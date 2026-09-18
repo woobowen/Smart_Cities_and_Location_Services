@@ -1,0 +1,54 @@
+{
+  "provenance": "Historical clean extraction/compilation during PROJECT-BASELINE-SYNC-001; not rerun during publication.",
+  "reports": {
+    "experiment": {
+      "command": [
+        "latexmk",
+        "-xelatex",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-halt-on-error",
+        "-outdir=build",
+        "experiment_report_template.tex"
+      ],
+      "latexmk_return": 0,
+      "xelatex_returns": [
+        0,
+        0
+      ],
+      "final_diagnostics": [],
+      "duplicate_page_warnings": [],
+      "page_count": 5,
+      "pdfinfo_return": 0,
+      "pdftotext_return": 0,
+      "historical_smoke_record_sha256": "167e98490023b0e16b147a439c30ebd5da206e8cafadff4f876192e0c048de87"
+    },
+    "process": {
+      "command": [
+        "latexmk",
+        "-xelatex",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-halt-on-error",
+        "-outdir=build",
+        "process_report_template.tex"
+      ],
+      "latexmk_return": 0,
+      "xelatex_returns": [
+        0,
+        0
+      ],
+      "final_diagnostics": [],
+      "duplicate_page_warnings": [],
+      "page_count": 10,
+      "pdfinfo_return": 0,
+      "pdftotext_return": 0,
+      "historical_smoke_record_sha256": "167e98490023b0e16b147a439c30ebd5da206e8cafadff4f876192e0c048de87"
+    }
+  },
+  "source_sha256": {
+    "templates/latex/common/p2_cloud_sorbet_colors.tex": "2aa820c3f68ba6c14cf1b52082b12336071d77bb5466db2b05b2fab6890aa243",
+    "templates/latex/experiment-report/experiment_report_template.tex": "bd8e6165ef5b43195ad21637bdb88ea60dab4f0b3fdcd911472f48858a4a475d",
+    "templates/latex/process-report/process_report_template.tex": "fb512f99a3ca0e2779728ce3e8f64b45560cb0482b698e2ff3389e75d0d2c91a"
+  }
+}

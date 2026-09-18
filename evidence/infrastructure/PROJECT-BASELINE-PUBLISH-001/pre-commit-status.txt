@@ -1,0 +1,24 @@
+$ git status --short --branch
+## No commits yet on main
+?? .gitignore
+?? AGENTS.md
+?? docs/
+?? evidence/
+?? releases/
+?? task1/
+?? templates/
+?? tools/
+returncode=0
+
+$ git branch --show-current
+main
+returncode=0
+
+$ git remote -v
+origin	https://github.com/woobowen/Smart_Cities_and_Location_Services.git (fetch)
+origin	https://github.com/woobowen/Smart_Cities_and_Location_Services.git (push)
+returncode=0
+
+$ git rev-list --all --count
+0
+returncode=0

@@ -1,0 +1,43 @@
+# OS / download metadata
+*:Zone.Identifier
+.DS_Store
+._*
+__MACOSX/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+.mplcache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+**/build/
+**/_build/
+
+# Editor cache
+.vscode/
+.idea/
+
+# Generated upload copies; canonical distribution ZIPs under releases/ remain eligible
+/releases/chatgpt-project-sources/
+
+# Local course materials and outputs: public distribution has not been approved
+/task1/
+
+# Detailed local audits contain machine-specific inventories and build transcripts
+/evidence/infrastructure/CODEX-INFRA-REPAIR-001/
+/evidence/infrastructure/PROJECT-BASELINE-SYNC-001/
+/evidence/infrastructure/PROJECT-BASELINE-PUBLISH-001/local/
