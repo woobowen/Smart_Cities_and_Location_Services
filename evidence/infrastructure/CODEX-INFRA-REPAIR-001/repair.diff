@@ -1,0 +1,188 @@
+--- before/docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md
++++ after/docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md
+@@ -94,7 +94,7 @@
+ 
+ Pastels can support background/fill; data marks, lines, boundaries and annotations use corresponding deeper accents when stronger contrast is required. Every visual channel must have meaning.
+ 
+-Read and follow `publication-plots.zip` whenever available. It is the plotting-quality baseline; this design system defines project identity and document integration.
++Read and follow the installed `tools/skills/publication-plots/SKILL.md` (repository-relative path). It is the plotting-quality baseline; this design system defines project identity and document integration. `publication-plots.zip` is a distribution archive, not the runtime source.
+ 
+ ## 8. Native production
+ 
+--- before/templates/latex/experiment-report/experiment_report_template.tex
++++ after/templates/latex/experiment-report/experiment_report_template.tex
+@@ -1,12 +1,14 @@
+ \documentclass[11pt,a4paper]{article}
+-\usepackage[UTF8]{ctex}
++\usepackage[UTF8,fontset=none]{ctex}
+ \usepackage{fontspec}
+ \setmainfont{DejaVu Serif}
+ \setsansfont{DejaVu Sans}
+ \setCJKmainfont{Noto Serif CJK SC}
+ \setCJKsansfont{Noto Sans CJK SC}
++\setCJKmonofont[Extension=.otf]{FandolFang-Regular}
+ \usepackage[a4paper,top=18mm,bottom=19mm,left=19mm,right=19mm]{geometry}
+ \usepackage{graphicx,booktabs,tabularx,array}
++\graphicspath{{demo-assets/}}
+ \usepackage{amsmath,amssymb}
+ \usepackage{xcolor}
+ \usepackage{titlesec}
+@@ -18,19 +20,7 @@
+ \usepackage{microtype}
+ \usepackage{tikz}
+ \usepackage{listings}
+-\definecolor{Paper}{HTML}{FCFAF7}
+-\definecolor{Ink}{HTML}{2D3238}
+-\definecolor{Muted}{HTML}{70757A}
+-\definecolor{P1}{HTML}{D3EAF5}
+-\definecolor{P2}{HTML}{F5D9B8}
+-\definecolor{P3}{HTML}{E8C7D3}
+-\definecolor{P4}{HTML}{D7D3EA}
+-\definecolor{C1}{HTML}{5B9FBE}
+-\definecolor{C2}{HTML}{D49757}
+-\definecolor{C3}{HTML}{B97589}
+-\definecolor{C4}{HTML}{8177A8}
+-\definecolor{Rule}{HTML}{DDE3E7}
+-\definecolor{Panel}{HTML}{FFFDFC}
++\input{../common/p2_cloud_sorbet_colors.tex}
+ \pagecolor{Paper}\color{Ink}
+ \hypersetup{colorlinks=true,linkcolor=C1,urlcolor=C1,citecolor=C4}
+ \setlength{\parindent}{2em}\setlength{\parskip}{0.24em}\linespread{1.17}
+@@ -49,6 +39,8 @@
+ \lstset{basicstyle=\ttfamily\small,frame=single,rulecolor=\color{Rule},backgroundcolor=\color{Panel},breaklines=true,showstringspaces=false}
+ \begin{document}
+ 
++% The unnumbered cover must not duplicate the following page.1 anchor.
++\hypersetup{pageanchor=false}
+ \begin{titlepage}
+ \thispagestyle{empty}
+ \vspace*{25mm}
+@@ -58,7 +50,7 @@
+ \vspace{3mm}
+ {\Large 轨迹数据预处理与质量评估}\par
+ \vspace{12mm}
+-\color{Rule}\rule{\linewidth}{0.8pt}\color{Ink}
++\noindent\color{Rule}\rule{\linewidth}{0.8pt}\color{Ink}
+ \vspace{10mm}
+ \begin{tabular}{@{}>{\sffamily\color{Muted}}p{28mm}p{100mm}@{}}
+ 报告类型 & Experiment Report \\
+@@ -74,6 +66,7 @@
+ \vspace{5mm}
+ {\small\color{Muted}此 PDF 用于冻结 Experiment Report 的视觉方向。所有数值和图均为模板合成示例，不属于实验一结果。}
+ \end{titlepage}
++\hypersetup{pageanchor=true}
+ 
+ \tableofcontents\clearpage
+ 
+@@ -108,7 +101,7 @@
+ \section{方法如何改变空间轨迹}
+ \begin{figure}[H]
+ \centering
+-\includegraphics[width=0.99\linewidth]{assets/signature_map.pdf}
++\includegraphics[width=0.99\linewidth]{signature_map.pdf}
+ \caption{Signature Visualization 示例。地图型主视觉同时承担空间上下文、轨迹结果、异常点、关键点和局部密度展示。}
+ \end{figure}
+ 
+@@ -118,11 +111,11 @@
+ \begin{figure}[H]
+ \centering
+ \begin{subfigure}[t]{0.49\linewidth}
+-\includegraphics[width=\linewidth]{assets/pareto.pdf}
++\includegraphics[width=\linewidth]{pareto.pdf}
+ \caption{误差—保留率—运行成本的联合编码}
+ \end{subfigure}\hfill
+ \begin{subfigure}[t]{0.49\linewidth}
+-\includegraphics[width=\linewidth]{assets/distribution.pdf}
++\includegraphics[width=\linewidth]{distribution.pdf}
+ \caption{不同轨迹类型的完整分布}
+ \end{subfigure}
+ \caption{多 Panel 示例：不同图承担互补信息，而不是机械重复同一个指标。}
+@@ -135,7 +128,7 @@
+ \section{多指标方法比较}
+ \begin{figure}[H]
+ \centering
+-\includegraphics[width=0.96\linewidth]{assets/parallel.pdf}
++\includegraphics[width=0.96\linewidth]{parallel.pdf}
+ \caption{Parallel Coordinates 示例：在统一尺度上同时比较多个评价维度。}
+ \end{figure}
+ 
+@@ -144,7 +137,7 @@
+ \section{参数敏感性与稳健区域}
+ \begin{figure}[H]
+ \centering
+-\includegraphics[width=0.80\linewidth]{assets/sensitivity.pdf}
++\includegraphics[width=0.80\linewidth]{sensitivity.pdf}
+ \caption{Heatmap + contour 示例：展示两个参数的联合作用以及相对稳定的高分区域。}
+ \end{figure}
+ 
+--- before/templates/latex/process-report/process_report_template.tex
++++ after/templates/latex/process-report/process_report_template.tex
+@@ -1,10 +1,11 @@
+ \documentclass[11pt,a4paper]{article}
+-\usepackage[UTF8]{ctex}
++\usepackage[UTF8,fontset=none]{ctex}
+ \usepackage{fontspec}
+ \setmainfont{DejaVu Serif}
+ \setsansfont{DejaVu Sans}
+ \setCJKmainfont{Noto Serif CJK SC}
+ \setCJKsansfont{Noto Sans CJK SC}
++\setCJKmonofont[Extension=.otf]{FandolFang-Regular}
+ \usepackage[a4paper,top=18mm,bottom=19mm,left=18mm,right=18mm]{geometry}
+ \usepackage{graphicx,booktabs,tabularx,array}
+ \usepackage{amsmath,amssymb}
+@@ -36,6 +37,8 @@
+ \newcommand{\semantic}[2]{\tikz[baseline=-.6ex]\node[rounded corners=1.4pt,inner xsep=4pt,inner ysep=1.4pt,fill=#1!68!white,text=Ink,font=\sffamily\scriptsize\bfseries]{#2};}
+ \begin{document}
+ 
++% The unnumbered cover must not duplicate the following page.1 anchor.
++\hypersetup{pageanchor=false}
+ \begin{titlepage}
+ \thispagestyle{empty}
+ \vspace*{25mm}
+@@ -45,7 +48,7 @@
+ \vspace{3mm}
+ {\Large Human--AI Research Process}\par
+ \vspace{12mm}
+-\color{Rule}\rule{\linewidth}{0.8pt}\color{Ink}
++\noindent\color{Rule}\rule{\linewidth}{0.8pt}\color{Ink}
+ \vspace{10mm}
+ \begin{tabular}{@{}>{\sffamily\color{Muted}}p{30mm}p{104mm}@{}}
+ 报告类型 & Process Report / AI 使用与研究过程文档 \\
+@@ -61,6 +64,7 @@
+ \vspace{5mm}
+ {\small\color{Muted}本模板展示 Process Report 的信息结构与视觉语言；示例内容不代表任何真实实验结论。}
+ \end{titlepage}
++\hypersetup{pageanchor=true}
+ 
+ \tableofcontents\clearpage
+ 
+--- before/templates/latex/experiment-report/README.md
++++ after/templates/latex/experiment-report/README.md
+@@ -9,3 +9,11 @@
+ For a real assignment, copy/adapt the template into that task's report directory. Do not overwrite this locked reference with task content.
+ 
+ The exact palette is defined in `../common/p2_cloud_sorbet_colors.tex` and documented in `../../../docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md`.
++
++Compile from this directory with:
++
++```bash
++latexmk -xelatex -interaction=nonstopmode -file-line-error -halt-on-error -outdir=build experiment_report_template.tex
++```
++
++The installed template reads the common palette and resolves figures from `demo-assets/`. Use the installed plotting Skill at `../../../tools/skills/publication-plots/SKILL.md`; ZIP files are distribution archives. `preview/` contains the rebuilt template reference, not experimental results.
+--- before/templates/latex/process-report/README.md
++++ after/templates/latex/process-report/README.md
+@@ -14,3 +14,13 @@
+ - do not invent user participation, chat UI, experiment outcomes or AI criticism.
+ 
+ `demo-assets/` are template-only assets and are not experimental evidence.
++
++The exact palette is read from `../common/p2_cloud_sorbet_colors.tex`. The installed specification is `../../../docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md`, and the plotting Skill is `../../../tools/skills/publication-plots/SKILL.md`.
++
++Compile from this directory with:
++
++```bash
++latexmk -xelatex -interaction=nonstopmode -file-line-error -halt-on-error -outdir=build process_report_template.tex
++```
++
++`preview/Process_Report_P2_Locked_v1.pdf` is the rebuilt template reference, not interaction evidence. Use installed sources for normal work; ZIP files are distribution archives.

@@ -1,0 +1,365 @@
+ SMART CITIES & LOCATION SERVICES
+
+
+       Process Report
+     Human–AI Research Process
+
+
+
+
+             Process Report / AI 使用与研究过程文档
+报告类型
+             P2 ·Cloud Sorbet Exact
+视觉基线
+             Editorial Board / Human Reasoning / Horizontal Can-
+核心图型         didate Tree
+             Design System v1（正式任务中必须替换为真实交互、真实
+状态           实验和真实决定）
+
+
+
+
+ 本模板展示 Process Report 的信息结构与视觉语言；示例内容不代表任何真实实验结论。
+SMART CITIES & LOCATION SERVICES       Process Report
+
+
+
+目录
+
+1 研究思路如何从发散走向收敛                                    2
+
+2 一般过程：截图汇总                                        3
+
+3 核心交互：连续多页证据（1/3）                                 4
+
+核心交互：连续多页证据（2/3）                                   5
+
+核心交互：连续多页证据（3/3）                                   6
+
+4 用户思考、证据与最终决定                                     7
+
+5 多候选方案如何筛选                                        8
+
+6 阶段性总结与下一轮研究                                      9
+
+7 使用边界                                             9
+
+
+
+
+                                   1
+SMART CITIES & LOCATION SERVICES                               Process Report
+
+
+
+1 研究思路如何从发散走向收敛
+  Brainstorm 在 Process Report 中的职责。这里只记录与正式实验方法形成直接相关的真实
+  思考过程：最初有哪些候选、用户补充或否决了什么、哪些问题进入资料研究或实验验证，以及思
+  路怎样逐步收敛。GitHub、LaTeX、配色、内部任务管理等项目管理内容不进入正式主体。
+
+
+
+        轨迹分段                轨迹去噪              轨迹简化         效果评价
+       时间 / 距离异常          方向 / 曲率 / 速度       几何保真 / 压缩    多指标 / 权衡
+
+
+
+
+                                   轨迹预处理如何设计？
+
+
+
+                  用户提出的问题                         进入验证的问题
+                “统一阈值是否合理？”                      候选方案需实验裁决
+
+
+  与 Experiment Report 的区别。 Process Report 可以保留 Brainstorm v1 / v2 / v3 等演
+  变版本；Experiment Report 若确有必要，只保留高度提炼的“最终技术设计/候选方案与选择”
+  图，不复制聊天过程，也不重复这张头脑风暴图。
+
+
+
+
+                                         2
+SMART CITIES & LOCATION SERVICES                   Process Report
+
+
+
+2 一般过程：截图汇总
+  一般过程同样保留真实截图，但在正式报告中按阶段汇总。截图是证据主体；文字只说明该阶段解
+  决了什么问题、形成了什么可继续推进的结果。完整原图进入 Evidence Archive。
+
+
+
+
+          图 1: 一般过程汇总的版式示例。正式版本替换为同阶段的真实 ChatGPT 网页截图。
+
+
+  阶段结果示例（非实验结论）。资料检索、数据理解、指标讨论和阶段性确认可在一页中汇总；真
+  正改变方法的关键对话则单独展开。
+
+
+
+
+                                   3
+SMART CITIES & LOCATION SERVICES                 Process Report
+
+
+
+3 核心交互：连续多页证据（1/3）
+  重要交互不限制为两页。页数由内容完整性和可读性决定，必要时可连续三页、四页或更多。正式
+  版使用用户保存的原始网页截图，并保留 raw 与 annotated 两个版本。
+
+
+
+
+                                       ① 用户判断
+
+                                       用户指出原有方案隐含了一
+                                       个未经验证的统一假设。
+
+                                       ② 被质疑假设
+
+                                       需要把 AI 建议中的隐含前提
+                                       单独拿出来验证。
+
+                                       ③ 后续动作
+
+                                       如果讨论仍不能决定，就转为
+                                       并行实验。
+
+
+
+
+                                   4
+SMART CITIES & LOCATION SERVICES                 Process Report
+
+
+
+核心交互：连续多页证据（2/3）
+
+  连续页不机械重复固定两栏。可根据原始截图比例使用宽幅截图，并在上方、侧边或下方加入必要
+  说明；highlight、编号和箭头使用 P2 语义色，但正文保持深灰。
+
+
+
+
+             图 2: 连续证据页示意。正式版按消息边界裁切，不从一条消息中间强行分页。
+
+
+用户建议     把“统一参数”与“分类参数”都保留为候选，而不是直接冻结一个方案。
+
+GPT 修正   将原先单一路径改成公平对照实验设计。
+
+
+
+
+                                   5
+SMART CITIES & LOCATION SERVICES                     Process Report
+
+
+
+核心交互：连续多页证据（3/3）
+
+
+
+
+                                   图 3: 核心交互收尾页示意。
+
+
+  最终确认必须保留。关键决策不仅展示争论过程，还应保留真实的最终确认截图，并明确写出“最
+  终决定是什么、为什么、下一步是什么”。
+
+
+
+
+                                         6
+SMART CITIES & LOCATION SERVICES                                                                 Process Report
+
+
+
+4 用户思考、证据与最终决定
+  这是 Process Report 最重要的图型之一：具体展示用户根据什么发现问题、如何形成判断、提
+  出什么建议、用什么资料或实验验证，以及最后怎样决定。
+
+
+
+     SMART CITIES & LOCATION SERVICES                                              Process Diagram Study v3 · 2/4
+
+
+     方案 4 精修：Human Reasoning → Evidence → Decision
+     把“用户发现 - 判断 - 建议”放在视觉中心，GPT 提议与证据作为前后支撑。
+
+
+
+
+                                                HUMAN REASONING
+
+        GPT PROPOSAL                                                                  EVIDENCE
+                                                    ① 用户发现
+      统一阈值                                                                          A/B 并行实验
+                                                    不同轨迹类型的运动状态与分布差异明显。
+      理由：实现简单，
+                                                                                    同数据 / 同指标
+      可作为统一基线。                                                                      同预算
+                                                    ② 用户判断
+                                                    统一阈值可能对某一类轨迹产生系统性偏差。
+
+
+
+                                                    ③ 用户建议
+                                                    保留统一阈值作 baseline，同时增加分类参数方案。
+
+
+
+
+                   结果解释
+                   如果分类参数在预先约定指标上更稳定，则采用；否则保留统一方案。
+
+                       FINAL DECISION = DATA + HUMAN INTERPRETATION
+
+
+
+
+     适用：AI 批判、参数选择、用户纠正 GPT 等核心 Human-in-the-loop 决策；Human Reasoning 始终是最大视觉模块。
+
+
+
+
+     图 4: Human Reasoning → Evidence → Decision。正式内容必须来自真实对话、资料和实验。
+
+
+
+
+                                                                      7
+SMART CITIES & LOCATION SERVICES                                                                       Process Report
+
+
+
+5 多候选方案如何筛选
+  当一个问题存在多个方法、参数或指标候选时，使用横向 Candidate Decision Tree 表达“保
+  留、修改、淘汰、进入实验”的逻辑。颜色只做小范围语义标记，普通节点保持白底。
+
+
+
+     SMART CITIES & LOCATION SERVICES                                                   Process Diagram Study v3 · 3/4
+
+
+     方案 3 精修：Horizontal Candidate Decision Tree
+     专门处理多候选方案的分叉、淘汰、修改与实验进入条件。
+
+
+
+
+                                        A 统一阈值
+                                        作为 baseline 保留
+                                                         KEEP
+                                                                      HUMAN GATE
+                                                                                                 A/B TEST
+                                                                     用户发现：A 与 B
+                                                                                               统一指标比较
+         QUESTION                                                    都具有合理性。
+                                        B 分类阈值
+       统一阈值还是                                                        用户建议：不主观选择，
+                                        用户建议进入实验
+       分类阈值？                                             TEST
+                                                                     让两者公平进入实验。
+
+
+                                                                                               FINAL
+
+                                                                                               按预设规则
+                                        C 自适应阈值
+                                                                                               选择方案
+                                        当前证据不足
+                                                         HOLD
+
+
+
+
+        状态语义          KEEP      TEST     HOLD      候选状态用小标签表达；大面积框保持白底。虚线 = 暂缓，不代表失败。
+
+
+
+
+     适用：方法、参数、指标等多候选筛选。横向结构便于插入 A4 页面，也能自然展示“保留 / 测试 / 暂缓”。
+
+
+
+
+                                        图 5: Horizontal Candidate Decision Tree。
+
+
+
+
+                                                                8
+SMART CITIES & LOCATION SERVICES                                                                  Process Report
+
+
+
+6 阶段性总结与下一轮研究
+  Editorial Decision Board 用于阶段总结：背景、关键判断、技术证据与下一步保持在一页内，但
+  不承担复杂分支。它与 Human Reasoning 图和 Candidate Tree 共同构成 Process Diagram
+  Language。
+
+
+
+     SMART CITIES & LOCATION SERVICES                                              Process Diagram Study v3 · 1/4
+
+
+     方案 2 精修：Editorial Decision Board
+     一页讲清“问题 - 人的判断 - 验证 - 决定”，减少箭头，用编辑式对齐建立阅读顺序。
+
+
+
+        研究问题
+        统一阈值是否适合所有轨迹类型？
+
+      01                                02                    03              04
+          GPT 初始建议                       用户发现的问题               用户提出建议          验证与决定
+
+          全部轨迹使用                         静止与行驶轨迹               增加“分类参数”方案      公平 A/B 实验后
+          统一阈值。                          分布差异明显。               作为对照。           再冻结方案。
+
+
+
+
+         EVIDENCE
+
+        资料 / 数据分布 / 参数敏感性实验
+        只在证据足够时进入最终方法；若结果不支持用户建议，也必须如实保留。
+
+
+
+
+         最终决定         由实验结果而不是对话偏好裁决；用户负责解释与最终确认。
+
+
+
+     适用：单个重要决策的一页式总结；重点在“人提出了什么”，而不是把所有步骤都做成彩色卡片。
+
+
+
+
+                                             图 6: Editorial Decision Board。
+
+
+  Process Report 的核心证据循环： Idea → Interaction → Human Judgment → Evidence
+  → Decision。一般过程汇总展示，关键过程展开，最终确认必须保留。
+
+
+
+
+7 使用边界
+   本模板锁定的是视觉语言和证据组织方式，不锁死具体章节名。正式实验中只使用真实任务、真实
+资料、真实交互和真实实验结果替换示例内容。Process Report 负责“决策如何形成”
+                                             ；Experiment
+Report 负责“最终方法与实验说明什么”
+                     ，二者允许共享事实来源，但不复制同一张 Brainstorm 或同
+一段聊天内容。
+
+
+
+
+                                                          9
+

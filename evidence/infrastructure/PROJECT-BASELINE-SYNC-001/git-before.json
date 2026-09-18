@@ -1,0 +1,54 @@
+[
+  {
+    "command": [
+      "git",
+      "status",
+      "--short",
+      "--branch"
+    ],
+    "returncode": 0,
+    "stdout": "## No commits yet on main\n?? .gitignore\n?? AGENTS.md\n?? docs/\n?? evidence/\n?? task1/\n?? templates/\n?? tools/\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "remote",
+      "-v"
+    ],
+    "returncode": 0,
+    "stdout": "origin\thttps://github.com/woobowen/Smart_Cities_and_Location_Services.git (fetch)\norigin\thttps://github.com/woobowen/Smart_Cities_and_Location_Services.git (push)\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "branch",
+      "--show-current"
+    ],
+    "returncode": 0,
+    "stdout": "main\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "rev-list",
+      "--all",
+      "--count"
+    ],
+    "returncode": 0,
+    "stdout": "0\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "git",
+      "ls-files",
+      "--stage"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  }
+]

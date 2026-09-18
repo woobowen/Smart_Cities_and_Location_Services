@@ -1,5 +1,7 @@
 # Initial public baseline
 
+Historical record: PROJECT-REPOSITORY-FULL-SYNC-001 supersedes the exclusions below. The current repository includes task1, teacher materials, ChatGPT upload copies and earlier infrastructure evidence. The original preparation record is retained below.
+
 This baseline publishes project rules, the installed Design System and reference templates, the publication-plots Skill, canonical distribution ZIPs, and concise infrastructure verification evidence. It contains no task1 materials, real experimental results or real Human–AI interaction evidence.
 
 ## Scope and checks

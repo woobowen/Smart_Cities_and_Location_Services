@@ -1,0 +1,23 @@
+[
+  {
+    "command": [
+      "git",
+      "status",
+      "--short",
+      "--branch"
+    ],
+    "returncode": 128,
+    "stdout": "",
+    "stderr": "fatal: not a git repository (or any of the parent directories): .git\n"
+  },
+  {
+    "command": [
+      "git",
+      "ls-remote",
+      "https://github.com/woobowen/Smart_Cities_and_Location_Services.git"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  }
+]

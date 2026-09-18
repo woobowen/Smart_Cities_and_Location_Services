@@ -1,0 +1,240 @@
+ SMART CITIES & LOCATION SERVICES
+
+
+       Experiment Report
+     轨迹数据预处理与质量评估
+
+
+
+
+            Experiment Report
+报告类型
+            P2 ·Cloud Sorbet
+视觉基线
+            B ·Visual Research + A ·Minimal Cover
+版式方向
+            Design System Preview（合成示例数据）
+状态
+
+
+
+
+ 此 PDF 用于冻结 Experiment Report 的视觉方向。所有数值和图均为模板合成示例，不属于实验一结果。
+SMART CITIES & LOCATION SERVICES       Experiment Report
+
+
+
+目录
+
+1 数据与问题                                               2
+
+2 方法如何改变空间轨迹                                          2
+
+3 参数与多目标权衡                                            3
+
+4 多指标方法比较                                             3
+
+5 参数敏感性与稳健区域                                          4
+
+6 技术批判与正式写作                                           4
+
+7 当前模板方向                                              4
+
+
+
+
+                                   1
+SMART CITIES & LOCATION SERVICES                                                Experiment Report
+
+
+
+1 数据与问题
+  阅读入口。正式报告先用一句话说明最重要的数据问题，再给图和定量证据。这里的浅蓝信息块
+  只承担章节级重点，不会每页重复出现。
+
+
+
+ 轨迹数量                           轨迹点                               中位采样间隔
+ 11,386                         1.17 M                            10 s
+
+             表 1: 版式示例：基础统计用克制表格呈现，颜色只用于真正需要强调的信息。
+
+                       轨迹类型        数量    中位速度/(m/s)        异常率/%
+
+                       静止          126              0.12         0.8
+                       混合           34              0.78         2.6
+                       行驶           40              2.31         1.4
+
+
+
+2 方法如何改变空间轨迹
+ Signature spatial view · synthetic layout preview
+                                                       high-density stop area
+
+
+
+
+      Cleaned A     Cleaned B       Cleaned C       Anomaly
+
+图 1: Signature Visualization 示例。地图型主视觉同时承担空间上下文、轨迹结果、异常点、关键点和局部
+密度展示。
+
+
+
+
+                                                2
+SMART CITIES & LOCATION SERVICES                                                                                                                                Experiment Report
+
+
+  正式报告中，此类主图只在确实有空间意义时使用。底图应低饱和、数据为视觉主体，annotation
+直接指出需要老师注意的局部现象。
+
+
+
+3 参数与多目标权衡
+                             Pareto trade-off                                                                                Distribution / raincloud-style view
+                96                                                                     12
+                94                                                                                                       4
+                                                        balanced choice                10
+                92
+Retention (%)
+
+
+
+
+                90                                                                     8
+
+
+
+
+                                                                                           Tolerance
+
+                                                                                                           Speed (m/s)
+                                                                                                                         3
+                88                                                                     6
+                86
+                                                                                       4                                 2
+                84
+                82                                                                     2
+                                                                                                                         1
+                80
+                                   2    4        6      8     10     12   14
+                                               Geometric error (m)                                                                Stationary           Mixed              Moving
+
+                                   (a) 误差—保留率—运行成本的联合编码                                                                                 (b) 不同轨迹类型的完整分布
+
+                                            图 2: 多 Panel 示例：不同图承担互补信息，而不是机械重复同一个指标。
+
+
+                版式原则。当一个参数不存在单一“最大最好”时，优先展示权衡关系和稳定区域，再在正文说
+                明为什么选择最终方案；不只给一张柱状图宣布某个参数最好。
+
+
+
+
+4 多指标方法比较
+
+                             1.0
+                                   Parallel coordinates · multi-metric method comparison
+                             0.8
+          Normalized score
+
+
+
+
+                             0.6
+
+                             0.4
+
+                             0.2
+
+                             0.0
+                                   Retention                   Geom. fidelity                    Anomaly recall                                Efficiency                 Stability
+                                                        Method A            Method B                         Method C                      Method D            Method E
+
+                                            图 3: Parallel Coordinates 示例：在统一尺度上同时比较多个评价维度。
+
+
+  这类多维图适合展示“某个方法在多数指标上均衡，但并非每项绝对最高”的情况。颜色用于区分
+方法，线宽仅突出最终选择，不额外增加无意义视觉维度。
+
+
+
+
+                                                                                                       3
+SMART CITIES & LOCATION SERVICES                                                                                   Experiment Report
+
+
+
+5 参数敏感性与稳健区域
+                                            Sensitivity surface · interaction between two parameters
+                                                                                                                     0.7
+                                       14
+                                                                                                                     0.6
+                                                                      0.00                       0
+                                       12                                                     0.1
+                                                                                                                     0.5
+        Simplification tolerance (m)
+
+
+
+
+                                       10                             0.20
+
+
+
+
+                                                                                                                       Composite score
+                                                                                                                     0.4
+                                        8                                           0.50
+                                                                             0.60                                    0.3
+
+
+
+
+                                                                                                            0.00
+                                            0.00
+
+
+
+
+                                                                             0.70
+                                        6                                                                            0.2
+
+                                        4                                                  0.40                      0.1
+                                                               0.30
+
+                                        2                                                                            0.0
+
+                                                   40     60          80                100          120   140
+                                                               Segmentation threshold (m)
+            图 4: Heatmap + contour 示例：展示两个参数的联合作用以及相对稳定的高分区域。
+
+
+  视觉目标。 P2 Cloud Sorbet 配色在正文中保持暖白、淡蓝、杏黄、柔粉和灰紫的柔和基调；数
+  据图使用同色系中更深的描边和曲线，避免“淡色很好看，但科研图看不清”的问题。
+
+
+
+
+6 技术批判与正式写作
+  技术批判进入 Experiment Report 时应聚焦可验证的技术事实，例如单位、坐标、投影、插值假
+设和评价指标。完整聊天过程留在 Process Report。
+
+                                                        Listing 1: 关键代码只展示有助于理解方法的部分
+def evaluate_candidate (candidate , reference ):
+    # The report explains why these metrics are used.
+    return retention , geometry_error , continuity
+
+
+
+
+7 当前模板方向
+  这一版本只冻结视觉方向，不锁死具体章节名称。后续根据老师题目调整章节结构，但保持统一字
+体、P2 配色、图注、表格、页眉页脚、Panel 间距和图表风格。
+
+
+
+
+                                                                                    4
+

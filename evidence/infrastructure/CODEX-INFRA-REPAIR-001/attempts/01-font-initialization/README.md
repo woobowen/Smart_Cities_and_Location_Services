@@ -1,0 +1,1 @@
+First repaired Experiment compile returned 0 and produced 5 pages. The audit stopped on two xeCJK CJK-family redefinition warnings: ctex loaded Fandol defaults before the explicit Noto assignments. The final repair uses fontset=none and explicitly preserves FandolFang-Regular for CJK monospace. This attempt is retained as diagnostic evidence, not the final preview.

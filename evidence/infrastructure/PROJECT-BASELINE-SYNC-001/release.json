@@ -1,0 +1,8 @@
+{
+  "path": "releases/design-system/smart_cities_design_system_v2.1.zip",
+  "sha256": "c578433aa29f99a5a524267c15f19709abbe0faaee9ed125efc6eb6b37c127a2",
+  "source_file_count": 24,
+  "source_bytes_verified": true,
+  "clean_extraction": "/tmp/project-baseline-sync-001-oxwrgecz/smart_cities_design_system_v2.1",
+  "manifest": "# Design System distribution manifest\n\n- version = v2.1\n- Experiment Report = LOCKED\n- Process Report = LOCKED\n- P2 Cloud Sorbet Exact = LOCKED\n- Compilation engine = XeLaTeX\n- Demo assets are synthetic/template material, not experimental results or real interaction evidence.\n\nv2.1 is a technical repair release of the installed v2 specification: corrected demo-asset paths, a common P2 color source, LaTeX warning fixes, and installed Skill references. It introduces no visual redesign.\n\nThe installed publication-plots Skill is distributed separately under releases/skills/publication-plots.zip. It is not needed to compile these template previews.\n\nFrom each report directory, run:\n\n```bash\nlatexmk -xelatex -interaction=nonstopmode -file-line-error -halt-on-error -outdir=build experiment_report_template.tex\nlatexmk -xelatex -interaction=nonstopmode -file-line-error -halt-on-error -outdir=build process_report_template.tex\n```\n\nThe packaged previews are installed visual references. Fresh build PDFs are generated from the packaged sources during release verification.\n"
+}

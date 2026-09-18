@@ -1,0 +1,1085 @@
+{
+  "modified": [
+    {
+      "path": "docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md",
+      "before_sha256": "a7fd6d340ab81ba7f3d7f951efee8173560fff7459f57f2ba1092a868eace487",
+      "after_sha256": "84c4ed57c3bcb66a9bd96623dfe6a1f944aeda7da355326a59ced7ef260eae3c"
+    },
+    {
+      "path": "templates/latex/experiment-report/README.md",
+      "before_sha256": "9edfc268e18a63eeac84e79d3da82aad62f9542c3ffdf09162ee7c6ebcfe7813",
+      "after_sha256": "18fbb2c1a0c6fe17f9e4d418d5204d6ef403b671f18142d4c9fa48cb439f6303"
+    },
+    {
+      "path": "templates/latex/experiment-report/experiment_report_template.tex",
+      "before_sha256": "3e36c86ef8ffd866daf3c2deaf35ed92642a4ff89ca06e8c4ecbeee459b5da92",
+      "after_sha256": "bd8e6165ef5b43195ad21637bdb88ea60dab4f0b3fdcd911472f48858a4a475d"
+    },
+    {
+      "path": "templates/latex/experiment-report/preview/Experiment_Report_P2_Exact.pdf",
+      "before_sha256": "9c1e75d4c366ad0ce9e3e38a6e2fb3ba5d2c140632a59078d07533160e1ac322",
+      "after_sha256": "6fd543f5123ba4d67985193d5658802ae820c6585dc3f509071b8b2d39b323dd"
+    },
+    {
+      "path": "templates/latex/process-report/README.md",
+      "before_sha256": "05c3f86497e040fb4ddd03a19c2e41145ed72c5660f8a4652e405776923314f4",
+      "after_sha256": "8225ea048072c5a576918ffb02df08d35219282ef748f5e4941c44cb55a00960"
+    },
+    {
+      "path": "templates/latex/process-report/preview/Process_Report_P2_Locked_v1.pdf",
+      "before_sha256": "b464ca19b6a39dea3be713bf4fd0a59d18a5ac97ba07b3e3ce55e1c85611990a",
+      "after_sha256": "7d1c16b1f6b58c54cd8ad230463b6017ae101b296c72f10fb90ea25a29923a4a"
+    },
+    {
+      "path": "templates/latex/process-report/process_report_template.tex",
+      "before_sha256": "5b3e248dc2e21529535e2512e0d5d2ef7a061aeb6cf18cb9a82695013729dfba",
+      "after_sha256": "fb512f99a3ca0e2779728ce3e8f64b45560cb0482b698e2ff3389e75d0d2c91a"
+    }
+  ],
+  "added": [
+    {
+      "path": ".git/HEAD",
+      "sha256": "28d25bf82af4c0e2b72f50959b2beb859e3e60b9630a5e8c603dad4ddb2b6e80",
+      "bytes": 21
+    },
+    {
+      "path": ".git/config",
+      "sha256": "310c0e6100dd037a7a8baa16cdcd40a02d74fa6405514cca8c4ddbcddf527e20",
+      "bytes": 229
+    },
+    {
+      "path": ".git/description",
+      "sha256": "85ab6c163d43a17ea9cf7788308bca1466f1b0a8d1cc92e26e9bf63da4062aee",
+      "bytes": 73
+    },
+    {
+      "path": ".git/hooks/applypatch-msg.sample",
+      "sha256": "0223497a0b8b033aa58a3a521b8629869386cf7ab0e2f101963d328aa62193f7",
+      "bytes": 478
+    },
+    {
+      "path": ".git/hooks/commit-msg.sample",
+      "sha256": "1f74d5e9292979b573ebd59741d46cb93ff391acdd083d340b94370753d92437",
+      "bytes": 896
+    },
+    {
+      "path": ".git/hooks/fsmonitor-watchman.sample",
+      "sha256": "e0549964e93897b519bd8e333c037e51fff0f88ba13e086a331592bf801fa1d0",
+      "bytes": 4726
+    },
+    {
+      "path": ".git/hooks/post-update.sample",
+      "sha256": "81765af2daef323061dcbc5e61fc16481cb74b3bac9ad8a174b186523586f6c5",
+      "bytes": 189
+    },
+    {
+      "path": ".git/hooks/pre-applypatch.sample",
+      "sha256": "e15c5b469ea3e0a695bea6f2c82bcf8e62821074939ddd85b77e0007ff165475",
+      "bytes": 424
+    },
+    {
+      "path": ".git/hooks/pre-commit.sample",
+      "sha256": "f9af7d95eb1231ecf2eba9770fedfa8d4797a12b02d7240e98d568201251244a",
+      "bytes": 1643
+    },
+    {
+      "path": ".git/hooks/pre-merge-commit.sample",
+      "sha256": "d3825a70337940ebbd0a5c072984e13245920cdf8898bd225c8d27a6dfc9cb53",
+      "bytes": 416
+    },
+    {
+      "path": ".git/hooks/pre-push.sample",
+      "sha256": "ecce9c7e04d3f5dd9d8ada81753dd1d549a9634b26770042b58dda00217d086a",
+      "bytes": 1374
+    },
+    {
+      "path": ".git/hooks/pre-rebase.sample",
+      "sha256": "4febce867790052338076f4e66cc47efb14879d18097d1d61c8261859eaaa7b3",
+      "bytes": 4898
+    },
+    {
+      "path": ".git/hooks/pre-receive.sample",
+      "sha256": "a4c3d2b9c7bb3fd8d1441c31bd4ee71a595d66b44fcf49ddb310252320169989",
+      "bytes": 544
+    },
+    {
+      "path": ".git/hooks/prepare-commit-msg.sample",
+      "sha256": "e9ddcaa4189fddd25ed97fc8c789eca7b6ca16390b2392ae3276f0c8e1aa4619",
+      "bytes": 1492
+    },
+    {
+      "path": ".git/hooks/push-to-checkout.sample",
+      "sha256": "a53d0741798b287c6dd7afa64aee473f305e65d3f49463bb9d7408ec3b12bf5f",
+      "bytes": 2783
+    },
+    {
+      "path": ".git/hooks/sendemail-validate.sample",
+      "sha256": "44ebfc923dc5466bc009602f0ecf067b9c65459abfe8868ddc49b78e6ced7a92",
+      "bytes": 2308
+    },
+    {
+      "path": ".git/hooks/update.sample",
+      "sha256": "8d5f2fa83e103cf08b57eaa67521df9194f45cbdbcb37da52ad586097a14d106",
+      "bytes": 3650
+    },
+    {
+      "path": ".git/info/exclude",
+      "sha256": "6671fe83b7a07c8932ee89164d1f2793b2318058eb8b98dc5c06ee0a5a3b0ec1",
+      "bytes": 240
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "b9898d52011b4c60c2fdc6e70a13cedad094ef42cd8af35124d0a30b8984f76b",
+      "bytes": 534
+    },
+    {
+      "path": "docs/design-system/README.md",
+      "sha256": "6a2c421b2d0ff44b184b3f6703f21fac872bb598c65241f63d14eaa000146229",
+      "bytes": 1484
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/README.md",
+      "sha256": "022df08871bd48d44e1ad92f40d754bb3909862d051326a9205e4cdde9ef3d68",
+      "bytes": 2345
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/archive-relocation.json",
+      "sha256": "df09cee8f2c6376a7d1cf61d1b38a1e94a632a2e1e1f21a11cdb7c9b6cc6d7bd",
+      "bytes": 398
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/attempts/01-font-initialization/README.md",
+      "sha256": "6b463bbbd1b07e0f8fb8b0aae20049b4f34020b072445105226be6027b7e5cb9",
+      "bytes": 368
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/attempts/01-font-initialization/experiment/build-console.txt",
+      "sha256": "e676190f8069b2d0e4b15c0d4d8c25c3d3899e325bead3ae7c5675a9fe75af6e",
+      "bytes": 38579
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/attempts/01-font-initialization/experiment/experiment_report_template.pdf",
+      "sha256": "4ad412d715e1ea159449b570c89ebebedd9d886e51d68274334eea51ecfc67d0",
+      "bytes": 278863
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/attempts/01-font-initialization/experiment/input-recorder.txt",
+      "sha256": "5d46e6a9afc137cb30d7efbb73ab44ae3ca9b227c31c32da998aebfd36e5883d",
+      "bytes": 33434
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/attempts/01-font-initialization/experiment/latex-log.txt",
+      "sha256": "a9c5a2ef46adcd33da122ca773ccaa6af4533ff5b1f7b0e8444e33a0965974a1",
+      "bytes": 91283
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/attempts/01-font-initialization/experiment/pdf-text.txt",
+      "sha256": "2f423f5920afa66a15ac5d35a80e26d843611845b208493c23798b103969130f",
+      "bytes": 9756
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/attempts/01-font-initialization/experiment/pdfinfo.txt",
+      "sha256": "e03e634f34c35406d437686fa76f8deb7faab62932e53da3e1068a1e01d99a63",
+      "bytes": 434
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/attempts/01-font-initialization/experiment/xelatex-status.jsonl",
+      "sha256": "85af59d956d33dda2682daa5461e46c140420a867256aa09c7a3ae9c67e7a58d",
+      "bytes": 358
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/baseline/AGENTS.md",
+      "sha256": "39be8f7472836cc3d117f150dc954fcef294bb08a4baaa026e9ffec975159cbf",
+      "bytes": 12454
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/baseline/docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md",
+      "sha256": "a7fd6d340ab81ba7f3d7f951efee8173560fff7459f57f2ba1092a868eace487",
+      "bytes": 7297
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/baseline/templates/latex/common/p2_cloud_sorbet_colors.tex",
+      "sha256": "2aa820c3f68ba6c14cf1b52082b12336071d77bb5466db2b05b2fab6890aa243",
+      "bytes": 629
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/baseline/templates/latex/experiment-report/README.md",
+      "sha256": "9edfc268e18a63eeac84e79d3da82aad62f9542c3ffdf09162ee7c6ebcfe7813",
+      "bytes": 674
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/baseline/templates/latex/experiment-report/experiment_report_template.tex",
+      "sha256": "3e36c86ef8ffd866daf3c2deaf35ed92642a4ff89ca06e8c4ecbeee459b5da92",
+      "bytes": 7274
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/baseline/templates/latex/experiment-report/preview/Experiment_Report_P2_Exact.pdf",
+      "sha256": "9c1e75d4c366ad0ce9e3e38a6e2fb3ba5d2c140632a59078d07533160e1ac322",
+      "bytes": 278793
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/baseline/templates/latex/process-report/README.md",
+      "sha256": "05c3f86497e040fb4ddd03a19c2e41145ed72c5660f8a4652e405776923314f4",
+      "bytes": 864
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/baseline/templates/latex/process-report/preview/Process_Report_P2_Locked_v1.pdf",
+      "sha256": "b464ca19b6a39dea3be713bf4fd0a59d18a5ac97ba07b3e3ce55e1c85611990a",
+      "bytes": 2388747
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/baseline/templates/latex/process-report/process_report_template.pdf",
+      "sha256": "b464ca19b6a39dea3be713bf4fd0a59d18a5ac97ba07b3e3ce55e1c85611990a",
+      "bytes": 2388747
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/baseline/templates/latex/process-report/process_report_template.tex",
+      "sha256": "5b3e248dc2e21529535e2512e0d5d2ef7a061aeb6cf18cb9a82695013729dfba",
+      "bytes": 10399
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/build_and_render.py",
+      "sha256": "c7740057350e9bcd0c51a973107df59fd822bf55508171dfac9f1ea3f7b0de54",
+      "bytes": 5994
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/cleanup-summary.json",
+      "sha256": "fe2d8374488ca5c100be1cc60c03f8ec880a438b07dc445c196d589166bcb5ea",
+      "bytes": 28916
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/experiment/build-console.txt",
+      "sha256": "44a71f337df9c70f7059740bd6c6d537ad1f5e0dd9ab8a031b8d94179fd9a793",
+      "bytes": 37957
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/experiment/experiment_report_template.pdf",
+      "sha256": "6fd543f5123ba4d67985193d5658802ae820c6585dc3f509071b8b2d39b323dd",
+      "bytes": 278863
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/experiment/input-recorder.txt",
+      "sha256": "f784053db76ca78c36637314f9140254f7f35ada669b30915bf09499784b278f",
+      "bytes": 33236
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/experiment/latex-log.txt",
+      "sha256": "04bc8e064229170e5828e19ef980b79db0ff531231344773eee19249159bb0dc",
+      "bytes": 89733
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/experiment/montage.jpg",
+      "sha256": "ef9f14f1ba84e629fb1540a9d0eefcd0048fbdea2d1cd2eef1d7914b1169d91a",
+      "bytes": 345453
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/experiment/pages/page-1.png",
+      "sha256": "9f18cb9acf197fccd5195c19b9693f173f0591e66512bc00d180a70d7c54d8c7",
+      "bytes": 64310
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/experiment/pages/page-2.png",
+      "sha256": "57fef7fb02263583bef57ee099c105ccb88160971cbf03bebfaf3e1c8135566b",
+      "bytes": 45167
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/experiment/pages/page-3.png",
+      "sha256": "6194ec9d15cb8b1bcb5e13530f328cfa5db8187fc8e291e4f58a75be69b1493e",
+      "bytes": 157160
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/experiment/pages/page-4.png",
+      "sha256": "067a79e38bc1f14866d9526e53ef792a6ffc442a7e1bff2a20a4839429bc604a",
+      "bytes": 196146
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/experiment/pages/page-5.png",
+      "sha256": "4b39552e3aa8c964aea6a2fc21cbeb96ee2ff13db9f428d72c4ba1b1b3304c1e",
+      "bytes": 199062
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/experiment/pdf-text.txt",
+      "sha256": "2f423f5920afa66a15ac5d35a80e26d843611845b208493c23798b103969130f",
+      "bytes": 9756
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/experiment/pdfinfo.txt",
+      "sha256": "5807ea32a2aa612e387f8a266842c68fe34e92f4a4a407d2b675070b7f0f13a3",
+      "bytes": 434
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/experiment/render-console.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/experiment/xelatex-status.jsonl",
+      "sha256": "85af59d956d33dda2682daa5461e46c140420a867256aa09c7a3ae9c67e7a58d",
+      "bytes": 358
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/final-state.json",
+      "sha256": "8ec63af1c5663b8c58271e7f45dbb46b964070bcf63cb657fc4b75cb964abb82",
+      "bytes": 597
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/git-final-state.json",
+      "sha256": "37bebbd07dd3a513c88ce53a04f23bbadcd436ccf1a47fda5f9278d292c276fb",
+      "bytes": 990
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/git-remote-check.json",
+      "sha256": "360d7d9ecedd8147afe8bc0ba04dc48accf71b3611e00ca409380a2ed916e7b5",
+      "bytes": 423
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/git-working-tree.json",
+      "sha256": "8943f54257f50e467b144ed875f20ef95f587dc0dc4f777151a0298e95bd684d",
+      "bytes": 1342
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/hygiene-verification.json",
+      "sha256": "3524d75d9c485c39ab49f94faa4bbc2fc08d3be3ac1bbf4598fe2af21723f9e2",
+      "bytes": 425
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/installed-verification.json",
+      "sha256": "a8b753d29bd27540b4881fc6e42d2f86fa7e03ae9e8607de70c36b58a2674463",
+      "bytes": 4778
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/pre-repair-files.json",
+      "sha256": "21d8f9ab8fb87c4e1633da964d02f256fd2bbae4d23c857de18ca3b75bbbfc28",
+      "bytes": 55501
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/pre-repair-tree.txt",
+      "sha256": "247377395e787f91cf445960f991bb36608e435fdeb05770bc1edcd454395cb6",
+      "bytes": 17392
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/preview-refresh.json",
+      "sha256": "76bdfcd5c73c53a4e7e801d3d346940b6fe63eb92f296b67b8d12f442524bc1f",
+      "bytes": 427
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/process/build-console.txt",
+      "sha256": "b9e8811b1d6dd20552b298eeec3f74896e6d935c282c294d4c88bd16c028d242",
+      "bytes": 38521
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/process/input-recorder.txt",
+      "sha256": "36b8b2be9d6c90a6f5e0bb8509444ade7e97534df73859df6a6899394567d57d",
+      "bytes": 34318
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/process/latex-log.txt",
+      "sha256": "13201485e5ff29b0a9998c24209484b28634877bb6bf29f2b9d1cf7323bdcce1",
+      "bytes": 86682
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/process/montage.jpg",
+      "sha256": "9e106f5eb13741789f48448f5fc7bf60f94b3aad6d4dccbcc6b8531524082a70",
+      "bytes": 627746
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/process/pages/page-01.png",
+      "sha256": "b6005864fb9098481fc65863a68a1fb614c27c7a898b2d42cdf285ef72bb3c8d",
+      "bytes": 73412
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/process/pages/page-02.png",
+      "sha256": "04264338589d988c5501f8c35b2c090bfa1ad23053993b397e98bf499dd5522e",
+      "bytes": 61996
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/process/pages/page-03.png",
+      "sha256": "61dcb885da34dae02f8dafa9e381cfcdbaafb9dca4c228091b1621ba9a6ecc3a",
+      "bytes": 138446
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/process/pages/page-04.png",
+      "sha256": "18dfb052f58b9233c1d58227bc109596dd19c928da9d17a8b8cdc263a26a0996",
+      "bytes": 115854
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/process/pages/page-05.png",
+      "sha256": "23ca919a32b362a4ac5cc34f869d55745599740ab90f1f37df6583f25d855a08",
+      "bytes": 104268
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/process/pages/page-06.png",
+      "sha256": "869c82ca10a184623b70696fa106858dc3646617cfc274b6877dd1cfadbda290",
+      "bytes": 112021
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/process/pages/page-07.png",
+      "sha256": "a79a4553c29813b9eef0893a5aa06f390d754f30026b51a91bca421b778674db",
+      "bytes": 81520
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/process/pages/page-08.png",
+      "sha256": "71eea02ae805d91de6c4d43b04e778fa60d6dbb18aea91ab22d196b86456bc00",
+      "bytes": 121501
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/process/pages/page-09.png",
+      "sha256": "79b7d4916cc2e774fe24cdf95ec75af84e7be6b5d5f5b8b84ecad016282766a7",
+      "bytes": 120719
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/process/pages/page-10.png",
+      "sha256": "39c2612650c21929cbc50bcc174058e5ac10277943ad22817a99b1b12d8d709d",
+      "bytes": 194723
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/process/pdf-text.txt",
+      "sha256": "00fa05eefae8a17dc59d7fc06e509d05610976a4f59bdea9aebeaa8fce692f83",
+      "bytes": 12905
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/process/pdfinfo.txt",
+      "sha256": "781789f06ac4a349e3068ce422013b85685a8b259e3c7126390c87af82cf53be",
+      "bytes": 436
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/process/process_report_template.pdf",
+      "sha256": "7d1c16b1f6b58c54cd8ad230463b6017ae101b296c72f10fb90ea25a29923a4a",
+      "bytes": 2389196
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/process/render-console.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/process/xelatex-status.jsonl",
+      "sha256": "1a6c643e074c6fce47a9fcf9868a85609bac230369f9656c8b9db0be52912650",
+      "bytes": 352
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/repair-summary.md",
+      "sha256": "e01a979dc9803e8367537193a57e9b810e3ce69c7b5cfc768b594c62245555d1",
+      "bytes": 5063
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/repair.diff",
+      "sha256": "234b582bc38cebd2aaba06d6a34dee93dc9a77b5ca38b4ea8a59e21a251dff74",
+      "bytes": 8138
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/reproduction/process-before.pdf",
+      "sha256": "76a92dc01df4cc841caea25a03c9f45e0b32fb01cd819a68167b0a45347b1554",
+      "bytes": 2389197
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/reproduction/process-console.txt",
+      "sha256": "074799d8550cd63e54384a61aaff8a124eb6202f05f27609a84a523ee536878d",
+      "bytes": 39439
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/reproduction/process-latex-log.txt",
+      "sha256": "3d57810ab4919f18ebd106619ed915da0cb16810356208784bf008dda352aa6c",
+      "bytes": 88160
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/reproduction/result.json",
+      "sha256": "e54e0d7ff8d589f238081ca0343e8c1cc1a7fbd87b089ab7887d2791b0906957",
+      "bytes": 277
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/smoke-results.json",
+      "sha256": "2b51ed429ce9f20f78ca59551cc1a444baedcbfd7b15a9aff3d9768343707c1f",
+      "bytes": 2090
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/task1-after.sha256.json",
+      "sha256": "ea08c718e99bf196e0d5b42579dfb8a26aca790ecdd47ad69408e12f57f4825d",
+      "bytes": 12806
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/task1-before.sha256.json",
+      "sha256": "ea08c718e99bf196e0d5b42579dfb8a26aca790ecdd47ad69408e12f57f4825d",
+      "bytes": 12806
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/task1-integrity.json",
+      "sha256": "d93a123c3dd8ae39df6fcf63748ac2d15a935f76f3252d5a4fe013aaee75787b",
+      "bytes": 287
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/tool-versions.json",
+      "sha256": "fc0cdf98551875677e627dd2fec4c2eb2df6473807c590c8597cd2d787bbe020",
+      "bytes": 1567
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/visual-comparison.json",
+      "sha256": "06dfa33c2cbe913253c09c0d0873e8a5aa3fdb80fc93693712c60d853a8522c9",
+      "bytes": 1862
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/visual-inspection.json",
+      "sha256": "32e33aef5ccce70826d575996aeb766f77fd007cffd616830326bcaab915d49c",
+      "bytes": 656
+    },
+    {
+      "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/warning-summary.md",
+      "sha256": "4ec8194a7cb0b3d83782ca801fe3ac1fb19a99c798c92b11022fb221278ff28c",
+      "bytes": 2592
+    },
+    {
+      "path": "smart_cities_design_system_v2.zip",
+      "sha256": "e66f70dccc6b8e98782fd442cbd74473fbb61b1459ebb242c9a816181401d39b",
+      "bytes": 7195880
+    }
+  ],
+  "removed_or_relocated": [
+    {
+      "path": "SMART_CITIES_VISUAL_SYSTEM_v2.md:Zone.Identifier",
+      "before_sha256": "5dec9463cf3ab239cddbfbd7ca3acf51ab7eec9a0a7c8d2baf1e26f60498843b"
+    },
+    {
+      "path": "smart_cities_design_system_v1.zip:Zone.Identifier",
+      "before_sha256": "65936e7a4fbb0791c509f161e0adaabdcb77fc26f3b068b8993112eea5866b99"
+    },
+    {
+      "path": "smart_cities_design_system_v1/smart_cities_design_system_v1/docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "smart_cities_design_system_v1/smart_cities_design_system_v1/templates/latex/common/p2_cloud_sorbet_colors.tex:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "smart_cities_design_system_v1/smart_cities_design_system_v1/templates/latex/experiment-report/README.md:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "smart_cities_design_system_v1/smart_cities_design_system_v1/templates/latex/experiment-report/demo-assets/distribution.pdf:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "smart_cities_design_system_v1/smart_cities_design_system_v1/templates/latex/experiment-report/demo-assets/heatmap.pdf:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "smart_cities_design_system_v1/smart_cities_design_system_v1/templates/latex/experiment-report/demo-assets/parallel.pdf:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "smart_cities_design_system_v1/smart_cities_design_system_v1/templates/latex/experiment-report/demo-assets/pareto.pdf:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "smart_cities_design_system_v1/smart_cities_design_system_v1/templates/latex/experiment-report/demo-assets/sensitivity.pdf:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "smart_cities_design_system_v1/smart_cities_design_system_v1/templates/latex/experiment-report/demo-assets/signature_map.pdf:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "smart_cities_design_system_v1/smart_cities_design_system_v1/templates/latex/experiment-report/experiment_report_template.tex:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "smart_cities_design_system_v1/smart_cities_design_system_v1/templates/latex/experiment-report/preview/Experiment_Report_P2_Exact.pdf:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "smart_cities_design_system_v2 .zip",
+      "before_sha256": "e66f70dccc6b8e98782fd442cbd74473fbb61b1459ebb242c9a816181401d39b"
+    },
+    {
+      "path": "smart_cities_design_system_v2 .zip:Zone.Identifier",
+      "before_sha256": "c8a8a247646c9dbf21fc2bed22da596409827a3ceda9eb5cc07f9350e8bc6fa2"
+    },
+    {
+      "path": "task1/作业/作业/._traj_dict.json",
+      "before_sha256": "07ac9dc173bcdda8a0779e186a341ff207e9b89c524da2537bf2af59a351dfcf"
+    },
+    {
+      "path": "task1/作业/作业/._traj_dict.json:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/._基于LLM的轨迹数据清洗评估.pptx",
+      "before_sha256": "12117162b8a0e3863c58b2c6d18790b40ceee0bb2a59059f35f54c78848a2cee"
+    },
+    {
+      "path": "task1/作业/作业/._基于LLM的轨迹数据清洗评估.pptx:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/.envrc.hint:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/.ipynb_checkpoints/作业1轨迹数据预处理-checkpoint.ipynb",
+      "before_sha256": "4d25f6bf95eb421d60d0fa7d2e363a52953a36923823b1acddaca34c3f703eea"
+    },
+    {
+      "path": "task1/作业/作业/.ipynb_checkpoints/作业1轨迹数据预处理-checkpoint.ipynb:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/.mplcache/fontlist-v390.json",
+      "before_sha256": "1ca028942966f5012ad6b3347b340d14a25e12791d43a0daa18a188d48e3fe81"
+    },
+    {
+      "path": "task1/作业/作业/.mplcache/fontlist-v390.json:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/ABLATION_REPORT.md:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/DECISIONS.md:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/README.md:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/build_ppt/assets/chart_anomaly.png:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/build_ppt/assets/chart_dp_curve.png:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/build_ppt/assets/chart_dup.png:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/build_ppt/assets/chart_heatmap.png:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/build_ppt/assets/chart_overlay.png:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/build_ppt/assets/chart_regime.png:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/build_ppt/assets/chart_sens.png:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/build_ppt/build_deck.mjs:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/build_ppt/inspect_deck.py:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/build_ppt/make_charts.py:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/build_ppt/node_modules:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/build_ppt/out/轨迹数据清洗_学生讲义.pptx:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/build_ppt_agent/assets/ablation_real.png:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/build_ppt_agent/assets/arch_layers.png:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/build_ppt_agent/assets/arch_loop.png:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/build_ppt_agent/assets/memory_tiers.png:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/build_ppt_agent/assets/param_three_stage.png:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/build_ppt_agent/assets/regret_bases.png:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/build_ppt_agent/build_deck.mjs:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/build_ppt_agent/build_native.mjs:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/build_ppt_agent/make_diagrams.py:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/build_ppt_agent/node_modules:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/build_ppt_agent/out/LLM辅助轨迹清洗评估智能体_架构与设计.pptx:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/build_ppt_agent/out2/基于LLM的轨迹数据清洗评估.pptx:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/demo_out/ablation.json:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/demo_out/ecnu_memory.sqlite:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/demo_out/ecnu_memory2.sqlite:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/demo_out/ecnu_token_report.md:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/demo_out/memory.sqlite:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/demo_out/summary.json:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/douglas_peucker.py:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/examples/run_demo.py:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/figures/demo_anomaly_scatter.png:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/figures/demo_clean_overlay.png:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/figures/report_ablation.png:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/figures/report_anomaly_scatter.png:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/figures/report_clean_overlay.png:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/figures/report_heatmap.png:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/figures/report_quality_compression.png:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/figures/report_sensitivity.png:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/pytest.ini:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/tests/__init__.py:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/tests/conftest.py:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/tests/test_agent.py:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/tests/test_anomalies.py:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/tests/test_architecture.py:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/tests/test_clean.py:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/tests/test_geo.py:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/tests/test_memory.py:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/tests/test_metrics.py:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/tests/test_report.py:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/tests/test_segment.py:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/tests/test_simplify.py:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/tests/test_tools.py:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/tests/test_verifier.py:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/traj_agent/__init__.py:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/traj_agent/agent/__init__.py:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/traj_agent/agent/loop.py:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/traj_agent/agent/prompts.py:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/traj_agent/agent/provider.py:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/traj_agent/core/__init__.py:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/traj_agent/core/anomalies.py:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/traj_agent/core/clean.py:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/traj_agent/core/diagnosis.py:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/traj_agent/core/geo.py:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/traj_agent/core/metrics.py:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/traj_agent/core/params.py:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/traj_agent/core/segment.py:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/traj_agent/core/simplify.py:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/traj_agent/core/traj.py:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/traj_agent/memory/__init__.py:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/traj_agent/memory/export.py:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/traj_agent/memory/features.py:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/traj_agent/memory/retrieve.py:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/traj_agent/memory/store.py:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/traj_agent/report/__init__.py:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/traj_agent/report/figures.py:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/traj_agent/road/__init__.py:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/traj_agent/road/matcher.py:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/traj_agent/tools/__init__.py:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/traj_agent/tools/playbook.py:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/traj_agent/tools/registry.py:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/traj_agent/tools/store.py:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/traj_agent/verifier/__init__.py:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/traj_agent/verifier/ablation.py:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/traj_agent/verifier/objective.py:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/traj_agent/verifier/search.py:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/traj_agent/verifier/verify.py:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/traj_dict.json:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/utils/__init__.py:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/utils/traj_dict.json:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/utils/util.py:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/utils/visualization.py:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/vault_stub/dp-tolerance.md:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/vault_stub/dt-threshold.md:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/vault_stub/regime-stationary.md:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/任务3_LLM辅助评估清洗.ipynb:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/作业1轨迹数据预处理.ipynb:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/使用说明.md:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "task1/作业/作业/基于LLM的轨迹数据清洗评估.pptx:Zone.Identifier",
+      "before_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "templates/latex/process-report/process_report_template.aux",
+      "before_sha256": "4ef7cb560dddd4254a506fba3cfb5e77217d085094d917118adb5b0ce752953b"
+    },
+    {
+      "path": "templates/latex/process-report/process_report_template.log",
+      "before_sha256": "8b348be55f4d8830c88c8154af1fa28cfee84b4ceab01b5e527b8e2e4edbea9b"
+    },
+    {
+      "path": "templates/latex/process-report/process_report_template.out",
+      "before_sha256": "08e4ce1df40442c6871387c520bf0fead4cb94bffcd4e3d0ccbeb9305452367e"
+    },
+    {
+      "path": "templates/latex/process-report/process_report_template.pdf",
+      "before_sha256": "b464ca19b6a39dea3be713bf4fd0a59d18a5ac97ba07b3e3ce55e1c85611990a"
+    },
+    {
+      "path": "templates/latex/process-report/process_report_template.toc",
+      "before_sha256": "d86669c7b7639b6c738a69c7074ad41300dddff520e1842038114681d1521d33"
+    }
+  ],
+  "renames_or_moves": [
+    {
+      "from": "smart_cities_design_system_v2 .zip",
+      "to": "smart_cities_design_system_v2.zip",
+      "sha256_before": "e66f70dccc6b8e98782fd442cbd74473fbb61b1459ebb242c9a816181401d39b",
+      "sha256_after": "e66f70dccc6b8e98782fd442cbd74473fbb61b1459ebb242c9a816181401d39b"
+    },
+    {
+      "from": "templates/latex/process-report/process_report_template.pdf",
+      "to": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/baseline/templates/latex/process-report/process_report_template.pdf",
+      "sha256": "b464ca19b6a39dea3be713bf4fd0a59d18a5ac97ba07b3e3ce55e1c85611990a",
+      "reason": "Preserve the duplicate packaged PDF as historical evidence; preview/ is the active rebuilt reference."
+    }
+  ],
+  "manifest_itself": {
+    "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/files-changed.json",
+    "status": "added",
+    "sha256": "omitted to avoid recursive self-hash"
+  }
+}
