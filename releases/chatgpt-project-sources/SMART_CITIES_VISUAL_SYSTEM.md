@@ -1,4 +1,4 @@
-# Smart Cities & Location Services — Visual / LaTeX Design System v2.1
+# Smart Cities & Location Services — Visual / LaTeX Design System v2.2
 
 Status: **LOCKED for Experiment Report and Process Report**
 
@@ -7,6 +7,8 @@ This document defines the long-term visual identity, LaTeX baseline, evidence pr
 The visual system is stable. Task-specific section names, figures and page structures may adapt to the teacher's requirements, but the locked visual identity and evidence principles must not be silently redesigned.
 
 ---
+
+Document routing: [Research Protocol](../../docs/research/SMART_CITIES_RESEARCH_PROTOCOL.md) owns research governance; [Interaction Evidence Protocol](../../docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md) owns authenticity, historical recovery, audit and lock; [AGENTS](../../AGENTS.md) owns engineering. This file owns visual grammar. Project Settings remains user-maintained in ChatGPT UI.
 
 ## 1. Shared Identity
 
@@ -72,8 +74,8 @@ It answers:
 
 Locked direction:
 
-**A · Modern Academic Minimal cover  
-+  
+**A · Modern Academic Minimal cover\
++\
 B · Visual Research Report body**
 
 Characteristics:
@@ -293,10 +295,10 @@ The same historical brainstorm must not simply appear unchanged in both reports.
 
 A useful relationship is:
 
-**Process Report:**  
+**Process Report:**\
 how the ideas evolved
 
-**Experiment Report:**  
+**Experiment Report:**\
 what technical design remained after convergence
 
 ---
@@ -310,7 +312,8 @@ Formal Process Report evidence must come from real Human–AI interaction.
 For important interaction evidence preserve:
 
 - raw screenshot;
-- annotated screenshot.
+- lossless crop or reproducible LaTeX trim specification;
+- annotated screenshot or editable LaTeX/TikZ source plus PDF overlay.
 
 The raw screenshot must remain untouched.
 
@@ -373,6 +376,36 @@ Do not:
 
 ---
 
+### 8.7 Interaction Evidence Visual Grammar
+
+**Original Evidence First.** Retrieval Screenshot may be a long scroll for context recovery; Formal Evidence Screenshot uses normal readable browser scale, sufficiently wide native high-resolution PNGs, with one Interaction Window per image as needed. Prefer multiple images/pages to unreadable shrinking.
+
+Preserve **raw / crop / annotated**. Use direct high-resolution PNG embedding plus TikZ/PDF vector annotation; lossless crop or LaTeX trim keeps the screenshot pixels intact. Record raw pixel size, crop bounds/pixel size, final physical display size and effective PPI. Calculate PPI from the displayed image region; require >=180 ppi, prefer >=200 ppi. Reduce display size, split pages or recapture when insufficient; page readability is also required.
+
+An **Interaction Trace** represents one decision interaction. A **Micro Trace** is one phrase correspondence. Make the **USER anchor** the visual center among GPT before / User / GPT after phrases. Use exact phrase highlight, short rounded outline, underline or numbered anchors; avoid whole-bubble boxes unless the whole bubble is the evidence object.
+
+Long-arrow correspondence must connect exact phrases approved by Evidence Master, using whitespace and margins without covering text. True one-to-one, one-to-many and many-to-one relations are allowed; symmetry does not justify adding an arrow. Semantic support, Interaction Window review and Phrase / Arrow Audit follow the Evidence Protocol.
+
+| Interaction role | P2 encoding |
+|---|---|
+| USER anchor / judgment | Apricot or Soft Rose light highlight |
+| GPT before / proposal / context | Light Blue |
+| GPT after / adoption / revision | Mist Violet or restrained Blue |
+| Connector | Ink or Blue accent |
+| Body / page | Paper / Panel / Ink |
+
+These interaction-specific roles take precedence over the general color suggestions in section 10. Labels and anchor numbers reinforce color semantics.
+
+Side Notes briefly state the human action, the following GPT change and, if necessary, later significance; normally about 40–80 Chinese characters. They do not repeat screenshots or rewrite the main text.
+
+A core page generally uses one principal Interaction Trace, optionally one supporting trace, or about 2–4 User phrase anchors. This is guidance, not a hard cap. Split a dense web of arrows across pages; preserve real final confirmation and use as many core-evidence pages as needed.
+
+A Contact Sheet supports process, context and lower-tier evidence. It needs real screenshots, stage labels and short explanations; Micro Trace is not mandatory.
+
+Prohibited: generated ChatGPT UI, redrawn interaction screenshots, AI upscale masquerading as original, fake sharpening, low-resolution enlargement, repeated resampling then enlargement, rasterized low-resolution annotations enlarged for print, arbitrary arrow connections. Rendering the PDF at 200 dpi is for inspection and does not increase source screenshot resolution.
+
+---
+
 ## 9. Process Diagram Language
 
 Three formal diagram grammars are locked.
@@ -395,10 +428,10 @@ This is the principal Human-in-the-loop diagram.
 
 It must explicitly show:
 
-**User Observation  
-→ User Interpretation / Judgment  
-→ User Proposal  
-→ Evidence / Verification  
+**User Observation\
+→ User Interpretation / Judgment\
+→ User Proposal\
+→ Evidence / Verification\
 → Final Decision**
 
 GPT suggestions may appear as context, but the human reasoning chain must not disappear behind AI-generated content.
@@ -500,10 +533,10 @@ and relevant references when needed.
 
 The relationship is:
 
-**publication-plots**  
+**publication-plots**\
 = publication-quality plotting baseline
 
-**SMART_CITIES_VISUAL_SYSTEM**  
+**SMART_CITIES_VISUAL_SYSTEM**\
 = project visual identity + document integration + Process Evidence language
 
 Project-specific P2 identity takes precedence over generic palette defaults from the plotting skill.
@@ -596,10 +629,10 @@ Preferred tools include:
 
 Recommended production flow:
 
-`real data / real code  
-→ plotting / GIS / diagram tool  
-→ SVG / PDF  
-→ optional visual refinement  
+`real data / real code\
+→ plotting / GIS / diagram tool\
+→ SVG / PDF\
+→ optional visual refinement\
 → formal output`
 
 Visual refinement may change:
@@ -727,6 +760,14 @@ The following are stable unless the teacher or user explicitly changes them:
 
 - **P2 · Cloud Sorbet Exact**
 - **XeLaTeX** default
+- Original Evidence First
+- raw/crop/annotated
+- phrase-level Micro Trace and exact phrase correspondence
+- long-arrow annotation
+- direct high-resolution PNG embedding
+- TikZ/PDF vector annotation
+- multi-page evidence
+- Phrase / Arrow Audit
 - Experiment Report:
   - A-style Modern Academic Minimal cover
   - B-style Visual Research body
@@ -735,7 +776,7 @@ The following are stable unless the teacher or user explicitly changes them:
   - Workflow Construction
   - Experiment Decision Process
   - real multi-page interaction evidence
-  - raw + annotated screenshots
+  - raw / crop / annotated assets
   - Contact Sheets
 - Process Diagram Language:
   - Editorial Decision Board

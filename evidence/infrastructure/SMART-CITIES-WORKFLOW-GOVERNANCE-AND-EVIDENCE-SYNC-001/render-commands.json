@@ -1,0 +1,50 @@
+[
+  {
+    "command": [
+      "pdfinfo",
+      "/home/addaswsw/lab/Smart_Cities_and_Location_Services/templates/latex/process-report/build/process_report_template.pdf"
+    ],
+    "exit_code": 0
+  },
+  {
+    "command": [
+      "pdftotext",
+      "-layout",
+      "/home/addaswsw/lab/Smart_Cities_and_Location_Services/templates/latex/process-report/build/process_report_template.pdf",
+      "-"
+    ],
+    "exit_code": 0
+  },
+  {
+    "command": [
+      "pdfimages",
+      "-list",
+      "/home/addaswsw/lab/Smart_Cities_and_Location_Services/templates/latex/process-report/build/process_report_template.pdf"
+    ],
+    "exit_code": 0
+  },
+  {
+    "command": [
+      "pdftoppm",
+      "-r",
+      "200",
+      "-png",
+      "/home/addaswsw/lab/Smart_Cities_and_Location_Services/templates/latex/process-report/build/process_report_template.pdf",
+      "/home/addaswsw/lab/Smart_Cities_and_Location_Services/templates/latex/process-report/build/render/page"
+    ],
+    "exit_code": 0
+  },
+  {
+    "command": [
+      "pdftocairo",
+      "-f",
+      "5",
+      "-l",
+      "5",
+      "-svg",
+      "/home/addaswsw/lab/Smart_Cities_and_Location_Services/templates/latex/process-report/build/process_report_template.pdf",
+      "/home/addaswsw/lab/Smart_Cities_and_Location_Services/templates/latex/process-report/build/render/micro-trace.svg"
+    ],
+    "exit_code": 0
+  }
+]

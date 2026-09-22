@@ -6,7 +6,7 @@ of the Smart Cities & Location Services project.
 
 The template follows:
 
-**Smart Cities Visual / LaTeX Design System v2.1**
+**Smart Cities Visual / LaTeX Design System v2.2**
 
 It shares the same P2 · Cloud Sorbet visual identity as the Experiment Report,
 but the two reports have different information responsibilities.
@@ -151,7 +151,8 @@ Every formal interaction shown in the Process Report must come from
 For important interactions preserve:
 
 - a raw screenshot;
-- an annotated copy.
+- a lossless crop or reproducible LaTeX trim specification;
+- an annotated copy or editable LaTeX/TikZ source plus PDF overlay.
 
 The raw screenshot must remain unchanged.
 
@@ -377,7 +378,7 @@ Do not overwrite the locked reference template for a specific assignment.
 
 For each formal task:
 
-1. copy the reference template into the task's report directory;
+1. copy the reference template and its `components/` directory into the task's report directory; keep inputs project-relative and point the palette input to the existing common source;
 2. keep the shared P2 palette and locked visual language;
 3. replace all demo content with real task content;
 4. insert genuine screenshots and interaction evidence;
@@ -402,3 +403,57 @@ latexmk -xelatex \
   -halt-on-error \
   -outdir=build \
   process_report_template.tex
+```
+
+## 12. Phrase-level Interaction Evidence authoring
+
+Required reads: [Evidence Protocol v2.3](../../../docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md), [Visual System v2.2](../../../docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md), [AGENTS](../../../AGENTS.md), and the current Evidence Master-approved annotation specification. Research governance lives in [Research Protocol](../../../docs/research/SMART_CITIES_RESEARCH_PROTOCOL.md).
+
+Production chain:
+
+raw screenshot → Evidence Master annotation spec → lossless crop → direct LaTeX embed → TikZ Micro Trace → XeLaTeX → 200-dpi render inspection → Phrase/Arrow Audit → Evidence Lock.
+
+Evidence Master selects phrases, relations, order and captions. Codex implements approved geometry and wording. Keep raw files unchanged, preserve crop parameters and annotated LaTeX/PDF. Review the Interaction Window; temporal adjacency alone never supports a relation.
+
+`components/interaction_evidence.tex` uses the existing shared P2 palette. The parent loads TikZ with `arrows.meta,calc` and the common palette before loading this component. It contains no screenshot-specific coordinates.
+
+| API | Usage |
+|---|---|
+| `\IEScreenshot[graphicx options]{path}{width}` | Direct PNG include; `trim={left bottom right top},clip` supported. |
+| `interactionevidence[graphicx options]{path}{width}` | Image with normalized coordinates: (0,0) bottom left, (1,1) top right of displayed crop. |
+| `\IEHighlight[role]{x1,y1}{x2,y2}` | Translucent phrase rectangle; default `ie user`. |
+| `\IEOutline[role]{x1,y1}{x2,y2}` | Rounded phrase outline, no fill. |
+| `\IEAnchor{name}{x,y}` | Named approved phrase endpoint. |
+| `\IEMarker[role]{x,y}{number}` | Small numbered marker. |
+| `\IECurvedArrow[style]{from}{to}` | Curved phrase-to-phrase connector. |
+| `\IERoutedArrow[style]{TikZ path}` | Explicit route through whitespace. |
+| `\IESideNote[style]{x,y}{text}` | Physical-size text beside image; default 40 mm width. |
+| `\IEProvenance[style]{x,y}{label}` | Provenance label. |
+| `\IEAssetLabel{x,y}{raw/crop/annotated}` | Asset-layer label. |
+
+Styles: `ie before` = Light Blue; `ie user` = Apricot; `ie user rose` = Soft Rose; `ie after` = Mist Violet; connector = Blue accent; body = Ink. Arrow semantics come from the spec. Keep evidence coordinates in each task page, not the reusable component. Cropping changes the coordinate basis; recalculate endpoints against the displayed crop.
+
+Effective PPI = displayed-region pixels / physical display inches, taking the smaller horizontal/vertical value. Require >=180, prefer >=200; preserve readability as well. If resizing/splitting cannot satisfy both, report `RECAPTURE_REQUIRED`; never AI-upscale or redraw UI. Record raw/crop pixel dimensions, crop bounds, display dimensions and PPI in the [internal Evidence Plan](../../../evidence/process-report/workflow-construction/WORKFLOW_EVIDENCE_PLAN.md).
+
+Check PHRASE MATCH, ARROW RELATION, ARROW ENDPOINT and SOURCE RESOLUTION individually. Failures block LOCK. Evidence Master performs final review/lock; successful compilation is not evidence approval. Contact Sheets do not require Micro Trace. Core evidence can span any necessary number of pages. Global Workflow Evolution Map is produced only after main workflow evidence is locked.
+
+## 13. Synthetic fixture and canonical preview
+
+The template contains a minimal `interactionevidence` example. All sample phrases and arrows are **SYNTHETIC / TEMPLATE ONLY**, not historical interaction. The raster background is a plain typeset specimen, not reconstructed ChatGPT UI. `demo-assets/micro_trace_specimen.tex` is its editable source. Generate its native PNG at 300 dpi, then include it directly; TikZ overlays remain vector in the final PDF.
+
+From `demo-assets/`:
+
+```bash
+latexmk -xelatex -interaction=nonstopmode -file-line-error -halt-on-error -outdir=build micro_trace_specimen.tex
+pdftoppm -f 1 -singlefile -r 300 -png build/micro_trace_specimen.pdf micro_trace_specimen
+```
+
+From the process-report directory, clean with `latexmk -C -outdir=build process_report_template.tex`, then run the compilation command in section 11. Render the fresh PDF:
+
+```bash
+pdftoppm -r 200 -png build/process_report_template.pdf build/process-page
+```
+
+Inspect every page and the full-resolution Micro Trace page for phrase accuracy, endpoints, side-note clipping, readable raster text and vector overlay. After validation refresh the sole [canonical preview](preview/Process_Report_P2_Locked_v1.pdf); `v1` is its locked visual identity filename, not the governance version. Do not create parallel active previews.
+
+The Experiment Report preview remains independent. Historical distribution ZIPs do not supersede installed sources.

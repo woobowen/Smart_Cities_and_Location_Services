@@ -1,0 +1,34 @@
+{
+  "staged_files_reviewed": 47,
+  "archive_members_scanned": 410,
+  "credential_patterns": [
+    "private_key",
+    "github_token",
+    "openai_key",
+    "aws_access_key",
+    "google_api_key",
+    "slack_token"
+  ],
+  "findings": [],
+  "large_files_at_or_above_100MiB": [],
+  "unexpected_cache_original_or_metadata_files": [],
+  "largest_file": {
+    "path": "releases/chatgpt-project-sources/作业.zip",
+    "bytes": 15376559
+  },
+  "secret_scan_limit": "High-confidence pattern scan and scope review; not a proof against all possible secrets. Existing originals and Skill archives were inspected without executing them.",
+  "binary_allowlist": [
+    "Three refreshed PDF paths: Process active preview, Process mirror, Experiment mirror (from unchanged active preview)",
+    "synthetic native PNG",
+    "200-dpi evidence render and two contact sheets",
+    "teacher-original PPTX and ZIP mirrors"
+  ],
+  "diff_review": "Related governance, template, mirror and evidence only; no tracked original deleted.",
+  "final_staged_files": 50,
+  "post_scan_additions_reviewed": [
+    "publication-check.json",
+    "files-changed.txt",
+    "whitespace-normalization.json"
+  ],
+  "final_staged_whitespace_check": "PASS after equivalent Markdown hard-break conversion and log whitespace normalization"
+}

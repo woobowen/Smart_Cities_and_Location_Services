@@ -1,0 +1,25 @@
+[
+  {
+    "cwd": "templates/latex/process-report",
+    "command": [
+      "latexmk",
+      "-C",
+      "-outdir=build",
+      "process_report_template.tex"
+    ],
+    "exit_code": 0
+  },
+  {
+    "cwd": "templates/latex/process-report",
+    "command": [
+      "latexmk",
+      "-xelatex",
+      "-interaction=nonstopmode",
+      "-file-line-error",
+      "-halt-on-error",
+      "-outdir=build",
+      "process_report_template.tex"
+    ],
+    "exit_code": 0
+  }
+]

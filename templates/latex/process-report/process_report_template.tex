@@ -21,6 +21,7 @@
 \usetikzlibrary{positioning,arrows.meta,calc,fit}
 
 \input{../common/p2_cloud_sorbet_colors.tex}
+\input{components/interaction_evidence.tex}
 
 \pagecolor{Paper}
 \color{Ink}
@@ -159,7 +160,7 @@ Editorial Board / Human Reasoning / Horizontal Candidate Tree
 
 状态
 &
-Design System v2.1（正式任务中必须替换为真实交互、真实证据和真实决定）
+Design System v2.2（正式任务中必须替换为真实交互、真实证据和真实决定）
 \end{tabular}
 
 \vfill
@@ -394,7 +395,7 @@ Workflow Construction 与 Experiment Decision Process
   width=.93\linewidth
 ]{demo-assets/contact_sheet.png}
 \caption{
-一般过程汇总的版式示例。
+SYNTHETIC / TEMPLATE ONLY：一般过程汇总的版式示例。
 正式版本替换为同阶段的真实 ChatGPT 网页截图。
 }
 \end{figure}
@@ -412,6 +413,47 @@ Workflow Construction 与 Experiment Decision Process
 \end{decisionbox}
 
 % ============================================================
+% Synthetic Micro Trace fixture; never treat these phrases as real evidence.
+% ============================================================
+\clearpage
+\section{短语对应与矢量批注：模板示例}
+
+\begin{contextbox}
+\textbf{SYNTHETIC / TEMPLATE ONLY}
+本页使用非聊天 UI 的合成文字样张，仅验证高清 PNG 直接嵌入、
+phrase highlight、User anchor、长箭头与侧注的工程能力。
+示例句及关系不代表真实用户观点、历史互动或 Evidence Lock。
+正式页面必须采用 Evidence Master 批准的原图与 annotation specification。
+\end{contextbox}
+
+\vspace{3mm}
+\noindent
+\begin{interactionevidence}[trim={0 0 0 0},clip]{demo-assets/micro_trace_specimen.png}{110mm}
+  \IEHighlight[ie before]{.079,.658}{.535,.704}
+  \IEHighlight[ie user]{.079,.418}{.490,.464}
+  \IEOutline[ie user]{.079,.418}{.490,.464}
+  \IEHighlight[ie after]{.079,.178}{.540,.224}
+  \IEAnchor{before-phrase}{.535,.68}
+  \IEAnchor{user-phrase}{.490,.44}
+  \IEAnchor{after-phrase}{.540,.20}
+  \IEMarker{.045,.44}{1}
+  \IECurvedArrow{user-phrase}{before-phrase}
+  \IERoutedArrow{(user-phrase) -- (.86,.44) -- (.86,.20) -- (after-phrase)}
+  \IESideNote{1.07,.74}{\textbf{① 示例动作与后续变化}\par
+    合成样例中的用户要求保留短语可读性；后续示例将单页安排改为跨页。
+    两条箭头只演示明确短语之间的对应，不构成真实历史证据。}
+  \IEProvenance[text width=40mm]{1.07,.30}{SYNTHETIC / TEMPLATE ONLY\\
+    Vector overlay: TikZ\\No Evidence Lock}
+  \IEAssetLabel{0,-.04}{synthetic PNG + vector annotation}
+\end{interactionevidence}
+
+\vspace{5mm}
+\noindent\small
+样张以 300 dpi 原生栅格化，在 110 mm 宽度直接显示，约 300 effective PPI。
+正式截图须分别记录 raw/crop 像素与最终尺寸；PDF 的 200-dpi 检查渲染不能提升原图清晰度。
+\normalsize
+
+% ============================================================
 % 3. Multi-page core interaction evidence
 % ============================================================
 
@@ -420,19 +462,21 @@ Workflow Construction 与 Experiment Decision Process
 \section{核心交互：连续多页证据（1/3）}
 
 \begin{contextbox}
+\textbf{SYNTHETIC / TEMPLATE ONLY}\par
 重要交互不限制为两页。
 
 页数由内容完整性和可读性决定，
 必要时可连续三页、四页或更多。
 
 正式版使用用户保存的原始网页截图，
-并保留 raw 与 annotated 两个版本。
+并保留 raw / crop / annotated 三层资产。
 
 该机制同时适用于工作流关键决策和实验关键决策。
 \end{contextbox}
 
 \noindent
 \begin{minipage}[t]{.68\linewidth}
+\vspace{0pt}
 
 \includegraphics[
   width=\linewidth
@@ -441,6 +485,7 @@ Workflow Construction 与 Experiment Decision Process
 \end{minipage}
 \hfill
 \begin{minipage}[t]{.28\linewidth}
+\vspace{0pt}
 
 \vspace{4mm}
 
@@ -481,6 +526,7 @@ Workflow Construction 与 Experiment Decision Process
 \addcontentsline{toc}{section}{核心交互：连续多页证据（2/3）}
 
 \begin{contextbox}
+\textbf{SYNTHETIC / TEMPLATE ONLY}\par
 连续页不机械重复固定两栏。
 
 可根据原始截图比例使用宽幅截图，
@@ -516,7 +562,7 @@ highlight、编号和箭头使用 P2 语义色，
 \vspace{4mm}
 
 \noindent
-\semantic{P1}{GPT修正}
+\semantic{P4}{GPT修正}
 \quad
 将原先单一路径改成公平对照实验设计，
 并等待真实证据裁决。
@@ -536,7 +582,7 @@ highlight、编号和箭头使用 P2 语义色，
 ]{demo-assets/interaction_part3.png}
 
 \caption{
-核心交互收尾页示意。
+SYNTHETIC / TEMPLATE ONLY：核心交互收尾页示意。
 正式版本必须替换为真实最终确认。
 }
 \end{figure}
