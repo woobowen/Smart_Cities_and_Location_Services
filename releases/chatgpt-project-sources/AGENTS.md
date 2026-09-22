@@ -431,6 +431,19 @@ GitHub与老师最终提交包职责不同：
 
 若老师或数据来源存在明确的公开/授权限制，也必须停止相关公开同步并报告。
 
+### ChatGPT Project Sources Upload Bundle
+
+`releases/chatgpt-project-sources/` 是可直接全量上传到 ChatGPT Project Sources 的 **Upload-Ready Bundle**。目录内容必须严格等于批准的 11-file upload set：用户可以删除 UI 中旧项目源后，打开该目录并全选上传。AGENTS.md 本身也是正式 PROJECT_SOURCE。
+
+- 目录只包含应上传的 11 个普通文件；不放 README、manifest、Evidence Plan、脚本、日志、备份、临时文件、子目录或带重复上传后缀的文件。
+- Project Settings 是最高层规则的例外，仅由用户在 ChatGPT UI 配置，不创建文件副本；内部 WORKFLOW_EVIDENCE_PLAN 不上传。
+- **Active source first → Upload bundle second**。bundle 仅为精确 distribution copy，不直接修改其中治理文档；每次 active Project Source 变化后必须同步。
+- 使用既有 [sync_sources.py](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/sync_sources.py) 的固定 allowlist 同步并清理目录中的非 allowlist 普通文件，再执行 `--check`。遇到子目录或符号链接先报告，不递归删除。
+- 必须核验 canonical names、EXACTLY 11、active bytes == bundle bytes 与 SHA256；二进制文件按字节比较。publication-plots.zip 保留已批准原始 distribution，核验固定 hash 与 installed Skill 的 effective members，不擅自重新打包。
+- [Internal manifest](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/evidence/infrastructure/chatgpt-project-source-sync/SOURCE_MANIFEST.md) 与 [Upload instructions](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/evidence/infrastructure/chatgpt-project-source-sync/UPLOAD_INSTRUCTIONS.md) 均保存在上传目录之外；manifest 的 11 项 Role 统一为 PROJECT_SOURCE，不代表 UI 当前状态。
+- 稳定目录与 canonical 文件名不添加 bundle_v2/final/new 后缀，版本由 Git commit 管理。
+- Codex 只能报告 **UPLOAD BUNDLE READY**，不得声称已完成 ChatGPT UI 上传。用户上传后由 GPT Evidence Master 做最终一致性审核。
+
 ### Git操作
 
 修改前：

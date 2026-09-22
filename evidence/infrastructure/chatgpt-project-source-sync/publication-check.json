@@ -1,0 +1,54 @@
+{
+  "scanned_files": 24,
+  "archive_members_scanned": 426,
+  "high_confidence_findings": [],
+  "literal_credential_candidates": [
+    {
+      "path": "releases/chatgpt-project-sources/作业.zip::作业/.envrc.hint",
+      "offset": 272,
+      "length": 12
+    },
+    {
+      "path": "releases/chatgpt-project-sources/作业.zip::作业/使用说明.md",
+      "offset": 1070,
+      "length": 12
+    }
+  ],
+  "large_files": [],
+  "runtime_personal_absolute_paths": [],
+  "bundle_entries": [
+    "AGENTS.md",
+    "Experiment_Report_P2_Exact.pdf",
+    "Process_Report_P2_Locked_v1.pdf",
+    "SMART_CITIES_RESEARCH_PROTOCOL.md",
+    "SMART_CITIES_VISUAL_SYSTEM.md",
+    "WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md",
+    "publication-plots.zip",
+    "任务3_LLM辅助评估清洗.ipynb",
+    "作业.zip",
+    "作业1轨迹数据预处理.ipynb",
+    "实验课1.pptx"
+  ],
+  "all_bundle_entries_ordinary_files": true,
+  "removed_from_bundle": [
+    "SOURCE_MANIFEST.md (moved and updated internally)"
+  ],
+  "active_source_deletions": [],
+  "scan_limit": "Pattern scan plus scope review; not a proof against every possible secret.",
+  "credential_candidate_review": [
+    {
+      "path": "releases/chatgpt-project-sources/作业.zip::作业/.envrc.hint",
+      "offset": 272,
+      "length": 12,
+      "classification": "EXPLICIT_PLACEHOLDER"
+    },
+    {
+      "path": "releases/chatgpt-project-sources/作业.zip::作业/使用说明.md",
+      "offset": 1070,
+      "length": 12,
+      "classification": "EXPLICIT_PLACEHOLDER"
+    }
+  ],
+  "unresolved_credential_candidates": [],
+  "security_status": "PASS"
+}

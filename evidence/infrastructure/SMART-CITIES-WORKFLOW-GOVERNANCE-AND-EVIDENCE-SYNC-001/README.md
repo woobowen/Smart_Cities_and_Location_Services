@@ -1,5 +1,7 @@
 # Workflow governance and evidence synchronization
 
+**Historical run 001 record.** Upload packaging is now governed by [Upload Bundle 002](../chatgpt-project-source-sync/README.md). The existing `sync_sources.py` and `validate_sync.py` have been upgraded in place; current metadata goes to [the internal manifest](../chatgpt-project-source-sync/SOURCE_MANIFEST.md). Historical JSON/TXT hashes, roles and paths below describe run 001 and are not current upload instructions. The upload directory now contains exactly eleven files, all PROJECT_SOURCE, with no manifest inside.
+
 Run: SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001\
 Scope: one-time governance, reusable Process template and Project Sources synchronization. No Experiment 1 implementation, notebook execution, parameter search or formal result production.
 
@@ -13,7 +15,7 @@ The canonical path did not exist. A read-only backup was saved outside the repos
 
 `preflight.json` records main, starting SHA, initial status, palette hash and hashes for all 106 tracked task1 files. The first command was `ls -la`; the root contained `.git`, `.gitignore`, `AGENTS.md`, `docs`, `evidence`, `releases`, `task1`, `templates`, `tools`.
 
-## Active responsibilities and consistency review
+## Recorded responsibilities and consistency review (run 001)
 
 | Pair / issue | Review and resulting rule |
 |---|---|
@@ -32,7 +34,7 @@ Added `components/interaction_evidence.tex` with direct include, trim/clip, high
 
 The initial specimen build failed because the preceding edit used the wrong working directory and the unapplied draft still referenced unavailable `standalone.cls`. `specimen-initial-failure.txt` preserves that failure. One correction applied the intended existing `article` + geometry setup and corrected the edit directory; the specimen then compiled. No dependency installation or engine change was needed. Later visual refinement tightened phrase bounds/arrow endpoints and fixed existing sidebar top alignment; a fresh clean build followed.
 
-Actual validation commands:
+Historical run 001 commands (the sync/validation paths now implement the current upload-bundle contract):
 
 ```bash
 # In templates/latex/process-report/demo-assets
