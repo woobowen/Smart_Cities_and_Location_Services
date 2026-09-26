@@ -23,6 +23,15 @@ class ProviderError(RuntimeError):
     pass
 
 
+# CLI 0.157.1 emits this startup diagnostic when we intentionally remove its
+# code executor. It is not a failed model turn: it also returns exit 0 and a
+# completed schema response. Preserve the message and require all success events.
+# All other errors, missing events, malformed JSON and unexpected tools fail closed.
+DISABLED_CODE_HOST = ('Code Mode is unavailable because code-mode host is disabled. '
+                     'Code mode will fail closed; enable `features.code_mode_host` '
+                     'and install `codex-code-mode-host`.')
+
+
 def response_schema(role, call_id, actions):
     fields={
         'role':{'type':'string','enum':[role]},
@@ -59,7 +68,9 @@ def visible_events(stdout):
             if item.get('type')=='agent_message':
                 events.append(event)
             elif item.get('type')=='error':
-                events.append({'type':'error','message':item.get('message',item.get('text','CLI error item')),'item_id':item.get('id')})
+                message=item.get('message',item.get('text','CLI error item'))
+                kind='capability.disabled' if message==DISABLED_CODE_HOST else 'error'
+                events.append({'type':kind,'message':message,'item_id':item.get('id')})
             else:
                 # Unexpected CLI tool activity is an execution-boundary failure.
                 events.append({'type':'unexpected_tool','item_type':item.get('type'),'item_id':item.get('id')})

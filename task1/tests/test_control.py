@@ -8,7 +8,7 @@ import pytest
 
 from task1.workflow import controller as c,tools
 from task1.workflow.io import CONFIG,read_json,write_json,digest,object_hash,bound_path
-from task1.workflow.provider import parse_response,visible_events,response_schema,ProviderError,CodexProvider
+from task1.workflow.provider import parse_response,visible_events,response_schema,ProviderError,CodexProvider,DISABLED_CODE_HOST
 from task1.workflow.diagnostics import profile,independent_profile_review,time_boundaries
 
 
@@ -158,6 +158,22 @@ def test_jsonl_and_schema_are_strict_and_reasoning_not_saved():
 def test_unexpected_cli_tools_cannot_pass():
     events=visible_events(json.dumps({'type':'item.completed','item':{'type':'command_execution','id':'bad'}}))
     with pytest.raises(ProviderError):parse_response(events,{},0)
+
+
+def test_intentionally_disabled_code_host_requires_completed_valid_turn():
+    raw=[{'type':'thread.started','thread_id':'fixture'},
+         {'type':'item.completed','item':{'type':'error','message':DISABLED_CODE_HOST,'id':'startup'}},
+         {'type':'item.completed','item':{'type':'agent_message','text':json.dumps(request())}},
+         {'type':'turn.completed','usage':{}}]
+    schema=response_schema('execution','test-call',['profile_pilot'])
+    events=visible_events('\n'.join(map(json.dumps,raw)))
+    assert events[1]['type']=='capability.disabled'
+    assert parse_response(events,schema,0)[0]==request()
+    with pytest.raises(ProviderError):parse_response(events[:-1],schema,0)
+    with pytest.raises(ProviderError):parse_response(events,schema,1)
+    raw[1]['item']['message']='A different unexpected startup error'
+    with pytest.raises(ProviderError):
+        parse_response(visible_events('\n'.join(map(json.dumps,raw))),schema,0)
 
 
 def test_known_raw_fixture_counts_and_time_partition():
