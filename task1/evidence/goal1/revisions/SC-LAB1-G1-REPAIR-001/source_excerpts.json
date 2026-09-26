@@ -1,0 +1,58 @@
+{
+  "teacher:13:body": {
+    "id": "teacher:13:body",
+    "path": "task1/实验课1.pptx",
+    "sha256": "cf5fdbdd0e116818f4bf195e8761dd55c4733443d7c360c986cf1cdfddfda075",
+    "member": "ppt/slides/slide13.xml",
+    "claim_status": "DATUM_NOT_BOUND_TO_JSON",
+    "kind": "source",
+    "excerpt": "GPS\n坐标系\nWGS84\n坐标系\n       \n即地球坐标系（\nWorld Geodetic System\n），国际上通用的坐标系。设备包含的\nGPS\n芯片或者北斗芯片获取的经纬度一般都是为\nWGS84\n地理坐标系，目前谷歌地图采用的是\nWGS84\n坐标系。\nGCJ02\n坐标系\n       \n即火星坐标系，国测局坐标系。是由中国国家测绘局制定。由\nWGS84\n坐标系经加密后的坐标系。谷歌中国和搜搜中国采用的\nGCJ02\n地理坐标系。",
+    "verification_scope": "File and excerpt verified; claim status is separate"
+  },
+  "teacher:13:notes": {
+    "id": "teacher:13:notes",
+    "path": "task1/实验课1.pptx",
+    "sha256": "cf5fdbdd0e116818f4bf195e8761dd55c4733443d7c360c986cf1cdfddfda075",
+    "member": "ppt/notesSlides/notesSlide13.xml",
+    "claim_status": "DATUM_NOT_BOUND_TO_JSON",
+    "kind": "source",
+    "excerpt": "通俗来讲，国内收集的\nGPS\n轨迹数据都是\nGCJ02\n坐标系的，而国际上的数据则普遍为\nWGS84\n坐标系，如\nopen\n \nstreet\n \nmap\n、\nbing\n等开源地图，在日常使用时。",
+    "verification_scope": "File and excerpt verified; claim status is separate"
+  },
+  "teacher:20": {
+    "id": "teacher:20",
+    "path": "task1/实验课1.pptx",
+    "sha256": "cf5fdbdd0e116818f4bf195e8761dd55c4733443d7c360c986cf1cdfddfda075",
+    "member": "ppt/slides/slide20.xml",
+    "claim_status": "PREDICATE_ONLY_SCHEDULE_UNAPPROVED",
+    "kind": "source",
+    "excerpt": "为什么需要轨迹数据预处理\n漂移点\n解决方法：轨迹去噪\nStep1:\n \n计算每个轨迹点的方向：当前轨迹点与后序轨迹点连成线段的方向\nStep2:\n \n定位方向与其前后序轨迹点方向都存在较大差异的漂移轨迹点，删除该点并连接其前后序轨迹点\nInput\n：单条轨迹数据 \ntr\n=\n{\n(\n𝑝\n0\n, \n𝑡\n0\n),\n(\n𝑝\n1\n, \n𝑡\n1\n),\n…,\n(\n𝑝\n𝑛\n, \n𝑡\n𝑛\n)\n}\n \n𝑝\n2\n的\n方向\n与\n𝑝\n1\n、\n𝑝\n3\n的\n方向\n差异\n均\n大于\n一定\n阈值\n，\n删除\n𝑝\n2\n \nOutput\n：\ntr\n=\n{\n(\n𝑝\n0\n, \n𝑡\n0\n),\n(\n𝑝\n1\n, \n𝑡\n1\n),\n(\n𝑝\n3\n, \n𝑡\n3\n),…,\n(\n𝑝\n𝑛\n, \n𝑡\n𝑛\n)\n}\n \n𝑝\n0\n \n𝑝\n1\n \n𝑝\n2\n \n𝑝\n3\n \n𝑝\n4\n \n𝑝\n5\n \n𝑝\n6\n \n𝑝\n3\n的\n方向\n为\n线段\n𝑝\n3\n→\n𝑝\n4\n的\n方向\n \n并\n连接\n𝑝\n1\n、\n𝑝\n3\n ",
+    "verification_scope": "File and excerpt verified; claim status is separate"
+  },
+  "repair:authorization": {
+    "id": "repair:authorization",
+    "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-REPAIR-001/handoff/SC-LAB1-G1-REPAIR-001_CODEX_PROMPT.md",
+    "sha256": "b7d0b7a7bf943b5719b46a42bef6b2185de6f1b415a9f503bf8c291ff93835f0",
+    "lines": [
+      107,
+      146
+    ],
+    "claim_status": "ENGINEERING_AND_BOUNDED_LIVE_AUTHORIZED_NOT_D1_D2",
+    "kind": "source",
+    "excerpt": "先做离线工作：\n1. 固定实际CLI路径/版本，核实本机参数schema与生效provider；对照该版本官方文档或源码。当前在线最新版说明不能替代本机版本证据。\n2. 检查登录方式/状态和所需工作区路由条件，只使用正常的状态接口和脱敏输出。不读取、复制或上传auth.json/token；不自动logout/login、不换计费API或账号、不改全局配置。\n3. 区分本地cwd、认证工作区、服务端路由和网络问题。不能凭报错文字就认定改cd必然解决。\n4. 实现对可见流事件的实时观察：有未预期的重连、fallback或错误时及时停止，不等communicate结束后才发现全部重试已经发生；处理进程组与清理。\n5. 分别统计预算预留、子进程实际启动、完成turn、有效结构响应、工具执行、可见重试和不可观察请求数；unknown保持unknown。\n6. 先用离线假进程/事件流证明限制生效。不能用这些fixture证明真实服务端请求次数为0或精确可知。\n\n本修复任务的有界联网授权：沿用用户已有ChatGPT/Codex访问，不开启额外付费API；最多新增6次外层模型派发，包含1次小型连通性探针和最多5次角色调用，串行、无自动重新提交。每次最长180秒，新增数值工具请求最多12次。额度是本次明确的新批次，旧4次及旧live_stop历史保留，不得换base/run_id清空累计记录。\n\n只有R1-F01/F02/F04及离线停止/预算测试通过，才能使本批次具备受控启动资格；不要直接把旧ledger的live_stop删掉。新批次引用本Prompt和测试结果。\n\n先单独做1次小型探针，不带完整轨迹任务或大量资料。成功且没有未预期重试，再启动角色链；首次路由/认证/预算异常则冻结本批次，不消耗剩余次数盲试。旧日志不能当成当前版本的成功验证。\n\n已检查的官方入口：\nhttps://developers.openai.com/codex/config-reference/\nhttps://developers.openai.com/codex/noninteractive/\nhttps://developers.openai.com/codex/auth/\n\n保留用户权限。只有用户明确同意后才能采用需额外认证或额外计费的替代方案。本轮不增加新的provider工程分支来回避故障。\n\n## 4. 两项研究前提：不能由工程修复伪造批准\n\n### D1：当前 JSON 的坐标基准与允许距离口径\n\n目前仍为UNKNOWN/未批准。保持原始值，不猜WGS84/GCJ02，不因数值像经纬度或底图看起来重合就标VERIFIED。\n\n只做定点追源：核对现有来源是否明确绑定这份JSON、原始数据说明或教师最新补充是否已经给出答案。不要再广泛检索论文，也不要用其他数据集的坐标系代替。\n\n若证据足够，保存具体原文、版本与绑定关系供研究层审核；距离/投影方案仍应明确说明单位、误差和适用范围。若没有证据，形成一条聚焦的数据提供方问题：这份traj_dict.json原始坐标是什么基准、是否加偏，是否有与文件对应的数据说明？不代发邮件。\n\n### D2：方向去噪删除调度\n\nGPT当前推荐的候选是：在本轮输入片段上一次计算教师双侧方向谓词，标记后同时删除；首尾及无法计算所需方向的点保留并标记；不自动反复删至收敛。删除后重算下游特征。\n\n推荐理由：不引入遍历顺序依赖，减少原文未指定的额外迭代；不是声称该规则效果最优或教师已经写明。\n\n本Prompt不替用户将该方法状态改成APPROVED。可以在明确标注的平面构造样例上准备该候选及独立检查；必须获得明确用户方法确认后才接入真实基线。若用户另给了确认，精确归档实际原话和授权范围，不能自己代写批准。\n\nD1/D2没有解决时，不阻止修复工程、数学测试、三角色真实诊断反馈；但完整真实处理与Goal1总体通过仍BLOCKED。不要把诊断闭环成功当成这两个前提已经解决。",
+    "verification_scope": "File and excerpt verified; claim status is separate"
+  },
+  "historical:stage01": {
+    "id": "historical:stage01",
+    "path": "task1/docs/research/Task1_Stage01_Readonly_Audit.md",
+    "sha256": "ffe30283c71250dabf4cf90c55d673f0e56c639f32324c7415048ee3a298e15f",
+    "lines": [
+      165,
+      171
+    ],
+    "claim_status": "HISTORICAL_NOT_NEW_RESULT",
+    "kind": "source",
+    "excerpt": "    ]\n  ],\n  \"crs\": \"UNVERIFIED: raw file has no CRS metadata\",\n  \"timezone\": \"UNVERIFIED: raw file has no timezone metadata\",\n  \"object_identity\": \"Raw keys exist; one key = one unique vehicle/person/trip is not established by file alone\",\n  \"ground_truth\": \"No truth coordinate/label fields in raw [timestamps,coordinates] schema\",\n  \"record_352_read_only_check\": {",
+    "verification_scope": "File and excerpt verified; claim status is separate"
+  }
+}

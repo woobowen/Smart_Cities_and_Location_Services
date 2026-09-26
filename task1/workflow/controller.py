@@ -12,23 +12,30 @@ import jsonschema
 from .io import ROOT,CONFIG,EVIDENCE,DATA,read_json,write_json,digest,object_hash,now,bound_path,relative
 from .provider import CodexProvider,ProviderError,response_schema,verify_saved_call
 from .tools import execute_tool
+from .sources import source_context, validate_references
+from .pipeline import preflight
+from .provider import redact
 
 PHASES=[
-    ('research','Initial TaskPlan: inspect the supplied requirements, semantics and actual raw diagnostics. Request source_evidence to check the semantic blockers and state an in-scope plan for the execution role, with sources and limitations. Do not approve unknown semantics.'),
-    ('execution','Execute the approved diagnostic scope. Request profile_pilot now to establish the required complete numeric input for the independent reviewer. Other tools require this prerequisite. Real full baseline is currently blocked.'),
-    ('review','Review actual tool receipts. Request verify_profiles (independent deterministic audit) and identify one concrete diagnostic gap to feed back. Distinguish implementation from quality.'),
-    ('research','You now have actual reviewer feedback and independent tool results. Refer to their exact IDs in feedback_refs. Choose a justified follow-up: duplicate_details, time_boundaries or recompute_check, or flag a research escalation. Do not merely repeat the previous task.'),
-    ('review','Review the executed follow-up and the earlier independent audit. Request recompute_check or verify_profiles for final reproducibility. State what remains blocked and a concrete next research task; no quality upgrade without thresholds.'),
+    ('research','Inspect actual source excerpts, contract and initial diagnostics. Choose an allowed initial diagnostic or escalate insufficient evidence. Never approve unknown semantics.'),
+    ('execution','Use the prior research request and current artifacts. Establish complete pilot profiles if absent; otherwise choose a justified diagnostic or approved baseline. Escalation is allowed.'),
+    ('review','Review actual artifacts. Request independent numeric verification. Evidence insufficiency is valid; do not invent a defect.'),
+    ('research','Use the current reviewer conclusion AND its verified numeric result. Choose a justified follow-up diagnostic/recheck or escalate. Cite all required_feedback IDs.'),
+    ('review','Review the actual follow-up, cite required_feedback, run final independent verification or escalate. State the next task and distinguish diagnostic from processing closure.'),
 ]
-PHASE_ACTIONS=[['source_evidence'],['profile_pilot'],['verify_profiles'],
-               ['duplicate_details','time_boundaries','recompute_check'],['recompute_check','verify_profiles']]
+# Broad per-stage upper bounds; available_actions further enforces prerequisites.
+PHASE_ACTIONS=[['contract_snapshot','source_check','profile_pilot','time_boundaries','duplicate_details','escalate'],
+               ['profile_pilot','time_boundaries','duplicate_details','baseline','escalate'],
+               ['verify_profiles','recompute_check','verify_baseline','escalate'],
+               ['duplicate_details','time_boundaries','recompute_check','source_check','escalate'],
+               ['recompute_check','verify_profiles','verify_baseline','escalate']]
 
 
 class GateError(ValueError):
     pass
 
 
-def validate_request(request,role,call_id,policy,pilot,*,mode='LIVE',feedback_ids=()):
+def validate_request(request,role,call_id,policy,pilot,*,mode='LIVE',feedback_ids=(),context=None,run_id=None):
     jsonschema.validate(request,response_schema(role,call_id,policy['actions'][role]))
     if policy['goal']!=1 or policy['metrics_version']!='g1-metrics-v1' or policy['semantics_version']!='g1-semantics-v1':
         raise GateError('UNAPPROVED_GOAL_OR_CONTRACT_VERSION')
@@ -39,21 +46,26 @@ def validate_request(request,role,call_id,policy,pilot,*,mode='LIVE',feedback_id
         raise GateError('RECORD_SCOPE_OR_HOLDOUT_VIOLATION')
     if not request['reason'].strip() or not request['evidence_refs']:
         raise GateError('MISSING_REASON_OR_SOURCE')
-    if feedback_ids and not set(request['feedback_refs']).intersection(feedback_ids):
+    if feedback_ids and not set(feedback_ids).issubset(request['feedback_refs']):
         raise GateError('MISSING_ACTUAL_FEEDBACK_REFERENCE')
-    if request['request_status']!='PROPOSED':
+    try:
+        validate_references(request,context if context is not None else source_context(),
+                            'RAW:'+policy['raw_sha256'],run_id,feedback_ids)
+    except ValueError as exc: raise GateError(str(exc)) from exc
+    if request['request_status']!='PROPOSED' and request['action']!='escalate':
         raise GateError('ROLE_REQUEST_REQUIRES_REVIEW:'+request['request_status'])
-    if request['action']=='baseline' and policy['method']['processing_status']!='APPROVED_FOR_REAL_INPUT':
+    if request['action']=='baseline' and preflight(policy):
         raise GateError('UNKNOWN_SEMANTICS_BASELINE_BLOCKED')
     return request
 
 
 class Controller:
-    def __init__(self,run_id,*,mode='LIVE',base=EVIDENCE/'runs',policy_path=CONFIG,pilot_path=ROOT/'task1/config/pilot.json'):
+    def __init__(self,run_id,*,mode='LIVE',base=EVIDENCE/'runs',policy_path=CONFIG,pilot_path=ROOT/'task1/config/pilot.json',batch=None):
         if not re.fullmatch(r'[a-zA-Z0-9][a-zA-Z0-9_-]{0,90}',run_id):
             raise GateError('ILLEGAL_RUN_ID')
         if mode not in ('LIVE','MOCK_TEST','REPLAY','SEARCH_ONLY'):
             raise GateError('UNKNOWN_MODE')
+        self.batch=batch
         self.base=Path(base).resolve();self.base.mkdir(parents=True,exist_ok=True)
         self.directory=bound_path(self.base,run_id)
         if self.directory.is_symlink():raise GateError('SYMLINK_RUN')
@@ -72,10 +84,10 @@ class Controller:
                         'policy_sha256':self.config_hash,'pilot_sha256':self.pilot_hash,
                         'input_sha256':self.policy['raw_sha256'],'started_at':now(),
                         'code_sha':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),
-                        'source_hashes':{relative(p):digest(p) for p in sorted((ROOT/'task1/workflow').glob('*.py'))},
+                        'source_hashes':{relative(p):digest(p) for p in [*sorted((ROOT/'task1/workflow').glob('*.py')),ROOT/'task1/config/goal1_sources.json']},
                         'tools':[],'calls':[],'model_dispatches':{},'decisions':[],'accepted_version':None,'errors':[]}
             self.save()
-        self.ledger_path=self.base/('budget_live.json' if mode=='LIVE' else 'budget_'+mode.lower()+'.json')
+        self.ledger_path=(EVIDENCE/'runs'/'budget_live.json') if mode=='LIVE' else self.base/('budget_'+mode.lower()+'.json')
         if not self.ledger_path.exists():
             write_json(self.ledger_path,{'model_attempts':0,'tool_requests':0,'by_run':{},'retry_failures':{}},exclusive=True)
 
@@ -95,6 +107,8 @@ class Controller:
         return e['event_hash']
 
     def spend(self,kind,call_id=None):
+        if self.mode=='LIVE' and self.batch is not None:
+            self.batch.reserve(kind,self.run_id,call_id);return
         # Execution is serial by contract; budget persists across run IDs.
         ledger=read_json(self.ledger_path)
         if kind=='model_attempts' and ledger.get('live_stop'):
@@ -135,21 +149,24 @@ class Controller:
             raise GateError('WRONG_PARENT_VERSION')
         if payload['output'].get('input_sha256')!=self.state['input_sha256']:
             raise GateError('INPUT_HASH_MISMATCH')
-        if payload['output'].get('status') not in ('EXECUTED','VERIFIED','REJECTED','BLOCKED'):
+        if payload['output'].get('status') not in ('EXECUTED','VERIFIED','REJECTED','BLOCKED','FAILED'):
             raise GateError('FORGED_SUCCESS_STATUS')
         if payload['output'].get('status')!=tool['status'] or payload['request'].get('action')!=tool['action']:
             raise GateError('TOOL_SUMMARY_MISMATCH')
         return payload
 
-    def dispatch(self,request,role,call_id,*,feedback_ids=(),inject_failure=False):
+    def _dispatch(self,request,role,call_id,*,feedback_ids=(),inject_failure=False):
         self.protection_check()
+        if self.state['phase']>=3:
+            actual=self.required_feedback()
+            if set(feedback_ids)!=set(actual):raise GateError('WRONG_CURRENT_FEEDBACK_TRIGGER')
         try:
-            validate_request(request,role,call_id,self.policy,self.pilot,mode=self.mode,feedback_ids=feedback_ids)
+            validate_request(request,role,call_id,self.policy,self.pilot,mode=self.mode,feedback_ids=feedback_ids,context=self.context(),run_id=self.run_id)
         except (ValueError,jsonschema.ValidationError) as exc:
             self.event('REQUEST_REJECTED',call_id=call_id,reason=str(exc))
             raise
         self.spend('tool_requests')
-        key=object_hash({'action':request['action'],'ids':request['record_ids'],'input':self.state['input_sha256'],
+        key=object_hash({'call_id':call_id,'action':request['action'],'ids':request['record_ids'],'input':self.state['input_sha256'],
                          'contract':self.config_hash,'profiles':self.profiles() if request['action'] in ('verify_profiles','recompute_check') else None})
         artifact='tools/'+key+'.json'
         path=bound_path(self.directory,artifact)
@@ -162,15 +179,12 @@ class Controller:
             self.state['status']='DISPATCHED';self.save()
             self.event('TOOL_DISPATCHED',call_id=call_id,action=request['action'],request_hash=key)
             start=time.perf_counter();self.state['status']='RUNNING';self.save()
-            if inject_failure:
-                self.state['errors'].append({'call_id':call_id,'reason':'INJECTED_FAILURE','classification':'ENGINEERING_TEST'})
-                self.state['status']='REJECTED';self.save()
-                self.event('TOOL_FAILED',call_id=call_id,reason='INJECTED_FAILURE',classification='ENGINEERING_TEST')
-                raise GateError('INJECTED_FAILURE')
+            if inject_failure: raise GateError('INJECTED_FAILURE')
             output=execute_tool(request['action'],request['record_ids'],self.policy,self.profiles(),
-                                classification='CURRENT_RUN_REAL_DATA' if self.mode=='LIVE' else self.mode)
+                                classification='CURRENT_RUN_REAL_DATA' if self.mode=='LIVE' else self.mode,
+                                previous_baseline=self.baseline_output())
             self.protection_check()
-            if output.get('status') not in ('EXECUTED','VERIFIED','REJECTED','BLOCKED'):
+            if output.get('status') not in ('EXECUTED','VERIFIED','REJECTED','BLOCKED','FAILED'):
                 raise GateError('FORGED_SUCCESS_STATUS')
             receipt={'tool_id':key,'request_hash':key,'role':role,'call_id':call_id,'request':request,
                      'run_id':self.run_id,'mode':self.mode,'classification':'CURRENT_RUN_REAL_DATA' if self.mode=='LIVE' else self.mode,
@@ -183,6 +197,71 @@ class Controller:
         if not any(t['tool_id']==key for t in self.state['tools']):self.state['tools'].append(summary)
         self.state['status']=receipt['output']['status'];self.save()
         return receipt
+
+    def terminate_failure(self, call_id, exc):
+        failure={'run_id':self.run_id,'call_id':call_id,'reason':redact(str(exc)),
+                 'error_type':type(exc).__name__,'classification':'ENGINEERING_TEST' if self.mode!='LIVE' else 'LIVE',
+                 'status':'FAILED','ended_at':now(),'automatic_resubmission':False}
+        self.state['status']='FAILED';self.state['ended_at']=failure['ended_at'];self.state['errors'].append(failure)
+        if self.batch is not None:self.batch.freeze(failure['reason'])
+        try:
+            self.save();write_json(bound_path(self.directory,'failures/'+call_id+'.json'),failure)
+            self.event('EXECUTION_FAILED',**{k:v for k,v in failure.items() if k!='run_id'})
+            self.export_manifest()
+        except OSError as disk:
+            raise GateError('EVIDENCE_MISSING: failure checkpoint/manifest could not be saved; do not resend') from disk
+
+    def dispatch(self, request, role, call_id, **kwargs):
+        try:return self._dispatch(request,role,call_id,**kwargs)
+        except (OSError,ValueError,TypeError,KeyError,ArithmeticError,RuntimeError) as exc:
+            self.terminate_failure(call_id,exc);raise
+
+    def baseline_output(self):
+        for tool in reversed(self.state['tools']):
+            if tool['action']=='baseline' and tool['status']=='VERIFIED':return self.read_tool(tool)['output']
+        return None
+
+    def context(self):
+        context=source_context()
+        if self.mode=='MOCK_TEST':
+            context['CONSTRUCTED_FIXTURE']={'kind':'source','claim_status':'TEST_ONLY'}
+        for tool in self.state['tools']:
+            receipt=self.read_tool(tool)
+            context[tool['tool_id']]={'kind':'tool','status':tool['status'],'action':tool['action'],
+                                     'run_id':self.run_id,'parent_version':receipt['output']['parent_version']}
+        for call in self.state['calls']:
+            path=bound_path(self.directory,call['response'])
+            dispatch=self.state['model_dispatches'].get(call['call_id'],{})
+            expected=dispatch.get('artifact_hashes',{}).get('response.json')
+            if expected is None or digest(path)!=expected:raise GateError('CALL_REFERENCE_HASH_MISMATCH')
+            context[call['call_id']]={'kind':'review' if call['role']=='review' else 'call',
+                                    'run_id':self.run_id,'parent_version':'RAW:'+self.state['input_sha256']}
+        return context
+
+    def required_feedback(self):
+        if self.state['phase']<3:return []
+        current=f"{self.run_id}-{self.state['phase']+1:02d}-{PHASES[self.state['phase']][0]}"
+        prior=[c for c in self.state['calls'] if c['call_id']!=current]
+        reviews=[c for c in prior if c['role']=='review']
+        # Only the completed reviewer that triggered this follow-up, never the current reply.
+        completed=[c for c in reviews if any(t['call_id']==c['call_id'] for t in self.state['tools'])]
+        if not completed:raise GateError('MISSING_ACTUAL_REVIEW')
+        reviewer=completed[-1]
+        audits=[t for t in self.state['tools'] if t['call_id']==reviewer['call_id'] and t['status']=='VERIFIED']
+        if not audits:raise GateError('MISSING_VERIFIED_REVIEW_TOOL')
+        required=[reviewer['call_id'],audits[-1]['tool_id']]
+        if self.state['phase']==4:
+            required.extend([prior[-1]['call_id'],self.state['tools'][-1]['tool_id']])
+        return list(dict.fromkeys(required))
+
+    def available_actions(self):
+        actions=[a for a in PHASE_ACTIONS[self.state['phase']] if a in self.policy['actions'][PHASES[self.state['phase']][0]]]
+        if self.profiles() is None:
+            actions=[a for a in actions if a not in ('verify_profiles','recompute_check')]
+            if self.state['phase']==1:actions=[a for a in actions if a in ('profile_pilot','escalate','baseline')]
+        if preflight(self.policy):actions=[a for a in actions if a!='baseline']
+        if self.baseline_output() is None:actions=[a for a in actions if a!='verify_baseline']
+        return actions
 
     def prompt(self,role,call_id,instruction):
         previous=[]
@@ -204,22 +283,24 @@ class Controller:
         payload={'task_id':self.policy['task_id'],'goal':1,'role':role,'call_id':call_id,'instruction':instruction,
                  'policy':self.policy,'pilot':self.pilot,'raw_structure':inventory,
                  'prior_calls':previous,'tool_receipts':tool_outputs,
-                 'available_actions':PHASE_ACTIONS[self.state['phase']]}
+                 'available_actions':self.available_actions(),'allowed_references':self.context(),
+                 'required_feedback':self.required_feedback()}
         return ('You are one real, separately called role in the Experiment1 Goal1 controller. '
                 'Return exactly the requested JSON schema. No terminal, file editing, browsing or spawning. '
                 'Your structured action will be validated and executed by deterministic code. '
-                'Cite source paths or prior call/tool IDs; never invent computed numbers, approvals or truth labels. '
+                'Cite only exact allowed_references IDs; never invent computed numbers, approvals or truth labels. '
                 'Do not report hidden reasoning; provide only concise visible task rationale. '
                 'All numeric facts must come from supplied actual tool receipts. '
                 'record_ids should include the entire seven-record pilot so no difficult case is omitted. '
                 'Unknown CRS and direction schedule block full baseline, not raw/time diagnostics. '
                 'In phase3 and later reference actual earlier reviewer/tool feedback IDs.\n'+json.dumps(payload,ensure_ascii=False))
 
-    def run(self,provider=None,*,stop_after=None):
+    def _run(self,provider=None,*,stop_after=None):
         if self.mode!='LIVE':raise GateError('LIVE_ENTRY_REQUIRES_LIVE_MODE')
-        provider=provider or CodexProvider(self.policy['budget']['max_seconds_per_model_call'])
+        provider=provider or CodexProvider(self.policy['budget']['max_seconds_per_model_call'],
+            **(self.batch.qualification['provider_pin'] if self.batch is not None else {}))
         if type(provider) is not CodexProvider:raise GateError('MOCK_CANNOT_BE_LIVE')
-        if not self.policy.get('live_execution_enabled',False):raise GateError('LIVE_DISABLED_PENDING_BUDGET_REVIEW')
+        if not self.policy.get('live_execution_enabled',False) and self.batch is None:raise GateError('LIVE_DISABLED_PENDING_BUDGET_REVIEW')
         self.protection_check()
         if self.state['inflight_model']:
             pending=self.state['inflight_model']
@@ -229,15 +310,16 @@ class Controller:
                 raise GateError('UNCERTAIN_MODEL_CALL_DO_NOT_REPEAT')
         while self.state['phase']<len(PHASES):
             phase=self.state['phase'];role,instruction=PHASES[phase]
+            actions=self.available_actions(); required_feedback=self.required_feedback()
             call_id=f'{self.run_id}-{phase+1:02d}-{role}'
             call_dir=self.directory/'calls'/call_id
             response_path=call_dir/'response.json'
             if response_path.exists():
                 dispatch=self.state.get('model_dispatches',{}).get(call_id)
                 ledger=read_json(self.ledger_path)
-                if not dispatch or ledger.get('dispatched_calls',{}).get(call_id,{}).get('run_id')!=self.run_id:
+                if not dispatch or (ledger.get('dispatched_calls',{}).get(call_id,{}).get('run_id')!=self.run_id and self.batch is None):
                     raise GateError('UNDISPATCHED_MODEL_RESPONSE')
-                value,receipt,hashes=verify_saved_call(call_dir,role,call_id,PHASE_ACTIONS[phase],dispatch['input_hash'])
+                value,receipt,hashes=verify_saved_call(call_dir,role,call_id,actions,dispatch['input_hash'])
                 if dispatch.get('artifact_hashes') and dispatch['artifact_hashes']!=hashes:
                     raise GateError('MODEL_ARTIFACT_HASH_MISMATCH')
                 dispatch['artifact_hashes']=hashes;self.save()
@@ -245,24 +327,27 @@ class Controller:
             else:
                 if call_dir.exists():raise GateError('PREEXISTING_OR_INCOMPLETE_CALL_DIRECTORY')
                 prompt=self.prompt(role,call_id,instruction)
-                saved_input={'role':role,'call_id':call_id,'prompt':prompt,'schema':response_schema(role,call_id,PHASE_ACTIONS[phase])}
+                saved_input={'role':role,'call_id':call_id,'prompt':prompt,'schema':response_schema(role,call_id,actions)}
                 self.spend('model_attempts',call_id)
                 self.state.setdefault('model_dispatches',{})[call_id]={'input_hash':object_hash(saved_input)}
                 self.state['inflight_model']=call_id;self.state['status']='DISPATCHED';self.save()
                 self.event('MODEL_DISPATCHED',role=role,call_id=call_id)
                 try:
-                    provider.call(role,call_id,prompt,PHASE_ACTIONS[phase],call_dir)
-                    value,receipt,hashes=verify_saved_call(call_dir,role,call_id,PHASE_ACTIONS[phase],object_hash(saved_input))
+                    provider.call(role,call_id,prompt,actions,call_dir)
+                    if self.batch is not None:self.batch.finish(call_id,read_json(call_dir/'receipt.json'))
+                    value,receipt,hashes=verify_saved_call(call_dir,role,call_id,actions,object_hash(saved_input))
                     self.state['model_dispatches'][call_id]['artifact_hashes']=hashes;self.save()
                 except ProviderError as exc:
+                    if self.batch is not None:
+                        if (call_dir/'receipt.json').exists():self.batch.finish(call_id,read_json(call_dir/'receipt.json'))
+                        else:self.batch.freeze('MISSING_RECEIPT')
                     self.state['status']='BLOCKED';self.state['ended_at']=now();self.state['errors'].append({'call_id':call_id,'reason':str(exc)})
                     self.save();self.event('LIVE_AGENT_BLOCKED',call_id=call_id,reason=str(exc));raise
             if not any(c['call_id']==call_id for c in self.state['calls']):
                 self.state['calls'].append({'call_id':call_id,'role':role,'thread_id':receipt.get('thread_id','unavailable'),
                                            'response':str(response_path.relative_to(self.directory))})
-            feedback_ids=[c['call_id'] for c in self.state['calls'][:-1] if c['role']=='review']+[t['tool_id'] for t in self.state['tools']]
             try:
-                tool=self.dispatch(value,role,call_id,feedback_ids=feedback_ids if phase>=3 else ())
+                tool=self.dispatch(value,role,call_id,feedback_ids=required_feedback)
             except (ValueError,jsonschema.ValidationError) as exc:
                 self.state['status']='NEEDS_REVIEW';self.state['ended_at']=now();self.state['errors'].append({'call_id':call_id,'reason':str(exc)})
                 self.state['inflight_model']=None;self.save();raise
@@ -272,15 +357,25 @@ class Controller:
                 self.event('BRANCH_STOPPED',call_id=call_id,status=self.state['status'])
                 self.export_manifest();return self.state
             decision={'decision_id':call_id+'-decision','trigger_call':call_id,'trigger_tool':tool['tool_id'],
-                      'status':'NEEDS_REVIEW','reason':'Engineering diagnostics executed; real baseline semantic blockers and quality thresholds unresolved',
+                      'status':'NEEDS_REVIEW','reason':'Executed '+value['action']+'; quality acceptance requires research review',
                       'quality_acceptance':'PENDING_RESEARCH_REVIEW','next_task':value['candidate_for_future_review'] or value['summary']}
             self.state['decisions'].append(decision)
             self.state['phase']+=1;self.state['inflight_model']=None;self.state['status']='VERIFIED';self.save()
             self.event('FEEDBACK_HANDOFF',decision=decision,next_phase=self.state['phase'])
             if stop_after is not None and self.state['phase']>=stop_after:return self.state
-        self.state.update(status='NEEDS_REVIEW',ended_at=now(),real_baseline_status='BLOCKED',gpt_second_review='PENDING')
+        self.state.update(status='VERIFIED' if self.state['phase']==5 else 'BLOCKED',ended_at=now(),
+                          diagnostic_loop_status='REAL_DIAGNOSTIC_LOOP' if self.state['phase']==5 and self.baseline_output() is None else 'NOT_APPLICABLE',
+                          real_baseline_status='VERIFIED' if self.baseline_output() else ('BLOCKED' if preflight(self.policy) else 'NOT_RUN'),gpt_second_review='PENDING')
         self.save();self.export_manifest()
         return self.state
+
+    def run(self, provider=None, *, stop_after=None):
+        try:return self._run(provider,stop_after=stop_after)
+        except (OSError,ValueError,TypeError,KeyError,ArithmeticError,RuntimeError,KeyboardInterrupt) as exc:
+            self.terminate_failure(self.state.get('inflight_model') or self.run_id+'-control',exc);raise
+        finally:
+            try:self.export_manifest()
+            except OSError as exc:raise GateError('EVIDENCE_MISSING: manifest could not be saved; do not resend') from exc
 
     def export_manifest(self):
         files={str(p.relative_to(self.directory)):digest(p) for p in sorted(self.directory.rglob('*')) if p.is_file() and p.name!='manifest.json'}
@@ -289,5 +384,7 @@ class Controller:
                    'pilot':self.pilot,'policy_sha256':self.config_hash,'semantics_version':self.policy['semantics_version'],
                    'metrics_version':self.policy['metrics_version'],'status':self.state['status'],
                    'started_at':self.state['started_at'],'ended_at':self.state.get('ended_at'),
+                   'diagnostic_loop_status':self.state.get('diagnostic_loop_status','NOT_COMPLETE'),
+                   'real_baseline_status':self.state.get('real_baseline_status','BLOCKED' if preflight(self.policy) else 'NOT_RUN'),
                    'calls':self.state['calls'],'tools':self.state['tools'],'errors':self.state['errors'],'artifacts':files})
         return files

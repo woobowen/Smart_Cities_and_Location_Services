@@ -1,0 +1,679 @@
+{
+  "classification": "CONSTRUCTED_FIXTURE_DEVELOPMENT_NOT_REAL_BASELINE",
+  "input": [
+    {
+      "record_id": "fixture:plane",
+      "indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "timestamps": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "xy": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          100,
+          0
+        ],
+        [
+          101,
+          0
+        ]
+      ]
+    }
+  ],
+  "contract": {
+    "scope": "CONSTRUCTED_PLANAR_ONLY",
+    "approval": "ENGINEERING_TEST_ONLY",
+    "method": "single_pass_simultaneous_keep_undefined",
+    "parameters": {
+      "dt": 30,
+      "distance": 10,
+      "min_points": 3,
+      "min_length": 0,
+      "direction": 35,
+      "dp": 0.1,
+      "time_reliable": true
+    }
+  },
+  "result": {
+    "status": "VERIFIED",
+    "classification": "CONSTRUCTED_FIXTURE",
+    "parameters": {
+      "dt": 30,
+      "distance": 10,
+      "min_points": 3,
+      "min_length": 0,
+      "direction": 35,
+      "dp": 0.1,
+      "time_reliable": true
+    },
+    "input_hash": "d6418ead4b5a60d0c37734051655630fca5025e4d42688508bb1100eb7a81f01",
+    "records": [
+      {
+        "record_id": "fixture:plane",
+        "boundaries": [
+          {
+            "from_index": 5,
+            "to_index": 6,
+            "dt": 1,
+            "dt_reason": null,
+            "distance": 97.0,
+            "speed": 97.0,
+            "speed_reason": null,
+            "direction_degrees": 90.0,
+            "direction_reason": null,
+            "reasons": [
+              "DISTANCE_GAP"
+            ],
+            "right_point_starts_segment": true
+          }
+        ],
+        "filtered_segments": [
+          {
+            "record_id": "fixture:plane",
+            "indices": [
+              6,
+              7
+            ],
+            "timestamps": [
+              6,
+              7
+            ],
+            "xy": [
+              [
+                100,
+                0
+              ],
+              [
+                101,
+                0
+              ]
+            ],
+            "features": {
+              "edges": [
+                {
+                  "from_index": 6,
+                  "to_index": 7,
+                  "dt": 1,
+                  "dt_reason": null,
+                  "distance": 1.0,
+                  "speed": 1.0,
+                  "speed_reason": null,
+                  "direction_degrees": 90.0,
+                  "direction_reason": null
+                }
+              ],
+              "length": 1.0,
+              "direction_convention": "CLOCKWISE_FROM_POSITIVE_Y",
+              "time_reliable": true,
+              "coverage": {
+                "edge_denominator": 1,
+                "speed_computable": 1,
+                "direction_computable": 1,
+                "reason": null
+              }
+            },
+            "segment_index": 1,
+            "filter_reasons": [
+              "TOO_FEW_POINTS"
+            ]
+          }
+        ],
+        "processed_segments": [
+          {
+            "segment_index": 0,
+            "input": {
+              "record_id": "fixture:plane",
+              "indices": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5
+              ],
+              "timestamps": [
+                0,
+                1,
+                2,
+                3,
+                4,
+                5
+              ],
+              "xy": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  1,
+                  0
+                ],
+                [
+                  0,
+                  0
+                ],
+                [
+                  1,
+                  0
+                ],
+                [
+                  2,
+                  0
+                ],
+                [
+                  3,
+                  0
+                ]
+              ],
+              "features": {
+                "edges": [
+                  {
+                    "from_index": 0,
+                    "to_index": 1,
+                    "dt": 1,
+                    "dt_reason": null,
+                    "distance": 1.0,
+                    "speed": 1.0,
+                    "speed_reason": null,
+                    "direction_degrees": 90.0,
+                    "direction_reason": null
+                  },
+                  {
+                    "from_index": 1,
+                    "to_index": 2,
+                    "dt": 1,
+                    "dt_reason": null,
+                    "distance": 1.0,
+                    "speed": 1.0,
+                    "speed_reason": null,
+                    "direction_degrees": 270.0,
+                    "direction_reason": null
+                  },
+                  {
+                    "from_index": 2,
+                    "to_index": 3,
+                    "dt": 1,
+                    "dt_reason": null,
+                    "distance": 1.0,
+                    "speed": 1.0,
+                    "speed_reason": null,
+                    "direction_degrees": 90.0,
+                    "direction_reason": null
+                  },
+                  {
+                    "from_index": 3,
+                    "to_index": 4,
+                    "dt": 1,
+                    "dt_reason": null,
+                    "distance": 1.0,
+                    "speed": 1.0,
+                    "speed_reason": null,
+                    "direction_degrees": 90.0,
+                    "direction_reason": null
+                  },
+                  {
+                    "from_index": 4,
+                    "to_index": 5,
+                    "dt": 1,
+                    "dt_reason": null,
+                    "distance": 1.0,
+                    "speed": 1.0,
+                    "speed_reason": null,
+                    "direction_degrees": 90.0,
+                    "direction_reason": null
+                  }
+                ],
+                "length": 5.0,
+                "direction_convention": "CLOCKWISE_FROM_POSITIVE_Y",
+                "time_reliable": true,
+                "coverage": {
+                  "edge_denominator": 5,
+                  "speed_computable": 5,
+                  "direction_computable": 5,
+                  "reason": null
+                }
+              },
+              "segment_index": 0,
+              "filter_reasons": []
+            },
+            "denoise": {
+              "record": {
+                "record_id": "fixture:plane",
+                "indices": [
+                  0,
+                  2,
+                  3,
+                  4,
+                  5
+                ],
+                "timestamps": [
+                  0,
+                  2,
+                  3,
+                  4,
+                  5
+                ],
+                "xy": [
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    0,
+                    0
+                  ],
+                  [
+                    1,
+                    0
+                  ],
+                  [
+                    2,
+                    0
+                  ],
+                  [
+                    3,
+                    0
+                  ]
+                ],
+                "features": {
+                  "edges": [
+                    {
+                      "from_index": 0,
+                      "to_index": 2,
+                      "dt": 2,
+                      "dt_reason": null,
+                      "distance": 0.0,
+                      "speed": 0.0,
+                      "speed_reason": null,
+                      "direction_degrees": null,
+                      "direction_reason": "ZERO_DISPLACEMENT"
+                    },
+                    {
+                      "from_index": 2,
+                      "to_index": 3,
+                      "dt": 1,
+                      "dt_reason": null,
+                      "distance": 1.0,
+                      "speed": 1.0,
+                      "speed_reason": null,
+                      "direction_degrees": 90.0,
+                      "direction_reason": null
+                    },
+                    {
+                      "from_index": 3,
+                      "to_index": 4,
+                      "dt": 1,
+                      "dt_reason": null,
+                      "distance": 1.0,
+                      "speed": 1.0,
+                      "speed_reason": null,
+                      "direction_degrees": 90.0,
+                      "direction_reason": null
+                    },
+                    {
+                      "from_index": 4,
+                      "to_index": 5,
+                      "dt": 1,
+                      "dt_reason": null,
+                      "distance": 1.0,
+                      "speed": 1.0,
+                      "speed_reason": null,
+                      "direction_degrees": 90.0,
+                      "direction_reason": null
+                    }
+                  ],
+                  "length": 3.0,
+                  "direction_convention": "CLOCKWISE_FROM_POSITIVE_Y",
+                  "time_reliable": true,
+                  "coverage": {
+                    "edge_denominator": 4,
+                    "speed_computable": 4,
+                    "direction_computable": 3,
+                    "reason": null
+                  }
+                }
+              },
+              "deleted_indices": [
+                1
+              ],
+              "decisions": [
+                {
+                  "index": 0,
+                  "candidate": null,
+                  "reason": "ENDPOINT",
+                  "previous_difference_degrees": null,
+                  "following_difference_degrees": null
+                },
+                {
+                  "index": 1,
+                  "candidate": true,
+                  "reason": null,
+                  "previous_difference_degrees": 180.0,
+                  "following_difference_degrees": 180.0
+                },
+                {
+                  "index": 2,
+                  "candidate": false,
+                  "reason": null,
+                  "previous_difference_degrees": 180.0,
+                  "following_difference_degrees": 0.0
+                },
+                {
+                  "index": 3,
+                  "candidate": false,
+                  "reason": null,
+                  "previous_difference_degrees": 0.0,
+                  "following_difference_degrees": 0.0
+                },
+                {
+                  "index": 4,
+                  "candidate": null,
+                  "reason": "MISSING_FOLLOWING_OUTGOING_EDGE",
+                  "previous_difference_degrees": null,
+                  "following_difference_degrees": null
+                },
+                {
+                  "index": 5,
+                  "candidate": null,
+                  "reason": "ENDPOINT",
+                  "previous_difference_degrees": null,
+                  "following_difference_degrees": null
+                }
+              ],
+              "method": "single_pass_simultaneous_keep_undefined",
+              "passes": 1,
+              "modified_values": 0
+            },
+            "output": {
+              "record_id": "fixture:plane",
+              "indices": [
+                0,
+                5
+              ],
+              "timestamps": [
+                0,
+                5
+              ],
+              "xy": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  3,
+                  0
+                ]
+              ],
+              "features": {
+                "edges": [
+                  {
+                    "from_index": 0,
+                    "to_index": 5,
+                    "dt": 5,
+                    "dt_reason": null,
+                    "distance": 3.0,
+                    "speed": 0.6,
+                    "speed_reason": null,
+                    "direction_degrees": 90.0,
+                    "direction_reason": null
+                  }
+                ],
+                "length": 3.0,
+                "direction_convention": "CLOCKWISE_FROM_POSITIVE_Y",
+                "time_reliable": true,
+                "coverage": {
+                  "edge_denominator": 1,
+                  "speed_computable": 1,
+                  "direction_computable": 1,
+                  "reason": null
+                }
+              },
+              "parent_hash": "7227b6f6d54ece04468d91387aeff6c1cde6bc20dfda93964bb606a18d89020d"
+            },
+            "independent_review": {
+              "status": "VERIFIED",
+              "quality_status": "PENDING_RESEARCH_REVIEW",
+              "errors": [],
+              "metrics": {
+                "reference_points": {
+                  "value": 5,
+                  "reason": null
+                },
+                "simplified_points": {
+                  "value": 2,
+                  "reason": null
+                },
+                "saving": {
+                  "value": 0.6,
+                  "reason": null
+                },
+                "max_error": {
+                  "value": 0.0,
+                  "reason": null
+                },
+                "reference_length": {
+                  "value": 3.0,
+                  "reason": null
+                },
+                "simplified_length": {
+                  "value": 3.0,
+                  "reason": null
+                },
+                "length_change": {
+                  "value": 0.0,
+                  "reason": null
+                },
+                "relative_length_change": {
+                  "value": 0.0,
+                  "reason": null
+                }
+              },
+              "reference_scope": "SAME_SIMPLIFICATION_INPUT",
+              "floating_allowance": 4.263256414560601e-14,
+              "floating_allowance_formula": "64 * binary64_epsilon * max(1, coordinate_extent, absolute_coordinate, tolerance)",
+              "algorithm_tolerance": 0.1,
+              "error_by_original_index": [
+                {
+                  "index": 0,
+                  "error": 0.0
+                },
+                {
+                  "index": 2,
+                  "error": 0.0
+                },
+                {
+                  "index": 3,
+                  "error": 0.0
+                },
+                {
+                  "index": 4,
+                  "error": 0.0
+                },
+                {
+                  "index": 5,
+                  "error": 0.0
+                }
+              ],
+              "exceeding_points": [],
+              "claims_supported": [
+                "ORDERED_SUBSEQUENCE",
+                "VALUES_UNCHANGED",
+                "INDEX_INTERVAL_ERROR_CHECK"
+              ],
+              "claims_not_supported": [
+                "GROUND_TRUTH_RECOVERY",
+                "DETECTION_ACCURACY",
+                "QUALITY_IMPROVEMENT"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "point_actions": [
+      {
+        "record_id": "fixture:plane",
+        "original_index": 6,
+        "action": "filtered",
+        "timestamp": 6,
+        "xy": [
+          100,
+          0
+        ]
+      },
+      {
+        "record_id": "fixture:plane",
+        "original_index": 7,
+        "action": "filtered",
+        "timestamp": 7,
+        "xy": [
+          101,
+          0
+        ]
+      },
+      {
+        "record_id": "fixture:plane",
+        "original_index": 1,
+        "action": "denoised",
+        "timestamp": 1,
+        "xy": [
+          1,
+          0
+        ]
+      },
+      {
+        "record_id": "fixture:plane",
+        "original_index": 2,
+        "action": "simplified",
+        "timestamp": 2,
+        "xy": [
+          0,
+          0
+        ]
+      },
+      {
+        "record_id": "fixture:plane",
+        "original_index": 3,
+        "action": "simplified",
+        "timestamp": 3,
+        "xy": [
+          1,
+          0
+        ]
+      },
+      {
+        "record_id": "fixture:plane",
+        "original_index": 4,
+        "action": "simplified",
+        "timestamp": 4,
+        "xy": [
+          2,
+          0
+        ]
+      },
+      {
+        "record_id": "fixture:plane",
+        "original_index": 0,
+        "action": "retained",
+        "timestamp": 0,
+        "xy": [
+          0,
+          0
+        ]
+      },
+      {
+        "record_id": "fixture:plane",
+        "original_index": 5,
+        "action": "retained",
+        "timestamp": 5,
+        "xy": [
+          3,
+          0
+        ]
+      }
+    ],
+    "stage_counts": {
+      "input": 8,
+      "segmented": 2,
+      "filtered": 2,
+      "denoised": 1,
+      "simplified": 3,
+      "not_processed": 0,
+      "retained": 2
+    },
+    "accounting": {
+      "status": "VERIFIED",
+      "input_records": 1,
+      "input_points": 8,
+      "stage_points": {
+        "filtered": 2,
+        "denoised": 1,
+        "simplified": 3,
+        "retained": 2
+      },
+      "errors": [],
+      "count_conserved": true,
+      "modified_point_count": 0
+    },
+    "quality_status": "PENDING_RESEARCH_REVIEW",
+    "modified_values": 0
+  },
+  "independent_review": {
+    "status": "VERIFIED",
+    "errors": [],
+    "accounting": {
+      "status": "VERIFIED",
+      "input_records": 2,
+      "input_points": 8,
+      "stage_points": {
+        "filtered": 2,
+        "denoised": 1,
+        "simplified": 3,
+        "retained": 2
+      },
+      "errors": [],
+      "count_conserved": true,
+      "modified_point_count": 0
+    },
+    "scope": "Stored direction schedule, DP geometry and terminal accounting; not ground truth"
+  }
+}

@@ -69,7 +69,8 @@ def test_feedback_must_reference_real_trigger(controller):
     with pytest.raises(c.GateError,match='FEEDBACK'):
         controller.dispatch(request(),'execution','test-call',feedback_ids=['actual-review'])
     r=request();r['feedback_refs']=['actual-review']
-    controller.dispatch(r,'execution','test-call',feedback_ids=['actual-review'])
+    with pytest.raises(c.GateError,match='UNKNOWN_EVIDENCE'):
+        controller.dispatch(r,'execution','test-call',feedback_ids=['actual-review'])
 
 
 @pytest.mark.parametrize('name',['../x','/tmp/x','a/../../x'])
@@ -196,8 +197,9 @@ def prepare_recovery_fixture(controller):
     """CONSTRUCTED_FIXTURE of a crash after response, never live-model evidence."""
     controller.mode='LIVE';controller.policy['live_execution_enabled']=True
     call=controller.run_id+'-01-research'
-    value=request('source_evidence','research',call)
-    schema=response_schema('research',call,['source_evidence'])
+    value=request('contract_snapshot','research',call)
+    value['evidence_refs']=['teacher:20']
+    schema=response_schema('research',call,controller.available_actions())
     saved={'role':'research','call_id':call,'prompt':'CONSTRUCTED_FIXTURE','schema':schema}
     out=controller.directory/'calls'/call
     write_json(out/'input.json',saved);write_json(out/'response.json',value)
@@ -224,7 +226,7 @@ def test_preplanted_live_response_is_rejected_without_model(controller,monkeypat
     monkeypatch.setattr(CodexProvider,'call',lambda *a,**k:pytest.fail('No model call allowed'))
     with pytest.raises(c.GateError,match='UNDISPATCHED'):controller.run(stop_after=1)
     assert read_json(controller.ledger_path)['model_attempts']==0
-    assert controller.state['status']=='PLANNED' and not controller.state['calls']
+    assert controller.state['status']=='FAILED' and not controller.state['calls']
 
 
 @pytest.mark.parametrize('tamper',['missing_events','empty_receipt','wrong_response','wrong_input','wrong_event','tool_event','fake_disabled'])

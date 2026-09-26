@@ -51,7 +51,7 @@ def main():
         markdown('# Goal 1：真实角色记录与离线复算\n\n教师映射：`任务3_LLM辅助评估清洗.ipynb` → 本入口。默认不会调用模型。LIVE、REPLAY、MOCK_TEST 明确分开；工程测试不冒充自然Agent失败或真实Human–AI争论。'),
         code(SETUP),
         code("MODE='RECOMPUTE'\nRUN_ID='g1-live-20260926-03'\nENABLE_LIVE=False\nassert MODE in ('RECOMPUTE','LIVE')"),
-        markdown('## 真实运行与失败边界\nrun03仅 A 研究角色成功并执行 source_evidence；B 因 workspace routing discovery failed 失败，C 未调用，反馈循环未完成。run01/02失败均保留。内部重连预算问题使所有新LIVE被冻结。不能把下方离线复算当作补齐三个真实角色。'),
+        markdown('## 历史运行与失败边界\nrun03仅 A 研究角色成功并执行 source_evidence；B 因 workspace routing discovery failed 失败，C 未调用，反馈循环未完成。run01/02失败均保留。旧批次因内部重连预算问题冻结。本次修复批次单独授权，实际结果见末尾新增单元。不能把下方离线复算当作补齐三个真实角色。'),
         code("directory=EVIDENCE/'runs'/RUN_ID\nmanifest=read_json(directory/'manifest.json')\nprint('run',RUN_ID,'code',manifest['code_sha'],'mode',manifest['mode'],'status',manifest['status'])\nfor call in manifest['calls']:\n    reply=read_json(directory/call['response'])\n    print(call['role'],call['call_id'],call['thread_id'],reply['action'],reply['feedback_refs'])\nfor tool in manifest['tools']: print('tool',tool['tool_id'],tool['action'],tool['status'])"),
         markdown('## 按已记录代码版本复算实际动作\n控制器已在失败后修复，当前源hash与旧run不同。下面从已存在的Git CODE_SHA恢复任务源码到临时目录，校验hash，再真实重跑旧run唯一成功动作 source_evidence。不会切换当前分支，也不修改旧产物。它只能证明这一项复算一致。'),
         code("if MODE=='RECOMPUTE':\n    from task1.scripts.recompute_archived_run import recompute_archived\n    result=recompute_archived(RUN_ID)\n    assert result['new_model_calls']==0 and result['status']=='VERIFIED'\n    assert [c['action'] for c in result['checks']]==['source_evidence']\n    print(json.dumps(result,ensure_ascii=False,indent=2))\nelse:\n    assert ENABLE_LIVE, '必须显式启用LIVE'\n    assert policy['live_execution_enabled'], policy['live_stop_reason']\n    assert not directory.exists(), '新模型实验须使用新的run_id；不得重置总预算'\n    from task1.workflow.controller import Controller\n    result=Controller(RUN_ID).run()\n    print(result['status'])"),
@@ -62,4 +62,19 @@ def main():
     ])
 
 
-if __name__=='__main__':main()
+def append_repair():
+    for path in OUT.glob('*.ipynb'):
+        nb=nbf.read(path,as_version=4)
+        nb.cells.extend([
+            markdown('## SC-LAB1-G1-REPAIR-001 当前修复复算\n以下为当前代码重新读取教师 JSON 的诊断；旧 run03 的 REPLAY 单独保留。构造处理链测试不代表真实数据已清洗。'),
+            code("revision=EVIDENCE/'revisions/SC-LAB1-G1-REPAIR-001'\ncurrent=execute_tool('profile_pilot',pilot['ids'],policy)\nstored=read_json(revision/'results/profile_pilot.json')\nassert current==stored\nchecked=execute_tool('recompute_check',pilot['ids'],policy,current['result']['profiles'])\nassert checked['status']=='VERIFIED' and checked['result']['exact_match']\nprint('当前7条 / 783点复算一致；模型调用0；完整baseline仍BLOCKED')"),
+            markdown('## 本批 LIVE 的真实边界\n只读取回执，不调用模型。有效模型响应、数值工具与完整反馈分别按实际产物计数；没有发生的角色不得补写。'),
+            code("budget=read_json(EVIDENCE/'runs/budget_repair_001.json')\nprint(json.dumps(budget,ensure_ascii=False,indent=2))\nnew_run=revision/'runs/g1-repair-roles-01/manifest.json'\nprint(read_json(new_run) if new_run.exists() else '角色链NOT_RUN：连通性探针没有通过')\nassert digest(DATA)==policy['raw_sha256']"),
+            code("from IPython.display import display, Image\ndisplay(Image(filename=str(revision/'figures/repair_loop.png')))"),
+        ])
+        nbf.write(nb,path)
+
+
+if __name__=='__main__':
+    main()
+    append_repair()

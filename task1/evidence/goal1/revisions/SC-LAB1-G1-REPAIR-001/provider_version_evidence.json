@@ -1,0 +1,54 @@
+{
+  "version": "0.157.1",
+  "upstream_commit": "36650394c5b38c2990ccf2a3457165ca3e9d9726",
+  "provider_source_url": "https://github.com/openai/codex/blob/36650394c5b38c2990ccf2a3457165ca3e9d9726/codex-rs/model-provider-info/src/lib.rs",
+  "source_sha256": "5ec320f562ae989cf1845bf296a6d20e6a32d3629bc9fb8f697f0ae69a3755c9",
+  "excerpts": [
+    {
+      "lines": [
+        60,
+        73
+      ],
+      "text": "        .unwrap_or_else(PoisonError::into_inner)\n}\n\nconst DEFAULT_STREAM_IDLE_TIMEOUT_MS: u64 = 300_000;\nconst DEFAULT_STREAM_MAX_RETRIES: u64 = 5;\nconst DEFAULT_REQUEST_MAX_RETRIES: u64 = 4;\nconst DEFAULT_AWS_CREDENTIAL_EXPORT_TIMEOUT_MS: u64 = 30_000;\nconst DEFAULT_AWS_AUTH_REFRESH_TIMEOUT_MS: u64 = 300_000;\npub const DEFAULT_WEBSOCKET_CONNECT_TIMEOUT_MS: u64 = 15_000;\n/// Hard cap for user-configured `stream_max_retries`.\nconst MAX_STREAM_MAX_RETRIES: u64 = 100;\n/// Hard cap for user-configured `request_max_retries`.\nconst MAX_REQUEST_MAX_RETRIES: u64 = 100;\n"
+    },
+    {
+      "lines": [
+        412,
+        430
+      ],
+      "text": "    }\n\n    /// Builds an API provider with managed residency taking precedence over configured headers.\n    pub fn to_api_provider(&self, auth_mode: Option<AuthMode>) -> CodexResult<ApiProvider> {\n        let default_base_url = if matches!(\n            auth_mode,\n            Some(\n                AuthMode::Chatgpt\n                    | AuthMode::ChatgptAuthTokens\n                    | AuthMode::Headers\n                    | AuthMode::AgentIdentity\n                    | AuthMode::PersonalAccessToken\n            )\n        ) {\n            CHATGPT_CODEX_BASE_URL\n        } else {\n            \"https://api.openai.com/v1\"\n        };\n        let base_url = self"
+    },
+    {
+      "lines": [
+        487,
+        499
+      ],
+      "text": "    pub fn request_max_retries(&self) -> u64 {\n        self.request_max_retries\n            .unwrap_or(DEFAULT_REQUEST_MAX_RETRIES)\n            .min(MAX_REQUEST_MAX_RETRIES)\n    }\n\n    /// Effective maximum number of stream reconnection attempts for this provider.\n    pub fn stream_max_retries(&self) -> u64 {\n        self.stream_max_retries\n            .unwrap_or(DEFAULT_STREAM_MAX_RETRIES)\n            .min(MAX_STREAM_MAX_RETRIES)\n    }\n"
+    },
+    {
+      "lines": [
+        539,
+        552
+      ],
+      "text": "                ]\n                .into_iter()\n                .collect(),\n            ),\n            // Use global defaults for retry/timeout unless overridden in config.toml.\n            request_max_retries: None,\n            stream_max_retries: None,\n            stream_idle_timeout_ms: None,\n            websocket_connect_timeout_ms: None,\n            requires_openai_auth: true,\n            supports_websockets: true,\n            supports_standalone_web_search: true,\n        }\n    }"
+    },
+    {
+      "lines": [
+        678,
+        722
+      ],
+      "text": "\n/// Merge configured providers into the built-in provider catalog.\n///\n/// Configured providers extend the built-in set. Built-in providers are not\n/// generally overridable, but built-in Amazon Bedrock providers allow the user\n/// to customize their endpoint, authentication, headers, and AWS settings.\npub fn merge_configured_model_providers(\n    mut model_providers: HashMap<String, ModelProviderInfo>,\n    configured_model_providers: HashMap<String, ModelProviderInfo>,\n) -> Result<HashMap<String, ModelProviderInfo>, String> {\n    for (key, mut provider) in configured_model_providers {\n        if matches!(\n            key.as_str(),\n            AMAZON_BEDROCK_PROVIDER_ID | AMAZON_BEDROCK_RUNTIME_PROVIDER_ID\n        ) {\n            provider\n                .validate_bedrock_override()\n                .map_err(|message| format!(\"model_providers.{key} {message}\"))?;\n            let base_url_override = provider.base_url.take();\n            let auth_override = provider.auth.take();\n            let aws_override = provider.aws.take();\n            let http_headers_override = provider.http_headers.take();\n            if let Some(built_in_provider) = model_providers.get_mut(&key) {\n                built_in_provider.base_url = base_url_override;\n                built_in_provider.auth = auth_override;\n                if let Some(aws_override) = aws_override {\n                    built_in_provider.aws = Some(aws_override);\n                }\n                if let Some(http_headers_override) = http_headers_override {\n                    built_in_provider\n                        .http_headers\n                        .get_or_insert_default()\n                        .extend(http_headers_override);\n                }\n            }\n        } else {\n            model_providers.entry(key).or_insert(provider);\n        }\n    }\n\n    Ok(model_providers)\n}\n\npub fn create_oss_provider(default_provider_port: u16, wire_api: WireApi) -> ModelProviderInfo {\n    // These CODEX_OSS_ environment variables are experimental: we may"
+    }
+  ],
+  "routing_source_url": "https://github.com/openai/codex/blob/36650394c5b38c2990ccf2a3457165ca3e9d9726/codex-rs/login/src/auth/manager/workspace_routing.rs",
+  "routing_sha256": "876f029d3d706efbd7889adc3538f548fa676fc01ed4a59297993b137cc526aa",
+  "routing_excerpt": "/// Returns no routing for independent destinations or no selected workspace.\n/// Custom ChatGPT-auth destinations require successful discovery before independence\n/// can be established; a cache miss is not evidence of an independent destination.\n/// Implementations must reject failed discovery and changes to the selected account.\npub trait WorkspaceRoutingResolver: Send + Sync {",
+  "conclusion": "Built-in openai entry is not overridden. Configured request=0 / stream=0 / websocket=false was ineffective. Keep same account/provider; observe events and terminate group immediately on first unexpected transport/protocol error. No exact hidden request count claim.",
+  "effective_provider": "openai (built-in; existing ChatGPT authentication)",
+  "effective_request_max_retries": 4,
+  "effective_stream_max_retries": 5,
+  "effective_supports_websockets": true,
+  "cwd_vs_route": "Temporary local cwd isolates project instructions. Account workspace selection and backend discovery are different state; cwd alone does not establish routing.",
+  "no_new_provider_branch": true,
+  "no_auth_migration": true
+}

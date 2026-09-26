@@ -1,0 +1,124 @@
+{
+  "task_id": "SC-LAB1-G1-FOUNDATION-001",
+  "reviewed_commit": "c2e3ffe2f5af92ee03dac16a2865ec7c42f576e0",
+  "reviewer": "GPT / Task 1 Research Conversation",
+  "date": "2026-09-26",
+  "decision": "REVISE",
+  "goal1_pass": false,
+  "engineering_status": "PARTIAL_BLOCKED_WITH_REQUIRED_REPAIRS",
+  "next_task": "SC-LAB1-G1-REPAIR-001",
+  "goal2_authorized": false,
+  "goal3_authorized": false,
+  "performed": [
+    "GitHub connector pinned source/record/Notebook review",
+    "Git tree and blob comparison",
+    "four source files restored and git-blob verified",
+    "Independent teacher JSON recount using matching SHA256",
+    "Deterministic fixture probes",
+    "Exact remote SVG restored, git-blob verified, rendered and viewed"
+  ],
+  "not_performed": [
+    "Full clone",
+    "Full independent replay of the 108-test suite",
+    "Live model calls",
+    "User environment access",
+    "Remote repository writes",
+    "Full reacquisition/render of all original PDF/PNG figures",
+    "Trajectory cleaning quality experiments"
+  ],
+  "findings": [
+    {
+      "id": "SR-01",
+      "type": "REPRODUCED_ENGINEERING_DEFECT",
+      "priority": "HIGH",
+      "description": "Profile duplicates/foreign records removed before independent coverage verification",
+      "affected": [
+        "G1-A08"
+      ],
+      "source": "task1/workflow/tools.py",
+      "evidence": "probes/results.json"
+    },
+    {
+      "id": "SR-02",
+      "type": "REPRODUCED_ENGINEERING_DEFECT",
+      "priority": "HIGH",
+      "description": "Missing-time/type/process errors escape normalization; timeout drops partial safe logs",
+      "affected": [
+        "G1-A08",
+        "G1-A10",
+        "G1-A13",
+        "G1-A14"
+      ],
+      "sources": [
+        "task1/workflow/diagnostics.py",
+        "task1/workflow/provider.py",
+        "task1/workflow/controller.py"
+      ],
+      "evidence": [
+        "probes/results.json",
+        "probes/provider_results.json"
+      ]
+    },
+    {
+      "id": "SR-03",
+      "type": "INCOMPLETE_IMPLEMENTATION",
+      "priority": "HIGH",
+      "description": "Baseline is fixed BLOCKED stub, denoise unresolved, current phase actions diagnostic only",
+      "affected": [
+        "G1-A05",
+        "G1-A06",
+        "G1-A09",
+        "G1-A11",
+        "G1-A12"
+      ],
+      "sources": [
+        "task1/workflow/tools.py",
+        "task1/workflow/geometry.py",
+        "task1/workflow/controller.py"
+      ]
+    },
+    {
+      "id": "SR-04",
+      "type": "STATIC_CONTRACT_GAP",
+      "priority": "MEDIUM",
+      "description": "Evidence refs nonempty not verified; feedback may cite unrelated prior tool; contract echo is not source verification",
+      "affected": [
+        "G1-A10",
+        "G1-A12"
+      ],
+      "sources": [
+        "task1/workflow/controller.py",
+        "task1/workflow/tools.py"
+      ]
+    },
+    {
+      "id": "SR-05",
+      "type": "CONFIRMED_HISTORICAL_FAILURE_CURRENT_FIX_UNVERIFIED",
+      "priority": "HIGH",
+      "description": "9 JSONL reconnect notifications versus 10 stderr retry logs; exact HTTP count unknown; current repair not live-validated",
+      "affected": [
+        "G1-A13"
+      ],
+      "sources": [
+        "task1/workflow/provider.py",
+        "task1/evidence/goal1/runs/g1-live-20260926-03/calls/g1-live-20260926-03-02-execution/visible_events.jsonl",
+        "task1/evidence/goal1/runs/g1-live-20260926-03/calls/g1-live-20260926-03-02-execution/receipt.json"
+      ]
+    }
+  ],
+  "pending_research_decisions": [
+    {
+      "id": "D1",
+      "state": "UNVERIFIED",
+      "subject": "JSON-specific coordinate reference and distance policy",
+      "auto_approval": false
+    },
+    {
+      "id": "D2",
+      "state": "CANDIDATE",
+      "subject": "One-pass simultaneous direction deletion, preserve uncomputable windows",
+      "auto_approval": false
+    }
+  ],
+  "environment_recommendation": "Retain .venv and existing CLI for remediation; pin and document; no unrequested cleanup or global reconfiguration"
+}

@@ -1,0 +1,212 @@
+{
+  "classification": "GPT_SECOND_REVIEW_LOCAL_AUDIT",
+  "reviewed_commit": "c2e3ffe2f5af92ee03dac16a2865ec7c42f576e0",
+  "model_calls": 0,
+  "remote_writes": 0,
+  "limitations": [
+    "Not a full Git checkout or reproduction of the 108-test suite",
+    "Historical model calls were inspected, not repeated"
+  ],
+  "probes": [
+    {
+      "id": "P0-positive-raw-profile",
+      "status": "PASS",
+      "detail": {
+        "status": "VERIFIED",
+        "errors": [],
+        "records_checked": 7,
+        "claim": "Structural counts only; no physical accuracy or cleaning quality claim"
+      }
+    },
+    {
+      "id": "P1-missing-time-duplicate",
+      "observed": "UNHANDLED_EXCEPTION",
+      "exception": "TypeError",
+      "message": "unsupported operand type(s) for -: 'int' and 'NoneType'",
+      "input_source": "CONSTRUCTED_FIXTURE",
+      "profile_valid_structure": true,
+      "profile_invalid_timestamps": 1
+    },
+    {
+      "id": "P2-duplicate-verify_profiles",
+      "input_source": "CONSTRUCTED_FIXTURE",
+      "submitted_rows": 2,
+      "expected_records": 1,
+      "direct_checker_status": "REJECTED",
+      "direct_checker_errors": [
+        "RECORD_COVERAGE"
+      ],
+      "tool_status": "VERIFIED",
+      "tool_result": {
+        "status": "VERIFIED",
+        "errors": [],
+        "records_checked": 1,
+        "claim": "Structural counts only; no physical accuracy or cleaning quality claim"
+      }
+    },
+    {
+      "id": "P2-duplicate-recompute_check",
+      "input_source": "CONSTRUCTED_FIXTURE",
+      "submitted_rows": 2,
+      "expected_records": 1,
+      "direct_checker_status": "REJECTED",
+      "direct_checker_errors": [
+        "RECORD_COVERAGE"
+      ],
+      "tool_status": "VERIFIED",
+      "tool_result": {
+        "status": "VERIFIED",
+        "errors": [],
+        "records_checked": 1,
+        "claim": "Structural counts only; no physical accuracy or cleaning quality claim",
+        "recomputed_sha256": "ef146fbcda5e084a4bae3b63cb39973df3455dc02713885520711d890bf2779c",
+        "stored_sha256": "ef146fbcda5e084a4bae3b63cb39973df3455dc02713885520711d890bf2779c",
+        "exact_match": true
+      }
+    },
+    {
+      "id": "P2-extra-verify_profiles",
+      "input_source": "CONSTRUCTED_FIXTURE",
+      "submitted_rows": 2,
+      "expected_records": 1,
+      "direct_checker_status": "REJECTED",
+      "direct_checker_errors": [
+        "RECORD_COVERAGE",
+        "UNKNOWN_RECORD:foreign"
+      ],
+      "tool_status": "VERIFIED",
+      "tool_result": {
+        "status": "VERIFIED",
+        "errors": [],
+        "records_checked": 1,
+        "claim": "Structural counts only; no physical accuracy or cleaning quality claim"
+      }
+    },
+    {
+      "id": "P2-extra-recompute_check",
+      "input_source": "CONSTRUCTED_FIXTURE",
+      "submitted_rows": 2,
+      "expected_records": 1,
+      "direct_checker_status": "REJECTED",
+      "direct_checker_errors": [
+        "RECORD_COVERAGE",
+        "UNKNOWN_RECORD:foreign"
+      ],
+      "tool_status": "VERIFIED",
+      "tool_result": {
+        "status": "VERIFIED",
+        "errors": [],
+        "records_checked": 1,
+        "claim": "Structural counts only; no physical accuracy or cleaning quality claim",
+        "recomputed_sha256": "ef146fbcda5e084a4bae3b63cb39973df3455dc02713885520711d890bf2779c",
+        "stored_sha256": "ef146fbcda5e084a4bae3b63cb39973df3455dc02713885520711d890bf2779c",
+        "exact_match": true
+      }
+    },
+    {
+      "id": "P3-approved-config-baseline-stub",
+      "input_source": "CONSTRUCTED_FIXTURE",
+      "configured_processing_status": "APPROVED_FOR_REAL_INPUT",
+      "actual_result": {
+        "classification": "MOCK_TEST",
+        "input_sha256": "75e789a4c87ab414a74217a7880d2e6bf988600a93f3f1a5e93261d3161745f9",
+        "record_ids": [
+          "fixture"
+        ],
+        "input_records": 1,
+        "input_points": 3,
+        "modified_values": 0,
+        "parent_version": "RAW:75e789a4c87ab414a74217a7880d2e6bf988600a93f3f1a5e93261d3161745f9",
+        "semantics_version": "fixture",
+        "metrics_version": "fixture",
+        "status": "BLOCKED",
+        "reason": [],
+        "stage_counts": {
+          "input": 3,
+          "segmented": null,
+          "filtered": null,
+          "denoised": null,
+          "simplified": null,
+          "not_processed": 3
+        },
+        "unavailable_metrics_reason": "CRS/distance policy and direction execution schedule unresolved"
+      }
+    },
+    {
+      "id": "P4-source-evidence-contract-echo",
+      "input_source": "EXISTING_RAW_PLUS_CONSTRUCTED_POLICY",
+      "returned_fixture_policy_without_source_lookup": true
+    }
+  ],
+  "verified_source_blobs": {
+    "diagnostics.py": "a70fbe2f74512322e5d19b5541e960f1ba48a5f4",
+    "tools.py": "da9a59f939b5e00907a3c2eacfef51545c2d3505",
+    "io.py": "25ac484dcfcf376d0f8a9e760eec565a7857749a"
+  },
+  "raw_independent_recount": {
+    "raw_sha256": "c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3",
+    "mounted_zip": "作业(4).zip",
+    "zip_member": "作业/traj_dict.json",
+    "stats": {
+      "n_records": 11386,
+      "n_points": 1173410,
+      "edges": 1162024,
+      "zero_dt": 42185,
+      "negative_dt": 0,
+      "gt30": 8272,
+      "same_time_different_position": 29175,
+      "consecutive_duplicate_position": 575278
+    },
+    "pilot": [
+      {
+        "record_id": "0",
+        "n_points": 99,
+        "partitions_time_only": 1,
+        "zero_dt": 0
+      },
+      {
+        "record_id": "1",
+        "n_points": 97,
+        "partitions_time_only": 1,
+        "zero_dt": 0
+      },
+      {
+        "record_id": "2",
+        "n_points": 99,
+        "partitions_time_only": 1,
+        "zero_dt": 0
+      },
+      {
+        "record_id": "246",
+        "n_points": 108,
+        "partitions_time_only": 1,
+        "zero_dt": 1
+      },
+      {
+        "record_id": "256",
+        "n_points": 99,
+        "partitions_time_only": 1,
+        "zero_dt": 0
+      },
+      {
+        "record_id": "306",
+        "n_points": 111,
+        "partitions_time_only": 5,
+        "zero_dt": 5
+      },
+      {
+        "record_id": "352",
+        "n_points": 170,
+        "partitions_time_only": 2,
+        "zero_dt": 116
+      }
+    ],
+    "pilot_points": 783,
+    "pilot_partitions": 12,
+    "record_352": {
+      "points": 170,
+      "distinct_timestamps": 54,
+      "span_raw": 543
+    }
+  }
+}

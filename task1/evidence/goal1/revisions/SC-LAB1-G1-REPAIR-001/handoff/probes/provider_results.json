@@ -1,0 +1,44 @@
+{
+  "classification": "GPT_SECOND_REVIEW_ENGINEERING_TEST",
+  "reviewed_commit": "c2e3ffe2f5af92ee03dac16a2865ec7c42f576e0",
+  "source_git_blob": "6d0a8a38d882477bf81686f73f125eb250583fb4",
+  "model_calls": 0,
+  "real_child_processes": 0,
+  "probes": [
+    {
+      "id": "P5-null-event-item",
+      "exception": "AttributeError",
+      "message": "'NoneType' object has no attribute 'get'",
+      "normalized_ProviderError": false
+    },
+    {
+      "id": "P6-spawn_error",
+      "exception": "OSError",
+      "normalized_ProviderError": false,
+      "files": [
+        "input.json"
+      ],
+      "receipt": null
+    },
+    {
+      "id": "P6-timeout",
+      "exception": "ProviderError",
+      "normalized_ProviderError": true,
+      "files": [
+        "input.json",
+        "receipt.json"
+      ],
+      "receipt": {
+        "classification": "LIVE_CALL_ATTEMPT",
+        "role": "research",
+        "call_id": "fixture",
+        "started_at": "2026-09-26T12:31:41.198891+00:00",
+        "ended_at": "2026-09-26T12:31:41.199041+00:00",
+        "elapsed_seconds": 0.00014856500001769746,
+        "status": "BLOCKED",
+        "error": "MODEL_TIMEOUT; process group killed; no automatic resubmission",
+        "usage": "unavailable"
+      }
+    }
+  ]
+}

@@ -241,3 +241,42 @@ def assess_improvement(*, hard_conditions, measured_gain=None, minimum_gain=None
               and all(protection_changes[name] <= allowed_degradations[name] for name in protection_changes))
     return {"status": "QUALITY_ACCEPTED" if passed else "REJECTED",
             "reason": "EXPLICIT_CONTRACT_SATISFIED" if passed else "EXPLICIT_CONTRACT_FAILED"}
+
+
+def review_baseline(output):
+    """Recheck stored processing artifacts, including the complete terminal ledger."""
+    errors=[];inputs=[];groups={k:[] for k in ('filtered','denoised','simplified','retained')}
+    for record in output['records']:
+        for segment in record['filtered_segments']:
+            inputs.append(segment);groups['filtered'].append(segment)
+        for segment in record['processed_segments']:
+            original=segment['input'];clean=segment['denoise']['record'];final=segment['output']
+            inputs.append(original)
+            # Independent direction windows on the unmodified segment, one simultaneous pass.
+            points=original['xy'];bearings=[]
+            for a,b in zip(points,points[1:]):
+                dx,dy=b[0]-a[0],b[1]-a[1]
+                bearings.append(None if dx==dy==0 else math.degrees(math.atan2(dx,dy))%360)
+            removed=[]
+            for i in range(1,len(points)-2):
+                a,b,c=bearings[i-1:i+2]
+                if None in (a,b,c):continue
+                distances=[min(abs(b-x),360-abs(b-x)) for x in (a,c)]
+                if min(distances)>output['parameters']['direction']:removed.append(original['indices'][i])
+            if removed!=segment['denoise']['deleted_indices'] or clean['indices']!=[i for i in original['indices'] if i not in removed]:
+                errors.append('DIRECTION_SCHEDULE_MISMATCH')
+            result=verify_simplification(clean,final,output['parameters']['dp'])
+            if result['status']!='VERIFIED':errors.extend(result['errors'])
+            for stage,ids in [('denoised',removed),('simplified',[i for i in clean['indices'] if i not in final['indices']]),('retained',final['indices'])]:
+                positions=[original['indices'].index(i) for i in ids]
+                groups[stage].append({'record_id':original['record_id'],'indices':ids,
+                                      'timestamps':[original['timestamps'][i] for i in positions],
+                                      'xy':[original['xy'][i] for i in positions]})
+    audit=audit_point_accounting(inputs,groups)
+    expected=[(r['record_id'],i,stage,t,tuple(xy)) for stage,rows in groups.items() for r in rows
+              for i,t,xy in zip(r['indices'],r['timestamps'],r['xy'])]
+    actual=[(r['record_id'],r['original_index'],r['action'],r['timestamp'],tuple(r['xy'])) for r in output['point_actions']]
+    if sorted(expected)!=sorted(actual):errors.append('TERMINAL_LEDGER_MISMATCH')
+    if audit['status']!='VERIFIED':errors.extend(audit['errors'])
+    return {'status':'REJECTED' if errors else 'VERIFIED','errors':errors,'accounting':audit,
+            'scope':'Stored direction schedule, DP geometry and terminal accounting; not ground truth'}

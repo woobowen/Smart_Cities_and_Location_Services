@@ -274,9 +274,13 @@ def direction_candidates(record, threshold):
             "limitation": "Deletion/iteration/undefined-direction policy remains unapproved"}
 
 
-def denoise_trajectory(*args, **kwargs):
-    """Fail closed: do not disguise an unresolved teacher rule as no-op success."""
-    raise MethodUnresolved(
-        "TEACHER_DIRECTION_RULE_UNRESOLVED: define direction indices, forward "
-        "lookahead, endpoint behavior, undefined bearings and iteration before use"
-    )
+def denoise_trajectory(record, threshold=None, *, method=None, time_reliable=False):
+    """Registered mathematical candidate; production approval is checked upstream."""
+    if method != 'single_pass_simultaneous_keep_undefined':
+        raise MethodUnresolved('TEACHER_DIRECTION_RULE_UNRESOLVED: explicit registered schedule required')
+    candidates = direction_candidates(record, threshold)
+    removed = candidates['candidate_indices']
+    output = select_indices(record, [i for i in record['indices'] if i not in removed],
+                            time_reliable=time_reliable)
+    return {'record':output,'deleted_indices':removed,'decisions':candidates['rows'],
+            'method':method,'passes':1,'modified_values':0}

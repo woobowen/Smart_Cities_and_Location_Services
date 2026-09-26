@@ -3,7 +3,7 @@ from .io import DATA, digest, read_json, object_hash
 from .diagnostics import profile, aggregate, time_boundaries, duplicate_details, independent_profile_review
 
 
-def execute_tool(action, record_ids, policy, previous_profiles=None,classification='CURRENT_RUN_REAL_DATA',previous_baseline=None):
+def execute_tool(action, record_ids, policy, previous_profiles=None,classification='CURRENT_RUN_REAL_DATA'):
     if digest(DATA)!=policy['raw_sha256']:
         raise ValueError('INPUT_HASH_MISMATCH')
     raw=read_json(DATA)
@@ -13,8 +13,8 @@ def execute_tool(action, record_ids, policy, previous_profiles=None,classificati
           'input_points':sum(len(v[1]) for v in subset.values()),'modified_values':0,
           'parent_version':'RAW:'+policy['raw_sha256'],'semantics_version':policy['semantics_version'],
           'metrics_version':policy['metrics_version']}
-    if action in ('contract_snapshot', 'source_evidence'):
-        payload={'scope':'SAVED_CONTRACT_ONLY_NOT_SOURCE_VERIFICATION','semantics':policy['semantics'],'method':policy['method'],
+    if action=='source_evidence':
+        payload={'semantics':policy['semantics'],'method':policy['method'],
                  'starter_reference':policy['starter_reference'],'teacher_95m':policy['teacher_95m']}
     elif action=='profile_pilot':
         rows=[profile(k,v,classification) for k,v in subset.items()]
@@ -28,30 +28,21 @@ def execute_tool(action, record_ids, policy, previous_profiles=None,classificati
     elif action in ('verify_profiles','recompute_check'):
         if previous_profiles is None:
             raise ValueError('MISSING_PROFILE_OUTPUT')
-        payload=independent_profile_review(subset,previous_profiles)
-        if payload['status'] != 'VERIFIED':
-            if action == 'recompute_check': payload['exact_match'] = False
-            return {**base,'status':'REJECTED','result':payload}
-        by_id={p['record_id']:p for p in previous_profiles}
+        by_id={p['record_id']:p for p in previous_profiles if p['record_id'] in subset}
+        if len(by_id)!=len(subset):raise ValueError('PROFILE_COVERAGE_MISMATCH')
         selected=[by_id[k] for k in subset]
+        payload=independent_profile_review(subset,selected)
         if action=='recompute_check':
             recomputed=[profile(k,v,classification) for k,v in subset.items()]
             equal=object_hash(recomputed)==object_hash(selected)
             payload.update(recomputed_sha256=object_hash(recomputed),stored_sha256=object_hash(selected),exact_match=equal)
             if not equal:payload['status']='REJECTED'
-    elif action=='verify_baseline':
-        from .evaluation import review_baseline
-        if previous_baseline is None:raise ValueError('MISSING_BASELINE_OUTPUT')
-        payload=review_baseline(previous_baseline)
     elif action=='baseline':
-        from .pipeline import run_real
-        return {**base, **run_real(raw, record_ids, policy)}
-    elif action == 'source_check':
-        from .sources import source_context
-        payload = {'sources':source_context(), 'scope':'EXACT_LOCAL_SOURCE_EXCERPTS; datum remains unverified'}
-    elif action == 'escalate':
-        payload = {'status':'BLOCKED','reason':'ROLE_REQUESTED_RESEARCH_REVIEW; no numeric modification'}
-
+        # Deliberately no projection/deletion fallback. The diagnostic path remains usable.
+        return {**base,'status':'BLOCKED','reason':policy['method']['blocking_ids'],
+                'stage_counts':{'input':base['input_points'],'segmented':None,'filtered':None,
+                                'denoised':None,'simplified':None,'not_processed':base['input_points']},
+                'unavailable_metrics_reason':'CRS/distance policy and direction execution schedule unresolved'}
     else:
         raise ValueError('UNKNOWN_TOOL')
     return {**base,'status':payload.get('status','EXECUTED'),'result':payload}

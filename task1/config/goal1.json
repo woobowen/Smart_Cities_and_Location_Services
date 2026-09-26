@@ -187,24 +187,32 @@
   },
   "actions": {
     "research": [
-      "source_evidence",
       "profile_pilot",
       "time_boundaries",
       "duplicate_details",
       "verify_profiles",
-      "recompute_check"
+      "recompute_check",
+      "contract_snapshot",
+      "source_check",
+      "escalate"
     ],
     "execution": [
       "profile_pilot",
       "time_boundaries",
       "duplicate_details",
       "recompute_check",
-      "baseline"
+      "baseline",
+      "contract_snapshot",
+      "source_check",
+      "escalate"
     ],
     "review": [
       "verify_profiles",
       "recompute_check",
-      "source_evidence"
+      "contract_snapshot",
+      "source_check",
+      "escalate",
+      "verify_baseline"
     ]
   },
   "budget": {

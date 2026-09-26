@@ -98,30 +98,22 @@ def duplicate_details(record_id, value):
     events=[]
     for i in range(1,len(ts)):
         tags=[]
-        time_ok = finite(ts[i]) and finite(ts[i-1])
-        position_ok = all(isinstance(c, list) and len(c) == 2 and all(finite(x) for x in c)
-                          for c in coords[i-1:i+1])
-        if not time_ok: tags.append('MISSING_OR_INVALID_TIME')
-        if not position_ok: tags.append('INVALID_POSITION_PAIR')
-        if position_ok and coords[i] == coords[i-1]:
+        if coords[i] == coords[i-1]:
             tags.append('REPEATED_POSITION_NOT_AUTOMATIC_NOISE')
-        if time_ok and ts[i] == ts[i-1]:
+        if ts[i] == ts[i-1]:
             tags.append('ZERO_DT_SPEED_UNAVAILABLE')
-            if position_ok and coords[i] != coords[i-1]:
+            if coords[i] != coords[i-1]:
                 tags.append('SAME_TIME_DIFFERENT_POSITION')
         if tags:
-            events.append({'left_index':i-1,'right_index':i,'dt_raw':ts[i]-ts[i-1] if time_ok else None,
-                           'dt_reason':None if time_ok else 'MISSING_OR_INVALID_TIME',
-                           'position_pair_computable':position_ok, 'reasons':tags})
+            events.append({'left_index':i-1,'right_index':i,'dt_raw':ts[i]-ts[i-1], 'reasons':tags})
     return {'record_id':record_id,'events':events,'modified':0,'deleted':0,'status':'EXECUTED'}
 
 
 def independent_profile_review(raw, rows):
     """Second implementation, direct counts, not a call to profile/aggregate."""
-    errors = profile_list_errors(raw, rows)
-    if errors:
-        return {'status':'REJECTED','errors':errors,'records_checked':0,
-                'claim':'Full submitted list rejected before alignment; no rows discarded'}
+    errors=[]
+    if len(rows)!=len(raw) or len({p.get('record_id') for p in rows})!=len(rows):
+        errors.append('RECORD_COVERAGE')
     for row in rows:
         rid=row.get('record_id')
         if rid not in raw:
@@ -162,30 +154,3 @@ def independent_profile_review(raw, rows):
             if row.get(k)!=v:errors.append(f'{rid}:{k}')
     return {'status':'VERIFIED' if not errors else 'REJECTED','errors':errors,'records_checked':len(rows),
             'claim':'Structural counts only; no physical accuracy or cleaning quality claim'}
-
-
-def profile_list_errors(raw, rows):
-    """Validate the entire submission before any mapping, selection or ordering."""
-    if not isinstance(rows, list): return ['PROFILE_LIST_REQUIRED']
-    template = profile('', [[], []])
-    errors = []
-    ids = []
-    for i, row in enumerate(rows):
-        if not isinstance(row, dict) or set(row) != set(template):
-            errors.append(f'PROFILE_FIELDS:{i}'); continue
-        if not isinstance(row['record_id'], str):
-            errors.append(f'RECORD_ID_TYPE:{i}'); continue
-        ids.append(row['record_id'])
-        for field, example in template.items():
-            value = row[field]
-            if example is None:
-                valid = value is None or finite(value)
-            else:
-                valid = type(value) is type(example)
-            if not valid: errors.append(f'PROFILE_FIELD_TYPE:{i}:{field}')
-        counts=row.get('dt_counts')
-        if isinstance(counts,dict) and any(type(v) is not int or v < 0 for v in counts.values()):
-            errors.append(f'DT_COUNTS_TYPE:{i}')
-    if len(ids) != len(set(ids)): errors.append('DUPLICATE_RECORD_ID')
-    if len(rows) != len(raw) or set(ids) != set(raw): errors.append('RECORD_COVERAGE')
-    return errors

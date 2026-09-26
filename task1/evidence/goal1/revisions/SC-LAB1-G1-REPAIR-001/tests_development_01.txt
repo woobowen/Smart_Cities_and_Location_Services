@@ -1,0 +1,251 @@
+.........F...................F.......F.FF............................... [ 66%]
+....................................                                     [100%]
+=================================== FAILURES ===================================
+__________________ test_feedback_must_reference_real_trigger ___________________
+
+request = {'role': 'execution', 'call_id': 'test-call', 'action': 'profile_pilot', 'record_ids': ['fixture'], ...}
+role = 'execution', call_id = 'test-call'
+policy = {'task_id': 'SC-LAB1-G1-FOUNDATION-001', 'goal': 1, 'policy_version': 'g1-policy-v1', 'semantics_version': 'g1-semantics-v1', ...}
+pilot = {'ids': ['fixture']}, mode = 'MOCK_TEST'
+feedback_ids = ['actual-review']
+context = {'teacher:13:body': {'id': 'teacher:13:body', 'path': 'task1/实验课1.pptx', 'sha256': 'cf5fdbdd0e116818f4bf195e8761dd55c4...PROMPT.md', 'sha256': 'b7d0b7a7bf943b5719b46a42bef6b2185de6f1b415a9f503bf8c291ff93835f0', 'lines': [1, 247], ...}, ...}
+run_id = 'engineering-test'
+
+    def validate_request(request,role,call_id,policy,pilot,*,mode='LIVE',feedback_ids=(),context=None,run_id=None):
+        jsonschema.validate(request,response_schema(role,call_id,policy['actions'][role]))
+        if policy['goal']!=1 or policy['metrics_version']!='g1-metrics-v1' or policy['semantics_version']!='g1-semantics-v1':
+            raise GateError('UNAPPROVED_GOAL_OR_CONTRACT_VERSION')
+        if mode=='SEARCH_ONLY':
+            raise GateError('LLM_FORBIDDEN_IN_SEARCH_ONLY')
+        ids=request['record_ids']
+        if len(ids)!=len(set(ids)) or not ids or len(ids)>policy['budget']['max_pilot_records'] or set(ids)!=set(pilot['ids']):
+            raise GateError('RECORD_SCOPE_OR_HOLDOUT_VIOLATION')
+        if not request['reason'].strip() or not request['evidence_refs']:
+            raise GateError('MISSING_REASON_OR_SOURCE')
+        if feedback_ids and not set(feedback_ids).issubset(request['feedback_refs']):
+            raise GateError('MISSING_ACTUAL_FEEDBACK_REFERENCE')
+        try:
+>           validate_references(request,context if context is not None else source_context(),
+                                'RAW:'+policy['raw_sha256'],run_id,feedback_ids)
+
+task1/workflow/controller.py:52: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+request = {'role': 'execution', 'call_id': 'test-call', 'action': 'profile_pilot', 'record_ids': ['fixture'], ...}
+context = {'teacher:13:body': {'id': 'teacher:13:body', 'path': 'task1/实验课1.pptx', 'sha256': 'cf5fdbdd0e116818f4bf195e8761dd55c4...PROMPT.md', 'sha256': 'b7d0b7a7bf943b5719b46a42bef6b2185de6f1b415a9f503bf8c291ff93835f0', 'lines': [1, 247], ...}, ...}
+parent_version = 'RAW:ed4f28c3846eafde0393d2b312267a64951e2cd20d9c72ab05d4ca3b12d2002e'
+run_id = 'engineering-test', required_feedback = ['actual-review']
+
+    def validate_references(request, context, parent_version, run_id, required_feedback=()):
+        for ref in request['evidence_refs'] + request['feedback_refs']:
+>           if ref not in context:raise ValueError('UNKNOWN_EVIDENCE_REFERENCE:'+ref)
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E           ValueError: UNKNOWN_EVIDENCE_REFERENCE:actual-review
+
+task1/workflow/sources.py:32: ValueError
+
+The above exception was the direct cause of the following exception:
+
+controller = <task1.workflow.controller.Controller object at 0x75f692b104d0>
+
+    def test_feedback_must_reference_real_trigger(controller):
+        with pytest.raises(c.GateError,match='FEEDBACK'):
+            controller.dispatch(request(),'execution','test-call',feedback_ids=['actual-review'])
+        r=request();r['feedback_refs']=['actual-review']
+>       controller.dispatch(r,'execution','test-call',feedback_ids=['actual-review'])
+
+task1/tests/test_control.py:72: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+task1/workflow/controller.py:212: in dispatch
+    try:return self._dispatch(request,role,call_id,**kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+task1/workflow/controller.py:161: in _dispatch
+    validate_request(request,role,call_id,self.policy,self.pilot,mode=self.mode,feedback_ids=feedback_ids,context=self.context(),run_id=self.run_id)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+request = {'role': 'execution', 'call_id': 'test-call', 'action': 'profile_pilot', 'record_ids': ['fixture'], ...}
+role = 'execution', call_id = 'test-call'
+policy = {'task_id': 'SC-LAB1-G1-FOUNDATION-001', 'goal': 1, 'policy_version': 'g1-policy-v1', 'semantics_version': 'g1-semantics-v1', ...}
+pilot = {'ids': ['fixture']}, mode = 'MOCK_TEST'
+feedback_ids = ['actual-review']
+context = {'teacher:13:body': {'id': 'teacher:13:body', 'path': 'task1/实验课1.pptx', 'sha256': 'cf5fdbdd0e116818f4bf195e8761dd55c4...PROMPT.md', 'sha256': 'b7d0b7a7bf943b5719b46a42bef6b2185de6f1b415a9f503bf8c291ff93835f0', 'lines': [1, 247], ...}, ...}
+run_id = 'engineering-test'
+
+    def validate_request(request,role,call_id,policy,pilot,*,mode='LIVE',feedback_ids=(),context=None,run_id=None):
+        jsonschema.validate(request,response_schema(role,call_id,policy['actions'][role]))
+        if policy['goal']!=1 or policy['metrics_version']!='g1-metrics-v1' or policy['semantics_version']!='g1-semantics-v1':
+            raise GateError('UNAPPROVED_GOAL_OR_CONTRACT_VERSION')
+        if mode=='SEARCH_ONLY':
+            raise GateError('LLM_FORBIDDEN_IN_SEARCH_ONLY')
+        ids=request['record_ids']
+        if len(ids)!=len(set(ids)) or not ids or len(ids)>policy['budget']['max_pilot_records'] or set(ids)!=set(pilot['ids']):
+            raise GateError('RECORD_SCOPE_OR_HOLDOUT_VIOLATION')
+        if not request['reason'].strip() or not request['evidence_refs']:
+            raise GateError('MISSING_REASON_OR_SOURCE')
+        if feedback_ids and not set(feedback_ids).issubset(request['feedback_refs']):
+            raise GateError('MISSING_ACTUAL_FEEDBACK_REFERENCE')
+        try:
+            validate_references(request,context if context is not None else source_context(),
+                                'RAW:'+policy['raw_sha256'],run_id,feedback_ids)
+>       except ValueError as exc: raise GateError(str(exc)) from exc
+                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+E       task1.workflow.controller.GateError: UNKNOWN_EVIDENCE_REFERENCE:actual-review
+
+task1/workflow/controller.py:54: GateError
+___________ test_preplanted_live_response_is_rejected_without_model ____________
+
+controller = <task1.workflow.controller.Controller object at 0x75f6929ba150>
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x75f69296e150>
+
+    def test_preplanted_live_response_is_rejected_without_model(controller,monkeypatch):
+        controller.mode='LIVE';controller.policy['live_execution_enabled']=True
+        call=controller.run_id+'-01-research'
+        out=controller.directory/'calls'/call
+        write_json(out/'response.json',request('source_evidence','research',call))
+        write_json(out/'receipt.json',{})
+        monkeypatch.setattr(CodexProvider,'call',lambda *a,**k:pytest.fail('No model call allowed'))
+        with pytest.raises(c.GateError,match='UNDISPATCHED'):controller.run(stop_after=1)
+        assert read_json(controller.ledger_path)['model_attempts']==0
+>       assert controller.state['status']=='PLANNED' and not controller.state['calls']
+E       AssertionError: assert ('FAILED' == 'PLANNED'
+E         
+E         - PLANNED
+E         + FAILED)
+
+task1/tests/test_control.py:227: AssertionError
+_____________ test_valid_recovery_executes_once_without_new_model ______________
+
+controller = <task1.workflow.controller.Controller object at 0x75f6929b9460>
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x75f69296fda0>
+
+    def test_valid_recovery_executes_once_without_new_model(controller,monkeypatch):
+        prepare_recovery_fixture(controller)
+        monkeypatch.setattr(CodexProvider,'call',lambda *a,**k:pytest.fail('No model call allowed'))
+>       state=controller.run(stop_after=1)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+task1/tests/test_control.py:251: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+task1/workflow/controller.py:366: in run
+    try:return self._run(provider,stop_after=stop_after)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+task1/workflow/controller.py:314: in _run
+    value,receipt,hashes=verify_saved_call(call_dir,role,call_id,actions,dispatch['input_hash'])
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+directory = PosixPath('/tmp/pytest-of-addaswsw/pytest-1/test_valid_recovery_executes_o0/runs/engineering-test/calls/engineering-test-01-research')
+role = 'research', call_id = 'engineering-test-01-research'
+actions = ['contract_snapshot', 'source_check', 'profile_pilot', 'time_boundaries', 'duplicate_details', 'escalate']
+expected_input_hash = '2507c326c7cff160c473daa75e85bc83a7018c7a6a4ebc77ce969be1184b3b87'
+
+    def verify_saved_call(directory, role, call_id, actions, expected_input_hash):
+        """Recover only a dispatched call, verifying the actual visible final event."""
+        directory=Path(directory)
+        paths=[directory/name for name in ('input.json','receipt.json','response.json','visible_events.jsonl')]
+        if any(not p.is_file() or p.is_symlink() for p in paths):
+            raise ProviderError('MISSING_OR_UNSAFE_CALL_EVIDENCE')
+        saved_input,receipt,value=(read_json(p) for p in paths[:3])
+        schema=response_schema(role,call_id,actions)
+        if object_hash(saved_input)!=expected_input_hash or saved_input.get('schema')!=schema:
+>           raise ProviderError('CALL_INPUT_MISMATCH')
+E           task1.workflow.provider.ProviderError: CALL_INPUT_MISMATCH
+
+task1/workflow/provider.py:228: ProviderError
+_____________ test_bad_tool_does_not_advance_or_upgrade[REJECTED] ______________
+
+controller = <task1.workflow.controller.Controller object at 0x75f6929b9d30>
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x75f6929b8050>
+status = 'REJECTED'
+
+    @pytest.mark.parametrize('status',['REJECTED','BLOCKED'])
+    def test_bad_tool_does_not_advance_or_upgrade(controller,monkeypatch,status):
+        prepare_recovery_fixture(controller)
+        real=c.execute_tool
+        def failing(*args,**kwargs):
+            output=real(*args,**kwargs);output['status']=status;return output
+        monkeypatch.setattr(c,'execute_tool',failing)
+        monkeypatch.setattr(CodexProvider,'call',lambda *a,**k:pytest.fail('No model call allowed'))
+>       state=controller.run(stop_after=1)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+task1/tests/test_control.py:275: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+task1/workflow/controller.py:366: in run
+    try:return self._run(provider,stop_after=stop_after)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+task1/workflow/controller.py:314: in _run
+    value,receipt,hashes=verify_saved_call(call_dir,role,call_id,actions,dispatch['input_hash'])
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+directory = PosixPath('/tmp/pytest-of-addaswsw/pytest-1/test_bad_tool_does_not_advance0/runs/engineering-test/calls/engineering-test-01-research')
+role = 'research', call_id = 'engineering-test-01-research'
+actions = ['contract_snapshot', 'source_check', 'profile_pilot', 'time_boundaries', 'duplicate_details', 'escalate']
+expected_input_hash = '2507c326c7cff160c473daa75e85bc83a7018c7a6a4ebc77ce969be1184b3b87'
+
+    def verify_saved_call(directory, role, call_id, actions, expected_input_hash):
+        """Recover only a dispatched call, verifying the actual visible final event."""
+        directory=Path(directory)
+        paths=[directory/name for name in ('input.json','receipt.json','response.json','visible_events.jsonl')]
+        if any(not p.is_file() or p.is_symlink() for p in paths):
+            raise ProviderError('MISSING_OR_UNSAFE_CALL_EVIDENCE')
+        saved_input,receipt,value=(read_json(p) for p in paths[:3])
+        schema=response_schema(role,call_id,actions)
+        if object_hash(saved_input)!=expected_input_hash or saved_input.get('schema')!=schema:
+>           raise ProviderError('CALL_INPUT_MISMATCH')
+E           task1.workflow.provider.ProviderError: CALL_INPUT_MISMATCH
+
+task1/workflow/provider.py:228: ProviderError
+______________ test_bad_tool_does_not_advance_or_upgrade[BLOCKED] ______________
+
+controller = <task1.workflow.controller.Controller object at 0x75f6934d2e70>
+monkeypatch = <_pytest.monkeypatch.MonkeyPatch object at 0x75f692972600>
+status = 'BLOCKED'
+
+    @pytest.mark.parametrize('status',['REJECTED','BLOCKED'])
+    def test_bad_tool_does_not_advance_or_upgrade(controller,monkeypatch,status):
+        prepare_recovery_fixture(controller)
+        real=c.execute_tool
+        def failing(*args,**kwargs):
+            output=real(*args,**kwargs);output['status']=status;return output
+        monkeypatch.setattr(c,'execute_tool',failing)
+        monkeypatch.setattr(CodexProvider,'call',lambda *a,**k:pytest.fail('No model call allowed'))
+>       state=controller.run(stop_after=1)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+task1/tests/test_control.py:275: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+task1/workflow/controller.py:366: in run
+    try:return self._run(provider,stop_after=stop_after)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+task1/workflow/controller.py:314: in _run
+    value,receipt,hashes=verify_saved_call(call_dir,role,call_id,actions,dispatch['input_hash'])
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+directory = PosixPath('/tmp/pytest-of-addaswsw/pytest-1/test_bad_tool_does_not_advance1/runs/engineering-test/calls/engineering-test-01-research')
+role = 'research', call_id = 'engineering-test-01-research'
+actions = ['contract_snapshot', 'source_check', 'profile_pilot', 'time_boundaries', 'duplicate_details', 'escalate']
+expected_input_hash = '2507c326c7cff160c473daa75e85bc83a7018c7a6a4ebc77ce969be1184b3b87'
+
+    def verify_saved_call(directory, role, call_id, actions, expected_input_hash):
+        """Recover only a dispatched call, verifying the actual visible final event."""
+        directory=Path(directory)
+        paths=[directory/name for name in ('input.json','receipt.json','response.json','visible_events.jsonl')]
+        if any(not p.is_file() or p.is_symlink() for p in paths):
+            raise ProviderError('MISSING_OR_UNSAFE_CALL_EVIDENCE')
+        saved_input,receipt,value=(read_json(p) for p in paths[:3])
+        schema=response_schema(role,call_id,actions)
+        if object_hash(saved_input)!=expected_input_hash or saved_input.get('schema')!=schema:
+>           raise ProviderError('CALL_INPUT_MISMATCH')
+E           task1.workflow.provider.ProviderError: CALL_INPUT_MISMATCH
+
+task1/workflow/provider.py:228: ProviderError
+=========================== short test summary info ============================
+FAILED task1/tests/test_control.py::test_feedback_must_reference_real_trigger
+FAILED task1/tests/test_control.py::test_preplanted_live_response_is_rejected_without_model
+FAILED task1/tests/test_control.py::test_valid_recovery_executes_once_without_new_model
+FAILED task1/tests/test_control.py::test_bad_tool_does_not_advance_or_upgrade[REJECTED]
+FAILED task1/tests/test_control.py::test_bad_tool_does_not_advance_or_upgrade[BLOCKED]
+5 failed, 103 passed in 2.20s

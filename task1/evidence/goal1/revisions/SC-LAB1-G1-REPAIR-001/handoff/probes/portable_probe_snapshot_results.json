@@ -1,0 +1,201 @@
+{
+  "classification": "ENGINEERING_TEST",
+  "network_calls": 0,
+  "model_calls": 0,
+  "review_target": "/mnt/data/g1_second_audit/source_snapshot",
+  "checked_commit": "unavailable",
+  "probes": [
+    {
+      "id": "MISSING_TIME_DUPLICATE",
+      "exception": "TypeError",
+      "message": "unsupported operand type(s) for -: 'int' and 'NoneType'"
+    },
+    {
+      "id": "duplicate_verify_profiles",
+      "status": "VERIFIED",
+      "result": {
+        "classification": "MOCK_TEST",
+        "input_sha256": "75e789a4c87ab414a74217a7880d2e6bf988600a93f3f1a5e93261d3161745f9",
+        "record_ids": [
+          "fixture"
+        ],
+        "input_records": 1,
+        "input_points": 3,
+        "modified_values": 0,
+        "parent_version": "RAW:75e789a4c87ab414a74217a7880d2e6bf988600a93f3f1a5e93261d3161745f9",
+        "semantics_version": "fixture",
+        "metrics_version": "fixture",
+        "status": "VERIFIED",
+        "result": {
+          "status": "VERIFIED",
+          "errors": [],
+          "records_checked": 1,
+          "claim": "Structural counts only; no physical accuracy or cleaning quality claim"
+        }
+      }
+    },
+    {
+      "id": "duplicate_recompute_check",
+      "status": "VERIFIED",
+      "result": {
+        "classification": "MOCK_TEST",
+        "input_sha256": "75e789a4c87ab414a74217a7880d2e6bf988600a93f3f1a5e93261d3161745f9",
+        "record_ids": [
+          "fixture"
+        ],
+        "input_records": 1,
+        "input_points": 3,
+        "modified_values": 0,
+        "parent_version": "RAW:75e789a4c87ab414a74217a7880d2e6bf988600a93f3f1a5e93261d3161745f9",
+        "semantics_version": "fixture",
+        "metrics_version": "fixture",
+        "status": "VERIFIED",
+        "result": {
+          "status": "VERIFIED",
+          "errors": [],
+          "records_checked": 1,
+          "claim": "Structural counts only; no physical accuracy or cleaning quality claim",
+          "recomputed_sha256": "ef146fbcda5e084a4bae3b63cb39973df3455dc02713885520711d890bf2779c",
+          "stored_sha256": "ef146fbcda5e084a4bae3b63cb39973df3455dc02713885520711d890bf2779c",
+          "exact_match": true
+        }
+      }
+    },
+    {
+      "id": "foreign_verify_profiles",
+      "status": "VERIFIED",
+      "result": {
+        "classification": "MOCK_TEST",
+        "input_sha256": "75e789a4c87ab414a74217a7880d2e6bf988600a93f3f1a5e93261d3161745f9",
+        "record_ids": [
+          "fixture"
+        ],
+        "input_records": 1,
+        "input_points": 3,
+        "modified_values": 0,
+        "parent_version": "RAW:75e789a4c87ab414a74217a7880d2e6bf988600a93f3f1a5e93261d3161745f9",
+        "semantics_version": "fixture",
+        "metrics_version": "fixture",
+        "status": "VERIFIED",
+        "result": {
+          "status": "VERIFIED",
+          "errors": [],
+          "records_checked": 1,
+          "claim": "Structural counts only; no physical accuracy or cleaning quality claim"
+        }
+      }
+    },
+    {
+      "id": "foreign_recompute_check",
+      "status": "VERIFIED",
+      "result": {
+        "classification": "MOCK_TEST",
+        "input_sha256": "75e789a4c87ab414a74217a7880d2e6bf988600a93f3f1a5e93261d3161745f9",
+        "record_ids": [
+          "fixture"
+        ],
+        "input_records": 1,
+        "input_points": 3,
+        "modified_values": 0,
+        "parent_version": "RAW:75e789a4c87ab414a74217a7880d2e6bf988600a93f3f1a5e93261d3161745f9",
+        "semantics_version": "fixture",
+        "metrics_version": "fixture",
+        "status": "VERIFIED",
+        "result": {
+          "status": "VERIFIED",
+          "errors": [],
+          "records_checked": 1,
+          "claim": "Structural counts only; no physical accuracy or cleaning quality claim",
+          "recomputed_sha256": "ef146fbcda5e084a4bae3b63cb39973df3455dc02713885520711d890bf2779c",
+          "stored_sha256": "ef146fbcda5e084a4bae3b63cb39973df3455dc02713885520711d890bf2779c",
+          "exact_match": true
+        }
+      }
+    },
+    {
+      "id": "valid_verify_profiles",
+      "status": "VERIFIED",
+      "result": {
+        "classification": "MOCK_TEST",
+        "input_sha256": "75e789a4c87ab414a74217a7880d2e6bf988600a93f3f1a5e93261d3161745f9",
+        "record_ids": [
+          "fixture"
+        ],
+        "input_records": 1,
+        "input_points": 3,
+        "modified_values": 0,
+        "parent_version": "RAW:75e789a4c87ab414a74217a7880d2e6bf988600a93f3f1a5e93261d3161745f9",
+        "semantics_version": "fixture",
+        "metrics_version": "fixture",
+        "status": "VERIFIED",
+        "result": {
+          "status": "VERIFIED",
+          "errors": [],
+          "records_checked": 1,
+          "claim": "Structural counts only; no physical accuracy or cleaning quality claim"
+        }
+      }
+    },
+    {
+      "id": "valid_recompute_check",
+      "status": "VERIFIED",
+      "result": {
+        "classification": "MOCK_TEST",
+        "input_sha256": "75e789a4c87ab414a74217a7880d2e6bf988600a93f3f1a5e93261d3161745f9",
+        "record_ids": [
+          "fixture"
+        ],
+        "input_records": 1,
+        "input_points": 3,
+        "modified_values": 0,
+        "parent_version": "RAW:75e789a4c87ab414a74217a7880d2e6bf988600a93f3f1a5e93261d3161745f9",
+        "semantics_version": "fixture",
+        "metrics_version": "fixture",
+        "status": "VERIFIED",
+        "result": {
+          "status": "VERIFIED",
+          "errors": [],
+          "records_checked": 1,
+          "claim": "Structural counts only; no physical accuracy or cleaning quality claim",
+          "recomputed_sha256": "ef146fbcda5e084a4bae3b63cb39973df3455dc02713885520711d890bf2779c",
+          "stored_sha256": "ef146fbcda5e084a4bae3b63cb39973df3455dc02713885520711d890bf2779c",
+          "exact_match": true
+        }
+      }
+    },
+    {
+      "id": "NULL_ITEM",
+      "exception": "AttributeError",
+      "normalized_provider_error": false
+    },
+    {
+      "id": "SPAWN_FAILURE",
+      "exception": "OSError",
+      "normalized_provider_error": false,
+      "saved_files": [
+        "input.json"
+      ],
+      "receipt": null
+    },
+    {
+      "id": "TIMEOUT_WITH_PARTIAL_LOG",
+      "exception": "ProviderError",
+      "normalized_provider_error": true,
+      "saved_files": [
+        "input.json",
+        "receipt.json"
+      ],
+      "receipt": {
+        "classification": "LIVE_CALL_ATTEMPT",
+        "role": "research",
+        "call_id": "fixture",
+        "started_at": "2026-09-26T12:33:08.759027+00:00",
+        "ended_at": "2026-09-26T12:33:08.759171+00:00",
+        "elapsed_seconds": 0.000141463999852931,
+        "status": "BLOCKED",
+        "error": "MODEL_TIMEOUT; process group killed; no automatic resubmission",
+        "usage": "unavailable"
+      }
+    }
+  ]
+}
