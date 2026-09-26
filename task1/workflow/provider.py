@@ -58,6 +58,8 @@ def visible_events(stdout):
         elif event['type']=='item.completed':
             if item.get('type')=='agent_message':
                 events.append(event)
+            elif item.get('type')=='error':
+                events.append({'type':'error','message':item.get('message',item.get('text','CLI error item')),'item_id':item.get('id')})
             else:
                 # Unexpected CLI tool activity is an execution-boundary failure.
                 events.append({'type':'unexpected_tool','item_type':item.get('type'),'item_id':item.get('id')})
@@ -119,7 +121,14 @@ class CodexProvider:
                            'started_at':started,'ended_at':now(),'elapsed_seconds':time.perf_counter()-clock,
                            'status':'BLOCKED','error':'MODEL_TIMEOUT; no automatic resubmission','usage':'unavailable'},exclusive=True)
                 raise ProviderError('MODEL_TIMEOUT') from exc
-            events=visible_events(result.stdout)
+            try:
+                events=visible_events(result.stdout)
+            except ProviderError as exc:
+                write_json(out/'receipt.json',{'classification':'LIVE_CALL_ATTEMPT','role':role,'call_id':call_id,
+                           'started_at':started,'ended_at':now(),'elapsed_seconds':time.perf_counter()-clock,
+                           'status':'BLOCKED','error':str(exc),'usage':'unavailable',
+                           'stdout_not_saved':'Invalid event stream; no regex repair'},exclusive=True)
+                raise
             (out/'visible_events.jsonl').write_text(''.join(json.dumps(e,ensure_ascii=False)+'\n' for e in events))
             receipt={'classification':'LIVE_CALL_ATTEMPT','provider':'Codex CLI / existing ChatGPT login',
                      'role':role,'call_id':call_id,'requested_model':'gpt-6-astra',

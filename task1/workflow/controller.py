@@ -229,7 +229,7 @@ class Controller:
                 try:
                     value,receipt=provider.call(role,call_id,self.prompt(role,call_id,instruction),PHASE_ACTIONS[phase],call_dir)
                 except ProviderError as exc:
-                    self.state['status']='BLOCKED';self.state['errors'].append({'call_id':call_id,'reason':str(exc)})
+                    self.state['status']='BLOCKED';self.state['ended_at']=now();self.state['errors'].append({'call_id':call_id,'reason':str(exc)})
                     self.save();self.event('LIVE_AGENT_BLOCKED',call_id=call_id,reason=str(exc));raise
             if not any(c['call_id']==call_id for c in self.state['calls']):
                 self.state['calls'].append({'call_id':call_id,'role':role,'thread_id':receipt.get('thread_id','unavailable'),
@@ -238,7 +238,7 @@ class Controller:
             try:
                 tool=self.dispatch(value,role,call_id,feedback_ids=feedback_ids if phase>=3 else ())
             except (ValueError,jsonschema.ValidationError) as exc:
-                self.state['status']='NEEDS_REVIEW';self.state['errors'].append({'call_id':call_id,'reason':str(exc)})
+                self.state['status']='NEEDS_REVIEW';self.state['ended_at']=now();self.state['errors'].append({'call_id':call_id,'reason':str(exc)})
                 self.state['inflight_model']=None;self.save();raise
             decision={'decision_id':call_id+'-decision','trigger_call':call_id,'trigger_tool':tool['tool_id'],
                       'status':'NEEDS_REVIEW','reason':'Engineering diagnostics executed; real baseline semantic blockers and quality thresholds unresolved',
