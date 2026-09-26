@@ -14,7 +14,7 @@ import xml.etree.ElementTree as ET
 ROOT=Path(__file__).resolve().parents[2]
 sys.path.insert(0,str(ROOT))
 from task1.workflow.io import DATA,CONFIG,EVIDENCE,read_json,write_json,digest,now,relative
-from task1.workflow.diagnostics import profile,aggregate,time_boundaries,independent_profile_review
+from task1.workflow.diagnostics import profile,aggregate,time_boundaries,independent_profile_review,duplicate_details
 from task1.workflow.tools import execute_tool
 from task1.workflow.controller import PHASES
 
@@ -144,10 +144,26 @@ def main():
           'independent_review':review,'full_baseline_gate':execute_tool('baseline',pilot['ids'],policy),
           'created_at':now(),'command':'.venv/bin/python task1/scripts/build_goal1_figures.py'}
     write_json(RESULTS/'pilot_diagnostics.json',data)
+    # Every pilot point has an explicit disposition, even when the real pipeline
+    # is blocked. These are diagnostic annotations, never deletion decisions.
+    with (RESULTS/'point_actions.jsonl').open('w') as f:
+        for rid in pilot['ids']:
+            tags={e['right_index']:e['reasons'] for e in duplicate_details(rid,raw[rid])['events']}
+            cuts={e['right_index']:e['reasons'] for p in parts if p['record_id']==rid for e in p['cuts']}
+            for index in range(len(raw[rid][1])):
+                f.write(json.dumps({'record_id':rid,'original_index':index,'parent_version':'RAW:'+policy['raw_sha256'],
+                    'classification':'CURRENT_RUN_REAL_DATA_DIAGNOSTIC','action':'PRESERVE_UNPROCESSED',
+                    'changed_values':0,'deleted':False,'incoming_edge_diagnostics':tags.get(index,[])+cuts.get(index,[]),
+                    'baseline_blockers':policy['method']['blocking_ids']},ensure_ascii=False)+'\n')
     csv_fields=['record_id','n_points','edges_total','zero_dt','same_time_different_position','consecutive_duplicate_position','long_gap_gt_30_source_seconds']
     with (RESULTS/'pilot_summary.csv').open('w',newline='') as f:
         w=csv.DictWriter(f,fieldnames=csv_fields);w.writeheader();w.writerows({k:r[k] for k in csv_fields} for r in rows)
-    font=font_manager.FontProperties(family='Noto Sans CJK SC')
+    # Matplotlib sees the first face of this installed TTC as "... JP", while
+    # fontconfig resolves its SC face. Register the actual file so stale caches
+    # cannot silently fall back to DejaVu and drop every Chinese glyph.
+    font_path=subprocess.check_output(['fc-match','-f','%{file}','Noto Sans CJK SC'],text=True).strip()
+    font_manager.fontManager.addfont(font_path)
+    font=font_manager.FontProperties(fname=font_path)
     plt.rcParams.update({'font.family':font.get_name(),'figure.facecolor':colors['Paper'],'axes.facecolor':colors['Paper'],
                         'text.color':colors['Ink'],'axes.labelcolor':colors['Ink'],'xtick.color':colors['Ink'],
                         'ytick.color':colors['Ink'],'axes.edgecolor':colors['Rule'],'font.size':11,'svg.fonttype':'none'})
@@ -175,6 +191,7 @@ def main():
                'diagnostic_code_sha':data['code_sha'],'script_sha256':digest(Path(__file__)),
                'palette_source':'templates/latex/common/p2_cloud_sorbet_colors.tex',
                'palette_sha256':digest(ROOT/'templates/latex/common/p2_cloud_sorbet_colors.tex'),
+               'font_family':font.get_name(),'font_file_sha256':digest(font_path),
                'artifacts':{relative(p):digest(p) for p in OUT.iterdir() if p.is_file() and p.name!='figure_manifest.json'},
                'baseline_before_after_figure':{'status':'BLOCKED','reason':'U01/U02; no real complete baseline output'},
                'diagram_export':'draw.io XML mxGeometry -> native SVG using included exporter; same nodes/waypoints/labels',

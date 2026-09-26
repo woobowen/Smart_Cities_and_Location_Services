@@ -25,7 +25,8 @@ def recompute_archived(run_id):
     if not re.fullmatch(r'[0-9a-f]{40}',sha):raise ValueError('INVALID_COMMIT')
     # Explicitly enumerate the same task-only source files, excluding unrelated
     # repository files, execution entry points supplied by a model, and secrets.
-    paths=subprocess.check_output(['git','ls-tree','-r','--name-only',sha,'--','task1/workflow','task1/config'],cwd=ROOT,text=True).splitlines()
+    paths=subprocess.check_output(['git','ls-tree','-r','--name-only',sha,'--','task1/workflow',
+                                   'task1/config/goal1.json','task1/config/pilot.json'],cwd=ROOT,text=True).splitlines()
     if not paths:raise ValueError('ARCHIVED_SOURCE_MISSING')
     with tempfile.TemporaryDirectory(prefix='sc-g1-recompute-') as tmp:
         root=Path(tmp)
