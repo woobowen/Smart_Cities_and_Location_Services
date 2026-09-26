@@ -19,11 +19,17 @@ EV = ROOT / "task1/evidence/goal2"
 
 SETUP = '''from pathlib import Path
 import sys, json, tempfile, shutil
-import pandas as pd
-from IPython.display import display, Image
+from html import escape
+from IPython.display import display, Image, HTML
 ROOT = next(p for p in [Path.cwd(), *Path.cwd().parents] if (p/'AGENTS.md').is_file() and (p/'task1').is_dir())
 if str(ROOT) not in sys.path: sys.path.insert(0, str(ROOT))
 from task1.workflow.io import read_json, digest, object_hash
+from task1.workflow.g2_provider import ExperimentProvider
+model_sentinel = {'calls': 0}
+def reject_model_call(*args, **kwargs):
+    model_sentinel['calls'] += 1
+    raise RuntimeError('RECOMPUTE_FORBIDS_NEW_MODEL_CALLS')
+ExperimentProvider.call = reject_model_call
 EV = ROOT/'task1/evidence/goal2'
 current = read_json(EV/'current_runs.json')
 contract = read_json(ROOT/'task1/config/goal2/contract.json')
@@ -33,7 +39,11 @@ ENABLE_LIVE = False
 assert MODE == 'RECOMPUTE' and ENABLE_LIVE is False, '新的 LIVE 调用须使用独立命令并显式启用，默认 Notebook 不发起模型请求。'
 WORK = Path(tempfile.mkdtemp(prefix='sc-g2-notebook-'))
 def show(rows):
-    display(pd.DataFrame(rows))
+    rows = list(rows)
+    columns = list(dict.fromkeys(key for row in rows for key in row))
+    header = ''.join('<th>'+escape(str(key))+'</th>' for key in columns)
+    body = ''.join('<tr>'+''.join('<td>'+escape(str(row.get(key, '')))+'</td>' for key in columns)+'</tr>' for row in rows)
+    display(HTML('<table><thead><tr>'+header+'</tr></thead><tbody>'+body+'</tbody></table>'))
 def figure(name):
     directory = Path(recomputed.get('figure_directory', WORK/'figures'))
     target = directory/(name+'.png')
@@ -58,6 +68,7 @@ def recompute_cell(topic):
 recomputed = recompute(topic='{topic}', output_directory=WORK, rebuild_figures=True)
 assert recomputed['status'] == 'VERIFIED', recomputed
 assert recomputed['new_model_calls'] == 0, recomputed
+assert model_sentinel['calls'] == 0, model_sentinel
 print('从 raw 和冻结提议复算:', recomputed['status'])
 print('新增模型调用:', recomputed['new_model_calls'])
 print('检查项数量:', len(recomputed['checks']))

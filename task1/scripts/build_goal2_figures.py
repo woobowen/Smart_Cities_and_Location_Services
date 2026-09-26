@@ -19,8 +19,9 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from matplotlib.colors import LinearSegmentedColormap
-from matplotlib.patches import FancyArrowPatch, FancyBboxPatch
+from matplotlib.patches import FancyArrowPatch, FancyBboxPatch, Patch
 from matplotlib.path import Path as DrawingPath
+from matplotlib.ticker import MaxNLocator
 import numpy as np
 from PIL import Image
 
@@ -89,6 +90,12 @@ class FigureSet:
             raise ValueError("UNVERIFIED_OR_CHANGED_PLOT_SOURCE")
         return read_gzip(self.source(path))
 
+    def table(self, directory, manifest, name):
+        path = directory / name
+        if digest(path) != manifest.get("tables", {}).get(name):
+            raise ValueError("UNBOUND_OR_CHANGED_PLOT_TABLE:" + name)
+        return read_json(self.source(path))
+
     def save(self, fig, name, data, description):
         self.data[name] = data
         paths = {}
@@ -119,7 +126,7 @@ def _oat(entries, parameter):
 
 def parameters_figures(writer):
     directory, manifest = writer.run("parameter_development")
-    entries = read_json(writer.source(directory / "parameter_table.json"))
+    entries = writer.table(directory, manifest, "parameter_table.json")
     p = writer.p
     fig, axes = plt.subplots(2, 2, figsize=(10, 7.3), layout="constrained")
     data = {}
@@ -131,7 +138,7 @@ def parameters_figures(writer):
         ax.plot(x, retained, "o-", color=p["C1"], label="Retained / raw points")
         ax.plot(x, missing, "s--", color=p["C3"], label="No-output / input records")
         ax.axvline(REFERENCE[parameter], color=p["Muted"], ls=":", lw=1)
-        ax.set(xlabel=PARAM_LABELS[parameter], ylabel="Fraction", ylim=(-.03, 1.03))
+        ax.set(xlabel=PARAM_LABELS[parameter], ylabel="Fraction", ylim=(-.03, 1.03), xticks=x)
         ax.grid(axis="y")
         ax.set_title(parameter.replace("_", " ").capitalize(), loc="left")
         data[parameter] = [{"value": r["parameters"][parameter], "config_id": r["config_id"],
@@ -139,7 +146,7 @@ def parameters_figures(writer):
                             "raw_points": r["summary"]["n_input"], "records": r["summary"]["n_records"]}
                            for r, a, b in zip(rows, retained, missing)]
     axes[0, 0].legend(loc="best")
-    fig.suptitle(f"Segmentation and filtering sensitivity · {len(manifest['input_ids'])} development records", fontsize=14)
+    fig.suptitle(f"Segmentation and filtering · {len(manifest['input_ids'])} records / {entries[0]['summary']['n_input']:,} raw points", fontsize=14)
     writer.save(fig, "segmentation_filter_response", data, "Four one-factor sweeps; dashed vertical lines mark the reference configuration.")
 
     fig, axes = plt.subplots(2, 2, figsize=(11, 8), layout="constrained")
@@ -155,8 +162,10 @@ def parameters_figures(writer):
                 x, y = entry["parameters"][x_key], entry["parameters"][y_key]
                 z[ys.index(y), xs.index(x)] = entry["summary"][metric]
             ax = axes[row_number, column]
-            image = ax.imshow(z, vmin=0, vmax=1, origin="lower", aspect="auto",
-                              cmap=LinearSegmentedColormap.from_list(metric, [p["Paper"], p[color]]))
+            # Native flat cells avoid interpolation artifacts in PDF backends.
+            image = ax.pcolormesh(np.arange(len(xs) + 1) - .5, np.arange(len(ys) + 1) - .5, z,
+                                  vmin=0, vmax=1, shading="flat", antialiased=False,
+                                  cmap=LinearSegmentedColormap.from_list(metric, [p["Paper"], p[color]]))
             ax.set(xticks=range(len(xs)), xticklabels=xs, yticks=range(len(ys)), yticklabels=ys,
                    xlabel=PARAM_LABELS[x_key], ylabel=PARAM_LABELS[y_key])
             ax.set_title(label, loc="left")
@@ -191,7 +200,8 @@ def parameters_figures(writer):
     for ax, metric, label, color in ((axes[0], "n_direction_removed", "Deleted by D (points)", "C3"),
                                      (axes[1], "direction_undefined_points", "Protected undefined / boundary points", "C4")):
         ax.plot(x, [entry["summary"][metric] for entry in rows], "o-", color=p[color])
-        ax.set(xlabel=PARAM_LABELS["direction"], ylabel=label)
+        ax.set(xlabel=PARAM_LABELS["direction"], ylabel=label, xticks=x, ylim=(0, None))
+        ax.yaxis.set_major_locator(MaxNLocator(integer=True))
         ax.grid(axis="y")
     if direction_case:
         rid, index, before, after, position = direction_case
@@ -205,10 +215,11 @@ def parameters_figures(writer):
         axes[2].scatter(*point, marker="x", s=80, color=p["C3"], zorder=5)
         axes[2].annotate(str(index), point, xytext=(6, 6), textcoords="offset points")
         axes[2].set_title(f"Record {rid} · deleted index {index}", loc="left")
-        axes[2].legend(loc="best", fontsize=8)
+        axes[2].legend(loc="upper left", fontsize=8)
     else:
         axes[2].text(.5, .5, "No direction deletion in reference scope", ha="center", transform=axes[2].transAxes)
-    axes[2].set(xlabel="East (working m)", ylabel="North (working m)", aspect="equal")
+    axes[2].set(xlabel="East (working m)", ylabel="North (working m)")
+    axes[2].set_aspect("equal", adjustable="datalim")
     fig.suptitle("Direction threshold: deletion, protected windows, and changed adjacency", fontsize=14)
     writer.save(fig, "direction_threshold_and_neighborhood", {"rows": rows, "case_selection": selection},
                 "Undefined-window protection is not a noise truth label; the local edge is recomputed after simultaneous deletion.")
@@ -232,7 +243,7 @@ def parameters_figures(writer):
     writer.save(fig, "dp_error_compression", rows, "Labels are registered tolerances; P-stage guarantees do not certify cross-method quality.")
 
     directory, manifest = writer.run("order_development")
-    rows = read_json(writer.source(directory / "order_table.json"))
+    rows = writer.table(directory, manifest, "order_table.json")
     fig, axes = plt.subplots(2, 2, figsize=(10.5, 7), layout="constrained")
     labels = [entry["order"] for entry in rows]
     readings = [("common_coverage", "Covered / raw points"), (None, "Records failing common protection"),
@@ -243,6 +254,10 @@ def parameters_figures(writer):
         colors = [p["C3"] if entry["research_status"] == "REJECTED_BY_CONSTRAINT" else p["C1"] for entry in rows]
         ax.bar(range(len(rows)), values, color=colors, edgecolor=p["Ink"], linewidth=.5)
         ax.set(xticks=range(len(rows)), xticklabels=labels, ylabel=label)
+        if metric == "common_coverage":
+            ax.set_ylim(0, 1)
+        else:
+            ax.yaxis.set_major_locator(MaxNLocator(integer=True))
         ax.tick_params(axis="x", rotation=25)
         ax.grid(axis="y")
         for i, value in enumerate(values):
@@ -250,6 +265,9 @@ def parameters_figures(writer):
                         xytext=(0, 3), textcoords="offset points", ha="center", fontsize=8)
         ax.margins(y=.18)
     fig.suptitle(f"Six executed stage orders · {len(manifest['input_ids'])} development records", fontsize=14)
+    axes[0, 0].legend(handles=[Patch(facecolor=p["C1"], edgecolor=p["Ink"], label="Passes common protection"),
+                               Patch(facecolor=p["C3"], edgecolor=p["Ink"], label="Rejected by common protection")],
+                      loc="upper right", fontsize=8)
     writer.save(fig, "order_protection_and_neighborhoods", rows,
                 "Rose denotes a constraint-rejected order; geometric execution remains a valid negative experiment.")
 
@@ -447,7 +465,7 @@ def case_figures(writer):
         ax.set_visible(False)
     handles, labels = axes[0, 0].get_legend_handles_labels()
     if handles:
-        fig.legend(handles, labels, loc="outside lower center", ncol=2)
+        axes[0, 0].legend(handles, labels, loc="best", fontsize=8)
     fig.suptitle("Real trajectory cases · fixed selection rules · conditional working plane", fontsize=14)
     writer.save(fig, "real_trajectory_cases", selection,
                 "Raw points are not connected across breaks. Cases include representative, largest loss/error, and near-boundary results; no basemap or ground-truth claim.")

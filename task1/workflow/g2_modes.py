@@ -99,8 +99,20 @@ def dispatch(provider,prompt,directory,request_id,purpose):
             receipts.append(receipt);return response,receipts
         except ProviderError:
             receipt=read_json(folder/'receipt.json');receipts.append(receipt)
-            text=json.dumps(receipt).lower()+(folder/'visible_events.jsonl').read_text().lower()
-            if any(word in text for word in ('authentication','unauthorized','insufficient_quota','billing','permission denied','401','403')):
+            # Hashes, usage counts and ordinary model text are not service errors.
+            # In particular a deliberate interrupt must never look like a 401
+            # because an unrelated SHA happens to contain those digits.
+            diagnostics=[receipt.get('error',''),receipt.get('stderr','')]
+            for line in (folder/'visible_events.jsonl').read_text().splitlines():
+                event=json.loads(line)
+                if event.get('type') in ('error','turn.failed'):
+                    diagnostics.append(json.dumps({k:event[k] for k in ('error','message','code') if k in event}))
+            text='\n'.join(diagnostics).lower()
+            if 'keyboardinterrupt' in text:
+                raise ProviderError('INTERRUPTED_CHECKPOINT; evidence='+str(folder.relative_to(ROOT)))
+            import re
+            auth_status=re.search(r'\b(?:http|status(?: code)?|code)\s*[\"\s:=]*\b(?:401|403)\b',text)
+            if auth_status or any(word in text for word in ('authentication','unauthorized','insufficient_quota','billing','permission denied')):
                 raise ProviderError('EXTERNAL_AUTH_PERMISSION_OR_BILLING_BLOCKED; evidence='+str(folder.relative_to(ROOT)))
             if any(word in text for word in ('unexpected_tool','invalid_jsonl','unexpected_visible_event','invalid_event_schema')):
                 raise ProviderError('PROVIDER_BOUNDARY_OR_PROTOCOL_ERROR_NO_RETRY; evidence='+str(folder.relative_to(ROOT)))
@@ -108,14 +120,13 @@ def dispatch(provider,prompt,directory,request_id,purpose):
                 # This is an observed unusable answer, not a transient network
                 # failure. None denotes parser rejection, never a fabricated reply.
                 return None,receipts
-            transient=any(word in text for word in ('timeout','timed out','rate_limit','rate limit','429',
-                'temporarily unavailable','service unavailable','connection reset','connect error','502','503','504'))
+            transient=any(word in text for word in ('timeout','timed out','rate_limit','rate limit',
+                'temporarily unavailable','service unavailable','connection reset','connect error')) or bool(re.search(r'\b(?:429|502|503|504)\b',text))
             if not transient:raise ProviderError('UNCLASSIFIED_PROVIDER_FAILURE_NO_RETRY; evidence='+str(folder.relative_to(ROOT)))
             if attempt==2:raise ProviderError('TRANSIENT_PROVIDER_FAILURE_AFTER_TWO_RETRIES; evidence='+str(folder.relative_to(ROOT)))
             # Child process group has already been reaped by the provider.
             # No response is synthesized; the failed attempt remains observable.
             delay=2*(attempt+1)
-            import re
             match=re.search(r'retry.after[^0-9]{0,8}([0-9]+)',text)
             if match:delay=max(delay,int(match.group(1)))
             if delay>60:raise ProviderError('RETRY_AFTER_REQUIRES_LATER_RESUME; seconds='+str(delay))
@@ -169,7 +180,7 @@ def run_batch_episode(run,mode,episode,ids,cards,*,memory=None,provider_factory=
                     observation['own_candidate_feedback']=[{'config_id':cid,'parameters':r['parameters'],
                         'metrics':compact_metrics(r['metrics']),'selection_assessment':{k:v for k,v in compare(r,states[rid]['candidates'][reference_id]).items() if k!='candidate_covered_indices'}}
                         for cid,r in states[rid]['candidates'].items()]
-                    observation['own_prior_proposal_validation']=states[rid]['proposals']
+                    observation['own_prior_proposal_validation']=deepcopy(states[rid]['proposals'])
                 if mode=='llm+memory+search':
                     fields=('memory_id','record_id','stratum','selected_parameters','research_status')
                     observation['demonstration_memory']=[{**{k:e[k] for k in fields},
@@ -187,6 +198,7 @@ def run_batch_episode(run,mode,episode,ids,cards,*,memory=None,provider_factory=
                      'evaluations_already_consumed':{rid:len(states[rid]['candidates']) for rid in active},
                      'records':observations}
             prompt=PROMPT_TEMPLATE+'\n'+json.dumps(context,ensure_ascii=False,separators=(',',':'))
+            locked_context_hash=object_hash(context)
             write_json(directory/f'round{round_number}_context.json',context,exclusive=True)
             response,receipts=dispatch(provider,prompt,directory/f'round{round_number}_call',episode_id+f'-r{round_number}',
                                        'DEVELOPMENT_PROTOCOL_LIVE' if run.partition=='DEVELOPMENT' else 'G2_EVAL_LIVE')
@@ -205,12 +217,12 @@ def run_batch_episode(run,mode,episode,ids,cards,*,memory=None,provider_factory=
                 if row is None:
                     state['proposals'].append({'round':round_number,'legal':False,'executed':False,
                          'reason':'INVALID_RECORD_ACTION_STRUCTURE','original_response_sha256':object_hash(response)})
-                    state['rounds'].append({'round':round_number,'context_hash':object_hash(context),
+                    state['rounds'].append({'round':round_number,'context_hash':locked_context_hash,
                         'raw_action':None,'response_validation_errors':errors,
                         'candidate_ids_after':list(state['candidates'])})
                     if mode=='llm-only':state['stopped']=True
                     continue
-                rd={'round':round_number,'context_hash':object_hash(context),'reference_handle':state['reference_handle'],
+                rd={'round':round_number,'context_hash':locked_context_hash,'reference_handle':state['reference_handle'],
                     'raw_action':deepcopy(row),'candidate_ids_before':list(state['candidates'])}
                 if mode=='llm+memory+search':rd['memory_consumption']=consumption(retrievals[rid],row)
                 for proposal in row['proposals']:
