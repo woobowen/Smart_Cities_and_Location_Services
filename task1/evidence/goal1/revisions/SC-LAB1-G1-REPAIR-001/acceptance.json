@@ -122,8 +122,8 @@
     },
     {
       "id": "R1-A12",
-      "status": "NOT_RUN",
-      "affected_scope": "代码880290a已push；完整artifact正在提交，发布后核对",
+      "status": "PASS",
+      "affected_scope": "完整artifact a82db66已push；本地/远程SHA一致，6个核心文件从固定提交实际HTTPS回读且hash一致。随后仅归档发布核对与验收状态；GPT新审核仍PENDING",
       "evidence_paths": [
         "task1/evidence/goal1/revisions/SC-LAB1-G1-REPAIR-001/publication.json"
       ]
@@ -337,8 +337,8 @@
     {
       "id": "G1-A18",
       "requirement": "完整安全的GitHub审核包同步",
-      "status": "NOT_RUN",
-      "affected_scope": "代码已push；完整修复artifact提交后核对",
+      "status": "PASS",
+      "affected_scope": "完整artifact a82db66已push；本地/远程SHA一致，6个核心文件从固定提交实际HTTPS回读且hash一致。随后仅归档发布核对与验收状态；GPT新审核仍PENDING",
       "previous_codex_status": "PASS",
       "gpt_c2e3_review": "See historical GPT_SECOND_REVIEW",
       "history_preserved": true,
@@ -347,5 +347,7 @@
       ]
     }
   ],
-  "review_scope_limitation": "C05 text asks for time partition checks, but recompute_check actually verifies profiles only. Do not treat its prose as extra evaluator coverage. Time boundaries and duplicate event lists are additionally verified by OFFLINE audit_live.py; this is not an extra model call or a full cleaning loop."
+  "review_scope_limitation": "C05 text asks for time partition checks, but recompute_check actually verifies profiles only. Do not treat its prose as extra evaluator coverage. Time boundaries and duplicate event lists are additionally verified by OFFLINE audit_live.py; this is not an extra model call or a full cleaning loop.",
+  "published_artifact_sha": "a82db66e29a2393055fa6940d47c75052a5bf895",
+  "publication_proof_scope": "完整运行artifact首轮发布后的实际ls-remote及固定提交raw HTTPS回读；本文件与最终验收状态的后续提交另由最终会话核对"
 }

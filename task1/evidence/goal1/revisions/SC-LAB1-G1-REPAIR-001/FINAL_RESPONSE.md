@@ -74,7 +74,7 @@ PASS均限表述范围，不能抵消D1/D2阻断。GPT新提交二重审核为PE
 | R1-A09 | BLOCKED：D1 UNKNOWN/D2未获用户批准；未执行同pilot真实空间baseline | [SEMANTICS.md](SEMANTICS.md), [baseline.json](results/baseline.json) |
 | R1-A10 | PASS：核心156pass；starter292pass/1字体skip；两Notebook各9cell新内核执行，无新模型 | [validation.json](validation.json), [starter_full.txt](starter_full.txt), [notebooks.json](notebooks.json), [visual_inspection.json](figures/visual_inspection.json) |
 | R1-A11 | PASS：CODE_SHA绑定与输入/源码/结果hash；原始文件、旧run和旧ledger不变 | [live_audit.json](live_audit.json), [protected_integrity.json](protected_integrity.json), [file_manifest.json](file_manifest.json), [release_check.json](release_check.json) |
-| R1-A12 | NOT_RUN：代码880290a已push；完整artifact正在提交，发布后核对 | [publication.json](publication.json) |
+| R1-A12 | PASS：完整artifact a82db66已push；本地/远程SHA一致，6个核心文件从固定提交实际HTTPS回读且hash一致。随后仅归档发布核对与验收状态；GPT新审核仍PENDING | [publication.json](publication.json) |
 
 | 项目 | 状态与范围 | 证据 |
 |---|---|---|
@@ -95,14 +95,14 @@ PASS均限表述范围，不能抵消D1/D2阻断。GPT新提交二重审核为PE
 | G1-A15 | PASS：两Notebook新内核各9codecell；旧source_evidence由历史CODE复算 | [notebooks.json](notebooks.json) |
 | G1-A16 | PASS：当前原始诊断/实际调用状态图已生成与200dpi检查；无假前后图 | [visual_inspection.json](figures/visual_inspection.json) |
 | G1-A17 | PASS：Goal2/3、论文筛选、扫描、融合、全量正式处理未执行 | [SEMANTICS.md](SEMANTICS.md) |
-| G1-A18 | NOT_RUN：代码已push；完整修复artifact提交后核对 | [publication.json](publication.json) |
+| G1-A18 | PASS：完整artifact a82db66已push；本地/远程SHA一致，6个核心文件从固定提交实际HTTPS回读且hash一致。随后仅归档发布核对与验收状态；GPT新审核仍PENDING | [publication.json](publication.json) |
 
 原G1-A08/A10已因本次审查重开并修复；A13保留旧FAIL历史，当前PASS仅涵盖本批外层预算、可见事件控制与已测试路径，不代表隐藏内部重试可计数或已禁用。机器表：[acceptance.json](acceptance.json)。
 
 **H. Git与文件**
 
 Repository：`https://github.com/woobowen/Smart_Cities_and_Location_Services.git`；Branch：`main`。
-CODE_SHA：`880290a5dada84c711248844038daa3ee35eeefb`，上述最终测试、当前诊断、6次LIVE、Notebook与图绑定这个已存在提交；随后只提交artifact/文档。发布实际核对见[publication.json](publication.json)。当前已核对远程SHA：`880290a5dada84c711248844038daa3ee35eeefb`（代码阶段push后的实际ls-remote核对；完整artifact尚待发布）。最终artifact提交的自身SHA无法预写到其自身文件；以最终会话回复给出的ARTIFACT_SHA/Remote SHA和该固定提交为准，或读取承载本文件的Git commit。不得用上述代码或上一发布SHA冒充最终HEAD。
+CODE_SHA：`880290a5dada84c711248844038daa3ee35eeefb`，上述最终测试、当前诊断、6次LIVE、Notebook与图绑定这个已存在提交；随后只提交artifact/文档。发布实际核对见[publication.json](publication.json)。当前已核对远程SHA：`a82db66e29a2393055fa6940d47c75052a5bf895`（完整运行artifact首轮发布后的实际ls-remote及固定提交raw HTTPS回读；本文件与最终验收状态的后续提交另由最终会话核对）。最终artifact提交的自身SHA无法预写到其自身文件；以最终会话回复给出的ARTIFACT_SHA/Remote SHA和该固定提交为准，或读取承载本文件的Git commit。不得用上述代码或上一发布SHA冒充最终HEAD。
 
 修改workflow、tests、config、任务文档、Notebook及生成入口；新增pipeline/sources/budget、历史研究原件、本次修复证据、当前结果/图/运行日志和固定新批ledger。未删除有效文件，未改公共协议/模板/上传集合/教师原件。逐文件增改/大小/hash见[file_manifest.json](file_manifest.json)，发布检查见[release_check.json](release_check.json)。原始失败日志、Git diff和Matplotlib SVG的空白按原字节保留，未为通过whitespace检查改写证据；初次检查结果也保留。Experiment Report/Process Report仅留阶段素材，未定稿，无伪造交互截图或Evidence Lock。
 
