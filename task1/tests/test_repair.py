@@ -54,7 +54,7 @@ def test_provider_failure_receipt_preserves_safe_partial_events(tmp_path,monkeyp
     stream='{"type":"thread.started","thread_id":"fixture"}\n'
     def fail(*args):
         if fault=='spawn':raise OSError('fixture launch failure')
-        if fault=='timeout':raise subprocess.TimeoutExpired('fixture',.1,output=stream,stderr='ERROR fixture timeout')
+        if fault=='timeout':raise subprocess.TimeoutExpired('fixture',.1,output=stream,stderr='fixture partial stderr')
         return subprocess.CompletedProcess('fixture',0,stream+'{invalid\n','ERROR fixture malformed')
     monkeypatch.setattr(p,'run_limited',fail)
     provider=p.CodexProvider(executable=sys.executable)

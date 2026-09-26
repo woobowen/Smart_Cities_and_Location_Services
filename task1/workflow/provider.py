@@ -110,6 +110,7 @@ def redact(text):
     text=re.sub(r'\bsk-[A-Za-z0-9_-]{12,}', '<REDACTED_KEY>',text)
     text=re.sub(r'(?i)(authorization:\s*bearer\s+)\S+',r'\1<REDACTED>',text)
     text=re.sub(r'\beyJ[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+', '<REDACTED_JWT>',text)
+    text=re.sub(r'(?i)((?:access_token|refresh_token|id_token|api_key)[\"\']?\s*[:=]\s*[\"\']?)[^\s\"\',}]+',r'\1<REDACTED>',text)
     return text
 
 
@@ -128,9 +129,10 @@ def transport_counts(events, stderr):
 
 
 def safe_stderr(text):
-    # Only this process's errors/transport diagnostics, never arbitrary account logs.
+    # Capture only this child process, never account log files. Preserve ordinary
+    # partial diagnostics too; explicitly suppress any reasoning content.
     return '\n'.join(redact(line) for line in text.splitlines()
-                     if any(k in line.lower() for k in ('error','warn','retry','reconnect','fallback','falling back','failed','timeout')))
+                     if not re.search(r'(?i)reasoning[_ -]?(?:summary|content)|"type"\s*:\s*"reasoning"',line))
 
 
 def run_limited(args, prompt, cwd, timeout):
@@ -263,7 +265,7 @@ class CodexProvider:
         if out.exists() and any(out.iterdir()):raise ProviderError('PREEXISTING_CALL_DO_NOT_OVERWRITE_OR_RESEND')
         started=now();clock=time.perf_counter();events=[];stderr='';result=None;process_started=False
         receipt={'classification':'LIVE_CALL_ATTEMPT','provider':'Codex CLI / existing ChatGPT login',
-                 'role':role,'call_id':call_id,'run_id':out.parent.parent.name,
+                 'role':role,'call_id':call_id,'run_id':out.parent.parent.name if out.parent.name=='calls' else 'standalone:'+call_id,
                  'requested_model':'gpt-6-astra','model_snapshot':'unavailable','request_id':'unavailable',
                  'started_at':started,'sandbox':'read-only','shell_tools':'disabled','reasoning_saved':False,
                  'usage':'unavailable','underlying_requests':'unknown','status':'BLOCKED','exit_code':None,
