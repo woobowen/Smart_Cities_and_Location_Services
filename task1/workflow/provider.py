@@ -7,8 +7,10 @@ is read-only. Numeric tools run later in the deterministic parent controller.
 from __future__ import annotations
 
 import json
+import os
 from pathlib import Path
 import re
+import signal
 import shutil
 import subprocess
 import tempfile
@@ -16,7 +18,7 @@ import time
 
 import jsonschema
 
-from .io import now, write_json
+from .io import now, write_json, read_json, digest, object_hash
 
 
 class ProviderError(RuntimeError):
@@ -64,9 +66,9 @@ def visible_events(stdout):
             continue
         if event['type'] in ('thread.started','turn.started','turn.completed','turn.failed','error'):
             events.append(event)
-        elif event['type']=='item.completed':
+        elif event['type'].startswith('item.'):
             if item.get('type')=='agent_message':
-                events.append(event)
+                if event['type']=='item.completed':events.append(event)
             elif item.get('type')=='error':
                 message=item.get('message',item.get('text','CLI error item'))
                 kind='capability.disabled' if message==DISABLED_CODE_HOST else 'error'
@@ -74,11 +76,13 @@ def visible_events(stdout):
             else:
                 # Unexpected CLI tool activity is an execution-boundary failure.
                 events.append({'type':'unexpected_tool','item_type':item.get('type'),'item_id':item.get('id')})
+        else:
+            events.append({'type':'unexpected_event','event_type':event['type']})
     return events
 
 
 def parse_response(events, schema, returncode):
-    if returncode!=0 or any(e['type'] in ('error','turn.failed','unexpected_tool') for e in events):
+    if returncode!=0 or any(e['type'] in ('error','turn.failed','unexpected_tool','unexpected_event') for e in events):
         raise ProviderError('CLI_FAILED_OR_UNEXPECTED_TOOL')
     threads=[e for e in events if e['type']=='thread.started']
     completed=[e for e in events if e['type']=='turn.completed']
@@ -98,6 +102,57 @@ def redact(text):
     text=re.sub(r'\bsk-[A-Za-z0-9_-]{12,}', '<REDACTED_KEY>',text)
     text=re.sub(r'(?i)(authorization:\s*bearer\s+)\S+',r'\1<REDACTED>',text)
     return text
+
+
+def run_limited(args, prompt, cwd, timeout):
+    """Own the CLI wrapper AND native child process group; no orphan requests."""
+    if os.name!='posix':raise ProviderError('PROCESS_GROUP_BOUNDARY_UNAVAILABLE')
+    env=os.environ.copy()
+    env.pop('NODE_TLS_REJECT_UNAUTHORIZED',None)
+    process=subprocess.Popen(args,stdin=subprocess.PIPE,stdout=subprocess.PIPE,stderr=subprocess.PIPE,
+                             cwd=cwd,env=env,text=True,start_new_session=True)
+    try:
+        stdout,stderr=process.communicate(prompt,timeout=timeout)
+    except subprocess.TimeoutExpired as exc:
+        try:os.killpg(process.pid,signal.SIGKILL)
+        except ProcessLookupError:pass
+        stdout,stderr=process.communicate(timeout=5)
+        raise subprocess.TimeoutExpired(args,timeout,output=stdout,stderr=stderr) from exc
+    except BaseException:
+        try:os.killpg(process.pid,signal.SIGKILL)
+        except ProcessLookupError:pass
+        process.communicate(timeout=5)
+        raise
+    return subprocess.CompletedProcess(args,process.returncode,stdout,stderr)
+
+
+def verify_saved_call(directory, role, call_id, actions, expected_input_hash):
+    """Recover only a dispatched call, verifying the actual visible final event."""
+    directory=Path(directory)
+    paths=[directory/name for name in ('input.json','receipt.json','response.json','visible_events.jsonl')]
+    if any(not p.is_file() or p.is_symlink() for p in paths):
+        raise ProviderError('MISSING_OR_UNSAFE_CALL_EVIDENCE')
+    saved_input,receipt,value=(read_json(p) for p in paths[:3])
+    schema=response_schema(role,call_id,actions)
+    if object_hash(saved_input)!=expected_input_hash or saved_input.get('schema')!=schema:
+        raise ProviderError('CALL_INPUT_MISMATCH')
+    if any(receipt.get(k)!=v for k,v in {'role':role,'call_id':call_id,'classification':'LIVE_CALL_ATTEMPT',
+           'status':'VERIFIED_STRUCTURE_ONLY','sandbox':'read-only','shell_tools':'disabled'}.items()):
+        raise ProviderError('INVALID_RECOVERY_RECEIPT')
+    # These are already filtered visible events, including a deliberately disabled
+    # capability notice. Parse directly; never repair or discard recorded errors.
+    try:events=[json.loads(line) for line in paths[3].read_text().splitlines() if line.strip()]
+    except ValueError as exc:raise ProviderError('INVALID_SAVED_JSONL') from exc
+    if any(not isinstance(e,dict) or e.get('type') not in ('thread.started','turn.started','turn.completed',
+           'turn.failed','error','item.completed','capability.disabled','unexpected_tool','unexpected_event') for e in events):
+        raise ProviderError('INVALID_SAVED_EVENT')
+    if any((e['type']=='item.completed' and e.get('item',{}).get('type')!='agent_message') or
+           (e['type']=='capability.disabled' and e.get('message')!=DISABLED_CODE_HOST) for e in events):
+        raise ProviderError('UNEXPECTED_SAVED_TOOL_OR_DIAGNOSTIC')
+    parsed,thread,usage=parse_response(events,schema,receipt.get('exit_code'))
+    if parsed!=value or receipt.get('thread_id')!=thread or receipt.get('usage')!=usage:
+        raise ProviderError('RESPONSE_EVENT_OR_RECEIPT_MISMATCH')
+    return value,receipt,{p.name:digest(p) for p in paths}
 
 
 class CodexProvider:
@@ -120,17 +175,20 @@ class CodexProvider:
             args=[self.executable,'exec','--ignore-user-config','--ephemeral','--skip-git-repo-check',
                   '--sandbox','read-only','--json','--color','never','--cd',tmp,
                   '--model','gpt-6-astra','-c','model_reasoning_effort="max"',
+                  '-c','model_providers.openai.request_max_retries=0',
+                  '-c','model_providers.openai.stream_max_retries=0',
+                  '-c','model_providers.openai.supports_websockets=false',
                   '-c','web_search="disabled"','-c','project_doc_max_bytes=0',
                   '--output-schema',str(p/'schema.json')]
             for feature in ('shell_tool','unified_exec','code_mode_host','apps','plugins','multi_agent','hooks','memories','shell_snapshot','browser_use','browser_use_external','computer_use','image_generation'):
                 args.extend(['--disable',feature])
             args.append('-')
             try:
-                result=subprocess.run(args,input=prompt,cwd=tmp,capture_output=True,text=True,timeout=self.timeout)
+                result=run_limited(args,prompt,tmp,self.timeout)
             except subprocess.TimeoutExpired as exc:
                 write_json(out/'receipt.json',{'classification':'LIVE_CALL_ATTEMPT','role':role,'call_id':call_id,
                            'started_at':started,'ended_at':now(),'elapsed_seconds':time.perf_counter()-clock,
-                           'status':'BLOCKED','error':'MODEL_TIMEOUT; no automatic resubmission','usage':'unavailable'},exclusive=True)
+                           'status':'BLOCKED','error':'MODEL_TIMEOUT; process group killed; no automatic resubmission','usage':'unavailable'},exclusive=True)
                 raise ProviderError('MODEL_TIMEOUT') from exc
             try:
                 events=visible_events(result.stdout)

@@ -73,7 +73,7 @@ def aggregate(profiles):
             'modifications':0, 'physical_distance':{'value':None,'reason':'CRS_AND_DISTANCE_POLICY_UNRESOLVED'}}
 
 
-def time_boundaries(record_id, value, threshold=30):
+def time_boundaries(record_id, value, threshold=30, classification='CURRENT_RUN_REAL_DATA'):
     """Diagnostic partition, not complete time+space segmentation or filtering."""
     p = profile(record_id,value)
     if not p['valid_structure'] or p['invalid_timestamps']:
@@ -84,7 +84,7 @@ def time_boundaries(record_id, value, threshold=30):
             for i in range(1,len(ts)) if ts[i] < ts[i-1] or ts[i]-ts[i-1] > threshold]
     bounds = [0]+[x['right_index'] for x in cuts]+[len(ts)]
     partitions = [list(range(a,b)) for a,b in zip(bounds,bounds[1:]) if a < b]
-    return {'record_id':record_id,'status':'EXECUTED','classification':'CURRENT_RUN_REAL_DATA_DIAGNOSTIC',
+    return {'record_id':record_id,'status':'EXECUTED','classification':classification,
             'threshold_source_seconds':threshold,'cuts':cuts,'partitions':partitions,
             'n_input':len(coords),'n_accounted':sum(map(len,partitions)),'deleted':0,'modified':0,
             'limitation':'TIME_ONLY; space cuts, length filtering, denoising and DP remain BLOCKED'}
@@ -124,18 +124,32 @@ def independent_profile_review(raw, rows):
                 errors.append(f'STRUCTURE:{rid}')
             continue
         t,c=value
+        coordinate_valid=[isinstance(p,list) and len(p)==2 and all(finite(v) for v in p) for p in c]
         expected={'n_points':len(c),'n_timestamps':len(t),'valid_structure':len(t)==len(c),
                   'negative_dt':0,'zero_dt':0,'positive_dt':0,'dt_computable':0,
                   'same_time_different_position':0,'consecutive_duplicate_position':0,
-                  'long_gap_gt_30_source_seconds':0,'edges_total':max(len(c)-1,0)}
+                  'long_gap_gt_30_source_seconds':0,'edges_total':max(len(c)-1,0),
+                  'invalid_timestamps':sum(not finite(v) for v in t),
+                  'invalid_coordinates':len(c)-sum(coordinate_valid),
+                  'position_pairs_computable':sum(a and b for a,b in zip(coordinate_valid,coordinate_valid[1:])),
+                  'time_span_raw':t[-1]-t[0] if t and finite(t[0]) and finite(t[-1]) else None,
+                  'dt_counts':{}}
+        deltas=[]
         for j,(a,b) in enumerate(zip(t,t[1:]),1):
             if not(finite(a) and finite(b)):continue
             expected['dt_computable']+=1
+            delta=b-a;deltas.append(delta)
+            key=str(delta);expected['dt_counts'][key]=expected['dt_counts'].get(key,0)+1
             expected['zero_dt']+=int(a==b);expected['negative_dt']+=int(b<a);expected['positive_dt']+=int(b>a)
             expected['long_gap_gt_30_source_seconds']+=int(b-a>30)
             if j < len(c) and a==b and c[j]!=c[j-1] and all(isinstance(x,list) and len(x)==2 and all(finite(v) for v in x) for x in c[j-1:j+1]):
                 expected['same_time_different_position']+=1
         expected['consecutive_duplicate_position']=sum(a==b for a,b in zip(c,c[1:]) if all(isinstance(x,list) and len(x)==2 and all(finite(v) for v in x) for x in [a,b]))
+        expected['dt_min_raw']=float(min(deltas)) if deltas else None
+        expected['dt_max_raw']=float(max(deltas)) if deltas else None
+        expected['issues']=(['ALIGNMENT_MISMATCH'] if len(t)!=len(c) else [])
+        if expected['invalid_timestamps']:expected['issues'].append('NONFINITE_TIME')
+        if expected['invalid_coordinates']:expected['issues'].append('NONFINITE_OR_NON2D_COORDINATE')
         for k,v in expected.items():
             if row.get(k)!=v:errors.append(f'{rid}:{k}')
     return {'status':'VERIFIED' if not errors else 'REJECTED','errors':errors,'records_checked':len(rows),

@@ -20,7 +20,7 @@ def execute_tool(action, record_ids, policy, previous_profiles=None,classificati
         rows=[profile(k,v,classification) for k,v in subset.items()]
         payload={'profiles':rows,'summary':aggregate(rows)}
     elif action=='time_boundaries':
-        payload={'trajectories':[time_boundaries(k,v,policy['starter_reference']['dt_seconds']) for k,v in subset.items()],
+        payload={'trajectories':[time_boundaries(k,v,policy['starter_reference']['dt_seconds'],classification) for k,v in subset.items()],
                  'scope':'TIME_ONLY_DIAGNOSTIC_NOT_BASELINE'}
     elif action=='duplicate_details':
         payload={'trajectories':[duplicate_details(k,v) for k,v in subset.items()],
@@ -28,7 +28,9 @@ def execute_tool(action, record_ids, policy, previous_profiles=None,classificati
     elif action in ('verify_profiles','recompute_check'):
         if previous_profiles is None:
             raise ValueError('MISSING_PROFILE_OUTPUT')
-        selected=[p for p in previous_profiles if p['record_id'] in subset]
+        by_id={p['record_id']:p for p in previous_profiles if p['record_id'] in subset}
+        if len(by_id)!=len(subset):raise ValueError('PROFILE_COVERAGE_MISMATCH')
+        selected=[by_id[k] for k in subset]
         payload=independent_profile_review(subset,selected)
         if action=='recompute_check':
             recomputed=[profile(k,v,classification) for k,v in subset.items()]

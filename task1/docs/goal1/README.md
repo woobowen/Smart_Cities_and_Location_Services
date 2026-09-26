@@ -10,14 +10,12 @@
 python3 -m venv --system-site-packages .venv
 .venv/bin/python -m pip install -r task1/config/requirements-goal1.txt
 .venv/bin/python -m pytest -q task1/tests
-.venv/bin/python -m task1.workflow inventory
-.venv/bin/python -m task1.workflow live --enable-live --run-id g1-live-20260926-01 --stop-after 3
-.venv/bin/python -m task1.workflow live --enable-live --run-id g1-live-20260926-01
-.venv/bin/python -m task1.workflow recompute --run-id g1-live-20260926-01
+.venv/bin/python task1/scripts/recompute_archived_run.py g1-live-20260926-03
+.venv/bin/python task1/scripts/build_goal1_figures.py
 ```
 
-LIVE 显式启用，复用当前 ChatGPT 登录；不读取认证文件、不换供应商、不启用付费 API。已有相同 run_id 会恢复；新 run_id 仍使用同一个 LIVE 调用预算。预算耗尽必须交研究审核，不能改 run_id 绕过。表中的示例 run_id 是本轮实际计划 ID，重复运行会恢复而不构成新模型实验。
+本轮LIVE已冻结：A成功一次，B网络失败，C/反馈未发生，且发现CLI内部重试未纳入原预算。不得直接再运行模型或改run_id绕过。已修复控制器漏洞，真实网络重试控制还需审核后复验。访问方式仍为现有ChatGPT登录，不读取认证文件、不换供应商、不启用付费API。
 
-默认 Notebook 仅离线重新执行工具并与真实记录逐对象比较；不只是打印旧结果。需要重新调用模型时显式设 LIVE 与新 ID，并受剩余预算和语义合同约束。
+默认 Notebook 仅离线重新执行工具并与真实记录逐对象比较。旧LIVE源码可按其CODE_SHA恢复到临时目录复算，当前工作区不切换版本；它只验证已实际执行的source_evidence，不等于完整Agent闭环。全量inventory已保存在审核包，重新调用inventory会重建同名派生文件，需另存原证据后再进行。
 
 [合同](CONTRACTS.md) · [角色/控制器](ARCHITECTURE.md) · [审核包](../../evidence/goal1/REVIEW_PACKET.md)

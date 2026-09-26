@@ -10,7 +10,7 @@ import time
 import jsonschema
 
 from .io import ROOT,CONFIG,EVIDENCE,DATA,read_json,write_json,digest,object_hash,now,bound_path,relative
-from .provider import CodexProvider,ProviderError,response_schema
+from .provider import CodexProvider,ProviderError,response_schema,verify_saved_call
 from .tools import execute_tool
 
 PHASES=[
@@ -41,6 +41,8 @@ def validate_request(request,role,call_id,policy,pilot,*,mode='LIVE',feedback_id
         raise GateError('MISSING_REASON_OR_SOURCE')
     if feedback_ids and not set(request['feedback_refs']).intersection(feedback_ids):
         raise GateError('MISSING_ACTUAL_FEEDBACK_REFERENCE')
+    if request['request_status']!='PROPOSED':
+        raise GateError('ROLE_REQUEST_REQUIRES_REVIEW:'+request['request_status'])
     if request['action']=='baseline' and policy['method']['processing_status']!='APPROVED_FOR_REAL_INPUT':
         raise GateError('UNKNOWN_SEMANTICS_BASELINE_BLOCKED')
     return request
@@ -71,7 +73,7 @@ class Controller:
                         'input_sha256':self.policy['raw_sha256'],'started_at':now(),
                         'code_sha':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),
                         'source_hashes':{relative(p):digest(p) for p in sorted((ROOT/'task1/workflow').glob('*.py'))},
-                        'tools':[],'calls':[],'decisions':[],'accepted_version':None,'errors':[]}
+                        'tools':[],'calls':[],'model_dispatches':{},'decisions':[],'accepted_version':None,'errors':[]}
             self.save()
         self.ledger_path=self.base/('budget_live.json' if mode=='LIVE' else 'budget_'+mode.lower()+'.json')
         if not self.ledger_path.exists():
@@ -92,14 +94,18 @@ class Controller:
         with path.open('a') as f:f.write(json.dumps(e,ensure_ascii=False)+'\n')
         return e['event_hash']
 
-    def spend(self,kind):
+    def spend(self,kind,call_id=None):
         # Execution is serial by contract; budget persists across run IDs.
         ledger=read_json(self.ledger_path)
+        if kind=='model_attempts' and ledger.get('live_stop'):
+            raise GateError('LIVE_BUDGET_FROZEN:'+ledger['live_stop'])
         limit=self.policy['budget']['max_model_calls' if kind=='model_attempts' else 'max_tool_calls']
         if ledger[kind]>=limit:raise GateError('BUDGET_EXHAUSTED:'+kind)
         ledger[kind]+=1
         entry=ledger['by_run'].setdefault(self.run_id,{'model_attempts':0,'tool_requests':0})
         entry[kind]+=1
+        if call_id:
+            ledger.setdefault('dispatched_calls',{})[call_id]={'run_id':self.run_id,'at':now()}
         write_json(self.ledger_path,ledger)
 
     def protection_check(self):
@@ -122,6 +128,8 @@ class Controller:
         if not path.is_file():raise GateError('MISSING_OUTPUT')
         if digest(path)!=tool['sha256']:raise GateError('OUTPUT_FILE_HASH_MISMATCH')
         payload=read_json(path)
+        if payload.get('tool_id')!=tool['tool_id'] or payload.get('request_hash')!=tool['tool_id'] or payload.get('run_id')!=self.run_id or payload.get('mode')!=self.mode:
+            raise GateError('TOOL_RECEIPT_BINDING_MISMATCH')
         if object_hash(payload['output'])!=payload['output_sha256']:raise GateError('OUTPUT_HASH_MISMATCH')
         if payload['output'].get('parent_version')!='RAW:'+self.state['input_sha256']:
             raise GateError('WRONG_PARENT_VERSION')
@@ -129,6 +137,8 @@ class Controller:
             raise GateError('INPUT_HASH_MISMATCH')
         if payload['output'].get('status') not in ('EXECUTED','VERIFIED','REJECTED','BLOCKED'):
             raise GateError('FORGED_SUCCESS_STATUS')
+        if payload['output'].get('status')!=tool['status'] or payload['request'].get('action')!=tool['action']:
+            raise GateError('TOOL_SUMMARY_MISMATCH')
         return payload
 
     def dispatch(self,request,role,call_id,*,feedback_ids=(),inject_failure=False):
@@ -144,9 +154,9 @@ class Controller:
         artifact='tools/'+key+'.json'
         path=bound_path(self.directory,artifact)
         if path.exists():
-            receipt=read_json(path)
-            if receipt['request_hash']!=key or receipt['output_sha256']!=object_hash(receipt['output']):
-                raise GateError('OUTPUT_HASH_MISMATCH')
+            registered=next((t for t in self.state['tools'] if t['tool_id']==key),None)
+            if registered is None:raise GateError('UNREGISTERED_CACHED_OUTPUT')
+            receipt=self.read_tool(registered)
             self.event('TOOL_REUSED_NO_SIDE_EFFECT',call_id=call_id,artifact=artifact)
         else:
             self.state['status']='DISPATCHED';self.save()
@@ -160,6 +170,8 @@ class Controller:
             output=execute_tool(request['action'],request['record_ids'],self.policy,self.profiles(),
                                 classification='CURRENT_RUN_REAL_DATA' if self.mode=='LIVE' else self.mode)
             self.protection_check()
+            if output.get('status') not in ('EXECUTED','VERIFIED','REJECTED','BLOCKED'):
+                raise GateError('FORGED_SUCCESS_STATUS')
             receipt={'tool_id':key,'request_hash':key,'role':role,'call_id':call_id,'request':request,
                      'run_id':self.run_id,'mode':self.mode,'classification':'CURRENT_RUN_REAL_DATA' if self.mode=='LIVE' else self.mode,
                      'code_sha':self.state['code_sha'],'output':output,'output_sha256':object_hash(output),
@@ -207,6 +219,7 @@ class Controller:
         if self.mode!='LIVE':raise GateError('LIVE_ENTRY_REQUIRES_LIVE_MODE')
         provider=provider or CodexProvider(self.policy['budget']['max_seconds_per_model_call'])
         if type(provider) is not CodexProvider:raise GateError('MOCK_CANNOT_BE_LIVE')
+        if not self.policy.get('live_execution_enabled',False):raise GateError('LIVE_DISABLED_PENDING_BUDGET_REVIEW')
         self.protection_check()
         if self.state['inflight_model']:
             pending=self.state['inflight_model']
@@ -220,14 +233,27 @@ class Controller:
             call_dir=self.directory/'calls'/call_id
             response_path=call_dir/'response.json'
             if response_path.exists():
-                value=read_json(response_path);receipt=read_json(call_dir/'receipt.json')
+                dispatch=self.state.get('model_dispatches',{}).get(call_id)
+                ledger=read_json(self.ledger_path)
+                if not dispatch or ledger.get('dispatched_calls',{}).get(call_id,{}).get('run_id')!=self.run_id:
+                    raise GateError('UNDISPATCHED_MODEL_RESPONSE')
+                value,receipt,hashes=verify_saved_call(call_dir,role,call_id,PHASE_ACTIONS[phase],dispatch['input_hash'])
+                if dispatch.get('artifact_hashes') and dispatch['artifact_hashes']!=hashes:
+                    raise GateError('MODEL_ARTIFACT_HASH_MISMATCH')
+                dispatch['artifact_hashes']=hashes;self.save()
                 self.event('MODEL_RESPONSE_RECOVERED',call_id=call_id)
             else:
-                self.spend('model_attempts')
+                if call_dir.exists():raise GateError('PREEXISTING_OR_INCOMPLETE_CALL_DIRECTORY')
+                prompt=self.prompt(role,call_id,instruction)
+                saved_input={'role':role,'call_id':call_id,'prompt':prompt,'schema':response_schema(role,call_id,PHASE_ACTIONS[phase])}
+                self.spend('model_attempts',call_id)
+                self.state.setdefault('model_dispatches',{})[call_id]={'input_hash':object_hash(saved_input)}
                 self.state['inflight_model']=call_id;self.state['status']='DISPATCHED';self.save()
                 self.event('MODEL_DISPATCHED',role=role,call_id=call_id)
                 try:
-                    value,receipt=provider.call(role,call_id,self.prompt(role,call_id,instruction),PHASE_ACTIONS[phase],call_dir)
+                    provider.call(role,call_id,prompt,PHASE_ACTIONS[phase],call_dir)
+                    value,receipt,hashes=verify_saved_call(call_dir,role,call_id,PHASE_ACTIONS[phase],object_hash(saved_input))
+                    self.state['model_dispatches'][call_id]['artifact_hashes']=hashes;self.save()
                 except ProviderError as exc:
                     self.state['status']='BLOCKED';self.state['ended_at']=now();self.state['errors'].append({'call_id':call_id,'reason':str(exc)})
                     self.save();self.event('LIVE_AGENT_BLOCKED',call_id=call_id,reason=str(exc));raise
@@ -240,6 +266,11 @@ class Controller:
             except (ValueError,jsonschema.ValidationError) as exc:
                 self.state['status']='NEEDS_REVIEW';self.state['ended_at']=now();self.state['errors'].append({'call_id':call_id,'reason':str(exc)})
                 self.state['inflight_model']=None;self.save();raise
+            if tool['output']['status'] not in ('EXECUTED','VERIFIED'):
+                self.state['status']=tool['output']['status'];self.state['ended_at']=now()
+                self.state['inflight_model']=None;self.save()
+                self.event('BRANCH_STOPPED',call_id=call_id,status=self.state['status'])
+                self.export_manifest();return self.state
             decision={'decision_id':call_id+'-decision','trigger_call':call_id,'trigger_tool':tool['tool_id'],
                       'status':'NEEDS_REVIEW','reason':'Engineering diagnostics executed; real baseline semantic blockers and quality thresholds unresolved',
                       'quality_acceptance':'PENDING_RESEARCH_REVIEW','next_task':value['candidate_for_future_review'] or value['summary']}
