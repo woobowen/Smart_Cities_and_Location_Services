@@ -1,0 +1,283 @@
+{
+  "classification": "ENGINEERING_TEST",
+  "network_calls": 0,
+  "model_calls": 0,
+  "review_target": "/home/addaswsw/lab/Smart_Cities_and_Location_Services",
+  "checked_commit": "157b79d563aaa916d4478ec494b25ec72c3badcb",
+  "probes": [
+    {
+      "id": "MISSING_TIME_DUPLICATE",
+      "returned": {
+        "record_id": "fixture",
+        "events": [
+          {
+            "left_index": 0,
+            "right_index": 1,
+            "dt_raw": null,
+            "dt_reason": "MISSING_OR_INVALID_TIME",
+            "position_pair_computable": true,
+            "reasons": [
+              "MISSING_OR_INVALID_TIME",
+              "REPEATED_POSITION_NOT_AUTOMATIC_NOISE"
+            ]
+          }
+        ],
+        "modified": 0,
+        "deleted": 0,
+        "status": "EXECUTED"
+      }
+    },
+    {
+      "id": "duplicate_verify_profiles",
+      "status": "REJECTED",
+      "result": {
+        "classification": "MOCK_TEST",
+        "input_sha256": "75e789a4c87ab414a74217a7880d2e6bf988600a93f3f1a5e93261d3161745f9",
+        "record_ids": [
+          "fixture"
+        ],
+        "input_records": 1,
+        "input_points": 3,
+        "modified_values": 0,
+        "parent_version": "RAW:75e789a4c87ab414a74217a7880d2e6bf988600a93f3f1a5e93261d3161745f9",
+        "semantics_version": "fixture",
+        "metrics_version": "fixture",
+        "status": "REJECTED",
+        "result": {
+          "status": "REJECTED",
+          "errors": [
+            "DUPLICATE_RECORD_ID",
+            "RECORD_COVERAGE"
+          ],
+          "records_checked": 0,
+          "claim": "Full submitted list rejected before alignment; no rows discarded"
+        }
+      }
+    },
+    {
+      "id": "duplicate_recompute_check",
+      "status": "REJECTED",
+      "result": {
+        "classification": "MOCK_TEST",
+        "input_sha256": "75e789a4c87ab414a74217a7880d2e6bf988600a93f3f1a5e93261d3161745f9",
+        "record_ids": [
+          "fixture"
+        ],
+        "input_records": 1,
+        "input_points": 3,
+        "modified_values": 0,
+        "parent_version": "RAW:75e789a4c87ab414a74217a7880d2e6bf988600a93f3f1a5e93261d3161745f9",
+        "semantics_version": "fixture",
+        "metrics_version": "fixture",
+        "status": "REJECTED",
+        "result": {
+          "status": "REJECTED",
+          "errors": [
+            "DUPLICATE_RECORD_ID",
+            "RECORD_COVERAGE"
+          ],
+          "records_checked": 0,
+          "claim": "Full submitted list rejected before alignment; no rows discarded",
+          "exact_match": false
+        }
+      }
+    },
+    {
+      "id": "foreign_verify_profiles",
+      "status": "REJECTED",
+      "result": {
+        "classification": "MOCK_TEST",
+        "input_sha256": "75e789a4c87ab414a74217a7880d2e6bf988600a93f3f1a5e93261d3161745f9",
+        "record_ids": [
+          "fixture"
+        ],
+        "input_records": 1,
+        "input_points": 3,
+        "modified_values": 0,
+        "parent_version": "RAW:75e789a4c87ab414a74217a7880d2e6bf988600a93f3f1a5e93261d3161745f9",
+        "semantics_version": "fixture",
+        "metrics_version": "fixture",
+        "status": "REJECTED",
+        "result": {
+          "status": "REJECTED",
+          "errors": [
+            "RECORD_COVERAGE"
+          ],
+          "records_checked": 0,
+          "claim": "Full submitted list rejected before alignment; no rows discarded"
+        }
+      }
+    },
+    {
+      "id": "foreign_recompute_check",
+      "status": "REJECTED",
+      "result": {
+        "classification": "MOCK_TEST",
+        "input_sha256": "75e789a4c87ab414a74217a7880d2e6bf988600a93f3f1a5e93261d3161745f9",
+        "record_ids": [
+          "fixture"
+        ],
+        "input_records": 1,
+        "input_points": 3,
+        "modified_values": 0,
+        "parent_version": "RAW:75e789a4c87ab414a74217a7880d2e6bf988600a93f3f1a5e93261d3161745f9",
+        "semantics_version": "fixture",
+        "metrics_version": "fixture",
+        "status": "REJECTED",
+        "result": {
+          "status": "REJECTED",
+          "errors": [
+            "RECORD_COVERAGE"
+          ],
+          "records_checked": 0,
+          "claim": "Full submitted list rejected before alignment; no rows discarded",
+          "exact_match": false
+        }
+      }
+    },
+    {
+      "id": "valid_verify_profiles",
+      "status": "VERIFIED",
+      "result": {
+        "classification": "MOCK_TEST",
+        "input_sha256": "75e789a4c87ab414a74217a7880d2e6bf988600a93f3f1a5e93261d3161745f9",
+        "record_ids": [
+          "fixture"
+        ],
+        "input_records": 1,
+        "input_points": 3,
+        "modified_values": 0,
+        "parent_version": "RAW:75e789a4c87ab414a74217a7880d2e6bf988600a93f3f1a5e93261d3161745f9",
+        "semantics_version": "fixture",
+        "metrics_version": "fixture",
+        "status": "VERIFIED",
+        "result": {
+          "status": "VERIFIED",
+          "errors": [],
+          "records_checked": 1,
+          "claim": "Structural counts only; no physical accuracy or cleaning quality claim"
+        }
+      }
+    },
+    {
+      "id": "valid_recompute_check",
+      "status": "VERIFIED",
+      "result": {
+        "classification": "MOCK_TEST",
+        "input_sha256": "75e789a4c87ab414a74217a7880d2e6bf988600a93f3f1a5e93261d3161745f9",
+        "record_ids": [
+          "fixture"
+        ],
+        "input_records": 1,
+        "input_points": 3,
+        "modified_values": 0,
+        "parent_version": "RAW:75e789a4c87ab414a74217a7880d2e6bf988600a93f3f1a5e93261d3161745f9",
+        "semantics_version": "fixture",
+        "metrics_version": "fixture",
+        "status": "VERIFIED",
+        "result": {
+          "status": "VERIFIED",
+          "errors": [],
+          "records_checked": 1,
+          "claim": "Structural counts only; no physical accuracy or cleaning quality claim",
+          "recomputed_sha256": "ef146fbcda5e084a4bae3b63cb39973df3455dc02713885520711d890bf2779c",
+          "stored_sha256": "ef146fbcda5e084a4bae3b63cb39973df3455dc02713885520711d890bf2779c",
+          "exact_match": true
+        }
+      }
+    },
+    {
+      "id": "NULL_ITEM",
+      "exception": "ProviderError",
+      "normalized_provider_error": true
+    },
+    {
+      "id": "SPAWN_FAILURE",
+      "exception": "ProviderError",
+      "normalized_provider_error": true,
+      "saved_files": [
+        "input.json",
+        "receipt.json",
+        "visible_events.jsonl"
+      ],
+      "receipt": {
+        "classification": "LIVE_CALL_ATTEMPT",
+        "provider": "Codex CLI / existing ChatGPT login",
+        "role": "research",
+        "call_id": "fixture",
+        "run_id": "",
+        "requested_model": "gpt-6-astra",
+        "model_snapshot": "unavailable",
+        "request_id": "unavailable",
+        "started_at": "2026-09-26T13:17:57.826747+00:00",
+        "sandbox": "read-only",
+        "shell_tools": "disabled",
+        "reasoning_saved": false,
+        "usage": "unavailable",
+        "underlying_requests": "unknown",
+        "status": "BLOCKED",
+        "exit_code": null,
+        "effective_provider": "openai built-in",
+        "retry_control": "FIRST_VISIBLE_FAULT_KILLS_PROCESS_GROUP; hidden requests unknown",
+        "error": "LIVE_AGENT_BLOCKED: pinned codex missing",
+        "error_type": "ProviderError",
+        "no_automatic_resubmission": true,
+        "ended_at": "2026-09-26T13:17:57.827694+00:00",
+        "elapsed_seconds": 0.0009241099999144353,
+        "process_started": false,
+        "stderr": "",
+        "visible_counts": {
+          "reconnect_notifications": 0,
+          "fallback_notifications": 0,
+          "sampling_retry_lines": 0,
+          "underlying_requests": "unknown"
+        },
+        "completed_turns": 0
+      }
+    },
+    {
+      "id": "TIMEOUT_WITH_PARTIAL_LOG",
+      "exception": "ProviderError",
+      "normalized_provider_error": true,
+      "saved_files": [
+        "input.json",
+        "receipt.json",
+        "visible_events.jsonl"
+      ],
+      "receipt": {
+        "classification": "LIVE_CALL_ATTEMPT",
+        "provider": "Codex CLI / existing ChatGPT login",
+        "role": "research",
+        "call_id": "fixture",
+        "run_id": "",
+        "requested_model": "gpt-6-astra",
+        "model_snapshot": "unavailable",
+        "request_id": "unavailable",
+        "started_at": "2026-09-26T13:17:57.828548+00:00",
+        "sandbox": "read-only",
+        "shell_tools": "disabled",
+        "reasoning_saved": false,
+        "usage": "unavailable",
+        "underlying_requests": "unknown",
+        "status": "BLOCKED",
+        "exit_code": null,
+        "effective_provider": "openai built-in",
+        "retry_control": "FIRST_VISIBLE_FAULT_KILLS_PROCESS_GROUP; hidden requests unknown",
+        "error": "LIVE_AGENT_BLOCKED: pinned codex missing",
+        "error_type": "ProviderError",
+        "no_automatic_resubmission": true,
+        "ended_at": "2026-09-26T13:17:57.828731+00:00",
+        "elapsed_seconds": 0.0001729880000311823,
+        "process_started": false,
+        "stderr": "",
+        "visible_counts": {
+          "reconnect_notifications": 0,
+          "fallback_notifications": 0,
+          "sampling_retry_lines": 0,
+          "underlying_requests": "unknown"
+        },
+        "completed_turns": 0
+      }
+    }
+  ]
+}

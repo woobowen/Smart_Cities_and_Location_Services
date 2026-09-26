@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net">
+  <diagram name="Repair actual state">
+    <mxGraphModel page="1" pageWidth="1400" pageHeight="840">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="Goal 1 定向修复 · 本批实际调用与处理边界" vertex="1" parent="1" style="fillColor=none;strokeColor=#DDE3E7;fontColor=#2D3238;fontSize=28;">
+          <mxGeometry x="40" y="25" width="1320" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="call0" value="连通性探针&#10;有效结构响应" vertex="1" parent="1" style="fillColor=#D3EAF5;strokeColor=#DDE3E7;fontColor=#2D3238;fontSize=20;">
+          <mxGeometry x="35" y="145" width="205" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="edge0" edge="1" parent="1" style="strokeColor=#5B9FBE;dashed=0;">
+          <mxGeometry as="geometry">
+            <mxPoint x="240" y="205" as="sourcePoint" />
+            <mxPoint x="260" y="205" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="call1" value="A · 初始诊断&#10;有效结构响应" vertex="1" parent="1" style="fillColor=#D3EAF5;strokeColor=#DDE3E7;fontColor=#2D3238;fontSize=20;">
+          <mxGeometry x="260" y="145" width="205" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="edge1" edge="1" parent="1" style="strokeColor=#5B9FBE;dashed=0;">
+          <mxGeometry as="geometry">
+            <mxPoint x="465" y="205" as="sourcePoint" />
+            <mxPoint x="485" y="205" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="call2" value="B · 实际执行&#10;有效结构响应" vertex="1" parent="1" style="fillColor=#D3EAF5;strokeColor=#DDE3E7;fontColor=#2D3238;fontSize=20;">
+          <mxGeometry x="485" y="145" width="205" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="edge2" edge="1" parent="1" style="strokeColor=#5B9FBE;dashed=0;">
+          <mxGeometry as="geometry">
+            <mxPoint x="690" y="205" as="sourcePoint" />
+            <mxPoint x="710" y="205" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="call3" value="C · 独立核查&#10;有效结构响应" vertex="1" parent="1" style="fillColor=#D3EAF5;strokeColor=#DDE3E7;fontColor=#2D3238;fontSize=20;">
+          <mxGeometry x="710" y="145" width="205" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="edge3" edge="1" parent="1" style="strokeColor=#5B9FBE;dashed=0;">
+          <mxGeometry as="geometry">
+            <mxPoint x="915" y="205" as="sourcePoint" />
+            <mxPoint x="935" y="205" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="call4" value="A · 反馈后动作&#10;有效结构响应" vertex="1" parent="1" style="fillColor=#D3EAF5;strokeColor=#DDE3E7;fontColor=#2D3238;fontSize=20;">
+          <mxGeometry x="935" y="145" width="205" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="edge4" edge="1" parent="1" style="strokeColor=#5B9FBE;dashed=0;">
+          <mxGeometry as="geometry">
+            <mxPoint x="1140" y="205" as="sourcePoint" />
+            <mxPoint x="1160" y="205" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="call5" value="C · 再次核查&#10;有效结构响应" vertex="1" parent="1" style="fillColor=#D3EAF5;strokeColor=#DDE3E7;fontColor=#2D3238;fontSize=20;">
+          <mxGeometry x="1160" y="145" width="205" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="budget" value="新批次预算&#10;外层预留 6 / 6；串行&#10;工具请求 5 / 12&#10;首次可见异常 → 终止整个进程组&#10;底层服务请求数：unknown" vertex="1" parent="1" style="fillColor=#FFFDFC;strokeColor=#DDE3E7;fontColor=#2D3238;fontSize=20;">
+          <mxGeometry x="50" y="345" width="615" height="235" as="geometry" />
+        </mxCell>
+        <mxCell id="research" value="真实数据：7 条 / 783 点&#10;D1 坐标基准与距离口径未批准&#10;D2 去噪删除调度未批准&#10;完整真实处理：BLOCKED&#10;未处理点保留原始 ID 与索引" vertex="1" parent="1" style="fillColor=#FFFDFC;strokeColor=#DDE3E7;fontColor=#2D3238;fontSize=20;">
+          <mxGeometry x="735" y="345" width="615" height="235" as="geometry" />
+        </mxCell>
+        <mxCell id="footer" value="诊断闭环：REAL_DIAGNOSTIC_LOOP；完整真实 baseline：BLOCKED。&#10;旧 run01/02/03 与旧预算冻结保留；本图只表示新批次。&#10;虚线表示没有发生的交接；构造处理测试不计入真实轨迹结果。" vertex="1" parent="1" style="fillColor=none;strokeColor=#DDE3E7;fontColor=#2D3238;fontSize=23;">
+          <mxGeometry x="50" y="650" width="1300" height="150" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

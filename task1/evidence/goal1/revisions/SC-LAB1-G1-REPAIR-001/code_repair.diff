@@ -1,0 +1,1659 @@
+diff --git a/task1/config/goal1.json b/task1/config/goal1.json
+index 746f889..ac215da 100644
+--- a/task1/config/goal1.json
++++ b/task1/config/goal1.json
+@@ -187,24 +187,32 @@
+   },
+   "actions": {
+     "research": [
+-      "source_evidence",
+       "profile_pilot",
+       "time_boundaries",
+       "duplicate_details",
+       "verify_profiles",
+-      "recompute_check"
++      "recompute_check",
++      "contract_snapshot",
++      "source_check",
++      "escalate"
+     ],
+     "execution": [
+       "profile_pilot",
+       "time_boundaries",
+       "duplicate_details",
+       "recompute_check",
+-      "baseline"
++      "baseline",
++      "contract_snapshot",
++      "source_check",
++      "escalate"
+     ],
+     "review": [
+       "verify_profiles",
+       "recompute_check",
+-      "source_evidence"
++      "contract_snapshot",
++      "source_check",
++      "escalate",
++      "verify_baseline"
+     ]
+   },
+   "budget": {
+diff --git a/task1/config/goal1_sources.json b/task1/config/goal1_sources.json
+new file mode 100644
+index 0000000..1aca7a4
+--- /dev/null
++++ b/task1/config/goal1_sources.json
+@@ -0,0 +1,43 @@
++[
++  {
++    "id": "teacher:13:body",
++    "path": "task1/实验课1.pptx",
++    "sha256": "cf5fdbdd0e116818f4bf195e8761dd55c4733443d7c360c986cf1cdfddfda075",
++    "member": "ppt/slides/slide13.xml",
++    "claim_status": "DATUM_NOT_BOUND_TO_JSON"
++  },
++  {
++    "id": "teacher:13:notes",
++    "path": "task1/实验课1.pptx",
++    "sha256": "cf5fdbdd0e116818f4bf195e8761dd55c4733443d7c360c986cf1cdfddfda075",
++    "member": "ppt/notesSlides/notesSlide13.xml",
++    "claim_status": "DATUM_NOT_BOUND_TO_JSON"
++  },
++  {
++    "id": "teacher:20",
++    "path": "task1/实验课1.pptx",
++    "sha256": "cf5fdbdd0e116818f4bf195e8761dd55c4733443d7c360c986cf1cdfddfda075",
++    "member": "ppt/slides/slide20.xml",
++    "claim_status": "PREDICATE_ONLY_SCHEDULE_UNAPPROVED"
++  },
++  {
++    "id": "repair:authorization",
++    "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-REPAIR-001/handoff/SC-LAB1-G1-REPAIR-001_CODEX_PROMPT.md",
++    "sha256": "b7d0b7a7bf943b5719b46a42bef6b2185de6f1b415a9f503bf8c291ff93835f0",
++    "lines": [
++      107,
++      146
++    ],
++    "claim_status": "ENGINEERING_AND_BOUNDED_LIVE_AUTHORIZED_NOT_D1_D2"
++  },
++  {
++    "id": "historical:stage01",
++    "path": "task1/docs/research/Task1_Stage01_Readonly_Audit.md",
++    "sha256": "ffe30283c71250dabf4cf90c55d673f0e56c639f32324c7415048ee3a298e15f",
++    "lines": [
++      165,
++      171
++    ],
++    "claim_status": "HISTORICAL_NOT_NEW_RESULT"
++  }
++]
+diff --git a/task1/docs/goal1/CONTRACTS.md b/task1/docs/goal1/CONTRACTS.md
+index ea4c4dc..d6c4959 100644
+--- a/task1/docs/goal1/CONTRACTS.md
++++ b/task1/docs/goal1/CONTRACTS.md
+@@ -8,7 +8,7 @@
+ 
+ **U01_CRS_DISTANCE：BLOCKED。** 教师 PPT 第13页正文泛述 WGS84，备注泛述 GCJ02，均未绑定这份数据；Notebook 函数名不能消除冲突。Notebook 分段/DP 使用 Mercator，而旧 traj_agent 使用31.23°N局部椭球平面。这两者也不是同一距离。真实距离、速度、空间分段、长度过滤、方向去噪和米制 DP 均不运行；不以构造数据冒充真实验收，不叠加底图。需先确认数据 CRS 与允许的距离口径。
+ 
+-**U02_DIRECTION_EXECUTION：BLOCKED。** 教师 PPT20 能确认 d_i=bearing(p_i,p_(i+1))，内部点满足 circular_difference(d_i,d_(i-1))>θ 且 circular_difference(d_i,d_(i+1))>θ 才为候选。无法据此确定同时标记、边删边算、还是重算迭代；最后方向与零位移邻域也未明确。两组真实执行的构造反例见 [direction_ambiguity_fixtures.json](../../evidence/goal1/materials/direction_ambiguity_fixtures.json)。`direction_candidates` 仅检查可算窗口并报告候选，不删除；`denoise_trajectory` 抛出 MethodUnresolved。规则核实不等于删除调度已批准。
++**U02_DIRECTION_EXECUTION：BLOCKED。** 教师 PPT20 能确认 d_i=bearing(p_i,p_(i+1))，内部点满足 circular_difference(d_i,d_(i-1))>θ 且 circular_difference(d_i,d_(i+1))>θ 才为候选。无法据此确定同时标记、边删边算、还是重算迭代；最后方向与零位移邻域也未明确。两组真实执行的构造反例见 [direction_ambiguity_fixtures.json](../../evidence/goal1/materials/direction_ambiguity_fixtures.json)。`direction_candidates` 仅检查可算窗口并报告候选，不删除；`denoise_trajectory` 缺少明确注册方法时抛出 MethodUnresolved；本次新增单次同时删除候选只在构造平面链中验证，生产入口仍需独立批准。规则核实不等于删除调度已批准。
+ 
+ 没有独立标签/参考轨迹。重复位置不自动等于噪声；零时间差速度不可计算，零位移方向不可计算。原始数值、顺序和点索引不得改写。禁止平滑、插值、折叠停留时间、地图匹配。历史案例352的“170点3秒4时间值”与当前数据不符，不能继续作为事实；本轮结构检查为170点、54时间值、跨度543原始秒。
+ 
+@@ -46,3 +46,11 @@ DP：有限线段距离，保留首尾，返回原始索引有序子序列；阈
+ 工程层：已知答案、硬条件、独立重算决定 VERIFIED/REJECTED。任务质量层：真实三步处理仍BLOCKED。改进层：硬条件 AND 主要收益达预先门槛 AND 保护项无不可接受退化 AND 比较有效/证据足够；目前收益门槛、退化额度、选择数据未冻结，统一 PENDING_RESEARCH_REVIEW。
+ 
+ 现有 `assess_improvement` 只执行上述逻辑；其构造测试中出现的数字是 ENGINEERING_TEST，不会写回批准合同。运行时 Agent 无权修改合同、方法、输入、审核代码、历史结果或留出集。新算法、参数扫描、组合、全量清洗、最终选择和正式报告均保持Goal2/3边界。
++
++## SC-LAB1-G1-REPAIR-001 工程补充
++
++完整提交列表先检查字段、唯一性和精确集合，再允许重排。新 `contract_snapshot` 仅说明保存合同；`source_check` 核读白名单来源的真实片段，不能确认未知 datum。反馈要求当前审核 call 与其 VERIFIED 工具回执，检查文件hash、run和原始父版本。
++
++`pipeline.py` 连接分段→独立过滤→注册方向方法→DP→独立审核→逐点账本。真实入口从教师JSON出发，只有研究批准后登记的 REAL_CONTRACTS/坐标适配器可执行；目前为空，D1/D2与参数均未冻结。
++
++旧预算和历史 live_stop 原样保留。新批次只按修复 Prompt 与最终离线测试授权6次外层派发（1探针＋最多5角色）、12工具、180秒、串行且无自动重提。CLI0.157.1内置openai不能通过同名provider覆盖重试值；实时观察首个异常即杀进程组，底层请求数仍unknown。详见修复审阅入口。
+diff --git a/task1/scripts/build_goal1_notebooks.py b/task1/scripts/build_goal1_notebooks.py
+index d1d3a3f..a4566da 100644
+--- a/task1/scripts/build_goal1_notebooks.py
++++ b/task1/scripts/build_goal1_notebooks.py
+@@ -51,7 +51,7 @@ def main():
+         markdown('# Goal 1：真实角色记录与离线复算\n\n教师映射：`任务3_LLM辅助评估清洗.ipynb` → 本入口。默认不会调用模型。LIVE、REPLAY、MOCK_TEST 明确分开；工程测试不冒充自然Agent失败或真实Human–AI争论。'),
+         code(SETUP),
+         code("MODE='RECOMPUTE'\nRUN_ID='g1-live-20260926-03'\nENABLE_LIVE=False\nassert MODE in ('RECOMPUTE','LIVE')"),
+-        markdown('## 真实运行与失败边界\nrun03仅 A 研究角色成功并执行 source_evidence；B 因 workspace routing discovery failed 失败，C 未调用，反馈循环未完成。run01/02失败均保留。内部重连预算问题使所有新LIVE被冻结。不能把下方离线复算当作补齐三个真实角色。'),
++        markdown('## 历史运行与失败边界\nrun03仅 A 研究角色成功并执行 source_evidence；B 因 workspace routing discovery failed 失败，C 未调用，反馈循环未完成。run01/02失败均保留。旧批次因内部重连预算问题冻结。本次修复批次单独授权，实际结果见末尾新增单元。不能把下方离线复算当作补齐三个真实角色。'),
+         code("directory=EVIDENCE/'runs'/RUN_ID\nmanifest=read_json(directory/'manifest.json')\nprint('run',RUN_ID,'code',manifest['code_sha'],'mode',manifest['mode'],'status',manifest['status'])\nfor call in manifest['calls']:\n    reply=read_json(directory/call['response'])\n    print(call['role'],call['call_id'],call['thread_id'],reply['action'],reply['feedback_refs'])\nfor tool in manifest['tools']: print('tool',tool['tool_id'],tool['action'],tool['status'])"),
+         markdown('## 按已记录代码版本复算实际动作\n控制器已在失败后修复，当前源hash与旧run不同。下面从已存在的Git CODE_SHA恢复任务源码到临时目录，校验hash，再真实重跑旧run唯一成功动作 source_evidence。不会切换当前分支，也不修改旧产物。它只能证明这一项复算一致。'),
+         code("if MODE=='RECOMPUTE':\n    from task1.scripts.recompute_archived_run import recompute_archived\n    result=recompute_archived(RUN_ID)\n    assert result['new_model_calls']==0 and result['status']=='VERIFIED'\n    assert [c['action'] for c in result['checks']]==['source_evidence']\n    print(json.dumps(result,ensure_ascii=False,indent=2))\nelse:\n    assert ENABLE_LIVE, '必须显式启用LIVE'\n    assert policy['live_execution_enabled'], policy['live_stop_reason']\n    assert not directory.exists(), '新模型实验须使用新的run_id；不得重置总预算'\n    from task1.workflow.controller import Controller\n    result=Controller(RUN_ID).run()\n    print(result['status'])"),
+@@ -62,4 +62,19 @@ def main():
+     ])
+ 
+ 
+-if __name__=='__main__':main()
++def append_repair():
++    for path in OUT.glob('*.ipynb'):
++        nb=nbf.read(path,as_version=4)
++        nb.cells.extend([
++            markdown('## SC-LAB1-G1-REPAIR-001 当前修复复算\n以下为当前代码重新读取教师 JSON 的诊断；旧 run03 的 REPLAY 单独保留。构造处理链测试不代表真实数据已清洗。'),
++            code("revision=EVIDENCE/'revisions/SC-LAB1-G1-REPAIR-001'\ncurrent=execute_tool('profile_pilot',pilot['ids'],policy)\nstored=read_json(revision/'results/profile_pilot.json')\nassert current==stored\nchecked=execute_tool('recompute_check',pilot['ids'],policy,current['result']['profiles'])\nassert checked['status']=='VERIFIED' and checked['result']['exact_match']\nprint('当前7条 / 783点复算一致；模型调用0；完整baseline仍BLOCKED')"),
++            markdown('## 本批 LIVE 的真实边界\n只读取回执，不调用模型。有效模型响应、数值工具与完整反馈分别按实际产物计数；没有发生的角色不得补写。'),
++            code("budget=read_json(EVIDENCE/'runs/budget_repair_001.json')\nprint(json.dumps(budget,ensure_ascii=False,indent=2))\nnew_run=revision/'runs/g1-repair-roles-01/manifest.json'\nprint(read_json(new_run) if new_run.exists() else '角色链NOT_RUN：连通性探针没有通过')\nassert digest(DATA)==policy['raw_sha256']"),
++            code("from IPython.display import display, Image\ndisplay(Image(filename=str(revision/'figures/repair_loop.png')))"),
++        ])
++        nbf.write(nb,path)
++
++
++if __name__=='__main__':
++    main()
++    append_repair()
+diff --git a/task1/scripts/build_repair_figures.py b/task1/scripts/build_repair_figures.py
+new file mode 100644
+index 0000000..789585c
+--- /dev/null
++++ b/task1/scripts/build_repair_figures.py
+@@ -0,0 +1,62 @@
++"""Current repair diagnostics and actual call status; old failed diagrams preserved."""
++import sys
++from pathlib import Path
++import xml.etree.ElementTree as ET
++import subprocess
++ROOT=Path(__file__).resolve().parents[2];sys.path.insert(0,str(ROOT))
++from task1.workflow.io import read_json,write_json,digest,relative
++from task1.workflow.budget import REVISION,LEDGER
++from task1.scripts.build_goal1_figures import palette,export_drawio_svg,render_drawio
++import matplotlib
++matplotlib.use('Agg')
++import matplotlib.pyplot as plt
++from matplotlib import font_manager
++
++
++def main():
++    out=REVISION/'figures';out.mkdir(exist_ok=True);colors=palette()
++    font_path=subprocess.check_output(['fc-match','-f','%{file}','Noto Sans CJK SC'],text=True).strip()
++    font_manager.fontManager.addfont(font_path);font=font_manager.FontProperties(fname=font_path)
++    plt.rcParams.update({'font.family':font.get_name(),'figure.facecolor':colors['Paper'],'axes.facecolor':colors['Paper'],
++                         'text.color':colors['Ink'],'axes.labelcolor':colors['Ink'],'svg.fonttype':'none'})
++    rows=read_json(REVISION/'results/profile_pilot.json')['result']['profiles']
++    fig,axes=plt.subplots(1,2,figsize=(12,5),layout='constrained')
++    for ax,field,label,color in [(axes[0],'zero_dt','零时间差',colors['C1']),(axes[1],'consecutive_duplicate_position','相邻重复位置',colors['C4'])]:
++        bars=ax.bar(range(7),[r[field] for r in rows],color=color)
++        ax.bar_label(bars,padding=3);ax.set_xticks(range(7),[r['record_id']+'\n边='+str(r['edges_total']) for r in rows])
++        ax.set_title(label,loc='left');ax.set_ylabel('原始相邻边数');ax.set_xlabel('固定 pilot 的原始 ID / 分母')
++        ax.spines[['top','right']].set_visible(False);ax.set_ylim(0,max(r[field] for r in rows)*1.15+3)
++    for suffix in ('png','svg','pdf'):fig.savefig(out/('pilot_diagnostics.'+suffix),dpi=300)
++    plt.close(fig)
++    ledger=read_json(LEDGER);calls=list(ledger['calls'].items())
++    probe=next((v['status'] for k,v in calls if v['probe']),'NOT_RUN')
++    roles=read_json(REVISION/'runs/g1-repair-roles-01/manifest.json') if (REVISION/'runs/g1-repair-roles-01/manifest.json').exists() else None
++    role_calls=[(k,v) for k,v in calls if not v['probe']]
++    statuses=[probe]+[role_calls[i][1]['status'] if i<len(role_calls) else 'NOT_RUN' for i in range(5)]
++    labels=['连通性探针','A · 初始诊断','B · 实际执行','C · 独立核查','A · 反馈后动作','C · 再次核查']
++    mx=ET.Element('mxfile',host='app.diagrams.net');d=ET.SubElement(mx,'diagram',name='Repair actual state')
++    model=ET.SubElement(d,'mxGraphModel',page='1',pageWidth='1400',pageHeight='840');root=ET.SubElement(model,'root')
++    ET.SubElement(root,'mxCell',id='0');ET.SubElement(root,'mxCell',id='1',parent='0')
++    def node(id,text,x,y,w,h,fill='Panel',size=20):
++        cell=ET.SubElement(root,'mxCell',id=id,value=text,vertex='1',parent='1',style=f'fillColor={colors.get(fill,fill)};strokeColor={colors["Rule"]};fontColor={colors["Ink"]};fontSize={size};')
++        ET.SubElement(cell,'mxGeometry',x=str(x),y=str(y),width=str(w),height=str(h),**{'as':'geometry'})
++    node('title','Goal 1 定向修复 · 本批实际调用与处理边界',40,25,1320,65,'none',28)
++    for i,(label,status) in enumerate(zip(labels,statuses)):
++        textstatus='有效结构响应' if status=='VERIFIED_STRUCTURE_ONLY' else '受阻 / 已停止' if status=='BLOCKED' else '尚未调用'
++        node('call'+str(i),label+'\n'+textstatus,35+i*225,145,205,120,'P1' if status=='VERIFIED_STRUCTURE_ONLY' else 'Panel',20)
++        if i<5:
++            cell=ET.SubElement(root,'mxCell',id='edge'+str(i),edge='1',parent='1',style=f'strokeColor={colors["C1"]};dashed={int(statuses[i+1]=="NOT_RUN")};')
++            g=ET.SubElement(cell,'mxGeometry',**{'as':'geometry'});ET.SubElement(g,'mxPoint',x=str(240+i*225),y='205',**{'as':'sourcePoint'});ET.SubElement(g,'mxPoint',x=str(260+i*225),y='205',**{'as':'targetPoint'})
++    node('budget',f'新批次预算\n外层预留 {ledger["model_attempts"]} / 6；串行\n工具请求 {ledger["tool_requests"]} / 12\n首次可见异常 → 终止整个进程组\n底层服务请求数：unknown',50,345,615,235)
++    node('research','真实数据：7 条 / 783 点\nD1 坐标基准与距离口径未批准\nD2 去噪删除调度未批准\n完整真实处理：BLOCKED\n未处理点保留原始 ID 与索引',735,345,615,235)
++    loop=roles.get('diagnostic_loop_status','NOT_COMPLETE') if roles else 'NOT_COMPLETE'
++    node('footer',f'诊断闭环：{loop}；完整真实 baseline：BLOCKED。\n旧 run01/02/03 与旧预算冻结保留；本图只表示新批次。\n虚线表示没有发生的交接；构造处理测试不计入真实轨迹结果。',50,650,1300,150,'none',23)
++    path=out/'repair_loop.drawio';ET.indent(mx);ET.ElementTree(mx).write(path,encoding='utf-8',xml_declaration=True)
++    export_drawio_svg(path,path.with_suffix('.svg'));render_drawio(path)
++    write_json(out/'manifest.json',{'code_sha':subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),
++               'classification':'CURRENT_REPAIR_REAL_DIAGNOSTICS_AND_ACTUAL_LIVE_STATUS','statuses':statuses,'data_sha256':digest(REVISION/'results/profile_pilot.json'),
++               'ledger_sha256':digest(LEDGER),'palette':relative(ROOT/'templates/latex/common/p2_cloud_sorbet_colors.tex'),
++               'files':{p.name:digest(p) for p in out.iterdir() if p.name!='manifest.json'},'baseline_before_after':'BLOCKED: no real baseline result'})
++
++
++if __name__=='__main__':main()
+diff --git a/task1/scripts/repair_goal1.py b/task1/scripts/repair_goal1.py
+new file mode 100644
+index 0000000..9953997
+--- /dev/null
++++ b/task1/scripts/repair_goal1.py
+@@ -0,0 +1,134 @@
++"""Reproduce this repair's bounded diagnostics, validation and one authorized batch."""
++import argparse
++import json
++import os
++from pathlib import Path
++import subprocess
++import sys
++import tempfile
++
++ROOT=Path(__file__).resolve().parents[2]
++sys.path.insert(0,str(ROOT))
++from task1.workflow.io import CONFIG,DATA,EVIDENCE,read_json,write_json,digest,relative,now,object_hash
++from task1.workflow.tools import execute_tool
++from task1.workflow.budget import RepairBudget, REVISION, AUTH, OLD, LEDGER, TASK
++from task1.workflow.provider import CodexProvider,ProviderError
++from task1.workflow.controller import Controller
++
++
++def versions():
++    return {'code_sha':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),
++            'source_hashes':{relative(p):digest(p) for pattern in ('task1/workflow/*.py','task1/scripts/*.py','task1/tests/*.py','task1/config/*.json') for p in sorted(ROOT.glob(pattern))},
++            'input_sha256':digest(DATA),'at':now()}
++
++
++def validate():
++    commands=[([sys.executable,'-m','compileall','-q','task1/workflow','task1/scripts','task1/tests'],ROOT,'syntax'),
++              ([sys.executable,'-m','pytest','task1/tests','-q','--junitxml='+str(REVISION/'tests_final.xml')],ROOT,'tests_final'),
++              ([sys.executable,'-m','pytest','tests','-q','-rs','--junitxml='+str(REVISION/'starter_full.xml')],ROOT/'task1/作业/作业','starter_full')]
++    log=[]
++    for args,cwd,name in commands:
++        with (REVISION/(name+'.txt')).open('w') as f:r=subprocess.run(args,cwd=cwd,stdout=f,stderr=subprocess.STDOUT)
++        log.append({'args':[x.replace(str(ROOT),'<REPO>') for x in args],'cwd':str(cwd.relative_to(ROOT)), 'exit_code':r.returncode,'log':name+'.txt'})
++        write_json(REVISION/'validation.json',{**versions(),'commands':log})
++        print(name,r.returncode,flush=True)
++        if r.returncode:raise RuntimeError('VALIDATION_FAILED:'+name)
++
++
++def diagnostics():
++    policy=read_json(CONFIG);pilot=read_json(ROOT/'task1/config/pilot.json');out=REVISION/'results'
++    out.mkdir(exist_ok=True)
++    outputs={};rows=None
++    for action in ('profile_pilot','verify_profiles','recompute_check','time_boundaries','duplicate_details','baseline','source_check'):
++        outputs[action]=execute_tool(action,pilot['ids'],policy,rows)
++        if action=='profile_pilot':rows=outputs[action]['result']['profiles']
++        write_json(out/(action+'.json'),outputs[action])
++    assert outputs['verify_profiles']['status']==outputs['recompute_check']['status']=='VERIFIED'
++    raw=read_json(DATA)
++    with (out/'point_actions.jsonl').open('w') as f:
++        for rid in pilot['ids']:
++            for i in range(len(raw[rid][1])):
++                f.write(json.dumps({'record_id':rid,'original_index':i,'action':'PRESERVE_UNPROCESSED',
++                                    'classification':'CURRENT_RUN_REAL_DATA_DIAGNOSTIC','parent_version':'RAW:'+policy['raw_sha256'],
++                                    'deleted':False,'modified_values':0,'reason':outputs['baseline'].get('reason')},ensure_ascii=False)+'\n')
++    write_json(out/'manifest.json',{**versions(),'classification':'CURRENT_RUN_REAL_DATA_DIAGNOSTIC',
++               'model_calls':0,'pilot':pilot,'processing_status':outputs['baseline']['status'],
++               'files':{p.name:digest(p) for p in out.iterdir() if p.name!='manifest.json'}})
++    print('diagnostics: seven original records;',outputs['profile_pilot']['input_points'],'points')
++
++
++def qualify():
++    validation=read_json(REVISION/'validation.json');current=versions()
++    if validation['code_sha']!=current['code_sha'] or validation['source_hashes']!=current['source_hashes']:
++        raise ValueError('VALIDATION_CODE_CHANGED')
++    if any(c['exit_code'] for c in validation['commands']):raise ValueError('TESTS_FAILED')
++    if subprocess.check_output(['git','diff','--name-only','HEAD','--','task1/workflow','task1/tests','task1/config','task1/scripts'],cwd=ROOT,text=True).strip():
++        raise ValueError('UNCOMMITTED_RESULT_CODE')
++    env=read_json(REVISION/'environment.json')
++    pin={'executable':env['cli_path'],'expected_sha256':env['cli_sha256'],
++         'native_path':env['native_path'],'native_sha256':env['native_sha256']}
++    files={**current['source_hashes']}
++    for name in ('tests_final.xml','validation.json','provider_version_evidence.json','cli_https_revalidation.json','environment.json','handoff/SC-LAB1-G1-REPAIR-001_CODEX_PROMPT.md'):
++        files[relative(REVISION/name)]=digest(REVISION/name)
++    write_json(AUTH,{'task_id':TASK,'code_sha':current['code_sha'],'required_files':files,
++                    'test_report':relative(REVISION/'tests_final.xml'),'old_ledger_sha256':digest(OLD),
++                    'limits':{'outer_dispatches':6,'initial_probes':1,'role_dispatches':5,'tool_requests':12,'seconds_per_call':180,'concurrency':1},
++                    'provider_pin':pin,'authorization':'Current user Prompt R1-F05; D1/D2 not approved',
++                    'underlying_requests':'unknown; first visible fault stops process group'},exclusive=True)
++    RepairBudget();print('qualified: one probe then at most five roles; no automatic resubmission')
++
++
++def live():
++    batch=RepairBudget();state=read_json(LEDGER)
++    # This entry cannot be restarted to obtain a second probe or repeat uncertain calls.
++    if state['model_attempts']:raise ValueError('BATCH_ALREADY_STARTED_DO_NOT_RESUBMIT')
++    run='g1-repair-connectivity-01';directory=REVISION/'runs'/run;call=run+'-probe'
++    directory.mkdir(parents=True,exist_ok=False)
++    checkpoint={**versions(),'run_id':run,'classification':'LIVE_CONNECTIVITY_PROBE','status':'PLANNED','call_id':call}
++    batch.reserve('model_attempts',run,call,probe=True)
++    checkpoint['status']='DISPATCHED';write_json(directory/'checkpoint.json',checkpoint)
++    provider=CodexProvider(180,**batch.qualification['provider_pin'])
++    prompt=('Small connectivity probe only. Return JSON with role="research", call_id="'+call+'", action="connectivity_probe", record_ids=[], feedback_refs=[], evidence_refs=["repair:authorization"], summary="CONNECTIVITY_OK", reason="Small connectivity probe", request_status="PROPOSED", candidate_for_future_review=null. Do not use tools or perform any trajectory task.')
++    try:
++        value,receipt=provider.call('research',call,prompt,['connectivity_probe'],directory/'calls'/call)
++        batch.finish(call,receipt)
++        checkpoint['status']='VERIFIED';checkpoint['response']=value
++    except (ProviderError,OSError,ValueError,KeyboardInterrupt) as exc:
++        receipt_path=directory/'calls'/call/'receipt.json'
++        if receipt_path.exists():batch.finish(call,read_json(receipt_path))
++        else:batch.freeze('MISSING_PROBE_RECEIPT; '+str(exc))
++        checkpoint.update(status='BLOCKED',error=str(exc))
++    finally:
++        checkpoint['ended_at']=now();write_json(directory/'checkpoint.json',checkpoint)
++        write_json(directory/'manifest.json',{**checkpoint,'files':{str(p.relative_to(directory)):digest(p) for p in directory.rglob('*') if p.is_file() and p.name!='manifest.json'}})
++    print('probe',checkpoint['status'],flush=True)
++    if checkpoint['status']!='VERIFIED':return
++    controller=Controller('g1-repair-roles-01',base=REVISION/'runs',batch=batch)
++    try:controller.run(provider)
++    except (ProviderError,OSError,ValueError,KeyboardInterrupt) as exc:print('roles stopped:',str(exc),flush=True)
++
++
++def notebooks():
++    import nbformat
++    from nbclient import NotebookClient
++    logs=[]
++    with tempfile.TemporaryDirectory(prefix='sc-g1-kernel-') as tmp:
++        kernel=Path(tmp)/'kernels/sc-g1-repair';kernel.mkdir(parents=True)
++        write_json(kernel/'kernel.json',{'argv':[sys.executable,'-m','ipykernel_launcher','-f','{connection_file}'], 'display_name':'SC Goal1 repair','language':'python'})
++        old=os.environ.get('JUPYTER_PATH');os.environ['JUPYTER_PATH']=tmp+(os.pathsep+old if old else '')
++        try:
++            for path in sorted((ROOT/'task1/notebooks').glob('*.ipynb')):
++                nb=nbformat.read(path,as_version=4);started=now()
++                client=NotebookClient(nb,timeout=180,kernel_name='sc-g1-repair',resources={'metadata':{'path':str(path.parent)}})
++                client.execute();nbformat.write(nb,path)
++                logs.append({'notebook':relative(path),'sha256':digest(path),'started_at':started,'ended_at':now(),
++                             'new_kernel':True,'python':sys.executable,'new_model_calls':0,'code_cells':sum(c.cell_type=='code' for c in nb.cells),'status':'PASS'})
++        finally:
++            if old is None:os.environ.pop('JUPYTER_PATH',None)
++            else:os.environ['JUPYTER_PATH']=old
++    write_json(REVISION/'notebooks.json',{**versions(),'executions':logs});print('two notebooks executed in fresh venv kernels')
++
++
++if __name__=='__main__':
++    parser=argparse.ArgumentParser();parser.add_argument('action',choices=['validate','diagnostics','qualify','live','notebooks'])
++    globals()[parser.parse_args().action]()
+diff --git a/task1/tests/test_control.py b/task1/tests/test_control.py
+index 29a6f46..1f459d6 100644
+--- a/task1/tests/test_control.py
++++ b/task1/tests/test_control.py
+@@ -69,7 +69,8 @@ def test_feedback_must_reference_real_trigger(controller):
+     with pytest.raises(c.GateError,match='FEEDBACK'):
+         controller.dispatch(request(),'execution','test-call',feedback_ids=['actual-review'])
+     r=request();r['feedback_refs']=['actual-review']
+-    controller.dispatch(r,'execution','test-call',feedback_ids=['actual-review'])
++    with pytest.raises(c.GateError,match='UNKNOWN_EVIDENCE'):
++        controller.dispatch(r,'execution','test-call',feedback_ids=['actual-review'])
+ 
+ 
+ @pytest.mark.parametrize('name',['../x','/tmp/x','a/../../x'])
+@@ -196,8 +197,9 @@ def prepare_recovery_fixture(controller):
+     """CONSTRUCTED_FIXTURE of a crash after response, never live-model evidence."""
+     controller.mode='LIVE';controller.policy['live_execution_enabled']=True
+     call=controller.run_id+'-01-research'
+-    value=request('source_evidence','research',call)
+-    schema=response_schema('research',call,['source_evidence'])
++    value=request('contract_snapshot','research',call)
++    value['evidence_refs']=['teacher:20']
++    schema=response_schema('research',call,controller.available_actions())
+     saved={'role':'research','call_id':call,'prompt':'CONSTRUCTED_FIXTURE','schema':schema}
+     out=controller.directory/'calls'/call
+     write_json(out/'input.json',saved);write_json(out/'response.json',value)
+@@ -224,7 +226,7 @@ def test_preplanted_live_response_is_rejected_without_model(controller,monkeypat
+     monkeypatch.setattr(CodexProvider,'call',lambda *a,**k:pytest.fail('No model call allowed'))
+     with pytest.raises(c.GateError,match='UNDISPATCHED'):controller.run(stop_after=1)
+     assert read_json(controller.ledger_path)['model_attempts']==0
+-    assert controller.state['status']=='PLANNED' and not controller.state['calls']
++    assert controller.state['status']=='FAILED' and not controller.state['calls']
+ 
+ 
+ @pytest.mark.parametrize('tamper',['missing_events','empty_receipt','wrong_response','wrong_input','wrong_event','tool_event','fake_disabled'])
+diff --git a/task1/tests/test_repair.py b/task1/tests/test_repair.py
+new file mode 100644
+index 0000000..6a3d8f4
+--- /dev/null
++++ b/task1/tests/test_repair.py
+@@ -0,0 +1,203 @@
++"""Repair regressions: constructed inputs and offline child processes only."""
++import copy
++import json
++import subprocess
++import sys
++import time
++from pathlib import Path
++import pytest
++from task1.tests.test_control import controller, request
++from task1.workflow import controller as c, tools, provider as p, budget
++from task1.workflow.diagnostics import profile, duplicate_details, independent_profile_review
++from task1.workflow.io import read_json, write_json, digest, object_hash, CONFIG
++from task1.workflow.sources import validate_references, source_context
++from task1.workflow.pipeline import run_constructed, preflight
++from task1.workflow.evaluation import review_baseline
++
++
++@pytest.mark.parametrize('action',['verify_profiles','recompute_check'])
++@pytest.mark.parametrize('case',['duplicate','extra','missing','reordered','valid','missing_field','wrong_type','not_list','not_row'])
++def test_entire_profile_submission(controller, action, case):
++    raw=read_json(tools.DATA);raw['second']=[[0,1],[[1,1],[2,2]]];write_json(tools.DATA,raw)
++    policy=copy.deepcopy(controller.policy);policy['raw_sha256']=digest(tools.DATA)
++    rows=[profile(k,v,'MOCK_TEST') for k,v in raw.items()]
++    if case=='duplicate':rows.append(copy.deepcopy(rows[0]))
++    if case=='extra':rows.append({**rows[0],'record_id':'foreign'})
++    if case=='missing':rows.pop()
++    if case=='reordered':rows.reverse()
++    if case=='missing_field':del rows[0]['zero_dt']
++    if case=='wrong_type':rows[0]['zero_dt']=True
++    if case=='not_list':rows={'x':rows}
++    if case=='not_row':rows[0]=None
++    result=tools.execute_tool(action,list(raw),policy,rows,classification='MOCK_TEST')
++    assert result['status']==('VERIFIED' if case in ('valid','reordered') else 'REJECTED')
++    if action=='recompute_check':assert result['result']['exact_match']==(case in ('valid','reordered'))
++
++
++def test_missing_time_keeps_position_diagnostic_without_fake_dt():
++    result=duplicate_details('fixture',[[None,1],[[0,0],[0,0]]])
++    assert result['status']=='EXECUTED' and result['events'][0]['dt_raw'] is None
++    assert 'REPEATED_POSITION_NOT_AUTOMATIC_NOISE' in result['events'][0]['reasons']
++    assert result['events'][0]['dt_reason']=='MISSING_OR_INVALID_TIME'
++    bad=duplicate_details('fixture',[[None,None],[None,None]])
++    assert 'SAME_TIME_DIFFERENT_POSITION' not in bad['events'][0]['reasons']
++    assert not bad['events'][0]['position_pair_computable']
++
++
++@pytest.mark.parametrize('item',[None,[],3,'x',{}, {'type':'agent_message','text':None}])
++def test_invalid_event_item_is_protocol_failure(item):
++    with pytest.raises(p.ProviderError):p.visible_events(json.dumps({'type':'item.started','item':item}))
++
++
++@pytest.mark.parametrize('fault',['spawn','timeout','bad_jsonl'])
++def test_provider_failure_receipt_preserves_safe_partial_events(tmp_path,monkeypatch,fault):
++    stream='{"type":"thread.started","thread_id":"fixture"}\n'
++    def fail(*args):
++        if fault=='spawn':raise OSError('fixture launch failure')
++        if fault=='timeout':raise subprocess.TimeoutExpired('fixture',.1,output=stream,stderr='fixture partial stderr')
++        return subprocess.CompletedProcess('fixture',0,stream+'{invalid\n','ERROR fixture malformed')
++    monkeypatch.setattr(p,'run_limited',fail)
++    provider=p.CodexProvider(executable=sys.executable)
++    out=tmp_path/'run'/'calls'/'call'
++    with pytest.raises(p.ProviderError):provider.call('research','call','fixture',['source_check'],out)
++    receipt=read_json(out/'receipt.json')
++    assert receipt['status']=='BLOCKED' and receipt['call_id']=='call' and receipt['run_id']=='run'
++    assert receipt['process_started']==(fault!='spawn')
++    if fault!='spawn':assert 'thread.started' in (out/'visible_events.jsonl').read_text() and receipt['stderr']
++    if fault=='bad_jsonl':assert 'stdout_line=2' in receipt['error']
++
++
++@pytest.mark.parametrize('exc',[OSError('fixture IO'),ArithmeticError('fixture numeric'),TypeError('fixture bad data')])
++def test_real_tool_exceptions_close_checkpoint_manifest(controller,monkeypatch,exc):
++    def fail(*args,**kwargs):raise exc
++    monkeypatch.setattr(c,'execute_tool',fail)
++    with pytest.raises(type(exc)):controller.dispatch(request(),'execution','test-call')
++    assert read_json(controller.state_path)['status']=='FAILED'
++    assert read_json(controller.directory/'manifest.json')['status']=='FAILED'
++    assert read_json(controller.directory/'failures/test-call.json')['call_id']=='test-call'
++
++
++def test_disk_failure_reports_missing_evidence(controller,monkeypatch):
++    def fail(*args,**kwargs):raise OSError('disk fixture')
++    monkeypatch.setattr(c,'write_json',fail)
++    with pytest.raises(c.GateError,match='EVIDENCE_MISSING'):controller.dispatch(request(),'execution','test-call')
++    assert controller.state['status']=='FAILED'
++
++
++@pytest.mark.parametrize('channel',['out','err'])
++def test_realtime_retry_stop_kills_parent_and_child(tmp_path,channel):
++    marker=tmp_path/'later'
++    child="import pathlib,time;time.sleep(.5);pathlib.Path(%r).write_text('BAD')"%str(marker)
++    notice=json.dumps({'type':'error','message':'Reconnecting 1/5'}) if channel=='out' else 'ERROR sampling retry 1/5'
++    code='import subprocess,sys,time;subprocess.Popen([sys.executable,"-c",%r]);print(%r,file=sys.%s,flush=True);time.sleep(10)'%(child,notice,'stdout' if channel=='out' else 'stderr')
++    start=time.monotonic()
++    with pytest.raises(p.ProviderError) as e:p.run_limited([sys.executable,'-c',code],'',tmp_path,3)
++    assert time.monotonic()-start<1
++    time.sleep(.65);assert not marker.exists()
++    assert e.value.returncode!=0
++
++
++def test_timeout_retains_stream_and_stops_descendants(tmp_path):
++    marker=tmp_path/'later'
++    child="import pathlib,time;time.sleep(.5);pathlib.Path(%r).write_text('BAD')"%str(marker)
++    code='import subprocess,sys,time;subprocess.Popen([sys.executable,"-c",%r]);print(\'{"type":"thread.started","thread_id":"fixture"}\',flush=True);print("WARN fixture",file=sys.stderr,flush=True);time.sleep(10)'%child
++    with pytest.raises(subprocess.TimeoutExpired) as e:p.run_limited([sys.executable,'-c',code],'',tmp_path,.15)
++    assert 'thread.started' in e.value.output and 'WARN' in e.value.stderr
++    time.sleep(.6);assert not marker.exists()
++
++
++def refs():
++    return {'source':{'kind':'source'},'review':{'kind':'review','run_id':'r','parent_version':'RAW:x'},
++            'numeric':{'kind':'tool','status':'VERIFIED','run_id':'r','parent_version':'RAW:x'}}
++
++
++@pytest.mark.parametrize('bad',['unknown','path','wrong_parent','wrong_run','nonreview','old_review','missing_numeric'])
++def test_feedback_denies_false_or_unrelated_references(bad):
++    ctx=refs();r={'evidence_refs':['source'],'feedback_refs':['review','numeric']}
++    if bad=='unknown':r['evidence_refs']=['invented']
++    if bad=='path':r['evidence_refs']=['../../auth.json']
++    if bad=='wrong_parent':ctx['numeric']['parent_version']='RAW:wrong'
++    if bad=='wrong_run':ctx['review']['run_id']='old'
++    if bad=='nonreview':ctx['review']['kind']='call'
++    if bad=='old_review':r['feedback_refs']=['numeric']
++    if bad=='missing_numeric':r['feedback_refs']=['review']
++    with pytest.raises(ValueError):validate_references(r,ctx,'RAW:x','r',['review','numeric'])
++
++
++def test_valid_feedback_and_real_sources():
++    validate_references({'evidence_refs':['source'],'feedback_refs':['review','numeric']},refs(),'RAW:x','r',['review','numeric'])
++    assert all(s['excerpt'] for s in source_context().values())
++
++
++def constructed_run():
++    records=[{'record_id':'fixture:plane','indices':list(range(8)), 'timestamps':list(range(8)),
++              'xy':[[0,0],[1,0],[0,0],[1,0],[2,0],[3,0],[100,0],[101,0]]}]
++    contract={'scope':'CONSTRUCTED_PLANAR_ONLY','approval':'ENGINEERING_TEST_ONLY',
++              'method':'single_pass_simultaneous_keep_undefined',
++              'parameters':{'dt':30,'distance':10,'min_points':3,'min_length':0,'direction':35,'dp':.1,'time_reliable':True}}
++    return records,contract
++
++
++def test_complete_constructed_runner_and_independent_review():
++    records,contract=constructed_run();before=copy.deepcopy(records)
++    result=run_constructed(records,contract)
++    assert records==before and result['status']=='VERIFIED'
++    assert result['stage_counts']=={'input':8,'segmented':2,'filtered':2,'denoised':1,'simplified':3,'retained':2,'not_processed':0}
++    assert review_baseline(result)['status']=='VERIFIED'
++    assert {r['original_index'] for r in result['point_actions']}==set(range(8))
++    damaged=copy.deepcopy(result);damaged['point_actions'].pop()
++    assert review_baseline(damaged)['status']=='REJECTED'
++    damaged=copy.deepcopy(result);damaged['records'][0]['processed_segments'][0]['denoise']['deleted_indices']=[]
++    assert review_baseline(damaged)['status']=='REJECTED'
++
++
++def test_constructed_approval_cannot_unlock_real_input():
++    policy=read_json(CONFIG);policy['method']['processing_status']='APPROVED_FOR_REAL_INPUT'
++    policy['method']['blocking_ids']=[];policy['semantics']['crs']['status']='APPROVED';policy['semantics']['distance_policy']['status']='APPROVED'
++    policy['method']['approved_contract_id']=constructed_run()[1]
++    # No untrusted approval object is looked up as a production contract.
++    result=tools.execute_tool('baseline',['0','1','2','246','256','306','352'],policy)
++    assert result['status']=='BLOCKED' and result['stage_counts']['not_processed']==783
++
++
++def test_legal_choices_and_preflight(controller):
++    assert len(controller.available_actions())>=3 and 'source_check' in controller.available_actions()
++    assert preflight(controller.policy)
++    result=controller.dispatch(request('duplicate_details'),'execution','test-call')
++    assert result['output']['status']=='EXECUTED'
++
++
++def test_batch_budget_fixed_across_instances_and_keeps_old_ledger(tmp_path,monkeypatch):
++    old=tmp_path/'old.json';write_json(old,{'model_attempts':4,'live_stop':'historical fail'})
++    xml=tmp_path/'tests.xml';xml.write_text('<testsuites><testsuite tests="1" failures="0" errors="0"/></testsuites>')
++    auth=tmp_path/'auth.json';write_json(auth,{'task_id':budget.TASK,'required_files':{'tests.xml':digest(xml)},'test_report':'tests.xml','old_ledger_sha256':digest(old)})
++    for name,value in [('ROOT',tmp_path),('AUTH',auth),('OLD',old),('LEDGER',tmp_path/'ledger.json')]:monkeypatch.setattr(budget,name,value)
++    initial=digest(old);b=budget.RepairBudget();b.reserve('model_attempts','a','probe',probe=True)
++    b.finish('probe',{'status':'VERIFIED_STRUCTURE_ONLY'})
++    for i in range(5):budget.RepairBudget().reserve('model_attempts',str(i),'call'+str(i))
++    with pytest.raises(ValueError,match='BUDGET'):budget.RepairBudget().reserve('model_attempts','new-run','x')
++    b.freeze('fixture fault')
++    with pytest.raises(ValueError,match='FROZEN'):budget.RepairBudget().reserve('tool_requests','new-base')
++    assert digest(old)==initial
++
++
++def test_five_stage_offline_recovery_validates_actual_feedback(controller,monkeypatch):
++    """Replay signed fixture events, never calls a model; exercises full scheduler."""
++    from task1.tests.test_control import prepare_recovery_fixture
++    prepare_recovery_fixture(controller)
++    monkeypatch.setattr(p.CodexProvider,'call',lambda *a,**k:pytest.fail('fixture must never call model'))
++    controller.run(stop_after=1)
++    for phase,action in [(1,'profile_pilot'),(2,'verify_profiles'),(3,'duplicate_details'),(4,'recompute_check')]:
++        role=c.PHASES[phase][0];call=f'{controller.run_id}-{phase+1:02d}-{role}';out=controller.directory/'calls'/call
++        value=request(action,role,call);value['evidence_refs']=['teacher:20'];value['feedback_refs']=controller.required_feedback()
++        schema=p.response_schema(role,call,controller.available_actions());saved={'role':role,'call_id':call,'prompt':'CONSTRUCTED_FIXTURE','schema':schema}
++        write_json(out/'input.json',saved);write_json(out/'response.json',value)
++        events=[{'type':'thread.started','thread_id':call+'-fixture'}, {'type':'item.completed','item':{'type':'agent_message','text':json.dumps(value)}},{'type':'turn.completed','usage':{}}]
++        (out/'visible_events.jsonl').write_text('\n'.join(map(json.dumps,events)))
++        write_json(out/'receipt.json',{'role':role,'call_id':call,'classification':'LIVE_CALL_ATTEMPT','status':'VERIFIED_STRUCTURE_ONLY','sandbox':'read-only','shell_tools':'disabled','exit_code':0,'thread_id':call+'-fixture','usage':{}})
++        controller.spend('model_attempts',call);controller.state['model_dispatches'][call]={'input_hash':object_hash(saved)};controller.state['inflight_model']=call;controller.save()
++        state=controller.run(stop_after=phase+1 if phase<4 else None)
++    assert state['phase']==5 and state['diagnostic_loop_status']=='REAL_DIAGNOSTIC_LOOP'
++    # This label tests the production scheduler; fixture artifacts stay under pytest tmp.
++    assert state['real_baseline_status']=='BLOCKED' and len(state['tools'])==5
++    assert len(state['calls'])==5 and state['accepted_version'] is None
+diff --git a/task1/workflow/budget.py b/task1/workflow/budget.py
+new file mode 100644
+index 0000000..b64fa7f
+--- /dev/null
++++ b/task1/workflow/budget.py
+@@ -0,0 +1,52 @@
++"""One explicitly authorized repair batch, cumulative across all run directories."""
++import xml.etree.ElementTree as ET
++from .io import ROOT, EVIDENCE, read_json, write_json, digest, bound_path, now
++
++TASK='SC-LAB1-G1-REPAIR-001'
++REVISION=EVIDENCE/'revisions'/TASK
++AUTH=REVISION/'live_qualification.json'
++LEDGER=EVIDENCE/'runs'/'budget_repair_001.json'
++OLD=EVIDENCE/'runs'/'budget_live.json'
++
++
++class RepairBudget:
++    def __init__(self):
++        qualification=read_json(AUTH)
++        if qualification['task_id']!=TASK:raise ValueError('BATCH_AUTHORIZATION_MISMATCH')
++        for name,sha in qualification['required_files'].items():
++            if digest(bound_path(ROOT,name))!=sha:raise ValueError('BATCH_QUALIFICATION_CHANGED:'+name)
++        log=bound_path(ROOT,qualification['test_report'])
++        suites=ET.parse(log).getroot().findall('testsuite')
++        if not suites or sum(int(s.get('tests',0)) for s in suites)<1 or any(int(s.get(k,0)) for s in suites for k in ('failures','errors')):
++            raise ValueError('OFFLINE_GATES_NOT_PASSED')
++        if digest(OLD)!=qualification['old_ledger_sha256']:raise ValueError('HISTORICAL_LEDGER_CHANGED')
++        self.qualification=qualification
++        if not LEDGER.exists():
++            write_json(LEDGER,{'batch':TASK,'authorization_sha256':digest(AUTH),'old_ledger_sha256':digest(OLD),
++                              'old_model_attempts':read_json(OLD)['model_attempts'],'model_attempts':0,
++                              'tool_requests':0,'probe_passed':False,'calls':{},'live_stop':None},exclusive=True)
++        if read_json(LEDGER)['authorization_sha256']!=digest(AUTH):raise ValueError('BATCH_ALREADY_BOUND')
++
++    def reserve(self, kind, run_id, call_id=None, *, probe=False):
++        state=read_json(LEDGER)
++        if state['live_stop']:raise ValueError('LIVE_BUDGET_FROZEN:'+state['live_stop'])
++        limit=6 if kind=='model_attempts' else 12
++        if state[kind]>=limit:raise ValueError('BUDGET_EXHAUSTED:'+kind)
++        if kind=='model_attempts':
++            if call_id in state['calls']:raise ValueError('CALL_ALREADY_RESERVED_DO_NOT_RESEND')
++            if probe and state['model_attempts']!=0:raise ValueError('ONLY_ONE_INITIAL_PROBE')
++            if not probe and not state['probe_passed']:raise ValueError('PROBE_NOT_PASSED')
++            state['calls'][call_id]={'run_id':run_id,'reserved_at':now(),'probe':probe,'status':'RESERVED_OUTCOME_UNKNOWN'}
++        state[kind]+=1;write_json(LEDGER,state)
++
++    def finish(self, call_id, receipt):
++        state=read_json(LEDGER);call=state['calls'][call_id]
++        call.update(status=receipt['status'],process_started=receipt.get('process_started','unknown'),
++                    completed_turns=receipt.get('completed_turns',0),visible_counts=receipt.get('visible_counts',{}))
++        ok=receipt['status']=='VERIFIED_STRUCTURE_ONLY'
++        if call['probe']:state['probe_passed']=ok
++        if not ok:state['live_stop']=receipt.get('error','UNKNOWN_CALL_OUTCOME')
++        write_json(LEDGER,state)
++
++    def freeze(self, reason):
++        state=read_json(LEDGER);state['live_stop']=reason;write_json(LEDGER,state)
+diff --git a/task1/workflow/controller.py b/task1/workflow/controller.py
+index 0fc0a03..9ec27d2 100644
+--- a/task1/workflow/controller.py
++++ b/task1/workflow/controller.py
+@@ -12,23 +12,30 @@ import jsonschema
+ from .io import ROOT,CONFIG,EVIDENCE,DATA,read_json,write_json,digest,object_hash,now,bound_path,relative
+ from .provider import CodexProvider,ProviderError,response_schema,verify_saved_call
+ from .tools import execute_tool
++from .sources import source_context, validate_references
++from .pipeline import preflight
++from .provider import redact
+ 
+ PHASES=[
+-    ('research','Initial TaskPlan: inspect the supplied requirements, semantics and actual raw diagnostics. Request source_evidence to check the semantic blockers and state an in-scope plan for the execution role, with sources and limitations. Do not approve unknown semantics.'),
+-    ('execution','Execute the approved diagnostic scope. Request profile_pilot now to establish the required complete numeric input for the independent reviewer. Other tools require this prerequisite. Real full baseline is currently blocked.'),
+-    ('review','Review actual tool receipts. Request verify_profiles (independent deterministic audit) and identify one concrete diagnostic gap to feed back. Distinguish implementation from quality.'),
+-    ('research','You now have actual reviewer feedback and independent tool results. Refer to their exact IDs in feedback_refs. Choose a justified follow-up: duplicate_details, time_boundaries or recompute_check, or flag a research escalation. Do not merely repeat the previous task.'),
+-    ('review','Review the executed follow-up and the earlier independent audit. Request recompute_check or verify_profiles for final reproducibility. State what remains blocked and a concrete next research task; no quality upgrade without thresholds.'),
++    ('research','Inspect actual source excerpts, contract and initial diagnostics. Choose an allowed initial diagnostic or escalate insufficient evidence. Never approve unknown semantics.'),
++    ('execution','Use the prior research request and current artifacts. Establish complete pilot profiles if absent; otherwise choose a justified diagnostic or approved baseline. Escalation is allowed.'),
++    ('review','Review actual artifacts. Request independent numeric verification. Evidence insufficiency is valid; do not invent a defect.'),
++    ('research','Use the current reviewer conclusion AND its verified numeric result. Choose a justified follow-up diagnostic/recheck or escalate. Cite all required_feedback IDs.'),
++    ('review','Review the actual follow-up, cite required_feedback, run final independent verification or escalate. State the next task and distinguish diagnostic from processing closure.'),
+ ]
+-PHASE_ACTIONS=[['source_evidence'],['profile_pilot'],['verify_profiles'],
+-               ['duplicate_details','time_boundaries','recompute_check'],['recompute_check','verify_profiles']]
++# Broad per-stage upper bounds; available_actions further enforces prerequisites.
++PHASE_ACTIONS=[['contract_snapshot','source_check','profile_pilot','time_boundaries','duplicate_details','escalate'],
++               ['profile_pilot','time_boundaries','duplicate_details','baseline','escalate'],
++               ['verify_profiles','recompute_check','verify_baseline','escalate'],
++               ['duplicate_details','time_boundaries','recompute_check','source_check','escalate'],
++               ['recompute_check','verify_profiles','verify_baseline','escalate']]
+ 
+ 
+ class GateError(ValueError):
+     pass
+ 
+ 
+-def validate_request(request,role,call_id,policy,pilot,*,mode='LIVE',feedback_ids=()):
++def validate_request(request,role,call_id,policy,pilot,*,mode='LIVE',feedback_ids=(),context=None,run_id=None):
+     jsonschema.validate(request,response_schema(role,call_id,policy['actions'][role]))
+     if policy['goal']!=1 or policy['metrics_version']!='g1-metrics-v1' or policy['semantics_version']!='g1-semantics-v1':
+         raise GateError('UNAPPROVED_GOAL_OR_CONTRACT_VERSION')
+@@ -39,21 +46,26 @@ def validate_request(request,role,call_id,policy,pilot,*,mode='LIVE',feedback_id
+         raise GateError('RECORD_SCOPE_OR_HOLDOUT_VIOLATION')
+     if not request['reason'].strip() or not request['evidence_refs']:
+         raise GateError('MISSING_REASON_OR_SOURCE')
+-    if feedback_ids and not set(request['feedback_refs']).intersection(feedback_ids):
++    if feedback_ids and not set(feedback_ids).issubset(request['feedback_refs']):
+         raise GateError('MISSING_ACTUAL_FEEDBACK_REFERENCE')
+-    if request['request_status']!='PROPOSED':
++    try:
++        validate_references(request,context if context is not None else source_context(),
++                            'RAW:'+policy['raw_sha256'],run_id,feedback_ids)
++    except ValueError as exc: raise GateError(str(exc)) from exc
++    if request['request_status']!='PROPOSED' and request['action']!='escalate':
+         raise GateError('ROLE_REQUEST_REQUIRES_REVIEW:'+request['request_status'])
+-    if request['action']=='baseline' and policy['method']['processing_status']!='APPROVED_FOR_REAL_INPUT':
++    if request['action']=='baseline' and preflight(policy):
+         raise GateError('UNKNOWN_SEMANTICS_BASELINE_BLOCKED')
+     return request
+ 
+ 
+ class Controller:
+-    def __init__(self,run_id,*,mode='LIVE',base=EVIDENCE/'runs',policy_path=CONFIG,pilot_path=ROOT/'task1/config/pilot.json'):
++    def __init__(self,run_id,*,mode='LIVE',base=EVIDENCE/'runs',policy_path=CONFIG,pilot_path=ROOT/'task1/config/pilot.json',batch=None):
+         if not re.fullmatch(r'[a-zA-Z0-9][a-zA-Z0-9_-]{0,90}',run_id):
+             raise GateError('ILLEGAL_RUN_ID')
+         if mode not in ('LIVE','MOCK_TEST','REPLAY','SEARCH_ONLY'):
+             raise GateError('UNKNOWN_MODE')
++        self.batch=batch
+         self.base=Path(base).resolve();self.base.mkdir(parents=True,exist_ok=True)
+         self.directory=bound_path(self.base,run_id)
+         if self.directory.is_symlink():raise GateError('SYMLINK_RUN')
+@@ -72,10 +84,10 @@ class Controller:
+                         'policy_sha256':self.config_hash,'pilot_sha256':self.pilot_hash,
+                         'input_sha256':self.policy['raw_sha256'],'started_at':now(),
+                         'code_sha':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),
+-                        'source_hashes':{relative(p):digest(p) for p in sorted((ROOT/'task1/workflow').glob('*.py'))},
++                        'source_hashes':{relative(p):digest(p) for p in [*sorted((ROOT/'task1/workflow').glob('*.py')),ROOT/'task1/config/goal1_sources.json']},
+                         'tools':[],'calls':[],'model_dispatches':{},'decisions':[],'accepted_version':None,'errors':[]}
+             self.save()
+-        self.ledger_path=self.base/('budget_live.json' if mode=='LIVE' else 'budget_'+mode.lower()+'.json')
++        self.ledger_path=(EVIDENCE/'runs'/'budget_live.json') if mode=='LIVE' else self.base/('budget_'+mode.lower()+'.json')
+         if not self.ledger_path.exists():
+             write_json(self.ledger_path,{'model_attempts':0,'tool_requests':0,'by_run':{},'retry_failures':{}},exclusive=True)
+ 
+@@ -95,6 +107,8 @@ class Controller:
+         return e['event_hash']
+ 
+     def spend(self,kind,call_id=None):
++        if self.mode=='LIVE' and self.batch is not None:
++            self.batch.reserve(kind,self.run_id,call_id);return
+         # Execution is serial by contract; budget persists across run IDs.
+         ledger=read_json(self.ledger_path)
+         if kind=='model_attempts' and ledger.get('live_stop'):
+@@ -135,21 +149,24 @@ class Controller:
+             raise GateError('WRONG_PARENT_VERSION')
+         if payload['output'].get('input_sha256')!=self.state['input_sha256']:
+             raise GateError('INPUT_HASH_MISMATCH')
+-        if payload['output'].get('status') not in ('EXECUTED','VERIFIED','REJECTED','BLOCKED'):
++        if payload['output'].get('status') not in ('EXECUTED','VERIFIED','REJECTED','BLOCKED','FAILED'):
+             raise GateError('FORGED_SUCCESS_STATUS')
+         if payload['output'].get('status')!=tool['status'] or payload['request'].get('action')!=tool['action']:
+             raise GateError('TOOL_SUMMARY_MISMATCH')
+         return payload
+ 
+-    def dispatch(self,request,role,call_id,*,feedback_ids=(),inject_failure=False):
++    def _dispatch(self,request,role,call_id,*,feedback_ids=(),inject_failure=False):
+         self.protection_check()
++        if self.state['phase']>=3:
++            actual=self.required_feedback()
++            if set(feedback_ids)!=set(actual):raise GateError('WRONG_CURRENT_FEEDBACK_TRIGGER')
+         try:
+-            validate_request(request,role,call_id,self.policy,self.pilot,mode=self.mode,feedback_ids=feedback_ids)
++            validate_request(request,role,call_id,self.policy,self.pilot,mode=self.mode,feedback_ids=feedback_ids,context=self.context(),run_id=self.run_id)
+         except (ValueError,jsonschema.ValidationError) as exc:
+             self.event('REQUEST_REJECTED',call_id=call_id,reason=str(exc))
+             raise
+         self.spend('tool_requests')
+-        key=object_hash({'action':request['action'],'ids':request['record_ids'],'input':self.state['input_sha256'],
++        key=object_hash({'call_id':call_id,'action':request['action'],'ids':request['record_ids'],'input':self.state['input_sha256'],
+                          'contract':self.config_hash,'profiles':self.profiles() if request['action'] in ('verify_profiles','recompute_check') else None})
+         artifact='tools/'+key+'.json'
+         path=bound_path(self.directory,artifact)
+@@ -162,15 +179,12 @@ class Controller:
+             self.state['status']='DISPATCHED';self.save()
+             self.event('TOOL_DISPATCHED',call_id=call_id,action=request['action'],request_hash=key)
+             start=time.perf_counter();self.state['status']='RUNNING';self.save()
+-            if inject_failure:
+-                self.state['errors'].append({'call_id':call_id,'reason':'INJECTED_FAILURE','classification':'ENGINEERING_TEST'})
+-                self.state['status']='REJECTED';self.save()
+-                self.event('TOOL_FAILED',call_id=call_id,reason='INJECTED_FAILURE',classification='ENGINEERING_TEST')
+-                raise GateError('INJECTED_FAILURE')
++            if inject_failure: raise GateError('INJECTED_FAILURE')
+             output=execute_tool(request['action'],request['record_ids'],self.policy,self.profiles(),
+-                                classification='CURRENT_RUN_REAL_DATA' if self.mode=='LIVE' else self.mode)
++                                classification='CURRENT_RUN_REAL_DATA' if self.mode=='LIVE' else self.mode,
++                                previous_baseline=self.baseline_output())
+             self.protection_check()
+-            if output.get('status') not in ('EXECUTED','VERIFIED','REJECTED','BLOCKED'):
++            if output.get('status') not in ('EXECUTED','VERIFIED','REJECTED','BLOCKED','FAILED'):
+                 raise GateError('FORGED_SUCCESS_STATUS')
+             receipt={'tool_id':key,'request_hash':key,'role':role,'call_id':call_id,'request':request,
+                      'run_id':self.run_id,'mode':self.mode,'classification':'CURRENT_RUN_REAL_DATA' if self.mode=='LIVE' else self.mode,
+@@ -184,6 +198,71 @@ class Controller:
+         self.state['status']=receipt['output']['status'];self.save()
+         return receipt
+ 
++    def terminate_failure(self, call_id, exc):
++        failure={'run_id':self.run_id,'call_id':call_id,'reason':redact(str(exc)),
++                 'error_type':type(exc).__name__,'classification':'ENGINEERING_TEST' if self.mode!='LIVE' else 'LIVE',
++                 'status':'FAILED','ended_at':now(),'automatic_resubmission':False}
++        self.state['status']='FAILED';self.state['ended_at']=failure['ended_at'];self.state['errors'].append(failure)
++        if self.batch is not None:self.batch.freeze(failure['reason'])
++        try:
++            self.save();write_json(bound_path(self.directory,'failures/'+call_id+'.json'),failure)
++            self.event('EXECUTION_FAILED',**{k:v for k,v in failure.items() if k!='run_id'})
++            self.export_manifest()
++        except OSError as disk:
++            raise GateError('EVIDENCE_MISSING: failure checkpoint/manifest could not be saved; do not resend') from disk
++
++    def dispatch(self, request, role, call_id, **kwargs):
++        try:return self._dispatch(request,role,call_id,**kwargs)
++        except (OSError,ValueError,TypeError,KeyError,ArithmeticError,RuntimeError) as exc:
++            self.terminate_failure(call_id,exc);raise
++
++    def baseline_output(self):
++        for tool in reversed(self.state['tools']):
++            if tool['action']=='baseline' and tool['status']=='VERIFIED':return self.read_tool(tool)['output']
++        return None
++
++    def context(self):
++        context=source_context()
++        if self.mode=='MOCK_TEST':
++            context['CONSTRUCTED_FIXTURE']={'kind':'source','claim_status':'TEST_ONLY'}
++        for tool in self.state['tools']:
++            receipt=self.read_tool(tool)
++            context[tool['tool_id']]={'kind':'tool','status':tool['status'],'action':tool['action'],
++                                     'run_id':self.run_id,'parent_version':receipt['output']['parent_version']}
++        for call in self.state['calls']:
++            path=bound_path(self.directory,call['response'])
++            dispatch=self.state['model_dispatches'].get(call['call_id'],{})
++            expected=dispatch.get('artifact_hashes',{}).get('response.json')
++            if expected is None or digest(path)!=expected:raise GateError('CALL_REFERENCE_HASH_MISMATCH')
++            context[call['call_id']]={'kind':'review' if call['role']=='review' else 'call',
++                                    'run_id':self.run_id,'parent_version':'RAW:'+self.state['input_sha256']}
++        return context
++
++    def required_feedback(self):
++        if self.state['phase']<3:return []
++        current=f"{self.run_id}-{self.state['phase']+1:02d}-{PHASES[self.state['phase']][0]}"
++        prior=[c for c in self.state['calls'] if c['call_id']!=current]
++        reviews=[c for c in prior if c['role']=='review']
++        # Only the completed reviewer that triggered this follow-up, never the current reply.
++        completed=[c for c in reviews if any(t['call_id']==c['call_id'] for t in self.state['tools'])]
++        if not completed:raise GateError('MISSING_ACTUAL_REVIEW')
++        reviewer=completed[-1]
++        audits=[t for t in self.state['tools'] if t['call_id']==reviewer['call_id'] and t['status']=='VERIFIED']
++        if not audits:raise GateError('MISSING_VERIFIED_REVIEW_TOOL')
++        required=[reviewer['call_id'],audits[-1]['tool_id']]
++        if self.state['phase']==4:
++            required.extend([prior[-1]['call_id'],self.state['tools'][-1]['tool_id']])
++        return list(dict.fromkeys(required))
++
++    def available_actions(self):
++        actions=[a for a in PHASE_ACTIONS[self.state['phase']] if a in self.policy['actions'][PHASES[self.state['phase']][0]]]
++        if self.profiles() is None:
++            actions=[a for a in actions if a not in ('verify_profiles','recompute_check')]
++            if self.state['phase']==1:actions=[a for a in actions if a in ('profile_pilot','escalate','baseline')]
++        if preflight(self.policy):actions=[a for a in actions if a!='baseline']
++        if self.baseline_output() is None:actions=[a for a in actions if a!='verify_baseline']
++        return actions
++
+     def prompt(self,role,call_id,instruction):
+         previous=[]
+         for c in self.state['calls']:
+@@ -204,22 +283,24 @@ class Controller:
+         payload={'task_id':self.policy['task_id'],'goal':1,'role':role,'call_id':call_id,'instruction':instruction,
+                  'policy':self.policy,'pilot':self.pilot,'raw_structure':inventory,
+                  'prior_calls':previous,'tool_receipts':tool_outputs,
+-                 'available_actions':PHASE_ACTIONS[self.state['phase']]}
++                 'available_actions':self.available_actions(),'allowed_references':self.context(),
++                 'required_feedback':self.required_feedback()}
+         return ('You are one real, separately called role in the Experiment1 Goal1 controller. '
+                 'Return exactly the requested JSON schema. No terminal, file editing, browsing or spawning. '
+                 'Your structured action will be validated and executed by deterministic code. '
+-                'Cite source paths or prior call/tool IDs; never invent computed numbers, approvals or truth labels. '
++                'Cite only exact allowed_references IDs; never invent computed numbers, approvals or truth labels. '
+                 'Do not report hidden reasoning; provide only concise visible task rationale. '
+                 'All numeric facts must come from supplied actual tool receipts. '
+                 'record_ids should include the entire seven-record pilot so no difficult case is omitted. '
+                 'Unknown CRS and direction schedule block full baseline, not raw/time diagnostics. '
+                 'In phase3 and later reference actual earlier reviewer/tool feedback IDs.\n'+json.dumps(payload,ensure_ascii=False))
+ 
+-    def run(self,provider=None,*,stop_after=None):
++    def _run(self,provider=None,*,stop_after=None):
+         if self.mode!='LIVE':raise GateError('LIVE_ENTRY_REQUIRES_LIVE_MODE')
+-        provider=provider or CodexProvider(self.policy['budget']['max_seconds_per_model_call'])
++        provider=provider or CodexProvider(self.policy['budget']['max_seconds_per_model_call'],
++            **(self.batch.qualification['provider_pin'] if self.batch is not None else {}))
+         if type(provider) is not CodexProvider:raise GateError('MOCK_CANNOT_BE_LIVE')
+-        if not self.policy.get('live_execution_enabled',False):raise GateError('LIVE_DISABLED_PENDING_BUDGET_REVIEW')
++        if not self.policy.get('live_execution_enabled',False) and self.batch is None:raise GateError('LIVE_DISABLED_PENDING_BUDGET_REVIEW')
+         self.protection_check()
+         if self.state['inflight_model']:
+             pending=self.state['inflight_model']
+@@ -229,15 +310,16 @@ class Controller:
+                 raise GateError('UNCERTAIN_MODEL_CALL_DO_NOT_REPEAT')
+         while self.state['phase']<len(PHASES):
+             phase=self.state['phase'];role,instruction=PHASES[phase]
++            actions=self.available_actions(); required_feedback=self.required_feedback()
+             call_id=f'{self.run_id}-{phase+1:02d}-{role}'
+             call_dir=self.directory/'calls'/call_id
+             response_path=call_dir/'response.json'
+             if response_path.exists():
+                 dispatch=self.state.get('model_dispatches',{}).get(call_id)
+                 ledger=read_json(self.ledger_path)
+-                if not dispatch or ledger.get('dispatched_calls',{}).get(call_id,{}).get('run_id')!=self.run_id:
++                if not dispatch or (ledger.get('dispatched_calls',{}).get(call_id,{}).get('run_id')!=self.run_id and self.batch is None):
+                     raise GateError('UNDISPATCHED_MODEL_RESPONSE')
+-                value,receipt,hashes=verify_saved_call(call_dir,role,call_id,PHASE_ACTIONS[phase],dispatch['input_hash'])
++                value,receipt,hashes=verify_saved_call(call_dir,role,call_id,actions,dispatch['input_hash'])
+                 if dispatch.get('artifact_hashes') and dispatch['artifact_hashes']!=hashes:
+                     raise GateError('MODEL_ARTIFACT_HASH_MISMATCH')
+                 dispatch['artifact_hashes']=hashes;self.save()
+@@ -245,24 +327,27 @@ class Controller:
+             else:
+                 if call_dir.exists():raise GateError('PREEXISTING_OR_INCOMPLETE_CALL_DIRECTORY')
+                 prompt=self.prompt(role,call_id,instruction)
+-                saved_input={'role':role,'call_id':call_id,'prompt':prompt,'schema':response_schema(role,call_id,PHASE_ACTIONS[phase])}
++                saved_input={'role':role,'call_id':call_id,'prompt':prompt,'schema':response_schema(role,call_id,actions)}
+                 self.spend('model_attempts',call_id)
+                 self.state.setdefault('model_dispatches',{})[call_id]={'input_hash':object_hash(saved_input)}
+                 self.state['inflight_model']=call_id;self.state['status']='DISPATCHED';self.save()
+                 self.event('MODEL_DISPATCHED',role=role,call_id=call_id)
+                 try:
+-                    provider.call(role,call_id,prompt,PHASE_ACTIONS[phase],call_dir)
+-                    value,receipt,hashes=verify_saved_call(call_dir,role,call_id,PHASE_ACTIONS[phase],object_hash(saved_input))
++                    provider.call(role,call_id,prompt,actions,call_dir)
++                    if self.batch is not None:self.batch.finish(call_id,read_json(call_dir/'receipt.json'))
++                    value,receipt,hashes=verify_saved_call(call_dir,role,call_id,actions,object_hash(saved_input))
+                     self.state['model_dispatches'][call_id]['artifact_hashes']=hashes;self.save()
+                 except ProviderError as exc:
++                    if self.batch is not None:
++                        if (call_dir/'receipt.json').exists():self.batch.finish(call_id,read_json(call_dir/'receipt.json'))
++                        else:self.batch.freeze('MISSING_RECEIPT')
+                     self.state['status']='BLOCKED';self.state['ended_at']=now();self.state['errors'].append({'call_id':call_id,'reason':str(exc)})
+                     self.save();self.event('LIVE_AGENT_BLOCKED',call_id=call_id,reason=str(exc));raise
+             if not any(c['call_id']==call_id for c in self.state['calls']):
+                 self.state['calls'].append({'call_id':call_id,'role':role,'thread_id':receipt.get('thread_id','unavailable'),
+                                            'response':str(response_path.relative_to(self.directory))})
+-            feedback_ids=[c['call_id'] for c in self.state['calls'][:-1] if c['role']=='review']+[t['tool_id'] for t in self.state['tools']]
+             try:
+-                tool=self.dispatch(value,role,call_id,feedback_ids=feedback_ids if phase>=3 else ())
++                tool=self.dispatch(value,role,call_id,feedback_ids=required_feedback)
+             except (ValueError,jsonschema.ValidationError) as exc:
+                 self.state['status']='NEEDS_REVIEW';self.state['ended_at']=now();self.state['errors'].append({'call_id':call_id,'reason':str(exc)})
+                 self.state['inflight_model']=None;self.save();raise
+@@ -272,16 +357,26 @@ class Controller:
+                 self.event('BRANCH_STOPPED',call_id=call_id,status=self.state['status'])
+                 self.export_manifest();return self.state
+             decision={'decision_id':call_id+'-decision','trigger_call':call_id,'trigger_tool':tool['tool_id'],
+-                      'status':'NEEDS_REVIEW','reason':'Engineering diagnostics executed; real baseline semantic blockers and quality thresholds unresolved',
++                      'status':'NEEDS_REVIEW','reason':'Executed '+value['action']+'; quality acceptance requires research review',
+                       'quality_acceptance':'PENDING_RESEARCH_REVIEW','next_task':value['candidate_for_future_review'] or value['summary']}
+             self.state['decisions'].append(decision)
+             self.state['phase']+=1;self.state['inflight_model']=None;self.state['status']='VERIFIED';self.save()
+             self.event('FEEDBACK_HANDOFF',decision=decision,next_phase=self.state['phase'])
+             if stop_after is not None and self.state['phase']>=stop_after:return self.state
+-        self.state.update(status='NEEDS_REVIEW',ended_at=now(),real_baseline_status='BLOCKED',gpt_second_review='PENDING')
++        self.state.update(status='VERIFIED' if self.state['phase']==5 else 'BLOCKED',ended_at=now(),
++                          diagnostic_loop_status='REAL_DIAGNOSTIC_LOOP' if self.state['phase']==5 and self.baseline_output() is None else 'NOT_APPLICABLE',
++                          real_baseline_status='VERIFIED' if self.baseline_output() else ('BLOCKED' if preflight(self.policy) else 'NOT_RUN'),gpt_second_review='PENDING')
+         self.save();self.export_manifest()
+         return self.state
+ 
++    def run(self, provider=None, *, stop_after=None):
++        try:return self._run(provider,stop_after=stop_after)
++        except (OSError,ValueError,TypeError,KeyError,ArithmeticError,RuntimeError,KeyboardInterrupt) as exc:
++            self.terminate_failure(self.state.get('inflight_model') or self.run_id+'-control',exc);raise
++        finally:
++            try:self.export_manifest()
++            except OSError as exc:raise GateError('EVIDENCE_MISSING: manifest could not be saved; do not resend') from exc
++
+     def export_manifest(self):
+         files={str(p.relative_to(self.directory)):digest(p) for p in sorted(self.directory.rglob('*')) if p.is_file() and p.name!='manifest.json'}
+         write_json(self.directory/'manifest.json',{'run_id':self.run_id,'mode':self.mode,'code_sha':self.state['code_sha'],
+@@ -289,5 +384,7 @@ class Controller:
+                    'pilot':self.pilot,'policy_sha256':self.config_hash,'semantics_version':self.policy['semantics_version'],
+                    'metrics_version':self.policy['metrics_version'],'status':self.state['status'],
+                    'started_at':self.state['started_at'],'ended_at':self.state.get('ended_at'),
++                   'diagnostic_loop_status':self.state.get('diagnostic_loop_status','NOT_COMPLETE'),
++                   'real_baseline_status':self.state.get('real_baseline_status','BLOCKED' if preflight(self.policy) else 'NOT_RUN'),
+                    'calls':self.state['calls'],'tools':self.state['tools'],'errors':self.state['errors'],'artifacts':files})
+         return files
+diff --git a/task1/workflow/diagnostics.py b/task1/workflow/diagnostics.py
+index a70fbe2..9ff8ea9 100644
+--- a/task1/workflow/diagnostics.py
++++ b/task1/workflow/diagnostics.py
+@@ -98,22 +98,30 @@ def duplicate_details(record_id, value):
+     events=[]
+     for i in range(1,len(ts)):
+         tags=[]
+-        if coords[i] == coords[i-1]:
++        time_ok = finite(ts[i]) and finite(ts[i-1])
++        position_ok = all(isinstance(c, list) and len(c) == 2 and all(finite(x) for x in c)
++                          for c in coords[i-1:i+1])
++        if not time_ok: tags.append('MISSING_OR_INVALID_TIME')
++        if not position_ok: tags.append('INVALID_POSITION_PAIR')
++        if position_ok and coords[i] == coords[i-1]:
+             tags.append('REPEATED_POSITION_NOT_AUTOMATIC_NOISE')
+-        if ts[i] == ts[i-1]:
++        if time_ok and ts[i] == ts[i-1]:
+             tags.append('ZERO_DT_SPEED_UNAVAILABLE')
+-            if coords[i] != coords[i-1]:
++            if position_ok and coords[i] != coords[i-1]:
+                 tags.append('SAME_TIME_DIFFERENT_POSITION')
+         if tags:
+-            events.append({'left_index':i-1,'right_index':i,'dt_raw':ts[i]-ts[i-1], 'reasons':tags})
++            events.append({'left_index':i-1,'right_index':i,'dt_raw':ts[i]-ts[i-1] if time_ok else None,
++                           'dt_reason':None if time_ok else 'MISSING_OR_INVALID_TIME',
++                           'position_pair_computable':position_ok, 'reasons':tags})
+     return {'record_id':record_id,'events':events,'modified':0,'deleted':0,'status':'EXECUTED'}
+ 
+ 
+ def independent_profile_review(raw, rows):
+     """Second implementation, direct counts, not a call to profile/aggregate."""
+-    errors=[]
+-    if len(rows)!=len(raw) or len({p.get('record_id') for p in rows})!=len(rows):
+-        errors.append('RECORD_COVERAGE')
++    errors = profile_list_errors(raw, rows)
++    if errors:
++        return {'status':'REJECTED','errors':errors,'records_checked':0,
++                'claim':'Full submitted list rejected before alignment; no rows discarded'}
+     for row in rows:
+         rid=row.get('record_id')
+         if rid not in raw:
+@@ -154,3 +162,30 @@ def independent_profile_review(raw, rows):
+             if row.get(k)!=v:errors.append(f'{rid}:{k}')
+     return {'status':'VERIFIED' if not errors else 'REJECTED','errors':errors,'records_checked':len(rows),
+             'claim':'Structural counts only; no physical accuracy or cleaning quality claim'}
++
++
++def profile_list_errors(raw, rows):
++    """Validate the entire submission before any mapping, selection or ordering."""
++    if not isinstance(rows, list): return ['PROFILE_LIST_REQUIRED']
++    template = profile('', [[], []])
++    errors = []
++    ids = []
++    for i, row in enumerate(rows):
++        if not isinstance(row, dict) or set(row) != set(template):
++            errors.append(f'PROFILE_FIELDS:{i}'); continue
++        if not isinstance(row['record_id'], str):
++            errors.append(f'RECORD_ID_TYPE:{i}'); continue
++        ids.append(row['record_id'])
++        for field, example in template.items():
++            value = row[field]
++            if example is None:
++                valid = value is None or finite(value)
++            else:
++                valid = type(value) is type(example)
++            if not valid: errors.append(f'PROFILE_FIELD_TYPE:{i}:{field}')
++        counts=row.get('dt_counts')
++        if isinstance(counts,dict) and any(type(v) is not int or v < 0 for v in counts.values()):
++            errors.append(f'DT_COUNTS_TYPE:{i}')
++    if len(ids) != len(set(ids)): errors.append('DUPLICATE_RECORD_ID')
++    if len(rows) != len(raw) or set(ids) != set(raw): errors.append('RECORD_COVERAGE')
++    return errors
+diff --git a/task1/workflow/evaluation.py b/task1/workflow/evaluation.py
+index aee0483..206bb5a 100644
+--- a/task1/workflow/evaluation.py
++++ b/task1/workflow/evaluation.py
+@@ -241,3 +241,42 @@ def assess_improvement(*, hard_conditions, measured_gain=None, minimum_gain=None
+               and all(protection_changes[name] <= allowed_degradations[name] for name in protection_changes))
+     return {"status": "QUALITY_ACCEPTED" if passed else "REJECTED",
+             "reason": "EXPLICIT_CONTRACT_SATISFIED" if passed else "EXPLICIT_CONTRACT_FAILED"}
++
++
++def review_baseline(output):
++    """Recheck stored processing artifacts, including the complete terminal ledger."""
++    errors=[];inputs=[];groups={k:[] for k in ('filtered','denoised','simplified','retained')}
++    for record in output['records']:
++        for segment in record['filtered_segments']:
++            inputs.append(segment);groups['filtered'].append(segment)
++        for segment in record['processed_segments']:
++            original=segment['input'];clean=segment['denoise']['record'];final=segment['output']
++            inputs.append(original)
++            # Independent direction windows on the unmodified segment, one simultaneous pass.
++            points=original['xy'];bearings=[]
++            for a,b in zip(points,points[1:]):
++                dx,dy=b[0]-a[0],b[1]-a[1]
++                bearings.append(None if dx==dy==0 else math.degrees(math.atan2(dx,dy))%360)
++            removed=[]
++            for i in range(1,len(points)-2):
++                a,b,c=bearings[i-1:i+2]
++                if None in (a,b,c):continue
++                distances=[min(abs(b-x),360-abs(b-x)) for x in (a,c)]
++                if min(distances)>output['parameters']['direction']:removed.append(original['indices'][i])
++            if removed!=segment['denoise']['deleted_indices'] or clean['indices']!=[i for i in original['indices'] if i not in removed]:
++                errors.append('DIRECTION_SCHEDULE_MISMATCH')
++            result=verify_simplification(clean,final,output['parameters']['dp'])
++            if result['status']!='VERIFIED':errors.extend(result['errors'])
++            for stage,ids in [('denoised',removed),('simplified',[i for i in clean['indices'] if i not in final['indices']]),('retained',final['indices'])]:
++                positions=[original['indices'].index(i) for i in ids]
++                groups[stage].append({'record_id':original['record_id'],'indices':ids,
++                                      'timestamps':[original['timestamps'][i] for i in positions],
++                                      'xy':[original['xy'][i] for i in positions]})
++    audit=audit_point_accounting(inputs,groups)
++    expected=[(r['record_id'],i,stage,t,tuple(xy)) for stage,rows in groups.items() for r in rows
++              for i,t,xy in zip(r['indices'],r['timestamps'],r['xy'])]
++    actual=[(r['record_id'],r['original_index'],r['action'],r['timestamp'],tuple(r['xy'])) for r in output['point_actions']]
++    if sorted(expected)!=sorted(actual):errors.append('TERMINAL_LEDGER_MISMATCH')
++    if audit['status']!='VERIFIED':errors.extend(audit['errors'])
++    return {'status':'REJECTED' if errors else 'VERIFIED','errors':errors,'accounting':audit,
++            'scope':'Stored direction schedule, DP geometry and terminal accounting; not ground truth'}
+diff --git a/task1/workflow/geometry.py b/task1/workflow/geometry.py
+index 24b212e..d96353e 100644
+--- a/task1/workflow/geometry.py
++++ b/task1/workflow/geometry.py
+@@ -274,9 +274,13 @@ def direction_candidates(record, threshold):
+             "limitation": "Deletion/iteration/undefined-direction policy remains unapproved"}
+ 
+ 
+-def denoise_trajectory(*args, **kwargs):
+-    """Fail closed: do not disguise an unresolved teacher rule as no-op success."""
+-    raise MethodUnresolved(
+-        "TEACHER_DIRECTION_RULE_UNRESOLVED: define direction indices, forward "
+-        "lookahead, endpoint behavior, undefined bearings and iteration before use"
+-    )
++def denoise_trajectory(record, threshold=None, *, method=None, time_reliable=False):
++    """Registered mathematical candidate; production approval is checked upstream."""
++    if method != 'single_pass_simultaneous_keep_undefined':
++        raise MethodUnresolved('TEACHER_DIRECTION_RULE_UNRESOLVED: explicit registered schedule required')
++    candidates = direction_candidates(record, threshold)
++    removed = candidates['candidate_indices']
++    output = select_indices(record, [i for i in record['indices'] if i not in removed],
++                            time_reliable=time_reliable)
++    return {'record':output,'deleted_indices':removed,'decisions':candidates['rows'],
++            'method':method,'passes':1,'modified_values':0}
+diff --git a/task1/workflow/pipeline.py b/task1/workflow/pipeline.py
+new file mode 100644
+index 0000000..3ee71ef
+--- /dev/null
++++ b/task1/workflow/pipeline.py
+@@ -0,0 +1,99 @@
++"""Conditional processing chain; synthetic contracts cannot authorize teacher data.
++
++Production registrations are reviewed code, not model/config supplied approvals.
++No real-input registration exists: D1/D2 and parameters remain unapproved.
++"""
++from .geometry import (split_trajectory, filter_segments, denoise_trajectory,
++                       douglas_peucker_indices, select_indices, validate_trajectory)
++from .evaluation import verify_simplification, audit_point_accounting
++from .io import object_hash
++
++DIRECTION_METHOD = 'single_pass_simultaneous_keep_undefined'
++# Add a real contract/coordinate adapter only after an archived research approval.
++REAL_CONTRACTS = {}
++
++
++def preflight(policy):
++    issues = []
++    if policy['semantics']['crs']['status'] not in ('VERIFIED', 'APPROVED'):
++        issues.append('D1_COORDINATE_DATUM_UNKNOWN')
++    if policy['semantics']['distance_policy']['status'] != 'APPROVED':
++        issues.append('D1_DISTANCE_CONTRACT_UNAPPROVED')
++    if policy['method']['processing_status'] != 'APPROVED_FOR_REAL_INPUT':
++        issues.append('D2_DIRECTION_SCHEDULE_UNAPPROVED')
++    contract_id=policy['method'].get('approved_contract_id')
++    contract = REAL_CONTRACTS.get(contract_id) if isinstance(contract_id,str) else None
++    if contract is None:
++        issues.append('REAL_INPUT_CONTRACT_AND_ADAPTER_NOT_REGISTERED')
++    elif contract['raw_sha256'] != policy['raw_sha256']:
++        issues.append('REAL_CONTRACT_INPUT_HASH_MISMATCH')
++    return issues
++
++
++def run_real(raw, record_ids, policy):
++    issues = preflight(policy)
++    n = sum(len(raw[k][1]) for k in record_ids)
++    if issues:
++        return {'status':'BLOCKED','reason':issues,
++                'stage_counts':{'input':n,'segmented':None,'filtered':None,'denoised':None,
++                                'simplified':None,'not_processed':n},
++                'unavailable_metrics_reason':'; '.join(issues)}
++    contract = REAL_CONTRACTS[policy['method']['approved_contract_id']]
++    if set(record_ids) != set(contract['record_ids']):
++        raise ValueError('REAL_CONTRACT_SCOPE_MISMATCH')
++    records = [contract['adapter'](rid, raw[rid]) for rid in record_ids]
++    return run_planar(records, contract['parameters'], classification='CURRENT_RUN_REAL_BASELINE')
++
++
++def run_constructed(records, contract):
++    """Explicit fixture entry. Never reads DATA or accepts a path to real input."""
++    if (contract.get('scope') != 'CONSTRUCTED_PLANAR_ONLY'
++            or contract.get('approval') != 'ENGINEERING_TEST_ONLY'
++            or contract.get('method') != DIRECTION_METHOD
++            or any(not r['record_id'].startswith('fixture:') for r in records)):
++        raise ValueError('CONSTRUCTED_CONTRACT_REQUIRED')
++    return run_planar(records, contract['parameters'], classification='CONSTRUCTED_FIXTURE')
++
++
++def run_planar(records, parameters, *, classification):
++    """Actual split → separate filter → one-pass denoise → DP → independent audit."""
++    required = {'dt','distance','min_points','min_length','direction','dp','time_reliable'}
++    if set(parameters) != required: raise ValueError('INCOMPLETE_PARAMETERS')
++    groups = {k:[] for k in ('filtered','denoised','simplified','retained')}
++    per_record = []; stages = {'input':0,'segmented':0,'filtered':0,'denoised':0,'simplified':0,'not_processed':0}
++    for record in records:
++        validate_trajectory(record)
++        stages['input'] += len(record['indices'])
++        split = split_trajectory(record, parameters['dt'], parameters['distance'], time_reliable=parameters['time_reliable'])
++        filtered = filter_segments(split['segments'], parameters['min_points'], parameters['min_length'], time_reliable=parameters['time_reliable'])
++        stages['segmented'] += len(split['segments'])
++        groups['filtered'].extend(filtered['dropped'])
++        segments = []
++        for segment in filtered['kept']:
++            clean = denoise_trajectory(segment, parameters['direction'], method=DIRECTION_METHOD,
++                                       time_reliable=parameters['time_reliable'])
++            denoised = clean['record']
++            retained = douglas_peucker_indices(denoised['xy'], parameters['dp'], denoised['indices'])
++            output = select_indices(denoised, retained, time_reliable=parameters['time_reliable'])
++            output['parent_hash'] = object_hash(denoised)
++            review = verify_simplification(denoised, output, parameters['dp'], expected_parent_hash=object_hash(denoised))
++            groups['denoised'].append(select_indices(segment, clean['deleted_indices']))
++            groups['simplified'].append(select_indices(denoised, [i for i in denoised['indices'] if i not in retained]))
++            groups['retained'].append(output)
++            segments.append({'segment_index':segment['segment_index'],'input':segment,'denoise':clean,
++                             'output':output,'independent_review':review})
++        per_record.append({'record_id':record['record_id'],'boundaries':split['boundaries'],
++                           'filtered_segments':filtered['dropped'],'processed_segments':segments})
++    accounting = audit_point_accounting(records, groups)
++    ledger = [{'record_id':r['record_id'],'original_index':i,'action':stage,
++               'timestamp':t,'xy':xy} for stage, rows in groups.items() for r in rows
++              for i,t,xy in zip(r['indices'],r['timestamps'],r['xy'])]
++    for stage in ('filtered','denoised','simplified'):
++        stages[stage] = accounting['stage_points'][stage]
++    stages['retained'] = accounting['stage_points']['retained']
++    reviews = [s['independent_review'] for r in per_record for s in r['processed_segments']]
++    passed = accounting['status']=='VERIFIED' and all(r['status']=='VERIFIED' for r in reviews)
++    return {'status':'VERIFIED' if passed else 'REJECTED','classification':classification,
++            'parameters':parameters,'input_hash':object_hash(records),'records':per_record,
++            'point_actions':ledger,'stage_counts':stages,'accounting':accounting,
++            'quality_status':'PENDING_RESEARCH_REVIEW','modified_values':0}
+diff --git a/task1/workflow/provider.py b/task1/workflow/provider.py
+index 6d0a8a3..79657fc 100644
+--- a/task1/workflow/provider.py
++++ b/task1/workflow/provider.py
+@@ -11,7 +11,7 @@ import os
+ from pathlib import Path
+ import re
+ import signal
+-import shutil
++import selectors
+ import subprocess
+ import tempfile
+ import time
+@@ -62,9 +62,17 @@ def visible_events(stdout):
+         if not isinstance(event,dict) or not isinstance(event.get('type'),str):
+             raise ProviderError('INVALID_EVENT_SCHEMA')
+         item=event.get('item',{})
++        if not isinstance(item,dict): raise ProviderError('INVALID_ITEM_SCHEMA')
++        if event['type'].startswith('item.') and not isinstance(item.get('type'),str):
++            raise ProviderError('INVALID_ITEM_TYPE')
++        if item.get('type')=='agent_message' and not isinstance(item.get('text'),str):
++            raise ProviderError('INVALID_MESSAGE_TEXT')
+         if item.get('type') in ('reasoning','reasoning_summary'):
+             continue
+-        if event['type'] in ('thread.started','turn.started','turn.completed','turn.failed','error'):
++        if event['type']=='capability.disabled':
++            if event.get('message')!=DISABLED_CODE_HOST: raise ProviderError('INVALID_DISABLED_NOTICE')
++            events.append(event)
++        elif event['type'] in ('thread.started','turn.started','turn.completed','turn.failed','error'):
+             events.append(event)
+         elif event['type'].startswith('item.'):
+             if item.get('type')=='agent_message':
+@@ -101,28 +109,116 @@ def redact(text):
+     text=re.sub(r'(https?://)[^/@\s]+:[^/@\s]+@',r'\1<REDACTED>@',text)
+     text=re.sub(r'\bsk-[A-Za-z0-9_-]{12,}', '<REDACTED_KEY>',text)
+     text=re.sub(r'(?i)(authorization:\s*bearer\s+)\S+',r'\1<REDACTED>',text)
++    text=re.sub(r'\beyJ[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+', '<REDACTED_JWT>',text)
++    text=re.sub(r'(?i)((?:access_token|refresh_token|id_token|api_key)[\"\']?\s*[:=]\s*[\"\']?)[^\s\"\',}]+',r'\1<REDACTED>',text)
+     return text
+ 
+ 
++def stream_problem(events):
++    for event in events:
++        if event['type'] in ('error','turn.failed','unexpected_tool','unexpected_event'):
++            return 'UNEXPECTED_VISIBLE_EVENT:' + event['type']
++    return None
++
++
++def transport_counts(events, stderr):
++    return {'reconnect_notifications':sum('reconnect' in json.dumps(e).lower() for e in events),
++            'fallback_notifications':sum('falling back' in json.dumps(e).lower() or 'fallback' in json.dumps(e).lower() for e in events),
++            'sampling_retry_lines':sum('retry' in line.lower() and 'sampling' in line.lower() for line in stderr.splitlines()),
++            'underlying_requests':'unknown'}
++
++
++def safe_stderr(text):
++    # Capture only this child process, never account log files. Preserve ordinary
++    # partial diagnostics too; explicitly suppress any reasoning content.
++    return '\n'.join(redact(line) for line in text.splitlines()
++                     if not re.search(r'(?i)reasoning[_ -]?(?:summary|content)|"type"\s*:\s*"reasoning"',line))
++
++
+ def run_limited(args, prompt, cwd, timeout):
+-    """Own the CLI wrapper AND native child process group; no orphan requests."""
++    """Observe JSONL/stderr while running, stop at the first protocol/transport fault."""
+     if os.name!='posix':raise ProviderError('PROCESS_GROUP_BOUNDARY_UNAVAILABLE')
+-    env=os.environ.copy()
+-    env.pop('NODE_TLS_REJECT_UNAUTHORIZED',None)
++    env=os.environ.copy();env.pop('NODE_TLS_REJECT_UNAUTHORIZED',None)
+     process=subprocess.Popen(args,stdin=subprocess.PIPE,stdout=subprocess.PIPE,stderr=subprocess.PIPE,
+-                             cwd=cwd,env=env,text=True,start_new_session=True)
+-    try:
+-        stdout,stderr=process.communicate(prompt,timeout=timeout)
+-    except subprocess.TimeoutExpired as exc:
+-        try:os.killpg(process.pid,signal.SIGKILL)
+-        except ProcessLookupError:pass
+-        stdout,stderr=process.communicate(timeout=5)
+-        raise subprocess.TimeoutExpired(args,timeout,output=stdout,stderr=stderr) from exc
+-    except BaseException:
++                             cwd=cwd,env=env,start_new_session=True)
++    events=[];errors=[];buffers={'out':b'','err':b''};line_number=0
++    reason=None;deadline=time.monotonic()+timeout
++    def consume(label, line):
++        nonlocal reason,line_number
++        if label=='err':
++            safe=safe_stderr(line)
++            if safe: errors.append(safe)
++            if any(k in line.lower() for k in ('retry','reconnect','falling back','fallback','error','failed')):
++                reason=reason or 'UNEXPECTED_STDERR_DIAGNOSTIC'
++        else:
++            line_number+=1
++            try:
++                batch=visible_events(line)
++                events.extend(batch)
++                reason=reason or stream_problem(batch)
++            except ProviderError as exc:
++                reason=reason or f'{exc}:stdout_line={line_number}'
++    def kill_group():
+         try:os.killpg(process.pid,signal.SIGKILL)
+         except ProcessLookupError:pass
+-        process.communicate(timeout=5)
+-        raise
++    try:
++        # Prompts are bounded, but write via a selectable pipe to include write time in timeout.
++        pending=prompt.encode(); offset=0
++        with selectors.DefaultSelector() as selector:
++            for stream,label in ((process.stdout,'out'),(process.stderr,'err')):
++                os.set_blocking(stream.fileno(),False);selector.register(stream,selectors.EVENT_READ,label)
++            os.set_blocking(process.stdin.fileno(),False)
++            if pending: selector.register(process.stdin,selectors.EVENT_WRITE,'in')
++            else: process.stdin.close()
++            killed=False; drain_deadline=None
++            while selector.get_map():
++                if time.monotonic()>=deadline and not reason:reason='MODEL_TIMEOUT'
++                if reason and not killed:
++                    kill_group();killed=True;drain_deadline=time.monotonic()+3
++                    if not process.stdin.closed:
++                        try:selector.unregister(process.stdin)
++                        except KeyError:pass
++                        process.stdin.close()
++                if killed and time.monotonic()>drain_deadline:break
++                for key,_ in selector.select(.05):
++                    label=key.data
++                    if label=='in':
++                        try: offset+=os.write(key.fileobj.fileno(),pending[offset:offset+4096])
++                        except BrokenPipeError: offset=len(pending)
++                        if offset==len(pending):selector.unregister(key.fileobj);key.fileobj.close()
++                        continue
++                    data=os.read(key.fileobj.fileno(),65536)
++                    if not data:
++                        selector.unregister(key.fileobj)
++                        if buffers[label]:consume(label,buffers[label].decode('utf-8',errors='strict'))
++                        buffers[label]=b'';continue
++                    buffers[label]+=data
++                    if len(buffers[label])>1024*1024:
++                        reason=reason or 'STREAM_LINE_LIMIT';buffers[label]=b''
++                    while b'\n' in buffers[label]:
++                        line,buffers[label]=buffers[label].split(b'\n',1)
++                        consume(label,line.decode('utf-8',errors='strict'))
++            process.wait(timeout=max(.1,deadline-time.monotonic()) if not killed else 3)
++    except BaseException as exc:
++        kill_group();process.wait(timeout=3)
++        if isinstance(exc,subprocess.TimeoutExpired):reason='MODEL_TIMEOUT'
++        else:
++            error=ProviderError(type(exc).__name__+':'+redact(str(exc)))
++            error.stdout=''.join(json.dumps(e,ensure_ascii=False)+'\n' for e in events)
++            error.stderr='\n'.join(errors);error.returncode=process.returncode;error.process_started=True
++            raise error from exc
++    finally:
++        # Even a parent that exited early must not leave descendants running.
++        kill_group()
++        for stream in (process.stdin,process.stdout,process.stderr):stream.close()
++    stdout=''.join(json.dumps(e,ensure_ascii=False)+'\n' for e in events)
++    stderr='\n'.join(errors)
++    if reason=='MODEL_TIMEOUT':
++        exc=subprocess.TimeoutExpired(args,timeout,output=stdout,stderr=stderr)
++        exc.returncode=process.returncode;raise exc
++    if reason:
++        exc=ProviderError(reason);exc.stdout=stdout;exc.stderr=stderr;exc.returncode=process.returncode
++        exc.process_started=True;raise exc
+     return subprocess.CompletedProcess(args,process.returncode,stdout,stderr)
+ 
+ 
+@@ -146,7 +242,7 @@ def verify_saved_call(directory, role, call_id, actions, expected_input_hash):
+     if any(not isinstance(e,dict) or e.get('type') not in ('thread.started','turn.started','turn.completed',
+            'turn.failed','error','item.completed','capability.disabled','unexpected_tool','unexpected_event') for e in events):
+         raise ProviderError('INVALID_SAVED_EVENT')
+-    if any((e['type']=='item.completed' and e.get('item',{}).get('type')!='agent_message') or
++    if any((e['type']=='item.completed' and (not isinstance(e.get('item'),dict) or e['item'].get('type')!='agent_message')) or
+            (e['type']=='capability.disabled' and e.get('message')!=DISABLED_CODE_HOST) for e in events):
+         raise ProviderError('UNEXPECTED_SAVED_TOOL_OR_DIAGNOSTIC')
+     parsed,thread,usage=parse_response(events,schema,receipt.get('exit_code'))
+@@ -158,61 +254,77 @@ def verify_saved_call(directory, role, call_id, actions, expected_input_hash):
+ class CodexProvider:
+     provenance='LIVE'
+ 
+-    def __init__(self, timeout=180):
+-        self.executable=shutil.which('codex')
+-        self.timeout=timeout
++    def __init__(self, timeout=180, *, executable=None, expected_sha256=None, native_path=None, native_sha256=None):
++        self.executable=executable or '/tmp/sc-g1-codex-0.157.1/node_modules/.bin/codex'
++        self.expected_sha256=expected_sha256
++        self.native_path=native_path;self.native_sha256=native_sha256
++        self.timeout=min(timeout,180)
+ 
+     def call(self, role, call_id, prompt, actions, output_dir):
+-        if not self.executable:
+-            raise ProviderError('LIVE_AGENT_BLOCKED: codex not found')
+-        schema=response_schema(role,call_id,actions)
+-        out=Path(output_dir)
+-        out.mkdir(parents=True,exist_ok=True)
+-        write_json(out/'input.json',{'role':role,'call_id':call_id,'prompt':prompt,'schema':schema},exclusive=True)
+-        started=now();clock=time.perf_counter()
+-        with tempfile.TemporaryDirectory(prefix='sc-g1-role-') as tmp:
+-            p=Path(tmp);write_json(p/'schema.json',schema)
+-            args=[self.executable,'exec','--ignore-user-config','--ephemeral','--skip-git-repo-check',
+-                  '--sandbox','read-only','--json','--color','never','--cd',tmp,
+-                  '--model','gpt-6-astra','-c','model_reasoning_effort="max"',
+-                  '-c','model_providers.openai.request_max_retries=0',
+-                  '-c','model_providers.openai.stream_max_retries=0',
+-                  '-c','model_providers.openai.supports_websockets=false',
+-                  '-c','web_search="disabled"','-c','project_doc_max_bytes=0',
+-                  '--output-schema',str(p/'schema.json')]
+-            for feature in ('shell_tool','unified_exec','code_mode_host','apps','plugins','multi_agent','hooks','memories','shell_snapshot','browser_use','browser_use_external','computer_use','image_generation'):
+-                args.extend(['--disable',feature])
+-            args.append('-')
+-            try:
+-                result=run_limited(args,prompt,tmp,self.timeout)
+-            except subprocess.TimeoutExpired as exc:
+-                write_json(out/'receipt.json',{'classification':'LIVE_CALL_ATTEMPT','role':role,'call_id':call_id,
+-                           'started_at':started,'ended_at':now(),'elapsed_seconds':time.perf_counter()-clock,
+-                           'status':'BLOCKED','error':'MODEL_TIMEOUT; process group killed; no automatic resubmission','usage':'unavailable'},exclusive=True)
+-                raise ProviderError('MODEL_TIMEOUT') from exc
+-            try:
+-                events=visible_events(result.stdout)
+-            except ProviderError as exc:
+-                write_json(out/'receipt.json',{'classification':'LIVE_CALL_ATTEMPT','role':role,'call_id':call_id,
+-                           'started_at':started,'ended_at':now(),'elapsed_seconds':time.perf_counter()-clock,
+-                           'status':'BLOCKED','error':str(exc),'usage':'unavailable',
+-                           'stdout_not_saved':'Invalid event stream; no regex repair'},exclusive=True)
+-                raise
+-            (out/'visible_events.jsonl').write_text(''.join(json.dumps(e,ensure_ascii=False)+'\n' for e in events))
+-            receipt={'classification':'LIVE_CALL_ATTEMPT','provider':'Codex CLI / existing ChatGPT login',
+-                     'role':role,'call_id':call_id,'requested_model':'gpt-6-astra',
+-                     'model_snapshot':'unavailable','request_id':'unavailable',
+-                     'started_at':started,'ended_at':now(),'elapsed_seconds':time.perf_counter()-clock,
+-                     'exit_code':result.returncode,'sandbox':'read-only','shell_tools':'disabled',
+-                     'command':[x.replace(tmp,'<ephemeral-role-directory>') for x in args],
+-                     'stderr':redact(result.stderr), 'reasoning_saved':False,'status':'EXECUTED'}
+-            try:
++        schema=response_schema(role,call_id,actions);out=Path(output_dir)
++        if out.exists() and any(out.iterdir()):raise ProviderError('PREEXISTING_CALL_DO_NOT_OVERWRITE_OR_RESEND')
++        started=now();clock=time.perf_counter();events=[];stderr='';result=None;process_started=False
++        receipt={'classification':'LIVE_CALL_ATTEMPT','provider':'Codex CLI / existing ChatGPT login',
++                 'role':role,'call_id':call_id,'run_id':out.parent.parent.name if out.parent.name=='calls' else 'standalone:'+call_id,
++                 'requested_model':'gpt-6-astra','model_snapshot':'unavailable','request_id':'unavailable',
++                 'started_at':started,'sandbox':'read-only','shell_tools':'disabled','reasoning_saved':False,
++                 'usage':'unavailable','underlying_requests':'unknown','status':'BLOCKED','exit_code':None,
++                 'effective_provider':'openai built-in','retry_control':'FIRST_VISIBLE_FAULT_KILLS_PROCESS_GROUP; hidden requests unknown'}
++        try:
++            out.mkdir(parents=True,exist_ok=True)
++            write_json(out/'input.json',{'role':role,'call_id':call_id,'prompt':prompt,'schema':schema},exclusive=True)
++            if not self.executable or not Path(self.executable).is_file():
++                raise ProviderError('LIVE_AGENT_BLOCKED: pinned codex missing')
++            if self.native_path:
++                if digest(self.native_path)!=self.native_sha256:raise ProviderError('NATIVE_EXECUTABLE_HASH_MISMATCH')
++                receipt['native_sha256']=self.native_sha256
++            receipt['executable_sha256']=digest(self.executable)
++            if self.expected_sha256 and receipt['executable_sha256']!=self.expected_sha256:
++                raise ProviderError('EXECUTABLE_HASH_MISMATCH')
++            with tempfile.TemporaryDirectory(prefix='sc-g1-role-') as tmp:
++                p=Path(tmp);write_json(p/'schema.json',schema)
++                args=[self.executable,'exec','--ignore-user-config','--strict-config','--ephemeral','--skip-git-repo-check',
++                      '--sandbox','read-only','--json','--color','never','--cd',tmp,
++                      '--model','gpt-6-astra','-c','model_reasoning_effort="max"',
++                      '-c','model_provider="openai"',
++                      '-c','analytics.enabled=false','-c','web_search="disabled"','-c','project_doc_max_bytes=0',
++                      '--output-schema',str(p/'schema.json')]
++                for feature in ('shell_tool','unified_exec','code_mode_host','apps','plugins','multi_agent','hooks','memories','shell_snapshot','browser_use','browser_use_external','computer_use','image_generation'):
++                    args.extend(['--disable',feature])
++                args.append('-')
++                receipt['command']=[x.replace(tmp,'<ephemeral-role-directory>') for x in args]
++                result=run_limited(args,prompt,tmp,self.timeout);process_started=True
++                receipt['exit_code']=result.returncode;stderr=result.stderr
++                # Incremental parsing retains earlier valid events if a later line fails.
++                for number,line in enumerate(result.stdout.splitlines(),1):
++                    try:events.extend(visible_events(line))
++                    except ProviderError as exc:raise ProviderError(f'{exc}:stdout_line={number}') from exc
+                 value,thread,usage=parse_response(events,schema,result.returncode)
+-            except ProviderError as exc:
+-                receipt.update(status='BLOCKED',error=str(exc))
++                write_json(out/'response.json',value,exclusive=True)
++                receipt.update(thread_id=thread,usage=usage,status='VERIFIED_STRUCTURE_ONLY')
++        except (OSError,ValueError,TypeError,ProviderError,subprocess.TimeoutExpired,KeyboardInterrupt) as exc:
++            if isinstance(exc,subprocess.TimeoutExpired) or getattr(exc,'process_started',False):
++                process_started=True
++                stdout=getattr(exc,'stdout',None) or getattr(exc,'output',None) or ''
++                if isinstance(stdout,bytes):stdout=stdout.decode('utf-8',errors='replace')
++                stderr=getattr(exc,'stderr','') or ''
++                if isinstance(stderr,bytes):stderr=stderr.decode('utf-8',errors='replace')
++                for number,line in enumerate(stdout.splitlines(),1):
++                    try:events.extend(visible_events(line))
++                    except ProviderError as parse_exc:
++                        receipt['parse_failure']=f'{parse_exc}:stdout_line={number}';break
++                receipt['exit_code']=getattr(exc,'returncode',None)
++            receipt['error']='MODEL_TIMEOUT' if isinstance(exc,subprocess.TimeoutExpired) else redact(str(exc))
++            receipt['error_type']=type(exc).__name__
++            receipt['no_automatic_resubmission']=True
++        finally:
++            receipt.update(ended_at=now(),elapsed_seconds=time.perf_counter()-clock,
++                           process_started=process_started,stderr=safe_stderr(stderr),
++                           visible_counts=transport_counts(events,stderr),completed_turns=sum(e['type']=='turn.completed' for e in events))
++            try:
++                (out/'visible_events.jsonl').write_text(''.join(json.dumps(e,ensure_ascii=False)+'\n' for e in events))
+                 write_json(out/'receipt.json',receipt,exclusive=True)
+-                raise
+-            receipt.update(thread_id=thread,usage=usage,status='VERIFIED_STRUCTURE_ONLY')
+-            write_json(out/'receipt.json',receipt,exclusive=True)
+-            write_json(out/'response.json',value,exclusive=True)
+-            return value,receipt
++            except OSError as save_exc:
++                raise ProviderError('EVIDENCE_MISSING: terminal receipt could not be saved; outcome unknown; do not resend') from save_exc
++        if receipt['status']!='VERIFIED_STRUCTURE_ONLY':raise ProviderError(receipt['error'])
++        return value,receipt
+diff --git a/task1/workflow/sources.py b/task1/workflow/sources.py
+new file mode 100644
+index 0000000..25ec8ce
+--- /dev/null
++++ b/task1/workflow/sources.py
+@@ -0,0 +1,42 @@
++"""Small task-specific source registry. No model-selected file reads."""
++import zipfile
++import xml.etree.ElementTree as ET
++from .io import ROOT, read_json, bound_path, digest
++
++REGISTRY = ROOT/'task1/config/goal1_sources.json'
++
++
++def source_context():
++    result = {}
++    for entry in read_json(REGISTRY):
++        path = bound_path(ROOT, entry['path'])
++        if not path.is_file() or digest(path) != entry['sha256']:
++            raise ValueError('SOURCE_FILE_VERSION_MISMATCH:'+entry['id'])
++        if 'member' in entry:
++            with zipfile.ZipFile(path) as z:
++                tree=ET.fromstring(z.read(entry['member']))
++                excerpt='\n'.join(e.text for e in tree.iter() if e.tag.endswith('}t') and e.text)
++        else:
++            lines=path.read_text().splitlines()
++            start,stop=entry['lines']
++            if start<1 or stop>len(lines) or start>stop:raise ValueError('INVALID_SOURCE_LOCATOR')
++            excerpt='\n'.join(lines[start-1:stop])
++        if not excerpt:raise ValueError('EMPTY_SOURCE_EXCERPT')
++        result[entry['id']]={**entry,'kind':'source','excerpt':excerpt,
++                             'verification_scope':'File and excerpt verified; claim status is separate'}
++    return result
++
++
++def validate_references(request, context, parent_version, run_id, required_feedback=()):
++    for ref in request['evidence_refs'] + request['feedback_refs']:
++        if ref not in context:raise ValueError('UNKNOWN_EVIDENCE_REFERENCE:'+ref)
++        item=context[ref]
++        if item['kind']!='source' and (item.get('parent_version')!=parent_version or item.get('run_id')!=run_id):
++            raise ValueError('WRONG_REFERENCE_PARENT_OR_RUN:'+ref)
++    if required_feedback and not set(required_feedback).issubset(request['feedback_refs']):
++        raise ValueError('MISSING_ACTUAL_FEEDBACK_REFERENCE')
++    if required_feedback:
++        if not any(context[r]['kind']=='review' for r in required_feedback):
++            raise ValueError('FEEDBACK_REQUIRES_CURRENT_REVIEW')
++        if not any(context[r]['kind']=='tool' and context[r].get('status')=='VERIFIED' for r in required_feedback):
++            raise ValueError('FEEDBACK_REQUIRES_VERIFIED_TOOL')
+diff --git a/task1/workflow/tools.py b/task1/workflow/tools.py
+index da9a59f..08af433 100644
+--- a/task1/workflow/tools.py
++++ b/task1/workflow/tools.py
+@@ -3,7 +3,7 @@ from .io import DATA, digest, read_json, object_hash
+ from .diagnostics import profile, aggregate, time_boundaries, duplicate_details, independent_profile_review
+ 
+ 
+-def execute_tool(action, record_ids, policy, previous_profiles=None,classification='CURRENT_RUN_REAL_DATA'):
++def execute_tool(action, record_ids, policy, previous_profiles=None,classification='CURRENT_RUN_REAL_DATA',previous_baseline=None):
+     if digest(DATA)!=policy['raw_sha256']:
+         raise ValueError('INPUT_HASH_MISMATCH')
+     raw=read_json(DATA)
+@@ -13,8 +13,8 @@ def execute_tool(action, record_ids, policy, previous_profiles=None,classificati
+           'input_points':sum(len(v[1]) for v in subset.values()),'modified_values':0,
+           'parent_version':'RAW:'+policy['raw_sha256'],'semantics_version':policy['semantics_version'],
+           'metrics_version':policy['metrics_version']}
+-    if action=='source_evidence':
+-        payload={'semantics':policy['semantics'],'method':policy['method'],
++    if action in ('contract_snapshot', 'source_evidence'):
++        payload={'scope':'SAVED_CONTRACT_ONLY_NOT_SOURCE_VERIFICATION','semantics':policy['semantics'],'method':policy['method'],
+                  'starter_reference':policy['starter_reference'],'teacher_95m':policy['teacher_95m']}
+     elif action=='profile_pilot':
+         rows=[profile(k,v,classification) for k,v in subset.items()]
+@@ -28,21 +28,30 @@ def execute_tool(action, record_ids, policy, previous_profiles=None,classificati
+     elif action in ('verify_profiles','recompute_check'):
+         if previous_profiles is None:
+             raise ValueError('MISSING_PROFILE_OUTPUT')
+-        by_id={p['record_id']:p for p in previous_profiles if p['record_id'] in subset}
+-        if len(by_id)!=len(subset):raise ValueError('PROFILE_COVERAGE_MISMATCH')
++        payload=independent_profile_review(subset,previous_profiles)
++        if payload['status'] != 'VERIFIED':
++            if action == 'recompute_check': payload['exact_match'] = False
++            return {**base,'status':'REJECTED','result':payload}
++        by_id={p['record_id']:p for p in previous_profiles}
+         selected=[by_id[k] for k in subset]
+-        payload=independent_profile_review(subset,selected)
+         if action=='recompute_check':
+             recomputed=[profile(k,v,classification) for k,v in subset.items()]
+             equal=object_hash(recomputed)==object_hash(selected)
+             payload.update(recomputed_sha256=object_hash(recomputed),stored_sha256=object_hash(selected),exact_match=equal)
+             if not equal:payload['status']='REJECTED'
++    elif action=='verify_baseline':
++        from .evaluation import review_baseline
++        if previous_baseline is None:raise ValueError('MISSING_BASELINE_OUTPUT')
++        payload=review_baseline(previous_baseline)
+     elif action=='baseline':
+-        # Deliberately no projection/deletion fallback. The diagnostic path remains usable.
+-        return {**base,'status':'BLOCKED','reason':policy['method']['blocking_ids'],
+-                'stage_counts':{'input':base['input_points'],'segmented':None,'filtered':None,
+-                                'denoised':None,'simplified':None,'not_processed':base['input_points']},
+-                'unavailable_metrics_reason':'CRS/distance policy and direction execution schedule unresolved'}
++        from .pipeline import run_real
++        return {**base, **run_real(raw, record_ids, policy)}
++    elif action == 'source_check':
++        from .sources import source_context
++        payload = {'sources':source_context(), 'scope':'EXACT_LOCAL_SOURCE_EXCERPTS; datum remains unverified'}
++    elif action == 'escalate':
++        payload = {'status':'BLOCKED','reason':'ROLE_REQUESTED_RESEARCH_REVIEW; no numeric modification'}
++
+     else:
+         raise ValueError('UNKNOWN_TOOL')
+     return {**base,'status':payload.get('status','EXECUTED'),'result':payload}

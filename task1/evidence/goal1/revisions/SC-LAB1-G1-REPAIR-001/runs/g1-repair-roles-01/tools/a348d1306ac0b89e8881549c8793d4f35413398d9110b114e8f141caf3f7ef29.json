@@ -1,0 +1,67 @@
+{
+  "tool_id": "a348d1306ac0b89e8881549c8793d4f35413398d9110b114e8f141caf3f7ef29",
+  "request_hash": "a348d1306ac0b89e8881549c8793d4f35413398d9110b114e8f141caf3f7ef29",
+  "role": "review",
+  "call_id": "g1-repair-roles-01-03-review",
+  "request": {
+    "role": "review",
+    "call_id": "g1-repair-roles-01-03-review",
+    "action": "verify_profiles",
+    "record_ids": [
+      "0",
+      "1",
+      "2",
+      "246",
+      "256",
+      "306",
+      "352"
+    ],
+    "feedback_refs": [
+      "g1-repair-roles-01-02-execution",
+      "c7e35903774d6cb888b5e3e2d0998a403499ff62d471aa35e99edb2b04d8fbd5",
+      "7ac416a65fac90f836ccd16be30ef03d7752492255f37e0afaf30843e1cbb0b2"
+    ],
+    "evidence_refs": [
+      "c7e35903774d6cb888b5e3e2d0998a403499ff62d471aa35e99edb2b04d8fbd5",
+      "7ac416a65fac90f836ccd16be30ef03d7752492255f37e0afaf30843e1cbb0b2",
+      "repair:authorization"
+    ],
+    "summary": "请求对完整 pilot 的逐记录及汇总 profiles 进行独立数值复核，交叉核对重复事件详情；保留输入顺序、原始索引和值。",
+    "reason": "profile_pilot 回执报告122个零时间差、62个同时间异位置事件及323个连续重复位置事件。duplicate_details 含多原因事件，部分记录仅展示事件摘录；现有 EXECUTED 回执不足以证明独立验证通过，也未确证实现缺陷。CRS、距离口径及方向删除调度仍阻止完整基线，但不阻止此次原始与时间诊断核验。",
+    "request_status": "PROPOSED",
+    "candidate_for_future_review": null
+  },
+  "run_id": "g1-repair-roles-01",
+  "mode": "LIVE",
+  "classification": "CURRENT_RUN_REAL_DATA",
+  "code_sha": "880290a5dada84c711248844038daa3ee35eeefb",
+  "output": {
+    "classification": "CURRENT_RUN_REAL_DATA",
+    "input_sha256": "c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3",
+    "record_ids": [
+      "0",
+      "1",
+      "2",
+      "246",
+      "256",
+      "306",
+      "352"
+    ],
+    "input_records": 7,
+    "input_points": 783,
+    "modified_values": 0,
+    "parent_version": "RAW:c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3",
+    "semantics_version": "g1-semantics-v1",
+    "metrics_version": "g1-metrics-v1",
+    "status": "VERIFIED",
+    "result": {
+      "status": "VERIFIED",
+      "errors": [],
+      "records_checked": 7,
+      "claim": "Structural counts only; no physical accuracy or cleaning quality claim"
+    }
+  },
+  "output_sha256": "c88b326db45f0fed3fec33caeaa6ab54e5d4d8e0271de04d30d49a464ad7652a",
+  "elapsed_seconds": 0.7304530800001885,
+  "completed_at": "2026-09-26T13:24:22.068895+00:00"
+}

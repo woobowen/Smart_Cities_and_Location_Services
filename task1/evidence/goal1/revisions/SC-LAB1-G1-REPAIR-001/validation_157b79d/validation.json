@@ -1,0 +1,76 @@
+{
+  "code_sha": "157b79d563aaa916d4478ec494b25ec72c3badcb",
+  "source_hashes": {
+    "task1/workflow/__init__.py": "bd23709231145ce415c01c88880b886e8c8343199a47dbe0762d68841aeb73ff",
+    "task1/workflow/__main__.py": "b96a66d5fe543f8082d528e81e7e70de2c0090b20ab60b090532ab65647713e8",
+    "task1/workflow/budget.py": "c275047dffcafb7160b0c3fcd8de4e56bbc1f86dc05925691ff5af43aea312ca",
+    "task1/workflow/controller.py": "fb51e16e3531ab958270624fbc0c2f31786c26235b79a85491b2c1ff805d4d0f",
+    "task1/workflow/diagnostics.py": "e2ef635bbd95db505b3eff336ca59074a60217a70b2bc644624c3fbd0280acda",
+    "task1/workflow/evaluation.py": "debb251902159f9186e79dc5f29c2bac23f952f036801fd829430ebc231cc7f0",
+    "task1/workflow/geometry.py": "4d0e6eddda27ec48e4ca9c37d1cf052acb891ea6b02513a65768cef9b943f70e",
+    "task1/workflow/inventory.py": "42bceb3ea1bab9ca386b88ce29104dc4bb518fee6df8f25aae50360633e7d5a1",
+    "task1/workflow/io.py": "0d3d72dd0beb4718f4020a07a5f1c0ca89193943049a479816b5c496806321b2",
+    "task1/workflow/pipeline.py": "be438f36ed4464bb49b90315da90f73dde20178c29df0152b129a588af306cb0",
+    "task1/workflow/provider.py": "b285fc9f1f0877df6aaad6553bd21bdbffeab3f0d648c50667f5c8e73f1546fa",
+    "task1/workflow/recompute.py": "4c198a016adec8554602c9ad04e0446bb90866ed970789834b96c51ebbec9b56",
+    "task1/workflow/sources.py": "74b42f79abfe172b7d2e29ba55a631b22f3e6d46c7cb2a08c0c7634eaf44ba90",
+    "task1/workflow/tools.py": "bb6769b534c7dd498e9edeb6b7fe962e4cb90ef789e84877cbef39beface17db",
+    "task1/scripts/build_goal1_figures.py": "136e35d613ff440faf0e6640ce66c09dc61b0af2a30d7704e063f69c4199a29b",
+    "task1/scripts/build_goal1_notebooks.py": "ea92fd765ba65e33398272176c9ee2aeabdde223c8d126919467846e363b69a0",
+    "task1/scripts/build_repair_figures.py": "51430a1a3a05f3ee240c4419cb9db5e6f1443553a6900ca13ce0c1c9c15b26ff",
+    "task1/scripts/recompute_archived_run.py": "0d566ef38f0583919dd488a906ddcb86069032d60fa171e71bd34acddb112bd3",
+    "task1/scripts/repair_goal1.py": "cc2076ca16bf46ca8d576458c1c0595843af66812954d968c4793ea5acda6023",
+    "task1/tests/test_control.py": "59d31aa7fe28b36bb61317c8dce4311e74761b39da7464cd57f9532d4b2d7ba2",
+    "task1/tests/test_evaluation.py": "d8f342bb62103e4f50235271bf6dcaa70746c4f33db740e256a1888cff0b3915",
+    "task1/tests/test_geometry.py": "2836d0ff7c5bd59c39f18e5bcb37326a5d0be594d0e4207ab962a6ced5008dec",
+    "task1/tests/test_repair.py": "472f41d2658189c3f1fb521cf077a0b7d64844e0b5970662fbf5541bd35aa9b1",
+    "task1/config/goal1.json": "b87603799150a1af15aebe0bb04fe0c58303caa63c20713fca12f950b87c4f65",
+    "task1/config/goal1_sources.json": "411d6eb81c71d7001fde7b5388e30b3311c86b8a6ab83bcb5b8a4c82455f6ef2",
+    "task1/config/pilot.json": "b3ddb3c0d3c6131d05171fb4f2eeed365dd8a516c02f798280b4b96915c31066"
+  },
+  "input_sha256": "c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3",
+  "at": "2026-09-26T13:19:20.229454+00:00",
+  "commands": [
+    {
+      "args": [
+        "<REPO>/.venv/bin/python",
+        "-m",
+        "compileall",
+        "-q",
+        "task1/workflow",
+        "task1/scripts",
+        "task1/tests"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "log": "syntax.txt"
+    },
+    {
+      "args": [
+        "<REPO>/.venv/bin/python",
+        "-m",
+        "pytest",
+        "task1/tests",
+        "-q",
+        "--junitxml=<REPO>/task1/evidence/goal1/revisions/SC-LAB1-G1-REPAIR-001/tests_final.xml"
+      ],
+      "cwd": ".",
+      "exit_code": 0,
+      "log": "tests_final.txt"
+    },
+    {
+      "args": [
+        "<REPO>/.venv/bin/python",
+        "-m",
+        "pytest",
+        "tests",
+        "-q",
+        "-rs",
+        "--junitxml=<REPO>/task1/evidence/goal1/revisions/SC-LAB1-G1-REPAIR-001/starter_full.xml"
+      ],
+      "cwd": "task1/作业/作业",
+      "exit_code": 0,
+      "log": "starter_full.txt"
+    }
+  ]
+}

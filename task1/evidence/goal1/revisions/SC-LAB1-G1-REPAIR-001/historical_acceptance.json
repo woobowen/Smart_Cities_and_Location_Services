@@ -1,0 +1,434 @@
+{
+  "task_id": "SC-LAB1-G1-FOUNDATION-001",
+  "engineering_status": "PARTIAL_BLOCKED",
+  "goal1_complete": false,
+  "gpt_second_review": "PENDING",
+  "deliverable": "IMPLEMENTING",
+  "understanding": "USER_DETERMINED",
+  "submission": "NOT_READY",
+  "updated_at": "2026-09-26T11:50:31.413000+00:00",
+  "status_vocabulary": [
+    "PASS",
+    "FAIL",
+    "BLOCKED",
+    "NOT_RUN"
+  ],
+  "rule": "任何核心缺项不能由其他PASS抵消；工程PASS限各行affected_scope，不表示清洗最优或最终验收",
+  "acceptance": [
+    {
+      "id": "G1-A01",
+      "requirement": "正确仓库、分支、工作区与用户工作保护",
+      "method_code": [
+        "task1/workflow/io.py"
+      ],
+      "actual_validation_command_or_action": "ls -la; pwd; git status --short; git branch --show-current; git fetch origin main; git rev-parse HEAD; git ls-remote origin refs/heads/main",
+      "expected": "main匹配指定仓库，既有改动不覆盖",
+      "actual_result": "初始clean main、b25efc1与origin相同；仅新增task1任务目录，117原文件未变",
+      "evidence_paths": [
+        "task1/evidence/goal1/environment/initial_commands.json",
+        "task1/evidence/goal1/validation/original_integrity.json",
+        "task1/evidence/goal1/publication.json"
+      ],
+      "evidence_links_relative_to_packet": [
+        "environment/initial_commands.json",
+        "validation/original_integrity.json",
+        "publication.json"
+      ],
+      "affected_scope": "本轮工作区；最终发布状态见publication",
+      "status": "PASS"
+    },
+    {
+      "id": "G1-A02",
+      "requirement": "完整材料读取与任务对应",
+      "method_code": [
+        "task1/evidence/goal1/materials/extract_materials.py"
+      ],
+      "actual_validation_command_or_action": "完整PPT XML/备注/图表渲染、两Notebook source/count/outputs及starter方法读取",
+      "expected": "要求R01–R16有实际来源；缺材料如实报告",
+      "actual_result": "5PPT/两Notebook/69文本方法source；主PPT43页及DP GIF逐帧；三研究文件缺失不补造",
+      "evidence_paths": [
+        "task1/evidence/goal1/materials/reading_coverage.json",
+        "task1/evidence/goal1/materials/governance_reading.json",
+        "task1/evidence/goal1/REQUIREMENTS.md",
+        "task1/evidence/goal1/materials/findings.md"
+      ],
+      "evidence_links_relative_to_packet": [
+        "materials/reading_coverage.json",
+        "materials/governance_reading.json",
+        "REQUIREMENTS.md",
+        "materials/findings.md"
+      ],
+      "affected_scope": "材料核实，不将阅读当成算法实验完成",
+      "status": "PASS"
+    },
+    {
+      "id": "G1-A03",
+      "requirement": "原始数据与历史结果区分",
+      "method_code": [
+        "task1/workflow/inventory.py"
+      ],
+      "actual_validation_command_or_action": "原始hash前后对照；ZIP成员逐字节核验",
+      "expected": "不改raw/teacher/starter；历史不计本轮实验",
+      "actual_result": "117清单文件全部未变；两数据相同；ZIP已有104文件全同，4辅助成员未解压",
+      "evidence_paths": [
+        "task1/evidence/goal1/inventory/raw_integrity.json",
+        "task1/evidence/goal1/inventory/zip_byte_comparison.json",
+        "task1/evidence/goal1/validation/original_integrity.json",
+        "task1/evidence/goal1/runs/README.md"
+      ],
+      "evidence_links_relative_to_packet": [
+        "inventory/raw_integrity.json",
+        "inventory/zip_byte_comparison.json",
+        "validation/original_integrity.json",
+        "runs/README.md"
+      ],
+      "affected_scope": "全部清单原材料；本轮派生另存",
+      "status": "PASS"
+    },
+    {
+      "id": "G1-A04",
+      "requirement": "时空语义与计算权限",
+      "method_code": [
+        "task1/workflow/controller.py",
+        "task1/workflow/tools.py"
+      ],
+      "actual_validation_command_or_action": "test_scope_and_schema_denials; test_geo07_unreliable_time_is_not_zero_speed; 两Notebook执行门控",
+      "expected": "未知CRS阻止依赖空间计算；可确认相对时间仍可诊断",
+      "actual_result": "CRS=UNKNOWN；distance_policy=ASSUMPTION_REQUIRING_APPROVAL；Unix秒SOURCE_DECLARED；完整链BLOCKED；时间诊断可执行",
+      "evidence_paths": [
+        "task1/config/goal1.json",
+        "task1/docs/goal1/CONTRACTS.md",
+        "task1/evidence/goal1/tests/case_results.json"
+      ],
+      "evidence_links_relative_to_packet": [
+        "../../config/goal1.json",
+        "../../docs/goal1/CONTRACTS.md",
+        "tests/case_results.json"
+      ],
+      "affected_scope": "这是正确门控，不是CRS已确认",
+      "status": "PASS"
+    },
+    {
+      "id": "G1-A05",
+      "requirement": "分段和过滤正确且可追踪",
+      "method_code": [
+        "task1/workflow/geometry.py",
+        "task1/workflow/diagnostics.py"
+      ],
+      "actual_validation_command_or_action": "test_geo09/10/11及eval08/09；7例真实时间分区",
+      "expected": "完整时间/空间分段、独立短片段原因且归属守恒",
+      "actual_result": "平面fixture已通过；真实7例783点形成12时间分区、0删改；真实空间切分与长度过滤未运行",
+      "evidence_paths": [
+        "task1/evidence/goal1/tests/case_results.json",
+        "task1/results/goal1/pilot_diagnostics.json",
+        "task1/docs/goal1/CONTRACTS.md"
+      ],
+      "evidence_links_relative_to_packet": [
+        "tests/case_results.json",
+        "../../results/goal1/pilot_diagnostics.json",
+        "../../docs/goal1/CONTRACTS.md"
+      ],
+      "affected_scope": "U01影响真实教学分段/过滤验收",
+      "status": "BLOCKED"
+    },
+    {
+      "id": "G1-A06",
+      "requirement": "忠于明确教师去噪方法且不混字段",
+      "method_code": [
+        "task1/workflow/geometry.py"
+      ],
+      "actual_validation_command_or_action": "PPT20视觉/公式核查；test_geo05/06/08/16/17及两个独立调度反例",
+      "expected": "明确谓词/索引/循环角差/端点/不可算值；不擅定删除调度",
+      "actual_result": "双侧循环差谓词核实、命名字段/候选诊断已测；删除调度会改变结果，正式denoise抛MethodUnresolved",
+      "evidence_paths": [
+        "task1/evidence/goal1/materials/direction_ambiguity_fixtures.json",
+        "task1/evidence/goal1/tests/case_results.json",
+        "task1/docs/goal1/CONTRACTS.md"
+      ],
+      "evidence_links_relative_to_packet": [
+        "materials/direction_ambiguity_fixtures.json",
+        "tests/case_results.json",
+        "../../docs/goal1/CONTRACTS.md"
+      ],
+      "affected_scope": "U02阻断真实去噪；U01亦影响距离/方向口径",
+      "status": "BLOCKED"
+    },
+    {
+      "id": "G1-A07",
+      "requirement": "DP及索引映射正确",
+      "method_code": [
+        "task1/workflow/geometry.py",
+        "task1/workflow/evaluation.py"
+      ],
+      "actual_validation_command_or_action": "test_finite_segment_known_answers; test_geo13/14/15; test_eval01/02/03/04",
+      "expected": "有限线段sqrt2反例、退化、闭合、重复、回头、有序原始索引及独立距离",
+      "actual_result": "已知答案与独立oracle通过；错误超差输出拒绝",
+      "evidence_paths": [
+        "task1/evidence/goal1/tests/case_results.json",
+        "task1/docs/goal1/geometry_notes.md"
+      ],
+      "evidence_links_relative_to_packet": [
+        "tests/case_results.json",
+        "../../docs/goal1/geometry_notes.md"
+      ],
+      "affected_scope": "平面几何工程实现；不证明未知CRS真实米制DP已执行",
+      "status": "PASS"
+    },
+    {
+      "id": "G1-A08",
+      "requirement": "独立评价器可测对",
+      "method_code": [
+        "task1/workflow/evaluation.py",
+        "task1/workflow/diagnostics.py"
+      ],
+      "actual_validation_command_or_action": "test_eval01..14；test_independent_profile_review_checks_all_reported_numeric_fields",
+      "expected": "独立参考，正确分母，不可用原因，伪造结果拒绝",
+      "actual_result": "108整体case中对应正反例均pass；计数审核遗漏被独立审查发现后修复；无假accuracy",
+      "evidence_paths": [
+        "task1/evidence/goal1/tests/case_results.json",
+        "task1/evidence/goal1/tests/CHECK_MATRIX.md",
+        "task1/evidence/goal1/tests/INDEPENDENT_CONTROL_REVIEW.md"
+      ],
+      "evidence_links_relative_to_packet": [
+        "tests/case_results.json",
+        "tests/CHECK_MATRIX.md",
+        "tests/INDEPENDENT_CONTROL_REVIEW.md"
+      ],
+      "affected_scope": "已批准工程与描述性指标；改进阈值未冻结仍PENDING",
+      "status": "PASS"
+    },
+    {
+      "id": "G1-A09",
+      "requirement": "三个角色实际独立调用与职责",
+      "method_code": [
+        "task1/workflow/provider.py",
+        "task1/workflow/controller.py"
+      ],
+      "actual_validation_command_or_action": "4次真实CLI派发；独立JSONL/context/receipt检查",
+      "expected": "A/B/C均有独立真实调用成功与实际工具交接",
+      "actual_result": "A成功且source_evidence执行；B路由失败；C未调。2个完成model turn但仅1个被控制器接受",
+      "evidence_paths": [
+        "task1/evidence/goal1/runs/call_summary.json",
+        "task1/evidence/goal1/runs/g1-live-20260926-03/manifest.json",
+        "task1/docs/goal1/ARCHITECTURE.md"
+      ],
+      "evidence_links_relative_to_packet": [
+        "runs/call_summary.json",
+        "runs/g1-live-20260926-03/manifest.json",
+        "../../docs/goal1/ARCHITECTURE.md"
+      ],
+      "affected_scope": "角色配置已建，真实三角色验收缺失；工程子代理不替代",
+      "status": "BLOCKED"
+    },
+    {
+      "id": "G1-A10",
+      "requirement": "运行控制与权限生效",
+      "method_code": [
+        "task1/workflow/controller.py",
+        "task1/workflow/provider.py",
+        "task1/workflow/io.py"
+      ],
+      "actual_validation_command_or_action": "read-only sandbox写入探针；schema/path/hash/cached/recovery/status正反例",
+      "expected": "越权/伪成功不可进入执行，正确请求可通过",
+      "actual_result": "sandbox拒写；修复后离线请求/缓存/恢复/事件/状态检查pass；LIVE已硬冻结",
+      "evidence_paths": [
+        "task1/evidence/goal1/tests/case_results.json",
+        "task1/evidence/goal1/tests/INDEPENDENT_CONTROL_REVIEW.md",
+        "task1/evidence/goal1/environment/sandbox_probe_01571.json"
+      ],
+      "evidence_links_relative_to_packet": [
+        "tests/case_results.json",
+        "tests/INDEPENDENT_CONTROL_REVIEW.md",
+        "environment/sandbox_probe_01571.json"
+      ],
+      "affected_scope": "当前代码的工程权限；旧live预算缺口另列A13 FAIL，不冲销",
+      "status": "PASS"
+    },
+    {
+      "id": "G1-A11",
+      "requirement": "小规模真实完整基线处理",
+      "method_code": [
+        "task1/workflow/tools.py"
+      ],
+      "actual_validation_command_or_action": "build_goal1_figures.py；01_baseline_and_audit.ipynb新内核运行",
+      "expected": "≤12事前固定原记录，当前代码实际完整三步链",
+      "actual_result": "7例783点完成结构/时间诊断；完整链BLOCKED、stage count=null、not_processed=783；未用合成替代",
+      "evidence_paths": [
+        "task1/config/pilot.json",
+        "task1/results/goal1/pilot_diagnostics.json",
+        "task1/results/goal1/point_actions.jsonl"
+      ],
+      "evidence_links_relative_to_packet": [
+        "../../config/pilot.json",
+        "../../results/goal1/pilot_diagnostics.json",
+        "../../results/goal1/point_actions.jsonl"
+      ],
+      "affected_scope": "U01/U02；仅真实诊断有效，完整处理核心缺项",
+      "status": "BLOCKED"
+    },
+    {
+      "id": "G1-A12",
+      "requirement": "审核反馈进入真实后续动作",
+      "method_code": [
+        "task1/workflow/controller.py"
+      ],
+      "actual_validation_command_or_action": "检查实际calls/tools/events中的角色与反馈引用",
+      "expected": "C反馈→A新计划→真实补查→复核闭环",
+      "actual_result": "只有A初始计划→source_evidence→B输入交接，随后失败；没有C反馈或后续A行动",
+      "evidence_paths": [
+        "task1/evidence/goal1/runs/g1-live-20260926-03/checkpoint.json",
+        "task1/evidence/goal1/runs/README.md"
+      ],
+      "evidence_links_relative_to_packet": [
+        "runs/g1-live-20260926-03/checkpoint.json",
+        "runs/README.md"
+      ],
+      "affected_scope": "禁止把初始FEEDBACK_HANDOFF事件名/工程审查/复算当闭环",
+      "status": "BLOCKED"
+    },
+    {
+      "id": "G1-A13",
+      "requirement": "拒绝、回退、恢复和预算受控",
+      "method_code": [
+        "task1/workflow/controller.py",
+        "task1/workflow/provider.py"
+      ],
+      "actual_validation_command_or_action": "故障/缓存/恢复/中断/预算fixture；run03 B真实失败事件",
+      "expected": "失败保留、恢复不重复副作用；所有请求重试计入预算并≤护栏",
+      "actual_result": "离线修复通过；真实CLI出现9重连通知+1fallback，底层请求数unavailable，原预算只记外层进程，未满足护栏；已冻结",
+      "evidence_paths": [
+        "task1/evidence/goal1/tests/INDEPENDENT_CONTROL_REVIEW.md",
+        "task1/evidence/goal1/tests/case_results.json",
+        "task1/evidence/goal1/runs/budget_live.json",
+        "task1/evidence/goal1/runs/call_summary.json"
+      ],
+      "evidence_links_relative_to_packet": [
+        "tests/INDEPENDENT_CONTROL_REVIEW.md",
+        "tests/case_results.json",
+        "runs/budget_live.json",
+        "runs/call_summary.json"
+      ],
+      "affected_scope": "真实历史护栏FAIL保留；新0重试参数尚无live复验",
+      "status": "FAIL"
+    },
+    {
+      "id": "G1-A14",
+      "requirement": "LIVE/REPLAY/MOCK严格区分",
+      "method_code": [
+        "task1/workflow/provider.py",
+        "task1/workflow/controller.py",
+        "task1/scripts/recompute_archived_run.py"
+      ],
+      "actual_validation_command_or_action": "unavailable provider/mock/search-only/strict events tests；归档CODE重算",
+      "expected": "无模型不能假LIVE；重算不冒充新模型；fixture不进入真实run目录",
+      "actual_result": "无Mock fallback；构造恢复仅pytest隔离目录；保存真实失败；默认Notebook new_model_calls=0",
+      "evidence_paths": [
+        "task1/evidence/goal1/tests/case_results.json",
+        "task1/evidence/goal1/runs/call_summary.json",
+        "task1/evidence/goal1/validation/replay_result.json",
+        "task1/evidence/goal1/validation/notebooks.json"
+      ],
+      "evidence_links_relative_to_packet": [
+        "tests/case_results.json",
+        "runs/call_summary.json",
+        "validation/replay_result.json",
+        "validation/notebooks.json"
+      ],
+      "affected_scope": "当前发布记录分类正确，不代表live三角色已完成",
+      "status": "PASS"
+    },
+    {
+      "id": "G1-A15",
+      "requirement": "Notebook及工具可复算",
+      "method_code": [
+        "task1/notebooks/01_baseline_and_audit.ipynb",
+        "task1/notebooks/02_agent_loop_recompute.ipynb"
+      ],
+      "actual_validation_command_or_action": "两份Notebook各新内核Run All；recompute_archived_run.py run03",
+      "expected": "重新读取规定raw计算并比对，不仅打印旧CSV",
+      "actual_result": "两份各6 code cells通过；旧source_evidence按旧CODE重算一致；当前数值profile/audit/recompute一致",
+      "evidence_paths": [
+        "task1/evidence/goal1/validation/notebooks.json",
+        "task1/evidence/goal1/validation/replay_result.json",
+        "task1/evidence/goal1/validation/code_versions.json"
+      ],
+      "evidence_links_relative_to_packet": [
+        "validation/notebooks.json",
+        "validation/replay_result.json",
+        "validation/code_versions.json"
+      ],
+      "affected_scope": "离线入口与部分旧run复算；未完成的live闭环不被补造",
+      "status": "PASS"
+    },
+    {
+      "id": "G1-A16",
+      "requirement": "必要图表可重建且忠于数据",
+      "method_code": [
+        "task1/scripts/build_goal1_figures.py",
+        "task1/figures/goal1/goal1_loop.drawio"
+      ],
+      "actual_validation_command_or_action": "脚本生成PNG/SVG/PDF/DRAWIO；pdftoppm -r 200；实际view_image",
+      "expected": "P2/原生可编辑，数值真实；未知空间语义不叠底图",
+      "actual_result": "7例原始诊断图与实际/未完成角色结构图已生成、视觉检查；真实前后图明确BLOCKED",
+      "evidence_paths": [
+        "task1/figures/goal1/figure_manifest.json",
+        "task1/evidence/goal1/figures/visual_inspection.json",
+        "task1/evidence/goal1/validation/figures_command.json"
+      ],
+      "evidence_links_relative_to_packet": [
+        "../../figures/goal1/figure_manifest.json",
+        "figures/visual_inspection.json",
+        "validation/figures_command.json"
+      ],
+      "affected_scope": "当前允许的必要图；无正式全量结果图、无Process Evidence Lock",
+      "status": "PASS"
+    },
+    {
+      "id": "G1-A17",
+      "requirement": "Goal范围未越界",
+      "method_code": [
+        "task1/workflow/controller.py",
+        "task1/config/goal1.json"
+      ],
+      "actual_validation_command_or_action": "goal/schema/holdout/search-only权限反例；范围与文件对照",
+      "expected": "禁止候选扫描/组合/全量清洗/最终集选择/最终报告",
+      "actual_result": "只读全量结构盘点、7例诊断、数学工具、工程审核与部分live；Goal2/3均未执行",
+      "evidence_paths": [
+        "task1/config/goal1.json",
+        "task1/evidence/goal1/tests/case_results.json",
+        "task1/evidence/goal1/LIMITATIONS_AND_NEXT_REVIEW.md",
+        "task1/evidence/goal1/REQUIREMENTS.md"
+      ],
+      "evidence_links_relative_to_packet": [
+        "../../config/goal1.json",
+        "tests/case_results.json",
+        "LIMITATIONS_AND_NEXT_REVIEW.md",
+        "REQUIREMENTS.md"
+      ],
+      "affected_scope": "后续范围/阈值/预算仅草案，无自动执行",
+      "status": "PASS"
+    },
+    {
+      "id": "G1-A18",
+      "requirement": "完整安全的GitHub审核包同步",
+      "method_code": [
+        "task1/evidence/goal1/REVIEW_PACKET.md"
+      ],
+      "actual_validation_command_or_action": "git diff --check; secret/size/link/notebook checks; git push origin main; git ls-remote",
+      "expected": "安全提交完整产物，最后HEAD=Remote main",
+      "actual_result": "完整审核包已实际推送9ccbf63，git ls-remote核对一致；TLS间歇错误保留，同origin重试push成功。秘密/大文件/链接/Notebook检查通过；原文和原生导出空白例外有记录。",
+      "evidence_paths": [
+        "task1/evidence/goal1/publication.json",
+        "task1/evidence/goal1/validation/release_check.json",
+        "task1/evidence/goal1/REVIEW_PACKET.md"
+      ],
+      "evidence_links_relative_to_packet": [
+        "publication.json",
+        "validation/release_check.json",
+        "REVIEW_PACKET.md"
+      ],
+      "affected_scope": "已发布完整Goal1受阻审核包；本次验收状态文档更新在最终会话HEAD/remote再核对；不是GPT二重验收",
+      "status": "PASS"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "tool": "pdftoppm -r 200 -png -singlefile; view_image",
+  "scope": "two current PDFs, one page each",
+  "files": [
+    {
+      "name": "repair_loop",
+      "pdf_sha256": "dc4fcdd6ca0ba9a32b09f5f36a895b146ec799627a6d501f5af4ffe94120a08d",
+      "render_png_sha256": "928fb596baa1f125181a0d36a24b89ccf36d9eff913f1ba56285e47d1b2754a5",
+      "render_dpi": 200,
+      "pixels": [
+        2800,
+        1680
+      ],
+      "visual_inspection": "PASS: Chinese text/labels visible, no clipping; counts and status agree with current artifacts"
+    },
+    {
+      "name": "pilot_diagnostics",
+      "pdf_sha256": "c12ef5eb7f6942a077ed54198ec1b5c5bfd000db218225b868fcab937943c130",
+      "render_png_sha256": "a3a0b7694ff1ed3f010c3b28cf35346e0bcce1cc656e1bd6a2bd12164d3c31cc",
+      "render_dpi": 200,
+      "pixels": [
+        2400,
+        1000
+      ],
+      "visual_inspection": "PASS: Chinese text/labels visible, no clipping; counts and status agree with current artifacts"
+    }
+  ],
+  "historical_figures": "kept unchanged"
+}

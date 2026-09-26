@@ -1,0 +1,26 @@
+{
+  "role": "execution",
+  "call_id": "g1-repair-roles-01-02-execution",
+  "action": "duplicate_details",
+  "record_ids": [
+    "0",
+    "1",
+    "2",
+    "246",
+    "256",
+    "306",
+    "352"
+  ],
+  "feedback_refs": [
+    "g1-repair-roles-01-01-research",
+    "c7e35903774d6cb888b5e3e2d0998a403499ff62d471aa35e99edb2b04d8fbd5"
+  ],
+  "evidence_refs": [
+    "c7e35903774d6cb888b5e3e2d0998a403499ff62d471aa35e99edb2b04d8fbd5",
+    "repair:authorization"
+  ],
+  "summary": "请求对完整 pilot 提取同时间及连续同位置事件详情，分别诊断，保留输入顺序、原始索引和值，不自动删除。",
+  "reason": "完整 profiles 已执行；工具回执报告122个零时间差、62个同时间异位置事件及323个连续重复位置事件，支持进一步核对重复详情。CRS、距离口径和方向删除调度仍未解决，阻止完整基线，但不阻止此只读诊断。",
+  "request_status": "PROPOSED",
+  "candidate_for_future_review": null
+}

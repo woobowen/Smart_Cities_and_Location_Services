@@ -1,0 +1,72 @@
+{
+  "tool_id": "a379395181531cd7c354bcf659a9b54269c8068e07f53b53c26265372e415dc2",
+  "request_hash": "a379395181531cd7c354bcf659a9b54269c8068e07f53b53c26265372e415dc2",
+  "role": "review",
+  "call_id": "g1-repair-roles-01-05-review",
+  "request": {
+    "role": "review",
+    "call_id": "g1-repair-roles-01-05-review",
+    "action": "recompute_check",
+    "record_ids": [
+      "0",
+      "1",
+      "2",
+      "246",
+      "256",
+      "306",
+      "352"
+    ],
+    "feedback_refs": [
+      "g1-repair-roles-01-03-review",
+      "a348d1306ac0b89e8881549c8793d4f35413398d9110b114e8f141caf3f7ef29",
+      "g1-repair-roles-01-04-research",
+      "48bf51951ddeb1cf4ebbbc00c5f7e3d9399c58f67ee7ac964e2b066de970cb04"
+    ],
+    "evidence_refs": [
+      "c7e35903774d6cb888b5e3e2d0998a403499ff62d471aa35e99edb2b04d8fbd5",
+      "a348d1306ac0b89e8881549c8793d4f35413398d9110b114e8f141caf3f7ef29",
+      "48bf51951ddeb1cf4ebbbc00c5f7e3d9399c58f67ee7ac964e2b066de970cb04",
+      "repair:authorization"
+    ],
+    "summary": "请求对完整 pilot 执行最终独立 recompute_check，核对时间边界严格大于30秒、等值不切分、分区索引无遗漏无重复及原始顺序和值保留。",
+    "reason": "verify_profiles 已返回 VERIFIED，仅覆盖结构计数；后续 time_boundaries 仍为 EXECUTED，记录1的30秒间隔未切分。须等待最终复核回执，才能在其验证范围内关闭诊断。CRS、距离口径及方向删除调度未决，不阻止原始/时间诊断，但完整基线、处理闭环及 Goal1 总体通过仍 BLOCKED。下一任务是定点追源文件绑定的 CRS、提交距离方案审核，并取得方向删除调度的明确用户确认。",
+    "request_status": "PROPOSED",
+    "candidate_for_future_review": null
+  },
+  "run_id": "g1-repair-roles-01",
+  "mode": "LIVE",
+  "classification": "CURRENT_RUN_REAL_DATA",
+  "code_sha": "880290a5dada84c711248844038daa3ee35eeefb",
+  "output": {
+    "classification": "CURRENT_RUN_REAL_DATA",
+    "input_sha256": "c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3",
+    "record_ids": [
+      "0",
+      "1",
+      "2",
+      "246",
+      "256",
+      "306",
+      "352"
+    ],
+    "input_records": 7,
+    "input_points": 783,
+    "modified_values": 0,
+    "parent_version": "RAW:c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3",
+    "semantics_version": "g1-semantics-v1",
+    "metrics_version": "g1-metrics-v1",
+    "status": "VERIFIED",
+    "result": {
+      "status": "VERIFIED",
+      "errors": [],
+      "records_checked": 7,
+      "claim": "Structural counts only; no physical accuracy or cleaning quality claim",
+      "recomputed_sha256": "a8564ce972115ae85df621862c44aa503b0dab66a6a2ca1951a4fdc73df655ba",
+      "stored_sha256": "a8564ce972115ae85df621862c44aa503b0dab66a6a2ca1951a4fdc73df655ba",
+      "exact_match": true
+    }
+  },
+  "output_sha256": "25c962adbe8bb9fbf180f987a24ee3fa1dc11932f8979b02b6e9e4ca8af26629",
+  "elapsed_seconds": 0.7228646230000777,
+  "completed_at": "2026-09-26T13:26:28.419453+00:00"
+}

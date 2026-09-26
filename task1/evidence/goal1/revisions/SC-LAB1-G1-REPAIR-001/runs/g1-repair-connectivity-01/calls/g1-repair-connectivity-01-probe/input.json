@@ -1,0 +1,79 @@
+{
+  "role": "research",
+  "call_id": "g1-repair-connectivity-01-probe",
+  "prompt": "Small connectivity probe only. Return JSON with role=\"research\", call_id=\"g1-repair-connectivity-01-probe\", action=\"connectivity_probe\", record_ids=[], feedback_refs=[], evidence_refs=[\"repair:authorization\"], summary=\"CONNECTIVITY_OK\", reason=\"Small connectivity probe\", request_status=\"PROPOSED\", candidate_for_future_review=null. Do not use tools or perform any trajectory task.",
+  "schema": {
+    "type": "object",
+    "properties": {
+      "role": {
+        "type": "string",
+        "enum": [
+          "research"
+        ]
+      },
+      "call_id": {
+        "type": "string",
+        "enum": [
+          "g1-repair-connectivity-01-probe"
+        ]
+      },
+      "action": {
+        "type": "string",
+        "enum": [
+          "connectivity_probe"
+        ]
+      },
+      "record_ids": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "feedback_refs": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "evidence_refs": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "summary": {
+        "type": "string"
+      },
+      "reason": {
+        "type": "string"
+      },
+      "request_status": {
+        "type": "string",
+        "enum": [
+          "PROPOSED",
+          "NEEDS_REVIEW",
+          "BLOCKED"
+        ]
+      },
+      "candidate_for_future_review": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    },
+    "required": [
+      "role",
+      "call_id",
+      "action",
+      "record_ids",
+      "feedback_refs",
+      "evidence_refs",
+      "summary",
+      "reason",
+      "request_status",
+      "candidate_for_future_review"
+    ],
+    "additionalProperties": false
+  }
+}
