@@ -1,19 +1,34 @@
-# Goal 1 工作入口
+# Goal 1 当前工作入口
 
-当前任务为 SC-LAB1-G1-REPAIR-001，修复前审核结论为 REVISE / NOT_PASS。工程总状态仍 PARTIAL_BLOCKED；新增真实诊断闭环已完成，D1/D2阻断真实空间baseline。完整入口见 [REVIEW_PACKET](../../evidence/goal1/REVIEW_PACKET.md)。
+当前执行 `SC-LAB1-G1-COMPLETE-001`，继续同一 `SC-LAB1-G1-FOUNDATION-001`。
+完整结果与状态见 [REVIEW_PACKET](../../evidence/goal1/REVIEW_PACKET.md)。
+执行授权为 [COMPLETE](../../evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/handoff/SC-LAB1-G1-COMPLETE-001_CODEX_PROMPT.md)
+及最新[补充决定](../../evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/AUTHORIZATION_SUPPLEMENT.md)。
 
-沿用现有 .venv 和恢复的临时 Codex CLI0.157.1，不需要重新安装环境。教师源位于 task1/作业/作业/，保持原样。task1/workflow 是工作版执行实现；它不加载会自动投影/平滑/改时间的历史入口。
+D2一次标记同时删除已明确批准；原始 datum 仍 `UNVERIFIED`。
+固定七条 pilot 在冻结局部 ENU 模型下做真实条件化分析，原始经纬度和时间不变。
+模型尺度的米不是已确认地面精度。G2/G3与正式两报告/教师提交仍不执行。
 
-可离线复核：
+复用 `.venv`，本轮新增独立核验依赖 `pyproj==3.7.2`。从仓库根目录执行：
 
 ```bash
 .venv/bin/python -m pytest task1/tests -q
-.venv/bin/python task1/scripts/recompute_archived_run.py g1-live-20260926-03
-.venv/bin/python task1/evidence/goal1/revisions/SC-LAB1-G1-REPAIR-001/audit_live.py
+.venv/bin/python -m task1.scripts.complete_goal1 status
+.venv/bin/python -m task1.scripts.complete_goal1 verify --run-id g1-complete-pilot-01
 ```
 
-当前记录：6次外层派发（1探针＋5角色）、5次真实工具、无可见重试；底层请求数unknown。旧ledger/live_stop保持冻结，新修复批次模型预算已耗尽。不要重发模型、清空ledger或换run_id/base绕过；Notebook默认离线，无模型请求。
+`verify`真正重读原始JSON并重算，不调用模型。新运行使用新ID：
 
-完整平面构造链已实现并独立验证；真实生产合同与坐标适配器等待批准，不把构造approval接到教师JSON。历史source_evidence仍按旧CODE复算；新工具contract_snapshot只读合同说明，source_check读取精确白名单来源，不替未知CRS背书。
+```bash
+.venv/bin/python -m task1.scripts.complete_goal1 recompute --run-id YOUR_NEW_RUN_ID
+```
 
-[合同](CONTRACTS.md) · [角色/控制器](ARCHITECTURE.md) · [修复对照](../../evidence/goal1/revisions/SC-LAB1-G1-REPAIR-001/REPAIR_COMPARISON.md)
+入口要求先提交处理源码，并登记新run；不能在旧run热替换代码或覆盖产物。
+若执行/写操作结果未知，保留检查点并人工核对，不自动重发。
+两工作 Notebook 默认RECOMPUTE，新内核Run All无模型调用。
+
+原生A/B/C实际协作由当前授权主会话分派，`GoalJournal`记录任务和真实回执。
+它不假装在独立Python进程中自动启动不存在的原生会话。旧CLI Provider仍保留，
+旧4次及修复6次调用、冻结ledger和失败不重置；旧批次授权不用于绕过新硬限制。
+
+[合同](CONTRACTS.md) · [实际角色与控制器](ARCHITECTURE.md) · [条件化坐标合同](../../config/conditional_planar.json)

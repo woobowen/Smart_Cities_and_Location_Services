@@ -1,10 +1,10 @@
 {
   "task_id": "SC-LAB1-G1-FOUNDATION-001",
   "goal": 1,
-  "policy_version": "g1-policy-v1",
+  "policy_version": "g1-policy-v2-conditional",
   "semantics_version": "g1-semantics-v1",
   "metrics_version": "g1-metrics-v1",
-  "approval_record": "task1/evidence/goal1/APPROVED_PROMPT.md",
+  "approval_record": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/handoff/SC-LAB1-G1-COMPLETE-001_CODEX_PROMPT.md",
   "raw_path": "task1/作业/作业/traj_dict.json",
   "raw_sha256": "c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3",
   "semantics": {
@@ -30,7 +30,7 @@
     },
     "crs": {
       "value": null,
-      "status": "UNKNOWN",
+      "status": "UNVERIFIED",
       "source": "teacher PPT p13 body: GPS generally WGS84; notes: domestic GPS generally GCJ02; neither binds this file",
       "verification": "source review conflict; function names and legacy geo.py conventions insufficient",
       "affected_operations": [
@@ -44,14 +44,15 @@
       ]
     },
     "distance_policy": {
-      "value": null,
-      "status": "ASSUMPTION_REQUIRING_APPROVAL",
-      "source": "starter Notebook util Mercator vs traj_agent local ellipsoid plane",
-      "verification": "metric choice affects thresholds; no approved override",
+      "value": "G1_CONDITIONAL_ENU_V1",
+      "status": "CONDITIONAL_ANALYSIS_AUTHORIZED",
+      "source": "task1/config/conditional_planar.json; AUTHORIZATION_SUPPLEMENT.md",
+      "verification": "pre-fixed local model; source datum remains UNVERIFIED",
       "affected_operations": [
         "distance",
         "length_filter",
         "space_segmentation",
+        "direction_denoise",
         "dp_meters"
       ]
     },
@@ -162,17 +163,17 @@
     ],
     "order_status": "NOTEBOOK_REFERENCE_NOT_OPTIMALITY_CLAIM",
     "direction_rule": "PPT20 outgoing bearings d_i; compare circular differences to d_(i-1) and d_(i+1), BOTH > threshold",
-    "direction_unresolved": [
-      "simultaneous vs online vs repeated passes",
-      "terminal outgoing direction policy",
-      "zero-displacement neighbor policy"
-    ],
-    "processing_status": "BLOCKED",
-    "blocking_ids": [
-      "U01_CRS_DISTANCE",
-      "U02_DIRECTION_EXECUTION"
-    ],
-    "scope": "primitives verified on CONSTRUCTED_FIXTURE; real diagnostic only until research decision"
+    "direction_unresolved": [],
+    "processing_status": "APPROVED_CONDITIONAL_ANALYSIS",
+    "blocking_ids": [],
+    "scope": "fixed seven-record conditional real-data development baseline; source geographic semantics UNVERIFIED",
+    "direction_schedule": {
+      "method": "single_pass_simultaneous_keep_undefined",
+      "status": "USER_APPROVED",
+      "approval_path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/USER_DECISIONS.json",
+      "approval_sha256": "2b68e39573ab9256a353484842438a118445bb62ddbaca1c42fbd4eee9fe4f0e"
+    },
+    "approved_contract_id": "G1_CONDITIONAL_ENU_V1"
   },
   "permissions": {
     "status": "APPROVED_BY_CURRENT_PROMPT",
@@ -194,7 +195,9 @@
       "recompute_check",
       "contract_snapshot",
       "source_check",
-      "escalate"
+      "escalate",
+      "verify_time_boundaries",
+      "verify_duplicate_details"
     ],
     "execution": [
       "profile_pilot",
@@ -212,7 +215,9 @@
       "contract_snapshot",
       "source_check",
       "escalate",
-      "verify_baseline"
+      "verify_baseline",
+      "verify_time_boundaries",
+      "verify_duplicate_details"
     ]
   },
   "budget": {
@@ -249,5 +254,6 @@
     "BLOCKED"
   ],
   "live_execution_enabled": false,
-  "live_stop_reason": "Run03 routing failure exposed hidden retries; no additional live calls until reviewed. Retry flags and process-group handling have only ENGINEERING_TEST validation."
+  "live_stop_reason": "Run03 routing failure exposed hidden retries; no additional live calls until reviewed. Retry flags and process-group handling have only ENGINEERING_TEST validation.",
+  "authorization_supplement": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/AUTHORIZATION_SUPPLEMENT.md"
 }

@@ -11,7 +11,7 @@ from task1.workflow import controller as c, tools, provider as p, budget
 from task1.workflow.diagnostics import profile, duplicate_details, independent_profile_review
 from task1.workflow.io import read_json, write_json, digest, object_hash, CONFIG
 from task1.workflow.sources import validate_references, source_context
-from task1.workflow.pipeline import run_constructed, preflight
+from task1.workflow.pipeline import run_constructed, preflight, trusted_constructed_reference
 from task1.workflow.evaluation import review_baseline
 
 
@@ -140,15 +140,16 @@ def constructed_run():
 
 def test_complete_constructed_runner_and_independent_review():
     records,contract=constructed_run();before=copy.deepcopy(records)
+    trusted=trusted_constructed_reference(records,contract)
     result=run_constructed(records,contract)
     assert records==before and result['status']=='VERIFIED'
     assert result['stage_counts']=={'input':8,'segmented':2,'filtered':2,'denoised':1,'simplified':3,'retained':2,'not_processed':0}
-    assert review_baseline(result)['status']=='VERIFIED'
+    assert review_baseline(result,*trusted)['status']=='VERIFIED'
     assert {r['original_index'] for r in result['point_actions']}==set(range(8))
     damaged=copy.deepcopy(result);damaged['point_actions'].pop()
-    assert review_baseline(damaged)['status']=='REJECTED'
+    assert review_baseline(damaged,*trusted)['status']=='REJECTED'
     damaged=copy.deepcopy(result);damaged['records'][0]['processed_segments'][0]['denoise']['deleted_indices']=[]
-    assert review_baseline(damaged)['status']=='REJECTED'
+    assert review_baseline(damaged,*trusted)['status']=='REJECTED'
 
 
 def test_constructed_approval_cannot_unlock_real_input():

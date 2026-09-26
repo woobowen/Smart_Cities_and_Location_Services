@@ -31,6 +31,13 @@ Purpose: **Smart Cities Research Governance / Source / Uncertainty / Spatiotempo
 
 GPT 提供研究候选与审核，用户审阅、质疑、修改、否决或选择；Codex 执行批准方案。Git commit/push 的执行规则由 AGENTS 管理。
 
+批准 Goal 内，审核发现工程缺陷后持续修复、回归、重建受影响产物并恢复父任务，
+不以审核报告、局部完成或子角色结束代替 Goal 验收。实现偏离批准定义的修正属于工程修复；
+改变定义、指标、关键参数原则或时空语义才需要研究决定，结果数值变化本身不自动越权。
+运行时角色不能改原始数据或批准合同；评价器可以修复实现，不能降低标准。
+内部进度与 commit 不代表等待用户；按当前 Prompt 完成内部总验收后发布，
+真实外部阻碍保存可恢复状态并诚实说明，仍继续所有不受影响的必要工作。
+
 ## D. Source Audit
 
 每个关键来源至少记录：Title；Author / Institution；Publication Date；URL；Accessibility；Source Type / Authority；Exact Supported Claim。
@@ -67,6 +74,12 @@ UNRESOLVED 实验原则保持 same data、same split、same preprocessing、same
 - sampling mechanism；representativeness；bias；sample vs population。
 
 禁止无依据把经纬度直接用于米制欧氏距离、为未知数据默认指定 CRS/时区、无物理依据插值缺失轨迹、混淆方向与速度字段、混淆单位、把样本结果直接外推总体。关键语义无法确认时停止受影响正式实验，返回证据、候选解释与影响。
+
+用户明确授权条件化分析时，允许在有依据的坐标顺序/角度单位与结构事实之上，预先固定
+适合任务尺度的局部数学模型及工作坐标，独立检查实现、近似误差与阈值影响。
+source_crs 仍为 UNVERIFIED；数学椭球/投影假设不是文件 datum 证明，不能按清洗分数选择。
+原始值不变，产物明确标为真实数据上的条件化分析。工程正确、条件化结果有效和真实地理
+语义确认分别验收；不放宽共同审核标准，也不以未知事实阻断授权内的全部处理。
 
 ## H. Parameter Rationale
 

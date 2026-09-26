@@ -244,7 +244,7 @@ def direction_candidates(record, threshold):
 
     At point position i, d[i] is i→i+1. If the circular difference between d[i]
     and each of d[i-1], d[i+1] is strictly > threshold, mark a candidate. This
-    simultaneous diagnostic does not settle the still unresolved deletion policy.
+    diagnostic itself does not delete; an explicitly registered schedule does.
     The first and final points, the penultimate point without a following outgoing
     edge, and any three-edge window containing a zero displacement are unevaluable.
     """
@@ -271,7 +271,7 @@ def direction_candidates(record, threshold):
     return {"status": "DIAGNOSTIC_ONLY", "rows": rows,
             "candidate_indices": [row["index"] for row in rows if row["candidate"] is True],
             "deleted_indices": [], "modified_values": 0,
-            "limitation": "Deletion/iteration/undefined-direction policy remains unapproved"}
+            "limitation": "Predicate diagnostic only; deletion requires the separately registered schedule"}
 
 
 def denoise_trajectory(record, threshold=None, *, method=None, time_reliable=False):

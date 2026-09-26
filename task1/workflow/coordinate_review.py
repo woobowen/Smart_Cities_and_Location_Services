@@ -1,0 +1,100 @@
+"""Independent PROJ checks and bounded geometric sensitivity, not CRS proof."""
+import math
+import pyproj
+from .coordinates import conditional_contract, working_xy
+from .evaluation import verify_simplification
+from .io import object_hash
+
+
+def validate_coordinates(raw, baseline=None):
+    c=conditional_contract();m=c['analysis_model'];v=c['validation']
+    a=m['semi_major_m'];rf=m['inverse_flattening'];lon=m['origin_lon_degrees'];lat=m['origin_lat_degrees']
+    transform=pyproj.Transformer.from_pipeline(
+        f'+proj=pipeline +step +proj=unitconvert +xy_in=deg +xy_out=rad '
+        f'+step +proj=cart +a={a} +rf={rf} '
+        f'+step +proj=topocentric +a={a} +rf={rf} +lon_0={lon} +lat_0={lat} +h_0=0')
+    geod=pyproj.Geod(a=a,rf=rf)
+    alternate=pyproj.Proj(proj='aeqd',a=a,rf=rf,lon_0=lon,lat_0=lat,units='m')
+    max_coordinate_error=0.;max_radius=0.;max_pair_relative=0.;max_pair_absolute=0.
+    pair_count=0;edges=[];coordinates={};alternate_xy={};errors=[]
+    for rid,(times,coords) in raw.items():
+        xy=working_xy(coords);coordinates[rid]=xy;alt=[]
+        for i,(p,q) in enumerate(zip(coords,xy)):
+            east,north,_=transform.transform(p[0],p[1],0,errcheck=True)
+            err=math.hypot(q[0]-east,q[1]-north);max_coordinate_error=max(max_coordinate_error,err)
+            radius=geod.inv(lon,lat,p[0],p[1])[2];max_radius=max(max_radius,radius)
+            alt.append(list(alternate(p[0],p[1],errcheck=True)))
+            for j in range(i):
+                s=geod.inv(coords[j][0],coords[j][1],p[0],p[1])[2]
+                d=math.dist(xy[j],q);pair_count+=1
+                max_pair_absolute=max(max_pair_absolute,abs(d-s))
+                if s>1e-6:max_pair_relative=max(max_pair_relative,abs(d-s)/s)
+            if i:
+                s=geod.inv(coords[i-1][0],coords[i-1][1],p[0],p[1])[2]
+                d=math.dist(xy[i-1],q)
+                edges.append({'record_id':rid,'left_index':i-1,'right_index':i,'enu_m':d,'ellipsoid_m':s,
+                              'absolute_difference_m':abs(d-s),'margin_to_400m':abs(d-400),
+                              'threshold_disagreement':(d>400)!=(s>400)})
+        alternate_xy[rid]=alt
+    if max_coordinate_error>v['coordinate_absolute_tolerance_m']:errors.append('INDEPENDENT_PROJ_COORDINATE_MISMATCH')
+    if max_radius>m['domain_max_radius_m']:errors.append('OUTSIDE_LOCAL_DOMAIN')
+    if max_pair_relative>v['max_observed_relative_distance_difference']:errors.append('LOCAL_MODEL_DISTANCE_DIFFERENCE_TOO_LARGE')
+    result={'status':'REJECTED' if errors else 'VERIFIED','errors':errors,
+            'classification':'CURRENT_RUN_CONDITIONAL_ANALYSIS','source_crs':'UNVERIFIED',
+            'contract_id':c['contract_id'],'contract_sha256':object_hash(c),'raw_scope_sha256':object_hash(raw),
+            'independent_implementation':{'pyproj':pyproj.__version__,'proj':pyproj.proj_version_str},
+            'points_checked':sum(len(v[1]) for v in raw.values()),'within_record_pairs_checked':pair_count,
+            'max_coordinate_crosscheck_error_m':max_coordinate_error,'max_model_geodesic_radius_m':max_radius,
+            'max_pair_distance_relative_difference':max_pair_relative,'max_pair_distance_absolute_difference_m':max_pair_absolute,
+            'edge_checks':edges,'edge_400m_disagreements':sum(e['threshold_disagreement'] for e in edges),
+            'source_datum_proven':False,'quality_claim':'implementation and finite pilot model sensitivity only',
+            'unavailable_claims':['absolute_geographic_accuracy','true_ground_error','datum_or_offset_identification']}
+    if baseline is None:
+        result['processing_threshold_checks']='NOT_RUN_PREPROCESSING_VALIDATION'
+        return result
+    if baseline.get('status')!='VERIFIED': raise ValueError('ACTUAL_BASELINE_REQUIRED')
+    segment_checks=[];direction_checks=[];dp_checks=[]
+    for record in baseline['records']:
+        rid=record['record_id'];times,coords=raw[rid]
+        segments=[(s,False) for s in record['filtered_segments']]+[(s['input'],True) for s in record['processed_segments']]
+        for segment,processed in segments:
+            indices=segment['indices']
+            enu=sum(math.dist(coordinates[rid][i],coordinates[rid][j]) for i,j in zip(indices,indices[1:]))
+            geo=sum(geod.inv(*coords[i],*coords[j])[2] for i,j in zip(indices,indices[1:]))
+            segment_checks.append({'record_id':rid,'segment_index':segment['segment_index'],'points':len(indices),
+                'enu_length_m':enu,'ellipsoid_length_m':geo,'margin_to_65m':abs(enu-65),
+                'threshold_disagreement':(enu<65)!=(geo<65)})
+            if not processed:continue
+            bearing_enu=[];bearing_geo=[]
+            for i,j in zip(indices,indices[1:]):
+                if coords[i]==coords[j]:bearing_enu.append(None);bearing_geo.append(None);continue
+                x,y=coordinates[rid][i],coordinates[rid][j]
+                bearing_enu.append(math.degrees(math.atan2(y[0]-x[0],y[1]-x[1]))%360)
+                bearing_geo.append(geod.inv(*coords[i],*coords[j])[0]%360)
+            circular=lambda x,y:abs((x-y+180)%360-180)
+            for pos in range(1,len(indices)-2):
+                en= bearing_enu[pos-1:pos+2]; ge=bearing_geo[pos-1:pos+2]
+                if None in en or None in ge:continue
+                en_d=[circular(en[1],b) for b in (en[0],en[2])]
+                ge_d=[circular(ge[1],b) for b in (ge[0],ge[2])]
+                direction_checks.append({'record_id':rid,'original_index':indices[pos],
+                    'enu_differences_degrees':en_d,'geodesic_azimuth_differences_degrees':ge_d,
+                    'margin_to_35deg':min(abs(x-35) for x in en_d),
+                    'predicate_disagreement':(min(en_d)>35)!=(min(ge_d)>35)})
+        for segment in record['processed_segments']:
+            clean=segment['denoise']['record'];final=segment['output']
+            def rec(r):
+                ids=r['indices'];return {'record_id':rid,'indices':ids,'timestamps':[times[i] for i in ids],
+                                        'xy':[alternate_xy[rid][i] for i in ids]}
+            checked=verify_simplification(rec(clean),rec(final),c['parameters']['dp'])
+            dp_checks.append({'record_id':rid,'segment_index':segment['segment_index'],
+                              'alternate_projection':'ellipsoid_AEQD_same_fixed_center_model_only',
+                              'status':checked['status'],'max_error_m':checked['metrics']['max_error']['value'],
+                              'exceeding_points':checked.get('exceeding_points',[])})
+    result.update(processing_threshold_checks='EXECUTED',segment_65m_checks=segment_checks,
+                  direction_35deg_checks=direction_checks,dp_5m_checks=dp_checks,
+                  segment_65m_disagreements=sum(c['threshold_disagreement'] for c in segment_checks),
+                  direction_35deg_disagreements=sum(c['predicate_disagreement'] for c in direction_checks),
+                  dp_5m_disagreements=sum(c['status']!='VERIFIED' for c in dp_checks),
+                  interpretation='Disagreements limit robustness claims; they do not alter the fixed ENU contract or relax DP tolerance.')
+    return result

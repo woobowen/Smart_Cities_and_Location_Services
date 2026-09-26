@@ -155,6 +155,41 @@ class Controller:
             raise GateError('TOOL_SUMMARY_MISMATCH')
         return payload
 
+    def review_target(self, action, request):
+        """Resolve actual registered bytes, never an ID/hash asserted by a model."""
+        from .artifact_review import COMPONENTS
+        explicit = {'verify_profiles':'profile_pilot', 'verify_time_boundaries':'time_boundaries',
+                    'verify_duplicate_details':'duplicate_details', 'verify_baseline':'baseline'}
+        if action not in (*explicit, 'recompute_check'): return None, None
+        artifacts = [t for t in self.state['tools'] if t['action'] in COMPONENTS
+                     and t['status'] in ('EXECUTED', 'VERIFIED')]
+        if action in explicit: artifacts = [t for t in artifacts if t['action'] == explicit[action]]
+        referenced = [t for t in artifacts if t['tool_id'] in request['evidence_refs']]
+        if len(referenced) > 1: raise GateError('AMBIGUOUS_REVIEW_TARGET')
+        target = referenced[0] if referenced else (artifacts[-1] if artifacts else None)
+        if target is None: raise GateError('MISSING_REGISTERED_REVIEW_TARGET')
+        receipt = self.read_tool(target)
+        binding = {'artifact_id':target['tool_id'], 'sha256':target['sha256'],
+                   'output_sha256':receipt['output_sha256'], 'action':target['action']}
+        return receipt['output'], binding
+
+    def artifact_coverage(self):
+        from .artifact_review import COMPONENTS
+        unchecked = []
+        for target in self.state['tools']:
+            if target['action'] not in COMPONENTS or target['status'] not in ('EXECUTED','VERIFIED'): continue
+            self.read_tool(target)
+            matched = False
+            for review in self.state['tools']:
+                r = self.read_tool(review)['output'].get('result', {})
+                if (r.get('target_artifact_id') == target['tool_id']
+                        and r.get('target_artifact_hash') == target['sha256']
+                        and r.get('status') == 'VERIFIED' and not r.get('unchecked_components')
+                        and set(COMPONENTS[target['action']]).issubset(r.get('checked_components', []))):
+                    matched = True
+            if not matched: unchecked.append(target['tool_id'])
+        return {'status':'VERIFIED' if not unchecked else 'NEEDS_REVIEW', 'unchecked_artifact_ids':unchecked}
+
     def _dispatch(self,request,role,call_id,*,feedback_ids=(),inject_failure=False):
         self.protection_check()
         if self.state['phase']>=3:
@@ -165,9 +200,10 @@ class Controller:
         except (ValueError,jsonschema.ValidationError) as exc:
             self.event('REQUEST_REJECTED',call_id=call_id,reason=str(exc))
             raise
+        target, binding = self.review_target(request['action'], request)
         self.spend('tool_requests')
         key=object_hash({'call_id':call_id,'action':request['action'],'ids':request['record_ids'],'input':self.state['input_sha256'],
-                         'contract':self.config_hash,'profiles':self.profiles() if request['action'] in ('verify_profiles','recompute_check') else None})
+                         'contract':self.config_hash,'target':binding})
         artifact='tools/'+key+'.json'
         path=bound_path(self.directory,artifact)
         if path.exists():
@@ -182,7 +218,7 @@ class Controller:
             if inject_failure: raise GateError('INJECTED_FAILURE')
             output=execute_tool(request['action'],request['record_ids'],self.policy,self.profiles(),
                                 classification='CURRENT_RUN_REAL_DATA' if self.mode=='LIVE' else self.mode,
-                                previous_baseline=self.baseline_output())
+                                previous_baseline=self.baseline_output(), target_artifact=target, target_binding=binding)
             self.protection_check()
             if output.get('status') not in ('EXECUTED','VERIFIED','REJECTED','BLOCKED','FAILED'):
                 raise GateError('FORGED_SUCCESS_STATUS')
@@ -363,9 +399,11 @@ class Controller:
             self.state['phase']+=1;self.state['inflight_model']=None;self.state['status']='VERIFIED';self.save()
             self.event('FEEDBACK_HANDOFF',decision=decision,next_phase=self.state['phase'])
             if stop_after is not None and self.state['phase']>=stop_after:return self.state
-        self.state.update(status='VERIFIED' if self.state['phase']==5 else 'BLOCKED',ended_at=now(),
+        coverage = self.artifact_coverage()
+        self.state.update(status='FRAGMENT_COMPLETE' if coverage['status']=='VERIFIED' else 'NEEDS_REVIEW',ended_at=now(),
                           diagnostic_loop_status='REAL_DIAGNOSTIC_LOOP' if self.state['phase']==5 and self.baseline_output() is None else 'NOT_APPLICABLE',
-                          real_baseline_status='VERIFIED' if self.baseline_output() else ('BLOCKED' if preflight(self.policy) else 'NOT_RUN'),gpt_second_review='PENDING')
+                          artifact_coverage=coverage, goal1_complete=False,
+                          real_baseline_status='AWAITING_INDEPENDENT_REVIEW' if self.baseline_output() else ('BLOCKED' if preflight(self.policy) else 'NOT_RUN'),gpt_second_review='PENDING')
         self.save();self.export_manifest()
         return self.state
 
