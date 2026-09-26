@@ -74,7 +74,7 @@ A/B/C职责、独立输入/输出/工具/自主边界/交接/核验/升级等11�
 | G1-A15 | PASS | Notebook及工具可复算 | [依据](validation/notebooks.json) |
 | G1-A16 | PASS | 必要图表可重建且忠于数据 | [依据](../../figures/goal1/figure_manifest.json) |
 | G1-A17 | PASS | Goal范围未越界 | [依据](../../config/goal1.json) |
-| G1-A18 | NOT_RUN | 完整安全的GitHub审核包同步 | [依据](publication.json) |
+| G1-A18 | PASS | 完整安全的GitHub审核包同步 | [依据](publication.json) |
 
 核心A05/A06/A09/A11/A12仍BLOCKED；A13保留真实预算护栏FAIL。其他PASS不能抵消。GPT独立远程二重验收仍PENDING。
 
@@ -86,7 +86,7 @@ A/B/C职责、独立输入/输出/工具/自主边界/交接/核验/升级等11�
 - [逐记录CSV](../../results/goal1/pilot_summary.csv)、[逐点动作](../../results/goal1/point_actions.jsonl)、[完整诊断](../../results/goal1/pilot_diagnostics.json)、[运行回执](runs/README.md)。
 - [诊断PDF](../../figures/goal1/pilot_diagnostics.pdf)、[诊断SVG](../../figures/goal1/pilot_diagnostics.svg)、[结构draw.io](../../figures/goal1/goal1_loop.drawio)、[结构SVG](../../figures/goal1/goal1_loop.svg)、[结构PDF](../../figures/goal1/goal1_loop.pdf)。
 
-新增文件均为本任务目录；没有删除有效材料，没有改公共模板、长期治理、ChatGPT UI或11-file上传集合。Experiment Report/Process Report只保留阶段素材；未制作正式报告或虚假聊天证据/Evidence Lock。没有最终教师ZIP。
+完整逐文件新增/修改/删除及hash见 [task_file_manifest.json](validation/task_file_manifest.json)。新增文件均为本任务目录；没有删除有效材料，没有改公共模板、长期治理、ChatGPT UI或11-file上传集合。Experiment Report/Process Report只保留阶段素材；未制作正式报告或虚假聊天证据/Evidence Lock。没有最终教师ZIP。
 
 # G. 待GPT/用户审核事项
 
@@ -101,7 +101,7 @@ A/B/C职责、独立输入/输出/工具/自主边界/交接/核验/升级等11�
 
 Repository：`https://github.com/woobowen/Smart_Cities_and_Location_Services.git`，Branch：`main`。
 
-CODE_SHA：`ea3b20ad13c65ab01cf2c761db6b09c185855b53`。代码里程碑真实push并核对remote一致。审核包的artifact发布状态见[publication.json](publication.json)；最终会话回复在最后push后提供ARTIFACT_SHA/Remote SHA和固定提交链接。自身文件不预写尚未生成的自身提交SHA。初始无用户未提交工作，未stash/reset/force push或创建分支。
+CODE_SHA：`ea3b20ad13c65ab01cf2c761db6b09c185855b53`。完整审核包已真实push为`9ccbf63a573d4045af90a07673401960d0bc56c3`，实际ls-remote返回相同SHA。TLS间歇错误已保留，同origin重试push成功；没有换认证或降低TLS检查。[publication.json](publication.json)保存核对。本验收状态/发布证据随后另提交，最终会话回复在最后push后给出最终ARTIFACT_SHA/Remote SHA和固定提交链接。自身文件不预写尚未生成的自身提交SHA。初始无用户未提交工作，未stash/reset/force push或创建分支。
 
 本次新增环境：项目`.venv`中的pytest/nbformat/nbclient/ipykernel及依赖；临时目录`/tmp/sc-g1-codex-0.157.1`中的CLI0.157.1。无apt系统包、无新字体、无全局CLI/账户配置改动、无额外付费API。[完整安装日志/包清单](environment/README.md)。当前保留以便复算；用户可决定是否在验收后清理。
 

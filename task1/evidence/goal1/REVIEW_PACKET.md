@@ -22,7 +22,7 @@
 | 真实7例结果/全部点去向 | [pilot_diagnostics](../../results/goal1/pilot_diagnostics.json)、[逐记录CSV](../../results/goal1/pilot_summary.csv)、[783点动作JSONL](../../results/goal1/point_actions.jsonl) |
 | Notebook | [基础/审核工作版](../../notebooks/01_baseline_and_audit.ipynb)、[部分LIVE记录/真实离线复算](../../notebooks/02_agent_loop_recompute.ipynb)、[新内核日志](validation/notebooks.json) |
 | 图与可编辑源 | [诊断PDF](../../figures/goal1/pilot_diagnostics.pdf)、[SVG](../../figures/goal1/pilot_diagnostics.svg)、[结构PDF](../../figures/goal1/goal1_loop.pdf)、[draw.io](../../figures/goal1/goal1_loop.drawio)、[结构SVG](../../figures/goal1/goal1_loop.svg)、[生成脚本](../../scripts/build_goal1_figures.py)、[200dpi视觉检查](figures/visual_inspection.json) |
-| 真实复算与版本关系 | [replay结果](validation/replay_result.json)、[原代码恢复复算脚本](../../scripts/recompute_archived_run.py)、[code_versions](validation/code_versions.json)、[117原文件不变](validation/original_integrity.json) |
+| 真实复算与版本关系 | [replay结果](validation/replay_result.json)、[原代码恢复复算脚本](../../scripts/recompute_archived_run.py)、[code_versions](validation/code_versions.json)、[117原文件不变](validation/original_integrity.json)、[实际run版本/事件核验](validation/run_artifact_audit.json)、[全部新增文件清单](validation/task_file_manifest.json) |
 | 限制/升级/Goal2草案 | [LIMITATIONS_AND_NEXT_REVIEW](LIMITATIONS_AND_NEXT_REVIEW.md)；包含问题、证据、影响、候选解释、参数/门槛/划分/预算建议，均不触发执行 |
 | 第一重验收与发布 | [acceptance.json](acceptance.json)、下表、[FINAL_RESPONSE](FINAL_RESPONSE.md)、[publication](publication.json)、[安全与链接检查](validation/release_check.json) |
 
@@ -59,7 +59,7 @@ PASS均限affected_scope；完整G1仍受核心BLOCKED/FAIL约束。机器表保
 | G1-A15 | PASS | Notebook及工具可复算 | 两份各6 code cells通过；旧source_evidence按旧CODE重算一致；当前数值profile/audit/recompute一致 | [证据](validation/notebooks.json) |
 | G1-A16 | PASS | 必要图表可重建且忠于数据 | 7例原始诊断图与实际/未完成角色结构图已生成、视觉检查；真实前后图明确BLOCKED | [证据](../../figures/goal1/figure_manifest.json) |
 | G1-A17 | PASS | Goal范围未越界 | 只读全量结构盘点、7例诊断、数学工具、工程审核与部分live；Goal2/3均未执行 | [证据](../../config/goal1.json) |
-| G1-A18 | NOT_RUN | 完整安全的GitHub审核包同步 | 代码里程碑已推送ea3b20a；最终审核包正待检查/推送 | [证据](publication.json) |
+| G1-A18 | PASS | 完整安全的GitHub审核包同步 | 完整审核包已实际推送9ccbf63，git ls-remote核对一致；TLS间歇错误保留，同origin重试push成功。秘密/大文件/链接/Notebook检查通过；原文和原生导出空白例外有记录。 | [证据](publication.json) |
 
 ## 4. 可复算命令与代码绑定
 
