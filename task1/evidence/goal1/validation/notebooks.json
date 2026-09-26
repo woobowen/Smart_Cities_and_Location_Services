@@ -1,0 +1,49 @@
+{
+  "command": "nbclient.NotebookClient.execute() with a fresh kernel for each generated notebook",
+  "code_sha": "ea3b20ad13c65ab01cf2c761db6b09c185855b53",
+  "input_sha256": "c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3",
+  "results": [
+    {
+      "path": "task1/notebooks/01_baseline_and_audit.ipynb",
+      "sha256": "bd1d591ccf0a96068167e43d87a8c30377a40c6eff5ebd03d4de71a541307225",
+      "code_sha": "ea3b20ad13c65ab01cf2c761db6b09c185855b53",
+      "started_at": "2026-09-26T11:27:44.066328+00:00",
+      "ended_at": "2026-09-26T11:27:48.257248+00:00",
+      "elapsed_seconds": 4.190875883999979,
+      "code_cells": 6,
+      "execution_counts": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "kernel": "fresh python3 per notebook; PATH uses project .venv",
+      "status": "PASS",
+      "new_model_calls": 0,
+      "mode": "RECOMPUTE"
+    },
+    {
+      "path": "task1/notebooks/02_agent_loop_recompute.ipynb",
+      "sha256": "f681487b48b68e059307958818f8751ceffd44364b9b224026dfb449c48f9dcb",
+      "code_sha": "ea3b20ad13c65ab01cf2c761db6b09c185855b53",
+      "started_at": "2026-09-26T11:27:48.259324+00:00",
+      "ended_at": "2026-09-26T11:27:55.013890+00:00",
+      "elapsed_seconds": 6.754576865000217,
+      "code_cells": 6,
+      "execution_counts": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "kernel": "fresh python3 per notebook; PATH uses project .venv",
+      "status": "PASS",
+      "new_model_calls": 0,
+      "mode": "RECOMPUTE"
+    }
+  ]
+}

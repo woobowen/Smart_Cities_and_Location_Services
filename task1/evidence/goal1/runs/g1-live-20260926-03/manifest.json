@@ -1,0 +1,86 @@
+{
+  "run_id": "g1-live-20260926-03",
+  "mode": "LIVE",
+  "code_sha": "d1444eb07035ef651a36a3e89269f004186581df",
+  "source_hashes": {
+    "task1/workflow/__init__.py": "bd23709231145ce415c01c88880b886e8c8343199a47dbe0762d68841aeb73ff",
+    "task1/workflow/__main__.py": "b96a66d5fe543f8082d528e81e7e70de2c0090b20ab60b090532ab65647713e8",
+    "task1/workflow/controller.py": "738e6d0bcb53e24658d8e8fd4648db609d7d7492f0f8c9e56f48b28530edc68d",
+    "task1/workflow/diagnostics.py": "a1cd7fa21450abdadd47f0265ae99b40022a45ca960838288b2d69f587d596c4",
+    "task1/workflow/evaluation.py": "a06138268a554ff3d8f2183e0602198ff35e82787c9ebb0f291e8085ee2bd485",
+    "task1/workflow/geometry.py": "a1ed3f3314e53fd4b221a6a5c981f639e1b3e79c4c5e96054c0ed4105da211dc",
+    "task1/workflow/inventory.py": "42bceb3ea1bab9ca386b88ce29104dc4bb518fee6df8f25aae50360633e7d5a1",
+    "task1/workflow/io.py": "0d3d72dd0beb4718f4020a07a5f1c0ca89193943049a479816b5c496806321b2",
+    "task1/workflow/provider.py": "2686c7e68b38fb8370b8488e1f00649c224cefba01a4bba5a4a9f6f7b66df021",
+    "task1/workflow/recompute.py": "4c198a016adec8554602c9ad04e0446bb90866ed970789834b96c51ebbec9b56",
+    "task1/workflow/tools.py": "7504b20b7229b5a73ee835ce06b65c26273ae68b16f96c232ac347b352d85d3f"
+  },
+  "input_sha256": "c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3",
+  "pilot": {
+    "classification": "DEVELOPMENT_PILOT_PREDECLARED",
+    "created_at": "2026-09-26T10:43:47.490169+00:00",
+    "raw_sha256": "c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3",
+    "ids": [
+      "0",
+      "1",
+      "2",
+      "246",
+      "256",
+      "306",
+      "352"
+    ],
+    "selection_rule": "historically exposed starter cases 0/246/256/306/352 plus first two other numeric IDs 1/2, fixed before Goal1 model feedback or processing scores; no success-based exclusion",
+    "historically_exposed": [
+      "0",
+      "246",
+      "256",
+      "306",
+      "352"
+    ],
+    "exposure_note": "entire input structurally inspected; starter regression tests have examined the historical cases. None of these is a final unseen confirmation set.",
+    "max_records": 12,
+    "frozen_final_holdout": false
+  },
+  "policy_sha256": "6b085487e67c6163883821a28e4ee69ffe022fc1df697eb03f1627fee6aa6433",
+  "semantics_version": "g1-semantics-v1",
+  "metrics_version": "g1-metrics-v1",
+  "status": "BLOCKED",
+  "started_at": "2026-09-26T11:07:34.075830+00:00",
+  "ended_at": "2026-09-26T11:09:33.737117+00:00",
+  "calls": [
+    {
+      "call_id": "g1-live-20260926-03-01-research",
+      "role": "research",
+      "thread_id": "01a0dd66-2d69-7123-9ea2-b8ec2b958dd3",
+      "response": "calls/g1-live-20260926-03-01-research/response.json"
+    }
+  ],
+  "tools": [
+    {
+      "tool_id": "0ad49e824507fb5f5ee9e1d042b423f1cee074df1d78283b5385d277638fa15c",
+      "artifact": "tools/0ad49e824507fb5f5ee9e1d042b423f1cee074df1d78283b5385d277638fa15c.json",
+      "sha256": "18ab8dd8bb1e686a2181ae4ff16fd03937378e6bf174c81c3f96b870ad92ac68",
+      "action": "source_evidence",
+      "call_id": "g1-live-20260926-03-01-research",
+      "status": "EXECUTED"
+    }
+  ],
+  "errors": [
+    {
+      "call_id": "g1-live-20260926-03-02-execution",
+      "reason": "CLI_FAILED_OR_UNEXPECTED_TOOL"
+    }
+  ],
+  "artifacts": {
+    "calls/g1-live-20260926-03-01-research/input.json": "8c3931b5a17a664fe139a797baf599e30d3c6683a60e4441b6f1c12249924ac9",
+    "calls/g1-live-20260926-03-01-research/receipt.json": "8ccad5aaeda66a4f668c3dc0933bf62055157d053e0612af76c58b90f20593ee",
+    "calls/g1-live-20260926-03-01-research/response.json": "1fff40573ead68443bce4ac0fa2ebe1ee4605e87fd9a907916bc739fdf066c76",
+    "calls/g1-live-20260926-03-01-research/visible_events.jsonl": "2d44982ac68bdb29c3224408febc3d8c2b52023fb45aa256efc99e1e155f38b7",
+    "calls/g1-live-20260926-03-02-execution/input.json": "54b3f27ce49bc0d2125ba7cc768d28e35058d77237db35acc4197e5ea0394240",
+    "calls/g1-live-20260926-03-02-execution/receipt.json": "088fcf3e76060fbe64e766a5aebf92e11c06fabe4c2011aca48521f9d2945665",
+    "calls/g1-live-20260926-03-02-execution/visible_events.jsonl": "02880cc126348db660b5e43c55302bb7e3ac11cd98b730d3ac8605f0674b233d",
+    "checkpoint.json": "bc8fed2493dbcd40809c4cc7a76e1d14ce418e7e01a6f8cb69f0048c80254ccd",
+    "events.jsonl": "b7c4770e0b51b71e4bac53ef2c469fb8e2582811b1f135adcb3b6451185617f0",
+    "tools/0ad49e824507fb5f5ee9e1d042b423f1cee074df1d78283b5385d277638fa15c.json": "18ab8dd8bb1e686a2181ae4ff16fd03937378e6bf174c81c3f96b870ad92ac68"
+  }
+}

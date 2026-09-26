@@ -1,0 +1,19 @@
+[
+  {
+    "classification": "ENGINEERING_DEBUG",
+    "command": ".venv/bin/python task1/scripts/recompute_archived_run.py g1-live-20260926-03",
+    "failure": "UNEXPECTED_SOURCE_MEMBER",
+    "cause": "archive enumeration included requirements-goal1.txt; only Python/JSON are execution inputs",
+    "fix": "enumerate workflow plus explicit goal1.json/pilot.json",
+    "recheck": "VERIFIED saved source_evidence hash matches; 0 model calls"
+  },
+  {
+    "classification": "ENGINEERING_DEBUG",
+    "command": ".venv/bin/python task1/scripts/build_goal1_figures.py",
+    "failure": "Matplotlib Noto Sans CJK SC family not found, CJK glyph warnings",
+    "cause": "fontconfig sees SC face but Matplotlib TTC first face name is JP",
+    "fix": "register actual installed font file and use its reported family",
+    "recheck_exit": 0,
+    "remaining_stderr": ""
+  }
+]

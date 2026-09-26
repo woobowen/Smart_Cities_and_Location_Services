@@ -1,0 +1,79 @@
+{
+  "role": "research",
+  "call_id": "g1-live-20260926-01-01-research",
+  "prompt": "You are one real, separately called role in the Experiment1 Goal1 controller. Return exactly the requested JSON schema. No terminal, file editing, browsing or spawning. Your structured action will be validated and executed by deterministic code. Cite source paths or prior call/tool IDs; never invent computed numbers, approvals or truth labels. Do not report hidden reasoning; provide only concise visible task rationale. All numeric facts must come from supplied actual tool receipts. record_ids should include the entire seven-record pilot so no difficult case is omitted. Unknown CRS and direction schedule block full baseline, not raw/time diagnostics. In phase3 and later reference actual earlier reviewer/tool feedback IDs.\n{\"task_id\": \"SC-LAB1-G1-FOUNDATION-001\", \"goal\": 1, \"role\": \"research\", \"call_id\": \"g1-live-20260926-01-01-research\", \"instruction\": \"Initial TaskPlan: inspect the supplied requirements, semantics and actual raw diagnostics. Request source_evidence to check the semantic blockers and state an in-scope plan for the execution role, with sources and limitations. Do not approve unknown semantics.\", \"policy\": {\"task_id\": \"SC-LAB1-G1-FOUNDATION-001\", \"goal\": 1, \"policy_version\": \"g1-policy-v1\", \"semantics_version\": \"g1-semantics-v1\", \"metrics_version\": \"g1-metrics-v1\", \"approval_record\": \"task1/evidence/goal1/APPROVED_PROMPT.md\", \"raw_path\": \"task1/作业/作业/traj_dict.json\", \"raw_sha256\": \"c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3\", \"semantics\": {\"record_identity\": {\"value\": \"dictionary key identifies vehicle/trajectory record\", \"status\": \"SOURCE_DECLARED\", \"source\": \"starter supplemental student lecture p4; raw JSON key structure verified\", \"verification\": \"full structural inventory; key does not establish independent vehicle trip\", \"affected_operations\": [\"cross_record_join\"]}, \"coordinate_order\": {\"value\": \"(longitude, latitude), two dimensions, degrees\", \"status\": \"SOURCE_DECLARED\", \"source\": \"starter supplemental student lecture p4 paired with raw JSON example\", \"verification\": \"raw arrays 2D verified; bounds do not prove datum\", \"affected_operations\": [\"projection\", \"distance\", \"direction\"]}, \"crs\": {\"value\": null, \"status\": \"UNKNOWN\", \"source\": \"teacher PPT p13 body: GPS generally WGS84; notes: domestic GPS generally GCJ02; neither binds this file\", \"verification\": \"source review conflict; function names and legacy geo.py conventions insufficient\", \"affected_operations\": [\"distance\", \"speed\", \"length_filter\", \"space_segmentation\", \"direction_denoise\", \"dp_meters\", \"map_overlay\"]}, \"distance_policy\": {\"value\": null, \"status\": \"ASSUMPTION_REQUIRING_APPROVAL\", \"source\": \"starter Notebook util Mercator vs traj_agent local ellipsoid plane\", \"verification\": \"metric choice affects thresholds; no approved override\", \"affected_operations\": [\"distance\", \"length_filter\", \"space_segmentation\", \"dp_meters\"]}, \"timestamp_unit\": {\"value\": \"Unix seconds\", \"status\": \"SOURCE_DECLARED\", \"source\": \"starter supplemental build_ppt/out/轨迹数据清洗_学生讲义.pptx p4\", \"verification\": \"relative deltas inspected without timezone assignment\", \"affected_operations\": [\"time_gap\", \"relative_duration\"]}, \"timestamp_timezone\": {\"value\": null, \"status\": \"UNKNOWN\", \"source\": \"no reliable display timezone declaration found\", \"verification\": \"Unix absolute instants do not require source local timezone for differences\", \"affected_operations\": [\"local_clock_interpretation\", \"day_partition\"]}, \"timestamp_order\": {\"value\": \"input order preserved; monotonicity inspected per record\", \"status\": \"VERIFIED\", \"source\": \"raw JSON\", \"verification\": \"profile uses exact source differences; no sorting\", \"affected_operations\": [\"time_gap\", \"speed\"]}, \"sampling\": {\"value\": \"irregular observed; Notebook suggests average 10 seconds\", \"status\": \"SOURCE_DECLARED\", \"source\": \"basic Notebook Cell1 comments\", \"verification\": \"full raw difference histogram; not verified constant sampling\", \"affected_operations\": [\"parameter_justification\", \"representativeness\"]}, \"speed_direction\": {\"value\": \"raw JSON has no speed/direction arrays; Notebook calculates [time,coords,speed,direction]\", \"status\": \"VERIFIED\", \"source\": \"Notebook Cell2; util.get_velocity/get_direction\", \"verification\": \"Cell6/8 comments reversed; working code uses named fields\", \"affected_operations\": [\"alignment\", \"feature_recomputation\"]}, \"labels\": {\"value\": null, \"status\": \"UNKNOWN\", \"source\": \"no independent truth labels/reference trajectory in supplied package\", \"verification\": \"material inventory; no detection accuracy/false deletion rate computed\", \"affected_operations\": [\"accuracy\", \"false_deletion\", \"truth_recovery\"]}, \"duplicates\": {\"value\": \"exact same position / same time diagnosed separately; no automatic deletion\", \"status\": \"VERIFIED\", \"source\": \"raw JSON plus approved prompt §5.1\", \"verification\": \"original indices and values preserved\", \"affected_operations\": [\"denoise\", \"stationary_duration\"]}, \"population\": {\"value\": \"supplied JSON records only; pilot is development exposure\", \"status\": \"VERIFIED\", \"source\": \"raw inventory plus pilot manifest\", \"verification\": \"no holdout or representativeness claim\", \"affected_operations\": [\"generalization\", \"final_selection\"]}}, \"starter_reference\": {\"status\": \"STARTER_REFERENCE_NOT_FROZEN\", \"source\": \"basic Notebook Cell1\", \"min_length\": 65, \"min_points\": 5, \"dt_seconds\": 30, \"distance\": 400, \"direction_degrees\": 35, \"dp_tolerance\": 5, \"distance_units\": \"intended meters; projection unresolved\"}, \"teacher_95m\": {\"role\": \"TEACHING_EXAMPLE\", \"source\": \"PPT p24 bicycle 25km/h, interval 12s; not Notebook400\", \"not_active_parameter\": true}, \"method\": {\"order\": [\"segment\", \"filter\", \"direction_denoise\", \"dp\"], \"order_status\": \"NOTEBOOK_REFERENCE_NOT_OPTIMALITY_CLAIM\", \"direction_rule\": \"PPT20 outgoing bearings d_i; compare circular differences to d_(i-1) and d_(i+1), BOTH > threshold\", \"direction_unresolved\": [\"simultaneous vs online vs repeated passes\", \"terminal outgoing direction policy\", \"zero-displacement neighbor policy\"], \"processing_status\": \"BLOCKED\", \"blocking_ids\": [\"U01_CRS_DISTANCE\", \"U02_DIRECTION_EXECUTION\"], \"scope\": \"primitives verified on CONSTRUCTED_FIXTURE; real diagnostic only until research decision\"}, \"permissions\": {\"status\": \"APPROVED_BY_CURRENT_PROMPT\", \"allow_value_changes\": false, \"allow_interpolation\": false, \"allow_map_matching\": false, \"allow_training\": false, \"allow_final_holdout\": false, \"allow_search\": false, \"allow_combination\": false, \"allow_quality_acceptance\": false}, \"actions\": {\"research\": [\"source_evidence\", \"profile_pilot\", \"time_boundaries\", \"duplicate_details\", \"verify_profiles\", \"recompute_check\"], \"execution\": [\"profile_pilot\", \"time_boundaries\", \"duplicate_details\", \"recompute_check\", \"baseline\"], \"review\": [\"verify_profiles\", \"recompute_check\", \"source_evidence\"]}, \"budget\": {\"max_pilot_records\": 12, \"max_model_calls\": 8, \"max_tool_calls\": 18, \"max_retries_same_failure\": 2, \"max_seconds_per_model_call\": 180, \"concurrency\": 1, \"authorization\": \"existing ChatGPT login only; no additional paid API; no global account config changes\"}, \"improvement\": {\"status\": \"DRAFT_FOR_NEXT_GOAL_REVIEW\", \"logic\": \"hard checks AND gain>=threshold AND protected degradation<=limit AND valid fair comparison/evidence\", \"minimum_gain\": null, \"maximum_protected_degradation\": null, \"selection_data\": null, \"missing_action\": \"PENDING_RESEARCH_REVIEW\"}, \"floating_point_check\": {\"status\": \"ENGINEERING_NUMERIC_CHECK_ONLY\", \"rule\": \"64 * binary64_epsilon * max(1, coordinate_extent, absolute_coordinate, tolerance)\", \"source\": \"binary64 rounding allowance fixed before tests; does not change DP tolerance\"}, \"allowed_states\": [\"PLANNED\", \"DISPATCHED\", \"RUNNING\", \"EXECUTED\", \"VERIFIED\", \"QUALITY_ACCEPTED\", \"REJECTED\", \"NEEDS_REVIEW\", \"BLOCKED\"]}, \"pilot\": {\"classification\": \"DEVELOPMENT_PILOT_PREDECLARED\", \"created_at\": \"2026-09-26T10:43:47.490169+00:00\", \"raw_sha256\": \"c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3\", \"ids\": [\"0\", \"1\", \"2\", \"246\", \"256\", \"306\", \"352\"], \"selection_rule\": \"historically exposed starter cases 0/246/256/306/352 plus first two other numeric IDs 1/2, fixed before Goal1 model feedback or processing scores; no success-based exclusion\", \"historically_exposed\": [\"0\", \"246\", \"256\", \"306\", \"352\"], \"exposure_note\": \"entire input structurally inspected; starter regression tests have examined the historical cases. None of these is a final unseen confirmation set.\", \"max_records\": 12, \"frozen_final_holdout\": false}, \"raw_structure\": {\"n_records\": 11386, \"valid_structure_records\": 11386, \"n_points\": 1173410, \"n_timestamps\": 1173410, \"invalid_timestamps\": 0, \"invalid_coordinates\": 0, \"negative_dt\": 0, \"zero_dt\": 42185, \"positive_dt\": 1119839, \"same_time_different_position\": 29175, \"consecutive_duplicate_position\": 575278, \"long_gap_gt_30_source_seconds\": 8272, \"edges_total\": 1162024, \"dt_computable\": 1162024, \"position_pairs_computable\": 1162024, \"point_count_min\": 20, \"point_count_max\": 229, \"modifications\": 0, \"physical_distance\": {\"value\": null, \"reason\": \"CRS_AND_DISTANCE_POLICY_UNRESOLVED\"}, \"classification\": \"FULL_DATASET_RAW_STRUCTURE_ONLY\", \"raw_path\": \"task1/作业/作业/traj_dict.json\", \"raw_sha256\": \"c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3\", \"created_at\": \"2026-09-26T10:43:49.819624+00:00\", \"source_unit\": \"Unix seconds SOURCE_DECLARED; CRS UNKNOWN\", \"exposure\": \"All records structurally observed; no physical quality inference or method tuning\"}, \"prior_calls\": [], \"tool_receipts\": [], \"available_actions\": [\"source_evidence\"]}",
+  "schema": {
+    "type": "object",
+    "properties": {
+      "role": {
+        "type": "string",
+        "enum": [
+          "research"
+        ]
+      },
+      "call_id": {
+        "type": "string",
+        "enum": [
+          "g1-live-20260926-01-01-research"
+        ]
+      },
+      "action": {
+        "type": "string",
+        "enum": [
+          "source_evidence"
+        ]
+      },
+      "record_ids": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "feedback_refs": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "evidence_refs": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      },
+      "summary": {
+        "type": "string"
+      },
+      "reason": {
+        "type": "string"
+      },
+      "request_status": {
+        "type": "string",
+        "enum": [
+          "PROPOSED",
+          "NEEDS_REVIEW",
+          "BLOCKED"
+        ]
+      },
+      "candidate_for_future_review": {
+        "type": [
+          "string",
+          "null"
+        ]
+      }
+    },
+    "required": [
+      "role",
+      "call_id",
+      "action",
+      "record_ids",
+      "feedback_refs",
+      "evidence_refs",
+      "summary",
+      "reason",
+      "request_status",
+      "candidate_for_future_review"
+    ],
+    "additionalProperties": false
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "mode": "REPLAY_RECOMPUTE",
+  "new_model_calls": 0,
+  "source_live_run": "g1-live-20260926-03",
+  "input_sha256": "c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3",
+  "source_code_sha": "d1444eb07035ef651a36a3e89269f004186581df",
+  "recomputed_at": "2026-09-26T11:26:56.233548+00:00",
+  "checks": [
+    {
+      "tool_id": "0ad49e824507fb5f5ee9e1d042b423f1cee074df1d78283b5385d277638fa15c",
+      "action": "source_evidence",
+      "expected_sha256": "107616dce9e51de0b85e18ac5364a04c738fd2ef4e04028215c4ecb0ee4cc182",
+      "recomputed_sha256": "107616dce9e51de0b85e18ac5364a04c738fd2ef4e04028215c4ecb0ee4cc182",
+      "equal": true
+    }
+  ],
+  "status": "VERIFIED",
+  "meaning": "Tools genuinely reran on the raw JSON; not a new model experiment or quality approval",
+  "restoration": "Tracked workflow/config from existing code_sha; current workspace not checked out or changed",
+  "scope": "Only saved successful tool actions. This partial run has source_evidence only; no completed A/B/C feedback loop.",
+  "archived_source_verified": true
+}

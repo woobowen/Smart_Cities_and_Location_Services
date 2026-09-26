@@ -1,0 +1,570 @@
+{
+  "classification": "ENGINEERING_TEST",
+  "fixture_source": "CONSTRUCTED_FIXTURE / MOCK_TEST (not natural live failures)",
+  "code_sha": "0b7914dfc65cfef39a96586713c8810d7c7fbfad",
+  "source_hashes": {
+    "task1/workflow/__init__.py": "bd23709231145ce415c01c88880b886e8c8343199a47dbe0762d68841aeb73ff",
+    "task1/workflow/__main__.py": "b96a66d5fe543f8082d528e81e7e70de2c0090b20ab60b090532ab65647713e8",
+    "task1/workflow/controller.py": "14def81bd1c1a16adff69510e1830de9c2eac343af5ffbdcbe76b21a28e29e6a",
+    "task1/workflow/diagnostics.py": "9d4541acb2880b6f36c2470bef15914f85ef83458c617bcd5d9f76ce61878786",
+    "task1/workflow/evaluation.py": "a06138268a554ff3d8f2183e0602198ff35e82787c9ebb0f291e8085ee2bd485",
+    "task1/workflow/geometry.py": "a1ed3f3314e53fd4b221a6a5c981f639e1b3e79c4c5e96054c0ed4105da211dc",
+    "task1/workflow/inventory.py": "42bceb3ea1bab9ca386b88ce29104dc4bb518fee6df8f25aae50360633e7d5a1",
+    "task1/workflow/io.py": "0d3d72dd0beb4718f4020a07a5f1c0ca89193943049a479816b5c496806321b2",
+    "task1/workflow/provider.py": "6c42840f03279e3b33fb119034f67cec56b7084053e500bf27e4d6985fc755f4",
+    "task1/workflow/recompute.py": "4c198a016adec8554602c9ad04e0446bb90866ed970789834b96c51ebbec9b56",
+    "task1/workflow/tools.py": "1b84da796696cc17abd5bc837fd7a2e05af3eef462f453742801d9a605dc0de5",
+    "task1/tests/test_control.py": "f036ab50b7ba7e60740fcab2a46f0eb94fec6e2589ec5347d5fed953225c0fd4",
+    "task1/tests/test_evaluation.py": "d8f342bb62103e4f50235271bf6dcaa70746c4f33db740e256a1888cff0b3915",
+    "task1/tests/test_geometry.py": "2836d0ff7c5bd59c39f18e5bcb37326a5d0be594d0e4207ab962a6ced5008dec"
+  },
+  "command": ".venv/bin/python -m pytest task1/tests -q --junitxml=task1/evidence/goal1/tests/final_bound.xml",
+  "exit_code": 0,
+  "passed": 108,
+  "failed": 0,
+  "skipped": 0,
+  "observed_stdout_summary": "108 passed in 1.41s",
+  "cases": [
+    {
+      "id": "task1.tests.test_control::test_correct_request_executes_and_independent_audit_accepts",
+      "seconds": 0.023,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_control::test_scope_and_schema_denials[<lambda>-ValidationError0]",
+      "seconds": 0.013,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_control::test_scope_and_schema_denials[<lambda>-ValidationError1]",
+      "seconds": 0.014,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_control::test_scope_and_schema_denials[<lambda>-ValidationError2]",
+      "seconds": 0.014,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_control::test_scope_and_schema_denials[<lambda>-GateError0]",
+      "seconds": 0.013,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_control::test_scope_and_schema_denials[<lambda>-GateError1]",
+      "seconds": 0.014,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_control::test_scope_and_schema_denials[<lambda>-GateError2]",
+      "seconds": 0.013,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_control::test_scope_and_schema_denials[<lambda>-GateError3]",
+      "seconds": 0.013,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_control::test_unapproved_metric_and_goal_denied",
+      "seconds": 0.018,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_control::test_feedback_must_reference_real_trigger",
+      "seconds": 0.02,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_control::test_illegal_paths[../x]",
+      "seconds": 0.001,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_control::test_illegal_paths[/tmp/x]",
+      "seconds": 0.001,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_control::test_illegal_paths[a/../../x]",
+      "seconds": 0.002,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_control::test_symlink_escape_denied",
+      "seconds": 0.003,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_control::test_raw_hash_mismatch_denied",
+      "seconds": 0.009,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_control::test_contract_protected",
+      "seconds": 0.008,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_control::test_output_tampering_is_rejected[missing]",
+      "seconds": 0.016,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_control::test_output_tampering_is_rejected[file_hash]",
+      "seconds": 0.014,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_control::test_output_tampering_is_rejected[wrong_parent]",
+      "seconds": 0.013,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_control::test_output_tampering_is_rejected[wrong_input]",
+      "seconds": 0.015,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_control::test_output_tampering_is_rejected[forged_status]",
+      "seconds": 0.018,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_control::test_failure_preserves_old_artifacts_and_resume_does_not_repeat_effect",
+      "seconds": 0.031,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_control::test_budget_cannot_reset_by_new_run_id",
+      "seconds": 0.015,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_control::test_search_only_no_llm_and_mock_not_live",
+      "seconds": 0.012,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_control::test_unavailable_provider_never_succeeds",
+      "seconds": 0.001,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_control::test_jsonl_and_schema_are_strict_and_reasoning_not_saved",
+      "seconds": 0.007,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_control::test_unexpected_cli_tools_cannot_pass",
+      "seconds": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_control::test_intentionally_disabled_code_host_requires_completed_valid_turn",
+      "seconds": 0.003,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_control::test_known_raw_fixture_counts_and_time_partition",
+      "seconds": 0.001,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_control::test_preplanted_live_response_is_rejected_without_model",
+      "seconds": 0.01,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_control::test_recovery_requires_bound_visible_call_evidence[missing_events]",
+      "seconds": 0.01,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_control::test_recovery_requires_bound_visible_call_evidence[empty_receipt]",
+      "seconds": 0.012,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_control::test_recovery_requires_bound_visible_call_evidence[wrong_response]",
+      "seconds": 0.015,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_control::test_recovery_requires_bound_visible_call_evidence[wrong_input]",
+      "seconds": 0.013,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_control::test_recovery_requires_bound_visible_call_evidence[wrong_event]",
+      "seconds": 0.012,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_control::test_recovery_requires_bound_visible_call_evidence[tool_event]",
+      "seconds": 0.009,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_control::test_recovery_requires_bound_visible_call_evidence[fake_disabled]",
+      "seconds": 0.01,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_control::test_valid_recovery_executes_once_without_new_model",
+      "seconds": 0.024,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_control::test_cached_output_self_hash_cannot_replace_registered_hash",
+      "seconds": 0.019,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_control::test_bad_tool_does_not_advance_or_upgrade[REJECTED]",
+      "seconds": 0.023,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_control::test_bad_tool_does_not_advance_or_upgrade[BLOCKED]",
+      "seconds": 0.024,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_control::test_tool_start_event_is_a_violation_even_with_valid_final",
+      "seconds": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_control::test_timeout_kills_child_process_group",
+      "seconds": 0.654,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_control::test_mock_time_partitions_keep_mock_classification",
+      "seconds": 0.022,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_control::test_recompute_accepts_same_record_set_in_different_order",
+      "seconds": 0.008,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_control::test_budget_freeze_cannot_be_reset_with_new_run_id",
+      "seconds": 0.012,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_control::test_escalation_request_not_executed",
+      "seconds": 0.011,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_control::test_final_policy_disables_all_new_live_calls",
+      "seconds": 0.009,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_control::test_independent_profile_review_checks_all_reported_numeric_fields[invalid_timestamps-99]",
+      "seconds": 0.001,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_control::test_independent_profile_review_checks_all_reported_numeric_fields[dt_counts-bad1]",
+      "seconds": 0.001,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_control::test_independent_profile_review_checks_all_reported_numeric_fields[time_span_raw-999]",
+      "seconds": 0.001,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_control::test_independent_profile_review_checks_all_reported_numeric_fields[dt_min_raw-99]",
+      "seconds": 0.001,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_control::test_independent_profile_review_checks_all_reported_numeric_fields[position_pairs_computable-0]",
+      "seconds": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_control::test_independent_profile_review_checks_all_reported_numeric_fields[issues-bad5]",
+      "seconds": 0.001,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_evaluation::test_eval01_finite_segment_oracle_rejects_plausible_wrong_simplification",
+      "seconds": 0.001,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_evaluation::test_eval02_index_interval_not_global_nearest_segment",
+      "seconds": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_evaluation::test_eval03_degenerate_segment_and_original_index_mapping",
+      "seconds": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_evaluation::test_eval04_independence_from_production_distance_and_self_report",
+      "seconds": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_evaluation::test_eval05_corruption_and_forged_success_rejected[wrong-record]",
+      "seconds": 0.001,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_evaluation::test_eval05_corruption_and_forged_success_rejected[wrong-hash]",
+      "seconds": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_evaluation::test_eval05_corruption_and_forged_success_rejected[wrong-parent-index]",
+      "seconds": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_evaluation::test_eval05_corruption_and_forged_success_rejected[coordinate-modified]",
+      "seconds": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_evaluation::test_eval05_corruption_and_forged_success_rejected[time-modified]",
+      "seconds": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_evaluation::test_eval05_corruption_and_forged_success_rejected[unordered]",
+      "seconds": 0.001,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_evaluation::test_eval05_corruption_and_forged_success_rejected[missing-output]",
+      "seconds": 0.001,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_evaluation::test_eval06_empty_single_zero_length_metrics_have_explicit_reasons",
+      "seconds": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_evaluation::test_eval07_saving_uses_same_pre_simplification_input_not_raw_count",
+      "seconds": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_evaluation::test_eval08_all_input_terminal_fates_and_record_boundaries",
+      "seconds": 0.001,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_evaluation::test_eval09_accounting_detects_undisclosed_loss_and_alteration",
+      "seconds": 0.001,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_evaluation::test_eval10_fixed_rounding_allowance_is_separate_from_algorithm_threshold",
+      "seconds": 0.001,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_evaluation::test_eval11_recomputation_consistent_and_rigid_scaled_geometry",
+      "seconds": 0.001,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_evaluation::test_eval12_unfrozen_improvement_contract_cannot_auto_accept",
+      "seconds": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_evaluation::test_eval13_engineering_fixture_acceptance_logic_positive_and_protection_failure",
+      "seconds": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_evaluation::test_eval14_nonfinite_metrics_cannot_be_verified",
+      "seconds": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_geometry::test_finite_segment_known_answers[GEO-01-finite-endpoint]",
+      "seconds": 0.001,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_geometry::test_finite_segment_known_answers[GEO-02-degenerate]",
+      "seconds": 0.001,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_geometry::test_finite_segment_known_answers[GEO-03-vertical]",
+      "seconds": 0.001,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_geometry::test_finite_segment_known_answers[GEO-04-before-start]",
+      "seconds": 0.001,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_geometry::test_geo05_circular_difference[wrap]",
+      "seconds": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_geometry::test_geo05_circular_difference[symmetric]",
+      "seconds": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_geometry::test_geo05_circular_difference[half-turn]",
+      "seconds": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_geometry::test_geo05_circular_difference[multiple-turns]",
+      "seconds": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_geometry::test_geo05_circular_difference[negative]",
+      "seconds": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_geometry::test_geo06_named_features_zero_and_negative_time",
+      "seconds": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_geometry::test_geo07_unreliable_time_is_not_zero_speed",
+      "seconds": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_geometry::test_geo08_select_recomputes_adjacency_and_preserves_index_values",
+      "seconds": 0.001,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_geometry::test_geo09_segmentation_right_boundary_and_equal_threshold",
+      "seconds": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_geometry::test_geo10_filter_is_separate_length_is_within_each_segment",
+      "seconds": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_geometry::test_geo11_time_gate_allows_independent_distance_only",
+      "seconds": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_geometry::test_geo12_empty_and_single_point_do_not_invent_edges",
+      "seconds": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_geometry::test_geo13_dp_short_closed_duplicate_and_return_cases[empty]",
+      "seconds": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_geometry::test_geo13_dp_short_closed_duplicate_and_return_cases[single]",
+      "seconds": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_geometry::test_geo13_dp_short_closed_duplicate_and_return_cases[two-duplicates]",
+      "seconds": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_geometry::test_geo13_dp_short_closed_duplicate_and_return_cases[vertical-collinear]",
+      "seconds": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_geometry::test_geo13_dp_short_closed_duplicate_and_return_cases[closed-return]",
+      "seconds": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_geometry::test_geo13_dp_short_closed_duplicate_and_return_cases[finite-segment-counterexample]",
+      "seconds": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_geometry::test_geo13_dp_short_closed_duplicate_and_return_cases[duplicate-coordinates]",
+      "seconds": 0.001,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_geometry::test_geo13_dp_short_closed_duplicate_and_return_cases[zero-identity]",
+      "seconds": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_geometry::test_geo13_dp_short_closed_duplicate_and_return_cases[threshold-equality]",
+      "seconds": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_geometry::test_geo14_dp_uses_original_ids_not_coordinate_equality",
+      "seconds": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_geometry::test_geo15_planar_rigid_motion_and_simultaneous_scale",
+      "seconds": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_geometry::test_geo16_direction_candidate_iteration_changes_answer_without_permitting_delete",
+      "seconds": 0.001,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_geometry::test_geo17_direction_unknown_window_and_endpoints_are_not_normal_bearings",
+      "seconds": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_geometry::test_geo18_invalid_thresholds_rejected[nan]",
+      "seconds": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_geometry::test_geo18_invalid_thresholds_rejected[inf]",
+      "seconds": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_geometry::test_geo18_invalid_thresholds_rejected[-1]",
+      "seconds": 0.001,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_geometry::test_geo18_invalid_thresholds_rejected[True]",
+      "seconds": 0.0,
+      "status": "PASS"
+    },
+    {
+      "id": "task1.tests.test_geometry::test_geo19_alignment_and_index_corruption_rejected",
+      "seconds": 0.001,
+      "status": "PASS"
+    }
+  ],
+  "final_code_core_unchanged": true
+}

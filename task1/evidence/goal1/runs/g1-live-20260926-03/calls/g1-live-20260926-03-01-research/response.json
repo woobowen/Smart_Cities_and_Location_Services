@@ -1,0 +1,24 @@
+{
+  "role": "research",
+  "call_id": "g1-live-20260926-03-01-research",
+  "action": "source_evidence",
+  "record_ids": [
+    "0",
+    "1",
+    "2",
+    "246",
+    "256",
+    "306",
+    "352"
+  ],
+  "feedback_refs": [],
+  "evidence_refs": [
+    "task1/evidence/goal1/APPROVED_PROMPT.md",
+    "task1/作业/作业/traj_dict.json",
+    "build_ppt/out/轨迹数据清洗_学生讲义.pptx"
+  ],
+  "summary": "请求核查绑定此数据文件的 CRS、距离策略及其批准依据，并核查方向规则的执行顺序、重复轮次、末端和零位移处理。执行角色可对全部固定 pilot 开展 profile_pilot、time_boundaries、duplicate_details，核验不依赖距离的原始诊断；保留输入顺序、原值和原始索引，分别检查重复时间、同刻异位、连续同位及长时间间隔，不自动删除或跨记录拼接。",
+  "reason": "U01_CRS_DISTANCE 和 U02_DIRECTION_EXECUTION 尚未解决，完整 baseline 保持 BLOCKED，但不阻断 raw/time diagnostics；未知显示时区不影响相对时间差。当前无历史调用或工具回执，所引路径仅为待核查来源，不新增数值或语义批准。缺少独立真值，不能推断准确率；pilot 仅用于开发，不构成最终 holdout 或总体代表性证据。",
+  "request_status": "PROPOSED",
+  "candidate_for_future_review": null
+}

@@ -1,0 +1,15 @@
+{
+  "first_attempt": {
+    "run": "g1-live-20260926-01",
+    "failure": "HTTP400 model requires newer CLI",
+    "repair": "Task-local npm @openai/codex 0.157.1; same model/auth and read-only sandbox"
+  },
+  "second_attempt": {
+    "run": "g1-live-20260926-02",
+    "failure": "Model returned a completed valid schema response, but parser treated deliberate disabled-code-host startup diagnostic as fatal",
+    "repair": "Classify only the exact observed expected disabled capability message separately; retain it; still require exit0, one actual thread, one completed turn and valid JSON Schema; all other errors/tool activity fail closed"
+  },
+  "no_response_promoted_retroactively": true,
+  "automatic_attempts_so_far": 2,
+  "next_run_uses_same_shared_budget": true
+}

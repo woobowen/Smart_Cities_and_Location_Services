@@ -1,0 +1,18 @@
+{
+  "classification": "ENGINEERING_TEST",
+  "cli_version": "0.157.1",
+  "command": [
+    "/tmp/sc-g1-codex-0.157.1/node_modules/.bin/codex",
+    "-c",
+    "sandbox_mode=\"read-only\"",
+    "sandbox",
+    "--",
+    "python3",
+    "-c",
+    "from pathlib import Path; Path('protected.txt').write_text('CHANGED')"
+  ],
+  "exit_code": 1,
+  "unchanged": true,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\n  File \"/usr/lib/python3.12/pathlib.py\", line 1049, in write_text\n    with self.open(mode='w', encoding=encoding, errors=errors, newline=newline) as f:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/pathlib.py\", line 1015, in open\n    return io.open(self, mode, buffering, encoding, errors, newline)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nOSError: [Errno 30] Read-only file system: 'protected.txt'\n"
+}

@@ -1,0 +1,51 @@
+{
+  "inspected_at": "2026-09-26T11:30:55.646545+00:00",
+  "figures": [
+    {
+      "source": "task1/figures/goal1/pilot_diagnostics.pdf",
+      "pdf_sha256": "d7649050a22469109bf4453289eeec6e0147f25048898233d7f680d0fbbea206",
+      "render_command": [
+        "pdftoppm",
+        "-r",
+        "200",
+        "-png",
+        "-singlefile",
+        "task1/figures/goal1/pilot_diagnostics.pdf",
+        "<temporary-inspection-prefix>"
+      ],
+      "render_exit_code": 0,
+      "render_dpi": 200,
+      "render_pixels": [
+        2160,
+        920
+      ],
+      "render_sha256": "a95ed30550bbc3d5e00bec1e6fa1233a25b253e49f483bb6403738e088aab51b",
+      "inspection": "Actual view_image inspection of both final PNG and 200dpi PDF rendering; Chinese glyphs present, labels readable, no clipping of data, counts match pilot_summary.csv; diagram explicitly labels A success/B failure/C not called and no completed feedback.",
+      "status": "PASS"
+    },
+    {
+      "source": "task1/figures/goal1/goal1_loop.pdf",
+      "pdf_sha256": "60343aca12dee04e701d7e6d4e6f3b5513bb77e89f1e86cd0a5c840df9be5443",
+      "render_command": [
+        "pdftoppm",
+        "-r",
+        "200",
+        "-png",
+        "-singlefile",
+        "task1/figures/goal1/goal1_loop.pdf",
+        "<temporary-inspection-prefix>"
+      ],
+      "render_exit_code": 0,
+      "render_dpi": 200,
+      "render_pixels": [
+        2800,
+        1680
+      ],
+      "render_sha256": "2e05f5402a8fab1ef0c8d8cc27d6b83287d7a405a4ee461fbfea54ddd1a9881f",
+      "inspection": "Actual view_image inspection of both final PNG and 200dpi PDF rendering; Chinese glyphs present, labels readable, no clipping of data, counts match pilot_summary.csv; diagram explicitly labels A success/B failure/C not called and no completed feedback.",
+      "status": "PASS"
+    }
+  ],
+  "raw_chat_evidence": "not produced or reconstructed",
+  "evidence_lock": "not claimed"
+}

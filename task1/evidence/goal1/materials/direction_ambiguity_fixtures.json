@@ -1,0 +1,304 @@
+[
+  {
+    "id": "DIRECTION-SCHEDULE-01",
+    "points": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ]
+    ],
+    "policies": [
+      "one_simultaneous_pass",
+      "simultaneous_until_stable"
+    ],
+    "expected": [
+      [
+        0,
+        1,
+        3,
+        4
+      ],
+      [
+        0,
+        3,
+        4
+      ]
+    ],
+    "classification": "CONSTRUCTED_FIXTURE",
+    "purpose": "demonstrate unresolved marking schedule only; not authorize either schedule",
+    "coordinate_semantics": "abstract planar units, x east/y north; no CRS assumption about teacher data",
+    "threshold_deg": 35.0,
+    "runs": [
+      {
+        "policy": "one_simultaneous_pass",
+        "kept_original_indices": [
+          0,
+          1,
+          3,
+          4
+        ],
+        "steps": [
+          {
+            "checks": [
+              {
+                "original_index": 1,
+                "directions_deg": [
+                  0.0,
+                  0.0,
+                  90.0
+                ],
+                "differences_deg": [
+                  0.0,
+                  90.0
+                ],
+                "marked": false
+              },
+              {
+                "original_index": 2,
+                "directions_deg": [
+                  0.0,
+                  90.0,
+                  0.0
+                ],
+                "differences_deg": [
+                  90.0,
+                  90.0
+                ],
+                "marked": true
+              }
+            ],
+            "deleted": [
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "policy": "simultaneous_until_stable",
+        "kept_original_indices": [
+          0,
+          3,
+          4
+        ],
+        "steps": [
+          {
+            "checks": [
+              {
+                "original_index": 1,
+                "directions_deg": [
+                  0.0,
+                  0.0,
+                  90.0
+                ],
+                "differences_deg": [
+                  0.0,
+                  90.0
+                ],
+                "marked": false
+              },
+              {
+                "original_index": 2,
+                "directions_deg": [
+                  0.0,
+                  90.0,
+                  0.0
+                ],
+                "differences_deg": [
+                  90.0,
+                  90.0
+                ],
+                "marked": true
+              }
+            ],
+            "deleted": [
+              2
+            ]
+          },
+          {
+            "checks": [
+              {
+                "original_index": 1,
+                "directions_deg": [
+                  0.0,
+                  45.0,
+                  0.0
+                ],
+                "differences_deg": [
+                  45.0,
+                  45.0
+                ],
+                "marked": true
+              }
+            ],
+            "deleted": [
+              1
+            ]
+          },
+          {
+            "checks": [],
+            "deleted": []
+          }
+        ]
+      }
+    ],
+    "verification": "PASS_FOR_COUNTEREXAMPLE"
+  },
+  {
+    "id": "DIRECTION-SCHEDULE-02",
+    "points": [
+      [
+        0,
+        0
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        4
+      ]
+    ],
+    "policies": [
+      "one_simultaneous_pass",
+      "left_to_right_immediate_recompute"
+    ],
+    "expected": [
+      [
+        0,
+        3,
+        4
+      ],
+      [
+        0,
+        2,
+        3,
+        4
+      ]
+    ],
+    "classification": "CONSTRUCTED_FIXTURE",
+    "purpose": "demonstrate unresolved marking schedule only; not authorize either schedule",
+    "coordinate_semantics": "abstract planar units, x east/y north; no CRS assumption about teacher data",
+    "threshold_deg": 35.0,
+    "runs": [
+      {
+        "policy": "one_simultaneous_pass",
+        "kept_original_indices": [
+          0,
+          3,
+          4
+        ],
+        "steps": [
+          {
+            "checks": [
+              {
+                "original_index": 1,
+                "directions_deg": [
+                  0.0,
+                  90.0,
+                  0.0
+                ],
+                "differences_deg": [
+                  90.0,
+                  90.0
+                ],
+                "marked": true
+              },
+              {
+                "original_index": 2,
+                "directions_deg": [
+                  90.0,
+                  0.0,
+                  90.0
+                ],
+                "differences_deg": [
+                  90.0,
+                  90.0
+                ],
+                "marked": true
+              }
+            ],
+            "deleted": [
+              1,
+              2
+            ]
+          }
+        ]
+      },
+      {
+        "policy": "left_to_right_immediate_recompute",
+        "kept_original_indices": [
+          0,
+          2,
+          3,
+          4
+        ],
+        "steps": [
+          {
+            "checks": [
+              {
+                "original_index": 1,
+                "directions_deg": [
+                  0.0,
+                  90.0,
+                  0.0
+                ],
+                "differences_deg": [
+                  90.0,
+                  90.0
+                ],
+                "marked": true
+              }
+            ],
+            "deleted": [
+              1
+            ]
+          },
+          {
+            "checks": [
+              {
+                "original_index": 2,
+                "directions_deg": [
+                  18.43494882292201,
+                  0.0,
+                  90.0
+                ],
+                "differences_deg": [
+                  18.434948822922024,
+                  90.0
+                ],
+                "marked": false
+              }
+            ],
+            "deleted": []
+          }
+        ]
+      }
+    ],
+    "verification": "PASS_FOR_COUNTEREXAMPLE"
+  }
+]

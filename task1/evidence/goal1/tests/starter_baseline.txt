@@ -1,0 +1,574 @@
+........................................................................ [ 24%]
+........................................................................ [ 49%]
+....................................s................................... [ 73%]
+.....................................F...FF............................. [ 98%]
+.....                                                                    [100%]
+=================================== FAILURES ===================================
+________________________ test_playbook_loads_stub_notes ________________________
+
+    def test_playbook_loads_stub_notes():
+        notes = playbook.load_notes()
+>       assert len(notes) >= 3
+E       assert 0 >= 3
+E        +  where 0 = len([])
+
+task1/作业/作业/tests/test_tools.py:243: AssertionError
+________________________ test_playbook_parses_wikilinks ________________________
+
+    def test_playbook_parses_wikilinks():
+        notes = playbook.load_notes()
+        all_links = [l for n in notes for l in n.wikilinks]
+>       assert all_links, "stub 笔记里应当有 WikiLink，否则图谱视图无意义"
+E       AssertionError: stub 笔记里应当有 WikiLink，否则图谱视图无意义
+E       assert []
+
+task1/作业/作业/tests/test_tools.py:269: AssertionError
+____________________ test_playbook_digest_filters_by_param _____________________
+
+    def test_playbook_digest_filters_by_param():
+        only = playbook.playbook_digest(params=["dp_tolerance"])
+>       assert only["n_notes"] == 1
+E       assert 0 == 1
+
+task1/作业/作业/tests/test_tools.py:274: AssertionError
+=============================== warnings summary ===============================
+tests/test_report.py::test_anomaly_scatter_renders
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:224: UserWarning: Glyph 21152 (\N{CJK UNIFIED IDEOGRAPH-52A0}) missing from current font.
+    fig.tight_layout()
+
+tests/test_report.py::test_anomaly_scatter_renders
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:224: UserWarning: Glyph 36895 (\N{CJK UNIFIED IDEOGRAPH-901F}) missing from current font.
+    fig.tight_layout()
+
+tests/test_report.py::test_anomaly_scatter_renders
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:224: UserWarning: Glyph 24230 (\N{CJK UNIFIED IDEOGRAPH-5EA6}) missing from current font.
+    fig.tight_layout()
+
+tests/test_report.py::test_anomaly_scatter_renders
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:224: UserWarning: Glyph 24322 (\N{CJK UNIFIED IDEOGRAPH-5F02}) missing from current font.
+    fig.tight_layout()
+
+tests/test_report.py::test_anomaly_scatter_renders
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:224: UserWarning: Glyph 24120 (\N{CJK UNIFIED IDEOGRAPH-5E38}) missing from current font.
+    fig.tight_layout()
+
+tests/test_report.py::test_anomaly_scatter_renders
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:224: UserWarning: Glyph 26102 (\N{CJK UNIFIED IDEOGRAPH-65F6}) missing from current font.
+    fig.tight_layout()
+
+tests/test_report.py::test_anomaly_scatter_renders
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:224: UserWarning: Glyph 38388 (\N{CJK UNIFIED IDEOGRAPH-95F4}) missing from current font.
+    fig.tight_layout()
+
+tests/test_report.py::test_anomaly_scatter_renders
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:224: UserWarning: Glyph 25139 (\N{CJK UNIFIED IDEOGRAPH-6233}) missing from current font.
+    fig.tight_layout()
+
+tests/test_report.py::test_anomaly_scatter_renders
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:224: UserWarning: Glyph 20266 (\N{CJK UNIFIED IDEOGRAPH-4F2A}) missing from current font.
+    fig.tight_layout()
+
+tests/test_report.py::test_anomaly_scatter_renders
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:224: UserWarning: Glyph 24433 (\N{CJK UNIFIED IDEOGRAPH-5F71}) missing from current font.
+    fig.tight_layout()
+
+tests/test_report.py::test_anomaly_scatter_renders
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:224: UserWarning: Glyph 65288 (\N{FULLWIDTH LEFT PARENTHESIS}) missing from current font.
+    fig.tight_layout()
+
+tests/test_report.py::test_anomaly_scatter_renders
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:224: UserWarning: Glyph 36828 (\N{CJK UNIFIED IDEOGRAPH-8FDC}) missing from current font.
+    fig.tight_layout()
+
+tests/test_report.py::test_anomaly_scatter_renders
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:224: UserWarning: Glyph 23567 (\N{CJK UNIFIED IDEOGRAPH-5C0F}) missing from current font.
+    fig.tight_layout()
+
+tests/test_report.py::test_anomaly_scatter_renders
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:224: UserWarning: Glyph 20110 (\N{CJK UNIFIED IDEOGRAPH-4E8E}) missing from current font.
+    fig.tight_layout()
+
+tests/test_report.py::test_anomaly_scatter_renders
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:224: UserWarning: Glyph 27491 (\N{CJK UNIFIED IDEOGRAPH-6B63}) missing from current font.
+    fig.tight_layout()
+
+tests/test_report.py::test_anomaly_scatter_renders
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:224: UserWarning: Glyph 37319 (\N{CJK UNIFIED IDEOGRAPH-91C7}) missing from current font.
+    fig.tight_layout()
+
+tests/test_report.py::test_anomaly_scatter_renders
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:224: UserWarning: Glyph 26679 (\N{CJK UNIFIED IDEOGRAPH-6837}) missing from current font.
+    fig.tight_layout()
+
+tests/test_report.py::test_anomaly_scatter_renders
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:224: UserWarning: Glyph 38548 (\N{CJK UNIFIED IDEOGRAPH-9694}) missing from current font.
+    fig.tight_layout()
+
+tests/test_report.py::test_anomaly_scatter_renders
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:224: UserWarning: Glyph 65289 (\N{FULLWIDTH RIGHT PARENTHESIS}) missing from current font.
+    fig.tight_layout()
+
+tests/test_report.py::test_anomaly_scatter_renders
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:224: UserWarning: Glyph 36229 (\N{CJK UNIFIED IDEOGRAPH-8D85}) missing from current font.
+    fig.tight_layout()
+
+tests/test_report.py::test_anomaly_scatter_renders
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:224: UserWarning: Glyph 38480 (\N{CJK UNIFIED IDEOGRAPH-9650}) missing from current font.
+    fig.tight_layout()
+
+tests/test_report.py::test_anomaly_scatter_renders
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:224: UserWarning: Glyph 38750 (\N{CJK UNIFIED IDEOGRAPH-975E}) missing from current font.
+    fig.tight_layout()
+
+tests/test_report.py::test_anomaly_scatter_renders
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:224: UserWarning: Glyph 36882 (\N{CJK UNIFIED IDEOGRAPH-9012}) missing from current font.
+    fig.tight_layout()
+
+tests/test_report.py::test_anomaly_scatter_renders
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:224: UserWarning: Glyph 22686 (\N{CJK UNIFIED IDEOGRAPH-589E}) missing from current font.
+    fig.tight_layout()
+
+tests/test_report.py::test_anomaly_scatter_renders
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:224: UserWarning: Glyph 26126 (\N{CJK UNIFIED IDEOGRAPH-660E}) missing from current font.
+    fig.tight_layout()
+
+tests/test_report.py::test_anomaly_scatter_renders
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:224: UserWarning: Glyph 26174 (\N{CJK UNIFIED IDEOGRAPH-663E}) missing from current font.
+    fig.tight_layout()
+
+tests/test_report.py::test_anomaly_scatter_renders
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:224: UserWarning: Glyph 28418 (\N{CJK UNIFIED IDEOGRAPH-6F02}) missing from current font.
+    fig.tight_layout()
+
+tests/test_report.py::test_anomaly_scatter_renders
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:224: UserWarning: Glyph 31227 (\N{CJK UNIFIED IDEOGRAPH-79FB}) missing from current font.
+    fig.tight_layout()
+
+tests/test_report.py::test_anomaly_scatter_renders
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:224: UserWarning: Glyph 20559 (\N{CJK UNIFIED IDEOGRAPH-504F}) missing from current font.
+    fig.tight_layout()
+
+tests/test_report.py::test_anomaly_scatter_renders
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:224: UserWarning: Glyph 31163 (\N{CJK UNIFIED IDEOGRAPH-79BB}) missing from current font.
+    fig.tight_layout()
+
+tests/test_report.py::test_anomaly_scatter_renders
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:224: UserWarning: Glyph 37051 (\N{CJK UNIFIED IDEOGRAPH-90BB}) missing from current font.
+    fig.tight_layout()
+
+tests/test_report.py::test_anomaly_scatter_renders
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:224: UserWarning: Glyph 22495 (\N{CJK UNIFIED IDEOGRAPH-57DF}) missing from current font.
+    fig.tight_layout()
+
+tests/test_report.py::test_anomaly_scatter_renders
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:224: UserWarning: Glyph 20013 (\N{CJK UNIFIED IDEOGRAPH-4E2D}) missing from current font.
+    fig.tight_layout()
+
+tests/test_report.py::test_anomaly_scatter_renders
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:224: UserWarning: Glyph 20301 (\N{CJK UNIFIED IDEOGRAPH-4F4D}) missing from current font.
+    fig.tight_layout()
+
+tests/test_report.py::test_anomaly_scatter_renders
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:224: UserWarning: Glyph 28857 (\N{CJK UNIFIED IDEOGRAPH-70B9}) missing from current font.
+    fig.tight_layout()
+
+tests/test_report.py::test_anomaly_scatter_renders
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:224: UserWarning: Glyph 38745 (\N{CJK UNIFIED IDEOGRAPH-9759}) missing from current font.
+    fig.tight_layout()
+
+tests/test_report.py::test_anomaly_scatter_renders
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:224: UserWarning: Glyph 27490 (\N{CJK UNIFIED IDEOGRAPH-6B62}) missing from current font.
+    fig.tight_layout()
+
+tests/test_report.py::test_anomaly_scatter_renders
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:224: UserWarning: Glyph 20572 (\N{CJK UNIFIED IDEOGRAPH-505C}) missing from current font.
+    fig.tight_layout()
+
+tests/test_report.py::test_anomaly_scatter_renders
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:224: UserWarning: Glyph 36710 (\N{CJK UNIFIED IDEOGRAPH-8F66}) missing from current font.
+    fig.tight_layout()
+
+tests/test_report.py::test_anomaly_scatter_renders
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:224: UserWarning: Glyph 23450 (\N{CJK UNIFIED IDEOGRAPH-5B9A}) missing from current font.
+    fig.tight_layout()
+
+tests/test_report.py::test_anomaly_scatter_renders
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:224: UserWarning: Glyph 25238 (\N{CJK UNIFIED IDEOGRAPH-6296}) missing from current font.
+    fig.tight_layout()
+
+tests/test_report.py::test_anomaly_scatter_renders
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:224: UserWarning: Glyph 21160 (\N{CJK UNIFIED IDEOGRAPH-52A8}) missing from current font.
+    fig.tight_layout()
+
+tests/test_report.py::test_anomaly_scatter_renders
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:226: UserWarning: Glyph 21152 (\N{CJK UNIFIED IDEOGRAPH-52A0}) missing from current font.
+    fig.savefig(path, dpi=140, bbox_inches="tight")
+
+tests/test_report.py::test_anomaly_scatter_renders
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:226: UserWarning: Glyph 36895 (\N{CJK UNIFIED IDEOGRAPH-901F}) missing from current font.
+    fig.savefig(path, dpi=140, bbox_inches="tight")
+
+tests/test_report.py::test_anomaly_scatter_renders
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:226: UserWarning: Glyph 24230 (\N{CJK UNIFIED IDEOGRAPH-5EA6}) missing from current font.
+    fig.savefig(path, dpi=140, bbox_inches="tight")
+
+tests/test_report.py::test_anomaly_scatter_renders
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:226: UserWarning: Glyph 24322 (\N{CJK UNIFIED IDEOGRAPH-5F02}) missing from current font.
+    fig.savefig(path, dpi=140, bbox_inches="tight")
+
+tests/test_report.py::test_anomaly_scatter_renders
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:226: UserWarning: Glyph 24120 (\N{CJK UNIFIED IDEOGRAPH-5E38}) missing from current font.
+    fig.savefig(path, dpi=140, bbox_inches="tight")
+
+tests/test_report.py::test_anomaly_scatter_renders
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:226: UserWarning: Glyph 26102 (\N{CJK UNIFIED IDEOGRAPH-65F6}) missing from current font.
+    fig.savefig(path, dpi=140, bbox_inches="tight")
+
+tests/test_report.py::test_anomaly_scatter_renders
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:226: UserWarning: Glyph 38388 (\N{CJK UNIFIED IDEOGRAPH-95F4}) missing from current font.
+    fig.savefig(path, dpi=140, bbox_inches="tight")
+
+tests/test_report.py::test_anomaly_scatter_renders
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:226: UserWarning: Glyph 25139 (\N{CJK UNIFIED IDEOGRAPH-6233}) missing from current font.
+    fig.savefig(path, dpi=140, bbox_inches="tight")
+
+tests/test_report.py::test_anomaly_scatter_renders
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:226: UserWarning: Glyph 20266 (\N{CJK UNIFIED IDEOGRAPH-4F2A}) missing from current font.
+    fig.savefig(path, dpi=140, bbox_inches="tight")
+
+tests/test_report.py::test_anomaly_scatter_renders
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:226: UserWarning: Glyph 24433 (\N{CJK UNIFIED IDEOGRAPH-5F71}) missing from current font.
+    fig.savefig(path, dpi=140, bbox_inches="tight")
+
+tests/test_report.py::test_anomaly_scatter_renders
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:226: UserWarning: Glyph 65288 (\N{FULLWIDTH LEFT PARENTHESIS}) missing from current font.
+    fig.savefig(path, dpi=140, bbox_inches="tight")
+
+tests/test_report.py::test_anomaly_scatter_renders
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:226: UserWarning: Glyph 36828 (\N{CJK UNIFIED IDEOGRAPH-8FDC}) missing from current font.
+    fig.savefig(path, dpi=140, bbox_inches="tight")
+
+tests/test_report.py::test_anomaly_scatter_renders
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:226: UserWarning: Glyph 23567 (\N{CJK UNIFIED IDEOGRAPH-5C0F}) missing from current font.
+    fig.savefig(path, dpi=140, bbox_inches="tight")
+
+tests/test_report.py::test_anomaly_scatter_renders
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:226: UserWarning: Glyph 20110 (\N{CJK UNIFIED IDEOGRAPH-4E8E}) missing from current font.
+    fig.savefig(path, dpi=140, bbox_inches="tight")
+
+tests/test_report.py::test_anomaly_scatter_renders
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:226: UserWarning: Glyph 27491 (\N{CJK UNIFIED IDEOGRAPH-6B63}) missing from current font.
+    fig.savefig(path, dpi=140, bbox_inches="tight")
+
+tests/test_report.py::test_anomaly_scatter_renders
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:226: UserWarning: Glyph 37319 (\N{CJK UNIFIED IDEOGRAPH-91C7}) missing from current font.
+    fig.savefig(path, dpi=140, bbox_inches="tight")
+
+tests/test_report.py::test_anomaly_scatter_renders
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:226: UserWarning: Glyph 26679 (\N{CJK UNIFIED IDEOGRAPH-6837}) missing from current font.
+    fig.savefig(path, dpi=140, bbox_inches="tight")
+
+tests/test_report.py::test_anomaly_scatter_renders
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:226: UserWarning: Glyph 38548 (\N{CJK UNIFIED IDEOGRAPH-9694}) missing from current font.
+    fig.savefig(path, dpi=140, bbox_inches="tight")
+
+tests/test_report.py::test_anomaly_scatter_renders
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:226: UserWarning: Glyph 65289 (\N{FULLWIDTH RIGHT PARENTHESIS}) missing from current font.
+    fig.savefig(path, dpi=140, bbox_inches="tight")
+
+tests/test_report.py::test_anomaly_scatter_renders
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:226: UserWarning: Glyph 36229 (\N{CJK UNIFIED IDEOGRAPH-8D85}) missing from current font.
+    fig.savefig(path, dpi=140, bbox_inches="tight")
+
+tests/test_report.py::test_anomaly_scatter_renders
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:226: UserWarning: Glyph 38480 (\N{CJK UNIFIED IDEOGRAPH-9650}) missing from current font.
+    fig.savefig(path, dpi=140, bbox_inches="tight")
+
+tests/test_report.py::test_anomaly_scatter_renders
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:226: UserWarning: Glyph 38750 (\N{CJK UNIFIED IDEOGRAPH-975E}) missing from current font.
+    fig.savefig(path, dpi=140, bbox_inches="tight")
+
+tests/test_report.py::test_anomaly_scatter_renders
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:226: UserWarning: Glyph 36882 (\N{CJK UNIFIED IDEOGRAPH-9012}) missing from current font.
+    fig.savefig(path, dpi=140, bbox_inches="tight")
+
+tests/test_report.py::test_anomaly_scatter_renders
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:226: UserWarning: Glyph 22686 (\N{CJK UNIFIED IDEOGRAPH-589E}) missing from current font.
+    fig.savefig(path, dpi=140, bbox_inches="tight")
+
+tests/test_report.py::test_anomaly_scatter_renders
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:226: UserWarning: Glyph 26126 (\N{CJK UNIFIED IDEOGRAPH-660E}) missing from current font.
+    fig.savefig(path, dpi=140, bbox_inches="tight")
+
+tests/test_report.py::test_anomaly_scatter_renders
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:226: UserWarning: Glyph 26174 (\N{CJK UNIFIED IDEOGRAPH-663E}) missing from current font.
+    fig.savefig(path, dpi=140, bbox_inches="tight")
+
+tests/test_report.py::test_anomaly_scatter_renders
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:226: UserWarning: Glyph 28418 (\N{CJK UNIFIED IDEOGRAPH-6F02}) missing from current font.
+    fig.savefig(path, dpi=140, bbox_inches="tight")
+
+tests/test_report.py::test_anomaly_scatter_renders
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:226: UserWarning: Glyph 31227 (\N{CJK UNIFIED IDEOGRAPH-79FB}) missing from current font.
+    fig.savefig(path, dpi=140, bbox_inches="tight")
+
+tests/test_report.py::test_anomaly_scatter_renders
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:226: UserWarning: Glyph 20559 (\N{CJK UNIFIED IDEOGRAPH-504F}) missing from current font.
+    fig.savefig(path, dpi=140, bbox_inches="tight")
+
+tests/test_report.py::test_anomaly_scatter_renders
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:226: UserWarning: Glyph 31163 (\N{CJK UNIFIED IDEOGRAPH-79BB}) missing from current font.
+    fig.savefig(path, dpi=140, bbox_inches="tight")
+
+tests/test_report.py::test_anomaly_scatter_renders
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:226: UserWarning: Glyph 37051 (\N{CJK UNIFIED IDEOGRAPH-90BB}) missing from current font.
+    fig.savefig(path, dpi=140, bbox_inches="tight")
+
+tests/test_report.py::test_anomaly_scatter_renders
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:226: UserWarning: Glyph 22495 (\N{CJK UNIFIED IDEOGRAPH-57DF}) missing from current font.
+    fig.savefig(path, dpi=140, bbox_inches="tight")
+
+tests/test_report.py::test_anomaly_scatter_renders
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:226: UserWarning: Glyph 20013 (\N{CJK UNIFIED IDEOGRAPH-4E2D}) missing from current font.
+    fig.savefig(path, dpi=140, bbox_inches="tight")
+
+tests/test_report.py::test_anomaly_scatter_renders
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:226: UserWarning: Glyph 20301 (\N{CJK UNIFIED IDEOGRAPH-4F4D}) missing from current font.
+    fig.savefig(path, dpi=140, bbox_inches="tight")
+
+tests/test_report.py::test_anomaly_scatter_renders
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:226: UserWarning: Glyph 28857 (\N{CJK UNIFIED IDEOGRAPH-70B9}) missing from current font.
+    fig.savefig(path, dpi=140, bbox_inches="tight")
+
+tests/test_report.py::test_anomaly_scatter_renders
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:226: UserWarning: Glyph 38745 (\N{CJK UNIFIED IDEOGRAPH-9759}) missing from current font.
+    fig.savefig(path, dpi=140, bbox_inches="tight")
+
+tests/test_report.py::test_anomaly_scatter_renders
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:226: UserWarning: Glyph 27490 (\N{CJK UNIFIED IDEOGRAPH-6B62}) missing from current font.
+    fig.savefig(path, dpi=140, bbox_inches="tight")
+
+tests/test_report.py::test_anomaly_scatter_renders
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:226: UserWarning: Glyph 20572 (\N{CJK UNIFIED IDEOGRAPH-505C}) missing from current font.
+    fig.savefig(path, dpi=140, bbox_inches="tight")
+
+tests/test_report.py::test_anomaly_scatter_renders
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:226: UserWarning: Glyph 36710 (\N{CJK UNIFIED IDEOGRAPH-8F66}) missing from current font.
+    fig.savefig(path, dpi=140, bbox_inches="tight")
+
+tests/test_report.py::test_anomaly_scatter_renders
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:226: UserWarning: Glyph 23450 (\N{CJK UNIFIED IDEOGRAPH-5B9A}) missing from current font.
+    fig.savefig(path, dpi=140, bbox_inches="tight")
+
+tests/test_report.py::test_anomaly_scatter_renders
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:226: UserWarning: Glyph 25238 (\N{CJK UNIFIED IDEOGRAPH-6296}) missing from current font.
+    fig.savefig(path, dpi=140, bbox_inches="tight")
+
+tests/test_report.py::test_anomaly_scatter_renders
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:226: UserWarning: Glyph 21160 (\N{CJK UNIFIED IDEOGRAPH-52A8}) missing from current font.
+    fig.savefig(path, dpi=140, bbox_inches="tight")
+
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:224: UserWarning: Glyph 31354 (\N{CJK UNIFIED IDEOGRAPH-7A7A}) missing from current font.
+    fig.tight_layout()
+
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:224: UserWarning: Glyph 36339 (\N{CJK UNIFIED IDEOGRAPH-8DF3}) missing from current font.
+    fig.tight_layout()
+
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:224: UserWarning: Glyph 36291 (\N{CJK UNIFIED IDEOGRAPH-8DC3}) missing from current font.
+    fig.tight_layout()
+
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:224: UserWarning: Glyph 36807 (\N{CJK UNIFIED IDEOGRAPH-8FC7}) missing from current font.
+    fig.tight_layout()
+
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:224: UserWarning: Glyph 22823 (\N{CJK UNIFIED IDEOGRAPH-5927}) missing from current font.
+    fig.tight_layout()
+
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:226: UserWarning: Glyph 31354 (\N{CJK UNIFIED IDEOGRAPH-7A7A}) missing from current font.
+    fig.savefig(path, dpi=140, bbox_inches="tight")
+
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:226: UserWarning: Glyph 36339 (\N{CJK UNIFIED IDEOGRAPH-8DF3}) missing from current font.
+    fig.savefig(path, dpi=140, bbox_inches="tight")
+
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:226: UserWarning: Glyph 36291 (\N{CJK UNIFIED IDEOGRAPH-8DC3}) missing from current font.
+    fig.savefig(path, dpi=140, bbox_inches="tight")
+
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:226: UserWarning: Glyph 36807 (\N{CJK UNIFIED IDEOGRAPH-8FC7}) missing from current font.
+    fig.savefig(path, dpi=140, bbox_inches="tight")
+
+tests/test_report.py::test_anomaly_scatter_on_clean_trajectory
+tests/test_report.py::test_render_dispatch
+  /home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/作业/作业/traj_agent/report/figures.py:226: UserWarning: Glyph 22823 (\N{CJK UNIFIED IDEOGRAPH-5927}) missing from current font.
+    fig.savefig(path, dpi=140, bbox_inches="tight")
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED task1/作业/作业/tests/test_tools.py::test_playbook_loads_stub_notes - ...
+FAILED task1/作业/作业/tests/test_tools.py::test_playbook_parses_wikilinks - ...
+FAILED task1/作业/作业/tests/test_tools.py::test_playbook_digest_filters_by_param
+3 failed, 289 passed, 1 skipped, 252 warnings in 68.92s (0:01:08)

@@ -1,0 +1,60 @@
+{
+  "command": "git diff --cached --check",
+  "exit_code": 2,
+  "counts": [
+    {
+      "path": "task1/evidence/goal1/APPROVED_PROMPT.md",
+      "message": "trailing whitespace.",
+      "count": 665
+    },
+    {
+      "path": "task1/evidence/goal1/environment/codex_01571_exec.txt",
+      "message": "trailing whitespace.",
+      "count": 3
+    },
+    {
+      "path": "task1/evidence/goal1/inventory/record_profiles.csv",
+      "message": "trailing whitespace.",
+      "count": 11387
+    },
+    {
+      "path": "task1/evidence/goal1/materials/notebook_02_source_outputs.md",
+      "message": "trailing whitespace.",
+      "count": 7
+    },
+    {
+      "path": "task1/evidence/goal1/materials/pptx_05_text_and_notes.md",
+      "message": "trailing whitespace.",
+      "count": 9
+    },
+    {
+      "path": "task1/figures/goal1/pilot_diagnostics.svg",
+      "message": "trailing whitespace.",
+      "count": 232
+    },
+    {
+      "path": "task1/results/goal1/pilot_summary.csv",
+      "message": "trailing whitespace.",
+      "count": 8
+    }
+  ],
+  "raw_output_not_duplicated": "Only file/line warning counts retained; full source is already staged, no need to duplicate 900KB warning text",
+  "checked_at": "2026-09-26T11:45:29.290097+00:00",
+  "reviewed_exception": "Only existing CRLF in exact user prompt/standard CSV, faithful CLI/source transcriptions, and native Matplotlib SVG trailing path spaces. Preserve source/export bytes; no code or handwritten prose whitespace errors.",
+  "filtered_check_command": [
+    "git",
+    "diff",
+    "--cached",
+    "--check",
+    "--",
+    ".",
+    ":(exclude)task1/evidence/goal1/APPROVED_PROMPT.md",
+    ":(exclude)task1/evidence/goal1/environment/codex_01571_exec.txt",
+    ":(exclude)task1/evidence/goal1/inventory/record_profiles.csv",
+    ":(exclude)task1/evidence/goal1/materials/notebook_02_source_outputs.md",
+    ":(exclude)task1/evidence/goal1/materials/pptx_05_text_and_notes.md",
+    ":(exclude)task1/figures/goal1/pilot_diagnostics.svg",
+    ":(exclude)task1/results/goal1/pilot_summary.csv"
+  ],
+  "filtered_check_exit_code": 0
+}

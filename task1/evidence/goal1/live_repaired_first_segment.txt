@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/workflow/__main__.py", line 28, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/workflow/__main__.py", line 20, in main
+    result=Controller(args.run_id).run(stop_after=args.stop_after)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/workflow/controller.py", line 230, in run
+    value,receipt=provider.call(role,call_id,self.prompt(role,call_id,instruction),PHASE_ACTIONS[phase],call_dir)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/workflow/provider.py", line 141, in call
+    value,thread,usage=parse_response(events,schema,result.returncode)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/workflow/provider.py", line 71, in parse_response
+    raise ProviderError('CLI_FAILED_OR_UNEXPECTED_TOOL')
+task1.workflow.provider.ProviderError: CLI_FAILED_OR_UNEXPECTED_TOOL

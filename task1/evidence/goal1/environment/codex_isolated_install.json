@@ -1,0 +1,19 @@
+{
+  "command": [
+    "npm",
+    "install",
+    "--prefix",
+    "/tmp/sc-g1-codex-0.157.1",
+    "--ignore-scripts",
+    "--no-audit",
+    "--no-fund",
+    "--strict-ssl=true",
+    "--registry=https://registry.npmjs.org",
+    "@openai/codex@0.157.1"
+  ],
+  "exit_code": 0,
+  "at": "2026-09-26T11:03:04.138193+00:00",
+  "scope": "task temporary directory, no global CLI/config/auth modifications",
+  "reason": "existing 0.147.0 rejected by server as too old for same gpt-6-astra",
+  "tls_verification": "enforced for install"
+}

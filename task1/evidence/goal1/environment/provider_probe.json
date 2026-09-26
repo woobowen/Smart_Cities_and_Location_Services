@@ -1,0 +1,30 @@
+{
+  "cli_version": "codex-cli 0.147.0",
+  "authentication": "ChatGPT existing CLI login; codex login status",
+  "model_config": "gpt-6-astra",
+  "reasoning_config": "max",
+  "capabilities": [
+    "exec --json",
+    "exec --output-schema",
+    "exec --ephemeral",
+    "exec --ignore-user-config",
+    "read-only sandbox",
+    "multi_agent stable enabled"
+  ],
+  "live_test": "NOT_RUN",
+  "secrets_read": false,
+  "official_sources": [
+    {
+      "url": "https://developers.openai.com/codex/noninteractive/",
+      "resolved": "https://learn.chatgpt.com/docs/non-interactive-mode",
+      "supported_claim": "exec supports JSONL events and schema outputs; reuses existing CLI authentication",
+      "checked": "2026-09-26"
+    },
+    {
+      "url": "https://developers.openai.com/codex/multi-agent/",
+      "resolved": "https://learn.chatgpt.com/docs/agent-configuration/subagents",
+      "supported_claim": "subagents have independent contexts; consume account usage and inherit permission controls",
+      "checked": "2026-09-26"
+    }
+  ]
+}
