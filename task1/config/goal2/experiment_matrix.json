@@ -1,0 +1,1997 @@
+{
+  "goal_id": "SC-LAB1-G2-EXPERIMENTS-001",
+  "contract_version": "G2_EXECUTION_CONTRACT_V1",
+  "authority": "current user prompt plus independently reviewed G2 contract",
+  "classification": "EXECUTABLE_TASKPLAN_NOT_HUMAN_APPROVAL",
+  "created_at_utc": "2026-09-26T18:50:21.466170+00:00",
+  "shared_computation_rule": "same raw/scope/code/contract/config/memory key reused once; memberships are not independent experiments",
+  "unique_development_parameter_configurations": 59,
+  "parameter_configurations": [
+    {
+      "config_id": "cfg-5f3726776663985b",
+      "parameters": {
+        "dt": 15,
+        "distance": 400,
+        "min_points": 5,
+        "min_length": 65,
+        "direction": 35,
+        "dp": 5
+      },
+      "order": "S-D-P",
+      "memberships": [
+        {
+          "experiment_id": "G2-PARAM-DT",
+          "value": 15
+        },
+        {
+          "experiment_id": "G2-PARAM-TIME-DISTANCE",
+          "dt": 15,
+          "distance": 400
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-7b4506482fa0b5f2",
+      "parameters": {
+        "dt": 20,
+        "distance": 400,
+        "min_points": 5,
+        "min_length": 65,
+        "direction": 35,
+        "dp": 5
+      },
+      "order": "S-D-P",
+      "memberships": [
+        {
+          "experiment_id": "G2-PARAM-DT",
+          "value": 20
+        },
+        {
+          "experiment_id": "G2-PARAM-TIME-DISTANCE",
+          "dt": 20,
+          "distance": 400
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-b15b8281b73592fb",
+      "parameters": {
+        "dt": 30,
+        "distance": 400,
+        "min_points": 5,
+        "min_length": 65,
+        "direction": 35,
+        "dp": 5
+      },
+      "order": "S-D-P",
+      "memberships": [
+        {
+          "experiment_id": "G2-PARAM-DT",
+          "value": 30
+        },
+        {
+          "experiment_id": "G2-PARAM-DISTANCE",
+          "value": 400
+        },
+        {
+          "experiment_id": "G2-PARAM-MIN_POINTS",
+          "value": 5
+        },
+        {
+          "experiment_id": "G2-PARAM-MIN_LENGTH",
+          "value": 65
+        },
+        {
+          "experiment_id": "G2-PARAM-DIRECTION",
+          "value": 35
+        },
+        {
+          "experiment_id": "G2-PARAM-DP",
+          "value": 5
+        },
+        {
+          "experiment_id": "G2-PARAM-TIME-DISTANCE",
+          "dt": 30,
+          "distance": 400
+        },
+        {
+          "experiment_id": "G2-PARAM-POINTS-LENGTH",
+          "min_points": 5,
+          "min_length": 65
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-85746847a32cb544",
+      "parameters": {
+        "dt": 45,
+        "distance": 400,
+        "min_points": 5,
+        "min_length": 65,
+        "direction": 35,
+        "dp": 5
+      },
+      "order": "S-D-P",
+      "memberships": [
+        {
+          "experiment_id": "G2-PARAM-DT",
+          "value": 45
+        },
+        {
+          "experiment_id": "G2-PARAM-TIME-DISTANCE",
+          "dt": 45,
+          "distance": 400
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-d4ff6528d1731c17",
+      "parameters": {
+        "dt": 60,
+        "distance": 400,
+        "min_points": 5,
+        "min_length": 65,
+        "direction": 35,
+        "dp": 5
+      },
+      "order": "S-D-P",
+      "memberships": [
+        {
+          "experiment_id": "G2-PARAM-DT",
+          "value": 60
+        },
+        {
+          "experiment_id": "G2-PARAM-TIME-DISTANCE",
+          "dt": 60,
+          "distance": 400
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-0ad662cd1af68eaf",
+      "parameters": {
+        "dt": 30,
+        "distance": 95,
+        "min_points": 5,
+        "min_length": 65,
+        "direction": 35,
+        "dp": 5
+      },
+      "order": "S-D-P",
+      "memberships": [
+        {
+          "experiment_id": "G2-PARAM-DISTANCE",
+          "value": 95
+        },
+        {
+          "experiment_id": "G2-PARAM-TIME-DISTANCE",
+          "dt": 30,
+          "distance": 95
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-c75c27c441321c6a",
+      "parameters": {
+        "dt": 30,
+        "distance": 200,
+        "min_points": 5,
+        "min_length": 65,
+        "direction": 35,
+        "dp": 5
+      },
+      "order": "S-D-P",
+      "memberships": [
+        {
+          "experiment_id": "G2-PARAM-DISTANCE",
+          "value": 200
+        },
+        {
+          "experiment_id": "G2-PARAM-TIME-DISTANCE",
+          "dt": 30,
+          "distance": 200
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-cfcdb0f0e22b991f",
+      "parameters": {
+        "dt": 30,
+        "distance": 600,
+        "min_points": 5,
+        "min_length": 65,
+        "direction": 35,
+        "dp": 5
+      },
+      "order": "S-D-P",
+      "memberships": [
+        {
+          "experiment_id": "G2-PARAM-DISTANCE",
+          "value": 600
+        },
+        {
+          "experiment_id": "G2-PARAM-TIME-DISTANCE",
+          "dt": 30,
+          "distance": 600
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-7261bd230cb316ee",
+      "parameters": {
+        "dt": 30,
+        "distance": 800,
+        "min_points": 5,
+        "min_length": 65,
+        "direction": 35,
+        "dp": 5
+      },
+      "order": "S-D-P",
+      "memberships": [
+        {
+          "experiment_id": "G2-PARAM-DISTANCE",
+          "value": 800
+        },
+        {
+          "experiment_id": "G2-PARAM-TIME-DISTANCE",
+          "dt": 30,
+          "distance": 800
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-6599edd5fcbf75b1",
+      "parameters": {
+        "dt": 30,
+        "distance": 400,
+        "min_points": 2,
+        "min_length": 65,
+        "direction": 35,
+        "dp": 5
+      },
+      "order": "S-D-P",
+      "memberships": [
+        {
+          "experiment_id": "G2-PARAM-MIN_POINTS",
+          "value": 2
+        },
+        {
+          "experiment_id": "G2-PARAM-POINTS-LENGTH",
+          "min_points": 2,
+          "min_length": 65
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-d4df6d869dc800d6",
+      "parameters": {
+        "dt": 30,
+        "distance": 400,
+        "min_points": 3,
+        "min_length": 65,
+        "direction": 35,
+        "dp": 5
+      },
+      "order": "S-D-P",
+      "memberships": [
+        {
+          "experiment_id": "G2-PARAM-MIN_POINTS",
+          "value": 3
+        },
+        {
+          "experiment_id": "G2-PARAM-POINTS-LENGTH",
+          "min_points": 3,
+          "min_length": 65
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-38b5af70752afcf3",
+      "parameters": {
+        "dt": 30,
+        "distance": 400,
+        "min_points": 7,
+        "min_length": 65,
+        "direction": 35,
+        "dp": 5
+      },
+      "order": "S-D-P",
+      "memberships": [
+        {
+          "experiment_id": "G2-PARAM-MIN_POINTS",
+          "value": 7
+        },
+        {
+          "experiment_id": "G2-PARAM-POINTS-LENGTH",
+          "min_points": 7,
+          "min_length": 65
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-7a5c632edc26a683",
+      "parameters": {
+        "dt": 30,
+        "distance": 400,
+        "min_points": 10,
+        "min_length": 65,
+        "direction": 35,
+        "dp": 5
+      },
+      "order": "S-D-P",
+      "memberships": [
+        {
+          "experiment_id": "G2-PARAM-MIN_POINTS",
+          "value": 10
+        },
+        {
+          "experiment_id": "G2-PARAM-POINTS-LENGTH",
+          "min_points": 10,
+          "min_length": 65
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-63139d05595c253c",
+      "parameters": {
+        "dt": 30,
+        "distance": 400,
+        "min_points": 5,
+        "min_length": 0,
+        "direction": 35,
+        "dp": 5
+      },
+      "order": "S-D-P",
+      "memberships": [
+        {
+          "experiment_id": "G2-PARAM-MIN_LENGTH",
+          "value": 0
+        },
+        {
+          "experiment_id": "G2-PARAM-POINTS-LENGTH",
+          "min_points": 5,
+          "min_length": 0
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-5279f18a16a391af",
+      "parameters": {
+        "dt": 30,
+        "distance": 400,
+        "min_points": 5,
+        "min_length": 32.5,
+        "direction": 35,
+        "dp": 5
+      },
+      "order": "S-D-P",
+      "memberships": [
+        {
+          "experiment_id": "G2-PARAM-MIN_LENGTH",
+          "value": 32.5
+        },
+        {
+          "experiment_id": "G2-PARAM-POINTS-LENGTH",
+          "min_points": 5,
+          "min_length": 32.5
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-2145210f6818db22",
+      "parameters": {
+        "dt": 30,
+        "distance": 400,
+        "min_points": 5,
+        "min_length": 97.5,
+        "direction": 35,
+        "dp": 5
+      },
+      "order": "S-D-P",
+      "memberships": [
+        {
+          "experiment_id": "G2-PARAM-MIN_LENGTH",
+          "value": 97.5
+        },
+        {
+          "experiment_id": "G2-PARAM-POINTS-LENGTH",
+          "min_points": 5,
+          "min_length": 97.5
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-dc3bdca5d6cb9c1f",
+      "parameters": {
+        "dt": 30,
+        "distance": 400,
+        "min_points": 5,
+        "min_length": 130,
+        "direction": 35,
+        "dp": 5
+      },
+      "order": "S-D-P",
+      "memberships": [
+        {
+          "experiment_id": "G2-PARAM-MIN_LENGTH",
+          "value": 130
+        },
+        {
+          "experiment_id": "G2-PARAM-POINTS-LENGTH",
+          "min_points": 5,
+          "min_length": 130
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-6b37e535e1ea2046",
+      "parameters": {
+        "dt": 30,
+        "distance": 400,
+        "min_points": 5,
+        "min_length": 65,
+        "direction": 15,
+        "dp": 5
+      },
+      "order": "S-D-P",
+      "memberships": [
+        {
+          "experiment_id": "G2-PARAM-DIRECTION",
+          "value": 15
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-893931df60c3d3d6",
+      "parameters": {
+        "dt": 30,
+        "distance": 400,
+        "min_points": 5,
+        "min_length": 65,
+        "direction": 25,
+        "dp": 5
+      },
+      "order": "S-D-P",
+      "memberships": [
+        {
+          "experiment_id": "G2-PARAM-DIRECTION",
+          "value": 25
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-24646b7acfafee8e",
+      "parameters": {
+        "dt": 30,
+        "distance": 400,
+        "min_points": 5,
+        "min_length": 65,
+        "direction": 45,
+        "dp": 5
+      },
+      "order": "S-D-P",
+      "memberships": [
+        {
+          "experiment_id": "G2-PARAM-DIRECTION",
+          "value": 45
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-a5483ca9cb883a91",
+      "parameters": {
+        "dt": 30,
+        "distance": 400,
+        "min_points": 5,
+        "min_length": 65,
+        "direction": 60,
+        "dp": 5
+      },
+      "order": "S-D-P",
+      "memberships": [
+        {
+          "experiment_id": "G2-PARAM-DIRECTION",
+          "value": 60
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-b64eb945a846910c",
+      "parameters": {
+        "dt": 30,
+        "distance": 400,
+        "min_points": 5,
+        "min_length": 65,
+        "direction": 35,
+        "dp": 0
+      },
+      "order": "S-D-P",
+      "memberships": [
+        {
+          "experiment_id": "G2-PARAM-DP",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-59d5d0c23b67d172",
+      "parameters": {
+        "dt": 30,
+        "distance": 400,
+        "min_points": 5,
+        "min_length": 65,
+        "direction": 35,
+        "dp": 0.5
+      },
+      "order": "S-D-P",
+      "memberships": [
+        {
+          "experiment_id": "G2-PARAM-DP",
+          "value": 0.5
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-322e68540606f046",
+      "parameters": {
+        "dt": 30,
+        "distance": 400,
+        "min_points": 5,
+        "min_length": 65,
+        "direction": 35,
+        "dp": 1
+      },
+      "order": "S-D-P",
+      "memberships": [
+        {
+          "experiment_id": "G2-PARAM-DP",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-df6f00206fb03678",
+      "parameters": {
+        "dt": 30,
+        "distance": 400,
+        "min_points": 5,
+        "min_length": 65,
+        "direction": 35,
+        "dp": 2
+      },
+      "order": "S-D-P",
+      "memberships": [
+        {
+          "experiment_id": "G2-PARAM-DP",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-65d9f66c5a9b483a",
+      "parameters": {
+        "dt": 30,
+        "distance": 400,
+        "min_points": 5,
+        "min_length": 65,
+        "direction": 35,
+        "dp": 10
+      },
+      "order": "S-D-P",
+      "memberships": [
+        {
+          "experiment_id": "G2-PARAM-DP",
+          "value": 10
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-e8ff0df5800d5c3b",
+      "parameters": {
+        "dt": 30,
+        "distance": 400,
+        "min_points": 5,
+        "min_length": 65,
+        "direction": 35,
+        "dp": 20
+      },
+      "order": "S-D-P",
+      "memberships": [
+        {
+          "experiment_id": "G2-PARAM-DP",
+          "value": 20
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-672c311f4dabd45c",
+      "parameters": {
+        "dt": 15,
+        "distance": 95,
+        "min_points": 5,
+        "min_length": 65,
+        "direction": 35,
+        "dp": 5
+      },
+      "order": "S-D-P",
+      "memberships": [
+        {
+          "experiment_id": "G2-PARAM-TIME-DISTANCE",
+          "dt": 15,
+          "distance": 95
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-a14223bb071ea6fe",
+      "parameters": {
+        "dt": 15,
+        "distance": 200,
+        "min_points": 5,
+        "min_length": 65,
+        "direction": 35,
+        "dp": 5
+      },
+      "order": "S-D-P",
+      "memberships": [
+        {
+          "experiment_id": "G2-PARAM-TIME-DISTANCE",
+          "dt": 15,
+          "distance": 200
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-fd21019cc8ca3842",
+      "parameters": {
+        "dt": 15,
+        "distance": 600,
+        "min_points": 5,
+        "min_length": 65,
+        "direction": 35,
+        "dp": 5
+      },
+      "order": "S-D-P",
+      "memberships": [
+        {
+          "experiment_id": "G2-PARAM-TIME-DISTANCE",
+          "dt": 15,
+          "distance": 600
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-3f2e270c7b010996",
+      "parameters": {
+        "dt": 15,
+        "distance": 800,
+        "min_points": 5,
+        "min_length": 65,
+        "direction": 35,
+        "dp": 5
+      },
+      "order": "S-D-P",
+      "memberships": [
+        {
+          "experiment_id": "G2-PARAM-TIME-DISTANCE",
+          "dt": 15,
+          "distance": 800
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-522fba6abbf5d1bc",
+      "parameters": {
+        "dt": 20,
+        "distance": 95,
+        "min_points": 5,
+        "min_length": 65,
+        "direction": 35,
+        "dp": 5
+      },
+      "order": "S-D-P",
+      "memberships": [
+        {
+          "experiment_id": "G2-PARAM-TIME-DISTANCE",
+          "dt": 20,
+          "distance": 95
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-9733e27113ed91ea",
+      "parameters": {
+        "dt": 20,
+        "distance": 200,
+        "min_points": 5,
+        "min_length": 65,
+        "direction": 35,
+        "dp": 5
+      },
+      "order": "S-D-P",
+      "memberships": [
+        {
+          "experiment_id": "G2-PARAM-TIME-DISTANCE",
+          "dt": 20,
+          "distance": 200
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-857da90ed04ebbbe",
+      "parameters": {
+        "dt": 20,
+        "distance": 600,
+        "min_points": 5,
+        "min_length": 65,
+        "direction": 35,
+        "dp": 5
+      },
+      "order": "S-D-P",
+      "memberships": [
+        {
+          "experiment_id": "G2-PARAM-TIME-DISTANCE",
+          "dt": 20,
+          "distance": 600
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-43be70fbb61e9927",
+      "parameters": {
+        "dt": 20,
+        "distance": 800,
+        "min_points": 5,
+        "min_length": 65,
+        "direction": 35,
+        "dp": 5
+      },
+      "order": "S-D-P",
+      "memberships": [
+        {
+          "experiment_id": "G2-PARAM-TIME-DISTANCE",
+          "dt": 20,
+          "distance": 800
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-a44fa1691cdad5d4",
+      "parameters": {
+        "dt": 45,
+        "distance": 95,
+        "min_points": 5,
+        "min_length": 65,
+        "direction": 35,
+        "dp": 5
+      },
+      "order": "S-D-P",
+      "memberships": [
+        {
+          "experiment_id": "G2-PARAM-TIME-DISTANCE",
+          "dt": 45,
+          "distance": 95
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-90310668f6147653",
+      "parameters": {
+        "dt": 45,
+        "distance": 200,
+        "min_points": 5,
+        "min_length": 65,
+        "direction": 35,
+        "dp": 5
+      },
+      "order": "S-D-P",
+      "memberships": [
+        {
+          "experiment_id": "G2-PARAM-TIME-DISTANCE",
+          "dt": 45,
+          "distance": 200
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-7380d059299db45a",
+      "parameters": {
+        "dt": 45,
+        "distance": 600,
+        "min_points": 5,
+        "min_length": 65,
+        "direction": 35,
+        "dp": 5
+      },
+      "order": "S-D-P",
+      "memberships": [
+        {
+          "experiment_id": "G2-PARAM-TIME-DISTANCE",
+          "dt": 45,
+          "distance": 600
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-4ba6fa8d8c11a024",
+      "parameters": {
+        "dt": 45,
+        "distance": 800,
+        "min_points": 5,
+        "min_length": 65,
+        "direction": 35,
+        "dp": 5
+      },
+      "order": "S-D-P",
+      "memberships": [
+        {
+          "experiment_id": "G2-PARAM-TIME-DISTANCE",
+          "dt": 45,
+          "distance": 800
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-56d9babc85c51d64",
+      "parameters": {
+        "dt": 60,
+        "distance": 95,
+        "min_points": 5,
+        "min_length": 65,
+        "direction": 35,
+        "dp": 5
+      },
+      "order": "S-D-P",
+      "memberships": [
+        {
+          "experiment_id": "G2-PARAM-TIME-DISTANCE",
+          "dt": 60,
+          "distance": 95
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-b3034e58a529fd4a",
+      "parameters": {
+        "dt": 60,
+        "distance": 200,
+        "min_points": 5,
+        "min_length": 65,
+        "direction": 35,
+        "dp": 5
+      },
+      "order": "S-D-P",
+      "memberships": [
+        {
+          "experiment_id": "G2-PARAM-TIME-DISTANCE",
+          "dt": 60,
+          "distance": 200
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-060195700887c44a",
+      "parameters": {
+        "dt": 60,
+        "distance": 600,
+        "min_points": 5,
+        "min_length": 65,
+        "direction": 35,
+        "dp": 5
+      },
+      "order": "S-D-P",
+      "memberships": [
+        {
+          "experiment_id": "G2-PARAM-TIME-DISTANCE",
+          "dt": 60,
+          "distance": 600
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-628483ab24c0b6b1",
+      "parameters": {
+        "dt": 60,
+        "distance": 800,
+        "min_points": 5,
+        "min_length": 65,
+        "direction": 35,
+        "dp": 5
+      },
+      "order": "S-D-P",
+      "memberships": [
+        {
+          "experiment_id": "G2-PARAM-TIME-DISTANCE",
+          "dt": 60,
+          "distance": 800
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-1e535c3fe3cc8ae1",
+      "parameters": {
+        "dt": 30,
+        "distance": 400,
+        "min_points": 2,
+        "min_length": 0,
+        "direction": 35,
+        "dp": 5
+      },
+      "order": "S-D-P",
+      "memberships": [
+        {
+          "experiment_id": "G2-PARAM-POINTS-LENGTH",
+          "min_points": 2,
+          "min_length": 0
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-81a89e633001f457",
+      "parameters": {
+        "dt": 30,
+        "distance": 400,
+        "min_points": 2,
+        "min_length": 32.5,
+        "direction": 35,
+        "dp": 5
+      },
+      "order": "S-D-P",
+      "memberships": [
+        {
+          "experiment_id": "G2-PARAM-POINTS-LENGTH",
+          "min_points": 2,
+          "min_length": 32.5
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-3096d8e282282635",
+      "parameters": {
+        "dt": 30,
+        "distance": 400,
+        "min_points": 2,
+        "min_length": 97.5,
+        "direction": 35,
+        "dp": 5
+      },
+      "order": "S-D-P",
+      "memberships": [
+        {
+          "experiment_id": "G2-PARAM-POINTS-LENGTH",
+          "min_points": 2,
+          "min_length": 97.5
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-7b664c0314ac01a9",
+      "parameters": {
+        "dt": 30,
+        "distance": 400,
+        "min_points": 2,
+        "min_length": 130,
+        "direction": 35,
+        "dp": 5
+      },
+      "order": "S-D-P",
+      "memberships": [
+        {
+          "experiment_id": "G2-PARAM-POINTS-LENGTH",
+          "min_points": 2,
+          "min_length": 130
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-a676557c7da6251e",
+      "parameters": {
+        "dt": 30,
+        "distance": 400,
+        "min_points": 3,
+        "min_length": 0,
+        "direction": 35,
+        "dp": 5
+      },
+      "order": "S-D-P",
+      "memberships": [
+        {
+          "experiment_id": "G2-PARAM-POINTS-LENGTH",
+          "min_points": 3,
+          "min_length": 0
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-901645379df0db06",
+      "parameters": {
+        "dt": 30,
+        "distance": 400,
+        "min_points": 3,
+        "min_length": 32.5,
+        "direction": 35,
+        "dp": 5
+      },
+      "order": "S-D-P",
+      "memberships": [
+        {
+          "experiment_id": "G2-PARAM-POINTS-LENGTH",
+          "min_points": 3,
+          "min_length": 32.5
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-4ad6ba13aaf512f3",
+      "parameters": {
+        "dt": 30,
+        "distance": 400,
+        "min_points": 3,
+        "min_length": 97.5,
+        "direction": 35,
+        "dp": 5
+      },
+      "order": "S-D-P",
+      "memberships": [
+        {
+          "experiment_id": "G2-PARAM-POINTS-LENGTH",
+          "min_points": 3,
+          "min_length": 97.5
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-b985b9509ecc8ff6",
+      "parameters": {
+        "dt": 30,
+        "distance": 400,
+        "min_points": 3,
+        "min_length": 130,
+        "direction": 35,
+        "dp": 5
+      },
+      "order": "S-D-P",
+      "memberships": [
+        {
+          "experiment_id": "G2-PARAM-POINTS-LENGTH",
+          "min_points": 3,
+          "min_length": 130
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-7de891c7d65fc173",
+      "parameters": {
+        "dt": 30,
+        "distance": 400,
+        "min_points": 7,
+        "min_length": 0,
+        "direction": 35,
+        "dp": 5
+      },
+      "order": "S-D-P",
+      "memberships": [
+        {
+          "experiment_id": "G2-PARAM-POINTS-LENGTH",
+          "min_points": 7,
+          "min_length": 0
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-9d355d795468065c",
+      "parameters": {
+        "dt": 30,
+        "distance": 400,
+        "min_points": 7,
+        "min_length": 32.5,
+        "direction": 35,
+        "dp": 5
+      },
+      "order": "S-D-P",
+      "memberships": [
+        {
+          "experiment_id": "G2-PARAM-POINTS-LENGTH",
+          "min_points": 7,
+          "min_length": 32.5
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-69a9139380a0edd9",
+      "parameters": {
+        "dt": 30,
+        "distance": 400,
+        "min_points": 7,
+        "min_length": 97.5,
+        "direction": 35,
+        "dp": 5
+      },
+      "order": "S-D-P",
+      "memberships": [
+        {
+          "experiment_id": "G2-PARAM-POINTS-LENGTH",
+          "min_points": 7,
+          "min_length": 97.5
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-15934b797839150f",
+      "parameters": {
+        "dt": 30,
+        "distance": 400,
+        "min_points": 7,
+        "min_length": 130,
+        "direction": 35,
+        "dp": 5
+      },
+      "order": "S-D-P",
+      "memberships": [
+        {
+          "experiment_id": "G2-PARAM-POINTS-LENGTH",
+          "min_points": 7,
+          "min_length": 130
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-64af02f0e5043228",
+      "parameters": {
+        "dt": 30,
+        "distance": 400,
+        "min_points": 10,
+        "min_length": 0,
+        "direction": 35,
+        "dp": 5
+      },
+      "order": "S-D-P",
+      "memberships": [
+        {
+          "experiment_id": "G2-PARAM-POINTS-LENGTH",
+          "min_points": 10,
+          "min_length": 0
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-00ad40b806af82f6",
+      "parameters": {
+        "dt": 30,
+        "distance": 400,
+        "min_points": 10,
+        "min_length": 32.5,
+        "direction": 35,
+        "dp": 5
+      },
+      "order": "S-D-P",
+      "memberships": [
+        {
+          "experiment_id": "G2-PARAM-POINTS-LENGTH",
+          "min_points": 10,
+          "min_length": 32.5
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-76a4880c98ee54c6",
+      "parameters": {
+        "dt": 30,
+        "distance": 400,
+        "min_points": 10,
+        "min_length": 97.5,
+        "direction": 35,
+        "dp": 5
+      },
+      "order": "S-D-P",
+      "memberships": [
+        {
+          "experiment_id": "G2-PARAM-POINTS-LENGTH",
+          "min_points": 10,
+          "min_length": 97.5
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-c19c8952dfd15e20",
+      "parameters": {
+        "dt": 30,
+        "distance": 400,
+        "min_points": 10,
+        "min_length": 130,
+        "direction": 35,
+        "dp": 5
+      },
+      "order": "S-D-P",
+      "memberships": [
+        {
+          "experiment_id": "G2-PARAM-POINTS-LENGTH",
+          "min_points": 10,
+          "min_length": 130
+        }
+      ]
+    }
+  ],
+  "fixed_eval_representative_config_ids": [
+    "cfg-5f3726776663985b",
+    "cfg-b15b8281b73592fb",
+    "cfg-d4ff6528d1731c17",
+    "cfg-0ad662cd1af68eaf",
+    "cfg-7261bd230cb316ee",
+    "cfg-6599edd5fcbf75b1",
+    "cfg-7a5c632edc26a683",
+    "cfg-63139d05595c253c",
+    "cfg-dc3bdca5d6cb9c1f",
+    "cfg-6b37e535e1ea2046",
+    "cfg-a5483ca9cb883a91",
+    "cfg-b64eb945a846910c",
+    "cfg-e8ff0df5800d5c3b"
+  ],
+  "evaluation_candidate_lock_required": true,
+  "experiments": [
+    {
+      "experiment_id": "G2-PARAM-DT",
+      "requirement_ids": [
+        "R01",
+        "R06"
+      ],
+      "question": "How does dt alter the actual reference chain and its stage fates?",
+      "hypothesis": "Parameter changes can alter conditional coverage/geometric compression; direction and magnitude require measurement.",
+      "baseline": "reference S-D-P",
+      "changes_only": [
+        "dt"
+      ],
+      "partition": "DEVELOPMENT",
+      "record_count": 120,
+      "config_ids": [
+        "cfg-5f3726776663985b",
+        "cfg-7b4506482fa0b5f2",
+        "cfg-b15b8281b73592fb",
+        "cfg-85746847a32cb544",
+        "cfg-d4ff6528d1731c17"
+      ],
+      "primary_metrics": [
+        "common_raw_coverage",
+        "common_raw_error",
+        "stage_fates"
+      ],
+      "protected_metrics": [
+        "raw_breakpoint_crossings",
+        "point_identity_and_values",
+        "complete_denominators"
+      ],
+      "budget": {
+        "configurations": 5,
+        "records_per_configuration": 120
+      },
+      "followup": [
+        "engineering repair with invalidation",
+        "freeze single parameter candidate using preregistered rule"
+      ],
+      "end_condition": "Every grid value has valid per-record outputs/aggregate, independent review and limitations; no gain is a valid outcome."
+    },
+    {
+      "experiment_id": "G2-PARAM-DISTANCE",
+      "requirement_ids": [
+        "R01",
+        "R06"
+      ],
+      "question": "How does distance alter the actual reference chain and its stage fates?",
+      "hypothesis": "Parameter changes can alter conditional coverage/geometric compression; direction and magnitude require measurement.",
+      "baseline": "reference S-D-P",
+      "changes_only": [
+        "distance"
+      ],
+      "partition": "DEVELOPMENT",
+      "record_count": 120,
+      "config_ids": [
+        "cfg-b15b8281b73592fb",
+        "cfg-0ad662cd1af68eaf",
+        "cfg-c75c27c441321c6a",
+        "cfg-cfcdb0f0e22b991f",
+        "cfg-7261bd230cb316ee"
+      ],
+      "primary_metrics": [
+        "common_raw_coverage",
+        "common_raw_error",
+        "stage_fates"
+      ],
+      "protected_metrics": [
+        "raw_breakpoint_crossings",
+        "point_identity_and_values",
+        "complete_denominators"
+      ],
+      "budget": {
+        "configurations": 5,
+        "records_per_configuration": 120
+      },
+      "followup": [
+        "engineering repair with invalidation",
+        "freeze single parameter candidate using preregistered rule"
+      ],
+      "end_condition": "Every grid value has valid per-record outputs/aggregate, independent review and limitations; no gain is a valid outcome."
+    },
+    {
+      "experiment_id": "G2-PARAM-MIN_POINTS",
+      "requirement_ids": [
+        "R01",
+        "R06"
+      ],
+      "question": "How does min_points alter the actual reference chain and its stage fates?",
+      "hypothesis": "Parameter changes can alter conditional coverage/geometric compression; direction and magnitude require measurement.",
+      "baseline": "reference S-D-P",
+      "changes_only": [
+        "min_points"
+      ],
+      "partition": "DEVELOPMENT",
+      "record_count": 120,
+      "config_ids": [
+        "cfg-b15b8281b73592fb",
+        "cfg-6599edd5fcbf75b1",
+        "cfg-d4df6d869dc800d6",
+        "cfg-38b5af70752afcf3",
+        "cfg-7a5c632edc26a683"
+      ],
+      "primary_metrics": [
+        "common_raw_coverage",
+        "common_raw_error",
+        "stage_fates"
+      ],
+      "protected_metrics": [
+        "raw_breakpoint_crossings",
+        "point_identity_and_values",
+        "complete_denominators"
+      ],
+      "budget": {
+        "configurations": 5,
+        "records_per_configuration": 120
+      },
+      "followup": [
+        "engineering repair with invalidation",
+        "freeze single parameter candidate using preregistered rule"
+      ],
+      "end_condition": "Every grid value has valid per-record outputs/aggregate, independent review and limitations; no gain is a valid outcome."
+    },
+    {
+      "experiment_id": "G2-PARAM-MIN_LENGTH",
+      "requirement_ids": [
+        "R01",
+        "R06"
+      ],
+      "question": "How does min_length alter the actual reference chain and its stage fates?",
+      "hypothesis": "Parameter changes can alter conditional coverage/geometric compression; direction and magnitude require measurement.",
+      "baseline": "reference S-D-P",
+      "changes_only": [
+        "min_length"
+      ],
+      "partition": "DEVELOPMENT",
+      "record_count": 120,
+      "config_ids": [
+        "cfg-b15b8281b73592fb",
+        "cfg-63139d05595c253c",
+        "cfg-5279f18a16a391af",
+        "cfg-2145210f6818db22",
+        "cfg-dc3bdca5d6cb9c1f"
+      ],
+      "primary_metrics": [
+        "common_raw_coverage",
+        "common_raw_error",
+        "stage_fates"
+      ],
+      "protected_metrics": [
+        "raw_breakpoint_crossings",
+        "point_identity_and_values",
+        "complete_denominators"
+      ],
+      "budget": {
+        "configurations": 5,
+        "records_per_configuration": 120
+      },
+      "followup": [
+        "engineering repair with invalidation",
+        "freeze single parameter candidate using preregistered rule"
+      ],
+      "end_condition": "Every grid value has valid per-record outputs/aggregate, independent review and limitations; no gain is a valid outcome."
+    },
+    {
+      "experiment_id": "G2-PARAM-DIRECTION",
+      "requirement_ids": [
+        "R01",
+        "R06"
+      ],
+      "question": "How does direction alter the actual reference chain and its stage fates?",
+      "hypothesis": "Parameter changes can alter conditional coverage/geometric compression; direction and magnitude require measurement.",
+      "baseline": "reference S-D-P",
+      "changes_only": [
+        "direction"
+      ],
+      "partition": "DEVELOPMENT",
+      "record_count": 120,
+      "config_ids": [
+        "cfg-b15b8281b73592fb",
+        "cfg-6b37e535e1ea2046",
+        "cfg-893931df60c3d3d6",
+        "cfg-24646b7acfafee8e",
+        "cfg-a5483ca9cb883a91"
+      ],
+      "primary_metrics": [
+        "common_raw_coverage",
+        "common_raw_error",
+        "stage_fates"
+      ],
+      "protected_metrics": [
+        "raw_breakpoint_crossings",
+        "point_identity_and_values",
+        "complete_denominators"
+      ],
+      "budget": {
+        "configurations": 5,
+        "records_per_configuration": 120
+      },
+      "followup": [
+        "engineering repair with invalidation",
+        "freeze single parameter candidate using preregistered rule"
+      ],
+      "end_condition": "Every grid value has valid per-record outputs/aggregate, independent review and limitations; no gain is a valid outcome."
+    },
+    {
+      "experiment_id": "G2-PARAM-DP",
+      "requirement_ids": [
+        "R01",
+        "R06"
+      ],
+      "question": "How does dp alter the actual reference chain and its stage fates?",
+      "hypothesis": "Parameter changes can alter conditional coverage/geometric compression; direction and magnitude require measurement.",
+      "baseline": "reference S-D-P",
+      "changes_only": [
+        "dp"
+      ],
+      "partition": "DEVELOPMENT",
+      "record_count": 120,
+      "config_ids": [
+        "cfg-b15b8281b73592fb",
+        "cfg-b64eb945a846910c",
+        "cfg-59d5d0c23b67d172",
+        "cfg-322e68540606f046",
+        "cfg-df6f00206fb03678",
+        "cfg-65d9f66c5a9b483a",
+        "cfg-e8ff0df5800d5c3b"
+      ],
+      "primary_metrics": [
+        "dp_saving",
+        "dp_interval_error"
+      ],
+      "protected_metrics": [
+        "raw_breakpoint_crossings",
+        "point_identity_and_values",
+        "complete_denominators"
+      ],
+      "budget": {
+        "configurations": 7,
+        "records_per_configuration": 120
+      },
+      "followup": [
+        "engineering repair with invalidation",
+        "freeze single parameter candidate using preregistered rule"
+      ],
+      "end_condition": "Every grid value has valid per-record outputs/aggregate, independent review and limitations; no gain is a valid outcome."
+    },
+    {
+      "experiment_id": "G2-PARAM-TIME-DISTANCE",
+      "requirement_ids": [
+        "R01",
+        "R06"
+      ],
+      "question": "Separate breakpoint rule effects from short-segment filtering effects.",
+      "hypothesis": "Two-factor interaction can differ from OAT; no monotonic quality assumed.",
+      "baseline": "reference S-D-P",
+      "changes_only": [
+        "dt",
+        "distance"
+      ],
+      "partition": "DEVELOPMENT",
+      "record_count": 120,
+      "config_ids": [
+        "cfg-5f3726776663985b",
+        "cfg-7b4506482fa0b5f2",
+        "cfg-b15b8281b73592fb",
+        "cfg-85746847a32cb544",
+        "cfg-d4ff6528d1731c17",
+        "cfg-0ad662cd1af68eaf",
+        "cfg-c75c27c441321c6a",
+        "cfg-cfcdb0f0e22b991f",
+        "cfg-7261bd230cb316ee",
+        "cfg-672c311f4dabd45c",
+        "cfg-a14223bb071ea6fe",
+        "cfg-fd21019cc8ca3842",
+        "cfg-3f2e270c7b010996",
+        "cfg-522fba6abbf5d1bc",
+        "cfg-9733e27113ed91ea",
+        "cfg-857da90ed04ebbbe",
+        "cfg-43be70fbb61e9927",
+        "cfg-a44fa1691cdad5d4",
+        "cfg-90310668f6147653",
+        "cfg-7380d059299db45a",
+        "cfg-4ba6fa8d8c11a024",
+        "cfg-56d9babc85c51d64",
+        "cfg-b3034e58a529fd4a",
+        "cfg-060195700887c44a",
+        "cfg-628483ab24c0b6b1"
+      ],
+      "primary_metrics": [
+        "stage_fates",
+        "all_filtered_record_ratio",
+        "common_raw_coverage"
+      ],
+      "protected_metrics": [
+        "complete_denominators",
+        "point_identity_and_values",
+        "raw_breakpoint_crossings"
+      ],
+      "budget": {
+        "configurations": 25,
+        "records_per_configuration": 120
+      },
+      "followup": [
+        "engineering repair",
+        "candidate freeze in union of two registered grids only"
+      ],
+      "end_condition": "All25 cells actually executed on120 records, overlaps reused with common keys; no four-factor Cartesian expansion."
+    },
+    {
+      "experiment_id": "G2-PARAM-POINTS-LENGTH",
+      "requirement_ids": [
+        "R01",
+        "R06"
+      ],
+      "question": "Separate breakpoint rule effects from short-segment filtering effects.",
+      "hypothesis": "Two-factor interaction can differ from OAT; no monotonic quality assumed.",
+      "baseline": "reference S-D-P",
+      "changes_only": [
+        "min_points",
+        "min_length"
+      ],
+      "partition": "DEVELOPMENT",
+      "record_count": 120,
+      "config_ids": [
+        "cfg-b15b8281b73592fb",
+        "cfg-6599edd5fcbf75b1",
+        "cfg-d4df6d869dc800d6",
+        "cfg-38b5af70752afcf3",
+        "cfg-7a5c632edc26a683",
+        "cfg-63139d05595c253c",
+        "cfg-5279f18a16a391af",
+        "cfg-2145210f6818db22",
+        "cfg-dc3bdca5d6cb9c1f",
+        "cfg-1e535c3fe3cc8ae1",
+        "cfg-81a89e633001f457",
+        "cfg-3096d8e282282635",
+        "cfg-7b664c0314ac01a9",
+        "cfg-a676557c7da6251e",
+        "cfg-901645379df0db06",
+        "cfg-4ad6ba13aaf512f3",
+        "cfg-b985b9509ecc8ff6",
+        "cfg-7de891c7d65fc173",
+        "cfg-9d355d795468065c",
+        "cfg-69a9139380a0edd9",
+        "cfg-15934b797839150f",
+        "cfg-64af02f0e5043228",
+        "cfg-00ad40b806af82f6",
+        "cfg-76a4880c98ee54c6",
+        "cfg-c19c8952dfd15e20"
+      ],
+      "primary_metrics": [
+        "stage_fates",
+        "all_filtered_record_ratio",
+        "common_raw_coverage"
+      ],
+      "protected_metrics": [
+        "complete_denominators",
+        "point_identity_and_values",
+        "raw_breakpoint_crossings"
+      ],
+      "budget": {
+        "configurations": 25,
+        "records_per_configuration": 120
+      },
+      "followup": [
+        "engineering repair",
+        "candidate freeze in union of two registered grids only"
+      ],
+      "end_condition": "All25 cells actually executed on120 records, overlaps reused with common keys; no four-factor Cartesian expansion."
+    },
+    {
+      "experiment_id": "G2-ORDER",
+      "requirement_ids": [
+        "R02",
+        "R06"
+      ],
+      "question": "Do the six actual stage orders preserve raw breakpoints, current neighborhoods and coverage?",
+      "hypothesis": "Result is not assumed; current actual evidence must decide within frozen scope.",
+      "baseline": "reference S-D-P",
+      "changes_only": [
+        "order"
+      ],
+      "partition": "DEVELOPMENT",
+      "record_count": 120,
+      "primary_metrics": [
+        "raw_breakpoint_crossings",
+        "common_raw_coverage",
+        "common_error_on_baseline_covered",
+        "stage_fates",
+        "record_no_output_ratio",
+        "all_filtered_record_ratio"
+      ],
+      "protected_metrics": [
+        "raw_breakpoint_crossings == 0",
+        "reference_covered_original_index_set subset_of candidate_covered_original_index_set",
+        "reference nonempty record/window coverage not lost"
+      ],
+      "budget": {
+        "orders": [
+          "S-D-P",
+          "S-P-D",
+          "D-S-P",
+          "D-P-S",
+          "P-S-D",
+          "P-D-S"
+        ]
+      },
+      "followup": [
+        "first execute actual smoke for every order",
+        "retain unsafe evidence then reject; full dev for feasible",
+        "freeze feasible orders before eval"
+      ],
+      "end_condition": "all six have actual evidence; unsafe failure witnesses recomputable; feasible orders evaluated on shared eval",
+      "feasibility_rule": {
+        "engineering_gate": "actual P immediate complete-input guarantee at its registered tolerance; all chain/identity/accounting requirements",
+        "safety_guards_per_record": [
+          "raw_breakpoint_crossings == 0",
+          "reference_covered_original_index_set subset_of candidate_covered_original_index_set",
+          "reference nonempty record/window coverage not lost"
+        ],
+        "violation_status": "REJECTED_BY_CONSTRAINT",
+        "violation_action": "save actual failure record, indices and complete recomputable witness; not an improvement candidate",
+        "geometry_only_degradation": "TRADEOFF, retain for description if safety guards hold; P immediate guarantee is not final-output guarantee",
+        "development_scope_for_admission": "all120 DEVELOPMENT records pass safety guards; unsafe groups may stop after actual witnessed failure",
+        "eval_gate": "freeze feasible order list before any G2_EVAL then evaluate each on all120 shared records"
+      }
+    },
+    {
+      "experiment_id": "G2-MEMORY-BUILD",
+      "requirement_ids": [
+        "R04"
+      ],
+      "question": "Can verified examples support eligible, traceable readonly retrieval?",
+      "hypothesis": "Result is not assumed; current actual evidence must decide within frozen scope.",
+      "baseline": "reference and frozen deterministic20",
+      "changes_only": [
+        "memory representation"
+      ],
+      "partition": "DEMO_MEMORY",
+      "record_count": 60,
+      "primary_metrics": [
+        "relevant registered metrics in contract"
+      ],
+      "protected_metrics": [
+        "scope",
+        "version",
+        "raw_identity",
+        "complete_denominators"
+      ],
+      "budget": {
+        "candidate_evaluations_per_record": 20
+      },
+      "followup": [
+        "only demo indexing repair before eval freeze",
+        "build no-gain experience honestly"
+      ],
+      "end_condition": "60 examples verified, snapshot frozen, write/self/cross-episode tests pass"
+    },
+    {
+      "experiment_id": "G2-MODES-DEV",
+      "requirement_ids": [
+        "R03",
+        "R04",
+        "R06"
+      ],
+      "question": "Are the four real execution structures and feedback budgets implemented correctly?",
+      "hypothesis": "Result is not assumed; current actual evidence must decide within frozen scope.",
+      "baseline": "search-only and common reference",
+      "changes_only": [
+        "LLM/search/memory availability"
+      ],
+      "partition": "DEVELOPMENT_LLM",
+      "record_count": 24,
+      "primary_metrics": [
+        "relevant registered metrics in contract"
+      ],
+      "protected_metrics": [
+        "scope",
+        "version",
+        "raw_identity",
+        "complete_denominators"
+      ],
+      "budget": {
+        "modes": 4,
+        "episodes": 1,
+        "max_batch_size": 8,
+        "search_candidates": 20
+      },
+      "followup": [
+        "repair implementation then rerun affected dev",
+        "freeze protocol/model/prompt/memory before eval"
+      ],
+      "end_condition": "all24 common records for4 modes have complete real traces and checked results"
+    },
+    {
+      "experiment_id": "G2-MODES-EVAL",
+      "requirement_ids": [
+        "R03",
+        "R04",
+        "R06"
+      ],
+      "question": "What paired conditional results and costs arise from the frozen modes?",
+      "hypothesis": "Result is not assumed; current actual evidence must decide within frozen scope.",
+      "baseline": "common reference and search-only bounded comparator",
+      "changes_only": [
+        "LLM/search/memory availability"
+      ],
+      "partition": "G2_EVAL_LLM",
+      "record_count": 24,
+      "primary_metrics": [
+        "relevant registered metrics in contract"
+      ],
+      "protected_metrics": [
+        "scope",
+        "version",
+        "raw_identity",
+        "complete_denominators"
+      ],
+      "budget": {
+        "modes": 4,
+        "episodes": 3,
+        "max_batch_size": 8,
+        "search_candidates": 20
+      },
+      "followup": [
+        "implementation errors invalidate affected episodes",
+        "negative method outcome retained; no retune"
+      ],
+      "end_condition": "all24x4x3 outcomes including failures, real LLM evidence and zero-model search proof"
+    },
+    {
+      "experiment_id": "G2-SINGLES-EVAL",
+      "requirement_ids": [
+        "R05",
+        "R06"
+      ],
+      "question": "Do the three independent development-frozen parameter candidates preserve preregistered guards?",
+      "hypothesis": "Result is not assumed; current actual evidence must decide within frozen scope.",
+      "baseline": "reference S-D-P",
+      "changes_only": [
+        "one approved parameter group at a time"
+      ],
+      "partition": "G2_EVAL",
+      "record_count": 120,
+      "primary_metrics": [
+        "relevant registered metrics in contract"
+      ],
+      "protected_metrics": [
+        "scope",
+        "version",
+        "raw_identity",
+        "complete_denominators"
+      ],
+      "budget": {
+        "required_single_candidates": [
+          "C-S",
+          "C-D",
+          "C-P"
+        ],
+        "representative_config_ids": [
+          "cfg-5f3726776663985b",
+          "cfg-b15b8281b73592fb",
+          "cfg-d4ff6528d1731c17",
+          "cfg-0ad662cd1af68eaf",
+          "cfg-7261bd230cb316ee",
+          "cfg-6599edd5fcbf75b1",
+          "cfg-7a5c632edc26a683",
+          "cfg-63139d05595c253c",
+          "cfg-dc3bdca5d6cb9c1f",
+          "cfg-6b37e535e1ea2046",
+          "cfg-a5483ca9cb883a91",
+          "cfg-b64eb945a846910c",
+          "cfg-e8ff0df5800d5c3b"
+        ]
+      },
+      "followup": [
+        "engineering repair only after eval",
+        "assign supported/no-gain/tradeoff/rejected/insufficient"
+      ],
+      "end_condition": "every single and preregistered representative has valid full120 paired results; no combination"
+    },
+    {
+      "experiment_id": "G2-COUNTEREXAMPLES",
+      "requirement_ids": [
+        "R07"
+      ],
+      "question": "Which known-answer edge cases defeat misleading cleaning or evaluation assumptions?",
+      "hypothesis": "Result is not assumed; current actual evidence must decide within frozen scope.",
+      "baseline": "same raw synthetic fixture and reference chain",
+      "changes_only": [
+        "explicit analytical geometry or time feature"
+      ],
+      "partition": "SYNTHETIC_COUNTEREXAMPLE",
+      "record_count": null,
+      "primary_metrics": [
+        "relevant registered metrics in contract"
+      ],
+      "protected_metrics": [
+        "scope",
+        "version",
+        "raw_identity",
+        "complete_denominators"
+      ],
+      "budget": {
+        "families": [
+          "normal sharp turn versus spike",
+          "zero displacement / same time different position / undefined direction",
+          "time-space break and P removes trigger",
+          "near threshold finite segment versus infinite line",
+          "all-delete cannot earn good score",
+          "own-clean small error cannot prove cross-method gain"
+        ]
+      },
+      "followup": [
+        "repair implementations that violate approved semantics",
+        "retain legitimate algorithm failures"
+      ],
+      "end_condition": "known answers and actual before/after metrics preserved separately from real data"
+    },
+    {
+      "experiment_id": "G2-PILOT-REGRESSION",
+      "requirement_ids": [
+        "R07",
+        "R09"
+      ],
+      "question": "Does the original seven-record contract remain reproducible and explain the exposed cases?",
+      "hypothesis": "Result is not assumed; current actual evidence must decide within frozen scope.",
+      "baseline": "G1 frozen contract and pilot03",
+      "changes_only": [
+        "G2 execution provenance only"
+      ],
+      "partition": "PILOT_REGRESSION",
+      "record_count": 7,
+      "primary_metrics": [
+        "relevant registered metrics in contract"
+      ],
+      "protected_metrics": [
+        "scope",
+        "version",
+        "raw_identity",
+        "complete_denominators"
+      ],
+      "budget": {
+        "raw_points": 783
+      },
+      "followup": [
+        "engineering repair; preserve originals"
+      ],
+      "end_condition": "fixed original contract yields prior reference counts/numerics with matching raw/point identities"
+    },
+    {
+      "experiment_id": "G2-DELIVERABLES",
+      "requirement_ids": [
+        "R08",
+        "R09"
+      ],
+      "question": "Can all current valid results be recomputed and explained from clean notebook kernels and editable figures?",
+      "hypothesis": "Result is not assumed; current actual evidence must decide within frozen scope.",
+      "baseline": "frozen current valid run",
+      "changes_only": [
+        "presentation only"
+      ],
+      "partition": "CURRENT_VALID_RUNS",
+      "record_count": null,
+      "primary_metrics": [
+        "relevant registered metrics in contract"
+      ],
+      "protected_metrics": [
+        "scope",
+        "version",
+        "raw_identity",
+        "complete_denominators"
+      ],
+      "budget": {
+        "notebooks": "2 or3 natural-theme notebooks",
+        "model_calls_default": 0
+      },
+      "followup": [
+        "fix stale links/figures/notebooks then regenerate"
+      ],
+      "end_condition": "required eight information groups represented in verified P2 figures, source, notebook and stage analysis"
+    },
+    {
+      "experiment_id": "G2-INDEPENDENT-ACCEPTANCE",
+      "requirement_ids": [
+        "R09",
+        "R10"
+      ],
+      "question": "Do all required tasks and current artifacts close independently?",
+      "hypothesis": "Result is not assumed; current actual evidence must decide within frozen scope.",
+      "baseline": "trusted raw, contract, code, split and model receipts",
+      "changes_only": [
+        "read-only independent checks"
+      ],
+      "partition": "ALL_REQUIRED",
+      "record_count": null,
+      "primary_metrics": [
+        "relevant registered metrics in contract"
+      ],
+      "protected_metrics": [
+        "scope",
+        "version",
+        "raw_identity",
+        "complete_denominators"
+      ],
+      "budget": {
+        "acceptance_items": [
+          "A01",
+          "A02",
+          "A03",
+          "A04",
+          "A05",
+          "A06",
+          "A07",
+          "A08",
+          "A09",
+          "A10",
+          "A11",
+          "A12",
+          "A13",
+          "A14",
+          "A15",
+          "A16",
+          "A17"
+        ]
+      },
+      "followup": [
+        "issue to B repair -> regression -> rebuild -> C review -> parent resume"
+      ],
+      "end_condition": "all R01-R10 and A01-A17 have actual closed evidence; no blocking issues"
+    },
+    {
+      "experiment_id": "G2-PUBLICATION",
+      "requirement_ids": [
+        "R10"
+      ],
+      "question": "Does the published fixed commit contain the internally accepted complete stage?",
+      "hypothesis": "Result is not assumed; current actual evidence must decide within frozen scope.",
+      "baseline": "internally accepted artifact tree",
+      "changes_only": [
+        "Git publication receipt"
+      ],
+      "partition": "ACCEPTED_STAGE",
+      "record_count": null,
+      "primary_metrics": [
+        "relevant registered metrics in contract"
+      ],
+      "protected_metrics": [
+        "scope",
+        "version",
+        "raw_identity",
+        "complete_denominators"
+      ],
+      "budget": {
+        "normal_push": 1,
+        "force_push": 0
+      },
+      "followup": [
+        "repair publication/auth only within authority"
+      ],
+      "end_condition": "actual remote equals local main and key fixed-SHA contents reread; GPT second review remains pending"
+    }
+  ],
+  "config_id_rule": "cfg- + first16 of SHA256 canonical object_hash({parameter:float(value) for all6 parameters}); actual task1.workflow.g2_selection.config_id"
+}
