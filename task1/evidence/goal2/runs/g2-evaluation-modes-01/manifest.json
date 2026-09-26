@@ -1,0 +1,752 @@
+{
+  "goal_id": "SC-LAB1-G2-EXPERIMENTS-001",
+  "run_id": "g2-evaluation-modes-01",
+  "started_at": "2026-09-26T20:33:37.246676+00:00",
+  "status": "REVIEW_PENDING",
+  "classification": "CURRENT_RUN_CONDITIONAL_ANALYSIS",
+  "source_crs": "UNVERIFIED",
+  "raw_sha256": "c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3",
+  "partition": "G2_EVAL",
+  "input_ids": [
+    "8424",
+    "8435",
+    "3641",
+    "1887",
+    "7027",
+    "7171",
+    "11325",
+    "4125",
+    "7153",
+    "2192",
+    "10003",
+    "7179",
+    "7095",
+    "10978",
+    "2950",
+    "11065",
+    "9407",
+    "2225",
+    "822",
+    "9996",
+    "7289",
+    "8617",
+    "2064",
+    "7253",
+    "3265",
+    "4678",
+    "2467",
+    "8522",
+    "1880",
+    "3725",
+    "5943",
+    "3479",
+    "7313",
+    "588",
+    "4549",
+    "7795",
+    "11034",
+    "11207",
+    "8023",
+    "10927",
+    "9880",
+    "10601",
+    "9458",
+    "9673",
+    "2297",
+    "3028",
+    "6212",
+    "6779",
+    "7711",
+    "9787",
+    "10913",
+    "9709",
+    "2025",
+    "4536",
+    "112",
+    "4930",
+    "9069",
+    "1596",
+    "4153",
+    "8941",
+    "139",
+    "6008",
+    "4155",
+    "6763",
+    "7137",
+    "4712",
+    "6168",
+    "14",
+    "9296",
+    "9242",
+    "7616",
+    "8152",
+    "9467",
+    "10887",
+    "4357",
+    "7270",
+    "10677",
+    "827",
+    "955",
+    "2148",
+    "3715",
+    "9036",
+    "3131",
+    "6871",
+    "11351",
+    "7033",
+    "8418",
+    "1070",
+    "33",
+    "2516",
+    "5758",
+    "2050",
+    "8358",
+    "8926",
+    "43",
+    "5176",
+    "3420",
+    "2108",
+    "6214",
+    "7116",
+    "10638",
+    "8033",
+    "3531",
+    "10075",
+    "5534",
+    "7511",
+    "57",
+    "911",
+    "2131",
+    "200",
+    "9097",
+    "7190",
+    "2394",
+    "5129",
+    "1307",
+    "5791",
+    "3371",
+    "4380",
+    "4415",
+    "11148"
+  ],
+  "contract_sha256": "db758c097509139596fbc52b4c3f65e921eb1f12d9fb4c239e308abdb57f31f8",
+  "split_sha256": "fd2ebc6916f63b4b8e23ff6977f22cc691c39849d450486035243db7e3eb2ee8",
+  "source_hashes": {
+    "task1/workflow/__init__.py": "bd23709231145ce415c01c88880b886e8c8343199a47dbe0762d68841aeb73ff",
+    "task1/workflow/__main__.py": "b96a66d5fe543f8082d528e81e7e70de2c0090b20ab60b090532ab65647713e8",
+    "task1/workflow/artifact_review.py": "dfa0b91149662baf26861a9ec0e51223842d0ac62ada29015eca7b119c68da48",
+    "task1/workflow/budget.py": "c275047dffcafb7160b0c3fcd8de4e56bbc1f86dc05925691ff5af43aea312ca",
+    "task1/workflow/controller.py": "16793b102fd077cc243eae6f1e714632f312a77e421850d424b8562a2909eb6d",
+    "task1/workflow/coordinate_review.py": "af4f0d753d162666bcb5da07edeccb846e008c33adf0f56b34939ac526eaf951",
+    "task1/workflow/coordinates.py": "d99b270a65c88f8530669d5e7d0887d7563b3e54e19770ab7a9eb695117e075d",
+    "task1/workflow/diagnostics.py": "aee1e4dd46ff7b15a8f3d854aaf1ed9668ee5ef4d4991a624beb479ff0f82745",
+    "task1/workflow/evaluation.py": "7cf224fbc290d3e83acd5d83a3fe335e6dc437c762f7053d8132817aa91025b2",
+    "task1/workflow/g2_data.py": "985453f073ec98ca7b17a827de1d316e8322dc89e452e6f8b45afa20b2a8a9f2",
+    "task1/workflow/g2_experiments.py": "713538f17d767e98c8ed802252ce33133c6f26dc4c6f7aeae208f6e0d64d2311",
+    "task1/workflow/g2_journal.py": "33b776f5c20f35844cc4c76ee28e38ee0b2e487ee3b13d4eff0c3d3a40d22c2a",
+    "task1/workflow/g2_memory.py": "e0784e6178cf4da3277c7fc8c1e16efce73b56b91b02b41acd3e8870d43a8c56",
+    "task1/workflow/g2_metrics.py": "8d80c8ff8e124b9d3d73f5d514a0c09af32f234034914379ea901e5e59cc3ebb",
+    "task1/workflow/g2_modes.py": "31e936448918b943dca3cfdc8e4590eb64da2c48b262899040862d7b1533704e",
+    "task1/workflow/g2_pipeline.py": "edb8f4c8dcaf65cda44b33533eb55e9d67ef946597895f0682860ba65499c441",
+    "task1/workflow/g2_provider.py": "636a6edaf95ef31e1982d27e1361697d145156fccb99760028ba5e0d77949bb1",
+    "task1/workflow/g2_selection.py": "590a7e9c427801fd65a6ec563fdbbff0d35b0e7bae6a155f28e43ab64bb8f3af",
+    "task1/workflow/geometry.py": "2ad3ca3b49e98e997684e3f5af948771be80dfb03b31b2ae4cc4483856e93d74",
+    "task1/workflow/goal.py": "d313d408961adf07b9791972b03ac6a99db808e805efe1aa06abe85a075e863a",
+    "task1/workflow/inventory.py": "42bceb3ea1bab9ca386b88ce29104dc4bb518fee6df8f25aae50360633e7d5a1",
+    "task1/workflow/io.py": "0d3d72dd0beb4718f4020a07a5f1c0ca89193943049a479816b5c496806321b2",
+    "task1/workflow/pipeline.py": "160bedcc0d8dffce71d833dffc4de28928bc7007077ae8d03c57c96d827548c7",
+    "task1/workflow/provider.py": "d778316bcdbdec1643707a93c1d0e00e52caa4c0b941c9299b33da547adbc28b",
+    "task1/workflow/recompute.py": "4c198a016adec8554602c9ad04e0446bb90866ed970789834b96c51ebbec9b56",
+    "task1/workflow/sources.py": "74b42f79abfe172b7d2e29ba55a631b22f3e6d46c7cb2a08c0c7634eaf44ba90",
+    "task1/workflow/tools.py": "0fde0acebfe3ec97bd2653744ac8f0444c1e9a162c61970bccf8a94a9fbd0b3f",
+    "task1/scripts/goal2.py": "f62fe1e30bd3cccb461bd34794d2c0d204af39fdac3631b26af042dcb7a563f5"
+  },
+  "source_tree_sha256": "7710e70e0d7ee6dd3b62604600136ff2b98221428c549cc466d1a4170bbc12b5",
+  "code_head_at_start": "c1c6272606716f9f59aa785d48bfeadb09c7a30e",
+  "code_binding": "verifiable exact source hashes; final CODE_SHA mapped at publication",
+  "artifacts": {},
+  "candidate_evaluations": 3583,
+  "deterministic_tool_calls": 7454,
+  "cache_reads": 0,
+  "experiment_model_dispatches": 63,
+  "command": "/home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/scripts/goal2.py evaluation-modes --run-id g2-evaluation-modes-01 --enable-live",
+  "mode_episodes": [
+    {
+      "path": "modes/G2_EVAL-llm-only-e1-b0/episode.json",
+      "sha256": "85efb38c12a0dd9c4339df4886e1dc4ad0f8842232852ecc03882c34345ef63b",
+      "mode": "llm-only",
+      "episode": 1,
+      "input_ids": [
+        "1887",
+        "10003",
+        "8424",
+        "2225",
+        "2064",
+        "7253",
+        "588",
+        "8522"
+      ]
+    },
+    {
+      "path": "modes/G2_EVAL-llm-only-e1-b1/episode.json",
+      "sha256": "a9b23703ef3be481c0d8d1e33605dc2874d1c55b4654fc92b8f04c4d80598ace",
+      "mode": "llm-only",
+      "episode": 1,
+      "input_ids": [
+        "1880",
+        "9673",
+        "2297",
+        "10927",
+        "9709",
+        "7711",
+        "7137",
+        "9296"
+      ]
+    },
+    {
+      "path": "modes/G2_EVAL-llm-only-e1-b2/episode.json",
+      "sha256": "c92606e2efb05b0ab714e938c382888a3205ce93949f3e6a48bdd2d0e6f3fc52",
+      "mode": "llm-only",
+      "episode": 1,
+      "input_ids": [
+        "7270",
+        "955",
+        "33",
+        "43",
+        "3420",
+        "911",
+        "3371",
+        "11148"
+      ]
+    },
+    {
+      "path": "modes/G2_EVAL-llm-only-e2-b0/episode.json",
+      "sha256": "41ceac3fa1d4cc953955cba7f71399c3079b0aaa5ab1e7ec8d7ecabd54606a9e",
+      "mode": "llm-only",
+      "episode": 2,
+      "input_ids": [
+        "1887",
+        "10003",
+        "8424",
+        "2225",
+        "2064",
+        "7253",
+        "588",
+        "8522"
+      ]
+    },
+    {
+      "path": "modes/G2_EVAL-llm-only-e2-b1/episode.json",
+      "sha256": "066dabb52813ddae434b4e1ba0d64008e712af62ab991878e1bdbe1014ee4b8b",
+      "mode": "llm-only",
+      "episode": 2,
+      "input_ids": [
+        "1880",
+        "9673",
+        "2297",
+        "10927",
+        "9709",
+        "7711",
+        "7137",
+        "9296"
+      ]
+    },
+    {
+      "path": "modes/G2_EVAL-llm-only-e2-b2/episode.json",
+      "sha256": "17cbe3ea4523e7dee33555b96acefacf9cc6f1e1b6ff32f19095e0832cc11856",
+      "mode": "llm-only",
+      "episode": 2,
+      "input_ids": [
+        "7270",
+        "955",
+        "33",
+        "43",
+        "3420",
+        "911",
+        "3371",
+        "11148"
+      ]
+    },
+    {
+      "path": "modes/G2_EVAL-llm-only-e3-b0/episode.json",
+      "sha256": "02562955106c4ac7a6db48fe08340473979172fd089104c2425b7f9be53e7c92",
+      "mode": "llm-only",
+      "episode": 3,
+      "input_ids": [
+        "1887",
+        "10003",
+        "8424",
+        "2225",
+        "2064",
+        "7253",
+        "588",
+        "8522"
+      ]
+    },
+    {
+      "path": "modes/G2_EVAL-llm-only-e3-b1/episode.json",
+      "sha256": "2c7c5b13bf688893d02ac0f7da70cff0c6e6f9245feabc740b4c6e3fc67c3890",
+      "mode": "llm-only",
+      "episode": 3,
+      "input_ids": [
+        "1880",
+        "9673",
+        "2297",
+        "10927",
+        "9709",
+        "7711",
+        "7137",
+        "9296"
+      ]
+    },
+    {
+      "path": "modes/G2_EVAL-llm-only-e3-b2/episode.json",
+      "sha256": "6bd46e14ff593f6461b1dca5334935eae19ba3cfd8dbd8288cb06e414a0ee3a4",
+      "mode": "llm-only",
+      "episode": 3,
+      "input_ids": [
+        "7270",
+        "955",
+        "33",
+        "43",
+        "3420",
+        "911",
+        "3371",
+        "11148"
+      ]
+    },
+    {
+      "path": "modes/G2_EVAL-search-only-e1-b0/episode.json",
+      "sha256": "c5205c0d4629e0a2c04c268badd739e1a54d94355aaa4ea13191f1405f487fc3",
+      "mode": "search-only",
+      "episode": 1,
+      "input_ids": [
+        "1887",
+        "10003",
+        "8424",
+        "2225",
+        "2064",
+        "7253",
+        "588",
+        "8522"
+      ]
+    },
+    {
+      "path": "modes/G2_EVAL-search-only-e1-b1/episode.json",
+      "sha256": "5798a45fcaff0fa386eb1e71bd0556141fb6c495729a32749b7d2d112df2ffe0",
+      "mode": "search-only",
+      "episode": 1,
+      "input_ids": [
+        "1880",
+        "9673",
+        "2297",
+        "10927",
+        "9709",
+        "7711",
+        "7137",
+        "9296"
+      ]
+    },
+    {
+      "path": "modes/G2_EVAL-search-only-e1-b2/episode.json",
+      "sha256": "daf1dd3859854e2439badbecbca0d0ee24847dc46a7f55ffe65cbd995c35dd6f",
+      "mode": "search-only",
+      "episode": 1,
+      "input_ids": [
+        "7270",
+        "955",
+        "33",
+        "43",
+        "3420",
+        "911",
+        "3371",
+        "11148"
+      ]
+    },
+    {
+      "path": "modes/G2_EVAL-search-only-e2-b0/episode.json",
+      "sha256": "3c6004994459901740caf61affee4a269babc89f78dc52137f5a1cffa5ebd387",
+      "mode": "search-only",
+      "episode": 2,
+      "input_ids": [
+        "1887",
+        "10003",
+        "8424",
+        "2225",
+        "2064",
+        "7253",
+        "588",
+        "8522"
+      ]
+    },
+    {
+      "path": "modes/G2_EVAL-search-only-e2-b1/episode.json",
+      "sha256": "7b0bbde8355d477e85abd3c5b1282962cf37f7fdb12da94b019db8e0adbf6fa0",
+      "mode": "search-only",
+      "episode": 2,
+      "input_ids": [
+        "1880",
+        "9673",
+        "2297",
+        "10927",
+        "9709",
+        "7711",
+        "7137",
+        "9296"
+      ]
+    },
+    {
+      "path": "modes/G2_EVAL-search-only-e2-b2/episode.json",
+      "sha256": "9c561555d7b4f422805106d00dcf30c8c4dd281b7a5cda77e3735f2e9bb14b63",
+      "mode": "search-only",
+      "episode": 2,
+      "input_ids": [
+        "7270",
+        "955",
+        "33",
+        "43",
+        "3420",
+        "911",
+        "3371",
+        "11148"
+      ]
+    },
+    {
+      "path": "modes/G2_EVAL-search-only-e3-b0/episode.json",
+      "sha256": "1b9a971b0c11e0d006f2c6d6ce511096b5fb0238dd882881fa655fadbca52575",
+      "mode": "search-only",
+      "episode": 3,
+      "input_ids": [
+        "1887",
+        "10003",
+        "8424",
+        "2225",
+        "2064",
+        "7253",
+        "588",
+        "8522"
+      ]
+    },
+    {
+      "path": "modes/G2_EVAL-search-only-e3-b1/episode.json",
+      "sha256": "6a07cacc807dbc73648861c12a1f99b8434f1dbf891d1a2578d5afecbda754b5",
+      "mode": "search-only",
+      "episode": 3,
+      "input_ids": [
+        "1880",
+        "9673",
+        "2297",
+        "10927",
+        "9709",
+        "7711",
+        "7137",
+        "9296"
+      ]
+    },
+    {
+      "path": "modes/G2_EVAL-search-only-e3-b2/episode.json",
+      "sha256": "c4c8017267277c6ffa3504f2197ea19b6e0399769d146dd0fe7c0bda3c96fa90",
+      "mode": "search-only",
+      "episode": 3,
+      "input_ids": [
+        "7270",
+        "955",
+        "33",
+        "43",
+        "3420",
+        "911",
+        "3371",
+        "11148"
+      ]
+    },
+    {
+      "path": "modes/G2_EVAL-llm+search-e1-b0/episode.json",
+      "sha256": "0fd8ef144071a0060f9b5d00c4aba5e6686303cfa8fdfc8d6d10f80f6ac993eb",
+      "mode": "llm+search",
+      "episode": 1,
+      "input_ids": [
+        "1887",
+        "10003",
+        "8424",
+        "2225",
+        "2064",
+        "7253",
+        "588",
+        "8522"
+      ]
+    },
+    {
+      "path": "modes/G2_EVAL-llm+search-e1-b1/episode.json",
+      "sha256": "095f260a22b33c7c9aaf2293427251f52ff784665c0b375ddf303cdd61bf3b24",
+      "mode": "llm+search",
+      "episode": 1,
+      "input_ids": [
+        "1880",
+        "9673",
+        "2297",
+        "10927",
+        "9709",
+        "7711",
+        "7137",
+        "9296"
+      ]
+    },
+    {
+      "path": "modes/G2_EVAL-llm+search-e1-b2/episode.json",
+      "sha256": "6129b671f81cbe2bd4477e7e7d7ecab5fb1059319278dbbb5f3cfa1e9c509015",
+      "mode": "llm+search",
+      "episode": 1,
+      "input_ids": [
+        "7270",
+        "955",
+        "33",
+        "43",
+        "3420",
+        "911",
+        "3371",
+        "11148"
+      ]
+    },
+    {
+      "path": "modes/G2_EVAL-llm+search-e2-b0/episode.json",
+      "sha256": "4027a9b7d4730efb1f5c737942e9836403137ee5f58c3c41d00385298eb032a0",
+      "mode": "llm+search",
+      "episode": 2,
+      "input_ids": [
+        "1887",
+        "10003",
+        "8424",
+        "2225",
+        "2064",
+        "7253",
+        "588",
+        "8522"
+      ]
+    },
+    {
+      "path": "modes/G2_EVAL-llm+search-e2-b1/episode.json",
+      "sha256": "bf1cbf020f42d3066ded84760f6a46b325da0649f9851a7f260ca4750ff92ab4",
+      "mode": "llm+search",
+      "episode": 2,
+      "input_ids": [
+        "1880",
+        "9673",
+        "2297",
+        "10927",
+        "9709",
+        "7711",
+        "7137",
+        "9296"
+      ]
+    },
+    {
+      "path": "modes/G2_EVAL-llm+search-e2-b2/episode.json",
+      "sha256": "739abc4d06617078950a080ce29e95a5c0dd7823edadda0c106bee8aaa009720",
+      "mode": "llm+search",
+      "episode": 2,
+      "input_ids": [
+        "7270",
+        "955",
+        "33",
+        "43",
+        "3420",
+        "911",
+        "3371",
+        "11148"
+      ]
+    },
+    {
+      "path": "modes/G2_EVAL-llm+search-e3-b0/episode.json",
+      "sha256": "426ad854e48b6cda4c3ec6c802b1b9aca95404aa1dacb4a60caecc96bbe3a366",
+      "mode": "llm+search",
+      "episode": 3,
+      "input_ids": [
+        "1887",
+        "10003",
+        "8424",
+        "2225",
+        "2064",
+        "7253",
+        "588",
+        "8522"
+      ]
+    },
+    {
+      "path": "modes/G2_EVAL-llm+search-e3-b1/episode.json",
+      "sha256": "41c47c34bcb4b7d1eef366e3a615c764011d6e5082c6aead58f58537ddcee0ed",
+      "mode": "llm+search",
+      "episode": 3,
+      "input_ids": [
+        "1880",
+        "9673",
+        "2297",
+        "10927",
+        "9709",
+        "7711",
+        "7137",
+        "9296"
+      ]
+    },
+    {
+      "path": "modes/G2_EVAL-llm+search-e3-b2/episode.json",
+      "sha256": "7697e3c3b4ecfae50dd58762d21458503003f0d34db9a163636c621ab39852a5",
+      "mode": "llm+search",
+      "episode": 3,
+      "input_ids": [
+        "7270",
+        "955",
+        "33",
+        "43",
+        "3420",
+        "911",
+        "3371",
+        "11148"
+      ]
+    },
+    {
+      "path": "modes/G2_EVAL-llm+memory+search-e1-b0/episode.json",
+      "sha256": "57ca6ac892f3f138eff26811f522b6722eb041beadc42a0036a16f3ea4ccc35c",
+      "mode": "llm+memory+search",
+      "episode": 1,
+      "input_ids": [
+        "1887",
+        "10003",
+        "8424",
+        "2225",
+        "2064",
+        "7253",
+        "588",
+        "8522"
+      ]
+    },
+    {
+      "path": "modes/G2_EVAL-llm+memory+search-e1-b1/episode.json",
+      "sha256": "1b07af7ee1b0d41fe149e2c11baccd8b2b4adb6460c1c15a5744adf362080fa0",
+      "mode": "llm+memory+search",
+      "episode": 1,
+      "input_ids": [
+        "1880",
+        "9673",
+        "2297",
+        "10927",
+        "9709",
+        "7711",
+        "7137",
+        "9296"
+      ]
+    },
+    {
+      "path": "modes/G2_EVAL-llm+memory+search-e1-b2/episode.json",
+      "sha256": "caba7c74181e328ad7bb3bd4bc32a12e4015e8f8d77916b6ca1b2cdd67d903e7",
+      "mode": "llm+memory+search",
+      "episode": 1,
+      "input_ids": [
+        "7270",
+        "955",
+        "33",
+        "43",
+        "3420",
+        "911",
+        "3371",
+        "11148"
+      ]
+    },
+    {
+      "path": "modes/G2_EVAL-llm+memory+search-e2-b0/episode.json",
+      "sha256": "64f43a4017f598c4c71c8b965590ec2afb05fc1fb12875ee4e28a5ae9afda88d",
+      "mode": "llm+memory+search",
+      "episode": 2,
+      "input_ids": [
+        "1887",
+        "10003",
+        "8424",
+        "2225",
+        "2064",
+        "7253",
+        "588",
+        "8522"
+      ]
+    },
+    {
+      "path": "modes/G2_EVAL-llm+memory+search-e2-b1/episode.json",
+      "sha256": "f87063eb351fd7d5b0958dfcebc6e4585aa27d0141cad6769d46914eb55d364a",
+      "mode": "llm+memory+search",
+      "episode": 2,
+      "input_ids": [
+        "1880",
+        "9673",
+        "2297",
+        "10927",
+        "9709",
+        "7711",
+        "7137",
+        "9296"
+      ]
+    },
+    {
+      "path": "modes/G2_EVAL-llm+memory+search-e2-b2/episode.json",
+      "sha256": "5334a0e0ae056f546d37b51af8589e301942f3f63cd29f7c4991205ee9878b1e",
+      "mode": "llm+memory+search",
+      "episode": 2,
+      "input_ids": [
+        "7270",
+        "955",
+        "33",
+        "43",
+        "3420",
+        "911",
+        "3371",
+        "11148"
+      ]
+    },
+    {
+      "path": "modes/G2_EVAL-llm+memory+search-e3-b0/episode.json",
+      "sha256": "7e1f80e448746f8d78d94cc20fd67e0bd5b7b5b5a8b6b78d79c6e7cd97cf9410",
+      "mode": "llm+memory+search",
+      "episode": 3,
+      "input_ids": [
+        "1887",
+        "10003",
+        "8424",
+        "2225",
+        "2064",
+        "7253",
+        "588",
+        "8522"
+      ]
+    },
+    {
+      "path": "modes/G2_EVAL-llm+memory+search-e3-b1/episode.json",
+      "sha256": "cfd94bd0cc4cbb4e874732982eca619a57dd7cea0d5bfd3aa69ff6b0595c7822",
+      "mode": "llm+memory+search",
+      "episode": 3,
+      "input_ids": [
+        "1880",
+        "9673",
+        "2297",
+        "10927",
+        "9709",
+        "7711",
+        "7137",
+        "9296"
+      ]
+    },
+    {
+      "path": "modes/G2_EVAL-llm+memory+search-e3-b2/episode.json",
+      "sha256": "87c3e83d55067f1cfacd0a8c09d102eea7f77e8bb72b1f4c4b6e1f48302c46f7",
+      "mode": "llm+memory+search",
+      "episode": 3,
+      "input_ids": [
+        "7270",
+        "955",
+        "33",
+        "43",
+        "3420",
+        "911",
+        "3371",
+        "11148"
+      ]
+    }
+  ],
+  "ended_at": "2026-09-26T21:13:21.940868+00:00"
+}

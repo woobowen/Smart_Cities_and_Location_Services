@@ -1,0 +1,390 @@
+{
+  "completed_at": "2026-09-26T21:08:47.947344+00:00",
+  "resources": {
+    "experiment_model_dispatches": 1,
+    "completed_model_turns": 1,
+    "candidate_evaluations": 64,
+    "reference_assessments_outside_llm_only_decision": 0,
+    "deterministic_tool_calls": 128,
+    "cache_reads": 0,
+    "governance_role_dispatches": 0,
+    "provider_requests": "unknown",
+    "usage": [
+      {
+        "input_tokens": 18258,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 966,
+        "reasoning_output_tokens": 88
+      }
+    ]
+  },
+  "records": {
+    "1887": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb",
+        "cfg-6599edd5fcbf75b1",
+        "cfg-b64eb945a846910c",
+        "cfg-322e68540606f046",
+        "cfg-df6f00206fb03678",
+        "cfg-65d9f66c5a9b483a",
+        "cfg-e8ff0df5800d5c3b",
+        "cfg-6b37e535e1ea2046"
+      ],
+      "stopped": false,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "1887-r1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 2,
+              "min_length": 65,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "raw_break_crossings",
+            "predicted_sign": "unchanged",
+            "reason": "18 raw breaks motivate testing retention of shorter segments. DEMO-9636 supports this trial, not a transferred outcome. Original split thresholds preserve breaks."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "f22f8504f54d79e49b362747d3611f89fc595ab80b7e76841c76612de89917d7",
+          "executed_config_id": "cfg-6599edd5fcbf75b1",
+          "prediction": {
+            "metric_id": "raw_break_crossings",
+            "predicted_sign": "unchanged",
+            "reference_handle": "6e0d3a7cc21d9fe0855e73f0adc742308a3569bc2f2a5297beec4550d99b8529",
+            "candidate_handle": "e068f6e98d7ce264b3cd82bb4b26fa21aba0fafc6064d517f386c094900e7709",
+            "status": "NEAR_ZERO_OR_UNCHANGED",
+            "delta": 0,
+            "observed_sign": "unchanged",
+            "evaluable": false,
+            "prediction_matches": true
+          }
+        }
+      ]
+    },
+    "10003": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb",
+        "cfg-a5483ca9cb883a91",
+        "cfg-b64eb945a846910c",
+        "cfg-322e68540606f046",
+        "cfg-df6f00206fb03678",
+        "cfg-65d9f66c5a9b483a",
+        "cfg-e8ff0df5800d5c3b",
+        "cfg-6b37e535e1ea2046"
+      ],
+      "stopped": false,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "10003-r1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 60,
+              "dp": 5
+            },
+            "metric_id": "common_max_error",
+            "predicted_sign": "not_predicted",
+            "reason": "Delivered direction-60 demonstrations motivate an isolated direction trial. Aggregate descriptors cannot establish this record's fidelity response."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "2ed509779883d2014c8b5d878e7e06910e7fe8391472262d008b77ccda9a8c88",
+          "executed_config_id": "cfg-a5483ca9cb883a91",
+          "prediction": {
+            "metric_id": "common_max_error",
+            "predicted_sign": "not_predicted",
+            "reference_handle": "035ee2f412968e5906b4a20497b788ae0bb782abca65b43d20b23939d94e9ce7",
+            "candidate_handle": "c2820b2968e21b6a34737c6c255891aa25f656c2b16f0de21045da288a2ad83a",
+            "status": "NOT_PREDICTED",
+            "evaluable": false
+          }
+        }
+      ]
+    },
+    "8424": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb",
+        "cfg-a5483ca9cb883a91",
+        "cfg-b64eb945a846910c",
+        "cfg-322e68540606f046",
+        "cfg-df6f00206fb03678",
+        "cfg-65d9f66c5a9b483a",
+        "cfg-e8ff0df5800d5c3b",
+        "cfg-6b37e535e1ea2046"
+      ],
+      "stopped": false,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "8424-r1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 60,
+              "dp": 5
+            },
+            "metric_id": "common_max_error",
+            "predicted_sign": "not_predicted",
+            "reason": "Test direction 60 based on delivered supported demonstrations, keeping S and P fixed. Their outcomes do not determine this record's error."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "80e9521ef380a50025967573c9d450cb98e30b2e8f3423f198124d3fd91fd2d3",
+          "executed_config_id": "cfg-a5483ca9cb883a91",
+          "prediction": {
+            "metric_id": "common_max_error",
+            "predicted_sign": "not_predicted",
+            "reference_handle": "7f15ec7005182dd69578ff3a73ba274d42c04e03f9483168f5cef7bcb767ec9b",
+            "candidate_handle": "da52a9cad9602942687784b05a61fdc3812b8d2406a34f5def1d0825d11a745f",
+            "status": "NOT_PREDICTED",
+            "evaluable": false
+          }
+        }
+      ]
+    },
+    "2225": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb",
+        "cfg-a5483ca9cb883a91",
+        "cfg-b64eb945a846910c",
+        "cfg-322e68540606f046",
+        "cfg-df6f00206fb03678",
+        "cfg-65d9f66c5a9b483a",
+        "cfg-e8ff0df5800d5c3b",
+        "cfg-6b37e535e1ea2046"
+      ],
+      "stopped": false,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "2225-r1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 60,
+              "dp": 5
+            },
+            "metric_id": "common_max_error",
+            "predicted_sign": "not_predicted",
+            "reason": "DEMO-2254 motivates testing direction 60. Undefined direction windows remain protected; duplicate counts alone do not justify an error prediction."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "5e3be46f21dcfcf5fba4bbe16bb2f11786ea14b19a9cccd472c725b73a9d2ead",
+          "executed_config_id": "cfg-a5483ca9cb883a91",
+          "prediction": {
+            "metric_id": "common_max_error",
+            "predicted_sign": "not_predicted",
+            "reference_handle": "d64bc2fffb8a8aacbfeb153488e6cbfdbd7dfaa0e82c0452a31db8e0398be789",
+            "candidate_handle": "a1ed1073db930c4fc1584666714ae0b2368ce6da057d00f9f10bc5507e81b826",
+            "status": "NOT_PREDICTED",
+            "evaluable": false
+          }
+        }
+      ]
+    },
+    "2064": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb",
+        "cfg-6599edd5fcbf75b1",
+        "cfg-b64eb945a846910c",
+        "cfg-322e68540606f046",
+        "cfg-df6f00206fb03678",
+        "cfg-65d9f66c5a9b483a",
+        "cfg-e8ff0df5800d5c3b",
+        "cfg-6b37e535e1ea2046"
+      ],
+      "stopped": false,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "2064-r1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 2,
+              "min_length": 65,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "raw_break_crossings",
+            "predicted_sign": "unchanged",
+            "reason": "Four raw breaks motivate checking whether the point-count filter excludes short segments. Lowering only min_points preserves original break boundaries; coverage gain requires evaluation."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "50718583662919fa25a451956d285f75a7fd47b3f3691f693f840feb802f71b2",
+          "executed_config_id": "cfg-6599edd5fcbf75b1",
+          "prediction": {
+            "metric_id": "raw_break_crossings",
+            "predicted_sign": "unchanged",
+            "reference_handle": "15282e7aa960f39a8f1ae5d97ec578153ef07b2ac37130eaec869e22429408e6",
+            "candidate_handle": "71e784bfdb25b9f3c524661040ed85606b26f6f566845dbc5b2298005a03cc7d",
+            "status": "NEAR_ZERO_OR_UNCHANGED",
+            "delta": 0,
+            "observed_sign": "unchanged",
+            "evaluable": false,
+            "prediction_matches": true
+          }
+        }
+      ]
+    },
+    "7253": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb",
+        "cfg-a5483ca9cb883a91",
+        "cfg-b64eb945a846910c",
+        "cfg-322e68540606f046",
+        "cfg-df6f00206fb03678",
+        "cfg-65d9f66c5a9b483a",
+        "cfg-e8ff0df5800d5c3b",
+        "cfg-6b37e535e1ea2046"
+      ],
+      "stopped": false,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "7253-r1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 60,
+              "dp": 5
+            },
+            "metric_id": "common_max_error",
+            "predicted_sign": "not_predicted",
+            "reason": "Explore an isolated direction-threshold change with S and P fixed. The card does not reveal affected windows or justify a fidelity sign."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "f0afb44b586be01f7cc85488f34684071bb27233db3a8fa9bc5b9f376f9062e5",
+          "executed_config_id": "cfg-a5483ca9cb883a91",
+          "prediction": {
+            "metric_id": "common_max_error",
+            "predicted_sign": "not_predicted",
+            "reference_handle": "7b9c2861799b270270b9ec5284efdbf7b4f80fabbfef74f89cb712650a0303fc",
+            "candidate_handle": "ae72e837b3cff8084eeddb8430bdcb925d9232d41ac44f463674b8ba8762c78c",
+            "status": "NOT_PREDICTED",
+            "evaluable": false
+          }
+        }
+      ]
+    },
+    "588": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb",
+        "cfg-a5483ca9cb883a91",
+        "cfg-b64eb945a846910c",
+        "cfg-322e68540606f046",
+        "cfg-df6f00206fb03678",
+        "cfg-65d9f66c5a9b483a",
+        "cfg-e8ff0df5800d5c3b",
+        "cfg-6b37e535e1ea2046"
+      ],
+      "stopped": false,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "588-r1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 60,
+              "dp": 5
+            },
+            "metric_id": "common_max_error",
+            "predicted_sign": "not_predicted",
+            "reason": "DEMO-3009 and DEMO-7057 motivate a direction-60 trial while preserving the raw breakpoint. Record-specific fidelity requires feedback."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "7aaec3c9cfafca77979b7a57e2b244e330fe43831db9386010cbb563f9f0f64f",
+          "executed_config_id": "cfg-a5483ca9cb883a91",
+          "prediction": {
+            "metric_id": "common_max_error",
+            "predicted_sign": "not_predicted",
+            "reference_handle": "295a0995e3b37a8ba232503c3fd07376c59f72645901018ceead8e030dd15d6c",
+            "candidate_handle": "b00667d3306af5939d47427791c2bede6d5856f9877b252fa295f839d5c3d095",
+            "status": "NOT_PREDICTED",
+            "evaluable": false
+          }
+        }
+      ]
+    },
+    "8522": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb",
+        "cfg-a5483ca9cb883a91",
+        "cfg-b64eb945a846910c",
+        "cfg-322e68540606f046",
+        "cfg-df6f00206fb03678",
+        "cfg-65d9f66c5a9b483a",
+        "cfg-e8ff0df5800d5c3b",
+        "cfg-6b37e535e1ea2046"
+      ],
+      "stopped": false,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "8522-r1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 60,
+              "dp": 5
+            },
+            "metric_id": "common_max_error",
+            "predicted_sign": "not_predicted",
+            "reason": "DEMO-7057 motivates testing direction 60 while retaining all four raw split boundaries. Its verified outcome does not establish an error change here."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "652884c572ff62efd9a3387924af4d83de6ce981dc111cc244d9806afbb9caa0",
+          "executed_config_id": "cfg-a5483ca9cb883a91",
+          "prediction": {
+            "metric_id": "common_max_error",
+            "predicted_sign": "not_predicted",
+            "reference_handle": "30b5c5409cd91b966f56f38ca178a04bbbaec40092f1d3ab0dbf0b2d98e708dc",
+            "candidate_handle": "dda40a2c2f63bdc3e1e5278ac58ff3db201db80cef654c7549233f68a5f0dab4",
+            "status": "NOT_PREDICTED",
+            "evaluable": false
+          }
+        }
+      ]
+    }
+  }
+}

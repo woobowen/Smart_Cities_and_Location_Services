@@ -1,0 +1,172 @@
+{
+  "records": [
+    {
+      "record_id": "9779",
+      "proposals": [
+        {
+          "candidate_id": "9779-r1",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 35,
+            "dp": 2
+          },
+          "metric_id": "n_direction_removed",
+          "predicted_sign": "unchanged",
+          "reason": "Test tighter DP tolerance for geometric fidelity; unchanged S/D preserves direction-removal count."
+        }
+      ],
+      "stop": false,
+      "memory_ids_used": []
+    },
+    {
+      "record_id": "3357",
+      "proposals": [
+        {
+          "candidate_id": "3357-r1",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 2,
+            "min_length": 0,
+            "direction": 35,
+            "dp": 5
+          },
+          "metric_id": "common_covered_points",
+          "predicted_sign": "not_predicted",
+          "reason": "Test whether relaxed segment filters recover coverage while preserving raw breakpoint thresholds; segment sizes are unknown."
+        }
+      ],
+      "stop": false,
+      "memory_ids_used": []
+    },
+    {
+      "record_id": "11355",
+      "proposals": [
+        {
+          "candidate_id": "11355-r1",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 2,
+            "min_length": 0,
+            "direction": 35,
+            "dp": 5
+          },
+          "metric_id": "common_covered_points",
+          "predicted_sign": "not_predicted",
+          "reason": "Two raw breaks may leave filtered segments; test relaxed filters without bridging those breaks."
+        }
+      ],
+      "stop": false,
+      "memory_ids_used": []
+    },
+    {
+      "record_id": "5049",
+      "proposals": [
+        {
+          "candidate_id": "5049-r1",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 2,
+            "min_length": 0,
+            "direction": 35,
+            "dp": 5
+          },
+          "metric_id": "common_covered_points",
+          "predicted_sign": "not_predicted",
+          "reason": "Test coverage recovery from segments around the three raw breaks; retain existing direction and DP settings."
+        }
+      ],
+      "stop": false,
+      "memory_ids_used": []
+    },
+    {
+      "record_id": "7186",
+      "proposals": [
+        {
+          "candidate_id": "7186-r1",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 35,
+            "dp": 2
+          },
+          "metric_id": "n_direction_removed",
+          "predicted_sign": "unchanged",
+          "reason": "Test tighter DP tolerance with identical S/D; duplicate counts alone do not justify stronger deletion."
+        }
+      ],
+      "stop": false,
+      "memory_ids_used": []
+    },
+    {
+      "record_id": "11326",
+      "proposals": [
+        {
+          "candidate_id": "11326-r1",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 2,
+            "min_length": 0,
+            "direction": 35,
+            "dp": 5
+          },
+          "metric_id": "common_covered_points",
+          "predicted_sign": "not_predicted",
+          "reason": "Test whether relaxed filters retain additional segments around five raw breaks; coverage effects require evaluation."
+        }
+      ],
+      "stop": false,
+      "memory_ids_used": []
+    },
+    {
+      "record_id": "2069",
+      "proposals": [
+        {
+          "candidate_id": "2069-r1",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 35,
+            "dp": 2
+          },
+          "metric_id": "n_direction_removed",
+          "predicted_sign": "unchanged",
+          "reason": "Test tighter DP tolerance while preserving S/D and the original zero-time edge."
+        }
+      ],
+      "stop": false,
+      "memory_ids_used": []
+    },
+    {
+      "record_id": "9613",
+      "proposals": [
+        {
+          "candidate_id": "9613-r1",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 2,
+            "min_length": 0,
+            "direction": 35,
+            "dp": 5
+          },
+          "metric_id": "common_covered_points",
+          "predicted_sign": "not_predicted",
+          "reason": "Fifteen raw breaks motivate testing relaxed segment filters for coverage; keep all original splitting thresholds."
+        }
+      ],
+      "stop": false,
+      "memory_ids_used": []
+    }
+  ]
+}

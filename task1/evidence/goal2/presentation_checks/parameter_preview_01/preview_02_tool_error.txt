@@ -1,0 +1,29 @@
+Evidence type: verbatim stderr text returned by the actual exec session 85801.
+Command: .venv/bin/python -m task1.scripts.build_goal2_figures --current-runs task1/evidence/goal2/current_runs.json --output /tmp/sc-g2-parameter-preview-02 --topic parameters
+Exit code: 1
+The stream was returned by tools.write_stdin; this text is preserved from that tool response rather than claimed as a separately captured original stderr file.
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/scripts/build_goal2_figures.py", line 627, in <module>
+    main()
+  File "/home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/scripts/build_goal2_figures.py", line 621, in main
+    result = build(args.current_runs, args.output, args.topic)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/scripts/build_goal2_figures.py", line 589, in build
+    parameters_figures(writer)
+  File "/home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/scripts/build_goal2_figures.py", line 268, in parameters_figures
+    fig.legend(handles=[Patch(facecolor=p["C1"], edgecolor=p["Ink"], label="Passes common protection"),
+  File "/usr/lib/python3/dist-packages/matplotlib/figure.py", line 1122, in legend
+    l = mlegend.Legend(self, handles, labels, *extra_args,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/matplotlib/_api/deprecation.py", line 454, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/matplotlib/legend.py", line 470, in __init__
+    loc = _api.check_getitem(self.codes, loc=loc)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3/dist-packages/matplotlib/_api/__init__.py", line 190, in check_getitem
+    raise ValueError(
+ValueError: 'outside lower center' is not a valid value for loc; supported values are 'best', 'upper right', 'upper left', 'lower left', 'lower right', 'right', 'center left', 'center right', 'lower center', 'upper center', 'center'

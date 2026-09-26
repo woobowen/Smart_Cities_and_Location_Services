@@ -1,0 +1,46 @@
+{
+  "status": "VERIFIED",
+  "role_context": "/root/c_contract",
+  "issue_id": "G2-B-NOTEBOOK-001",
+  "parent_task": "notebooks",
+  "reviewed_at": "2026-09-26T19:34:20.872140+00:00",
+  "targets": [
+    {
+      "path": "task1/scripts/build_goal2_notebooks.py",
+      "sha256": "a0b8b254f67e710031de96491dd6b7d3fc592a4432269249bb0e320a98ee71da"
+    }
+  ],
+  "source_hashes": {
+    "task1/scripts/build_goal2_notebooks.py": "a0b8b254f67e710031de96491dd6b7d3fc592a4432269249bb0e320a98ee71da"
+  },
+  "checked_components": [
+    "fault_rejected",
+    "valid_receipt_accepted",
+    "source_epoch",
+    "fresh_kernel_SETUP_imports",
+    "real_provider_call_sentinel",
+    "all_notebook_code_cells_compile"
+  ],
+  "unchecked_components": [
+    "complete three Notebook Restart Kernel Run All",
+    "full deterministic recompute",
+    "figures and real mode evidence cells",
+    "entire notebooks task acceptance"
+  ],
+  "compiled_code_cells": 20,
+  "actual_model_calls": 0,
+  "blocked_fault_test_attempts": 1,
+  "fresh_kernels": 1,
+  "kernel_environment": "existing .venv, temporary kernel specification, no dependency installation",
+  "evidence": [
+    {
+      "path": "task1/evidence/goal2/c_contract/notebook_setup_engineering_test.ipynb",
+      "sha256": "1f13780e3d73c394339ed40f9ce10980591c966c2cda9ee01796f10f55504b04"
+    },
+    {
+      "path": "task1/evidence/goal2/c_contract/review_notebook_setup.py",
+      "sha256": "bc39d0126bdd09ebf913796098b7fba3d5bc298b46bda0f5608e8e8d921ad4e0"
+    }
+  ],
+  "limit": "This closes the missing dependency / missing active sentinel implementation defects only. Full Notebook execution remains pending."
+}

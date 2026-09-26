@@ -1,0 +1,188 @@
+{
+  "errors": [],
+  "accepted_record_ids": [
+    "7270",
+    "955",
+    "33",
+    "43",
+    "3420",
+    "911",
+    "3371",
+    "11148"
+  ],
+  "original_response": {
+    "records": [
+      {
+        "record_id": "7270",
+        "proposals": [
+          {
+            "candidate_id": "7270-r1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 60,
+              "dp": 5
+            },
+            "metric_id": "raw_break_crossings",
+            "predicted_sign": "unchanged",
+            "reason": "Test direction-threshold sensitivity while preserving reference segmentation and DP tolerance; geometric effects require evaluation."
+          }
+        ],
+        "stop": false,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "955",
+        "proposals": [
+          {
+            "candidate_id": "955-r1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 60,
+              "dp": 5
+            },
+            "metric_id": "raw_break_crossings",
+            "predicted_sign": "unchanged",
+            "reason": "Test whether changing the direction threshold improves protected geometry on this compact, winding record; preserve segmentation."
+          }
+        ],
+        "stop": false,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "33",
+        "proposals": [
+          {
+            "candidate_id": "33-r1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 0,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "common_covered_points",
+            "predicted_sign": "not_predicted",
+            "reason": "Test whether removing the length filter restores coverage for this small-span record; supplied summaries do not establish the filter outcome."
+          }
+        ],
+        "stop": false,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "43",
+        "proposals": [
+          {
+            "candidate_id": "43-r1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 0,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "common_covered_points",
+            "predicted_sign": "increase",
+            "reason": "The unbroken record has total path length below 65. Removing the length filter should restore coverage; DEMO-1180 supports testing this intervention, without establishing its outcome here."
+          }
+        ],
+        "stop": false,
+        "memory_ids_used": [
+          "DEMO-1180"
+        ]
+      },
+      {
+        "record_id": "3420",
+        "proposals": [
+          {
+            "candidate_id": "3420-r1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 60,
+              "dp": 5
+            },
+            "metric_id": "raw_break_crossings",
+            "predicted_sign": "unchanged",
+            "reason": "Preserve both observed raw breakpoints while testing direction-threshold sensitivity; assess geometric tradeoffs through feedback."
+          }
+        ],
+        "stop": false,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "911",
+        "proposals": [
+          {
+            "candidate_id": "911-r1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 2,
+              "min_length": 0,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "common_covered_points",
+            "predicted_sign": "not_predicted",
+            "reason": "Test recovery of segments potentially excluded after the three raw breaks. Segment sizes are unavailable, so a strict coverage increase is uncertain."
+          }
+        ],
+        "stop": false,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "3371",
+        "proposals": [
+          {
+            "candidate_id": "3371-r1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 35,
+              "dp": 10
+            },
+            "metric_id": "n_final",
+            "predicted_sign": "not_predicted",
+            "reason": "Test additional compression with unchanged S/D. Acceptability depends on measured common fidelity remaining within the common5 budget; strict point reduction is uncertain."
+          }
+        ],
+        "stop": false,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "11148",
+        "proposals": [
+          {
+            "candidate_id": "11148-r1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 60,
+              "dp": 5
+            },
+            "metric_id": "raw_break_crossings",
+            "predicted_sign": "unchanged",
+            "reason": "Test direction-threshold sensitivity while retaining reference segmentation and DP tolerance; no geometric improvement is assumed."
+          }
+        ],
+        "stop": false,
+        "memory_ids_used": []
+      }
+    ]
+  },
+  "raw_proposals_preserved_before_validation": true
+}

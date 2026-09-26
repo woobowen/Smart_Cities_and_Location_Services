@@ -1,0 +1,58 @@
+{
+  "classification": "ACTUAL_B_IMAGE_INSPECTION",
+  "reviewed_images": [
+    {
+      "path": "task1/evidence/goal2/presentation_checks/candidate_preview_02/before/real_trajectory_cases.png",
+      "sha256": "905036d61c046f8f935b1a5e93cc2b8a567666102b011df0adee31b1f88b1f67",
+      "actual_tool": "view_image",
+      "result": "REPAIR_REQUIRED"
+    },
+    {
+      "path": "task1/evidence/goal2/presentation_checks/candidate_preview_02/before/pdf-render-200dpi/real_trajectory_cases.png",
+      "sha256": "9cc1207f6e429947ed72c1e0ab9c542ddbfb0a8f4dbeba129392b9d6c650e6f6",
+      "actual_tool": "view_image",
+      "result": "REPAIR_REQUIRED"
+    },
+    {
+      "path": "task1/evidence/goal2/presentation_checks/candidate_preview_02/before/synthetic_metric_counterexamples.png",
+      "sha256": "3fe03110fc2239c1d3bf90bb7723e32adf43b2691530a4bd5ce5fe4147bf8dd3",
+      "actual_tool": "view_image",
+      "result": "REPAIR_REQUIRED"
+    },
+    {
+      "path": "task1/evidence/goal2/presentation_checks/candidate_preview_02/before/pdf-render-200dpi/synthetic_metric_counterexamples.png",
+      "sha256": "d9e2546d333a042d42b330da5909f402da83b65d6b65adfc36d0297a7911cbb2",
+      "actual_tool": "view_image",
+      "result": "REPAIR_REQUIRED"
+    },
+    {
+      "path": "task1/evidence/goal2/presentation_checks/candidate_preview_02/before/goal2_actual_architecture.png",
+      "sha256": "06e5deea0f1022fec93f969fca7aee6819b0b2ea1909aafa4332742cd70ff3c9",
+      "actual_tool": "view_image",
+      "result": "LAYOUT_READABLE_MODULE_BINDING_REQUIRES_FIX"
+    },
+    {
+      "path": "task1/evidence/goal2/presentation_checks/candidate_preview_02/before/pdf-render-200dpi/goal2_actual_architecture.png",
+      "sha256": "8b3f9916d5b163d9027dc29ff770a3a453461e3213d975dadc9eefc44ba6dad1",
+      "actual_tool": "view_image",
+      "result": "LAYOUT_READABLE_MODULE_BINDING_REQUIRES_FIX"
+    }
+  ],
+  "findings": [
+    {
+      "id": "F01",
+      "figure": "real_trajectory_cases",
+      "facts": "Equal aspect with adjustable box collapses narrow traces; x tick labels overlap. First all-filtered axis legend covers No final output and only exposes Raw points."
+    },
+    {
+      "id": "F02",
+      "figure": "synthetic_metric_counterexamples",
+      "facts": "Horizontal example axis collapsed to a line; title/index annotations overlap; near-coincident indices 1 and 2 overlap."
+    },
+    {
+      "id": "F03",
+      "figure": "goal2_actual_architecture",
+      "facts": "C independent reviewer node metadata points to B production metrics instead of actual independent C implementation; physical graph readable."
+    }
+  ]
+}

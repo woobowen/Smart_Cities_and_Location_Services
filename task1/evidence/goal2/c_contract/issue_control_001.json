@@ -1,0 +1,77 @@
+{
+  "status": "ISSUE_OPEN",
+  "issue_id": "G2-C-CONTROL-001",
+  "parent_task": "core",
+  "classification": "ENGINEERING_TEST_FINDING_NOT_PRODUCTION_RUN",
+  "fact": "Initial G2Journal.accept accepts empty target sets, unrelated check coverage, unsatisfied task prerequisites and a wrong source-hash claim.",
+  "violated_clause": "Prompt sections 6,15,17 A12/A14; preserve target-specific review closure guards",
+  "target_path": "task1/workflow/g2_journal.py",
+  "target_sha256": "35e863a9f81332a993db75499ec4f11dcb11e2817b5b96e526f1a7e43dc6cef2",
+  "tests": [
+    {
+      "test": "unmet_dependency",
+      "classification": "ENGINEERING_TEST_FAULT_INJECTION",
+      "accepted": true,
+      "expected": "REJECTED",
+      "actual_status": "VERIFIED",
+      "reason": null,
+      "pending_dependencies": [
+        "internal_acceptance"
+      ]
+    },
+    {
+      "test": "empty_evidence",
+      "classification": "ENGINEERING_TEST_FAULT_INJECTION",
+      "accepted": true,
+      "expected": "REJECTED",
+      "actual_status": "VERIFIED",
+      "reason": null,
+      "pending_dependencies": [
+        "contract"
+      ]
+    },
+    {
+      "test": "missing_required_coverage",
+      "classification": "ENGINEERING_TEST_FAULT_INJECTION",
+      "accepted": true,
+      "expected": "REJECTED",
+      "actual_status": "VERIFIED",
+      "reason": null,
+      "pending_dependencies": [
+        "contract"
+      ]
+    },
+    {
+      "test": "stale_source_receipt",
+      "classification": "ENGINEERING_TEST_FAULT_INJECTION",
+      "accepted": true,
+      "expected": "REJECTED",
+      "actual_status": "VERIFIED",
+      "reason": null,
+      "pending_dependencies": [
+        "contract"
+      ]
+    }
+  ],
+  "repairer": "B-Repair:root",
+  "verifier": "C:/root/c_contract",
+  "affected_artifacts": [
+    "future G2 task closure and final acceptance"
+  ],
+  "closure_standard": [
+    "nonempty exact submitted targets",
+    "ready dependencies and expected transition",
+    "task-specific mandatory coverage",
+    "real registered independent actor",
+    "frozen source/contract/split version binding checked at accept/checkpoint",
+    "fault injections reject and genuine target receipt succeeds"
+  ],
+  "checked_components": [
+    "current accept path combined fault injections"
+  ],
+  "unchecked_components": [
+    "full Goal controller behavior",
+    "individual isolation of each missing guard after repair"
+  ],
+  "probe_development_note": "The first probe used an external /tmp target and was correctly rejected by EVIDENCE_PATH_REQUIRED; fixtures now live inside the assigned C evidence directory."
+}

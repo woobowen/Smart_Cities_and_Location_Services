@@ -1,0 +1,399 @@
+{
+  "completed_at": "2026-09-26T20:20:37.974212+00:00",
+  "resources": {
+    "experiment_model_dispatches": 1,
+    "completed_model_turns": 1,
+    "candidate_evaluations": 64,
+    "reference_assessments_outside_llm_only_decision": 0,
+    "deterministic_tool_calls": 128,
+    "cache_reads": 0,
+    "governance_role_dispatches": 0,
+    "provider_requests": "unknown",
+    "usage": [
+      {
+        "input_tokens": 18266,
+        "cached_input_tokens": 7808,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 923,
+        "reasoning_output_tokens": 113
+      }
+    ]
+  },
+  "records": {
+    "82": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb",
+        "cfg-a5483ca9cb883a91",
+        "cfg-b64eb945a846910c",
+        "cfg-322e68540606f046",
+        "cfg-df6f00206fb03678",
+        "cfg-65d9f66c5a9b483a",
+        "cfg-e8ff0df5800d5c3b",
+        "cfg-6b37e535e1ea2046"
+      ],
+      "stopped": false,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "82-r1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 60,
+              "dp": 5
+            },
+            "metric_id": "common_max_error",
+            "predicted_sign": "not_predicted",
+            "reason": "Test direction sensitivity while preserving segmentation and DP tolerance; aggregate observations do not determine common fidelity."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "a5ad8ca56d8a9c8e9d1988c63f53d167e5a36bf4b8c99501bd5fcf6e53b63946",
+          "executed_config_id": "cfg-a5483ca9cb883a91",
+          "prediction": {
+            "metric_id": "common_max_error",
+            "predicted_sign": "not_predicted",
+            "reference_handle": "eccdd1eb0e15c917aa870c63cab584da162912811d42ec4a7d5768acaa2bf1e3",
+            "candidate_handle": "cfc88b99ba84aab3084071b3e6839af5889b4a752882760048a48317f799f454",
+            "status": "NOT_PREDICTED",
+            "evaluable": false
+          }
+        }
+      ]
+    },
+    "10232": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb",
+        "cfg-a5483ca9cb883a91",
+        "cfg-b64eb945a846910c",
+        "cfg-322e68540606f046",
+        "cfg-df6f00206fb03678",
+        "cfg-65d9f66c5a9b483a",
+        "cfg-e8ff0df5800d5c3b",
+        "cfg-6b37e535e1ea2046"
+      ],
+      "stopped": false,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "10232-r1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 60,
+              "dp": 5
+            },
+            "metric_id": "common_max_error",
+            "predicted_sign": "not_predicted",
+            "reason": "Isolate the direction threshold's effect on protected fidelity; the card cannot establish an error change."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "8d1cafbce7d202b9aa34d29a97406aa93309f9fa97b70cb13ce4695640699bbd",
+          "executed_config_id": "cfg-a5483ca9cb883a91",
+          "prediction": {
+            "metric_id": "common_max_error",
+            "predicted_sign": "not_predicted",
+            "reference_handle": "7b4c5f26de8f013f4def46791886b2b7563a6159432da2ab0d1ff2a8730adcd2",
+            "candidate_handle": "3102b14843f13c734f3cfa7cd9ddd4bb26064a282ea58c8e209e7dcc5daeeb6f",
+            "status": "NOT_PREDICTED",
+            "evaluable": false
+          }
+        }
+      ]
+    },
+    "10796": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb",
+        "cfg-63139d05595c253c",
+        "cfg-b64eb945a846910c",
+        "cfg-322e68540606f046",
+        "cfg-df6f00206fb03678",
+        "cfg-65d9f66c5a9b483a",
+        "cfg-e8ff0df5800d5c3b",
+        "cfg-6b37e535e1ea2046"
+      ],
+      "stopped": false,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "10796-r1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 0,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "common_covered_points",
+            "predicted_sign": "increase",
+            "reason": "The unbroken 98-point path is shorter than 65 working metres. Removing the length filter should restore coverage."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "faa21834a375cafb2bbc2e083a8f2a34350a1316a2ddb51347236f76c1decad9",
+          "executed_config_id": "cfg-63139d05595c253c",
+          "prediction": {
+            "metric_id": "common_covered_points",
+            "predicted_sign": "increase",
+            "reference_handle": "76db23ea7b061962a8b67bf637bc182b0bbb968d946d0d816c148add39a7443f",
+            "candidate_handle": "1a406bc629b01e4cd8159bce7750c856a6d90508aec7d766d6c22d3032555c0b",
+            "status": "EVALUABLE",
+            "delta": 98,
+            "observed_sign": "increase",
+            "evaluable": true,
+            "prediction_matches": true
+          }
+        }
+      ]
+    },
+    "4805": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb",
+        "cfg-63139d05595c253c",
+        "cfg-b64eb945a846910c",
+        "cfg-322e68540606f046",
+        "cfg-df6f00206fb03678",
+        "cfg-65d9f66c5a9b483a",
+        "cfg-e8ff0df5800d5c3b",
+        "cfg-6b37e535e1ea2046"
+      ],
+      "stopped": false,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "4805-r1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 0,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "common_covered_points",
+            "predicted_sign": "increase",
+            "reason": "The unbroken path is shorter than 65 working metres. Test coverage recovery by removing the length filter; DEMO-1180 supports testing this change without guaranteeing transfer."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "99ae076ed98fea0953458e7760b1a4f6be4e1b332896573b067a97d0f29dfaa8",
+          "executed_config_id": "cfg-63139d05595c253c",
+          "prediction": {
+            "metric_id": "common_covered_points",
+            "predicted_sign": "increase",
+            "reference_handle": "b929a3d15f015e95180afad91bed0d8705196d6e281be3451d69f0155b0a33d3",
+            "candidate_handle": "fb3c16b9b673f44477f575afad2bccc6c6d046930556a57c801ef17225af4d0b",
+            "status": "EVALUABLE",
+            "delta": 99,
+            "observed_sign": "increase",
+            "evaluable": true,
+            "prediction_matches": true
+          }
+        }
+      ]
+    },
+    "7764": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb",
+        "cfg-a5483ca9cb883a91",
+        "cfg-b64eb945a846910c",
+        "cfg-322e68540606f046",
+        "cfg-df6f00206fb03678",
+        "cfg-65d9f66c5a9b483a",
+        "cfg-e8ff0df5800d5c3b",
+        "cfg-6b37e535e1ea2046"
+      ],
+      "stopped": false,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "7764-r1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 60,
+              "dp": 5
+            },
+            "metric_id": "raw_break_crossings",
+            "predicted_sign": "unchanged",
+            "reason": "Test direction sensitivity while retaining the reference split thresholds, which continue separating both raw breaks."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "af61507082c6cea7b92207c5c3d95a667ff560559c14d384dc2874acc3b83b91",
+          "executed_config_id": "cfg-a5483ca9cb883a91",
+          "prediction": {
+            "metric_id": "raw_break_crossings",
+            "predicted_sign": "unchanged",
+            "reference_handle": "76626a3dcc103669d30a77f1c0e4cff884dacdb52a3cc104874fe399a6eccc24",
+            "candidate_handle": "42d4c1c30ce65bd155b84d74ea9c32357777b45f9d2d6e446924e67347d3c5d4",
+            "status": "NEAR_ZERO_OR_UNCHANGED",
+            "delta": 0,
+            "observed_sign": "unchanged",
+            "evaluable": false,
+            "prediction_matches": true
+          }
+        }
+      ]
+    },
+    "4953": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb",
+        "cfg-a5483ca9cb883a91",
+        "cfg-b64eb945a846910c",
+        "cfg-322e68540606f046",
+        "cfg-df6f00206fb03678",
+        "cfg-65d9f66c5a9b483a",
+        "cfg-e8ff0df5800d5c3b",
+        "cfg-6b37e535e1ea2046"
+      ],
+      "stopped": false,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "4953-r1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 60,
+              "dp": 5
+            },
+            "metric_id": "raw_break_crossings",
+            "predicted_sign": "unchanged",
+            "reason": "Preserve both time and distance break boundaries while testing the direction threshold's geometric tradeoff."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "c78e396d4f54c090ccb04e8375e4f44bd7df38b027f85e3dfb2ce557b92bd53a",
+          "executed_config_id": "cfg-a5483ca9cb883a91",
+          "prediction": {
+            "metric_id": "raw_break_crossings",
+            "predicted_sign": "unchanged",
+            "reference_handle": "739d37314a2f178164b054d118adfc04efd99a4f0affe2a6a008fd0ed86990f3",
+            "candidate_handle": "d62b2fd721a7f05dea1a8d1e53466644b5021aea8f9727d599175ebcaa9569c3",
+            "status": "NEAR_ZERO_OR_UNCHANGED",
+            "delta": 0,
+            "observed_sign": "unchanged",
+            "evaluable": false,
+            "prediction_matches": true
+          }
+        }
+      ]
+    },
+    "5029": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb",
+        "cfg-63139d05595c253c",
+        "cfg-b64eb945a846910c",
+        "cfg-322e68540606f046",
+        "cfg-df6f00206fb03678",
+        "cfg-65d9f66c5a9b483a",
+        "cfg-e8ff0df5800d5c3b",
+        "cfg-6b37e535e1ea2046"
+      ],
+      "stopped": false,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "5029-r1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 0,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "common_covered_points",
+            "predicted_sign": "increase",
+            "reason": "Total path length is below 65 working metres, so reference segments fail the length filter. Removing it should recover eligible segments while preserving all six breaks; DEMO-77 motivates this trial."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "a75a89d1207117450c987f67e3eb82585eb2379018c630467a752261ebedf074",
+          "executed_config_id": "cfg-63139d05595c253c",
+          "prediction": {
+            "metric_id": "common_covered_points",
+            "predicted_sign": "increase",
+            "reference_handle": "d50a9ede38bbc361647cd076bfc0227ff5751596ed9d9e38e2e19301eee79144",
+            "candidate_handle": "e7a53a52bd0ff933cf4dbe9494c72d10897f92fd64c4dd24c90a5abbdfa27ebc",
+            "status": "EVALUABLE",
+            "delta": 94,
+            "observed_sign": "increase",
+            "evaluable": true,
+            "prediction_matches": true
+          }
+        }
+      ]
+    },
+    "6556": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb",
+        "cfg-63139d05595c253c",
+        "cfg-b64eb945a846910c",
+        "cfg-322e68540606f046",
+        "cfg-df6f00206fb03678",
+        "cfg-65d9f66c5a9b483a",
+        "cfg-e8ff0df5800d5c3b",
+        "cfg-6b37e535e1ea2046"
+      ],
+      "stopped": false,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "6556-r1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 0,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "common_covered_points",
+            "predicted_sign": "not_predicted",
+            "reason": "Test recovery of short segments around the single time break. Segment lengths and point counts are unavailable, so a strict coverage increase is uncertain."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "612f903af0401430ba4bc62ce9622f97d6527475f675cbf222f136c4b0ec1700",
+          "executed_config_id": "cfg-63139d05595c253c",
+          "prediction": {
+            "metric_id": "common_covered_points",
+            "predicted_sign": "not_predicted",
+            "reference_handle": "0f07200ca874fec1eb63aebee6c78bf7e640c61d91195f1a8a41790c91622a1f",
+            "candidate_handle": "16a8c14ac06a64432a09d543ee3c51b98c0ccbeb2db123c2ae35ca506a975aed",
+            "status": "NOT_PREDICTED",
+            "evaluable": false
+          }
+        }
+      ]
+    }
+  }
+}

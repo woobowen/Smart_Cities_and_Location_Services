@@ -1,0 +1,1706 @@
+{
+  "status": "VERIFIED",
+  "role_context": "/root/c_contract",
+  "task": "development_orders",
+  "run_id": "g2-development-orders-01",
+  "reviewed_at": "2026-09-26T19:32:29.480093+00:00",
+  "targets": [
+    {
+      "path": "task1/evidence/goal2/runs/g2-development-orders-01/manifest.json",
+      "sha256": "5ac5e7e047672ce34d45a5f84ce337cf08376203e03eb72be12b2ee60b21f326"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-development-orders-01/order_table.json",
+      "sha256": "cef461d45653fb3f8e1deaf23763944b3619db6046353adee9ebbf660ce223ac"
+    }
+  ],
+  "source_hashes": {
+    "task1/scripts/goal2.py": "f62fe1e30bd3cccb461bd34794d2c0d204af39fdac3631b26af042dcb7a563f5",
+    "task1/workflow/coordinates.py": "d99b270a65c88f8530669d5e7d0887d7563b3e54e19770ab7a9eb695117e075d",
+    "task1/workflow/evaluation.py": "7cf224fbc290d3e83acd5d83a3fe335e6dc437c762f7053d8132817aa91025b2",
+    "task1/workflow/g2_data.py": "985453f073ec98ca7b17a827de1d316e8322dc89e452e6f8b45afa20b2a8a9f2",
+    "task1/workflow/g2_experiments.py": "713538f17d767e98c8ed802252ce33133c6f26dc4c6f7aeae208f6e0d64d2311",
+    "task1/workflow/g2_journal.py": "33b776f5c20f35844cc4c76ee28e38ee0b2e487ee3b13d4eff0c3d3a40d22c2a",
+    "task1/workflow/g2_memory.py": "e0784e6178cf4da3277c7fc8c1e16efce73b56b91b02b41acd3e8870d43a8c56",
+    "task1/workflow/g2_metrics.py": "8d80c8ff8e124b9d3d73f5d514a0c09af32f234034914379ea901e5e59cc3ebb",
+    "task1/workflow/g2_modes.py": "c8aa5902ffab4a1d4438efcccbe9cb655969d610030c74c4a8b5641c75b91dbd",
+    "task1/workflow/g2_pipeline.py": "edb8f4c8dcaf65cda44b33533eb55e9d67ef946597895f0682860ba65499c441",
+    "task1/workflow/g2_provider.py": "636a6edaf95ef31e1982d27e1361697d145156fccb99760028ba5e0d77949bb1",
+    "task1/workflow/g2_selection.py": "590a7e9c427801fd65a6ec563fdbbff0d35b0e7bae6a155f28e43ab64bb8f3af",
+    "task1/workflow/geometry.py": "2ad3ca3b49e98e997684e3f5af948771be80dfb03b31b2ae4cc4483856e93d74",
+    "task1/workflow/io.py": "0d3d72dd0beb4718f4020a07a5f1c0ca89193943049a479816b5c496806321b2"
+  },
+  "raw_sha256": "c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3",
+  "contract_sha256": "db758c097509139596fbc52b4c3f65e921eb1f12d9fb4c239e308abdb57f31f8",
+  "split_sha256": "fd2ebc6916f63b4b8e23ff6977f22cc691c39849d450486035243db7e3eb2ee8",
+  "checked_components": [
+    "all_six_orders",
+    "raw_breakpoint_failures",
+    "stage_dependencies",
+    "complete_record_scope",
+    "current_versions",
+    "full_artifact_hashes",
+    "full_ledger_and_common_reference",
+    "independent_DP_certificates",
+    "independent_summary",
+    "sampled_Decimal_DP_reconstruction"
+  ],
+  "unchecked_components": [
+    "source_datum_truth",
+    "ground_truth_quality",
+    "full_exact_recursive_DP_rerun_for_every_record_configuration",
+    "real_model_consumption",
+    "heldout_G2_EVAL",
+    "final_Goal2_acceptance"
+  ],
+  "audit_program": {
+    "path": "task1/evidence/goal2/c_contract/review_development_runs.py",
+    "sha256": "f33e722a26198753a40ba05e2139bc053297d1d24938a14ed14f6ba15eaaec31"
+  },
+  "oracle_sha256": "9c28775af3389fb9735d268bdaf776a0cedc683990518d0aee2736d5ff863865",
+  "sampling_rule": {
+    "every_artifact": [
+      "first all-filtered record by stable ID",
+      "maximum common error; stable ID tie",
+      "closest actual DP error to positive tolerance; stable ID tie",
+      "largest raw point count; stable ID tie"
+    ],
+    "reference_config_and_every_order": "one minimum SHA256(42|C-review|record_id) record per frozen descriptive stratum",
+    "purpose": "independent audit sampling only; never candidate selection or representative population estimation"
+  },
+  "check_count": 2302734,
+  "errors": [],
+  "artifact_count": 6,
+  "record_configurations": 720,
+  "sampled_DP_record_configurations": 75,
+  "artifact_reviews": [
+    {
+      "config_id": "cfg-b15b8281b73592fb",
+      "order": "S-D-P",
+      "records_fully_checked": 120,
+      "raw_points_per_config": 11777,
+      "sampled_full_DP_reconstructions": [
+        {
+          "record_id": "3549",
+          "reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "status": "VERIFIED",
+          "checks": 1234,
+          "errors": [],
+          "target_sha256": "a7ab25b3f3a2d1359c47a5524734f57748a25ed0dd4fbac3f5533b2420869edd"
+        },
+        {
+          "record_id": "10449",
+          "reasons": [
+            "near_DP_threshold"
+          ],
+          "status": "VERIFIED",
+          "checks": 982,
+          "errors": [],
+          "target_sha256": "7761dd5c47bc039c4e5eed8ed7e8846c1edee96ecf116bd6c48d413ff4c1c254"
+        },
+        {
+          "record_id": "9145",
+          "reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "status": "VERIFIED",
+          "checks": 999,
+          "errors": [],
+          "target_sha256": "61254fcad0317ef254dee064e282033be21d57dc66cc16a3cbe26ad70235b536"
+        },
+        {
+          "record_id": "3680",
+          "reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "status": "VERIFIED",
+          "checks": 695,
+          "errors": [],
+          "target_sha256": "d72a75cad691fee71dd4b328fd5b8f0de9df8b58c80990b2c04f9a65b5da55a4"
+        },
+        {
+          "record_id": "5366",
+          "reasons": [
+            "largest_record",
+            "descriptive_stratum_representative"
+          ],
+          "status": "VERIFIED",
+          "checks": 1205,
+          "errors": [],
+          "target_sha256": "333efa87f2d2fc7db975c98d5f2adbdd72f0b429c47e81878484ec7b53c46ea5"
+        },
+        {
+          "record_id": "3262",
+          "reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "status": "VERIFIED",
+          "checks": 448,
+          "errors": [],
+          "target_sha256": "0d54055cdfed7849d4c8e8925942dc1fdfc4996adc74d060c95ba7fbd6e6ef47"
+        },
+        {
+          "record_id": "611",
+          "reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "status": "VERIFIED",
+          "checks": 444,
+          "errors": [],
+          "target_sha256": "f3f95e87753aad426c9d5d36a79920dc4cd9f3b8e8c54535e40ec723a1e706e2"
+        },
+        {
+          "record_id": "82",
+          "reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "status": "VERIFIED",
+          "checks": 859,
+          "errors": [],
+          "target_sha256": "43a714c8aa03e5e29d34de211b094b4c7f479d30d70b12289953759751d629c0"
+        },
+        {
+          "record_id": "7151",
+          "reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "status": "VERIFIED",
+          "checks": 444,
+          "errors": [],
+          "target_sha256": "8c3353b2b954a81a3e219543a91c8cea7d21ea2290dd5ffd3445c07201d5d337"
+        },
+        {
+          "record_id": "10796",
+          "reasons": [
+            "all_filtered"
+          ],
+          "status": "VERIFIED",
+          "checks": 440,
+          "errors": [],
+          "target_sha256": "85625169a58f07400627891d2e6f17ae82adcff8541c67fa826a0f3449404d97"
+        },
+        {
+          "record_id": "10810",
+          "reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "status": "VERIFIED",
+          "checks": 903,
+          "errors": [],
+          "target_sha256": "078add4b29fa6d239681cd976c14d9629cd923c9cf7104945c491b125dc538aa"
+        },
+        {
+          "record_id": "3439",
+          "reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "status": "VERIFIED",
+          "checks": 1131,
+          "errors": [],
+          "target_sha256": "86c2d8ad3337c103a4a358820052d9e3d47478b27799f8d5f1ae1168c1e4358c"
+        },
+        {
+          "record_id": "7920",
+          "reasons": [
+            "worst_common_error"
+          ],
+          "status": "VERIFIED",
+          "checks": 938,
+          "errors": [],
+          "target_sha256": "db027dc5feba5dfd6bd4a9155b464e9ea04944c359d348b15333469162f79df7"
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-b15b8281b73592fb",
+      "order": "S-P-D",
+      "records_fully_checked": 120,
+      "raw_points_per_config": 11777,
+      "sampled_full_DP_reconstructions": [
+        {
+          "record_id": "3549",
+          "reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "status": "VERIFIED",
+          "checks": 1152,
+          "errors": [],
+          "target_sha256": "937322b13c621a4012be86105dd8b7926a8c213af86773e298cdc4ea17043a62"
+        },
+        {
+          "record_id": "10449",
+          "reasons": [
+            "near_DP_threshold"
+          ],
+          "status": "VERIFIED",
+          "checks": 878,
+          "errors": [],
+          "target_sha256": "5b3cff58eced788bb3f8027799d8cdf800ae9bc9c2d1bfd32348a8327dac6624"
+        },
+        {
+          "record_id": "9145",
+          "reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "status": "VERIFIED",
+          "checks": 817,
+          "errors": [],
+          "target_sha256": "b9b35564f3d29731697f3ee66172ef724013f5b4544eb4395198161847feb9f1"
+        },
+        {
+          "record_id": "4378",
+          "reasons": [
+            "worst_common_error"
+          ],
+          "status": "VERIFIED",
+          "checks": 813,
+          "errors": [],
+          "target_sha256": "f61623e3412e77f923e19d18af96e7eebd36bb4d6c128ad9b83157fe2d955d7c"
+        },
+        {
+          "record_id": "3680",
+          "reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "status": "VERIFIED",
+          "checks": 645,
+          "errors": [],
+          "target_sha256": "fc5acc9c795f5feff00ba597cc2c8db6fb723a212df16c540b75bc97a3b8e45d"
+        },
+        {
+          "record_id": "5366",
+          "reasons": [
+            "largest_record",
+            "descriptive_stratum_representative"
+          ],
+          "status": "VERIFIED",
+          "checks": 1061,
+          "errors": [],
+          "target_sha256": "605347d47644fc9b665b47ac639e2e12661bcd39d74972b844ba8eec8a73ff65"
+        },
+        {
+          "record_id": "3262",
+          "reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "status": "VERIFIED",
+          "checks": 448,
+          "errors": [],
+          "target_sha256": "7c7f5a154c7c86018f19ba2c3f00ec2dd91e7f1c1a483af4250de102d02cf342"
+        },
+        {
+          "record_id": "611",
+          "reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "status": "VERIFIED",
+          "checks": 444,
+          "errors": [],
+          "target_sha256": "86270f5c454b7c0c64f17096941a2e52a7f489df7a4b50c90c43a1e9670fbf80"
+        },
+        {
+          "record_id": "82",
+          "reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "status": "VERIFIED",
+          "checks": 703,
+          "errors": [],
+          "target_sha256": "3c8b3ce0f74f1b2d8f5eb27575983cfaf23cd5a7272975f8c72a973ef5abe48c"
+        },
+        {
+          "record_id": "7151",
+          "reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "status": "VERIFIED",
+          "checks": 444,
+          "errors": [],
+          "target_sha256": "95e8cfb77077b0ed30ea7a413694401567ad38635fb1ac51a7f5cf1794c618da"
+        },
+        {
+          "record_id": "10796",
+          "reasons": [
+            "all_filtered"
+          ],
+          "status": "VERIFIED",
+          "checks": 440,
+          "errors": [],
+          "target_sha256": "cd123cb9722f3b4acd845abb4c769292b41473e332263dfac1da5b2bc9a435f6"
+        },
+        {
+          "record_id": "10810",
+          "reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "status": "VERIFIED",
+          "checks": 753,
+          "errors": [],
+          "target_sha256": "e802610b9a5984dd6cacafe5e10f4042d3d15a643e85d160bc3b2920b9745a53"
+        },
+        {
+          "record_id": "3439",
+          "reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "status": "VERIFIED",
+          "checks": 961,
+          "errors": [],
+          "target_sha256": "9dc365bf22c875b44a8e708f624871c5e051d823a4dd45fc6047c02ad91a4b3a"
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-b15b8281b73592fb",
+      "order": "D-S-P",
+      "records_fully_checked": 120,
+      "raw_points_per_config": 11777,
+      "sampled_full_DP_reconstructions": [
+        {
+          "record_id": "3549",
+          "reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "status": "VERIFIED",
+          "checks": 1132,
+          "errors": [],
+          "target_sha256": "fc175790b7f8b93515d1308c79c9ac2118e6e58e7f08766321348778ea007856"
+        },
+        {
+          "record_id": "10449",
+          "reasons": [
+            "near_DP_threshold"
+          ],
+          "status": "VERIFIED",
+          "checks": 1013,
+          "errors": [],
+          "target_sha256": "7fb51180b1e952fddc8c4611e10121f8716d35820f179e2a41e5e6410e44676f"
+        },
+        {
+          "record_id": "9145",
+          "reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "status": "VERIFIED",
+          "checks": 999,
+          "errors": [],
+          "target_sha256": "217b25ea1d8e9bab5cb23cbf6b9bb8717cbe442c1a602191c68ff3e9642ef222"
+        },
+        {
+          "record_id": "3680",
+          "reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "status": "VERIFIED",
+          "checks": 583,
+          "errors": [],
+          "target_sha256": "9a2e2fef9f6a599d318718999a8ce525414e3534c04ef3a61fbc2d311bce2f29"
+        },
+        {
+          "record_id": "5366",
+          "reasons": [
+            "largest_record",
+            "descriptive_stratum_representative"
+          ],
+          "status": "VERIFIED",
+          "checks": 1213,
+          "errors": [],
+          "target_sha256": "efcea3618608214be5df24e2ae1624fee36ee1585eaf215fe18c648959200807"
+        },
+        {
+          "record_id": "3262",
+          "reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "status": "VERIFIED",
+          "checks": 659,
+          "errors": [],
+          "target_sha256": "0bf6e576ee87aa7544d5ae982abda484f4a22be0be09a5307a97fe9388ae74a8"
+        },
+        {
+          "record_id": "11304",
+          "reasons": [
+            "all_filtered"
+          ],
+          "status": "VERIFIED",
+          "checks": 641,
+          "errors": [],
+          "target_sha256": "6a522d8b52b58a31071dca1bbcf882ac48bb56a92e6703902fc57894206a9f66"
+        },
+        {
+          "record_id": "611",
+          "reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "status": "VERIFIED",
+          "checks": 653,
+          "errors": [],
+          "target_sha256": "1d9e66f752fe05a587eb02ea3a03cb071116273fbbd65b12d4ea7b25b0767df8"
+        },
+        {
+          "record_id": "82",
+          "reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "status": "VERIFIED",
+          "checks": 699,
+          "errors": [],
+          "target_sha256": "f88ae793ef42ceacb367240b41611dbaba5f5f838de93032e35d44ee277c3335"
+        },
+        {
+          "record_id": "7151",
+          "reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "status": "VERIFIED",
+          "checks": 653,
+          "errors": [],
+          "target_sha256": "ffafca36a154c77c211ebc5f5748e2b02ba5701f474053c6218b6c4d5fcc5478"
+        },
+        {
+          "record_id": "10810",
+          "reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "status": "VERIFIED",
+          "checks": 875,
+          "errors": [],
+          "target_sha256": "cdb5730a72e15fdadcfff79026fc62cfd61675462b724ccb259a31f1b57c2894"
+        },
+        {
+          "record_id": "3439",
+          "reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "status": "VERIFIED",
+          "checks": 1151,
+          "errors": [],
+          "target_sha256": "f4e653619630cb7e958fd2c050a397800d32d4a1983ee0ee16e1b509088d14e6"
+        },
+        {
+          "record_id": "7920",
+          "reasons": [
+            "worst_common_error"
+          ],
+          "status": "VERIFIED",
+          "checks": 1009,
+          "errors": [],
+          "target_sha256": "350f9984dbae5bb3025463a6130927c4a665a5138f1fd94314710d916e1cc735"
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-b15b8281b73592fb",
+      "order": "D-P-S",
+      "records_fully_checked": 120,
+      "raw_points_per_config": 11777,
+      "sampled_full_DP_reconstructions": [
+        {
+          "record_id": "3549",
+          "reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "status": "VERIFIED",
+          "checks": 778,
+          "errors": [],
+          "target_sha256": "741a57dc73828cdc8b81c421de2ea8351341cf5447b7a76731c5adcce9e743ee"
+        },
+        {
+          "record_id": "2308",
+          "reasons": [
+            "near_DP_threshold"
+          ],
+          "status": "VERIFIED",
+          "checks": 425,
+          "errors": [],
+          "target_sha256": "7d42e85934c157e9464264e3897f0a67da42bafdfdd8ec62a8324bd864b282dc"
+        },
+        {
+          "record_id": "9145",
+          "reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "status": "VERIFIED",
+          "checks": 752,
+          "errors": [],
+          "target_sha256": "880091337fb66aa8470a0a314492ef4a41957bb5cad581f25fceadddd8154295"
+        },
+        {
+          "record_id": "3680",
+          "reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "status": "VERIFIED",
+          "checks": 488,
+          "errors": [],
+          "target_sha256": "8c08610156bc383084b11ee98e9e04ffef7d638ffdcdce60ada66a3a4ab276e2"
+        },
+        {
+          "record_id": "5366",
+          "reasons": [
+            "largest_record",
+            "descriptive_stratum_representative"
+          ],
+          "status": "VERIFIED",
+          "checks": 990,
+          "errors": [],
+          "target_sha256": "840861317bd32ce9bf57b71143f06e9946fe93479db7b95d6c49993cf24d5207"
+        },
+        {
+          "record_id": "3262",
+          "reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "status": "VERIFIED",
+          "checks": 580,
+          "errors": [],
+          "target_sha256": "bda9f9e1f30c32c54c52b98f8cb6e285fa54074fdf55738d59c33fd0814d4d71"
+        },
+        {
+          "record_id": "611",
+          "reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "status": "VERIFIED",
+          "checks": 575,
+          "errors": [],
+          "target_sha256": "0e6a91664f84bf41c91aa946304fb484295f40ee98af63a250ba5e020c0ae5a1"
+        },
+        {
+          "record_id": "82",
+          "reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "status": "VERIFIED",
+          "checks": 631,
+          "errors": [],
+          "target_sha256": "6bc9819407f7ce6704a2acf7fcf0441f915af9bb8231027ae13f7944d196ec18"
+        },
+        {
+          "record_id": "7151",
+          "reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "status": "VERIFIED",
+          "checks": 583,
+          "errors": [],
+          "target_sha256": "07da7c6328c171a274168423ae56b65f716a17dfd91eaa13568e1833a27a38b4"
+        },
+        {
+          "record_id": "10810",
+          "reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "status": "VERIFIED",
+          "checks": 680,
+          "errors": [],
+          "target_sha256": "74588046f571572f0aacc4b7b9759cf0ddcf91fb489cd7973c5ecee22bc133c1"
+        },
+        {
+          "record_id": "3439",
+          "reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "status": "VERIFIED",
+          "checks": 917,
+          "errors": [],
+          "target_sha256": "0cce0fb9264b79650a25d0f6307ee91d36a0beb3c6f6a6ec57dcaed1ef636956"
+        },
+        {
+          "record_id": "7920",
+          "reasons": [
+            "worst_common_error"
+          ],
+          "status": "VERIFIED",
+          "checks": 790,
+          "errors": [],
+          "target_sha256": "3245f38d55aaf78fa56c053927f27243cbf5f759903cb795ab6a298d14c5c20e"
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-b15b8281b73592fb",
+      "order": "P-S-D",
+      "records_fully_checked": 120,
+      "raw_points_per_config": 11777,
+      "sampled_full_DP_reconstructions": [
+        {
+          "record_id": "3549",
+          "reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "status": "VERIFIED",
+          "checks": 610,
+          "errors": [],
+          "target_sha256": "0d7429e3174db01ff36bd2bd87e3615c24abfe4c5118274a7145fbb3ef8b7f10"
+        },
+        {
+          "record_id": "2308",
+          "reasons": [
+            "near_DP_threshold"
+          ],
+          "status": "VERIFIED",
+          "checks": 387,
+          "errors": [],
+          "target_sha256": "878313f62121506ea768b1e87f6679eecd9cac1a3ad98c7fcc45c7d0b258c25b"
+        },
+        {
+          "record_id": "9145",
+          "reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "status": "VERIFIED",
+          "checks": 544,
+          "errors": [],
+          "target_sha256": "438285668e319c16817df1ac19b765aca2dfb130687491e701084cd021fd1940"
+        },
+        {
+          "record_id": "3680",
+          "reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "status": "VERIFIED",
+          "checks": 495,
+          "errors": [],
+          "target_sha256": "2e8dc333e97848fbf1f022314f0f09d81b8c2ce641e98923d4817e136b685b23"
+        },
+        {
+          "record_id": "5366",
+          "reasons": [
+            "largest_record",
+            "descriptive_stratum_representative"
+          ],
+          "status": "VERIFIED",
+          "checks": 866,
+          "errors": [],
+          "target_sha256": "d8b66aaaf099298d5d267b95e7e70575f82ae49fc970cd513abef3710b507f4b"
+        },
+        {
+          "record_id": "3262",
+          "reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "status": "VERIFIED",
+          "checks": 369,
+          "errors": [],
+          "target_sha256": "1f0a41749f110c97ee38a2556934690cbf5bd201daf603902f879f56fbdb57c5"
+        },
+        {
+          "record_id": "611",
+          "reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "status": "VERIFIED",
+          "checks": 366,
+          "errors": [],
+          "target_sha256": "01d60d945ea0fd61ebdb20a9ae03a53b5534f9c9ce0c622834cf969297fe0f73"
+        },
+        {
+          "record_id": "82",
+          "reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "status": "VERIFIED",
+          "checks": 465,
+          "errors": [],
+          "target_sha256": "7b649dfe5b37f037d60f2a1778e47dc653220e9228303c71f59b962a1ed15dce"
+        },
+        {
+          "record_id": "7151",
+          "reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "status": "VERIFIED",
+          "checks": 374,
+          "errors": [],
+          "target_sha256": "5321acfb4f430697c10eb4c03b3e4d96d4d88034ef0f3bc3725f8a288b529c5e"
+        },
+        {
+          "record_id": "10810",
+          "reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "status": "VERIFIED",
+          "checks": 503,
+          "errors": [],
+          "target_sha256": "9300e2df982efd8d7f01144d41cabf9c4c57fd72ab6464e1b1f96cda39c956b5"
+        },
+        {
+          "record_id": "3439",
+          "reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "status": "VERIFIED",
+          "checks": 752,
+          "errors": [],
+          "target_sha256": "cce6e14a88b754e0af6b497414c96a287792ef01de24cf5deacbea40bedf3e89"
+        },
+        {
+          "record_id": "7920",
+          "reasons": [
+            "worst_common_error"
+          ],
+          "status": "VERIFIED",
+          "checks": 595,
+          "errors": [],
+          "target_sha256": "8bcd2fe8c374cc195251ad531350c2e5f0175fb1dceef027b0402406214daaf0"
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-b15b8281b73592fb",
+      "order": "P-D-S",
+      "records_fully_checked": 120,
+      "raw_points_per_config": 11777,
+      "sampled_full_DP_reconstructions": [
+        {
+          "record_id": "3549",
+          "reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "status": "VERIFIED",
+          "checks": 683,
+          "errors": [],
+          "target_sha256": "4a28bdee1a7e11d55c79f662abf04b9453333dc313fc024fc17f79feb574b014"
+        },
+        {
+          "record_id": "2308",
+          "reasons": [
+            "near_DP_threshold"
+          ],
+          "status": "VERIFIED",
+          "checks": 379,
+          "errors": [],
+          "target_sha256": "2553a1ab97303a46d6d1939a07da0de6d7abfd1bc693542561ae54126f470c01"
+        },
+        {
+          "record_id": "9145",
+          "reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "status": "VERIFIED",
+          "checks": 566,
+          "errors": [],
+          "target_sha256": "66743fe6e51e5908329d2e5e61df6a3da5cca2a83654fe0a04dcf61e862625e4"
+        },
+        {
+          "record_id": "3680",
+          "reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "status": "VERIFIED",
+          "checks": 456,
+          "errors": [],
+          "target_sha256": "90277d24628107598eeb109fea3bcc98f2639da92b3ca6d36e4992d14a286583"
+        },
+        {
+          "record_id": "5366",
+          "reasons": [
+            "largest_record",
+            "descriptive_stratum_representative"
+          ],
+          "status": "VERIFIED",
+          "checks": 864,
+          "errors": [],
+          "target_sha256": "22c8c03d36ccf1e5b2579573183c81531a157a8e18cdeddcdf5e5d151f8fbe4f"
+        },
+        {
+          "record_id": "3262",
+          "reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "status": "VERIFIED",
+          "checks": 384,
+          "errors": [],
+          "target_sha256": "415c77a084e70f081443bc92a299bec6d3121c4c00b86c1d32c3920f7587a24d"
+        },
+        {
+          "record_id": "611",
+          "reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "status": "VERIFIED",
+          "checks": 381,
+          "errors": [],
+          "target_sha256": "057082b4fad0f215a8f56a07b1beb4ed4841bc151758e5586fa7436a984349c7"
+        },
+        {
+          "record_id": "82",
+          "reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "status": "VERIFIED",
+          "checks": 414,
+          "errors": [],
+          "target_sha256": "aaa2fb4192dca8af84cc45f7cb6741636fddd30e32112680458e3f86b2ff4a58"
+        },
+        {
+          "record_id": "7151",
+          "reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "status": "VERIFIED",
+          "checks": 391,
+          "errors": [],
+          "target_sha256": "3bc5e57db704a1990d52f412fcc71c11976cd5c9980bcee0949afc1a29fecc77"
+        },
+        {
+          "record_id": "10810",
+          "reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "status": "VERIFIED",
+          "checks": 473,
+          "errors": [],
+          "target_sha256": "67e5c0a7f16fb3d9ce97a9b444b92be2c756aae5cf498babf93aaae8cc01364c"
+        },
+        {
+          "record_id": "3615",
+          "reasons": [
+            "worst_common_error"
+          ],
+          "status": "VERIFIED",
+          "checks": 240,
+          "errors": [],
+          "target_sha256": "7906fbdc4691b6462a9bc00486a4b3822e2235f55bdc220cf597ab1bbdd614b7"
+        },
+        {
+          "record_id": "3439",
+          "reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "status": "VERIFIED",
+          "checks": 731,
+          "errors": [],
+          "target_sha256": "41d96d2848cc70388d93cb728118700be1ccd849334c793e14d8306d5d2a7be2"
+        }
+      ]
+    }
+  ],
+  "independent_summaries": [
+    {
+      "config_id": "cfg-b15b8281b73592fb",
+      "order": "S-D-P",
+      "independent_summary": {
+        "n_input": 11777,
+        "n_final": 2601,
+        "n_filtered": 3369,
+        "n_direction_removed": 669,
+        "n_dp_removed": 5138,
+        "n_dp_input": 7739,
+        "n_dp_output": 2601,
+        "n_dp_exceedances": 0,
+        "n_s_segments": 344,
+        "n_filtered_segments": 117,
+        "common_raw_points": 11777,
+        "common_covered_points": 8408,
+        "common_uncovered_points": 3369,
+        "common_over_5_points": 217,
+        "raw_break_count": 224,
+        "raw_break_crossings": 0,
+        "raw_breaks_crossed": 0,
+        "raw_break_trigger_points_removed": 132,
+        "raw_windows": 344,
+        "raw_windows_covered": 227,
+        "direction_candidate_points": 669,
+        "direction_undefined_points": 2318,
+        "direction_windows_across_raw_breaks": 0,
+        "p_removed_raw_break_trigger_points": 0,
+        "n_records": 120,
+        "n_records_covered": 87,
+        "n_all_filtered_records": 33,
+        "n_no_output_records": 33,
+        "point_retention": 0.2208542073533158,
+        "point_retention_reason": null,
+        "record_coverage": 0.725,
+        "record_coverage_reason": null,
+        "all_filtered_record_fraction": 0.275,
+        "all_filtered_record_fraction_reason": null,
+        "no_output_record_fraction": 0.275,
+        "no_output_record_fraction_reason": null,
+        "common_coverage": 0.7139339390337097,
+        "common_coverage_reason": null,
+        "dp_saving": 0.663910065899987,
+        "dp_saving_reason": null,
+        "dp_max_error": 4.996011323152332,
+        "dp_max_error_reason": null,
+        "common_max_error": 187.6375419804648,
+        "common_max_error_reason": null,
+        "record_mean_point_retention": 0.22485439718885816,
+        "record_mean_point_retention_denominator": 120,
+        "record_mean_point_retention_unavailable_records": 0,
+        "record_mean_dp_saving": 0.6481474258232128,
+        "record_mean_dp_saving_denominator": 87,
+        "record_mean_dp_saving_unavailable_records": 33,
+        "record_mean_common_coverage": 0.7017582337817181,
+        "record_mean_common_coverage_denominator": 120,
+        "record_mean_common_coverage_unavailable_records": 0,
+        "record_mean_common_max_error": 26.459285914939077,
+        "record_mean_common_max_error_denominator": 87,
+        "record_mean_common_max_error_unavailable_records": 33,
+        "record_mean_common_mean_error": 1.960648619310489,
+        "record_mean_common_mean_error_denominator": 87,
+        "record_mean_common_mean_error_unavailable_records": 33,
+        "filter_reason_segments": {
+          "TOO_FEW_POINTS": 63,
+          "TOO_SHORT_LENGTH": 84
+        },
+        "filter_reason_points": {
+          "TOO_FEW_POINTS": 143,
+          "TOO_SHORT_LENGTH": 3269
+        },
+        "direction_undefined_reasons": {
+          "ENDPOINT": 454,
+          "MISSING_FOLLOWING_OUTGOING_EDGE": 227,
+          "UNCOMPUTABLE_DIRECTION_IN_WINDOW": 1637
+        },
+        "dp_checks_passed": true,
+        "aggregation_unit": "original_record; pooled counts explicitly identified"
+      }
+    },
+    {
+      "config_id": "cfg-b15b8281b73592fb",
+      "order": "S-P-D",
+      "independent_summary": {
+        "n_input": 11777,
+        "n_final": 2273,
+        "n_filtered": 3369,
+        "n_direction_removed": 507,
+        "n_dp_removed": 5628,
+        "n_dp_input": 8408,
+        "n_dp_output": 2780,
+        "n_dp_exceedances": 0,
+        "n_s_segments": 344,
+        "n_filtered_segments": 117,
+        "common_raw_points": 11777,
+        "common_covered_points": 8408,
+        "common_uncovered_points": 3369,
+        "common_over_5_points": 1795,
+        "raw_break_count": 224,
+        "raw_break_crossings": 0,
+        "raw_breaks_crossed": 0,
+        "raw_break_trigger_points_removed": 132,
+        "raw_windows": 344,
+        "raw_windows_covered": 227,
+        "direction_candidate_points": 507,
+        "direction_undefined_points": 657,
+        "direction_windows_across_raw_breaks": 0,
+        "p_removed_raw_break_trigger_points": 0,
+        "n_records": 120,
+        "n_records_covered": 87,
+        "n_all_filtered_records": 33,
+        "n_no_output_records": 33,
+        "point_retention": 0.19300331153944128,
+        "point_retention_reason": null,
+        "record_coverage": 0.725,
+        "record_coverage_reason": null,
+        "all_filtered_record_fraction": 0.275,
+        "all_filtered_record_fraction_reason": null,
+        "no_output_record_fraction": 0.275,
+        "no_output_record_fraction_reason": null,
+        "common_coverage": 0.7139339390337097,
+        "common_coverage_reason": null,
+        "dp_saving": 0.6693625118934348,
+        "dp_saving_reason": null,
+        "dp_max_error": 4.996011323152332,
+        "dp_max_error_reason": null,
+        "common_max_error": 257.5731434649807,
+        "common_max_error_reason": null,
+        "record_mean_point_retention": 0.19695912907992652,
+        "record_mean_point_retention_denominator": 120,
+        "record_mean_point_retention_unavailable_records": 0,
+        "record_mean_dp_saving": 0.6529949251874949,
+        "record_mean_dp_saving_denominator": 87,
+        "record_mean_dp_saving_unavailable_records": 33,
+        "record_mean_common_coverage": 0.7017582337817181,
+        "record_mean_common_coverage_denominator": 120,
+        "record_mean_common_coverage_unavailable_records": 0,
+        "record_mean_common_max_error": 63.95229553665397,
+        "record_mean_common_max_error_denominator": 87,
+        "record_mean_common_max_error_unavailable_records": 33,
+        "record_mean_common_mean_error": 7.031384172818195,
+        "record_mean_common_mean_error_denominator": 87,
+        "record_mean_common_mean_error_unavailable_records": 33,
+        "filter_reason_segments": {
+          "TOO_FEW_POINTS": 63,
+          "TOO_SHORT_LENGTH": 84
+        },
+        "filter_reason_points": {
+          "TOO_FEW_POINTS": 143,
+          "TOO_SHORT_LENGTH": 3269
+        },
+        "direction_undefined_reasons": {
+          "ENDPOINT": 454,
+          "MISSING_FOLLOWING_OUTGOING_EDGE": 203
+        },
+        "dp_checks_passed": true,
+        "aggregation_unit": "original_record; pooled counts explicitly identified"
+      }
+    },
+    {
+      "config_id": "cfg-b15b8281b73592fb",
+      "order": "D-S-P",
+      "independent_summary": {
+        "n_input": 11777,
+        "n_final": 2512,
+        "n_filtered": 3862,
+        "n_direction_removed": 744,
+        "n_dp_removed": 4659,
+        "n_dp_input": 7171,
+        "n_dp_output": 2512,
+        "n_dp_exceedances": 0,
+        "n_s_segments": 451,
+        "n_filtered_segments": 194,
+        "common_raw_points": 11777,
+        "common_covered_points": 7480,
+        "common_uncovered_points": 4297,
+        "common_over_5_points": 134,
+        "raw_break_count": 224,
+        "raw_break_crossings": 1,
+        "raw_breaks_crossed": 4,
+        "raw_break_trigger_points_removed": 152,
+        "raw_windows": 344,
+        "raw_windows_covered": 220,
+        "direction_candidate_points": 744,
+        "direction_undefined_points": 4813,
+        "direction_windows_across_raw_breaks": 612,
+        "p_removed_raw_break_trigger_points": 1,
+        "n_records": 120,
+        "n_records_covered": 85,
+        "n_all_filtered_records": 28,
+        "n_no_output_records": 35,
+        "point_retention": 0.21329710452577058,
+        "point_retention_reason": null,
+        "record_coverage": 0.7083333333333334,
+        "record_coverage_reason": null,
+        "all_filtered_record_fraction": 0.23333333333333334,
+        "all_filtered_record_fraction_reason": null,
+        "no_output_record_fraction": 0.2916666666666667,
+        "no_output_record_fraction_reason": null,
+        "common_coverage": 0.635136282584699,
+        "common_coverage_reason": null,
+        "dp_saving": 0.6497001812857341,
+        "dp_saving_reason": null,
+        "dp_max_error": 4.996011323152332,
+        "dp_max_error_reason": null,
+        "common_max_error": 187.6375419804648,
+        "common_max_error_reason": null,
+        "record_mean_point_retention": 0.21585388054393434,
+        "record_mean_point_retention_denominator": 120,
+        "record_mean_point_retention_unavailable_records": 0,
+        "record_mean_dp_saving": 0.6364815785323129,
+        "record_mean_dp_saving_denominator": 85,
+        "record_mean_dp_saving_unavailable_records": 35,
+        "record_mean_common_coverage": 0.6195842682070739,
+        "record_mean_common_coverage_denominator": 120,
+        "record_mean_common_coverage_unavailable_records": 0,
+        "record_mean_common_max_error": 21.799088475910228,
+        "record_mean_common_max_error_denominator": 85,
+        "record_mean_common_max_error_unavailable_records": 35,
+        "record_mean_common_mean_error": 1.691754072316245,
+        "record_mean_common_mean_error_denominator": 85,
+        "record_mean_common_mean_error_unavailable_records": 35,
+        "filter_reason_segments": {
+          "TOO_FEW_POINTS": 98,
+          "TOO_SHORT_LENGTH": 156
+        },
+        "filter_reason_points": {
+          "TOO_FEW_POINTS": 237,
+          "TOO_SHORT_LENGTH": 3741
+        },
+        "direction_undefined_reasons": {
+          "ENDPOINT": 240,
+          "MISSING_FOLLOWING_OUTGOING_EDGE": 120,
+          "UNCOMPUTABLE_DIRECTION_IN_WINDOW": 4453
+        },
+        "dp_checks_passed": true,
+        "aggregation_unit": "original_record; pooled counts explicitly identified"
+      }
+    },
+    {
+      "config_id": "cfg-b15b8281b73592fb",
+      "order": "D-P-S",
+      "independent_summary": {
+        "n_input": 11777,
+        "n_final": 1017,
+        "n_filtered": 1622,
+        "n_direction_removed": 744,
+        "n_dp_removed": 8394,
+        "n_dp_input": 11033,
+        "n_dp_output": 2639,
+        "n_dp_exceedances": 0,
+        "n_s_segments": 1138,
+        "n_filtered_segments": 1000,
+        "common_raw_points": 11777,
+        "common_covered_points": 1502,
+        "common_uncovered_points": 10275,
+        "common_over_5_points": 74,
+        "raw_break_count": 224,
+        "raw_break_crossings": 1,
+        "raw_breaks_crossed": 4,
+        "raw_break_trigger_points_removed": 394,
+        "raw_windows": 344,
+        "raw_windows_covered": 85,
+        "direction_candidate_points": 744,
+        "direction_undefined_points": 4813,
+        "direction_windows_across_raw_breaks": 612,
+        "p_removed_raw_break_trigger_points": 188,
+        "n_records": 120,
+        "n_records_covered": 59,
+        "n_all_filtered_records": 0,
+        "n_no_output_records": 61,
+        "point_retention": 0.086354759276556,
+        "point_retention_reason": null,
+        "record_coverage": 0.49166666666666664,
+        "record_coverage_reason": null,
+        "all_filtered_record_fraction": 0.0,
+        "all_filtered_record_fraction_reason": null,
+        "no_output_record_fraction": 0.5083333333333333,
+        "no_output_record_fraction_reason": null,
+        "common_coverage": 0.12753672412329117,
+        "common_coverage_reason": null,
+        "dp_saving": 0.7608084836399891,
+        "dp_saving_reason": null,
+        "dp_max_error": 4.998606057698267,
+        "dp_max_error_reason": null,
+        "common_max_error": 187.6375419804648,
+        "common_max_error_reason": null,
+        "record_mean_point_retention": 0.09065787544471854,
+        "record_mean_point_retention_denominator": 120,
+        "record_mean_point_retention_unavailable_records": 0,
+        "record_mean_dp_saving": 0.7478773355705564,
+        "record_mean_dp_saving_denominator": 120,
+        "record_mean_dp_saving_unavailable_records": 0,
+        "record_mean_common_coverage": 0.13241320803115894,
+        "record_mean_common_coverage_denominator": 120,
+        "record_mean_common_coverage_unavailable_records": 0,
+        "record_mean_common_max_error": 21.072212298761638,
+        "record_mean_common_max_error_denominator": 59,
+        "record_mean_common_max_error_unavailable_records": 61,
+        "record_mean_common_mean_error": 2.2935504181893642,
+        "record_mean_common_mean_error_denominator": 59,
+        "record_mean_common_mean_error_unavailable_records": 61,
+        "filter_reason_segments": {
+          "TOO_FEW_POINTS": 999,
+          "TOO_SHORT_LENGTH": 714
+        },
+        "filter_reason_points": {
+          "TOO_SHORT_LENGTH": 806,
+          "TOO_FEW_POINTS": 1617
+        },
+        "direction_undefined_reasons": {
+          "ENDPOINT": 240,
+          "MISSING_FOLLOWING_OUTGOING_EDGE": 120,
+          "UNCOMPUTABLE_DIRECTION_IN_WINDOW": 4453
+        },
+        "dp_checks_passed": true,
+        "aggregation_unit": "original_record; pooled counts explicitly identified"
+      }
+    },
+    {
+      "config_id": "cfg-b15b8281b73592fb",
+      "order": "P-S-D",
+      "independent_summary": {
+        "n_input": 11777,
+        "n_final": 1078,
+        "n_filtered": 1605,
+        "n_direction_removed": 166,
+        "n_dp_removed": 8928,
+        "n_dp_input": 11777,
+        "n_dp_output": 2849,
+        "n_dp_exceedances": 0,
+        "n_s_segments": 1125,
+        "n_filtered_segments": 967,
+        "common_raw_points": 11777,
+        "common_covered_points": 1733,
+        "common_uncovered_points": 10044,
+        "common_over_5_points": 245,
+        "raw_break_count": 224,
+        "raw_break_crossings": 0,
+        "raw_breaks_crossed": 0,
+        "raw_break_trigger_points_removed": 391,
+        "raw_windows": 344,
+        "raw_windows_covered": 94,
+        "direction_candidate_points": 166,
+        "direction_undefined_points": 474,
+        "direction_windows_across_raw_breaks": 0,
+        "p_removed_raw_break_trigger_points": 193,
+        "n_records": 120,
+        "n_records_covered": 63,
+        "n_all_filtered_records": 0,
+        "n_no_output_records": 57,
+        "point_retention": 0.09153434660779486,
+        "point_retention_reason": null,
+        "record_coverage": 0.525,
+        "record_coverage_reason": null,
+        "all_filtered_record_fraction": 0.0,
+        "all_filtered_record_fraction_reason": null,
+        "no_output_record_fraction": 0.475,
+        "no_output_record_fraction_reason": null,
+        "common_coverage": 0.14715122696781863,
+        "common_coverage_reason": null,
+        "dp_saving": 0.7580877982508278,
+        "dp_saving_reason": null,
+        "dp_max_error": 4.998606057698267,
+        "dp_max_error_reason": null,
+        "common_max_error": 273.3275233583358,
+        "common_max_error_reason": null,
+        "record_mean_point_retention": 0.09548435712286313,
+        "record_mean_point_retention_denominator": 120,
+        "record_mean_point_retention_unavailable_records": 0,
+        "record_mean_dp_saving": 0.7496564906797657,
+        "record_mean_dp_saving_denominator": 120,
+        "record_mean_dp_saving_unavailable_records": 0,
+        "record_mean_common_coverage": 0.15124378189579932,
+        "record_mean_common_coverage_denominator": 120,
+        "record_mean_common_coverage_unavailable_records": 0,
+        "record_mean_common_max_error": 40.012039751713786,
+        "record_mean_common_max_error_denominator": 63,
+        "record_mean_common_max_error_unavailable_records": 57,
+        "record_mean_common_mean_error": 5.843527880913939,
+        "record_mean_common_mean_error_denominator": 63,
+        "record_mean_common_mean_error_unavailable_records": 57,
+        "filter_reason_segments": {
+          "TOO_FEW_POINTS": 966,
+          "TOO_SHORT_LENGTH": 687
+        },
+        "filter_reason_points": {
+          "TOO_SHORT_LENGTH": 795,
+          "TOO_FEW_POINTS": 1600
+        },
+        "direction_undefined_reasons": {
+          "ENDPOINT": 316,
+          "MISSING_FOLLOWING_OUTGOING_EDGE": 158
+        },
+        "dp_checks_passed": true,
+        "aggregation_unit": "original_record; pooled counts explicitly identified"
+      }
+    },
+    {
+      "config_id": "cfg-b15b8281b73592fb",
+      "order": "P-D-S",
+      "independent_summary": {
+        "n_input": 11777,
+        "n_final": 841,
+        "n_filtered": 1455,
+        "n_direction_removed": 553,
+        "n_dp_removed": 8928,
+        "n_dp_input": 11777,
+        "n_dp_output": 2849,
+        "n_dp_exceedances": 0,
+        "n_s_segments": 972,
+        "n_filtered_segments": 854,
+        "common_raw_points": 11777,
+        "common_covered_points": 1183,
+        "common_uncovered_points": 10594,
+        "common_over_5_points": 63,
+        "raw_break_count": 224,
+        "raw_break_crossings": 1,
+        "raw_breaks_crossed": 3,
+        "raw_break_trigger_points_removed": 394,
+        "raw_windows": 344,
+        "raw_windows_covered": 80,
+        "direction_candidate_points": 553,
+        "direction_undefined_points": 331,
+        "direction_windows_across_raw_breaks": 453,
+        "p_removed_raw_break_trigger_points": 193,
+        "n_records": 120,
+        "n_records_covered": 55,
+        "n_all_filtered_records": 0,
+        "n_no_output_records": 65,
+        "point_retention": 0.07141037615691602,
+        "point_retention_reason": null,
+        "record_coverage": 0.4583333333333333,
+        "record_coverage_reason": null,
+        "all_filtered_record_fraction": 0.0,
+        "all_filtered_record_fraction_reason": null,
+        "no_output_record_fraction": 0.5416666666666666,
+        "no_output_record_fraction_reason": null,
+        "common_coverage": 0.1004500297189437,
+        "common_coverage_reason": null,
+        "dp_saving": 0.7580877982508278,
+        "dp_saving_reason": null,
+        "dp_max_error": 4.998606057698267,
+        "dp_max_error_reason": null,
+        "common_max_error": 166.14902120777495,
+        "common_max_error_reason": null,
+        "record_mean_point_retention": 0.07664296636833538,
+        "record_mean_point_retention_denominator": 120,
+        "record_mean_point_retention_unavailable_records": 0,
+        "record_mean_dp_saving": 0.7496564906797657,
+        "record_mean_dp_saving_denominator": 120,
+        "record_mean_dp_saving_unavailable_records": 0,
+        "record_mean_common_coverage": 0.10777629023874316,
+        "record_mean_common_coverage_denominator": 120,
+        "record_mean_common_coverage_unavailable_records": 0,
+        "record_mean_common_max_error": 19.54072477948759,
+        "record_mean_common_max_error_denominator": 55,
+        "record_mean_common_max_error_unavailable_records": 65,
+        "record_mean_common_mean_error": 2.360817837615428,
+        "record_mean_common_mean_error_denominator": 55,
+        "record_mean_common_mean_error_unavailable_records": 65,
+        "filter_reason_segments": {
+          "TOO_FEW_POINTS": 854,
+          "TOO_SHORT_LENGTH": 561
+        },
+        "filter_reason_points": {
+          "TOO_SHORT_LENGTH": 627,
+          "TOO_FEW_POINTS": 1455
+        },
+        "direction_undefined_reasons": {
+          "ENDPOINT": 240,
+          "MISSING_FOLLOWING_OUTGOING_EDGE": 91
+        },
+        "dp_checks_passed": true,
+        "aggregation_unit": "original_record; pooled counts explicitly identified"
+      }
+    }
+  ],
+  "order_safety": {
+    "S-D-P": {
+      "failing_records": [],
+      "failing_record_count": 0,
+      "research_status": "FEASIBLE_FOR_STAGE_EVALUATION"
+    },
+    "S-P-D": {
+      "failing_records": [],
+      "failing_record_count": 0,
+      "research_status": "FEASIBLE_FOR_STAGE_EVALUATION"
+    },
+    "D-S-P": {
+      "failing_records": [
+        "3203",
+        "10449",
+        "11355",
+        "3291",
+        "9994",
+        "1944",
+        "1860",
+        "9222",
+        "11326",
+        "4381",
+        "1605",
+        "6831",
+        "2150",
+        "3189",
+        "11017",
+        "3680",
+        "5027",
+        "5366",
+        "2668",
+        "5256",
+        "5707",
+        "6313",
+        "10089",
+        "10232",
+        "11272",
+        "5633",
+        "8061",
+        "89",
+        "6225",
+        "82",
+        "2713",
+        "647",
+        "3367",
+        "9565",
+        "7764",
+        "2197",
+        "1686",
+        "4838",
+        "1818",
+        "10810",
+        "7404",
+        "3439",
+        "9352",
+        "2340",
+        "10051",
+        "1676"
+      ],
+      "failing_record_count": 46,
+      "research_status": "REJECTED_BY_CONSTRAINT"
+    },
+    "D-P-S": {
+      "failing_records": [
+        "3549",
+        "3203",
+        "867",
+        "10449",
+        "2308",
+        "11355",
+        "3357",
+        "9779",
+        "4773",
+        "3291",
+        "10433",
+        "9994",
+        "1944",
+        "8430",
+        "1860",
+        "9222",
+        "5431",
+        "9145",
+        "7186",
+        "11326",
+        "4378",
+        "11021",
+        "5049",
+        "4381",
+        "1378",
+        "9613",
+        "1605",
+        "6831",
+        "2150",
+        "1076",
+        "3189",
+        "8246",
+        "11017",
+        "3680",
+        "6412",
+        "2069",
+        "6596",
+        "5027",
+        "10155",
+        "2759",
+        "5366",
+        "2668",
+        "5256",
+        "3186",
+        "4915",
+        "5707",
+        "1718",
+        "9002",
+        "6313",
+        "10089",
+        "10232",
+        "11272",
+        "5633",
+        "8061",
+        "89",
+        "6225",
+        "82",
+        "2713",
+        "647",
+        "3367",
+        "9565",
+        "2141",
+        "11193",
+        "1628",
+        "10169",
+        "10547",
+        "2232",
+        "7764",
+        "2197",
+        "6876",
+        "1686",
+        "4838",
+        "1818",
+        "10810",
+        "4953",
+        "7404",
+        "3615",
+        "3439",
+        "9352",
+        "10000",
+        "2340",
+        "7920",
+        "10442",
+        "2034",
+        "10051",
+        "8456",
+        "1676"
+      ],
+      "failing_record_count": 87,
+      "research_status": "REJECTED_BY_CONSTRAINT"
+    },
+    "P-S-D": {
+      "failing_records": [
+        "3549",
+        "3203",
+        "867",
+        "10449",
+        "2308",
+        "11355",
+        "3357",
+        "9779",
+        "4773",
+        "3291",
+        "10433",
+        "9994",
+        "1944",
+        "8430",
+        "1860",
+        "9222",
+        "5431",
+        "9145",
+        "7186",
+        "11326",
+        "4378",
+        "11021",
+        "5049",
+        "4381",
+        "1378",
+        "9613",
+        "1605",
+        "6831",
+        "2150",
+        "1076",
+        "3189",
+        "8246",
+        "11017",
+        "3680",
+        "6412",
+        "2069",
+        "6596",
+        "5027",
+        "10155",
+        "2759",
+        "5366",
+        "2668",
+        "5256",
+        "3186",
+        "4915",
+        "5707",
+        "1718",
+        "9002",
+        "6313",
+        "10089",
+        "10232",
+        "11272",
+        "5633",
+        "8061",
+        "89",
+        "6225",
+        "82",
+        "2713",
+        "647",
+        "3367",
+        "9565",
+        "2141",
+        "11193",
+        "1628",
+        "10169",
+        "10547",
+        "2232",
+        "7764",
+        "2197",
+        "6876",
+        "1686",
+        "4838",
+        "1818",
+        "10810",
+        "4953",
+        "7404",
+        "3615",
+        "3439",
+        "9352",
+        "10000",
+        "2340",
+        "7920",
+        "10442",
+        "2034",
+        "10051",
+        "8456",
+        "1676"
+      ],
+      "failing_record_count": 87,
+      "research_status": "REJECTED_BY_CONSTRAINT"
+    },
+    "P-D-S": {
+      "failing_records": [
+        "3549",
+        "3203",
+        "867",
+        "10449",
+        "2308",
+        "11355",
+        "3357",
+        "9779",
+        "4773",
+        "3291",
+        "10433",
+        "9994",
+        "1944",
+        "8430",
+        "1860",
+        "9222",
+        "5431",
+        "9145",
+        "7186",
+        "11326",
+        "4378",
+        "11021",
+        "5049",
+        "4381",
+        "1378",
+        "9613",
+        "1605",
+        "6831",
+        "2150",
+        "1076",
+        "3189",
+        "8246",
+        "11017",
+        "3680",
+        "6412",
+        "2069",
+        "6596",
+        "5027",
+        "10155",
+        "2759",
+        "5366",
+        "2668",
+        "5256",
+        "3186",
+        "4915",
+        "5707",
+        "1718",
+        "9002",
+        "6313",
+        "10089",
+        "10232",
+        "11272",
+        "5633",
+        "8061",
+        "89",
+        "6225",
+        "82",
+        "2713",
+        "647",
+        "3367",
+        "9565",
+        "2141",
+        "11193",
+        "1628",
+        "10169",
+        "10547",
+        "2232",
+        "7764",
+        "2197",
+        "6876",
+        "1686",
+        "4838",
+        "1818",
+        "10810",
+        "4953",
+        "7404",
+        "3615",
+        "3439",
+        "9352",
+        "10000",
+        "2340",
+        "7920",
+        "10442",
+        "2034",
+        "10051",
+        "8456",
+        "1676"
+      ],
+      "failing_record_count": 87,
+      "research_status": "REJECTED_BY_CONSTRAINT"
+    }
+  },
+  "elapsed_seconds": 6.2502530429992476,
+  "new_model_calls": 0
+}

@@ -1,0 +1,345 @@
+{
+  "completed_at": "2026-09-26T19:36:43.383327+00:00",
+  "resources": {
+    "experiment_model_dispatches": 1,
+    "completed_model_turns": 1,
+    "candidate_evaluations": 16,
+    "reference_assessments_outside_llm_only_decision": 8,
+    "deterministic_tool_calls": 32,
+    "cache_reads": 0,
+    "governance_role_dispatches": 0,
+    "provider_requests": "unknown",
+    "usage": [
+      {
+        "input_tokens": 12815,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 973,
+        "reasoning_output_tokens": 166
+      }
+    ]
+  },
+  "records": {
+    "82": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb",
+        "cfg-df6f00206fb03678"
+      ],
+      "stopped": true,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "82-1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 35,
+              "dp": 2
+            },
+            "metric_id": "n_final",
+            "predicted_sign": "not_predicted",
+            "reason": "Lower DP tolerance explores finer retention while preserving S/D. Coordinates are unavailable, so a strict point-count increase is uncertain."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "cccdfb6b31bafc0bd2e3e0a0873ef3011fd3995c3a81daf3ad77fa2c48011ed5",
+          "executed_config_id": "cfg-df6f00206fb03678",
+          "prediction": {
+            "metric_id": "n_final",
+            "predicted_sign": "not_predicted",
+            "reference_handle": "0d56cc6ab08345170fe227abe298d49c6ed0d8ddfb816729721e57b51c8f60a4",
+            "candidate_handle": "3604a59042ed1038e62e78bdfd7d74d4d58ec22e0607b8a8a1883c2d707568da",
+            "status": "NOT_PREDICTED",
+            "evaluable": false
+          }
+        }
+      ]
+    },
+    "10232": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb",
+        "cfg-df6f00206fb03678"
+      ],
+      "stopped": true,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "10232-1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 35,
+              "dp": 2
+            },
+            "metric_id": "n_final",
+            "predicted_sign": "not_predicted",
+            "reason": "Preserve S/D and explore lower DP tolerance. The card cannot establish whether additional DP vertices will survive."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "8b85389be1f4fb302ea0e74781714eb3d775eeba317c62c88e5500fc49f715f0",
+          "executed_config_id": "cfg-df6f00206fb03678",
+          "prediction": {
+            "metric_id": "n_final",
+            "predicted_sign": "not_predicted",
+            "reference_handle": "0a11915192b9255f430dd20f73aea3ee7c2b9e20b5f7ef6c0bcaf66e4cda86b8",
+            "candidate_handle": "54cd93a9b47f4cf1f2366b0124639dd4d5a38f500d611b17d6bbaafc48c07706",
+            "status": "NOT_PREDICTED",
+            "evaluable": false
+          }
+        }
+      ]
+    },
+    "10796": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb",
+        "cfg-63139d05595c253c"
+      ],
+      "stopped": true,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "10796-1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 0,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "n_final",
+            "predicted_sign": "increase",
+            "reason": "The unbroken 98-point path is shorter than the reference length cutoff. Removing that cutoff permits retention, with D/P preserving endpoints; this is not a quality claim."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "4e9adb1b972d2f71b5df622e629ad6f6749609b7daa858b561fff441b2b2b672",
+          "executed_config_id": "cfg-63139d05595c253c",
+          "prediction": {
+            "metric_id": "n_final",
+            "predicted_sign": "increase",
+            "reference_handle": "7110a8f4651023ad08d0c74b9bb05480fe648f73af7ee68178dbc3a528d8bbee",
+            "candidate_handle": "1bc300b63a06c0b4c7a3f29faaa46c1a392172871eabe3a4cb1ff45acd3f566d",
+            "status": "EVALUABLE",
+            "delta": 4,
+            "observed_sign": "increase",
+            "evaluable": true,
+            "prediction_matches": true
+          }
+        }
+      ]
+    },
+    "4805": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb",
+        "cfg-63139d05595c253c"
+      ],
+      "stopped": true,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "4805-1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 0,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "n_final",
+            "predicted_sign": "increase",
+            "reason": "The unbroken path is below the reference length cutoff. A zero cutoff admits it; duplicate edges remain subject to the specified unchanged D/P rules."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "165cb69d7f1dc27df253f1eaeafe62185f951f07f65b0ce55d0ce57526ba3763",
+          "executed_config_id": "cfg-63139d05595c253c",
+          "prediction": {
+            "metric_id": "n_final",
+            "predicted_sign": "increase",
+            "reference_handle": "07c56b9240f50c6950f900a89cd659a7f98534dc239961c633c17eec700584a5",
+            "candidate_handle": "9c3d0e86232f5ffc8a3c6dce41cd661a14233715a4b7ed3e6f56a74321ecf630",
+            "status": "EVALUABLE",
+            "delta": 2,
+            "observed_sign": "increase",
+            "evaluable": true,
+            "prediction_matches": true
+          }
+        }
+      ]
+    },
+    "7764": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb",
+        "cfg-df6f00206fb03678"
+      ],
+      "stopped": true,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "7764-1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 35,
+              "dp": 2
+            },
+            "metric_id": "n_final",
+            "predicted_sign": "not_predicted",
+            "reason": "Keep the two raw breakpoints and all S/D settings while exploring finer DP retention. The card does not determine a strict output-count change."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "1027952b6c7c954eae7dd04ac0377d80c4031555e68cf2d94c891ccd39f03387",
+          "executed_config_id": "cfg-df6f00206fb03678",
+          "prediction": {
+            "metric_id": "n_final",
+            "predicted_sign": "not_predicted",
+            "reference_handle": "15796c777607c6d5e31dd121a77c73a82c8945d8d79d303d5874365a85f0e155",
+            "candidate_handle": "95c7cc320119daceeeca7700a05c55faa4f34ddc9dcbe8d0ed142ee1109358fc",
+            "status": "NOT_PREDICTED",
+            "evaluable": false
+          }
+        }
+      ]
+    },
+    "4953": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb",
+        "cfg-df6f00206fb03678"
+      ],
+      "stopped": true,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "4953-1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 35,
+              "dp": 2
+            },
+            "metric_id": "n_final",
+            "predicted_sign": "not_predicted",
+            "reason": "Preserve temporal and distance break handling and explore lower DP tolerance. Additional retained vertices cannot be established without geometry."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "bd2a60a66f83d2f8b46b67169a5716acd5d85b12245cd1c04bd5204069e0f4da",
+          "executed_config_id": "cfg-df6f00206fb03678",
+          "prediction": {
+            "metric_id": "n_final",
+            "predicted_sign": "not_predicted",
+            "reference_handle": "84161ffec9b08a836e55156579729ec1f6d2a56b3be2c5f647392f73f25597ea",
+            "candidate_handle": "3f5bd8f4cc95e51b7edce655ac93ea086da3a677dafcd08a27f58ddba9430bbe",
+            "status": "NOT_PREDICTED",
+            "evaluable": false
+          }
+        }
+      ]
+    },
+    "5029": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb",
+        "cfg-63139d05595c253c"
+      ],
+      "stopped": true,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "5029-1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 0,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "n_final",
+            "predicted_sign": "increase",
+            "reason": "Total path length is below 65, excluding every reference segment. Removing the length cutoff admits at least one sufficiently populated segment while preserving all six raw breaks."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "f738ebf0d1bad541859e4e0fd9d3193c109d11ae94967692fb0abd9db1818c88",
+          "executed_config_id": "cfg-63139d05595c253c",
+          "prediction": {
+            "metric_id": "n_final",
+            "predicted_sign": "increase",
+            "reference_handle": "365fa08cce8215f350e28ac61e82be0381cdaf19734ae34b4e7948d3814ebf70",
+            "candidate_handle": "6382fc5f7ca5624cbd15885917566aec7b5f073dbd5e7b456f6df6c9497c2a15",
+            "status": "EVALUABLE",
+            "delta": 12,
+            "observed_sign": "increase",
+            "evaluable": true,
+            "prediction_matches": true
+          }
+        }
+      ]
+    },
+    "6556": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb",
+        "cfg-63139d05595c253c"
+      ],
+      "stopped": true,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "6556-1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 0,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "n_final",
+            "predicted_sign": "not_predicted",
+            "reason": "Explore retaining short segments without changing the raw breakpoint. Segment lengths and populations are unavailable, so a strict retention increase is uncertain."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "35b1c2807447689448715bf16459451f82fdf6b6cbcc70d2c8b2e84337e75643",
+          "executed_config_id": "cfg-63139d05595c253c",
+          "prediction": {
+            "metric_id": "n_final",
+            "predicted_sign": "not_predicted",
+            "reference_handle": "3f507519329c7905c7ec0c5a54392625cfdb03114a345da6430f9af3ff92b3e5",
+            "candidate_handle": "8bfd19be6cff24d77f9ab95ce5a887802ffde8b9ead170e5e2b51b80d1bc2ab1",
+            "status": "NOT_PREDICTED",
+            "evaluable": false
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,172 @@
+{
+  "status": "VERIFIED",
+  "role_context": "/root/c_contract",
+  "task": null,
+  "at": "2026-09-26T21:20:51.212563+00:00",
+  "classification": "INDEPENDENT_C_COORDINATE_AND_ACTUAL_TRACE_SENSITIVITY_REVIEW",
+  "targets": [
+    {
+      "path": "task1/config/goal2/contract.json",
+      "sha256": "db758c097509139596fbc52b4c3f65e921eb1f12d9fb4c239e308abdb57f31f8"
+    },
+    {
+      "path": "task1/evidence/goal2/data/split_manifest.json",
+      "sha256": "fd2ebc6916f63b4b8e23ff6977f22cc691c39849d450486035243db7e3eb2ee8"
+    },
+    {
+      "path": "task1/scripts/goal2_coordinate_sensitivity.py",
+      "sha256": "9f072efd99839a9ab2593497f18b0a0ce221aef67aeaa8fd328f442d5278869b"
+    },
+    {
+      "path": "task1/evidence/goal2/coordinate_sensitivity/raw_preflight/summary.json",
+      "sha256": "dc54e0958a2eacb96deb2c005566ec870eee1384a3809fe9115e694ad3fa970a"
+    },
+    {
+      "path": "task1/evidence/goal2/coordinate_sensitivity/raw_preflight/coordinate_checks.json",
+      "sha256": "171238f0c83b07d92901bc895c412213adb1bcc466b86da8b70705e540eda831"
+    },
+    {
+      "path": "task1/evidence/goal2/coordinate_sensitivity/raw_preflight/raw_edges.jsonl.gz",
+      "sha256": "b359c4aaa95a14af351b0f0327772e0c9f3aa928c1b7eb7ea4723ae4efbb4df1"
+    },
+    {
+      "path": "task1/evidence/goal2/coordinate_sensitivity/raw_preflight/all_threshold_differences.jsonl.gz",
+      "sha256": "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64"
+    },
+    {
+      "path": "task1/evidence/goal2/coordinate_sensitivity/evaluation-01/summary.json",
+      "sha256": "8a43b2bdd2661a630289520718f527d2494e790d4ff6ea45c4f55e02e540fd19"
+    },
+    {
+      "path": "task1/evidence/goal2/coordinate_sensitivity/evaluation-01/coordinate_checks.json",
+      "sha256": "171238f0c83b07d92901bc895c412213adb1bcc466b86da8b70705e540eda831"
+    },
+    {
+      "path": "task1/evidence/goal2/coordinate_sensitivity/evaluation-01/raw_edges.jsonl.gz",
+      "sha256": "b359c4aaa95a14af351b0f0327772e0c9f3aa928c1b7eb7ea4723ae4efbb4df1"
+    },
+    {
+      "path": "task1/evidence/goal2/coordinate_sensitivity/evaluation-01/all_threshold_differences.jsonl.gz",
+      "sha256": "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64"
+    }
+  ],
+  "checked_components": [
+    "trusted_raw_selected_scope",
+    "all307_PROJ_coordinates",
+    "all1594527_Geod_pairs",
+    "all30685_raw_edges_grid_thresholds",
+    "all5503_evaluation_trace_stage_sensitivity",
+    "stage_denominators_and_extrema",
+    "conditional_model_claims"
+  ],
+  "unchecked_components": [
+    "source_datum",
+    "ground_truth_location_accuracy",
+    "G3_RESERVED_processing",
+    "development_stage_sensitivity_covered_in_separate_receipt",
+    "full_goal_acceptance"
+  ],
+  "records": 307,
+  "points": 30992,
+  "pair_denominator": 1594527,
+  "zero_geod_pair_denominator": 55362,
+  "runs": [
+    {
+      "run_id": "g2-evaluation-parameters-01",
+      "manifest": {
+        "path": "task1/evidence/goal2/runs/g2-evaluation-parameters-01/manifest.json",
+        "sha256": "c3f35ddad27245a166f43992f0f0b3f1f0543c7177543fc2d13471e53902fcf3"
+      },
+      "traces": 1680,
+      "independent_stage_counts": {
+        "S_distance_edges": 168742,
+        "S_actual_segments_length": 8796,
+        "D_windows": 121787,
+        "D_undefined_windows": 33011,
+        "P_segments": 3518,
+        "P_complete_input_points": 111089,
+        "P_immediate_output_points": 40883
+      },
+      "independent_extrema": {
+        "S_max_abs_aeqd_distance_change_m": 0.26341058679827256,
+        "S_max_abs_geod_distance_change_m": 0.2565318544075126,
+        "S_max_abs_geod_length_change_m": 0.9362243293189749,
+        "D_max_abs_aeqd_angle_change_degrees": 0.005658187954054483,
+        "P_max_aeqd_error_of_actual_output_m": 19.883637689154153,
+        "P_max_abs_aeqd_error_change_m": 0.0024875330593268075
+      }
+    },
+    {
+      "run_id": "g2-evaluation-orders-01",
+      "manifest": {
+        "path": "task1/evidence/goal2/runs/g2-evaluation-orders-01/manifest.json",
+        "sha256": "5da2a9ff4d53941d2d91e9ecfedd508e1b247a0c44738042e9c3666a3aa9b047"
+      },
+      "traces": 240,
+      "independent_stage_counts": {
+        "S_distance_edges": 24106,
+        "S_actual_segments_length": 602,
+        "D_windows": 11750,
+        "D_undefined_windows": 2517,
+        "P_segments": 410,
+        "P_complete_input_points": 16852,
+        "P_immediate_output_points": 5693
+      },
+      "independent_extrema": {
+        "S_max_abs_aeqd_distance_change_m": 0.26341058679827256,
+        "S_max_abs_geod_distance_change_m": 0.2565318544075126,
+        "S_max_abs_geod_length_change_m": 0.3536222304646799,
+        "D_max_abs_aeqd_angle_change_degrees": 0.005658187954054483,
+        "P_max_aeqd_error_of_actual_output_m": 4.992584216676394,
+        "P_max_abs_aeqd_error_change_m": 0.0007397981480163907
+      }
+    },
+    {
+      "run_id": "g2-evaluation-modes-01",
+      "manifest": {
+        "path": "task1/evidence/goal2/runs/g2-evaluation-modes-01/manifest.json",
+        "sha256": "444820a35c3d2c95863fd730422f6b7252fa72e146e242d2d189814e3b9e2b14"
+      },
+      "traces": 3583,
+      "independent_stage_counts": {
+        "S_distance_edges": 345898,
+        "S_actual_segments_length": 15945,
+        "D_windows": 288161,
+        "D_undefined_windows": 67281,
+        "P_segments": 8909,
+        "P_complete_input_points": 261943,
+        "P_immediate_output_points": 111806
+      },
+      "independent_extrema": {
+        "S_max_abs_aeqd_distance_change_m": 0.011063927321629308,
+        "S_max_abs_geod_distance_change_m": 0.005237150259290502,
+        "S_max_abs_geod_length_change_m": 0.08325854482791328,
+        "D_max_abs_aeqd_angle_change_degrees": 0.0005483325606689959,
+        "P_max_aeqd_error_of_actual_output_m": 19.864725768909267,
+        "P_max_abs_aeqd_error_change_m": 0.0004345621703432112
+      }
+    }
+  ],
+  "check_count": 1804527,
+  "errors": [],
+  "new_model_calls": 0,
+  "new_processing_experiments": 0,
+  "memory_writes": 0,
+  "interpretation": "PROJ agreement verifies the fixed ENU formula. Geod/AEQD differences quantify that conditional model's approximation. No observed threshold difference within these exact inputs establishes neither a source datum nor accuracy outside this scope.",
+  "elapsed_seconds": 20.024771725999017,
+  "audit_program": {
+    "path": "task1/evidence/goal2/c_contract/review_evaluation_coordinate_sensitivity.py",
+    "sha256": "8fd0427667c2de3bf3574757df28184084aed77f5d8ebc89b71ecf1cceb72c25"
+  },
+  "numeric_oracle": {
+    "path": "task1/evidence/goal2/c_contract/independent_numeric.py",
+    "sha256": "9c28775af3389fb9735d268bdaf776a0cedc683990518d0aee2736d5ff863865"
+  },
+  "C_program_correction": {
+    "prior_receipt": {
+      "path": "task1/evidence/goal2/c_contract/coordinate_sensitivity_receipt.json",
+      "sha256": "ac539af6c46762144cdb9b492bb30feb7e61292eb1fd92a0238639336fc23f4c"
+    },
+    "fact": "One selected record has no positive Geod pairs. Target correctly records NO_POSITIVE_GEOD_DISTANCES; the first C implementation used generic EMPTY_DENOMINATOR. C now verifies the specific reason; all numerical and stage checks passed before this C-only correction."
+  }
+}

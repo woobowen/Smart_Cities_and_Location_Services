@@ -1,0 +1,19 @@
+{
+  "at": "2026-09-26T21:57:46.521762+00:00",
+  "finding_id": "A-HANDOFF-COMPLETENESS-001",
+  "status": "INCORPORATED_FOR_INDEPENDENT_C_REVIEW",
+  "classification": "NONBLOCKING_FACTUAL_SUMMARY_COMPLETENESS_NOT_AN_EXPERIMENT_DEFECT",
+  "source_review": {
+    "path": "task1/evidence/goal2/a_epoch02/final_handoff_check/receipt.json",
+    "sha256": "72cf688fd6439c522b75d705299388c4b3a070a00b35f6e4b3fd0f91479ed6cc"
+  },
+  "witness": {
+    "path": "task1/evidence/goal2/a_epoch02/final_handoff_check/formal_eval_tradeoff_witnesses.json",
+    "sha256": "199554a3df6307c58c62f620a7189befbd1e598a7aa68964391bde0589c378ee"
+  },
+  "updated_frozen_document": {
+    "path": "task1/evidence/goal2/internal_acceptance_inputs/prepublication_01/FINAL_RESPONSE.md.source.txt",
+    "sha256": "ddb3c92dcebb994bc43acfbfc49a3cc07a6470eb10f04bb3cb1c7b60daf672c8"
+  },
+  "root_check": "Actually joined mode_proposals.csv and mode_candidates.csv by episode_id, record_id and executed config; exactly2 legal formal proposals had TRADEOFF and neither was selected; coverage_delta -16 and-1, no new computation or parameter choice."
+}

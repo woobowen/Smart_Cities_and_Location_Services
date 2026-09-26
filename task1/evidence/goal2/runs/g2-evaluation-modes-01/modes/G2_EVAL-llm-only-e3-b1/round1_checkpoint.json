@@ -1,0 +1,356 @@
+{
+  "completed_at": "2026-09-26T20:38:41.295309+00:00",
+  "resources": {
+    "experiment_model_dispatches": 1,
+    "completed_model_turns": 1,
+    "candidate_evaluations": 12,
+    "reference_assessments_outside_llm_only_decision": 8,
+    "deterministic_tool_calls": 24,
+    "cache_reads": 4,
+    "governance_role_dispatches": 0,
+    "provider_requests": "unknown",
+    "usage": [
+      {
+        "input_tokens": 12827,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1064,
+        "reasoning_output_tokens": 278
+      }
+    ]
+  },
+  "records": {
+    "1880": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb"
+      ],
+      "stopped": true,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "1880-c1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "n_final",
+            "predicted_sign": "unchanged",
+            "reason": "Retain reference: aggregate observations do not justify changing protected breakpoints, coverage, or fidelity."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "78bf0f8de9b1c26740ab0b5d0d5c4cca80a9e8fd900c95c524043e8d12becc53",
+          "executed_config_id": "cfg-b15b8281b73592fb",
+          "prediction": {
+            "metric_id": "n_final",
+            "predicted_sign": "unchanged",
+            "reference_handle": "5eaa9121d6c637c5a73abc1dad1f0f072657a83bf8b4f357e6e52afc12ef5e80",
+            "candidate_handle": "5eaa9121d6c637c5a73abc1dad1f0f072657a83bf8b4f357e6e52afc12ef5e80",
+            "status": "NEAR_ZERO_OR_UNCHANGED",
+            "delta": 0,
+            "observed_sign": "unchanged",
+            "evaluable": false,
+            "prediction_matches": true
+          }
+        }
+      ]
+    },
+    "9673": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb"
+      ],
+      "stopped": true,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "9673-c1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "n_final",
+            "predicted_sign": "unchanged",
+            "reason": "Retain reference: duplicates and undefined direction windows alone do not justify parameter changes."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "c4947dc9d7a0532fff47cff6b54ffc2a60d51e36a38d92ca88a04b959d316156",
+          "executed_config_id": "cfg-b15b8281b73592fb",
+          "prediction": {
+            "metric_id": "n_final",
+            "predicted_sign": "unchanged",
+            "reference_handle": "b86735e0eda8cf7065bde40ddd027e943fdc1198c3b6d97fd564a18569915a07",
+            "candidate_handle": "b86735e0eda8cf7065bde40ddd027e943fdc1198c3b6d97fd564a18569915a07",
+            "status": "NEAR_ZERO_OR_UNCHANGED",
+            "delta": 0,
+            "observed_sign": "unchanged",
+            "evaluable": false,
+            "prediction_matches": true
+          }
+        }
+      ]
+    },
+    "2297": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb"
+      ],
+      "stopped": true,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "2297-c1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "n_final",
+            "predicted_sign": "unchanged",
+            "reason": "Retain reference: breakpoint and duplicate counts do not establish a protected improvement."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "b733700618e253b35825ea4c5cca1ecb5cae6c7fcd31ca2af3838805495267fc",
+          "executed_config_id": "cfg-b15b8281b73592fb",
+          "prediction": {
+            "metric_id": "n_final",
+            "predicted_sign": "unchanged",
+            "reference_handle": "2d2340fc2565639af284180858a4e5119fbe9c9b6143d0411d4ca6cbb5a79cab",
+            "candidate_handle": "2d2340fc2565639af284180858a4e5119fbe9c9b6143d0411d4ca6cbb5a79cab",
+            "status": "NEAR_ZERO_OR_UNCHANGED",
+            "delta": 0,
+            "observed_sign": "unchanged",
+            "evaluable": false,
+            "prediction_matches": true
+          }
+        }
+      ]
+    },
+    "10927": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb"
+      ],
+      "stopped": true,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "10927-c1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "n_final",
+            "predicted_sign": "unchanged",
+            "reason": "Retain reference: no observed breaks, and aggregate statistics cannot establish a beneficial direction or DP change."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "1e8dd92ec556d318be711019bb3187c8e0ed24b4481312262ad67e1e22afca7c",
+          "executed_config_id": "cfg-b15b8281b73592fb",
+          "prediction": {
+            "metric_id": "n_final",
+            "predicted_sign": "unchanged",
+            "reference_handle": "c5de513002202de702c310fc3c83e6a1d88a74723f9f005c4dae8551b7cf3e2d",
+            "candidate_handle": "c5de513002202de702c310fc3c83e6a1d88a74723f9f005c4dae8551b7cf3e2d",
+            "status": "NEAR_ZERO_OR_UNCHANGED",
+            "delta": 0,
+            "observed_sign": "unchanged",
+            "evaluable": false,
+            "prediction_matches": true
+          }
+        }
+      ]
+    },
+    "9709": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb",
+        "cfg-63139d05595c253c"
+      ],
+      "stopped": true,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "9709-c1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 0,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "n_final",
+            "predicted_sign": "increase",
+            "reason": "The unbroken 99-point trajectory is shorter than 65 working metres. Removing the length filter admits it while preserving breakpoint thresholds and endpoints."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "1e95d7e1b41090b6ef0dba2113819f2af516d4f7d80906d63d2fde790293c9fe",
+          "executed_config_id": "cfg-63139d05595c253c",
+          "prediction": {
+            "metric_id": "n_final",
+            "predicted_sign": "increase",
+            "reference_handle": "f97ffa08b8ea2ba7e899b9603215ef95d79e1a0366add42d0045824ea8bab788",
+            "candidate_handle": "6b603e2bef1764433562ba71b30b6f2122525c294f84fd788f96f67c543cb669",
+            "status": "EVALUABLE",
+            "delta": 2,
+            "observed_sign": "increase",
+            "evaluable": true,
+            "prediction_matches": true
+          }
+        }
+      ]
+    },
+    "7711": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb",
+        "cfg-63139d05595c253c"
+      ],
+      "stopped": true,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "7711-c1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 0,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "n_final",
+            "predicted_sign": "increase",
+            "reason": "The unbroken 100-point trajectory is shorter than 65 working metres. Removing the length filter retains a segment previously excluded by length."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "b19998cfb037a5ac2611a1937917f0849f368ab3c1284d819b3440b5545cb83d",
+          "executed_config_id": "cfg-63139d05595c253c",
+          "prediction": {
+            "metric_id": "n_final",
+            "predicted_sign": "increase",
+            "reference_handle": "a58d7180d728f2675f87667b317ba765f4546227893c7648e2f39c2659c14eca",
+            "candidate_handle": "a14ff6785cd3fcd6960ffd66b997322d9242e63b7fd765132f838d56fd4ddb74",
+            "status": "EVALUABLE",
+            "delta": 2,
+            "observed_sign": "increase",
+            "evaluable": true,
+            "prediction_matches": true
+          }
+        }
+      ]
+    },
+    "7137": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb",
+        "cfg-63139d05595c253c"
+      ],
+      "stopped": true,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "7137-c1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 0,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "n_final",
+            "predicted_sign": "increase",
+            "reason": "The unbroken 100-point trajectory falls below the reference length minimum. Setting that minimum to zero admits it without changing S breakpoints, D, or DP tolerance."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "d128e4705a5d09c1e7daf8d98fbd413f9f753bfb6f143278c7eff6680d2c1b13",
+          "executed_config_id": "cfg-63139d05595c253c",
+          "prediction": {
+            "metric_id": "n_final",
+            "predicted_sign": "increase",
+            "reference_handle": "d6b923d91ef00a12266b4543dbf1ab519e0e0466ca922cad730995a23cb17bbf",
+            "candidate_handle": "f9b2c33fb9868d48b5011dc4a950abcf3738ae6dc7dcd8bfcc615d0ca0ad2838",
+            "status": "EVALUABLE",
+            "delta": 2,
+            "observed_sign": "increase",
+            "evaluable": true,
+            "prediction_matches": true
+          }
+        }
+      ]
+    },
+    "9296": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb",
+        "cfg-63139d05595c253c"
+      ],
+      "stopped": true,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "9296-c1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 0,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "n_final",
+            "predicted_sign": "increase",
+            "reason": "All segments are shorter than 65 working metres; with 67 points and two breaks, at least one meets min_points=5. Removing the length filter admits eligible segments while preserving both breaks."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "127b3eb68beb103afdaf059296ef18024f66e94a25be4eaa1bd209cd7cec8285",
+          "executed_config_id": "cfg-63139d05595c253c",
+          "prediction": {
+            "metric_id": "n_final",
+            "predicted_sign": "increase",
+            "reference_handle": "92ffd30ef9c5cc236672732df92781c42a55846bd55cd274f363e2bcfbd326b3",
+            "candidate_handle": "ea02e812e12f823b665ceaf31329c4d3679384fc82c46658c1bbf91e0b89de00",
+            "status": "EVALUABLE",
+            "delta": 6,
+            "observed_sign": "increase",
+            "evaluable": true,
+            "prediction_matches": true
+          }
+        }
+      ]
+    }
+  }
+}

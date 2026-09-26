@@ -1,0 +1,46 @@
+{
+  "classification": "FULL_CURRENT_G2_ANALYSIS_EXECUTION",
+  "status": "COMPLETED",
+  "started_at": "2026-09-26T21:15:25.990136+00:00",
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "task1.scripts.build_goal2_analysis",
+    "--current-runs",
+    "task1/evidence/goal2/current_runs.json",
+    "--output-dir",
+    "task1/evidence/goal2",
+    "--document",
+    "task1/docs/goal2/STAGE_ANALYSIS.md"
+  ],
+  "analysis_source": {
+    "path": "task1/scripts/build_goal2_analysis.py",
+    "sha256": "2ccf9fb06b8e7633fc118b0798fce348661c07eed8a3cfa4d08a9e08559c2e38"
+  },
+  "current_registry": {
+    "path": "task1/evidence/goal2/current_runs.json",
+    "sha256": "cd241536bbff6b84dc66dd9b757e813af3b13bd43bb9ff92ae2f55cc5adbced0"
+  },
+  "expected_evaluation_mode_manifest_sha256": "444820a35c3d2c95863fd730422f6b7252fa72e146e242d2d189814e3b9e2b14",
+  "new_model_calls": 0,
+  "new_candidate_processing_runs": 0,
+  "scope": "derive existing complete frozen traces, no reselection",
+  "ended_at": "2026-09-26T21:17:00.612321+00:00",
+  "elapsed_seconds": 92.45626341599927,
+  "exit_code": 0,
+  "analysis_source_after_sha256": "2ccf9fb06b8e7633fc118b0798fce348661c07eed8a3cfa4d08a9e08559c2e38",
+  "log": {
+    "path": "task1/evidence/goal2/a_epoch02/final_analysis/build.log",
+    "sha256": "47ed7a2c100cb138601c2ed887fa2377d09e4f4c099b604ef7c5c41f4b1e21f3"
+  },
+  "outputs": [
+    {
+      "path": "task1/evidence/goal2/result_summary.json",
+      "sha256": "4fbd16b754f25253b0803a27898e4758bc4eaf6debda03607454c374bba758a7"
+    },
+    {
+      "path": "task1/docs/goal2/STAGE_ANALYSIS.md",
+      "sha256": "1779953946507b0bd022403095e6488021e0ac49d1f3d05fec1d4d5e96ae5fba"
+    }
+  ]
+}

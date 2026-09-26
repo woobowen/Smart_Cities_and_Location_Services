@@ -1,0 +1,172 @@
+{
+  "records": [
+    {
+      "record_id": "7270",
+      "proposals": [
+        {
+          "candidate_id": "7270_reference",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 35,
+            "dp": 5
+          },
+          "metric_id": "n_final",
+          "predicted_sign": "unchanged",
+          "reason": "Retain reference: aggregate span and path length do not establish a protected improvement from changing thresholds."
+        }
+      ],
+      "stop": true,
+      "memory_ids_used": []
+    },
+    {
+      "record_id": "955",
+      "proposals": [
+        {
+          "candidate_id": "955_reference",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 35,
+            "dp": 5
+          },
+          "metric_id": "n_final",
+          "predicted_sign": "unchanged",
+          "reason": "Retain reference: path length relative to span does not distinguish meaningful turns from removable deviations."
+        }
+      ],
+      "stop": true,
+      "memory_ids_used": []
+    },
+    {
+      "record_id": "33",
+      "proposals": [
+        {
+          "candidate_id": "33_reference",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 35,
+            "dp": 5
+          },
+          "metric_id": "n_final",
+          "predicted_sign": "unchanged",
+          "reason": "Retain reference: small span and duplicate edges do not justify changing coverage or direction filtering."
+        }
+      ],
+      "stop": true,
+      "memory_ids_used": []
+    },
+    {
+      "record_id": "43",
+      "proposals": [
+        {
+          "candidate_id": "43_reference",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 35,
+            "dp": 5
+          },
+          "metric_id": "n_final",
+          "predicted_sign": "unchanged",
+          "reason": "Retain reference: lowering the length filter could change coverage; duplicate counts alone do not establish a protected benefit."
+        }
+      ],
+      "stop": true,
+      "memory_ids_used": []
+    },
+    {
+      "record_id": "3420",
+      "proposals": [
+        {
+          "candidate_id": "3420_reference",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 35,
+            "dp": 5
+          },
+          "metric_id": "n_final",
+          "predicted_sign": "unchanged",
+          "reason": "Retain reference to preserve the observed raw breakpoint handling; aggregate statistics do not support a protected alternative."
+        }
+      ],
+      "stop": true,
+      "memory_ids_used": []
+    },
+    {
+      "record_id": "911",
+      "proposals": [
+        {
+          "candidate_id": "911_reference",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 35,
+            "dp": 5
+          },
+          "metric_id": "n_final",
+          "predicted_sign": "unchanged",
+          "reason": "Retain reference: three raw break edges make segmentation changes consequential, with no window-level evidence supporting them."
+        }
+      ],
+      "stop": true,
+      "memory_ids_used": []
+    },
+    {
+      "record_id": "3371",
+      "proposals": [
+        {
+          "candidate_id": "3371_reference",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 35,
+            "dp": 5
+          },
+          "metric_id": "n_final",
+          "predicted_sign": "unchanged",
+          "reason": "Retain reference: similar span and path length do not establish that higher DP tolerance would satisfy the common fidelity budget."
+        }
+      ],
+      "stop": true,
+      "memory_ids_used": []
+    },
+    {
+      "record_id": "11148",
+      "proposals": [
+        {
+          "candidate_id": "11148_reference",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 35,
+            "dp": 5
+          },
+          "metric_id": "n_final",
+          "predicted_sign": "unchanged",
+          "reason": "Retain reference: zero-time and duplicate edges alone provide no justified direction or DP adjustment."
+        }
+      ],
+      "stop": true,
+      "memory_ids_used": []
+    }
+  ]
+}

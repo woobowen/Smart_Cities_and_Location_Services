@@ -1,0 +1,187 @@
+{
+  "issue_id": "G2-B-MODE-FIGURE-001",
+  "parent_task": "figures",
+  "status": "B_REPAIRED_REGRESSION_VERIFIED_C_PENDING",
+  "reviewer": "B /root/b_engine",
+  "reviewed_at": "2026-09-26T21:23:18.024681+00:00",
+  "source_scope": [
+    "mode_figures"
+  ],
+  "processing_epoch_changed": false,
+  "mathematical_data_changed": false,
+  "old_source_sha256": "0269ee69590a6c343ed8ff8b4397f55091e87fe0c2faa1c722bdb4194b339c10",
+  "new_source_sha256": "646547b63e6da6ab80a95ae71b3db908f6ea3dce95900ec12aa642b9939916eb",
+  "targets": [
+    {
+      "path": "task1/figures/goal2/four_mode_paired_results.svg",
+      "sha256": "c775b759f658abc4aaed746b77ac768b00468ec2b909271a8adf9fd46c53c793"
+    },
+    {
+      "path": "task1/figures/goal2/four_mode_paired_results.pdf",
+      "sha256": "a7d562ee93974ac0bf1928d46eb1778159844a43ec4a92d41e6bd88ee2f92b77"
+    },
+    {
+      "path": "task1/figures/goal2/four_mode_paired_results.png",
+      "sha256": "ec7a87bbc8dd53a188a19815e26ff32f8ca2b66c46b0f227aab6e78cac0d5593"
+    },
+    {
+      "path": "task1/figures/goal2/pdf-render-200dpi/four_mode_paired_results.png",
+      "sha256": "fa3bffc77bac144694495c1890cd1cf2f75a4688b02cd9565bce1f6bffd9cf19"
+    },
+    {
+      "path": "task1/figures/goal2/four_mode_failures_and_cost.svg",
+      "sha256": "cc8f67ced5597a6d09729074f0a43a5d93dd9d98b127af7c871a9bd64d55fa68"
+    },
+    {
+      "path": "task1/figures/goal2/four_mode_failures_and_cost.pdf",
+      "sha256": "f4c020d1004ee0d2b9cc49d1f4c3a022d7f0f58df33e4ce25a82b3ad11d87334"
+    },
+    {
+      "path": "task1/figures/goal2/four_mode_failures_and_cost.png",
+      "sha256": "8c3a0cca4a96c3f6a531a758e0285980d28fefec3e89f82a480dd12c086dd048"
+    },
+    {
+      "path": "task1/figures/goal2/pdf-render-200dpi/four_mode_failures_and_cost.png",
+      "sha256": "1d2578adfe3008e18fe452bd1f984deabdc2edaaf1fd5783446f17279169b84c"
+    },
+    {
+      "path": "task1/figures/goal2/memory_coverage_and_consumption.svg",
+      "sha256": "cd224e538169e583b74141ffc8d610fa043a7b3378f6c54174925f3f49572441"
+    },
+    {
+      "path": "task1/figures/goal2/memory_coverage_and_consumption.pdf",
+      "sha256": "1820fc4281b6ae5a823ce5baef3b9fb2ec3ab2a792d563433e1f741c0462d712"
+    },
+    {
+      "path": "task1/figures/goal2/memory_coverage_and_consumption.png",
+      "sha256": "a968f524e803479c9e7c12a05550451e877726b84093d2aab968d1986f15a683"
+    },
+    {
+      "path": "task1/figures/goal2/pdf-render-200dpi/memory_coverage_and_consumption.png",
+      "sha256": "a6723e827a0e2bbe3c64b0014b51a00f8a57c37bb91bf70bd0b1e6ee3d1f6bb1"
+    },
+    {
+      "path": "task1/scripts/build_goal2_figures.py",
+      "sha256": "646547b63e6da6ab80a95ae71b3db908f6ea3dce95900ec12aa642b9939916eb"
+    },
+    {
+      "path": "task1/figures/goal2/figure_manifest.json",
+      "sha256": "429eb219b0487393bd49f6f63df9130222c44924c02ef3837c4427cd4bbefcc9"
+    },
+    {
+      "path": "task1/figures/goal2/figure_data.json",
+      "sha256": "ad99fe5b33847ad89e1f87401f6ab58722b1913cdc2bd7af6e98a0a9fa4aec40"
+    },
+    {
+      "path": "task1/figures/goal2/CASE_SELECTION.json",
+      "sha256": "648246451c074c03336f10ab58abb89b49eeee11f96bfc20d6a7ccbb416b6fb6"
+    },
+    {
+      "path": "task1/figures/goal2/goal2_actual_architecture.drawio",
+      "sha256": "9b07dbb940e0dfa053084637c53ad8b4184e9026673f95e4cf3cf5f72fdae97b"
+    },
+    {
+      "path": "task1/evidence/goal2/presentation_checks/formal_mode_layout/binding_checks.json",
+      "sha256": "c76678abafa68bce1142289f936d1c4ffc3d5c281dcf64bfc5786ade10d5161a"
+    }
+  ],
+  "checks": [
+    {
+      "name": "segmentation_filter_response",
+      "method": "Actual view_image of current300dpiPNG and current200dpiPDF render",
+      "png_sha256": "e0a58ccbb1a3d3754f130b74c1842ae9989597cfde5acb602ecda3cb25052327",
+      "pdf_render_sha256": "79f24a5ac347773ba6fd00e64b0b34b5962c73478ea4e076c8c82059bac54720",
+      "status": "VERIFIED_B_VISUAL_SELF_CHECK",
+      "observation": "Both fractions have explicit raw-point/input-record denominators; all four grids/readings labelled; no legend collision or clipping."
+    },
+    {
+      "name": "segmentation_filter_grids",
+      "method": "Actual view_image of current300dpiPNG and current200dpiPDF render",
+      "png_sha256": "114fd20087ae92606d5ce2a4103fd406defda6ae121f01eebdf1e669a2ba958e",
+      "pdf_render_sha256": "062e474d1f9886436beab1b1c250be5fcdc2c52ecb4b1a8ddd4a743664cc4ecf",
+      "status": "VERIFIED_B_VISUAL_SELF_CHECK",
+      "observation": "Both 5x5 grids and units readable; PDF has no diagonal image artifact; zero no-output row retained."
+    },
+    {
+      "name": "direction_threshold_and_neighborhood",
+      "method": "Actual view_image of current300dpiPNG and current200dpiPDF render",
+      "png_sha256": "e6b2c495beb5d63eec10acbc13ee2809797c0e7115b2e9c78f5c26a0c9073422",
+      "pdf_render_sha256": "7fca5f51506590b7e6d0aa17b9e6b6cd2113302a9258f28e16cfd2043d1ba66f",
+      "status": "VERIFIED_B_VISUAL_SELF_CHECK",
+      "observation": "Direction counts/protected counts and local raw-index deletion readable; equal-aspect local trajectory maintains a useful axes area."
+    },
+    {
+      "name": "dp_error_compression",
+      "method": "Actual view_image of current300dpiPNG and current200dpiPDF render",
+      "png_sha256": "f7d51745cf774f8f5d6e890e9ec6fc9a9b6e29642ffcbc90cad2c3c88602ef6f",
+      "pdf_render_sha256": "16722d876ecca02da8e8df9d6f113cdb0d1bed9782a7f14466a4946fdda99e87",
+      "status": "VERIFIED_B_VISUAL_SELF_CHECK",
+      "observation": "DP immediate saving and complete P-input interval error labelled separately; tolerance0 and common5 working-metre budget shown."
+    },
+    {
+      "name": "order_protection_and_neighborhoods",
+      "method": "Actual view_image of current300dpiPNG and current200dpiPDF render",
+      "png_sha256": "8b150a234295b081982c9c2b83140a3928e9f558053f62e0d89c33a08737a730",
+      "pdf_render_sha256": "aabf5bf39f2a3d1a32ffa957619a5b89c8376173f9fc1c86c8cde611aa00c659",
+      "status": "VERIFIED_B_VISUAL_SELF_CHECK",
+      "observation": "All six actually executed orders shown; rejected orders distinguished; integer zero crossing counts visible."
+    },
+    {
+      "name": "four_mode_paired_results",
+      "method": "Actual view_image of current300dpiPNG and current200dpiPDF render",
+      "png_sha256": "ec7a87bbc8dd53a188a19815e26ff32f8ca2b66c46b0f227aab6e78cac0d5593",
+      "pdf_render_sha256": "fa3bffc77bac144694495c1890cd1cf2f75a4688b02cd9565bce1f6bffd9cf19",
+      "status": "VERIFIED_B_VISUAL_SELF_CHECK",
+      "observation": "Circle record-episode pairs and outlined-diamond per-record means explicitly explained; available/total denominators show24/24+72/72 or19/24+57/72; no overlap."
+    },
+    {
+      "name": "four_mode_failures_and_cost",
+      "method": "Actual view_image of current300dpiPNG and current200dpiPDF render",
+      "png_sha256": "8c3a0cca4a96c3f6a531a758e0285980d28fefec3e89f82a480dd12c086dd048",
+      "pdf_render_sha256": "1d2578adfe3008e18fe452bd1f984deabdc2edaaf1fd5783446f17279169b84c",
+      "status": "VERIFIED_B_VISUAL_SELF_CHECK",
+      "observation": "Failure count axis spans0..1 with integer ticks; three zeros per mode shown explicitly; real dispatch/evaluation/time values readable."
+    },
+    {
+      "name": "memory_coverage_and_consumption",
+      "method": "Actual view_image of current300dpiPNG and current200dpiPDF render",
+      "png_sha256": "a968f524e803479c9e7c12a05550451e877726b84093d2aab968d1986f15a683",
+      "pdf_render_sha256": "a6723e827a0e2bbe3c64b0014b51a00f8a57c37bb91bf70bd0b1e6ee3d1f6bb1",
+      "status": "VERIFIED_B_VISUAL_SELF_CHECK",
+      "observation": "Figure-level legend lies below both panels and covers no bar; eligible/delivered/cited/action-consistent counts and stratum denominators visible."
+    },
+    {
+      "name": "real_trajectory_cases",
+      "method": "Actual view_image of current300dpiPNG and current200dpiPDF render",
+      "png_sha256": "2a033e931f5a62f87400209818ee58d20f57c2daa49de5096d9932f0d1050f45",
+      "pdf_render_sha256": "392bd79dfa039ce8c1dd9d9815f8cc653771ebe1730185b1c7fd02a9c7e40480",
+      "status": "VERIFIED_B_VISUAL_SELF_CHECK",
+      "observation": "All six actual selected cases showG2_EVAL/configuration/reference units; no-output panels explicit; near-threshold original-index leader and commonreference caption readable."
+    },
+    {
+      "name": "synthetic_metric_counterexamples",
+      "method": "Actual view_image of current300dpiPNG and current200dpiPDF render",
+      "png_sha256": "048388c4fe88c104ca9a8830fc3e3cad923bb7c97121303a1a849f9abf6e29cc",
+      "pdf_render_sha256": "1eaf5761e6b3990055d42bc71acdbe0a112afdcc1600058cd665644d30d3e340",
+      "status": "VERIFIED_B_VISUAL_SELF_CHECK",
+      "observation": "Synthetic status explicit; distance-break crossing and own-clean versus commonraw error metrics labelled; index leaders separate coincident labels."
+    },
+    {
+      "name": "goal2_actual_architecture",
+      "method": "Actual view_image of current300dpiPNG and current200dpiPDF render",
+      "png_sha256": "06e5deea0f1022fec93f969fca7aee6819b0b2ea1909aafa4332742cd70ff3c9",
+      "pdf_render_sha256": "8b3f9916d5b163d9027dc29ff770a3a453461e3213d975dadc9eefc44ba6dad1",
+      "status": "VERIFIED_B_VISUAL_SELF_CHECK",
+      "observation": "Two layers and actualA/B/C/GoalJournal/deterministic-tool modules distinct; arrows terminate on intended nodes; repair and read-onlymemory flows visible."
+    }
+  ],
+  "unchecked_components": [
+    "IndependentCvisualacceptance",
+    "diagrams.netGUIimportroundtrip",
+    "notebookfreshkernelrunpending"
+  ],
+  "bindings_receipt": "task1/evidence/goal2/presentation_checks/formal_mode_layout/binding_checks.json",
+  "commands_receipt": "task1/evidence/goal2/presentation_checks/formal_mode_layout/rebuild_execution.json",
+  "before_directory": "task1/evidence/goal2/presentation_checks/formal_mode_layout/before",
+  "after_directory": "task1/evidence/goal2/presentation_checks/formal_mode_layout/after"
+}

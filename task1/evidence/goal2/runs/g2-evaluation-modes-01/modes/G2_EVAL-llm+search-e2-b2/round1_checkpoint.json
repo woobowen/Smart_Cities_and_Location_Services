@@ -1,0 +1,405 @@
+{
+  "completed_at": "2026-09-26T20:51:07.479831+00:00",
+  "resources": {
+    "experiment_model_dispatches": 1,
+    "completed_model_turns": 1,
+    "candidate_evaluations": 64,
+    "reference_assessments_outside_llm_only_decision": 0,
+    "deterministic_tool_calls": 128,
+    "cache_reads": 0,
+    "governance_role_dispatches": 0,
+    "provider_requests": "unknown",
+    "usage": [
+      {
+        "input_tokens": 12837,
+        "cached_input_tokens": 7808,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 906,
+        "reasoning_output_tokens": 155
+      }
+    ]
+  },
+  "records": {
+    "7270": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb",
+        "cfg-65d9f66c5a9b483a",
+        "cfg-b64eb945a846910c",
+        "cfg-322e68540606f046",
+        "cfg-df6f00206fb03678",
+        "cfg-e8ff0df5800d5c3b",
+        "cfg-6b37e535e1ea2046",
+        "cfg-893931df60c3d3d6"
+      ],
+      "stopped": false,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "7270-r1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 35,
+              "dp": 10
+            },
+            "metric_id": "common_covered_points",
+            "predicted_sign": "unchanged",
+            "reason": "Test additional DP compression with unchanged S/D; feedback must establish compliance with the common5 fidelity budget."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "2fbab76f4d4c0a96943e51181b27603941019b2ec4f0ab7fb2efb2ad0bd0e3e2",
+          "executed_config_id": "cfg-65d9f66c5a9b483a",
+          "prediction": {
+            "metric_id": "common_covered_points",
+            "predicted_sign": "unchanged",
+            "reference_handle": "c1536d13c965600dab0f880fc432bcb87b35ea55789b95c589a10a729c67c91c",
+            "candidate_handle": "7602fd9a106ad77880d5abff50ef2e27893d1ff9450b1ff6321ecac3ed229afd",
+            "status": "NEAR_ZERO_OR_UNCHANGED",
+            "delta": 0,
+            "observed_sign": "unchanged",
+            "evaluable": false,
+            "prediction_matches": true
+          }
+        }
+      ]
+    },
+    "955": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb",
+        "cfg-65d9f66c5a9b483a",
+        "cfg-b64eb945a846910c",
+        "cfg-322e68540606f046",
+        "cfg-df6f00206fb03678",
+        "cfg-e8ff0df5800d5c3b",
+        "cfg-6b37e535e1ea2046",
+        "cfg-893931df60c3d3d6"
+      ],
+      "stopped": false,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "955-r1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 35,
+              "dp": 10
+            },
+            "metric_id": "common_covered_points",
+            "predicted_sign": "unchanged",
+            "reason": "Probe compression at higher DP tolerance while preserving S/D coverage; geometric acceptability requires evaluation."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "0613a108fa81c23343c47025f5a2d25cfe0f702905b8ab28d475c1e0e3de7ec2",
+          "executed_config_id": "cfg-65d9f66c5a9b483a",
+          "prediction": {
+            "metric_id": "common_covered_points",
+            "predicted_sign": "unchanged",
+            "reference_handle": "8f8afdf708876ddc100cb91507c3ff2a1b2538f2b72c8aa583baaafbd2d24c44",
+            "candidate_handle": "020af04fc0b3763fc5e8efcab122cd55d4b4c9cd1093f15e00ce98255de33969",
+            "status": "NEAR_ZERO_OR_UNCHANGED",
+            "delta": 0,
+            "observed_sign": "unchanged",
+            "evaluable": false,
+            "prediction_matches": true
+          }
+        }
+      ]
+    },
+    "33": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb",
+        "cfg-df6f00206fb03678",
+        "cfg-b64eb945a846910c",
+        "cfg-322e68540606f046",
+        "cfg-65d9f66c5a9b483a",
+        "cfg-e8ff0df5800d5c3b",
+        "cfg-6b37e535e1ea2046",
+        "cfg-893931df60c3d3d6"
+      ],
+      "stopped": false,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "33-r1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 35,
+              "dp": 2
+            },
+            "metric_id": "common_covered_points",
+            "predicted_sign": "unchanged",
+            "reason": "Probe finer DP fidelity on this small-span trajectory, leaving segmentation and direction filtering fixed."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "f92b3d8eec134804b4210a44d0ad84d6834f8f0b837c90f4754afe3bb9c9b6b6",
+          "executed_config_id": "cfg-df6f00206fb03678",
+          "prediction": {
+            "metric_id": "common_covered_points",
+            "predicted_sign": "unchanged",
+            "reference_handle": "1b00c9dcdf535c3bbf75535202ca17bb526f7fa74d29bea806e60ebb562ba78e",
+            "candidate_handle": "76b4e17ccda85cce84c85885162bdcb92a884a9a91e6ba9ead29159560a91c94",
+            "status": "NEAR_ZERO_OR_UNCHANGED",
+            "delta": 0,
+            "observed_sign": "unchanged",
+            "evaluable": false,
+            "prediction_matches": true
+          }
+        }
+      ]
+    },
+    "43": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb",
+        "cfg-63139d05595c253c",
+        "cfg-b64eb945a846910c",
+        "cfg-322e68540606f046",
+        "cfg-df6f00206fb03678",
+        "cfg-65d9f66c5a9b483a",
+        "cfg-e8ff0df5800d5c3b",
+        "cfg-6b37e535e1ea2046"
+      ],
+      "stopped": false,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "43-r1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 0,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "common_covered_points",
+            "predicted_sign": "increase",
+            "reason": "The reported total path length is below the reference length cutoff; removing that cutoff should recover coverage for evaluation."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "dd3a65a0ee2ea8e9dc8ae72dcae80d5077461a1267dabb041a96d4d6f7b6f342",
+          "executed_config_id": "cfg-63139d05595c253c",
+          "prediction": {
+            "metric_id": "common_covered_points",
+            "predicted_sign": "increase",
+            "reference_handle": "ef011515aeb64c8d40cd45dd1ded6faee846628a50e852b31e4e54c983aeb599",
+            "candidate_handle": "b2f99babb669780c134b7e7045e3ee50447d3ccb5a0c8c2c40242a97cca65394",
+            "status": "EVALUABLE",
+            "delta": 98,
+            "observed_sign": "increase",
+            "evaluable": true,
+            "prediction_matches": true
+          }
+        }
+      ]
+    },
+    "3420": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb",
+        "cfg-65d9f66c5a9b483a",
+        "cfg-b64eb945a846910c",
+        "cfg-322e68540606f046",
+        "cfg-df6f00206fb03678",
+        "cfg-e8ff0df5800d5c3b",
+        "cfg-6b37e535e1ea2046",
+        "cfg-893931df60c3d3d6"
+      ],
+      "stopped": false,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "3420-r1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 35,
+              "dp": 10
+            },
+            "metric_id": "common_covered_points",
+            "predicted_sign": "unchanged",
+            "reason": "Preserve raw breakpoint handling and probe DP compression; evaluate the common5 fidelity constraint."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "921a377da12d1120e8e841f3094c9048bd0355c6d67753ef83f81bb6fa3c4152",
+          "executed_config_id": "cfg-65d9f66c5a9b483a",
+          "prediction": {
+            "metric_id": "common_covered_points",
+            "predicted_sign": "unchanged",
+            "reference_handle": "085ac8c98877ac9d775a45df27eb3a8bac15d521bd0c193f5e4973d6b461b99e",
+            "candidate_handle": "e0dd77181055cf0f200ac0ff8f6b7b7afc649bf131a819319079a0128a6f3c00",
+            "status": "NEAR_ZERO_OR_UNCHANGED",
+            "delta": 0,
+            "observed_sign": "unchanged",
+            "evaluable": false,
+            "prediction_matches": true
+          }
+        }
+      ]
+    },
+    "911": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb",
+        "cfg-5279f18a16a391af",
+        "cfg-b64eb945a846910c",
+        "cfg-322e68540606f046",
+        "cfg-df6f00206fb03678",
+        "cfg-65d9f66c5a9b483a",
+        "cfg-e8ff0df5800d5c3b",
+        "cfg-6b37e535e1ea2046"
+      ],
+      "stopped": false,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "911-r1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 32.5,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "common_covered_points",
+            "predicted_sign": "not_predicted",
+            "reason": "Test whether a lower length cutoff recovers segments separated by existing breaks; segment lengths are unavailable."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "8fdeeb2a0e5053a03b5bb76926dc7ff6894bc748aec6a7b4e6ce0a1454b8cd92",
+          "executed_config_id": "cfg-5279f18a16a391af",
+          "prediction": {
+            "metric_id": "common_covered_points",
+            "predicted_sign": "not_predicted",
+            "reference_handle": "40dc5033d63b67200b47cbd4e7e68d646be079f1795510155667018026900488",
+            "candidate_handle": "209005a78c08cf49346416dcd93fb050928ad7bf15065bbc82efc2e50d43958f",
+            "status": "NOT_PREDICTED",
+            "evaluable": false
+          }
+        }
+      ]
+    },
+    "3371": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb",
+        "cfg-65d9f66c5a9b483a",
+        "cfg-b64eb945a846910c",
+        "cfg-322e68540606f046",
+        "cfg-df6f00206fb03678",
+        "cfg-e8ff0df5800d5c3b",
+        "cfg-6b37e535e1ea2046",
+        "cfg-893931df60c3d3d6"
+      ],
+      "stopped": false,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "3371-r1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 35,
+              "dp": 10
+            },
+            "metric_id": "common_covered_points",
+            "predicted_sign": "unchanged",
+            "reason": "Test higher DP tolerance for compression without changing S/D; duplicates alone do not establish geometric acceptability."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "bba411f241113764b6a22ac7675fd480b6de7c58c0093d208d96450f1d2f1043",
+          "executed_config_id": "cfg-65d9f66c5a9b483a",
+          "prediction": {
+            "metric_id": "common_covered_points",
+            "predicted_sign": "unchanged",
+            "reference_handle": "a9ada0278e40cf0c65c80a33068220cc475180873e62f4a565b9af9c832aba1c",
+            "candidate_handle": "44639850cce2e188fc9490642043024fcdc8de0bcd93d4be54783bf2a5a7eacf",
+            "status": "NEAR_ZERO_OR_UNCHANGED",
+            "delta": 0,
+            "observed_sign": "unchanged",
+            "evaluable": false,
+            "prediction_matches": true
+          }
+        }
+      ]
+    },
+    "11148": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb",
+        "cfg-65d9f66c5a9b483a",
+        "cfg-b64eb945a846910c",
+        "cfg-322e68540606f046",
+        "cfg-df6f00206fb03678",
+        "cfg-e8ff0df5800d5c3b",
+        "cfg-6b37e535e1ea2046",
+        "cfg-893931df60c3d3d6"
+      ],
+      "stopped": false,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "11148-r1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 35,
+              "dp": 10
+            },
+            "metric_id": "common_covered_points",
+            "predicted_sign": "unchanged",
+            "reason": "Probe additional compression with fixed S/D and assess its fidelity tradeoff using feedback."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "ae068de5767357895ba18af67c1c42836f03c9f46dfc578804c8ce8b183d8297",
+          "executed_config_id": "cfg-65d9f66c5a9b483a",
+          "prediction": {
+            "metric_id": "common_covered_points",
+            "predicted_sign": "unchanged",
+            "reference_handle": "4827483de04e502b35e4c48defd997c82822c97c39f947c5ce93761ca3946cac",
+            "candidate_handle": "7966078ac234bb88ecba844930bec4360fc793472d34cfd6f172e41ebbabd085",
+            "status": "NEAR_ZERO_OR_UNCHANGED",
+            "delta": 0,
+            "observed_sign": "unchanged",
+            "evaluable": false,
+            "prediction_matches": true
+          }
+        }
+      ]
+    }
+  }
+}

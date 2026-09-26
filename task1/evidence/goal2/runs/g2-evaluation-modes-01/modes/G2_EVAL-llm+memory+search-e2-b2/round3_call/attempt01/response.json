@@ -1,0 +1,80 @@
+{
+  "records": [
+    {
+      "record_id": "3420",
+      "proposals": [],
+      "stop": true,
+      "memory_ids_used": []
+    },
+    {
+      "record_id": "911",
+      "proposals": [
+        {
+          "candidate_id": "911-r3-a",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 2,
+            "min_length": 0,
+            "direction": 60,
+            "dp": 2
+          },
+          "metric_id": "common_covered_points",
+          "predicted_sign": "increase",
+          "reason": "Preserve the verified 69-point coverage versus 60 at reference; test tighter DP for additional geometric fidelity."
+        },
+        {
+          "candidate_id": "911-r3-b",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 2,
+            "min_length": 0,
+            "direction": 60,
+            "dp": 0
+          },
+          "metric_id": "n_direction_removed",
+          "predicted_sign": "decrease",
+          "reason": "The same S/D removed 12 points versus 22 at reference. Disable DP deletion to measure the remaining direction-stage geometric error."
+        }
+      ],
+      "stop": false,
+      "memory_ids_used": []
+    },
+    {
+      "record_id": "11148",
+      "proposals": [
+        {
+          "candidate_id": "11148-r3-a",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 60,
+            "dp": 1
+          },
+          "metric_id": "n_final",
+          "predicted_sign": "increase",
+          "reason": "Direction60 with DP2 retained 29 versus 21 reference points; tighter DP retains at least those points. Test whether common maximum error improves further."
+        },
+        {
+          "candidate_id": "11148-r3-b",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 60,
+            "dp": 0
+          },
+          "metric_id": "n_final",
+          "predicted_sign": "increase",
+          "reason": "The verified direction stage leaves 99 points, all retained at DP0. Measure its geometric error without DP deletion; common error need not improve monotonically."
+        }
+      ],
+      "stop": false,
+      "memory_ids_used": []
+    }
+  ]
+}

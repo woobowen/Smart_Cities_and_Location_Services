@@ -1,0 +1,183 @@
+{
+  "records": [
+    {
+      "record_id": "82",
+      "proposals": [
+        {
+          "candidate_id": "82-r2-a",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 45,
+            "dp": 5
+          },
+          "metric_id": "common_covered_points",
+          "predicted_sign": "unchanged",
+          "reason": "Lower direction thresholds degraded common fidelity; test 45 with unchanged segmentation and endpoint coverage."
+        },
+        {
+          "candidate_id": "82-r2-b",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 60,
+            "dp": 5
+          },
+          "metric_id": "common_covered_points",
+          "predicted_sign": "unchanged",
+          "reason": "DP 10 exceeded the common budget; test a higher direction threshold while retaining DP 5. Fidelity requires evaluation."
+        }
+      ],
+      "stop": false,
+      "memory_ids_used": []
+    },
+    {
+      "record_id": "10232",
+      "proposals": [
+        {
+          "candidate_id": "10232-r2-a",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 45,
+            "dp": 5
+          },
+          "metric_id": "common_covered_points",
+          "predicted_sign": "unchanged",
+          "reason": "Direction 15 and 25 increased common maximum error; probe 45 while preserving segment coverage."
+        },
+        {
+          "candidate_id": "10232-r2-b",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 60,
+            "dp": 5
+          },
+          "metric_id": "common_covered_points",
+          "predicted_sign": "unchanged",
+          "reason": "Higher DP tolerances failed the budget; explore direction 60 at DP 5 without predicting a fidelity gain."
+        }
+      ],
+      "stop": false,
+      "memory_ids_used": []
+    },
+    {
+      "record_id": "10796",
+      "proposals": [],
+      "stop": true,
+      "memory_ids_used": []
+    },
+    {
+      "record_id": "4805",
+      "proposals": [],
+      "stop": true,
+      "memory_ids_used": []
+    },
+    {
+      "record_id": "7764",
+      "proposals": [
+        {
+          "candidate_id": "7764-r2-a",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 45,
+            "dp": 5
+          },
+          "metric_id": "common_covered_points",
+          "predicted_sign": "unchanged",
+          "reason": "Lower direction thresholds worsened common maximum error; test 45 with all three reference segments preserved."
+        },
+        {
+          "candidate_id": "7764-r2-b",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 60,
+            "dp": 5
+          },
+          "metric_id": "raw_break_crossings",
+          "predicted_sign": "unchanged",
+          "reason": "DP-only changes produced no supported gain; probe direction 60 while retaining both raw-break splits."
+        }
+      ],
+      "stop": false,
+      "memory_ids_used": []
+    },
+    {
+      "record_id": "4953",
+      "proposals": [
+        {
+          "candidate_id": "4953-r2-a",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 45,
+            "dp": 5
+          },
+          "metric_id": "common_covered_points",
+          "predicted_sign": "unchanged",
+          "reason": "Direction 25 tied protected outcomes and 15 degraded fidelity; test 45 with unchanged segment coverage."
+        },
+        {
+          "candidate_id": "4953-r2-b",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 60,
+            "dp": 5
+          },
+          "metric_id": "raw_break_crossings",
+          "predicted_sign": "unchanged",
+          "reason": "Higher DP tolerances violated the common budget; test direction 60 while preserving temporal and spatial splits."
+        }
+      ],
+      "stop": false,
+      "memory_ids_used": []
+    },
+    {
+      "record_id": "5029",
+      "proposals": [
+        {
+          "candidate_id": "5029-r2-a",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 3,
+            "min_length": 0,
+            "direction": 35,
+            "dp": 5
+          },
+          "metric_id": "common_covered_points",
+          "predicted_sign": "increase",
+          "reason": "Removing the length cutoff covered 94 points but filtered one four-point segment; min_points 3 tests recovery of that remaining window while preserving all six breaks."
+        }
+      ],
+      "stop": false,
+      "memory_ids_used": []
+    },
+    {
+      "record_id": "6556",
+      "proposals": [],
+      "stop": true,
+      "memory_ids_used": []
+    }
+  ]
+}

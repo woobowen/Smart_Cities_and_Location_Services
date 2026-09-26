@@ -1,0 +1,25 @@
+{
+  "status": "B_PUBLICATION_PREPARATION_AT_EXPLICIT_CUTOFF",
+  "at": "2026-09-26T22:00:17.262416+00:00",
+  "full_scan": "task1/evidence/goal2/release_checks/final_01/release_check.json",
+  "full_scan_exit_code": 1,
+  "full_scan_reason": "Threepathflagsreviewedand13concurrentnewfiles;originalreportpreserved.",
+  "delta_receipt": {
+    "path": "task1/evidence/goal2/release_checks/delta_01/delta_reuse_receipt.json",
+    "sha256": "72e16db09c379c9bcc9dcaa0750bc1866e3166398f0ddd2de0e38ab492f9bc4c"
+  },
+  "ignored_logs_receipt": {
+    "path": "task1/evidence/goal2/release_checks/delta_01/ignored_goal2_logs.json",
+    "sha256": "47d33deba550af548285ac7c4f397adb7d1ac164383659ba3ffa2c18c3df7364",
+    "count": 67,
+    "bytes": 63242
+  },
+  "raw_sha256": "c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3",
+  "protected_G1_and_teacher_files": 900,
+  "protected_user_ZIPs": 3,
+  "user_ZIP_tracking": "COMPLETEandCLOSUREremainuntracked;REPAIRwasalreadytracked;allbytesunchanged.",
+  "new_installs_or_shell_config_changes": [],
+  "staging_commit_push_performed": false,
+  "next_check_command": ".venv/bin/python task1/evidence/goal2/release_checks/scan_release_delta.py --baseline task1/evidence/goal2/release_checks/delta_01 --output task1/evidence/goal2/release_checks/delta_02",
+  "boundary": "LaterC/publicationmetadatarequireanewdeltacutoff;thisisnotremoteverificationorscientificacceptance."
+}

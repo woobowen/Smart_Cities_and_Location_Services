@@ -1,0 +1,228 @@
+{
+  "role_context": "/root/c_contract",
+  "status": "VERIFIED",
+  "at_utc": "2026-09-26T18:56:43.522436+00:00",
+  "classification": "INDEPENDENT_C_DEFINITION_REVIEW_NOT_HUMAN_APPROVAL",
+  "targets": [
+    {
+      "path": "task1/config/goal2/contract.json",
+      "sha256": "db758c097509139596fbc52b4c3f65e921eb1f12d9fb4c239e308abdb57f31f8"
+    },
+    {
+      "path": "task1/config/goal2/experiment_matrix.json",
+      "sha256": "24ee0fed02252585618dc90a90250f5e754e9d8f5f9a58e25a8e368d0d232775"
+    },
+    {
+      "path": "task1/docs/goal2/CONTRACT.md",
+      "sha256": "10bffe4971813437798826fb958a4d45609bc9fb9a9bf3664049f98105507010"
+    }
+  ],
+  "source_hashes": {
+    "task1/config/goal2/contract.json": "db758c097509139596fbc52b4c3f65e921eb1f12d9fb4c239e308abdb57f31f8",
+    "task1/config/goal2/experiment_matrix.json": "24ee0fed02252585618dc90a90250f5e754e9d8f5f9a58e25a8e368d0d232775",
+    "task1/docs/goal2/CONTRACT.md": "10bffe4971813437798826fb958a4d45609bc9fb9a9bf3664049f98105507010"
+  },
+  "requirements_reference_at_preparation": {
+    "path": "task1/evidence/goal2/requirements.json",
+    "sha256": "8d1525734712444e686da621792107fafb65189f9e78194ffff4e926abac977b"
+  },
+  "checked_components": [
+    "teacher_requirements",
+    "comparison_definitions",
+    "selection_rules",
+    "data_partition_rules",
+    "mode_budgets",
+    "scope_boundaries",
+    "source_bindings",
+    "unique_exact_grid",
+    "same_coordinate_model"
+  ],
+  "unchecked_components": [
+    "actual_split_ids",
+    "production_split_recompute",
+    "full_G2_coordinate_sensitivity",
+    "actual_parameter_experiments",
+    "real_mode_episodes",
+    "memory_consumption",
+    "final_acceptance"
+  ],
+  "checks": [
+    {
+      "name": "user_parameter_grids_exact",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "reference_parameters_exact",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all_59_unique_configs_exact",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "grid_membership:G2-PARAM-DT",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "grid_membership:G2-PARAM-DISTANCE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "grid_membership:G2-PARAM-MIN_POINTS",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "grid_membership:G2-PARAM-MIN_LENGTH",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "grid_membership:G2-PARAM-DIRECTION",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "grid_membership:G2-PARAM-DP",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "grid_membership:G2-PARAM-TIME-DISTANCE",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "grid_membership:G2-PARAM-POINTS-LENGTH",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "fixed_13_eval_representatives",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "six_exact_orders",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_preS_segmentation",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "order_feasibility_preregistered",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "search_20_unique_configs_reference_first",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "search_sequence_in_domain",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "mode_sizes_and_round_budgets",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "strict_zero_search_model",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "llmonly_no_feedback",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "memory_demo_60_readonly",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "record_partition_sizes",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "same_coordinate_mathematics",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "expanded_guard_separate_from_precision",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "common_raw_independent_reference",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "no_own_clean_quality_claim",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "three_required_singles_no_combinations",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "source_snapshots_match",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "actual_prompt_bound",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "single_R01_R10_registry",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all_A01_A17_pending_not_fabricated",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "default_recompute_zero_models",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "internal_before_publication",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "human_approval": false,
+  "manual_review": [
+    "Teacher original PPT 18/20/22/24/26/37/42 and both starter notebooks agree with limited G2 scope.",
+    "G1 40km guard stays frozen; explicit G2 200km guard is an input-domain extension of unchanged mathematics, not accuracy proof.",
+    "Baseline covered point identities prevent difficulty substitution; missing output is not zero error.",
+    "P immediate guarantee and final geometry after later D/S are separate.",
+    "Order safety versus geometric tradeoff is fixed before G2 development results.",
+    "Memory retrieval and cited consumption are observables, not causal quality-gain proof.",
+    "No G3 composition/final processing/report or human-understanding pass is authorized by this receipt."
+  ],
+  "open_contract_issues": [],
+  "new_model_calls": 0
+}

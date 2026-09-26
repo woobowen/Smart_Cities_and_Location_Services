@@ -1,0 +1,55 @@
+{
+  "goal_id": "SC-LAB1-G2-EXPERIMENTS-001",
+  "experiment_id": "G2-R07-COUNTEREXAMPLES",
+  "run_id": "g2-counterexamples-engineering-smoke-01",
+  "classification": "ENGINEERING_COUNTEREXAMPLE_RUN",
+  "started_at": "2026-09-26T18:58:28.271559+00:00",
+  "ended_at": "2026-09-26T18:58:29.560710+00:00",
+  "elapsed_seconds": 1.2891541550015972,
+  "actual_command": [
+    "/home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/scripts/goal2_counterexamples.py",
+    "--output",
+    "task1/evidence/goal2/counterexamples/engineering-smoke-01",
+    "--run-id",
+    "g2-counterexamples-engineering-smoke-01"
+  ],
+  "code_sha": "a45d89f49f2041477b16485f535adc508c32f8ea",
+  "source_tree_hash": "90a5b2e0b26a97fc9bd28245b2e45288bd3c93128c40263c3fb674a6c07bae36",
+  "source_files": {
+    "task1/scripts/goal2_counterexamples.py": "dc32e77163a62d3f6543370c0d516f4be3094f3ea07a01751ff883c7aac622de",
+    "task1/workflow/g2_pipeline.py": "edb8f4c8dcaf65cda44b33533eb55e9d67ef946597895f0682860ba65499c441",
+    "task1/workflow/g2_metrics.py": "8d80c8ff8e124b9d3d73f5d514a0c09af32f234034914379ea901e5e59cc3ebb",
+    "task1/workflow/geometry.py": "2ad3ca3b49e98e997684e3f5af948771be80dfb03b31b2ae4cc4483856e93d74",
+    "task1/workflow/evaluation.py": "7cf224fbc290d3e83acd5d83a3fe335e6dc437c762f7053d8132817aa91025b2",
+    "task1/workflow/coordinates.py": "d99b270a65c88f8530669d5e7d0887d7563b3e54e19770ab7a9eb695117e075d",
+    "task1/workflow/io.py": "0d3d72dd0beb4718f4020a07a5f1c0ca89193943049a479816b5c496806321b2"
+  },
+  "g2_parent_contract_hash": "db758c097509139596fbc52b4c3f65e921eb1f12d9fb4c239e308abdb57f31f8",
+  "fixture_contract_hash": "c8044c0f8571910c0573b48e0ab095cf54fb86735711cec43712267f03ac91b7",
+  "raw_sha256": "c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3",
+  "pilot_scope": [
+    "0",
+    "1",
+    "2",
+    "246",
+    "256",
+    "306",
+    "352"
+  ],
+  "synthetic_pipeline_executions": 19,
+  "pilot_pipeline_executions": 10,
+  "experiment_model_dispatches": 0,
+  "known_answer_checks": 25,
+  "status": "ENGINEERING_VERIFIED",
+  "artifacts": {
+    "CASE_ANALYSIS.md": "fb1981057932185dafe3de7d41c01fec37b4bef9f9327b96e126576c1b7b55c5",
+    "exposed_pilot_cases.json": "aa14e3adf10811e7dbb8b46a679fb150f9dd597842577ef630d6025bac6c785b",
+    "synthetic_cases.json": "73407da777541c35201c613bef3e913896ff2dc701cb14431896f94f062f8d3a"
+  },
+  "limitations": [
+    "synthetic truth applies only to authored fixtures",
+    "pilot cases are already exposed",
+    "conditional work-plane results do not establish source datum",
+    "no final method selected"
+  ]
+}

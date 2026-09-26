@@ -1,0 +1,1950 @@
+{
+  "classification": "FINAL_STATIC_PUBLICATION_CHECK",
+  "status": "FINDINGS_REQUIRE_REVIEW",
+  "started_at": "2026-09-26T21:46:31.719668+00:00",
+  "ended_at": "2026-09-26T21:51:51.713205+00:00",
+  "head": "c1c6272606716f9f59aa785d48bfeadb09c7a30e",
+  "branch": "main",
+  "command": ".venv/bin/python task1/evidence/goal2/release_checks/scan_release.py --output task1/evidence/goal2/release_checks/final_01 --final",
+  "scanner_sha256": "7dfd12a631c861f9f086a365a088d8dd0f66b5a91a7db0a811a8f3b5bae94679",
+  "adapted_from": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/release_checks.py",
+  "checked_files": 3260,
+  "plaintext_and_decompressed_characters_scanned": 5223683232,
+  "secret_scan_policy": "Values are never included in findings or logs. Explicit credential formats only; no account/session directories, decryption, network fetching, binary OCR or general secret-absence guarantee.",
+  "binary_formats_hash_and_size_only": {
+    ".png": 107,
+    ".pdf": 37
+  },
+  "blocking_counts": {
+    "secret_pattern_findings": 0,
+    "over_100MiB_files": 0,
+    "symlinks_requiring_review": 0,
+    "broken_local_links": 0,
+    "reproduction_absolute_path_findings": 3,
+    "protected_byte_changes": 0,
+    "tracked_cache_files": 0,
+    "notebook_error_cells": 0,
+    "bundle_check_failed": 0,
+    "dependency_inventory_mismatches": 0,
+    "unstable_snapshot": 13,
+    "active_running_runs": 0
+  },
+  "secret_pattern_findings": [],
+  "over_50MiB_files": [],
+  "over_100MiB_files": [],
+  "symlinks": [],
+  "absolute_path_findings": [
+    {
+      "path": "task1/docs/goal2/REPRODUCE.md",
+      "lines": [
+        20,
+        26,
+        28,
+        41
+      ],
+      "classification": "REPRODUCTION_SOURCE_REQUIRES_REVIEW"
+    },
+    {
+      "path": "task1/evidence/goal2/c_contract/control_round2.xml",
+      "lines": [
+        1,
+        15,
+        23,
+        42,
+        61
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/c_contract/control_round3.xml",
+      "lines": [
+        1
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/c_contract/mode_memory_round1.xml",
+      "lines": [
+        1
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/c_contract/mode_memory_round2.xml",
+      "lines": [
+        1
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/c_contract/review_parameter_figures.py",
+      "lines": [
+        13
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/coordinate_sensitivity/development-01/summary.json",
+      "lines": [
+        9
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/coordinate_sensitivity/development-02/summary.json",
+      "lines": [
+        9
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/coordinate_sensitivity/evaluation-01/summary.json",
+      "lines": [
+        9
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/coordinate_sensitivity/raw_preflight/summary.json",
+      "lines": [
+        9
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/counterexamples/engineering-smoke-01/manifest.json",
+      "lines": [
+        10
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/counterexamples/formal-01/manifest.json",
+      "lines": [
+        10
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/counterexamples/formal-02/manifest.json",
+      "lines": [
+        10
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/logs/g2-demo-memory-01.log",
+      "lines": [
+        1
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/logs/g2-development-modes-01.log",
+      "lines": [
+        11,
+        14,
+        23,
+        26,
+        29,
+        32,
+        35
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/logs/g2-development-orders-01.log",
+      "lines": [
+        1
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/logs/g2-development-parameters-01.log",
+      "lines": [
+        1
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/logs/g2-evaluation-orders-01.log",
+      "lines": [
+        1
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/logs/g2-evaluation-orders-01_execution.json",
+      "lines": [
+        5
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/logs/g2-evaluation-parameters-01.log",
+      "lines": [
+        1
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/logs/g2-evaluation-parameters-01_execution.json",
+      "lines": [
+        5
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/logs/tests_final_sources.xml",
+      "lines": [
+        1
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/notebook_checks/formal_launch_01_execution.json",
+      "lines": [
+        3
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/notebook_execution.json",
+      "lines": [
+        53,
+        56,
+        58,
+        64,
+        96,
+        99,
+        101,
+        107,
+        139,
+        142,
+        144,
+        150
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/notebook_runs/fresh-01/01_parameters_and_orders/dispatch_receipt.json",
+      "lines": [
+        3,
+        4,
+        7,
+        9
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/notebook_runs/fresh-01/01_parameters_and_orders/worker_receipt.json",
+      "lines": [
+        5,
+        8,
+        10,
+        16
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/notebook_runs/fresh-01/02_real_modes_and_memory/dispatch_receipt.json",
+      "lines": [
+        3,
+        4,
+        7,
+        9
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/notebook_runs/fresh-01/02_real_modes_and_memory/worker_receipt.json",
+      "lines": [
+        5,
+        8,
+        10,
+        16
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/notebook_runs/fresh-01/03_candidates_counterexamples_and_cases/dispatch_receipt.json",
+      "lines": [
+        3,
+        4,
+        7,
+        9
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/notebook_runs/fresh-01/03_candidates_counterexamples_and_cases/worker_receipt.json",
+      "lines": [
+        5,
+        8,
+        10,
+        16
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/notebook_runs/fresh-01/combined_receipt.json",
+      "lines": [
+        53,
+        56,
+        58,
+        64,
+        96,
+        99,
+        101,
+        107,
+        139,
+        142,
+        144,
+        150
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/presentation_checks/candidate_preview_02/after/raster_checks.log",
+      "lines": [
+        1,
+        2,
+        3
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/presentation_checks/candidate_preview_02/before/raster_checks.log",
+      "lines": [
+        1,
+        2,
+        3
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/presentation_checks/candidate_preview_02/deterministic_validation.json",
+      "lines": [
+        3,
+        4
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/presentation_checks/candidate_preview_02/intermediate_visual_inspection.json",
+      "lines": [
+        3,
+        4,
+        5
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/presentation_checks/candidate_preview_02/preview_initial_execution.json",
+      "lines": [
+        4,
+        10,
+        17
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/presentation_checks/candidate_preview_02/preview_repaired_02_execution.json",
+      "lines": [
+        4,
+        10,
+        17
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/presentation_checks/candidate_preview_02/preview_repaired_execution.json",
+      "lines": [
+        4,
+        10,
+        17
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/presentation_checks/case_configuration_labels/after/raster_checks.log",
+      "lines": [
+        1,
+        2,
+        3
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/presentation_checks/case_configuration_labels/before/raster_checks.log",
+      "lines": [
+        1,
+        2,
+        3
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/presentation_checks/case_configuration_labels/deterministic_validation.json",
+      "lines": [
+        3,
+        4
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/presentation_checks/case_configuration_labels/execution.json",
+      "lines": [
+        4,
+        10,
+        17
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/presentation_checks/formal_01/execution.json",
+      "lines": [
+        4,
+        10,
+        12
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/presentation_checks/formal_mode_layout/before/raster_checks.log",
+      "lines": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/presentation_checks/formal_mode_layout/rebuild_execution.json",
+      "lines": [
+        4,
+        10,
+        12
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/presentation_checks/parameter_preview_01/initial/raster_checks.log",
+      "lines": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/presentation_checks/parameter_preview_01/preview_02_tool_error.txt",
+      "lines": [
+        2,
+        9,
+        11,
+        14,
+        16
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/presentation_checks/parameter_preview_01/repaired/raster_checks.log",
+      "lines": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/provider_smoke/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/result_summary.json",
+      "lines": [
+        273
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-demo-memory-01/manifest.json",
+      "lines": [
+        3311
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-demo-memory-02/manifest.json",
+      "lines": [
+        3311
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-development-modes-01/manifest.json",
+      "lines": [
+        172
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-development-modes-01/modes/DEVELOPMENT-llm+memory+search-e1-b0/round1_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-development-modes-01/modes/DEVELOPMENT-llm+memory+search-e1-b0/round2_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-development-modes-01/modes/DEVELOPMENT-llm+memory+search-e1-b0/round3_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-development-modes-01/modes/DEVELOPMENT-llm+search-e1-b0/round1_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-development-modes-01/modes/DEVELOPMENT-llm+search-e1-b0/round2_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-development-modes-01/modes/DEVELOPMENT-llm+search-e1-b0/round3_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-development-modes-01/modes/DEVELOPMENT-llm+search-e1-b1/round1_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-development-modes-01/modes/DEVELOPMENT-llm+search-e1-b1/round2_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-development-modes-01/modes/DEVELOPMENT-llm+search-e1-b1/round3_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-development-modes-01/modes/DEVELOPMENT-llm+search-e1-b2/round1_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-development-modes-01/modes/DEVELOPMENT-llm+search-e1-b2/round2_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-development-modes-01/modes/DEVELOPMENT-llm+search-e1-b2/round3_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-development-modes-01/modes/DEVELOPMENT-llm-only-e1-b0/round1_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-development-modes-01/modes/DEVELOPMENT-llm-only-e1-b1/round1_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-development-modes-01/modes/DEVELOPMENT-llm-only-e1-b2/round1_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-development-modes-02/manifest.json",
+      "lines": [
+        172
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-development-modes-02/modes/DEVELOPMENT-llm+memory+search-e1-b0/round1_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-development-modes-02/modes/DEVELOPMENT-llm+memory+search-e1-b0/round2_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-development-modes-02/modes/DEVELOPMENT-llm+memory+search-e1-b0/round3_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-development-modes-02/modes/DEVELOPMENT-llm+memory+search-e1-b1/round1_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-development-modes-02/modes/DEVELOPMENT-llm+memory+search-e1-b1/round2_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-development-modes-02/modes/DEVELOPMENT-llm+memory+search-e1-b1/round3_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-development-modes-02/modes/DEVELOPMENT-llm+memory+search-e1-b2/round1_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-development-modes-02/modes/DEVELOPMENT-llm+memory+search-e1-b2/round2_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-development-modes-02/modes/DEVELOPMENT-llm+memory+search-e1-b2/round3_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-development-modes-02/modes/DEVELOPMENT-llm+search-e1-b0/round1_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-development-modes-02/modes/DEVELOPMENT-llm+search-e1-b0/round2_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-development-modes-02/modes/DEVELOPMENT-llm+search-e1-b0/round3_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-development-modes-02/modes/DEVELOPMENT-llm+search-e1-b1/round1_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-development-modes-02/modes/DEVELOPMENT-llm+search-e1-b1/round2_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-development-modes-02/modes/DEVELOPMENT-llm+search-e1-b1/round3_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-development-modes-02/modes/DEVELOPMENT-llm+search-e1-b2/round1_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-development-modes-02/modes/DEVELOPMENT-llm+search-e1-b2/round2_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-development-modes-02/modes/DEVELOPMENT-llm+search-e1-b2/round3_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-development-modes-02/modes/DEVELOPMENT-llm-only-e1-b0/round1_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-development-modes-02/modes/DEVELOPMENT-llm-only-e1-b1/round1_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-development-modes-02/modes/DEVELOPMENT-llm-only-e1-b2/round1_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-development-orders-01/manifest.json",
+      "lines": [
+        68122
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-development-orders-02/manifest.json",
+      "lines": [
+        68122
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-development-parameters-01/manifest.json",
+      "lines": [
+        13462
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-development-parameters-02/manifest.json",
+      "lines": [
+        13462
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-engineering-smoke-01/manifest.json",
+      "lines": [
+        379
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-evaluation-modes-01/manifest.json",
+      "lines": [
+        172
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm+memory+search-e1-b0/round1_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm+memory+search-e1-b0/round2_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm+memory+search-e1-b0/round3_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm+memory+search-e1-b1/round1_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm+memory+search-e1-b1/round2_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm+memory+search-e1-b1/round3_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm+memory+search-e1-b2/round1_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm+memory+search-e1-b2/round2_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm+memory+search-e1-b2/round3_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm+memory+search-e2-b0/round1_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm+memory+search-e2-b0/round2_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm+memory+search-e2-b0/round3_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm+memory+search-e2-b1/round1_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm+memory+search-e2-b1/round2_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm+memory+search-e2-b1/round3_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm+memory+search-e2-b2/round1_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm+memory+search-e2-b2/round2_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm+memory+search-e2-b2/round3_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm+memory+search-e3-b0/round1_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm+memory+search-e3-b0/round2_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm+memory+search-e3-b0/round3_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm+memory+search-e3-b1/round1_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm+memory+search-e3-b1/round2_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm+memory+search-e3-b1/round3_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm+memory+search-e3-b2/round1_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm+memory+search-e3-b2/round2_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm+memory+search-e3-b2/round3_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm+search-e1-b0/round1_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm+search-e1-b0/round2_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm+search-e1-b0/round3_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm+search-e1-b1/round1_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm+search-e1-b1/round2_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm+search-e1-b1/round3_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm+search-e1-b2/round1_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm+search-e1-b2/round2_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm+search-e1-b2/round3_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm+search-e2-b0/round1_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm+search-e2-b0/round2_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm+search-e2-b0/round3_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm+search-e2-b1/round1_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm+search-e2-b1/round2_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm+search-e2-b1/round3_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm+search-e2-b2/round1_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm+search-e2-b2/round2_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm+search-e2-b2/round3_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm+search-e3-b0/round1_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm+search-e3-b0/round2_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm+search-e3-b0/round3_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm+search-e3-b1/round1_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm+search-e3-b1/round2_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm+search-e3-b1/round3_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm+search-e3-b2/round1_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm+search-e3-b2/round2_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm+search-e3-b2/round3_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm-only-e1-b0/round1_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm-only-e1-b1/round1_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm-only-e1-b2/round1_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm-only-e2-b0/round1_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm-only-e2-b1/round1_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm-only-e2-b2/round1_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm-only-e3-b0/round1_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm-only-e3-b1/round1_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm-only-e3-b2/round1_call/attempt01/receipt.json",
+      "lines": [
+        21
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-evaluation-orders-01/manifest.json",
+      "lines": [
+        612
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-evaluation-parameters-01/manifest.json",
+      "lines": [
+        3249
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/tests_after_presentation_repair.xml",
+      "lines": [
+        1
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/tests_code_epoch02.xml",
+      "lines": [
+        1
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/tests_code_freeze.xml",
+      "lines": [
+        1
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/evidence/goal2/tests_preproduction.xml",
+      "lines": [
+        1
+      ],
+      "classification": "HISTORICAL_OR_CURRENT_EXECUTION_EVIDENCE"
+    },
+    {
+      "path": "task1/figures/goal2/raster_checks.log",
+      "lines": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "classification": "REPRODUCTION_SOURCE_REQUIRES_REVIEW"
+    },
+    {
+      "path": "task1/workflow/g2_provider.py",
+      "lines": [
+        17
+      ],
+      "classification": "REPRODUCTION_SOURCE_REQUIRES_REVIEW"
+    }
+  ],
+  "absolute_path_note": "Evidence records retain observed command/trace paths. Only reproduction sources and Notebook code require portability review; no evidence was altered.",
+  "local_link_scope": "Parsed CommonMark links and images: local file existence checked; fragments and external URLs not fetched.",
+  "local_links_checked": 149,
+  "broken_local_links": [],
+  "cache_files": [
+    {
+      "path": "task1/evidence/goal2/__pycache__/refresh_governance_dispatches.cpython-312.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/evidence/goal2/__pycache__/refresh_resource_ledger.cpython-312.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/evidence/goal2/a_epoch02/__pycache__/prepare_followup.cpython-312.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/evidence/goal2/a_epoch02/__pycache__/prepare_readiness.cpython-312.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/evidence/goal2/a_epoch02/__pycache__/verify_ai_tradeoff_analysis.cpython-312.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/evidence/goal2/a_epoch02/actual_ai_critique/__pycache__/build_actual_ai_critique.cpython-312.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/evidence/goal2/a_epoch02/final_analysis/__pycache__/verify_final_analysis.cpython-312.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/evidence/goal2/a_epoch02/heldout_single_confirmation/__pycache__/build_confirmation.cpython-312.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/evidence/goal2/c_contract/__pycache__/compare_deterministic_epochs.cpython-312.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/evidence/goal2/c_contract/__pycache__/independent_numeric.cpython-312.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/evidence/goal2/c_contract/__pycache__/review_actual_ai_critique.cpython-312.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/evidence/goal2/c_contract/__pycache__/review_coordinate_sensitivity.cpython-312.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/evidence/goal2/c_contract/__pycache__/review_counterexamples.cpython-312.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/evidence/goal2/c_contract/__pycache__/review_development_runs.cpython-312.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/evidence/goal2/c_contract/__pycache__/review_evaluation_modes.cpython-312.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/evidence/goal2/c_contract/__pycache__/review_evaluation_runs.cpython-312.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/evidence/goal2/c_contract/__pycache__/review_final_analysis.cpython-312.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/evidence/goal2/c_contract/__pycache__/review_live_modes_epoch02.cpython-312.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/evidence/goal2/c_contract/__pycache__/review_single_confirmation.cpython-312.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/evidence/goal2/c_contract/__pycache__/review_target_reconciliation.cpython-312.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/evidence/goal2/c_contract/__pycache__/test_control_independent.cpython-312-pytest-9.1.1.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/evidence/goal2/c_contract/__pycache__/test_g2_modes_independent.cpython-312-pytest-9.1.1.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/evidence/goal2/c_contract/__pycache__/test_g2_provenance_independent.cpython-312-pytest-9.1.1.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/evidence/goal2/release_checks/__pycache__/scan_release.cpython-312.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/scripts/__pycache__/build_complete_figures.cpython-312.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/scripts/__pycache__/build_goal1_figures.cpython-312.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/scripts/__pycache__/build_goal1_notebooks.cpython-312.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/scripts/__pycache__/build_goal2_analysis.cpython-312.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/scripts/__pycache__/build_goal2_figures.cpython-312.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/scripts/__pycache__/build_goal2_notebooks.cpython-312.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/scripts/__pycache__/build_repair_figures.cpython-312.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/scripts/__pycache__/complete_goal1.cpython-312.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/scripts/__pycache__/goal2.cpython-312.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/scripts/__pycache__/goal2_coordinate_sensitivity.cpython-312.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/scripts/__pycache__/goal2_counterexamples.cpython-312.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/scripts/__pycache__/recompute_archived_run.cpython-312.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/scripts/__pycache__/repair_goal1.cpython-312.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/tests/__pycache__/test_baseline_trust.cpython-312-pytest-9.1.1.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/tests/__pycache__/test_baseline_trust.cpython-312.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/tests/__pycache__/test_control.cpython-312-pytest-9.1.1.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/tests/__pycache__/test_control.cpython-312.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/tests/__pycache__/test_coordinates.cpython-312-pytest-9.1.1.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/tests/__pycache__/test_coordinates.cpython-312.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/tests/__pycache__/test_evaluation.cpython-312-pytest-9.1.1.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/tests/__pycache__/test_evaluation.cpython-312.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/tests/__pycache__/test_g2_coordinate_sensitivity.cpython-312-pytest-9.1.1.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/tests/__pycache__/test_g2_coordinate_sensitivity.cpython-312.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/tests/__pycache__/test_g2_counterexamples.cpython-312-pytest-9.1.1.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/tests/__pycache__/test_g2_modes.cpython-312-pytest-9.1.1.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/tests/__pycache__/test_g2_pipeline.cpython-312-pytest-9.1.1.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/tests/__pycache__/test_geometry.cpython-312-pytest-9.1.1.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/tests/__pycache__/test_geometry.cpython-312.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/tests/__pycache__/test_goal_completion.cpython-312-pytest-9.1.1.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/tests/__pycache__/test_goal_completion.cpython-312.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/tests/__pycache__/test_repair.cpython-312-pytest-9.1.1.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/tests/__pycache__/test_repair.cpython-312.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/workflow/__pycache__/__init__.cpython-312.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/workflow/__pycache__/__main__.cpython-312.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/workflow/__pycache__/artifact_review.cpython-312.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/workflow/__pycache__/budget.cpython-312.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/workflow/__pycache__/controller.cpython-312.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/workflow/__pycache__/coordinate_review.cpython-312.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/workflow/__pycache__/coordinates.cpython-312.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/workflow/__pycache__/diagnostics.cpython-312.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/workflow/__pycache__/evaluation.cpython-312.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/workflow/__pycache__/g2_data.cpython-312.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/workflow/__pycache__/g2_experiments.cpython-312.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/workflow/__pycache__/g2_journal.cpython-312.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/workflow/__pycache__/g2_memory.cpython-312.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/workflow/__pycache__/g2_metrics.cpython-312.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/workflow/__pycache__/g2_modes.cpython-312.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/workflow/__pycache__/g2_pipeline.cpython-312.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/workflow/__pycache__/g2_provider.cpython-312.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/workflow/__pycache__/g2_selection.cpython-312.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/workflow/__pycache__/geometry.cpython-312.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/workflow/__pycache__/goal.cpython-312.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/workflow/__pycache__/inventory.cpython-312.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/workflow/__pycache__/io.cpython-312.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/workflow/__pycache__/pipeline.cpython-312.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/workflow/__pycache__/provider.cpython-312.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/workflow/__pycache__/recompute.cpython-312.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/workflow/__pycache__/sources.cpython-312.pyc",
+      "tracked": false,
+      "ignored": true
+    },
+    {
+      "path": "task1/workflow/__pycache__/tools.cpython-312.pyc",
+      "tracked": false,
+      "ignored": true
+    }
+  ],
+  "ignored_substantive_files_need_explicit_staging_review": [
+    "task1/evidence/goal2/a_epoch02/actual_ai_critique/root_rebuild.log",
+    "task1/evidence/goal2/a_epoch02/final_analysis/build.log",
+    "task1/evidence/goal2/c_contract/candidate_figure_review.log",
+    "task1/evidence/goal2/c_contract/candidate_figure_review_02.log",
+    "task1/evidence/goal2/c_contract/candidate_figure_review_03.log",
+    "task1/evidence/goal2/c_contract/case_config_review.log",
+    "task1/evidence/goal2/c_contract/case_config_review_02.log",
+    "task1/evidence/goal2/c_contract/development_modes_epoch02_full_review.log",
+    "task1/evidence/goal2/c_contract/development_modes_epoch02_llmonly_b0.log",
+    "task1/evidence/goal2/c_contract/development_modes_epoch02_llmonly_b1.log",
+    "task1/evidence/goal2/c_contract/development_modes_epoch02_memory_b0.log",
+    "task1/evidence/goal2/c_contract/development_modes_epoch02_search_b0.log",
+    "task1/evidence/goal2/c_contract/development_modes_first_episode.log",
+    "task1/evidence/goal2/c_contract/development_modes_search_first_episode.log",
+    "task1/evidence/goal2/c_contract/development_orders_epoch02_review.log",
+    "task1/evidence/goal2/c_contract/development_orders_review.log",
+    "task1/evidence/goal2/c_contract/development_parameters_epoch02_review.log",
+    "task1/evidence/goal2/c_contract/development_parameters_review.log",
+    "task1/evidence/goal2/c_contract/evaluation_modes_feedback_early_review.log",
+    "task1/evidence/goal2/c_contract/evaluation_modes_feedback_mid_review.log",
+    "task1/evidence/goal2/c_contract/evaluation_modes_llmonly_e1_b0_review.log",
+    "task1/evidence/goal2/c_contract/evaluation_modes_llmonly_early_review.log",
+    "task1/evidence/goal2/c_contract/evaluation_modes_memory_e1_b0_review.log",
+    "task1/evidence/goal2/c_contract/evaluation_modes_search_e1_b0_review.log",
+    "task1/evidence/goal2/c_contract/evaluation_orders_review.log",
+    "task1/evidence/goal2/c_contract/evaluation_parameters_review.log",
+    "task1/evidence/goal2/c_contract/memory_epoch02_review.log",
+    "task1/evidence/goal2/c_contract/memory_review.log",
+    "task1/evidence/goal2/c_contract/receipt_target_review.log",
+    "task1/evidence/goal2/c_contract/single_candidate_confirmation_review.log",
+    "task1/evidence/goal2/logs/candidate_lock_02.log",
+    "task1/evidence/goal2/logs/coordinate_development_02.log",
+    "task1/evidence/goal2/logs/coordinate_evaluation_01.log",
+    "task1/evidence/goal2/logs/g2-demo-memory-01.log",
+    "task1/evidence/goal2/logs/g2-demo-memory-02.log",
+    "task1/evidence/goal2/logs/g2-development-modes-01.log",
+    "task1/evidence/goal2/logs/g2-development-modes-02.log",
+    "task1/evidence/goal2/logs/g2-development-orders-01.log",
+    "task1/evidence/goal2/logs/g2-development-orders-02.log",
+    "task1/evidence/goal2/logs/g2-development-parameters-01.log",
+    "task1/evidence/goal2/logs/g2-development-parameters-02.log",
+    "task1/evidence/goal2/logs/g2-evaluation-modes-01.log",
+    "task1/evidence/goal2/logs/g2-evaluation-orders-01.log",
+    "task1/evidence/goal2/logs/g2-evaluation-parameters-01.log",
+    "task1/evidence/goal2/logs/tests_after_presentation_repair.log",
+    "task1/evidence/goal2/logs/tests_final_sources.log",
+    "task1/evidence/goal2/notebook_checks/formal_launch_01.log",
+    "task1/evidence/goal2/notebook_runs/fresh-01/01_parameters_and_orders/execution.log",
+    "task1/evidence/goal2/notebook_runs/fresh-01/02_real_modes_and_memory/execution.log",
+    "task1/evidence/goal2/notebook_runs/fresh-01/03_candidates_counterexamples_and_cases/execution.log",
+    "task1/evidence/goal2/presentation_checks/candidate_preview_02/after/raster_checks.log",
+    "task1/evidence/goal2/presentation_checks/candidate_preview_02/before/raster_checks.log",
+    "task1/evidence/goal2/presentation_checks/candidate_preview_02/preview_initial.log",
+    "task1/evidence/goal2/presentation_checks/candidate_preview_02/preview_repaired.log",
+    "task1/evidence/goal2/presentation_checks/candidate_preview_02/preview_repaired_02.log",
+    "task1/evidence/goal2/presentation_checks/case_configuration_labels/after/raster_checks.log",
+    "task1/evidence/goal2/presentation_checks/case_configuration_labels/before/raster_checks.log",
+    "task1/evidence/goal2/presentation_checks/case_configuration_labels/execution.log",
+    "task1/evidence/goal2/presentation_checks/formal_01/execution.log",
+    "task1/evidence/goal2/presentation_checks/formal_mode_layout/before/raster_checks.log",
+    "task1/evidence/goal2/presentation_checks/formal_mode_layout/rebuild.log",
+    "task1/evidence/goal2/presentation_checks/parameter_preview_01/initial/raster_checks.log",
+    "task1/evidence/goal2/presentation_checks/parameter_preview_01/repaired/raster_checks.log",
+    "task1/figures/goal2/raster_checks.log"
+  ],
+  "notebook_error_cells": [],
+  "protected_tracked_files": 900,
+  "protected_user_zip_files": [
+    {
+      "path": "SC-LAB1-G1-COMPLETE-001_HANDOFF.zip",
+      "startup_sha256": "95d467b764b0c358e5248ed5392c4d8704a3767f6a907f56a76527d0c50a8c68",
+      "current_sha256": "95d467b764b0c358e5248ed5392c4d8704a3767f6a907f56a76527d0c50a8c68",
+      "unchanged": true,
+      "currently_git_tracked": false
+    },
+    {
+      "path": "SC-LAB1-G1-REPAIR-001_HANDOFF.zip",
+      "startup_sha256": "e79ea04a803d2b49bed4699e1609412f8d615b209d529a9b816991188cb09fea",
+      "current_sha256": "e79ea04a803d2b49bed4699e1609412f8d615b209d529a9b816991188cb09fea",
+      "unchanged": true,
+      "currently_git_tracked": true
+    },
+    {
+      "path": "SC-LAB1-G1-CLOSURE-002_HANDOFF.zip",
+      "startup_sha256": "43db2c0316f7773bb568cc335ba563b29c013f41a4bf82ba74b1c36e90add4fe",
+      "current_sha256": "43db2c0316f7773bb568cc335ba563b29c013f41a4bf82ba74b1c36e90add4fe",
+      "unchanged": true,
+      "currently_git_tracked": false
+    }
+  ],
+  "changed_protected_files": [],
+  "protected_receipt_sha256": "11f918bbb78a30b8d9e88c2a5557a2d40f26a07de2e244dc4f1dc5f72a4a2d8e",
+  "inventory_sha256": "3d1beda031a23965043b8d7dfeec1c5712acc9b456d9d1506611c723955dc0b4",
+  "bundle_check": {
+    "command": ".venv/bin/python evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/sync_sources.py --check",
+    "exit_code": 0,
+    "output_sha256": "0bf7633d08da538eca695c79fce48748948c4a1fa34c1753073d68721d500beb"
+  },
+  "dependency_record": {
+    "path": "task1/evidence/goal2/environment_record.json",
+    "sha256": "dee72dc5b7e172e1ad02bc6bed14005ae1a2998a061d96d31fbf9752911b104a",
+    "registered_installations": {
+      "new_system_packages": [],
+      "new_language_packages": [],
+      "new_toolchains": [],
+      "shell_or_environment_config_changes": []
+    },
+    "package_version_checks": [
+      {
+        "package": "numpy",
+        "recorded": "1.26.4",
+        "installed": "1.26.4",
+        "matches": true
+      },
+      {
+        "package": "scipy",
+        "recorded": "1.11.4",
+        "installed": "1.11.4",
+        "matches": true
+      },
+      {
+        "package": "pandas",
+        "recorded": null,
+        "installed": null,
+        "matches": true
+      },
+      {
+        "package": "matplotlib",
+        "recorded": "3.6.3",
+        "installed": "3.6.3",
+        "matches": true
+      },
+      {
+        "package": "Pillow",
+        "recorded": "10.2.0",
+        "installed": "10.2.0",
+        "matches": true
+      },
+      {
+        "package": "nbformat",
+        "recorded": "5.11.1",
+        "installed": "5.11.1",
+        "matches": true
+      },
+      {
+        "package": "nbclient",
+        "recorded": "0.11.0",
+        "installed": "0.11.0",
+        "matches": true
+      },
+      {
+        "package": "ipykernel",
+        "recorded": "7.3.0",
+        "installed": "7.3.0",
+        "matches": true
+      },
+      {
+        "package": "pytest",
+        "recorded": "9.1.1",
+        "installed": "9.1.1",
+        "matches": true
+      },
+      {
+        "package": "pyproj",
+        "recorded": "3.7.2",
+        "installed": "3.7.2",
+        "matches": true
+      },
+      {
+        "package": "jsonschema",
+        "recorded": "4.10.3",
+        "installed": "4.10.3",
+        "matches": true
+      }
+    ],
+    "scanner_extra_existing_dependency": {
+      "markdown-it-py": "3.0.0"
+    }
+  },
+  "mutated_during_read": [],
+  "created_during_scan": [
+    "task1/evidence/goal2/a_epoch02/final_handoff_check/FINAL_RESPONSE.md.source.txt",
+    "task1/evidence/goal2/a_epoch02/final_handoff_check/PROCESS_RECORD.md.source.txt",
+    "task1/evidence/goal2/a_epoch02/final_handoff_check/REVIEW_PACKET.md.source.txt",
+    "task1/evidence/goal2/a_epoch02/final_handoff_check/read_cutoff.json",
+    "task1/evidence/goal2/c_contract/final_all_tests.log",
+    "task1/evidence/goal2/c_contract/final_all_tests.xml",
+    "task1/evidence/goal2/c_contract/final_all_tests_execution.json",
+    "task1/evidence/goal2/c_contract/final_notebook_independent_checks_v2.json",
+    "task1/evidence/goal2/c_contract/final_representative_raw_receipt.json",
+    "task1/evidence/goal2/c_contract/final_representative_raw_recheck.py",
+    "task1/evidence/goal2/c_contract/notebook_confirmation_closure_receipt_v2.json",
+    "task1/evidence/goal2/c_contract/notebooks_complete_receipt_v2.json",
+    "task1/evidence/goal2/c_contract/review_final_notebooks_before_schema_fix.py"
+  ],
+  "running_runs": [
+    {
+      "run_id": "g2-development-modes-01",
+      "listed_in_superseded_registry": true
+    }
+  ],
+  "remaining_final_checks": [
+    "Repeat this script after all real mode/evaluation runs and current artifacts are frozen.",
+    "Independently verify complete acceptance, final Notebook Run All, figure source/version bindings and actual visual review.",
+    "Recheck final diff and staged contents, including substantive ignored logs; never stage caches or user ZIPs implicitly.",
+    "Verify fixed CODE_SHA/ARTIFACT_SHA and actual pushed remote files after authorized publication."
+  ],
+  "scope_limits": [
+    "Static engineering publication preparation is not scientific acceptance or permission to publish.",
+    "Cache files are reported and left untouched; original files and archives are only read.",
+    "Package inventory is checked against the recorded reused environment; this script performs no installations."
+  ]
+}

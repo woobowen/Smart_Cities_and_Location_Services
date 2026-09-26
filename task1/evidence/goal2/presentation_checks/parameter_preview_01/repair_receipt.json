@@ -1,0 +1,362 @@
+{
+  "issue_id": "G2-B-FIGURE-001",
+  "parent_task": "figures",
+  "classification": "LAYOUT_ENGINEERING_PREVIEW_FROM_REAL_DEVELOPMENT_RUNS",
+  "recorded_at": "2026-09-26T19:39:28.476833+00:00",
+  "repairer": "/root/b_engine",
+  "independent_reviewer": "PENDING_C",
+  "status": "REBUILT_REVIEW_PENDING",
+  "required_independent_closure": "C must inspect archived defect/fixed evidence and final complete figure set; this B self-check does not close the issue.",
+  "scope": {
+    "partition": "DEVELOPMENT",
+    "records": 120,
+    "raw_points": 11777,
+    "parameter_configurations": 59,
+    "orders": 6,
+    "modes_or_eval_used": false,
+    "new_model_calls": 0
+  },
+  "matplotlib_version": "3.6.3",
+  "source_before_sha256": "d667c78d2ec00d666404ff0f4d6b7ba924b7a07d22aed19f45e2a4fb22a0bb33",
+  "source_after_sha256": "d3171f14677c16a465f32e3ff89387f4bb3fb9f981acdb71145c418fcf5b1c76",
+  "changed_source_files": [
+    "task1/scripts/build_goal2_figures.py"
+  ],
+  "processing_or_contract_changes": false,
+  "formal_experiment_invalidation_required": false,
+  "attempts": [
+    {
+      "preview": "sc-g2-parameter-preview-01",
+      "exit_code": 0,
+      "figures": 5,
+      "visual_result": "DEFECTS_OBSERVED"
+    },
+    {
+      "preview": "sc-g2-parameter-preview-02",
+      "exit_code": 1,
+      "visual_result": "PARTIAL_REBUILD",
+      "error_record": "preview_02_tool_error.txt",
+      "error": "Matplotlib 3.6.3 does not accept legend location outside lower center.",
+      "error_record_sha256": "36f5aea49121ca219cfe417456a9619c43cd588b244a072de3e39fd298d9d73b"
+    },
+    {
+      "preview": "sc-g2-parameter-preview-03",
+      "exit_code": 0,
+      "figures": 5,
+      "raster_check": "PASSED",
+      "visual_result": "B_SELF_CHECK_ACCEPTABLE"
+    }
+  ],
+  "repairs": [
+    "Use flat pcolormesh cells for exact categorical grid rendering in vector PDF.",
+    "Keep equal spatial scale with adjustable data limits; move direction legend away from the trajectory.",
+    "Bind input summary tables to manifest SHA256 before plotting.",
+    "Use supported axis legends everywhere; no remaining outside lower center calls.",
+    "Add registered sweep ticks, input denominators, common-protection colour legend and integer count ticks."
+  ],
+  "checks": [
+    {
+      "run_id": "g2-development-parameters-01",
+      "table": "parameter_table.json",
+      "table_sha256": "f4878603b44c461fab1ab0535cd57d586e0f16faf6671562cb755ffc808f529d",
+      "rows_bound_to_manifest_artifacts": 59,
+      "status": "PASSED"
+    },
+    {
+      "run_id": "g2-development-orders-01",
+      "table": "order_table.json",
+      "table_sha256": "cef461d45653fb3f8e1deaf23763944b3619db6046353adee9ebbf660ce223ac",
+      "rows_bound_to_manifest_artifacts": 6,
+      "status": "PASSED"
+    },
+    {
+      "test_context": "ENGINEERING_TEST_TEMPORARY_COPY",
+      "case": "changed_table",
+      "status": "REJECTED_AS_EXPECTED",
+      "reason": "UNBOUND_OR_CHANGED_PLOT_TABLE:table.json"
+    },
+    {
+      "test_context": "ENGINEERING_TEST_TEMPORARY_COPY",
+      "case": "missing_manifest_binding",
+      "status": "REJECTED_AS_EXPECTED",
+      "reason": "UNBOUND_OR_CHANGED_PLOT_TABLE:table.json"
+    }
+  ],
+  "figure_data_before_sha256": "585aac19aeacca69790751cb5fadeba091a85a46c3e0ecada40c4a20588e84a8",
+  "figure_data_after_sha256": "585aac19aeacca69790751cb5fadeba091a85a46c3e0ecada40c4a20588e84a8",
+  "figure_data_bytes_unchanged": true,
+  "actual_image_views": [
+    {
+      "figure": "segmentation_filter_response",
+      "stage": "initial",
+      "format": "PNG_300_DPI",
+      "sha256": "538af57661458034971419d31edbd57e0fca548ffd182026b6b88cbaa571825c",
+      "method": "Actual tools.view_image output inspected by /root/b_engine",
+      "observation": "Readable without clipping; sweep coordinates were not all explicitly ticked.",
+      "status": "INSPECTED"
+    },
+    {
+      "figure": "segmentation_filter_response",
+      "stage": "initial",
+      "format": "PDF_RENDER_200_DPI",
+      "sha256": "e23206fcc2ac36cd22ebbe90463b01db481daad8856b837c7665c06e67a55508",
+      "method": "Actual tools.view_image output inspected by /root/b_engine",
+      "observation": "Readable without clipping; sweep coordinates were not all explicitly ticked.",
+      "status": "INSPECTED"
+    },
+    {
+      "figure": "segmentation_filter_response",
+      "stage": "repaired",
+      "format": "PNG_300_DPI",
+      "sha256": "e0a58ccbb1a3d3754f130b74c1842ae9989597cfde5acb602ecda3cb25052327",
+      "method": "Actual tools.view_image output inspected by /root/b_engine",
+      "observation": "All registered x values are ticked; title states 120 records and 11,777 raw points. Both fractions retain distinct denominators.",
+      "status": "SELF_CHECK_ACCEPTABLE"
+    },
+    {
+      "figure": "segmentation_filter_response",
+      "stage": "repaired",
+      "format": "PDF_RENDER_200_DPI",
+      "sha256": "79f24a5ac347773ba6fd00e64b0b34b5962c73478ea4e076c8c82059bac54720",
+      "method": "Actual tools.view_image output inspected by /root/b_engine",
+      "observation": "All registered x values are ticked; title states 120 records and 11,777 raw points. Both fractions retain distinct denominators.",
+      "status": "SELF_CHECK_ACCEPTABLE"
+    },
+    {
+      "figure": "segmentation_filter_grids",
+      "stage": "initial",
+      "format": "PNG_300_DPI",
+      "sha256": "7c098cc8431e982a4a7a491d11031bd8aa6686098a216df00184b241e9ee5c4c",
+      "method": "Actual tools.view_image output inspected by /root/b_engine",
+      "observation": "PNG grid readable; PDF 200 dpi render showed diagonal bands/white diagonal lines absent from the numerical 5 by 5 cell data.",
+      "status": "DEFECT_OBSERVED"
+    },
+    {
+      "figure": "segmentation_filter_grids",
+      "stage": "initial",
+      "format": "PDF_RENDER_200_DPI",
+      "sha256": "d3a8afb0e68a0348934bc33082c1a10f7eb05417acd38a21d5a64cbeeef2bc4d",
+      "method": "Actual tools.view_image output inspected by /root/b_engine",
+      "observation": "PNG grid readable; PDF 200 dpi render showed diagonal bands/white diagonal lines absent from the numerical 5 by 5 cell data.",
+      "status": "DEFECT_OBSERVED"
+    },
+    {
+      "figure": "segmentation_filter_grids",
+      "stage": "repaired",
+      "format": "PNG_300_DPI",
+      "sha256": "114fd20087ae92606d5ce2a4103fd406defda6ae121f01eebdf1e669a2ba958e",
+      "method": "Actual tools.view_image output inspected by /root/b_engine",
+      "observation": "Flat vector cells show no diagonal artifacts in PNG or PDF render. Both axes and 0-1 color ranges match registered grids.",
+      "status": "SELF_CHECK_ACCEPTABLE"
+    },
+    {
+      "figure": "segmentation_filter_grids",
+      "stage": "repaired",
+      "format": "PDF_RENDER_200_DPI",
+      "sha256": "062e474d1f9886436beab1b1c250be5fcdc2c52ecb4b1a8ddd4a743664cc4ecf",
+      "method": "Actual tools.view_image output inspected by /root/b_engine",
+      "observation": "Flat vector cells show no diagonal artifacts in PNG or PDF render. Both axes and 0-1 color ranges match registered grids.",
+      "status": "SELF_CHECK_ACCEPTABLE"
+    },
+    {
+      "figure": "direction_threshold_and_neighborhood",
+      "stage": "initial",
+      "format": "PNG_300_DPI",
+      "sha256": "393fec49e844c2f73b529379c553049ac4dc353b7594f5b3b913a18ba0e9f552",
+      "method": "Actual tools.view_image output inspected by /root/b_engine",
+      "observation": "Equal-aspect box collapsed the local path to a thin strip; legend overlaid the path.",
+      "status": "DEFECT_OBSERVED"
+    },
+    {
+      "figure": "direction_threshold_and_neighborhood",
+      "stage": "initial",
+      "format": "PDF_RENDER_200_DPI",
+      "sha256": "8e6979ac7eaec3f8ff27a8526739ad21797a33e9024a27596c509930cb7ea392",
+      "method": "Actual tools.view_image output inspected by /root/b_engine",
+      "observation": "Equal-aspect box collapsed the local path to a thin strip; legend overlaid the path.",
+      "status": "DEFECT_OBSERVED"
+    },
+    {
+      "figure": "direction_threshold_and_neighborhood",
+      "stage": "repaired",
+      "format": "PNG_300_DPI",
+      "sha256": "e6b2c495beb5d63eec10acbc13ee2809797c0e7115b2e9c78f5c26a0c9073422",
+      "method": "Actual tools.view_image output inspected by /root/b_engine",
+      "observation": "Equal data scaling retained with adjustable data limits; full panel and upper-left legend leave the path visible. Original record 10000, deleted index 4 is unchanged.",
+      "status": "SELF_CHECK_ACCEPTABLE"
+    },
+    {
+      "figure": "direction_threshold_and_neighborhood",
+      "stage": "repaired",
+      "format": "PDF_RENDER_200_DPI",
+      "sha256": "7fca5f51506590b7e6d0aa17b9e6b6cd2113302a9258f28e16cfd2043d1ba66f",
+      "method": "Actual tools.view_image output inspected by /root/b_engine",
+      "observation": "Equal data scaling retained with adjustable data limits; full panel and upper-left legend leave the path visible. Original record 10000, deleted index 4 is unchanged.",
+      "status": "SELF_CHECK_ACCEPTABLE"
+    },
+    {
+      "figure": "dp_error_compression",
+      "stage": "initial",
+      "format": "PNG_300_DPI",
+      "sha256": "f7d51745cf774f8f5d6e890e9ec6fc9a9b6e29642ffcbc90cad2c3c88602ef6f",
+      "method": "Actual tools.view_image output inspected by /root/b_engine",
+      "observation": "PNG/PDF labels, seven tolerance annotations, zero-tolerance endpoint, and 5-working-metre budget line readable.",
+      "status": "INSPECTED"
+    },
+    {
+      "figure": "dp_error_compression",
+      "stage": "initial",
+      "format": "PDF_RENDER_200_DPI",
+      "sha256": "16722d876ecca02da8e8df9d6f113cdb0d1bed9782a7f14466a4946fdda99e87",
+      "method": "Actual tools.view_image output inspected by /root/b_engine",
+      "observation": "PNG/PDF labels, seven tolerance annotations, zero-tolerance endpoint, and 5-working-metre budget line readable.",
+      "status": "INSPECTED"
+    },
+    {
+      "figure": "dp_error_compression",
+      "stage": "repaired",
+      "format": "PNG_300_DPI",
+      "sha256": "f7d51745cf774f8f5d6e890e9ec6fc9a9b6e29642ffcbc90cad2c3c88602ef6f",
+      "method": "Actual tools.view_image output inspected by /root/b_engine",
+      "observation": "Unchanged data/layout; same complete seven-tolerance series readable in both formats. P input denominator remains distinct from raw retention.",
+      "status": "SELF_CHECK_ACCEPTABLE"
+    },
+    {
+      "figure": "dp_error_compression",
+      "stage": "repaired",
+      "format": "PDF_RENDER_200_DPI",
+      "sha256": "16722d876ecca02da8e8df9d6f113cdb0d1bed9782a7f14466a4946fdda99e87",
+      "method": "Actual tools.view_image output inspected by /root/b_engine",
+      "observation": "Unchanged data/layout; same complete seven-tolerance series readable in both formats. P input denominator remains distinct from raw retention.",
+      "status": "SELF_CHECK_ACCEPTABLE"
+    },
+    {
+      "figure": "order_protection_and_neighborhoods",
+      "stage": "initial",
+      "format": "PNG_300_DPI",
+      "sha256": "d8f753be6a41f802fe2070a52c12f9898012805a949d437d63701156276c86d4",
+      "method": "Actual tools.view_image output inspected by /root/b_engine",
+      "observation": "All six orders shown; colour meaning needed a visible legend and count axes used fractional ticks.",
+      "status": "DEFECT_OBSERVED"
+    },
+    {
+      "figure": "order_protection_and_neighborhoods",
+      "stage": "initial",
+      "format": "PDF_RENDER_200_DPI",
+      "sha256": "50445f83a7514f3123c93568797aca0724dcf133103266609fcac10adf83a821",
+      "method": "Actual tools.view_image output inspected by /root/b_engine",
+      "observation": "All six orders shown; colour meaning needed a visible legend and count axes used fractional ticks.",
+      "status": "DEFECT_OBSERVED"
+    },
+    {
+      "figure": "order_protection_and_neighborhoods",
+      "stage": "repaired",
+      "format": "PNG_300_DPI",
+      "sha256": "8b150a234295b081982c9c2b83140a3928e9f558053f62e0d89c33a08737a730",
+      "method": "Actual tools.view_image output inspected by /root/b_engine",
+      "observation": "Common-protection legend visible, fraction axis spans 0-1, count axes use integer ticks. Rejection/coverage values match the order table.",
+      "status": "SELF_CHECK_ACCEPTABLE"
+    },
+    {
+      "figure": "order_protection_and_neighborhoods",
+      "stage": "repaired",
+      "format": "PDF_RENDER_200_DPI",
+      "sha256": "aabf5bf39f2a3d1a32ffa957619a5b89c8376173f9fc1c86c8cde611aa00c659",
+      "method": "Actual tools.view_image output inspected by /root/b_engine",
+      "observation": "Common-protection legend visible, fraction axis spans 0-1, count axes use integer ticks. Rejection/coverage values match the order table.",
+      "status": "SELF_CHECK_ACCEPTABLE"
+    }
+  ],
+  "archived_images": [
+    {
+      "stage": "initial",
+      "file": "task1/evidence/goal2/presentation_checks/parameter_preview_01/initial/segmentation_filter_grids.png",
+      "sha256": "7c098cc8431e982a4a7a491d11031bd8aa6686098a216df00184b241e9ee5c4c",
+      "original_name": "segmentation_filter_grids.png",
+      "copied_bytes_unchanged": true
+    },
+    {
+      "stage": "initial",
+      "file": "task1/evidence/goal2/presentation_checks/parameter_preview_01/initial/segmentation_filter_grids_pdf_render_200dpi.png",
+      "sha256": "d3a8afb0e68a0348934bc33082c1a10f7eb05417acd38a21d5a64cbeeef2bc4d",
+      "original_name": "pdf-render-200dpi/segmentation_filter_grids.png",
+      "copied_bytes_unchanged": true
+    },
+    {
+      "stage": "initial",
+      "file": "task1/evidence/goal2/presentation_checks/parameter_preview_01/initial/direction_threshold_and_neighborhood.png",
+      "sha256": "393fec49e844c2f73b529379c553049ac4dc353b7594f5b3b913a18ba0e9f552",
+      "original_name": "direction_threshold_and_neighborhood.png",
+      "copied_bytes_unchanged": true
+    },
+    {
+      "stage": "initial",
+      "file": "task1/evidence/goal2/presentation_checks/parameter_preview_01/initial/direction_threshold_and_neighborhood_pdf_render_200dpi.png",
+      "sha256": "8e6979ac7eaec3f8ff27a8526739ad21797a33e9024a27596c509930cb7ea392",
+      "original_name": "pdf-render-200dpi/direction_threshold_and_neighborhood.png",
+      "copied_bytes_unchanged": true
+    },
+    {
+      "stage": "initial",
+      "file": "task1/evidence/goal2/presentation_checks/parameter_preview_01/initial/order_protection_and_neighborhoods.png",
+      "sha256": "d8f753be6a41f802fe2070a52c12f9898012805a949d437d63701156276c86d4",
+      "original_name": "order_protection_and_neighborhoods.png",
+      "copied_bytes_unchanged": true
+    },
+    {
+      "stage": "initial",
+      "file": "task1/evidence/goal2/presentation_checks/parameter_preview_01/initial/order_protection_and_neighborhoods_pdf_render_200dpi.png",
+      "sha256": "50445f83a7514f3123c93568797aca0724dcf133103266609fcac10adf83a821",
+      "original_name": "pdf-render-200dpi/order_protection_and_neighborhoods.png",
+      "copied_bytes_unchanged": true
+    },
+    {
+      "stage": "repaired",
+      "file": "task1/evidence/goal2/presentation_checks/parameter_preview_01/repaired/segmentation_filter_grids.png",
+      "sha256": "114fd20087ae92606d5ce2a4103fd406defda6ae121f01eebdf1e669a2ba958e",
+      "original_name": "segmentation_filter_grids.png",
+      "copied_bytes_unchanged": true
+    },
+    {
+      "stage": "repaired",
+      "file": "task1/evidence/goal2/presentation_checks/parameter_preview_01/repaired/segmentation_filter_grids_pdf_render_200dpi.png",
+      "sha256": "062e474d1f9886436beab1b1c250be5fcdc2c52ecb4b1a8ddd4a743664cc4ecf",
+      "original_name": "pdf-render-200dpi/segmentation_filter_grids.png",
+      "copied_bytes_unchanged": true
+    },
+    {
+      "stage": "repaired",
+      "file": "task1/evidence/goal2/presentation_checks/parameter_preview_01/repaired/direction_threshold_and_neighborhood.png",
+      "sha256": "e6b2c495beb5d63eec10acbc13ee2809797c0e7115b2e9c78f5c26a0c9073422",
+      "original_name": "direction_threshold_and_neighborhood.png",
+      "copied_bytes_unchanged": true
+    },
+    {
+      "stage": "repaired",
+      "file": "task1/evidence/goal2/presentation_checks/parameter_preview_01/repaired/direction_threshold_and_neighborhood_pdf_render_200dpi.png",
+      "sha256": "7fca5f51506590b7e6d0aa17b9e6b6cd2113302a9258f28e16cfd2043d1ba66f",
+      "original_name": "pdf-render-200dpi/direction_threshold_and_neighborhood.png",
+      "copied_bytes_unchanged": true
+    },
+    {
+      "stage": "repaired",
+      "file": "task1/evidence/goal2/presentation_checks/parameter_preview_01/repaired/order_protection_and_neighborhoods.png",
+      "sha256": "8b150a234295b081982c9c2b83140a3928e9f558053f62e0d89c33a08737a730",
+      "original_name": "order_protection_and_neighborhoods.png",
+      "copied_bytes_unchanged": true
+    },
+    {
+      "stage": "repaired",
+      "file": "task1/evidence/goal2/presentation_checks/parameter_preview_01/repaired/order_protection_and_neighborhoods_pdf_render_200dpi.png",
+      "sha256": "aabf5bf39f2a3d1a32ffa957619a5b89c8376173f9fc1c86c8cde611aa00c659",
+      "original_name": "pdf-render-200dpi/order_protection_and_neighborhoods.png",
+      "copied_bytes_unchanged": true
+    }
+  ],
+  "unchecked_components": [
+    "Formal mode and G2_EVAL/candidate figures (data not yet complete).",
+    "Independent final C visual acceptance.",
+    "Drawio final export/editability in this bounded parameters-only preview."
+  ],
+  "dependency_changes": []
+}

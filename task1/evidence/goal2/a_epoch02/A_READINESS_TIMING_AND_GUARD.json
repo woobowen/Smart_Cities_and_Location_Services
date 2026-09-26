@@ -1,0 +1,42 @@
+{
+  "classification": "ACTUAL_A_SCOPE_GUARD_AND_TIMING_NOTE",
+  "recorded_at": "2026-09-26T20:34:15.148026+00:00",
+  "readiness": {
+    "path": "task1/evidence/goal2/a_epoch02/A_EVALUATION_READINESS.json",
+    "sha256": "f0d3b41519861e3a2bd912b1147872ed6ba16fe74a98f2ab3ff80b1794207d16",
+    "started_at": "2026-09-26T20:33:20.009395+00:00",
+    "ended_at": "2026-09-26T20:33:26.004333+00:00"
+  },
+  "actual_guard_event": {
+    "command": ".venv/bin/python -m task1.evidence.goal2.a_epoch02.prepare_readiness",
+    "exit_code": 1,
+    "exception_type": "ValueError",
+    "message": "A_READINESS_MUST_NOT_CONSUME_EVALUATION_RESULTS",
+    "cause": "The shared current_runs registry acquired EVAL keys after the earlier development-only observations. The guard rejected the registry before Inputs opened any evaluation manifest.",
+    "exact_event_timestamp": null,
+    "timestamp_reason": "The failed tool output retained exit/error but no wall-clock timestamp; recorded_at is the time of this note, not invented event time."
+  },
+  "recovery": {
+    "action": "Reconstruct only the already-consumed five-entry development registry and require its bytes to match the original current_runs SHA saved by the observation summary.",
+    "snapshot": {
+      "path": "task1/evidence/goal2/a_epoch02_development_registry_snapshot.json",
+      "sha256": "7690ed28d2ecc40171fba07452bae2a178cb334f96faf84b7547855dc30e1904",
+      "original_observation_at": "2026-09-26T20:28:29.841138+00:00",
+      "original_current_registry_byte_hash_reproduced": true,
+      "concurrent_root_progress": "Root registered evaluation after the development observations were collected; A finalization uses only this exact prior development registry snapshot. No evaluation manifest or method result is opened."
+    },
+    "evaluation_manifest_or_result_opened": false,
+    "new_model_or_candidate_processing_calls": 0
+  },
+  "timing_boundary": {
+    "A_readiness_finalization_after_evaluation_freeze": true,
+    "A_readiness_finalization_after_EVAL_start": true,
+    "source_for_EVAL_start": "Explicit root message received during this task; no EVAL method results were read.",
+    "root_execution_gate": "Earlier concrete A TaskPlan plus complete independent C development-mode review and C evaluation-freeze review; current A finalization is subsequent development evidence review, not retroactive pre-run permission.",
+    "freeze_path": "task1/evidence/goal2/evaluation_freeze.json",
+    "freeze_sha256": "eb61eea6948d8a1177bef512bfc03b9103ef8ecf2ee68e3d7a2407753ca8a40d",
+    "freeze_time": "2026-09-26T20:24:20.876488+00:00"
+  },
+  "no_human_approval": true,
+  "no_implementation_or_selection_change": true
+}

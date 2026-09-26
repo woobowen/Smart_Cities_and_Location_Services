@@ -1,0 +1,32 @@
+{
+  "classification": "ENGINEERING_READONLY_REMOTE_API_SMOKE_NOT_G2_PUBLICATION",
+  "started_at": "2026-09-26T22:06:46.981266+00:00",
+  "ended_at": "2026-09-26T22:06:49.811835+00:00",
+  "actual_command": [
+    "gh",
+    "api",
+    "-H",
+    "Accept: application/vnd.github.raw+json",
+    "repos/woobowen/Smart_Cities_and_Location_Services/contents/AGENTS.md?ref=a45d89f49f2041477b16485f535adc508c32f8ea"
+  ],
+  "observed_ref": "a45d89f49f2041477b16485f535adc508c32f8ea",
+  "path": "AGENTS.md",
+  "exit_code": 0,
+  "bytes": 23249,
+  "sha256": "6950ca3d95e1c599626b172eaba2c6f15f72bddcf641077e7f53415360204334",
+  "expected_sha256": "6950ca3d95e1c599626b172eaba2c6f15f72bddcf641077e7f53415360204334",
+  "exact_byte_match": true,
+  "tree_api_smoke": {
+    "command": [
+      "gh",
+      "api",
+      "repos/woobowen/Smart_Cities_and_Location_Services/git/trees/a45d89f49f2041477b16485f535adc508c32f8ea?recursive=1"
+    ],
+    "ended_at": "2026-09-26T22:07:24.163138+00:00",
+    "exit_code": 0,
+    "full_blob_count": 1136,
+    "full_tree_equal": true,
+    "truncated": false,
+    "response_sha256": "18401da585d4e2d51c9de83be4d4a7b3bd2519a0fc6dab0e57ff6d8f472787af"
+  }
+}

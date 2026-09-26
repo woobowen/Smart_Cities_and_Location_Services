@@ -1,0 +1,408 @@
+{
+  "completed_at": "2026-09-26T20:58:42.044608+00:00",
+  "resources": {
+    "experiment_model_dispatches": 1,
+    "completed_model_turns": 1,
+    "candidate_evaluations": 64,
+    "reference_assessments_outside_llm_only_decision": 0,
+    "deterministic_tool_calls": 128,
+    "cache_reads": 0,
+    "governance_role_dispatches": 0,
+    "provider_requests": "unknown",
+    "usage": [
+      {
+        "input_tokens": 18260,
+        "cached_input_tokens": 7808,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 976,
+        "reasoning_output_tokens": 66
+      }
+    ]
+  },
+  "records": {
+    "1887": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb",
+        "cfg-6599edd5fcbf75b1",
+        "cfg-b64eb945a846910c",
+        "cfg-322e68540606f046",
+        "cfg-df6f00206fb03678",
+        "cfg-65d9f66c5a9b483a",
+        "cfg-e8ff0df5800d5c3b",
+        "cfg-6b37e535e1ea2046"
+      ],
+      "stopped": false,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "1887-r1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 2,
+              "min_length": 65,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "raw_break_crossings",
+            "predicted_sign": "unchanged",
+            "reason": "With 18 raw breaks, test whether lowering min_points recovers eligible short segments. DEMO-9636 motivates this test; retained split thresholds preserve raw breaks."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "f22f8504f54d79e49b362747d3611f89fc595ab80b7e76841c76612de89917d7",
+          "executed_config_id": "cfg-6599edd5fcbf75b1",
+          "prediction": {
+            "metric_id": "raw_break_crossings",
+            "predicted_sign": "unchanged",
+            "reference_handle": "49c21348ca686c3712fec0745859cbf5f5d9efe4f70e2a1e4a4a811a9246ba4a",
+            "candidate_handle": "f0c158f026f64d9fe8e602e98b755efc1fbc88cf1ff2e7868ca7359419442832",
+            "status": "NEAR_ZERO_OR_UNCHANGED",
+            "delta": 0,
+            "observed_sign": "unchanged",
+            "evaluable": false,
+            "prediction_matches": true
+          }
+        }
+      ]
+    },
+    "10003": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb",
+        "cfg-a5483ca9cb883a91",
+        "cfg-b64eb945a846910c",
+        "cfg-322e68540606f046",
+        "cfg-df6f00206fb03678",
+        "cfg-65d9f66c5a9b483a",
+        "cfg-e8ff0df5800d5c3b",
+        "cfg-6b37e535e1ea2046"
+      ],
+      "stopped": false,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "10003-r1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 60,
+              "dp": 5
+            },
+            "metric_id": "raw_break_crossings",
+            "predicted_sign": "unchanged",
+            "reason": "Test direction 60, motivated by the verified selections in DEMO-11076 and DEMO-9600. There are no raw breaks; fidelity effects require evaluation."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "2ed509779883d2014c8b5d878e7e06910e7fe8391472262d008b77ccda9a8c88",
+          "executed_config_id": "cfg-a5483ca9cb883a91",
+          "prediction": {
+            "metric_id": "raw_break_crossings",
+            "predicted_sign": "unchanged",
+            "reference_handle": "6da40149a35ee1ca269b497a498ebca3ca5b55207732f4bda657a45866ba77b9",
+            "candidate_handle": "46eca6c2da2bf1d9e8d841c59242e7b11b1d1db88168cd7445140eb9ca17bf22",
+            "status": "NEAR_ZERO_OR_UNCHANGED",
+            "delta": 0,
+            "observed_sign": "unchanged",
+            "evaluable": false,
+            "prediction_matches": true
+          }
+        }
+      ]
+    },
+    "8424": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb",
+        "cfg-a5483ca9cb883a91",
+        "cfg-b64eb945a846910c",
+        "cfg-322e68540606f046",
+        "cfg-df6f00206fb03678",
+        "cfg-65d9f66c5a9b483a",
+        "cfg-e8ff0df5800d5c3b",
+        "cfg-6b37e535e1ea2046"
+      ],
+      "stopped": false,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "8424-r1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 60,
+              "dp": 5
+            },
+            "metric_id": "raw_break_crossings",
+            "predicted_sign": "unchanged",
+            "reason": "The delivered direction-60 demonstrations motivate an isolated direction test. No raw breaks exist; their other outcomes are not predictions for this record."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "80e9521ef380a50025967573c9d450cb98e30b2e8f3423f198124d3fd91fd2d3",
+          "executed_config_id": "cfg-a5483ca9cb883a91",
+          "prediction": {
+            "metric_id": "raw_break_crossings",
+            "predicted_sign": "unchanged",
+            "reference_handle": "cad3578bcb447b068786b026864ae928cd7c9cda05a3f36acf1fcff2b51d3ba5",
+            "candidate_handle": "e7ffec0fc3856afdba772be17c8198d78690b6c69ef6f4e467125b29823bccff",
+            "status": "NEAR_ZERO_OR_UNCHANGED",
+            "delta": 0,
+            "observed_sign": "unchanged",
+            "evaluable": false,
+            "prediction_matches": true
+          }
+        }
+      ]
+    },
+    "2225": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb",
+        "cfg-a5483ca9cb883a91",
+        "cfg-b64eb945a846910c",
+        "cfg-322e68540606f046",
+        "cfg-df6f00206fb03678",
+        "cfg-65d9f66c5a9b483a",
+        "cfg-e8ff0df5800d5c3b",
+        "cfg-6b37e535e1ea2046"
+      ],
+      "stopped": false,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "2225-r1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 60,
+              "dp": 5
+            },
+            "metric_id": "raw_break_crossings",
+            "predicted_sign": "unchanged",
+            "reason": "DEMO-2254 motivates testing direction 60 while retaining the undefined-window rule. No raw breaks exist; duplicate counts do not establish a fidelity benefit."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "5e3be46f21dcfcf5fba4bbe16bb2f11786ea14b19a9cccd472c725b73a9d2ead",
+          "executed_config_id": "cfg-a5483ca9cb883a91",
+          "prediction": {
+            "metric_id": "raw_break_crossings",
+            "predicted_sign": "unchanged",
+            "reference_handle": "ec350dbaee4b0905e2c8797c02d2033eb675cfabf55ed2408ca6e24bfeec6f61",
+            "candidate_handle": "aace153da21c9517d099df3bbdae5cb72a054f728090faf93fc63aa937997c3d",
+            "status": "NEAR_ZERO_OR_UNCHANGED",
+            "delta": 0,
+            "observed_sign": "unchanged",
+            "evaluable": false,
+            "prediction_matches": true
+          }
+        }
+      ]
+    },
+    "2064": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb",
+        "cfg-6599edd5fcbf75b1",
+        "cfg-b64eb945a846910c",
+        "cfg-322e68540606f046",
+        "cfg-df6f00206fb03678",
+        "cfg-65d9f66c5a9b483a",
+        "cfg-e8ff0df5800d5c3b",
+        "cfg-6b37e535e1ea2046"
+      ],
+      "stopped": false,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "2064-r1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 2,
+              "min_length": 65,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "raw_break_crossings",
+            "predicted_sign": "unchanged",
+            "reason": "Four raw breaks motivate testing whether the point-count filter excludes eligible short segments. Lowering min_points preserves the reference split boundaries; coverage gains remain unverified."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "50718583662919fa25a451956d285f75a7fd47b3f3691f693f840feb802f71b2",
+          "executed_config_id": "cfg-6599edd5fcbf75b1",
+          "prediction": {
+            "metric_id": "raw_break_crossings",
+            "predicted_sign": "unchanged",
+            "reference_handle": "4f331492aec73fd08c7657276929ca9051b961994936ac411fe1683cede117af",
+            "candidate_handle": "8fe01e54ca00eaea3259b4e1bb1f2670e62a8ce17436af765b06fdedf279e01f",
+            "status": "NEAR_ZERO_OR_UNCHANGED",
+            "delta": 0,
+            "observed_sign": "unchanged",
+            "evaluable": false,
+            "prediction_matches": true
+          }
+        }
+      ]
+    },
+    "7253": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb",
+        "cfg-a5483ca9cb883a91",
+        "cfg-b64eb945a846910c",
+        "cfg-322e68540606f046",
+        "cfg-df6f00206fb03678",
+        "cfg-65d9f66c5a9b483a",
+        "cfg-e8ff0df5800d5c3b",
+        "cfg-6b37e535e1ea2046"
+      ],
+      "stopped": false,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "7253-r1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 60,
+              "dp": 5
+            },
+            "metric_id": "raw_break_crossings",
+            "predicted_sign": "unchanged",
+            "reason": "Explore an isolated direction-threshold change for evaluation. No raw breaks exist, and the card does not justify predicting fidelity or compression gains."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "f0afb44b586be01f7cc85488f34684071bb27233db3a8fa9bc5b9f376f9062e5",
+          "executed_config_id": "cfg-a5483ca9cb883a91",
+          "prediction": {
+            "metric_id": "raw_break_crossings",
+            "predicted_sign": "unchanged",
+            "reference_handle": "fcf48bf5099b2899dfb85847225e488b020f671f90c5bbd6887bfd1df6091d68",
+            "candidate_handle": "807a129c8fd59d23ccbcc55e8c4fae603e036856aa830525b5164a8a7b1bebf4",
+            "status": "NEAR_ZERO_OR_UNCHANGED",
+            "delta": 0,
+            "observed_sign": "unchanged",
+            "evaluable": false,
+            "prediction_matches": true
+          }
+        }
+      ]
+    },
+    "588": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb",
+        "cfg-a5483ca9cb883a91",
+        "cfg-b64eb945a846910c",
+        "cfg-322e68540606f046",
+        "cfg-df6f00206fb03678",
+        "cfg-65d9f66c5a9b483a",
+        "cfg-e8ff0df5800d5c3b",
+        "cfg-6b37e535e1ea2046"
+      ],
+      "stopped": false,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "588-r1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 60,
+              "dp": 5
+            },
+            "metric_id": "raw_break_crossings",
+            "predicted_sign": "unchanged",
+            "reason": "DEMO-3009 and DEMO-7057 motivate testing direction 60. Keeping both split thresholds preserves the existing raw break; other effects need record-specific feedback."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "7aaec3c9cfafca77979b7a57e2b244e330fe43831db9386010cbb563f9f0f64f",
+          "executed_config_id": "cfg-a5483ca9cb883a91",
+          "prediction": {
+            "metric_id": "raw_break_crossings",
+            "predicted_sign": "unchanged",
+            "reference_handle": "3d5aba873479b035f49748a8ce5787a002cc2f941a41626970b1728d8dfa01b7",
+            "candidate_handle": "7246c247948e332f3605fc62b1f0e87f7e86650526553ddbf4fa2facee9144e2",
+            "status": "NEAR_ZERO_OR_UNCHANGED",
+            "delta": 0,
+            "observed_sign": "unchanged",
+            "evaluable": false,
+            "prediction_matches": true
+          }
+        }
+      ]
+    },
+    "8522": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb",
+        "cfg-a5483ca9cb883a91",
+        "cfg-b64eb945a846910c",
+        "cfg-322e68540606f046",
+        "cfg-df6f00206fb03678",
+        "cfg-65d9f66c5a9b483a",
+        "cfg-e8ff0df5800d5c3b",
+        "cfg-6b37e535e1ea2046"
+      ],
+      "stopped": false,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "8522-r1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 60,
+              "dp": 5
+            },
+            "metric_id": "raw_break_crossings",
+            "predicted_sign": "unchanged",
+            "reason": "DEMO-7057 motivates an isolated direction-60 test. Reference split thresholds preserve all four raw breaks; zero-time edges remain subject to the specified algorithm."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "652884c572ff62efd9a3387924af4d83de6ce981dc111cc244d9806afbb9caa0",
+          "executed_config_id": "cfg-a5483ca9cb883a91",
+          "prediction": {
+            "metric_id": "raw_break_crossings",
+            "predicted_sign": "unchanged",
+            "reference_handle": "38fe2742b45480d2778e07482c1e4315d5122883a54c61b4aefc029f46565e6e",
+            "candidate_handle": "dbba45d0f986fe80532e48a49750f9bd672f5b84723247169d7ff63e790de657",
+            "status": "NEAR_ZERO_OR_UNCHANGED",
+            "delta": 0,
+            "observed_sign": "unchanged",
+            "evaluable": false,
+            "prediction_matches": true
+          }
+        }
+      ]
+    }
+  }
+}

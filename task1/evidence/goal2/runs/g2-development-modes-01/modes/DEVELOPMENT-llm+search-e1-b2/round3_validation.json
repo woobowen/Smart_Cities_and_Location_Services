@@ -1,0 +1,190 @@
+{
+  "errors": [],
+  "accepted_record_ids": [
+    "82",
+    "10232",
+    "7764",
+    "4953",
+    "5029"
+  ],
+  "original_response": {
+    "records": [
+      {
+        "record_id": "82",
+        "proposals": [
+          {
+            "candidate_id": "82-r3-a",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 60,
+              "dp": 2
+            },
+            "metric_id": "n_direction_removed",
+            "predicted_sign": "decrease",
+            "reason": "Direction 60 reduced removals from 15 to 6 and yielded a supported common-error reduction at DP 5; test tighter DP with its retention tradeoff."
+          },
+          {
+            "candidate_id": "82-r3-b",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 60,
+              "dp": 0
+            },
+            "metric_id": "n_final",
+            "predicted_sign": "increase",
+            "reason": "Direction 60 leaves 92 DP inputs; retaining all isolates its common geometric error, at increased output size."
+          }
+        ],
+        "stop": false,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "10232",
+        "proposals": [
+          {
+            "candidate_id": "10232-r3-a",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 60,
+              "dp": 2
+            },
+            "metric_id": "n_direction_removed",
+            "predicted_sign": "decrease",
+            "reason": "Direction 60 reduced removals from 32 to 10 and common maximum error to 4.821; test tighter DP while preserving segmentation."
+          },
+          {
+            "candidate_id": "10232-r3-b",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 60,
+              "dp": 0
+            },
+            "metric_id": "n_final",
+            "predicted_sign": "increase",
+            "reason": "Retain all 88 observed direction-60 DP inputs to measure direction-only common error; output size increases from reference 18."
+          }
+        ],
+        "stop": false,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "7764",
+        "proposals": [
+          {
+            "candidate_id": "7764-r3-a",
+            "parameters": {
+              "dt": 20,
+              "distance": 400,
+              "min_points": 2,
+              "min_length": 0,
+              "direction": 60,
+              "dp": 2
+            },
+            "metric_id": "raw_break_crossings",
+            "predicted_sign": "unchanged",
+            "reason": "Direction 60 alone tied common maximum error; test additional temporal splits with relaxed short-segment filters, since dt 15 previously lost 31 covered identities. Coverage requires evaluation."
+          },
+          {
+            "candidate_id": "7764-r3-b",
+            "parameters": {
+              "dt": 30,
+              "distance": 200,
+              "min_points": 2,
+              "min_length": 0,
+              "direction": 60,
+              "dp": 2
+            },
+            "metric_id": "raw_break_crossings",
+            "predicted_sign": "unchanged",
+            "reason": "Distance 95 lost 40 covered identities; probe a less restrictive spatial threshold with relaxed filters and tighter DP. Both original temporal breaks remain split."
+          }
+        ],
+        "stop": false,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "4953",
+        "proposals": [
+          {
+            "candidate_id": "4953-r3-a",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 45,
+              "dp": 2
+            },
+            "metric_id": "n_direction_removed",
+            "predicted_sign": "decrease",
+            "reason": "Direction 45 reduced removals from 4 to 1 and common maximum error to 4.445; test tighter DP for further geometric fidelity with increased retention."
+          },
+          {
+            "candidate_id": "4953-r3-b",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 45,
+              "dp": 0
+            },
+            "metric_id": "n_final",
+            "predicted_sign": "increase",
+            "reason": "Retaining all 99 observed direction-45 DP inputs isolates the remaining direction-deletion error while preserving both raw breaks."
+          }
+        ],
+        "stop": false,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "5029",
+        "proposals": [
+          {
+            "candidate_id": "5029-r3-a",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 3,
+              "min_length": 0,
+              "direction": 35,
+              "dp": 0.5
+            },
+            "metric_id": "common_covered_points",
+            "predicted_sign": "increase",
+            "reason": "The relaxed filters recovered all 98 points and seven windows; test tighter DP against the observed 0.962 common error, with a possible retention increase."
+          },
+          {
+            "candidate_id": "5029-r3-b",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 3,
+              "min_length": 0,
+              "direction": 35,
+              "dp": 0
+            },
+            "metric_id": "common_covered_points",
+            "predicted_sign": "increase",
+            "reason": "Verified relaxed filtering retains all points and D removes none; DP 0 retains all 98, testing zero simplification error at full output size."
+          }
+        ],
+        "stop": false,
+        "memory_ids_used": []
+      }
+    ]
+  },
+  "raw_proposals_preserved_before_validation": true
+}

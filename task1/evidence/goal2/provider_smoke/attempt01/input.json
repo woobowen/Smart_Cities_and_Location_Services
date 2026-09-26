@@ -1,0 +1,105 @@
+{
+  "prompt": "ENGINEERING_SMOKE_TEST, not an experiment or a cleaning result. Check response schema only. Return {\"records\":[]}. No trajectories or candidate selection are present.",
+  "schema": {
+    "type": "object",
+    "properties": {
+      "records": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "record_id": {
+              "type": "string"
+            },
+            "proposals": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "candidate_id": {
+                    "type": "string"
+                  },
+                  "parameters": {
+                    "type": "object",
+                    "properties": {
+                      "dt": {
+                        "type": "number"
+                      },
+                      "distance": {
+                        "type": "number"
+                      },
+                      "min_points": {
+                        "type": "number"
+                      },
+                      "min_length": {
+                        "type": "number"
+                      },
+                      "direction": {
+                        "type": "number"
+                      },
+                      "dp": {
+                        "type": "number"
+                      }
+                    },
+                    "required": [
+                      "dt",
+                      "distance",
+                      "min_points",
+                      "min_length",
+                      "direction",
+                      "dp"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "metric_id": {
+                    "type": "string"
+                  },
+                  "predicted_sign": {
+                    "type": "string",
+                    "enum": [
+                      "increase",
+                      "decrease",
+                      "unchanged",
+                      "not_predicted"
+                    ]
+                  },
+                  "reason": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "candidate_id",
+                  "parameters",
+                  "metric_id",
+                  "predicted_sign",
+                  "reason"
+                ],
+                "additionalProperties": false
+              }
+            },
+            "stop": {
+              "type": "boolean"
+            },
+            "memory_ids_used": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": [
+            "record_id",
+            "proposals",
+            "stop",
+            "memory_ids_used"
+          ],
+          "additionalProperties": false
+        }
+      }
+    },
+    "required": [
+      "records"
+    ],
+    "additionalProperties": false
+  }
+}

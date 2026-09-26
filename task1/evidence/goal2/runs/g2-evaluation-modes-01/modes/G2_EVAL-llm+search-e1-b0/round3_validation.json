@@ -1,0 +1,226 @@
+{
+  "errors": [],
+  "accepted_record_ids": [
+    "10003",
+    "8424",
+    "2064",
+    "7253",
+    "588",
+    "8522"
+  ],
+  "original_response": {
+    "records": [
+      {
+        "record_id": "10003",
+        "proposals": [
+          {
+            "candidate_id": "10003-r3-a",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 60,
+              "dp": 2
+            },
+            "metric_id": "n_direction_removed",
+            "predicted_sign": "decrease",
+            "reason": "Direction 60 reduced D deletions from 8 to 2 and preserved coverage. Test lower DP tolerance for further common geometric fidelity, with compression evaluated."
+          },
+          {
+            "candidate_id": "10003-r3-b",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 60,
+              "dp": 0
+            },
+            "metric_id": "n_direction_removed",
+            "predicted_sign": "decrease",
+            "reason": "Retain all points surviving the verified two-deletion D stage to measure its residual common error; DP saving becomes zero."
+          }
+        ],
+        "stop": false,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "8424",
+        "proposals": [
+          {
+            "candidate_id": "8424-r3-a",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 60,
+              "dp": 2
+            },
+            "metric_id": "n_direction_removed",
+            "predicted_sign": "decrease",
+            "reason": "Direction 60 reduced D deletions from 8 to 4 and common maximum error to 4.796. Test lower DP tolerance while preserving segmentation."
+          },
+          {
+            "candidate_id": "8424-r3-b",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 60,
+              "dp": 0
+            },
+            "metric_id": "n_direction_removed",
+            "predicted_sign": "decrease",
+            "reason": "Measure residual common error from the four verified D deletions without DP removal; expose the loss of compression."
+          }
+        ],
+        "stop": false,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "2064",
+        "proposals": [
+          {
+            "candidate_id": "2064-r3-a",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 60,
+              "dp": 2
+            },
+            "metric_id": "common_max_error",
+            "predicted_sign": "decrease",
+            "reason": "Direction 60 deleted no points and preserved all five windows. DP tolerance 2 therefore bounds common error below the reference 28.482."
+          },
+          {
+            "candidate_id": "2064-r3-b",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 60,
+              "dp": 0
+            },
+            "metric_id": "common_max_error",
+            "predicted_sign": "decrease",
+            "reason": "Verified S/D retains every original point. DP zero retains them all, testing zero common error with no DP compression."
+          }
+        ],
+        "stop": false,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "7253",
+        "proposals": [
+          {
+            "candidate_id": "7253-r3-a",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 60,
+              "dp": 2
+            },
+            "metric_id": "common_max_error",
+            "predicted_sign": "decrease",
+            "reason": "Direction 60 produced no D deletions with full coverage. DP tolerance 2 bounds common error below the reference 8.574; evaluate added retention."
+          },
+          {
+            "candidate_id": "7253-r3-b",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 60,
+              "dp": 0
+            },
+            "metric_id": "common_max_error",
+            "predicted_sign": "decrease",
+            "reason": "Verified S/D retains all 103 points. DP zero tests zero common error while explicitly sacrificing DP compression."
+          }
+        ],
+        "stop": false,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "588",
+        "proposals": [
+          {
+            "candidate_id": "588-r3-a",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 60,
+              "dp": 2
+            },
+            "metric_id": "n_direction_removed",
+            "predicted_sign": "decrease",
+            "reason": "Direction 60 reduced D deletions from 9 to 3 and preserved both windows. Test whether lower DP tolerance further reduces common error."
+          },
+          {
+            "candidate_id": "588-r3-b",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 60,
+              "dp": 0
+            },
+            "metric_id": "n_direction_removed",
+            "predicted_sign": "decrease",
+            "reason": "Measure residual geometry from the three verified D deletions without DP removal, preserving the raw breakpoint and exposing zero DP saving."
+          }
+        ],
+        "stop": false,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "8522",
+        "proposals": [
+          {
+            "candidate_id": "8522-r3-a",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 60,
+              "dp": 2
+            },
+            "metric_id": "common_max_error",
+            "predicted_sign": "decrease",
+            "reason": "Direction 60 deleted no points and preserved all five windows. DP tolerance 2 bounds common error below the reference 12.279."
+          },
+          {
+            "candidate_id": "8522-r3-b",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 60,
+              "dp": 0
+            },
+            "metric_id": "common_max_error",
+            "predicted_sign": "decrease",
+            "reason": "Verified S/D retains all 108 points without crossing raw breaks. DP zero tests zero common error at the cost of all DP compression."
+          }
+        ],
+        "stop": false,
+        "memory_ids_used": []
+      }
+    ]
+  },
+  "raw_proposals_preserved_before_validation": true
+}

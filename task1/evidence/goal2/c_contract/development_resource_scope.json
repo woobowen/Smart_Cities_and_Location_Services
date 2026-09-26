@@ -1,0 +1,43 @@
+{
+  "classification": "C_READONLY_RESOURCE_ACCOUNTING_INTERPRETATION",
+  "at": "2026-09-26T19:35:07.150114+00:00",
+  "runs": [
+    {
+      "run_id": "g2-development-parameters-01",
+      "manifest_sha256": "92bec0c62a89c98ad5b5c05e38cc2fb2722919da2a4eedaba964a0c1038be0e7",
+      "candidate_evaluations": 7080,
+      "experiment_model_dispatches": 0,
+      "instrumented_new_candidate_tool_calls": 118,
+      "cache_reads": 0,
+      "cache_hit_independent_verifier_calls": 0,
+      "new_and_cached_batch_processing_verifier_calls": 118,
+      "memory_admission_per_record_verifier_calls": 0
+    },
+    {
+      "run_id": "g2-development-orders-01",
+      "manifest_sha256": "5ac5e7e047672ce34d45a5f84ce337cf08376203e03eb72be12b2ee60b21f326",
+      "candidate_evaluations": 720,
+      "experiment_model_dispatches": 0,
+      "instrumented_new_candidate_tool_calls": 12,
+      "cache_reads": 1,
+      "cache_hit_independent_verifier_calls": 1,
+      "new_and_cached_batch_processing_verifier_calls": 13,
+      "memory_admission_per_record_verifier_calls": 0
+    },
+    {
+      "run_id": "g2-demo-memory-01",
+      "manifest_sha256": "c2e325539dac7a702cab72af39590127b319967debc513f91ca915b1bbc09fb4",
+      "candidate_evaluations": 1200,
+      "experiment_model_dispatches": 0,
+      "instrumented_new_candidate_tool_calls": 40,
+      "cache_reads": 0,
+      "cache_hit_independent_verifier_calls": 0,
+      "new_and_cached_batch_processing_verifier_calls": 40,
+      "memory_admission_per_record_verifier_calls": 60
+    }
+  ],
+  "instrumentation_scope": "manifest deterministic_tool_calls records new candidate run_batch + review_batch dispatches only; it excludes actual cache re-review and memory admission review_record calls.",
+  "unit": "registered processing/verifier function invocation, not all Python helper calls or all CPU operations",
+  "additional_governance": "C independent full audits and candidate_lock independent rechecks are separate governance computations; not hidden experimental model calls.",
+  "no_historical_manifest_rewrite": true
+}

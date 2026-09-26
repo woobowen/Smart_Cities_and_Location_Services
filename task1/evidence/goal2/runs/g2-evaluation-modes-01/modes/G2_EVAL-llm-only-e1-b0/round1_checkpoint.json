@@ -1,0 +1,352 @@
+{
+  "completed_at": "2026-09-26T20:34:11.369774+00:00",
+  "resources": {
+    "experiment_model_dispatches": 1,
+    "completed_model_turns": 1,
+    "candidate_evaluations": 8,
+    "reference_assessments_outside_llm_only_decision": 8,
+    "deterministic_tool_calls": 16,
+    "cache_reads": 8,
+    "governance_role_dispatches": 0,
+    "provider_requests": "unknown",
+    "usage": [
+      {
+        "input_tokens": 12813,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 885,
+        "reasoning_output_tokens": 112
+      }
+    ]
+  },
+  "records": {
+    "1887": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb"
+      ],
+      "stopped": true,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "1887-c1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "n_final",
+            "predicted_sign": "unchanged",
+            "reason": "Retain reference: 18 distance breaks make segmentation changes consequential, and aggregate observations do not establish a protected improvement."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "f22f8504f54d79e49b362747d3611f89fc595ab80b7e76841c76612de89917d7",
+          "executed_config_id": "cfg-b15b8281b73592fb",
+          "prediction": {
+            "metric_id": "n_final",
+            "predicted_sign": "unchanged",
+            "reference_handle": "c4d043976393f2202424bdfb00f37f749c94d9d878755efe330e38a0ed66bc86",
+            "candidate_handle": "c4d043976393f2202424bdfb00f37f749c94d9d878755efe330e38a0ed66bc86",
+            "status": "NEAR_ZERO_OR_UNCHANGED",
+            "delta": 0,
+            "observed_sign": "unchanged",
+            "evaluable": false,
+            "prediction_matches": true
+          }
+        }
+      ]
+    },
+    "10003": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb"
+      ],
+      "stopped": true,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "10003-c1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "n_final",
+            "predicted_sign": "unchanged",
+            "reason": "Retain reference: no raw breaks are reported, and aggregate observations cannot justify changing direction filtering or the existing 5-metre DP tolerance."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "2ed509779883d2014c8b5d878e7e06910e7fe8391472262d008b77ccda9a8c88",
+          "executed_config_id": "cfg-b15b8281b73592fb",
+          "prediction": {
+            "metric_id": "n_final",
+            "predicted_sign": "unchanged",
+            "reference_handle": "d0c845ff50bf00db0cbb761659451129852b5acaff19e98b377c25c4b6c352fe",
+            "candidate_handle": "d0c845ff50bf00db0cbb761659451129852b5acaff19e98b377c25c4b6c352fe",
+            "status": "NEAR_ZERO_OR_UNCHANGED",
+            "delta": 0,
+            "observed_sign": "unchanged",
+            "evaluable": false,
+            "prediction_matches": true
+          }
+        }
+      ]
+    },
+    "8424": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb"
+      ],
+      "stopped": true,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "8424-c1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "n_final",
+            "predicted_sign": "unchanged",
+            "reason": "Retain reference: path and span summaries do not establish a candidate that improves protected coverage or fidelity."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "80e9521ef380a50025967573c9d450cb98e30b2e8f3423f198124d3fd91fd2d3",
+          "executed_config_id": "cfg-b15b8281b73592fb",
+          "prediction": {
+            "metric_id": "n_final",
+            "predicted_sign": "unchanged",
+            "reference_handle": "0dd051e15f096673b860233a01b68398a4fa52d20f338b1cb9ea707f643f1be1",
+            "candidate_handle": "0dd051e15f096673b860233a01b68398a4fa52d20f338b1cb9ea707f643f1be1",
+            "status": "NEAR_ZERO_OR_UNCHANGED",
+            "delta": 0,
+            "observed_sign": "unchanged",
+            "evaluable": false,
+            "prediction_matches": true
+          }
+        }
+      ]
+    },
+    "2225": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb"
+      ],
+      "stopped": true,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "2225-c1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "n_final",
+            "predicted_sign": "unchanged",
+            "reason": "Retain reference: duplicate edges and unavailable directions do not justify additional deletion; undefined direction windows remain protected by the specified algorithm."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "5e3be46f21dcfcf5fba4bbe16bb2f11786ea14b19a9cccd472c725b73a9d2ead",
+          "executed_config_id": "cfg-b15b8281b73592fb",
+          "prediction": {
+            "metric_id": "n_final",
+            "predicted_sign": "unchanged",
+            "reference_handle": "7e6ea6ac77817c5e3434299fd2db76d068bf08bf351b8d8ee23358b8e547b812",
+            "candidate_handle": "7e6ea6ac77817c5e3434299fd2db76d068bf08bf351b8d8ee23358b8e547b812",
+            "status": "NEAR_ZERO_OR_UNCHANGED",
+            "delta": 0,
+            "observed_sign": "unchanged",
+            "evaluable": false,
+            "prediction_matches": true
+          }
+        }
+      ]
+    },
+    "2064": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb"
+      ],
+      "stopped": true,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "2064-c1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "n_final",
+            "predicted_sign": "unchanged",
+            "reason": "Retain reference: four distance breaks are reported, but segment sizes and geometry needed to assess filter changes are unavailable."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "50718583662919fa25a451956d285f75a7fd47b3f3691f693f840feb802f71b2",
+          "executed_config_id": "cfg-b15b8281b73592fb",
+          "prediction": {
+            "metric_id": "n_final",
+            "predicted_sign": "unchanged",
+            "reference_handle": "ad7621309fa65dbcfc150639d250e681fe9f2897f3cb9a2677a20c6d9cc3c9bd",
+            "candidate_handle": "ad7621309fa65dbcfc150639d250e681fe9f2897f3cb9a2677a20c6d9cc3c9bd",
+            "status": "NEAR_ZERO_OR_UNCHANGED",
+            "delta": 0,
+            "observed_sign": "unchanged",
+            "evaluable": false,
+            "prediction_matches": true
+          }
+        }
+      ]
+    },
+    "7253": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb"
+      ],
+      "stopped": true,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "7253-c1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "n_final",
+            "predicted_sign": "unchanged",
+            "reason": "Retain reference: 14 duplicate edges alone provide no evidence that parameter changes would improve protected metrics."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "f0afb44b586be01f7cc85488f34684071bb27233db3a8fa9bc5b9f376f9062e5",
+          "executed_config_id": "cfg-b15b8281b73592fb",
+          "prediction": {
+            "metric_id": "n_final",
+            "predicted_sign": "unchanged",
+            "reference_handle": "a66585ed5b768779106e4c0dc692f293a18bb2c3670e78eaafefb5baeea54af8",
+            "candidate_handle": "a66585ed5b768779106e4c0dc692f293a18bb2c3670e78eaafefb5baeea54af8",
+            "status": "NEAR_ZERO_OR_UNCHANGED",
+            "delta": 0,
+            "observed_sign": "unchanged",
+            "evaluable": false,
+            "prediction_matches": true
+          }
+        }
+      ]
+    },
+    "588": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb"
+      ],
+      "stopped": true,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "588-c1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "n_final",
+            "predicted_sign": "unchanged",
+            "reason": "Retain reference: preserve the reported common raw breakpoint; no geometry or feedback supports a beneficial alternative."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "7aaec3c9cfafca77979b7a57e2b244e330fe43831db9386010cbb563f9f0f64f",
+          "executed_config_id": "cfg-b15b8281b73592fb",
+          "prediction": {
+            "metric_id": "n_final",
+            "predicted_sign": "unchanged",
+            "reference_handle": "893ee9fe2745beac3ad3e06f7e89ced46338d9702f4785f36610263b3e02f690",
+            "candidate_handle": "893ee9fe2745beac3ad3e06f7e89ced46338d9702f4785f36610263b3e02f690",
+            "status": "NEAR_ZERO_OR_UNCHANGED",
+            "delta": 0,
+            "observed_sign": "unchanged",
+            "evaluable": false,
+            "prediction_matches": true
+          }
+        }
+      ]
+    },
+    "8522": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb"
+      ],
+      "stopped": true,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "8522-c1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "n_final",
+            "predicted_sign": "unchanged",
+            "reason": "Retain reference: four raw breaks and two zero-time edges do not establish a protected improvement from any threshold change."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "652884c572ff62efd9a3387924af4d83de6ce981dc111cc244d9806afbb9caa0",
+          "executed_config_id": "cfg-b15b8281b73592fb",
+          "prediction": {
+            "metric_id": "n_final",
+            "predicted_sign": "unchanged",
+            "reference_handle": "be0b67a69ff1e2c46167634971f41eb9b610150449f9d8776e7b024cdde1953b",
+            "candidate_handle": "be0b67a69ff1e2c46167634971f41eb9b610150449f9d8776e7b024cdde1953b",
+            "status": "NEAR_ZERO_OR_UNCHANGED",
+            "delta": 0,
+            "observed_sign": "unchanged",
+            "evaluable": false,
+            "prediction_matches": true
+          }
+        }
+      ]
+    }
+  }
+}

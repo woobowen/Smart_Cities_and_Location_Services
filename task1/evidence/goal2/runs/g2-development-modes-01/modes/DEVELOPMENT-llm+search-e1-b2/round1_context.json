@@ -1,0 +1,233 @@
+{
+  "mode": "llm+search",
+  "episode_id": "DEVELOPMENT-llm+search-e1-b2",
+  "decision_round": 1,
+  "proposal_limit": 1,
+  "reference_parameters": {
+    "dt": 30,
+    "distance": 400,
+    "min_points": 5,
+    "min_length": 65,
+    "direction": 35,
+    "dp": 5
+  },
+  "parameter_grids": {
+    "dt": [
+      15,
+      20,
+      30,
+      45,
+      60
+    ],
+    "distance": [
+      95,
+      200,
+      400,
+      600,
+      800
+    ],
+    "min_points": [
+      2,
+      3,
+      5,
+      7,
+      10
+    ],
+    "min_length": [
+      0,
+      32.5,
+      65,
+      97.5,
+      130
+    ],
+    "direction": [
+      15,
+      25,
+      35,
+      45,
+      60
+    ],
+    "dp": [
+      0,
+      0.5,
+      1,
+      2,
+      5,
+      10,
+      20
+    ]
+  },
+  "prediction_metric_ids": [
+    "n_final",
+    "common_covered_points",
+    "common_max_error",
+    "dp_saving",
+    "raw_break_crossings",
+    "n_direction_removed"
+  ],
+  "per_record_candidate_budget": 20,
+  "evaluations_already_consumed": {
+    "82": 0,
+    "10232": 0,
+    "10796": 0,
+    "4805": 0,
+    "7764": 0,
+    "4953": 0,
+    "5029": 0,
+    "6556": 0
+  },
+  "records": [
+    {
+      "card": {
+        "record_id": "82",
+        "n_points": 98,
+        "span_work_m": 55.645680586724716,
+        "duration_seconds": 1194.0,
+        "path_length_work_m": 268.1743777607514,
+        "zero_dt_edges": 0,
+        "negative_dt_edges": 0,
+        "dt_over_30_edges": 0,
+        "distance_over_400_edges": 0,
+        "raw_break_edges": 0,
+        "adjacent_duplicate_edges": 0,
+        "direction_unavailable_edges": 0,
+        "median_positive_dt": 10.0,
+        "stratum": "MID_T0_D0",
+        "reference_handle": "cccdfb6b31bafc0bd2e3e0a0873ef3011fd3995c3a81daf3ad77fa2c48011ed5"
+      }
+    },
+    {
+      "card": {
+        "record_id": "10232",
+        "n_points": 98,
+        "span_work_m": 86.72166771827746,
+        "duration_seconds": 1191.0,
+        "path_length_work_m": 394.71070715908667,
+        "zero_dt_edges": 0,
+        "negative_dt_edges": 0,
+        "dt_over_30_edges": 0,
+        "distance_over_400_edges": 0,
+        "raw_break_edges": 0,
+        "adjacent_duplicate_edges": 0,
+        "direction_unavailable_edges": 0,
+        "median_positive_dt": 10.0,
+        "stratum": "MID_T0_D0",
+        "reference_handle": "8b85389be1f4fb302ea0e74781714eb3d775eeba317c62c88e5500fc49f715f0"
+      }
+    },
+    {
+      "card": {
+        "record_id": "10796",
+        "n_points": 98,
+        "span_work_m": 14.025039993843908,
+        "duration_seconds": 1186.0,
+        "path_length_work_m": 62.87336929954257,
+        "zero_dt_edges": 0,
+        "negative_dt_edges": 0,
+        "dt_over_30_edges": 0,
+        "distance_over_400_edges": 0,
+        "raw_break_edges": 0,
+        "adjacent_duplicate_edges": 5,
+        "direction_unavailable_edges": 5,
+        "median_positive_dt": 10.0,
+        "stratum": "MID_T0_D1",
+        "reference_handle": "4e9adb1b972d2f71b5df622e629ad6f6749609b7daa858b561fff441b2b2b672"
+      }
+    },
+    {
+      "card": {
+        "record_id": "4805",
+        "n_points": 99,
+        "span_work_m": 17.29961032472596,
+        "duration_seconds": 1195.0,
+        "path_length_work_m": 24.710877975503042,
+        "zero_dt_edges": 0,
+        "negative_dt_edges": 0,
+        "dt_over_30_edges": 0,
+        "distance_over_400_edges": 0,
+        "raw_break_edges": 0,
+        "adjacent_duplicate_edges": 78,
+        "direction_unavailable_edges": 78,
+        "median_positive_dt": 10.0,
+        "stratum": "MID_T0_D1",
+        "reference_handle": "165cb69d7f1dc27df253f1eaeafe62185f951f07f65b0ce55d0ce57526ba3763"
+      }
+    },
+    {
+      "card": {
+        "record_id": "7764",
+        "n_points": 122,
+        "span_work_m": 2760.587412537877,
+        "duration_seconds": 1195.0,
+        "path_length_work_m": 6452.241437726076,
+        "zero_dt_edges": 23,
+        "negative_dt_edges": 0,
+        "dt_over_30_edges": 2,
+        "distance_over_400_edges": 0,
+        "raw_break_edges": 2,
+        "adjacent_duplicate_edges": 0,
+        "direction_unavailable_edges": 0,
+        "median_positive_dt": 10.0,
+        "stratum": "MID_T1_D0",
+        "reference_handle": "1027952b6c7c954eae7dd04ac0377d80c4031555e68cf2d94c891ccd39f03387"
+      }
+    },
+    {
+      "card": {
+        "record_id": "4953",
+        "n_points": 100,
+        "span_work_m": 3196.7238319916014,
+        "duration_seconds": 1084.0,
+        "path_length_work_m": 7756.517395116174,
+        "zero_dt_edges": 0,
+        "negative_dt_edges": 0,
+        "dt_over_30_edges": 1,
+        "distance_over_400_edges": 1,
+        "raw_break_edges": 2,
+        "adjacent_duplicate_edges": 0,
+        "direction_unavailable_edges": 0,
+        "median_positive_dt": 10.0,
+        "stratum": "MID_T1_D0",
+        "reference_handle": "bd2a60a66f83d2f8b46b67169a5716acd5d85b12245cd1c04bd5204069e0f4da"
+      }
+    },
+    {
+      "card": {
+        "record_id": "5029",
+        "n_points": 98,
+        "span_work_m": 18.132066973359066,
+        "duration_seconds": 1177.0,
+        "path_length_work_m": 24.307343690533223,
+        "zero_dt_edges": 19,
+        "negative_dt_edges": 0,
+        "dt_over_30_edges": 6,
+        "distance_over_400_edges": 0,
+        "raw_break_edges": 6,
+        "adjacent_duplicate_edges": 87,
+        "direction_unavailable_edges": 87,
+        "median_positive_dt": 11.0,
+        "stratum": "MID_T1_D1",
+        "reference_handle": "f738ebf0d1bad541859e4e0fd9d3193c109d11ae94967692fb0abd9db1818c88"
+      }
+    },
+    {
+      "card": {
+        "record_id": "6556",
+        "n_points": 97,
+        "span_work_m": 17.787783172762087,
+        "duration_seconds": 1191.0,
+        "path_length_work_m": 68.219823052222,
+        "zero_dt_edges": 2,
+        "negative_dt_edges": 0,
+        "dt_over_30_edges": 1,
+        "distance_over_400_edges": 0,
+        "raw_break_edges": 1,
+        "adjacent_duplicate_edges": 3,
+        "direction_unavailable_edges": 3,
+        "median_positive_dt": 10.0,
+        "stratum": "MID_T1_D1",
+        "reference_handle": "35b1c2807447689448715bf16459451f82fdf6b6cbcc70d2c8b2e84337e75643"
+      }
+    }
+  ]
+}

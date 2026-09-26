@@ -1,0 +1,26 @@
+{
+  "classification": "ACTUAL_B_IMAGE_INSPECTION",
+  "role_context": "/root/b_engine",
+  "checked_at": "2026-09-26T20:56:24.807130+00:00",
+  "reviewed_images": [
+    {
+      "path": "task1/evidence/goal2/presentation_checks/case_configuration_labels/after/real_trajectory_cases.png",
+      "sha256": "2a033e931f5a62f87400209818ee58d20f57c2daa49de5096d9932f0d1050f45",
+      "actual_view_tool": "view_image",
+      "result": "B_VISUAL_CHECK_PASSED",
+      "observations": "G2_EVAL title visible; first three panel labels Reference; last three automatic changed-parameter labels readable. Shared reference caption contains S-D-P and all six values with units. Labels, legend, near-boundary annotation and axes do not overlap. All plotted original coordinates and selected records unchanged."
+    },
+    {
+      "path": "task1/evidence/goal2/presentation_checks/case_configuration_labels/after/pdf-render-200dpi/real_trajectory_cases.png",
+      "sha256": "392bd79dfa039ce8c1dd9d9815f8cc653771ebe1730185b1c7fd02a9c7e40480",
+      "actual_view_tool": "view_image",
+      "result": "B_VISUAL_CHECK_PASSED",
+      "observations": "G2_EVAL title visible; first three panel labels Reference; last three automatic changed-parameter labels readable. Shared reference caption contains S-D-P and all six values with units. Labels, legend, near-boundary annotation and axes do not overlap. All plotted original coordinates and selected records unchanged."
+    }
+  ],
+  "unaffected_other_two_pngs_byte_identical_to_previously_viewed_images": {
+    "synthetic_metric_counterexamples": true,
+    "goal2_actual_architecture": true
+  },
+  "independent_C": "PENDING"
+}

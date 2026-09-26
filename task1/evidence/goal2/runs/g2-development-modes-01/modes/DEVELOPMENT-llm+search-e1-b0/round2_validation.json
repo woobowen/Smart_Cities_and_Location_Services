@@ -1,0 +1,269 @@
+{
+  "errors": [],
+  "accepted_record_ids": [
+    "9779",
+    "3357",
+    "11355",
+    "5049",
+    "7186",
+    "11326",
+    "2069",
+    "9613"
+  ],
+  "original_response": {
+    "records": [
+      {
+        "record_id": "9779",
+        "proposals": [
+          {
+            "candidate_id": "9779-r2-a",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 45,
+              "dp": 5
+            },
+            "metric_id": "common_covered_points",
+            "predicted_sign": "unchanged",
+            "reason": "Lower direction thresholds degraded common maximum error; test a higher threshold with reference splitting and DP."
+          },
+          {
+            "candidate_id": "9779-r2-b",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 60,
+              "dp": 5
+            },
+            "metric_id": "common_covered_points",
+            "predicted_sign": "unchanged",
+            "reason": "DP-only reductions left maximum error at 13.57; test whether retaining more direction candidates reduces it."
+          }
+        ],
+        "stop": false,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "3357",
+        "proposals": [
+          {
+            "candidate_id": "3357-r2-a",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 2,
+              "min_length": 0,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "common_covered_points",
+            "predicted_sign": "increase",
+            "reason": "Reference filtered one two-point segment; relax filters to recover its coverage while preserving raw breaks."
+          },
+          {
+            "candidate_id": "3357-r2-b",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 60,
+              "dp": 5
+            },
+            "metric_id": "common_covered_points",
+            "predicted_sign": "unchanged",
+            "reason": "Lower direction thresholds increased maximum error to 127.81; test a higher threshold against the reference 90.06."
+          }
+        ],
+        "stop": false,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "11355",
+        "proposals": [
+          {
+            "candidate_id": "11355-r2-a",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 45,
+              "dp": 5
+            },
+            "metric_id": "common_covered_points",
+            "predicted_sign": "unchanged",
+            "reason": "Lower direction thresholds degraded geometry, while lower DP tolerances left maximum error unchanged; test a higher direction threshold."
+          },
+          {
+            "candidate_id": "11355-r2-b",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 60,
+              "dp": 5
+            },
+            "metric_id": "common_covered_points",
+            "predicted_sign": "unchanged",
+            "reason": "Probe further direction retention with the same raw-break segmentation; geometric benefit requires evaluation."
+          }
+        ],
+        "stop": false,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "5049",
+        "proposals": [
+          {
+            "candidate_id": "5049-r2-a",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 60,
+              "dp": 5
+            },
+            "metric_id": "common_covered_points",
+            "predicted_sign": "unchanged",
+            "reason": "Lower direction thresholds degraded common geometry; test whether a higher threshold changes the single reference deletion."
+          },
+          {
+            "candidate_id": "5049-r2-b",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 60,
+              "dp": 2
+            },
+            "metric_id": "common_max_error",
+            "predicted_sign": "decrease",
+            "reason": "Reference-direction DP2 achieved maximum error 1.74 versus 4.43; test tighter DP with a higher direction threshold, subject to protected comparison."
+          }
+        ],
+        "stop": false,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "7186",
+        "proposals": [],
+        "stop": true,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "11326",
+        "proposals": [
+          {
+            "candidate_id": "11326-r2-a",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 2,
+              "min_length": 0,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "common_covered_points",
+            "predicted_sign": "increase",
+            "reason": "Reference filtered seven points across two segments; relax filters to recover eligible windows without merging raw breaks."
+          },
+          {
+            "candidate_id": "11326-r2-b",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 60,
+              "dp": 5
+            },
+            "metric_id": "common_covered_points",
+            "predicted_sign": "unchanged",
+            "reason": "Lower direction thresholds and lower DP tolerances left maximum error at 89.30; test higher direction retention."
+          }
+        ],
+        "stop": false,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "2069",
+        "proposals": [
+          {
+            "candidate_id": "2069-r2-a",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 45,
+              "dp": 5
+            },
+            "metric_id": "common_covered_points",
+            "predicted_sign": "unchanged",
+            "reason": "Direction15 reduced maximum error but increased mean error; explore higher direction retention to assess another geometric tradeoff."
+          },
+          {
+            "candidate_id": "2069-r2-b",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 60,
+              "dp": 5
+            },
+            "metric_id": "common_covered_points",
+            "predicted_sign": "unchanged",
+            "reason": "Reference maximum error persisted under DP changes; test whether a higher direction threshold retains the responsible points."
+          }
+        ],
+        "stop": false,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "9613",
+        "proposals": [
+          {
+            "candidate_id": "9613-r2-a",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 2,
+              "min_length": 0,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "common_covered_points",
+            "predicted_sign": "increase",
+            "reason": "Reference filtered twelve points across three windows; relax filters while preserving all fifteen raw breaks."
+          },
+          {
+            "candidate_id": "9613-r2-b",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 3,
+              "min_length": 0,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "common_covered_points",
+            "predicted_sign": "increase",
+            "reason": "Test a less permissive point-count filter for recovering excluded windows; verify new coverage and its common error."
+          }
+        ],
+        "stop": false,
+        "memory_ids_used": []
+      }
+    ]
+  },
+  "raw_proposals_preserved_before_validation": true
+}

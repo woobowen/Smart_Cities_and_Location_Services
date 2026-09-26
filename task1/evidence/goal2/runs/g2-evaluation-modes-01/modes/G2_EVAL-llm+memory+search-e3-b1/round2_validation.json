@@ -1,0 +1,81 @@
+{
+  "errors": [],
+  "accepted_record_ids": [
+    "1880",
+    "9673",
+    "2297",
+    "10927",
+    "9709",
+    "7711",
+    "7137",
+    "9296"
+  ],
+  "original_response": {
+    "records": [
+      {
+        "record_id": "1880",
+        "proposals": [
+          {
+            "candidate_id": "1880-r2-a",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 2,
+              "min_length": 0,
+              "direction": 60,
+              "dp": 5
+            },
+            "metric_id": "common_covered_points",
+            "predicted_sign": "increase",
+            "reason": "Direction 60 already reduced common maximum error with coverage preserved. Relaxing filters tests recovery of the four points in two filtered segments while preserving raw breaks; newly covered geometry requires verification."
+          }
+        ],
+        "stop": false,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "9673",
+        "proposals": [],
+        "stop": true,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "2297",
+        "proposals": [],
+        "stop": true,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "10927",
+        "proposals": [],
+        "stop": true,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "9709",
+        "proposals": [],
+        "stop": true,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "7711",
+        "proposals": [],
+        "stop": true,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "7137",
+        "proposals": [],
+        "stop": true,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "9296",
+        "proposals": [],
+        "stop": true,
+        "memory_ids_used": []
+      }
+    ]
+  },
+  "raw_proposals_preserved_before_validation": true
+}

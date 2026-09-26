@@ -1,0 +1,1952 @@
+{
+  "status": "VERIFIED",
+  "classification": "C_ENGINEERING_PROBE_ON_EXPOSED_G1_PILOT_NOT_G2_SELECTION",
+  "role_context": "/root/c_contract",
+  "created_at": "2026-09-26T19:17:59.198628+00:00",
+  "records": 7,
+  "order_runs": 42,
+  "source_hashes": {
+    "task1/workflow/g2_pipeline.py": "edb8f4c8dcaf65cda44b33533eb55e9d67ef946597895f0682860ba65499c441",
+    "task1/workflow/g2_metrics.py": "8d80c8ff8e124b9d3d73f5d514a0c09af32f234034914379ea901e5e59cc3ebb",
+    "task1/workflow/g2_data.py": "985453f073ec98ca7b17a827de1d316e8322dc89e452e6f8b45afa20b2a8a9f2"
+  },
+  "oracle_sha256": "9c28775af3389fb9735d268bdaf776a0cedc683990518d0aee2736d5ff863865",
+  "contract_sha256": "db758c097509139596fbc52b4c3f65e921eb1f12d9fb4c239e308abdb57f31f8",
+  "raw_sha256": "c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3",
+  "checked_components": [
+    "six_orders",
+    "independent_metrics",
+    "point_accounting",
+    "stage_features",
+    "PROJ_coordinates",
+    "full_DP_input",
+    "common_raw_reference"
+  ],
+  "unchecked_components": [
+    "formal_development_grid",
+    "formal_G2_EVAL",
+    "all_selected_coordinate_sensitivity",
+    "full_goal_acceptance"
+  ],
+  "checks": [
+    {
+      "record_id": "0",
+      "order": "S-D-P",
+      "target_sha256": "fadb0661b3efaaced1fd39d35e6c79d834e7e3f368c6435915611cdab6354b1b",
+      "independent": {
+        "status": "VERIFIED",
+        "record_id": "0",
+        "checks": 444,
+        "errors": [],
+        "coordinate_max_error_m": 0.0,
+        "fate_counts": {
+          "filtered": 99
+        },
+        "dp_reference_points": 0,
+        "dp_output_points": 0,
+        "dp_maximum": null,
+        "checked_components": [
+          "trusted_raw_alignment",
+          "PROJ_coordinates",
+          "exact_frozen_parameters_order_contract",
+          "independent_split_filter_direction_DP",
+          "stage_actual_values_features",
+          "ledger_fates",
+          "reported_common_point_errors_coverage_and_counts",
+          "reported_DP_denominator_saving_max"
+        ],
+        "unchecked_components": [
+          "batch_scope",
+          "batch_aggregation",
+          "full_hash_graph",
+          "LLM_path",
+          "memory",
+          "selection",
+          "experiment_admission"
+        ]
+      },
+      "common_independent_summary": {
+        "max_error": null,
+        "mean_error": null,
+        "crossed_edges": []
+      },
+      "production_review_status": "VERIFIED",
+      "production_errors": []
+    },
+    {
+      "record_id": "0",
+      "order": "S-P-D",
+      "target_sha256": "3a16fabe98b7e913782e258399667f47ae60fb3623f5f7d6c186d6fab1e6f83d",
+      "independent": {
+        "status": "VERIFIED",
+        "record_id": "0",
+        "checks": 444,
+        "errors": [],
+        "coordinate_max_error_m": 0.0,
+        "fate_counts": {
+          "filtered": 99
+        },
+        "dp_reference_points": 0,
+        "dp_output_points": 0,
+        "dp_maximum": null,
+        "checked_components": [
+          "trusted_raw_alignment",
+          "PROJ_coordinates",
+          "exact_frozen_parameters_order_contract",
+          "independent_split_filter_direction_DP",
+          "stage_actual_values_features",
+          "ledger_fates",
+          "reported_common_point_errors_coverage_and_counts",
+          "reported_DP_denominator_saving_max"
+        ],
+        "unchecked_components": [
+          "batch_scope",
+          "batch_aggregation",
+          "full_hash_graph",
+          "LLM_path",
+          "memory",
+          "selection",
+          "experiment_admission"
+        ]
+      },
+      "common_independent_summary": {
+        "max_error": null,
+        "mean_error": null,
+        "crossed_edges": []
+      },
+      "production_review_status": "VERIFIED",
+      "production_errors": []
+    },
+    {
+      "record_id": "0",
+      "order": "D-S-P",
+      "target_sha256": "abebb9b0a936ae4e516d058a9d56db54d2b8e528cde7a004eadfde71526ce26e",
+      "independent": {
+        "status": "VERIFIED",
+        "record_id": "0",
+        "checks": 653,
+        "errors": [],
+        "coordinate_max_error_m": 0.0,
+        "fate_counts": {
+          "filtered": 99
+        },
+        "dp_reference_points": 0,
+        "dp_output_points": 0,
+        "dp_maximum": null,
+        "checked_components": [
+          "trusted_raw_alignment",
+          "PROJ_coordinates",
+          "exact_frozen_parameters_order_contract",
+          "independent_split_filter_direction_DP",
+          "stage_actual_values_features",
+          "ledger_fates",
+          "reported_common_point_errors_coverage_and_counts",
+          "reported_DP_denominator_saving_max"
+        ],
+        "unchecked_components": [
+          "batch_scope",
+          "batch_aggregation",
+          "full_hash_graph",
+          "LLM_path",
+          "memory",
+          "selection",
+          "experiment_admission"
+        ]
+      },
+      "common_independent_summary": {
+        "max_error": null,
+        "mean_error": null,
+        "crossed_edges": []
+      },
+      "production_review_status": "VERIFIED",
+      "production_errors": []
+    },
+    {
+      "record_id": "0",
+      "order": "D-P-S",
+      "target_sha256": "542c268ece6e4528b9a3f5ec87d606d7810f492224ff4f0573d52f31bee3bbd0",
+      "independent": {
+        "status": "VERIFIED",
+        "record_id": "0",
+        "checks": 575,
+        "errors": [],
+        "coordinate_max_error_m": 0.0,
+        "fate_counts": {
+          "simplified": 97,
+          "filtered": 2
+        },
+        "dp_reference_points": 99,
+        "dp_output_points": 2,
+        "dp_maximum": 3.8174786806909036,
+        "checked_components": [
+          "trusted_raw_alignment",
+          "PROJ_coordinates",
+          "exact_frozen_parameters_order_contract",
+          "independent_split_filter_direction_DP",
+          "stage_actual_values_features",
+          "ledger_fates",
+          "reported_common_point_errors_coverage_and_counts",
+          "reported_DP_denominator_saving_max"
+        ],
+        "unchecked_components": [
+          "batch_scope",
+          "batch_aggregation",
+          "full_hash_graph",
+          "LLM_path",
+          "memory",
+          "selection",
+          "experiment_admission"
+        ]
+      },
+      "common_independent_summary": {
+        "max_error": null,
+        "mean_error": null,
+        "crossed_edges": []
+      },
+      "production_review_status": "VERIFIED",
+      "production_errors": []
+    },
+    {
+      "record_id": "0",
+      "order": "P-S-D",
+      "target_sha256": "d0289acf72036e1b2f91557b8ae99a0d445c05b9664d816d1dd16bf20292ff16",
+      "independent": {
+        "status": "VERIFIED",
+        "record_id": "0",
+        "checks": 366,
+        "errors": [],
+        "coordinate_max_error_m": 0.0,
+        "fate_counts": {
+          "simplified": 97,
+          "filtered": 2
+        },
+        "dp_reference_points": 99,
+        "dp_output_points": 2,
+        "dp_maximum": 3.8174786806909036,
+        "checked_components": [
+          "trusted_raw_alignment",
+          "PROJ_coordinates",
+          "exact_frozen_parameters_order_contract",
+          "independent_split_filter_direction_DP",
+          "stage_actual_values_features",
+          "ledger_fates",
+          "reported_common_point_errors_coverage_and_counts",
+          "reported_DP_denominator_saving_max"
+        ],
+        "unchecked_components": [
+          "batch_scope",
+          "batch_aggregation",
+          "full_hash_graph",
+          "LLM_path",
+          "memory",
+          "selection",
+          "experiment_admission"
+        ]
+      },
+      "common_independent_summary": {
+        "max_error": null,
+        "mean_error": null,
+        "crossed_edges": []
+      },
+      "production_review_status": "VERIFIED",
+      "production_errors": []
+    },
+    {
+      "record_id": "0",
+      "order": "P-D-S",
+      "target_sha256": "aee61235478b5d002db9c4c5f084707dc00aaba58ae728940567f70fc41768aa",
+      "independent": {
+        "status": "VERIFIED",
+        "record_id": "0",
+        "checks": 381,
+        "errors": [],
+        "coordinate_max_error_m": 0.0,
+        "fate_counts": {
+          "simplified": 97,
+          "filtered": 2
+        },
+        "dp_reference_points": 99,
+        "dp_output_points": 2,
+        "dp_maximum": 3.8174786806909036,
+        "checked_components": [
+          "trusted_raw_alignment",
+          "PROJ_coordinates",
+          "exact_frozen_parameters_order_contract",
+          "independent_split_filter_direction_DP",
+          "stage_actual_values_features",
+          "ledger_fates",
+          "reported_common_point_errors_coverage_and_counts",
+          "reported_DP_denominator_saving_max"
+        ],
+        "unchecked_components": [
+          "batch_scope",
+          "batch_aggregation",
+          "full_hash_graph",
+          "LLM_path",
+          "memory",
+          "selection",
+          "experiment_admission"
+        ]
+      },
+      "common_independent_summary": {
+        "max_error": null,
+        "mean_error": null,
+        "crossed_edges": []
+      },
+      "production_review_status": "VERIFIED",
+      "production_errors": []
+    },
+    {
+      "record_id": "1",
+      "order": "S-D-P",
+      "target_sha256": "5b4cdbaf3712e8d1d1e2844bc87d1dfa879f0211e22129409f178a51a2389d0e",
+      "independent": {
+        "status": "VERIFIED",
+        "record_id": "1",
+        "checks": 436,
+        "errors": [],
+        "coordinate_max_error_m": 3.637978807091713e-12,
+        "fate_counts": {
+          "filtered": 97
+        },
+        "dp_reference_points": 0,
+        "dp_output_points": 0,
+        "dp_maximum": null,
+        "checked_components": [
+          "trusted_raw_alignment",
+          "PROJ_coordinates",
+          "exact_frozen_parameters_order_contract",
+          "independent_split_filter_direction_DP",
+          "stage_actual_values_features",
+          "ledger_fates",
+          "reported_common_point_errors_coverage_and_counts",
+          "reported_DP_denominator_saving_max"
+        ],
+        "unchecked_components": [
+          "batch_scope",
+          "batch_aggregation",
+          "full_hash_graph",
+          "LLM_path",
+          "memory",
+          "selection",
+          "experiment_admission"
+        ]
+      },
+      "common_independent_summary": {
+        "max_error": null,
+        "mean_error": null,
+        "crossed_edges": []
+      },
+      "production_review_status": "VERIFIED",
+      "production_errors": []
+    },
+    {
+      "record_id": "1",
+      "order": "S-P-D",
+      "target_sha256": "2d1e22ecfb8dd9c031ba7ad70003b7d7867c0a0ff99a991d609e32901b12d4d1",
+      "independent": {
+        "status": "VERIFIED",
+        "record_id": "1",
+        "checks": 436,
+        "errors": [],
+        "coordinate_max_error_m": 3.637978807091713e-12,
+        "fate_counts": {
+          "filtered": 97
+        },
+        "dp_reference_points": 0,
+        "dp_output_points": 0,
+        "dp_maximum": null,
+        "checked_components": [
+          "trusted_raw_alignment",
+          "PROJ_coordinates",
+          "exact_frozen_parameters_order_contract",
+          "independent_split_filter_direction_DP",
+          "stage_actual_values_features",
+          "ledger_fates",
+          "reported_common_point_errors_coverage_and_counts",
+          "reported_DP_denominator_saving_max"
+        ],
+        "unchecked_components": [
+          "batch_scope",
+          "batch_aggregation",
+          "full_hash_graph",
+          "LLM_path",
+          "memory",
+          "selection",
+          "experiment_admission"
+        ]
+      },
+      "common_independent_summary": {
+        "max_error": null,
+        "mean_error": null,
+        "crossed_edges": []
+      },
+      "production_review_status": "VERIFIED",
+      "production_errors": []
+    },
+    {
+      "record_id": "1",
+      "order": "D-S-P",
+      "target_sha256": "5372bfb960e1aeff00a38e7f461932f2351a3200b7fe5628ff9dff24e61d22e2",
+      "independent": {
+        "status": "VERIFIED",
+        "record_id": "1",
+        "checks": 641,
+        "errors": [],
+        "coordinate_max_error_m": 3.637978807091713e-12,
+        "fate_counts": {
+          "filtered": 97
+        },
+        "dp_reference_points": 0,
+        "dp_output_points": 0,
+        "dp_maximum": null,
+        "checked_components": [
+          "trusted_raw_alignment",
+          "PROJ_coordinates",
+          "exact_frozen_parameters_order_contract",
+          "independent_split_filter_direction_DP",
+          "stage_actual_values_features",
+          "ledger_fates",
+          "reported_common_point_errors_coverage_and_counts",
+          "reported_DP_denominator_saving_max"
+        ],
+        "unchecked_components": [
+          "batch_scope",
+          "batch_aggregation",
+          "full_hash_graph",
+          "LLM_path",
+          "memory",
+          "selection",
+          "experiment_admission"
+        ]
+      },
+      "common_independent_summary": {
+        "max_error": null,
+        "mean_error": null,
+        "crossed_edges": []
+      },
+      "production_review_status": "VERIFIED",
+      "production_errors": []
+    },
+    {
+      "record_id": "1",
+      "order": "D-P-S",
+      "target_sha256": "434bde38f5787c049bb28bf3babfc1914c1d4eede26af1ed93b05ccb78f99010",
+      "independent": {
+        "status": "VERIFIED",
+        "record_id": "1",
+        "checks": 565,
+        "errors": [],
+        "coordinate_max_error_m": 3.637978807091713e-12,
+        "fate_counts": {
+          "simplified": 95,
+          "filtered": 2
+        },
+        "dp_reference_points": 97,
+        "dp_output_points": 2,
+        "dp_maximum": 3.93009387521488,
+        "checked_components": [
+          "trusted_raw_alignment",
+          "PROJ_coordinates",
+          "exact_frozen_parameters_order_contract",
+          "independent_split_filter_direction_DP",
+          "stage_actual_values_features",
+          "ledger_fates",
+          "reported_common_point_errors_coverage_and_counts",
+          "reported_DP_denominator_saving_max"
+        ],
+        "unchecked_components": [
+          "batch_scope",
+          "batch_aggregation",
+          "full_hash_graph",
+          "LLM_path",
+          "memory",
+          "selection",
+          "experiment_admission"
+        ]
+      },
+      "common_independent_summary": {
+        "max_error": null,
+        "mean_error": null,
+        "crossed_edges": []
+      },
+      "production_review_status": "VERIFIED",
+      "production_errors": []
+    },
+    {
+      "record_id": "1",
+      "order": "P-S-D",
+      "target_sha256": "31a1556014b8a7697db99cdcb456c1ee24a034261cceb4116a03d6e547d7cc02",
+      "independent": {
+        "status": "VERIFIED",
+        "record_id": "1",
+        "checks": 360,
+        "errors": [],
+        "coordinate_max_error_m": 3.637978807091713e-12,
+        "fate_counts": {
+          "simplified": 95,
+          "filtered": 2
+        },
+        "dp_reference_points": 97,
+        "dp_output_points": 2,
+        "dp_maximum": 3.93009387521488,
+        "checked_components": [
+          "trusted_raw_alignment",
+          "PROJ_coordinates",
+          "exact_frozen_parameters_order_contract",
+          "independent_split_filter_direction_DP",
+          "stage_actual_values_features",
+          "ledger_fates",
+          "reported_common_point_errors_coverage_and_counts",
+          "reported_DP_denominator_saving_max"
+        ],
+        "unchecked_components": [
+          "batch_scope",
+          "batch_aggregation",
+          "full_hash_graph",
+          "LLM_path",
+          "memory",
+          "selection",
+          "experiment_admission"
+        ]
+      },
+      "common_independent_summary": {
+        "max_error": null,
+        "mean_error": null,
+        "crossed_edges": []
+      },
+      "production_review_status": "VERIFIED",
+      "production_errors": []
+    },
+    {
+      "record_id": "1",
+      "order": "P-D-S",
+      "target_sha256": "1b8e5cf7cca33a69e2ee056fc596abd7d7507c5e191fa3f0fe0d459ccb6dacfd",
+      "independent": {
+        "status": "VERIFIED",
+        "record_id": "1",
+        "checks": 375,
+        "errors": [],
+        "coordinate_max_error_m": 3.637978807091713e-12,
+        "fate_counts": {
+          "simplified": 95,
+          "filtered": 2
+        },
+        "dp_reference_points": 97,
+        "dp_output_points": 2,
+        "dp_maximum": 3.93009387521488,
+        "checked_components": [
+          "trusted_raw_alignment",
+          "PROJ_coordinates",
+          "exact_frozen_parameters_order_contract",
+          "independent_split_filter_direction_DP",
+          "stage_actual_values_features",
+          "ledger_fates",
+          "reported_common_point_errors_coverage_and_counts",
+          "reported_DP_denominator_saving_max"
+        ],
+        "unchecked_components": [
+          "batch_scope",
+          "batch_aggregation",
+          "full_hash_graph",
+          "LLM_path",
+          "memory",
+          "selection",
+          "experiment_admission"
+        ]
+      },
+      "common_independent_summary": {
+        "max_error": null,
+        "mean_error": null,
+        "crossed_edges": []
+      },
+      "production_review_status": "VERIFIED",
+      "production_errors": []
+    },
+    {
+      "record_id": "2",
+      "order": "S-D-P",
+      "target_sha256": "7b8c81eaa84eacffac7325ec4c1c91a62307505f25e1a58f3fdf182a1f7a67e4",
+      "independent": {
+        "status": "VERIFIED",
+        "record_id": "2",
+        "checks": 444,
+        "errors": [],
+        "coordinate_max_error_m": 3.637978807091713e-12,
+        "fate_counts": {
+          "filtered": 99
+        },
+        "dp_reference_points": 0,
+        "dp_output_points": 0,
+        "dp_maximum": null,
+        "checked_components": [
+          "trusted_raw_alignment",
+          "PROJ_coordinates",
+          "exact_frozen_parameters_order_contract",
+          "independent_split_filter_direction_DP",
+          "stage_actual_values_features",
+          "ledger_fates",
+          "reported_common_point_errors_coverage_and_counts",
+          "reported_DP_denominator_saving_max"
+        ],
+        "unchecked_components": [
+          "batch_scope",
+          "batch_aggregation",
+          "full_hash_graph",
+          "LLM_path",
+          "memory",
+          "selection",
+          "experiment_admission"
+        ]
+      },
+      "common_independent_summary": {
+        "max_error": null,
+        "mean_error": null,
+        "crossed_edges": []
+      },
+      "production_review_status": "VERIFIED",
+      "production_errors": []
+    },
+    {
+      "record_id": "2",
+      "order": "S-P-D",
+      "target_sha256": "0b513ef20e5cfec7458a20cd063dca0305d898525a8d4e4117009881bd863f8a",
+      "independent": {
+        "status": "VERIFIED",
+        "record_id": "2",
+        "checks": 444,
+        "errors": [],
+        "coordinate_max_error_m": 3.637978807091713e-12,
+        "fate_counts": {
+          "filtered": 99
+        },
+        "dp_reference_points": 0,
+        "dp_output_points": 0,
+        "dp_maximum": null,
+        "checked_components": [
+          "trusted_raw_alignment",
+          "PROJ_coordinates",
+          "exact_frozen_parameters_order_contract",
+          "independent_split_filter_direction_DP",
+          "stage_actual_values_features",
+          "ledger_fates",
+          "reported_common_point_errors_coverage_and_counts",
+          "reported_DP_denominator_saving_max"
+        ],
+        "unchecked_components": [
+          "batch_scope",
+          "batch_aggregation",
+          "full_hash_graph",
+          "LLM_path",
+          "memory",
+          "selection",
+          "experiment_admission"
+        ]
+      },
+      "common_independent_summary": {
+        "max_error": null,
+        "mean_error": null,
+        "crossed_edges": []
+      },
+      "production_review_status": "VERIFIED",
+      "production_errors": []
+    },
+    {
+      "record_id": "2",
+      "order": "D-S-P",
+      "target_sha256": "8713610a1dd19775682a0bfb869bdc809ff55039146ea3287bd04adc0ae69df2",
+      "independent": {
+        "status": "VERIFIED",
+        "record_id": "2",
+        "checks": 653,
+        "errors": [],
+        "coordinate_max_error_m": 3.637978807091713e-12,
+        "fate_counts": {
+          "filtered": 99
+        },
+        "dp_reference_points": 0,
+        "dp_output_points": 0,
+        "dp_maximum": null,
+        "checked_components": [
+          "trusted_raw_alignment",
+          "PROJ_coordinates",
+          "exact_frozen_parameters_order_contract",
+          "independent_split_filter_direction_DP",
+          "stage_actual_values_features",
+          "ledger_fates",
+          "reported_common_point_errors_coverage_and_counts",
+          "reported_DP_denominator_saving_max"
+        ],
+        "unchecked_components": [
+          "batch_scope",
+          "batch_aggregation",
+          "full_hash_graph",
+          "LLM_path",
+          "memory",
+          "selection",
+          "experiment_admission"
+        ]
+      },
+      "common_independent_summary": {
+        "max_error": null,
+        "mean_error": null,
+        "crossed_edges": []
+      },
+      "production_review_status": "VERIFIED",
+      "production_errors": []
+    },
+    {
+      "record_id": "2",
+      "order": "D-P-S",
+      "target_sha256": "4ad6cef7f3ac95604abc95d21c945bfaf4fc839d06b2c025fa8476b53fa58831",
+      "independent": {
+        "status": "VERIFIED",
+        "record_id": "2",
+        "checks": 575,
+        "errors": [],
+        "coordinate_max_error_m": 3.637978807091713e-12,
+        "fate_counts": {
+          "simplified": 97,
+          "filtered": 2
+        },
+        "dp_reference_points": 99,
+        "dp_output_points": 2,
+        "dp_maximum": 0.5679577817855923,
+        "checked_components": [
+          "trusted_raw_alignment",
+          "PROJ_coordinates",
+          "exact_frozen_parameters_order_contract",
+          "independent_split_filter_direction_DP",
+          "stage_actual_values_features",
+          "ledger_fates",
+          "reported_common_point_errors_coverage_and_counts",
+          "reported_DP_denominator_saving_max"
+        ],
+        "unchecked_components": [
+          "batch_scope",
+          "batch_aggregation",
+          "full_hash_graph",
+          "LLM_path",
+          "memory",
+          "selection",
+          "experiment_admission"
+        ]
+      },
+      "common_independent_summary": {
+        "max_error": null,
+        "mean_error": null,
+        "crossed_edges": []
+      },
+      "production_review_status": "VERIFIED",
+      "production_errors": []
+    },
+    {
+      "record_id": "2",
+      "order": "P-S-D",
+      "target_sha256": "96efa9f46bfe56f4ea4cb8058946101e4115c8165484120ec637533cbd13d01f",
+      "independent": {
+        "status": "VERIFIED",
+        "record_id": "2",
+        "checks": 366,
+        "errors": [],
+        "coordinate_max_error_m": 3.637978807091713e-12,
+        "fate_counts": {
+          "simplified": 97,
+          "filtered": 2
+        },
+        "dp_reference_points": 99,
+        "dp_output_points": 2,
+        "dp_maximum": 0.5679577817855923,
+        "checked_components": [
+          "trusted_raw_alignment",
+          "PROJ_coordinates",
+          "exact_frozen_parameters_order_contract",
+          "independent_split_filter_direction_DP",
+          "stage_actual_values_features",
+          "ledger_fates",
+          "reported_common_point_errors_coverage_and_counts",
+          "reported_DP_denominator_saving_max"
+        ],
+        "unchecked_components": [
+          "batch_scope",
+          "batch_aggregation",
+          "full_hash_graph",
+          "LLM_path",
+          "memory",
+          "selection",
+          "experiment_admission"
+        ]
+      },
+      "common_independent_summary": {
+        "max_error": null,
+        "mean_error": null,
+        "crossed_edges": []
+      },
+      "production_review_status": "VERIFIED",
+      "production_errors": []
+    },
+    {
+      "record_id": "2",
+      "order": "P-D-S",
+      "target_sha256": "20bb948d282ccafb218e2e1cfc2a29ba1a31c2259b7cae1c1cf8720c3c6d5dd3",
+      "independent": {
+        "status": "VERIFIED",
+        "record_id": "2",
+        "checks": 381,
+        "errors": [],
+        "coordinate_max_error_m": 3.637978807091713e-12,
+        "fate_counts": {
+          "simplified": 97,
+          "filtered": 2
+        },
+        "dp_reference_points": 99,
+        "dp_output_points": 2,
+        "dp_maximum": 0.5679577817855923,
+        "checked_components": [
+          "trusted_raw_alignment",
+          "PROJ_coordinates",
+          "exact_frozen_parameters_order_contract",
+          "independent_split_filter_direction_DP",
+          "stage_actual_values_features",
+          "ledger_fates",
+          "reported_common_point_errors_coverage_and_counts",
+          "reported_DP_denominator_saving_max"
+        ],
+        "unchecked_components": [
+          "batch_scope",
+          "batch_aggregation",
+          "full_hash_graph",
+          "LLM_path",
+          "memory",
+          "selection",
+          "experiment_admission"
+        ]
+      },
+      "common_independent_summary": {
+        "max_error": null,
+        "mean_error": null,
+        "crossed_edges": []
+      },
+      "production_review_status": "VERIFIED",
+      "production_errors": []
+    },
+    {
+      "record_id": "246",
+      "order": "S-D-P",
+      "target_sha256": "9621e46b2d03e4f275bf760408dd325e4eb86d05bc8d083625415719debb7ac9",
+      "independent": {
+        "status": "VERIFIED",
+        "record_id": "246",
+        "checks": 1007,
+        "errors": [],
+        "coordinate_max_error_m": 1.8189894035458565e-12,
+        "fate_counts": {
+          "denoised": 3,
+          "simplified": 69,
+          "retained": 36
+        },
+        "dp_reference_points": 105,
+        "dp_output_points": 36,
+        "dp_maximum": 4.768356861321127,
+        "checked_components": [
+          "trusted_raw_alignment",
+          "PROJ_coordinates",
+          "exact_frozen_parameters_order_contract",
+          "independent_split_filter_direction_DP",
+          "stage_actual_values_features",
+          "ledger_fates",
+          "reported_common_point_errors_coverage_and_counts",
+          "reported_DP_denominator_saving_max"
+        ],
+        "unchecked_components": [
+          "batch_scope",
+          "batch_aggregation",
+          "full_hash_graph",
+          "LLM_path",
+          "memory",
+          "selection",
+          "experiment_admission"
+        ]
+      },
+      "common_independent_summary": {
+        "max_error": 111.93999607553866,
+        "mean_error": 2.1880863653973632,
+        "crossed_edges": []
+      },
+      "production_review_status": "VERIFIED",
+      "production_errors": []
+    },
+    {
+      "record_id": "246",
+      "order": "S-P-D",
+      "target_sha256": "e6b4f6e552fa29ea257492860138d2290b57bffde231056193c3a324fcc2b140",
+      "independent": {
+        "status": "VERIFIED",
+        "record_id": "246",
+        "checks": 869,
+        "errors": [],
+        "coordinate_max_error_m": 1.8189894035458565e-12,
+        "fate_counts": {
+          "simplified": 71,
+          "denoised": 2,
+          "retained": 35
+        },
+        "dp_reference_points": 108,
+        "dp_output_points": 37,
+        "dp_maximum": 4.768356861321127,
+        "checked_components": [
+          "trusted_raw_alignment",
+          "PROJ_coordinates",
+          "exact_frozen_parameters_order_contract",
+          "independent_split_filter_direction_DP",
+          "stage_actual_values_features",
+          "ledger_fates",
+          "reported_common_point_errors_coverage_and_counts",
+          "reported_DP_denominator_saving_max"
+        ],
+        "unchecked_components": [
+          "batch_scope",
+          "batch_aggregation",
+          "full_hash_graph",
+          "LLM_path",
+          "memory",
+          "selection",
+          "experiment_admission"
+        ]
+      },
+      "common_independent_summary": {
+        "max_error": 111.93999607553866,
+        "mean_error": 2.530171752218117,
+        "crossed_edges": []
+      },
+      "production_review_status": "VERIFIED",
+      "production_errors": []
+    },
+    {
+      "record_id": "246",
+      "order": "D-S-P",
+      "target_sha256": "7e5b85191120439c61e32c3c55d69d3a092553f7f33753ee97b337053b3bacf3",
+      "independent": {
+        "status": "VERIFIED",
+        "record_id": "246",
+        "checks": 998,
+        "errors": [],
+        "coordinate_max_error_m": 1.8189894035458565e-12,
+        "fate_counts": {
+          "denoised": 3,
+          "simplified": 69,
+          "retained": 36
+        },
+        "dp_reference_points": 105,
+        "dp_output_points": 36,
+        "dp_maximum": 4.768356861321127,
+        "checked_components": [
+          "trusted_raw_alignment",
+          "PROJ_coordinates",
+          "exact_frozen_parameters_order_contract",
+          "independent_split_filter_direction_DP",
+          "stage_actual_values_features",
+          "ledger_fates",
+          "reported_common_point_errors_coverage_and_counts",
+          "reported_DP_denominator_saving_max"
+        ],
+        "unchecked_components": [
+          "batch_scope",
+          "batch_aggregation",
+          "full_hash_graph",
+          "LLM_path",
+          "memory",
+          "selection",
+          "experiment_admission"
+        ]
+      },
+      "common_independent_summary": {
+        "max_error": 111.93999607553866,
+        "mean_error": 2.1880863653973632,
+        "crossed_edges": []
+      },
+      "production_review_status": "VERIFIED",
+      "production_errors": []
+    },
+    {
+      "record_id": "246",
+      "order": "D-P-S",
+      "target_sha256": "334927fbb7740bf2a0a379ba4341ebb0b656e5d4fe86d2eecdf9274df8d3ffe3",
+      "independent": {
+        "status": "VERIFIED",
+        "record_id": "246",
+        "checks": 822,
+        "errors": [],
+        "coordinate_max_error_m": 1.8189894035458565e-12,
+        "fate_counts": {
+          "denoised": 3,
+          "simplified": 69,
+          "filtered": 21,
+          "retained": 15
+        },
+        "dp_reference_points": 105,
+        "dp_output_points": 36,
+        "dp_maximum": 4.768356861321127,
+        "checked_components": [
+          "trusted_raw_alignment",
+          "PROJ_coordinates",
+          "exact_frozen_parameters_order_contract",
+          "independent_split_filter_direction_DP",
+          "stage_actual_values_features",
+          "ledger_fates",
+          "reported_common_point_errors_coverage_and_counts",
+          "reported_DP_denominator_saving_max"
+        ],
+        "unchecked_components": [
+          "batch_scope",
+          "batch_aggregation",
+          "full_hash_graph",
+          "LLM_path",
+          "memory",
+          "selection",
+          "experiment_admission"
+        ]
+      },
+      "common_independent_summary": {
+        "max_error": 111.93999607553866,
+        "mean_error": 5.678002930587295,
+        "crossed_edges": []
+      },
+      "production_review_status": "VERIFIED",
+      "production_errors": []
+    },
+    {
+      "record_id": "246",
+      "order": "P-S-D",
+      "target_sha256": "b81c7de88c1f2025bd176383c4aed4bcf1e98ff094cbe9e4fc427fdd0ca8e016",
+      "independent": {
+        "status": "VERIFIED",
+        "record_id": "246",
+        "checks": 658,
+        "errors": [],
+        "coordinate_max_error_m": 1.8189894035458565e-12,
+        "fate_counts": {
+          "simplified": 71,
+          "filtered": 21,
+          "denoised": 1,
+          "retained": 15
+        },
+        "dp_reference_points": 108,
+        "dp_output_points": 37,
+        "dp_maximum": 4.768356861321127,
+        "checked_components": [
+          "trusted_raw_alignment",
+          "PROJ_coordinates",
+          "exact_frozen_parameters_order_contract",
+          "independent_split_filter_direction_DP",
+          "stage_actual_values_features",
+          "ledger_fates",
+          "reported_common_point_errors_coverage_and_counts",
+          "reported_DP_denominator_saving_max"
+        ],
+        "unchecked_components": [
+          "batch_scope",
+          "batch_aggregation",
+          "full_hash_graph",
+          "LLM_path",
+          "memory",
+          "selection",
+          "experiment_admission"
+        ]
+      },
+      "common_independent_summary": {
+        "max_error": 111.93999607553866,
+        "mean_error": 5.678002930587295,
+        "crossed_edges": []
+      },
+      "production_review_status": "VERIFIED",
+      "production_errors": []
+    },
+    {
+      "record_id": "246",
+      "order": "P-D-S",
+      "target_sha256": "beade7186095850f2682b7a71f76f3405c13bd0dead08a63a157ea67a58b7807",
+      "independent": {
+        "status": "VERIFIED",
+        "record_id": "246",
+        "checks": 678,
+        "errors": [],
+        "coordinate_max_error_m": 1.8189894035458565e-12,
+        "fate_counts": {
+          "simplified": 71,
+          "denoised": 2,
+          "filtered": 20,
+          "retained": 15
+        },
+        "dp_reference_points": 108,
+        "dp_output_points": 37,
+        "dp_maximum": 4.768356861321127,
+        "checked_components": [
+          "trusted_raw_alignment",
+          "PROJ_coordinates",
+          "exact_frozen_parameters_order_contract",
+          "independent_split_filter_direction_DP",
+          "stage_actual_values_features",
+          "ledger_fates",
+          "reported_common_point_errors_coverage_and_counts",
+          "reported_DP_denominator_saving_max"
+        ],
+        "unchecked_components": [
+          "batch_scope",
+          "batch_aggregation",
+          "full_hash_graph",
+          "LLM_path",
+          "memory",
+          "selection",
+          "experiment_admission"
+        ]
+      },
+      "common_independent_summary": {
+        "max_error": 111.93999607553866,
+        "mean_error": 5.678002930587295,
+        "crossed_edges": []
+      },
+      "production_review_status": "VERIFIED",
+      "production_errors": []
+    },
+    {
+      "record_id": "256",
+      "order": "S-D-P",
+      "target_sha256": "2fcaa9e2c8c05c7c1b3d30968962952db111b007e3f2c48540580347ce1340f1",
+      "independent": {
+        "status": "VERIFIED",
+        "record_id": "256",
+        "checks": 1249,
+        "errors": [],
+        "coordinate_max_error_m": 3.637978807091713e-12,
+        "fate_counts": {
+          "simplified": 45,
+          "retained": 54
+        },
+        "dp_reference_points": 99,
+        "dp_output_points": 54,
+        "dp_maximum": 4.592745496123116,
+        "checked_components": [
+          "trusted_raw_alignment",
+          "PROJ_coordinates",
+          "exact_frozen_parameters_order_contract",
+          "independent_split_filter_direction_DP",
+          "stage_actual_values_features",
+          "ledger_fates",
+          "reported_common_point_errors_coverage_and_counts",
+          "reported_DP_denominator_saving_max"
+        ],
+        "unchecked_components": [
+          "batch_scope",
+          "batch_aggregation",
+          "full_hash_graph",
+          "LLM_path",
+          "memory",
+          "selection",
+          "experiment_admission"
+        ]
+      },
+      "common_independent_summary": {
+        "max_error": 4.592745496123116,
+        "mean_error": 0.6888742496738106,
+        "crossed_edges": []
+      },
+      "production_review_status": "VERIFIED",
+      "production_errors": []
+    },
+    {
+      "record_id": "256",
+      "order": "S-P-D",
+      "target_sha256": "c85f30e452acadd26201b10819b4a626bc9b3548173cacf3958c1682d87aecb7",
+      "independent": {
+        "status": "VERIFIED",
+        "record_id": "256",
+        "checks": 1159,
+        "errors": [],
+        "coordinate_max_error_m": 3.637978807091713e-12,
+        "fate_counts": {
+          "simplified": 45,
+          "retained": 54
+        },
+        "dp_reference_points": 99,
+        "dp_output_points": 54,
+        "dp_maximum": 4.592745496123116,
+        "checked_components": [
+          "trusted_raw_alignment",
+          "PROJ_coordinates",
+          "exact_frozen_parameters_order_contract",
+          "independent_split_filter_direction_DP",
+          "stage_actual_values_features",
+          "ledger_fates",
+          "reported_common_point_errors_coverage_and_counts",
+          "reported_DP_denominator_saving_max"
+        ],
+        "unchecked_components": [
+          "batch_scope",
+          "batch_aggregation",
+          "full_hash_graph",
+          "LLM_path",
+          "memory",
+          "selection",
+          "experiment_admission"
+        ]
+      },
+      "common_independent_summary": {
+        "max_error": 4.592745496123116,
+        "mean_error": 0.6888742496738106,
+        "crossed_edges": []
+      },
+      "production_review_status": "VERIFIED",
+      "production_errors": []
+    },
+    {
+      "record_id": "256",
+      "order": "D-S-P",
+      "target_sha256": "c3c994de9f595a3a13edfa543fd861cc33fe2621509d2f59d355540e8ded6cdf",
+      "independent": {
+        "status": "VERIFIED",
+        "record_id": "256",
+        "checks": 1161,
+        "errors": [],
+        "coordinate_max_error_m": 3.637978807091713e-12,
+        "fate_counts": {
+          "simplified": 45,
+          "retained": 54
+        },
+        "dp_reference_points": 99,
+        "dp_output_points": 54,
+        "dp_maximum": 4.592745496123116,
+        "checked_components": [
+          "trusted_raw_alignment",
+          "PROJ_coordinates",
+          "exact_frozen_parameters_order_contract",
+          "independent_split_filter_direction_DP",
+          "stage_actual_values_features",
+          "ledger_fates",
+          "reported_common_point_errors_coverage_and_counts",
+          "reported_DP_denominator_saving_max"
+        ],
+        "unchecked_components": [
+          "batch_scope",
+          "batch_aggregation",
+          "full_hash_graph",
+          "LLM_path",
+          "memory",
+          "selection",
+          "experiment_admission"
+        ]
+      },
+      "common_independent_summary": {
+        "max_error": 4.592745496123116,
+        "mean_error": 0.6888742496738106,
+        "crossed_edges": []
+      },
+      "production_review_status": "VERIFIED",
+      "production_errors": []
+    },
+    {
+      "record_id": "256",
+      "order": "D-P-S",
+      "target_sha256": "ad0b05f1a700fbb148c42467b6c9a5e10b61f86781c464018e1f07c49192d4b0",
+      "independent": {
+        "status": "VERIFIED",
+        "record_id": "256",
+        "checks": 840,
+        "errors": [],
+        "coordinate_max_error_m": 3.637978807091713e-12,
+        "fate_counts": {
+          "simplified": 53,
+          "filtered": 29,
+          "retained": 17
+        },
+        "dp_reference_points": 99,
+        "dp_output_points": 46,
+        "dp_maximum": 4.695664044891429,
+        "checked_components": [
+          "trusted_raw_alignment",
+          "PROJ_coordinates",
+          "exact_frozen_parameters_order_contract",
+          "independent_split_filter_direction_DP",
+          "stage_actual_values_features",
+          "ledger_fates",
+          "reported_common_point_errors_coverage_and_counts",
+          "reported_DP_denominator_saving_max"
+        ],
+        "unchecked_components": [
+          "batch_scope",
+          "batch_aggregation",
+          "full_hash_graph",
+          "LLM_path",
+          "memory",
+          "selection",
+          "experiment_admission"
+        ]
+      },
+      "common_independent_summary": {
+        "max_error": 3.180307567105683,
+        "mean_error": 0.1766837537280935,
+        "crossed_edges": []
+      },
+      "production_review_status": "VERIFIED",
+      "production_errors": []
+    },
+    {
+      "record_id": "256",
+      "order": "P-S-D",
+      "target_sha256": "6ff31ee63c5d008cf0ec928368f735765e4f1c8580115502f2aaf7c2caa815c9",
+      "independent": {
+        "status": "VERIFIED",
+        "record_id": "256",
+        "checks": 698,
+        "errors": [],
+        "coordinate_max_error_m": 3.637978807091713e-12,
+        "fate_counts": {
+          "simplified": 53,
+          "filtered": 29,
+          "retained": 17
+        },
+        "dp_reference_points": 99,
+        "dp_output_points": 46,
+        "dp_maximum": 4.695664044891429,
+        "checked_components": [
+          "trusted_raw_alignment",
+          "PROJ_coordinates",
+          "exact_frozen_parameters_order_contract",
+          "independent_split_filter_direction_DP",
+          "stage_actual_values_features",
+          "ledger_fates",
+          "reported_common_point_errors_coverage_and_counts",
+          "reported_DP_denominator_saving_max"
+        ],
+        "unchecked_components": [
+          "batch_scope",
+          "batch_aggregation",
+          "full_hash_graph",
+          "LLM_path",
+          "memory",
+          "selection",
+          "experiment_admission"
+        ]
+      },
+      "common_independent_summary": {
+        "max_error": 3.180307567105683,
+        "mean_error": 0.1766837537280935,
+        "crossed_edges": []
+      },
+      "production_review_status": "VERIFIED",
+      "production_errors": []
+    },
+    {
+      "record_id": "256",
+      "order": "P-D-S",
+      "target_sha256": "f633ea9597a7b26ca2541e1f03f442da0b5ccf8a2fc3b36b001959fd32f52ef2",
+      "independent": {
+        "status": "VERIFIED",
+        "record_id": "256",
+        "checks": 734,
+        "errors": [],
+        "coordinate_max_error_m": 3.637978807091713e-12,
+        "fate_counts": {
+          "simplified": 53,
+          "filtered": 29,
+          "retained": 17
+        },
+        "dp_reference_points": 99,
+        "dp_output_points": 46,
+        "dp_maximum": 4.695664044891429,
+        "checked_components": [
+          "trusted_raw_alignment",
+          "PROJ_coordinates",
+          "exact_frozen_parameters_order_contract",
+          "independent_split_filter_direction_DP",
+          "stage_actual_values_features",
+          "ledger_fates",
+          "reported_common_point_errors_coverage_and_counts",
+          "reported_DP_denominator_saving_max"
+        ],
+        "unchecked_components": [
+          "batch_scope",
+          "batch_aggregation",
+          "full_hash_graph",
+          "LLM_path",
+          "memory",
+          "selection",
+          "experiment_admission"
+        ]
+      },
+      "common_independent_summary": {
+        "max_error": 3.180307567105683,
+        "mean_error": 0.1766837537280935,
+        "crossed_edges": []
+      },
+      "production_review_status": "VERIFIED",
+      "production_errors": []
+    },
+    {
+      "record_id": "306",
+      "order": "S-D-P",
+      "target_sha256": "e68f2cd5fe3c4ed9f8a86c3e7cc1df99d6343d20dccef5c9f83a03ab174e415b",
+      "independent": {
+        "status": "VERIFIED",
+        "record_id": "306",
+        "checks": 1394,
+        "errors": [],
+        "coordinate_max_error_m": 3.637978807091713e-12,
+        "fate_counts": {
+          "filtered": 4,
+          "denoised": 2,
+          "simplified": 36,
+          "retained": 69
+        },
+        "dp_reference_points": 105,
+        "dp_output_points": 69,
+        "dp_maximum": 4.938319812632412,
+        "checked_components": [
+          "trusted_raw_alignment",
+          "PROJ_coordinates",
+          "exact_frozen_parameters_order_contract",
+          "independent_split_filter_direction_DP",
+          "stage_actual_values_features",
+          "ledger_fates",
+          "reported_common_point_errors_coverage_and_counts",
+          "reported_DP_denominator_saving_max"
+        ],
+        "unchecked_components": [
+          "batch_scope",
+          "batch_aggregation",
+          "full_hash_graph",
+          "LLM_path",
+          "memory",
+          "selection",
+          "experiment_admission"
+        ]
+      },
+      "common_independent_summary": {
+        "max_error": 64.36006739329578,
+        "mean_error": 1.3801906772433494,
+        "crossed_edges": []
+      },
+      "production_review_status": "VERIFIED",
+      "production_errors": []
+    },
+    {
+      "record_id": "306",
+      "order": "S-P-D",
+      "target_sha256": "905500b8fbf0d1e542f1da902b7e34aa1a08c20ae90196ca87a9e611a9cb5626",
+      "independent": {
+        "status": "VERIFIED",
+        "record_id": "306",
+        "checks": 1320,
+        "errors": [],
+        "coordinate_max_error_m": 3.637978807091713e-12,
+        "fate_counts": {
+          "filtered": 4,
+          "simplified": 38,
+          "denoised": 1,
+          "retained": 68
+        },
+        "dp_reference_points": 107,
+        "dp_output_points": 69,
+        "dp_maximum": 4.938319812632412,
+        "checked_components": [
+          "trusted_raw_alignment",
+          "PROJ_coordinates",
+          "exact_frozen_parameters_order_contract",
+          "independent_split_filter_direction_DP",
+          "stage_actual_values_features",
+          "ledger_fates",
+          "reported_common_point_errors_coverage_and_counts",
+          "reported_DP_denominator_saving_max"
+        ],
+        "unchecked_components": [
+          "batch_scope",
+          "batch_aggregation",
+          "full_hash_graph",
+          "LLM_path",
+          "memory",
+          "selection",
+          "experiment_admission"
+        ]
+      },
+      "common_independent_summary": {
+        "max_error": 96.75880526940793,
+        "mean_error": 2.100854493298641,
+        "crossed_edges": []
+      },
+      "production_review_status": "VERIFIED",
+      "production_errors": []
+    },
+    {
+      "record_id": "306",
+      "order": "D-S-P",
+      "target_sha256": "044094fdaccfcf88e76e3cc3e6071d4435beef4ed00e0e1c48331d033fc8873b",
+      "independent": {
+        "status": "VERIFIED",
+        "record_id": "306",
+        "checks": 1320,
+        "errors": [],
+        "coordinate_max_error_m": 3.637978807091713e-12,
+        "fate_counts": {
+          "denoised": 2,
+          "filtered": 4,
+          "simplified": 36,
+          "retained": 69
+        },
+        "dp_reference_points": 105,
+        "dp_output_points": 69,
+        "dp_maximum": 4.938319812632412,
+        "checked_components": [
+          "trusted_raw_alignment",
+          "PROJ_coordinates",
+          "exact_frozen_parameters_order_contract",
+          "independent_split_filter_direction_DP",
+          "stage_actual_values_features",
+          "ledger_fates",
+          "reported_common_point_errors_coverage_and_counts",
+          "reported_DP_denominator_saving_max"
+        ],
+        "unchecked_components": [
+          "batch_scope",
+          "batch_aggregation",
+          "full_hash_graph",
+          "LLM_path",
+          "memory",
+          "selection",
+          "experiment_admission"
+        ]
+      },
+      "common_independent_summary": {
+        "max_error": 4.938319812632412,
+        "mean_error": 0.7860408969032321,
+        "crossed_edges": []
+      },
+      "production_review_status": "VERIFIED",
+      "production_errors": []
+    },
+    {
+      "record_id": "306",
+      "order": "D-P-S",
+      "target_sha256": "af111efbbe7de4025246fde28d22491f4a769f8b5947b2dd44e6e9890899f3a3",
+      "independent": {
+        "status": "VERIFIED",
+        "record_id": "306",
+        "checks": 1053,
+        "errors": [],
+        "coordinate_max_error_m": 3.637978807091713e-12,
+        "fate_counts": {
+          "denoised": 2,
+          "simplified": 42,
+          "filtered": 25,
+          "retained": 42
+        },
+        "dp_reference_points": 109,
+        "dp_output_points": 67,
+        "dp_maximum": 4.938319812632412,
+        "checked_components": [
+          "trusted_raw_alignment",
+          "PROJ_coordinates",
+          "exact_frozen_parameters_order_contract",
+          "independent_split_filter_direction_DP",
+          "stage_actual_values_features",
+          "ledger_fates",
+          "reported_common_point_errors_coverage_and_counts",
+          "reported_DP_denominator_saving_max"
+        ],
+        "unchecked_components": [
+          "batch_scope",
+          "batch_aggregation",
+          "full_hash_graph",
+          "LLM_path",
+          "memory",
+          "selection",
+          "experiment_admission"
+        ]
+      },
+      "common_independent_summary": {
+        "max_error": 1.0825277545928014,
+        "mean_error": 0.0651297593113816,
+        "crossed_edges": []
+      },
+      "production_review_status": "VERIFIED",
+      "production_errors": []
+    },
+    {
+      "record_id": "306",
+      "order": "P-S-D",
+      "target_sha256": "d8d56f964174f5920a6fd0bf8e549beb2e6fbd7ad53e92700dc7e9d7a1653d21",
+      "independent": {
+        "status": "VERIFIED",
+        "record_id": "306",
+        "checks": 973,
+        "errors": [],
+        "coordinate_max_error_m": 3.637978807091713e-12,
+        "fate_counts": {
+          "simplified": 44,
+          "filtered": 24,
+          "retained": 43
+        },
+        "dp_reference_points": 111,
+        "dp_output_points": 67,
+        "dp_maximum": 4.938319812632412,
+        "checked_components": [
+          "trusted_raw_alignment",
+          "PROJ_coordinates",
+          "exact_frozen_parameters_order_contract",
+          "independent_split_filter_direction_DP",
+          "stage_actual_values_features",
+          "ledger_fates",
+          "reported_common_point_errors_coverage_and_counts",
+          "reported_DP_denominator_saving_max"
+        ],
+        "unchecked_components": [
+          "batch_scope",
+          "batch_aggregation",
+          "full_hash_graph",
+          "LLM_path",
+          "memory",
+          "selection",
+          "experiment_admission"
+        ]
+      },
+      "common_independent_summary": {
+        "max_error": 2.4837565785123714,
+        "mean_error": 0.10561907275936643,
+        "crossed_edges": []
+      },
+      "production_review_status": "VERIFIED",
+      "production_errors": []
+    },
+    {
+      "record_id": "306",
+      "order": "P-D-S",
+      "target_sha256": "dbbf4eae3df54e1ce89ae48d5ddf28789ccf2c5f7989143baf48c090d27e95f7",
+      "independent": {
+        "status": "VERIFIED",
+        "record_id": "306",
+        "checks": 964,
+        "errors": [],
+        "coordinate_max_error_m": 3.637978807091713e-12,
+        "fate_counts": {
+          "simplified": 44,
+          "denoised": 1,
+          "filtered": 25,
+          "retained": 41
+        },
+        "dp_reference_points": 111,
+        "dp_output_points": 67,
+        "dp_maximum": 4.938319812632412,
+        "checked_components": [
+          "trusted_raw_alignment",
+          "PROJ_coordinates",
+          "exact_frozen_parameters_order_contract",
+          "independent_split_filter_direction_DP",
+          "stage_actual_values_features",
+          "ledger_fates",
+          "reported_common_point_errors_coverage_and_counts",
+          "reported_DP_denominator_saving_max"
+        ],
+        "unchecked_components": [
+          "batch_scope",
+          "batch_aggregation",
+          "full_hash_graph",
+          "LLM_path",
+          "memory",
+          "selection",
+          "experiment_admission"
+        ]
+      },
+      "common_independent_summary": {
+        "max_error": 1.2085906007380107,
+        "mean_error": 0.056371360026769325,
+        "crossed_edges": []
+      },
+      "production_review_status": "VERIFIED",
+      "production_errors": []
+    },
+    {
+      "record_id": "352",
+      "order": "S-D-P",
+      "target_sha256": "8dce5df3dda159d2e50664a173138d9ade502eea273b3b6e677e5337fb4c7fb9",
+      "independent": {
+        "status": "VERIFIED",
+        "record_id": "352",
+        "checks": 1522,
+        "errors": [],
+        "coordinate_max_error_m": 3.637978807091713e-12,
+        "fate_counts": {
+          "filtered": 10,
+          "denoised": 8,
+          "simplified": 123,
+          "retained": 29
+        },
+        "dp_reference_points": 152,
+        "dp_output_points": 29,
+        "dp_maximum": 4.344985593528116,
+        "checked_components": [
+          "trusted_raw_alignment",
+          "PROJ_coordinates",
+          "exact_frozen_parameters_order_contract",
+          "independent_split_filter_direction_DP",
+          "stage_actual_values_features",
+          "ledger_fates",
+          "reported_common_point_errors_coverage_and_counts",
+          "reported_DP_denominator_saving_max"
+        ],
+        "unchecked_components": [
+          "batch_scope",
+          "batch_aggregation",
+          "full_hash_graph",
+          "LLM_path",
+          "memory",
+          "selection",
+          "experiment_admission"
+        ]
+      },
+      "common_independent_summary": {
+        "max_error": 128.06681822112668,
+        "mean_error": 2.3593083696604675,
+        "crossed_edges": []
+      },
+      "production_review_status": "VERIFIED",
+      "production_errors": []
+    },
+    {
+      "record_id": "352",
+      "order": "S-P-D",
+      "target_sha256": "da71615d2c25d77af878da836cba24168f5e21fb5c97fc59f3c625147beaa2ee",
+      "independent": {
+        "status": "VERIFIED",
+        "record_id": "352",
+        "checks": 1286,
+        "errors": [],
+        "coordinate_max_error_m": 3.637978807091713e-12,
+        "fate_counts": {
+          "filtered": 10,
+          "simplified": 125,
+          "denoised": 7,
+          "retained": 28
+        },
+        "dp_reference_points": 160,
+        "dp_output_points": 35,
+        "dp_maximum": 4.344985593528116,
+        "checked_components": [
+          "trusted_raw_alignment",
+          "PROJ_coordinates",
+          "exact_frozen_parameters_order_contract",
+          "independent_split_filter_direction_DP",
+          "stage_actual_values_features",
+          "ledger_fates",
+          "reported_common_point_errors_coverage_and_counts",
+          "reported_DP_denominator_saving_max"
+        ],
+        "unchecked_components": [
+          "batch_scope",
+          "batch_aggregation",
+          "full_hash_graph",
+          "LLM_path",
+          "memory",
+          "selection",
+          "experiment_admission"
+        ]
+      },
+      "common_independent_summary": {
+        "max_error": 128.06681822112668,
+        "mean_error": 6.337954720716881,
+        "crossed_edges": []
+      },
+      "production_review_status": "VERIFIED",
+      "production_errors": []
+    },
+    {
+      "record_id": "352",
+      "order": "D-S-P",
+      "target_sha256": "7e5e208c621e61dd6970b8bb2edeea488a22e1de0aabff94322ced6a92253b04",
+      "independent": {
+        "status": "VERIFIED",
+        "record_id": "352",
+        "checks": 1469,
+        "errors": [],
+        "coordinate_max_error_m": 3.637978807091713e-12,
+        "fate_counts": {
+          "denoised": 14,
+          "filtered": 5,
+          "simplified": 123,
+          "retained": 28
+        },
+        "dp_reference_points": 151,
+        "dp_output_points": 28,
+        "dp_maximum": 4.344985593528116,
+        "checked_components": [
+          "trusted_raw_alignment",
+          "PROJ_coordinates",
+          "exact_frozen_parameters_order_contract",
+          "independent_split_filter_direction_DP",
+          "stage_actual_values_features",
+          "ledger_fates",
+          "reported_common_point_errors_coverage_and_counts",
+          "reported_DP_denominator_saving_max"
+        ],
+        "unchecked_components": [
+          "batch_scope",
+          "batch_aggregation",
+          "full_hash_graph",
+          "LLM_path",
+          "memory",
+          "selection",
+          "experiment_admission"
+        ]
+      },
+      "common_independent_summary": {
+        "max_error": 94.24105140876988,
+        "mean_error": 1.4756243941206846,
+        "crossed_edges": []
+      },
+      "production_review_status": "VERIFIED",
+      "production_errors": []
+    },
+    {
+      "record_id": "352",
+      "order": "D-P-S",
+      "target_sha256": "3f684cd691f94e2eb9e11395335c17239e6976e4a7f2dd075bb7714e6767b50e",
+      "independent": {
+        "status": "VERIFIED",
+        "record_id": "352",
+        "checks": 1065,
+        "errors": [],
+        "coordinate_max_error_m": 3.637978807091713e-12,
+        "fate_counts": {
+          "denoised": 14,
+          "simplified": 130,
+          "filtered": 10,
+          "retained": 16
+        },
+        "dp_reference_points": 156,
+        "dp_output_points": 26,
+        "dp_maximum": 4.344985593528116,
+        "checked_components": [
+          "trusted_raw_alignment",
+          "PROJ_coordinates",
+          "exact_frozen_parameters_order_contract",
+          "independent_split_filter_direction_DP",
+          "stage_actual_values_features",
+          "ledger_fates",
+          "reported_common_point_errors_coverage_and_counts",
+          "reported_DP_denominator_saving_max"
+        ],
+        "unchecked_components": [
+          "batch_scope",
+          "batch_aggregation",
+          "full_hash_graph",
+          "LLM_path",
+          "memory",
+          "selection",
+          "experiment_admission"
+        ]
+      },
+      "common_independent_summary": {
+        "max_error": 94.24105140876988,
+        "mean_error": 1.7289665088323196,
+        "crossed_edges": []
+      },
+      "production_review_status": "VERIFIED",
+      "production_errors": []
+    },
+    {
+      "record_id": "352",
+      "order": "P-S-D",
+      "target_sha256": "7d38a061a09ffeb580dd9b7cd5aed1c265edb2424bdc68523bdbfa2cd36f574f",
+      "independent": {
+        "status": "VERIFIED",
+        "record_id": "352",
+        "checks": 858,
+        "errors": [],
+        "coordinate_max_error_m": 3.637978807091713e-12,
+        "fate_counts": {
+          "simplified": 134,
+          "filtered": 15,
+          "denoised": 2,
+          "retained": 19
+        },
+        "dp_reference_points": 170,
+        "dp_output_points": 36,
+        "dp_maximum": 4.344985593528116,
+        "checked_components": [
+          "trusted_raw_alignment",
+          "PROJ_coordinates",
+          "exact_frozen_parameters_order_contract",
+          "independent_split_filter_direction_DP",
+          "stage_actual_values_features",
+          "ledger_fates",
+          "reported_common_point_errors_coverage_and_counts",
+          "reported_DP_denominator_saving_max"
+        ],
+        "unchecked_components": [
+          "batch_scope",
+          "batch_aggregation",
+          "full_hash_graph",
+          "LLM_path",
+          "memory",
+          "selection",
+          "experiment_admission"
+        ]
+      },
+      "common_independent_summary": {
+        "max_error": 94.24105140876988,
+        "mean_error": 6.4351465688701115,
+        "crossed_edges": []
+      },
+      "production_review_status": "VERIFIED",
+      "production_errors": []
+    },
+    {
+      "record_id": "352",
+      "order": "P-D-S",
+      "target_sha256": "0b9120d05eb939b64db872a8f311dbbeffb8feca7561c66ea408cf29011b8526",
+      "independent": {
+        "status": "VERIFIED",
+        "record_id": "352",
+        "checks": 804,
+        "errors": [],
+        "coordinate_max_error_m": 3.637978807091713e-12,
+        "fate_counts": {
+          "simplified": 134,
+          "denoised": 10,
+          "filtered": 14,
+          "retained": 12
+        },
+        "dp_reference_points": 170,
+        "dp_output_points": 36,
+        "dp_maximum": 4.344985593528116,
+        "checked_components": [
+          "trusted_raw_alignment",
+          "PROJ_coordinates",
+          "exact_frozen_parameters_order_contract",
+          "independent_split_filter_direction_DP",
+          "stage_actual_values_features",
+          "ledger_fates",
+          "reported_common_point_errors_coverage_and_counts",
+          "reported_DP_denominator_saving_max"
+        ],
+        "unchecked_components": [
+          "batch_scope",
+          "batch_aggregation",
+          "full_hash_graph",
+          "LLM_path",
+          "memory",
+          "selection",
+          "experiment_admission"
+        ]
+      },
+      "common_independent_summary": {
+        "max_error": 94.24105140876988,
+        "mean_error": 6.0922171108916485,
+        "crossed_edges": []
+      },
+      "production_review_status": "VERIFIED",
+      "production_errors": []
+    }
+  ],
+  "total_checks": 33440,
+  "elapsed_seconds": 3.8085119939969445,
+  "new_model_calls": 0
+}

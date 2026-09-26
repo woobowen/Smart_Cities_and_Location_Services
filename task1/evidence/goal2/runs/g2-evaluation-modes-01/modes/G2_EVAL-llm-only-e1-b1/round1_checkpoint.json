@@ -1,0 +1,348 @@
+{
+  "completed_at": "2026-09-26T20:34:50.617791+00:00",
+  "resources": {
+    "experiment_model_dispatches": 1,
+    "completed_model_turns": 1,
+    "candidate_evaluations": 16,
+    "reference_assessments_outside_llm_only_decision": 8,
+    "deterministic_tool_calls": 32,
+    "cache_reads": 0,
+    "governance_role_dispatches": 0,
+    "provider_requests": "unknown",
+    "usage": [
+      {
+        "input_tokens": 12829,
+        "cached_input_tokens": 7808,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 1059,
+        "reasoning_output_tokens": 249
+      }
+    ]
+  },
+  "records": {
+    "1880": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb",
+        "cfg-df6f00206fb03678"
+      ],
+      "stopped": true,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "1880-c1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 35,
+              "dp": 2
+            },
+            "metric_id": "common_max_error",
+            "predicted_sign": "not_predicted",
+            "reason": "Lower DP tolerance while preserving S/D and raw breakpoint handling; aggregate observations cannot establish a strict common-error change."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "78bf0f8de9b1c26740ab0b5d0d5c4cca80a9e8fd900c95c524043e8d12becc53",
+          "executed_config_id": "cfg-df6f00206fb03678",
+          "prediction": {
+            "metric_id": "common_max_error",
+            "predicted_sign": "not_predicted",
+            "reference_handle": "ee3e7b75de73291f730514d82931fffe19a3e558b55bd958007328c640a713fd",
+            "candidate_handle": "11ab9422ff91caba0f5c1d7b6d90e24894c9da3585a58a3156ed5ecf7a9e40b9",
+            "status": "NOT_PREDICTED",
+            "evaluable": false
+          }
+        }
+      ]
+    },
+    "9673": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb",
+        "cfg-df6f00206fb03678"
+      ],
+      "stopped": true,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "9673-c1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 35,
+              "dp": 2
+            },
+            "metric_id": "common_max_error",
+            "predicted_sign": "not_predicted",
+            "reason": "Test lower DP tolerance with unchanged segmentation and direction filtering; duplicate counts do not determine common geometric error."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "c4947dc9d7a0532fff47cff6b54ffc2a60d51e36a38d92ca88a04b959d316156",
+          "executed_config_id": "cfg-df6f00206fb03678",
+          "prediction": {
+            "metric_id": "common_max_error",
+            "predicted_sign": "not_predicted",
+            "reference_handle": "6d5b4c17c61273079f420d0316bdbcbc5ed05c3e3e1a9cfee870c10cfb9fb443",
+            "candidate_handle": "039300a6b9973ac0fb99648e814ea69dc14fd284e5e95b90afe7a4ba0baf04c4",
+            "status": "NOT_PREDICTED",
+            "evaluable": false
+          }
+        }
+      ]
+    },
+    "2297": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb",
+        "cfg-df6f00206fb03678"
+      ],
+      "stopped": true,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "2297-c1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 35,
+              "dp": 2
+            },
+            "metric_id": "common_max_error",
+            "predicted_sign": "not_predicted",
+            "reason": "Preserve reference S/D while reducing DP tolerance; coordinates are needed to predict whether common error strictly changes."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "b733700618e253b35825ea4c5cca1ecb5cae6c7fcd31ca2af3838805495267fc",
+          "executed_config_id": "cfg-df6f00206fb03678",
+          "prediction": {
+            "metric_id": "common_max_error",
+            "predicted_sign": "not_predicted",
+            "reference_handle": "c23d27f1f353fcc0fad5492aed2701e84b10d0d2b84d7d0690667f5ac5f350cf",
+            "candidate_handle": "c0740657139ab837e28c509dbad56ef06f2741c6a87804bb9ff207103a4a4e68",
+            "status": "NOT_PREDICTED",
+            "evaluable": false
+          }
+        }
+      ]
+    },
+    "10927": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb",
+        "cfg-df6f00206fb03678"
+      ],
+      "stopped": true,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "10927-c1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 35,
+              "dp": 2
+            },
+            "metric_id": "common_max_error",
+            "predicted_sign": "not_predicted",
+            "reason": "Lower DP tolerance without altering covered input identities through S/D; the card cannot establish the resulting common error."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "1e8dd92ec556d318be711019bb3187c8e0ed24b4481312262ad67e1e22afca7c",
+          "executed_config_id": "cfg-df6f00206fb03678",
+          "prediction": {
+            "metric_id": "common_max_error",
+            "predicted_sign": "not_predicted",
+            "reference_handle": "2ac342727f9e6af2b09bd580eafc50f8127e1054e9d6ad8d5b883712b116d7cc",
+            "candidate_handle": "c6432ed0eac4be2473e8fb535b497b47fb0d9717e37e451ad97f49b62b0db842",
+            "status": "NOT_PREDICTED",
+            "evaluable": false
+          }
+        }
+      ]
+    },
+    "9709": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb",
+        "cfg-63139d05595c253c"
+      ],
+      "stopped": true,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "9709-c1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 0,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "n_final",
+            "predicted_sign": "increase",
+            "reason": "The entire path is below the reference length cutoff. Removing that cutoff admits the unbroken 99-point segment, whose endpoints survive D/P; this predicts retention, not quality."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "1e95d7e1b41090b6ef0dba2113819f2af516d4f7d80906d63d2fde790293c9fe",
+          "executed_config_id": "cfg-63139d05595c253c",
+          "prediction": {
+            "metric_id": "n_final",
+            "predicted_sign": "increase",
+            "reference_handle": "70d75bdb698636d4cbefa80edc9b3e933e047ccebd011dd88e0dec268e68c477",
+            "candidate_handle": "aec65557863a392323acb9a5c959310823b280b673b6717bcdb5de7670a85ea2",
+            "status": "EVALUABLE",
+            "delta": 2,
+            "observed_sign": "increase",
+            "evaluable": true,
+            "prediction_matches": true
+          }
+        }
+      ]
+    },
+    "7711": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb",
+        "cfg-63139d05595c253c"
+      ],
+      "stopped": true,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "7711-c1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 0,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "n_final",
+            "predicted_sign": "increase",
+            "reason": "The reference length cutoff excludes this short path. A zero cutoff admits its unbroken 100-point segment and preserves endpoints through D/P."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "b19998cfb037a5ac2611a1937917f0849f368ab3c1284d819b3440b5545cb83d",
+          "executed_config_id": "cfg-63139d05595c253c",
+          "prediction": {
+            "metric_id": "n_final",
+            "predicted_sign": "increase",
+            "reference_handle": "5a450d804ddf46e4e3df9b749a9d8facad75d5e834080258394540736bbb83da",
+            "candidate_handle": "b488877fb9d6c9710e2e0e81b5d0f45a632d851e908df20c9fb35babe48a667a",
+            "status": "EVALUABLE",
+            "delta": 2,
+            "observed_sign": "increase",
+            "evaluable": true,
+            "prediction_matches": true
+          }
+        }
+      ]
+    },
+    "7137": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb",
+        "cfg-63139d05595c253c"
+      ],
+      "stopped": true,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "7137-c1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 0,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "n_final",
+            "predicted_sign": "increase",
+            "reason": "The path falls below 65 working metres and has no reference breaks. Removing the length cutoff admits the segment, with endpoints retained."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "d128e4705a5d09c1e7daf8d98fbd413f9f753bfb6f143278c7eff6680d2c1b13",
+          "executed_config_id": "cfg-63139d05595c253c",
+          "prediction": {
+            "metric_id": "n_final",
+            "predicted_sign": "increase",
+            "reference_handle": "9dae13bd28095a6d949813665fe10da75e9609f991cbdeaf0224bee42524a715",
+            "candidate_handle": "52e74b2f4063f6e0cc4fa673ba094f06dead1953ede9567cb04648ee0156a0f1",
+            "status": "EVALUABLE",
+            "delta": 2,
+            "observed_sign": "increase",
+            "evaluable": true,
+            "prediction_matches": true
+          }
+        }
+      ]
+    },
+    "9296": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb",
+        "cfg-63139d05595c253c"
+      ],
+      "stopped": true,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "9296-c1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 0,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "n_final",
+            "predicted_sign": "increase",
+            "reason": "All reference segments are shorter than 65 working metres. Among 67 points split at two breaks, at least one segment meets min_points=5; a zero length cutoff admits it while preserving those breaks."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "127b3eb68beb103afdaf059296ef18024f66e94a25be4eaa1bd209cd7cec8285",
+          "executed_config_id": "cfg-63139d05595c253c",
+          "prediction": {
+            "metric_id": "n_final",
+            "predicted_sign": "increase",
+            "reference_handle": "5449affd167651824a809b9b129f755b5354cbba941a3c8eaaad374fe6fa9ec1",
+            "candidate_handle": "0947154c7feac6828f8d8947e64ff51c259c750e2d2c0dbabfdc287a71b90ccd",
+            "status": "EVALUABLE",
+            "delta": 6,
+            "observed_sign": "increase",
+            "evaluable": true,
+            "prediction_matches": true
+          }
+        }
+      ]
+    }
+  }
+}

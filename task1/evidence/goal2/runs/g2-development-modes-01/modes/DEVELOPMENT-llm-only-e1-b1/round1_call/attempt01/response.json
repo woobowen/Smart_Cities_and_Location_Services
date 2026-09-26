@@ -1,0 +1,172 @@
+{
+  "records": [
+    {
+      "record_id": "1076",
+      "proposals": [
+        {
+          "candidate_id": "1076-c1",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 35,
+            "dp": 5
+          },
+          "metric_id": "n_final",
+          "predicted_sign": "unchanged",
+          "reason": "Retain reference: aggregate observations do not justify changing protected breakpoints, coverage, or fidelity."
+        }
+      ],
+      "stop": true,
+      "memory_ids_used": []
+    },
+    {
+      "record_id": "5027",
+      "proposals": [
+        {
+          "candidate_id": "5027-c1",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 35,
+            "dp": 5
+          },
+          "metric_id": "n_final",
+          "predicted_sign": "unchanged",
+          "reason": "Retain reference: duplicate counts and undefined direction windows do not establish a beneficial parameter change."
+        }
+      ],
+      "stop": true,
+      "memory_ids_used": []
+    },
+    {
+      "record_id": "2759",
+      "proposals": [
+        {
+          "candidate_id": "2759-c1",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 35,
+            "dp": 5
+          },
+          "metric_id": "n_final",
+          "predicted_sign": "unchanged",
+          "reason": "Retain reference: aggregate counts cannot establish a protected improvement from changing segmentation, direction filtering, or DP."
+        }
+      ],
+      "stop": true,
+      "memory_ids_used": []
+    },
+    {
+      "record_id": "5256",
+      "proposals": [
+        {
+          "candidate_id": "5256-c1",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 35,
+            "dp": 5
+          },
+          "metric_id": "n_final",
+          "predicted_sign": "unchanged",
+          "reason": "Retain reference: no coordinates or verified feedback support an improvement over the existing coverage and fidelity tradeoff."
+        }
+      ],
+      "stop": true,
+      "memory_ids_used": []
+    },
+    {
+      "record_id": "4732",
+      "proposals": [
+        {
+          "candidate_id": "4732-c1",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 0,
+            "direction": 35,
+            "dp": 5
+          },
+          "metric_id": "n_final",
+          "predicted_sign": "increase",
+          "reason": "Reported total path length is below 65, so reference length filtering rejects the record. Setting min_length to 0 admits its sufficiently populated segment, whose endpoints survive D and P."
+        }
+      ],
+      "stop": true,
+      "memory_ids_used": []
+    },
+    {
+      "record_id": "9729",
+      "proposals": [
+        {
+          "candidate_id": "9729-c1",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 0,
+            "direction": 35,
+            "dp": 5
+          },
+          "metric_id": "n_final",
+          "predicted_sign": "increase",
+          "reason": "Reported total path length is below 65. Removing the length floor admits the unsplit 100-point segment and preserves endpoints, increasing output from the reference's empty result."
+        }
+      ],
+      "stop": true,
+      "memory_ids_used": []
+    },
+    {
+      "record_id": "9056",
+      "proposals": [
+        {
+          "candidate_id": "9056-c1",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 0,
+            "direction": 35,
+            "dp": 5
+          },
+          "metric_id": "n_final",
+          "predicted_sign": "increase",
+          "reason": "Reported path length is below 65 and there are no reference break edges. A zero length floor admits the segment; zero-time edges do not trigger the stated S rule, and endpoints survive."
+        }
+      ],
+      "stop": true,
+      "memory_ids_used": []
+    },
+    {
+      "record_id": "217",
+      "proposals": [
+        {
+          "candidate_id": "217-c1",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 0,
+            "direction": 35,
+            "dp": 5
+          },
+          "metric_id": "n_final",
+          "predicted_sign": "increase",
+          "reason": "Reported total path length is below 65, so reference segments fail length filtering. Keeping the single raw break and removing the length floor admits at least one segment with five or more points, retaining endpoints."
+        }
+      ],
+      "stop": true,
+      "memory_ids_used": []
+    }
+  ]
+}

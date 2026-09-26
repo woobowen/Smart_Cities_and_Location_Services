@@ -1,0 +1,105 @@
+# Goal 2 交付记录
+
+Goal ID：SC-LAB1-G2-EXPERIMENTS-001。内部 A01–A17 总验收已通过，当前处于实际发布准备；发布后补登记已经发生的 Git 核对。
+
+## A. 状态与批准范围
+
+- Goal 2 内部工程：VERIFIED，规定实验、单项确认、分析、11张正式图和三份新内核 Notebook 均通过独立 A01–A17 总验收。
+- Goal 2 实验：规定开发、留出、真实四模式、示范记忆、单项与反例均已实际执行。负结果属于研究结果，不等同于实现失败。
+- Publication：READY_FOR_ACTUAL_PUBLICATION；GPT_SECOND_REVIEW：PENDING。
+- 实验一 Deliverable：IMPLEMENTING；Understanding：保留用户实际状态；Submission：NOT_READY。
+
+本轮执行教师规定实验、有限参数/顺序/模式比较及单项验证。源 datum 仍为 UNVERIFIED，全部距离和轨迹图采用冻结数学椭球、h=0、ECEF→ENU 的共同工作平面。没有声称真实地理精度、噪声检测准确率或最终方法最优。G1 的阶段验收依据是本轮用户转交的明确结论，没有伪造网页审核附件。
+
+## B. 实际实验
+
+原始文件哈希为 `c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3`；只读盘点11,386条顶层记录、1,173,410点。记录不自动解释为独立用户或完整骑行。
+
+| 分区 | 记录数 | 用途 |
+|---|---:|---|
+| PILOT_REGRESSION | 7 | 已暴露案例与旧合同回归 |
+| DEMO_MEMORY | 60 | 确定性搜索和核验后建立示范记忆 |
+| DEVELOPMENT | 120 | 参数、六顺序和开发选择；模式固定24条 |
+| G2_EVAL | 120 | 冻结后确认；模式固定24条、各3次 episode |
+| G3_RESERVED | 11,079 | 本轮未用于候选选择、模式评估或最终清洗 |
+
+分区在方法结果之前按记录分组、seed=42和纯描述分层固定，所有片段留在父记录分区。原始跨度层不是运动类别真值；分层样本均值不解释为总体均值。
+
+- R01：规定 OAT、时间×距离5×5、点数×长度5×5、方向5值、DP7值，合并为59个独立配置，全部在120条开发记录运行，共7,080次记录—配置处理。冻结后14个代表/单项配置在120条留出记录运行，共1,680次。
+- R02：六顺序全部在开发120条实际运行，共720次；两种可行顺序在留出120条确认，共240次。危险顺序保存具体失败机制，没有暗加共同安全步骤。
+- R03：开发四模式各24条、1次 episode；正式各24条、3次 episode。开发12批、96个记录级观测、21次真实模型调用和1,218次候选评估；正式36批、288个记录—模式—episode观测、63次调用和3,583次候选评估。
+- R04：60条示范记录各20次确定性候选评估，共1,200次。持久快照哈希 `2330543c3a443532891936ac29d4080cb6e5f45c58e2976cc81c8fa67c6607d6`；正式评测只读，检索、消费、同源过滤与跨 episode 隔离经过独立检查。
+- R05：C-S、C-D、C-P 均完成开发选择与独立留出确认；C-D、C-P 复用同一参考配置计算，不冒充两次独立实验。两个可选结构类别均有 NOT_ADMITTED_WITH_REASON，没有新增或组合增强算法。
+- R06–R07：共同 raw 参考、完整分母/null原因、逐记录配对、阶段去向和保护项均保留。六组构造反例真实运行19条处理链、25项已知答案核验；另外10条已暴露 pilot 处理链用于解释与回归，不称新留出。
+- R08–R10：三份工作 Notebook、39张完整表（111,053行）、11张图及可编辑源、阶段技术分析、真实过程记录与独立验收由唯一 [要求登记](requirements.json) 对应；正常发布以内部全部必需项闭合为前提。
+
+当前七类正式 run 共15,721次记录—候选/配置处理，包含共同参考在不同实验中的计算，不代表15,721条独立轨迹。索引及精确哈希见 [current_runs.json](current_runs.json) 和 [result_summary.json](result_summary.json)。
+
+## C. 关键结果与分母
+
+C-S 仅替换分段/短段过滤参数组：时间30、距离400、最少点数2、最短长度0，方向35、DP5及 S-D-P 保持参考。在留出120条、12,173个原始点上，120/120条保护项通过，53条出现预登记指标的严格改善；共同覆盖从8,805增至12,162点，无输出记录从32降至0，最终点数从2,748增至2,939。新增覆盖不能证明这些点是真实有效运动点；不同上游的 DP 省点率不用于证明整体质量。
+
+C-D 保留35度、C-P 保留5工作米，结论为 NO_DEMONSTRATED_GAIN。保留参考是冻结规则下的操作性回退，不是最优性证明。开发中 D-S-P、D-P-S、P-S-D、P-D-S 分别有46、87、87、87条记录违反共同保护，作为 REJECTED_BY_CONSTRAINT 保存；S-P-D 保留其几何权衡，不包装为确定改进。
+
+| 正式模式 | 原始记录×episode | 真实模型调用 | 候选评估 | 保护内出现严格改善的记录—episode |
+|---|---:|---:|---:|---:|
+| llm-only | 24×3 | 9 | 109 | 15/72 |
+| search-only | 24×3 | 0 | 1,440 | 27/72 |
+| llm+search | 24×3 | 27 | 1,080 | 47/72 |
+| llm+memory+search | 24×3 | 27 | 954 | 47/72 |
+
+三种模型模式正式共467条原始提议，467条合法且执行，未夹紧后再统计合法性；0工程回退。185条可评价方向预测与实测方向一致，282条因未承诺、不可比或近零等原因不可评价，不能算作额外正确预测。search-only 不产生模型提议，其模型接口哨兵测试要求一旦调用立即失败。
+
+合法提议也有负结果：正式467条提议中2条记忆模式提议分别损失记录3420的16个、记录955的1个共同覆盖身份，均为 TRADEOFF，未被选入最终输出。覆盖缺失时不把完整共同集合误差写成可比数值；[原始提议](tables/mode_proposals.csv) 与 [候选保护结果](tables/mode_candidates.csv) 可按 episode、record 和 config 配对核验。
+
+正式记忆模式72/72个检索机会有送达条目；181个记录级决策回合中43个有有效引用，36个同时满足引用与参数一致。命中、引用和参数一致分别统计。两种搜索 LLM 的该项改善计数同为47/72，不能从检索命中或成本差异宣称因果记忆收益。完整逐记录、分层和三次重复分布见表，不把72个重复观测当作72条独立轨迹。
+
+开发模型记录7764的一条合法提议通过自身 DP 证书，却把共同参考几何最大误差从约40.2148增至69.1454工作米，保护拒绝其成为最终输出。另一个丢失11个共同覆盖身份的提议，其完整基线集合误差是 null，原因明确记录，不误写成数值恶化。构造反例只对其解析输入具有真值，未伪造模型错误或用户质疑。
+
+## D. Workflow / Multi-Agent 与持续修复
+
+A 使用真实原生上下文整理合同、开发方案、留出单项和技术分析；B/主线程实施处理、真实调用、图与 Notebook；C 在独立上下文读取可信 raw、完整范围和精确目标进行核验。确定性 GoalJournal 控制依赖、版本、目标哈希与 Issue 闭合，四模式内部的模型调用与生产治理派发分账。
+
+实际问题与故障注入分开保存。13个真实工程 Issue 均经独立复验闭合，重要修复包括控制器回执门禁、只读记忆边界、来源绑定、反馈 context 可变引用、错误分类器、审核目标遗漏、图的标签/布局、null 比较文案及 Notebook 留出结果入口。普通修复后继续父任务；没有以审查报告代替问题消费。完整错误事实、修复者、复验者、前后证据和状态见 [PROCESS_RECORD.md](PROCESS_RECORD.md) 与 [goal_state.json](goal_state.json)。
+
+context 缺陷使旧开发模式失效；旧15次模型调用原样保存，其中14次完成、1次中断。修复后固定新计算版本，所有受影响开发链及真实模型决策重新运行。旧9,000次确定性处理与新数学结果精确一致，也没有把旧提议复算标成新 LIVE。
+
+## E. 条件化结论与后续候选
+
+C-S 可按 SUPPORTED_WITHIN_SCOPE / KEEP 作为 Goal 3 单项备选；C-D、C-P 没有证实额外收益。危险顺序有实际拒绝证据，其他权衡与不足保留。未冻结最终研究结论，也未设置事后可接受退化额度。
+
+独立坐标复核覆盖307条所选记录、30,992点及1,594,527个记录内 Geod 点对；全部15,721条当前处理轨迹的实际 S/D/P 输入均核对。固定 ENU 与独立 PROJ 的最大实现差约4.823×10⁻¹⁰工作米；ENU与假定椭球 Geod 的记录内距离差最大约3.504米。当前已执行阈值未出现替代判定差异；这不证明 datum、真实定位精度或未测试阈值的稳定性。
+
+本轮没有真实噪声标签、不报告真实误删率；有限预算搜索不是全局最优参照。没有冻结可比标量目标，因此归一化 regret 为不适用，保留有符号的逐指标差异。
+
+## F. 验证、复现与工作产物
+
+最终处理与展示源码上的完整相关测试命令为 `.venv/bin/python -m pytest -q task1/tests --junitxml=task1/evidence/goal2/logs/tests_final_sources.xml`，实际316项通过（5.85秒），详见 [命令与输出](logs/tests_final_sources_execution.json)。旧审核漏洞和新增模式/指标故障注入在明确测试上下文执行，未破坏真实实验。
+
+独立 C 另行实际执行上述测试及三份独立边界回归，共407项通过，并从可信 raw 独立重构42条去重后的代表、全部过滤、最差、近阈值、三单项、六顺序和四模式轨迹。该抽查采用独立 PROJ、Decimal DP、S/D与完整账本，不复用生产处理器或核验器；全部低成本哈希、范围、分母、反馈与记忆检查另有全检回执。详见 [C 实际测试命令](c_contract/final_all_tests_execution.json) 和 [独立原始输入重构](c_contract/final_representative_raw_receipt.json)，不把42条抽查声称为全量独立重跑。
+
+三份 Notebook 的正式新内核执行全部通过：21个代码单元、17,401次确定性记录—候选复算；每份实际新增模型调用为0，记忆快照哈希不变。执行回执为 [notebook_execution.json](notebook_execution.json)，独立 C 已完成 [完整 Notebook 核验](c_contract/notebooks_complete_receipt_v2.json)。默认 RECOMPUTE 从 raw 与冻结真实提议重建处理、指标和图，Provider 哨兵要求0新增模型调用；不是只读CSV，也不写示范记忆。可用命令：
+
+```bash
+.venv/bin/python -m task1.scripts.build_goal2_notebooks --execute
+```
+
+本轮实际使用最多两个独立 OS worker 调用相同执行器；实际入口、源码绑定和命令保留在 `notebook_checks/execute_fresh_notebooks.py` 与 `notebook_runs/fresh-01/`。正式图保存 SVG、PDF、300-dpi PNG、200-dpi PDF 渲染及 `.drawio` 架构源；独立 C 已实际查看全部11张 PNG 与 PDF 渲染，核对44份导出及可编辑架构。完整视觉和新内核验收已纳入 [独立 A01–A17 总回执](c_contract/internal_acceptance_receipt_v2.json) 与 [范围说明](c_contract/GOAL2_COMPLETE_ACCEPTANCE.md)。
+
+修改/新增范围为 `task1/workflow/g2_*.py`、Goal 2 配置、脚本、测试、三份 Notebook、`task1/figures/goal2/`、阶段文档与 `task1/evidence/goal2/`。相对 G1 交付未删除原有效文件；原始数据、教师材料、旧失败和两个原有未跟踪 ZIP 保持原样。Experiment Report / Process Report 本轮仅提供阶段素材，没有正式定稿或 Evidence Lock。
+
+环境复用既有 `.venv` 与已存在的 Codex CLI 0.157.1。新增系统包、语言包、工具链和持久配置改动均为0。LIVE 的既有 CLI 绝对位置是已公开记录的环境依赖，默认 Notebook 不使用它；新环境说明见 [REPRODUCE.md](../../docs/goal2/REPRODUCE.md)。
+
+## G. 工程发布与资源
+
+Repository：`https://github.com/woobowen/Smart_Cities_and_Location_Services.git`；Branch：`main`。
+
+CODE_SHA：`c1c6272606716f9f59aa785d48bfeadb09c7a30e`。ARTIFACT_SHA、实际 Remote SHA 和 Local–Remote 一致性尚待内部全部验收后的真实提交/推送核对，不在此预填未来值。最后只读远程观察仍为 G1 的 `a45d89f49f2041477b16485f535adc508c32f8ea`；此观察不是发布证明。
+
+当前有效实验84次可见模型调用，历史失效/中断实验15次，工程资格1次，共100次可见 CLI 派发；资格和旧调用均不进入当前效果分母。已登记的当前处理/核验函数调用为10,249次，此数不包括全部 Python helper、OS 工具或治理审查。可见 tokens、耗时、逻辑 request ID、thread ID 与不可见项分别保留于 [资源账](resource_ledger.json)。原生 A/B/C 派发另见 [governance_dispatches.json](governance_dispatches.json)，不能当作精确 provider 请求数或费用。
+
+审阅入口为 [REVIEW_PACKET.md](REVIEW_PACKET.md)。最终发布后提供固定 SHA 链接，并回读关键远程文件；不以易变 main 链接替代固定版本。没有修改 active 治理文档，不声称已更新 ChatGPT UI。
+
+## H. 停点
+
+本轮完成后只交回 Goal 3 的单项证据、权衡与待判断事项。没有执行候选组合、最终全量处理、两份正式报告定稿、老师提交包或邮件发送。网页 GPT 将读取真实 GitHub 进行二重验收，内部 C 不能将 GPT_SECOND_REVIEW 改成 PASS。

@@ -1,0 +1,95 @@
+{
+  "status": "VERIFIED",
+  "role_context": "/root/c_contract",
+  "classification": "INDEPENDENT_C_RELEASE_PREPARATION_AND_FINAL_NEGATIVE_CASE_RECONCILIATION",
+  "at": "2026-09-26T22:07:41.241235+00:00",
+  "check_count": 13774,
+  "errors": [],
+  "targets": [
+    {
+      "path": "task1/evidence/goal2/release_checks/final_01/release_check.json",
+      "sha256": "559b92b2cdbd180d62af24663b857f46c0afdc8c54a3e4c85e7cf79d8552248b"
+    },
+    {
+      "path": "task1/evidence/goal2/release_checks/final_01/scope_inventory.json",
+      "sha256": "3d1beda031a23965043b8d7dfeec1c5712acc9b456d9d1506611c723955dc0b4"
+    },
+    {
+      "path": "task1/evidence/goal2/release_checks/final_01/findings_disposition.json",
+      "sha256": "2f6ca10f0307d093a48ae2f3743b110ba9adaefe87f2d427e9d1a108d8d1629c"
+    },
+    {
+      "path": "task1/evidence/goal2/release_checks/delta_01/delta_reuse_receipt.json",
+      "sha256": "72e16db09c379c9bcc9dcaa0750bc1866e3166398f0ddd2de0e38ab492f9bc4c"
+    },
+    {
+      "path": "task1/evidence/goal2/release_checks/delta_01/scope_inventory.json",
+      "sha256": "d7e5c0f3bbb361a2dd9b44c7ba6f4a92a5d9929a2262c19c7de8cef5a07eb940"
+    },
+    {
+      "path": "task1/evidence/goal2/release_checks/delta_01/execution.json",
+      "sha256": "dec9d23e362adce3dac275ecf08aad38112358fee765cc72790130c7040782e2"
+    },
+    {
+      "path": "task1/evidence/goal2/release_checks/scan_release.py",
+      "sha256": "7dfd12a631c861f9f086a365a088d8dd0f66b5a91a7db0a811a8f3b5bae94679"
+    },
+    {
+      "path": "task1/evidence/goal2/release_checks/scan_release_delta.py",
+      "sha256": "70e3f0199685c380d3d1366a4dba3d15374510815e410073cddce82b40226666"
+    },
+    {
+      "path": "task1/evidence/goal2/a_epoch02/final_handoff_check/formal_eval_tradeoff_witnesses.json",
+      "sha256": "199554a3df6307c58c62f620a7189befbd1e598a7aa68964391bde0589c378ee"
+    }
+  ],
+  "checked_components": [
+    "exact_scope_and_hash_reuse",
+    "actual_changed_text_rescan",
+    "documented_portability_findings",
+    "bundle_and_dependency_checks",
+    "protected_G1_and_archives",
+    "formal_negative_proposal_raw_response_trace_lock"
+  ],
+  "unchecked_components": [
+    "actual_staged_file_set",
+    "actual_git_commit_push_and_remote_readback",
+    "not_a_proof_absent_unknown_secret_formats",
+    "external_URL_and_fragment_validity"
+  ],
+  "publication_completed": false,
+  "full_scan_reuse_files": 3025,
+  "C_actual_changed_text_rescan_files": 54,
+  "C_characters_scanned": 4075226,
+  "post_cutoff_mutable_or_C_review_changes": [
+    {
+      "path": "task1/evidence/goal2/goal_state.json",
+      "scanned_sha256": "929c923118934cdd09016d70f78e1b5764734bcadcc2516b6bbe4ef26243c325",
+      "current_sha256": "34912a8e57bf3395bda35a9ff83b7f5d5236b192ffad166fda167552cc24a96c"
+    }
+  ],
+  "formal_proposals": 467,
+  "formal_negative_proposals": 24,
+  "scope_limits": [
+    "Binary formats retain hash/size inspection rather than content credential parsing.",
+    "Root must scan new acceptance/publication metadata and inspect the actual staged set before push.",
+    "Provider absolute CLI default is an explicit recorded LIVE environment dependency; default RECOMPUTE is provider-free."
+  ],
+  "audit_program": {
+    "path": "task1/evidence/goal2/c_contract/review_release_and_final_facts.py",
+    "sha256": "098fcf5de1cd26f09620048cdaea1f886b3c162d189411f7d2b358392e8e5187"
+  },
+  "new_model_calls": 0,
+  "elapsed_seconds": 1.1161536439976771,
+  "formal_original_proposal_research_statuses": {
+    "NO_DEMONSTRATED_GAIN": 152,
+    "SUPPORTED_WITHIN_SCOPE": 291,
+    "REJECTED_BY_CONSTRAINT": 22,
+    "TRADEOFF": 2
+  },
+  "formal_coverage_tradeoff_witnesses": 2,
+  "C_audit_corrections": [
+    "Initial schema probe corrected llm-only post-lock assessment access, without changing production.",
+    "Initial rejected C receipt conflated all 24 infeasible proposals with the two coverage TRADEOFF witnesses; 22 common-DP-budget constraint rejections are now retained separately."
+  ]
+}

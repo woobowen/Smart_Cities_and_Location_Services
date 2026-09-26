@@ -1,0 +1,163 @@
+{
+  "role_context": "/root/c_contract",
+  "status": "VERIFIED",
+  "classification": "INDEPENDENT_C_ENGINEERING_PROVIDER_REVIEW_NOT_MODE_ACCEPTANCE",
+  "at_utc": "2026-09-26T19:02:25.814932+00:00",
+  "targets": [
+    {
+      "path": "task1/evidence/goal2/provider_smoke/attempt01/receipt.json",
+      "sha256": "967d1a98264e41baf21095145b605fc531b05e6d975b0946f78f7b48c9850a97"
+    },
+    {
+      "path": "task1/evidence/goal2/provider_smoke/attempt01/input.json",
+      "sha256": "6392117e7aca9006561e204b0957490413162ad310af84fda174419dc4a079cd"
+    },
+    {
+      "path": "task1/evidence/goal2/provider_smoke/attempt01/response.json",
+      "sha256": "6c1db664439054b14cf5baade95beb5c1b194266ecf60003a2aab24c85fd8359"
+    },
+    {
+      "path": "task1/evidence/goal2/provider_smoke/attempt01/visible_events.jsonl",
+      "sha256": "74a1c775f0fc0e10b98641fa5d3629005589f80fdb87abe6fcf98c86fbb748a2"
+    }
+  ],
+  "source_hashes": {
+    "task1/workflow/g2_provider.py": "7416319fd8ae97026b3374c979bce86941bbc535739becdd78563934e7919e8e",
+    "task1/workflow/provider.py": "d778316bcdbdec1643707a93c1d0e00e52caa4c0b941c9299b33da547adbc28b"
+  },
+  "checked_components": [
+    "actual_smoke_response_and_usage",
+    "hash_bindings",
+    "read_only_ephemeral_cli_flags",
+    "disabled_tools",
+    "unexpected_tool_failure",
+    "completed_turn_uniqueness",
+    "counter_classification"
+  ],
+  "unchecked_components": [
+    "actual_four_mode_data_episodes",
+    "batch_card_scope_enforcement",
+    "candidate_budget_enforcement",
+    "memory_eligibility_and_consumption",
+    "feedback_causality",
+    "hidden_provider_request_count"
+  ],
+  "checks": [
+    {
+      "name": "input_binding",
+      "passed": true
+    },
+    {
+      "name": "response_binding",
+      "passed": true
+    },
+    {
+      "name": "events_binding",
+      "passed": true
+    },
+    {
+      "name": "registered_schema",
+      "passed": true
+    },
+    {
+      "name": "actual_visible_response",
+      "passed": true
+    },
+    {
+      "name": "one_visible_dispatch_not_eight_or_provider_request_count",
+      "passed": true
+    },
+    {
+      "name": "probe_only",
+      "passed": true
+    },
+    {
+      "name": "read_only_ephemeral",
+      "passed": true
+    },
+    {
+      "name": "disabled:shell_tool",
+      "passed": true
+    },
+    {
+      "name": "disabled:unified_exec",
+      "passed": true
+    },
+    {
+      "name": "disabled:code_mode_host",
+      "passed": true
+    },
+    {
+      "name": "disabled:apps",
+      "passed": true
+    },
+    {
+      "name": "disabled:plugins",
+      "passed": true
+    },
+    {
+      "name": "disabled:multi_agent",
+      "passed": true
+    },
+    {
+      "name": "disabled:hooks",
+      "passed": true
+    },
+    {
+      "name": "disabled:memories",
+      "passed": true
+    },
+    {
+      "name": "disabled:shell_snapshot",
+      "passed": true
+    },
+    {
+      "name": "disabled:browser_use",
+      "passed": true
+    },
+    {
+      "name": "disabled:browser_use_external",
+      "passed": true
+    },
+    {
+      "name": "disabled:computer_use",
+      "passed": true
+    },
+    {
+      "name": "disabled:image_generation",
+      "passed": true
+    },
+    {
+      "name": "project_docs_and_web_disabled",
+      "passed": true
+    },
+    {
+      "name": "no_visible_model_tools",
+      "passed": true
+    },
+    {
+      "name": "fault_rejected:unexpected_tool",
+      "passed": true
+    },
+    {
+      "name": "fault_rejected:duplicate_turn",
+      "passed": true
+    },
+    {
+      "name": "fault_rejected:missing_turn",
+      "passed": true
+    },
+    {
+      "name": "fault_rejected:provider_error",
+      "passed": true
+    },
+    {
+      "name": "hidden_tool_sentinel",
+      "passed": true
+    }
+  ],
+  "experiment_model_dispatches_in_probe": 0,
+  "engineering_model_dispatches_observed": 1,
+  "new_model_calls_for_this_review": 0,
+  "underlying_provider_requests": "unknown"
+}

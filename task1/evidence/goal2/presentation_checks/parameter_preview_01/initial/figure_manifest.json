@@ -1,0 +1,169 @@
+{
+  "created_at": "2026-09-26T19:33:47.562619+00:00",
+  "topic": "parameters",
+  "source_files": {
+    "task1/evidence/goal2/current_runs.json": "7672418ba695647a2c4fec33364004527b0b3e61c3bbecb6ef7e5a871253c8a3",
+    "task1/evidence/goal2/runs/g2-development-parameters-01/manifest.json": "92bec0c62a89c98ad5b5c05e38cc2fb2722919da2a4eedaba964a0c1038be0e7",
+    "task1/evidence/goal2/runs/g2-development-parameters-01/parameter_table.json": "f4878603b44c461fab1ab0535cd57d586e0f16faf6671562cb755ffc808f529d",
+    "task1/evidence/goal2/runs/g2-development-parameters-01/cfg-b15b8281b73592fb_S-D-P_01bed9b1.json.gz": "d61accd85a2c95f9ff8ef75bd4aacb43c84712497047b5aa0c1bae40a3c12188",
+    "task1/evidence/goal2/runs/g2-development-orders-01/manifest.json": "5ac5e7e047672ce34d45a5f84ce337cf08376203e03eb72be12b2ee60b21f326",
+    "task1/evidence/goal2/runs/g2-development-orders-01/order_table.json": "cef461d45653fb3f8e1deaf23763944b3619db6046353adee9ebbf660ce223ac"
+  },
+  "source_binding_hash": "9e1fc539e1428a4440c40abc9a38a1026a20b381314ef775bc5829e82ffccb66",
+  "generator_sha256": "d667c78d2ec00d666404ff0f4d6b7ba924b7a07d22aed19f45e2a4fb22a0bb33",
+  "palette_source": "templates/latex/common/p2_cloud_sorbet_colors.tex",
+  "palette_sha256": "2aa820c3f68ba6c14cf1b52082b12336071d77bb5466db2b05b2fab6890aa243",
+  "figure_data_sha256": "585aac19aeacca69790751cb5fadeba091a85a46c3e0ecada40c4a20588e84a8",
+  "figures": [
+    {
+      "name": "segmentation_filter_response",
+      "description": "Four one-factor sweeps; dashed vertical lines mark the reference configuration.",
+      "formats": {
+        "svg": {
+          "file": "segmentation_filter_response.svg",
+          "sha256": "cc2acb47523eba2604e50d152411cb48a7638314e51ffdb11549ee077b580d82"
+        },
+        "pdf": {
+          "file": "segmentation_filter_response.pdf",
+          "sha256": "cb7942155304a6ef4e86a61390050ca7070852b3299f112f5ac86e8ef351c592"
+        },
+        "png": {
+          "file": "segmentation_filter_response.png",
+          "sha256": "538af57661458034971419d31edbd57e0fca548ffd182026b6b88cbaa571825c"
+        }
+      },
+      "png_size_pixels": [
+        3000,
+        2190
+      ],
+      "png_dpi": 300,
+      "pdf_render": {
+        "file": "pdf-render-200dpi/segmentation_filter_response.png",
+        "dpi": 200,
+        "sha256": "e23206fcc2ac36cd22ebbe90463b01db481daad8856b837c7665c06e67a55508"
+      },
+      "visual_inspection": "PENDING_ACTUAL_IMAGE_REVIEW"
+    },
+    {
+      "name": "segmentation_filter_grids",
+      "description": "Same fractions and 0–1 color range in both registered two-factor grids.",
+      "formats": {
+        "svg": {
+          "file": "segmentation_filter_grids.svg",
+          "sha256": "f215fe27e66edd7948fc0d06f4dc75f7b235476767dd71944e25bf78a8cc91eb"
+        },
+        "pdf": {
+          "file": "segmentation_filter_grids.pdf",
+          "sha256": "c445c1e2c874aa5695ac17b358fa2352020d90ec0095325023f036e29798f3f9"
+        },
+        "png": {
+          "file": "segmentation_filter_grids.png",
+          "sha256": "7c098cc8431e982a4a7a491d11031bd8aa6686098a216df00184b241e9ee5c4c"
+        }
+      },
+      "png_size_pixels": [
+        3300,
+        2400
+      ],
+      "png_dpi": 300,
+      "pdf_render": {
+        "file": "pdf-render-200dpi/segmentation_filter_grids.png",
+        "dpi": 200,
+        "sha256": "d3a8afb0e68a0348934bc33082c1a10f7eb05417acd38a21d5a64cbeeef2bc4d"
+      },
+      "visual_inspection": "PENDING_ACTUAL_IMAGE_REVIEW"
+    },
+    {
+      "name": "direction_threshold_and_neighborhood",
+      "description": "Undefined-window protection is not a noise truth label; the local edge is recomputed after simultaneous deletion.",
+      "formats": {
+        "svg": {
+          "file": "direction_threshold_and_neighborhood.svg",
+          "sha256": "577273a05f7f5ed178d890f30012929216c71d60546399d779022fd3ce962424"
+        },
+        "pdf": {
+          "file": "direction_threshold_and_neighborhood.pdf",
+          "sha256": "5124051ec0a3febc312114802ea37cb99cfb4aec2c277197a929766fbd373aaa"
+        },
+        "png": {
+          "file": "direction_threshold_and_neighborhood.png",
+          "sha256": "393fec49e844c2f73b529379c553049ac4dc353b7594f5b3b913a18ba0e9f552"
+        }
+      },
+      "png_size_pixels": [
+        3900,
+        1260
+      ],
+      "png_dpi": 300,
+      "pdf_render": {
+        "file": "pdf-render-200dpi/direction_threshold_and_neighborhood.png",
+        "dpi": 200,
+        "sha256": "8e6979ac7eaec3f8ff27a8526739ad21797a33e9024a27596c509930cb7ea392"
+      },
+      "visual_inspection": "PENDING_ACTUAL_IMAGE_REVIEW"
+    },
+    {
+      "name": "dp_error_compression",
+      "description": "Labels are registered tolerances; P-stage guarantees do not certify cross-method quality.",
+      "formats": {
+        "svg": {
+          "file": "dp_error_compression.svg",
+          "sha256": "11b7041d6cfa47034812fb4595d37333a413c346575548f80f2793f69018dd2c"
+        },
+        "pdf": {
+          "file": "dp_error_compression.pdf",
+          "sha256": "ba432796e0d32948fe7e80adb14ef6d7965e22deeb92c264def811eb01e7c1d8"
+        },
+        "png": {
+          "file": "dp_error_compression.png",
+          "sha256": "f7d51745cf774f8f5d6e890e9ec6fc9a9b6e29642ffcbc90cad2c3c88602ef6f"
+        }
+      },
+      "png_size_pixels": [
+        3000,
+        1350
+      ],
+      "png_dpi": 300,
+      "pdf_render": {
+        "file": "pdf-render-200dpi/dp_error_compression.png",
+        "dpi": 200,
+        "sha256": "16722d876ecca02da8e8df9d6f113cdb0d1bed9782a7f14466a4946fdda99e87"
+      },
+      "visual_inspection": "PENDING_ACTUAL_IMAGE_REVIEW"
+    },
+    {
+      "name": "order_protection_and_neighborhoods",
+      "description": "Rose denotes a constraint-rejected order; geometric execution remains a valid negative experiment.",
+      "formats": {
+        "svg": {
+          "file": "order_protection_and_neighborhoods.svg",
+          "sha256": "47eb9db4097ba2b4114bbf89eaf84d834cbad8e72b2db54a5c464a62b6a94293"
+        },
+        "pdf": {
+          "file": "order_protection_and_neighborhoods.pdf",
+          "sha256": "6bbed32b9931f64f65589c153f0a1124520725cbb739745aa521989f8def5919"
+        },
+        "png": {
+          "file": "order_protection_and_neighborhoods.png",
+          "sha256": "d8f753be6a41f802fe2070a52c12f9898012805a949d437d63701156276c86d4"
+        }
+      },
+      "png_size_pixels": [
+        3150,
+        2100
+      ],
+      "png_dpi": 300,
+      "pdf_render": {
+        "file": "pdf-render-200dpi/order_protection_and_neighborhoods.png",
+        "dpi": 200,
+        "sha256": "50445f83a7514f3123c93568797aca0724dcf133103266609fcac10adf83a821"
+      },
+      "visual_inspection": "PENDING_ACTUAL_IMAGE_REVIEW"
+    }
+  ],
+  "raster_check_status": "PASSED",
+  "pdf_render_dpi": 200,
+  "visual_inspection_status": "PENDING_ACTUAL_IMAGE_REVIEW",
+  "independent_C_status": "PENDING",
+  "claims": "current run visual readings only; no source datum, ground truth, final-method, or statistical superiority claim"
+}

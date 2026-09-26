@@ -1,0 +1,123 @@
+[
+  {
+    "partition": "G2_EVAL",
+    "mode": "llm+memory+search",
+    "episode": 1,
+    "episode_id": "G2_EVAL-llm+memory+search-e1-b2",
+    "record_id": "3420",
+    "round": 2,
+    "candidate_id": "3420-r2-b",
+    "config_id": "cfg-43b5b4d298c42f35",
+    "raw_proposal": {
+      "candidate_id": "3420-r2-b",
+      "parameters": {
+        "dt": 30,
+        "distance": 95,
+        "min_points": 2,
+        "min_length": 0,
+        "direction": 60,
+        "dp": 5
+      },
+      "metric_id": "raw_break_crossings",
+      "predicted_sign": "unchanged",
+      "reason": "Probe a finer spatial split threshold against the persistent maximum error. Relaxed filters may limit coverage loss but cannot guarantee preservation."
+    },
+    "raw_response_sources": [
+      {
+        "path": "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm+memory+search-e1-b2/round2_call/attempt01/response.json",
+        "sha256": "a183a91105a8daada0096dd2b5f746ef7cc13f0037dd2c701072f3ecf5cb007c"
+      }
+    ],
+    "episode_path": "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm+memory+search-e1-b2/episode.json",
+    "episode_sha256": "caba7c74181e328ad7bb3bd4bc32a12e4015e8f8d77916b6ca1b2cdd67d903e7",
+    "trace_path": "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm+memory+search-e1-b2/3420_candidate_traces.json.gz",
+    "trace_sha256": "990d99b47a6f2eddee6450f636dae90f929201542644da849bb9acdb3444013c",
+    "lock_path": "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm+memory+search-e1-b2/3420_lock.json",
+    "lock_sha256": "393c4e1841d754d845ff7245470ed8902a6a96db5f391b6ba4304811ad5f7a1a",
+    "baseline_covered_count": 127,
+    "candidate_covered_count": 111,
+    "lost_baseline_covered_indices": [
+      0,
+      1,
+      8,
+      9,
+      13,
+      28,
+      39,
+      40,
+      41,
+      54,
+      55,
+      60,
+      74,
+      96,
+      118,
+      126
+    ],
+    "candidate_max_on_baseline_covered": null,
+    "unavailable_reason": "BASELINE_COVERED_IDENTITIES_LOST",
+    "own_coverage_error_values_are_comparable": false,
+    "selected_config_id": "cfg-b15b8281b73592fb",
+    "fallback": false,
+    "selection_reason": "NO_UNAMBIGUOUS_PROTECTED_GAIN",
+    "research_status": "TRADEOFF",
+    "protection_failures": [
+      "COMMON_COVERED_IDENTITIES_LOST",
+      "COMMON_GEOMETRIC_PROTECTION_DEGRADED"
+    ],
+    "interpretation": "Legal executed exploration with a measured coverage tradeoff, excluded by frozen protection. Not illegal, hallucinated or a ground-truth quality error."
+  },
+  {
+    "partition": "G2_EVAL",
+    "mode": "llm+memory+search",
+    "episode": 3,
+    "episode_id": "G2_EVAL-llm+memory+search-e3-b2",
+    "record_id": "955",
+    "round": 3,
+    "candidate_id": "955-r3-a",
+    "config_id": "cfg-2cb606fa6575cbdc",
+    "raw_proposal": {
+      "candidate_id": "955-r3-a",
+      "parameters": {
+        "dt": 15,
+        "distance": 400,
+        "min_points": 2,
+        "min_length": 0,
+        "direction": 60,
+        "dp": 5
+      },
+      "metric_id": "raw_break_crossings",
+      "predicted_sign": "unchanged",
+      "reason": "dt20 preserved coverage but left maximum error unchanged. Test finer temporal windows while relaxing the filters responsible for substantial losses at dt15; singleton losses remain possible."
+    },
+    "raw_response_sources": [
+      {
+        "path": "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm+memory+search-e3-b2/round3_call/attempt01/response.json",
+        "sha256": "b4ef33449ed0ba5c32a2d17307dd67c19452eeda6c53500b71bdb3fd1356f12f"
+      }
+    ],
+    "episode_path": "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm+memory+search-e3-b2/episode.json",
+    "episode_sha256": "87c3e83d55067f1cfacd0a8c09d102eea7f77e8bb72b1f4c4b6e1f48302c46f7",
+    "trace_path": "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm+memory+search-e3-b2/955_candidate_traces.json.gz",
+    "trace_sha256": "aee9ab54414df0d8665e927cd1f15f9288b24c2cbe6b9812d63c15111a4a304e",
+    "lock_path": "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm+memory+search-e3-b2/955_lock.json",
+    "lock_sha256": "0bf2cd76c8967c05bfe84f84b3aa5fb927c3b2ba433b36a3c838e9e48e7c7920",
+    "baseline_covered_count": 100,
+    "candidate_covered_count": 99,
+    "lost_baseline_covered_indices": [
+      7
+    ],
+    "candidate_max_on_baseline_covered": null,
+    "unavailable_reason": "BASELINE_COVERED_IDENTITIES_LOST",
+    "own_coverage_error_values_are_comparable": false,
+    "selected_config_id": "cfg-b15b8281b73592fb",
+    "fallback": false,
+    "selection_reason": "NO_UNAMBIGUOUS_PROTECTED_GAIN",
+    "research_status": "TRADEOFF",
+    "protection_failures": [
+      "COMMON_COVERED_IDENTITIES_LOST",
+      "COMMON_GEOMETRIC_PROTECTION_DEGRADED"
+    ],
+    "interpretation": "Legal executed exploration with a measured coverage tradeoff, excluded by frozen protection. Not illegal, hallucinated or a ground-truth quality error."
+  }
+]

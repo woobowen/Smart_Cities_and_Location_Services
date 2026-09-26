@@ -1,0 +1,186 @@
+{
+  "errors": [],
+  "accepted_record_ids": [
+    "1887",
+    "10003",
+    "8424",
+    "2225",
+    "2064",
+    "7253",
+    "588",
+    "8522"
+  ],
+  "original_response": {
+    "records": [
+      {
+        "record_id": "1887",
+        "proposals": [
+          {
+            "candidate_id": "1887-dp2",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 35,
+              "dp": 2
+            },
+            "metric_id": "n_direction_removed",
+            "predicted_sign": "unchanged",
+            "reason": "Preserve segmentation around the 18 observed raw breaks; test a smaller DP tolerance. Unchanged S/D preserves direction removals; geometric and compression effects remain unverified."
+          }
+        ],
+        "stop": true,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "10003",
+        "proposals": [
+          {
+            "candidate_id": "10003-dp2",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 35,
+              "dp": 2
+            },
+            "metric_id": "n_direction_removed",
+            "predicted_sign": "unchanged",
+            "reason": "No observed raw breaks justify changing segmentation. Test a smaller DP tolerance with unchanged S/D, which preserves direction removals; no quality improvement is asserted."
+          }
+        ],
+        "stop": true,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "8424",
+        "proposals": [
+          {
+            "candidate_id": "8424-dp2",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 35,
+              "dp": 2
+            },
+            "metric_id": "n_direction_removed",
+            "predicted_sign": "unchanged",
+            "reason": "Keep S/D fixed and test the fidelity/compression tradeoff at DP tolerance 2. Direction removals are unchanged; aggregate path statistics cannot establish a geometric improvement."
+          }
+        ],
+        "stop": true,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "2225",
+        "proposals": [
+          {
+            "candidate_id": "2225-dp2",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 35,
+              "dp": 2
+            },
+            "metric_id": "n_direction_removed",
+            "predicted_sign": "unchanged",
+            "reason": "The 23 unavailable direction edges do not justify altering D. Change only DP tolerance, preserving direction removals and testing an unverified fidelity/compression tradeoff."
+          }
+        ],
+        "stop": true,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "2064",
+        "proposals": [
+          {
+            "candidate_id": "2064-dp2",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 35,
+              "dp": 2
+            },
+            "metric_id": "n_direction_removed",
+            "predicted_sign": "unchanged",
+            "reason": "Preserve S/D given four observed raw breaks and nine unavailable direction edges. Smaller DP tolerance leaves direction removals unchanged; its selection benefit is unknown."
+          }
+        ],
+        "stop": true,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "7253",
+        "proposals": [
+          {
+            "candidate_id": "7253-dp2",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 35,
+              "dp": 2
+            },
+            "metric_id": "n_direction_removed",
+            "predicted_sign": "unchanged",
+            "reason": "Keep the existing handling of 14 unavailable direction edges. Test only DP tolerance 2; unchanged S/D guarantees unchanged direction removals without implying better quality."
+          }
+        ],
+        "stop": true,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "588",
+        "proposals": [
+          {
+            "candidate_id": "588-dp2",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 35,
+              "dp": 2
+            },
+            "metric_id": "n_direction_removed",
+            "predicted_sign": "unchanged",
+            "reason": "Retain segmentation at the observed raw breakpoint and test smaller DP tolerance. Direction removals remain unchanged because S/D is fixed; geometric effects require evaluation."
+          }
+        ],
+        "stop": true,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "8522",
+        "proposals": [
+          {
+            "candidate_id": "8522-dp2",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 35,
+              "dp": 2
+            },
+            "metric_id": "n_direction_removed",
+            "predicted_sign": "unchanged",
+            "reason": "Preserve S/D with four observed raw breaks and two zero-time edges. Changing only DP tolerance preserves direction removals; compression and common fidelity tradeoffs remain unverified."
+          }
+        ],
+        "stop": true,
+        "memory_ids_used": []
+      }
+    ]
+  },
+  "raw_proposals_preserved_before_validation": true
+}

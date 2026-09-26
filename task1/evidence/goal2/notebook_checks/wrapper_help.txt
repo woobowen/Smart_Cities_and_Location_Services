@@ -1,0 +1,17 @@
+usage: execute_fresh_notebooks.py [-h] [--execute] --output OUTPUT
+                                  [--jobs {1,2}]
+                                  [--expected-current-sha256 EXPECTED_CURRENT_SHA256]
+                                  [--expected-figure-generator-sha256 EXPECTED_FIGURE_GENERATOR_SHA256]
+
+Execute existing Goal 2 notebooks in at most two isolated OS workers.
+Preparation alone never launches a kernel. --execute and frozen input hashes
+are required; the existing generator/executor remain the only notebook
+writers.
+
+options:
+  -h, --help            show this help message and exit
+  --execute
+  --output OUTPUT
+  --jobs {1,2}
+  --expected-current-sha256 EXPECTED_CURRENT_SHA256
+  --expected-figure-generator-sha256 EXPECTED_FIGURE_GENERATOR_SHA256

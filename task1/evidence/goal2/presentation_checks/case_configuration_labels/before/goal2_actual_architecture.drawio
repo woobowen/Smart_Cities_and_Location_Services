@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" version="24.7.17">
+  <diagram name="Goal 2 actual modules" id="g2-actual-modules">
+    <mxGraphModel dx="1400" dy="1000" grid="1" gridSize="10" page="1" pageWidth="1400" pageHeight="1000">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="human" value="User + web GPT&#10;research judgment / remote review" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#F5D9B8;strokeColor=#70757A;fontColor=#2D3238;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="430.0" y="25.0" width="440.00000000000006" height="75.0" as="geometry" />
+        </mxCell>
+        <mxCell id="A" value="A · diagnosis / planning&#10;contract and bounded proposals" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFFDFC;strokeColor=#70757A;fontColor=#2D3238;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="60.0" y="150.00000000000006" width="310.0" height="90.0" as="geometry" />
+        </mxCell>
+        <mxCell id="root" value="Codex main + deterministic GoalJournal&#10;requirements · versions · dependencies" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFFDFC;strokeColor=#70757A;fontColor=#2D3238;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="430.0" y="150.00000000000006" width="440.00000000000006" height="90.0" as="geometry" />
+        </mxCell>
+        <mxCell id="C" value="C · independent read-only review&#10;trusted input + target hashes" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFFDFC;strokeColor=#70757A;fontColor=#2D3238;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="930.0000000000001" y="150.00000000000006" width="310.0" height="90.0" as="geometry" />
+        </mxCell>
+        <mxCell id="B" value="B-Run&#10;registered actions / new artifacts" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFFDFC;strokeColor=#70757A;fontColor=#2D3238;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="430.0" y="315.0" width="250.0" height="85.0" as="geometry" />
+        </mxCell>
+        <mxCell id="repair" value="B-Repair&#10;reproduce → fix → rebuild" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFFDFC;strokeColor=#70757A;fontColor=#2D3238;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="810.0" y="315.0" width="310.0" height="85.0" as="geometry" />
+        </mxCell>
+        <mxCell id="cards" value="Fixed raw diagnostic cards&#10;record / split / contract handles" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFFDFC;strokeColor=#70757A;fontColor=#2D3238;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="60.0" y="525.0" width="310.0" height="85.0" as="geometry" />
+        </mxCell>
+        <mxCell id="modes" value="Evaluated decision paths&#10;LLM only · zero-model search&#10;LLM + search · LLM + memory + search" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#D3EAF5;strokeColor=#70757A;fontColor=#2D3238;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="430.0" y="509.99999999999994" width="440.00000000000006" height="114.99999999999999" as="geometry" />
+        </mxCell>
+        <mxCell id="tools" value="S / D / P deterministic tools&#10;complete point ledger" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFFDFC;strokeColor=#70757A;fontColor=#2D3238;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="930.0000000000001" y="525.0" width="310.0" height="85.0" as="geometry" />
+        </mxCell>
+        <mxCell id="memory" value="Frozen DEMO memory&#10;verified examples · read-only eval" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFFDFC;strokeColor=#70757A;fontColor=#2D3238;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="60.0" y="735.0" width="310.0" height="90.0" as="geometry" />
+        </mxCell>
+        <mxCell id="lock" value="Lock candidate → post-lock evaluation&#10;no evaluation feedback to episode" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFFDFC;strokeColor=#70757A;fontColor=#2D3238;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="700.0" y="735.0" width="540.0" height="90.0" as="geometry" />
+        </mxCell>
+        <mxCell id="edge0" value="authorized scope" edge="1" parent="1" source="human" target="root" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;strokeColor=#2D3238;fontSize=11;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge1" value="task plan" edge="1" parent="1" source="A" target="root" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;strokeColor=#2D3238;fontSize=11;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge2" value="validated action" edge="1" parent="1" source="root" target="B" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;strokeColor=#2D3238;fontSize=11;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge3" value="artifact + hash" edge="1" parent="1" source="B" target="C" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;strokeColor=#2D3238;fontSize=11;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge4" value="receipt / issue" edge="1" parent="1" source="C" target="root" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;strokeColor=#2D3238;fontSize=11;dashed=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge5" value="engineering issue" edge="1" parent="1" source="C" target="repair" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;strokeColor=#2D3238;fontSize=11;dashed=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge6" value="new version / parent resumes" edge="1" parent="1" source="repair" target="B" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;strokeColor=#2D3238;fontSize=11;dashed=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge7" value="controlled experiment" edge="1" parent="1" source="B" target="cards" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;strokeColor=#2D3238;fontSize=11;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge8" value="common observations" edge="1" parent="1" source="cards" target="modes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;strokeColor=#2D3238;fontSize=11;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge9" value="memory mode only" edge="1" parent="1" source="memory" target="modes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;strokeColor=#2D3238;fontSize=11;dashed=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge10" value="bounded candidates" edge="1" parent="1" source="modes" target="tools" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;strokeColor=#2D3238;fontSize=11;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge11" value="actual internal feedback&#10;search LLM modes only" edge="1" parent="1" source="tools" target="modes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;strokeColor=#2D3238;fontSize=11;dashed=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge12" value="final locked output" edge="1" parent="1" source="tools" target="lock" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;strokeColor=#2D3238;fontSize=11;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

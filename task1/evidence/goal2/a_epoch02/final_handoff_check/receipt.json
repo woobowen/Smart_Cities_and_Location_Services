@@ -1,0 +1,1888 @@
+{
+  "goal_id": "SC-LAB1-G2-EXPERIMENTS-001",
+  "reviewer": "A /root/a_contract",
+  "generated_at": "2026-09-26T21:56:03.519811+00:00",
+  "status": "FACTUAL_CHECK_PASSED_WITH_NONBLOCKING_COMPLETENESS_NOTE",
+  "classification": "READ_ONLY_HANDOFF_FACT_CHECK_NOT_INDEPENDENT_C_ACCEPTANCE",
+  "source_sha256": "e877122ab2db0fdb0fde8c55e9f516ef393786cc67d273529fb428e246cdfdd4",
+  "read_cutoff": {
+    "read_cutoff_at": "2026-09-26T21:47:11.163892+00:00",
+    "scope": "Read-only factual check; root may continue updating live handoff/status documents. Findings bind captured bytes, not later revisions.",
+    "documents": [
+      {
+        "path": "task1/evidence/goal2/FINAL_RESPONSE.md",
+        "sha256": "bd2b43d52b7b2b91ea3d0d7b8cc2f183abc3ce4ba80982b37e1415d0de24269a",
+        "snapshot_path": "task1/evidence/goal2/a_epoch02/final_handoff_check/FINAL_RESPONSE.md.source.txt",
+        "bytes": 12141
+      },
+      {
+        "path": "task1/evidence/goal2/REVIEW_PACKET.md",
+        "sha256": "f449cfb8387a5a4e4cd99add63109a4b5e211d5c0c957ff0b6fc80db010161e5",
+        "snapshot_path": "task1/evidence/goal2/a_epoch02/final_handoff_check/REVIEW_PACKET.md.source.txt",
+        "bytes": 7641
+      },
+      {
+        "path": "task1/evidence/goal2/PROCESS_RECORD.md",
+        "sha256": "73cd7d395f48840482e7a4533361f494ba6a079bc6bbdb402c9f373280525e97",
+        "snapshot_path": "task1/evidence/goal2/a_epoch02/final_handoff_check/PROCESS_RECORD.md.source.txt",
+        "bytes": 12545
+      }
+    ]
+  },
+  "checks": [
+    {
+      "label": "task1/evidence/goal2/FINAL_RESPONSE.md captured bytes",
+      "actual": "bd2b43d52b7b2b91ea3d0d7b8cc2f183abc3ce4ba80982b37e1415d0de24269a",
+      "expected": "bd2b43d52b7b2b91ea3d0d7b8cc2f183abc3ce4ba80982b37e1415d0de24269a",
+      "passed": true
+    },
+    {
+      "label": "task1/evidence/goal2/REVIEW_PACKET.md captured bytes",
+      "actual": "f449cfb8387a5a4e4cd99add63109a4b5e211d5c0c957ff0b6fc80db010161e5",
+      "expected": "f449cfb8387a5a4e4cd99add63109a4b5e211d5c0c957ff0b6fc80db010161e5",
+      "passed": true
+    },
+    {
+      "label": "task1/evidence/goal2/PROCESS_RECORD.md captured bytes",
+      "actual": "73cd7d395f48840482e7a4533361f494ba6a079bc6bbdb402c9f373280525e97",
+      "expected": "73cd7d395f48840482e7a4533361f494ba6a079bc6bbdb402c9f373280525e97",
+      "passed": true
+    },
+    {
+      "label": "raw records and points",
+      "actual": [
+        11386,
+        1173410
+      ],
+      "expected": [
+        11386,
+        1173410
+      ],
+      "passed": true
+    },
+    {
+      "label": "partition counts",
+      "actual": {
+        "PILOT_REGRESSION": 7,
+        "DEMO_MEMORY": 60,
+        "DEVELOPMENT": 120,
+        "G2_EVAL": 120,
+        "G3_RESERVED": 11079
+      },
+      "expected": {
+        "PILOT_REGRESSION": 7,
+        "DEMO_MEMORY": 60,
+        "DEVELOPMENT": 120,
+        "G2_EVAL": 120,
+        "G3_RESERVED": 11079
+      },
+      "passed": true
+    },
+    {
+      "label": "fixed mode subsets",
+      "actual": {
+        "DEVELOPMENT": 24,
+        "G2_EVAL": 24
+      },
+      "expected": {
+        "DEVELOPMENT": 24,
+        "G2_EVAL": 24
+      },
+      "passed": true
+    },
+    {
+      "label": "registered record-candidate evaluations",
+      "actual": {
+        "parameter_development": 7080,
+        "order_development": 720,
+        "memory": 1200,
+        "mode_development": 1218,
+        "evaluation_parameters": 1680,
+        "evaluation_orders": 240,
+        "mode_evaluation": 3583
+      },
+      "expected": {
+        "parameter_development": 7080,
+        "order_development": 720,
+        "memory": 1200,
+        "mode_development": 1218,
+        "evaluation_parameters": 1680,
+        "evaluation_orders": 240,
+        "mode_evaluation": 3583
+      },
+      "passed": true
+    },
+    {
+      "label": "total registered evaluations",
+      "actual": 15721,
+      "expected": 15721,
+      "passed": true
+    },
+    {
+      "label": "table hash ai_critique_examples",
+      "actual": "947c4815f43035d8a187cf129c6cc4aa80d0e7c49ed213de1cc80f23fe540f5c",
+      "expected": "947c4815f43035d8a187cf129c6cc4aa80d0e7c49ed213de1cc80f23fe540f5c",
+      "passed": true
+    },
+    {
+      "label": "table rows ai_critique_examples",
+      "actual": 3,
+      "expected": 3,
+      "passed": true
+    },
+    {
+      "label": "table hash ai_legal_proposal_tradeoffs",
+      "actual": "cfef198e6c28f2076642a2791b53afbbaf5d07adc044bf12cab1bc8fe9d88e13",
+      "expected": "cfef198e6c28f2076642a2791b53afbbaf5d07adc044bf12cab1bc8fe9d88e13",
+      "passed": true
+    },
+    {
+      "label": "table rows ai_legal_proposal_tradeoffs",
+      "actual": 6,
+      "expected": 6,
+      "passed": true
+    },
+    {
+      "label": "table hash candidate_by_stratum",
+      "actual": "bafc4926c75545c4518caf164b08a2aad92a3ad598a1257f2050c1e0ed57f1e9",
+      "expected": "bafc4926c75545c4518caf164b08a2aad92a3ad598a1257f2050c1e0ed57f1e9",
+      "passed": true
+    },
+    {
+      "label": "table rows candidate_by_stratum",
+      "actual": 30,
+      "expected": 30,
+      "passed": true
+    },
+    {
+      "label": "table hash candidate_development",
+      "actual": "751dc50b2a2aaa158d223c5b7858b00021028899adf5057f8f1a97f6d821bc79",
+      "expected": "751dc50b2a2aaa158d223c5b7858b00021028899adf5057f8f1a97f6d821bc79",
+      "passed": true
+    },
+    {
+      "label": "table rows candidate_development",
+      "actual": 3,
+      "expected": 3,
+      "passed": true
+    },
+    {
+      "label": "table hash candidate_evaluation",
+      "actual": "8df135a37c7906f0a289fb07f387dc70f2a2675dc6b9b19d7823964afeda18ab",
+      "expected": "8df135a37c7906f0a289fb07f387dc70f2a2675dc6b9b19d7823964afeda18ab",
+      "passed": true
+    },
+    {
+      "label": "table rows candidate_evaluation",
+      "actual": 3,
+      "expected": 3,
+      "passed": true
+    },
+    {
+      "label": "table hash candidate_record_pairs",
+      "actual": "458d88e27acd6cd0f9f3c567281415de57e4a20abccec35c226249a24ccf2280",
+      "expected": "458d88e27acd6cd0f9f3c567281415de57e4a20abccec35c226249a24ccf2280",
+      "passed": true
+    },
+    {
+      "label": "table rows candidate_record_pairs",
+      "actual": 360,
+      "expected": 360,
+      "passed": true
+    },
+    {
+      "label": "table hash counterexamples",
+      "actual": "b62d45c5a5e64578722307c03c50073ec62eace347735b06f71fbdd3468dfa19",
+      "expected": "b62d45c5a5e64578722307c03c50073ec62eace347735b06f71fbdd3468dfa19",
+      "passed": true
+    },
+    {
+      "label": "table rows counterexamples",
+      "actual": 19,
+      "expected": 19,
+      "passed": true
+    },
+    {
+      "label": "table hash exposed_pilot_direction",
+      "actual": "9ab503063530f7eb43f52fe771dc2088b3546d8c939f16e162502d2db25f2c4f",
+      "expected": "9ab503063530f7eb43f52fe771dc2088b3546d8c939f16e162502d2db25f2c4f",
+      "passed": true
+    },
+    {
+      "label": "table rows exposed_pilot_direction",
+      "actual": 3,
+      "expected": 3,
+      "passed": true
+    },
+    {
+      "label": "table hash exposed_pilot_filtering",
+      "actual": "522a508368fb89b7f4e488d5726b0bb09d1b3b587d64fa4de4edf322287fed88",
+      "expected": "522a508368fb89b7f4e488d5726b0bb09d1b3b587d64fa4de4edf322287fed88",
+      "passed": true
+    },
+    {
+      "label": "table rows exposed_pilot_filtering",
+      "actual": 3,
+      "expected": 3,
+      "passed": true
+    },
+    {
+      "label": "table hash feasible_pareto",
+      "actual": "4e5125e3057215be8dcac49644a5494520d052fa8d81a716ffea7ba6d433de5b",
+      "expected": "4e5125e3057215be8dcac49644a5494520d052fa8d81a716ffea7ba6d433de5b",
+      "passed": true
+    },
+    {
+      "label": "table rows feasible_pareto",
+      "actual": 61,
+      "expected": 61,
+      "passed": true
+    },
+    {
+      "label": "table hash historical_model_calls",
+      "actual": "a593d396d395312240b1ead73f613d29b2258cc94b7489a6dad474a196dba6d0",
+      "expected": "a593d396d395312240b1ead73f613d29b2258cc94b7489a6dad474a196dba6d0",
+      "passed": true
+    },
+    {
+      "label": "table rows historical_model_calls",
+      "actual": 15,
+      "expected": 15,
+      "passed": true
+    },
+    {
+      "label": "table hash memory_consumption",
+      "actual": "571115d5c31cc0d1c7bdbad5e5a28900780466784546a0fed595dc51cb39bb93",
+      "expected": "571115d5c31cc0d1c7bdbad5e5a28900780466784546a0fed595dc51cb39bb93",
+      "passed": true
+    },
+    {
+      "label": "table rows memory_consumption",
+      "actual": 241,
+      "expected": 241,
+      "passed": true
+    },
+    {
+      "label": "table hash memory_delivered_entries",
+      "actual": "5a98e8ce068ce785804c9b4b0774b88af95b691fabc4126b3b6510933648d4c3",
+      "expected": "5a98e8ce068ce785804c9b4b0774b88af95b691fabc4126b3b6510933648d4c3",
+      "passed": true
+    },
+    {
+      "label": "table rows memory_delivered_entries",
+      "actual": 288,
+      "expected": 288,
+      "passed": true
+    },
+    {
+      "label": "table hash memory_entries",
+      "actual": "ecb5f3ab6e0d5fcece8e92644105057206fcde61f8874343fe3542725648dbd2",
+      "expected": "ecb5f3ab6e0d5fcece8e92644105057206fcde61f8874343fe3542725648dbd2",
+      "passed": true
+    },
+    {
+      "label": "table rows memory_entries",
+      "actual": 60,
+      "expected": 60,
+      "passed": true
+    },
+    {
+      "label": "table hash memory_independent_mode_comparison",
+      "actual": "5221201a7d8c5ca0fb6d2f95c03d8b201bfe35376ff3c7321cb1af19e0768ce8",
+      "expected": "5221201a7d8c5ca0fb6d2f95c03d8b201bfe35376ff3c7321cb1af19e0768ce8",
+      "passed": true
+    },
+    {
+      "label": "table rows memory_independent_mode_comparison",
+      "actual": 96,
+      "expected": 96,
+      "passed": true
+    },
+    {
+      "label": "table hash memory_retrieval",
+      "actual": "73829dc6b2a27afadbafd9bf4d64b39e3bb9588f1c255d8c705cae0ac9cf58d6",
+      "expected": "73829dc6b2a27afadbafd9bf4d64b39e3bb9588f1c255d8c705cae0ac9cf58d6",
+      "passed": true
+    },
+    {
+      "label": "table rows memory_retrieval",
+      "actual": 96,
+      "expected": 96,
+      "passed": true
+    },
+    {
+      "label": "table hash mode_batch_resources",
+      "actual": "2badc93888d04d159dfb1b4ef8fe38c54a76db072e7f24bdfd8b1375d8936abf",
+      "expected": "2badc93888d04d159dfb1b4ef8fe38c54a76db072e7f24bdfd8b1375d8936abf",
+      "passed": true
+    },
+    {
+      "label": "table rows mode_batch_resources",
+      "actual": 48,
+      "expected": 48,
+      "passed": true
+    },
+    {
+      "label": "table hash mode_candidates",
+      "actual": "f75f868bf4908986557ebaafccb17dc1fc5b69dd0ec58d925e3350a803260e30",
+      "expected": "f75f868bf4908986557ebaafccb17dc1fc5b69dd0ec58d925e3350a803260e30",
+      "passed": true
+    },
+    {
+      "label": "table rows mode_candidates",
+      "actual": 4801,
+      "expected": 4801,
+      "passed": true
+    },
+    {
+      "label": "table hash mode_episode_distributions",
+      "actual": "b1da06d44a5e383b490863e6684b1ddc53a0b1485fc670a6461e3fb5a0dd1015",
+      "expected": "b1da06d44a5e383b490863e6684b1ddc53a0b1485fc670a6461e3fb5a0dd1015",
+      "passed": true
+    },
+    {
+      "label": "table rows mode_episode_distributions",
+      "actual": 384,
+      "expected": 384,
+      "passed": true
+    },
+    {
+      "label": "table hash mode_original_record_summary",
+      "actual": "37aefb3b7bf822602e0286abf34e7fcb7e868124aee3a12154b227d0bcc5a785",
+      "expected": "37aefb3b7bf822602e0286abf34e7fcb7e868124aee3a12154b227d0bcc5a785",
+      "passed": true
+    },
+    {
+      "label": "table rows mode_original_record_summary",
+      "actual": 96,
+      "expected": 96,
+      "passed": true
+    },
+    {
+      "label": "table hash mode_pairwise",
+      "actual": "bca2a13c754c9ad3da70dc11eba646fbe70d9cf8ec2bf43e77cd172a2880dea5",
+      "expected": "bca2a13c754c9ad3da70dc11eba646fbe70d9cf8ec2bf43e77cd172a2880dea5",
+      "passed": true
+    },
+    {
+      "label": "table rows mode_pairwise",
+      "actual": 6912,
+      "expected": 6912,
+      "passed": true
+    },
+    {
+      "label": "table hash mode_proposals",
+      "actual": "de1ff0be9adf1883fec47853c1d0fa5a4bc4883f5520a4d436928ddaedacd0c4",
+      "expected": "de1ff0be9adf1883fec47853c1d0fa5a4bc4883f5520a4d436928ddaedacd0c4",
+      "passed": true
+    },
+    {
+      "label": "table rows mode_proposals",
+      "actual": 615,
+      "expected": 615,
+      "passed": true
+    },
+    {
+      "label": "table hash mode_record_repeat_distributions",
+      "actual": "ba565fa04d395001a26fcad55dea231739b667f9f2a2d7606696753b2699ceb8",
+      "expected": "ba565fa04d395001a26fcad55dea231739b667f9f2a2d7606696753b2699ceb8",
+      "passed": true
+    },
+    {
+      "label": "table rows mode_record_repeat_distributions",
+      "actual": 2304,
+      "expected": 2304,
+      "passed": true
+    },
+    {
+      "label": "table hash mode_record_results",
+      "actual": "e8dac7e26d1aaefa692fbf6836581eb4f038dfdbbe79fd49268d9ac6eb0bb02f",
+      "expected": "e8dac7e26d1aaefa692fbf6836581eb4f038dfdbbe79fd49268d9ac6eb0bb02f",
+      "passed": true
+    },
+    {
+      "label": "table rows mode_record_results",
+      "actual": 384,
+      "expected": 384,
+      "passed": true
+    },
+    {
+      "label": "table hash mode_rounds",
+      "actual": "8c8e79f877013b0c6d7d8a1cf8b99fcf841486db212414e353359ce27d469dd3",
+      "expected": "8c8e79f877013b0c6d7d8a1cf8b99fcf841486db212414e353359ce27d469dd3",
+      "passed": true
+    },
+    {
+      "label": "table rows mode_rounds",
+      "actual": 591,
+      "expected": 591,
+      "passed": true
+    },
+    {
+      "label": "table hash mode_summary",
+      "actual": "9f9a8916b685e37d12952ff8fd00fb6aa6688654eacb7ba1159671123ac02bef",
+      "expected": "9f9a8916b685e37d12952ff8fd00fb6aa6688654eacb7ba1159671123ac02bef",
+      "passed": true
+    },
+    {
+      "label": "table rows mode_summary",
+      "actual": 8,
+      "expected": 8,
+      "passed": true
+    },
+    {
+      "label": "table hash model_calls",
+      "actual": "ee1386fc1517fe211c227c2fc1970d5b2d672cfa62863f03d19b65b7415912ea",
+      "expected": "ee1386fc1517fe211c227c2fc1970d5b2d672cfa62863f03d19b65b7415912ea",
+      "passed": true
+    },
+    {
+      "label": "table rows model_calls",
+      "actual": 84,
+      "expected": 84,
+      "passed": true
+    },
+    {
+      "label": "table hash model_cost_scope_summary",
+      "actual": "5f3cc2801a732b370462efd8cfa3fbb4917c7706f08eced5bef3c5ff4fe0e12c",
+      "expected": "5f3cc2801a732b370462efd8cfa3fbb4917c7706f08eced5bef3c5ff4fe0e12c",
+      "passed": true
+    },
+    {
+      "label": "table rows model_cost_scope_summary",
+      "actual": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "label": "table hash order_configurations",
+      "actual": "fbc461782fea14ba32023ab71a11afb29058b0562d8ce83569c2e61bb1ffa54c",
+      "expected": "fbc461782fea14ba32023ab71a11afb29058b0562d8ce83569c2e61bb1ffa54c",
+      "passed": true
+    },
+    {
+      "label": "table rows order_configurations",
+      "actual": 8,
+      "expected": 8,
+      "passed": true
+    },
+    {
+      "label": "table hash order_failure_mechanisms",
+      "actual": "5d71bfcfec30332fab8fa68fd23065a0e8df5ae7216e16852b815777833537fa",
+      "expected": "5d71bfcfec30332fab8fa68fd23065a0e8df5ae7216e16852b815777833537fa",
+      "passed": true
+    },
+    {
+      "label": "table rows order_failure_mechanisms",
+      "actual": 660,
+      "expected": 660,
+      "passed": true
+    },
+    {
+      "label": "table hash order_records",
+      "actual": "72d32668a25ee02f629e6aa854722cad798bfc9c6c0ed6f9d0805dd4a9767844",
+      "expected": "72d32668a25ee02f629e6aa854722cad798bfc9c6c0ed6f9d0805dd4a9767844",
+      "passed": true
+    },
+    {
+      "label": "table rows order_records",
+      "actual": 960,
+      "expected": 960,
+      "passed": true
+    },
+    {
+      "label": "table hash parameter_by_stratum",
+      "actual": "9773f7ae0fcf12bfffcde82c02130f251bae21364edf299facc6e177e5d4ba36",
+      "expected": "9773f7ae0fcf12bfffcde82c02130f251bae21364edf299facc6e177e5d4ba36",
+      "passed": true
+    },
+    {
+      "label": "table rows parameter_by_stratum",
+      "actual": 730,
+      "expected": 730,
+      "passed": true
+    },
+    {
+      "label": "table hash parameter_configurations",
+      "actual": "7afd17503849b48cba887875e1208dd6021084ed7abd255583960fe03ea659df",
+      "expected": "7afd17503849b48cba887875e1208dd6021084ed7abd255583960fe03ea659df",
+      "passed": true
+    },
+    {
+      "label": "table rows parameter_configurations",
+      "actual": 73,
+      "expected": 73,
+      "passed": true
+    },
+    {
+      "label": "table hash parameter_record_pairs",
+      "actual": "e051dfc6871b1413ce59be0a31fbf361f68e5ff20e6824792d0a0085bd45af9f",
+      "expected": "e051dfc6871b1413ce59be0a31fbf361f68e5ff20e6824792d0a0085bd45af9f",
+      "passed": true
+    },
+    {
+      "label": "table rows parameter_record_pairs",
+      "actual": 8760,
+      "expected": 8760,
+      "passed": true
+    },
+    {
+      "label": "table hash parameter_records",
+      "actual": "c0f8af1e53c8cd3bcdef8e1a355274ee4ce663ff36688592b20435bd14442d7c",
+      "expected": "c0f8af1e53c8cd3bcdef8e1a355274ee4ce663ff36688592b20435bd14442d7c",
+      "passed": true
+    },
+    {
+      "label": "table rows parameter_records",
+      "actual": 8760,
+      "expected": 8760,
+      "passed": true
+    },
+    {
+      "label": "table hash processing_reasons",
+      "actual": "c13ca6c74a753e0662293a0e07e795f311722cf26b1f598b94a249010b556b31",
+      "expected": "c13ca6c74a753e0662293a0e07e795f311722cf26b1f598b94a249010b556b31",
+      "passed": true
+    },
+    {
+      "label": "table rows processing_reasons",
+      "actual": 34663,
+      "expected": 34663,
+      "passed": true
+    },
+    {
+      "label": "table hash resource_totals",
+      "actual": "886f26c47434b6b967ee2f8c4ad2bb907705ad0a1c94879ac8d43ecd1e06a1ef",
+      "expected": "886f26c47434b6b967ee2f8c4ad2bb907705ad0a1c94879ac8d43ecd1e06a1ef",
+      "passed": true
+    },
+    {
+      "label": "table rows resource_totals",
+      "actual": 11,
+      "expected": 11,
+      "passed": true
+    },
+    {
+      "label": "table hash stable_intervals",
+      "actual": "f4c7587260b3ed4d90f31701bf14eb3006a801041849be6651ed4820401f9a63",
+      "expected": "f4c7587260b3ed4d90f31701bf14eb3006a801041849be6651ed4820401f9a63",
+      "passed": true
+    },
+    {
+      "label": "table rows stable_intervals",
+      "actual": 32,
+      "expected": 32,
+      "passed": true
+    },
+    {
+      "label": "table hash stage_readings",
+      "actual": "809bee9199b8b2cdea87259aec1eaead712639edba5127cfc65559d077a6662d",
+      "expected": "809bee9199b8b2cdea87259aec1eaead712639edba5127cfc65559d077a6662d",
+      "passed": true
+    },
+    {
+      "label": "table rows stage_readings",
+      "actual": 38880,
+      "expected": 38880,
+      "passed": true
+    },
+    {
+      "label": "table count and rows",
+      "actual": [
+        39,
+        111053
+      ],
+      "expected": [
+        39,
+        111053
+      ],
+      "passed": true
+    },
+    {
+      "label": "single candidate order",
+      "actual": [
+        "C-S",
+        "C-D",
+        "C-P"
+      ],
+      "expected": [
+        "C-S",
+        "C-D",
+        "C-P"
+      ],
+      "passed": true
+    },
+    {
+      "label": "C-S registered counts",
+      "actual": [
+        120,
+        12173,
+        120,
+        53,
+        12162,
+        0,
+        2939
+      ],
+      "expected": [
+        120,
+        12173,
+        120,
+        53,
+        12162,
+        0,
+        2939
+      ],
+      "passed": true
+    },
+    {
+      "label": "C-D/C-P reference and negative conclusion",
+      "actual": [
+        [
+          true,
+          "NO_DEMONSTRATED_GAIN",
+          0
+        ],
+        [
+          true,
+          "NO_DEMONSTRATED_GAIN",
+          0
+        ]
+      ],
+      "expected": [
+        [
+          true,
+          "NO_DEMONSTRATED_GAIN",
+          0
+        ],
+        [
+          true,
+          "NO_DEMONSTRATED_GAIN",
+          0
+        ]
+      ],
+      "passed": true
+    },
+    {
+      "label": "C-S common baseline counts",
+      "actual": [
+        8805,
+        32,
+        2748
+      ],
+      "expected": [
+        8805,
+        32,
+        2748
+      ],
+      "passed": true
+    },
+    {
+      "label": "unsafe order record counts",
+      "actual": {
+        "S-D-P": 0,
+        "S-P-D": 0,
+        "D-S-P": 46,
+        "D-P-S": 87,
+        "P-S-D": 87,
+        "P-D-S": 87
+      },
+      "expected": {
+        "S-D-P": 0,
+        "S-P-D": 0,
+        "D-S-P": 46,
+        "D-P-S": 87,
+        "P-S-D": 87,
+        "P-D-S": 87
+      },
+      "passed": true
+    },
+    {
+      "label": "formal mode table",
+      "actual": {
+        "llm+memory+search": [
+          72,
+          27,
+          954,
+          47
+        ],
+        "llm+search": [
+          72,
+          27,
+          1080,
+          47
+        ],
+        "llm-only": [
+          72,
+          9,
+          109,
+          15
+        ],
+        "search-only": [
+          72,
+          0,
+          1440,
+          27
+        ]
+      },
+      "expected": {
+        "llm-only": [
+          72,
+          9,
+          109,
+          15
+        ],
+        "search-only": [
+          72,
+          0,
+          1440,
+          27
+        ],
+        "llm+search": [
+          72,
+          27,
+          1080,
+          47
+        ],
+        "llm+memory+search": [
+          72,
+          27,
+          954,
+          47
+        ]
+      },
+      "passed": true
+    },
+    {
+      "label": "formal proposals/legal/executed/evaluable/matching/fallback",
+      "actual": [
+        467,
+        467,
+        467,
+        185,
+        185,
+        0
+      ],
+      "expected": [
+        467,
+        467,
+        467,
+        185,
+        185,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "label": "formal memory delivery and use denominators",
+      "actual": [
+        72,
+        72,
+        181,
+        43,
+        36
+      ],
+      "expected": [
+        72,
+        72,
+        181,
+        43,
+        36
+      ],
+      "passed": true
+    },
+    {
+      "label": "memory no causal assertion",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "label": "counterexample counts",
+      "actual": [
+        6,
+        19,
+        25,
+        10
+      ],
+      "expected": [
+        6,
+        19,
+        25,
+        10
+      ],
+      "passed": true
+    },
+    {
+      "label": "coordinate scope",
+      "actual": [
+        307,
+        30992,
+        1594527
+      ],
+      "expected": [
+        307,
+        30992,
+        1594527
+      ],
+      "passed": true
+    },
+    {
+      "label": "reported rounded coordinate maxima",
+      "actual": [
+        4.823e-10,
+        3.504
+      ],
+      "expected": [
+        4.823e-10,
+        3.504
+      ],
+      "passed": true
+    },
+    {
+      "label": "registered sensitivity trace counts",
+      "actual": [
+        10218,
+        5503
+      ],
+      "expected": [
+        10218,
+        5503
+      ],
+      "passed": true
+    },
+    {
+      "label": "observed alternate threshold differences",
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "label": "visible CLI scope counts",
+      "actual": {
+        "CURRENT_VALID_EXPERIMENT": 84,
+        "ENGINEERING_PROVIDER_QUALIFICATION": 1,
+        "HISTORICAL_SUPERSEDED_OR_INTERRUPTED_EXPERIMENT": 15
+      },
+      "expected": {
+        "CURRENT_VALID_EXPERIMENT": 84,
+        "ENGINEERING_PROVIDER_QUALIFICATION": 1,
+        "HISTORICAL_SUPERSEDED_OR_INTERRUPTED_EXPERIMENT": 15
+      },
+      "passed": true
+    },
+    {
+      "label": "visible CLI total",
+      "actual": 100,
+      "expected": 100,
+      "passed": true
+    },
+    {
+      "label": "named processing/verifier count",
+      "actual": 10249,
+      "expected": 10249,
+      "passed": true
+    },
+    {
+      "label": "Notebook cells/recomputations/new calls",
+      "actual": [
+        21,
+        17401,
+        0
+      ],
+      "expected": [
+        21,
+        17401,
+        0
+      ],
+      "passed": true
+    },
+    {
+      "label": "Notebook memory stable",
+      "actual": "2330543c3a443532891936ac29d4080cb6e5f45c58e2976cc81c8fa67c6607d6",
+      "expected": "2330543c3a443532891936ac29d4080cb6e5f45c58e2976cc81c8fa67c6607d6",
+      "passed": true
+    },
+    {
+      "label": "actual pytest count and internal duration",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "label": "figure and export counts",
+      "actual": [
+        11,
+        44
+      ],
+      "expected": [
+        11,
+        44
+      ],
+      "passed": true
+    },
+    {
+      "label": "formal legal proposal tradeoff count",
+      "actual": 2,
+      "expected": 2,
+      "passed": true
+    },
+    {
+      "label": "3420-r2-b response hash",
+      "actual": "a183a91105a8daada0096dd2b5f746ef7cc13f0037dd2c701072f3ecf5cb007c",
+      "expected": "a183a91105a8daada0096dd2b5f746ef7cc13f0037dd2c701072f3ecf5cb007c",
+      "passed": true
+    },
+    {
+      "label": "3420-r2-b raw exact proposal",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "label": "3420-r2-b episode artifact binding 3420_candidate_traces.json.gz",
+      "actual": "990d99b47a6f2eddee6450f636dae90f929201542644da849bb9acdb3444013c",
+      "expected": "990d99b47a6f2eddee6450f636dae90f929201542644da849bb9acdb3444013c",
+      "passed": true
+    },
+    {
+      "label": "3420-r2-b episode artifact binding 3420_lock.json",
+      "actual": "393c4e1841d754d845ff7245470ed8902a6a96db5f391b6ba4304811ad5f7a1a",
+      "expected": "393c4e1841d754d845ff7245470ed8902a6a96db5f391b6ba4304811ad5f7a1a",
+      "passed": true
+    },
+    {
+      "label": "3420-r2-b lost identity count",
+      "actual": 16,
+      "expected": 16,
+      "passed": true
+    },
+    {
+      "label": "3420-r2-b null on full baseline",
+      "actual": null,
+      "expected": null,
+      "passed": true
+    },
+    {
+      "label": "3420-r2-b not locked",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "label": "3420-r2-b reference retained without fallback",
+      "actual": [
+        "cfg-b15b8281b73592fb",
+        false
+      ],
+      "expected": [
+        "cfg-b15b8281b73592fb",
+        false
+      ],
+      "passed": true
+    },
+    {
+      "label": "955-r3-a response hash",
+      "actual": "b4ef33449ed0ba5c32a2d17307dd67c19452eeda6c53500b71bdb3fd1356f12f",
+      "expected": "b4ef33449ed0ba5c32a2d17307dd67c19452eeda6c53500b71bdb3fd1356f12f",
+      "passed": true
+    },
+    {
+      "label": "955-r3-a raw exact proposal",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "label": "955-r3-a episode artifact binding 955_candidate_traces.json.gz",
+      "actual": "aee9ab54414df0d8665e927cd1f15f9288b24c2cbe6b9812d63c15111a4a304e",
+      "expected": "aee9ab54414df0d8665e927cd1f15f9288b24c2cbe6b9812d63c15111a4a304e",
+      "passed": true
+    },
+    {
+      "label": "955-r3-a episode artifact binding 955_lock.json",
+      "actual": "0bf2cd76c8967c05bfe84f84b3aa5fb927c3b2ba433b36a3c838e9e48e7c7920",
+      "expected": "0bf2cd76c8967c05bfe84f84b3aa5fb927c3b2ba433b36a3c838e9e48e7c7920",
+      "passed": true
+    },
+    {
+      "label": "955-r3-a lost identity count",
+      "actual": 1,
+      "expected": 1,
+      "passed": true
+    },
+    {
+      "label": "955-r3-a null on full baseline",
+      "actual": null,
+      "expected": null,
+      "passed": true
+    },
+    {
+      "label": "955-r3-a not locked",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "label": "955-r3-a reference retained without fallback",
+      "actual": [
+        "cfg-b15b8281b73592fb",
+        false
+      ],
+      "expected": [
+        "cfg-b15b8281b73592fb",
+        false
+      ],
+      "passed": true
+    },
+    {
+      "label": "all captured relative link targets exist",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "label": "explicit process receipt hashes match",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "label": "preserved ZIP SC-LAB1-G1-COMPLETE-001_HANDOFF.zip",
+      "actual": "95d467b764b0c358e5248ed5392c4d8704a3767f6a907f56a76527d0c50a8c68",
+      "expected": "95d467b764b0c358e5248ed5392c4d8704a3767f6a907f56a76527d0c50a8c68",
+      "passed": true
+    },
+    {
+      "label": "preserved ZIP SC-LAB1-G1-REPAIR-001_HANDOFF.zip",
+      "actual": "e79ea04a803d2b49bed4699e1609412f8d615b209d529a9b816991188cb09fea",
+      "expected": "e79ea04a803d2b49bed4699e1609412f8d615b209d529a9b816991188cb09fea",
+      "passed": true
+    },
+    {
+      "label": "preserved ZIP SC-LAB1-G1-CLOSURE-002_HANDOFF.zip",
+      "actual": "43db2c0316f7773bb568cc335ba563b29c013f41a4bf82ba74b1c36e90add4fe",
+      "expected": "43db2c0316f7773bb568cc335ba563b29c013f41a4bf82ba74b1c36e90add4fe",
+      "passed": true
+    },
+    {
+      "label": "actual untracked handoff ZIP count",
+      "actual": 2,
+      "expected": 2,
+      "passed": true
+    }
+  ],
+  "check_count": 131,
+  "failures": [],
+  "input_hashes": {
+    "task1/evidence/goal2/a_epoch02/final_handoff_check/read_cutoff.json": "e0829f79061ff53417262d307c43116e915f32bf1fa2276e4c23394bcf8f2719",
+    "task1/evidence/goal2/a_epoch02/final_handoff_check/FINAL_RESPONSE.md.source.txt": "bd2b43d52b7b2b91ea3d0d7b8cc2f183abc3ce4ba80982b37e1415d0de24269a",
+    "task1/evidence/goal2/a_epoch02/final_handoff_check/REVIEW_PACKET.md.source.txt": "f449cfb8387a5a4e4cd99add63109a4b5e211d5c0c957ff0b6fc80db010161e5",
+    "task1/evidence/goal2/a_epoch02/final_handoff_check/PROCESS_RECORD.md.source.txt": "73cd7d395f48840482e7a4533361f494ba6a079bc6bbdb402c9f373280525e97",
+    "task1/evidence/goal2/result_summary.json": "4fbd16b754f25253b0803a27898e4758bc4eaf6debda03607454c374bba758a7",
+    "task1/evidence/goal2/current_runs.json": "cd241536bbff6b84dc66dd9b757e813af3b13bd43bb9ff92ae2f55cc5adbced0",
+    "task1/evidence/goal2/runs/g2-development-parameters-02/manifest.json": "51fc830c8e0be9a0f5f4b4f497833aef6637f5d570590f25e4e9495cfc120920",
+    "task1/evidence/goal2/runs/g2-development-orders-02/manifest.json": "840ea80c28ff2a34584b67793514ffd04ee0cb13e1511f221161eed27b621c53",
+    "task1/evidence/goal2/runs/g2-demo-memory-02/manifest.json": "9bfd29dbfe573f19c28aedd69cd9f2d9da066a56cc150fc7f831cc13c631dac8",
+    "task1/evidence/goal2/runs/g2-development-modes-02/manifest.json": "1c4431c5848e19daa5c89dec1c5ab4ab8ac2a337d7bd26a9ac199846adb80f9d",
+    "task1/evidence/goal2/runs/g2-evaluation-parameters-01/manifest.json": "c3f35ddad27245a166f43992f0f0b3f1f0543c7177543fc2d13471e53902fcf3",
+    "task1/evidence/goal2/runs/g2-evaluation-orders-01/manifest.json": "5da2a9ff4d53941d2d91e9ecfedd508e1b247a0c44738042e9c3666a3aa9b047",
+    "task1/evidence/goal2/runs/g2-evaluation-modes-01/manifest.json": "444820a35c3d2c95863fd730422f6b7252fa72e146e242d2d189814e3b9e2b14",
+    "task1/evidence/goal2/tables/ai_critique_examples.csv": "947c4815f43035d8a187cf129c6cc4aa80d0e7c49ed213de1cc80f23fe540f5c",
+    "task1/evidence/goal2/tables/ai_legal_proposal_tradeoffs.csv": "cfef198e6c28f2076642a2791b53afbbaf5d07adc044bf12cab1bc8fe9d88e13",
+    "task1/evidence/goal2/tables/candidate_by_stratum.csv": "bafc4926c75545c4518caf164b08a2aad92a3ad598a1257f2050c1e0ed57f1e9",
+    "task1/evidence/goal2/tables/candidate_development.csv": "751dc50b2a2aaa158d223c5b7858b00021028899adf5057f8f1a97f6d821bc79",
+    "task1/evidence/goal2/tables/candidate_evaluation.csv": "8df135a37c7906f0a289fb07f387dc70f2a2675dc6b9b19d7823964afeda18ab",
+    "task1/evidence/goal2/tables/candidate_record_pairs.csv": "458d88e27acd6cd0f9f3c567281415de57e4a20abccec35c226249a24ccf2280",
+    "task1/evidence/goal2/tables/counterexamples.csv": "b62d45c5a5e64578722307c03c50073ec62eace347735b06f71fbdd3468dfa19",
+    "task1/evidence/goal2/tables/exposed_pilot_direction.csv": "9ab503063530f7eb43f52fe771dc2088b3546d8c939f16e162502d2db25f2c4f",
+    "task1/evidence/goal2/tables/exposed_pilot_filtering.csv": "522a508368fb89b7f4e488d5726b0bb09d1b3b587d64fa4de4edf322287fed88",
+    "task1/evidence/goal2/tables/feasible_pareto.csv": "4e5125e3057215be8dcac49644a5494520d052fa8d81a716ffea7ba6d433de5b",
+    "task1/evidence/goal2/tables/historical_model_calls.csv": "a593d396d395312240b1ead73f613d29b2258cc94b7489a6dad474a196dba6d0",
+    "task1/evidence/goal2/tables/memory_consumption.csv": "571115d5c31cc0d1c7bdbad5e5a28900780466784546a0fed595dc51cb39bb93",
+    "task1/evidence/goal2/tables/memory_delivered_entries.csv": "5a98e8ce068ce785804c9b4b0774b88af95b691fabc4126b3b6510933648d4c3",
+    "task1/evidence/goal2/tables/memory_entries.csv": "ecb5f3ab6e0d5fcece8e92644105057206fcde61f8874343fe3542725648dbd2",
+    "task1/evidence/goal2/tables/memory_independent_mode_comparison.csv": "5221201a7d8c5ca0fb6d2f95c03d8b201bfe35376ff3c7321cb1af19e0768ce8",
+    "task1/evidence/goal2/tables/memory_retrieval.csv": "73829dc6b2a27afadbafd9bf4d64b39e3bb9588f1c255d8c705cae0ac9cf58d6",
+    "task1/evidence/goal2/tables/mode_batch_resources.csv": "2badc93888d04d159dfb1b4ef8fe38c54a76db072e7f24bdfd8b1375d8936abf",
+    "task1/evidence/goal2/tables/mode_candidates.csv": "f75f868bf4908986557ebaafccb17dc1fc5b69dd0ec58d925e3350a803260e30",
+    "task1/evidence/goal2/tables/mode_episode_distributions.csv": "b1da06d44a5e383b490863e6684b1ddc53a0b1485fc670a6461e3fb5a0dd1015",
+    "task1/evidence/goal2/tables/mode_original_record_summary.csv": "37aefb3b7bf822602e0286abf34e7fcb7e868124aee3a12154b227d0bcc5a785",
+    "task1/evidence/goal2/tables/mode_pairwise.csv": "bca2a13c754c9ad3da70dc11eba646fbe70d9cf8ec2bf43e77cd172a2880dea5",
+    "task1/evidence/goal2/tables/mode_proposals.csv": "de1ff0be9adf1883fec47853c1d0fa5a4bc4883f5520a4d436928ddaedacd0c4",
+    "task1/evidence/goal2/tables/mode_record_repeat_distributions.csv": "ba565fa04d395001a26fcad55dea231739b667f9f2a2d7606696753b2699ceb8",
+    "task1/evidence/goal2/tables/mode_record_results.csv": "e8dac7e26d1aaefa692fbf6836581eb4f038dfdbbe79fd49268d9ac6eb0bb02f",
+    "task1/evidence/goal2/tables/mode_rounds.csv": "8c8e79f877013b0c6d7d8a1cf8b99fcf841486db212414e353359ce27d469dd3",
+    "task1/evidence/goal2/tables/mode_summary.csv": "9f9a8916b685e37d12952ff8fd00fb6aa6688654eacb7ba1159671123ac02bef",
+    "task1/evidence/goal2/tables/model_calls.csv": "ee1386fc1517fe211c227c2fc1970d5b2d672cfa62863f03d19b65b7415912ea",
+    "task1/evidence/goal2/tables/model_cost_scope_summary.csv": "5f3cc2801a732b370462efd8cfa3fbb4917c7706f08eced5bef3c5ff4fe0e12c",
+    "task1/evidence/goal2/tables/order_configurations.csv": "fbc461782fea14ba32023ab71a11afb29058b0562d8ce83569c2e61bb1ffa54c",
+    "task1/evidence/goal2/tables/order_failure_mechanisms.csv": "5d71bfcfec30332fab8fa68fd23065a0e8df5ae7216e16852b815777833537fa",
+    "task1/evidence/goal2/tables/order_records.csv": "72d32668a25ee02f629e6aa854722cad798bfc9c6c0ed6f9d0805dd4a9767844",
+    "task1/evidence/goal2/tables/parameter_by_stratum.csv": "9773f7ae0fcf12bfffcde82c02130f251bae21364edf299facc6e177e5d4ba36",
+    "task1/evidence/goal2/tables/parameter_configurations.csv": "7afd17503849b48cba887875e1208dd6021084ed7abd255583960fe03ea659df",
+    "task1/evidence/goal2/tables/parameter_record_pairs.csv": "e051dfc6871b1413ce59be0a31fbf361f68e5ff20e6824792d0a0085bd45af9f",
+    "task1/evidence/goal2/tables/parameter_records.csv": "c0f8af1e53c8cd3bcdef8e1a355274ee4ce663ff36688592b20435bd14442d7c",
+    "task1/evidence/goal2/tables/processing_reasons.csv": "c13ca6c74a753e0662293a0e07e795f311722cf26b1f598b94a249010b556b31",
+    "task1/evidence/goal2/tables/resource_totals.csv": "886f26c47434b6b967ee2f8c4ad2bb907705ad0a1c94879ac8d43ecd1e06a1ef",
+    "task1/evidence/goal2/tables/stable_intervals.csv": "f4c7587260b3ed4d90f31701bf14eb3006a801041849be6651ed4820401f9a63",
+    "task1/evidence/goal2/tables/stage_readings.csv": "809bee9199b8b2cdea87259aec1eaead712639edba5127cfc65559d077a6662d",
+    "task1/evidence/goal2/coordinate_sensitivity/raw_preflight/coordinate_checks.json": "171238f0c83b07d92901bc895c412213adb1bcc466b86da8b70705e540eda831",
+    "task1/evidence/goal2/coordinate_sensitivity/development-02/summary.json": "34562909f25a373e3c29a445d7b5e65314f3832d331183df3aa545e730abbf4f",
+    "task1/evidence/goal2/coordinate_sensitivity/evaluation-01/summary.json": "8a43b2bdd2661a630289520718f527d2494e790d4ff6ea45c4f55e02e540fd19",
+    "task1/evidence/goal2/resource_ledger.json": "01ff40b084ba354c3b9647491eaafff00f6dd217df54b9b49bc3cca08c90fc68",
+    "task1/evidence/goal2/notebook_runs/fresh-01/b_self_check.json": "3365fa80f320fbcd6109c0efa2be966c41fd76c9bdce50b715aab306f52334d4",
+    "task1/evidence/goal2/notebook_execution.json": "f256437eaa0d9883d27735c1195a7f90924068ac6b8c58f66110aac1f03fa452",
+    "task1/evidence/goal2/logs/tests_final_sources.log": "c9ad23e9e5e1193849c90d66336757fca3ffa40d7e72db7c303eec4d3100812c",
+    "task1/figures/goal2/figure_manifest.json": "429eb219b0487393bd49f6f63df9130222c44924c02ef3837c4427cd4bbefcc9",
+    "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm+memory+search-e1-b2/episode.json": "caba7c74181e328ad7bb3bd4bc32a12e4015e8f8d77916b6ca1b2cdd67d903e7",
+    "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm+memory+search-e1-b2/3420_lock.json": "393c4e1841d754d845ff7245470ed8902a6a96db5f391b6ba4304811ad5f7a1a",
+    "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm+memory+search-e1-b2/3420_candidate_traces.json.gz": "990d99b47a6f2eddee6450f636dae90f929201542644da849bb9acdb3444013c",
+    "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm+memory+search-e1-b2/round2_call/attempt01/response.json": "a183a91105a8daada0096dd2b5f746ef7cc13f0037dd2c701072f3ecf5cb007c",
+    "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm+memory+search-e3-b2/episode.json": "87c3e83d55067f1cfacd0a8c09d102eea7f77e8bb72b1f4c4b6e1f48302c46f7",
+    "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm+memory+search-e3-b2/955_lock.json": "0bf2cd76c8967c05bfe84f84b3aa5fb927c3b2ba433b36a3c838e9e48e7c7920",
+    "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm+memory+search-e3-b2/955_candidate_traces.json.gz": "aee9ab54414df0d8665e927cd1f15f9288b24c2cbe6b9812d63c15111a4a304e",
+    "task1/evidence/goal2/runs/g2-evaluation-modes-01/modes/G2_EVAL-llm+memory+search-e3-b2/round3_call/attempt01/response.json": "b4ef33449ed0ba5c32a2d17307dd67c19452eeda6c53500b71bdb3fd1356f12f",
+    "task1/evidence/goal2/c_contract/control_closure_receipt.json": "8f0573d674cba525a76972d5d1f0a156ef8792926347a1de98817c794eee106e",
+    "task1/evidence/goal2/c_contract/mode_memory_closure_current.json": "cf76902f616ae8bb950510d3104748b90e61e282c3384cb4a2580384ef4fa4d3",
+    "task1/evidence/goal2/c_contract/source_scope_closure_receipt.json": "c6f808528a51b7fc3c3dbb07880d6f58f9501fd2bd3c248faf43e4de55d194ca",
+    "task1/evidence/goal2/c_contract/notebook_setup_closure_receipt.json": "6da70f147d7fcdda7a2e448af1fd0f46da62911ee8467c009f14d07f298fa56b",
+    "task1/evidence/goal2/c_contract/parameter_figure_closure_receipt.json": "242e5c35e811b682e730ac55588d56179d551581d54b2e8bdcf1afe8d9d72b9d",
+    "task1/evidence/goal2/c_contract/context_closure_epoch02.json": "01085d6c6e67032f2ded8d78254c78053023c20f4c1d2ae3c2196f64f848a4e9",
+    "task1/evidence/goal2/c_contract/retry_classifier_closure_epoch02.json": "001736ad2f6c2895e982b421b3979abf957a0cb28ce24f7f2148e063d7cf7ace",
+    "task1/evidence/goal2/startup.json": "9373bcc0d2c7f6c1788d1be82476707a4546621417575086aa73474b57134505",
+    "SC-LAB1-G1-COMPLETE-001_HANDOFF.zip": "95d467b764b0c358e5248ed5392c4d8704a3767f6a907f56a76527d0c50a8c68",
+    "SC-LAB1-G1-REPAIR-001_HANDOFF.zip": "e79ea04a803d2b49bed4699e1609412f8d615b209d529a9b816991188cb09fea",
+    "SC-LAB1-G1-CLOSURE-002_HANDOFF.zip": "43db2c0316f7773bb568cc335ba563b29c013f41a4bf82ba74b1c36e90add4fe"
+  },
+  "canonical_relative_link_checks": [
+    {
+      "document": "task1/evidence/goal2/FINAL_RESPONSE.md",
+      "target": "requirements.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/FINAL_RESPONSE.md",
+      "target": "current_runs.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/FINAL_RESPONSE.md",
+      "target": "result_summary.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/FINAL_RESPONSE.md",
+      "target": "PROCESS_RECORD.md",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/FINAL_RESPONSE.md",
+      "target": "goal_state.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/FINAL_RESPONSE.md",
+      "target": "logs/tests_final_sources_execution.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/FINAL_RESPONSE.md",
+      "target": "notebook_execution.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/FINAL_RESPONSE.md",
+      "target": "../../docs/goal2/REPRODUCE.md",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/FINAL_RESPONSE.md",
+      "target": "resource_ledger.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/FINAL_RESPONSE.md",
+      "target": "governance_dispatches.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/FINAL_RESPONSE.md",
+      "target": "REVIEW_PACKET.md",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "USER_PROMPT.md",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "prompt_source.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "requirements.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "goal_state.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "progress_checkpoint.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "../../docs/goal2/CONTRACT.md",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "../../config/goal2/contract.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "../../config/goal2/experiment_matrix.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "contract_freeze.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "data/split_manifest.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "data/raw_diagnostics.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "code_freeze.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "current_runs.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "runs/g2-development-parameters-02/manifest.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "runs/g2-development-orders-02/manifest.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "runs/g2-demo-memory-02/manifest.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "runs/g2-demo-memory-02/memory_snapshot.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "runs/g2-development-modes-02/manifest.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "runs/g2-evaluation-parameters-01/manifest.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "runs/g2-evaluation-orders-01/manifest.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "runs/g2-evaluation-modes-01/manifest.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "../../docs/goal2/STAGE_ANALYSIS.md",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "result_summary.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "tables/parameter_records.csv",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "tables/stable_intervals.csv",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "tables/feasible_pareto.csv",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "tables/order_failure_mechanisms.csv",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "tables/mode_record_results.csv",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "tables/mode_pairwise.csv",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "tables/mode_record_repeat_distributions.csv",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "tables/mode_proposals.csv",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "tables/memory_retrieval.csv",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "tables/memory_consumption.csv",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "tables/memory_delivered_entries.csv",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "candidate_lock.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "a_epoch02/heldout_single_confirmation/single_candidate_confirmation.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "tables/candidate_by_stratum.csv",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "startup.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "c_contract/handoff_receipt_bound.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "c_contract/contract_receipt.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "c_contract/split_receipt.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "c_contract/core_receipt_epoch02.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "c_contract/mode_memory_closure_current.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "c_contract/source_scope_closure_receipt.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "../../workflow/g2_pipeline.py",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "../../workflow/g2_metrics.py",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "../../workflow/g2_modes.py",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "../../workflow/g2_memory.py",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "coordinate_sensitivity/raw_preflight/summary.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "coordinate_sensitivity/development-02/summary.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "coordinate_sensitivity/evaluation-01/summary.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "c_contract/coordinate_complete_receipt.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "a_epoch02/A_FOLLOWUP_DEVELOPMENT_EPOCH02.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "evaluation_freeze.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "c_contract/evaluation_freeze_epoch02_receipt.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "c_contract/context_closure_epoch02.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "c_contract/retry_classifier_closure_epoch02.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "superseded_runs.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "c_contract/evaluation_parameters_bound_receipt.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "c_contract/evaluation_orders_bound_receipt.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "c_contract/evaluation_modes_complete_receipt.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "c_contract/single_candidate_confirmation_receipt.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "c_contract/counterexamples_complete_receipt.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "../../notebooks/goal2/01_parameters_and_orders.ipynb",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "../../notebooks/goal2/02_real_modes_and_memory.ipynb",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "../../notebooks/goal2/03_candidates_counterexamples_and_cases.ipynb",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "../../docs/goal2/REPRODUCE.md",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "counterexamples/formal-02/manifest.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "a_epoch02/actual_ai_critique/ACTUAL_AI_CRITIQUE.md",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "../../figures/goal2/figure_manifest.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "../../figures/goal2/figure_data.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "../../figures/goal2/goal2_actual_architecture.drawio",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "c_contract/figures_complete_receipt.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "notebook_execution.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "notebook_runs/fresh-01/b_self_check.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "c_contract/analysis_complete_receipt_v2.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "PROCESS_RECORD.md",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "governance_dispatches.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "environment_record.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "target": "resource_ledger.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/PROCESS_RECORD.md",
+      "target": "superseded_runs.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/PROCESS_RECORD.md",
+      "target": "logs/b_run_execution_02.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/PROCESS_RECORD.md",
+      "target": "c_contract/development_parameters_epoch02_receipt.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/PROCESS_RECORD.md",
+      "target": "c_contract/development_orders_epoch02_receipt.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/PROCESS_RECORD.md",
+      "target": "c_contract/memory_epoch02_receipt.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/PROCESS_RECORD.md",
+      "target": "c_contract/control_closure_receipt.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/PROCESS_RECORD.md",
+      "target": "c_contract/mode_memory_closure_current.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/PROCESS_RECORD.md",
+      "target": "c_contract/source_scope_closure_receipt.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/PROCESS_RECORD.md",
+      "target": "c_contract/notebook_setup_closure_receipt.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/PROCESS_RECORD.md",
+      "target": "c_contract/parameter_figure_closure_receipt.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/PROCESS_RECORD.md",
+      "target": "c_contract/context_closure_epoch02.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/PROCESS_RECORD.md",
+      "target": "c_contract/retry_classifier_closure_epoch02.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/PROCESS_RECORD.md",
+      "target": "review_target_reconciliation.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/PROCESS_RECORD.md",
+      "target": "c_contract/receipt_target_closure_receipt.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/PROCESS_RECORD.md",
+      "target": "c_contract/evaluation_parameters_bound_receipt.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/PROCESS_RECORD.md",
+      "target": "c_contract/evaluation_orders_bound_receipt.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/PROCESS_RECORD.md",
+      "target": "presentation_checks/candidate_preview_02/repair_receipt.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/PROCESS_RECORD.md",
+      "target": "c_contract/candidate_figure_closure_receipt_v2.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/PROCESS_RECORD.md",
+      "target": "presentation_checks/case_configuration_labels/repair_receipt.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/PROCESS_RECORD.md",
+      "target": "c_contract/case_config_closure_receipt_v2.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/PROCESS_RECORD.md",
+      "target": "presentation_checks/case_configuration_labels/root_visual_inspection.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/PROCESS_RECORD.md",
+      "target": "a_epoch02/actual_ai_critique_v1/ACTUAL_AI_CRITIQUE.md",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/PROCESS_RECORD.md",
+      "target": "a_epoch02/actual_ai_critique/ACTUAL_AI_CRITIQUE.md",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/PROCESS_RECORD.md",
+      "target": "c_contract/ai_null_closure_receipt.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/PROCESS_RECORD.md",
+      "target": "c_contract/counterexamples_complete_receipt.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/PROCESS_RECORD.md",
+      "target": "interrupted_model_costs.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/PROCESS_RECORD.md",
+      "target": "context_interruption.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/PROCESS_RECORD.md",
+      "target": "c_contract/development_resource_scope.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/PROCESS_RECORD.md",
+      "target": "resource_ledger.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/PROCESS_RECORD.md",
+      "target": "provider_attempt_inventory_check.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/PROCESS_RECORD.md",
+      "target": "goal_state.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/PROCESS_RECORD.md",
+      "target": "progress_checkpoint.json",
+      "exists": true
+    },
+    {
+      "document": "task1/evidence/goal2/PROCESS_RECORD.md",
+      "target": "current_runs.json",
+      "exists": true
+    }
+  ],
+  "process_explicit_hash_checks": [
+    {
+      "path": "task1/evidence/goal2/c_contract/control_closure_receipt.json",
+      "passed": true
+    },
+    {
+      "path": "task1/evidence/goal2/c_contract/mode_memory_closure_current.json",
+      "passed": true
+    },
+    {
+      "path": "task1/evidence/goal2/c_contract/source_scope_closure_receipt.json",
+      "passed": true
+    },
+    {
+      "path": "task1/evidence/goal2/c_contract/notebook_setup_closure_receipt.json",
+      "passed": true
+    },
+    {
+      "path": "task1/evidence/goal2/c_contract/parameter_figure_closure_receipt.json",
+      "passed": true
+    },
+    {
+      "path": "task1/evidence/goal2/c_contract/context_closure_epoch02.json",
+      "passed": true
+    },
+    {
+      "path": "task1/evidence/goal2/c_contract/retry_classifier_closure_epoch02.json",
+      "passed": true
+    }
+  ],
+  "user_zip_states": [
+    {
+      "path": "SC-LAB1-G1-COMPLETE-001_HANDOFF.zip",
+      "sha256": "95d467b764b0c358e5248ed5392c4d8704a3767f6a907f56a76527d0c50a8c68",
+      "currently_tracked": false
+    },
+    {
+      "path": "SC-LAB1-G1-REPAIR-001_HANDOFF.zip",
+      "sha256": "e79ea04a803d2b49bed4699e1609412f8d615b209d529a9b816991188cb09fea",
+      "currently_tracked": true
+    },
+    {
+      "path": "SC-LAB1-G1-CLOSURE-002_HANDOFF.zip",
+      "sha256": "43db2c0316f7773bb568cc335ba563b29c013f41a4bf82ba74b1c36e90add4fe",
+      "currently_tracked": false
+    }
+  ],
+  "findings": [
+    {
+      "finding_id": "A-HANDOFF-COMPLETENESS-001",
+      "severity": "NONBLOCKING_PRESENTATION_COMPLETENESS",
+      "target": "task1/evidence/goal2/FINAL_RESPONSE.md:51",
+      "cutoff_sha256": "bd2b43d52b7b2b91ea3d0d7b8cc2f183abc3ce4ba80982b37e1415d0de24269a",
+      "fact": "2 of 467 formal raw legal proposals have actual coverage tradeoffs (3420 lost16, 955 lost1); neither was selected. The captured summary illustrates this risk using DEVELOPMENT proposals but does not explicitly mention the two formal cases.",
+      "recommended_action": "Optionally add the formal 2/467 count and link to the bound witness/table. Do not call the suggestions illegal or compare geometric maxima across different coverage masks.",
+      "experiment_defect": false
+    }
+  ],
+  "narrative_review": {
+    "numerical_or_denominator_error_found": false,
+    "null_as_zero_or_numeric_comparison_found": false,
+    "causal_memory_gain_overclaim_found": false,
+    "true_quality_or_optimality_overclaim_found": false,
+    "negative_results": "C-D/C-P no gain, unsafe orders, S-P-D tradeoff, actual DEV model tradeoff and unknown datum are explicit. Formal two-proposal tradeoff detail is the nonblocking completeness note.",
+    "pending_statuses": "Captured docs explicitly remain prepublication/in-progress; later status updates require their own current evidence."
+  },
+  "checked_components": [
+    "All three captured documents read in full",
+    "Main frozen counts and table hash/row integrity",
+    "Model and memory denominators",
+    "Resource scope separation and unknown costs",
+    "C-S heldout counts and no-gain C-D/C-P",
+    "Coordinate and Notebook/test/figure numerical claims",
+    "Process explicit receipt hashes",
+    "Actual two formal proposal/trace/lock witnesses",
+    "Conditional language and current handoff scope"
+  ],
+  "unchecked_components": [
+    "No independent raw-to-output numerical rerun",
+    "No fresh visual inspection",
+    "No full A01-A17 acceptance",
+    "No remote publication verification",
+    "No evaluation of later document edits",
+    "No provider-hidden request count or true-label quality"
+  ],
+  "new_model_calls": 0,
+  "new_candidate_evaluations": 0,
+  "new_memory_writes": 0,
+  "bound_artifacts_or_source_modified": false,
+  "live_documents_at_end": [
+    {
+      "path": "task1/evidence/goal2/FINAL_RESPONSE.md",
+      "cutoff_sha256": "bd2b43d52b7b2b91ea3d0d7b8cc2f183abc3ce4ba80982b37e1415d0de24269a",
+      "current_sha256": "5f924bfad54cb0bb111a25269cf21705ac8abcb935075f3d6d813c62e8f52937",
+      "changed_since_cutoff": true
+    },
+    {
+      "path": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "cutoff_sha256": "f449cfb8387a5a4e4cd99add63109a4b5e211d5c0c957ff0b6fc80db010161e5",
+      "current_sha256": "07fd6792d97874b54440c1ea21ea21bde5dc7218cd0ffdb411710fbbc01716a7",
+      "changed_since_cutoff": true
+    },
+    {
+      "path": "task1/evidence/goal2/PROCESS_RECORD.md",
+      "cutoff_sha256": "73cd7d395f48840482e7a4533361f494ba6a079bc6bbdb402c9f373280525e97",
+      "current_sha256": "f99ad16b7b098e8b741c7e3bbc78890a3c5a49ba659f1e1626e926d7180ef30b",
+      "changed_since_cutoff": true
+    }
+  ]
+}

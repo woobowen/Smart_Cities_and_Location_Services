@@ -1,0 +1,172 @@
+{
+  "records": [
+    {
+      "record_id": "9779",
+      "proposals": [
+        {
+          "candidate_id": "9779-r1",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 35,
+            "dp": 10
+          },
+          "metric_id": "n_direction_removed",
+          "predicted_sign": "unchanged",
+          "reason": "Probe additional DP compression with S/D fixed; feedback must establish whether common geometric error stays within the 5-metre budget."
+        }
+      ],
+      "stop": false,
+      "memory_ids_used": []
+    },
+    {
+      "record_id": "3357",
+      "proposals": [
+        {
+          "candidate_id": "3357-r1",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 35,
+            "dp": 10
+          },
+          "metric_id": "n_direction_removed",
+          "predicted_sign": "unchanged",
+          "reason": "Keep splitting at the five observed raw breaks and probe DP compression; acceptance depends on protected coverage and common fidelity feedback."
+        }
+      ],
+      "stop": false,
+      "memory_ids_used": []
+    },
+    {
+      "record_id": "11355",
+      "proposals": [
+        {
+          "candidate_id": "11355-r1",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 35,
+            "dp": 10
+          },
+          "metric_id": "n_direction_removed",
+          "predicted_sign": "unchanged",
+          "reason": "Preserve reference S/D around the two observed breaks while testing additional compression against the common 5-metre budget."
+        }
+      ],
+      "stop": false,
+      "memory_ids_used": []
+    },
+    {
+      "record_id": "5049",
+      "proposals": [
+        {
+          "candidate_id": "5049-r1",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 35,
+            "dp": 10
+          },
+          "metric_id": "n_direction_removed",
+          "predicted_sign": "unchanged",
+          "reason": "Keep reference splitting and undefined-direction handling; test whether higher DP tolerance yields admissible compression."
+        }
+      ],
+      "stop": false,
+      "memory_ids_used": []
+    },
+    {
+      "record_id": "7186",
+      "proposals": [
+        {
+          "candidate_id": "7186-r1",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 35,
+            "dp": 10
+          },
+          "metric_id": "n_direction_removed",
+          "predicted_sign": "unchanged",
+          "reason": "Probe DP compression with S/D unchanged; duplicate-edge counts alone do not establish a compression benefit or acceptable common error."
+        }
+      ],
+      "stop": false,
+      "memory_ids_used": []
+    },
+    {
+      "record_id": "11326",
+      "proposals": [
+        {
+          "candidate_id": "11326-r1",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 35,
+            "dp": 10
+          },
+          "metric_id": "n_direction_removed",
+          "predicted_sign": "unchanged",
+          "reason": "Retain splitting at the five observed raw breaks and reference direction handling while evaluating compression and common fidelity."
+        }
+      ],
+      "stop": false,
+      "memory_ids_used": []
+    },
+    {
+      "record_id": "2069",
+      "proposals": [
+        {
+          "candidate_id": "2069-r1",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 35,
+            "dp": 10
+          },
+          "metric_id": "n_direction_removed",
+          "predicted_sign": "unchanged",
+          "reason": "Test additional DP compression without changing S/D or timestamps; feedback must verify the common 5-metre error budget."
+        }
+      ],
+      "stop": false,
+      "memory_ids_used": []
+    },
+    {
+      "record_id": "9613",
+      "proposals": [
+        {
+          "candidate_id": "9613-r1",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 35,
+            "dp": 10
+          },
+          "metric_id": "n_direction_removed",
+          "predicted_sign": "unchanged",
+          "reason": "Preserve reference segmentation amid fifteen observed raw breaks; probe DP compression subject to protected coverage and fidelity checks."
+        }
+      ],
+      "stop": false,
+      "memory_ids_used": []
+    }
+  ]
+}

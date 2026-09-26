@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="6" skipped="0" tests="37" time="0.671" timestamp="2026-09-27T03:12:05.668071+08:00" hostname="LAPTOP-KI0GT6AJ"><testcase classname="task1.evidence.goal2.c_contract.test_g2_modes_independent" name="test_semantic_response_failure_is_not_given_hidden_revision[INVALID_STRUCTURED_RESPONSE]" time="0.002" /><testcase classname="task1.evidence.goal2.c_contract.test_g2_modes_independent" name="test_semantic_response_failure_is_not_given_hidden_revision[MISSING_OR_AMBIGUOUS_FINAL_EVENT]" time="0.001" /><testcase classname="task1.evidence.goal2.c_contract.test_g2_modes_independent" name="test_auth_tool_protocol_and_unknown_failure_no_retry[authentication failed]" time="0.001" /><testcase classname="task1.evidence.goal2.c_contract.test_g2_modes_independent" name="test_auth_tool_protocol_and_unknown_failure_no_retry[billing required]" time="0.001" /><testcase classname="task1.evidence.goal2.c_contract.test_g2_modes_independent" name="test_auth_tool_protocol_and_unknown_failure_no_retry[401 Unauthorized]" time="0.001" /><testcase classname="task1.evidence.goal2.c_contract.test_g2_modes_independent" name="test_auth_tool_protocol_and_unknown_failure_no_retry[permission denied]" time="0.001" /><testcase classname="task1.evidence.goal2.c_contract.test_g2_modes_independent" name="test_auth_tool_protocol_and_unknown_failure_no_retry[UNEXPECTED_TOOL]" time="0.001" /><testcase classname="task1.evidence.goal2.c_contract.test_g2_modes_independent" name="test_auth_tool_protocol_and_unknown_failure_no_retry[INVALID_JSONL]" time="0.001" /><testcase classname="task1.evidence.goal2.c_contract.test_g2_modes_independent" name="test_auth_tool_protocol_and_unknown_failure_no_retry[UNEXPECTED_VISIBLE_EVENT]" time="0.001" /><testcase classname="task1.evidence.goal2.c_contract.test_g2_modes_independent" name="test_auth_tool_protocol_and_unknown_failure_no_retry[unknown permanent fault]" time="0.001" /><testcase classname="task1.evidence.goal2.c_contract.test_g2_modes_independent" name="test_transient_retry_budget_and_retry_after_are_observed" time="0.001" /><testcase classname="task1.evidence.goal2.c_contract.test_g2_modes_independent" name="test_transient_failure_stops_after_two_retries" time="0.001" /><testcase classname="task1.evidence.goal2.c_contract.test_g2_modes_independent" name="test_long_retry_after_saves_failure_without_blocking_sleep" time="0.001" /><testcase classname="task1.evidence.goal2.c_contract.test_g2_modes_independent" name="test_search_only_never_instantiates_a_model_or_reads_memory" time="0.088" /><testcase classname="task1.evidence.goal2.c_contract.test_g2_modes_independent" name="test_batch_scope_limit_is_enforced_before_model[0]" time="0.001" /><testcase classname="task1.evidence.goal2.c_contract.test_g2_modes_independent" name="test_batch_scope_limit_is_enforced_before_model[9]" time="0.001" /><testcase classname="task1.evidence.goal2.c_contract.test_g2_modes_independent" name="test_llm_only_preserves_illegal_original_without_clamping_or_revision" time="0.010" /><testcase classname="task1.evidence.goal2.c_contract.test_g2_modes_independent" name="test_llm_only_unparseable_batch_records_rejection_and_single_reference" time="0.016" /><testcase classname="task1.evidence.goal2.c_contract.test_g2_modes_independent" name="test_search_feedback_is_sequential_own_record_only_and_ephemeral" time="0.338" /><testcase classname="task1.evidence.goal2.c_contract.test_g2_modes_independent" name="test_memory_public_snapshot_mutation_cannot_affect_retrieval" time="0.002" /><testcase classname="task1.evidence.goal2.c_contract.test_g2_modes_independent" name="test_memory_private_in_process_tamper_detected" time="0.001" /><testcase classname="task1.evidence.goal2.c_contract.test_g2_modes_independent" name="test_memory_disk_write_detected_and_write_api_denied" time="0.002" /><testcase classname="task1.evidence.goal2.c_contract.test_g2_modes_independent" name="test_memory_ineligible_cases_are_not_delivered[record_id-QUERY-SAME_PARENT_RECORD_OR_EXACT_DUPLICATE]" time="0.001" /><testcase classname="task1.evidence.goal2.c_contract.test_g2_modes_independent" name="test_memory_ineligible_cases_are_not_delivered[record_content_sha256-9b10ec234b838ef32c4dcf7728a9b8c195724d5503ea9df9cb25bf8cf2d6c094-SAME_PARENT_RECORD_OR_EXACT_DUPLICATE]" time="0.002" /><testcase classname="task1.evidence.goal2.c_contract.test_g2_modes_independent" name="test_memory_ineligible_cases_are_not_delivered[partition-G2_EVAL-NOT_DEMO_MEMORY]" time="0.001" /><testcase classname="task1.evidence.goal2.c_contract.test_g2_modes_independent" name="test_memory_ineligible_cases_are_not_delivered[contract_sha256-wrong-WRONG_DATA_OR_CONTRACT]" time="0.001" /><testcase classname="task1.evidence.goal2.c_contract.test_g2_modes_independent" name="test_memory_ineligible_cases_are_not_delivered[raw_sha256-wrong-WRONG_DATA_OR_CONTRACT]" time="0.001" /><testcase classname="task1.evidence.goal2.c_contract.test_g2_modes_independent" name="test_memory_ineligible_cases_are_not_delivered[engineering_status-PENDING-NOT_VERIFIED]" time="0.001" /><testcase classname="task1.evidence.goal2.c_contract.test_g2_modes_independent" name="test_memory_ineligible_cases_are_not_delivered[stratum-different-STRATUM_NOT_APPLICABLE]" time="0.001" /><testcase classname="task1.evidence.goal2.c_contract.test_g2_modes_independent" name="test_memory_ineligible_cases_are_not_delivered[features-None-DIAGNOSTIC_FEATURE_UNAVAILABLE]" time="0.001" /><testcase classname="task1.evidence.goal2.c_contract.test_g2_modes_independent" name="test_memory_frozen_maximum_three_cannot_be_expanded" time="0.002"><failure message="AssertionError: assert 4 &lt;= 3&#10; +  where 4 = len([{'memory_id': 'MEMORY-DEMO-0', 'record_id': 'DEMO-0', 'partition': 'DEMO_MEMORY', 'record_content_sha256': '739e7525c...ion': 'DEMO_MEMORY', 'record_content_sha256': '627ee2407311cc437a6bc2756e8b54071762bdf3388029a1396fa9eef75c8246', ...}])">work = PosixPath('/home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/evidence/goal2/c_contract/engineering_mode_test_gyl_a4ry')
+
+    def test_memory_frozen_maximum_three_cannot_be_expanded(work):
+        memory = memory_fixture(work)
+        try:
+            result = memory.retrieve(card("QUERY"), limit=4)
+        except ValueError:
+            return
+&gt;       assert len(result["delivered"]) &lt;= 3
+E       AssertionError: assert 4 &lt;= 3
+E        +  where 4 = len([{'memory_id': 'MEMORY-DEMO-0', 'record_id': 'DEMO-0', 'partition': 'DEMO_MEMORY', 'record_content_sha256': '739e7525c...ion': 'DEMO_MEMORY', 'record_content_sha256': '627ee2407311cc437a6bc2756e8b54071762bdf3388029a1396fa9eef75c8246', ...}])
+
+task1/evidence/goal2/c_contract/test_g2_modes_independent.py:288: AssertionError</failure></testcase><testcase classname="task1.evidence.goal2.c_contract.test_g2_modes_independent" name="test_memory_citation_and_matching_parameters_are_distinct_from_gain" time="0.001" /><testcase classname="task1.evidence.goal2.c_contract.test_g2_modes_independent" name="test_empty_output_cannot_win_by_zero_error_or_compression" time="0.001"><failure message="ValueError: G2_CONTRACT_HASH_REQUIRED">def test_empty_output_cannot_win_by_zero_error_or_compression():
+&gt;       baseline = actual_result()
+                   ^^^^^^^^^^^^^^^
+
+task1/evidence/goal2/c_contract/test_g2_modes_independent.py:307: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+task1/evidence/goal2/c_contract/test_g2_modes_independent.py:303: in actual_result
+    return run_record(raw, parameters or REFERENCE, "S-D-P", contract_hash="fixture", provenance={"source_kind": "ENGINEERING_TEST"})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+record = {'record_id': 'synthetic-selection', 'indices': [0, 1, 2, 3, 4, 5, ...], 'timestamps': [0, 1, 2, 3, 4, 5, ...], 'xy': [[0, 0], [10, 0], [20, 0], [30, 0], [40, 0], [50, 0], ...]}
+parameters = {'dt': 30, 'distance': 400, 'min_points': 5, 'min_length': 65, ...}
+order = 'S-D-P', contract_hash = 'fixture'
+provenance = {'source_kind': 'ENGINEERING_TEST'}
+
+    def run_record(record, parameters, order="S-D-P", *, contract_hash, provenance=None):
+        """Run all three registered stages and retain an auditable complete trace.
+    
+    `parameters` has exactly dt/distance/min_points/min_length/direction/dp. The
+    provided trajectory is already in the frozen conditional work plane. This
+    function does not choose candidates, read model output, or modify the contract.
+        """
+        validate_trajectory(record)
+        validate_parameters(parameters)
+        if order not in ORDERS:
+            raise ValueError("UNREGISTERED_G2_ORDER")
+        if (not isinstance(contract_hash, str) or len(contract_hash) != 64
+                or any(c not in "0123456789abcdef" for c in contract_hash)):
+&gt;           raise ValueError("G2_CONTRACT_HASH_REQUIRED")
+E           ValueError: G2_CONTRACT_HASH_REQUIRED
+
+task1/workflow/g2_pipeline.py:66: ValueError</failure></testcase><testcase classname="task1.evidence.goal2.c_contract.test_g2_modes_independent" name="test_equal_coverage_count_with_changed_point_identities_is_not_protected" time="0.000"><failure message="ValueError: G2_CONTRACT_HASH_REQUIRED">def test_equal_coverage_count_with_changed_point_identities_is_not_protected():
+&gt;       baseline = actual_result()
+                   ^^^^^^^^^^^^^^^
+
+task1/evidence/goal2/c_contract/test_g2_modes_independent.py:315: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+task1/evidence/goal2/c_contract/test_g2_modes_independent.py:303: in actual_result
+    return run_record(raw, parameters or REFERENCE, "S-D-P", contract_hash="fixture", provenance={"source_kind": "ENGINEERING_TEST"})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+record = {'record_id': 'synthetic-selection', 'indices': [0, 1, 2, 3, 4, 5, ...], 'timestamps': [0, 1, 2, 3, 4, 5, ...], 'xy': [[0, 0], [10, 0], [20, 0], [30, 0], [40, 0], [50, 0], ...]}
+parameters = {'dt': 30, 'distance': 400, 'min_points': 5, 'min_length': 65, ...}
+order = 'S-D-P', contract_hash = 'fixture'
+provenance = {'source_kind': 'ENGINEERING_TEST'}
+
+    def run_record(record, parameters, order="S-D-P", *, contract_hash, provenance=None):
+        """Run all three registered stages and retain an auditable complete trace.
+    
+    `parameters` has exactly dt/distance/min_points/min_length/direction/dp. The
+    provided trajectory is already in the frozen conditional work plane. This
+    function does not choose candidates, read model output, or modify the contract.
+        """
+        validate_trajectory(record)
+        validate_parameters(parameters)
+        if order not in ORDERS:
+            raise ValueError("UNREGISTERED_G2_ORDER")
+        if (not isinstance(contract_hash, str) or len(contract_hash) != 64
+                or any(c not in "0123456789abcdef" for c in contract_hash)):
+&gt;           raise ValueError("G2_CONTRACT_HASH_REQUIRED")
+E           ValueError: G2_CONTRACT_HASH_REQUIRED
+
+task1/workflow/g2_pipeline.py:66: ValueError</failure></testcase><testcase classname="task1.evidence.goal2.c_contract.test_g2_modes_independent" name="test_changed_upstream_cannot_claim_dp_error_as_common_quality_gain" time="0.000"><failure message="ValueError: G2_CONTRACT_HASH_REQUIRED">def test_changed_upstream_cannot_claim_dp_error_as_common_quality_gain():
+&gt;       baseline = actual_result()
+                   ^^^^^^^^^^^^^^^
+
+task1/evidence/goal2/c_contract/test_g2_modes_independent.py:326: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+task1/evidence/goal2/c_contract/test_g2_modes_independent.py:303: in actual_result
+    return run_record(raw, parameters or REFERENCE, "S-D-P", contract_hash="fixture", provenance={"source_kind": "ENGINEERING_TEST"})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+record = {'record_id': 'synthetic-selection', 'indices': [0, 1, 2, 3, 4, 5, ...], 'timestamps': [0, 1, 2, 3, 4, 5, ...], 'xy': [[0, 0], [10, 0], [20, 0], [30, 0], [40, 0], [50, 0], ...]}
+parameters = {'dt': 30, 'distance': 400, 'min_points': 5, 'min_length': 65, ...}
+order = 'S-D-P', contract_hash = 'fixture'
+provenance = {'source_kind': 'ENGINEERING_TEST'}
+
+    def run_record(record, parameters, order="S-D-P", *, contract_hash, provenance=None):
+        """Run all three registered stages and retain an auditable complete trace.
+    
+    `parameters` has exactly dt/distance/min_points/min_length/direction/dp. The
+    provided trajectory is already in the frozen conditional work plane. This
+    function does not choose candidates, read model output, or modify the contract.
+        """
+        validate_trajectory(record)
+        validate_parameters(parameters)
+        if order not in ORDERS:
+            raise ValueError("UNREGISTERED_G2_ORDER")
+        if (not isinstance(contract_hash, str) or len(contract_hash) != 64
+                or any(c not in "0123456789abcdef" for c in contract_hash)):
+&gt;           raise ValueError("G2_CONTRACT_HASH_REQUIRED")
+E           ValueError: G2_CONTRACT_HASH_REQUIRED
+
+task1/workflow/g2_pipeline.py:66: ValueError</failure></testcase><testcase classname="task1.evidence.goal2.c_contract.test_g2_modes_independent" name="test_full_frontier_is_retained_even_without_strict_gain" time="0.000"><failure message="ValueError: G2_CONTRACT_HASH_REQUIRED">def test_full_frontier_is_retained_even_without_strict_gain():
+&gt;       baseline = actual_result()
+                   ^^^^^^^^^^^^^^^
+
+task1/evidence/goal2/c_contract/test_g2_modes_independent.py:336: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+task1/evidence/goal2/c_contract/test_g2_modes_independent.py:303: in actual_result
+    return run_record(raw, parameters or REFERENCE, "S-D-P", contract_hash="fixture", provenance={"source_kind": "ENGINEERING_TEST"})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+record = {'record_id': 'synthetic-selection', 'indices': [0, 1, 2, 3, 4, 5, ...], 'timestamps': [0, 1, 2, 3, 4, 5, ...], 'xy': [[0, 0], [10, 0], [20, 0], [30, 0], [40, 0], [50, 0], ...]}
+parameters = {'dt': 30, 'distance': 400, 'min_points': 5, 'min_length': 65, ...}
+order = 'S-D-P', contract_hash = 'fixture'
+provenance = {'source_kind': 'ENGINEERING_TEST'}
+
+    def run_record(record, parameters, order="S-D-P", *, contract_hash, provenance=None):
+        """Run all three registered stages and retain an auditable complete trace.
+    
+    `parameters` has exactly dt/distance/min_points/min_length/direction/dp. The
+    provided trajectory is already in the frozen conditional work plane. This
+    function does not choose candidates, read model output, or modify the contract.
+        """
+        validate_trajectory(record)
+        validate_parameters(parameters)
+        if order not in ORDERS:
+            raise ValueError("UNREGISTERED_G2_ORDER")
+        if (not isinstance(contract_hash, str) or len(contract_hash) != 64
+                or any(c not in "0123456789abcdef" for c in contract_hash)):
+&gt;           raise ValueError("G2_CONTRACT_HASH_REQUIRED")
+E           ValueError: G2_CONTRACT_HASH_REQUIRED
+
+task1/workflow/g2_pipeline.py:66: ValueError</failure></testcase><testcase classname="task1.evidence.goal2.c_contract.test_g2_modes_independent" name="test_prediction_denominator_excludes_cross_reference_and_unavailable" time="0.000"><failure message="ValueError: G2_CONTRACT_HASH_REQUIRED">def test_prediction_denominator_excludes_cross_reference_and_unavailable():
+&gt;       baseline = actual_result()
+                   ^^^^^^^^^^^^^^^
+
+task1/evidence/goal2/c_contract/test_g2_modes_independent.py:346: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+task1/evidence/goal2/c_contract/test_g2_modes_independent.py:303: in actual_result
+    return run_record(raw, parameters or REFERENCE, "S-D-P", contract_hash="fixture", provenance={"source_kind": "ENGINEERING_TEST"})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+record = {'record_id': 'synthetic-selection', 'indices': [0, 1, 2, 3, 4, 5, ...], 'timestamps': [0, 1, 2, 3, 4, 5, ...], 'xy': [[0, 0], [10, 0], [20, 0], [30, 0], [40, 0], [50, 0], ...]}
+parameters = {'dt': 30, 'distance': 400, 'min_points': 5, 'min_length': 65, ...}
+order = 'S-D-P', contract_hash = 'fixture'
+provenance = {'source_kind': 'ENGINEERING_TEST'}
+
+    def run_record(record, parameters, order="S-D-P", *, contract_hash, provenance=None):
+        """Run all three registered stages and retain an auditable complete trace.
+    
+    `parameters` has exactly dt/distance/min_points/min_length/direction/dp. The
+    provided trajectory is already in the frozen conditional work plane. This
+    function does not choose candidates, read model output, or modify the contract.
+        """
+        validate_trajectory(record)
+        validate_parameters(parameters)
+        if order not in ORDERS:
+            raise ValueError("UNREGISTERED_G2_ORDER")
+        if (not isinstance(contract_hash, str) or len(contract_hash) != 64
+                or any(c not in "0123456789abcdef" for c in contract_hash)):
+&gt;           raise ValueError("G2_CONTRACT_HASH_REQUIRED")
+E           ValueError: G2_CONTRACT_HASH_REQUIRED
+
+task1/workflow/g2_pipeline.py:66: ValueError</failure></testcase></testsuite></testsuites>

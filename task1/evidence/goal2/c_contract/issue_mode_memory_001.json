@@ -1,0 +1,67 @@
+{
+  "status": "ISSUE_OPEN",
+  "issue_id": "G2-C-MODE-MEMORY-001",
+  "parent_task": "core",
+  "classification": "INDEPENDENT_STATIC_REVIEW_AND_ENGINEERING_TEST_FINDINGS_NO_FORMAL_MODEL_CALLS",
+  "fact": "Mode retry semantics, frozen memory immutability and bounded retrieval, and complete selection-frontier evidence require repair before formal episodes.",
+  "violated_clause": "User Prompt sections 6,8.3,11,12,15; frozen contract selection.all_feasible_and_pareto_saved and memory maximum 3",
+  "findings": [
+    {
+      "id": "F01",
+      "discovery": "STATIC_REVIEW_BEFORE_ROOT_FIX",
+      "fact": "dispatch previously retried general ProviderError including invalid structured final answer; llm-only could receive hidden extra attempts",
+      "first_dynamic_check": "AFTER_REPAIR_PASSED",
+      "evidence": "mode_memory_initial_probes.json"
+    },
+    {
+      "id": "F02",
+      "discovery": "STATIC_REVIEW_BEFORE_ROOT_FIX",
+      "fact": "public memory.snapshot was a mutable in-process dictionary while verify_unchanged checked disk only",
+      "first_dynamic_check": "AFTER_REPAIR_PASSED",
+      "evidence": "mode_memory_initial_probes.json"
+    },
+    {
+      "id": "F03",
+      "discovery": "ACTUAL_ENGINEERING_TEST_FAILURE",
+      "fact": "FrozenMemory.retrieve limit=4 returned four cases although fixed cap is three",
+      "evidence": "mode_memory_round2.xml::test_memory_frozen_maximum_three_cannot_be_expanded"
+    },
+    {
+      "id": "F04",
+      "discovery": "ACTUAL_ENGINEERING_TEST_FAILURE",
+      "fact": "select_record no-gain branch omitted full Pareto frontier, including feasible tied reference and dp10 on a straight fixture",
+      "evidence": "mode_memory_round2.xml::test_full_frontier_is_retained_even_without_strict_gain"
+    }
+  ],
+  "affected_artifacts": [
+    "future development/heldout episode authenticity and memory consumption",
+    "future per-record selection evidence"
+  ],
+  "repairer": "B-Repair:/root",
+  "verifier": "C:/root/c_contract",
+  "closure_standard": [
+    "semantic failures rejected once; only explicit transient faults at most two retries",
+    "public memory cannot change consumed contents; private and on-disk changes detected",
+    "retrieval cap 3 enforced by callable boundary",
+    "complete feasible/frontier evidence retained for ties, no gains and CP branch",
+    "all independent boundary tests pass on bound repaired source"
+  ],
+  "checked_components": [
+    "no real provider calls in C tests",
+    "isolated 0-model sentinel",
+    "actual deterministic synthetic processing",
+    "fixed budget and feedback sequencing",
+    "raw illegal proposal preservation",
+    "memory read-only and eligibility"
+  ],
+  "unchecked_components": [
+    "formal live episode existence",
+    "actual DEMO_MEMORY admission and performance",
+    "end-to-end G2 final acceptance"
+  ],
+  "reviewer_test_repair": "mode_memory_round1.xml includes 5 C fixture errors caused by invalid literal contract hash; fixed to a valid SHA without changing expected behavior. They are not production findings.",
+  "target_hashes_observed_after_F01_F02_repair": {
+    "task1/workflow/g2_modes.py": "ca2602886c42a05a5cecbe61eb63acafcb5233e628e0dde4341b4cb0513388f3",
+    "task1/workflow/g2_memory.py": "a86116137bcd089819e895701365a153ce02fca23fe0fc707dde7ad47b8f6325"
+  }
+}

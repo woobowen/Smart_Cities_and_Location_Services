@@ -1,0 +1,186 @@
+{
+  "errors": [],
+  "accepted_record_ids": [
+    "7270",
+    "955",
+    "33",
+    "43",
+    "3420",
+    "911",
+    "3371",
+    "11148"
+  ],
+  "original_response": {
+    "records": [
+      {
+        "record_id": "7270",
+        "proposals": [
+          {
+            "candidate_id": "7270-r1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 35,
+              "dp": 10
+            },
+            "metric_id": "common_covered_points",
+            "predicted_sign": "unchanged",
+            "reason": "Keep S/D fixed and test greater compression; acceptance requires measured fidelity within the common5 budget."
+          }
+        ],
+        "stop": false,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "955",
+        "proposals": [
+          {
+            "candidate_id": "955-r1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 35,
+              "dp": 10
+            },
+            "metric_id": "common_covered_points",
+            "predicted_sign": "unchanged",
+            "reason": "Isolate DP tolerance to test compression while preserving covered identities; verify the common5 fidelity budget."
+          }
+        ],
+        "stop": false,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "33",
+        "proposals": [
+          {
+            "candidate_id": "33-r1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 0,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "common_covered_points",
+            "predicted_sign": "not_predicted",
+            "reason": "Test whether removing the length filter changes coverage; the card does not establish whether that filter binds."
+          }
+        ],
+        "stop": false,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "43",
+        "proposals": [
+          {
+            "candidate_id": "43-r1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 0,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "common_covered_points",
+            "predicted_sign": "increase",
+            "reason": "The reported total path length is below 65; removing the length minimum should recover coverage of this unsplit record."
+          }
+        ],
+        "stop": false,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "3420",
+        "proposals": [
+          {
+            "candidate_id": "3420-r1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 2,
+              "min_length": 0,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "common_covered_points",
+            "predicted_sign": "not_predicted",
+            "reason": "Preserve raw break thresholds and test recovery of filtered segments; segment sizes and lengths are unknown."
+          }
+        ],
+        "stop": false,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "911",
+        "proposals": [
+          {
+            "candidate_id": "911-r1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 2,
+              "min_length": 0,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "common_covered_points",
+            "predicted_sign": "not_predicted",
+            "reason": "Relax segment retention while preserving break thresholds; feedback must establish whether any coverage is recovered."
+          }
+        ],
+        "stop": false,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "3371",
+        "proposals": [
+          {
+            "candidate_id": "3371-r1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 35,
+              "dp": 10
+            },
+            "metric_id": "common_covered_points",
+            "predicted_sign": "unchanged",
+            "reason": "Test DP compression with S/D fixed; actual geometric error must remain within the common5 budget."
+          }
+        ],
+        "stop": false,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "11148",
+        "proposals": [
+          {
+            "candidate_id": "11148-r1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 35,
+              "dp": 10
+            },
+            "metric_id": "common_covered_points",
+            "predicted_sign": "unchanged",
+            "reason": "Change only DP tolerance to test compression eligibility under the measured common5 fidelity constraint."
+          }
+        ],
+        "stop": false,
+        "memory_ids_used": []
+      }
+    ]
+  },
+  "raw_proposals_preserved_before_validation": true
+}

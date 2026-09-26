@@ -1,0 +1,11 @@
+{
+  "classification": "ENGINEERING_TEST_ASSERTION_FAILURE_NOT_EXPERIMENT_FAILURE",
+  "recorded_at": "2026-09-26T20:41:22.983273+00:00",
+  "command": ".venv/bin/python -m task1.evidence.goal2.a_epoch02.verify_ai_tradeoff_analysis",
+  "exit_code": 1,
+  "exception": "AssertionError: 40.2148",
+  "cause": "The presentation assertion expected a six-significant-digit fragment, while the unchanged existing formatter uses eight significant digits. All preceding actual proposal and cost checks passed.",
+  "test_source_before_sha256": "aad20224348d9fdf70913b5a6f253ba168a18bff1f3762ad0570b251af700a32",
+  "analysis_source_sha256": "2ccf9fb06b8e7633fc118b0798fce348661c07eed8a3cfa4d08a9e08559c2e38",
+  "repair": "Correct only the known literal display expectation to the existing eight-significant-digit output, and test the actual documented boundary wording. No metric, data, display formatter or experiment changed."
+}

@@ -1,0 +1,58 @@
+{
+  "classification": "IMMUTABLE_AS_OF_REVIEW_SNAPSHOT_NOT_AN_ACTIVE_REGISTRY",
+  "source_path": "task1/evidence/goal2/progress_checkpoint.json",
+  "source_sha256": "b125bf19d5ea35bc40bedea18c9c0ad9b8b51e869adb52dfcf038eda29b93187",
+  "captured_at": "2026-09-26T21:56:09.992623+00:00",
+  "content": {
+    "at": "2026-09-26T21:48:07.055029+00:00",
+    "status": "ALL_COMPONENTS_VERIFIED_FINAL_ACCEPTANCE_PREPARATION",
+    "code_epoch": 2,
+    "code_sha": "c1c6272606716f9f59aa785d48bfeadb09c7a30e",
+    "current_completed_run_index": {
+      "counterexamples": "task1/evidence/goal2/counterexamples/formal-02",
+      "parameter_development": "g2-development-parameters-02",
+      "order_development": "g2-development-orders-02",
+      "memory": "g2-demo-memory-02",
+      "mode_development": "g2-development-modes-02",
+      "evaluation_parameters": "g2-evaluation-parameters-01",
+      "evaluation_orders": "g2-evaluation-orders-01",
+      "mode_evaluation": "g2-evaluation-modes-01"
+    },
+    "inflight": null,
+    "task_states": {
+      "handoff": "VERIFIED",
+      "contract": "VERIFIED",
+      "split": "VERIFIED",
+      "core": "VERIFIED",
+      "development_parameters": "VERIFIED",
+      "development_orders": "VERIFIED",
+      "memory": "VERIFIED",
+      "development_modes": "VERIFIED",
+      "evaluation_freeze": "VERIFIED",
+      "evaluation_parameters": "VERIFIED",
+      "evaluation_orders": "VERIFIED",
+      "evaluation_modes": "VERIFIED",
+      "candidates": "VERIFIED",
+      "counterexamples": "VERIFIED",
+      "notebooks": "VERIFIED",
+      "figures": "VERIFIED",
+      "analysis": "VERIFIED",
+      "internal_acceptance": "PENDING",
+      "publication": "PENDING"
+    },
+    "open_issues": [],
+    "g3_reserved_processing": 0,
+    "next_actions": [
+      "Complete final release safety and independent A01-A17 acceptance",
+      "Artifact commit, actual GitHub push and fixed-SHA readback",
+      "Publication independent closure and final metadata release"
+    ],
+    "restart_rule": "Inspect existing manifest, own PID and provider dispatch/receipt before any retry; do not duplicate active model call or relabel archived replay as LIVE.",
+    "frozen_versions": {
+      "code_freeze.json": "98317896571ace54de1aed61fb6f486400a1ec092330bde6502cd57256c1cb60",
+      "evaluation_freeze.json": "eb61eea6948d8a1177bef512bfc03b9103ef8ecf2ee68e3d7a2407753ca8a40d",
+      "candidate_lock.json": "a5ed67a3e28a6591063be28df3fb70b0698915b212b010acee7fa580e1aadef8",
+      "data/split_manifest.json": "fd2ebc6916f63b4b8e23ff6977f22cc691c39849d450486035243db7e3eb2ee8"
+    }
+  }
+}

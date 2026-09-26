@@ -1,0 +1,77 @@
+{
+  "status": "PREPARED_NOT_EXECUTED",
+  "prepared_at": "2026-09-26T21:06:44.353675+00:00",
+  "wrapper": "task1/evidence/goal2/notebook_checks/execute_fresh_notebooks.py",
+  "wrapper_sha256": "7222e5f8b9c1c4fcbe7594b77583c08413c9ae33352ed65c2d945304b9d4d90f",
+  "notebooks_executed": 0,
+  "kernels_launched": 0,
+  "new_packages": [],
+  "concurrency_decision": {
+    "maximum_independent_workers": 2,
+    "basis": "recompute_saved_run and recompute_saved_modes read archived runs using resume=True without save; each notebook writes only its mkdtemp WORK and its own .ipynb; execute_notebooks JUPYTER_PATH assignment is process-local. Parent is sole notebook_execution.json writer.",
+    "resource_reading": {
+      "logical_cpus": 22,
+      "MemAvailable_kB": 12543900,
+      "read_at": "2026-09-26T21:07:16.971879+00:00",
+      "availability_checked_again_at_launch": true
+    },
+    "runtime_policy": "jobs=2 with at least 4 GiB MemAvailable, otherwise serial; no GPU or new dependency"
+  },
+  "reviewed_functions": [
+    "task1.scripts.goal2.recompute",
+    "task1.scripts.goal2.recompute_saved_run",
+    "task1.scripts.goal2.recompute_saved_modes",
+    "task1.scripts.build_goal2_notebooks.build",
+    "task1.scripts.build_goal2_notebooks.execute_notebooks",
+    "task1.workflow.g2_experiments.ExperimentRun.__init__",
+    "task1.scripts.goal2_counterexamples.run"
+  ],
+  "shared_output_analysis": {
+    "archived_experiment_runs": "read-only",
+    "current_runs_json": "read-only and hash bound",
+    "frozen_memory": "hash checked before and after each worker and after whole execution",
+    "figure_outputs": "per-notebook mkdtemp WORK/figures; default rebuilds all eleven, no shared output",
+    "counterexamples": "only candidates notebook WORK/counterexamples",
+    "notebook_files": "one unique worker per path",
+    "receipt_and_log": "unique worker subdirectory; parent merges once",
+    "kernel_spec_and_environment": "existing execute_notebooks temporary kernel spec in unique process-local TMPDIR; JUPYTER_PATH never modified across threads",
+    "matplotlib_cache_and_jupyter_runtime": "unique worker TMPDIR children outside repository; no private runtime material included in release evidence"
+  },
+  "execution_gate": [
+    "explicit --execute",
+    "expected current_runs SHA256",
+    "expected final figure-generator SHA256",
+    "all seven runs complete",
+    "36 formal evaluation batches cover four modes times three episodes times shared 24 records",
+    "11 actual official figures with current source/output hashes",
+    "processing/contract/split/candidate/raw/memory bindings match freeze"
+  ],
+  "planned_evidence": [
+    "actual per-worker command/start/end/monotonic elapsed/exit/log",
+    "existing execute_notebooks return receipt",
+    "fresh sequential code-cell execution counts and no error outputs",
+    "successful runtime Provider zero-call assertion cell indices",
+    "unchanged notebook cell sources",
+    "memory pre/post hashes",
+    "combined notebook_execution.json plus immutable per-attempt combined_receipt.json"
+  ],
+  "preparation_checks": {
+    "syntax_compile": "PASSED",
+    "help_exit_code": 0,
+    "execution_performed": false
+  },
+  "future_command": [
+    ".venv/bin/python",
+    "task1/evidence/goal2/notebook_checks/execute_fresh_notebooks.py",
+    "--execute",
+    "--output",
+    "task1/evidence/goal2/notebook_runs/fresh-01",
+    "--jobs",
+    "2",
+    "--expected-current-sha256",
+    "<SHA256 after mode completion>",
+    "--expected-figure-generator-sha256",
+    "<final stable generator SHA256>"
+  ],
+  "scope_limits": "This receipt establishes preparation only. Actual new-kernel execution and zero-call/memory evidence are pending root start instruction."
+}

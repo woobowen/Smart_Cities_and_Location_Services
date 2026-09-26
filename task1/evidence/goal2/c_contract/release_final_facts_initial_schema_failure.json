@@ -1,0 +1,9 @@
+{
+  "classification": "C_AUDIT_SCRIPT_SCHEMA_ERROR_NOT_PRODUCTION_FAILURE",
+  "command": ".venv/bin/python task1/evidence/goal2/c_contract/review_release_and_final_facts.py",
+  "exit_code": 1,
+  "observed_error": "KeyError: assessments at rec['selection']['assessments'][p['executed_config_id']]",
+  "cause": "llm-only correctly has LOCKED_SINGLE_PROPOSAL and post-lock research_assessment, rather than search selection assessments",
+  "production_changed": false,
+  "receipt_not_emitted": true
+}

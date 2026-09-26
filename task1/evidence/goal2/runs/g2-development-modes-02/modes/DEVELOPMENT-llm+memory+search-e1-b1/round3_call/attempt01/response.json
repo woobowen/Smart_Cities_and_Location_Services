@@ -1,0 +1,39 @@
+{
+  "records": [
+    {
+      "record_id": "5027",
+      "proposals": [
+        {
+          "candidate_id": "5027-r3-a",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 2,
+            "min_length": 0,
+            "direction": 60,
+            "dp": 2
+          },
+          "metric_id": "common_max_error",
+          "predicted_sign": "decrease",
+          "reason": "Verified identical S/D settings cover all 104 points with no direction deletions. Lower DP tolerance to test tighter geometric fidelity, with increased point retention as a tradeoff."
+        },
+        {
+          "candidate_id": "5027-r3-b",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 2,
+            "min_length": 0,
+            "direction": 60,
+            "dp": 0
+          },
+          "metric_id": "common_max_error",
+          "predicted_sign": "decrease",
+          "reason": "Verified S/D settings retain all input points before DP. Tolerance zero retains them all, predicting zero common geometric error while sacrificing compression; raw break boundaries remain preserved."
+        }
+      ],
+      "stop": false,
+      "memory_ids_used": []
+    }
+  ]
+}

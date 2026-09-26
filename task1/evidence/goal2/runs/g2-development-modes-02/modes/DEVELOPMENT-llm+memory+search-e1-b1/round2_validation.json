@@ -1,0 +1,81 @@
+{
+  "errors": [],
+  "accepted_record_ids": [
+    "1076",
+    "5027",
+    "2759",
+    "5256",
+    "4732",
+    "9729",
+    "9056",
+    "217"
+  ],
+  "original_response": {
+    "records": [
+      {
+        "record_id": "1076",
+        "proposals": [],
+        "stop": true,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "5027",
+        "proposals": [
+          {
+            "candidate_id": "5027-r2-a",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 2,
+              "min_length": 0,
+              "direction": 60,
+              "dp": 5
+            },
+            "metric_id": "common_covered_points",
+            "predicted_sign": "increase",
+            "reason": "Direction=60 already reduced common_max_error to 4.98545. Relax both segment filters to recover the remaining three-point window while preserving raw break boundaries; verify the combined protections."
+          }
+        ],
+        "stop": false,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "2759",
+        "proposals": [],
+        "stop": true,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "5256",
+        "proposals": [],
+        "stop": true,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "4732",
+        "proposals": [],
+        "stop": true,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "9729",
+        "proposals": [],
+        "stop": true,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "9056",
+        "proposals": [],
+        "stop": true,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "217",
+        "proposals": [],
+        "stop": true,
+        "memory_ids_used": []
+      }
+    ]
+  },
+  "raw_proposals_preserved_before_validation": true
+}

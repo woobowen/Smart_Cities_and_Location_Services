@@ -1,0 +1,12 @@
+{
+  "at": "2026-09-26T19:44:52.699852+00:00",
+  "classification": "INTERRUPTED_CHECKPOINT",
+  "reason": "G2-C-CONTEXT-001 actual independent audit: mutable context hash mismatch",
+  "run_id": "g2-development-modes-01",
+  "signal": "SIGINT to exact matching experiment parent",
+  "parent_pid": 121633,
+  "parent_still_present_after_wait": false,
+  "source_modified_during_run": false,
+  "partial_provider_evidence": "provider.run_limited reaps its process group and preserves visible partial events",
+  "future_action": "fix immutable context binding, independent regression, new code commit, rebuild affected current epoch; old calls remain historical real requests"
+}

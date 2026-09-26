@@ -1,0 +1,139 @@
+{
+  "issue_id": "G2-B-CANDIDATE-FIGURE-001",
+  "parent_task": "figures",
+  "status": "REBUILT_REVIEW_PENDING",
+  "repairer": "B:/root/b_engine",
+  "created_at": "2026-09-26T20:42:04.878607+00:00",
+  "classification": "REAL_PRESENTATION_ENGINEERING_DEFECT",
+  "affected_source": "task1/scripts/build_goal2_figures.py",
+  "before_source_sha256": "d3171f14677c16a465f32e3ff89387f4bb3fb9f981acdb71145c418fcf5b1c76",
+  "after_source_sha256": "f1e7acda8f6ee7a56d8e45839a0d66d619b7c364b380d614b82126e0dd05f6dd",
+  "repair_summary": [
+    "Use equal working-metre scale with adjustable data limits, preserving usable axes boxes for narrow and horizontal trajectories.",
+    "Collect a complete shared raw/final legend outside panels; separate index annotations and display existing counterexample metrics.",
+    "Expose the originally selected real near-boundary point and its already computed residual; preserve original case selection byte-for-byte.",
+    "Bind C role metadata to c_contract/independent_numeric.py instead of the deterministic production metric module."
+  ],
+  "changed_functions": [
+    "_draw_trajectory",
+    "architecture",
+    "case_figures"
+  ],
+  "impact": {
+    "processing_sources_unchanged": true,
+    "raw_coordinates_metrics_candidates_selection_unchanged": true,
+    "parameter_and_mode_figure_functions_unchanged": true,
+    "reason_no_parameter_repreview": "AST comparison confirms parameters_figures, mode_figures, FigureSet, theme, and all other definitions unchanged; only case_figures calls changed _draw_trajectory.",
+    "current_live_modes_unaffected": true,
+    "final_all_figures_must_be_generated_after_mode_completion": true
+  },
+  "checks": {
+    "status": "PASSED",
+    "changed_functions": [
+      "_draw_trajectory",
+      "architecture",
+      "case_figures"
+    ],
+    "trajectory_helper_callers": [
+      "case_figures"
+    ],
+    "parameter_and_mode_functions_unchanged": true,
+    "case_selection_bytes_unchanged": true,
+    "numerical_figure_data_unchanged": true,
+    "drawio_native_editable_vertices": 11,
+    "drawio_connected_edges": 13,
+    "drawio_export_spec_matches": true,
+    "drawio_GUI_roundtrip_tested": false,
+    "module_hashes": {
+      "task1/config/goal2/contract.json": "db758c097509139596fbc52b4c3f65e921eb1f12d9fb4c239e308abdb57f31f8",
+      "task1/workflow/g2_journal.py": "33b776f5c20f35844cc4c76ee28e38ee0b2e487ee3b13d4eff0c3d3a40d22c2a",
+      "task1/evidence/goal2/c_contract/independent_numeric.py": "9c28775af3389fb9735d268bdaf776a0cedc683990518d0aee2736d5ff863865",
+      "task1/workflow/g2_experiments.py": "713538f17d767e98c8ed802252ce33133c6f26dc4c6f7aeae208f6e0d64d2311",
+      "task1/workflow/g2_data.py": "985453f073ec98ca7b17a827de1d316e8322dc89e452e6f8b45afa20b2a8a9f2",
+      "task1/workflow/g2_modes.py": "31e936448918b943dca3cfdc8e4590eb64da2c48b262899040862d7b1533704e",
+      "task1/workflow/g2_pipeline.py": "edb8f4c8dcaf65cda44b33533eb55e9d67ef946597895f0682860ba65499c441",
+      "task1/workflow/g2_memory.py": "e0784e6178cf4da3277c7fc8c1e16efce73b56b91b02b41acd3e8870d43a8c56",
+      "task1/workflow/g2_metrics.py": "8d80c8ff8e124b9d3d73f5d514a0c09af32f234034914379ea901e5e59cc3ebb"
+    },
+    "all_export_hashes_valid": true,
+    "pdf_text_checked": [
+      "real_trajectory_cases",
+      "synthetic_metric_counterexamples",
+      "goal2_actual_architecture"
+    ],
+    "processing_epoch_unchanged": true,
+    "generator_sha256": "f1e7acda8f6ee7a56d8e45839a0d66d619b7c364b380d614b82126e0dd05f6dd"
+  },
+  "actual_images_viewed": {
+    "initial": 6,
+    "intermediate": 3,
+    "final": 6
+  },
+  "targets": [
+    {
+      "path": "task1/evidence/goal2/presentation_checks/candidate_preview_02/generator_before.py",
+      "sha256": "d3171f14677c16a465f32e3ff89387f4bb3fb9f981acdb71145c418fcf5b1c76"
+    },
+    {
+      "path": "task1/evidence/goal2/presentation_checks/candidate_preview_02/generator_repair_01.py",
+      "sha256": "38cf410a92f13c49d921dfc753772c99df0a25d04f318958a2c10bb27f2a4bdd"
+    },
+    {
+      "path": "task1/evidence/goal2/presentation_checks/candidate_preview_02/generator_after.py",
+      "sha256": "f1e7acda8f6ee7a56d8e45839a0d66d619b7c364b380d614b82126e0dd05f6dd"
+    },
+    {
+      "path": "task1/evidence/goal2/presentation_checks/candidate_preview_02/initial_visual_inspection.json",
+      "sha256": "26da08bbf9a7b19cfd055a6d462241f64fa8e079c955447e41ad8cac6138572b"
+    },
+    {
+      "path": "task1/evidence/goal2/presentation_checks/candidate_preview_02/intermediate_visual_inspection.json",
+      "sha256": "a6ac785c8fb3afa119248ff656e12306dd93f973ce1eaee2cf585911423003ac"
+    },
+    {
+      "path": "task1/evidence/goal2/presentation_checks/candidate_preview_02/final_visual_inspection.json",
+      "sha256": "3a2f2b6e56fee798da5e5d2fc9f6b6957428daca6c237849b02ed6697a875af7"
+    },
+    {
+      "path": "task1/evidence/goal2/presentation_checks/candidate_preview_02/deterministic_validation.json",
+      "sha256": "2982367eea5bab6097d395db36f1dd3fede4a8f3a2e9c76752f646e320c89445"
+    },
+    {
+      "path": "task1/evidence/goal2/presentation_checks/candidate_preview_02/preview_initial_execution.json",
+      "sha256": "f55f201a35258166d05e352ce73ae8a26e35abfee36c3455bc0e100824006d43"
+    },
+    {
+      "path": "task1/evidence/goal2/presentation_checks/candidate_preview_02/preview_repaired_execution.json",
+      "sha256": "acbea6c7b165a690a8540aaa46d8ada56d8179535de60c2a1dcfd19faeb0f1ad"
+    },
+    {
+      "path": "task1/evidence/goal2/presentation_checks/candidate_preview_02/preview_repaired_02_execution.json",
+      "sha256": "9e5b3c73ae348abc2f95e16a87c924483a49cf597514c34dbe60ce713f6d8331"
+    },
+    {
+      "path": "task1/evidence/goal2/presentation_checks/candidate_preview_02/after/figure_manifest.json",
+      "sha256": "5aafd92fc13139d8ef8ee76ef13e87e4df4425dcd1bcb7130ee41863057bb4c4"
+    },
+    {
+      "path": "task1/evidence/goal2/presentation_checks/candidate_preview_02/after/figure_data.json",
+      "sha256": "cfa12a7e6fa15845287b49f79ed245e5ae6d1efe36bafde749add4bfa967a59a"
+    },
+    {
+      "path": "task1/evidence/goal2/presentation_checks/candidate_preview_02/after/CASE_SELECTION.json",
+      "sha256": "648246451c074c03336f10ab58abb89b49eeee11f96bfc20d6a7ccbb416b6fb6"
+    },
+    {
+      "path": "task1/evidence/goal2/presentation_checks/candidate_preview_02/after/goal2_actual_architecture.drawio",
+      "sha256": "9b07dbb940e0dfa053084637c53ad8b4184e9026673f95e4cf3cf5f72fdae97b"
+    },
+    {
+      "path": "task1/evidence/goal2/presentation_checks/candidate_preview_02/validate_preview.py",
+      "sha256": "3aaabd2e9d79fdb2f1ca0fb5b6829fd8462dbf8f5c53c38f76cea656d1468152"
+    }
+  ],
+  "limitations": [
+    "B self-check is not independent C acceptance.",
+    "Native editable XML was parsed and matched to export specification; diagrams.net GUI round-trip was not performed.",
+    "This preview contains three candidate/counterexample/architecture figures only; final full set remains pending."
+  ]
+}

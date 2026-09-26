@@ -1,0 +1,172 @@
+{
+  "records": [
+    {
+      "record_id": "1076",
+      "proposals": [
+        {
+          "candidate_id": "1076-c1",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 35,
+            "dp": 5
+          },
+          "metric_id": "n_final",
+          "predicted_sign": "unchanged",
+          "reason": "Retain reference: aggregate observations do not establish a protected improvement from changing parameters."
+        }
+      ],
+      "stop": true,
+      "memory_ids_used": []
+    },
+    {
+      "record_id": "5027",
+      "proposals": [
+        {
+          "candidate_id": "5027-c1",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 35,
+            "dp": 5
+          },
+          "metric_id": "n_final",
+          "predicted_sign": "unchanged",
+          "reason": "Retain reference: duplicate counts alone do not justify changing segmentation, direction filtering, or simplification."
+        }
+      ],
+      "stop": true,
+      "memory_ids_used": []
+    },
+    {
+      "record_id": "2759",
+      "proposals": [
+        {
+          "candidate_id": "2759-c1",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 35,
+            "dp": 5
+          },
+          "metric_id": "n_final",
+          "predicted_sign": "unchanged",
+          "reason": "Retain reference: unavailable direction windows and aggregate counts provide no evidence of a protected gain."
+        }
+      ],
+      "stop": true,
+      "memory_ids_used": []
+    },
+    {
+      "record_id": "5256",
+      "proposals": [
+        {
+          "candidate_id": "5256-c1",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 35,
+            "dp": 5
+          },
+          "metric_id": "n_final",
+          "predicted_sign": "unchanged",
+          "reason": "Retain reference: no coordinates or verified feedback support a beneficial parameter change."
+        }
+      ],
+      "stop": true,
+      "memory_ids_used": []
+    },
+    {
+      "record_id": "4732",
+      "proposals": [
+        {
+          "candidate_id": "4732-c1",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 0,
+            "direction": 35,
+            "dp": 5
+          },
+          "metric_id": "n_final",
+          "predicted_sign": "increase",
+          "reason": "Reported total path length is below 65, so reference filtering removes the record. Setting min_length to zero admits its 99-point segment and preserves endpoints; no quality gain is asserted."
+        }
+      ],
+      "stop": true,
+      "memory_ids_used": []
+    },
+    {
+      "record_id": "9729",
+      "proposals": [
+        {
+          "candidate_id": "9729-c1",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 0,
+            "direction": 35,
+            "dp": 5
+          },
+          "metric_id": "n_final",
+          "predicted_sign": "increase",
+          "reason": "Reported total path length is below 65. Removing the length cutoff admits the 100-point segment, whose endpoints survive D and P."
+        }
+      ],
+      "stop": true,
+      "memory_ids_used": []
+    },
+    {
+      "record_id": "9056",
+      "proposals": [
+        {
+          "candidate_id": "9056-c1",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 0,
+            "direction": 35,
+            "dp": 5
+          },
+          "metric_id": "n_final",
+          "predicted_sign": "increase",
+          "reason": "Reported total path length is below 65 and there are no reference break edges. A zero length cutoff admits the 99-point segment while retaining the existing breakpoint and direction rules."
+        }
+      ],
+      "stop": true,
+      "memory_ids_used": []
+    },
+    {
+      "record_id": "217",
+      "proposals": [
+        {
+          "candidate_id": "217-c1",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 0,
+            "direction": 35,
+            "dp": 5
+          },
+          "metric_id": "n_final",
+          "predicted_sign": "increase",
+          "reason": "Reported total path length is below 65, so all reference segments fail the length cutoff. With one break among 101 points, at least one segment meets min_points; setting min_length to zero admits it while preserving that break."
+        }
+      ],
+      "stop": true,
+      "memory_ids_used": []
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "role_context": "/root/c_contract",
+  "status": "REJECTED",
+  "issue_id": "G2-C-CONTROL-001",
+  "parent_task": "core",
+  "classification": "INDEPENDENT_C_ENGINEERING_FAULT_PROBES",
+  "target": {
+    "path": "task1/workflow/g2_journal.py",
+    "sha256": "6f9be5b65507401c076fd567072a909b8120512d146a5c5d7e15418f30fabc30"
+  },
+  "check_script": {
+    "path": "task1/evidence/goal2/c_contract/test_control_independent.py",
+    "sha256": "cfb07557dce253204a824aed38cd4cda9a4cdc40803805360f159839e2d07c34"
+  },
+  "command": ".venv/bin/python -m pytest task1/evidence/goal2/c_contract/test_control_independent.py -q --junitxml=task1/evidence/goal2/c_contract/control_round2.xml",
+  "junit": {
+    "path": "task1/evidence/goal2/c_contract/control_round2.xml",
+    "sha256": "725d020175f7c6c2099f84b409f552b6884deb5cfb46b345a336d79363c6c95b"
+  },
+  "results": {
+    "passed": 11,
+    "failed": 5
+  },
+  "checked_components": [
+    "legitimate_receipt_positive_control",
+    "individual_accept_target_coverage_actor_epoch_state",
+    "empty_submission",
+    "dependency_gate",
+    "actual_controlled_source_change_accept_and_checkpoint",
+    "issue_close_actor_coverage_epoch",
+    "publication_all_tasks_gate"
+  ],
+  "failed_components": [
+    "publication_all_required_tasks",
+    "repair_nonempty_targets",
+    "close_issue_registered_actor",
+    "close_issue_specific_coverage",
+    "close_issue_source_epoch"
+  ],
+  "unchecked_components": [
+    "final_runner_source_registration",
+    "production_experiment_governance_completion"
+  ],
+  "next_action": "B-Repair repairs remaining issue closure and publication gate; rerun independent tests; do not close parent issue yet"
+}

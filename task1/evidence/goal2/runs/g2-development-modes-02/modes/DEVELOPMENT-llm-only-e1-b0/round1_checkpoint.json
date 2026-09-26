@@ -1,0 +1,352 @@
+{
+  "completed_at": "2026-09-26T20:09:23.001183+00:00",
+  "resources": {
+    "experiment_model_dispatches": 1,
+    "completed_model_turns": 1,
+    "candidate_evaluations": 8,
+    "reference_assessments_outside_llm_only_decision": 8,
+    "deterministic_tool_calls": 16,
+    "cache_reads": 8,
+    "governance_role_dispatches": 0,
+    "provider_requests": "unknown",
+    "usage": [
+      {
+        "input_tokens": 12809,
+        "cached_input_tokens": 7808,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 846,
+        "reasoning_output_tokens": 88
+      }
+    ]
+  },
+  "records": {
+    "9779": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb"
+      ],
+      "stopped": true,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "9779-reference",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "n_final",
+            "predicted_sign": "unchanged",
+            "reason": "No raw breaks are reported; aggregate observations do not justify changing direction filtering or DP. Retain reference."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "b17fb219dece81740fc0c6dc5334e8ac48ebe0b432d65d6883a55728538fefcc",
+          "executed_config_id": "cfg-b15b8281b73592fb",
+          "prediction": {
+            "metric_id": "n_final",
+            "predicted_sign": "unchanged",
+            "reference_handle": "cd02e5c1fccd5a27f8262d9407a3a2fcad8c2bf33b03d6905591433b703e0319",
+            "candidate_handle": "cd02e5c1fccd5a27f8262d9407a3a2fcad8c2bf33b03d6905591433b703e0319",
+            "status": "NEAR_ZERO_OR_UNCHANGED",
+            "delta": 0,
+            "observed_sign": "unchanged",
+            "evaluable": false,
+            "prediction_matches": true
+          }
+        }
+      ]
+    },
+    "3357": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb"
+      ],
+      "stopped": true,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "3357-reference",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "n_final",
+            "predicted_sign": "unchanged",
+            "reason": "Retain reference to preserve the five reported raw break boundaries; no evidence establishes a protected improvement."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "828ce90ca6600e51eb3a5f0a71f81981c61a0b3696bc398ac7dd035a321aedf6",
+          "executed_config_id": "cfg-b15b8281b73592fb",
+          "prediction": {
+            "metric_id": "n_final",
+            "predicted_sign": "unchanged",
+            "reference_handle": "700dabbd0905ce55e24e1302317780515f6d91f92e4fd5e1fe355d16b941c766",
+            "candidate_handle": "700dabbd0905ce55e24e1302317780515f6d91f92e4fd5e1fe355d16b941c766",
+            "status": "NEAR_ZERO_OR_UNCHANGED",
+            "delta": 0,
+            "observed_sign": "unchanged",
+            "evaluable": false,
+            "prediction_matches": true
+          }
+        }
+      ]
+    },
+    "11355": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb"
+      ],
+      "stopped": true,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "11355-reference",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "n_final",
+            "predicted_sign": "unchanged",
+            "reason": "Two raw breaks are reported. Without segment geometry or feedback, retain reference coverage and filtering."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "e0085d099b15ea7b6c44f9780adfbb1f2894147cf84d67ea2d61e22791ab3b59",
+          "executed_config_id": "cfg-b15b8281b73592fb",
+          "prediction": {
+            "metric_id": "n_final",
+            "predicted_sign": "unchanged",
+            "reference_handle": "62f6e836a0ce402bd4e0f6d019023316198f1dd5566affff05b87bad25543a9c",
+            "candidate_handle": "62f6e836a0ce402bd4e0f6d019023316198f1dd5566affff05b87bad25543a9c",
+            "status": "NEAR_ZERO_OR_UNCHANGED",
+            "delta": 0,
+            "observed_sign": "unchanged",
+            "evaluable": false,
+            "prediction_matches": true
+          }
+        }
+      ]
+    },
+    "5049": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb"
+      ],
+      "stopped": true,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "5049-reference",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "n_final",
+            "predicted_sign": "unchanged",
+            "reason": "Three raw breaks and seven unavailable direction edges do not establish a beneficial parameter change. Retain reference."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "698a2f112248605f10e0d00644d0238573294765d50a90bc15d6fdb4ce895ba7",
+          "executed_config_id": "cfg-b15b8281b73592fb",
+          "prediction": {
+            "metric_id": "n_final",
+            "predicted_sign": "unchanged",
+            "reference_handle": "7dc0340ae510aaa7e19431e85a8ca5dd5ea4403a7d6924edd13438fc12720a18",
+            "candidate_handle": "7dc0340ae510aaa7e19431e85a8ca5dd5ea4403a7d6924edd13438fc12720a18",
+            "status": "NEAR_ZERO_OR_UNCHANGED",
+            "delta": 0,
+            "observed_sign": "unchanged",
+            "evaluable": false,
+            "prediction_matches": true
+          }
+        }
+      ]
+    },
+    "7186": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb"
+      ],
+      "stopped": true,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "7186-reference",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "n_final",
+            "predicted_sign": "unchanged",
+            "reason": "Duplicate edges alone do not justify additional deletion; undefined direction windows are retained by D. Retain reference."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "a0749bb0d9db9cc21bd816fb6ef8173156e3751fe6768aad95a427c76ac7c5fb",
+          "executed_config_id": "cfg-b15b8281b73592fb",
+          "prediction": {
+            "metric_id": "n_final",
+            "predicted_sign": "unchanged",
+            "reference_handle": "32289a2b8e624fc907a2c9cccc1205569f9189a4c90b72c20eddd10b5998722a",
+            "candidate_handle": "32289a2b8e624fc907a2c9cccc1205569f9189a4c90b72c20eddd10b5998722a",
+            "status": "NEAR_ZERO_OR_UNCHANGED",
+            "delta": 0,
+            "observed_sign": "unchanged",
+            "evaluable": false,
+            "prediction_matches": true
+          }
+        }
+      ]
+    },
+    "11326": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb"
+      ],
+      "stopped": true,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "11326-reference",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "n_final",
+            "predicted_sign": "unchanged",
+            "reason": "Retain the reference handling of five raw breaks and unavailable direction windows; aggregate counts cannot establish improved fidelity or coverage."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "17e3602af331089d34cfcb956976233b3120e4a112510d78f05b13602ff17d9a",
+          "executed_config_id": "cfg-b15b8281b73592fb",
+          "prediction": {
+            "metric_id": "n_final",
+            "predicted_sign": "unchanged",
+            "reference_handle": "82477457b3786ddc8646701018f57a03f126764204ccaa1cb19b178ade5a1b57",
+            "candidate_handle": "82477457b3786ddc8646701018f57a03f126764204ccaa1cb19b178ade5a1b57",
+            "status": "NEAR_ZERO_OR_UNCHANGED",
+            "delta": 0,
+            "observed_sign": "unchanged",
+            "evaluable": false,
+            "prediction_matches": true
+          }
+        }
+      ]
+    },
+    "2069": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb"
+      ],
+      "stopped": true,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "2069-reference",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "n_final",
+            "predicted_sign": "unchanged",
+            "reason": "The zero-duration edge does not itself trigger S, and no raw breaks are reported. No supported reason to depart from reference."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "79a0bfc4b17f31046523886425d116935d074959fe87623e590035488f467a21",
+          "executed_config_id": "cfg-b15b8281b73592fb",
+          "prediction": {
+            "metric_id": "n_final",
+            "predicted_sign": "unchanged",
+            "reference_handle": "35c5008fbcce233e9551d33d57a4d191a1e6c72ad4d650b61008165ef13b246e",
+            "candidate_handle": "35c5008fbcce233e9551d33d57a4d191a1e6c72ad4d650b61008165ef13b246e",
+            "status": "NEAR_ZERO_OR_UNCHANGED",
+            "delta": 0,
+            "observed_sign": "unchanged",
+            "evaluable": false,
+            "prediction_matches": true
+          }
+        }
+      ]
+    },
+    "9613": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb"
+      ],
+      "stopped": true,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "9613-reference",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "n_final",
+            "predicted_sign": "unchanged",
+            "reason": "Fifteen raw breaks make segment coverage relevant, but segment sizes are unavailable. Retain reference rather than infer a protected improvement."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "18693f7b5537971b791d1ab640f9ec4098dca39e95528d829b3fff3da88d7eb1",
+          "executed_config_id": "cfg-b15b8281b73592fb",
+          "prediction": {
+            "metric_id": "n_final",
+            "predicted_sign": "unchanged",
+            "reference_handle": "647c786ec58ae5e9686c5aa497a8d256aa6cd56952dd95631036c6bbc0a25973",
+            "candidate_handle": "647c786ec58ae5e9686c5aa497a8d256aa6cd56952dd95631036c6bbc0a25973",
+            "status": "NEAR_ZERO_OR_UNCHANGED",
+            "delta": 0,
+            "observed_sign": "unchanged",
+            "evaluable": false,
+            "prediction_matches": true
+          }
+        }
+      ]
+    }
+  }
+}

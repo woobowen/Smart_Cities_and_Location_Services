@@ -1,0 +1,168 @@
+{
+  "status": "VERIFIED",
+  "role_context": "/root/c_contract",
+  "task": null,
+  "classification": "PARTIAL_C_COUNTEREXAMPLE_AND_EXPOSED_PILOT_REVIEW_NOT_FULL_R07_ACCEPTANCE",
+  "at": "2026-09-26T20:00:44.166525+00:00",
+  "run_id": "g2-counterexamples-02",
+  "targets": [
+    {
+      "path": "task1/evidence/goal2/counterexamples/formal-02/manifest.json",
+      "sha256": "735189dd6d157e60411a677363bb5d4f896634c3233c50a0c0335e2c8a01714c"
+    }
+  ],
+  "checked_components": [
+    "known_answers",
+    "real_execution",
+    "synthetic_labels",
+    "pilot_explanations"
+  ],
+  "unchecked_components": [
+    "actual_current_model_citations_and_AI_critique",
+    "full_goal_acceptance"
+  ],
+  "synthetic_executions": 19,
+  "pilot_executions": 10,
+  "known_answers": 25,
+  "checks": 4027,
+  "pilot_independent_checks": 10680,
+  "pilot_reconstructions": [
+    {
+      "record_id": "0",
+      "parameters": {
+        "dt": 30,
+        "distance": 400,
+        "min_points": 5,
+        "min_length": 65,
+        "direction": 35,
+        "dp": 5
+      },
+      "checks": 444,
+      "status": "VERIFIED"
+    },
+    {
+      "record_id": "1",
+      "parameters": {
+        "dt": 30,
+        "distance": 400,
+        "min_points": 5,
+        "min_length": 65,
+        "direction": 35,
+        "dp": 5
+      },
+      "checks": 436,
+      "status": "VERIFIED"
+    },
+    {
+      "record_id": "2",
+      "parameters": {
+        "dt": 30,
+        "distance": 400,
+        "min_points": 5,
+        "min_length": 65,
+        "direction": 35,
+        "dp": 5
+      },
+      "checks": 444,
+      "status": "VERIFIED"
+    },
+    {
+      "record_id": "246",
+      "parameters": {
+        "dt": 30,
+        "distance": 400,
+        "min_points": 5,
+        "min_length": 65,
+        "direction": 35,
+        "dp": 5
+      },
+      "checks": 1007,
+      "status": "VERIFIED"
+    },
+    {
+      "record_id": "256",
+      "parameters": {
+        "dt": 30,
+        "distance": 400,
+        "min_points": 5,
+        "min_length": 65,
+        "direction": 35,
+        "dp": 5
+      },
+      "checks": 1249,
+      "status": "VERIFIED"
+    },
+    {
+      "record_id": "306",
+      "parameters": {
+        "dt": 30,
+        "distance": 400,
+        "min_points": 5,
+        "min_length": 65,
+        "direction": 35,
+        "dp": 5
+      },
+      "checks": 1394,
+      "status": "VERIFIED"
+    },
+    {
+      "record_id": "352",
+      "parameters": {
+        "dt": 30,
+        "distance": 400,
+        "min_points": 5,
+        "min_length": 65,
+        "direction": 35,
+        "dp": 5
+      },
+      "checks": 1522,
+      "status": "VERIFIED"
+    },
+    {
+      "record_id": "306",
+      "parameters": {
+        "dt": 30,
+        "distance": 400,
+        "min_points": 5,
+        "min_length": 65,
+        "direction": 35,
+        "dp": 2
+      },
+      "checks": 1420,
+      "status": "VERIFIED"
+    },
+    {
+      "record_id": "306",
+      "parameters": {
+        "dt": 30,
+        "distance": 400,
+        "min_points": 5,
+        "min_length": 65,
+        "direction": 35,
+        "dp": 5
+      },
+      "checks": 1394,
+      "status": "VERIFIED"
+    },
+    {
+      "record_id": "306",
+      "parameters": {
+        "dt": 30,
+        "distance": 400,
+        "min_points": 5,
+        "min_length": 65,
+        "direction": 35,
+        "dp": 10
+      },
+      "checks": 1370,
+      "status": "VERIFIED"
+    }
+  ],
+  "errors": [],
+  "real_model_calls_in_review": 0,
+  "elapsed_seconds": 0.581023484999605,
+  "audit_program": {
+    "path": "task1/evidence/goal2/c_contract/review_counterexamples.py",
+    "sha256": "bd2b443d059f5674863db0c7069a8efa0191e347c974529cc0d76f36c2f71818"
+  }
+}

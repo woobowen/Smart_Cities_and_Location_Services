@@ -1,0 +1,830 @@
+{
+  "completed_at": "2026-09-26T20:44:18.659370+00:00",
+  "resources": {
+    "experiment_model_dispatches": 3,
+    "completed_model_turns": 3,
+    "candidate_evaluations": 100,
+    "reference_assessments_outside_llm_only_decision": 0,
+    "deterministic_tool_calls": 200,
+    "cache_reads": 11,
+    "governance_role_dispatches": 0,
+    "provider_requests": "unknown",
+    "usage": [
+      {
+        "input_tokens": 12831,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 914,
+        "reasoning_output_tokens": 122
+      },
+      {
+        "input_tokens": 54382,
+        "cached_input_tokens": 0,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 770,
+        "reasoning_output_tokens": 128
+      },
+      {
+        "input_tokens": 41799,
+        "cached_input_tokens": 7808,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 630,
+        "reasoning_output_tokens": 74
+      }
+    ]
+  },
+  "records": {
+    "1880": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb",
+        "cfg-1e535c3fe3cc8ae1",
+        "cfg-b64eb945a846910c",
+        "cfg-322e68540606f046",
+        "cfg-df6f00206fb03678",
+        "cfg-65d9f66c5a9b483a",
+        "cfg-e8ff0df5800d5c3b",
+        "cfg-6b37e535e1ea2046",
+        "cfg-03e48c0f4a2e877f",
+        "cfg-f17c964da9a0cb33",
+        "cfg-893931df60c3d3d6",
+        "cfg-24646b7acfafee8e",
+        "cfg-a5483ca9cb883a91",
+        "cfg-5f3726776663985b",
+        "cfg-3957aec985534f51",
+        "cfg-7d8b7cd433506152",
+        "cfg-d4ff6528d1731c17",
+        "cfg-0ad662cd1af68eaf",
+        "cfg-7261bd230cb316ee",
+        "cfg-6599edd5fcbf75b1"
+      ],
+      "stopped": false,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "1880-r1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 2,
+              "min_length": 0,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "common_covered_points",
+            "predicted_sign": "not_predicted",
+            "reason": "Test whether relaxed segment filters recover covered identities while preserving split thresholds; segment sizes and protected tradeoffs require evaluation."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "78bf0f8de9b1c26740ab0b5d0d5c4cca80a9e8fd900c95c524043e8d12becc53",
+          "executed_config_id": "cfg-1e535c3fe3cc8ae1",
+          "prediction": {
+            "metric_id": "common_covered_points",
+            "predicted_sign": "not_predicted",
+            "reference_handle": "69d40b019292064f343508882cf8b32463eb23cbcfcc6f6ef1beea2db4ed2f8a",
+            "candidate_handle": "8267d66ea0de6b3db5c99685e1abbc867442d72e6ba81950b48d86529f326b3c",
+            "status": "NOT_PREDICTED",
+            "evaluable": false
+          }
+        },
+        {
+          "round": 2,
+          "original": {
+            "candidate_id": "1880-r2-a",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 2,
+              "min_length": 0,
+              "direction": 45,
+              "dp": 5
+            },
+            "metric_id": "common_covered_points",
+            "predicted_sign": "increase",
+            "reason": "Relaxed filters recovered three covered identities. Preserve that coverage gain and test whether a higher direction threshold reduces the residual common error."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "78bf0f8de9b1c26740ab0b5d0d5c4cca80a9e8fd900c95c524043e8d12becc53",
+          "executed_config_id": "cfg-03e48c0f4a2e877f",
+          "prediction": {
+            "metric_id": "common_covered_points",
+            "predicted_sign": "increase",
+            "reference_handle": "69d40b019292064f343508882cf8b32463eb23cbcfcc6f6ef1beea2db4ed2f8a",
+            "candidate_handle": "6478fbf1c5caf94c6f4884589d4a8a51865054adc8fd633868d0243d2159eda9",
+            "status": "EVALUABLE",
+            "delta": 3,
+            "observed_sign": "increase",
+            "evaluable": true,
+            "prediction_matches": true
+          }
+        },
+        {
+          "round": 2,
+          "original": {
+            "candidate_id": "1880-r2-b",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 2,
+              "min_length": 0,
+              "direction": 60,
+              "dp": 5
+            },
+            "metric_id": "common_covered_points",
+            "predicted_sign": "increase",
+            "reason": "Keep the verified coverage recovery and test a further direction-threshold increase; geometric protection still requires evaluation."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "78bf0f8de9b1c26740ab0b5d0d5c4cca80a9e8fd900c95c524043e8d12becc53",
+          "executed_config_id": "cfg-f17c964da9a0cb33",
+          "prediction": {
+            "metric_id": "common_covered_points",
+            "predicted_sign": "increase",
+            "reference_handle": "69d40b019292064f343508882cf8b32463eb23cbcfcc6f6ef1beea2db4ed2f8a",
+            "candidate_handle": "2cc894bd989ff898115cb5459be314cf2b1140c11a297ea2ffe047a3f2aa4e1b",
+            "status": "EVALUABLE",
+            "delta": 3,
+            "observed_sign": "increase",
+            "evaluable": true,
+            "prediction_matches": true
+          }
+        },
+        {
+          "round": 3,
+          "original": {
+            "candidate_id": "1880-r3-a",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 2,
+              "min_length": 0,
+              "direction": 45,
+              "dp": 2
+            },
+            "metric_id": "common_covered_points",
+            "predicted_sign": "increase",
+            "reason": "Preserve the verified recovery of three covered identities and test tighter DP after direction 45 reduced common maximum error to 4.58."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "78bf0f8de9b1c26740ab0b5d0d5c4cca80a9e8fd900c95c524043e8d12becc53",
+          "executed_config_id": "cfg-3957aec985534f51",
+          "prediction": {
+            "metric_id": "common_covered_points",
+            "predicted_sign": "increase",
+            "reference_handle": "69d40b019292064f343508882cf8b32463eb23cbcfcc6f6ef1beea2db4ed2f8a",
+            "candidate_handle": "fb472e0f9942092ec238be2495b9b8af29555d5ebe7a3eb93f4f2c4d17338196",
+            "status": "EVALUABLE",
+            "delta": 3,
+            "observed_sign": "increase",
+            "evaluable": true,
+            "prediction_matches": true
+          }
+        },
+        {
+          "round": 3,
+          "original": {
+            "candidate_id": "1880-r3-b",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 2,
+              "min_length": 0,
+              "direction": 45,
+              "dp": 0
+            },
+            "metric_id": "common_covered_points",
+            "predicted_sign": "increase",
+            "reason": "Preserve verified coverage recovery and disable DP to measure the remaining direction-deletion error; increased output size remains a tradeoff."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "78bf0f8de9b1c26740ab0b5d0d5c4cca80a9e8fd900c95c524043e8d12becc53",
+          "executed_config_id": "cfg-7d8b7cd433506152",
+          "prediction": {
+            "metric_id": "common_covered_points",
+            "predicted_sign": "increase",
+            "reference_handle": "69d40b019292064f343508882cf8b32463eb23cbcfcc6f6ef1beea2db4ed2f8a",
+            "candidate_handle": "2288767ad8fddb6b984d78bbb8211500a6c73cb80ce968a02718866932f3156f",
+            "status": "EVALUABLE",
+            "delta": 3,
+            "observed_sign": "increase",
+            "evaluable": true,
+            "prediction_matches": true
+          }
+        }
+      ]
+    },
+    "9673": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb",
+        "cfg-1e535c3fe3cc8ae1",
+        "cfg-b64eb945a846910c",
+        "cfg-322e68540606f046",
+        "cfg-df6f00206fb03678",
+        "cfg-65d9f66c5a9b483a",
+        "cfg-e8ff0df5800d5c3b",
+        "cfg-6b37e535e1ea2046",
+        "cfg-24646b7acfafee8e",
+        "cfg-a5483ca9cb883a91",
+        "cfg-893931df60c3d3d6",
+        "cfg-5f3726776663985b",
+        "cfg-d4ff6528d1731c17",
+        "cfg-0ad662cd1af68eaf",
+        "cfg-3433969952b300c3",
+        "cfg-1b416ac45c2afa33",
+        "cfg-7261bd230cb316ee",
+        "cfg-6599edd5fcbf75b1",
+        "cfg-d4df6d869dc800d6",
+        "cfg-38b5af70752afcf3"
+      ],
+      "stopped": false,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "9673-r1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 2,
+              "min_length": 0,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "common_covered_points",
+            "predicted_sign": "not_predicted",
+            "reason": "Test coverage recovery around the existing distance break without changing direction or DP; aggregate observations do not establish a strict gain."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "c4947dc9d7a0532fff47cff6b54ffc2a60d51e36a38d92ca88a04b959d316156",
+          "executed_config_id": "cfg-1e535c3fe3cc8ae1",
+          "prediction": {
+            "metric_id": "common_covered_points",
+            "predicted_sign": "not_predicted",
+            "reference_handle": "65bedc68d21b8831baae1375f5f584cff8758b15f5883c571a91cd6cc0cfc775",
+            "candidate_handle": "fc21beffc5486656206af4b1263cf5436d3316f1e71db8d05d22c2c950e574d8",
+            "status": "NOT_PREDICTED",
+            "evaluable": false
+          }
+        },
+        {
+          "round": 2,
+          "original": {
+            "candidate_id": "9673-r2-a",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 45,
+              "dp": 5
+            },
+            "metric_id": "common_max_error",
+            "predicted_sign": "not_predicted",
+            "reason": "Reducing DP tolerance left common maximum error at 16.98. Test a higher direction threshold to investigate the remaining deletion error."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "c4947dc9d7a0532fff47cff6b54ffc2a60d51e36a38d92ca88a04b959d316156",
+          "executed_config_id": "cfg-24646b7acfafee8e",
+          "prediction": {
+            "metric_id": "common_max_error",
+            "predicted_sign": "not_predicted",
+            "reference_handle": "65bedc68d21b8831baae1375f5f584cff8758b15f5883c571a91cd6cc0cfc775",
+            "candidate_handle": "22c76d9385e225875540940a2c0036c67a98f1d4373ee2da5cb4e8c30d6ca48d",
+            "status": "NOT_PREDICTED",
+            "evaluable": false
+          }
+        },
+        {
+          "round": 2,
+          "original": {
+            "candidate_id": "9673-r2-b",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 60,
+              "dp": 5
+            },
+            "metric_id": "common_max_error",
+            "predicted_sign": "not_predicted",
+            "reason": "Test further direction retention with the original segmentation and DP budget; the two reference deletions may persist or change."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "c4947dc9d7a0532fff47cff6b54ffc2a60d51e36a38d92ca88a04b959d316156",
+          "executed_config_id": "cfg-a5483ca9cb883a91",
+          "prediction": {
+            "metric_id": "common_max_error",
+            "predicted_sign": "not_predicted",
+            "reference_handle": "65bedc68d21b8831baae1375f5f584cff8758b15f5883c571a91cd6cc0cfc775",
+            "candidate_handle": "2acc58a1b81973ed753377655f2db88cb47a3a3668b9949aba191f8f59a1371a",
+            "status": "NOT_PREDICTED",
+            "evaluable": false
+          }
+        },
+        {
+          "round": 3,
+          "original": {
+            "candidate_id": "9673-r3-a",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 45,
+              "dp": 2
+            },
+            "metric_id": "common_max_error",
+            "predicted_sign": "decrease",
+            "reason": "Direction 45 removed no points and preserved all 82 covered identities. DP 2 bounds geometric error below the reference maximum of 16.98."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "c4947dc9d7a0532fff47cff6b54ffc2a60d51e36a38d92ca88a04b959d316156",
+          "executed_config_id": "cfg-3433969952b300c3",
+          "prediction": {
+            "metric_id": "common_max_error",
+            "predicted_sign": "decrease",
+            "reference_handle": "65bedc68d21b8831baae1375f5f584cff8758b15f5883c571a91cd6cc0cfc775",
+            "candidate_handle": "f63a4baa7292ef6b001c826e8b163363fa062bbf00096ca6eff4581fb102556c",
+            "status": "EVALUABLE",
+            "delta": -15.339869787036667,
+            "observed_sign": "decrease",
+            "evaluable": true,
+            "prediction_matches": true
+          }
+        },
+        {
+          "round": 3,
+          "original": {
+            "candidate_id": "9673-r3-b",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 45,
+              "dp": 0
+            },
+            "metric_id": "common_max_error",
+            "predicted_sign": "decrease",
+            "reason": "Verified S/D retains every input point; disabling DP retains all 82 points and eliminates simplification error, at the cost of compression."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "c4947dc9d7a0532fff47cff6b54ffc2a60d51e36a38d92ca88a04b959d316156",
+          "executed_config_id": "cfg-1b416ac45c2afa33",
+          "prediction": {
+            "metric_id": "common_max_error",
+            "predicted_sign": "decrease",
+            "reference_handle": "65bedc68d21b8831baae1375f5f584cff8758b15f5883c571a91cd6cc0cfc775",
+            "candidate_handle": "757bc42472929eedde6daac287f17fe1c58ec24210f90dd143176e44574406a9",
+            "status": "EVALUABLE",
+            "delta": -16.981771167882144,
+            "observed_sign": "decrease",
+            "evaluable": true,
+            "prediction_matches": true
+          }
+        }
+      ]
+    },
+    "2297": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb",
+        "cfg-1e535c3fe3cc8ae1",
+        "cfg-b64eb945a846910c",
+        "cfg-322e68540606f046",
+        "cfg-df6f00206fb03678",
+        "cfg-65d9f66c5a9b483a",
+        "cfg-e8ff0df5800d5c3b",
+        "cfg-6b37e535e1ea2046"
+      ],
+      "stopped": true,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "2297-r1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 2,
+              "min_length": 0,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "common_covered_points",
+            "predicted_sign": "not_predicted",
+            "reason": "Relax segment filters while retaining raw breakpoint thresholds; evaluate whether previously excluded segments contribute protected coverage."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "b733700618e253b35825ea4c5cca1ecb5cae6c7fcd31ca2af3838805495267fc",
+          "executed_config_id": "cfg-1e535c3fe3cc8ae1",
+          "prediction": {
+            "metric_id": "common_covered_points",
+            "predicted_sign": "not_predicted",
+            "reference_handle": "ca3481160a6d8851f0444c17ce7b01e13ff8b315dcd9ca07183f41016ffa9ea7",
+            "candidate_handle": "b4cc3ecfd968fadc11c3e4dd50db4690a3365cad6a5e4c1403abe729e89ab2ad",
+            "status": "NOT_PREDICTED",
+            "evaluable": false
+          }
+        }
+      ]
+    },
+    "10927": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb",
+        "cfg-df6f00206fb03678",
+        "cfg-b64eb945a846910c",
+        "cfg-322e68540606f046",
+        "cfg-65d9f66c5a9b483a",
+        "cfg-e8ff0df5800d5c3b",
+        "cfg-6b37e535e1ea2046",
+        "cfg-893931df60c3d3d6",
+        "cfg-24646b7acfafee8e",
+        "cfg-a5483ca9cb883a91",
+        "cfg-5f3726776663985b",
+        "cfg-d4ff6528d1731c17",
+        "cfg-0ad662cd1af68eaf",
+        "cfg-7261bd230cb316ee",
+        "cfg-3433969952b300c3",
+        "cfg-1b416ac45c2afa33",
+        "cfg-6599edd5fcbf75b1",
+        "cfg-d4df6d869dc800d6",
+        "cfg-38b5af70752afcf3",
+        "cfg-63139d05595c253c"
+      ],
+      "stopped": false,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "10927-r1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 35,
+              "dp": 2
+            },
+            "metric_id": "n_final",
+            "predicted_sign": "not_predicted",
+            "reason": "Test tighter DP for a possible fidelity improvement. Retention cannot decrease with unchanged S/D, but a strict increase requires coordinates."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "1e8dd92ec556d318be711019bb3187c8e0ed24b4481312262ad67e1e22afca7c",
+          "executed_config_id": "cfg-df6f00206fb03678",
+          "prediction": {
+            "metric_id": "n_final",
+            "predicted_sign": "not_predicted",
+            "reference_handle": "056e647052570d88eee5a72edda2a0abfc04914777dc8a4ee8c61d2c4c9dad5f",
+            "candidate_handle": "2e9db03a220fa770d8c7eee510992f61baaa2630be0e6d76eed1087db462c73c",
+            "status": "NOT_PREDICTED",
+            "evaluable": false
+          }
+        },
+        {
+          "round": 2,
+          "original": {
+            "candidate_id": "10927-r2-a",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 45,
+              "dp": 5
+            },
+            "metric_id": "common_max_error",
+            "predicted_sign": "not_predicted",
+            "reason": "Common maximum error stayed at 7.52 even with DP disabled. Test whether a higher direction threshold retains points responsible for that residual."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "1e8dd92ec556d318be711019bb3187c8e0ed24b4481312262ad67e1e22afca7c",
+          "executed_config_id": "cfg-24646b7acfafee8e",
+          "prediction": {
+            "metric_id": "common_max_error",
+            "predicted_sign": "not_predicted",
+            "reference_handle": "056e647052570d88eee5a72edda2a0abfc04914777dc8a4ee8c61d2c4c9dad5f",
+            "candidate_handle": "6b7aeb7969e0a2217d917299b86089fc7b6b96c2140410a5391274deb2df1670",
+            "status": "NOT_PREDICTED",
+            "evaluable": false
+          }
+        },
+        {
+          "round": 2,
+          "original": {
+            "candidate_id": "10927-r2-b",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 60,
+              "dp": 5
+            },
+            "metric_id": "common_max_error",
+            "predicted_sign": "not_predicted",
+            "reason": "Lower direction thresholds produced a tie or geometric degradation. Explore greater direction retention; strict geometric gain remains unverified."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "1e8dd92ec556d318be711019bb3187c8e0ed24b4481312262ad67e1e22afca7c",
+          "executed_config_id": "cfg-a5483ca9cb883a91",
+          "prediction": {
+            "metric_id": "common_max_error",
+            "predicted_sign": "not_predicted",
+            "reference_handle": "056e647052570d88eee5a72edda2a0abfc04914777dc8a4ee8c61d2c4c9dad5f",
+            "candidate_handle": "2efc788b98f2c0ee18fb011489d72e23b675ed1f1f05d80c18901a9edfb4d283",
+            "status": "NOT_PREDICTED",
+            "evaluable": false
+          }
+        },
+        {
+          "round": 3,
+          "original": {
+            "candidate_id": "10927-r3-a",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 45,
+              "dp": 2
+            },
+            "metric_id": "n_direction_removed",
+            "predicted_sign": "decrease",
+            "reason": "Direction 45 reduced deletions from two to one. Preserve that change and test whether tighter DP further reduces common geometric error."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "1e8dd92ec556d318be711019bb3187c8e0ed24b4481312262ad67e1e22afca7c",
+          "executed_config_id": "cfg-3433969952b300c3",
+          "prediction": {
+            "metric_id": "n_direction_removed",
+            "predicted_sign": "decrease",
+            "reference_handle": "056e647052570d88eee5a72edda2a0abfc04914777dc8a4ee8c61d2c4c9dad5f",
+            "candidate_handle": "2e35a1145c421ce5cba0a95a6456010fa62c8082acb1bb48843780adc2f09274",
+            "status": "EVALUABLE",
+            "delta": -1,
+            "observed_sign": "decrease",
+            "evaluable": true,
+            "prediction_matches": true
+          }
+        },
+        {
+          "round": 3,
+          "original": {
+            "candidate_id": "10927-r3-b",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 45,
+              "dp": 0
+            },
+            "metric_id": "n_direction_removed",
+            "predicted_sign": "decrease",
+            "reason": "Preserve the verified single direction deletion and disable DP to isolate its residual error; output size will increase."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "1e8dd92ec556d318be711019bb3187c8e0ed24b4481312262ad67e1e22afca7c",
+          "executed_config_id": "cfg-1b416ac45c2afa33",
+          "prediction": {
+            "metric_id": "n_direction_removed",
+            "predicted_sign": "decrease",
+            "reference_handle": "056e647052570d88eee5a72edda2a0abfc04914777dc8a4ee8c61d2c4c9dad5f",
+            "candidate_handle": "02cb542f478ce977cf3f77538643d90f62b74c2f7f729b30a6c3673c29540928",
+            "status": "EVALUABLE",
+            "delta": -1,
+            "observed_sign": "decrease",
+            "evaluable": true,
+            "prediction_matches": true
+          }
+        }
+      ]
+    },
+    "9709": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb",
+        "cfg-63139d05595c253c",
+        "cfg-b64eb945a846910c",
+        "cfg-322e68540606f046",
+        "cfg-df6f00206fb03678",
+        "cfg-65d9f66c5a9b483a",
+        "cfg-e8ff0df5800d5c3b",
+        "cfg-6b37e535e1ea2046"
+      ],
+      "stopped": true,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "9709-r1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 0,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "n_final",
+            "predicted_sign": "increase",
+            "reason": "Observed total length is below 65 and there are no split edges; removing the length cutoff admits the segment, whose endpoints survive."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "1e95d7e1b41090b6ef0dba2113819f2af516d4f7d80906d63d2fde790293c9fe",
+          "executed_config_id": "cfg-63139d05595c253c",
+          "prediction": {
+            "metric_id": "n_final",
+            "predicted_sign": "increase",
+            "reference_handle": "1cf0061894778371969ee76320f2feecb5a14e34e2bb5d93ed5234b984a35c23",
+            "candidate_handle": "81a63eeca072868ef55296bfb28887d0c031cd2641d8d5ee7d7e7ef60749416f",
+            "status": "EVALUABLE",
+            "delta": 2,
+            "observed_sign": "increase",
+            "evaluable": true,
+            "prediction_matches": true
+          }
+        }
+      ]
+    },
+    "7711": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb",
+        "cfg-63139d05595c253c",
+        "cfg-b64eb945a846910c",
+        "cfg-322e68540606f046",
+        "cfg-df6f00206fb03678",
+        "cfg-65d9f66c5a9b483a",
+        "cfg-e8ff0df5800d5c3b",
+        "cfg-6b37e535e1ea2046"
+      ],
+      "stopped": true,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "7711-r1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 0,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "n_final",
+            "predicted_sign": "increase",
+            "reason": "The unbroken segment is shorter than the reference length cutoff; setting that cutoff to zero retains at least its endpoints."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "b19998cfb037a5ac2611a1937917f0849f368ab3c1284d819b3440b5545cb83d",
+          "executed_config_id": "cfg-63139d05595c253c",
+          "prediction": {
+            "metric_id": "n_final",
+            "predicted_sign": "increase",
+            "reference_handle": "bcae561c9777067ea6d355bc1b10eeeda872eb74a12572c8c67606279f91c329",
+            "candidate_handle": "c309e03b33d3043569db7ea93f2afa895fe299a6135ab88933ad5639881472b3",
+            "status": "EVALUABLE",
+            "delta": 2,
+            "observed_sign": "increase",
+            "evaluable": true,
+            "prediction_matches": true
+          }
+        }
+      ]
+    },
+    "7137": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb",
+        "cfg-63139d05595c253c",
+        "cfg-b64eb945a846910c",
+        "cfg-322e68540606f046",
+        "cfg-df6f00206fb03678",
+        "cfg-65d9f66c5a9b483a",
+        "cfg-e8ff0df5800d5c3b",
+        "cfg-6b37e535e1ea2046"
+      ],
+      "stopped": true,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "7137-r1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 0,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "n_final",
+            "predicted_sign": "increase",
+            "reason": "The observed unbroken segment fails the reference length cutoff. Removing that cutoff permits endpoint retention without changing duplicate handling."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "d128e4705a5d09c1e7daf8d98fbd413f9f753bfb6f143278c7eff6680d2c1b13",
+          "executed_config_id": "cfg-63139d05595c253c",
+          "prediction": {
+            "metric_id": "n_final",
+            "predicted_sign": "increase",
+            "reference_handle": "54d60e70bb510c3bd3edb14d64172daf77662b739941acbc834c6a935b868361",
+            "candidate_handle": "febad6116cbf3335e7b9803b4e37b72171c25b003b8b445d34e6129108d462b4",
+            "status": "EVALUABLE",
+            "delta": 2,
+            "observed_sign": "increase",
+            "evaluable": true,
+            "prediction_matches": true
+          }
+        }
+      ]
+    },
+    "9296": {
+      "candidate_ids": [
+        "cfg-b15b8281b73592fb",
+        "cfg-63139d05595c253c",
+        "cfg-b64eb945a846910c",
+        "cfg-322e68540606f046",
+        "cfg-df6f00206fb03678",
+        "cfg-65d9f66c5a9b483a",
+        "cfg-e8ff0df5800d5c3b",
+        "cfg-6b37e535e1ea2046"
+      ],
+      "stopped": true,
+      "proposals": [
+        {
+          "round": 1,
+          "original": {
+            "candidate_id": "9296-r1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 0,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "n_final",
+            "predicted_sign": "increase",
+            "reason": "All reference segments are shorter than 65. Two breaks among 67 points leave at least one segment meeting min_points; removing the length cutoff retains endpoints while preserving breaks."
+          },
+          "legal": true,
+          "rejection_reason": null,
+          "executed": true,
+          "reference_handle_locked_before_execution": "127b3eb68beb103afdaf059296ef18024f66e94a25be4eaa1bd209cd7cec8285",
+          "executed_config_id": "cfg-63139d05595c253c",
+          "prediction": {
+            "metric_id": "n_final",
+            "predicted_sign": "increase",
+            "reference_handle": "32d17696ac37d719eefb067b5ce51832dabe4457df93fa48483e4392260518c4",
+            "candidate_handle": "bfc94a5779e55a6f85d6b2d03c9457b040d2650abd43dd83f64eeb590d4422db",
+            "status": "EVALUABLE",
+            "delta": 6,
+            "observed_sign": "increase",
+            "evaluable": true,
+            "prediction_matches": true
+          }
+        }
+      ]
+    }
+  }
+}

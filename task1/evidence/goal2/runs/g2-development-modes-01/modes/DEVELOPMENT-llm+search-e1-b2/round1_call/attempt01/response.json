@@ -1,0 +1,172 @@
+{
+  "records": [
+    {
+      "record_id": "82",
+      "proposals": [
+        {
+          "candidate_id": "82-r1",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 35,
+            "dp": 10
+          },
+          "metric_id": "common_covered_points",
+          "predicted_sign": "unchanged",
+          "reason": "Probe additional compression with unchanged S/D; acceptance requires measured common error within the 5-work-metre budget."
+        }
+      ],
+      "stop": false,
+      "memory_ids_used": []
+    },
+    {
+      "record_id": "10232",
+      "proposals": [
+        {
+          "candidate_id": "10232-r1",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 35,
+            "dp": 10
+          },
+          "metric_id": "common_covered_points",
+          "predicted_sign": "unchanged",
+          "reason": "Probe additional compression while preserving S/D coverage; verify common fidelity against the 5-work-metre budget."
+        }
+      ],
+      "stop": false,
+      "memory_ids_used": []
+    },
+    {
+      "record_id": "10796",
+      "proposals": [
+        {
+          "candidate_id": "10796-r1",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 0,
+            "direction": 35,
+            "dp": 5
+          },
+          "metric_id": "n_final",
+          "predicted_sign": "increase",
+          "reason": "The unbroken 98-point trajectory has total length below 65; removing the length cutoff should retain a segment previously filtered out."
+        }
+      ],
+      "stop": false,
+      "memory_ids_used": []
+    },
+    {
+      "record_id": "4805",
+      "proposals": [
+        {
+          "candidate_id": "4805-r1",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 0,
+            "direction": 35,
+            "dp": 5
+          },
+          "metric_id": "n_final",
+          "predicted_sign": "increase",
+          "reason": "Total length is below the reference cutoff and there are no raw breaks; test retaining this short trajectory without changing duplicate handling."
+        }
+      ],
+      "stop": false,
+      "memory_ids_used": []
+    },
+    {
+      "record_id": "7764",
+      "proposals": [
+        {
+          "candidate_id": "7764-r1",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 35,
+            "dp": 10
+          },
+          "metric_id": "common_covered_points",
+          "predicted_sign": "unchanged",
+          "reason": "Keep existing splits and D fixed while probing compression; evaluate breakpoint protection and common error before acceptance."
+        }
+      ],
+      "stop": false,
+      "memory_ids_used": []
+    },
+    {
+      "record_id": "4953",
+      "proposals": [
+        {
+          "candidate_id": "4953-r1",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 35,
+            "dp": 10
+          },
+          "metric_id": "common_covered_points",
+          "predicted_sign": "unchanged",
+          "reason": "Preserve temporal and spatial splitting while testing higher DP tolerance; any compression benefit remains conditional on protected fidelity."
+        }
+      ],
+      "stop": false,
+      "memory_ids_used": []
+    },
+    {
+      "record_id": "5029",
+      "proposals": [
+        {
+          "candidate_id": "5029-r1",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 0,
+            "direction": 35,
+            "dp": 5
+          },
+          "metric_id": "n_final",
+          "predicted_sign": "increase",
+          "reason": "Total path length is below 65, so reference segments fail the length cutoff; zero cutoff should restore eligible segments while preserving all six breaks."
+        }
+      ],
+      "stop": false,
+      "memory_ids_used": []
+    },
+    {
+      "record_id": "6556",
+      "proposals": [
+        {
+          "candidate_id": "6556-r1",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 0,
+            "direction": 35,
+            "dp": 5
+          },
+          "metric_id": "common_covered_points",
+          "predicted_sign": "not_predicted",
+          "reason": "Test whether the length cutoff excludes coverage around the existing split; segment lengths and point allocation are unavailable."
+        }
+      ],
+      "stop": false,
+      "memory_ids_used": []
+    }
+  ]
+}

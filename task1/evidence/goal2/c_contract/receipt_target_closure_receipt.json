@@ -1,0 +1,81 @@
+{
+  "issue_id": "G2-C-RECEIPT-TARGET-001",
+  "status": "VERIFIED",
+  "role_context": "/root/c_contract",
+  "at": "2026-09-26T20:40:29.711571+00:00",
+  "classification": "ACTUAL_HANDOFF_GAP_CLOSED_WITH_ISOLATED_REGRESSION",
+  "targets": [
+    {
+      "path": "task1/evidence/goal2/review_target_reconciliation.json",
+      "sha256": "940fdeb9e32d16cb21026ee10ba100a04fc01890f6de4143874dbbcc70c72e35"
+    },
+    {
+      "path": "task1/evidence/goal2/logs/g2-evaluation-parameters-01_artifact_checks.json",
+      "sha256": "f7d9e878351cdd7d88d4071975493e90ccf075ad0cffb303616b3ab88a0d266e"
+    },
+    {
+      "path": "task1/evidence/goal2/logs/g2-evaluation-parameters-01_execution.json",
+      "sha256": "7d0299c16cb1dc4b049027e5c5d557f3244a4823ce2a7ed5a84f872a954fbb33"
+    },
+    {
+      "path": "task1/evidence/goal2/logs/g2-evaluation-orders-01_artifact_checks.json",
+      "sha256": "189375c313f3e058006989bbecc2b52610306ed5cd2b4deb381473ee6c5e0b4f"
+    },
+    {
+      "path": "task1/evidence/goal2/logs/g2-evaluation-orders-01_execution.json",
+      "sha256": "51b955ed0f0d3a1ac07d6016d93ddc98415d729b1ed01ecef2c682d0579fe380"
+    }
+  ],
+  "source_hashes": {
+    "task1/evidence/goal2/review_target_reconciliation.json": "940fdeb9e32d16cb21026ee10ba100a04fc01890f6de4143874dbbcc70c72e35",
+    "task1/evidence/goal2/logs/g2-evaluation-parameters-01_artifact_checks.json": "f7d9e878351cdd7d88d4071975493e90ccf075ad0cffb303616b3ab88a0d266e",
+    "task1/evidence/goal2/logs/g2-evaluation-parameters-01_execution.json": "7d0299c16cb1dc4b049027e5c5d557f3244a4823ce2a7ed5a84f872a954fbb33",
+    "task1/evidence/goal2/logs/g2-evaluation-orders-01_artifact_checks.json": "189375c313f3e058006989bbecc2b52610306ed5cd2b4deb381473ee6c5e0b4f",
+    "task1/evidence/goal2/logs/g2-evaluation-orders-01_execution.json": "51b955ed0f0d3a1ac07d6016d93ddc98415d729b1ed01ecef2c682d0579fe380"
+  },
+  "checked_components": [
+    "fault_rejected",
+    "valid_receipt_accepted",
+    "source_epoch",
+    "metadata_actual_manifest_and_logs",
+    "prior_numerical_receipts_preserved"
+  ],
+  "unchecked_components": [
+    "independent_replay_of_historical_process_exit",
+    "full_Goal2_acceptance"
+  ],
+  "check_count": 248,
+  "errors": [],
+  "regression_results": [
+    {
+      "task": "evaluation_parameters",
+      "original_receipt_rejection": "C_TARGET_MISMATCH",
+      "complete_receipt_accepted": true,
+      "complete_receipt": {
+        "path": "task1/evidence/goal2/c_contract/evaluation_parameters_bound_receipt.json",
+        "sha256": "46acb492750de12c4d288327356bee4b6824f26aadb3d85c2e91a593fd4f19c4"
+      }
+    },
+    {
+      "task": "evaluation_orders",
+      "original_receipt_rejection": "C_TARGET_MISMATCH",
+      "complete_receipt_accepted": true,
+      "complete_receipt": {
+        "path": "task1/evidence/goal2/c_contract/evaluation_orders_bound_receipt.json",
+        "sha256": "43d3aaad37562b83e4abe39601b1d8375e72d63649d60a05b0c1e9e0c5504fbd"
+      }
+    }
+  ],
+  "engineering_test_journal": {
+    "path": "task1/evidence/goal2/c_contract/receipt_target_engineering_test/goal_state.json",
+    "sha256": "b872e4afe001c217e64bf30540006ddd743fb3d66a7f17d984b34d03ced20a4d"
+  },
+  "audit_program": {
+    "path": "task1/evidence/goal2/c_contract/review_target_reconciliation.py",
+    "sha256": "3b6fe5796afcf63ea332a2e7dcf0c7d52f6287dc3191a363e2b156339589d80c"
+  },
+  "numerical_reruns": 0,
+  "processing_mutations": 0,
+  "new_model_calls": 0,
+  "parent_resume": "Root must close issue, resubmit original targets, and accept complete receipts in production journal."
+}

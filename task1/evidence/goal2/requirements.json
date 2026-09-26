@@ -1,0 +1,555 @@
+{
+  "goal_id": "SC-LAB1-G2-EXPERIMENTS-001",
+  "registry_version": "G2_REQUIREMENT_REGISTRY_V1",
+  "role": "ONLY_CURRENT_GOAL2_REQUIREMENT_STATUS_REGISTRY",
+  "created_at_utc": "2026-09-26T18:50:21.466170+00:00",
+  "previous_total_registry": "task1/evidence/goal1/requirements.json",
+  "previous_registry_preserved": true,
+  "current_authority": {
+    "type": "CURRENT_DIRECT_USER_PROMPT",
+    "path": "task1/evidence/goal2/USER_PROMPT.md",
+    "sha256": "f4b4246e4287e7f521c0fafbca4bed68c5d91e39f6818be64d25b10d34968603",
+    "internal_A_C_is_human_approval": false
+  },
+  "engineering_status": "VERIFIED",
+  "experiment_status": "PRESCRIBED_RUNS_AND_SINGLE_CONFIRMATION_VERIFIED",
+  "publication_status": "READY_FOR_ACTUAL_PUBLICATION",
+  "gpt_second_review": "PENDING",
+  "project_deliverable": "IMPLEMENTING",
+  "understanding": "UNCHANGED_USER_ACTUAL_STATE",
+  "submission": "NOT_READY",
+  "requirements": [
+    {
+      "id": "R01",
+      "requirement": "三组参数实验：分段/过滤、方向、DP",
+      "previous_total_requirement_ids": [
+        "R02",
+        "R03",
+        "R04",
+        "R06"
+      ],
+      "sources": [
+        "PPT18/20/22/26",
+        "basic notebook cells12/14/16",
+        "USER_PROMPT sections3/9"
+      ],
+      "experiment_ids": [
+        "G2-PARAM-DT",
+        "G2-PARAM-DISTANCE",
+        "G2-PARAM-MIN_POINTS",
+        "G2-PARAM-MIN_LENGTH",
+        "G2-PARAM-DIRECTION",
+        "G2-PARAM-DP",
+        "G2-PARAM-TIME-DISTANCE",
+        "G2-PARAM-POINTS-LENGTH"
+      ],
+      "planned_artifact_roles": [
+        "parameter_results",
+        "full_per_record_tables",
+        "parameter_figures"
+      ],
+      "artifacts": [
+        "task1/evidence/goal2/runs/g2-development-parameters-02/manifest.json",
+        "task1/evidence/goal2/runs/g2-development-parameters-02/parameter_table.json",
+        "task1/evidence/goal2/runs/g2-evaluation-parameters-01/manifest.json",
+        "task1/evidence/goal2/tables/parameter_records.csv",
+        "task1/evidence/goal2/tables/stable_intervals.csv"
+      ],
+      "review_evidence": [
+        "task1/evidence/goal2/c_contract/development_parameters_epoch02_receipt.json",
+        "task1/evidence/goal2/c_contract/evaluation_parameters_bound_receipt.json",
+        "task1/evidence/goal2/c_contract/internal_acceptance_receipt_v2.json"
+      ],
+      "status": "VERIFIED",
+      "conclusion_boundary": "All required grids actually run; no teacher extra mandatory grid found; quantities are current prompt settings, not teacher optimal values.",
+      "completion_boundary": "Independent A01-A17 passed; actual publication remains separately gated and not yet claimed."
+    },
+    {
+      "id": "R02",
+      "requirement": "六顺序实际对照与机制解释",
+      "previous_total_requirement_ids": [
+        "R07"
+      ],
+      "sources": [
+        "PPT42",
+        "USER_PROMPT section10"
+      ],
+      "experiment_ids": [
+        "G2-ORDER"
+      ],
+      "planned_artifact_roles": [
+        "order_results",
+        "unsafe_failure_witnesses",
+        "order_figures"
+      ],
+      "artifacts": [
+        "task1/evidence/goal2/runs/g2-development-orders-02/manifest.json",
+        "task1/evidence/goal2/runs/g2-development-orders-02/order_table.json",
+        "task1/evidence/goal2/runs/g2-evaluation-orders-01/manifest.json",
+        "task1/evidence/goal2/tables/order_failure_mechanisms.csv"
+      ],
+      "review_evidence": [
+        "task1/evidence/goal2/c_contract/development_orders_epoch02_receipt.json",
+        "task1/evidence/goal2/c_contract/evaluation_orders_bound_receipt.json",
+        "task1/evidence/goal2/c_contract/internal_acceptance_receipt_v2.json"
+      ],
+      "status": "VERIFIED",
+      "conclusion_boundary": "Unsafe order rejection with actual evidence counts as result; conceptual intuition alone does not.",
+      "completion_boundary": "Independent A01-A17 passed; actual publication remains separately gated and not yet claimed."
+    },
+    {
+      "id": "R03",
+      "requirement": "真实四模式公平实验",
+      "previous_total_requirement_ids": [
+        "R08",
+        "R09"
+      ],
+      "sources": [
+        "PPT37",
+        "LLM notebook cells20/21",
+        "USER_PROMPT section11"
+      ],
+      "experiment_ids": [
+        "G2-MODES-DEV",
+        "G2-MODES-EVAL"
+      ],
+      "planned_artifact_roles": [
+        "raw_model_traces",
+        "per_episode_results",
+        "mode_costs",
+        "zero_model_sentinel"
+      ],
+      "artifacts": [
+        "task1/evidence/goal2/runs/g2-development-modes-02/manifest.json",
+        "task1/evidence/goal2/evaluation_freeze.json",
+        "task1/evidence/goal2/runs/g2-evaluation-modes-01/manifest.json",
+        "task1/evidence/goal2/tables/mode_record_results.csv",
+        "task1/evidence/goal2/tables/mode_proposals.csv"
+      ],
+      "review_evidence": [
+        "task1/evidence/goal2/c_contract/development_modes_epoch02_receipt.json",
+        "task1/evidence/goal2/c_contract/evaluation_freeze_epoch02_receipt.json",
+        "task1/evidence/goal2/c_contract/evaluation_modes_complete_receipt.json",
+        "task1/evidence/goal2/c_contract/internal_acceptance_receipt_v2.json"
+      ],
+      "status": "VERIFIED",
+      "conclusion_boundary": "Three LLM modes must contain this-round real requests; search-only zero; dev24 and eval24x3 exact common records.",
+      "completion_boundary": "Independent A01-A17 passed; actual publication remains separately gated and not yet claimed."
+    },
+    {
+      "id": "R04",
+      "requirement": "示范记忆、真实检索消费与泄漏隔离",
+      "previous_total_requirement_ids": [
+        "R09"
+      ],
+      "sources": [
+        "PPT37",
+        "LLM notebook cells20/23/25",
+        "USER_PROMPT section12"
+      ],
+      "experiment_ids": [
+        "G2-MEMORY-BUILD",
+        "G2-MODES-DEV",
+        "G2-MODES-EVAL"
+      ],
+      "planned_artifact_roles": [
+        "frozen_memory",
+        "admission_receipts",
+        "retrieval_consumption",
+        "readonly_and_leak_tests"
+      ],
+      "artifacts": [
+        "task1/evidence/goal2/runs/g2-demo-memory-02/memory_snapshot.json",
+        "task1/evidence/goal2/runs/g2-development-modes-02/manifest.json",
+        "task1/evidence/goal2/tables/memory_retrieval.csv",
+        "task1/evidence/goal2/tables/memory_consumption.csv"
+      ],
+      "review_evidence": [
+        "task1/evidence/goal2/c_contract/memory_epoch02_receipt.json",
+        "task1/evidence/goal2/c_contract/development_modes_epoch02_receipt.json",
+        "task1/evidence/goal2/c_contract/evaluation_modes_complete_receipt.json",
+        "task1/evidence/goal2/c_contract/internal_acceptance_receipt_v2.json"
+      ],
+      "status": "VERIFIED",
+      "conclusion_boundary": "No memory from eval, own record or prior eval episode; retrieval hit is not evidence of causal quality gain.",
+      "completion_boundary": "Independent A01-A17 passed; actual publication remains separately gated and not yet claimed."
+    },
+    {
+      "id": "R05",
+      "requirement": "三必做单项与有限候选筛选",
+      "previous_total_requirement_ids": [
+        "R13"
+      ],
+      "sources": [
+        "USER_PROMPT section13"
+      ],
+      "experiment_ids": [
+        "G2-SINGLES-EVAL"
+      ],
+      "planned_artifact_roles": [
+        "candidate_lock",
+        "candidate_results",
+        "full_feasible_pareto",
+        "structural_not_admitted"
+      ],
+      "artifacts": [
+        "task1/evidence/goal2/candidate_lock.json",
+        "task1/evidence/goal2/a_epoch02/A_FOLLOWUP_DEVELOPMENT_EPOCH02.json",
+        "task1/evidence/goal2/a_epoch02/heldout_single_confirmation/single_candidate_confirmation.json",
+        "task1/evidence/goal2/tables/candidate_record_pairs.csv"
+      ],
+      "review_evidence": [
+        "task1/evidence/goal2/c_contract/candidate_lock_epoch02_receipt.json",
+        "task1/evidence/goal2/c_contract/single_candidate_confirmation_receipt.json",
+        "task1/evidence/goal2/c_contract/internal_acceptance_receipt_v2.json"
+      ],
+      "status": "VERIFIED",
+      "conclusion_boundary": "C-S/C-D/C-P independently evaluated; reference allowed; no combination or final adoption; optional structural candidates not admitted unless fully preregistered.",
+      "completion_boundary": "Independent A01-A17 passed; actual publication remains separately gated and not yet claimed."
+    },
+    {
+      "id": "R06",
+      "requirement": "可信指标与分母、独立参考、结论边界",
+      "previous_total_requirement_ids": [
+        "R01",
+        "R05"
+      ],
+      "sources": [
+        "PPT26",
+        "USER_PROMPT sections7/8/15"
+      ],
+      "experiment_ids": [
+        "G2-PARAM-DT",
+        "G2-PARAM-DISTANCE",
+        "G2-PARAM-MIN_POINTS",
+        "G2-PARAM-MIN_LENGTH",
+        "G2-PARAM-DIRECTION",
+        "G2-PARAM-DP",
+        "G2-PARAM-TIME-DISTANCE",
+        "G2-PARAM-POINTS-LENGTH",
+        "G2-ORDER",
+        "G2-MODES-DEV",
+        "G2-MODES-EVAL",
+        "G2-SINGLES-EVAL"
+      ],
+      "planned_artifact_roles": [
+        "metric_contract",
+        "common_reference",
+        "per_point_coverage",
+        "paired_statistics"
+      ],
+      "artifacts": [
+        "task1/evidence/goal2/coordinate_sensitivity/raw_preflight/summary.json",
+        "task1/evidence/goal2/coordinate_sensitivity/development-02/summary.json",
+        "task1/evidence/goal2/coordinate_sensitivity/evaluation-01/summary.json",
+        "task1/evidence/goal2/resource_ledger.json",
+        "task1/evidence/goal2/tables/mode_pairwise.csv"
+      ],
+      "review_evidence": [
+        "task1/evidence/goal2/c_contract/core_receipt_epoch02.json",
+        "task1/evidence/goal2/c_contract/coordinate_complete_receipt.json",
+        "task1/evidence/goal2/c_contract/internal_acceptance_receipt_v2.json"
+      ],
+      "status": "VERIFIED",
+      "conclusion_boundary": "Conditional geometry/coverage/compression only; no unlabeled real error-detection accuracy or global-optimum claim.",
+      "completion_boundary": "Independent A01-A17 passed; actual publication remains separately gated and not yet claimed."
+    },
+    {
+      "id": "R07",
+      "requirement": "AI批判、已知答案反例与真实案例",
+      "previous_total_requirement_ids": [
+        "R10"
+      ],
+      "sources": [
+        "PPT6",
+        "USER_PROMPT section14"
+      ],
+      "experiment_ids": [
+        "G2-COUNTEREXAMPLES",
+        "G2-PILOT-REGRESSION"
+      ],
+      "planned_artifact_roles": [
+        "synthetic_generation_and_results",
+        "real_case_selection",
+        "actual_model_critique"
+      ],
+      "artifacts": [
+        "task1/evidence/goal2/counterexamples/formal-02/manifest.json",
+        "task1/evidence/goal2/a_epoch02/actual_ai_critique/actual_ai_critique.json"
+      ],
+      "review_evidence": [
+        "task1/evidence/goal2/c_contract/counterexamples_epoch02_receipt.json",
+        "task1/evidence/goal2/c_contract/counterexamples_complete_receipt.json",
+        "task1/evidence/goal2/c_contract/internal_acceptance_receipt_v2.json"
+      ],
+      "status": "VERIFIED",
+      "conclusion_boundary": "Actual model quotes only; synthetic/history/current real sources separated; pilot is exposed development material.",
+      "completion_boundary": "Independent A01-A17 passed; actual publication remains separately gated and not yet claimed."
+    },
+    {
+      "id": "R08",
+      "requirement": "工作Notebook、表图、可编辑架构与阶段分析",
+      "previous_total_requirement_ids": [
+        "R11",
+        "R14"
+      ],
+      "sources": [
+        "PPT4-6/26",
+        "USER_PROMPT section16"
+      ],
+      "experiment_ids": [
+        "G2-DELIVERABLES"
+      ],
+      "planned_artifact_roles": [
+        "notebooks",
+        "teacher_cell_mapping",
+        "figures_and_sources",
+        "stage_analysis",
+        "process_log"
+      ],
+      "artifacts": [
+        "task1/evidence/goal2/PROCESS_RECORD.md",
+        "task1/evidence/goal2/result_summary.json",
+        "task1/evidence/goal2/logs/tests_final_sources_execution.json",
+        "task1/evidence/goal2/notebook_execution.json",
+        "task1/figures/goal2/figure_manifest.json",
+        "task1/docs/goal2/STAGE_ANALYSIS.md"
+      ],
+      "review_evidence": [
+        "task1/evidence/goal2/c_contract/notebooks_complete_receipt_v2.json",
+        "task1/evidence/goal2/c_contract/figures_complete_receipt.json",
+        "task1/evidence/goal2/c_contract/analysis_complete_receipt_v2.json",
+        "task1/evidence/goal2/c_contract/internal_acceptance_receipt_v2.json"
+      ],
+      "status": "VERIFIED",
+      "conclusion_boundary": "Work artifacts only; no final two reports, Evidence Lock or submission-ready claim.",
+      "completion_boundary": "Independent A01-A17 passed; actual publication remains separately gated and not yet claimed."
+    },
+    {
+      "id": "R09",
+      "requirement": "真实A/B/C与确定性持续闭环",
+      "previous_total_requirement_ids": [
+        "R12"
+      ],
+      "sources": [
+        "USER_PROMPT sections4-6/17"
+      ],
+      "experiment_ids": [
+        "G2-INDEPENDENT-ACCEPTANCE"
+      ],
+      "planned_artifact_roles": [
+        "governance_dispatches",
+        "goal_journal",
+        "issues_repairs_reviews",
+        "acceptance_receipts"
+      ],
+      "artifacts": [
+        "task1/evidence/goal2/goal_state.json",
+        "task1/evidence/goal2/superseded_runs.json",
+        "task1/evidence/goal2/logs/b_run_execution_02.json",
+        "task1/evidence/goal2/provider_attempt_inventory_check.json"
+      ],
+      "review_evidence": [
+        "task1/evidence/goal2/c_contract/core_receipt_epoch02.json",
+        "task1/evidence/goal2/c_contract/context_closure_epoch02.json",
+        "task1/evidence/goal2/c_contract/retry_classifier_closure_epoch02.json",
+        "task1/evidence/goal2/c_contract/development_modes_epoch02_receipt.json",
+        "task1/evidence/goal2/c_contract/ai_null_closure_receipt.json",
+        "task1/evidence/goal2/c_contract/mode_figure_closure_receipt.json",
+        "task1/evidence/goal2/c_contract/notebook_confirmation_closure_receipt_v2.json",
+        "task1/evidence/goal2/c_contract/internal_acceptance_receipt_v2.json"
+      ],
+      "status": "VERIFIED",
+      "conclusion_boundary": "Native independent C required; ordinary errors consumed within this goal; test injections distinct from real incidents.",
+      "completion_boundary": "Independent A01-A17 passed; actual publication remains separately gated and not yet claimed."
+    },
+    {
+      "id": "R10",
+      "requirement": "内部完整验收后真实GitHub发布",
+      "previous_total_requirement_ids": [
+        "R15",
+        "R16"
+      ],
+      "sources": [
+        "USER_PROMPT sections17/19/20"
+      ],
+      "experiment_ids": [
+        "G2-INDEPENDENT-ACCEPTANCE",
+        "G2-PUBLICATION"
+      ],
+      "planned_artifact_roles": [
+        "independent_C_A01_A17",
+        "publication_receipt",
+        "fixed_SHA_review_packet",
+        "FINAL_RESPONSE"
+      ],
+      "artifacts": [
+        "task1/evidence/goal2/FINAL_RESPONSE.md",
+        "task1/evidence/goal2/REVIEW_PACKET.md"
+      ],
+      "review_evidence": [
+        "task1/evidence/goal2/c_contract/internal_acceptance_receipt_v2.json"
+      ],
+      "status": "INTERNAL_VERIFIED_PUBLICATION_PENDING",
+      "conclusion_boundary": "Internal verified and publication separate; web GPT second review pending; no teacher ZIP/email.",
+      "completion_boundary": "Independent A01-A17 passed; actual publication remains separately gated and not yet claimed."
+    }
+  ],
+  "acceptance_items": [
+    {
+      "id": "A01",
+      "source": "USER_PROMPT section17",
+      "status": "VERIFIED",
+      "evidence": [
+        "task1/evidence/goal2/c_contract/internal_acceptance_receipt_v2.json"
+      ],
+      "scope": "Internal prepublication acceptance; actual push/readback separately verified by publication task."
+    },
+    {
+      "id": "A02",
+      "source": "USER_PROMPT section17",
+      "status": "VERIFIED",
+      "evidence": [
+        "task1/evidence/goal2/c_contract/internal_acceptance_receipt_v2.json"
+      ],
+      "scope": "Internal prepublication acceptance; actual push/readback separately verified by publication task."
+    },
+    {
+      "id": "A03",
+      "source": "USER_PROMPT section17",
+      "status": "VERIFIED",
+      "evidence": [
+        "task1/evidence/goal2/c_contract/internal_acceptance_receipt_v2.json"
+      ],
+      "scope": "Internal prepublication acceptance; actual push/readback separately verified by publication task."
+    },
+    {
+      "id": "A04",
+      "source": "USER_PROMPT section17",
+      "status": "VERIFIED",
+      "evidence": [
+        "task1/evidence/goal2/c_contract/internal_acceptance_receipt_v2.json"
+      ],
+      "scope": "Internal prepublication acceptance; actual push/readback separately verified by publication task."
+    },
+    {
+      "id": "A05",
+      "source": "USER_PROMPT section17",
+      "status": "VERIFIED",
+      "evidence": [
+        "task1/evidence/goal2/c_contract/internal_acceptance_receipt_v2.json"
+      ],
+      "scope": "Internal prepublication acceptance; actual push/readback separately verified by publication task."
+    },
+    {
+      "id": "A06",
+      "source": "USER_PROMPT section17",
+      "status": "VERIFIED",
+      "evidence": [
+        "task1/evidence/goal2/c_contract/internal_acceptance_receipt_v2.json"
+      ],
+      "scope": "Internal prepublication acceptance; actual push/readback separately verified by publication task."
+    },
+    {
+      "id": "A07",
+      "source": "USER_PROMPT section17",
+      "status": "VERIFIED",
+      "evidence": [
+        "task1/evidence/goal2/c_contract/internal_acceptance_receipt_v2.json"
+      ],
+      "scope": "Internal prepublication acceptance; actual push/readback separately verified by publication task."
+    },
+    {
+      "id": "A08",
+      "source": "USER_PROMPT section17",
+      "status": "VERIFIED",
+      "evidence": [
+        "task1/evidence/goal2/c_contract/internal_acceptance_receipt_v2.json"
+      ],
+      "scope": "Internal prepublication acceptance; actual push/readback separately verified by publication task."
+    },
+    {
+      "id": "A09",
+      "source": "USER_PROMPT section17",
+      "status": "VERIFIED",
+      "evidence": [
+        "task1/evidence/goal2/c_contract/internal_acceptance_receipt_v2.json"
+      ],
+      "scope": "Internal prepublication acceptance; actual push/readback separately verified by publication task."
+    },
+    {
+      "id": "A10",
+      "source": "USER_PROMPT section17",
+      "status": "VERIFIED",
+      "evidence": [
+        "task1/evidence/goal2/c_contract/internal_acceptance_receipt_v2.json"
+      ],
+      "scope": "Internal prepublication acceptance; actual push/readback separately verified by publication task."
+    },
+    {
+      "id": "A11",
+      "source": "USER_PROMPT section17",
+      "status": "VERIFIED",
+      "evidence": [
+        "task1/evidence/goal2/c_contract/internal_acceptance_receipt_v2.json"
+      ],
+      "scope": "Internal prepublication acceptance; actual push/readback separately verified by publication task."
+    },
+    {
+      "id": "A12",
+      "source": "USER_PROMPT section17",
+      "status": "VERIFIED",
+      "evidence": [
+        "task1/evidence/goal2/c_contract/internal_acceptance_receipt_v2.json"
+      ],
+      "scope": "Internal prepublication acceptance; actual push/readback separately verified by publication task."
+    },
+    {
+      "id": "A13",
+      "source": "USER_PROMPT section17",
+      "status": "VERIFIED",
+      "evidence": [
+        "task1/evidence/goal2/c_contract/internal_acceptance_receipt_v2.json"
+      ],
+      "scope": "Internal prepublication acceptance; actual push/readback separately verified by publication task."
+    },
+    {
+      "id": "A14",
+      "source": "USER_PROMPT section17",
+      "status": "VERIFIED",
+      "evidence": [
+        "task1/evidence/goal2/c_contract/internal_acceptance_receipt_v2.json"
+      ],
+      "scope": "Internal prepublication acceptance; actual push/readback separately verified by publication task."
+    },
+    {
+      "id": "A15",
+      "source": "USER_PROMPT section17",
+      "status": "VERIFIED",
+      "evidence": [
+        "task1/evidence/goal2/c_contract/internal_acceptance_receipt_v2.json"
+      ],
+      "scope": "Internal prepublication acceptance; actual push/readback separately verified by publication task."
+    },
+    {
+      "id": "A16",
+      "source": "USER_PROMPT section17",
+      "status": "VERIFIED",
+      "evidence": [
+        "task1/evidence/goal2/c_contract/internal_acceptance_receipt_v2.json"
+      ],
+      "scope": "Internal prepublication acceptance; actual push/readback separately verified by publication task."
+    },
+    {
+      "id": "A17",
+      "source": "USER_PROMPT section17",
+      "status": "VERIFIED",
+      "evidence": [
+        "task1/evidence/goal2/c_contract/internal_acceptance_receipt_v2.json"
+      ],
+      "scope": "Internal prepublication acceptance; actual push/readback separately verified by publication task."
+    }
+  ],
+  "completion_rule": "Every R01-R10 and independent A01-A17 has current valid closed evidence, no blocking issues, then actual publication verified; never equate no-gain with engineering failure or missing experiment with completion.",
+  "updated_at_utc": "2026-09-26T22:11:40.945886+00:00"
+}

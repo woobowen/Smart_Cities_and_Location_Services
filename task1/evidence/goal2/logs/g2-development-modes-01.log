@@ -1,0 +1,37 @@
+{"episode": "DEVELOPMENT-llm-only-e1-b0", "model_dispatches": 1, "candidate_evaluations": 8, "seconds": 31.17}
+{"episode": "DEVELOPMENT-llm-only-e1-b1", "model_dispatches": 1, "candidate_evaluations": 12, "seconds": 33.83}
+{"episode": "DEVELOPMENT-llm-only-e1-b2", "model_dispatches": 1, "candidate_evaluations": 16, "seconds": 35.75}
+{"episode": "DEVELOPMENT-search-only-e1-b0", "model_dispatches": 0, "candidate_evaluations": 160, "seconds": 11.94}
+{"episode": "DEVELOPMENT-search-only-e1-b1", "model_dispatches": 0, "candidate_evaluations": 160, "seconds": 10.3}
+{"episode": "DEVELOPMENT-search-only-e1-b2", "model_dispatches": 0, "candidate_evaluations": 160, "seconds": 10.52}
+{"episode": "DEVELOPMENT-llm+search-e1-b0", "model_dispatches": 3, "candidate_evaluations": 148, "seconds": 135.46}
+{"episode": "DEVELOPMENT-llm+search-e1-b1", "model_dispatches": 3, "candidate_evaluations": 100, "seconds": 88.54}
+{"episode": "DEVELOPMENT-llm+search-e1-b2", "model_dispatches": 3, "candidate_evaluations": 124, "seconds": 115.5}
+Traceback (most recent call last):
+  File "/home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/workflow/g2_modes.py", line 98, in dispatch
+    response,receipt=provider.call(prompt,folder,request_id=request_id+f'-try{attempt+1}',purpose=purpose)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/workflow/g2_provider.py", line 96, in call
+    raise ProviderError(receipt.get('error','FAILED'))
+task1.workflow.provider.ProviderError: KeyboardInterrupt:
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/scripts/goal2.py", line 246, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/scripts/goal2.py", line 240, in main
+    elif action in ('development-modes','evaluation-modes'):run_modes(run,3 if partition=='G2_EVAL' else 1,enable_live=args.enable_live)
+                                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/scripts/goal2.py", line 63, in run_modes
+    result=run_batch_episode(run,mode,episode,ids[offset:offset+8],observed,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/workflow/g2_modes.py", line 191, in run_batch_episode
+    response,receipts=dispatch(provider,prompt,directory/f'round{round_number}_call',episode_id+f'-r{round_number}',
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/workflow/g2_modes.py", line 104, in dispatch
+    raise ProviderError('EXTERNAL_AUTH_PERMISSION_OR_BILLING_BLOCKED; evidence='+str(folder.relative_to(ROOT)))
+task1.workflow.provider.ProviderError: EXTERNAL_AUTH_PERMISSION_OR_BILLING_BLOCKED; evidence=task1/evidence/goal2/runs/g2-development-modes-01/modes/DEVELOPMENT-llm+memory+search-e1-b0/round3_call/attempt01

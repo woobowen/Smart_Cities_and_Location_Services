@@ -1,0 +1,30 @@
+{
+  "role_context": "/root/c_contract",
+  "at": "2026-09-26T20:47:57.650876+00:00",
+  "status": "VERIFIED",
+  "classification": "ACTUAL_C_IMAGE_INSPECTION",
+  "tool": "view_image",
+  "targets": [
+    {
+      "path": "task1/evidence/goal2/presentation_checks/candidate_preview_02/after/real_trajectory_cases.png",
+      "sha256": "286f9e456b414164fd639ec5357ed8d30bfef0aef3fc82aae3aa19d68ac7f82f"
+    },
+    {
+      "path": "task1/evidence/goal2/presentation_checks/candidate_preview_02/after/synthetic_metric_counterexamples.png",
+      "sha256": "048388c4fe88c104ca9a8830fc3e3cad923bb7c97121303a1a849f9abf6e29cc"
+    },
+    {
+      "path": "task1/evidence/goal2/presentation_checks/candidate_preview_02/after/goal2_actual_architecture.png",
+      "sha256": "06e5deea0f1022fec93f969fca7aee6819b0b2ea1909aafa4332742cd70ff3c9"
+    }
+  ],
+  "observations": "C directly viewed all three native PNGs after separately viewing and independently rerendering three PDFs: labels, equal-scale axes, external legend, near-boundary annotation and actual governance/runtime graph agree and remain legible, with no cropping/overlap defect identified.",
+  "parent_receipt": {
+    "path": "task1/evidence/goal2/c_contract/candidate_figure_closure_receipt_v2.json",
+    "sha256": "fe35786d1d21ef148e9f806cbee937fc70959fb7b2e85354db31e8b29dce080a"
+  },
+  "unchecked_components": [
+    "final11figureSet",
+    "diagram_GUI_roundtrip"
+  ]
+}

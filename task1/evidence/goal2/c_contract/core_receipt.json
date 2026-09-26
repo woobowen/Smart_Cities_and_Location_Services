@@ -1,0 +1,105 @@
+{
+  "status": "VERIFIED",
+  "task": "core",
+  "role_context": "/root/c_contract",
+  "reviewed_at": "2026-09-26T19:20:44.893175+00:00",
+  "targets": [
+    {
+      "path": "task1/workflow/g2_pipeline.py",
+      "sha256": "edb8f4c8dcaf65cda44b33533eb55e9d67ef946597895f0682860ba65499c441"
+    },
+    {
+      "path": "task1/workflow/g2_metrics.py",
+      "sha256": "8d80c8ff8e124b9d3d73f5d514a0c09af32f234034914379ea901e5e59cc3ebb"
+    },
+    {
+      "path": "task1/evidence/goal2/c_contract/core_numeric_current.json",
+      "sha256": "d27a24903efe31791a7281115e38c1e82e37de30addb9d8f1ace6086b16511dc"
+    },
+    {
+      "path": "task1/evidence/goal2/c_contract/core_boundary_tests.xml",
+      "sha256": "4a915fd67c7a94b24d86cdbfd8f017f3ba612bbe275bd7a9d1bbcb58ad900cf1"
+    },
+    {
+      "path": "task1/evidence/goal2/c_contract/mode_memory_round4.xml",
+      "sha256": "17d44f32e89448e481704f66776479a573d1e0caebdbee3e9b66066718048c01"
+    },
+    {
+      "path": "task1/evidence/goal2/c_contract/source_scope_round2.xml",
+      "sha256": "ad98d8f048eb028d764a1a60bde5ee1d9b8e60c72d49001a10becf77039c9d75"
+    }
+  ],
+  "source_hashes": {
+    "task1/scripts/goal2.py": "f62fe1e30bd3cccb461bd34794d2c0d204af39fdac3631b26af042dcb7a563f5",
+    "task1/workflow/coordinates.py": "d99b270a65c88f8530669d5e7d0887d7563b3e54e19770ab7a9eb695117e075d",
+    "task1/workflow/evaluation.py": "7cf224fbc290d3e83acd5d83a3fe335e6dc437c762f7053d8132817aa91025b2",
+    "task1/workflow/g2_data.py": "985453f073ec98ca7b17a827de1d316e8322dc89e452e6f8b45afa20b2a8a9f2",
+    "task1/workflow/g2_experiments.py": "713538f17d767e98c8ed802252ce33133c6f26dc4c6f7aeae208f6e0d64d2311",
+    "task1/workflow/g2_journal.py": "33b776f5c20f35844cc4c76ee28e38ee0b2e487ee3b13d4eff0c3d3a40d22c2a",
+    "task1/workflow/g2_memory.py": "e0784e6178cf4da3277c7fc8c1e16efce73b56b91b02b41acd3e8870d43a8c56",
+    "task1/workflow/g2_metrics.py": "8d80c8ff8e124b9d3d73f5d514a0c09af32f234034914379ea901e5e59cc3ebb",
+    "task1/workflow/g2_modes.py": "c8aa5902ffab4a1d4438efcccbe9cb655969d610030c74c4a8b5641c75b91dbd",
+    "task1/workflow/g2_pipeline.py": "edb8f4c8dcaf65cda44b33533eb55e9d67ef946597895f0682860ba65499c441",
+    "task1/workflow/g2_provider.py": "636a6edaf95ef31e1982d27e1361697d145156fccb99760028ba5e0d77949bb1",
+    "task1/workflow/g2_selection.py": "590a7e9c427801fd65a6ec563fdbbff0d35b0e7bae6a155f28e43ab64bb8f3af",
+    "task1/workflow/geometry.py": "2ad3ca3b49e98e997684e3f5af948771be80dfb03b31b2ae4cc4483856e93d74",
+    "task1/workflow/io.py": "0d3d72dd0beb4718f4020a07a5f1c0ca89193943049a479816b5c496806321b2"
+  },
+  "checked_components": [
+    "six_orders",
+    "independent_metrics",
+    "point_accounting",
+    "numeric_boundaries",
+    "fault_injections",
+    "controller_closure",
+    "conditional_source_UNVERIFIED",
+    "current_common_reference_metrics",
+    "frozen_parameter_legality",
+    "frozen_memory_runtime_immutability",
+    "true_zero_model_search_structure"
+  ],
+  "unchecked_components": [
+    "formal parameter grids on DEVELOPMENT120",
+    "formal six-order development scope and later safe-order selection",
+    "DEMO_MEMORY60 actual admission and applicability",
+    "formal real four-mode episodes and their consumption",
+    "G2_EVAL120 and 24x3 model episodes",
+    "all selected-point coordinate-scale sensitivity",
+    "stage figures/notebooks/analysis",
+    "A01-A17 final independent acceptance",
+    "GitHub publication"
+  ],
+  "numeric_evidence": {
+    "records": 7,
+    "orders": 6,
+    "runs": 42,
+    "independent_checks": 33440,
+    "status": "VERIFIED",
+    "oracle": "independent PROJ coordinate check, Decimal finite-segment DP, independently reconstructed S/D and common reference"
+  },
+  "tests": [
+    {
+      "suite": "pipeline, geometry, evaluation, counterexamples",
+      "passed": 89,
+      "path": "task1/evidence/goal2/c_contract/core_boundary_tests.xml"
+    },
+    {
+      "suite": "independent modes/memory/selection boundaries",
+      "passed": 39,
+      "path": "task1/evidence/goal2/c_contract/mode_memory_round4.xml"
+    },
+    {
+      "suite": "independent controller/provenance/freeze faults and positive controls",
+      "passed": 47,
+      "path": "task1/evidence/goal2/c_contract/source_scope_round2.xml"
+    }
+  ],
+  "issue_closure_receipts": [
+    "control_closure_receipt.json",
+    "mode_memory_closure_current.json",
+    "source_scope_closure_receipt.json"
+  ],
+  "closure_condition": "Root must consume the two current issue-closure receipts with matching repair target/source hashes before accepting core; this core receipt does not verify any future experiment.",
+  "independence": "C wrote only C-owned review programs/tests/receipts; root and B repaired production. Scripted provider fixtures are non-live ENGINEERING_TEST, disposable, and excluded from all experiment counts.",
+  "real_model_calls_during_this_review": 0
+}

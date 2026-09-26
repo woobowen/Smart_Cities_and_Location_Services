@@ -1,0 +1,109 @@
+{
+  "records": [
+    {
+      "record_id": "1880",
+      "proposals": [
+        {
+          "candidate_id": "1880-r3-a",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 2,
+            "min_length": 0,
+            "direction": 60,
+            "dp": 2
+          },
+          "metric_id": "common_covered_points",
+          "predicted_sign": "increase",
+          "reason": "The same S/D with dp=5 covered 111 versus 108 reference points and passed protections. Test tighter DP while preserving that coverage; compression will decrease relative to that candidate."
+        },
+        {
+          "candidate_id": "1880-r3-b",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 2,
+            "min_length": 0,
+            "direction": 60,
+            "dp": 0
+          },
+          "metric_id": "common_covered_points",
+          "predicted_sign": "increase",
+          "reason": "Preserve the verified coverage gain and retain every D output to measure residual direction-stage geometric error without DP deletion."
+        }
+      ],
+      "stop": false,
+      "memory_ids_used": []
+    },
+    {
+      "record_id": "9673",
+      "proposals": [
+        {
+          "candidate_id": "9673-r3-a",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 45,
+            "dp": 2
+          },
+          "metric_id": "common_max_error",
+          "predicted_sign": "decrease",
+          "reason": "Direction=45 removed zero points and preserved all 82 covered identities. With no D deletion, dp=2 bounds common error below the reference maximum 16.9818, at reduced compression."
+        },
+        {
+          "candidate_id": "9673-r3-b",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 45,
+            "dp": 0
+          },
+          "metric_id": "common_max_error",
+          "predicted_sign": "decrease",
+          "reason": "Verified S/D retains all input points. Zero DP tolerance retains them all, testing zero geometric error against the reference maximum 16.9818 at the cost of compression."
+        }
+      ],
+      "stop": false,
+      "memory_ids_used": []
+    },
+    {
+      "record_id": "10927",
+      "proposals": [
+        {
+          "candidate_id": "10927-r3-a",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 45,
+            "dp": 2
+          },
+          "metric_id": "n_direction_removed",
+          "predicted_sign": "decrease",
+          "reason": "Direction=45 reduced removals from two to one and passed protections at dp=5. Test tighter DP for further geometric gains; the same S/D preserves one removal."
+        },
+        {
+          "candidate_id": "10927-r3-b",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 45,
+            "dp": 0
+          },
+          "metric_id": "n_direction_removed",
+          "predicted_sign": "decrease",
+          "reason": "Retain every output of the verified direction=45 stage to isolate its remaining geometric error. Direction removals remain one versus two in the reference; DP compression is forfeited."
+        }
+      ],
+      "stop": false,
+      "memory_ids_used": []
+    }
+  ]
+}

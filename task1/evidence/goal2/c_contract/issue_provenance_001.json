@@ -1,0 +1,41 @@
+{
+  "status": "ISSUE_OPEN",
+  "issue_id": "G2-C-SOURCE-SCOPE-001",
+  "parent_task": "core",
+  "classification": "STATIC_CODE_REVIEW_THEN_POST_REPAIR_ENGINEERING_TEST",
+  "fact": "Pre-repair ExperimentRun resume did not bind requested partition/input IDs, assert_epoch omitted newly added sources, candidate selection trusted stale/mutated run artifacts and manifest summaries, and cache reuse did not bind review status/target/hash.",
+  "violated_clause": "User Prompt sections 6,8,15,17 A03/A10/A12/A14; raw-scope, code-epoch and independent-target review binding",
+  "repairer": "B-Repair:/root",
+  "verifier": "C:/root/c_contract",
+  "affected_artifacts": [
+    "future deterministic run resume/cache",
+    "future candidate_lock and heldout evaluation freeze"
+  ],
+  "discovery_note": "Root repaired after static C messages and before the first dynamic run of these fault tests. No pre-repair dynamic failure is claimed.",
+  "closure_standard": [
+    "legitimate complete 59-config + six-order synthetic engineering study locks successfully",
+    "single wrong partition/scope/raw/source-tree/new-source/target/review/summary/status/grid/table mutations rejected",
+    "cache cannot return a result with stale or incorrect independent review"
+  ],
+  "test_command": ".venv/bin/python -m pytest -q task1/evidence/goal2/c_contract/test_g2_provenance_independent.py --junitxml=task1/evidence/goal2/c_contract/provenance_round1.xml",
+  "post_repair_result": {
+    "passed": 18,
+    "failed": 0,
+    "real_model_calls": 0,
+    "elapsed_seconds": 5.13
+  },
+  "repair_target": {
+    "path": "task1/workflow/g2_experiments.py",
+    "sha256": "98ea2490e67206b1d4e4189878dc511fc4478a1ac38b335f395ea48cf1d25c4d"
+  },
+  "checked_components": [
+    "isolated real controller/selection/cache execution",
+    "complete positive control",
+    "single-defect fault rejection"
+  ],
+  "unchecked_components": [
+    "formal real-data candidate selection",
+    "complete later evaluation-freeze and publication chain"
+  ],
+  "registry_note": "Canonical issue ID registered by root; initial C draft filename retained. No separate G2-C-PROVENANCE-001 issue is required."
+}

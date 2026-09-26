@@ -1,0 +1,483 @@
+{
+  "status": "VERIFIED",
+  "role_context": "/root/c_contract",
+  "task": "evaluation_orders",
+  "run_id": "g2-evaluation-orders-01",
+  "at": "2026-09-26T20:34:09.027295+00:00",
+  "targets": [
+    {
+      "path": "task1/evidence/goal2/runs/g2-evaluation-orders-01/manifest.json",
+      "sha256": "5da2a9ff4d53941d2d91e9ecfedd508e1b247a0c44738042e9c3666a3aa9b047"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-evaluation-orders-01/order_table.json",
+      "sha256": "eaea1e4e77f5cd14f0095397b1f9a5d25f27ecc4196a9c16467933940a750690"
+    },
+    {
+      "path": "task1/evidence/goal2/evaluation_freeze.json",
+      "sha256": "eb61eea6948d8a1177bef512bfc03b9103ef8ecf2ee68e3d7a2407753ca8a40d"
+    }
+  ],
+  "source_hashes": {
+    "task1/scripts/goal2.py": "f62fe1e30bd3cccb461bd34794d2c0d204af39fdac3631b26af042dcb7a563f5",
+    "task1/workflow/coordinates.py": "d99b270a65c88f8530669d5e7d0887d7563b3e54e19770ab7a9eb695117e075d",
+    "task1/workflow/evaluation.py": "7cf224fbc290d3e83acd5d83a3fe335e6dc437c762f7053d8132817aa91025b2",
+    "task1/workflow/g2_data.py": "985453f073ec98ca7b17a827de1d316e8322dc89e452e6f8b45afa20b2a8a9f2",
+    "task1/workflow/g2_experiments.py": "713538f17d767e98c8ed802252ce33133c6f26dc4c6f7aeae208f6e0d64d2311",
+    "task1/workflow/g2_journal.py": "33b776f5c20f35844cc4c76ee28e38ee0b2e487ee3b13d4eff0c3d3a40d22c2a",
+    "task1/workflow/g2_memory.py": "e0784e6178cf4da3277c7fc8c1e16efce73b56b91b02b41acd3e8870d43a8c56",
+    "task1/workflow/g2_metrics.py": "8d80c8ff8e124b9d3d73f5d514a0c09af32f234034914379ea901e5e59cc3ebb",
+    "task1/workflow/g2_modes.py": "31e936448918b943dca3cfdc8e4590eb64da2c48b262899040862d7b1533704e",
+    "task1/workflow/g2_pipeline.py": "edb8f4c8dcaf65cda44b33533eb55e9d67ef946597895f0682860ba65499c441",
+    "task1/workflow/g2_provider.py": "636a6edaf95ef31e1982d27e1361697d145156fccb99760028ba5e0d77949bb1",
+    "task1/workflow/g2_selection.py": "590a7e9c427801fd65a6ec563fdbbff0d35b0e7bae6a155f28e43ab64bb8f3af",
+    "task1/workflow/geometry.py": "2ad3ca3b49e98e997684e3f5af948771be80dfb03b31b2ae4cc4483856e93d74",
+    "task1/workflow/io.py": "0d3d72dd0beb4718f4020a07a5f1c0ca89193943049a479816b5c496806321b2"
+  },
+  "checked_components": [
+    "frozen_feasible_orders",
+    "complete_record_scope",
+    "raw_breakpoint_protection",
+    "current_versions",
+    "full_hash_scope_ledger",
+    "independent_common_reference_denominators",
+    "all_P_certificates",
+    "sampled_full_Decimal_reconstruction"
+  ],
+  "unchecked_components": [
+    "ground_truth_quality",
+    "full_recursive_DP_reconstruction_for_every_record_configuration",
+    "full_Goal2_acceptance"
+  ],
+  "check_count": 891992,
+  "errors": [],
+  "record_configurations": 240,
+  "artifact_reviews": [
+    {
+      "config_id": "cfg-b15b8281b73592fb",
+      "order": "S-D-P",
+      "records_checked": 120,
+      "sampled_DP_reconstructions": [
+        {
+          "record_id": "3641",
+          "selection_reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "checks": 1001,
+          "status": "VERIFIED"
+        },
+        {
+          "record_id": "7095",
+          "selection_reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "checks": 844,
+          "status": "VERIFIED"
+        },
+        {
+          "record_id": "3265",
+          "selection_reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "checks": 1066,
+          "status": "VERIFIED"
+        },
+        {
+          "record_id": "3479",
+          "selection_reasons": [
+            "worst_common_error"
+          ],
+          "checks": 1111,
+          "status": "VERIFIED"
+        },
+        {
+          "record_id": "11207",
+          "selection_reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "checks": 1071,
+          "status": "VERIFIED"
+        },
+        {
+          "record_id": "3028",
+          "selection_reasons": [
+            "largest_record"
+          ],
+          "checks": 1321,
+          "status": "VERIFIED"
+        },
+        {
+          "record_id": "9787",
+          "selection_reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "checks": 444,
+          "status": "VERIFIED"
+        },
+        {
+          "record_id": "6008",
+          "selection_reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "checks": 441,
+          "status": "VERIFIED"
+        },
+        {
+          "record_id": "10887",
+          "selection_reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "checks": 849,
+          "status": "VERIFIED"
+        },
+        {
+          "record_id": "1070",
+          "selection_reasons": [
+            "all_filtered"
+          ],
+          "checks": 444,
+          "status": "VERIFIED"
+        },
+        {
+          "record_id": "2050",
+          "selection_reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "checks": 448,
+          "status": "VERIFIED"
+        },
+        {
+          "record_id": "3531",
+          "selection_reasons": [
+            "near_DP_threshold"
+          ],
+          "checks": 991,
+          "status": "VERIFIED"
+        },
+        {
+          "record_id": "911",
+          "selection_reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "checks": 631,
+          "status": "VERIFIED"
+        },
+        {
+          "record_id": "9097",
+          "selection_reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "checks": 1061,
+          "status": "VERIFIED"
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-b15b8281b73592fb",
+      "order": "S-P-D",
+      "records_checked": 120,
+      "sampled_DP_reconstructions": [
+        {
+          "record_id": "3641",
+          "selection_reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "checks": 875,
+          "status": "VERIFIED"
+        },
+        {
+          "record_id": "7095",
+          "selection_reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "checks": 742,
+          "status": "VERIFIED"
+        },
+        {
+          "record_id": "3265",
+          "selection_reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "checks": 958,
+          "status": "VERIFIED"
+        },
+        {
+          "record_id": "11207",
+          "selection_reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "checks": 929,
+          "status": "VERIFIED"
+        },
+        {
+          "record_id": "9673",
+          "selection_reasons": [
+            "worst_common_error"
+          ],
+          "checks": 691,
+          "status": "VERIFIED"
+        },
+        {
+          "record_id": "3028",
+          "selection_reasons": [
+            "largest_record"
+          ],
+          "checks": 1143,
+          "status": "VERIFIED"
+        },
+        {
+          "record_id": "9787",
+          "selection_reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "checks": 444,
+          "status": "VERIFIED"
+        },
+        {
+          "record_id": "6008",
+          "selection_reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "checks": 441,
+          "status": "VERIFIED"
+        },
+        {
+          "record_id": "10887",
+          "selection_reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "checks": 689,
+          "status": "VERIFIED"
+        },
+        {
+          "record_id": "1070",
+          "selection_reasons": [
+            "all_filtered"
+          ],
+          "checks": 444,
+          "status": "VERIFIED"
+        },
+        {
+          "record_id": "2050",
+          "selection_reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "checks": 448,
+          "status": "VERIFIED"
+        },
+        {
+          "record_id": "3531",
+          "selection_reasons": [
+            "near_DP_threshold"
+          ],
+          "checks": 861,
+          "status": "VERIFIED"
+        },
+        {
+          "record_id": "911",
+          "selection_reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "checks": 569,
+          "status": "VERIFIED"
+        },
+        {
+          "record_id": "9097",
+          "selection_reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "checks": 927,
+          "status": "VERIFIED"
+        }
+      ]
+    }
+  ],
+  "independent_summaries": [
+    {
+      "config_id": "cfg-b15b8281b73592fb",
+      "order": "S-D-P",
+      "independent_summary": {
+        "n_input": 12173,
+        "n_final": 2748,
+        "n_filtered": 3368,
+        "n_direction_removed": 758,
+        "n_dp_removed": 5299,
+        "n_dp_input": 8047,
+        "n_dp_output": 2748,
+        "n_dp_exceedances": 0,
+        "n_s_segments": 301,
+        "n_filtered_segments": 96,
+        "common_raw_points": 12173,
+        "common_covered_points": 8805,
+        "common_uncovered_points": 3368,
+        "common_over_5_points": 249,
+        "raw_break_count": 181,
+        "raw_break_crossings": 0,
+        "raw_breaks_crossed": 0,
+        "raw_break_trigger_points_removed": 100,
+        "raw_windows": 301,
+        "raw_windows_covered": 205,
+        "direction_candidate_points": 758,
+        "direction_undefined_points": 1930,
+        "direction_windows_across_raw_breaks": 0,
+        "p_removed_raw_break_trigger_points": 0,
+        "n_records": 120,
+        "n_records_covered": 88,
+        "n_all_filtered_records": 32,
+        "n_no_output_records": 32,
+        "point_retention": 0.22574550234124702,
+        "point_retention_reason": null,
+        "record_coverage": 0.7333333333333333,
+        "record_coverage_reason": null,
+        "all_filtered_record_fraction": 0.26666666666666666,
+        "all_filtered_record_fraction_reason": null,
+        "no_output_record_fraction": 0.26666666666666666,
+        "no_output_record_fraction_reason": null,
+        "common_coverage": 0.7233221063008297,
+        "common_coverage_reason": null,
+        "dp_saving": 0.6585062756306699,
+        "dp_saving_reason": null,
+        "dp_max_error": 4.992555071639092,
+        "dp_max_error_reason": null,
+        "common_max_error": 136.11825855330264,
+        "common_max_error_reason": null,
+        "record_mean_point_retention": 0.2201584506016546,
+        "record_mean_point_retention_denominator": 120,
+        "record_mean_point_retention_unavailable_records": 0,
+        "record_mean_dp_saving": 0.6619485384794497,
+        "record_mean_dp_saving_denominator": 88,
+        "record_mean_dp_saving_unavailable_records": 32,
+        "record_mean_common_coverage": 0.7080427894532787,
+        "record_mean_common_coverage_denominator": 120,
+        "record_mean_common_coverage_unavailable_records": 0,
+        "record_mean_common_max_error": 20.91508361184359,
+        "record_mean_common_max_error_denominator": 88,
+        "record_mean_common_max_error_unavailable_records": 32,
+        "record_mean_common_mean_error": 1.4954907113609914,
+        "record_mean_common_mean_error_denominator": 88,
+        "record_mean_common_mean_error_unavailable_records": 32,
+        "filter_reason_segments": {
+          "TOO_FEW_POINTS": 39,
+          "TOO_SHORT_LENGTH": 75
+        },
+        "filter_reason_points": {
+          "TOO_FEW_POINTS": 101,
+          "TOO_SHORT_LENGTH": 3302
+        },
+        "direction_undefined_reasons": {
+          "ENDPOINT": 410,
+          "MISSING_FOLLOWING_OUTGOING_EDGE": 205,
+          "UNCOMPUTABLE_DIRECTION_IN_WINDOW": 1315
+        },
+        "dp_checks_passed": true,
+        "aggregation_unit": "original_record; pooled counts explicitly identified"
+      }
+    },
+    {
+      "config_id": "cfg-b15b8281b73592fb",
+      "order": "S-P-D",
+      "independent_summary": {
+        "n_input": 12173,
+        "n_final": 2434,
+        "n_filtered": 3368,
+        "n_direction_removed": 511,
+        "n_dp_removed": 5860,
+        "n_dp_input": 8805,
+        "n_dp_output": 2945,
+        "n_dp_exceedances": 0,
+        "n_s_segments": 301,
+        "n_filtered_segments": 96,
+        "common_raw_points": 12173,
+        "common_covered_points": 8805,
+        "common_uncovered_points": 3368,
+        "common_over_5_points": 1593,
+        "raw_break_count": 181,
+        "raw_break_crossings": 0,
+        "raw_breaks_crossed": 0,
+        "raw_break_trigger_points_removed": 100,
+        "raw_windows": 301,
+        "raw_windows_covered": 205,
+        "direction_candidate_points": 511,
+        "direction_undefined_points": 587,
+        "direction_windows_across_raw_breaks": 0,
+        "p_removed_raw_break_trigger_points": 0,
+        "n_records": 120,
+        "n_records_covered": 88,
+        "n_all_filtered_records": 32,
+        "n_no_output_records": 32,
+        "point_retention": 0.19995071058900846,
+        "point_retention_reason": null,
+        "record_coverage": 0.7333333333333333,
+        "record_coverage_reason": null,
+        "all_filtered_record_fraction": 0.26666666666666666,
+        "all_filtered_record_fraction_reason": null,
+        "no_output_record_fraction": 0.26666666666666666,
+        "no_output_record_fraction_reason": null,
+        "common_coverage": 0.7233221063008297,
+        "common_coverage_reason": null,
+        "dp_saving": 0.6655309483248155,
+        "dp_saving_reason": null,
+        "dp_max_error": 4.992555071639092,
+        "dp_max_error_reason": null,
+        "common_max_error": 377.72700546021355,
+        "common_max_error_reason": null,
+        "record_mean_point_retention": 0.19404717668039823,
+        "record_mean_point_retention_denominator": 120,
+        "record_mean_point_retention_unavailable_records": 0,
+        "record_mean_dp_saving": 0.6676388271775857,
+        "record_mean_dp_saving_denominator": 88,
+        "record_mean_dp_saving_unavailable_records": 32,
+        "record_mean_common_coverage": 0.7080427894532787,
+        "record_mean_common_coverage_denominator": 120,
+        "record_mean_common_coverage_unavailable_records": 0,
+        "record_mean_common_max_error": 48.98422880775658,
+        "record_mean_common_max_error_denominator": 88,
+        "record_mean_common_max_error_unavailable_records": 32,
+        "record_mean_common_mean_error": 5.383289426812935,
+        "record_mean_common_mean_error_denominator": 88,
+        "record_mean_common_mean_error_unavailable_records": 32,
+        "filter_reason_segments": {
+          "TOO_FEW_POINTS": 39,
+          "TOO_SHORT_LENGTH": 75
+        },
+        "filter_reason_points": {
+          "TOO_FEW_POINTS": 101,
+          "TOO_SHORT_LENGTH": 3302
+        },
+        "direction_undefined_reasons": {
+          "ENDPOINT": 410,
+          "MISSING_FOLLOWING_OUTGOING_EDGE": 177
+        },
+        "dp_checks_passed": true,
+        "aggregation_unit": "original_record; pooled counts explicitly identified"
+      }
+    }
+  ],
+  "order_safety": {
+    "S-D-P": {
+      "failing_records": [],
+      "engineering_correctness_distinct_from_outcome": true
+    },
+    "S-P-D": {
+      "failing_records": [],
+      "engineering_correctness_distinct_from_outcome": true
+    }
+  },
+  "sampling_rule": {
+    "every_artifact": [
+      "first all-filtered record by stable ID",
+      "maximum common error; stable ID tie",
+      "closest actual DP error to positive tolerance; stable ID tie",
+      "largest raw point count; stable ID tie"
+    ],
+    "reference_config_and_every_order": "one minimum SHA256(42|C-review|record_id) record per frozen descriptive stratum",
+    "purpose": "independent audit sampling only; never candidate selection or representative population estimation"
+  },
+  "new_model_calls": 0,
+  "no_evaluation_reselection": true,
+  "audit_program": {
+    "path": "task1/evidence/goal2/c_contract/review_evaluation_runs.py",
+    "sha256": "21301c767229676eb638eb5bed4a7e7d7d027ff18b54f1f0549995537d514289"
+  },
+  "elapsed_seconds": 2.7100534250021155
+}

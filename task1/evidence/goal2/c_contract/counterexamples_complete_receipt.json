@@ -1,0 +1,84 @@
+{
+  "status": "VERIFIED",
+  "role_context": "/root/c_contract",
+  "task": "counterexamples",
+  "at": "2026-09-26T21:18:35.715476+00:00",
+  "targets": [
+    {
+      "path": "task1/evidence/goal2/counterexamples/formal-02/manifest.json",
+      "sha256": "735189dd6d157e60411a677363bb5d4f896634c3233c50a0c0335e2c8a01714c"
+    },
+    {
+      "path": "task1/scripts/build_goal2_analysis.py",
+      "sha256": "2ccf9fb06b8e7633fc118b0798fce348661c07eed8a3cfa4d08a9e08559c2e38"
+    },
+    {
+      "path": "task1/evidence/goal2/a_epoch02/actual_ai_critique/actual_ai_critique.json",
+      "sha256": "6e224d48ab052faae8a54af47d763277181e02f547838129f20f90aff8b5db1b"
+    },
+    {
+      "path": "task1/evidence/goal2/a_epoch02/actual_ai_critique/ACTUAL_AI_CRITIQUE.md",
+      "sha256": "6125243eaa9c3f0f201349a114f99c3751e389f8b1a767ef6ffaabc933386fae"
+    },
+    {
+      "path": "task1/evidence/goal2/a_epoch02/actual_ai_critique/build_actual_ai_critique.py",
+      "sha256": "917b4ef6600a42e59c945f61c21e1b90a1bc471870def92fdac43d1fac03b106"
+    }
+  ],
+  "source_hashes": {
+    "task1/scripts/goal2.py": "f62fe1e30bd3cccb461bd34794d2c0d204af39fdac3631b26af042dcb7a563f5",
+    "task1/scripts/goal2_counterexamples.py": "dc32e77163a62d3f6543370c0d516f4be3094f3ea07a01751ff883c7aac622de",
+    "task1/workflow/coordinates.py": "d99b270a65c88f8530669d5e7d0887d7563b3e54e19770ab7a9eb695117e075d",
+    "task1/workflow/evaluation.py": "7cf224fbc290d3e83acd5d83a3fe335e6dc437c762f7053d8132817aa91025b2",
+    "task1/workflow/g2_data.py": "985453f073ec98ca7b17a827de1d316e8322dc89e452e6f8b45afa20b2a8a9f2",
+    "task1/workflow/g2_experiments.py": "713538f17d767e98c8ed802252ce33133c6f26dc4c6f7aeae208f6e0d64d2311",
+    "task1/workflow/g2_journal.py": "33b776f5c20f35844cc4c76ee28e38ee0b2e487ee3b13d4eff0c3d3a40d22c2a",
+    "task1/workflow/g2_memory.py": "e0784e6178cf4da3277c7fc8c1e16efce73b56b91b02b41acd3e8870d43a8c56",
+    "task1/workflow/g2_metrics.py": "8d80c8ff8e124b9d3d73f5d514a0c09af32f234034914379ea901e5e59cc3ebb",
+    "task1/workflow/g2_modes.py": "31e936448918b943dca3cfdc8e4590eb64da2c48b262899040862d7b1533704e",
+    "task1/workflow/g2_pipeline.py": "edb8f4c8dcaf65cda44b33533eb55e9d67ef946597895f0682860ba65499c441",
+    "task1/workflow/g2_provider.py": "636a6edaf95ef31e1982d27e1361697d145156fccb99760028ba5e0d77949bb1",
+    "task1/workflow/g2_selection.py": "590a7e9c427801fd65a6ec563fdbbff0d35b0e7bae6a155f28e43ab64bb8f3af",
+    "task1/workflow/geometry.py": "2ad3ca3b49e98e997684e3f5af948771be80dfb03b31b2ae4cc4483856e93d74",
+    "task1/workflow/io.py": "0d3d72dd0beb4718f4020a07a5f1c0ca89193943049a479816b5c496806321b2"
+  },
+  "checked_components": [
+    "actual_ai_citations",
+    "known_answers",
+    "pilot_explanations",
+    "real_execution",
+    "synthetic_labels"
+  ],
+  "unchecked_components": [
+    "ground_truth_real_noise",
+    "full_goal_acceptance"
+  ],
+  "errors": [],
+  "known_answers": 25,
+  "synthetic_executions": 19,
+  "exposed_pilot_executions": 10,
+  "actual_ai_citations": 6,
+  "complete_actual_legal_tradeoffs": 4,
+  "partial_numeric_review_reused": {
+    "path": "task1/evidence/goal2/c_contract/counterexamples_epoch02_receipt.json",
+    "sha256": "1b327952d22c837827b5e17cd4b94c5e12ee1a73d6dacca1caa3d46f92f86c8a"
+  },
+  "partial_numeric_checked_components": [
+    "known_answers",
+    "real_execution",
+    "synthetic_labels",
+    "pilot_explanations"
+  ],
+  "AI_null_issue_closure": {
+    "path": "task1/evidence/goal2/c_contract/ai_null_closure_receipt.json",
+    "sha256": "629c6b6ab32bccdcb5f310baccab389dc3709864a8036c394c01858f4c28045e"
+  },
+  "new_model_calls": 0,
+  "new_candidate_experiments": 0,
+  "check_count": 8050,
+  "audit_program": {
+    "path": "task1/evidence/goal2/c_contract/review_actual_ai_critique.py",
+    "sha256": "f1216e24e6e4a293a1d11091daed14ab494ccb754c9e14b9f875c889f1b90a6e"
+  },
+  "elapsed_seconds": 3.000233589002164
+}

@@ -1,0 +1,255 @@
+{
+  "records": [
+    {
+      "record_id": "7270",
+      "proposals": [
+        {
+          "candidate_id": "7270-r2-a",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 45,
+            "dp": 5
+          },
+          "metric_id": "common_covered_points",
+          "predicted_sign": "unchanged",
+          "reason": "Lower direction thresholds degraded common geometry; test a higher threshold while preserving segmentation and endpoints."
+        },
+        {
+          "candidate_id": "7270-r2-b",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 60,
+            "dp": 5
+          },
+          "metric_id": "common_covered_points",
+          "predicted_sign": "unchanged",
+          "reason": "DP reductions left the reference maximum error unchanged; test whether fewer direction deletions reduce that error."
+        }
+      ],
+      "stop": false,
+      "memory_ids_used": []
+    },
+    {
+      "record_id": "955",
+      "proposals": [
+        {
+          "candidate_id": "955-r2-a",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 45,
+            "dp": 5
+          },
+          "metric_id": "common_covered_points",
+          "predicted_sign": "unchanged",
+          "reason": "Direction15 and25 worsened common maximum error; explore a higher threshold with the same retained segment."
+        },
+        {
+          "candidate_id": "955-r2-b",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 60,
+            "dp": 5
+          },
+          "metric_id": "common_covered_points",
+          "predicted_sign": "unchanged",
+          "reason": "DP0 retained the same common maximum error as reference; test the direction stage while retaining DP5."
+        }
+      ],
+      "stop": false,
+      "memory_ids_used": []
+    },
+    {
+      "record_id": "33",
+      "proposals": [
+        {
+          "candidate_id": "33-r2-a",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 60,
+            "dp": 5
+          },
+          "metric_id": "common_covered_points",
+          "predicted_sign": "unchanged",
+          "reason": "Direction15 reproduced the reference geometry and DP10 gave no compression gain; test the opposite direction threshold."
+        },
+        {
+          "candidate_id": "33-r2-b",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 60,
+            "dp": 2
+          },
+          "metric_id": "common_covered_points",
+          "predicted_sign": "unchanged",
+          "reason": "DP2 previously reduced common maximum error with more output points; evaluate that tradeoff with a higher direction threshold."
+        }
+      ],
+      "stop": false,
+      "memory_ids_used": []
+    },
+    {
+      "record_id": "43",
+      "proposals": [],
+      "stop": true,
+      "memory_ids_used": []
+    },
+    {
+      "record_id": "3420",
+      "proposals": [
+        {
+          "candidate_id": "3420-r2-a",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 45,
+            "dp": 5
+          },
+          "metric_id": "raw_break_crossings",
+          "predicted_sign": "unchanged",
+          "reason": "Relaxed filters recovered nothing and DP reductions left maximum error unchanged; test direction45 while preserving all raw breaks."
+        },
+        {
+          "candidate_id": "3420-r2-b",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 60,
+            "dp": 5
+          },
+          "metric_id": "raw_break_crossings",
+          "predicted_sign": "unchanged",
+          "reason": "Direction15 degraded geometric protection; test a higher threshold without merging any raw windows."
+        }
+      ],
+      "stop": false,
+      "memory_ids_used": []
+    },
+    {
+      "record_id": "911",
+      "proposals": [
+        {
+          "candidate_id": "911-r2-a",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 2,
+            "min_length": 0,
+            "direction": 45,
+            "dp": 5
+          },
+          "metric_id": "common_covered_points",
+          "predicted_sign": "increase",
+          "reason": "Relaxed filters demonstrably recovered nine covered identities; retain those filters and test a higher direction threshold for geometric protection."
+        },
+        {
+          "candidate_id": "911-r2-b",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 2,
+            "min_length": 0,
+            "direction": 60,
+            "dp": 5
+          },
+          "metric_id": "common_covered_points",
+          "predicted_sign": "increase",
+          "reason": "Keep the verified coverage recovery and raw breaks; explore direction60 because DP reductions alone did not reduce reference maximum error."
+        }
+      ],
+      "stop": false,
+      "memory_ids_used": []
+    },
+    {
+      "record_id": "3371",
+      "proposals": [
+        {
+          "candidate_id": "3371-r2-a",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 60,
+            "dp": 5
+          },
+          "metric_id": "common_covered_points",
+          "predicted_sign": "unchanged",
+          "reason": "Lower direction thresholds reproduced reference geometry, while DP10 exceeded budget; test the higher direction threshold."
+        },
+        {
+          "candidate_id": "3371-r2-b",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 60,
+            "dp": 2
+          },
+          "metric_id": "common_covered_points",
+          "predicted_sign": "unchanged",
+          "reason": "DP2 showed lower common maximum error with one additional output point; test its interaction with direction60 and expose the tradeoff."
+        }
+      ],
+      "stop": false,
+      "memory_ids_used": []
+    },
+    {
+      "record_id": "11148",
+      "proposals": [
+        {
+          "candidate_id": "11148-r2-a",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 45,
+            "dp": 5
+          },
+          "metric_id": "common_covered_points",
+          "predicted_sign": "unchanged",
+          "reason": "Direction15 and25 degraded common geometry; test direction45 with unchanged segmentation and DP tolerance."
+        },
+        {
+          "candidate_id": "11148-r2-b",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 60,
+            "dp": 5
+          },
+          "metric_id": "common_covered_points",
+          "predicted_sign": "unchanged",
+          "reason": "DP1 and2 left common maximum error unchanged; test whether a higher direction threshold changes the limiting geometry."
+        }
+      ],
+      "stop": false,
+      "memory_ids_used": []
+    }
+  ]
+}

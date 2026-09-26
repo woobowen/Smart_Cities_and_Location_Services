@@ -1,0 +1,190 @@
+{
+  "records": [
+    {
+      "record_id": "9779",
+      "proposals": [
+        {
+          "candidate_id": "9779-r1",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 60,
+            "dp": 5
+          },
+          "metric_id": "raw_break_crossings",
+          "predicted_sign": "unchanged",
+          "reason": "Test direction 60, motivated by DEMO-9600's verified selection. Unchanged splitting preserves raw break boundaries; geometric effects require evaluation."
+        }
+      ],
+      "stop": false,
+      "memory_ids_used": [
+        "DEMO-9600"
+      ]
+    },
+    {
+      "record_id": "3357",
+      "proposals": [
+        {
+          "candidate_id": "3357-r1",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 60,
+            "dp": 5
+          },
+          "metric_id": "raw_break_crossings",
+          "predicted_sign": "unchanged",
+          "reason": "DEMO-2065 motivates an isolated direction trial while preserving this record's five raw breaks. Its outcome does not establish a gain here."
+        }
+      ],
+      "stop": false,
+      "memory_ids_used": [
+        "DEMO-2065"
+      ]
+    },
+    {
+      "record_id": "11355",
+      "proposals": [
+        {
+          "candidate_id": "11355-r1",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 60,
+            "dp": 5
+          },
+          "metric_id": "common_max_error",
+          "predicted_sign": "not_predicted",
+          "reason": "Verified direction-60 selections motivate testing this setting. Their differing common errors do not justify a fidelity prediction for this record."
+        }
+      ],
+      "stop": false,
+      "memory_ids_used": [
+        "DEMO-2065",
+        "DEMO-11076",
+        "DEMO-9600"
+      ]
+    },
+    {
+      "record_id": "5049",
+      "proposals": [
+        {
+          "candidate_id": "5049-r1",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 60,
+            "dp": 5
+          },
+          "metric_id": "raw_break_crossings",
+          "predicted_sign": "unchanged",
+          "reason": "Test the direction setting selected in DEMO-2254 while keeping all three raw break boundaries. Undefined direction windows remain governed by the specified predicate."
+        }
+      ],
+      "stop": false,
+      "memory_ids_used": [
+        "DEMO-2254"
+      ]
+    },
+    {
+      "record_id": "7186",
+      "proposals": [
+        {
+          "candidate_id": "7186-r1",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 60,
+            "dp": 5
+          },
+          "metric_id": "common_max_error",
+          "predicted_sign": "not_predicted",
+          "reason": "Nearby demonstrations retained reference, so no gain is inferred. Evaluate one isolated direction change; 34 unavailable direction edges leave its effect uncertain."
+        }
+      ],
+      "stop": false,
+      "memory_ids_used": [
+        "DEMO-10417",
+        "DEMO-8718",
+        "DEMO-5605"
+      ]
+    },
+    {
+      "record_id": "11326",
+      "proposals": [
+        {
+          "candidate_id": "11326-r1",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 2,
+            "min_length": 65,
+            "direction": 35,
+            "dp": 5
+          },
+          "metric_id": "raw_break_crossings",
+          "predicted_sign": "unchanged",
+          "reason": "Five raw breaks motivate testing whether a lower point-count filter recovers short segments. Split boundaries remain unchanged; actual coverage gain requires evaluation."
+        }
+      ],
+      "stop": false,
+      "memory_ids_used": []
+    },
+    {
+      "record_id": "2069",
+      "proposals": [
+        {
+          "candidate_id": "2069-r1",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 60,
+            "dp": 5
+          },
+          "metric_id": "common_max_error",
+          "predicted_sign": "not_predicted",
+          "reason": "DEMO-3009 motivates an isolated direction-60 trial. The zero-time edge alone does not justify changing S, and common fidelity effects remain unknown."
+        }
+      ],
+      "stop": false,
+      "memory_ids_used": [
+        "DEMO-3009"
+      ]
+    },
+    {
+      "record_id": "9613",
+      "proposals": [
+        {
+          "candidate_id": "9613-r1",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 2,
+            "min_length": 65,
+            "direction": 35,
+            "dp": 5
+          },
+          "metric_id": "common_covered_points",
+          "predicted_sign": "increase",
+          "reason": "Fifteen raw breaks suggest short filtered segments; DEMO-8843 supports testing min_points 2. Predict recovered coverage, subject to segment lengths and verification."
+        }
+      ],
+      "stop": false,
+      "memory_ids_used": [
+        "DEMO-8843"
+      ]
+    }
+  ]
+}

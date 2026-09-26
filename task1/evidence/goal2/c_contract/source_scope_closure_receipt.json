@@ -1,0 +1,67 @@
+{
+  "status": "VERIFIED",
+  "role_context": "/root/c_contract",
+  "issue_id": "G2-C-SOURCE-SCOPE-001",
+  "parent_task": "core",
+  "reviewed_at": "2026-09-26T19:20:44.890655+00:00",
+  "targets": [
+    {
+      "path": "task1/workflow/g2_experiments.py",
+      "sha256": "713538f17d767e98c8ed802252ce33133c6f26dc4c6f7aeae208f6e0d64d2311"
+    },
+    {
+      "path": "task1/workflow/g2_journal.py",
+      "sha256": "33b776f5c20f35844cc4c76ee28e38ee0b2e487ee3b13d4eff0c3d3a40d22c2a"
+    },
+    {
+      "path": "task1/scripts/goal2.py",
+      "sha256": "f62fe1e30bd3cccb461bd34794d2c0d204af39fdac3631b26af042dcb7a563f5"
+    }
+  ],
+  "source_hashes": {
+    "task1/workflow/g2_experiments.py": "713538f17d767e98c8ed802252ce33133c6f26dc4c6f7aeae208f6e0d64d2311",
+    "task1/workflow/g2_journal.py": "33b776f5c20f35844cc4c76ee28e38ee0b2e487ee3b13d4eff0c3d3a40d22c2a",
+    "task1/scripts/goal2.py": "f62fe1e30bd3cccb461bd34794d2c0d204af39fdac3631b26af042dcb7a563f5"
+  },
+  "checked_components": [
+    "fault_rejected",
+    "valid_receipt_accepted",
+    "source_epoch",
+    "resume_partition_and_scope",
+    "exact_registered_dependency_set",
+    "candidate_trace_review_summary_bindings",
+    "cache_review_target_status_hash",
+    "order_safety_recomputed",
+    "evaluation_frozen_component_bindings"
+  ],
+  "unchecked_components": [
+    "formal real-data candidate selections",
+    "formal development model episodes",
+    "actual heldout admission after development",
+    "full Goal 2 completion"
+  ],
+  "tests": [
+    {
+      "path": "task1/evidence/goal2/c_contract/test_control_independent.py",
+      "sha256": "028258a6d2ed27c1cf4c4dbdccfcf8199a93478e74ab5e3c91b744090b70bcdf"
+    },
+    {
+      "path": "task1/evidence/goal2/c_contract/test_g2_provenance_independent.py",
+      "sha256": "12f5b646daf950d9381e1ddfd12eab6176c823ff3affb8ab82f094c6b12d5b57"
+    },
+    {
+      "path": "task1/evidence/goal2/c_contract/source_scope_round2.xml",
+      "sha256": "ad98d8f048eb028d764a1a60bde5ee1d9b8e60c72d49001a10becf77039c9d75"
+    }
+  ],
+  "result": {
+    "passed": 47,
+    "failed": 0,
+    "elapsed_seconds": 5.25,
+    "real_model_calls": 0
+  },
+  "test_command": ".venv/bin/python -m pytest -q task1/evidence/goal2/c_contract/test_control_independent.py task1/evidence/goal2/c_contract/test_g2_provenance_independent.py --junitxml=task1/evidence/goal2/c_contract/source_scope_round2.xml",
+  "source_scope_review": "Processing epoch includes workflow/*.py and scripts/goal2.py. Presentation, counterexample and coordinate-sensitivity scripts have task-specific source/manifest bindings and cannot change the processing epoch; substantive derived-statistic changes still require affected artifact review. This is dependency scoping, not a new computation or model-run claim.",
+  "static_check_goal2_entrypoint": "freeze_evaluation checks 12 development batches, exactly 24 IDs each mode, episode1, per-episode file hashes and expected LIVE/zero-model labels, then records candidate/memory/prompt/processing bindings. Actual model truth and complete formal content remain a later independent review responsibility.",
+  "discovery": "Static review preceded repair; first dynamic provenance probes were after root repaired. No fabricated pre-repair execution failure."
+}

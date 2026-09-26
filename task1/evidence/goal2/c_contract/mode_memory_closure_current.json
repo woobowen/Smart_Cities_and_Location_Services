@@ -1,0 +1,79 @@
+{
+  "status": "VERIFIED",
+  "role_context": "/root/c_contract",
+  "issue_id": "G2-C-MODE-MEMORY-001",
+  "parent_task": "core",
+  "reviewed_at": "2026-09-26T19:20:44.887645+00:00",
+  "targets": [
+    {
+      "path": "task1/workflow/g2_modes.py",
+      "sha256": "c8aa5902ffab4a1d4438efcccbe9cb655969d610030c74c4a8b5641c75b91dbd"
+    },
+    {
+      "path": "task1/workflow/g2_memory.py",
+      "sha256": "e0784e6178cf4da3277c7fc8c1e16efce73b56b91b02b41acd3e8870d43a8c56"
+    },
+    {
+      "path": "task1/workflow/g2_provider.py",
+      "sha256": "636a6edaf95ef31e1982d27e1361697d145156fccb99760028ba5e0d77949bb1"
+    },
+    {
+      "path": "task1/workflow/g2_selection.py",
+      "sha256": "590a7e9c427801fd65a6ec563fdbbff0d35b0e7bae6a155f28e43ab64bb8f3af"
+    }
+  ],
+  "source_hashes": {
+    "task1/workflow/g2_modes.py": "c8aa5902ffab4a1d4438efcccbe9cb655969d610030c74c4a8b5641c75b91dbd",
+    "task1/workflow/g2_memory.py": "e0784e6178cf4da3277c7fc8c1e16efce73b56b91b02b41acd3e8870d43a8c56",
+    "task1/workflow/g2_provider.py": "636a6edaf95ef31e1982d27e1361697d145156fccb99760028ba5e0d77949bb1",
+    "task1/workflow/g2_selection.py": "590a7e9c427801fd65a6ec563fdbbff0d35b0e7bae6a155f28e43ab64bb8f3af"
+  },
+  "checked_components": [
+    "fault_rejected",
+    "valid_receipt_accepted",
+    "source_epoch",
+    "zero_model_sentinel",
+    "model_retry_policy",
+    "single_unclamped_raw_proposal",
+    "sequential_8_14_20_candidate_budget",
+    "post_lock_feedback_absence",
+    "in_process_and_disk_memory_integrity",
+    "same_source_leakage_rejection",
+    "three_case_retrieval_cap",
+    "complete_feasible_frontier_retention",
+    "null_and_common_reference_guards",
+    "formal_run_rejects_scripted_provider",
+    "fixture_outputs_labelled_non_live"
+  ],
+  "unchecked_components": [
+    "formal live mode authenticity and actual model decisions",
+    "complete real DEMO snapshot admission",
+    "real G2_EVAL outcome fairness",
+    "future Notebook and publication"
+  ],
+  "test_command": ".venv/bin/python -m pytest -q task1/evidence/goal2/c_contract/test_g2_modes_independent.py --junitxml=task1/evidence/goal2/c_contract/mode_memory_round4.xml",
+  "result": {
+    "passed": 39,
+    "failed": 0,
+    "elapsed_seconds": 0.92,
+    "real_model_calls": 0
+  },
+  "test_program": {
+    "path": "task1/evidence/goal2/c_contract/test_g2_modes_independent.py",
+    "sha256": "23be066415b603452ef2a0ebbfe73d3bc1aa6822c46d9bdbdf34491517ee1514"
+  },
+  "test_result": {
+    "path": "task1/evidence/goal2/c_contract/mode_memory_round4.xml",
+    "sha256": "17d44f32e89448e481704f66776479a573d1e0caebdbee3e9b66066718048c01"
+  },
+  "repair_provenance": "root changed production; C only wrote/ran isolated tests and receipts",
+  "history": [
+    "mode_memory_initial_probes.json first dynamic probes were after root repair of static-discovered defects",
+    "mode_memory_round1.xml preserves 5 C fixture-construction failures separately from production findings",
+    "mode_memory_round2.xml reproduced retrieval-cap and missing-frontier failures; 35 pass 2 fail",
+    "mode_memory_round3.xml all 37 pass after root repairs",
+    "mode_memory_round4.xml adds explicit fixture classification/formal-provider rejection; 39 pass"
+  ],
+  "limitation": "Engineering fixtures are scripted non-live provider doubles and synthetic coordinates; no test output is counted as experimental model evidence.",
+  "supersedes": "mode_memory_closure_receipt.json"
+}

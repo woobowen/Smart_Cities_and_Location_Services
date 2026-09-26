@@ -1,0 +1,155 @@
+{
+  "errors": [],
+  "accepted_record_ids": [
+    "82",
+    "10232",
+    "10796",
+    "4805",
+    "7764",
+    "4953",
+    "5029",
+    "6556"
+  ],
+  "original_response": {
+    "records": [
+      {
+        "record_id": "82",
+        "proposals": [
+          {
+            "candidate_id": "82-r2-a",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 60,
+              "dp": 2
+            },
+            "metric_id": "n_direction_removed",
+            "predicted_sign": "decrease",
+            "reason": "Direction 60 removed 6 versus reference 15 and improved common maximum error. Test tighter DP for further geometric change; direction removals remain 6."
+          }
+        ],
+        "stop": false,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "10232",
+        "proposals": [
+          {
+            "candidate_id": "10232-r2-a",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 60,
+              "dp": 2
+            },
+            "metric_id": "n_direction_removed",
+            "predicted_sign": "decrease",
+            "reason": "Direction 60 improved common maximum error and removed 10 versus reference 32. Test tighter DP while preserving that verified direction stage."
+          }
+        ],
+        "stop": false,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "10796",
+        "proposals": [],
+        "stop": true,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "4805",
+        "proposals": [],
+        "stop": true,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "7764",
+        "proposals": [
+          {
+            "candidate_id": "7764-r2-a",
+            "parameters": {
+              "dt": 30,
+              "distance": 200,
+              "min_points": 2,
+              "min_length": 0,
+              "direction": 60,
+              "dp": 5
+            },
+            "metric_id": "raw_break_crossings",
+            "predicted_sign": "unchanged",
+            "reason": "Direction 60 alone left common maximum error unchanged. Test additional spatial splits with relaxed segment filters; existing raw breaks remain separated, while coverage and fidelity require evaluation."
+          },
+          {
+            "candidate_id": "7764-r2-b",
+            "parameters": {
+              "dt": 30,
+              "distance": 95,
+              "min_points": 2,
+              "min_length": 0,
+              "direction": 60,
+              "dp": 5
+            },
+            "metric_id": "raw_break_crossings",
+            "predicted_sign": "unchanged",
+            "reason": "Test a stronger spatial split threshold after the direction-only trial tied protected maximum error. Preserve raw break separation; short-window coverage remains uncertain."
+          }
+        ],
+        "stop": false,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "4953",
+        "proposals": [
+          {
+            "candidate_id": "4953-r2-a",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 60,
+              "dp": 2
+            },
+            "metric_id": "n_direction_removed",
+            "predicted_sign": "decrease",
+            "reason": "Direction 60 reduced common maximum error to 4.445 and removed 1 versus reference 4. Test tighter DP with the same verified direction stage."
+          }
+        ],
+        "stop": false,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "5029",
+        "proposals": [
+          {
+            "candidate_id": "5029-r2-a",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 3,
+              "min_length": 0,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "common_covered_points",
+            "predicted_sign": "increase",
+            "reason": "Removing the length filter recovered 94 points but filtered one four-point segment. Lowering min_points to 3 should recover that window too, preserving all six raw breaks."
+          }
+        ],
+        "stop": false,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "6556",
+        "proposals": [],
+        "stop": true,
+        "memory_ids_used": []
+      }
+    ]
+  },
+  "raw_proposals_preserved_before_validation": true
+}

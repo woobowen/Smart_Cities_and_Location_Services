@@ -1,0 +1,358 @@
+{
+  "at": "2026-09-26T21:40:49.693505+00:00",
+  "status": "VERIFIED",
+  "role_context": "/root/c_contract",
+  "check_count": 74551,
+  "errors": [],
+  "numeric_data_reconstructed": [
+    "segmentation_filter_response",
+    "segmentation_filter_grids",
+    "direction_threshold_and_neighborhood",
+    "dp_error_compression",
+    "order_protection_and_neighborhoods",
+    "four_mode_paired_results",
+    "four_mode_failures_and_cost",
+    "memory_coverage_and_consumption",
+    "real_trajectory_cases",
+    "synthetic_metric_counterexamples",
+    "goal2_actual_architecture"
+  ],
+  "actual_viewed_images": [
+    {
+      "name": "segmentation_filter_response",
+      "native_png": {
+        "path": "task1/figures/goal2/segmentation_filter_response.png",
+        "sha256": "e0a58ccbb1a3d3754f130b74c1842ae9989597cfde5acb602ecda3cb25052327"
+      },
+      "pdf_raster_200dpi": {
+        "path": "task1/figures/goal2/pdf-render-200dpi/segmentation_filter_response.png",
+        "sha256": "79f24a5ac347773ba6fd00e64b0b34b5962c73478ea4e076c8c82059bac54720"
+      },
+      "observation": "Four OAT panels show distinct point and record denominators with reference verticals; minimum length zero gives zero no-output records. Labels/legend legible; no clipping."
+    },
+    {
+      "name": "segmentation_filter_grids",
+      "native_png": {
+        "path": "task1/figures/goal2/segmentation_filter_grids.png",
+        "sha256": "114fd20087ae92606d5ce2a4103fd406defda6ae121f01eebdf1e669a2ba958e"
+      },
+      "pdf_raster_200dpi": {
+        "path": "task1/figures/goal2/pdf-render-200dpi/segmentation_filter_grids.png",
+        "sha256": "062e474d1f9886436beab1b1c250be5fcdc2c52ecb4b1a8ddd4a743664cc4ecf"
+      },
+      "observation": "Four 5-by-5 native heat maps use a common 0-1 fraction scale; all cell labels legible, including length-zero row; no diagonal interpolation artifact in PDF."
+    },
+    {
+      "name": "direction_threshold_and_neighborhood",
+      "native_png": {
+        "path": "task1/figures/goal2/direction_threshold_and_neighborhood.png",
+        "sha256": "e6b2c495beb5d63eec10acbc13ee2809797c0e7115b2e9c78f5c26a0c9073422"
+      },
+      "pdf_raster_200dpi": {
+        "path": "task1/figures/goal2/pdf-render-200dpi/direction_threshold_and_neighborhood.png",
+        "sha256": "7fca5f51506590b7e6d0aa17b9e6b6cd2113302a9258f28e16cfd2043d1ba66f"
+      },
+      "observation": "Deleted/protected counts and the actual record10000/index4 neighborhood are distinct. Input/output adjacency and deletion marker clear with equal working-metre geometry."
+    },
+    {
+      "name": "dp_error_compression",
+      "native_png": {
+        "path": "task1/figures/goal2/dp_error_compression.png",
+        "sha256": "f7d51745cf774f8f5d6e890e9ec6fc9a9b6e29642ffcbc90cad2c3c88602ef6f"
+      },
+      "pdf_raster_200dpi": {
+        "path": "task1/figures/goal2/pdf-render-200dpi/dp_error_compression.png",
+        "sha256": "16722d876ecca02da8e8df9d6f113cdb0d1bed9782a7f14466a4946fdda99e87"
+      },
+      "observation": "DP input denominator and immediate error explicit; tolerance0 shows zero saving, other tolerance labels and fixed5m vertical budget readable. No truth-quality claim."
+    },
+    {
+      "name": "order_protection_and_neighborhoods",
+      "native_png": {
+        "path": "task1/figures/goal2/order_protection_and_neighborhoods.png",
+        "sha256": "8b150a234295b081982c9c2b83140a3928e9f558053f62e0d89c33a08737a730"
+      },
+      "pdf_raster_200dpi": {
+        "path": "task1/figures/goal2/pdf-render-200dpi/order_protection_and_neighborhoods.png",
+        "sha256": "aabf5bf39f2a3d1a32ffa957619a5b89c8376173f9fc1c86c8cde611aa00c659"
+      },
+      "observation": "All six orders and zero/count annotations present; accepted/rejected colors include a legend; coverage and raw-break/window counts not conflated."
+    },
+    {
+      "name": "four_mode_paired_results",
+      "native_png": {
+        "path": "task1/figures/goal2/four_mode_paired_results.png",
+        "sha256": "ec7a87bbc8dd53a188a19815e26ff32f8ca2b66c46b0f227aab6e78cac0d5593"
+      },
+      "pdf_raster_200dpi": {
+        "path": "task1/figures/goal2/pdf-render-200dpi/four_mode_paired_results.png",
+        "sha256": "fa3bffc77bac144694495c1890cd1cf2f75a4688b02cd9565bce1f6bffd9cf19"
+      },
+      "observation": "Current labels show available/total records and record-episode pairs. Circles and outlined record-mean diamonds explained below panels. Available error57/72 differs explicitly from coverage/count72/72."
+    },
+    {
+      "name": "four_mode_failures_and_cost",
+      "native_png": {
+        "path": "task1/figures/goal2/four_mode_failures_and_cost.png",
+        "sha256": "8c3a0cca4a96c3f6a531a758e0285980d28fefec3e89f82a480dd12c086dd048"
+      },
+      "pdf_raster_200dpi": {
+        "path": "task1/figures/goal2/pdf-render-200dpi/four_mode_failures_and_cost.png",
+        "sha256": "1d2578adfe3008e18fe452bd1f984deabdc2edaaf1fd5783446f17279169b84c"
+      },
+      "observation": "Actual call/evaluation/time panels legible. Zero-failure panel now has 0..1 integer count scale and twelve visible zeros, avoiding negative count implication."
+    },
+    {
+      "name": "memory_coverage_and_consumption",
+      "native_png": {
+        "path": "task1/figures/goal2/memory_coverage_and_consumption.png",
+        "sha256": "a968f524e803479c9e7c12a05550451e877726b84093d2aab968d1986f15a683"
+      },
+      "pdf_raster_200dpi": {
+        "path": "task1/figures/goal2/pdf-render-200dpi/memory_coverage_and_consumption.png",
+        "sha256": "a6723e827a0e2bbe3c64b0014b51a00f8a57c37bb91bf70bd0b1e6ee3d1f6bb1"
+      },
+      "observation": "Delivered/cited/matching-action observations separate; record-episode denominator72 and stratum denominators shown. New figure-level legend sits below bars without obscuring first stratum."
+    },
+    {
+      "name": "real_trajectory_cases",
+      "native_png": {
+        "path": "task1/figures/goal2/real_trajectory_cases.png",
+        "sha256": "2a033e931f5a62f87400209818ee58d20f57c2daa49de5096d9932f0d1050f45"
+      },
+      "pdf_raster_200dpi": {
+        "path": "task1/figures/goal2/pdf-render-200dpi/real_trajectory_cases.png",
+        "sha256": "392bd79dfa039ce8c1dd9d9815f8cc653771ebe1730185b1c7fd02a9c7e40480"
+      },
+      "observation": "Six fixed-rule G2_EVAL cases show actual point counts and Reference or changed distance95/direction15. Two no-output cases explicit. Index2 near5m residual annotation, six common reference settings and work-plane caveat readable."
+    },
+    {
+      "name": "synthetic_metric_counterexamples",
+      "native_png": {
+        "path": "task1/figures/goal2/synthetic_metric_counterexamples.png",
+        "sha256": "048388c4fe88c104ca9a8830fc3e3cad923bb7c97121303a1a849f9abf6e29cc"
+      },
+      "pdf_raster_200dpi": {
+        "path": "task1/figures/goal2/pdf-render-200dpi/synthetic_metric_counterexamples.png",
+        "sha256": "1eaf5761e6b3990055d42bc71acdbe0a112afdcc1600058cd665644d30d3e340"
+      },
+      "observation": "Both authored examples labelled synthetic. Original hidden break and own-clean0 versus common raw0.447m distinguish definitions. Index leaders separate coincident labels."
+    },
+    {
+      "name": "goal2_actual_architecture",
+      "native_png": {
+        "path": "task1/figures/goal2/goal2_actual_architecture.png",
+        "sha256": "06e5deea0f1022fec93f969fca7aee6819b0b2ea1909aafa4332742cd70ff3c9"
+      },
+      "pdf_raster_200dpi": {
+        "path": "task1/figures/goal2/pdf-render-200dpi/goal2_actual_architecture.png",
+        "sha256": "8b3f9916d5b163d9027dc29ff770a3a453461e3213d975dadc9eefc44ba6dad1"
+      },
+      "observation": "Actual governance and evaluated runtime layers separated. User/webGPT, A/root/B/C, repair/resume, bounded tools, frozen memory and final-lock feedback boundary shown; no invented fourth LLM."
+    }
+  ],
+  "audit_program": {
+    "path": "task1/evidence/goal2/c_contract/review_final_figures.py",
+    "sha256": "9a61ea989f1e86bf333b5873fa58e3bb6603cc499f9a15399059e6599dd28634"
+  },
+  "independent_PDF_renders": [
+    {
+      "path": "task1/evidence/goal2/c_contract/final_figure_pdf_renders/segmentation_filter_response.png",
+      "sha256": "79f24a5ac347773ba6fd00e64b0b34b5962c73478ea4e076c8c82059bac54720"
+    },
+    {
+      "path": "task1/evidence/goal2/c_contract/final_figure_pdf_renders/segmentation_filter_grids.png",
+      "sha256": "062e474d1f9886436beab1b1c250be5fcdc2c52ecb4b1a8ddd4a743664cc4ecf"
+    },
+    {
+      "path": "task1/evidence/goal2/c_contract/final_figure_pdf_renders/direction_threshold_and_neighborhood.png",
+      "sha256": "7fca5f51506590b7e6d0aa17b9e6b6cd2113302a9258f28e16cfd2043d1ba66f"
+    },
+    {
+      "path": "task1/evidence/goal2/c_contract/final_figure_pdf_renders/dp_error_compression.png",
+      "sha256": "16722d876ecca02da8e8df9d6f113cdb0d1bed9782a7f14466a4946fdda99e87"
+    },
+    {
+      "path": "task1/evidence/goal2/c_contract/final_figure_pdf_renders/order_protection_and_neighborhoods.png",
+      "sha256": "aabf5bf39f2a3d1a32ffa957619a5b89c8376173f9fc1c86c8cde611aa00c659"
+    },
+    {
+      "path": "task1/evidence/goal2/c_contract/final_figure_pdf_renders/four_mode_paired_results.png",
+      "sha256": "fa3bffc77bac144694495c1890cd1cf2f75a4688b02cd9565bce1f6bffd9cf19"
+    },
+    {
+      "path": "task1/evidence/goal2/c_contract/final_figure_pdf_renders/four_mode_failures_and_cost.png",
+      "sha256": "1d2578adfe3008e18fe452bd1f984deabdc2edaaf1fd5783446f17279169b84c"
+    },
+    {
+      "path": "task1/evidence/goal2/c_contract/final_figure_pdf_renders/memory_coverage_and_consumption.png",
+      "sha256": "a6723e827a0e2bbe3c64b0014b51a00f8a57c37bb91bf70bd0b1e6ee3d1f6bb1"
+    },
+    {
+      "path": "task1/evidence/goal2/c_contract/final_figure_pdf_renders/real_trajectory_cases.png",
+      "sha256": "392bd79dfa039ce8c1dd9d9815f8cc653771ebe1730185b1c7fd02a9c7e40480"
+    },
+    {
+      "path": "task1/evidence/goal2/c_contract/final_figure_pdf_renders/synthetic_metric_counterexamples.png",
+      "sha256": "1eaf5761e6b3990055d42bc71acdbe0a112afdcc1600058cd665644d30d3e340"
+    },
+    {
+      "path": "task1/evidence/goal2/c_contract/final_figure_pdf_renders/goal2_actual_architecture.png",
+      "sha256": "8b3f9916d5b163d9027dc29ff770a3a453461e3213d975dadc9eefc44ba6dad1"
+    }
+  ],
+  "old_new_plot_properties": [
+    {
+      "count_lower_bound": -0.05500000000000001,
+      "count_upper_bound": 0.05500000000000001,
+      "count_ticks": [
+        -0.06,
+        -0.039999999999999994,
+        -0.019999999999999997,
+        0.0,
+        0.020000000000000004,
+        0.04000000000000001,
+        0.06
+      ],
+      "count_zero_annotations": 0,
+      "paired_correct_units": false,
+      "paired_available_pair_labels": 0,
+      "paired_marker_explanation": false,
+      "memory_legend_overlaps_bars": true,
+      "figure_level_memory_legend": false
+    },
+    {
+      "count_lower_bound": 0.0,
+      "count_upper_bound": 1.0,
+      "count_ticks": [
+        0.0,
+        1.0
+      ],
+      "count_zero_annotations": 12,
+      "paired_correct_units": true,
+      "paired_available_pair_labels": 12,
+      "paired_marker_explanation": true,
+      "memory_legend_overlaps_bars": false,
+      "figure_level_memory_legend": true
+    }
+  ],
+  "elapsed_seconds": 7.659393612997519,
+  "new_model_calls": 0,
+  "new_candidate_evaluations": 0,
+  "scope_limit": "All figure data/bindings/renderings checked. Underlying processing verification is separately bound to prior C receipts. Native draw.io XML editability checked; no diagrams.net GUI import is claimed. This is not complete Goal2 or remote publication acceptance.",
+  "issue_id": "G2-B-MODE-FIGURE-001",
+  "parent_task": "figures",
+  "targets": [
+    {
+      "path": "task1/evidence/goal2/presentation_checks/formal_mode_layout/repair_receipt.json",
+      "sha256": "4ed1f19afe442e4c72fb70566cf13551fcb6515398b962d462143c6ff1fc6d6a"
+    },
+    {
+      "path": "task1/figures/goal2/four_mode_paired_results.svg",
+      "sha256": "c775b759f658abc4aaed746b77ac768b00468ec2b909271a8adf9fd46c53c793"
+    },
+    {
+      "path": "task1/figures/goal2/four_mode_paired_results.pdf",
+      "sha256": "a7d562ee93974ac0bf1928d46eb1778159844a43ec4a92d41e6bd88ee2f92b77"
+    },
+    {
+      "path": "task1/figures/goal2/four_mode_paired_results.png",
+      "sha256": "ec7a87bbc8dd53a188a19815e26ff32f8ca2b66c46b0f227aab6e78cac0d5593"
+    },
+    {
+      "path": "task1/figures/goal2/pdf-render-200dpi/four_mode_paired_results.png",
+      "sha256": "fa3bffc77bac144694495c1890cd1cf2f75a4688b02cd9565bce1f6bffd9cf19"
+    },
+    {
+      "path": "task1/figures/goal2/four_mode_failures_and_cost.svg",
+      "sha256": "cc8f67ced5597a6d09729074f0a43a5d93dd9d98b127af7c871a9bd64d55fa68"
+    },
+    {
+      "path": "task1/figures/goal2/four_mode_failures_and_cost.pdf",
+      "sha256": "f4c020d1004ee0d2b9cc49d1f4c3a022d7f0f58df33e4ce25a82b3ad11d87334"
+    },
+    {
+      "path": "task1/figures/goal2/four_mode_failures_and_cost.png",
+      "sha256": "8c3a0cca4a96c3f6a531a758e0285980d28fefec3e89f82a480dd12c086dd048"
+    },
+    {
+      "path": "task1/figures/goal2/pdf-render-200dpi/four_mode_failures_and_cost.png",
+      "sha256": "1d2578adfe3008e18fe452bd1f984deabdc2edaaf1fd5783446f17279169b84c"
+    },
+    {
+      "path": "task1/figures/goal2/memory_coverage_and_consumption.svg",
+      "sha256": "cd224e538169e583b74141ffc8d610fa043a7b3378f6c54174925f3f49572441"
+    },
+    {
+      "path": "task1/figures/goal2/memory_coverage_and_consumption.pdf",
+      "sha256": "1820fc4281b6ae5a823ce5baef3b9fb2ec3ab2a792d563433e1f741c0462d712"
+    },
+    {
+      "path": "task1/figures/goal2/memory_coverage_and_consumption.png",
+      "sha256": "a968f524e803479c9e7c12a05550451e877726b84093d2aab968d1986f15a683"
+    },
+    {
+      "path": "task1/figures/goal2/pdf-render-200dpi/memory_coverage_and_consumption.png",
+      "sha256": "a6723e827a0e2bbe3c64b0014b51a00f8a57c37bb91bf70bd0b1e6ee3d1f6bb1"
+    },
+    {
+      "path": "task1/scripts/build_goal2_figures.py",
+      "sha256": "646547b63e6da6ab80a95ae71b3db908f6ea3dce95900ec12aa642b9939916eb"
+    },
+    {
+      "path": "task1/figures/goal2/figure_manifest.json",
+      "sha256": "429eb219b0487393bd49f6f63df9130222c44924c02ef3837c4427cd4bbefcc9"
+    },
+    {
+      "path": "task1/figures/goal2/figure_data.json",
+      "sha256": "ad99fe5b33847ad89e1f87401f6ab58722b1913cdc2bd7af6e98a0a9fa4aec40"
+    },
+    {
+      "path": "task1/figures/goal2/CASE_SELECTION.json",
+      "sha256": "648246451c074c03336f10ab58abb89b49eeee11f96bfc20d6a7ccbb416b6fb6"
+    },
+    {
+      "path": "task1/figures/goal2/goal2_actual_architecture.drawio",
+      "sha256": "9b07dbb940e0dfa053084637c53ad8b4184e9026673f95e4cf3cf5f72fdae97b"
+    },
+    {
+      "path": "task1/evidence/goal2/presentation_checks/formal_mode_layout/binding_checks.json",
+      "sha256": "c76678abafa68bce1142289f936d1c4ffc3d5c281dcf64bfc5786ade10d5161a"
+    }
+  ],
+  "source_hashes": {
+    "task1/evidence/goal2/presentation_checks/formal_mode_layout/repair_receipt.json": "4ed1f19afe442e4c72fb70566cf13551fcb6515398b962d462143c6ff1fc6d6a",
+    "task1/figures/goal2/four_mode_paired_results.svg": "c775b759f658abc4aaed746b77ac768b00468ec2b909271a8adf9fd46c53c793",
+    "task1/figures/goal2/four_mode_paired_results.pdf": "a7d562ee93974ac0bf1928d46eb1778159844a43ec4a92d41e6bd88ee2f92b77",
+    "task1/figures/goal2/four_mode_paired_results.png": "ec7a87bbc8dd53a188a19815e26ff32f8ca2b66c46b0f227aab6e78cac0d5593",
+    "task1/figures/goal2/pdf-render-200dpi/four_mode_paired_results.png": "fa3bffc77bac144694495c1890cd1cf2f75a4688b02cd9565bce1f6bffd9cf19",
+    "task1/figures/goal2/four_mode_failures_and_cost.svg": "cc8f67ced5597a6d09729074f0a43a5d93dd9d98b127af7c871a9bd64d55fa68",
+    "task1/figures/goal2/four_mode_failures_and_cost.pdf": "f4c020d1004ee0d2b9cc49d1f4c3a022d7f0f58df33e4ce25a82b3ad11d87334",
+    "task1/figures/goal2/four_mode_failures_and_cost.png": "8c3a0cca4a96c3f6a531a758e0285980d28fefec3e89f82a480dd12c086dd048",
+    "task1/figures/goal2/pdf-render-200dpi/four_mode_failures_and_cost.png": "1d2578adfe3008e18fe452bd1f984deabdc2edaaf1fd5783446f17279169b84c",
+    "task1/figures/goal2/memory_coverage_and_consumption.svg": "cd224e538169e583b74141ffc8d610fa043a7b3378f6c54174925f3f49572441",
+    "task1/figures/goal2/memory_coverage_and_consumption.pdf": "1820fc4281b6ae5a823ce5baef3b9fb2ec3ab2a792d563433e1f741c0462d712",
+    "task1/figures/goal2/memory_coverage_and_consumption.png": "a968f524e803479c9e7c12a05550451e877726b84093d2aab968d1986f15a683",
+    "task1/figures/goal2/pdf-render-200dpi/memory_coverage_and_consumption.png": "a6723e827a0e2bbe3c64b0014b51a00f8a57c37bb91bf70bd0b1e6ee3d1f6bb1",
+    "task1/scripts/build_goal2_figures.py": "646547b63e6da6ab80a95ae71b3db908f6ea3dce95900ec12aa642b9939916eb",
+    "task1/figures/goal2/figure_manifest.json": "429eb219b0487393bd49f6f63df9130222c44924c02ef3837c4427cd4bbefcc9",
+    "task1/figures/goal2/figure_data.json": "ad99fe5b33847ad89e1f87401f6ab58722b1913cdc2bd7af6e98a0a9fa4aec40",
+    "task1/figures/goal2/CASE_SELECTION.json": "648246451c074c03336f10ab58abb89b49eeee11f96bfc20d6a7ccbb416b6fb6",
+    "task1/figures/goal2/goal2_actual_architecture.drawio": "9b07dbb940e0dfa053084637c53ad8b4184e9026673f95e4cf3cf5f72fdae97b",
+    "task1/evidence/goal2/presentation_checks/formal_mode_layout/binding_checks.json": "c76678abafa68bce1142289f936d1c4ffc3d5c281dcf64bfc5786ade10d5161a"
+  },
+  "checked_components": [
+    "fault_rejected",
+    "valid_receipt_accepted",
+    "source_epoch",
+    "actual_PNG_and_PDF_view",
+    "record_episode_units",
+    "integer_zero_count_axis",
+    "unobscured_legend",
+    "unchanged_numeric_data"
+  ],
+  "unchecked_components": [
+    "full_Goal2_acceptance",
+    "remote_publication"
+  ]
+}

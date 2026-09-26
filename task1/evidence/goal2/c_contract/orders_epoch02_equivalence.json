@@ -1,0 +1,89 @@
+{
+  "status": "VERIFIED",
+  "role_context": "/root/c_contract",
+  "at": "2026-09-26T20:05:12.570725+00:00",
+  "classification": "C_EPOCH_EQUIVALENCE_CHECK_NOT_ADDITIONAL_INDEPENDENT_EXPERIMENT",
+  "old_run": "g2-development-orders-01",
+  "new_run": "g2-development-orders-02",
+  "normalized_fields": [
+    "batch.provenance",
+    "each_record.provenance"
+  ],
+  "all_other_fields_compared": true,
+  "checks": 145,
+  "errors": [],
+  "configurations": 6,
+  "record_configurations": 720,
+  "targets": [
+    {
+      "path": "task1/evidence/goal2/runs/g2-development-orders-01/manifest.json",
+      "sha256": "5ac5e7e047672ce34d45a5f84ce337cf08376203e03eb72be12b2ee60b21f326"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-development-orders-02/manifest.json",
+      "sha256": "840ea80c28ff2a34584b67793514ffd04ee0cb13e1511f221161eed27b621c53"
+    }
+  ],
+  "rows": [
+    {
+      "config_id": "cfg-b15b8281b73592fb",
+      "order": "S-D-P",
+      "records": 120,
+      "old_hash": "8a053995a99204c2212f09f3acf54e12c884dd735506b66eb93fcbcce0c56fdb",
+      "new_hash": "79e2f1fbac97e3e9d55ff29cc97fec1b5139d4166307f743c03b9ebc34964a50",
+      "numeric_payload_hash": "aa2146a52c401c6eb99ff363703820a9d5eea46e5a00bdf71528360509404d68",
+      "identical": true
+    },
+    {
+      "config_id": "cfg-b15b8281b73592fb",
+      "order": "S-P-D",
+      "records": 120,
+      "old_hash": "e08f61e76be27e975f8ee5a11d2ab29390626cda2eae3a410f7c3b1105845f01",
+      "new_hash": "cfbe9cd91f81c6c8caac246d6221bb231c75f4e6bd9eef9fcb0743980f44352c",
+      "numeric_payload_hash": "73020c7e03f51c50027e5c4d0ca0050b994ce7fc03149c20d0f4d6b2e98d98d2",
+      "identical": true
+    },
+    {
+      "config_id": "cfg-b15b8281b73592fb",
+      "order": "D-S-P",
+      "records": 120,
+      "old_hash": "33f026b43f804470b68d269d00742710c9f0ad73be882bbea4b77c1e30449151",
+      "new_hash": "105ac63ef92d1df78f54b21ad9cebcd1cb3d0774dcb518f6e91148dad4d0e0fb",
+      "numeric_payload_hash": "51111f6ba0c9f202412a4a4a4efe77942556ac47ba248020983db2a23448ffc4",
+      "identical": true
+    },
+    {
+      "config_id": "cfg-b15b8281b73592fb",
+      "order": "D-P-S",
+      "records": 120,
+      "old_hash": "66f3e3b0c00b919e2ebe8eab5c7cab63b8acc8dcd4907fa4e1ea6199e8749f74",
+      "new_hash": "80f17e993f91963e72ef85455829459e67b09841149a16ccbe4d2afbfb737293",
+      "numeric_payload_hash": "c8355f08e567723a5379e6c2ddd443d244b6092896e302e4f01fcece2010f762",
+      "identical": true
+    },
+    {
+      "config_id": "cfg-b15b8281b73592fb",
+      "order": "P-S-D",
+      "records": 120,
+      "old_hash": "1988a990f782899bc561a8d24340ace336edd5b7df28a357fa7a33f48364323e",
+      "new_hash": "781ca3472ecc67f04aac04676f184927a53572012488508c4a8a5e08ea89d580",
+      "numeric_payload_hash": "ab28feeef8d8fde5fd7cb6719108df9f7a4640b8a95a25dbc9b5cf522a7e45a0",
+      "identical": true
+    },
+    {
+      "config_id": "cfg-b15b8281b73592fb",
+      "order": "P-D-S",
+      "records": 120,
+      "old_hash": "4369f6c7ebb8b50245a3ae44b10f1bd8535627174c99c334ee518409400311f8",
+      "new_hash": "f05e91fc3a4ba52d8d1cb4ade137bac2412063a05e95659a1a3263c02ffa6278",
+      "numeric_payload_hash": "1937ed8c07f613ddd05aea5ff383baaf515b7842b45c739ad1d1bea482bbadac",
+      "identical": true
+    }
+  ],
+  "new_model_calls": 0,
+  "elapsed_seconds": 10.517299484999967,
+  "audit_program": {
+    "path": "task1/evidence/goal2/c_contract/compare_deterministic_epochs.py",
+    "sha256": "a0eb7e3f879224d481276ae7cacaa78064e5dabb4074480463b737fa504c2dd7"
+  }
+}

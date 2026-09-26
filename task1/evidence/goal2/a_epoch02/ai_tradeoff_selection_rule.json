@@ -1,0 +1,27 @@
+{
+  "registered_at": "2026-09-26T20:37:53.773059+00:00",
+  "classification": "ANALYSIS_PRESENTATION_RULE_NOT_EXPERIMENT_SELECTION",
+  "analysis_source_before": "0a7ad0743e8f4fe0344ba1d0b97bb2fd6acf54f1c059e0a6224ab9c00d88281d",
+  "category": "LEGAL_PROPOSAL_TRADEOFF",
+  "eligibility": "Preserved original proposal is legal and executed; its hash-bound actual candidate comparison to the episode reference has status TRADEOFF. This is not an illegal action, prediction mismatch or ground-truth-quality label.",
+  "representative_sort": [
+    "partition",
+    "mode",
+    "episode",
+    "record_id as existing string order",
+    "round",
+    "proposal_number"
+  ],
+  "representative_rule": "First eligible row in the existing stable AI critique ordering; retain all eligible rows in a separate derived table. No ranking by most favourable or most dramatic effect.",
+  "required_fields": [
+    "unaltered original proposal reason",
+    "pre-execution metric_id/reference_handle/predicted_sign",
+    "raw response path and SHA256",
+    "actual reference and candidate metrics",
+    "identity-coverage and geometric protections",
+    "candidate DP-local and common-reference readings separately",
+    "locked output flag"
+  ],
+  "test_scope": "Already bound DEVELOPMENT-only registry snapshot; no current G2_EVAL mode artifacts read.",
+  "evaluation_rule_or_parameter_change": false
+}

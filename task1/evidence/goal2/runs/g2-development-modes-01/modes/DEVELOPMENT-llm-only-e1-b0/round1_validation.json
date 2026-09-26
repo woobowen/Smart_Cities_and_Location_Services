@@ -1,0 +1,186 @@
+{
+  "errors": [],
+  "accepted_record_ids": [
+    "9779",
+    "3357",
+    "11355",
+    "5049",
+    "7186",
+    "11326",
+    "2069",
+    "9613"
+  ],
+  "original_response": {
+    "records": [
+      {
+        "record_id": "9779",
+        "proposals": [
+          {
+            "candidate_id": "9779-c1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "n_final",
+            "predicted_sign": "unchanged",
+            "reason": "Retain reference: no raw breaks are reported, and aggregate observations do not establish a protected improvement."
+          }
+        ],
+        "stop": true,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "3357",
+        "proposals": [
+          {
+            "candidate_id": "3357-c1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "n_final",
+            "predicted_sign": "unchanged",
+            "reason": "Retain reference to preserve the five reported raw break boundaries; no evidence supports a protected improvement."
+          }
+        ],
+        "stop": true,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "11355",
+        "proposals": [
+          {
+            "candidate_id": "11355-c1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "n_final",
+            "predicted_sign": "unchanged",
+            "reason": "Retain reference: two raw breaks are reported, but segment details needed to justify filter changes are unavailable."
+          }
+        ],
+        "stop": true,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "5049",
+        "proposals": [
+          {
+            "candidate_id": "5049-c1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "n_final",
+            "predicted_sign": "unchanged",
+            "reason": "Retain reference: three raw breaks and seven unavailable-direction edges do not justify changing segmentation or direction filtering."
+          }
+        ],
+        "stop": true,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "7186",
+        "proposals": [
+          {
+            "candidate_id": "7186-c1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "n_final",
+            "predicted_sign": "unchanged",
+            "reason": "Retain reference: duplicate-edge counts alone do not establish beneficial deletions or justify exceeding the common DP budget."
+          }
+        ],
+        "stop": true,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "11326",
+        "proposals": [
+          {
+            "candidate_id": "11326-c1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "n_final",
+            "predicted_sign": "unchanged",
+            "reason": "Retain reference to preserve current processing around five raw breaks; unavailable-direction counts do not establish an advantageous alternative."
+          }
+        ],
+        "stop": true,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "2069",
+        "proposals": [
+          {
+            "candidate_id": "2069-c1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "n_final",
+            "predicted_sign": "unchanged",
+            "reason": "Retain reference: a zero-time edge does not trigger the specified temporal split rule, and no protected improvement is supported."
+          }
+        ],
+        "stop": true,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "9613",
+        "proposals": [
+          {
+            "candidate_id": "9613-c1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "n_final",
+            "predicted_sign": "unchanged",
+            "reason": "Retain reference: fifteen raw breaks make segment coverage relevant, but aggregate counts cannot establish beneficial threshold changes."
+          }
+        ],
+        "stop": true,
+        "memory_ids_used": []
+      }
+    ]
+  },
+  "raw_proposals_preserved_before_validation": true
+}

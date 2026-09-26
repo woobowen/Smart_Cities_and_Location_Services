@@ -1,0 +1,267 @@
+{
+  "issue_id": "G2-C-CONTEXT-001",
+  "parent_task": "development_modes",
+  "status": "ISSUE_OPEN",
+  "at": "2026-09-26T19:44:01.524508+00:00",
+  "classification": "REAL_FORMAL_DEVELOPMENT_PROVENANCE_DEFECT_NOT_FAULT_INJECTION",
+  "fact": "On actual completed llm+search episode b0, 13 per-record round2/3 context_hash values differ from the immutable context actually serialized into provider input. All saved provider prompt contexts equal their recorded round context files.",
+  "root_cause": "The in-memory context references mutable states[rid].proposals lists. Processing a response appends proposal records before hashing later records, so the hash describes mutated feedback that the provider did not see.",
+  "violated_clause": "Prompt 11.4 actual feedback-to-action binding and 15 run/proposal provenance",
+  "target": {
+    "path": "task1/workflow/g2_modes.py",
+    "sha256": "c8aa5902ffab4a1d4438efcccbe9cb655969d610030c74c4a8b5641c75b91dbd"
+  },
+  "affected_artifacts": [
+    {
+      "path": "task1/evidence/goal2/runs/g2-development-modes-01/modes/DEVELOPMENT-llm+search-e1-b0/episode.json",
+      "sha256": "44e195c5723918a6e145f45ce5ea240f28eaf0a4aa89adf5e53c1f1477f728a8"
+    }
+  ],
+  "repairer": "B-Repair:/root",
+  "verifier": "C:/root/c_contract",
+  "observed_failed_bindings": 13,
+  "actual_prompt_contexts_all_correct": true,
+  "detailed_bindings": [
+    {
+      "record_id": "9779",
+      "round": 1,
+      "record_context_hash": "77b695f3d5cb133ef1db7cd24314cb7dc6259ad1914667e6dd61b1897935b8fa",
+      "actual_model_context_hash": "77b695f3d5cb133ef1db7cd24314cb7dc6259ad1914667e6dd61b1897935b8fa",
+      "record_binding_matches": true,
+      "saved_context_equals_actual_model_prompt": true,
+      "context_path": "task1/evidence/goal2/runs/g2-development-modes-01/modes/DEVELOPMENT-llm+search-e1-b0/round1_context.json",
+      "context_file_sha256": "8c8ffd59f23d1117e7375e0fc235c5e0d3105410a6c32e0703014064a6bfa181"
+    },
+    {
+      "record_id": "9779",
+      "round": 2,
+      "record_context_hash": "73fad8a6858f56cefa5d83c8ec9b62f3269a3d167f943832d5500f5104f0bb29",
+      "actual_model_context_hash": "73fad8a6858f56cefa5d83c8ec9b62f3269a3d167f943832d5500f5104f0bb29",
+      "record_binding_matches": true,
+      "saved_context_equals_actual_model_prompt": true,
+      "context_path": "task1/evidence/goal2/runs/g2-development-modes-01/modes/DEVELOPMENT-llm+search-e1-b0/round2_context.json",
+      "context_file_sha256": "e2189e2902e9102f93eaaff00bdbbb83d18b2005798ec97f4b73605a295d139e"
+    },
+    {
+      "record_id": "9779",
+      "round": 3,
+      "record_context_hash": "a56109256c91da9885e186c95a9d920d9440bcf8471030c40dcbd6e6182f1600",
+      "actual_model_context_hash": "a56109256c91da9885e186c95a9d920d9440bcf8471030c40dcbd6e6182f1600",
+      "record_binding_matches": true,
+      "saved_context_equals_actual_model_prompt": true,
+      "context_path": "task1/evidence/goal2/runs/g2-development-modes-01/modes/DEVELOPMENT-llm+search-e1-b0/round3_context.json",
+      "context_file_sha256": "08a72b83d823f88da2f9d933752bbd45bb49d3c8edfa5a56f9c6c8a35f9a3840"
+    },
+    {
+      "record_id": "3357",
+      "round": 1,
+      "record_context_hash": "77b695f3d5cb133ef1db7cd24314cb7dc6259ad1914667e6dd61b1897935b8fa",
+      "actual_model_context_hash": "77b695f3d5cb133ef1db7cd24314cb7dc6259ad1914667e6dd61b1897935b8fa",
+      "record_binding_matches": true,
+      "saved_context_equals_actual_model_prompt": true,
+      "context_path": "task1/evidence/goal2/runs/g2-development-modes-01/modes/DEVELOPMENT-llm+search-e1-b0/round1_context.json",
+      "context_file_sha256": "8c8ffd59f23d1117e7375e0fc235c5e0d3105410a6c32e0703014064a6bfa181"
+    },
+    {
+      "record_id": "3357",
+      "round": 2,
+      "record_context_hash": "076556b518f0d361551cbc5bf0162bff1172b42eeb36dd59ea5168215b9823b1",
+      "actual_model_context_hash": "73fad8a6858f56cefa5d83c8ec9b62f3269a3d167f943832d5500f5104f0bb29",
+      "record_binding_matches": false,
+      "saved_context_equals_actual_model_prompt": true,
+      "context_path": "task1/evidence/goal2/runs/g2-development-modes-01/modes/DEVELOPMENT-llm+search-e1-b0/round2_context.json",
+      "context_file_sha256": "e2189e2902e9102f93eaaff00bdbbb83d18b2005798ec97f4b73605a295d139e"
+    },
+    {
+      "record_id": "3357",
+      "round": 3,
+      "record_context_hash": "080f2f8de6955ea057bfa2f5f67f0a150d4a781ff5ee9419138ebf5148795d6e",
+      "actual_model_context_hash": "a56109256c91da9885e186c95a9d920d9440bcf8471030c40dcbd6e6182f1600",
+      "record_binding_matches": false,
+      "saved_context_equals_actual_model_prompt": true,
+      "context_path": "task1/evidence/goal2/runs/g2-development-modes-01/modes/DEVELOPMENT-llm+search-e1-b0/round3_context.json",
+      "context_file_sha256": "08a72b83d823f88da2f9d933752bbd45bb49d3c8edfa5a56f9c6c8a35f9a3840"
+    },
+    {
+      "record_id": "11355",
+      "round": 1,
+      "record_context_hash": "77b695f3d5cb133ef1db7cd24314cb7dc6259ad1914667e6dd61b1897935b8fa",
+      "actual_model_context_hash": "77b695f3d5cb133ef1db7cd24314cb7dc6259ad1914667e6dd61b1897935b8fa",
+      "record_binding_matches": true,
+      "saved_context_equals_actual_model_prompt": true,
+      "context_path": "task1/evidence/goal2/runs/g2-development-modes-01/modes/DEVELOPMENT-llm+search-e1-b0/round1_context.json",
+      "context_file_sha256": "8c8ffd59f23d1117e7375e0fc235c5e0d3105410a6c32e0703014064a6bfa181"
+    },
+    {
+      "record_id": "11355",
+      "round": 2,
+      "record_context_hash": "743f5d47274473a97dcb0b2a9d168f86075cf0db039bab1693990fa1078909f7",
+      "actual_model_context_hash": "73fad8a6858f56cefa5d83c8ec9b62f3269a3d167f943832d5500f5104f0bb29",
+      "record_binding_matches": false,
+      "saved_context_equals_actual_model_prompt": true,
+      "context_path": "task1/evidence/goal2/runs/g2-development-modes-01/modes/DEVELOPMENT-llm+search-e1-b0/round2_context.json",
+      "context_file_sha256": "e2189e2902e9102f93eaaff00bdbbb83d18b2005798ec97f4b73605a295d139e"
+    },
+    {
+      "record_id": "11355",
+      "round": 3,
+      "record_context_hash": "85b71c81c34e7e8f95338a469cdba04d02ef859976f475c420896d0082f48171",
+      "actual_model_context_hash": "a56109256c91da9885e186c95a9d920d9440bcf8471030c40dcbd6e6182f1600",
+      "record_binding_matches": false,
+      "saved_context_equals_actual_model_prompt": true,
+      "context_path": "task1/evidence/goal2/runs/g2-development-modes-01/modes/DEVELOPMENT-llm+search-e1-b0/round3_context.json",
+      "context_file_sha256": "08a72b83d823f88da2f9d933752bbd45bb49d3c8edfa5a56f9c6c8a35f9a3840"
+    },
+    {
+      "record_id": "5049",
+      "round": 1,
+      "record_context_hash": "77b695f3d5cb133ef1db7cd24314cb7dc6259ad1914667e6dd61b1897935b8fa",
+      "actual_model_context_hash": "77b695f3d5cb133ef1db7cd24314cb7dc6259ad1914667e6dd61b1897935b8fa",
+      "record_binding_matches": true,
+      "saved_context_equals_actual_model_prompt": true,
+      "context_path": "task1/evidence/goal2/runs/g2-development-modes-01/modes/DEVELOPMENT-llm+search-e1-b0/round1_context.json",
+      "context_file_sha256": "8c8ffd59f23d1117e7375e0fc235c5e0d3105410a6c32e0703014064a6bfa181"
+    },
+    {
+      "record_id": "5049",
+      "round": 2,
+      "record_context_hash": "8911c1b78c2ed3ffe19730102c5088618b788fba34ac99b11e9cd173638dd201",
+      "actual_model_context_hash": "73fad8a6858f56cefa5d83c8ec9b62f3269a3d167f943832d5500f5104f0bb29",
+      "record_binding_matches": false,
+      "saved_context_equals_actual_model_prompt": true,
+      "context_path": "task1/evidence/goal2/runs/g2-development-modes-01/modes/DEVELOPMENT-llm+search-e1-b0/round2_context.json",
+      "context_file_sha256": "e2189e2902e9102f93eaaff00bdbbb83d18b2005798ec97f4b73605a295d139e"
+    },
+    {
+      "record_id": "5049",
+      "round": 3,
+      "record_context_hash": "2d6305201a4a85754b38441415890b60ad1f7e5ad5a218017be83bc98d51e088",
+      "actual_model_context_hash": "a56109256c91da9885e186c95a9d920d9440bcf8471030c40dcbd6e6182f1600",
+      "record_binding_matches": false,
+      "saved_context_equals_actual_model_prompt": true,
+      "context_path": "task1/evidence/goal2/runs/g2-development-modes-01/modes/DEVELOPMENT-llm+search-e1-b0/round3_context.json",
+      "context_file_sha256": "08a72b83d823f88da2f9d933752bbd45bb49d3c8edfa5a56f9c6c8a35f9a3840"
+    },
+    {
+      "record_id": "7186",
+      "round": 1,
+      "record_context_hash": "77b695f3d5cb133ef1db7cd24314cb7dc6259ad1914667e6dd61b1897935b8fa",
+      "actual_model_context_hash": "77b695f3d5cb133ef1db7cd24314cb7dc6259ad1914667e6dd61b1897935b8fa",
+      "record_binding_matches": true,
+      "saved_context_equals_actual_model_prompt": true,
+      "context_path": "task1/evidence/goal2/runs/g2-development-modes-01/modes/DEVELOPMENT-llm+search-e1-b0/round1_context.json",
+      "context_file_sha256": "8c8ffd59f23d1117e7375e0fc235c5e0d3105410a6c32e0703014064a6bfa181"
+    },
+    {
+      "record_id": "7186",
+      "round": 2,
+      "record_context_hash": "fcc23f69e1d8aad9394994ecd7b6a49efb10dd78bd965e8ea2acb7e1a74c93ec",
+      "actual_model_context_hash": "73fad8a6858f56cefa5d83c8ec9b62f3269a3d167f943832d5500f5104f0bb29",
+      "record_binding_matches": false,
+      "saved_context_equals_actual_model_prompt": true,
+      "context_path": "task1/evidence/goal2/runs/g2-development-modes-01/modes/DEVELOPMENT-llm+search-e1-b0/round2_context.json",
+      "context_file_sha256": "e2189e2902e9102f93eaaff00bdbbb83d18b2005798ec97f4b73605a295d139e"
+    },
+    {
+      "record_id": "11326",
+      "round": 1,
+      "record_context_hash": "77b695f3d5cb133ef1db7cd24314cb7dc6259ad1914667e6dd61b1897935b8fa",
+      "actual_model_context_hash": "77b695f3d5cb133ef1db7cd24314cb7dc6259ad1914667e6dd61b1897935b8fa",
+      "record_binding_matches": true,
+      "saved_context_equals_actual_model_prompt": true,
+      "context_path": "task1/evidence/goal2/runs/g2-development-modes-01/modes/DEVELOPMENT-llm+search-e1-b0/round1_context.json",
+      "context_file_sha256": "8c8ffd59f23d1117e7375e0fc235c5e0d3105410a6c32e0703014064a6bfa181"
+    },
+    {
+      "record_id": "11326",
+      "round": 2,
+      "record_context_hash": "fcc23f69e1d8aad9394994ecd7b6a49efb10dd78bd965e8ea2acb7e1a74c93ec",
+      "actual_model_context_hash": "73fad8a6858f56cefa5d83c8ec9b62f3269a3d167f943832d5500f5104f0bb29",
+      "record_binding_matches": false,
+      "saved_context_equals_actual_model_prompt": true,
+      "context_path": "task1/evidence/goal2/runs/g2-development-modes-01/modes/DEVELOPMENT-llm+search-e1-b0/round2_context.json",
+      "context_file_sha256": "e2189e2902e9102f93eaaff00bdbbb83d18b2005798ec97f4b73605a295d139e"
+    },
+    {
+      "record_id": "11326",
+      "round": 3,
+      "record_context_hash": "85ea75a58a42f4b7eeb0565e133d7fafcfbfb2ea662c2296813aa5005b1d144e",
+      "actual_model_context_hash": "a56109256c91da9885e186c95a9d920d9440bcf8471030c40dcbd6e6182f1600",
+      "record_binding_matches": false,
+      "saved_context_equals_actual_model_prompt": true,
+      "context_path": "task1/evidence/goal2/runs/g2-development-modes-01/modes/DEVELOPMENT-llm+search-e1-b0/round3_context.json",
+      "context_file_sha256": "08a72b83d823f88da2f9d933752bbd45bb49d3c8edfa5a56f9c6c8a35f9a3840"
+    },
+    {
+      "record_id": "2069",
+      "round": 1,
+      "record_context_hash": "77b695f3d5cb133ef1db7cd24314cb7dc6259ad1914667e6dd61b1897935b8fa",
+      "actual_model_context_hash": "77b695f3d5cb133ef1db7cd24314cb7dc6259ad1914667e6dd61b1897935b8fa",
+      "record_binding_matches": true,
+      "saved_context_equals_actual_model_prompt": true,
+      "context_path": "task1/evidence/goal2/runs/g2-development-modes-01/modes/DEVELOPMENT-llm+search-e1-b0/round1_context.json",
+      "context_file_sha256": "8c8ffd59f23d1117e7375e0fc235c5e0d3105410a6c32e0703014064a6bfa181"
+    },
+    {
+      "record_id": "2069",
+      "round": 2,
+      "record_context_hash": "80d7b7bc021306faca6a9e22577c83ca535430cea8e315a12946f171e03550d7",
+      "actual_model_context_hash": "73fad8a6858f56cefa5d83c8ec9b62f3269a3d167f943832d5500f5104f0bb29",
+      "record_binding_matches": false,
+      "saved_context_equals_actual_model_prompt": true,
+      "context_path": "task1/evidence/goal2/runs/g2-development-modes-01/modes/DEVELOPMENT-llm+search-e1-b0/round2_context.json",
+      "context_file_sha256": "e2189e2902e9102f93eaaff00bdbbb83d18b2005798ec97f4b73605a295d139e"
+    },
+    {
+      "record_id": "2069",
+      "round": 3,
+      "record_context_hash": "e7836e13e97f109774cc71f6e573e7ca49ccfc2da3c9180207a53753d74318c7",
+      "actual_model_context_hash": "a56109256c91da9885e186c95a9d920d9440bcf8471030c40dcbd6e6182f1600",
+      "record_binding_matches": false,
+      "saved_context_equals_actual_model_prompt": true,
+      "context_path": "task1/evidence/goal2/runs/g2-development-modes-01/modes/DEVELOPMENT-llm+search-e1-b0/round3_context.json",
+      "context_file_sha256": "08a72b83d823f88da2f9d933752bbd45bb49d3c8edfa5a56f9c6c8a35f9a3840"
+    },
+    {
+      "record_id": "9613",
+      "round": 1,
+      "record_context_hash": "77b695f3d5cb133ef1db7cd24314cb7dc6259ad1914667e6dd61b1897935b8fa",
+      "actual_model_context_hash": "77b695f3d5cb133ef1db7cd24314cb7dc6259ad1914667e6dd61b1897935b8fa",
+      "record_binding_matches": true,
+      "saved_context_equals_actual_model_prompt": true,
+      "context_path": "task1/evidence/goal2/runs/g2-development-modes-01/modes/DEVELOPMENT-llm+search-e1-b0/round1_context.json",
+      "context_file_sha256": "8c8ffd59f23d1117e7375e0fc235c5e0d3105410a6c32e0703014064a6bfa181"
+    },
+    {
+      "record_id": "9613",
+      "round": 2,
+      "record_context_hash": "c7315afffc8594ef16e32034e2e8f5f0c8a4dfb56edb07e7e10a19c9cf6a986d",
+      "actual_model_context_hash": "73fad8a6858f56cefa5d83c8ec9b62f3269a3d167f943832d5500f5104f0bb29",
+      "record_binding_matches": false,
+      "saved_context_equals_actual_model_prompt": true,
+      "context_path": "task1/evidence/goal2/runs/g2-development-modes-01/modes/DEVELOPMENT-llm+search-e1-b0/round2_context.json",
+      "context_file_sha256": "e2189e2902e9102f93eaaff00bdbbb83d18b2005798ec97f4b73605a295d139e"
+    },
+    {
+      "record_id": "9613",
+      "round": 3,
+      "record_context_hash": "390492e4de967989612a2c7a1d73eb6e1e412b7f3cc08bcb3e206bff4b00945e",
+      "actual_model_context_hash": "a56109256c91da9885e186c95a9d920d9440bcf8471030c40dcbd6e6182f1600",
+      "record_binding_matches": false,
+      "saved_context_equals_actual_model_prompt": true,
+      "context_path": "task1/evidence/goal2/runs/g2-development-modes-01/modes/DEVELOPMENT-llm+search-e1-b0/round3_context.json",
+      "context_file_sha256": "08a72b83d823f88da2f9d933752bbd45bb49d3c8edfa5a56f9c6c8a35f9a3840"
+    }
+  ],
+  "independent_audit": "development_modes_search_first_episode.json",
+  "other_checks": "807607 checks within episode; only 13 failed, all context_hash. Actual candidate schedule, raw responses, legal actions, metrics, selection and numerical reconstruction passed.",
+  "impact_boundary": "The observed defect does not change the actual serialized diagnostic/feedback content. Other episodes must be checked before assigning their impact. No claim of repaired LIVE provenance is made.",
+  "closure_standard": [
+    "freeze independent context before state mutation or bind its hash before dispatch",
+    "at safe batch boundary preserve original actual requests and invalid binding artifacts",
+    "mark affected record/episode summaries superseded and generate explicitly linked deterministic rebuilt evidence without calling it new LIVE",
+    "verify every new record context hash equals the actual provider prompt/context",
+    "unchanged serialized diagnostics/feedback demonstrated before any reuse of real proposals",
+    "resume parent development modes and complete independent acceptance"
+  ]
+}

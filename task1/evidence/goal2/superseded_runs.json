@@ -1,0 +1,37 @@
+{
+  "at": "2026-09-26T19:46:33.105197+00:00",
+  "reason": "G2-C-CONTEXT-001 and G2-B-RETRY-CLASSIFIER-001 require fixed processing epoch; preserved original artifacts and original manifests unchanged",
+  "source_code_available_at_commit": "0747574b7844e44f687a0e7eaf1ab599eb7a3d5d",
+  "runs": [
+    {
+      "run_id": "g2-development-parameters-01",
+      "original_manifest_sha256": "92bec0c62a89c98ad5b5c05e38cc2fb2722919da2a4eedaba964a0c1038be0e7",
+      "status": "SUPERSEDED",
+      "old_math_results_falsified": false,
+      "reason": "full source-epoch binding invalidated by metadata/error-classifier repair; real model feedback was not altered"
+    },
+    {
+      "run_id": "g2-development-orders-01",
+      "original_manifest_sha256": "5ac5e7e047672ce34d45a5f84ce337cf08376203e03eb72be12b2ee60b21f326",
+      "status": "SUPERSEDED",
+      "old_math_results_falsified": false,
+      "reason": "full source-epoch binding invalidated by metadata/error-classifier repair; real model feedback was not altered"
+    },
+    {
+      "run_id": "g2-demo-memory-01",
+      "original_manifest_sha256": "c2e325539dac7a702cab72af39590127b319967debc513f91ca915b1bbc09fb4",
+      "status": "SUPERSEDED",
+      "old_math_results_falsified": false,
+      "reason": "full source-epoch binding invalidated by metadata/error-classifier repair; real model feedback was not altered"
+    },
+    {
+      "run_id": "g2-development-modes-01",
+      "original_manifest_sha256": "4bbdf84035066e4d2a401c73eea552d3b8ecaa5507ba2dec2a25790235b20a5a",
+      "status": "INTERRUPTED_CHECKPOINT_SUPERSEDED",
+      "old_math_results_falsified": false,
+      "reason": "full source-epoch binding invalidated by metadata/error-classifier repair; real model feedback was not altered"
+    }
+  ],
+  "recompute_is_new_LIVE": false,
+  "chosen_recovery": "new deterministic runs and new actual LIVE DEVELOPMENT episodes; no G2_EVAL run existed"
+}

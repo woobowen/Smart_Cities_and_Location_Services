@@ -1,0 +1,244 @@
+{
+  "status": "VERIFIED",
+  "classification": "ACTUAL_DEVELOPMENT_ANALYSIS_PRESENTATION_REGRESSION",
+  "started_at": "2026-09-26T20:41:23.159757+00:00",
+  "ended_at": "2026-09-26T20:41:29.089776+00:00",
+  "elapsed_seconds": 5.930016607999278,
+  "actual_command": ".venv/bin/python -m task1.evidence.goal2.a_epoch02.verify_ai_tradeoff_analysis",
+  "analysis_source": {
+    "path": "task1/scripts/build_goal2_analysis.py",
+    "sha256": "2ccf9fb06b8e7633fc118b0798fce348661c07eed8a3cfa4d08a9e08559c2e38"
+  },
+  "verification_source": {
+    "path": "task1/evidence/goal2/a_epoch02/verify_ai_tradeoff_analysis.py",
+    "sha256": "6eef21a504880ffbf26355998b38a8bcb265cc817926873d7705192180fa54b2"
+  },
+  "source_archive": {
+    "classification": "HISTORICAL_ANALYSIS_SOURCE_BINDING",
+    "archived_at": "2026-09-26T20:37:53.772438+00:00",
+    "source_path": "task1/scripts/build_goal2_analysis.py",
+    "source_sha256": "0a7ad0743e8f4fe0344ba1d0b97bb2fd6acf54f1c059e0a6224ab9c00d88281d",
+    "archive_path": "task1/evidence/goal2/a_followup_archive/0a7ad0743e8f4fe0/build_goal2_analysis.py",
+    "change_scope": "Presentation-only actual AI critique: add legal executed proposals with TRADEOFF and bound actual reference/candidate protection readings. No processing or selection changes.",
+    "immutable_consumers": [
+      {
+        "path": "task1/evidence/goal2/analysis_resource_accounting_regression.json",
+        "sha256": "5b85fe7d55760ae00bbde29ca82ddba3971b134791cd007ce86db0544f3e780f"
+      },
+      {
+        "path": "task1/evidence/goal2/a_epoch02/A_FOLLOWUP_DEVELOPMENT_EPOCH02.json",
+        "sha256": "99874f0c3febbd8ee53834b7a41c8ecbb505321254256026dbb4639ceda569e1"
+      },
+      {
+        "path": "task1/evidence/goal2/a_epoch02/A_EVALUATION_READINESS.json",
+        "sha256": "f0d3b41519861e3a2bd912b1147872ed6ba16fe74a98f2ab3ff80b1794207d16"
+      }
+    ],
+    "prior_A_and_cost_evidence_preserved": true
+  },
+  "old_A_and_cost_consumers_unchanged": true,
+  "changed_functions": [
+    "actual_ai_critique",
+    "render_document"
+  ],
+  "processing_and_contract_sources_unchanged": true,
+  "development_registry_snapshot": {
+    "path": "task1/evidence/goal2/a_epoch02_development_registry_snapshot.json",
+    "sha256": "7690ed28d2ecc40171fba07452bae2a178cb334f96faf84b7547855dc30e1904"
+  },
+  "development_record_episodes_checked": 96,
+  "actual_tradeoff_proposals": 4,
+  "all_four_match_original_responses_and_previous_bound_A_evidence": true,
+  "representative": {
+    "record_id": "7764",
+    "candidate_id": "7764-r2-a",
+    "raw_response_sources": [
+      {
+        "path": "task1/evidence/goal2/runs/g2-development-modes-02/modes/DEVELOPMENT-llm+memory+search-e1-b2/round2_call/attempt01/response.json",
+        "sha256": "fe36cab28325d549ba8118e21e59d53363b7147f4da77b45346d36404e58db98"
+      }
+    ],
+    "actual_execution_comparison": {
+      "research_status": "TRADEOFF",
+      "reference_config_id": "cfg-b15b8281b73592fb",
+      "candidate_config_id": "cfg-251678d7e6520f89",
+      "reference_metrics": {
+        "n_input": 122,
+        "n_final": 48,
+        "n_filtered": 0,
+        "n_direction_removed": 31,
+        "n_dp_input": 91,
+        "n_dp_output": 48,
+        "dp_max_error": 4.826419900439255,
+        "dp_saving": 0.4725274725274725,
+        "dp_error_reason": null,
+        "n_dp_exceedances": 0,
+        "common_raw_points": 122,
+        "common_covered_points": 122,
+        "common_max_error": 40.214764334442535,
+        "common_error_reason": null,
+        "raw_break_crossings": 0,
+        "raw_windows_covered": 3,
+        "final_length": 5673.106999933484,
+        "raw_length": 6452.241437726075
+      },
+      "candidate_metrics": {
+        "n_input": 122,
+        "n_final": 59,
+        "n_filtered": 0,
+        "n_direction_removed": 17,
+        "n_dp_input": 105,
+        "n_dp_output": 59,
+        "dp_max_error": 4.826419900439255,
+        "dp_saving": 0.4380952380952381,
+        "dp_error_reason": null,
+        "n_dp_exceedances": 0,
+        "common_raw_points": 122,
+        "common_covered_points": 122,
+        "common_max_error": 69.14535092142388,
+        "common_error_reason": null,
+        "raw_break_crossings": 0,
+        "raw_windows_covered": 3,
+        "final_length": 4869.039080484155,
+        "raw_length": 6452.241437726075
+      },
+      "registered_protection_readings": {
+        "status": "TRADEOFF",
+        "feasible": false,
+        "strict_gain": false,
+        "protection_failures": [
+          "COMMON_GEOMETRIC_PROTECTION_DEGRADED"
+        ],
+        "baseline_covered_count": 122,
+        "candidate_covered_count": 122,
+        "coverage_delta": 0,
+        "baseline_common_max": 40.214764334442535,
+        "candidate_max_on_baseline_covered": 69.14535092142388,
+        "newly_covered_max_error": null,
+        "numerical_allowance": 2.7017536949079056e-10
+      },
+      "same_common_covered_point_mask": true,
+      "prediction_metric_reference_value": 0,
+      "prediction_metric_candidate_value": 0,
+      "dp_reference_scope": "Each DP metric describes that candidate's complete immediate DP input; a small DP-local error does not establish common-raw-reference improvement.",
+      "interpretation": "Legal executed model suggestion with an actual registered protection tradeoff; not an illegal action or a ground-truth-quality finding.",
+      "true_quality_claim": false
+    }
+  },
+  "stable_order_after_input_reversal_verified": true,
+  "prior_five_critique_categories": {
+    "ILLEGAL_PROPOSAL": {
+      "observed_count": 0,
+      "example_present": false,
+      "absence_reason": "NO_ACTUAL_OBSERVATION_IN_VALID_CURRENT_RUNS"
+    },
+    "CORRECT_EVALUABLE_PREDICTION": {
+      "observed_count": 70,
+      "example_present": true,
+      "absence_reason": null
+    },
+    "PREDICTION_MISMATCH": {
+      "observed_count": 0,
+      "example_present": false,
+      "absence_reason": "NO_ACTUAL_OBSERVATION_IN_VALID_CURRENT_RUNS"
+    },
+    "UNEVALUABLE_PREDICTION": {
+      "observed_count": 78,
+      "example_present": true,
+      "absence_reason": null
+    },
+    "FALLBACK": {
+      "observed_count": 0,
+      "example_present": false,
+      "absence_reason": "NO_ACTUAL_OBSERVATION_IN_VALID_CURRENT_RUNS"
+    }
+  },
+  "new_critique_category": {
+    "observed_count": 4,
+    "example_present": true,
+    "absence_reason": null
+  },
+  "resource_accounting_regression": {
+    "current_and_historical_costs_identical_to_prior_actual_observation": true,
+    "historical15_14_complete1_interrupted_unknown_usage_preserved": true,
+    "memory40_plus60_admission_equals100": true,
+    "orders12_plus1_cache_verifier_equals13": true,
+    "resource_function_ASTs_unchanged": true
+  },
+  "tables": {
+    "ai_critique_examples": {
+      "path": "task1/evidence/goal2/a_epoch02/ai_tradeoff_analysis_regression/tables/ai_critique_examples.csv",
+      "sha256": "947c4815f43035d8a187cf129c6cc4aa80d0e7c49ed213de1cc80f23fe540f5c",
+      "rows": 3,
+      "null_encoding": "empty CSV cell; companion reason/denominator columns retain meaning"
+    },
+    "ai_legal_proposal_tradeoffs": {
+      "path": "task1/evidence/goal2/a_epoch02/ai_tradeoff_analysis_regression/tables/ai_legal_proposal_tradeoffs.csv",
+      "sha256": "998f2a24a6345bab1849653e89e886d8f49a496caa1417909f6d22f511f5faa8",
+      "rows": 4,
+      "null_encoding": "empty CSV cell; companion reason/denominator columns retain meaning"
+    }
+  },
+  "presentation_preview": {
+    "path": "task1/evidence/goal2/a_epoch02/ai_tradeoff_analysis_regression/DEVELOPMENT_PRESENTATION_REGRESSION.md",
+    "sha256": "836fd235ac8b2343753793060aebf0394f108398509da17cd70b5c3808199b2f"
+  },
+  "input_hashes": {
+    "task1/config/goal2/contract.json": "db758c097509139596fbc52b4c3f65e921eb1f12d9fb4c239e308abdb57f31f8",
+    "task1/evidence/goal2/data/split_manifest.json": "fd2ebc6916f63b4b8e23ff6977f22cc691c39849d450486035243db7e3eb2ee8",
+    "task1/evidence/goal2/data/raw_diagnostics.json": "b090eeb696df00940d6c707f5114c4a78f0e6b2f69ffdfa6ffcd6de84eb99442",
+    "task1/config/goal2/experiment_matrix.json": "24ee0fed02252585618dc90a90250f5e754e9d8f5f9a58e25a8e368d0d232775",
+    "task1/evidence/goal2/a_epoch02_development_registry_snapshot.json": "7690ed28d2ecc40171fba07452bae2a178cb334f96faf84b7547855dc30e1904",
+    "task1/evidence/goal2/runs/g2-development-parameters-02/manifest.json": "51fc830c8e0be9a0f5f4b4f497833aef6637f5d570590f25e4e9495cfc120920",
+    "task1/evidence/goal2/runs/g2-development-orders-02/manifest.json": "840ea80c28ff2a34584b67793514ffd04ee0cb13e1511f221161eed27b621c53",
+    "task1/evidence/goal2/runs/g2-demo-memory-02/manifest.json": "9bfd29dbfe573f19c28aedd69cd9f2d9da066a56cc150fc7f831cc13c631dac8",
+    "task1/evidence/goal2/runs/g2-development-modes-02/manifest.json": "1c4431c5848e19daa5c89dec1c5ab4ab8ac2a337d7bd26a9ac199846adb80f9d",
+    "task1/evidence/goal2/candidate_lock.json": "a5ed67a3e28a6591063be28df3fb70b0698915b212b010acee7fa580e1aadef8",
+    "task1/evidence/goal2/evaluation_freeze.json": "eb61eea6948d8a1177bef512bfc03b9103ef8ecf2ee68e3d7a2407753ca8a40d",
+    "task1/evidence/goal2/runs/g2-demo-memory-02/memory_snapshot.json": "2330543c3a443532891936ac29d4080cb6e5f45c58e2976cc81c8fa67c6607d6",
+    "task1/evidence/goal2/runs/g2-development-modes-02/modes/DEVELOPMENT-llm-only-e1-b0/episode.json": "930aa36f4f76d51ec58b1cc8e9200273398725be2312d12072ca2cf7c8eea305",
+    "task1/evidence/goal2/runs/g2-development-modes-02/modes/DEVELOPMENT-llm-only-e1-b1/episode.json": "0f35b6a1e0cba92e1c5c7a55f656c1f584f2037fbbf5a437c4f2300b3a2f21fe",
+    "task1/evidence/goal2/runs/g2-development-modes-02/modes/DEVELOPMENT-llm-only-e1-b2/episode.json": "4ee87c705597e83d0c6529ed0ed62b7dc9ff15446f89ff61391604202626daca",
+    "task1/evidence/goal2/runs/g2-development-modes-02/modes/DEVELOPMENT-search-only-e1-b0/episode.json": "85cffb517c1abfdf52b3b91d900943cd1abea1d2e085b441bd3c652231f1a8fa",
+    "task1/evidence/goal2/runs/g2-development-modes-02/modes/DEVELOPMENT-search-only-e1-b1/episode.json": "27bd018f0d00924fed53c2d0ff9afbedf263d762ceb7151eeea16f148a978376",
+    "task1/evidence/goal2/runs/g2-development-modes-02/modes/DEVELOPMENT-search-only-e1-b2/episode.json": "332cbaf88e59d4859ebccb9e68f78c6a4f85d7518624afb8feaf32e4233966f6",
+    "task1/evidence/goal2/runs/g2-development-modes-02/modes/DEVELOPMENT-llm+search-e1-b0/episode.json": "0a1edf01a2373a1c4b81c89f4a9f78a7e3061882118c3f40ff87755a42944599",
+    "task1/evidence/goal2/runs/g2-development-modes-02/modes/DEVELOPMENT-llm+search-e1-b1/episode.json": "f2054864e1adb5629ca24ea219252cd5cca66d2d32b0253492e4cf6d4314d1ff",
+    "task1/evidence/goal2/runs/g2-development-modes-02/modes/DEVELOPMENT-llm+search-e1-b2/episode.json": "bf15ceb0b0121c63e423fb33bd2885a36389786289f4c7c8851299b6aa26822f",
+    "task1/evidence/goal2/runs/g2-development-modes-02/modes/DEVELOPMENT-llm+memory+search-e1-b0/episode.json": "e46f3f759afa4959f4477dcc3ac2e73ba3230952742035c8c5f81132a8631a88",
+    "task1/evidence/goal2/runs/g2-development-modes-02/modes/DEVELOPMENT-llm+memory+search-e1-b1/episode.json": "f72c7e2c7f9784632505ce6fecc2717f08a966975cf6b0f5f401ab3c136fe8fb",
+    "task1/evidence/goal2/runs/g2-development-modes-02/modes/DEVELOPMENT-llm+memory+search-e1-b2/episode.json": "59fb590b6f2410cdcdee510430c958cb84e08bc282507e3bf07c97cbf305cff2",
+    "task1/evidence/goal2/c_contract/development_resource_scope.json": "49cca2149ad0357712eb0a26b9049736d31604dfcfd16032637f126bc7217b20",
+    "task1/evidence/goal2/superseded_runs.json": "2bfc5f8cab6868e81fda32d7b1c146d35341b3bc06a8211c8346cb27fc6bd231",
+    "task1/evidence/goal2/runs/g2-development-parameters-01/manifest.json": "92bec0c62a89c98ad5b5c05e38cc2fb2722919da2a4eedaba964a0c1038be0e7",
+    "task1/evidence/goal2/runs/g2-development-orders-01/manifest.json": "5ac5e7e047672ce34d45a5f84ce337cf08376203e03eb72be12b2ee60b21f326",
+    "task1/evidence/goal2/runs/g2-demo-memory-01/manifest.json": "c2e325539dac7a702cab72af39590127b319967debc513f91ca915b1bbc09fb4",
+    "task1/evidence/goal2/runs/g2-development-modes-01/manifest.json": "4bbdf84035066e4d2a401c73eea552d3b8ecaa5507ba2dec2a25790235b20a5a",
+    "task1/evidence/goal2/interrupted_model_costs.json": "fca041e4bc475144e00d85815d8497c3bb28525a3a7618f7796b28cef8c12a1d",
+    "task1/evidence/goal2/runs/g2-development-modes-01/modes/DEVELOPMENT-llm+memory+search-e1-b0/round1_call/attempt01/receipt.json": "97b69c8ed2b34b3064e4e9ee8e4cebe53331a5e1ff1edb8b5bcad7d5a92b692e",
+    "task1/evidence/goal2/runs/g2-development-modes-01/modes/DEVELOPMENT-llm+memory+search-e1-b0/round2_call/attempt01/receipt.json": "f954bd4ea114ecefbba4f3e601953bca1b8412dfe253c22cdbfdeb96bc2ae2b9",
+    "task1/evidence/goal2/runs/g2-development-modes-01/modes/DEVELOPMENT-llm+memory+search-e1-b0/round3_call/attempt01/receipt.json": "826e626a02af72a61c07f9ee4c1c319d9db7ab618f90e45cf5a9d3e32e7d8cad",
+    "task1/evidence/goal2/runs/g2-development-modes-01/modes/DEVELOPMENT-llm+search-e1-b0/round1_call/attempt01/receipt.json": "04e90cdc596ea642c66f457a4e9ca5d66188a92dd21978db3d2820c1f22254b2",
+    "task1/evidence/goal2/runs/g2-development-modes-01/modes/DEVELOPMENT-llm+search-e1-b0/round2_call/attempt01/receipt.json": "804249267244398fde0be605cca5a2086ec9023294e684495266b944499ef168",
+    "task1/evidence/goal2/runs/g2-development-modes-01/modes/DEVELOPMENT-llm+search-e1-b0/round3_call/attempt01/receipt.json": "653cd818ccad5a03035cb6015553faea0886a62e46654d874d8df22268a9a6dd",
+    "task1/evidence/goal2/runs/g2-development-modes-01/modes/DEVELOPMENT-llm+search-e1-b1/round1_call/attempt01/receipt.json": "5703aa803ad47f1841ef59e9b28975eee2407c9edae76472f53aa25968a10ecf",
+    "task1/evidence/goal2/runs/g2-development-modes-01/modes/DEVELOPMENT-llm+search-e1-b1/round2_call/attempt01/receipt.json": "9ae69a4bd7b320a58b4bd4dcd23f3bdbf465ef742190eee022d397aa99ff21c2",
+    "task1/evidence/goal2/runs/g2-development-modes-01/modes/DEVELOPMENT-llm+search-e1-b1/round3_call/attempt01/receipt.json": "df43306eb1460ba89edac2eb6d615295bfdb89777826dcc2d6899242b7991bff",
+    "task1/evidence/goal2/runs/g2-development-modes-01/modes/DEVELOPMENT-llm+search-e1-b2/round1_call/attempt01/receipt.json": "ce0280c257de1eeab20b4ad42f2dcbfce39c075546a236858c8982a6d1e58fe0",
+    "task1/evidence/goal2/runs/g2-development-modes-01/modes/DEVELOPMENT-llm+search-e1-b2/round2_call/attempt01/receipt.json": "f1afcbfaea4fe742184e4c59823d75e3eb8013fa77a97161ef0764c3e2fa0be5",
+    "task1/evidence/goal2/runs/g2-development-modes-01/modes/DEVELOPMENT-llm+search-e1-b2/round3_call/attempt01/receipt.json": "b71ea2bbcc0cc744534e91b2d15b95f0a416c69bdad67c0d1a2d6214451f9881",
+    "task1/evidence/goal2/runs/g2-development-modes-01/modes/DEVELOPMENT-llm-only-e1-b0/round1_call/attempt01/receipt.json": "0057d4ca70847c91fbf28551ab0a2564c9d7f2ea5f23979e5d14ce4ee3704b08",
+    "task1/evidence/goal2/runs/g2-development-modes-01/modes/DEVELOPMENT-llm-only-e1-b1/round1_call/attempt01/receipt.json": "fcea6c84458c39f0940938774f5a98d1dae26d7388f98fa15b7a528d1e941daf",
+    "task1/evidence/goal2/runs/g2-development-modes-01/modes/DEVELOPMENT-llm-only-e1-b2/round1_call/attempt01/receipt.json": "2a2a1544ce69e5388ee8e0c8d804480bfaa1a0c5ae3bbe169845ce098272b0fd"
+  },
+  "evaluation_results_read": false,
+  "new_model_calls": 0,
+  "new_candidate_processing_runs": 0,
+  "final_analysis_executed": false,
+  "selection_or_parameters_changed": false,
+  "closed_test_assertion_failure": {
+    "path": "task1/evidence/goal2/a_epoch02/ai_tradeoff_analysis_regression/initial_test_failure.json",
+    "sha256": "2d073d70b06f4d7de45e01ad84a6e2f626260c5e2f3b2ff9a9764d7cde66231d",
+    "closure": "The corrected display assertion and all original proposal/resource checks passed in this actual rerun."
+  }
+}

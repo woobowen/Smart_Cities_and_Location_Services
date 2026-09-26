@@ -1,0 +1,66 @@
+{
+  "role_context": "/root/c_contract",
+  "classification": "CURRENT_INDEPENDENT_C_HANDOFF_REVIEW",
+  "at_utc": "2026-09-26T18:42:46.994968+00:00",
+  "command": ".venv/bin/python task1/evidence/goal2/c_contract/review_handoff.py",
+  "review_script_sha256": "d93cf0cf03e15c18a6dcb8c8e4a63fe0ecad49517754505ad915f5c77ecc928d",
+  "reused_independent_probe_sha256": "82249a790476b07986159a74995a3706bf95bac872caf6068cf91e9b5ecfcaf9",
+  "targets": [
+    {
+      "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/baseline.json",
+      "sha256": "865710aea34a316fe83088d7cf2ac1aec68c96623269bfcf06255b5db2930fd8"
+    },
+    {
+      "path": "task1/作业/作业/traj_dict.json",
+      "sha256": "c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3"
+    },
+    {
+      "path": "task1/config/conditional_planar.json",
+      "sha256": "5b1ab7dbf25797a51405a2cddd93a8d2ea3e3b69530369366d0e05be7abb8169"
+    }
+  ],
+  "checked_components": [
+    "raw_sha256",
+    "full_raw_structure_count",
+    "exact_record_duplicates",
+    "raw_extent",
+    "teacher_starter_bytes",
+    "G1_protected_paths",
+    "seven_record_independent_geometry",
+    "G1_current_production_recompute_exact_match"
+  ],
+  "unchecked_components": [
+    "G2_contract",
+    "G2_split",
+    "G2_experiments",
+    "G2_modes",
+    "G2_final_acceptance"
+  ],
+  "status": "VERIFIED",
+  "independent_check_count": 383,
+  "stage_counts": {
+    "input": 783,
+    "segmented": 30,
+    "filtered": 309,
+    "denoised": 13,
+    "simplified": 273,
+    "retained": 188,
+    "not_processed": 0
+  },
+  "max_dp_error_working_m": 4.938319812632412,
+  "new_model_calls": 0,
+  "elapsed_s": 7.027062742999988,
+  "limits": [
+    "G1 exposed pilot regression, not new held-out evidence",
+    "source_crs remains UNVERIFIED",
+    "Expanded extent requires separate G2 numerical and threshold sensitivity verification"
+  ],
+  "source_hashes": {
+    "task1/workflow/geometry.py": "2ad3ca3b49e98e997684e3f5af948771be80dfb03b31b2ae4cc4483856e93d74",
+    "task1/workflow/evaluation.py": "7cf224fbc290d3e83acd5d83a3fe335e6dc437c762f7053d8132817aa91025b2",
+    "task1/workflow/coordinates.py": "d99b270a65c88f8530669d5e7d0887d7563b3e54e19770ab7a9eb695117e075d",
+    "task1/workflow/pipeline.py": "160bedcc0d8dffce71d833dffc4de28928bc7007077ae8d03c57c96d827548c7"
+  },
+  "binding_added_at_utc": "2026-09-26T18:54:20.101062+00:00",
+  "binding_scope": "Existing verified handoff checks with unchanged processing source bytes; no new experiment"
+}

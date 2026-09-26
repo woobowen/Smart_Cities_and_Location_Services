@@ -1,0 +1,42 @@
+{
+  "at": "2026-09-26T21:52:13.792445+00:00",
+  "classification": "INDEPENDENT_PREPUBLICATION_READONLY_GIT_OBSERVATION",
+  "commands": {
+    "branch": [
+      "git",
+      "branch",
+      "--show-current"
+    ],
+    "head": [
+      "git",
+      "rev-parse",
+      "HEAD"
+    ],
+    "origin_main": [
+      "git",
+      "rev-parse",
+      "origin/main"
+    ],
+    "actual_remote": [
+      "git",
+      "ls-remote",
+      "origin",
+      "refs/heads/main"
+    ],
+    "status": [
+      "git",
+      "status",
+      "--porcelain=v1",
+      "-z"
+    ]
+  },
+  "limits": "Not publication proof; final publication requires a new remote readback after actual push.",
+  "branch": "main",
+  "head": "c1c6272606716f9f59aa785d48bfeadb09c7a30e",
+  "origin_main": "a45d89f49f2041477b16485f535adc508c32f8ea",
+  "actual_remote": "a45d89f49f2041477b16485f535adc508c32f8ea\trefs/heads/main",
+  "status": {
+    "sha256": "737c064ecd5f050133f0fdeb6cd7da7ed330694509a0c3b5906e551a88e90a43",
+    "entries": 12
+  }
+}

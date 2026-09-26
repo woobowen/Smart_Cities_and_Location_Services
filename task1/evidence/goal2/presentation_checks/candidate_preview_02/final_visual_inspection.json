@@ -1,0 +1,56 @@
+{
+  "classification": "ACTUAL_B_IMAGE_INSPECTION",
+  "role_context": "/root/b_engine",
+  "reviewed_at": "2026-09-26T20:42:04.878392+00:00",
+  "reviewed_images": [
+    {
+      "path": "task1/evidence/goal2/presentation_checks/candidate_preview_02/after/real_trajectory_cases.png",
+      "sha256": "286f9e456b414164fd639ec5357ed8d30bfef0aef3fc82aae3aa19d68ac7f82f",
+      "actual_view_tool": "view_image",
+      "format": "PNG_300_DPI",
+      "result": "B_VISUAL_CHECK_PASSED",
+      "observations": "All six equal-scale axes remain rectangular; ticks and titles readable. Raw/final shared legend unobstructed, two no-output labels visible. Existing selected near-boundary point is marked with actual 4.999598 residual and 5 working-metre tolerance. No case selection changed."
+    },
+    {
+      "path": "task1/evidence/goal2/presentation_checks/candidate_preview_02/after/pdf-render-200dpi/real_trajectory_cases.png",
+      "sha256": "8b1ab3697983c0c3dc04909eeb8352a48cd62d96b41ca5ead76ed6ea156da7ff",
+      "actual_view_tool": "view_image",
+      "format": "PDF_RENDER_200_DPI",
+      "result": "B_VISUAL_CHECK_PASSED",
+      "observations": "All six equal-scale axes remain rectangular; ticks and titles readable. Raw/final shared legend unobstructed, two no-output labels visible. Existing selected near-boundary point is marked with actual 4.999598 residual and 5 working-metre tolerance. No case selection changed."
+    },
+    {
+      "path": "task1/evidence/goal2/presentation_checks/candidate_preview_02/after/synthetic_metric_counterexamples.png",
+      "sha256": "048388c4fe88c104ca9a8830fc3e3cad923bb7c97121303a1a849f9abf6e29cc",
+      "actual_view_tool": "view_image",
+      "format": "PNG_300_DPI",
+      "result": "B_VISUAL_CHECK_PASSED",
+      "observations": "Horizontal example occupies readable axes, indices 0/1/2 separated with leaders; second example index 0 no longer touches x ticks. Metric annotations agree with executed source. Shared legend and synthetic status visible."
+    },
+    {
+      "path": "task1/evidence/goal2/presentation_checks/candidate_preview_02/after/pdf-render-200dpi/synthetic_metric_counterexamples.png",
+      "sha256": "1eaf5761e6b3990055d42bc71acdbe0a112afdcc1600058cd665644d30d3e340",
+      "actual_view_tool": "view_image",
+      "format": "PDF_RENDER_200_DPI",
+      "result": "B_VISUAL_CHECK_PASSED",
+      "observations": "Horizontal example occupies readable axes, indices 0/1/2 separated with leaders; second example index 0 no longer touches x ticks. Metric annotations agree with executed source. Shared legend and synthetic status visible."
+    },
+    {
+      "path": "task1/evidence/goal2/presentation_checks/candidate_preview_02/after/goal2_actual_architecture.png",
+      "sha256": "06e5deea0f1022fec93f969fca7aee6819b0b2ea1909aafa4332742cd70ff3c9",
+      "actual_view_tool": "view_image",
+      "format": "PNG_300_DPI",
+      "result": "B_VISUAL_CHECK_PASSED",
+      "observations": "All 11 nodes and 13 directed edges readable without clipped labels; production and runtime sections distinct; no fourth model implied by deterministic controller/tools. Native XML vertex/edge specification matches exported graph. C module association points to actual independent numeric implementation."
+    },
+    {
+      "path": "task1/evidence/goal2/presentation_checks/candidate_preview_02/after/pdf-render-200dpi/goal2_actual_architecture.png",
+      "sha256": "8b3f9916d5b163d9027dc29ff770a3a453461e3213d975dadc9eefc44ba6dad1",
+      "actual_view_tool": "view_image",
+      "format": "PDF_RENDER_200_DPI",
+      "result": "B_VISUAL_CHECK_PASSED",
+      "observations": "All 11 nodes and 13 directed edges readable without clipped labels; production and runtime sections distinct; no fourth model implied by deterministic controller/tools. Native XML vertex/edge specification matches exported graph. C module association points to actual independent numeric implementation."
+    }
+  ],
+  "inspection_boundary": "Engineering preview only; independent C and full eleven-figure final acceptance remain pending."
+}

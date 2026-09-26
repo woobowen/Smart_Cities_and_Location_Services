@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="5" skipped="0" tests="16" time="0.079" timestamp="2026-09-27T02:54:00.054698+08:00" hostname="LAPTOP-KI0GT6AJ"><testcase classname="task1.evidence.goal2.c_contract.test_control_independent" name="test_genuine_target_receipt_accepts" time="0.006" /><testcase classname="task1.evidence.goal2.c_contract.test_control_independent" name="test_single_receipt_defect_rejected[missing_component]" time="0.002" /><testcase classname="task1.evidence.goal2.c_contract.test_control_independent" name="test_single_receipt_defect_rejected[wrong_epoch]" time="0.002" /><testcase classname="task1.evidence.goal2.c_contract.test_control_independent" name="test_single_receipt_defect_rejected[wrong_actor]" time="0.002" /><testcase classname="task1.evidence.goal2.c_contract.test_control_independent" name="test_single_receipt_defect_rejected[wrong_target]" time="0.002" /><testcase classname="task1.evidence.goal2.c_contract.test_control_independent" name="test_single_receipt_defect_rejected[empty_targets]" time="0.002" /><testcase classname="task1.evidence.goal2.c_contract.test_control_independent" name="test_empty_submission_rejected" time="0.001" /><testcase classname="task1.evidence.goal2.c_contract.test_control_independent" name="test_unmet_dependency_rejected" time="0.001" /><testcase classname="task1.evidence.goal2.c_contract.test_control_independent" name="test_wrong_state_rejected" time="0.002" /><testcase classname="task1.evidence.goal2.c_contract.test_control_independent" name="test_real_source_change_rejected_before_accept" time="0.002" /><testcase classname="task1.evidence.goal2.c_contract.test_control_independent" name="test_real_source_change_rejected_at_checkpoint" time="0.003" /><testcase classname="task1.evidence.goal2.c_contract.test_control_independent" name="test_publication_requires_all_required_tasks" time="0.001"><failure message="AssertionError: assert not True&#10; +  where True = ready('publication')&#10; +    where ready = &lt;task1.workflow.g2_journal.G2Journal object at 0x766baabd5610&gt;.ready">context = (&lt;task1.workflow.g2_journal.G2Journal object at 0x766baabd5610&gt;, PosixPath('/home/addaswsw/lab/Smart_Cities_and_Locati...daswsw/lab/Smart_Cities_and_Location_Services/task1/evidence/goal2/c_contract/control-fixture-m7xt7qkv/artifact.json'))
+
+    def test_publication_requires_all_required_tasks(context):
+        journal, _, _ = context
+        # Even a purported final-review marker cannot replace the full task registry.
+        for row in journal.state["tasks"].values():
+            row["status"] = "VERIFIED"
+        journal.state["tasks"]["publication"]["status"] = "PENDING"
+        journal.state["tasks"]["evaluation_orders"]["status"] = "PENDING"
+&gt;       assert not journal.ready("publication")
+E       AssertionError: assert not True
+E        +  where True = ready('publication')
+E        +    where ready = &lt;task1.workflow.g2_journal.G2Journal object at 0x766baabd5610&gt;.ready
+
+task1/evidence/goal2/c_contract/test_control_independent.py:124: AssertionError</failure></testcase><testcase classname="task1.evidence.goal2.c_contract.test_control_independent" name="test_issue_repair_requires_nonempty_targets" time="0.002"><failure message="Failed: DID NOT RAISE ValueError">context = (&lt;task1.workflow.g2_journal.G2Journal object at 0x766bab7e8230&gt;, PosixPath('/home/addaswsw/lab/Smart_Cities_and_Locati...daswsw/lab/Smart_Cities_and_Location_Services/task1/evidence/goal2/c_contract/control-fixture-fo71rag0/artifact.json'))
+
+    def test_issue_repair_requires_nonempty_targets(context):
+        journal, _, _ = context
+        journal.issue("FIXTURE", "handoff", "synthetic", "test", [], "B:fixture", "C:test")
+&gt;       with pytest.raises(ValueError):
+E       Failed: DID NOT RAISE ValueError
+
+task1/evidence/goal2/c_contract/test_control_independent.py:130: Failed</failure></testcase><testcase classname="task1.evidence.goal2.c_contract.test_control_independent" name="test_issue_closure_checks_actor_coverage_epoch[wrong_actor]" time="0.003"><failure message="Failed: DID NOT RAISE ValueError">context = (&lt;task1.workflow.g2_journal.G2Journal object at 0x766baabd71a0&gt;, PosixPath('/home/addaswsw/lab/Smart_Cities_and_Locati...daswsw/lab/Smart_Cities_and_Location_Services/task1/evidence/goal2/c_contract/control-fixture-jfthxvim/artifact.json'))
+change = 'wrong_actor'
+
+    @pytest.mark.parametrize("change", ["wrong_actor", "missing_component", "wrong_epoch"])
+    def test_issue_closure_checks_actor_coverage_epoch(context, change):
+        journal, directory, artifact = context
+        journal.issue("FIXTURE", "handoff", "synthetic", "test", [journal.attach(artifact)], "B:fixture", "C:test")
+        journal.repair("FIXTURE", [artifact])
+        path, value = valid_receipt(journal, directory, artifact)
+        if change == "wrong_actor":
+            value["role_context"] = "/root/not_registered"
+        elif change == "missing_component":
+            value["checked_components"] = ["unrelated_dummy_check"]
+        else:
+            value["source_hashes"][next(iter(value["source_hashes"]))] = "0" * 64
+        path.write_text(json.dumps(value))
+&gt;       with pytest.raises(ValueError):
+E       Failed: DID NOT RAISE ValueError
+
+task1/evidence/goal2/c_contract/test_control_independent.py:147: Failed</failure></testcase><testcase classname="task1.evidence.goal2.c_contract.test_control_independent" name="test_issue_closure_checks_actor_coverage_epoch[missing_component]" time="0.003"><failure message="Failed: DID NOT RAISE ValueError">context = (&lt;task1.workflow.g2_journal.G2Journal object at 0x766baabd7320&gt;, PosixPath('/home/addaswsw/lab/Smart_Cities_and_Locati...daswsw/lab/Smart_Cities_and_Location_Services/task1/evidence/goal2/c_contract/control-fixture-zfwv2aqe/artifact.json'))
+change = 'missing_component'
+
+    @pytest.mark.parametrize("change", ["wrong_actor", "missing_component", "wrong_epoch"])
+    def test_issue_closure_checks_actor_coverage_epoch(context, change):
+        journal, directory, artifact = context
+        journal.issue("FIXTURE", "handoff", "synthetic", "test", [journal.attach(artifact)], "B:fixture", "C:test")
+        journal.repair("FIXTURE", [artifact])
+        path, value = valid_receipt(journal, directory, artifact)
+        if change == "wrong_actor":
+            value["role_context"] = "/root/not_registered"
+        elif change == "missing_component":
+            value["checked_components"] = ["unrelated_dummy_check"]
+        else:
+            value["source_hashes"][next(iter(value["source_hashes"]))] = "0" * 64
+        path.write_text(json.dumps(value))
+&gt;       with pytest.raises(ValueError):
+E       Failed: DID NOT RAISE ValueError
+
+task1/evidence/goal2/c_contract/test_control_independent.py:147: Failed</failure></testcase><testcase classname="task1.evidence.goal2.c_contract.test_control_independent" name="test_issue_closure_checks_actor_coverage_epoch[wrong_epoch]" time="0.003"><failure message="Failed: DID NOT RAISE ValueError">context = (&lt;task1.workflow.g2_journal.G2Journal object at 0x766baabd6f30&gt;, PosixPath('/home/addaswsw/lab/Smart_Cities_and_Locati...daswsw/lab/Smart_Cities_and_Location_Services/task1/evidence/goal2/c_contract/control-fixture-zy21ct49/artifact.json'))
+change = 'wrong_epoch'
+
+    @pytest.mark.parametrize("change", ["wrong_actor", "missing_component", "wrong_epoch"])
+    def test_issue_closure_checks_actor_coverage_epoch(context, change):
+        journal, directory, artifact = context
+        journal.issue("FIXTURE", "handoff", "synthetic", "test", [journal.attach(artifact)], "B:fixture", "C:test")
+        journal.repair("FIXTURE", [artifact])
+        path, value = valid_receipt(journal, directory, artifact)
+        if change == "wrong_actor":
+            value["role_context"] = "/root/not_registered"
+        elif change == "missing_component":
+            value["checked_components"] = ["unrelated_dummy_check"]
+        else:
+            value["source_hashes"][next(iter(value["source_hashes"]))] = "0" * 64
+        path.write_text(json.dumps(value))
+&gt;       with pytest.raises(ValueError):
+E       Failed: DID NOT RAISE ValueError
+
+task1/evidence/goal2/c_contract/test_control_independent.py:147: Failed</failure></testcase></testsuite></testsuites>

@@ -1,0 +1,58 @@
+{
+  "status": "VERIFIED",
+  "role_context": "/root/c_contract",
+  "reviewed_at": "2026-09-26T19:53:03.561101+00:00",
+  "classification": "INDEPENDENT_IMPLEMENTATION_REPAIR_ACCEPTANCE_NOT_FORMAL_EXPERIMENT_ACCEPTANCE",
+  "targets": [
+    {
+      "path": "task1/workflow/g2_modes.py",
+      "sha256": "31e936448918b943dca3cfdc8e4590eb64da2c48b262899040862d7b1533704e"
+    }
+  ],
+  "source_hashes": {
+    "task1/workflow/g2_modes.py": "31e936448918b943dca3cfdc8e4590eb64da2c48b262899040862d7b1533704e"
+  },
+  "checked_components": [
+    "fault_rejected",
+    "valid_receipt_accepted",
+    "source_epoch",
+    "serialized_prompt_context_binding",
+    "all_rows_share_pre_dispatch_hash",
+    "old_actual_failure_preserved"
+  ],
+  "tests": {
+    "passed": 91,
+    "failed": 0,
+    "result": {
+      "path": "task1/evidence/goal2/c_contract/core_epoch02_tests.xml",
+      "sha256": "f2237137b1d7f5213fb8842616c286403cdf00f1a628c7d5514de3ad6262ffa5"
+    },
+    "program": {
+      "path": "task1/evidence/goal2/c_contract/test_g2_modes_independent.py",
+      "sha256": "e9482cfbc825fcba9d42c7b548683c44b7d3c496f08657539cf67ca9f0ec2d6b"
+    }
+  },
+  "real_model_calls_during_review": 0,
+  "independence": "Root repaired production; C independently authored and executed fixtures and read-only actual-failure checks.",
+  "unchecked_components": [
+    "new source epoch formal experiments and LIVE episodes",
+    "parent development_modes acceptance"
+  ],
+  "parent_recovery_condition": "Implementation defect is repaired. Parent must remain unverified until new code is committed, fresh deterministic runs and new LIVE episodes complete, and independent run receipts are accepted.",
+  "superseded_old_runs": {
+    "path": "task1/evidence/goal2/superseded_runs.json",
+    "sha256": "2bfc5f8cab6868e81fda32d7b1c146d35341b3bc06a8211c8346cb27fc6bd231"
+  },
+  "issue_id": "G2-C-CONTEXT-001",
+  "parent_task": "development_modes",
+  "historical_failure": {
+    "path": "task1/evidence/goal2/c_contract/issue_context_001.json",
+    "sha256": "8e44ab96e8c5c251eca0ee0e27c1eb153703ae38729ba5a3bbaf5faeb3822631"
+  },
+  "historical_episode_preserved": {
+    "path": "task1/evidence/goal2/runs/g2-development-modes-01/modes/DEVELOPMENT-llm+search-e1-b0/episode.json",
+    "sha256": "44e195c5723918a6e145f45ce5ea240f28eaf0a4aa89adf5e53c1f1477f728a8"
+  },
+  "repair": "Deep-copy prior proposal history and compute a single immutable context hash before dispatch.",
+  "regression": "Two synthetic records, three causally sequential feedback rounds, two fresh episodes; every recorded hash equals exact serialized provider prompt context. Old actual 13-mismatch evidence remains preserved."
+}

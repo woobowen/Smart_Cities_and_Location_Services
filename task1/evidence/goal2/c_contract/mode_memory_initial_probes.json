@@ -1,0 +1,19 @@
+{
+  "classification": "C_ENGINEERING_FAULT_INJECTION_NO_MODEL_CALLS",
+  "targets": {
+    "task1/workflow/g2_modes.py": "ca2602886c42a05a5cecbe61eb63acafcb5233e628e0dde4341b4cb0513388f3",
+    "task1/workflow/g2_memory.py": "a86116137bcd089819e895701365a153ce02fca23fe0fc707dde7ad47b8f6325"
+  },
+  "semantic_output_retry": {
+    "provider_fixture_calls": 1,
+    "expected_calls": 1,
+    "result": "returned",
+    "test_passed": true
+  },
+  "memory_public_mutation": {
+    "retrieved_dp": 5,
+    "result": "returned",
+    "test_passed": true,
+    "disk_hash_unchanged": true
+  }
+}

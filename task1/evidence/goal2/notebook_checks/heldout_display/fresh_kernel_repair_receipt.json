@@ -1,0 +1,89 @@
+{
+  "issue_id": "G2-B-NOTEBOOK-CONFIRMATION-001",
+  "parent_task": "notebooks",
+  "status": "B_REPAIRED_FRESH_KERNEL_VERIFIED_C_PENDING",
+  "at": "2026-09-26T21:38:01.650445+00:00",
+  "reviewer": "B /root/b_engine",
+  "checked_components": [
+    "Onlycandidates_notebookpresentationfunctionchanged",
+    "freshkernelall8codecells1to8",
+    "heldoutdisplaycellexecution4",
+    "actualoutputtableequalsreviewedcandidateconfirmation",
+    "rawrecomputeandallbindingassertspassed",
+    "Providerzerosentinel",
+    "memorypreposthash",
+    "processing28hashesunchanged"
+  ],
+  "displayed_results": [
+    {
+      "candidate": "C-S",
+      "config_id": "cfg-1e535c3fe3cc8ae1",
+      "protected_records": "120/120",
+      "strict_gain_records": "53/120",
+      "covered_raw_points": "12162/12173",
+      "retained_raw_points": "2939/12173",
+      "no_output_records": "0/120",
+      "research_status": "SUPPORTED_WITHIN_SCOPE",
+      "quality_accepted": "False"
+    },
+    {
+      "candidate": "C-D",
+      "config_id": "cfg-b15b8281b73592fb",
+      "protected_records": "120/120",
+      "strict_gain_records": "0/120",
+      "covered_raw_points": "8805/12173",
+      "retained_raw_points": "2748/12173",
+      "no_output_records": "32/120",
+      "research_status": "NO_DEMONSTRATED_GAIN",
+      "quality_accepted": "False"
+    },
+    {
+      "candidate": "C-P",
+      "config_id": "cfg-b15b8281b73592fb",
+      "protected_records": "120/120",
+      "strict_gain_records": "0/120",
+      "covered_raw_points": "8805/12173",
+      "retained_raw_points": "2748/12173",
+      "no_output_records": "32/120",
+      "research_status": "NO_DEMONSTRATED_GAIN",
+      "quality_accepted": "False"
+    }
+  ],
+  "targets": [
+    {
+      "path": "task1/scripts/build_goal2_notebooks.py",
+      "sha256": "93093383ab2d2aa4bb6fc4dda1568982727d01c05b7470e92cef8d93e27f3fa0"
+    },
+    {
+      "path": "task1/notebooks/goal2/03_candidates_counterexamples_and_cases.ipynb",
+      "sha256": "17da1bce859e024e24f2b0301b07f0efa9be300d16803d361b3cf243ab2315ce"
+    },
+    {
+      "path": "task1/evidence/goal2/notebook_runs/fresh-01/03_candidates_counterexamples_and_cases/worker_receipt.json",
+      "sha256": "c341ec87e70f7375a57c5602a6a46272da81727389d0287b28043be16d6b671e"
+    },
+    {
+      "path": "task1/evidence/goal2/notebook_runs/fresh-01/03_candidates_counterexamples_and_cases/dispatch_receipt.json",
+      "sha256": "f4d56569d34fdf28648fcae89409a1fc379460f3a551b826c7af0fe474c14e18"
+    },
+    {
+      "path": "task1/evidence/goal2/notebook_checks/heldout_display/source_check_receipt.json",
+      "sha256": "fee83b7d054c15c2daf7d877e90e906e2e9452bd656b0a41eef8eeaa2cbcc792"
+    },
+    {
+      "path": "task1/evidence/goal2/a_epoch02/heldout_single_confirmation/single_candidate_confirmation.json",
+      "sha256": "d2ae21c5d74512e3ed121462a3211c1392e8b84e31370f415e16b34241aba263"
+    },
+    {
+      "path": "task1/evidence/goal2/c_contract/single_candidate_confirmation_receipt.json",
+      "sha256": "a727b3e9c12a904c2ccb5ab4200e217b4a8d8f2675aee7c8796b443a37e8086d"
+    }
+  ],
+  "new_model_calls": 0,
+  "new_independent_research_experiments": 0,
+  "processing_epoch_changed": false,
+  "unchecked_components": [
+    "IndependentCclosure",
+    "Parentnotebooktaskuntilall3RunAllreceiptscollected"
+  ]
+}

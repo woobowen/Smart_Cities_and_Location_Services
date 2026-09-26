@@ -1,0 +1,95 @@
+{
+  "at": "2026-09-26T20:35:22.872592+00:00",
+  "observed_error": "C_TARGET_MISMATCH",
+  "classification": "ACTUAL_REVIEW_HANDOFF_COVERAGE_GAP",
+  "original_parameter_accept_rejected": true,
+  "task_rows": [
+    {
+      "task": "evaluation_parameters",
+      "submitted_targets": [
+        {
+          "path": "task1/evidence/goal2/runs/g2-evaluation-parameters-01/manifest.json",
+          "sha256": "c3f35ddad27245a166f43992f0f0b3f1f0543c7177543fc2d13471e53902fcf3"
+        },
+        {
+          "path": "task1/evidence/goal2/logs/g2-evaluation-parameters-01_artifact_checks.json",
+          "sha256": "f7d9e878351cdd7d88d4071975493e90ccf075ad0cffb303616b3ab88a0d266e"
+        },
+        {
+          "path": "task1/evidence/goal2/logs/g2-evaluation-parameters-01_execution.json",
+          "sha256": "7d0299c16cb1dc4b049027e5c5d557f3244a4823ce2a7ed5a84f872a954fbb33"
+        }
+      ],
+      "original_c_receipt": "task1/evidence/goal2/c_contract/evaluation_parameters_receipt.json",
+      "c_targets": [
+        {
+          "path": "task1/evidence/goal2/runs/g2-evaluation-parameters-01/manifest.json",
+          "sha256": "c3f35ddad27245a166f43992f0f0b3f1f0543c7177543fc2d13471e53902fcf3"
+        },
+        {
+          "path": "task1/evidence/goal2/runs/g2-evaluation-parameters-01/evaluation_table.json",
+          "sha256": "06da36b4d35bf3d6e9aee744b18802b9eb7eded95b7834c4510abc6bad0afe44"
+        },
+        {
+          "path": "task1/evidence/goal2/evaluation_freeze.json",
+          "sha256": "eb61eea6948d8a1177bef512bfc03b9103ef8ecf2ee68e3d7a2407753ca8a40d"
+        }
+      ],
+      "missing_target_bindings": [
+        {
+          "path": "task1/evidence/goal2/logs/g2-evaluation-parameters-01_artifact_checks.json",
+          "sha256": "f7d9e878351cdd7d88d4071975493e90ccf075ad0cffb303616b3ab88a0d266e"
+        },
+        {
+          "path": "task1/evidence/goal2/logs/g2-evaluation-parameters-01_execution.json",
+          "sha256": "7d0299c16cb1dc4b049027e5c5d557f3244a4823ce2a7ed5a84f872a954fbb33"
+        }
+      ]
+    },
+    {
+      "task": "evaluation_orders",
+      "submitted_targets": [
+        {
+          "path": "task1/evidence/goal2/runs/g2-evaluation-orders-01/manifest.json",
+          "sha256": "5da2a9ff4d53941d2d91e9ecfedd508e1b247a0c44738042e9c3666a3aa9b047"
+        },
+        {
+          "path": "task1/evidence/goal2/logs/g2-evaluation-orders-01_artifact_checks.json",
+          "sha256": "189375c313f3e058006989bbecc2b52610306ed5cd2b4deb381473ee6c5e0b4f"
+        },
+        {
+          "path": "task1/evidence/goal2/logs/g2-evaluation-orders-01_execution.json",
+          "sha256": "51b955ed0f0d3a1ac07d6016d93ddc98415d729b1ed01ecef2c682d0579fe380"
+        }
+      ],
+      "original_c_receipt": "task1/evidence/goal2/c_contract/evaluation_orders_receipt.json",
+      "c_targets": [
+        {
+          "path": "task1/evidence/goal2/runs/g2-evaluation-orders-01/manifest.json",
+          "sha256": "5da2a9ff4d53941d2d91e9ecfedd508e1b247a0c44738042e9c3666a3aa9b047"
+        },
+        {
+          "path": "task1/evidence/goal2/runs/g2-evaluation-orders-01/order_table.json",
+          "sha256": "eaea1e4e77f5cd14f0095397b1f9a5d25f27ecc4196a9c16467933940a750690"
+        },
+        {
+          "path": "task1/evidence/goal2/evaluation_freeze.json",
+          "sha256": "eb61eea6948d8a1177bef512bfc03b9103ef8ecf2ee68e3d7a2407753ca8a40d"
+        }
+      ],
+      "missing_target_bindings": [
+        {
+          "path": "task1/evidence/goal2/logs/g2-evaluation-orders-01_artifact_checks.json",
+          "sha256": "189375c313f3e058006989bbecc2b52610306ed5cd2b4deb381473ee6c5e0b4f"
+        },
+        {
+          "path": "task1/evidence/goal2/logs/g2-evaluation-orders-01_execution.json",
+          "sha256": "51b955ed0f0d3a1ac07d6016d93ddc98415d729b1ed01ecef2c682d0579fe380"
+        }
+      ]
+    }
+  ],
+  "numeric_artifacts_changed": false,
+  "processing_sources_changed": false,
+  "required_action": "independently inspect execution and B artifact-check metadata, then issue complete bound C receipts; retain original receipts"
+}

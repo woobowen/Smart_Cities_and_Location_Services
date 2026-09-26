@@ -1,0 +1,1289 @@
+{
+  "mode": "llm+memory+search",
+  "episode_id": "DEVELOPMENT-llm+memory+search-e1-b2",
+  "decision_round": 1,
+  "proposal_limit": 1,
+  "reference_parameters": {
+    "dt": 30,
+    "distance": 400,
+    "min_points": 5,
+    "min_length": 65,
+    "direction": 35,
+    "dp": 5
+  },
+  "parameter_grids": {
+    "dt": [
+      15,
+      20,
+      30,
+      45,
+      60
+    ],
+    "distance": [
+      95,
+      200,
+      400,
+      600,
+      800
+    ],
+    "min_points": [
+      2,
+      3,
+      5,
+      7,
+      10
+    ],
+    "min_length": [
+      0,
+      32.5,
+      65,
+      97.5,
+      130
+    ],
+    "direction": [
+      15,
+      25,
+      35,
+      45,
+      60
+    ],
+    "dp": [
+      0,
+      0.5,
+      1,
+      2,
+      5,
+      10,
+      20
+    ]
+  },
+  "prediction_metric_ids": [
+    "n_final",
+    "common_covered_points",
+    "common_max_error",
+    "dp_saving",
+    "raw_break_crossings",
+    "n_direction_removed"
+  ],
+  "per_record_candidate_budget": 20,
+  "evaluations_already_consumed": {
+    "82": 0,
+    "10232": 0,
+    "10796": 0,
+    "4805": 0,
+    "7764": 0,
+    "4953": 0,
+    "5029": 0,
+    "6556": 0
+  },
+  "records": [
+    {
+      "card": {
+        "record_id": "82",
+        "n_points": 98,
+        "span_work_m": 55.645680586724716,
+        "duration_seconds": 1194.0,
+        "path_length_work_m": 268.1743777607514,
+        "zero_dt_edges": 0,
+        "negative_dt_edges": 0,
+        "dt_over_30_edges": 0,
+        "distance_over_400_edges": 0,
+        "raw_break_edges": 0,
+        "adjacent_duplicate_edges": 0,
+        "direction_unavailable_edges": 0,
+        "median_positive_dt": 10.0,
+        "stratum": "MID_T0_D0",
+        "reference_handle": "a5ad8ca56d8a9c8e9d1988c63f53d167e5a36bf4b8c99501bd5fcf6e53b63946"
+      },
+      "demonstration_memory": [
+        {
+          "memory_id": "DEMO-3972",
+          "record_id": "3972",
+          "stratum": "MID_T0_D0",
+          "selected_parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 35,
+            "dp": 5
+          },
+          "research_status": "NO_DEMONSTRATED_GAIN",
+          "verified_metrics": {
+            "n_input": 100,
+            "n_final": 11,
+            "common_covered_points": 100,
+            "common_max_error": 5.250490869816339,
+            "dp_saving": 0.8705882352941177,
+            "dp_max_error": 4.2161253172240665,
+            "raw_break_crossings": 0
+          },
+          "applicability": "same descriptive stratum; verified demonstration, no ground-truth label",
+          "retrieval_distance": 0.024286279387398097
+        },
+        {
+          "memory_id": "DEMO-11343",
+          "record_id": "11343",
+          "stratum": "MID_T0_D0",
+          "selected_parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 35,
+            "dp": 5
+          },
+          "research_status": "NO_DEMONSTRATED_GAIN",
+          "verified_metrics": {
+            "n_input": 100,
+            "n_final": 13,
+            "common_covered_points": 100,
+            "common_max_error": 4.99661612976897,
+            "dp_saving": 0.8555555555555556,
+            "dp_max_error": 4.613983245448166,
+            "raw_break_crossings": 0
+          },
+          "applicability": "same descriptive stratum; verified demonstration, no ground-truth label",
+          "retrieval_distance": 0.031177393992010798
+        },
+        {
+          "memory_id": "DEMO-1431",
+          "record_id": "1431",
+          "stratum": "MID_T0_D0",
+          "selected_parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 35,
+            "dp": 5
+          },
+          "research_status": "NO_DEMONSTRATED_GAIN",
+          "verified_metrics": {
+            "n_input": 100,
+            "n_final": 9,
+            "common_covered_points": 100,
+            "common_max_error": 4.8168258305085745,
+            "dp_saving": 0.898876404494382,
+            "dp_max_error": 4.8168258305085745,
+            "raw_break_crossings": 0
+          },
+          "applicability": "same descriptive stratum; verified demonstration, no ground-truth label",
+          "retrieval_distance": 0.09103964329097324
+        }
+      ],
+      "procedural_memory": {
+        "dt": {
+          "min": 30,
+          "max": 30,
+          "values": [
+            30
+          ],
+          "meaning": "range among verifier-selected demonstration outcomes; not a validated universal rule"
+        },
+        "distance": {
+          "min": 95,
+          "max": 400,
+          "values": [
+            95,
+            400
+          ],
+          "meaning": "range among verifier-selected demonstration outcomes; not a validated universal rule"
+        },
+        "min_points": {
+          "min": 2,
+          "max": 5,
+          "values": [
+            2,
+            5
+          ],
+          "meaning": "range among verifier-selected demonstration outcomes; not a validated universal rule"
+        },
+        "min_length": {
+          "min": 0,
+          "max": 65,
+          "values": [
+            0,
+            65
+          ],
+          "meaning": "range among verifier-selected demonstration outcomes; not a validated universal rule"
+        },
+        "direction": {
+          "min": 35,
+          "max": 60,
+          "values": [
+            35,
+            60
+          ],
+          "meaning": "range among verifier-selected demonstration outcomes; not a validated universal rule"
+        },
+        "dp": {
+          "min": 5,
+          "max": 5,
+          "values": [
+            5
+          ],
+          "meaning": "range among verifier-selected demonstration outcomes; not a validated universal rule"
+        }
+      },
+      "memory_absence_reason": null
+    },
+    {
+      "card": {
+        "record_id": "10232",
+        "n_points": 98,
+        "span_work_m": 86.72166771827746,
+        "duration_seconds": 1191.0,
+        "path_length_work_m": 394.71070715908667,
+        "zero_dt_edges": 0,
+        "negative_dt_edges": 0,
+        "dt_over_30_edges": 0,
+        "distance_over_400_edges": 0,
+        "raw_break_edges": 0,
+        "adjacent_duplicate_edges": 0,
+        "direction_unavailable_edges": 0,
+        "median_positive_dt": 10.0,
+        "stratum": "MID_T0_D0",
+        "reference_handle": "8d1cafbce7d202b9aa34d29a97406aa93309f9fa97b70cb13ce4695640699bbd"
+      },
+      "demonstration_memory": [
+        {
+          "memory_id": "DEMO-3972",
+          "record_id": "3972",
+          "stratum": "MID_T0_D0",
+          "selected_parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 35,
+            "dp": 5
+          },
+          "research_status": "NO_DEMONSTRATED_GAIN",
+          "verified_metrics": {
+            "n_input": 100,
+            "n_final": 11,
+            "common_covered_points": 100,
+            "common_max_error": 5.250490869816339,
+            "dp_saving": 0.8705882352941177,
+            "dp_max_error": 4.2161253172240665,
+            "raw_break_crossings": 0
+          },
+          "applicability": "same descriptive stratum; verified demonstration, no ground-truth label",
+          "retrieval_distance": 0.02316121673906629
+        },
+        {
+          "memory_id": "DEMO-11343",
+          "record_id": "11343",
+          "stratum": "MID_T0_D0",
+          "selected_parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 35,
+            "dp": 5
+          },
+          "research_status": "NO_DEMONSTRATED_GAIN",
+          "verified_metrics": {
+            "n_input": 100,
+            "n_final": 13,
+            "common_covered_points": 100,
+            "common_max_error": 4.99661612976897,
+            "dp_saving": 0.8555555555555556,
+            "dp_max_error": 4.613983245448166,
+            "raw_break_crossings": 0
+          },
+          "applicability": "same descriptive stratum; verified demonstration, no ground-truth label",
+          "retrieval_distance": 0.07225626898553453
+        },
+        {
+          "memory_id": "DEMO-1431",
+          "record_id": "1431",
+          "stratum": "MID_T0_D0",
+          "selected_parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 35,
+            "dp": 5
+          },
+          "research_status": "NO_DEMONSTRATED_GAIN",
+          "verified_metrics": {
+            "n_input": 100,
+            "n_final": 9,
+            "common_covered_points": 100,
+            "common_max_error": 4.8168258305085745,
+            "dp_saving": 0.898876404494382,
+            "dp_max_error": 4.8168258305085745,
+            "raw_break_crossings": 0
+          },
+          "applicability": "same descriptive stratum; verified demonstration, no ground-truth label",
+          "retrieval_distance": 0.1330398230628868
+        }
+      ],
+      "procedural_memory": {
+        "dt": {
+          "min": 30,
+          "max": 30,
+          "values": [
+            30
+          ],
+          "meaning": "range among verifier-selected demonstration outcomes; not a validated universal rule"
+        },
+        "distance": {
+          "min": 95,
+          "max": 400,
+          "values": [
+            95,
+            400
+          ],
+          "meaning": "range among verifier-selected demonstration outcomes; not a validated universal rule"
+        },
+        "min_points": {
+          "min": 2,
+          "max": 5,
+          "values": [
+            2,
+            5
+          ],
+          "meaning": "range among verifier-selected demonstration outcomes; not a validated universal rule"
+        },
+        "min_length": {
+          "min": 0,
+          "max": 65,
+          "values": [
+            0,
+            65
+          ],
+          "meaning": "range among verifier-selected demonstration outcomes; not a validated universal rule"
+        },
+        "direction": {
+          "min": 35,
+          "max": 60,
+          "values": [
+            35,
+            60
+          ],
+          "meaning": "range among verifier-selected demonstration outcomes; not a validated universal rule"
+        },
+        "dp": {
+          "min": 5,
+          "max": 5,
+          "values": [
+            5
+          ],
+          "meaning": "range among verifier-selected demonstration outcomes; not a validated universal rule"
+        }
+      },
+      "memory_absence_reason": null
+    },
+    {
+      "card": {
+        "record_id": "10796",
+        "n_points": 98,
+        "span_work_m": 14.025039993843908,
+        "duration_seconds": 1186.0,
+        "path_length_work_m": 62.87336929954257,
+        "zero_dt_edges": 0,
+        "negative_dt_edges": 0,
+        "dt_over_30_edges": 0,
+        "distance_over_400_edges": 0,
+        "raw_break_edges": 0,
+        "adjacent_duplicate_edges": 5,
+        "direction_unavailable_edges": 5,
+        "median_positive_dt": 10.0,
+        "stratum": "MID_T0_D1",
+        "reference_handle": "faa21834a375cafb2bbc2e083a8f2a34350a1316a2ddb51347236f76c1decad9"
+      },
+      "demonstration_memory": [
+        {
+          "memory_id": "DEMO-9879",
+          "record_id": "9879",
+          "stratum": "MID_T0_D1",
+          "selected_parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 35,
+            "dp": 5
+          },
+          "research_status": "NO_DEMONSTRATED_GAIN",
+          "verified_metrics": {
+            "n_input": 100,
+            "n_final": 5,
+            "common_covered_points": 100,
+            "common_max_error": 4.509748668910041,
+            "dp_saving": 0.9390243902439024,
+            "dp_max_error": 4.509748668910041,
+            "raw_break_crossings": 0
+          },
+          "applicability": "same descriptive stratum; verified demonstration, no ground-truth label",
+          "retrieval_distance": 0.04985270451143886
+        },
+        {
+          "memory_id": "DEMO-6919",
+          "record_id": "6919",
+          "stratum": "MID_T0_D1",
+          "selected_parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 35,
+            "dp": 5
+          },
+          "research_status": "NO_DEMONSTRATED_GAIN",
+          "verified_metrics": {
+            "n_input": 100,
+            "n_final": 2,
+            "common_covered_points": 100,
+            "common_max_error": 3.532907620024157,
+            "dp_saving": 0.979381443298969,
+            "dp_max_error": 3.532907620024157,
+            "raw_break_crossings": 0
+          },
+          "applicability": "same descriptive stratum; verified demonstration, no ground-truth label",
+          "retrieval_distance": 0.07948872262479215
+        },
+        {
+          "memory_id": "DEMO-7672",
+          "record_id": "7672",
+          "stratum": "MID_T0_D1",
+          "selected_parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 35,
+            "dp": 5
+          },
+          "research_status": "NO_DEMONSTRATED_GAIN",
+          "verified_metrics": {
+            "n_input": 102,
+            "n_final": 15,
+            "common_covered_points": 102,
+            "common_max_error": 4.487378082690823,
+            "dp_saving": 0.8529411764705882,
+            "dp_max_error": 4.487378082690823,
+            "raw_break_crossings": 0
+          },
+          "applicability": "same descriptive stratum; verified demonstration, no ground-truth label",
+          "retrieval_distance": 0.7083042928872362
+        }
+      ],
+      "procedural_memory": {
+        "dt": {
+          "min": 30,
+          "max": 30,
+          "values": [
+            30
+          ],
+          "meaning": "range among verifier-selected demonstration outcomes; not a validated universal rule"
+        },
+        "distance": {
+          "min": 95,
+          "max": 400,
+          "values": [
+            95,
+            400
+          ],
+          "meaning": "range among verifier-selected demonstration outcomes; not a validated universal rule"
+        },
+        "min_points": {
+          "min": 2,
+          "max": 5,
+          "values": [
+            2,
+            5
+          ],
+          "meaning": "range among verifier-selected demonstration outcomes; not a validated universal rule"
+        },
+        "min_length": {
+          "min": 0,
+          "max": 65,
+          "values": [
+            0,
+            65
+          ],
+          "meaning": "range among verifier-selected demonstration outcomes; not a validated universal rule"
+        },
+        "direction": {
+          "min": 35,
+          "max": 60,
+          "values": [
+            35,
+            60
+          ],
+          "meaning": "range among verifier-selected demonstration outcomes; not a validated universal rule"
+        },
+        "dp": {
+          "min": 5,
+          "max": 5,
+          "values": [
+            5
+          ],
+          "meaning": "range among verifier-selected demonstration outcomes; not a validated universal rule"
+        }
+      },
+      "memory_absence_reason": null
+    },
+    {
+      "card": {
+        "record_id": "4805",
+        "n_points": 99,
+        "span_work_m": 17.29961032472596,
+        "duration_seconds": 1195.0,
+        "path_length_work_m": 24.710877975503042,
+        "zero_dt_edges": 0,
+        "negative_dt_edges": 0,
+        "dt_over_30_edges": 0,
+        "distance_over_400_edges": 0,
+        "raw_break_edges": 0,
+        "adjacent_duplicate_edges": 78,
+        "direction_unavailable_edges": 78,
+        "median_positive_dt": 10.0,
+        "stratum": "MID_T0_D1",
+        "reference_handle": "99ae076ed98fea0953458e7760b1a4f6be4e1b332896573b067a97d0f29dfaa8"
+      },
+      "demonstration_memory": [
+        {
+          "memory_id": "DEMO-10170",
+          "record_id": "10170",
+          "stratum": "MID_T0_D1",
+          "selected_parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 35,
+            "dp": 5
+          },
+          "research_status": "NO_DEMONSTRATED_GAIN",
+          "verified_metrics": {
+            "n_input": 99,
+            "n_final": 4,
+            "common_covered_points": 99,
+            "common_max_error": 4.523331710997489,
+            "dp_saving": 0.9595959595959596,
+            "dp_max_error": 4.523331710997489,
+            "raw_break_crossings": 0
+          },
+          "applicability": "same descriptive stratum; verified demonstration, no ground-truth label",
+          "retrieval_distance": 0.041951300691326306
+        },
+        {
+          "memory_id": "DEMO-1180",
+          "record_id": "1180",
+          "stratum": "MID_T0_D1",
+          "selected_parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 0,
+            "direction": 35,
+            "dp": 5
+          },
+          "research_status": "SUPPORTED_WITHIN_SCOPE",
+          "verified_metrics": {
+            "n_input": 99,
+            "n_final": 2,
+            "common_covered_points": 99,
+            "common_max_error": 2.009448866471899,
+            "dp_saving": 0.9797979797979798,
+            "dp_max_error": 2.009448866471899,
+            "raw_break_crossings": 0
+          },
+          "applicability": "same descriptive stratum; verified demonstration, no ground-truth label",
+          "retrieval_distance": 0.11156180627744111
+        },
+        {
+          "memory_id": "DEMO-7672",
+          "record_id": "7672",
+          "stratum": "MID_T0_D1",
+          "selected_parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 35,
+            "dp": 5
+          },
+          "research_status": "NO_DEMONSTRATED_GAIN",
+          "verified_metrics": {
+            "n_input": 102,
+            "n_final": 15,
+            "common_covered_points": 102,
+            "common_max_error": 4.487378082690823,
+            "dp_saving": 0.8529411764705882,
+            "dp_max_error": 4.487378082690823,
+            "raw_break_crossings": 0
+          },
+          "applicability": "same descriptive stratum; verified demonstration, no ground-truth label",
+          "retrieval_distance": 0.5501315343130606
+        }
+      ],
+      "procedural_memory": {
+        "dt": {
+          "min": 30,
+          "max": 30,
+          "values": [
+            30
+          ],
+          "meaning": "range among verifier-selected demonstration outcomes; not a validated universal rule"
+        },
+        "distance": {
+          "min": 95,
+          "max": 400,
+          "values": [
+            95,
+            400
+          ],
+          "meaning": "range among verifier-selected demonstration outcomes; not a validated universal rule"
+        },
+        "min_points": {
+          "min": 2,
+          "max": 5,
+          "values": [
+            2,
+            5
+          ],
+          "meaning": "range among verifier-selected demonstration outcomes; not a validated universal rule"
+        },
+        "min_length": {
+          "min": 0,
+          "max": 65,
+          "values": [
+            0,
+            65
+          ],
+          "meaning": "range among verifier-selected demonstration outcomes; not a validated universal rule"
+        },
+        "direction": {
+          "min": 35,
+          "max": 60,
+          "values": [
+            35,
+            60
+          ],
+          "meaning": "range among verifier-selected demonstration outcomes; not a validated universal rule"
+        },
+        "dp": {
+          "min": 5,
+          "max": 5,
+          "values": [
+            5
+          ],
+          "meaning": "range among verifier-selected demonstration outcomes; not a validated universal rule"
+        }
+      },
+      "memory_absence_reason": null
+    },
+    {
+      "card": {
+        "record_id": "7764",
+        "n_points": 122,
+        "span_work_m": 2760.587412537877,
+        "duration_seconds": 1195.0,
+        "path_length_work_m": 6452.241437726076,
+        "zero_dt_edges": 23,
+        "negative_dt_edges": 0,
+        "dt_over_30_edges": 2,
+        "distance_over_400_edges": 0,
+        "raw_break_edges": 2,
+        "adjacent_duplicate_edges": 0,
+        "direction_unavailable_edges": 0,
+        "median_positive_dt": 10.0,
+        "stratum": "MID_T1_D0",
+        "reference_handle": "af61507082c6cea7b92207c5c3d95a667ff560559c14d384dc2874acc3b83b91"
+      },
+      "demonstration_memory": [
+        {
+          "memory_id": "DEMO-4461",
+          "record_id": "4461",
+          "stratum": "MID_T1_D0",
+          "selected_parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 35,
+            "dp": 5
+          },
+          "research_status": "NO_DEMONSTRATED_GAIN",
+          "verified_metrics": {
+            "n_input": 128,
+            "n_final": 55,
+            "common_covered_points": 128,
+            "common_max_error": 57.675801785726335,
+            "dp_saving": 0.5258620689655172,
+            "dp_max_error": 4.988893781697602,
+            "raw_break_crossings": 0
+          },
+          "applicability": "same descriptive stratum; verified demonstration, no ground-truth label",
+          "retrieval_distance": 0.1663698221002049
+        },
+        {
+          "memory_id": "DEMO-3971",
+          "record_id": "3971",
+          "stratum": "MID_T1_D0",
+          "selected_parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 35,
+            "dp": 5
+          },
+          "research_status": "NO_DEMONSTRATED_GAIN",
+          "verified_metrics": {
+            "n_input": 120,
+            "n_final": 39,
+            "common_covered_points": 120,
+            "common_max_error": 22.021122892958378,
+            "dp_saving": 0.625,
+            "dp_max_error": 4.883873434706808,
+            "raw_break_crossings": 0
+          },
+          "applicability": "same descriptive stratum; verified demonstration, no ground-truth label",
+          "retrieval_distance": 0.16989893550619908
+        },
+        {
+          "memory_id": "DEMO-3296",
+          "record_id": "3296",
+          "stratum": "MID_T1_D0",
+          "selected_parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 35,
+            "dp": 5
+          },
+          "research_status": "NO_DEMONSTRATED_GAIN",
+          "verified_metrics": {
+            "n_input": 115,
+            "n_final": 31,
+            "common_covered_points": 115,
+            "common_max_error": 8.62148400960732,
+            "dp_saving": 0.7075471698113207,
+            "dp_max_error": 4.8646363532306545,
+            "raw_break_crossings": 0
+          },
+          "applicability": "same descriptive stratum; verified demonstration, no ground-truth label",
+          "retrieval_distance": 0.19983802607940315
+        }
+      ],
+      "procedural_memory": {
+        "dt": {
+          "min": 30,
+          "max": 30,
+          "values": [
+            30
+          ],
+          "meaning": "range among verifier-selected demonstration outcomes; not a validated universal rule"
+        },
+        "distance": {
+          "min": 95,
+          "max": 400,
+          "values": [
+            95,
+            400
+          ],
+          "meaning": "range among verifier-selected demonstration outcomes; not a validated universal rule"
+        },
+        "min_points": {
+          "min": 2,
+          "max": 5,
+          "values": [
+            2,
+            5
+          ],
+          "meaning": "range among verifier-selected demonstration outcomes; not a validated universal rule"
+        },
+        "min_length": {
+          "min": 0,
+          "max": 65,
+          "values": [
+            0,
+            65
+          ],
+          "meaning": "range among verifier-selected demonstration outcomes; not a validated universal rule"
+        },
+        "direction": {
+          "min": 35,
+          "max": 60,
+          "values": [
+            35,
+            60
+          ],
+          "meaning": "range among verifier-selected demonstration outcomes; not a validated universal rule"
+        },
+        "dp": {
+          "min": 5,
+          "max": 5,
+          "values": [
+            5
+          ],
+          "meaning": "range among verifier-selected demonstration outcomes; not a validated universal rule"
+        }
+      },
+      "memory_absence_reason": null
+    },
+    {
+      "card": {
+        "record_id": "4953",
+        "n_points": 100,
+        "span_work_m": 3196.7238319916014,
+        "duration_seconds": 1084.0,
+        "path_length_work_m": 7756.517395116174,
+        "zero_dt_edges": 0,
+        "negative_dt_edges": 0,
+        "dt_over_30_edges": 1,
+        "distance_over_400_edges": 1,
+        "raw_break_edges": 2,
+        "adjacent_duplicate_edges": 0,
+        "direction_unavailable_edges": 0,
+        "median_positive_dt": 10.0,
+        "stratum": "MID_T1_D0",
+        "reference_handle": "c78e396d4f54c090ccb04e8375e4f44bd7df38b027f85e3dfb2ce557b92bd53a"
+      },
+      "demonstration_memory": [
+        {
+          "memory_id": "DEMO-3971",
+          "record_id": "3971",
+          "stratum": "MID_T1_D0",
+          "selected_parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 35,
+            "dp": 5
+          },
+          "research_status": "NO_DEMONSTRATED_GAIN",
+          "verified_metrics": {
+            "n_input": 120,
+            "n_final": 39,
+            "common_covered_points": 120,
+            "common_max_error": 22.021122892958378,
+            "dp_saving": 0.625,
+            "dp_max_error": 4.883873434706808,
+            "raw_break_crossings": 0
+          },
+          "applicability": "same descriptive stratum; verified demonstration, no ground-truth label",
+          "retrieval_distance": 0.11999249074506689
+        },
+        {
+          "memory_id": "DEMO-3296",
+          "record_id": "3296",
+          "stratum": "MID_T1_D0",
+          "selected_parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 35,
+            "dp": 5
+          },
+          "research_status": "NO_DEMONSTRATED_GAIN",
+          "verified_metrics": {
+            "n_input": 115,
+            "n_final": 31,
+            "common_covered_points": 115,
+            "common_max_error": 8.62148400960732,
+            "dp_saving": 0.7075471698113207,
+            "dp_max_error": 4.8646363532306545,
+            "raw_break_crossings": 0
+          },
+          "applicability": "same descriptive stratum; verified demonstration, no ground-truth label",
+          "retrieval_distance": 0.12062657283016066
+        },
+        {
+          "memory_id": "DEMO-4461",
+          "record_id": "4461",
+          "stratum": "MID_T1_D0",
+          "selected_parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 35,
+            "dp": 5
+          },
+          "research_status": "NO_DEMONSTRATED_GAIN",
+          "verified_metrics": {
+            "n_input": 128,
+            "n_final": 55,
+            "common_covered_points": 128,
+            "common_max_error": 57.675801785726335,
+            "dp_saving": 0.5258620689655172,
+            "dp_max_error": 4.988893781697602,
+            "raw_break_crossings": 0
+          },
+          "applicability": "same descriptive stratum; verified demonstration, no ground-truth label",
+          "retrieval_distance": 0.15215307468156375
+        }
+      ],
+      "procedural_memory": {
+        "dt": {
+          "min": 30,
+          "max": 30,
+          "values": [
+            30
+          ],
+          "meaning": "range among verifier-selected demonstration outcomes; not a validated universal rule"
+        },
+        "distance": {
+          "min": 95,
+          "max": 400,
+          "values": [
+            95,
+            400
+          ],
+          "meaning": "range among verifier-selected demonstration outcomes; not a validated universal rule"
+        },
+        "min_points": {
+          "min": 2,
+          "max": 5,
+          "values": [
+            2,
+            5
+          ],
+          "meaning": "range among verifier-selected demonstration outcomes; not a validated universal rule"
+        },
+        "min_length": {
+          "min": 0,
+          "max": 65,
+          "values": [
+            0,
+            65
+          ],
+          "meaning": "range among verifier-selected demonstration outcomes; not a validated universal rule"
+        },
+        "direction": {
+          "min": 35,
+          "max": 60,
+          "values": [
+            35,
+            60
+          ],
+          "meaning": "range among verifier-selected demonstration outcomes; not a validated universal rule"
+        },
+        "dp": {
+          "min": 5,
+          "max": 5,
+          "values": [
+            5
+          ],
+          "meaning": "range among verifier-selected demonstration outcomes; not a validated universal rule"
+        }
+      },
+      "memory_absence_reason": null
+    },
+    {
+      "card": {
+        "record_id": "5029",
+        "n_points": 98,
+        "span_work_m": 18.132066973359066,
+        "duration_seconds": 1177.0,
+        "path_length_work_m": 24.307343690533223,
+        "zero_dt_edges": 19,
+        "negative_dt_edges": 0,
+        "dt_over_30_edges": 6,
+        "distance_over_400_edges": 0,
+        "raw_break_edges": 6,
+        "adjacent_duplicate_edges": 87,
+        "direction_unavailable_edges": 87,
+        "median_positive_dt": 11.0,
+        "stratum": "MID_T1_D1",
+        "reference_handle": "a75a89d1207117450c987f67e3eb82585eb2379018c630467a752261ebedf074"
+      },
+      "demonstration_memory": [
+        {
+          "memory_id": "DEMO-77",
+          "record_id": "77",
+          "stratum": "MID_T1_D1",
+          "selected_parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 0,
+            "direction": 35,
+            "dp": 5
+          },
+          "research_status": "SUPPORTED_WITHIN_SCOPE",
+          "verified_metrics": {
+            "n_input": 101,
+            "n_final": 6,
+            "common_covered_points": 101,
+            "common_max_error": 3.2257422225376584,
+            "dp_saving": 0.9405940594059405,
+            "dp_max_error": 3.2257422225376584,
+            "raw_break_crossings": 0
+          },
+          "applicability": "same descriptive stratum; verified demonstration, no ground-truth label",
+          "retrieval_distance": 0.26646672719124437
+        },
+        {
+          "memory_id": "DEMO-263",
+          "record_id": "263",
+          "stratum": "MID_T1_D1",
+          "selected_parameters": {
+            "dt": 30,
+            "distance": 95,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 35,
+            "dp": 5
+          },
+          "research_status": "SUPPORTED_WITHIN_SCOPE",
+          "verified_metrics": {
+            "n_input": 98,
+            "n_final": 13,
+            "common_covered_points": 95,
+            "common_max_error": 4.20947427876341,
+            "dp_saving": 0.8631578947368421,
+            "dp_max_error": 4.20947427876341,
+            "raw_break_crossings": 0
+          },
+          "applicability": "same descriptive stratum; verified demonstration, no ground-truth label",
+          "retrieval_distance": 0.45028391468882817
+        },
+        {
+          "memory_id": "DEMO-3694",
+          "record_id": "3694",
+          "stratum": "MID_T1_D1",
+          "selected_parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 35,
+            "dp": 5
+          },
+          "research_status": "NO_DEMONSTRATED_GAIN",
+          "verified_metrics": {
+            "n_input": 106,
+            "n_final": 25,
+            "common_covered_points": 106,
+            "common_max_error": 7.770943672724103,
+            "dp_saving": 0.7619047619047619,
+            "dp_max_error": 4.9046063603833066,
+            "raw_break_crossings": 0
+          },
+          "applicability": "same descriptive stratum; verified demonstration, no ground-truth label",
+          "retrieval_distance": 0.6685453469943817
+        }
+      ],
+      "procedural_memory": {
+        "dt": {
+          "min": 30,
+          "max": 30,
+          "values": [
+            30
+          ],
+          "meaning": "range among verifier-selected demonstration outcomes; not a validated universal rule"
+        },
+        "distance": {
+          "min": 95,
+          "max": 400,
+          "values": [
+            95,
+            400
+          ],
+          "meaning": "range among verifier-selected demonstration outcomes; not a validated universal rule"
+        },
+        "min_points": {
+          "min": 2,
+          "max": 5,
+          "values": [
+            2,
+            5
+          ],
+          "meaning": "range among verifier-selected demonstration outcomes; not a validated universal rule"
+        },
+        "min_length": {
+          "min": 0,
+          "max": 65,
+          "values": [
+            0,
+            65
+          ],
+          "meaning": "range among verifier-selected demonstration outcomes; not a validated universal rule"
+        },
+        "direction": {
+          "min": 35,
+          "max": 60,
+          "values": [
+            35,
+            60
+          ],
+          "meaning": "range among verifier-selected demonstration outcomes; not a validated universal rule"
+        },
+        "dp": {
+          "min": 5,
+          "max": 5,
+          "values": [
+            5
+          ],
+          "meaning": "range among verifier-selected demonstration outcomes; not a validated universal rule"
+        }
+      },
+      "memory_absence_reason": null
+    },
+    {
+      "card": {
+        "record_id": "6556",
+        "n_points": 97,
+        "span_work_m": 17.787783172762087,
+        "duration_seconds": 1191.0,
+        "path_length_work_m": 68.219823052222,
+        "zero_dt_edges": 2,
+        "negative_dt_edges": 0,
+        "dt_over_30_edges": 1,
+        "distance_over_400_edges": 0,
+        "raw_break_edges": 1,
+        "adjacent_duplicate_edges": 3,
+        "direction_unavailable_edges": 3,
+        "median_positive_dt": 10.0,
+        "stratum": "MID_T1_D1",
+        "reference_handle": "612f903af0401430ba4bc62ce9622f97d6527475f675cbf222f136c4b0ec1700"
+      },
+      "demonstration_memory": [
+        {
+          "memory_id": "DEMO-7902",
+          "record_id": "7902",
+          "stratum": "MID_T1_D1",
+          "selected_parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 35,
+            "dp": 5
+          },
+          "research_status": "NO_DEMONSTRATED_GAIN",
+          "verified_metrics": {
+            "n_input": 103,
+            "n_final": 27,
+            "common_covered_points": 103,
+            "common_max_error": 16.69913242960253,
+            "dp_saving": 0.6538461538461539,
+            "dp_max_error": 4.136534878630016,
+            "raw_break_crossings": 0
+          },
+          "applicability": "same descriptive stratum; verified demonstration, no ground-truth label",
+          "retrieval_distance": 0.37507260186177577
+        },
+        {
+          "memory_id": "DEMO-8952",
+          "record_id": "8952",
+          "stratum": "MID_T1_D1",
+          "selected_parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 35,
+            "dp": 5
+          },
+          "research_status": "NO_DEMONSTRATED_GAIN",
+          "verified_metrics": {
+            "n_input": 106,
+            "n_final": 22,
+            "common_covered_points": 106,
+            "common_max_error": 14.62224398788669,
+            "dp_saving": 0.7731958762886598,
+            "dp_max_error": 4.5142479438024266,
+            "raw_break_crossings": 0
+          },
+          "applicability": "same descriptive stratum; verified demonstration, no ground-truth label",
+          "retrieval_distance": 0.5071581127568876
+        },
+        {
+          "memory_id": "DEMO-3694",
+          "record_id": "3694",
+          "stratum": "MID_T1_D1",
+          "selected_parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 35,
+            "dp": 5
+          },
+          "research_status": "NO_DEMONSTRATED_GAIN",
+          "verified_metrics": {
+            "n_input": 106,
+            "n_final": 25,
+            "common_covered_points": 106,
+            "common_max_error": 7.770943672724103,
+            "dp_saving": 0.7619047619047619,
+            "dp_max_error": 4.9046063603833066,
+            "raw_break_crossings": 0
+          },
+          "applicability": "same descriptive stratum; verified demonstration, no ground-truth label",
+          "retrieval_distance": 0.6145293311400608
+        }
+      ],
+      "procedural_memory": {
+        "dt": {
+          "min": 30,
+          "max": 30,
+          "values": [
+            30
+          ],
+          "meaning": "range among verifier-selected demonstration outcomes; not a validated universal rule"
+        },
+        "distance": {
+          "min": 95,
+          "max": 400,
+          "values": [
+            95,
+            400
+          ],
+          "meaning": "range among verifier-selected demonstration outcomes; not a validated universal rule"
+        },
+        "min_points": {
+          "min": 2,
+          "max": 5,
+          "values": [
+            2,
+            5
+          ],
+          "meaning": "range among verifier-selected demonstration outcomes; not a validated universal rule"
+        },
+        "min_length": {
+          "min": 0,
+          "max": 65,
+          "values": [
+            0,
+            65
+          ],
+          "meaning": "range among verifier-selected demonstration outcomes; not a validated universal rule"
+        },
+        "direction": {
+          "min": 35,
+          "max": 60,
+          "values": [
+            35,
+            60
+          ],
+          "meaning": "range among verifier-selected demonstration outcomes; not a validated universal rule"
+        },
+        "dp": {
+          "min": 5,
+          "max": 5,
+          "values": [
+            5
+          ],
+          "meaning": "range among verifier-selected demonstration outcomes; not a validated universal rule"
+        }
+      },
+      "memory_absence_reason": null
+    }
+  ]
+}

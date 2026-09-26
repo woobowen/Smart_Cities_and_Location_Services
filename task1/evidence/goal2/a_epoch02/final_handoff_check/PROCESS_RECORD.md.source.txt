@@ -1,0 +1,157 @@
+# Goal 2 真实执行与修复记录
+
+生产治理层与被评估系统分别登记。A、B、C 是真实原生角色上下文；确定性控制器不是额外 LLM。用户授权来自本轮原始 Prompt，内部 A/C 审查不记为 Human Approval。
+
+## 承接与计算版本
+
+G1 验收来自当前用户转交，没有额外网页附件。工作区起点为 `a45d89f49f2041477b16485f535adc508c32f8ea`，原始数据、教师 starter、旧成果和用户 ZIP 未被覆盖。
+
+最初固定计算版本 `0747574b7844e44f687a0e7eaf1ab599eb7a3d5d` 完成了三类确定性开发运行。真实模式独立审查随后发现 context hash 绑定错误；主线程中断当前运行、保存全部可见请求，修复并独立复验，再恢复父任务。
+
+当前处理计算版本为 `c1c6272606716f9f59aa785d48bfeadb09c7a30e`。旧版本依赖及原始产物保留在 [失效登记](superseded_runs.json) 和 `revisions/context_binding_v1/`，没有把旧调用重标为新 LIVE。新版三类确定性开发运行已全部重建并经独立 C 验收；59×120 参数、6×120 顺序、20×60 示范搜索共 9,000 个记录—候选配对的新旧数学结果精确一致。新版真实模式开发的 21 次调用及 1,218 次候选评估也已通过独立 C。阶段评测按冻结文件执行，14×120 参数、2×120 顺序以及四模式三次 episode 均已通过独立验收。正式模式包含36批、288个记录—模式—episode观测、63次真实模型调用和3,583次候选评估；search-only 模型调用为0。
+
+重建命令与耗时见 [B 实际执行记录](logs/b_run_execution_02.json)。独立 C 分别保存了 [参数](c_contract/development_parameters_epoch02_receipt.json)、[顺序](c_contract/development_orders_epoch02_receipt.json) 和 [记忆](c_contract/memory_epoch02_receipt.json) 审核；主线程已通过控制器消费三份回执并恢复 `development_modes` 父任务。数学等价说明修复没有改变处理结果，不把重建算成独立实验重复。
+
+## 实际问题、修复和独立复验
+
+早期故障注入与真实生产缺陷分开。下面事实来自各独立审查回执和实际命令结果；测试中的人为损坏不是自然数据错误。
+
+### G2-C-CONTROL-001
+
+父任务 `core`；当前状态 `VERIFIED`。
+
+Initial G2Journal.accept accepts empty target sets, unrelated check coverage, unsatisfied task prerequisites and a wrong source-hash claim.
+
+条款：Prompt sections 6,15,17 A12/A14; preserve target-specific review closure guards
+
+修复者：B-Repair:root；独立复验者：C:/root/c_contract。
+- [control_closure_receipt.json](c_contract/control_closure_receipt.json)，SHA256 `8f0573d674cba525a76972d5d1f0a156ef8792926347a1de98817c794eee106e`。
+
+### G2-C-MODE-MEMORY-001
+
+父任务 `core`；当前状态 `VERIFIED`。
+
+Static independent review found schema-invalid answers could be retried and public in-process memory snapshot could be mutated.
+
+条款：Prompt 11 llm-only one proposal; 12 frozen readonly memory
+
+修复者：B-Repair:root；独立复验者：C:/root/c_contract。
+- [mode_memory_closure_current.json](c_contract/mode_memory_closure_current.json)，SHA256 `cf76902f616ae8bb950510d3104748b90e61e282c3384cb4a2580384ef4fa4d3`。
+
+### G2-C-SOURCE-SCOPE-001
+
+父任务 `core`；当前状态 `VERIFIED`。
+
+Follow-up static review found resume partition/source-set, candidate manifest summary and cache review binding gaps before formal runs.
+
+条款：Prompt 15 provenance and 17 altered-summary/wrong-parent fault regressions
+
+修复者：B-Repair:root；独立复验者：C:/root/c_contract。
+- [source_scope_closure_receipt.json](c_contract/source_scope_closure_receipt.json)，SHA256 `c6f808528a51b7fc3c3dbb07880d6f58f9501fd2bd3c248faf43e4de55d194ca`。
+
+### G2-B-NOTEBOOK-001
+
+父任务 `notebooks`；当前状态 `VERIFIED`。
+
+Notebook SETUP imported pandas but existing .venv has no pandas distribution; text claimed a Provider sentinel although none was installed.
+
+条款：R08/A13: fresh kernel execution in reused environment and measured zero new calls
+
+修复者：B-Repair:/root；独立复验者：C:/root/c_contract。
+- [notebook_setup_closure_receipt.json](c_contract/notebook_setup_closure_receipt.json)，SHA256 `6da70f147d7fcdda7a2e448af1fd0f46da62911ee8467c009f14d07f298fa56b`。
+
+### G2-B-FIGURE-001
+
+父任务 `figures`；当前状态 `VERIFIED`。
+
+Actual parameter figure preview showed non-data diagonal color bands in PDF heatmap rendering and direction neighborhood compressed into narrow axes/covered by legend. The first layout repair used unsupported Matplotlib 3.6.3 outside-legend location and raised an actual rendering exception.
+
+条款：R08/A15: accurate scientific marks, legible actual PDF renders, reuse existing dependency versions
+
+修复者：B:/root/b_engine；独立复验者：C:/root/c_contract。
+- [parameter_figure_closure_receipt.json](c_contract/parameter_figure_closure_receipt.json)，SHA256 `242e5c35e811b682e730ac55588d56179d551581d54b2e8bdcf1afe8d9d72b9d`。
+
+### G2-C-CONTEXT-001
+
+父任务 `development_modes`；当前状态 `VERIFIED`。
+
+Independent C found 13 mismatches between record round.context_hash and immutable saved round2/3 context; own_prior_proposal_validation shared mutable proposal list. Actual model input/response/numeric schedule remained matched in inspected batch.
+
+条款：R03/R09/R15: response must bind exactly to context actually supplied to model
+
+修复者：B-Repair:/root；独立复验者：C:/root/c_contract。
+- [context_closure_epoch02.json](c_contract/context_closure_epoch02.json)，SHA256 `01085d6c6e67032f2ded8d78254c78053023c20f4c1d2ae3c2196f64f848a4e9`。
+
+### G2-B-RETRY-CLASSIFIER-001
+
+父任务 `core`；当前状态 `VERIFIED`。
+
+Intentional SIGINT produced receipt.error KeyboardInterrupt but dispatch falsely labeled EXTERNAL_AUTH_PERMISSION_OR_BILLING_BLOCKED by searching arbitrary hash fields for 401/403. No real authorization failure occurred.
+
+条款：R06/R09: truthful failure classification and finite no-duplicate recovery
+
+修复者：B-Repair:/root；独立复验者：C:/root/c_contract。
+- [retry_classifier_closure_epoch02.json](c_contract/retry_classifier_closure_epoch02.json)，SHA256 `001736ad2f6c2895e982b421b3979abf957a0cb28ce24f7f2148e063d7cf7ace`。
+
+### G2-C-RECEIPT-TARGET-001
+
+父任务 `evaluation_parameters`，同时影响 `evaluation_orders` 的接收；当前状态 `VERIFIED`。
+
+控制器真实拒绝 `C_TARGET_MISMATCH`：B 提交了 manifest、执行记录与产物自检记录，第一份 C 数值回执覆盖 manifest、实验表与冻结文件，未绑定额外两份日志。原候选与数值没有错误，缺口属于审核范围。
+
+主线程保留原提交目标并登记 [对应关系](review_target_reconciliation.json)。C 实际补验命令、日志、时间、源码与资源，再以临时控制器证明旧回执拒绝、新回执可接受。主线程关闭 Issue 后重新提交原三个目标，参数与顺序均正式接收。
+
+- [独立补验与闭合](c_contract/receipt_target_closure_receipt.json)。
+- [完整参数回执](c_contract/evaluation_parameters_bound_receipt.json)、[完整顺序回执](c_contract/evaluation_orders_bound_receipt.json)。原数值回执保留。
+
+### G2-B-CANDIDATE-FIGURE-001
+
+父任务 `figures`；当前状态 `VERIFIED`。
+
+实际预览暴露平直/窄轨迹面板压缩、标签与图例遮挡，以及架构图 C 节点关联到生产确定性核验器的问题。B 仅修改三个展示函数，保存原图、原源码和中间修复；案例选择与数值不变，处理 epoch 不变。
+
+C 实际查看前后图，独立重渲染 200-dpi PDF，检查六个案例选择及原生 draw.io 的 11 个节点、13 条边。第一版 C 补充检查把 tuple 传给仅支持 JSON 类型的比较函数，产生了一次审核程序误报；修正该检查后通过，原误报回执保留。这不是数据或模型实验错误。
+
+- [B 修复与前后证据](presentation_checks/candidate_preview_02/repair_receipt.json)。
+- [C 独立闭合 v2](c_contract/candidate_figure_closure_receipt_v2.json)。此闭合仅覆盖三张案例/架构预览，完整最终图集仍须独立检查。
+
+### G2-B-CASE-CONFIG-001
+
+父任务 `figures`；当前状态 `VERIFIED`。
+
+主线程实际查看案例 PDF 后发现，最后三个面板采用了不同参数，却没有把参数差异写在面板上，读者可能将其误读成共同参考配置。B 只修改 `case_figures`：从实际 trace 自动生成 Reference 或改动参数标签，并明确 G2_EVAL、参考链、六个参数及工作米单位。案例选择、数值、坐标和其余两张预览 PNG 均保持不变。
+
+C 实际查看新 PNG 与 200-dpi PDF，核对六个面板的配置来源，并以旧未标注图和篡改标签进行拒绝测试；18 个修复目标全部绑定。首版 C 回执对 B 元数据 wrapper 字段集合的比较存在误报，修正审核程序后通过，原回执保留，未改生产实现。
+
+- [B 修复和前后源文件](presentation_checks/case_configuration_labels/repair_receipt.json)。
+- [C 独立闭合 v2](c_contract/case_config_closure_receipt_v2.json)。
+- [主线程补充视觉检查](presentation_checks/case_configuration_labels/root_visual_inspection.json)。
+
+所有历史源码回执按其发生时版本解释；展示生成器的后续修改保留了旧源码副本，不把旧哈希宣称为当前文件哈希。当前处理源码仍与评测冻结完全一致。
+
+### G2-C-AI-NULL-001
+
+父任务 `counterexamples`；当前状态 `VERIFIED`。
+
+实际 AI 批判的 AI-DEV-02 案例丢失了11个基线已覆盖身份，但说明把机器保护失败标记与“误差恶化”、`40.214 → None` 并列，未充分解释完整基线集合上的误差不可计算。主线程 B-Repair 保留旧文案与生成器，只补充真实覆盖集合、丢失索引和 `BASELINE_COVERED_IDENTITIES_LOST` 原因；两个自身覆盖集合的最大误差明确为不可配对的描述性读数。
+
+原话、原始提议、参数、数值、预测、机器保护标记及构造案例完全不变，没有新实验或方法改动。C 核对全部148条开发提议和六条引文，拒绝旧问题文案与故障副本，再通过新文案，主线程关闭问题并恢复 `counterexamples`。
+
+- [原版本](a_epoch02/actual_ai_critique_v1/ACTUAL_AI_CRITIQUE.md)、[修订后说明](a_epoch02/actual_ai_critique/ACTUAL_AI_CRITIQUE.md)。
+- [独立修复闭合](c_contract/ai_null_closure_receipt.json)、[完整反例与AI批判验收](c_contract/counterexamples_complete_receipt.json)。
+
+## 中断真实性与成本
+
+第一次模型开发运行完成9个批 episode（llm-only、search-only、llm+search各3批），记忆模式首批在第3轮被主动中断。所有15次实际请求回执保留，其中14次完成，1次中断。它们属于旧运行成本，不进入当前有效模式结果的分母，也不冒称四模式全完成。
+
+原中断记录中的 `EXTERNAL_AUTH_PERMISSION_OR_BILLING_BLOCKED` 是错误分类器被无关hash数字误触发的错误，独立只读复算已确认应为 `INTERRUPTED_CHECKPOINT`；不是已证实的服务认证故障。[成本明细](interrupted_model_costs.json) 和 [中断记录](context_interruption.json) 保存原事实。
+
+注册的确定性工具调用与Python内部所有helper调用不是同一统计口径。旧运行缓存复核和60条记忆准入的额外核验见 [独立资源范围说明](c_contract/development_resource_scope.json)；不把不完整仪表字段冒充全部成本。
+
+本轮有效实验调用84次（开发21、正式63），历史已失效/中断实验调用15次，另外有1次工程 Provider 资格调用，共100个可见 CLI 派发。100个实际 dispatch 目录均有对应 receipt；资格调用不进入模式效果分母。历史中断的不可见 tokens、底层请求与费用不补0。完整分类见 [资源账](resource_ledger.json) 和 [目录集合核对](provider_attempt_inventory_check.json)；原生 A/B/C 的治理派发另外登记。
+
+## 仍待完成的父任务
+
+实际状态以 [控制器](goal_state.json)、[恢复检查点](progress_checkpoint.json)、[当前run索引](current_runs.json) 为入口。局部修复、预览图检查和核心源码通过均不能替代规定实验、完整Notebook或最终A01–A17验收。
+
+阶段解释保持条件化；用户理解状态未代填，网页 GPT 二重审核仍为 PENDING。本轮不执行 Goal 3 组合、最终全量处理、两份正式报告定稿或提交包。

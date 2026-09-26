@@ -1,0 +1,54 @@
+{
+  "role_context": "/root/c_contract",
+  "status": "VERIFIED",
+  "issue_id": "G2-C-CONTROL-001",
+  "parent_task": "core",
+  "classification": "INDEPENDENT_C_ENGINEERING_REGRESSION_REVIEW",
+  "at_utc": "2026-09-26T19:01:05.974431+00:00",
+  "targets": [
+    {
+      "path": "task1/workflow/g2_journal.py",
+      "sha256": "788a867d5e454310d044bd3cd21b275477f0a367ca06b0eea7098f4ca44f4e11"
+    }
+  ],
+  "source_hashes": {
+    "task1/workflow/g2_journal.py": "788a867d5e454310d044bd3cd21b275477f0a367ca06b0eea7098f4ca44f4e11"
+  },
+  "checked_components": [
+    "fault_rejected",
+    "valid_receipt_accepted",
+    "source_epoch",
+    "exact_added_source_set",
+    "registered_actor",
+    "task_specific_coverage",
+    "publication_all_tasks",
+    "nonempty_repair_targets",
+    "issue_closure_actor_coverage_epoch",
+    "parent_resume_without_auto_verify"
+  ],
+  "unchecked_components": [
+    "future_full_goal_acceptance",
+    "actual_mode_execution"
+  ],
+  "results": {
+    "passed": 18,
+    "failed": 0
+  },
+  "command": ".venv/bin/python -m pytest task1/evidence/goal2/c_contract/test_control_independent.py -q --junitxml=task1/evidence/goal2/c_contract/control_round4.xml",
+  "test_script": {
+    "path": "task1/evidence/goal2/c_contract/test_control_independent.py",
+    "sha256": "028258a6d2ed27c1cf4c4dbdccfcf8199a93478e74ab5e3c91b744090b70bcdf"
+  },
+  "junit": {
+    "path": "task1/evidence/goal2/c_contract/control_round4.xml",
+    "sha256": "18f205c08e035987c1b57c21fe9f03627fb292b4e66f6323b850c9467025773b"
+  },
+  "history": [
+    "issue_control_001.json",
+    "control_round2.xml",
+    "control_round2_receipt.json",
+    "control_round3.xml"
+  ],
+  "closure_scope": "All observed preparation-time controller defects closed by actual isolated fault rejection plus legitimate task and legitimate issue receipt positive controls. The parent core task resumes PENDING and still requires full core acceptance.",
+  "new_model_calls": 0
+}

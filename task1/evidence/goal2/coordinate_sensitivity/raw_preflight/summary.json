@@ -1,0 +1,60 @@
+{
+  "goal_id": "SC-LAB1-G2-EXPERIMENTS-001",
+  "classification": "CURRENT_RUN_CONDITIONAL_ANALYSIS",
+  "status": "VERIFIED",
+  "started_at": "2026-09-26T19:11:47.910320+00:00",
+  "ended_at": "2026-09-26T19:11:50.138228+00:00",
+  "elapsed_seconds": 2.2279079830004775,
+  "command": [
+    "/home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/scripts/goal2_coordinate_sensitivity.py",
+    "--coordinates-only",
+    "--output-dir",
+    "task1/evidence/goal2/coordinate_sensitivity/raw_preflight"
+  ],
+  "raw_sha256": "c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3",
+  "contract_sha256": "db758c097509139596fbc52b4c3f65e921eb1f12d9fb4c239e308abdb57f31f8",
+  "split_sha256": "fd2ebc6916f63b4b8e23ff6977f22cc691c39849d450486035243db7e3eb2ee8",
+  "source_sha256": "9f072efd99839a9ab2593497f18b0a0ce221aef67aeaa8fd328f442d5278869b",
+  "source_crs": "UNVERIFIED",
+  "source_datum_proven": false,
+  "new_candidate_evaluations": 0,
+  "new_model_calls": 0,
+  "memory_writes": 0,
+  "selected_record_count": 307,
+  "raw_scope_hash": "6dfcf01f5737d25dbe9bad8cb618c8f52a20fbad246fc9f29a88edc082ee6457",
+  "runs": [],
+  "processing_sensitivity_status": "NOT_RUN_COORDINATES_ONLY",
+  "checked_components": [
+    "all307_selected_coordinates",
+    "independent_PROJ",
+    "all_selected_within_record_Geod_pairs",
+    "raw_edge_grid_thresholds"
+  ],
+  "unchecked_components": [
+    "source_datum",
+    "ground_truth_accuracy",
+    "unprovided_run_traces",
+    "independent_final_C_acceptance",
+    "all_processing_threshold_sensitivity"
+  ],
+  "limitations": [
+    "Geod and AEQD use the same assumed ellipsoid and center; agreement cannot establish source datum.",
+    "All actual stage indices are frozen ENU-chain inputs. Alternate predicates and DP index sets are sensitivity diagnostics, not alternate cleaning results or selection feedback.",
+    "Approximation threshold differences are retained and limit robustness claims, not a reason to replace records or change the coordinate model.",
+    "Only listed manifests/configurations/episodes were checked; omitted runs are not certified."
+  ],
+  "artifacts": {
+    "coordinate_checks.json": {
+      "path": "coordinate_checks.json",
+      "sha256": "171238f0c83b07d92901bc895c412213adb1bcc466b86da8b70705e540eda831"
+    },
+    "raw_edges.jsonl.gz": {
+      "path": "raw_edges.jsonl.gz",
+      "sha256": "b359c4aaa95a14af351b0f0327772e0c9f3aa928c1b7eb7ea4723ae4efbb4df1"
+    },
+    "all_threshold_differences.jsonl.gz": {
+      "path": "all_threshold_differences.jsonl.gz",
+      "sha256": "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64"
+    }
+  }
+}

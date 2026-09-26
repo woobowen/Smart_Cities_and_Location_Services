@@ -1,0 +1,631 @@
+{
+  "real_trajectory_cases": [
+    {
+      "role": "Representative LOW",
+      "record_id": "9787",
+      "config_id": "cfg-b15b8281b73592fb",
+      "criterion_value": 3.300630672328042,
+      "rule": "closest raw span to within-span-stratum median; stable ID tie"
+    },
+    {
+      "role": "Representative MID",
+      "record_id": "57",
+      "config_id": "cfg-b15b8281b73592fb",
+      "criterion_value": 166.4294795877001,
+      "rule": "closest raw span to within-span-stratum median; stable ID tie"
+    },
+    {
+      "role": "Representative HIGH",
+      "record_id": "2950",
+      "config_id": "cfg-b15b8281b73592fb",
+      "criterion_value": 7683.341835086889,
+      "rule": "closest raw span to within-span-stratum median; stable ID tie"
+    },
+    {
+      "role": "Largest covered-point loss",
+      "criterion_value": 102,
+      "record_id": "7033",
+      "config_id": "cfg-0ad662cd1af68eaf",
+      "rule": "largest raw coverage-count loss versus same-record reference",
+      "original_index": null
+    },
+    {
+      "role": "Largest available raw error",
+      "criterion_value": 376.34110369099557,
+      "record_id": "8023",
+      "config_id": "cfg-6b37e535e1ea2046",
+      "rule": "largest available common raw error among predeclared evaluation configurations",
+      "original_index": null
+    },
+    {
+      "role": "Nearest positive P residual gap",
+      "criterion_value": 0.00040176799036117927,
+      "record_id": "7027",
+      "config_id": "cfg-6b37e535e1ea2046",
+      "rule": "smallest positive |P tolerance - actual P residual|; stable ID/config tie",
+      "original_index": 2
+    }
+  ],
+  "synthetic_metric_counterexamples": [
+    {
+      "case_id": "CE03_ORDER_AND_BREAK_INFORMATION",
+      "execution": "hidden_distance_break:P-S-D",
+      "metrics": {
+        "record_id": "fixture:hidden_distance_break",
+        "n_input": 3,
+        "n_final": 2,
+        "point_retention": 0.6666666666666666,
+        "point_retention_reason": null,
+        "record_covered": true,
+        "all_filtered": false,
+        "no_output": false,
+        "n_filtered": 0,
+        "n_direction_removed": 0,
+        "n_dp_removed": 1,
+        "n_dp_input": 3,
+        "n_dp_output": 2,
+        "dp_saving": 0.33333333333333337,
+        "dp_saving_reason": null,
+        "dp_max_error": 2.0,
+        "dp_mean_error": 0.6666666666666666,
+        "dp_p50_error": 0.0,
+        "dp_p90_error": 1.6,
+        "dp_p95_error": 1.7999999999999998,
+        "dp_p99_error": 1.96,
+        "dp_error_reason": null,
+        "dp_error_denominator": 3,
+        "n_dp_exceedances": 0,
+        "dp_checks_passed": true,
+        "n_s_segments": 1,
+        "n_filtered_segments": 0,
+        "filter_reason_segments": {},
+        "filter_reason_points": {},
+        "direction_candidate_points": 0,
+        "direction_undefined_points": 2,
+        "direction_undefined_reasons": {
+          "ENDPOINT": 2
+        },
+        "direction_windows_across_raw_breaks": 0,
+        "direction_window_crossing_details": [],
+        "p_removed_raw_break_trigger_points": 1,
+        "p_removed_raw_break_trigger_indices": [
+          1
+        ],
+        "raw_length": 403.0,
+        "raw_length_reason": null,
+        "final_length": 399.0,
+        "final_length_reason": null,
+        "stage_readings": {
+          "raw": {
+            "segments": 1,
+            "points": 3,
+            "length": 403.0,
+            "length_reason": null,
+            "edge_denominator": 2,
+            "speed_computable": 2,
+            "direction_computable": 2,
+            "speed_unavailable_reasons": {},
+            "direction_unavailable_reasons": {},
+            "negative_dt_edges": 0,
+            "zero_dt_edges": 0,
+            "same_time_different_position_edges": 0,
+            "zero_displacement_edges": 0
+          },
+          "after_P": {
+            "segments": 1,
+            "points": 2,
+            "length": 399.0,
+            "length_reason": null,
+            "edge_denominator": 1,
+            "speed_computable": 1,
+            "direction_computable": 1,
+            "speed_unavailable_reasons": {},
+            "direction_unavailable_reasons": {},
+            "negative_dt_edges": 0,
+            "zero_dt_edges": 0,
+            "same_time_different_position_edges": 0,
+            "zero_displacement_edges": 0,
+            "length_change": -4.0,
+            "length_change_reason": null,
+            "relative_length_change": -0.00992555831265507,
+            "relative_length_change_reason": null
+          },
+          "after_S": {
+            "segments": 1,
+            "points": 2,
+            "length": 399.0,
+            "length_reason": null,
+            "edge_denominator": 1,
+            "speed_computable": 1,
+            "direction_computable": 1,
+            "speed_unavailable_reasons": {},
+            "direction_unavailable_reasons": {},
+            "negative_dt_edges": 0,
+            "zero_dt_edges": 0,
+            "same_time_different_position_edges": 0,
+            "zero_displacement_edges": 0,
+            "length_change": 0.0,
+            "length_change_reason": null,
+            "relative_length_change": 0.0,
+            "relative_length_change_reason": null
+          },
+          "after_D": {
+            "segments": 1,
+            "points": 2,
+            "length": 399.0,
+            "length_reason": null,
+            "edge_denominator": 1,
+            "speed_computable": 1,
+            "direction_computable": 1,
+            "speed_unavailable_reasons": {},
+            "direction_unavailable_reasons": {},
+            "negative_dt_edges": 0,
+            "zero_dt_edges": 0,
+            "same_time_different_position_edges": 0,
+            "zero_displacement_edges": 0,
+            "length_change": 0.0,
+            "length_change_reason": null,
+            "relative_length_change": 0.0,
+            "relative_length_change_reason": null
+          }
+        },
+        "common_reference_id": "RAW_WINDOWS_DT30_DISTANCE400_V1",
+        "common_raw_points": 3,
+        "common_covered_points": 2,
+        "common_uncovered_points": 1,
+        "common_coverage": 0.6666666666666666,
+        "common_coverage_reason": null,
+        "common_error_denominator": 2,
+        "common_max_error": 0.0,
+        "common_mean_error": 0.0,
+        "common_p95_error": 0.0,
+        "common_error_reason": null,
+        "common_over_5_points": 0,
+        "common_error_budget": 5,
+        "common_floating_allowance": 5.6985527407960035e-12,
+        "common_point_errors": [
+          {
+            "index": 0,
+            "error": 0.0,
+            "reason": null,
+            "reference_window": 0
+          },
+          {
+            "index": 1,
+            "error": null,
+            "reason": "UNCOVERED_OR_NO_BRACKETING_EDGE",
+            "reference_window": 1
+          },
+          {
+            "index": 2,
+            "error": 0.0,
+            "reason": null,
+            "reference_window": 1
+          }
+        ],
+        "raw_break_count": 1,
+        "raw_break_crossings": 1,
+        "raw_breaks_crossed": 1,
+        "raw_boundaries": [
+          {
+            "from_index": 0,
+            "to_index": 1,
+            "dt": 1,
+            "dt_reason": null,
+            "distance": 401.0,
+            "speed": 401.0,
+            "speed_reason": null,
+            "direction_degrees": 90.0,
+            "direction_reason": null,
+            "reasons": [
+              "DISTANCE_GAP"
+            ],
+            "right_point_starts_segment": true
+          }
+        ],
+        "breakpoint_crossing_edges": [
+          {
+            "segment_id": "record:fixture:hidden_distance_break/S0",
+            "from_index": 0,
+            "to_index": 2,
+            "crossed_boundary_right_indices": [
+              1
+            ]
+          }
+        ],
+        "raw_break_trigger_points_removed": 1,
+        "boundary_trigger_losses": [
+          {
+            "from_index": 0,
+            "to_index": 1,
+            "missing_trigger_indices": [
+              1
+            ]
+          }
+        ],
+        "raw_windows": 2,
+        "raw_windows_covered": 2,
+        "reference_window_length": 2.0,
+        "constraint_status": "REJECTED_BY_CONSTRAINT"
+      },
+      "classification": "SYNTHETIC_COUNTEREXAMPLE"
+    },
+    {
+      "case_id": "CE06_OWN_CLEAN_IS_NOT_COMMON_TRUTH",
+      "execution": "direction=35",
+      "metrics": {
+        "record_id": "fixture:own_clean_reference",
+        "n_input": 5,
+        "n_final": 4,
+        "point_retention": 0.8,
+        "point_retention_reason": null,
+        "record_covered": true,
+        "all_filtered": false,
+        "no_output": false,
+        "n_filtered": 0,
+        "n_direction_removed": 1,
+        "n_dp_removed": 0,
+        "n_dp_input": 4,
+        "n_dp_output": 4,
+        "dp_saving": 0.0,
+        "dp_saving_reason": null,
+        "dp_max_error": 0.0,
+        "dp_mean_error": 0.0,
+        "dp_p50_error": 0.0,
+        "dp_p90_error": 0.0,
+        "dp_p95_error": 0.0,
+        "dp_p99_error": 0.0,
+        "dp_error_reason": null,
+        "dp_error_denominator": 4,
+        "n_dp_exceedances": 0,
+        "dp_checks_passed": true,
+        "n_s_segments": 1,
+        "n_filtered_segments": 0,
+        "filter_reason_segments": {},
+        "filter_reason_points": {},
+        "direction_candidate_points": 1,
+        "direction_undefined_points": 3,
+        "direction_undefined_reasons": {
+          "ENDPOINT": 2,
+          "MISSING_FOLLOWING_OUTGOING_EDGE": 1
+        },
+        "direction_windows_across_raw_breaks": 0,
+        "direction_window_crossing_details": [],
+        "p_removed_raw_break_trigger_points": 0,
+        "p_removed_raw_break_trigger_indices": [],
+        "raw_length": 4.414213562373095,
+        "raw_length_reason": null,
+        "final_length": 4.23606797749979,
+        "final_length_reason": null,
+        "stage_readings": {
+          "raw": {
+            "segments": 1,
+            "points": 5,
+            "length": 4.414213562373095,
+            "length_reason": null,
+            "edge_denominator": 4,
+            "speed_computable": 4,
+            "direction_computable": 4,
+            "speed_unavailable_reasons": {},
+            "direction_unavailable_reasons": {},
+            "negative_dt_edges": 0,
+            "zero_dt_edges": 0,
+            "same_time_different_position_edges": 0,
+            "zero_displacement_edges": 0
+          },
+          "after_S": {
+            "segments": 1,
+            "points": 5,
+            "length": 4.414213562373095,
+            "length_reason": null,
+            "edge_denominator": 4,
+            "speed_computable": 4,
+            "direction_computable": 4,
+            "speed_unavailable_reasons": {},
+            "direction_unavailable_reasons": {},
+            "negative_dt_edges": 0,
+            "zero_dt_edges": 0,
+            "same_time_different_position_edges": 0,
+            "zero_displacement_edges": 0,
+            "length_change": 0.0,
+            "length_change_reason": null,
+            "relative_length_change": 0.0,
+            "relative_length_change_reason": null
+          },
+          "after_D": {
+            "segments": 1,
+            "points": 4,
+            "length": 4.23606797749979,
+            "length_reason": null,
+            "edge_denominator": 3,
+            "speed_computable": 3,
+            "direction_computable": 3,
+            "speed_unavailable_reasons": {},
+            "direction_unavailable_reasons": {},
+            "negative_dt_edges": 0,
+            "zero_dt_edges": 0,
+            "same_time_different_position_edges": 0,
+            "zero_displacement_edges": 0,
+            "length_change": -0.17814558487330512,
+            "length_change_reason": null,
+            "relative_length_change": -0.04035726463074285,
+            "relative_length_change_reason": null
+          },
+          "after_P": {
+            "segments": 1,
+            "points": 4,
+            "length": 4.23606797749979,
+            "length_reason": null,
+            "edge_denominator": 3,
+            "speed_computable": 3,
+            "direction_computable": 3,
+            "speed_unavailable_reasons": {},
+            "direction_unavailable_reasons": {},
+            "negative_dt_edges": 0,
+            "zero_dt_edges": 0,
+            "same_time_different_position_edges": 0,
+            "zero_displacement_edges": 0,
+            "length_change": 0.0,
+            "length_change_reason": null,
+            "relative_length_change": 0.0,
+            "relative_length_change_reason": null
+          }
+        },
+        "common_reference_id": "RAW_WINDOWS_DT30_DISTANCE400_V1",
+        "common_raw_points": 5,
+        "common_covered_points": 5,
+        "common_uncovered_points": 0,
+        "common_coverage": 1.0,
+        "common_coverage_reason": null,
+        "common_error_denominator": 5,
+        "common_max_error": 0.4472135954999579,
+        "common_mean_error": 0.08944271909999159,
+        "common_p95_error": 0.35777087639996624,
+        "common_error_reason": null,
+        "common_over_5_points": 0,
+        "common_error_budget": 5,
+        "common_floating_allowance": 7.105427357601002e-14,
+        "common_point_errors": [
+          {
+            "index": 0,
+            "error": 0.0,
+            "reason": null,
+            "reference_window": 0
+          },
+          {
+            "index": 1,
+            "error": 0.0,
+            "reason": null,
+            "reference_window": 0
+          },
+          {
+            "index": 2,
+            "error": 0.4472135954999579,
+            "reason": null,
+            "reference_window": 0
+          },
+          {
+            "index": 3,
+            "error": 0.0,
+            "reason": null,
+            "reference_window": 0
+          },
+          {
+            "index": 4,
+            "error": 0.0,
+            "reason": null,
+            "reference_window": 0
+          }
+        ],
+        "raw_break_count": 0,
+        "raw_break_crossings": 0,
+        "raw_breaks_crossed": 0,
+        "raw_boundaries": [],
+        "breakpoint_crossing_edges": [],
+        "raw_break_trigger_points_removed": 0,
+        "boundary_trigger_losses": [],
+        "raw_windows": 1,
+        "raw_windows_covered": 1,
+        "reference_window_length": 4.414213562373095,
+        "constraint_status": "NO_RAW_BREAK_CROSSING"
+      },
+      "classification": "SYNTHETIC_COUNTEREXAMPLE"
+    }
+  ],
+  "goal2_actual_architecture": {
+    "nodes": [
+      [
+        "human",
+        "User + web GPT\nresearch judgment / remote review",
+        4.3,
+        8.0,
+        4.4,
+        0.75,
+        "P2",
+        null
+      ],
+      [
+        "A",
+        "A · diagnosis / planning\ncontract and bounded proposals",
+        0.6,
+        6.6,
+        3.1,
+        0.9,
+        "Panel",
+        "task1/config/goal2/contract.json"
+      ],
+      [
+        "root",
+        "Codex main + deterministic GoalJournal\nrequirements · versions · dependencies",
+        4.3,
+        6.6,
+        4.4,
+        0.9,
+        "Panel",
+        "task1/workflow/g2_journal.py"
+      ],
+      [
+        "C",
+        "C · independent read-only review\ntrusted input + target hashes",
+        9.3,
+        6.6,
+        3.1,
+        0.9,
+        "Panel",
+        "task1/workflow/g2_metrics.py"
+      ],
+      [
+        "B",
+        "B-Run\nregistered actions / new artifacts",
+        4.3,
+        5.0,
+        2.5,
+        0.85,
+        "Panel",
+        "task1/workflow/g2_experiments.py"
+      ],
+      [
+        "repair",
+        "B-Repair\nreproduce → fix → rebuild",
+        8.1,
+        5.0,
+        3.1,
+        0.85,
+        "Panel",
+        "task1/workflow/g2_journal.py"
+      ],
+      [
+        "cards",
+        "Fixed raw diagnostic cards\nrecord / split / contract handles",
+        0.6,
+        2.9,
+        3.1,
+        0.85,
+        "Panel",
+        "task1/workflow/g2_data.py"
+      ],
+      [
+        "modes",
+        "Evaluated decision paths\nLLM only · zero-model search\nLLM + search · LLM + memory + search",
+        4.3,
+        2.75,
+        4.4,
+        1.15,
+        "P1",
+        "task1/workflow/g2_modes.py"
+      ],
+      [
+        "tools",
+        "S / D / P deterministic tools\ncomplete point ledger",
+        9.3,
+        2.9,
+        3.1,
+        0.85,
+        "Panel",
+        "task1/workflow/g2_pipeline.py"
+      ],
+      [
+        "memory",
+        "Frozen DEMO memory\nverified examples · read-only eval",
+        0.6,
+        0.75,
+        3.1,
+        0.9,
+        "Panel",
+        "task1/workflow/g2_memory.py"
+      ],
+      [
+        "lock",
+        "Lock candidate → post-lock evaluation\nno evaluation feedback to episode",
+        7.0,
+        0.75,
+        5.4,
+        0.9,
+        "Panel",
+        "task1/workflow/g2_metrics.py"
+      ]
+    ],
+    "edges": [
+      [
+        "human",
+        "root",
+        "authorized scope",
+        false
+      ],
+      [
+        "A",
+        "root",
+        "task plan",
+        false
+      ],
+      [
+        "root",
+        "B",
+        "validated action",
+        false
+      ],
+      [
+        "B",
+        "C",
+        "artifact + hash",
+        false
+      ],
+      [
+        "C",
+        "root",
+        "receipt / issue",
+        true
+      ],
+      [
+        "C",
+        "repair",
+        "engineering issue",
+        true
+      ],
+      [
+        "repair",
+        "B",
+        "new version / parent resumes",
+        true
+      ],
+      [
+        "B",
+        "cards",
+        "controlled experiment",
+        false
+      ],
+      [
+        "cards",
+        "modes",
+        "common observations",
+        false
+      ],
+      [
+        "memory",
+        "modes",
+        "memory mode only",
+        true
+      ],
+      [
+        "modes",
+        "tools",
+        "bounded candidates",
+        false
+      ],
+      [
+        "tools",
+        "modes",
+        "actual internal feedback\nsearch LLM modes only",
+        true
+      ],
+      [
+        "tools",
+        "lock",
+        "final locked output",
+        false
+      ]
+    ],
+    "drawio_file": "goal2_actual_architecture.drawio",
+    "drawio_sha256": "9b07dbb940e0dfa053084637c53ad8b4184e9026673f95e4cf3cf5f72fdae97b"
+  }
+}

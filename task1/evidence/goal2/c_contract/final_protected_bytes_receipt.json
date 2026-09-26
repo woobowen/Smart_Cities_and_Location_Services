@@ -1,0 +1,53 @@
+{
+  "at": "2026-09-26T21:53:42.170437+00:00",
+  "classification": "INDEPENDENT_G1_MATERIAL_AND_USER_ARCHIVE_BYTE_PROTECTION",
+  "status": "VERIFIED",
+  "anchor": "a45d89f49f2041477b16485f535adc508c32f8ea",
+  "trusted_command": [
+    "git",
+    "ls-tree",
+    "-r",
+    "-z",
+    "a45d89f49f2041477b16485f535adc508c32f8ea",
+    "--",
+    "task1/evidence/goal1",
+    "task1/docs/goal1",
+    "task1/notebooks",
+    "task1/作业",
+    "task1/作业.zip",
+    "task1/实验课1.pptx",
+    "task1/config/goal1.json",
+    "task1/config/pilot.json",
+    "task1/config/conditional_planar.json",
+    "task1/config/goal1_sources.json",
+    "task1/config/requirements-goal1.txt"
+  ],
+  "protected_git_blobs": 900,
+  "changed": [],
+  "user_archive_checks": [
+    {
+      "path": "SC-LAB1-G1-COMPLETE-001_HANDOFF.zip",
+      "startup_sha256": "95d467b764b0c358e5248ed5392c4d8704a3767f6a907f56a76527d0c50a8c68",
+      "actual_sha256": "95d467b764b0c358e5248ed5392c4d8704a3767f6a907f56a76527d0c50a8c68",
+      "matches": true,
+      "tracked": false
+    },
+    {
+      "path": "SC-LAB1-G1-REPAIR-001_HANDOFF.zip",
+      "startup_sha256": "e79ea04a803d2b49bed4699e1609412f8d615b209d529a9b816991188cb09fea",
+      "actual_sha256": "e79ea04a803d2b49bed4699e1609412f8d615b209d529a9b816991188cb09fea",
+      "matches": true,
+      "tracked": true
+    },
+    {
+      "path": "SC-LAB1-G1-CLOSURE-002_HANDOFF.zip",
+      "startup_sha256": "43db2c0316f7773bb568cc335ba563b29c013f41a4bf82ba74b1c36e90add4fe",
+      "actual_sha256": "43db2c0316f7773bb568cc335ba563b29c013f41a4bf82ba74b1c36e90add4fe",
+      "matches": true,
+      "tracked": false
+    }
+  ],
+  "actual_untracked_user_archives": 2,
+  "elapsed_seconds": 0.18437710400030483,
+  "writes_to_protected_files": 0
+}

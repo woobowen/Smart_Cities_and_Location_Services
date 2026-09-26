@@ -1,0 +1,56 @@
+{
+  "classification": "B_STATIC_FINDING_TRIAGE_NOT_FINAL_ACCEPTANCE",
+  "source_receipt": "snapshot_01/release_check.json",
+  "source_receipt_sha256": "30a07aca22c5a76206bfbef44a72f713c0301008652a563f64adf233ba5d27d9",
+  "scan_phase": "NONFINAL_LIVE_WORK_STILL_IN_PROGRESS",
+  "findings": [
+    {
+      "path": "task1/docs/goal2/REPRODUCE.md",
+      "sha256": "75fe1d39deea8f48b6bee0664a3339ea92fcfa98e9b2e9cb42a6d5447c5e3ba4",
+      "lines": [
+        18,
+        35
+      ],
+      "inspection": "Both paths are explicitly chosen output directories in example commands; they are not input locations or Notebook code dependencies.",
+      "classification": "DOCUMENTED_UNIX_OUTPUT_EXAMPLE",
+      "action": "Optional portability wording can use a project-relative new output directory; no processing change needed."
+    },
+    {
+      "path": "task1/workflow/g2_provider.py",
+      "sha256": "636a6edaf95ef31e1982d27e1361697d145156fccb99760028ba5e0d77949bb1",
+      "lines": [
+        17,
+        38
+      ],
+      "inspection": "Default LIVE executable is the existing Goal 1 isolated CLI at a temporary absolute location. Constructor accepts an explicit executable. Default Notebook RECOMPUTE is designed to avoid Provider.call; complete new-kernel verification remains a separate parent task.",
+      "classification": "LIVE_ENVIRONMENT_DEPENDENCY_REQUIRES_EXPLICIT_SETUP_DOCUMENTATION_OR_PORTABLE_ENTRY",
+      "action": "Reported to root without touching frozen processing source or interrupting current LIVE work. A fresh clone cannot assume this default binary exists."
+    }
+  ],
+  "scope_results": {
+    "formal_goal2_notebook_code_absolute_dependencies": 0,
+    "explicit_credential_pattern_findings": 0,
+    "broken_local_file_links": 0,
+    "over_50MiB_files": 0,
+    "protected_tracked_files_unchanged": 900,
+    "user_supplied_zip_files_unchanged": 3,
+    "user_zip_currently_untracked": 2,
+    "user_zip_already_tracked": 1,
+    "ignored_substantive_logs_need_reviewed_explicit_staging": 22,
+    "cache_files_reported_untouched": 69,
+    "bundle_exactly_11_check_exit_code": 0,
+    "package_inventory_mismatches": 0,
+    "installations_registered": []
+  },
+  "required_final_rechecks": [
+    "Rerun scan after all artifacts and real model runs are fixed; 95 files appeared during this snapshot.",
+    "Inspect all current figure formats and final Notebook outputs added later.",
+    "Review and explicitly stage substantive ignored logs across all Goal 2 evidence subdirectories.",
+    "Do not stage the two original untracked user ZIPs or generated cache files implicitly.",
+    "Consume the LIVE executable setup finding with parent documentation/entry-point policy before final publication."
+  ],
+  "redaction_engineering_check": "scanner_selfcheck_01/receipt.json",
+  "gpt_second_review": "PENDING",
+  "deletions": [],
+  "source_or_contract_changes": []
+}

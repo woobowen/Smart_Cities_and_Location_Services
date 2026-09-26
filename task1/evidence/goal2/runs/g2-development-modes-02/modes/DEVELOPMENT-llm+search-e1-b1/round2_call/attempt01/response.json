@@ -1,0 +1,125 @@
+{
+  "records": [
+    {
+      "record_id": "1076",
+      "proposals": [
+        {
+          "candidate_id": "1076-r2-a",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 2,
+            "min_length": 0,
+            "direction": 35,
+            "dp": 2
+          },
+          "metric_id": "common_covered_points",
+          "predicted_sign": "increase",
+          "reason": "Seven points were filtered across two segments. Relax segment filters to test coverage recovery; DP 2 previously reduced common error to 1.818. Preserve raw break thresholds."
+        }
+      ],
+      "stop": false,
+      "memory_ids_used": []
+    },
+    {
+      "record_id": "5027",
+      "proposals": [
+        {
+          "candidate_id": "5027-r2-a",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 60,
+            "dp": 5
+          },
+          "metric_id": "raw_break_crossings",
+          "predicted_sign": "unchanged",
+          "reason": "Common maximum error remained 67.565 even at DP 0. Test a higher direction threshold to investigate direction-stage loss while preserving segmentation."
+        },
+        {
+          "candidate_id": "5027-r2-b",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 2,
+            "min_length": 0,
+            "direction": 35,
+            "dp": 5
+          },
+          "metric_id": "common_covered_points",
+          "predicted_sign": "increase",
+          "reason": "The reference filtered one three-point segment. Relax segment filters to recover its coverage while preserving existing windows and their D/P processing; verify newly covered error."
+        }
+      ],
+      "stop": false,
+      "memory_ids_used": []
+    },
+    {
+      "record_id": "2759",
+      "proposals": [],
+      "stop": true,
+      "memory_ids_used": []
+    },
+    {
+      "record_id": "5256",
+      "proposals": [
+        {
+          "candidate_id": "5256-r2-a",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 45,
+            "dp": 5
+          },
+          "metric_id": "raw_break_crossings",
+          "predicted_sign": "unchanged",
+          "reason": "DP 0 retained common maximum error 11.738, while lower direction thresholds worsened it. Test a higher direction threshold with unchanged segmentation."
+        },
+        {
+          "candidate_id": "5256-r2-b",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 60,
+            "dp": 5
+          },
+          "metric_id": "raw_break_crossings",
+          "predicted_sign": "unchanged",
+          "reason": "Test whether a further direction-threshold increase reduces the persistent geometric error; coverage and fidelity require evaluation."
+        }
+      ],
+      "stop": false,
+      "memory_ids_used": []
+    },
+    {
+      "record_id": "4732",
+      "proposals": [],
+      "stop": true,
+      "memory_ids_used": []
+    },
+    {
+      "record_id": "9729",
+      "proposals": [],
+      "stop": true,
+      "memory_ids_used": []
+    },
+    {
+      "record_id": "9056",
+      "proposals": [],
+      "stop": true,
+      "memory_ids_used": []
+    },
+    {
+      "record_id": "217",
+      "proposals": [],
+      "stop": true,
+      "memory_ids_used": []
+    }
+  ]
+}

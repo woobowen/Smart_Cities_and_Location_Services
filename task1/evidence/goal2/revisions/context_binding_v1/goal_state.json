@@ -1,0 +1,1090 @@
+{
+  "goal_id": "SC-LAB1-G2-EXPERIMENTS-001",
+  "status": "IMPLEMENTING",
+  "gpt_second_review": "PENDING",
+  "submission": "NOT_READY",
+  "events": [
+    {
+      "sequence": 0,
+      "at": "2026-09-26T18:45:13.281018+00:00",
+      "kind": "NATIVE_ROLE_DISPATCH",
+      "previous_hash": "ROOT",
+      "role": "A",
+      "context": "/root/a_contract",
+      "task": "taskplan_contract",
+      "operation": "spawn_agent",
+      "provider_requests": "unknown",
+      "independent_os_sandbox": false,
+      "hash": "4cea731da7f595c8a04fd846f4bd2dc31d412b50b6798049514fcdf2b507a182"
+    },
+    {
+      "sequence": 1,
+      "at": "2026-09-26T18:45:13.281556+00:00",
+      "kind": "NATIVE_ROLE_DISPATCH",
+      "previous_hash": "4cea731da7f595c8a04fd846f4bd2dc31d412b50b6798049514fcdf2b507a182",
+      "role": "B",
+      "context": "/root/b_engine",
+      "task": "processing_metrics_implementation",
+      "operation": "spawn_agent",
+      "provider_requests": "unknown",
+      "independent_os_sandbox": false,
+      "hash": "a499b213054baf121e63125f3f9487a72b1630e65cf676d4e9b126945ad7de49"
+    },
+    {
+      "sequence": 2,
+      "at": "2026-09-26T18:45:13.281842+00:00",
+      "kind": "NATIVE_ROLE_DISPATCH",
+      "previous_hash": "a499b213054baf121e63125f3f9487a72b1630e65cf676d4e9b126945ad7de49",
+      "role": "C",
+      "context": "/root/c_contract",
+      "task": "handoff_contract_review",
+      "operation": "spawn_agent",
+      "provider_requests": "unknown",
+      "independent_os_sandbox": false,
+      "hash": "27867e39f3b0fc0f0ea930e882c6c5d550624b23a9f59a6370943c163d122891"
+    },
+    {
+      "sequence": 3,
+      "at": "2026-09-26T18:50:50.789569+00:00",
+      "kind": "ISSUE_OPENED",
+      "previous_hash": "27867e39f3b0fc0f0ea930e882c6c5d550624b23a9f59a6370943c163d122891",
+      "issue_id": "G2-C-CONTROL-001",
+      "hash": "5cd1dbdfdfe0861540c297c0a1b8a50cf5c3a7babf00090b4d6bf294707c530f"
+    },
+    {
+      "sequence": 4,
+      "at": "2026-09-26T18:50:50.790111+00:00",
+      "kind": "B_REPAIR_SUBMITTED",
+      "previous_hash": "5cd1dbdfdfe0861540c297c0a1b8a50cf5c3a7babf00090b4d6bf294707c530f",
+      "issue_id": "G2-C-CONTROL-001",
+      "hash": "74b9851f705f92a6be63b54f8136468efcb5fa287abe31147a9cd494b3eb64d1"
+    },
+    {
+      "sequence": 5,
+      "at": "2026-09-26T18:54:08.710902+00:00",
+      "kind": "B_REPAIR_SUBMITTED",
+      "previous_hash": "74b9851f705f92a6be63b54f8136468efcb5fa287abe31147a9cd494b3eb64d1",
+      "issue_id": "G2-C-CONTROL-001",
+      "hash": "eda55396cb3608567a09a19b71e1f25b715795ee3d0f4eff8a49309216813b0f"
+    },
+    {
+      "sequence": 6,
+      "at": "2026-09-26T18:54:43.512026+00:00",
+      "kind": "TASK_SUBMITTED",
+      "previous_hash": "eda55396cb3608567a09a19b71e1f25b715795ee3d0f4eff8a49309216813b0f",
+      "task": "handoff",
+      "hash": "02a9f5bfb385ece7a399682e5c3f40b0cff7dfdc1c14ef3e11581ae2e730070f"
+    },
+    {
+      "sequence": 7,
+      "at": "2026-09-26T18:54:43.566761+00:00",
+      "kind": "TASK_VERIFIED",
+      "previous_hash": "02a9f5bfb385ece7a399682e5c3f40b0cff7dfdc1c14ef3e11581ae2e730070f",
+      "task": "handoff",
+      "verifier": "C:/root/c_contract",
+      "hash": "858b5ee10f60b12c6fdfb78fdf61b766752f92c68bf374222df945656f897ca7"
+    },
+    {
+      "sequence": 8,
+      "at": "2026-09-26T18:57:28.214399+00:00",
+      "kind": "TASK_SUBMITTED",
+      "previous_hash": "858b5ee10f60b12c6fdfb78fdf61b766752f92c68bf374222df945656f897ca7",
+      "task": "contract",
+      "hash": "2d41a7f675aed9c35a1b85df5560c1278cf172a20da3b0eeedee6c1c5dd556d9"
+    },
+    {
+      "sequence": 9,
+      "at": "2026-09-26T18:57:28.215815+00:00",
+      "kind": "TASK_VERIFIED",
+      "previous_hash": "2d41a7f675aed9c35a1b85df5560c1278cf172a20da3b0eeedee6c1c5dd556d9",
+      "task": "contract",
+      "verifier": "C:/root/c_contract",
+      "hash": "ba69c887a0cc1796dba5e0525b2c0b06d960ebd29577365031fda80eb37fe023"
+    },
+    {
+      "sequence": 10,
+      "at": "2026-09-26T18:58:12.345314+00:00",
+      "kind": "NATIVE_ROLE_DISPATCH",
+      "previous_hash": "ba69c887a0cc1796dba5e0525b2c0b06d960ebd29577365031fda80eb37fe023",
+      "role": "A",
+      "context": "/root/a_contract",
+      "task": "expanded_coordinate_sensitivity",
+      "operation": "followup_task",
+      "provider_requests": "unknown",
+      "independent_os_sandbox": false,
+      "hash": "1bebc13170d67b7af39669eb25464f87f1e8d49fd0f87702123bee67f3bb108c"
+    },
+    {
+      "sequence": 11,
+      "at": "2026-09-26T18:58:12.346644+00:00",
+      "kind": "B_REPAIR_SUBMITTED",
+      "previous_hash": "1bebc13170d67b7af39669eb25464f87f1e8d49fd0f87702123bee67f3bb108c",
+      "issue_id": "G2-C-CONTROL-001",
+      "hash": "ff34f32fe918ae2dbcb21aef04aecbbbca834fe4703ccd814bebe6357719f9d2"
+    },
+    {
+      "sequence": 12,
+      "at": "2026-09-26T19:01:54.007497+00:00",
+      "kind": "C_VERIFIED_PARENT_RESUMED",
+      "previous_hash": "ff34f32fe918ae2dbcb21aef04aecbbbca834fe4703ccd814bebe6357719f9d2",
+      "issue_id": "G2-C-CONTROL-001",
+      "parent_task": "core",
+      "hash": "09a0ae693a54eed5a26c14fe83f67c9834f6884a0ebe9d20c5ff7d3c52ef0d07"
+    },
+    {
+      "sequence": 13,
+      "at": "2026-09-26T19:01:54.019314+00:00",
+      "kind": "TASK_SUBMITTED",
+      "previous_hash": "09a0ae693a54eed5a26c14fe83f67c9834f6884a0ebe9d20c5ff7d3c52ef0d07",
+      "task": "split",
+      "hash": "7e40efbf89053c3eb3681a1039032c14b788a109ccc0116f86e9a3344f937bdf"
+    },
+    {
+      "sequence": 14,
+      "at": "2026-09-26T19:01:54.032278+00:00",
+      "kind": "TASK_VERIFIED",
+      "previous_hash": "7e40efbf89053c3eb3681a1039032c14b788a109ccc0116f86e9a3344f937bdf",
+      "task": "split",
+      "verifier": "C:/root/c_contract",
+      "hash": "04715b69a98e943f8eb191cc393774c4979dfaadbf9e52f79553f8860210aa8a"
+    },
+    {
+      "sequence": 15,
+      "at": "2026-09-26T19:07:13.595736+00:00",
+      "kind": "NATIVE_ROLE_DISPATCH",
+      "previous_hash": "04715b69a98e943f8eb191cc393774c4979dfaadbf9e52f79553f8860210aa8a",
+      "role": "B",
+      "context": "/root/b_engine",
+      "task": "figures_notebooks_reproduction",
+      "operation": "followup_task",
+      "provider_requests": "unknown",
+      "independent_os_sandbox": false,
+      "hash": "a74f8c751913a25a95f519daf5e96771a62e0e9934a9c25662205849718b46d5"
+    },
+    {
+      "sequence": 16,
+      "at": "2026-09-26T19:09:42.618871+00:00",
+      "kind": "ISSUE_OPENED",
+      "previous_hash": "a74f8c751913a25a95f519daf5e96771a62e0e9934a9c25662205849718b46d5",
+      "issue_id": "G2-C-MODE-MEMORY-001",
+      "hash": "e07e3f0e62f398ea4a3328eadf4a419c1d572a8ba461d8e73987b79ba940fc9e"
+    },
+    {
+      "sequence": 17,
+      "at": "2026-09-26T19:09:42.620232+00:00",
+      "kind": "B_REPAIR_SUBMITTED",
+      "previous_hash": "e07e3f0e62f398ea4a3328eadf4a419c1d572a8ba461d8e73987b79ba940fc9e",
+      "issue_id": "G2-C-MODE-MEMORY-001",
+      "hash": "405117999ae8d926fc0981e72057b88fe122e0555d9251d594851a7d625c625d"
+    },
+    {
+      "sequence": 18,
+      "at": "2026-09-26T19:12:22.330334+00:00",
+      "kind": "B_REPAIR_SUBMITTED",
+      "previous_hash": "405117999ae8d926fc0981e72057b88fe122e0555d9251d594851a7d625c625d",
+      "issue_id": "G2-C-MODE-MEMORY-001",
+      "hash": "c75612beb134d92c589019baf24d3eb3cb0b52a6976f35a6ee819aa57147c70d"
+    },
+    {
+      "sequence": 19,
+      "at": "2026-09-26T19:13:53.890976+00:00",
+      "kind": "B_REPAIR_SUBMITTED",
+      "previous_hash": "c75612beb134d92c589019baf24d3eb3cb0b52a6976f35a6ee819aa57147c70d",
+      "issue_id": "G2-C-MODE-MEMORY-001",
+      "hash": "7f7a787eab0e06a091a339b11ff23879c66d9ffd8b0b607189e25008b18f64e6"
+    },
+    {
+      "sequence": 20,
+      "at": "2026-09-26T19:15:33.335332+00:00",
+      "kind": "ISSUE_OPENED",
+      "previous_hash": "7f7a787eab0e06a091a339b11ff23879c66d9ffd8b0b607189e25008b18f64e6",
+      "issue_id": "G2-C-SOURCE-SCOPE-001",
+      "hash": "b073277b4174eea4f07910f29cd4fe026df00530b85b6e32c4f0eef4ccdfd64b"
+    },
+    {
+      "sequence": 21,
+      "at": "2026-09-26T19:15:33.336368+00:00",
+      "kind": "B_REPAIR_SUBMITTED",
+      "previous_hash": "b073277b4174eea4f07910f29cd4fe026df00530b85b6e32c4f0eef4ccdfd64b",
+      "issue_id": "G2-C-SOURCE-SCOPE-001",
+      "hash": "61a63d864c6395d85a7765a683bbe53e8168a99457be32badb81c1453f44041e"
+    },
+    {
+      "sequence": 22,
+      "at": "2026-09-26T19:17:03.456911+00:00",
+      "kind": "B_REPAIR_SUBMITTED",
+      "previous_hash": "61a63d864c6395d85a7765a683bbe53e8168a99457be32badb81c1453f44041e",
+      "issue_id": "G2-C-MODE-MEMORY-001",
+      "hash": "0e084ee076f483760e313b4e4415cae9b6b272afb4fd70c09bc91e8cbf8c8ed7"
+    },
+    {
+      "sequence": 23,
+      "at": "2026-09-26T19:22:07.291975+00:00",
+      "kind": "B_REPAIR_SUBMITTED",
+      "previous_hash": "0e084ee076f483760e313b4e4415cae9b6b272afb4fd70c09bc91e8cbf8c8ed7",
+      "issue_id": "G2-C-MODE-MEMORY-001",
+      "hash": "269cbedac435997930975b58e666bc9694176ec34811a058280349ce7179cdb3"
+    },
+    {
+      "sequence": 24,
+      "at": "2026-09-26T19:22:07.293907+00:00",
+      "kind": "C_VERIFIED_PARENT_RESUMED",
+      "previous_hash": "269cbedac435997930975b58e666bc9694176ec34811a058280349ce7179cdb3",
+      "issue_id": "G2-C-MODE-MEMORY-001",
+      "parent_task": "core",
+      "hash": "c925471a959ac3d2b13a9c83c1d9e68f1f02a89a5e09dc1cc54efc7a59bcb466"
+    },
+    {
+      "sequence": 25,
+      "at": "2026-09-26T19:22:07.294653+00:00",
+      "kind": "B_REPAIR_SUBMITTED",
+      "previous_hash": "c925471a959ac3d2b13a9c83c1d9e68f1f02a89a5e09dc1cc54efc7a59bcb466",
+      "issue_id": "G2-C-SOURCE-SCOPE-001",
+      "hash": "318208337b4b650923b14ad589d57d204dd4d35af430292533ae0569ffade061"
+    },
+    {
+      "sequence": 26,
+      "at": "2026-09-26T19:22:07.295749+00:00",
+      "kind": "C_VERIFIED_PARENT_RESUMED",
+      "previous_hash": "318208337b4b650923b14ad589d57d204dd4d35af430292533ae0569ffade061",
+      "issue_id": "G2-C-SOURCE-SCOPE-001",
+      "parent_task": "core",
+      "hash": "9b9e113b0c6a32911dfea36e1abd55aa8df7d04cd3942b54ae0cfd9749d64205"
+    },
+    {
+      "sequence": 27,
+      "at": "2026-09-26T19:22:07.297577+00:00",
+      "kind": "TASK_SUBMITTED",
+      "previous_hash": "9b9e113b0c6a32911dfea36e1abd55aa8df7d04cd3942b54ae0cfd9749d64205",
+      "task": "core",
+      "hash": "972deafba6d4cf74ecf003e3ef3489a10df9f2bf68ec497a755f1cbbf98fd7e6"
+    },
+    {
+      "sequence": 28,
+      "at": "2026-09-26T19:22:07.299985+00:00",
+      "kind": "TASK_VERIFIED",
+      "previous_hash": "972deafba6d4cf74ecf003e3ef3489a10df9f2bf68ec497a755f1cbbf98fd7e6",
+      "task": "core",
+      "verifier": "C:/root/c_contract",
+      "hash": "8415830d993c778f8b2c5672bd360867dc14df6b5e1b40732a18085df1cedd75"
+    },
+    {
+      "sequence": 29,
+      "at": "2026-09-26T19:22:07.357949+00:00",
+      "kind": "CHECKPOINT",
+      "previous_hash": "8415830d993c778f8b2c5672bd360867dc14df6b5e1b40732a18085df1cedd75",
+      "status": "IMPLEMENTING",
+      "hash": "fea892f814df78e189921e396946d6e21c961e3c27cfeb170a196e36ff04dd56"
+    },
+    {
+      "sequence": 30,
+      "at": "2026-09-26T19:23:23.678456+00:00",
+      "kind": "NATIVE_ROLE_DISPATCH",
+      "previous_hash": "fea892f814df78e189921e396946d6e21c961e3c27cfeb170a196e36ff04dd56",
+      "role": "B",
+      "context": "/root/b_engine",
+      "task": "development_parameters/development_orders/memory",
+      "operation": "B-Run: serial frozen-code formal DEVELOPMENT and DEMO execution",
+      "provider_requests": "unknown",
+      "independent_os_sandbox": false,
+      "hash": "b2537c39e44a97b8c7c76ef5139eb72fe4d6c7a43e95aa746b7f6d4ec2ea0914"
+    },
+    {
+      "sequence": 31,
+      "at": "2026-09-26T19:23:23.679246+00:00",
+      "kind": "NATIVE_ROLE_DISPATCH",
+      "previous_hash": "b2537c39e44a97b8c7c76ef5139eb72fe4d6c7a43e95aa746b7f6d4ec2ea0914",
+      "role": "C",
+      "context": "/root/c_contract",
+      "task": "development_parameters/development_orders/memory",
+      "operation": "prepare independent real-run review and execute after complete",
+      "provider_requests": "unknown",
+      "independent_os_sandbox": false,
+      "hash": "735fb87172cf279900f771855ac4642818f75a46691ac108f29f7e9131babe0d"
+    },
+    {
+      "sequence": 32,
+      "at": "2026-09-26T19:23:23.681092+00:00",
+      "kind": "FROZEN_CODE_FORMAL_RUN_STARTED",
+      "previous_hash": "735fb87172cf279900f771855ac4642818f75a46691ac108f29f7e9131babe0d",
+      "code_sha": "0747574b7844e44f687a0e7eaf1ab599eb7a3d5d",
+      "hash": "b4f2b9d2fc5c705a274ab501afc74ba339faa7e4e881b22f683172c00fe51722"
+    },
+    {
+      "sequence": 33,
+      "at": "2026-09-26T19:24:24.108089+00:00",
+      "kind": "COUNTEREXAMPLES_EXECUTED",
+      "previous_hash": "b4f2b9d2fc5c705a274ab501afc74ba339faa7e4e881b22f683172c00fe51722",
+      "run_id": "g2-counterexamples-01",
+      "scope": "19 synthetic executions +10 exposed pilot executions;25 known-answer checks",
+      "remaining": "independent C audit and actual live model critique citations",
+      "hash": "c2c95856572e4938076c883d70d89442afb64265fdc8edebda2f1e63f6b0bc77"
+    },
+    {
+      "sequence": 34,
+      "at": "2026-09-26T19:27:11.006640+00:00",
+      "kind": "ISSUE_OPENED",
+      "previous_hash": "c2c95856572e4938076c883d70d89442afb64265fdc8edebda2f1e63f6b0bc77",
+      "issue_id": "G2-B-NOTEBOOK-001",
+      "hash": "0e70148684f76e4c6f272bf122fcb5fb89059a6e9235989a599fb9b28f40e644"
+    },
+    {
+      "sequence": 35,
+      "at": "2026-09-26T19:27:11.604127+00:00",
+      "kind": "B_REPAIR_SUBMITTED",
+      "previous_hash": "0e70148684f76e4c6f272bf122fcb5fb89059a6e9235989a599fb9b28f40e644",
+      "issue_id": "G2-B-NOTEBOOK-001",
+      "hash": "844588592e3b3e182bc0b03f406c062f46f0326f6435b15df8bee66dd16a6450"
+    },
+    {
+      "sequence": 36,
+      "at": "2026-09-26T19:33:41.711376+00:00",
+      "kind": "TASK_SUBMITTED",
+      "previous_hash": "844588592e3b3e182bc0b03f406c062f46f0326f6435b15df8bee66dd16a6450",
+      "task": "development_orders",
+      "hash": "bfd5ac3dbf1c05b7c1d682ea627527107284405ef82c464d2bac6191351fcf90"
+    },
+    {
+      "sequence": 37,
+      "at": "2026-09-26T19:33:41.718471+00:00",
+      "kind": "TASK_VERIFIED",
+      "previous_hash": "bfd5ac3dbf1c05b7c1d682ea627527107284405ef82c464d2bac6191351fcf90",
+      "task": "development_orders",
+      "verifier": "C:/root/c_contract",
+      "hash": "1e480e2ecd5bbf0b4bb16c700c49fd69e4e9bf63e85bb3fbcc7ff8b43a18c01e"
+    },
+    {
+      "sequence": 38,
+      "at": "2026-09-26T19:33:41.719101+00:00",
+      "kind": "NATIVE_ROLE_DISPATCH",
+      "previous_hash": "1e480e2ecd5bbf0b4bb16c700c49fd69e4e9bf63e85bb3fbcc7ff8b43a18c01e",
+      "role": "B",
+      "context": "/root/b_engine",
+      "task": "parameter_figures_preview",
+      "operation": "followup_task: current actual DEV layout render/visual inspection; presentation-only repairs",
+      "provider_requests": "unknown",
+      "independent_os_sandbox": false,
+      "hash": "02b20247d5f738767058a9ac78172a00c855d19a14f6fe66a062e8f86c0fc32f"
+    },
+    {
+      "sequence": 39,
+      "at": "2026-09-26T19:34:06.188556+00:00",
+      "kind": "B_RUN_BATCHES_COMPLETE",
+      "previous_hash": "02b20247d5f738767058a9ac78172a00c855d19a14f6fe66a062e8f86c0fc32f",
+      "runs": [
+        "g2-development-parameters-01",
+        "g2-development-orders-01",
+        "g2-demo-memory-01"
+      ],
+      "candidate_record_evaluations": 9000,
+      "model_dispatches": 0,
+      "hash": "2e9940c16968d5f956638773149585c622396be62eb93c412751b0693ef1851b"
+    },
+    {
+      "sequence": 40,
+      "at": "2026-09-26T19:34:21.431129+00:00",
+      "kind": "TASK_SUBMITTED",
+      "previous_hash": "2e9940c16968d5f956638773149585c622396be62eb93c412751b0693ef1851b",
+      "task": "development_parameters",
+      "hash": "6943f3311dba0c678fcd056c77acee2436c7aa3918280e7c1d5714e1ea4d9c8c"
+    },
+    {
+      "sequence": 41,
+      "at": "2026-09-26T19:34:21.435133+00:00",
+      "kind": "TASK_VERIFIED",
+      "previous_hash": "6943f3311dba0c678fcd056c77acee2436c7aa3918280e7c1d5714e1ea4d9c8c",
+      "task": "development_parameters",
+      "verifier": "C:/root/c_contract",
+      "hash": "09b456473969183a9a58a3d1bdcfbadfdb4d7a42de86ec428e355578dd8004d4"
+    },
+    {
+      "sequence": 42,
+      "at": "2026-09-26T19:34:29.717568+00:00",
+      "kind": "TASK_SUBMITTED",
+      "previous_hash": "09b456473969183a9a58a3d1bdcfbadfdb4d7a42de86ec428e355578dd8004d4",
+      "task": "memory",
+      "hash": "69045a5bf8d4f5c7349491960846baa2c32d85d8bae3c580dfb06b02556a3cf6"
+    },
+    {
+      "sequence": 43,
+      "at": "2026-09-26T19:34:29.720395+00:00",
+      "kind": "TASK_VERIFIED",
+      "previous_hash": "69045a5bf8d4f5c7349491960846baa2c32d85d8bae3c580dfb06b02556a3cf6",
+      "task": "memory",
+      "verifier": "C:/root/c_contract",
+      "hash": "48701097188fc53e292f6a1938ccf94a1a7d53db4f1e4ce00fb305112ec908f3"
+    },
+    {
+      "sequence": 44,
+      "at": "2026-09-26T19:34:59.235816+00:00",
+      "kind": "EXPERIMENT_MODEL_RUN_STARTED",
+      "previous_hash": "48701097188fc53e292f6a1938ccf94a1a7d53db4f1e4ce00fb305112ec908f3",
+      "run_id": "g2-development-modes-01",
+      "scope": "DEVELOPMENT fixed24, four modes x1 episode",
+      "governance_role_dispatches": 0,
+      "provider": "existing authenticated Codex CLI, explicit --enable-live",
+      "hash": "af31e837dc6ff278fd02dadc9a2c6ecad1ed1014ae25d2730fab10fe038db332"
+    },
+    {
+      "sequence": 45,
+      "at": "2026-09-26T19:35:43.563431+00:00",
+      "kind": "C_VERIFIED_PARENT_RESUMED",
+      "previous_hash": "af31e837dc6ff278fd02dadc9a2c6ecad1ed1014ae25d2730fab10fe038db332",
+      "issue_id": "G2-B-NOTEBOOK-001",
+      "parent_task": "notebooks",
+      "hash": "ae5e8c5f212ace88fcd85a44dc1d4984fb1fa7162f4e86344184b7f7991fd6f4"
+    },
+    {
+      "sequence": 46,
+      "at": "2026-09-26T19:37:33.729828+00:00",
+      "kind": "ISSUE_OPENED",
+      "previous_hash": "ae5e8c5f212ace88fcd85a44dc1d4984fb1fa7162f4e86344184b7f7991fd6f4",
+      "issue_id": "G2-B-FIGURE-001",
+      "hash": "45dd4e996265cbe157d22edd60831eaa6b03a9a0c91de3e2d0032e478fcade19"
+    },
+    {
+      "sequence": 47,
+      "at": "2026-09-26T19:40:36.375315+00:00",
+      "kind": "B_REPAIR_SUBMITTED",
+      "previous_hash": "45dd4e996265cbe157d22edd60831eaa6b03a9a0c91de3e2d0032e478fcade19",
+      "issue_id": "G2-B-FIGURE-001",
+      "hash": "6b96d910127b950b3279492892084582888d23a4852ef804256ec6984a0e77c1"
+    },
+    {
+      "sequence": 48,
+      "at": "2026-09-26T19:46:33.086303+00:00",
+      "kind": "ISSUE_OPENED",
+      "previous_hash": "6b96d910127b950b3279492892084582888d23a4852ef804256ec6984a0e77c1",
+      "issue_id": "G2-C-CONTEXT-001",
+      "hash": "54c8bcc6ea3c7f8f822e9a5c59e4ca85e1a8818fdc25b1aad4a782d00c392dcc"
+    },
+    {
+      "sequence": 49,
+      "at": "2026-09-26T19:46:33.087173+00:00",
+      "kind": "ISSUE_OPENED",
+      "previous_hash": "54c8bcc6ea3c7f8f822e9a5c59e4ca85e1a8818fdc25b1aad4a782d00c392dcc",
+      "issue_id": "G2-B-RETRY-CLASSIFIER-001",
+      "hash": "9232123940d67752fb09cdf6a4dd3e185c15dd761aa24349dd74794b22b5e099"
+    }
+  ],
+  "tasks": {
+    "handoff": {
+      "status": "VERIFIED",
+      "depends_on": [],
+      "evidence": [
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/baseline.json",
+          "sha256": "865710aea34a316fe83088d7cf2ac1aec68c96623269bfcf06255b5db2930fd8"
+        },
+        {
+          "path": "task1/作业/作业/traj_dict.json",
+          "sha256": "c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3"
+        },
+        {
+          "path": "task1/config/conditional_planar.json",
+          "sha256": "5b1ab7dbf25797a51405a2cddd93a8d2ea3e3b69530369366d0e05be7abb8169"
+        }
+      ],
+      "source_hashes": {
+        "task1/workflow/geometry.py": "2ad3ca3b49e98e997684e3f5af948771be80dfb03b31b2ae4cc4483856e93d74",
+        "task1/workflow/evaluation.py": "7cf224fbc290d3e83acd5d83a3fe335e6dc437c762f7053d8132817aa91025b2",
+        "task1/workflow/coordinates.py": "d99b270a65c88f8530669d5e7d0887d7563b3e54e19770ab7a9eb695117e075d",
+        "task1/workflow/pipeline.py": "160bedcc0d8dffce71d833dffc4de28928bc7007077ae8d03c57c96d827548c7"
+      },
+      "verifier": "C:/root/c_contract",
+      "review": {
+        "path": "task1/evidence/goal2/c_contract/handoff_receipt_bound.json",
+        "sha256": "aa3cc1b1fb4429aa7882de3420766c40ebc7f123a14c214f2159edd4a9da4d13"
+      }
+    },
+    "contract": {
+      "status": "VERIFIED",
+      "depends_on": [
+        "handoff"
+      ],
+      "evidence": [
+        {
+          "path": "task1/config/goal2/contract.json",
+          "sha256": "db758c097509139596fbc52b4c3f65e921eb1f12d9fb4c239e308abdb57f31f8"
+        },
+        {
+          "path": "task1/config/goal2/experiment_matrix.json",
+          "sha256": "24ee0fed02252585618dc90a90250f5e754e9d8f5f9a58e25a8e368d0d232775"
+        },
+        {
+          "path": "task1/docs/goal2/CONTRACT.md",
+          "sha256": "10bffe4971813437798826fb958a4d45609bc9fb9a9bf3664049f98105507010"
+        }
+      ],
+      "source_hashes": {
+        "task1/config/goal2/contract.json": "db758c097509139596fbc52b4c3f65e921eb1f12d9fb4c239e308abdb57f31f8",
+        "task1/config/goal2/experiment_matrix.json": "24ee0fed02252585618dc90a90250f5e754e9d8f5f9a58e25a8e368d0d232775",
+        "task1/docs/goal2/CONTRACT.md": "10bffe4971813437798826fb958a4d45609bc9fb9a9bf3664049f98105507010"
+      },
+      "verifier": "C:/root/c_contract",
+      "review": {
+        "path": "task1/evidence/goal2/c_contract/contract_receipt.json",
+        "sha256": "33206aa6cf6c6e5a353d073f3a454efe4b1c944c59ab23d8024a613b8c906db3"
+      }
+    },
+    "split": {
+      "status": "VERIFIED",
+      "depends_on": [
+        "contract"
+      ],
+      "evidence": [
+        {
+          "path": "task1/evidence/goal2/data/split_manifest.json",
+          "sha256": "fd2ebc6916f63b4b8e23ff6977f22cc691c39849d450486035243db7e3eb2ee8"
+        },
+        {
+          "path": "task1/evidence/goal2/data/raw_diagnostics.json",
+          "sha256": "b090eeb696df00940d6c707f5114c4a78f0e6b2f69ffdfa6ffcd6de84eb99442"
+        }
+      ],
+      "source_hashes": {
+        "task1/workflow/g2_data.py": "985453f073ec98ca7b17a827de1d316e8322dc89e452e6f8b45afa20b2a8a9f2",
+        "task1/config/goal2/contract.json": "db758c097509139596fbc52b4c3f65e921eb1f12d9fb4c239e308abdb57f31f8"
+      },
+      "verifier": "C:/root/c_contract",
+      "review": {
+        "path": "task1/evidence/goal2/c_contract/split_receipt.json",
+        "sha256": "4419b0238ef91e7452a3e291ad8817d817811d1237c2a25ac3da8fbb77b81f1f"
+      }
+    },
+    "core": {
+      "status": "ISSUE_OPEN",
+      "depends_on": [
+        "contract"
+      ],
+      "evidence": [
+        {
+          "path": "task1/workflow/g2_pipeline.py",
+          "sha256": "edb8f4c8dcaf65cda44b33533eb55e9d67ef946597895f0682860ba65499c441"
+        },
+        {
+          "path": "task1/workflow/g2_metrics.py",
+          "sha256": "8d80c8ff8e124b9d3d73f5d514a0c09af32f234034914379ea901e5e59cc3ebb"
+        },
+        {
+          "path": "task1/evidence/goal2/c_contract/core_numeric_current.json",
+          "sha256": "d27a24903efe31791a7281115e38c1e82e37de30addb9d8f1ace6086b16511dc"
+        },
+        {
+          "path": "task1/evidence/goal2/c_contract/core_boundary_tests.xml",
+          "sha256": "4a915fd67c7a94b24d86cdbfd8f017f3ba612bbe275bd7a9d1bbcb58ad900cf1"
+        },
+        {
+          "path": "task1/evidence/goal2/c_contract/mode_memory_round4.xml",
+          "sha256": "17d44f32e89448e481704f66776479a573d1e0caebdbee3e9b66066718048c01"
+        },
+        {
+          "path": "task1/evidence/goal2/c_contract/source_scope_round2.xml",
+          "sha256": "ad98d8f048eb028d764a1a60bde5ee1d9b8e60c72d49001a10becf77039c9d75"
+        }
+      ],
+      "source_hashes": {
+        "task1/scripts/goal2.py": "f62fe1e30bd3cccb461bd34794d2c0d204af39fdac3631b26af042dcb7a563f5",
+        "task1/workflow/coordinates.py": "d99b270a65c88f8530669d5e7d0887d7563b3e54e19770ab7a9eb695117e075d",
+        "task1/workflow/evaluation.py": "7cf224fbc290d3e83acd5d83a3fe335e6dc437c762f7053d8132817aa91025b2",
+        "task1/workflow/g2_data.py": "985453f073ec98ca7b17a827de1d316e8322dc89e452e6f8b45afa20b2a8a9f2",
+        "task1/workflow/g2_experiments.py": "713538f17d767e98c8ed802252ce33133c6f26dc4c6f7aeae208f6e0d64d2311",
+        "task1/workflow/g2_journal.py": "33b776f5c20f35844cc4c76ee28e38ee0b2e487ee3b13d4eff0c3d3a40d22c2a",
+        "task1/workflow/g2_memory.py": "e0784e6178cf4da3277c7fc8c1e16efce73b56b91b02b41acd3e8870d43a8c56",
+        "task1/workflow/g2_metrics.py": "8d80c8ff8e124b9d3d73f5d514a0c09af32f234034914379ea901e5e59cc3ebb",
+        "task1/workflow/g2_modes.py": "c8aa5902ffab4a1d4438efcccbe9cb655969d610030c74c4a8b5641c75b91dbd",
+        "task1/workflow/g2_pipeline.py": "edb8f4c8dcaf65cda44b33533eb55e9d67ef946597895f0682860ba65499c441",
+        "task1/workflow/g2_provider.py": "636a6edaf95ef31e1982d27e1361697d145156fccb99760028ba5e0d77949bb1",
+        "task1/workflow/g2_selection.py": "590a7e9c427801fd65a6ec563fdbbff0d35b0e7bae6a155f28e43ab64bb8f3af",
+        "task1/workflow/geometry.py": "2ad3ca3b49e98e997684e3f5af948771be80dfb03b31b2ae4cc4483856e93d74",
+        "task1/workflow/io.py": "0d3d72dd0beb4718f4020a07a5f1c0ca89193943049a479816b5c496806321b2"
+      },
+      "verifier": "C:/root/c_contract",
+      "review": {
+        "path": "task1/evidence/goal2/c_contract/core_receipt.json",
+        "sha256": "4493d0c9a6e7da0b8f5b4a8380fade03467da2302442087ca0ebe21591b22bea"
+      }
+    },
+    "development_parameters": {
+      "status": "VERIFIED",
+      "depends_on": [
+        "split",
+        "core"
+      ],
+      "evidence": [
+        {
+          "path": "task1/evidence/goal2/runs/g2-development-parameters-01/manifest.json",
+          "sha256": "92bec0c62a89c98ad5b5c05e38cc2fb2722919da2a4eedaba964a0c1038be0e7"
+        },
+        {
+          "path": "task1/evidence/goal2/runs/g2-development-parameters-01/parameter_table.json",
+          "sha256": "f4878603b44c461fab1ab0535cd57d586e0f16faf6671562cb755ffc808f529d"
+        }
+      ],
+      "source_hashes": {
+        "task1/scripts/goal2.py": "f62fe1e30bd3cccb461bd34794d2c0d204af39fdac3631b26af042dcb7a563f5",
+        "task1/workflow/coordinates.py": "d99b270a65c88f8530669d5e7d0887d7563b3e54e19770ab7a9eb695117e075d",
+        "task1/workflow/evaluation.py": "7cf224fbc290d3e83acd5d83a3fe335e6dc437c762f7053d8132817aa91025b2",
+        "task1/workflow/g2_data.py": "985453f073ec98ca7b17a827de1d316e8322dc89e452e6f8b45afa20b2a8a9f2",
+        "task1/workflow/g2_experiments.py": "713538f17d767e98c8ed802252ce33133c6f26dc4c6f7aeae208f6e0d64d2311",
+        "task1/workflow/g2_journal.py": "33b776f5c20f35844cc4c76ee28e38ee0b2e487ee3b13d4eff0c3d3a40d22c2a",
+        "task1/workflow/g2_memory.py": "e0784e6178cf4da3277c7fc8c1e16efce73b56b91b02b41acd3e8870d43a8c56",
+        "task1/workflow/g2_metrics.py": "8d80c8ff8e124b9d3d73f5d514a0c09af32f234034914379ea901e5e59cc3ebb",
+        "task1/workflow/g2_modes.py": "c8aa5902ffab4a1d4438efcccbe9cb655969d610030c74c4a8b5641c75b91dbd",
+        "task1/workflow/g2_pipeline.py": "edb8f4c8dcaf65cda44b33533eb55e9d67ef946597895f0682860ba65499c441",
+        "task1/workflow/g2_provider.py": "636a6edaf95ef31e1982d27e1361697d145156fccb99760028ba5e0d77949bb1",
+        "task1/workflow/g2_selection.py": "590a7e9c427801fd65a6ec563fdbbff0d35b0e7bae6a155f28e43ab64bb8f3af",
+        "task1/workflow/geometry.py": "2ad3ca3b49e98e997684e3f5af948771be80dfb03b31b2ae4cc4483856e93d74",
+        "task1/workflow/io.py": "0d3d72dd0beb4718f4020a07a5f1c0ca89193943049a479816b5c496806321b2"
+      },
+      "verifier": "C:/root/c_contract",
+      "review": {
+        "path": "task1/evidence/goal2/c_contract/development_parameters_receipt.json",
+        "sha256": "ad37b82a645ba1b44502217d8a66eb79cdd42d6a627965c4160c919aa4ccc9a4"
+      }
+    },
+    "development_orders": {
+      "status": "VERIFIED",
+      "depends_on": [
+        "split",
+        "core"
+      ],
+      "evidence": [
+        {
+          "path": "task1/evidence/goal2/runs/g2-development-orders-01/manifest.json",
+          "sha256": "5ac5e7e047672ce34d45a5f84ce337cf08376203e03eb72be12b2ee60b21f326"
+        },
+        {
+          "path": "task1/evidence/goal2/runs/g2-development-orders-01/order_table.json",
+          "sha256": "cef461d45653fb3f8e1deaf23763944b3619db6046353adee9ebbf660ce223ac"
+        }
+      ],
+      "source_hashes": {
+        "task1/scripts/goal2.py": "f62fe1e30bd3cccb461bd34794d2c0d204af39fdac3631b26af042dcb7a563f5",
+        "task1/workflow/coordinates.py": "d99b270a65c88f8530669d5e7d0887d7563b3e54e19770ab7a9eb695117e075d",
+        "task1/workflow/evaluation.py": "7cf224fbc290d3e83acd5d83a3fe335e6dc437c762f7053d8132817aa91025b2",
+        "task1/workflow/g2_data.py": "985453f073ec98ca7b17a827de1d316e8322dc89e452e6f8b45afa20b2a8a9f2",
+        "task1/workflow/g2_experiments.py": "713538f17d767e98c8ed802252ce33133c6f26dc4c6f7aeae208f6e0d64d2311",
+        "task1/workflow/g2_journal.py": "33b776f5c20f35844cc4c76ee28e38ee0b2e487ee3b13d4eff0c3d3a40d22c2a",
+        "task1/workflow/g2_memory.py": "e0784e6178cf4da3277c7fc8c1e16efce73b56b91b02b41acd3e8870d43a8c56",
+        "task1/workflow/g2_metrics.py": "8d80c8ff8e124b9d3d73f5d514a0c09af32f234034914379ea901e5e59cc3ebb",
+        "task1/workflow/g2_modes.py": "c8aa5902ffab4a1d4438efcccbe9cb655969d610030c74c4a8b5641c75b91dbd",
+        "task1/workflow/g2_pipeline.py": "edb8f4c8dcaf65cda44b33533eb55e9d67ef946597895f0682860ba65499c441",
+        "task1/workflow/g2_provider.py": "636a6edaf95ef31e1982d27e1361697d145156fccb99760028ba5e0d77949bb1",
+        "task1/workflow/g2_selection.py": "590a7e9c427801fd65a6ec563fdbbff0d35b0e7bae6a155f28e43ab64bb8f3af",
+        "task1/workflow/geometry.py": "2ad3ca3b49e98e997684e3f5af948771be80dfb03b31b2ae4cc4483856e93d74",
+        "task1/workflow/io.py": "0d3d72dd0beb4718f4020a07a5f1c0ca89193943049a479816b5c496806321b2"
+      },
+      "verifier": "C:/root/c_contract",
+      "review": {
+        "path": "task1/evidence/goal2/c_contract/development_orders_receipt.json",
+        "sha256": "dc9e50174b867b724dcbd2754968578634f433c80daf2d3f1a8063a2181559c0"
+      }
+    },
+    "memory": {
+      "status": "VERIFIED",
+      "depends_on": [
+        "split",
+        "core"
+      ],
+      "evidence": [
+        {
+          "path": "task1/evidence/goal2/runs/g2-demo-memory-01/manifest.json",
+          "sha256": "c2e325539dac7a702cab72af39590127b319967debc513f91ca915b1bbc09fb4"
+        },
+        {
+          "path": "task1/evidence/goal2/runs/g2-demo-memory-01/memory_snapshot.json",
+          "sha256": "0911ec0f28ad4905ab9f84215225336d547b48bd3442c67bdf9a4c6ff8d08a74"
+        }
+      ],
+      "source_hashes": {
+        "task1/scripts/goal2.py": "f62fe1e30bd3cccb461bd34794d2c0d204af39fdac3631b26af042dcb7a563f5",
+        "task1/workflow/coordinates.py": "d99b270a65c88f8530669d5e7d0887d7563b3e54e19770ab7a9eb695117e075d",
+        "task1/workflow/evaluation.py": "7cf224fbc290d3e83acd5d83a3fe335e6dc437c762f7053d8132817aa91025b2",
+        "task1/workflow/g2_data.py": "985453f073ec98ca7b17a827de1d316e8322dc89e452e6f8b45afa20b2a8a9f2",
+        "task1/workflow/g2_experiments.py": "713538f17d767e98c8ed802252ce33133c6f26dc4c6f7aeae208f6e0d64d2311",
+        "task1/workflow/g2_journal.py": "33b776f5c20f35844cc4c76ee28e38ee0b2e487ee3b13d4eff0c3d3a40d22c2a",
+        "task1/workflow/g2_memory.py": "e0784e6178cf4da3277c7fc8c1e16efce73b56b91b02b41acd3e8870d43a8c56",
+        "task1/workflow/g2_metrics.py": "8d80c8ff8e124b9d3d73f5d514a0c09af32f234034914379ea901e5e59cc3ebb",
+        "task1/workflow/g2_modes.py": "c8aa5902ffab4a1d4438efcccbe9cb655969d610030c74c4a8b5641c75b91dbd",
+        "task1/workflow/g2_pipeline.py": "edb8f4c8dcaf65cda44b33533eb55e9d67ef946597895f0682860ba65499c441",
+        "task1/workflow/g2_provider.py": "636a6edaf95ef31e1982d27e1361697d145156fccb99760028ba5e0d77949bb1",
+        "task1/workflow/g2_selection.py": "590a7e9c427801fd65a6ec563fdbbff0d35b0e7bae6a155f28e43ab64bb8f3af",
+        "task1/workflow/geometry.py": "2ad3ca3b49e98e997684e3f5af948771be80dfb03b31b2ae4cc4483856e93d74",
+        "task1/workflow/io.py": "0d3d72dd0beb4718f4020a07a5f1c0ca89193943049a479816b5c496806321b2"
+      },
+      "verifier": "C:/root/c_contract",
+      "review": {
+        "path": "task1/evidence/goal2/c_contract/memory_receipt.json",
+        "sha256": "44a7cbfa0d3cd67bcfaa8aeb37b80d09f893e8a4242af24c09e701e48de5523b"
+      }
+    },
+    "development_modes": {
+      "status": "ISSUE_OPEN",
+      "depends_on": [
+        "memory",
+        "development_parameters"
+      ],
+      "evidence": []
+    },
+    "evaluation_freeze": {
+      "status": "PENDING",
+      "depends_on": [
+        "development_parameters",
+        "development_orders",
+        "development_modes"
+      ],
+      "evidence": []
+    },
+    "evaluation_parameters": {
+      "status": "PENDING",
+      "depends_on": [
+        "evaluation_freeze"
+      ],
+      "evidence": []
+    },
+    "evaluation_orders": {
+      "status": "PENDING",
+      "depends_on": [
+        "evaluation_freeze"
+      ],
+      "evidence": []
+    },
+    "evaluation_modes": {
+      "status": "PENDING",
+      "depends_on": [
+        "evaluation_freeze"
+      ],
+      "evidence": []
+    },
+    "candidates": {
+      "status": "PENDING",
+      "depends_on": [
+        "evaluation_parameters"
+      ],
+      "evidence": []
+    },
+    "counterexamples": {
+      "status": "REVIEW_PENDING",
+      "depends_on": [
+        "core"
+      ],
+      "evidence": []
+    },
+    "notebooks": {
+      "status": "PENDING",
+      "depends_on": [
+        "evaluation_modes",
+        "candidates",
+        "counterexamples"
+      ],
+      "evidence": []
+    },
+    "figures": {
+      "status": "REGRESSION_PENDING",
+      "depends_on": [
+        "evaluation_modes",
+        "candidates",
+        "counterexamples"
+      ],
+      "evidence": []
+    },
+    "analysis": {
+      "status": "PENDING",
+      "depends_on": [
+        "evaluation_modes",
+        "candidates",
+        "counterexamples"
+      ],
+      "evidence": []
+    },
+    "internal_acceptance": {
+      "status": "PENDING",
+      "depends_on": [
+        "notebooks",
+        "figures",
+        "analysis"
+      ],
+      "evidence": []
+    },
+    "publication": {
+      "status": "PENDING",
+      "depends_on": [
+        "internal_acceptance"
+      ],
+      "evidence": []
+    }
+  },
+  "issues": {
+    "G2-C-CONTROL-001": {
+      "issue_id": "G2-C-CONTROL-001",
+      "parent_task": "core",
+      "fact": "Initial G2Journal.accept accepts empty target sets, unrelated check coverage, unsatisfied task prerequisites and a wrong source-hash claim.",
+      "violated_clause": "Prompt sections 6,15,17 A12/A14; preserve target-specific review closure guards",
+      "affected_artifacts": [
+        "future G2 task closure and final acceptance"
+      ],
+      "repairer": "B-Repair:root",
+      "source": "task1/evidence/goal2/c_contract/issue_control_001.json",
+      "verifier": "C:/root/c_contract",
+      "status": "VERIFIED",
+      "closure_evidence": [
+        {
+          "path": "task1/evidence/goal2/c_contract/control_closure_receipt.json",
+          "sha256": "8f0573d674cba525a76972d5d1f0a156ef8792926347a1de98817c794eee106e"
+        }
+      ],
+      "repair_evidence": [
+        {
+          "path": "task1/workflow/g2_journal.py",
+          "sha256": "788a867d5e454310d044bd3cd21b275477f0a367ca06b0eea7098f4ca44f4e11"
+        }
+      ],
+      "repair_source_hashes": {
+        "task1/workflow/g2_journal.py": "788a867d5e454310d044bd3cd21b275477f0a367ca06b0eea7098f4ca44f4e11"
+      }
+    },
+    "G2-C-MODE-MEMORY-001": {
+      "issue_id": "G2-C-MODE-MEMORY-001",
+      "parent_task": "core",
+      "fact": "Static independent review found schema-invalid answers could be retried and public in-process memory snapshot could be mutated.",
+      "violated_clause": "Prompt 11 llm-only one proposal; 12 frozen readonly memory",
+      "affected_artifacts": [
+        "future development and evaluation modes",
+        "memory admission/consumption"
+      ],
+      "repairer": "B-Repair:root",
+      "source": "C:/root/c_contract; fixes preceded first dynamic probes, no fabricated pre-fix failure",
+      "verifier": "C:/root/c_contract",
+      "status": "VERIFIED",
+      "closure_evidence": [
+        {
+          "path": "task1/evidence/goal2/c_contract/mode_memory_closure_current.json",
+          "sha256": "cf76902f616ae8bb950510d3104748b90e61e282c3384cb4a2580384ef4fa4d3"
+        }
+      ],
+      "repair_evidence": [
+        {
+          "path": "task1/workflow/g2_modes.py",
+          "sha256": "c8aa5902ffab4a1d4438efcccbe9cb655969d610030c74c4a8b5641c75b91dbd"
+        },
+        {
+          "path": "task1/workflow/g2_memory.py",
+          "sha256": "e0784e6178cf4da3277c7fc8c1e16efce73b56b91b02b41acd3e8870d43a8c56"
+        },
+        {
+          "path": "task1/workflow/g2_provider.py",
+          "sha256": "636a6edaf95ef31e1982d27e1361697d145156fccb99760028ba5e0d77949bb1"
+        },
+        {
+          "path": "task1/workflow/g2_selection.py",
+          "sha256": "590a7e9c427801fd65a6ec563fdbbff0d35b0e7bae6a155f28e43ab64bb8f3af"
+        }
+      ],
+      "repair_source_hashes": {
+        "task1/workflow/g2_modes.py": "c8aa5902ffab4a1d4438efcccbe9cb655969d610030c74c4a8b5641c75b91dbd",
+        "task1/workflow/g2_memory.py": "e0784e6178cf4da3277c7fc8c1e16efce73b56b91b02b41acd3e8870d43a8c56",
+        "task1/workflow/g2_provider.py": "636a6edaf95ef31e1982d27e1361697d145156fccb99760028ba5e0d77949bb1",
+        "task1/workflow/g2_selection.py": "590a7e9c427801fd65a6ec563fdbbff0d35b0e7bae6a155f28e43ab64bb8f3af"
+      }
+    },
+    "G2-C-SOURCE-SCOPE-001": {
+      "issue_id": "G2-C-SOURCE-SCOPE-001",
+      "parent_task": "core",
+      "fact": "Follow-up static review found resume partition/source-set, candidate manifest summary and cache review binding gaps before formal runs.",
+      "violated_clause": "Prompt 15 provenance and 17 altered-summary/wrong-parent fault regressions",
+      "affected_artifacts": [
+        "future deterministic run cache and candidate lock"
+      ],
+      "repairer": "B-Repair:root",
+      "source": "C:/root/c_contract static review",
+      "verifier": "C:/root/c_contract",
+      "status": "VERIFIED",
+      "closure_evidence": [
+        {
+          "path": "task1/evidence/goal2/c_contract/source_scope_closure_receipt.json",
+          "sha256": "c6f808528a51b7fc3c3dbb07880d6f58f9501fd2bd3c248faf43e4de55d194ca"
+        }
+      ],
+      "repair_evidence": [
+        {
+          "path": "task1/workflow/g2_experiments.py",
+          "sha256": "713538f17d767e98c8ed802252ce33133c6f26dc4c6f7aeae208f6e0d64d2311"
+        },
+        {
+          "path": "task1/workflow/g2_journal.py",
+          "sha256": "33b776f5c20f35844cc4c76ee28e38ee0b2e487ee3b13d4eff0c3d3a40d22c2a"
+        },
+        {
+          "path": "task1/scripts/goal2.py",
+          "sha256": "f62fe1e30bd3cccb461bd34794d2c0d204af39fdac3631b26af042dcb7a563f5"
+        }
+      ],
+      "repair_source_hashes": {
+        "task1/workflow/g2_experiments.py": "713538f17d767e98c8ed802252ce33133c6f26dc4c6f7aeae208f6e0d64d2311",
+        "task1/workflow/g2_journal.py": "33b776f5c20f35844cc4c76ee28e38ee0b2e487ee3b13d4eff0c3d3a40d22c2a",
+        "task1/scripts/goal2.py": "f62fe1e30bd3cccb461bd34794d2c0d204af39fdac3631b26af042dcb7a563f5"
+      }
+    },
+    "G2-B-NOTEBOOK-001": {
+      "issue_id": "G2-B-NOTEBOOK-001",
+      "parent_task": "notebooks",
+      "fact": "Notebook SETUP imported pandas but existing .venv has no pandas distribution; text claimed a Provider sentinel although none was installed.",
+      "violated_clause": "R08/A13: fresh kernel execution in reused environment and measured zero new calls",
+      "affected_artifacts": [
+        "task1/scripts/build_goal2_notebooks.py",
+        "task1/notebooks/goal2"
+      ],
+      "repairer": "B-Repair:/root",
+      "source": "root environment metadata and source inspection before any Notebook execution",
+      "verifier": "C:/root/c_contract",
+      "status": "VERIFIED",
+      "closure_evidence": [
+        {
+          "path": "task1/evidence/goal2/c_contract/notebook_setup_closure_receipt.json",
+          "sha256": "6da70f147d7fcdda7a2e448af1fd0f46da62911ee8467c009f14d07f298fa56b"
+        }
+      ],
+      "repair_evidence": [
+        {
+          "path": "task1/scripts/build_goal2_notebooks.py",
+          "sha256": "a0b8b254f67e710031de96491dd6b7d3fc592a4432269249bb0e320a98ee71da"
+        }
+      ],
+      "repair_source_hashes": {
+        "task1/scripts/build_goal2_notebooks.py": "a0b8b254f67e710031de96491dd6b7d3fc592a4432269249bb0e320a98ee71da"
+      }
+    },
+    "G2-B-FIGURE-001": {
+      "issue_id": "G2-B-FIGURE-001",
+      "parent_task": "figures",
+      "fact": "Actual parameter figure preview showed non-data diagonal color bands in PDF heatmap rendering and direction neighborhood compressed into narrow axes/covered by legend. The first layout repair used unsupported Matplotlib 3.6.3 outside-legend location and raised an actual rendering exception.",
+      "violated_clause": "R08/A15: accurate scientific marks, legible actual PDF renders, reuse existing dependency versions",
+      "affected_artifacts": [
+        "parameter figure preview outputs",
+        "task1/scripts/build_goal2_figures.py"
+      ],
+      "repairer": "B:/root/b_engine",
+      "source": "B actual visual inspection and rendering exception; initial previews retained in presentation_checks",
+      "verifier": null,
+      "status": "REGRESSION_PENDING",
+      "closure_evidence": [],
+      "repair_evidence": [
+        {
+          "path": "task1/scripts/build_goal2_figures.py",
+          "sha256": "d3171f14677c16a465f32e3ff89387f4bb3fb9f981acdb71145c418fcf5b1c76"
+        }
+      ],
+      "repair_source_hashes": {
+        "task1/scripts/build_goal2_figures.py": "d3171f14677c16a465f32e3ff89387f4bb3fb9f981acdb71145c418fcf5b1c76"
+      }
+    },
+    "G2-C-CONTEXT-001": {
+      "issue_id": "G2-C-CONTEXT-001",
+      "parent_task": "development_modes",
+      "fact": "Independent C found 13 mismatches between record round.context_hash and immutable saved round2/3 context; own_prior_proposal_validation shared mutable proposal list. Actual model input/response/numeric schedule remained matched in inspected batch.",
+      "violated_clause": "R03/R09/R15: response must bind exactly to context actually supplied to model",
+      "affected_artifacts": [
+        "g2-development-modes-01 subsequent-round record metadata"
+      ],
+      "repairer": "B-Repair:/root",
+      "source": "C actual first llm+search batch audit",
+      "verifier": null,
+      "status": "ISSUE_OPEN",
+      "closure_evidence": []
+    },
+    "G2-B-RETRY-CLASSIFIER-001": {
+      "issue_id": "G2-B-RETRY-CLASSIFIER-001",
+      "parent_task": "core",
+      "fact": "Intentional SIGINT produced receipt.error KeyboardInterrupt but dispatch falsely labeled EXTERNAL_AUTH_PERMISSION_OR_BILLING_BLOCKED by searching arbitrary hash fields for 401/403. No real authorization failure occurred.",
+      "violated_clause": "R06/R09: truthful failure classification and finite no-duplicate recovery",
+      "affected_artifacts": [
+        "g2-development-modes-01 interruption classification",
+        "task1/workflow/g2_modes.py"
+      ],
+      "repairer": "B-Repair:/root",
+      "source": "Actual interrupted provider receipt and logs/g2-development-modes-01.log",
+      "verifier": null,
+      "status": "ISSUE_OPEN",
+      "closure_evidence": []
+    }
+  },
+  "runs": {},
+  "inflight": null,
+  "governance_role_dispatches": [
+    {
+      "at": "2026-09-26T18:45:13.281018+00:00",
+      "role": "A",
+      "context": "/root/a_contract",
+      "task": "taskplan_contract",
+      "operation": "spawn_agent",
+      "provider_requests": "unknown",
+      "independent_os_sandbox": false
+    },
+    {
+      "at": "2026-09-26T18:45:13.281556+00:00",
+      "role": "B",
+      "context": "/root/b_engine",
+      "task": "processing_metrics_implementation",
+      "operation": "spawn_agent",
+      "provider_requests": "unknown",
+      "independent_os_sandbox": false
+    },
+    {
+      "at": "2026-09-26T18:45:13.281842+00:00",
+      "role": "C",
+      "context": "/root/c_contract",
+      "task": "handoff_contract_review",
+      "operation": "spawn_agent",
+      "provider_requests": "unknown",
+      "independent_os_sandbox": false
+    },
+    {
+      "at": "2026-09-26T18:58:12.345314+00:00",
+      "role": "A",
+      "context": "/root/a_contract",
+      "task": "expanded_coordinate_sensitivity",
+      "operation": "followup_task",
+      "provider_requests": "unknown",
+      "independent_os_sandbox": false
+    },
+    {
+      "at": "2026-09-26T19:07:13.595736+00:00",
+      "role": "B",
+      "context": "/root/b_engine",
+      "task": "figures_notebooks_reproduction",
+      "operation": "followup_task",
+      "provider_requests": "unknown",
+      "independent_os_sandbox": false
+    },
+    {
+      "at": "2026-09-26T19:23:23.678456+00:00",
+      "role": "B",
+      "context": "/root/b_engine",
+      "task": "development_parameters/development_orders/memory",
+      "operation": "B-Run: serial frozen-code formal DEVELOPMENT and DEMO execution",
+      "provider_requests": "unknown",
+      "independent_os_sandbox": false
+    },
+    {
+      "at": "2026-09-26T19:23:23.679246+00:00",
+      "role": "C",
+      "context": "/root/c_contract",
+      "task": "development_parameters/development_orders/memory",
+      "operation": "prepare independent real-run review and execute after complete",
+      "provider_requests": "unknown",
+      "independent_os_sandbox": false
+    },
+    {
+      "at": "2026-09-26T19:33:41.719101+00:00",
+      "role": "B",
+      "context": "/root/b_engine",
+      "task": "parameter_figures_preview",
+      "operation": "followup_task: current actual DEV layout render/visual inspection; presentation-only repairs",
+      "provider_requests": "unknown",
+      "independent_os_sandbox": false
+    }
+  ],
+  "experiment_model_dispatches": 0,
+  "deterministic_tool_calls": 0
+}

@@ -1,0 +1,70 @@
+{
+  "role_context": "/root/c_contract",
+  "status": "VERIFIED",
+  "at_utc": "2026-09-26T19:00:44.513085+00:00",
+  "classification": "INDEPENDENT_C_RAW_SPLIT_RECOMPUTATION",
+  "targets": [
+    {
+      "path": "task1/evidence/goal2/data/split_manifest.json",
+      "sha256": "fd2ebc6916f63b4b8e23ff6977f22cc691c39849d450486035243db7e3eb2ee8"
+    },
+    {
+      "path": "task1/evidence/goal2/data/raw_diagnostics.json",
+      "sha256": "b090eeb696df00940d6c707f5114c4a78f0e6b2f69ffdfa6ffcd6de84eb99442"
+    }
+  ],
+  "source_hashes": {
+    "task1/workflow/g2_data.py": "985453f073ec98ca7b17a827de1d316e8322dc89e452e6f8b45afa20b2a8a9f2",
+    "task1/config/goal2/contract.json": "db758c097509139596fbc52b4c3f65e921eb1f12d9fb4c239e308abdb57f31f8"
+  },
+  "checked_components": [
+    "raw_hash",
+    "exact_scope",
+    "record_isolation",
+    "strata_recomputation",
+    "stable_selection",
+    "reserved_protection",
+    "complete_full_raw_descriptors",
+    "all_quota_shortfalls",
+    "exact_LLM_subsets"
+  ],
+  "unchecked_components": [
+    "future_actual_G3_use",
+    "external_higher_entity_identity",
+    "source_datum_truth",
+    "candidate_processing",
+    "expanded_domain_threshold_sensitivity"
+  ],
+  "check_count": 68338,
+  "errors": [],
+  "raw_records": 11386,
+  "raw_points": 1173410,
+  "partition_sizes": {
+    "PILOT_REGRESSION": 7,
+    "DEMO_MEMORY": 60,
+    "DEVELOPMENT": 120,
+    "G2_EVAL": 120,
+    "G3_RESERVED": 11079
+  },
+  "llm_sizes": {
+    "DEVELOPMENT": 24,
+    "G2_EVAL": 24
+  },
+  "independent_quantiles": [
+    9.933816397293144,
+    3527.6557695247957
+  ],
+  "maximum_descriptor_difference_m": 1.3487806427292526e-09,
+  "shortfalls": {
+    "DEMO_MEMORY": {
+      "LOW_T1_D0": 4
+    },
+    "DEVELOPMENT": {},
+    "G2_EVAL": {},
+    "DEVELOPMENT_LLM": {},
+    "G2_EVAL_LLM": {}
+  },
+  "sampling_claim": "Descriptive stratified record sample; not population means or labeled movement classes",
+  "new_model_calls": 0,
+  "elapsed_s": 2.009995046999393
+}

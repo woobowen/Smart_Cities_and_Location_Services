@@ -1,0 +1,61 @@
+{
+  "classification": "B_SELF_CHECK_NOT_INDEPENDENT_C",
+  "status": "PASSED",
+  "checked_at": "2026-09-26T20:33:05.943813+00:00",
+  "run_id": "g2-evaluation-orders-01",
+  "manifest_sha256": "5da2a9ff4d53941d2d91e9ecfedd508e1b247a0c44738042e9c3666a3aa9b047",
+  "evaluation_freeze_sha256": "eb61eea6948d8a1177bef512bfc03b9103ef8ecf2ee68e3d7a2407753ca8a40d",
+  "code_sha": "c1c6272606716f9f59aa785d48bfeadb09c7a30e",
+  "processing_source_tree_sha256": "7710e70e0d7ee6dd3b62604600136ff2b98221428c549cc466d1a4170bbc12b5",
+  "checks": [
+    "frozen_feasible_orders_exact_set",
+    "full_eval_scope_and_no_G3",
+    "reference_parameters_unchanged",
+    "all_trace_and_review_hashes",
+    "all_review_target_object_hashes",
+    "all_point_ledger_counts",
+    "all_summary_reaggregation",
+    "all_table_hashes",
+    "same_processing_sources",
+    "current_index_binding",
+    "zero_model_dispatches"
+  ],
+  "artifacts": [
+    {
+      "order": "S-D-P",
+      "config_id": "cfg-b15b8281b73592fb",
+      "file": "cfg-b15b8281b73592fb_S-D-P_8f325bf9.json.gz",
+      "sha256": "fa9d9081b6628e1e6ff2ac127578b21286666cd454820578086eb1385b937e5a",
+      "records": 120,
+      "input_points": 12173,
+      "production_review": "VERIFIED",
+      "full_scope_and_ledger_counts": "PASSED",
+      "summary_reaggregation": "PASSED",
+      "raw_break_crossings": 0,
+      "direction_windows_across_raw_breaks": 0
+    },
+    {
+      "order": "S-P-D",
+      "config_id": "cfg-b15b8281b73592fb",
+      "file": "cfg-b15b8281b73592fb_S-P-D_8f325bf9.json.gz",
+      "sha256": "2d0f9eadb7822343fb7991bb24ea23681126aa48f8349cdf6be06fb10a7f24fa",
+      "records": 120,
+      "input_points": 12173,
+      "production_review": "VERIFIED",
+      "full_scope_and_ledger_counts": "PASSED",
+      "summary_reaggregation": "PASSED",
+      "raw_break_crossings": 0,
+      "direction_windows_across_raw_breaks": 0
+    }
+  ],
+  "resources": {
+    "candidate_evaluations": 240,
+    "deterministic_tool_calls": 4,
+    "cache_reads": 0,
+    "experiment_model_dispatches": 0
+  },
+  "unchecked_components": [
+    "independent_alternate_numeric_recomputation",
+    "research_outcome_acceptance"
+  ]
+}

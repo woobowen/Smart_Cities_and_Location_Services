@@ -1,0 +1,87 @@
+{
+  "issue_id": "G2-B-MODE-FIGURE-001",
+  "parent_task": "figures",
+  "reviewed_at": "2026-09-26T21:20:16.539074+00:00",
+  "reviewer": "B /root/b_engine",
+  "inspection_method": "Actual view_image calls for each formal 300dpi PNG and 200dpi PDF render before this archive; no independent C claim.",
+  "generator_sha256": "0269ee69590a6c343ed8ff8b4397f55091e87fe0c2faa1c722bdb4194b339c10",
+  "checked_figures": [
+    {
+      "name": "segmentation_filter_response",
+      "png_sha256": "e0a58ccbb1a3d3754f130b74c1842ae9989597cfde5acb602ecda3cb25052327",
+      "pdf_render_sha256": "79f24a5ac347773ba6fd00e64b0b34b5962c73478ea4e076c8c82059bac54720",
+      "observed": "No text collision, clipping, misleading labels, or axes problem observed."
+    },
+    {
+      "name": "segmentation_filter_grids",
+      "png_sha256": "114fd20087ae92606d5ce2a4103fd406defda6ae121f01eebdf1e669a2ba958e",
+      "pdf_render_sha256": "062e474d1f9886436beab1b1c250be5fcdc2c52ecb4b1a8ddd4a743664cc4ecf",
+      "observed": "No text collision, clipping, misleading labels, or axes problem observed."
+    },
+    {
+      "name": "direction_threshold_and_neighborhood",
+      "png_sha256": "e6b2c495beb5d63eec10acbc13ee2809797c0e7115b2e9c78f5c26a0c9073422",
+      "pdf_render_sha256": "7fca5f51506590b7e6d0aa17b9e6b6cd2113302a9258f28e16cfd2043d1ba66f",
+      "observed": "No text collision, clipping, misleading labels, or axes problem observed."
+    },
+    {
+      "name": "dp_error_compression",
+      "png_sha256": "f7d51745cf774f8f5d6e890e9ec6fc9a9b6e29642ffcbc90cad2c3c88602ef6f",
+      "pdf_render_sha256": "16722d876ecca02da8e8df9d6f113cdb0d1bed9782a7f14466a4946fdda99e87",
+      "observed": "No text collision, clipping, misleading labels, or axes problem observed."
+    },
+    {
+      "name": "order_protection_and_neighborhoods",
+      "png_sha256": "8b150a234295b081982c9c2b83140a3928e9f558053f62e0d89c33a08737a730",
+      "pdf_render_sha256": "aabf5bf39f2a3d1a32ffa957619a5b89c8376173f9fc1c86c8cde611aa00c659",
+      "observed": "No text collision, clipping, misleading labels, or axes problem observed."
+    },
+    {
+      "name": "four_mode_paired_results",
+      "png_sha256": "ab5fe150cbd04f2e16b56bd6e73a4c359e7ffb6e877f7c8c2f78241cac542ec2",
+      "pdf_render_sha256": "ec46728a7f99e618cecc8884f3cc0b84349f400b9ae7c8d2cb9e9d87b5edf133",
+      "observed": "72 observations are record-episode pairs, not independent episodes; marker meanings are absent from the image."
+    },
+    {
+      "name": "four_mode_failures_and_cost",
+      "png_sha256": "4bce605cb05a23df459acf86be40cdca5418e20452e58398e90e9d1fe2e4845a",
+      "pdf_render_sha256": "83ab1972152136d27893f47c62dddd85fc23101259a8ab3f937e2700bbd7a676",
+      "observed": "All failure counts are zero, but axis shows negative/fractional values and zero is not labelled."
+    },
+    {
+      "name": "memory_coverage_and_consumption",
+      "png_sha256": "75cfe572da1a0f615343d2dd20a768281b3891e2c54b7ee8d204ecddf4192418",
+      "pdf_render_sha256": "2bf5a75df3dc02a53e9e355cc0a4813a446980cc18c48e7bf914f03d8accc35e",
+      "observed": "The right axes legend overlaps the first stratum bars."
+    },
+    {
+      "name": "real_trajectory_cases",
+      "png_sha256": "2a033e931f5a62f87400209818ee58d20f57c2daa49de5096d9932f0d1050f45",
+      "pdf_render_sha256": "392bd79dfa039ce8c1dd9d9815f8cc653771ebe1730185b1c7fd02a9c7e40480",
+      "observed": "No text collision, clipping, misleading labels, or axes problem observed."
+    },
+    {
+      "name": "synthetic_metric_counterexamples",
+      "png_sha256": "048388c4fe88c104ca9a8830fc3e3cad923bb7c97121303a1a849f9abf6e29cc",
+      "pdf_render_sha256": "1eaf5761e6b3990055d42bc71acdbe0a112afdcc1600058cd665644d30d3e340",
+      "observed": "No text collision, clipping, misleading labels, or axes problem observed."
+    },
+    {
+      "name": "goal2_actual_architecture",
+      "png_sha256": "06e5deea0f1022fec93f969fca7aee6819b0b2ea1909aafa4332742cd70ff3c9",
+      "pdf_render_sha256": "8b3f9916d5b163d9027dc29ff770a3a453461e3213d975dadc9eefc44ba6dad1",
+      "observed": "No text collision, clipping, misleading labels, or axes problem observed."
+    }
+  ],
+  "repair_scope": "mode_figures only; data and all processing source hashes unchanged",
+  "expected_unchanged_figures": [
+    "segmentation_filter_response",
+    "segmentation_filter_grids",
+    "direction_threshold_and_neighborhood",
+    "dp_error_compression",
+    "order_protection_and_neighborhoods",
+    "real_trajectory_cases",
+    "synthetic_metric_counterexamples",
+    "goal2_actual_architecture"
+  ]
+}

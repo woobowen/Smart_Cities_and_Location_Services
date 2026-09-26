@@ -1,0 +1,186 @@
+{
+  "errors": [],
+  "accepted_record_ids": [
+    "7270",
+    "955",
+    "33",
+    "43",
+    "3420",
+    "911",
+    "3371",
+    "11148"
+  ],
+  "original_response": {
+    "records": [
+      {
+        "record_id": "7270",
+        "proposals": [
+          {
+            "candidate_id": "7270_r1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 35,
+              "dp": 2
+            },
+            "metric_id": "n_direction_removed",
+            "predicted_sign": "unchanged",
+            "reason": "Probe tighter DP fidelity; unchanged S and D preserve direction-removal decisions. Evaluate the compression tradeoff."
+          }
+        ],
+        "stop": false,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "955",
+        "proposals": [
+          {
+            "candidate_id": "955_r1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 35,
+              "dp": 2
+            },
+            "metric_id": "n_direction_removed",
+            "predicted_sign": "unchanged",
+            "reason": "Probe tighter DP tolerance on the compact trajectory. S and D remain unchanged; fidelity gains require evaluation."
+          }
+        ],
+        "stop": false,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "33",
+        "proposals": [
+          {
+            "candidate_id": "33_r1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 0,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "common_covered_points",
+            "predicted_sign": "not_predicted",
+            "reason": "Small spatial extent motivates testing whether the length filter limits coverage. Aggregate observations cannot establish the common-coverage effect."
+          }
+        ],
+        "stop": false,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "43",
+        "proposals": [
+          {
+            "candidate_id": "43_r1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 0,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "n_final",
+            "predicted_sign": "increase",
+            "reason": "Both reported span and path length are below 65. Removing the length cutoff should admit the unbroken segment and retain endpoints."
+          }
+        ],
+        "stop": false,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "3420",
+        "proposals": [
+          {
+            "candidate_id": "3420_r1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 35,
+              "dp": 2
+            },
+            "metric_id": "n_direction_removed",
+            "predicted_sign": "unchanged",
+            "reason": "Keep reference breakpoint handling and direction filtering while testing tighter DP fidelity and its compression cost."
+          }
+        ],
+        "stop": false,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "911",
+        "proposals": [
+          {
+            "candidate_id": "911_r1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 35,
+              "dp": 2
+            },
+            "metric_id": "n_direction_removed",
+            "predicted_sign": "unchanged",
+            "reason": "Preserve reference segmentation around observed breaks. Changing only DP tests fidelity without changing direction-removal decisions."
+          }
+        ],
+        "stop": false,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "3371",
+        "proposals": [
+          {
+            "candidate_id": "3371_r1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 35,
+              "dp": 2
+            },
+            "metric_id": "n_direction_removed",
+            "predicted_sign": "unchanged",
+            "reason": "Test tighter DP tolerance while preserving undefined-window handling and all S/D settings; no quality improvement is assumed."
+          }
+        ],
+        "stop": false,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "11148",
+        "proposals": [
+          {
+            "candidate_id": "11148_r1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 35,
+              "dp": 2
+            },
+            "metric_id": "n_direction_removed",
+            "predicted_sign": "unchanged",
+            "reason": "Probe the fidelity/compression tradeoff through DP alone. Earlier S/D decisions remain identical to reference."
+          }
+        ],
+        "stop": false,
+        "memory_ids_used": []
+      }
+    ]
+  },
+  "raw_proposals_preserved_before_validation": true
+}

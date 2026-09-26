@@ -1,0 +1,55 @@
+{
+  "status": "VERIFIED",
+  "classification": "A_FINAL_ANALYSIS_ARITHMETIC_AND_HASH_READBACK_NOT_C_FULL_ACCEPTANCE",
+  "at": "2026-09-26T21:19:22.457561+00:00",
+  "actual_command": ".venv/bin/python -m task1.evidence.goal2.a_epoch02.final_analysis.verify_final_analysis",
+  "source": {
+    "path": "task1/evidence/goal2/a_epoch02/final_analysis/verify_final_analysis.py",
+    "sha256": "8f19937636e214824b96c9e0ee8c7dd3aea28eca681eb896723a3f3f95dfca9a"
+  },
+  "summary": {
+    "path": "task1/evidence/goal2/result_summary.json",
+    "sha256": "4fbd16b754f25253b0803a27898e4758bc4eaf6debda03607454c374bba758a7"
+  },
+  "checked_table_count": 39,
+  "checked_table_rows": 111053,
+  "actual_episode_readback": {
+    "path": "task1/evidence/goal2/a_epoch02/final_analysis/mode_totals_independent_readback.json",
+    "sha256": "16de9ce7c4c974ec81cb373d2c6792046835a5447f42a643ea1049fe539a22a1"
+  },
+  "heldout_single_confirmation": {
+    "path": "task1/evidence/goal2/a_epoch02/heldout_single_confirmation/single_candidate_confirmation.json",
+    "sha256": "d2ae21c5d74512e3ed121462a3211c1392e8b84e31370f415e16b34241aba263"
+  },
+  "evaluation_group_count": 12,
+  "original_records_per_group": 24,
+  "evaluation_record_episodes": 288,
+  "evaluation_single_candidates_match_prior_independent_C_reviewed_artifact": true,
+  "current_model_dispatches": 84,
+  "historical_model_dispatches": 15,
+  "historical_unknown_usage_preserved": true,
+  "unavailable_currency_cost_preserved": true,
+  "memory_readings": {
+    "DEVELOPMENT": {
+      "retrieval_opportunities": 24,
+      "nonempty_retrievals": 24,
+      "record_rounds": 60,
+      "rounds_with_valid_citation": 17,
+      "rounds_with_parameter_consistent_citation": 13,
+      "valid_citation_occurrences": 21,
+      "parameter_consistent_citation_proposal_pairs": 15
+    },
+    "G2_EVAL": {
+      "retrieval_opportunities": 72,
+      "nonempty_retrievals": 72,
+      "record_rounds": 181,
+      "rounds_with_valid_citation": 43,
+      "rounds_with_parameter_consistent_citation": 36,
+      "valid_citation_occurrences": 66,
+      "parameter_consistent_citation_proposal_pairs": 51
+    }
+  },
+  "new_model_calls": 0,
+  "new_candidate_processing_runs": 0,
+  "independent_C_full_acceptance": "PENDING_OUTSIDE_THIS_ARITHMETIC_CHECK"
+}

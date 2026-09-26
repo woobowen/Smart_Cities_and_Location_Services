@@ -1,0 +1,4705 @@
+{
+  "status": "VERIFIED",
+  "role_context": "/root/c_contract",
+  "task": "memory",
+  "run_id": "g2-demo-memory-02",
+  "reviewed_at": "2026-09-26T20:06:31.237879+00:00",
+  "targets": [
+    {
+      "path": "task1/evidence/goal2/runs/g2-demo-memory-02/manifest.json",
+      "sha256": "9bfd29dbfe573f19c28aedd69cd9f2d9da066a56cc150fc7f831cc13c631dac8"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-demo-memory-02/memory_snapshot.json",
+      "sha256": "2330543c3a443532891936ac29d4080cb6e5f45c58e2976cc81c8fa67c6607d6"
+    }
+  ],
+  "source_hashes": {
+    "task1/scripts/goal2.py": "f62fe1e30bd3cccb461bd34794d2c0d204af39fdac3631b26af042dcb7a563f5",
+    "task1/workflow/coordinates.py": "d99b270a65c88f8530669d5e7d0887d7563b3e54e19770ab7a9eb695117e075d",
+    "task1/workflow/evaluation.py": "7cf224fbc290d3e83acd5d83a3fe335e6dc437c762f7053d8132817aa91025b2",
+    "task1/workflow/g2_data.py": "985453f073ec98ca7b17a827de1d316e8322dc89e452e6f8b45afa20b2a8a9f2",
+    "task1/workflow/g2_experiments.py": "713538f17d767e98c8ed802252ce33133c6f26dc4c6f7aeae208f6e0d64d2311",
+    "task1/workflow/g2_journal.py": "33b776f5c20f35844cc4c76ee28e38ee0b2e487ee3b13d4eff0c3d3a40d22c2a",
+    "task1/workflow/g2_memory.py": "e0784e6178cf4da3277c7fc8c1e16efce73b56b91b02b41acd3e8870d43a8c56",
+    "task1/workflow/g2_metrics.py": "8d80c8ff8e124b9d3d73f5d514a0c09af32f234034914379ea901e5e59cc3ebb",
+    "task1/workflow/g2_modes.py": "31e936448918b943dca3cfdc8e4590eb64da2c48b262899040862d7b1533704e",
+    "task1/workflow/g2_pipeline.py": "edb8f4c8dcaf65cda44b33533eb55e9d67ef946597895f0682860ba65499c441",
+    "task1/workflow/g2_provider.py": "636a6edaf95ef31e1982d27e1361697d145156fccb99760028ba5e0d77949bb1",
+    "task1/workflow/g2_selection.py": "590a7e9c427801fd65a6ec563fdbbff0d35b0e7bae6a155f28e43ab64bb8f3af",
+    "task1/workflow/geometry.py": "2ad3ca3b49e98e997684e3f5af948771be80dfb03b31b2ae4cc4483856e93d74",
+    "task1/workflow/io.py": "0d3d72dd0beb4718f4020a07a5f1c0ca89193943049a479816b5c496806321b2"
+  },
+  "raw_sha256": "c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3",
+  "contract_sha256": "db758c097509139596fbc52b4c3f65e921eb1f12d9fb4c239e308abdb57f31f8",
+  "split_sha256": "fd2ebc6916f63b4b8e23ff6977f22cc691c39849d450486035243db7e3eb2ee8",
+  "checked_components": [
+    "demo_scope",
+    "verifier_admission",
+    "retrieval_applicability",
+    "leakage_isolation",
+    "snapshot_integrity",
+    "full_artifact_hashes",
+    "full_ledger_and_common_reference",
+    "independent_DP_certificates",
+    "independent_summary",
+    "sampled_Decimal_DP_reconstruction"
+  ],
+  "unchecked_components": [
+    "source_datum_truth",
+    "ground_truth_quality",
+    "full_exact_recursive_DP_rerun_for_every_record_configuration",
+    "real_model_consumption",
+    "heldout_G2_EVAL",
+    "final_Goal2_acceptance"
+  ],
+  "audit_program": {
+    "path": "task1/evidence/goal2/c_contract/review_development_runs.py",
+    "sha256": "f33e722a26198753a40ba05e2139bc053297d1d24938a14ed14f6ba15eaaec31"
+  },
+  "oracle_sha256": "9c28775af3389fb9735d268bdaf776a0cedc683990518d0aee2736d5ff863865",
+  "sampling_rule": {
+    "every_artifact": [
+      "first all-filtered record by stable ID",
+      "maximum common error; stable ID tie",
+      "closest actual DP error to positive tolerance; stable ID tie",
+      "largest raw point count; stable ID tie"
+    ],
+    "reference_config_and_every_order": "one minimum SHA256(42|C-review|record_id) record per frozen descriptive stratum",
+    "purpose": "independent audit sampling only; never candidate selection or representative population estimation"
+  },
+  "check_count": 5190697,
+  "errors": [],
+  "artifact_count": 20,
+  "record_configurations": 1200,
+  "sampled_DP_record_configurations": 88,
+  "artifact_reviews": [
+    {
+      "config_id": "cfg-b15b8281b73592fb",
+      "order": "S-D-P",
+      "records_fully_checked": 60,
+      "raw_points_per_config": 6259,
+      "sampled_full_DP_reconstructions": [
+        {
+          "record_id": "8194",
+          "reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "status": "VERIFIED",
+          "checks": 903,
+          "errors": [],
+          "target_sha256": "292b30251f95cc96329ba1350436f63764a9a1094d34439d0fa67b1eafeee64c"
+        },
+        {
+          "record_id": "8843",
+          "reasons": [
+            "worst_common_error"
+          ],
+          "status": "VERIFIED",
+          "checks": 1175,
+          "errors": [],
+          "target_sha256": "ae79c6865d1cdc47ec58f88caed28f514fbef080804a5a27edf257686efbaa2b"
+        },
+        {
+          "record_id": "9491",
+          "reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "status": "VERIFIED",
+          "checks": 1001,
+          "errors": [],
+          "target_sha256": "3385dc7f9e1a0cc0d8cfd1c926b3766898a0b0d6e84a2ed4f4189ac548a27274"
+        },
+        {
+          "record_id": "3811",
+          "reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "status": "VERIFIED",
+          "checks": 1297,
+          "errors": [],
+          "target_sha256": "264480d950499c9b2cb46fb45aea33bcb37e2e21b69e5edc8abb24c95bbc2d73"
+        },
+        {
+          "record_id": "6865",
+          "reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "status": "VERIFIED",
+          "checks": 440,
+          "errors": [],
+          "target_sha256": "72e0f81fcfd012a88bac0db62bded90208a133f84bacb74a31cabbb5f88134e8"
+        },
+        {
+          "record_id": "7949",
+          "reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "status": "VERIFIED",
+          "checks": 128,
+          "errors": [],
+          "target_sha256": "22d40f9a676f0264dea82f162ca96cf94ce6f9a10472ae327a335f224dfbb161"
+        },
+        {
+          "record_id": "6699",
+          "reasons": [
+            "largest_record"
+          ],
+          "status": "VERIFIED",
+          "checks": 576,
+          "errors": [],
+          "target_sha256": "66d086411ca38752d23127158a13deb66d86e99f160c523695c915f920e9c74c"
+        },
+        {
+          "record_id": "1149",
+          "reasons": [
+            "all_filtered",
+            "descriptive_stratum_representative"
+          ],
+          "status": "VERIFIED",
+          "checks": 444,
+          "errors": [],
+          "target_sha256": "42cc9a049f8afae4662fbb3b8b11f118d46792ad8064bc1b84e501ff012ff4cd"
+        },
+        {
+          "record_id": "1431",
+          "reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "status": "VERIFIED",
+          "checks": 873,
+          "errors": [],
+          "target_sha256": "2512178ed42b1e8e8f879053f7204bb7f38f2a9784fe81efab78ff20158fcb5f"
+        },
+        {
+          "record_id": "10170",
+          "reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "status": "VERIFIED",
+          "checks": 877,
+          "errors": [],
+          "target_sha256": "2cc30600b87e208c3d0fb7c2fe13302302de1c2cefd257e02915936af0f9a5c6"
+        },
+        {
+          "record_id": "3008",
+          "reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "status": "VERIFIED",
+          "checks": 869,
+          "errors": [],
+          "target_sha256": "be458154911490f0e5470845baf745c70e7ba061206cb3f73da6cdd16d7b26d4"
+        },
+        {
+          "record_id": "7842",
+          "reasons": [
+            "near_DP_threshold"
+          ],
+          "status": "VERIFIED",
+          "checks": 888,
+          "errors": [],
+          "target_sha256": "1e0dae87c5b9c14791eaf7ea3caf59602e1d7b378fe158e307e5099d29806dda"
+        },
+        {
+          "record_id": "8952",
+          "reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "status": "VERIFIED",
+          "checks": 951,
+          "errors": [],
+          "target_sha256": "9ca290d1da1b479d198198392a17e3c7f238d85a831fd196e63a9503456f3f16"
+        },
+        {
+          "record_id": "9820",
+          "reasons": [
+            "descriptive_stratum_representative"
+          ],
+          "status": "VERIFIED",
+          "checks": 1015,
+          "errors": [],
+          "target_sha256": "cf6d3276fd3e06bf19029ccd7bca5e7805a702e13c2da35a4ac005dec14f0f1b"
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-b64eb945a846910c",
+      "order": "S-D-P",
+      "records_fully_checked": 60,
+      "raw_points_per_config": 6259,
+      "sampled_full_DP_reconstructions": [
+        {
+          "record_id": "8843",
+          "reasons": [
+            "worst_common_error"
+          ],
+          "status": "VERIFIED",
+          "checks": 1213,
+          "errors": [],
+          "target_sha256": "c6fead7eb7a812a283f40cdf7151718be1a12ab56d74e63c7930b7e92aa13151"
+        },
+        {
+          "record_id": "6699",
+          "reasons": [
+            "largest_record"
+          ],
+          "status": "VERIFIED",
+          "checks": 576,
+          "errors": [],
+          "target_sha256": "ed080b7afc92a2fb6ba0f00e4890bc4029f53f81f43034b8a8a58d151ecdffe4"
+        },
+        {
+          "record_id": "1149",
+          "reasons": [
+            "all_filtered"
+          ],
+          "status": "VERIFIED",
+          "checks": 444,
+          "errors": [],
+          "target_sha256": "64aa5096c816bd2da48f4250cd9440c78231784773667796ba237b679489950e"
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-322e68540606f046",
+      "order": "S-D-P",
+      "records_fully_checked": 60,
+      "raw_points_per_config": 6259,
+      "sampled_full_DP_reconstructions": [
+        {
+          "record_id": "8843",
+          "reasons": [
+            "worst_common_error"
+          ],
+          "status": "VERIFIED",
+          "checks": 1199,
+          "errors": [],
+          "target_sha256": "20999d41899283969c35ad1724e63c67a547d95a8ade7f8123e6888b930ecb59"
+        },
+        {
+          "record_id": "6699",
+          "reasons": [
+            "largest_record"
+          ],
+          "status": "VERIFIED",
+          "checks": 576,
+          "errors": [],
+          "target_sha256": "e82cd89bfbe82ac5bbf5d2c6769c0426da07f5b41bdf2a553a6e812c1e6c296e"
+        },
+        {
+          "record_id": "1149",
+          "reasons": [
+            "all_filtered"
+          ],
+          "status": "VERIFIED",
+          "checks": 444,
+          "errors": [],
+          "target_sha256": "d76569103aaee1fb719b5b1d022d480762ed146f9a2f574bee8231d399e74c0d"
+        },
+        {
+          "record_id": "9820",
+          "reasons": [
+            "near_DP_threshold"
+          ],
+          "status": "VERIFIED",
+          "checks": 1065,
+          "errors": [],
+          "target_sha256": "2391bc184df1e4ace3246cd874d3c1ab9e68691046b2de79898bdb064ac54b86"
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-df6f00206fb03678",
+      "order": "S-D-P",
+      "records_fully_checked": 60,
+      "raw_points_per_config": 6259,
+      "sampled_full_DP_reconstructions": [
+        {
+          "record_id": "8843",
+          "reasons": [
+            "worst_common_error"
+          ],
+          "status": "VERIFIED",
+          "checks": 1195,
+          "errors": [],
+          "target_sha256": "913f6654c91aeefde2b350954ff0e772fd832587842f937dba3d5f0262aee04a"
+        },
+        {
+          "record_id": "1837",
+          "reasons": [
+            "near_DP_threshold"
+          ],
+          "status": "VERIFIED",
+          "checks": 1215,
+          "errors": [],
+          "target_sha256": "f5ab9fd30d753cb266f67a1c544e0d881d962caeb3448b7dbbd18cd61f1613d7"
+        },
+        {
+          "record_id": "6699",
+          "reasons": [
+            "largest_record"
+          ],
+          "status": "VERIFIED",
+          "checks": 576,
+          "errors": [],
+          "target_sha256": "c29608a0cd707afc5f7a7da414043591965acd9de66acd8a1942492eb981f0ef"
+        },
+        {
+          "record_id": "1149",
+          "reasons": [
+            "all_filtered"
+          ],
+          "status": "VERIFIED",
+          "checks": 444,
+          "errors": [],
+          "target_sha256": "25dbc1b794eeca37cea2d28ea0e7121e6a66ccc53a68a1bc2b5ac4ed0bf8aeeb"
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-65d9f66c5a9b483a",
+      "order": "S-D-P",
+      "records_fully_checked": 60,
+      "raw_points_per_config": 6259,
+      "sampled_full_DP_reconstructions": [
+        {
+          "record_id": "9636",
+          "reasons": [
+            "near_DP_threshold"
+          ],
+          "status": "VERIFIED",
+          "checks": 1543,
+          "errors": [],
+          "target_sha256": "8d1b1a601595bff7c9b786a8c98b6a912f45dd8cdccd0dd795e5e4f80b5cb588"
+        },
+        {
+          "record_id": "8843",
+          "reasons": [
+            "worst_common_error"
+          ],
+          "status": "VERIFIED",
+          "checks": 1165,
+          "errors": [],
+          "target_sha256": "07c2dcda9c93bf7712a9b210f95451812b581217a46d55c7c7f95ce0f62baea6"
+        },
+        {
+          "record_id": "6699",
+          "reasons": [
+            "largest_record"
+          ],
+          "status": "VERIFIED",
+          "checks": 576,
+          "errors": [],
+          "target_sha256": "d2a7e8c00bb72027f69e0c76bf15fb5b99db0bd5ea1b3fbd74d0147453e4ba3e"
+        },
+        {
+          "record_id": "1149",
+          "reasons": [
+            "all_filtered"
+          ],
+          "status": "VERIFIED",
+          "checks": 444,
+          "errors": [],
+          "target_sha256": "cd49a11530b32f7b29903902d1bf5aacd71070585a13d4f02e509ffeb26fd19a"
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-e8ff0df5800d5c3b",
+      "order": "S-D-P",
+      "records_fully_checked": 60,
+      "raw_points_per_config": 6259,
+      "sampled_full_DP_reconstructions": [
+        {
+          "record_id": "8718",
+          "reasons": [
+            "near_DP_threshold"
+          ],
+          "status": "VERIFIED",
+          "checks": 981,
+          "errors": [],
+          "target_sha256": "cf954094a040f6f57849f5c94ce46a160368774b3f21c3e3db795833947ab87f"
+        },
+        {
+          "record_id": "8843",
+          "reasons": [
+            "worst_common_error"
+          ],
+          "status": "VERIFIED",
+          "checks": 1145,
+          "errors": [],
+          "target_sha256": "91d5a59e2223485a8bb9bc957abe15e1514c972c3335b5bb2df46f66f9b564af"
+        },
+        {
+          "record_id": "6699",
+          "reasons": [
+            "largest_record"
+          ],
+          "status": "VERIFIED",
+          "checks": 576,
+          "errors": [],
+          "target_sha256": "26eab0a73397a05ffb934bae05d89f0058cc67ec115835cdc4cbca3926e2dacf"
+        },
+        {
+          "record_id": "1149",
+          "reasons": [
+            "all_filtered"
+          ],
+          "status": "VERIFIED",
+          "checks": 444,
+          "errors": [],
+          "target_sha256": "7459ab1e6c5fdadcdd8be78fe482706ab8c4ae9c7f3f6f37cb0a11d13631cd9f"
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-6b37e535e1ea2046",
+      "order": "S-D-P",
+      "records_fully_checked": 60,
+      "raw_points_per_config": 6259,
+      "sampled_full_DP_reconstructions": [
+        {
+          "record_id": "9636",
+          "reasons": [
+            "near_DP_threshold"
+          ],
+          "status": "VERIFIED",
+          "checks": 1563,
+          "errors": [],
+          "target_sha256": "ef71a828c39c32a3437664730d25ca04adc94907c15401befb1b36c62a8f833e"
+        },
+        {
+          "record_id": "8843",
+          "reasons": [
+            "worst_common_error"
+          ],
+          "status": "VERIFIED",
+          "checks": 1161,
+          "errors": [],
+          "target_sha256": "72673d4cd8e84771ec5a8477e811549c03aa95f4034570648995922862bf75cb"
+        },
+        {
+          "record_id": "6699",
+          "reasons": [
+            "largest_record"
+          ],
+          "status": "VERIFIED",
+          "checks": 576,
+          "errors": [],
+          "target_sha256": "716a6fb7986ebd86b046f19644839abf2f823ff49604e65fce320055f5db62ec"
+        },
+        {
+          "record_id": "1149",
+          "reasons": [
+            "all_filtered"
+          ],
+          "status": "VERIFIED",
+          "checks": 444,
+          "errors": [],
+          "target_sha256": "475907928ff9b585a2c36a9d45f0b86d9281a2bf37e21badaee7e49cf74047b9"
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-893931df60c3d3d6",
+      "order": "S-D-P",
+      "records_fully_checked": 60,
+      "raw_points_per_config": 6259,
+      "sampled_full_DP_reconstructions": [
+        {
+          "record_id": "8843",
+          "reasons": [
+            "worst_common_error"
+          ],
+          "status": "VERIFIED",
+          "checks": 1165,
+          "errors": [],
+          "target_sha256": "9930a0b3d2e766f84c1a95fcfee95ffca740b9eaeaf1afbe821edc54d2394981"
+        },
+        {
+          "record_id": "6699",
+          "reasons": [
+            "largest_record"
+          ],
+          "status": "VERIFIED",
+          "checks": 576,
+          "errors": [],
+          "target_sha256": "3a5758bcc2a2c84891c847e44607921c69aa2f92f9ecc3c6d3c3c945c3758bae"
+        },
+        {
+          "record_id": "1149",
+          "reasons": [
+            "all_filtered"
+          ],
+          "status": "VERIFIED",
+          "checks": 444,
+          "errors": [],
+          "target_sha256": "5bf3c0039a2bf74e5ccabda787fd9b71807218e645ee292fb7749d379b5c31ed"
+        },
+        {
+          "record_id": "4461",
+          "reasons": [
+            "near_DP_threshold"
+          ],
+          "status": "VERIFIED",
+          "checks": 1205,
+          "errors": [],
+          "target_sha256": "12f409f3bdb28d27760d8c02808935f97363364198f1d0c9aca1d11ae12610eb"
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-24646b7acfafee8e",
+      "order": "S-D-P",
+      "records_fully_checked": 60,
+      "raw_points_per_config": 6259,
+      "sampled_full_DP_reconstructions": [
+        {
+          "record_id": "8843",
+          "reasons": [
+            "worst_common_error"
+          ],
+          "status": "VERIFIED",
+          "checks": 1183,
+          "errors": [],
+          "target_sha256": "a0c003f2f3b2c3f5b74bff9faf5550fb913278e2bd2a8da338c2c817d0de065c"
+        },
+        {
+          "record_id": "6699",
+          "reasons": [
+            "largest_record"
+          ],
+          "status": "VERIFIED",
+          "checks": 576,
+          "errors": [],
+          "target_sha256": "4dc9861e656d4132b1c61db58994d15ee35a2197ddcaca47e7e05fa271fe9fe5"
+        },
+        {
+          "record_id": "1149",
+          "reasons": [
+            "all_filtered"
+          ],
+          "status": "VERIFIED",
+          "checks": 444,
+          "errors": [],
+          "target_sha256": "8d9861d62891accff05403534b2466bfca9423f433bdf55fe940548bd54fdc69"
+        },
+        {
+          "record_id": "3296",
+          "reasons": [
+            "near_DP_threshold"
+          ],
+          "status": "VERIFIED",
+          "checks": 1051,
+          "errors": [],
+          "target_sha256": "5ba6a3386dfdda387e3639f58524c4e6416e92dd03a0e963d493a14679720576"
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-a5483ca9cb883a91",
+      "order": "S-D-P",
+      "records_fully_checked": 60,
+      "raw_points_per_config": 6259,
+      "sampled_full_DP_reconstructions": [
+        {
+          "record_id": "9600",
+          "reasons": [
+            "near_DP_threshold"
+          ],
+          "status": "VERIFIED",
+          "checks": 991,
+          "errors": [],
+          "target_sha256": "ac24a1e720624acf22c6f58a213fc41a9c5dd38d20cd9c49dbd3e7ce627dd353"
+        },
+        {
+          "record_id": "8843",
+          "reasons": [
+            "worst_common_error"
+          ],
+          "status": "VERIFIED",
+          "checks": 1183,
+          "errors": [],
+          "target_sha256": "3f2697fd6ded4d59cb5e11c44543831d7708c750c74695b42b247f95ca09f1af"
+        },
+        {
+          "record_id": "6699",
+          "reasons": [
+            "largest_record"
+          ],
+          "status": "VERIFIED",
+          "checks": 576,
+          "errors": [],
+          "target_sha256": "5aafe7a6aee491b4c1ea9a76c7069e98e3edd56593b9fd6ba07e3d8c34e76cba"
+        },
+        {
+          "record_id": "1149",
+          "reasons": [
+            "all_filtered"
+          ],
+          "status": "VERIFIED",
+          "checks": 444,
+          "errors": [],
+          "target_sha256": "c4f45278b37ffa076abd9acd70553eccd38fcaecba42152371d65da2a2ea702d"
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-5f3726776663985b",
+      "order": "S-D-P",
+      "records_fully_checked": 60,
+      "raw_points_per_config": 6259,
+      "sampled_full_DP_reconstructions": [
+        {
+          "record_id": "8843",
+          "reasons": [
+            "worst_common_error"
+          ],
+          "status": "VERIFIED",
+          "checks": 1060,
+          "errors": [],
+          "target_sha256": "80adb4d01c807359321d6f22ab3365a7cb0ff609349e1772d44d8e673c6fe9ff"
+        },
+        {
+          "record_id": "9175",
+          "reasons": [
+            "near_DP_threshold"
+          ],
+          "status": "VERIFIED",
+          "checks": 1198,
+          "errors": [],
+          "target_sha256": "77962916cd8a5a5e96b8f275f0fbaffec2cf4ef996aed9d68d0704f531860c4c"
+        },
+        {
+          "record_id": "6699",
+          "reasons": [
+            "largest_record"
+          ],
+          "status": "VERIFIED",
+          "checks": 666,
+          "errors": [],
+          "target_sha256": "4aa113ca3ff2796700fec7581e129f4d808d178dd802b15840f90c709c25c88f"
+        },
+        {
+          "record_id": "10170",
+          "reasons": [
+            "all_filtered"
+          ],
+          "status": "VERIFIED",
+          "checks": 549,
+          "errors": [],
+          "target_sha256": "7dfa40e62e7133747f4be4f7de35ef247689e122414ba7fe8885740eac025e8c"
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-d4ff6528d1731c17",
+      "order": "S-D-P",
+      "records_fully_checked": 60,
+      "raw_points_per_config": 6259,
+      "sampled_full_DP_reconstructions": [
+        {
+          "record_id": "8843",
+          "reasons": [
+            "worst_common_error"
+          ],
+          "status": "VERIFIED",
+          "checks": 1141,
+          "errors": [],
+          "target_sha256": "9045a88743d0f2dd5e944f2d2330972b04ca7d7c18f79f86c35101902814e040"
+        },
+        {
+          "record_id": "6699",
+          "reasons": [
+            "largest_record"
+          ],
+          "status": "VERIFIED",
+          "checks": 576,
+          "errors": [],
+          "target_sha256": "c8e875a433eec73faaa9802c83173e3c3957952741504d2ffe715b4086cd9f52"
+        },
+        {
+          "record_id": "1149",
+          "reasons": [
+            "all_filtered"
+          ],
+          "status": "VERIFIED",
+          "checks": 444,
+          "errors": [],
+          "target_sha256": "3e50b91824e23160a86e9a74cf1da9c575fdb8cb2de469758074fe0e7158cfeb"
+        },
+        {
+          "record_id": "4461",
+          "reasons": [
+            "near_DP_threshold"
+          ],
+          "status": "VERIFIED",
+          "checks": 1187,
+          "errors": [],
+          "target_sha256": "605170723c3ccd000448039f7919ae65aa95869fc999318594e27fc514ba84d8"
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-0ad662cd1af68eaf",
+      "order": "S-D-P",
+      "records_fully_checked": 60,
+      "raw_points_per_config": 6259,
+      "sampled_full_DP_reconstructions": [
+        {
+          "record_id": "6699",
+          "reasons": [
+            "largest_record"
+          ],
+          "status": "VERIFIED",
+          "checks": 576,
+          "errors": [],
+          "target_sha256": "b05b836aad4e182ac38de462e44d50899d4a6ddf6d84e858023a3244568a70c1"
+        },
+        {
+          "record_id": "1149",
+          "reasons": [
+            "all_filtered"
+          ],
+          "status": "VERIFIED",
+          "checks": 444,
+          "errors": [],
+          "target_sha256": "acd6282bbb1b6cb17b183ace244e2b78764d4dfc0809a1ef57f0dd9c65030f98"
+        },
+        {
+          "record_id": "5202",
+          "reasons": [
+            "near_DP_threshold"
+          ],
+          "status": "VERIFIED",
+          "checks": 1295,
+          "errors": [],
+          "target_sha256": "4d9e1e189a217a3980dc188f99fb67061b4b68af40ddb04fcc955da41784e779"
+        },
+        {
+          "record_id": "10744",
+          "reasons": [
+            "worst_common_error"
+          ],
+          "status": "VERIFIED",
+          "checks": 1142,
+          "errors": [],
+          "target_sha256": "a0ad550d5fdfe476fdbef5492904d9baba4ab1098d9147dab7d28d451c873c7b"
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-7261bd230cb316ee",
+      "order": "S-D-P",
+      "records_fully_checked": 60,
+      "raw_points_per_config": 6259,
+      "sampled_full_DP_reconstructions": [
+        {
+          "record_id": "8843",
+          "reasons": [
+            "worst_common_error"
+          ],
+          "status": "VERIFIED",
+          "checks": 1062,
+          "errors": [],
+          "target_sha256": "de9af0a08ff06a15ce04e9b3d2318bc40b67342922c7757cb4efa3db51aac1a9"
+        },
+        {
+          "record_id": "6699",
+          "reasons": [
+            "largest_record"
+          ],
+          "status": "VERIFIED",
+          "checks": 576,
+          "errors": [],
+          "target_sha256": "095883883b31daacfdee85b3aba63d8fae849c51512b84847250a8c4c13f3515"
+        },
+        {
+          "record_id": "1149",
+          "reasons": [
+            "all_filtered"
+          ],
+          "status": "VERIFIED",
+          "checks": 444,
+          "errors": [],
+          "target_sha256": "f1fbbd06613f1cf7993769f9e7519546fb5a774f208b67492f75794fa4b9968c"
+        },
+        {
+          "record_id": "7842",
+          "reasons": [
+            "near_DP_threshold"
+          ],
+          "status": "VERIFIED",
+          "checks": 888,
+          "errors": [],
+          "target_sha256": "84a0544734a2cc309a5af3b7ffd7fc0559cec02fed1692c7ab993735b71fc987"
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-6599edd5fcbf75b1",
+      "order": "S-D-P",
+      "records_fully_checked": 60,
+      "raw_points_per_config": 6259,
+      "sampled_full_DP_reconstructions": [
+        {
+          "record_id": "8843",
+          "reasons": [
+            "worst_common_error"
+          ],
+          "status": "VERIFIED",
+          "checks": 1455,
+          "errors": [],
+          "target_sha256": "9c51eba00eecb363f925a3168135953d710dddbc010550d98bf8c91244305a7b"
+        },
+        {
+          "record_id": "6699",
+          "reasons": [
+            "largest_record"
+          ],
+          "status": "VERIFIED",
+          "checks": 576,
+          "errors": [],
+          "target_sha256": "4ed4b0fb58cb4bdb420d30b32b3199c3e827f939bd10611abdc93f7dfd8fa500"
+        },
+        {
+          "record_id": "1149",
+          "reasons": [
+            "all_filtered"
+          ],
+          "status": "VERIFIED",
+          "checks": 444,
+          "errors": [],
+          "target_sha256": "f31410a0be2de28670e4de244cb6437408480c6497314926f3f7a517741d48b1"
+        },
+        {
+          "record_id": "7842",
+          "reasons": [
+            "near_DP_threshold"
+          ],
+          "status": "VERIFIED",
+          "checks": 888,
+          "errors": [],
+          "target_sha256": "01c95fab72dd5d532703dc680fa150e775627b985ceea9ea7097ebe0026aac14"
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-d4df6d869dc800d6",
+      "order": "S-D-P",
+      "records_fully_checked": 60,
+      "raw_points_per_config": 6259,
+      "sampled_full_DP_reconstructions": [
+        {
+          "record_id": "8843",
+          "reasons": [
+            "worst_common_error"
+          ],
+          "status": "VERIFIED",
+          "checks": 1373,
+          "errors": [],
+          "target_sha256": "33fe9f06fb9903a9f9d608d3a9ac5845aba845da6858e071efa18ea7234d2f70"
+        },
+        {
+          "record_id": "6699",
+          "reasons": [
+            "largest_record"
+          ],
+          "status": "VERIFIED",
+          "checks": 576,
+          "errors": [],
+          "target_sha256": "ac9a151da76c86845a5cf3d388a6c9bacb8e18e68bc8e2724b866fdb579d899f"
+        },
+        {
+          "record_id": "1149",
+          "reasons": [
+            "all_filtered"
+          ],
+          "status": "VERIFIED",
+          "checks": 444,
+          "errors": [],
+          "target_sha256": "44660fb5bf5a51b3d7b54c130b9fca10db62ded602193eb1bc80fb92bfda9f7f"
+        },
+        {
+          "record_id": "7842",
+          "reasons": [
+            "near_DP_threshold"
+          ],
+          "status": "VERIFIED",
+          "checks": 888,
+          "errors": [],
+          "target_sha256": "87e092aa3edd7f0ff46bd155e80e7bc78c406209a6c845be1b9c86f28fe379f5"
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-38b5af70752afcf3",
+      "order": "S-D-P",
+      "records_fully_checked": 60,
+      "raw_points_per_config": 6259,
+      "sampled_full_DP_reconstructions": [
+        {
+          "record_id": "6699",
+          "reasons": [
+            "largest_record"
+          ],
+          "status": "VERIFIED",
+          "checks": 576,
+          "errors": [],
+          "target_sha256": "94cabe37543d04b67b48acc7635d035e151d1462c24fc584da813367204589e1"
+        },
+        {
+          "record_id": "1149",
+          "reasons": [
+            "all_filtered"
+          ],
+          "status": "VERIFIED",
+          "checks": 444,
+          "errors": [],
+          "target_sha256": "87db0b0cce67188331807226f8c731f86922836a6d2f68c57626a2e8b415d046"
+        },
+        {
+          "record_id": "7842",
+          "reasons": [
+            "near_DP_threshold"
+          ],
+          "status": "VERIFIED",
+          "checks": 888,
+          "errors": [],
+          "target_sha256": "d428b42f666fa998a200b3e353533c0e8e23b0af4c5cd4e7611a55fb15d91b58"
+        },
+        {
+          "record_id": "10744",
+          "reasons": [
+            "worst_common_error"
+          ],
+          "status": "VERIFIED",
+          "checks": 955,
+          "errors": [],
+          "target_sha256": "5dba8cb0548553e1c0289c1acadb032cb69cee1e7a56b87dbc1a6769d34424d2"
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-63139d05595c253c",
+      "order": "S-D-P",
+      "records_fully_checked": 60,
+      "raw_points_per_config": 6259,
+      "sampled_full_DP_reconstructions": [
+        {
+          "record_id": "8843",
+          "reasons": [
+            "worst_common_error"
+          ],
+          "status": "VERIFIED",
+          "checks": 1175,
+          "errors": [],
+          "target_sha256": "7b576f4ce15b75fe6cfdb811ce4a996ce3bdbcf6040601728f763ca8339c6751"
+        },
+        {
+          "record_id": "6699",
+          "reasons": [
+            "largest_record"
+          ],
+          "status": "VERIFIED",
+          "checks": 1111,
+          "errors": [],
+          "target_sha256": "bdad8af5c5a0689d47a9fda134569bc4080ef796a6c1a492b01f7ccbdf1daabe"
+        },
+        {
+          "record_id": "7842",
+          "reasons": [
+            "near_DP_threshold"
+          ],
+          "status": "VERIFIED",
+          "checks": 1008,
+          "errors": [],
+          "target_sha256": "91245fc8f01b829e2ced830798b22a47a9a5453631a1f79e9e94ddde2f0823a4"
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-5279f18a16a391af",
+      "order": "S-D-P",
+      "records_fully_checked": 60,
+      "raw_points_per_config": 6259,
+      "sampled_full_DP_reconstructions": [
+        {
+          "record_id": "8843",
+          "reasons": [
+            "worst_common_error"
+          ],
+          "status": "VERIFIED",
+          "checks": 1175,
+          "errors": [],
+          "target_sha256": "a4ea2367e3aa1bc38b4fbfde36bf1e871d20c4f73b5454ba78903e8b99785701"
+        },
+        {
+          "record_id": "6699",
+          "reasons": [
+            "largest_record"
+          ],
+          "status": "VERIFIED",
+          "checks": 576,
+          "errors": [],
+          "target_sha256": "a9efec808ad02d25e6b446b83410d378e4323be32f901a22911fe63b947aeeb6"
+        },
+        {
+          "record_id": "1149",
+          "reasons": [
+            "all_filtered"
+          ],
+          "status": "VERIFIED",
+          "checks": 444,
+          "errors": [],
+          "target_sha256": "55bac4c569b78e53291d5951cfaa75dee0f819d7b4a24ccc19bbecd6cc960733"
+        },
+        {
+          "record_id": "7842",
+          "reasons": [
+            "near_DP_threshold"
+          ],
+          "status": "VERIFIED",
+          "checks": 1008,
+          "errors": [],
+          "target_sha256": "3b5a9b79ea1f87a232e76ce195d82bc8963724b48c61c15478164e741f5a69f0"
+        }
+      ]
+    },
+    {
+      "config_id": "cfg-dc3bdca5d6cb9c1f",
+      "order": "S-D-P",
+      "records_fully_checked": 60,
+      "raw_points_per_config": 6259,
+      "sampled_full_DP_reconstructions": [
+        {
+          "record_id": "8843",
+          "reasons": [
+            "worst_common_error"
+          ],
+          "status": "VERIFIED",
+          "checks": 1175,
+          "errors": [],
+          "target_sha256": "c927b4c4481a1650c78cd893bd737411184b2b7973b309dd7a55a5da7be5b665"
+        },
+        {
+          "record_id": "6699",
+          "reasons": [
+            "largest_record"
+          ],
+          "status": "VERIFIED",
+          "checks": 576,
+          "errors": [],
+          "target_sha256": "83e6bf018c38eff8a7a5028c7126e164fb9d91a1364f784fc484cb5cc976dd24"
+        },
+        {
+          "record_id": "10170",
+          "reasons": [
+            "all_filtered"
+          ],
+          "status": "VERIFIED",
+          "checks": 444,
+          "errors": [],
+          "target_sha256": "49a1a2b56dcf1ff5ef73d4fbc1d1e001021a6b0057028fa59a4e1d6dc814d134"
+        },
+        {
+          "record_id": "4461",
+          "reasons": [
+            "near_DP_threshold"
+          ],
+          "status": "VERIFIED",
+          "checks": 1221,
+          "errors": [],
+          "target_sha256": "cf65bd2c3125d5308b2f8b49848ca04d98735fb4714ec68c15accfcdbb48ca29"
+        }
+      ]
+    }
+  ],
+  "independent_summaries": [
+    {
+      "config_id": "cfg-b15b8281b73592fb",
+      "order": "S-D-P",
+      "independent_summary": {
+        "n_input": 6259,
+        "n_final": 1541,
+        "n_filtered": 1398,
+        "n_direction_removed": 375,
+        "n_dp_removed": 2945,
+        "n_dp_input": 4486,
+        "n_dp_output": 1541,
+        "n_dp_exceedances": 0,
+        "n_s_segments": 181,
+        "n_filtered_segments": 43,
+        "common_raw_points": 6259,
+        "common_covered_points": 4861,
+        "common_uncovered_points": 1398,
+        "common_over_5_points": 118,
+        "raw_break_count": 121,
+        "raw_break_crossings": 0,
+        "raw_breaks_crossed": 0,
+        "raw_break_trigger_points_removed": 45,
+        "raw_windows": 181,
+        "raw_windows_covered": 138,
+        "direction_candidate_points": 375,
+        "direction_undefined_points": 1209,
+        "direction_windows_across_raw_breaks": 0,
+        "p_removed_raw_break_trigger_points": 0,
+        "n_records": 60,
+        "n_records_covered": 46,
+        "n_all_filtered_records": 14,
+        "n_no_output_records": 14,
+        "point_retention": 0.24620546413165043,
+        "point_retention_reason": null,
+        "record_coverage": 0.7666666666666667,
+        "record_coverage_reason": null,
+        "all_filtered_record_fraction": 0.23333333333333334,
+        "all_filtered_record_fraction_reason": null,
+        "no_output_record_fraction": 0.23333333333333334,
+        "no_output_record_fraction_reason": null,
+        "common_coverage": 0.7766416360440965,
+        "common_coverage_reason": null,
+        "dp_saving": 0.6564868479714667,
+        "dp_saving_reason": null,
+        "dp_max_error": 4.989313004438724,
+        "dp_max_error_reason": null,
+        "common_max_error": 184.45720996185406,
+        "common_max_error_reason": null,
+        "record_mean_point_retention": 0.23631416957764037,
+        "record_mean_point_retention_denominator": 60,
+        "record_mean_point_retention_unavailable_records": 0,
+        "record_mean_dp_saving": 0.6568165397273148,
+        "record_mean_dp_saving_denominator": 46,
+        "record_mean_dp_saving_unavailable_records": 14,
+        "record_mean_common_coverage": 0.7544916169267962,
+        "record_mean_common_coverage_denominator": 60,
+        "record_mean_common_coverage_unavailable_records": 0,
+        "record_mean_common_max_error": 23.683959375173423,
+        "record_mean_common_max_error_denominator": 46,
+        "record_mean_common_max_error_unavailable_records": 14,
+        "record_mean_common_mean_error": 1.5867007992207447,
+        "record_mean_common_mean_error_denominator": 46,
+        "record_mean_common_mean_error_unavailable_records": 14,
+        "filter_reason_segments": {
+          "TOO_FEW_POINTS": 24,
+          "TOO_SHORT_LENGTH": 27
+        },
+        "filter_reason_points": {
+          "TOO_FEW_POINTS": 60,
+          "TOO_SHORT_LENGTH": 1350
+        },
+        "direction_undefined_reasons": {
+          "ENDPOINT": 276,
+          "MISSING_FOLLOWING_OUTGOING_EDGE": 138,
+          "UNCOMPUTABLE_DIRECTION_IN_WINDOW": 795
+        },
+        "dp_checks_passed": true,
+        "aggregation_unit": "original_record; pooled counts explicitly identified"
+      }
+    },
+    {
+      "config_id": "cfg-b64eb945a846910c",
+      "order": "S-D-P",
+      "independent_summary": {
+        "n_input": 6259,
+        "n_final": 4486,
+        "n_filtered": 1398,
+        "n_direction_removed": 375,
+        "n_dp_removed": 0,
+        "n_dp_input": 4486,
+        "n_dp_output": 4486,
+        "n_dp_exceedances": 0,
+        "n_s_segments": 181,
+        "n_filtered_segments": 43,
+        "common_raw_points": 6259,
+        "common_covered_points": 4861,
+        "common_uncovered_points": 1398,
+        "common_over_5_points": 113,
+        "raw_break_count": 121,
+        "raw_break_crossings": 0,
+        "raw_breaks_crossed": 0,
+        "raw_break_trigger_points_removed": 45,
+        "raw_windows": 181,
+        "raw_windows_covered": 138,
+        "direction_candidate_points": 375,
+        "direction_undefined_points": 1209,
+        "direction_windows_across_raw_breaks": 0,
+        "p_removed_raw_break_trigger_points": 0,
+        "n_records": 60,
+        "n_records_covered": 46,
+        "n_all_filtered_records": 14,
+        "n_no_output_records": 14,
+        "point_retention": 0.7167279118069979,
+        "point_retention_reason": null,
+        "record_coverage": 0.7666666666666667,
+        "record_coverage_reason": null,
+        "all_filtered_record_fraction": 0.23333333333333334,
+        "all_filtered_record_fraction_reason": null,
+        "no_output_record_fraction": 0.23333333333333334,
+        "no_output_record_fraction_reason": null,
+        "common_coverage": 0.7766416360440965,
+        "common_coverage_reason": null,
+        "dp_saving": 0.0,
+        "dp_saving_reason": null,
+        "dp_max_error": 0.0,
+        "dp_max_error_reason": null,
+        "common_max_error": 184.45720996185406,
+        "common_max_error_reason": null,
+        "record_mean_point_retention": 0.6968786999985686,
+        "record_mean_point_retention_denominator": 60,
+        "record_mean_point_retention_unavailable_records": 0,
+        "record_mean_dp_saving": 0.0,
+        "record_mean_dp_saving_denominator": 46,
+        "record_mean_dp_saving_unavailable_records": 14,
+        "record_mean_common_coverage": 0.7544916169267962,
+        "record_mean_common_coverage_denominator": 60,
+        "record_mean_common_coverage_unavailable_records": 0,
+        "record_mean_common_max_error": 22.547205403761247,
+        "record_mean_common_max_error_denominator": 46,
+        "record_mean_common_max_error_unavailable_records": 14,
+        "record_mean_common_mean_error": 0.6098188503246696,
+        "record_mean_common_mean_error_denominator": 46,
+        "record_mean_common_mean_error_unavailable_records": 14,
+        "filter_reason_segments": {
+          "TOO_FEW_POINTS": 24,
+          "TOO_SHORT_LENGTH": 27
+        },
+        "filter_reason_points": {
+          "TOO_FEW_POINTS": 60,
+          "TOO_SHORT_LENGTH": 1350
+        },
+        "direction_undefined_reasons": {
+          "ENDPOINT": 276,
+          "MISSING_FOLLOWING_OUTGOING_EDGE": 138,
+          "UNCOMPUTABLE_DIRECTION_IN_WINDOW": 795
+        },
+        "dp_checks_passed": true,
+        "aggregation_unit": "original_record; pooled counts explicitly identified"
+      }
+    },
+    {
+      "config_id": "cfg-322e68540606f046",
+      "order": "S-D-P",
+      "independent_summary": {
+        "n_input": 6259,
+        "n_final": 2562,
+        "n_filtered": 1398,
+        "n_direction_removed": 375,
+        "n_dp_removed": 1924,
+        "n_dp_input": 4486,
+        "n_dp_output": 2562,
+        "n_dp_exceedances": 0,
+        "n_s_segments": 181,
+        "n_filtered_segments": 43,
+        "common_raw_points": 6259,
+        "common_covered_points": 4861,
+        "common_uncovered_points": 1398,
+        "common_over_5_points": 113,
+        "raw_break_count": 121,
+        "raw_break_crossings": 0,
+        "raw_breaks_crossed": 0,
+        "raw_break_trigger_points_removed": 45,
+        "raw_windows": 181,
+        "raw_windows_covered": 138,
+        "direction_candidate_points": 375,
+        "direction_undefined_points": 1209,
+        "direction_windows_across_raw_breaks": 0,
+        "p_removed_raw_break_trigger_points": 0,
+        "n_records": 60,
+        "n_records_covered": 46,
+        "n_all_filtered_records": 14,
+        "n_no_output_records": 14,
+        "point_retention": 0.4093305639878575,
+        "point_retention_reason": null,
+        "record_coverage": 0.7666666666666667,
+        "record_coverage_reason": null,
+        "all_filtered_record_fraction": 0.23333333333333334,
+        "all_filtered_record_fraction_reason": null,
+        "no_output_record_fraction": 0.23333333333333334,
+        "no_output_record_fraction_reason": null,
+        "common_coverage": 0.7766416360440965,
+        "common_coverage_reason": null,
+        "dp_saving": 0.4288898796255015,
+        "dp_saving_reason": null,
+        "dp_max_error": 0.9999028710853399,
+        "dp_max_error_reason": null,
+        "common_max_error": 184.45720996185406,
+        "common_max_error_reason": null,
+        "record_mean_point_retention": 0.39233803863048694,
+        "record_mean_point_retention_denominator": 60,
+        "record_mean_point_retention_unavailable_records": 0,
+        "record_mean_dp_saving": 0.430523844685189,
+        "record_mean_dp_saving_denominator": 46,
+        "record_mean_dp_saving_unavailable_records": 14,
+        "record_mean_common_coverage": 0.7544916169267962,
+        "record_mean_common_coverage_denominator": 60,
+        "record_mean_common_coverage_unavailable_records": 0,
+        "record_mean_common_max_error": 22.673938598695866,
+        "record_mean_common_max_error_denominator": 46,
+        "record_mean_common_max_error_unavailable_records": 14,
+        "record_mean_common_mean_error": 0.7277466742602918,
+        "record_mean_common_mean_error_denominator": 46,
+        "record_mean_common_mean_error_unavailable_records": 14,
+        "filter_reason_segments": {
+          "TOO_FEW_POINTS": 24,
+          "TOO_SHORT_LENGTH": 27
+        },
+        "filter_reason_points": {
+          "TOO_FEW_POINTS": 60,
+          "TOO_SHORT_LENGTH": 1350
+        },
+        "direction_undefined_reasons": {
+          "ENDPOINT": 276,
+          "MISSING_FOLLOWING_OUTGOING_EDGE": 138,
+          "UNCOMPUTABLE_DIRECTION_IN_WINDOW": 795
+        },
+        "dp_checks_passed": true,
+        "aggregation_unit": "original_record; pooled counts explicitly identified"
+      }
+    },
+    {
+      "config_id": "cfg-df6f00206fb03678",
+      "order": "S-D-P",
+      "independent_summary": {
+        "n_input": 6259,
+        "n_final": 2169,
+        "n_filtered": 1398,
+        "n_direction_removed": 375,
+        "n_dp_removed": 2317,
+        "n_dp_input": 4486,
+        "n_dp_output": 2169,
+        "n_dp_exceedances": 0,
+        "n_s_segments": 181,
+        "n_filtered_segments": 43,
+        "common_raw_points": 6259,
+        "common_covered_points": 4861,
+        "common_uncovered_points": 1398,
+        "common_over_5_points": 112,
+        "raw_break_count": 121,
+        "raw_break_crossings": 0,
+        "raw_breaks_crossed": 0,
+        "raw_break_trigger_points_removed": 45,
+        "raw_windows": 181,
+        "raw_windows_covered": 138,
+        "direction_candidate_points": 375,
+        "direction_undefined_points": 1209,
+        "direction_windows_across_raw_breaks": 0,
+        "p_removed_raw_break_trigger_points": 0,
+        "n_records": 60,
+        "n_records_covered": 46,
+        "n_all_filtered_records": 14,
+        "n_no_output_records": 14,
+        "point_retention": 0.3465409809873782,
+        "point_retention_reason": null,
+        "record_coverage": 0.7666666666666667,
+        "record_coverage_reason": null,
+        "all_filtered_record_fraction": 0.23333333333333334,
+        "all_filtered_record_fraction_reason": null,
+        "no_output_record_fraction": 0.23333333333333334,
+        "no_output_record_fraction_reason": null,
+        "common_coverage": 0.7766416360440965,
+        "common_coverage_reason": null,
+        "dp_saving": 0.5164957646009809,
+        "dp_saving_reason": null,
+        "dp_max_error": 1.9922626712705402,
+        "dp_max_error_reason": null,
+        "common_max_error": 184.45720996185406,
+        "common_max_error_reason": null,
+        "record_mean_point_retention": 0.33192012925141545,
+        "record_mean_point_retention_denominator": 60,
+        "record_mean_point_retention_unavailable_records": 0,
+        "record_mean_dp_saving": 0.51864305646063,
+        "record_mean_dp_saving_denominator": 46,
+        "record_mean_dp_saving_unavailable_records": 14,
+        "record_mean_common_coverage": 0.7544916169267962,
+        "record_mean_common_coverage_denominator": 60,
+        "record_mean_common_coverage_unavailable_records": 0,
+        "record_mean_common_max_error": 22.835344509128507,
+        "record_mean_common_max_error_denominator": 46,
+        "record_mean_common_max_error_unavailable_records": 14,
+        "record_mean_common_mean_error": 0.8838531543911654,
+        "record_mean_common_mean_error_denominator": 46,
+        "record_mean_common_mean_error_unavailable_records": 14,
+        "filter_reason_segments": {
+          "TOO_FEW_POINTS": 24,
+          "TOO_SHORT_LENGTH": 27
+        },
+        "filter_reason_points": {
+          "TOO_FEW_POINTS": 60,
+          "TOO_SHORT_LENGTH": 1350
+        },
+        "direction_undefined_reasons": {
+          "ENDPOINT": 276,
+          "MISSING_FOLLOWING_OUTGOING_EDGE": 138,
+          "UNCOMPUTABLE_DIRECTION_IN_WINDOW": 795
+        },
+        "dp_checks_passed": true,
+        "aggregation_unit": "original_record; pooled counts explicitly identified"
+      }
+    },
+    {
+      "config_id": "cfg-65d9f66c5a9b483a",
+      "order": "S-D-P",
+      "independent_summary": {
+        "n_input": 6259,
+        "n_final": 1117,
+        "n_filtered": 1398,
+        "n_direction_removed": 375,
+        "n_dp_removed": 3369,
+        "n_dp_input": 4486,
+        "n_dp_output": 1117,
+        "n_dp_exceedances": 0,
+        "n_s_segments": 181,
+        "n_filtered_segments": 43,
+        "common_raw_points": 6259,
+        "common_covered_points": 4861,
+        "common_uncovered_points": 1398,
+        "common_over_5_points": 806,
+        "raw_break_count": 121,
+        "raw_break_crossings": 0,
+        "raw_breaks_crossed": 0,
+        "raw_break_trigger_points_removed": 45,
+        "raw_windows": 181,
+        "raw_windows_covered": 138,
+        "direction_candidate_points": 375,
+        "direction_undefined_points": 1209,
+        "direction_windows_across_raw_breaks": 0,
+        "p_removed_raw_break_trigger_points": 0,
+        "n_records": 60,
+        "n_records_covered": 46,
+        "n_all_filtered_records": 14,
+        "n_no_output_records": 14,
+        "point_retention": 0.1784630132609043,
+        "point_retention_reason": null,
+        "record_coverage": 0.7666666666666667,
+        "record_coverage_reason": null,
+        "all_filtered_record_fraction": 0.23333333333333334,
+        "all_filtered_record_fraction_reason": null,
+        "no_output_record_fraction": 0.23333333333333334,
+        "no_output_record_fraction_reason": null,
+        "common_coverage": 0.7766416360440965,
+        "common_coverage_reason": null,
+        "dp_saving": 0.7510031208203299,
+        "dp_saving_reason": null,
+        "dp_max_error": 9.991299356762257,
+        "dp_max_error_reason": null,
+        "common_max_error": 184.45720996185406,
+        "common_max_error_reason": null,
+        "record_mean_point_retention": 0.17165599134161844,
+        "record_mean_point_retention_denominator": 60,
+        "record_mean_point_retention_unavailable_records": 0,
+        "record_mean_dp_saving": 0.7508677911598685,
+        "record_mean_dp_saving_denominator": 46,
+        "record_mean_dp_saving_unavailable_records": 14,
+        "record_mean_common_coverage": 0.7544916169267962,
+        "record_mean_common_coverage_denominator": 60,
+        "record_mean_common_coverage_unavailable_records": 0,
+        "record_mean_common_max_error": 25.013036719556556,
+        "record_mean_common_max_error_denominator": 46,
+        "record_mean_common_max_error_unavailable_records": 14,
+        "record_mean_common_mean_error": 2.6238724774807456,
+        "record_mean_common_mean_error_denominator": 46,
+        "record_mean_common_mean_error_unavailable_records": 14,
+        "filter_reason_segments": {
+          "TOO_FEW_POINTS": 24,
+          "TOO_SHORT_LENGTH": 27
+        },
+        "filter_reason_points": {
+          "TOO_FEW_POINTS": 60,
+          "TOO_SHORT_LENGTH": 1350
+        },
+        "direction_undefined_reasons": {
+          "ENDPOINT": 276,
+          "MISSING_FOLLOWING_OUTGOING_EDGE": 138,
+          "UNCOMPUTABLE_DIRECTION_IN_WINDOW": 795
+        },
+        "dp_checks_passed": true,
+        "aggregation_unit": "original_record; pooled counts explicitly identified"
+      }
+    },
+    {
+      "config_id": "cfg-e8ff0df5800d5c3b",
+      "order": "S-D-P",
+      "independent_summary": {
+        "n_input": 6259,
+        "n_final": 841,
+        "n_filtered": 1398,
+        "n_direction_removed": 375,
+        "n_dp_removed": 3645,
+        "n_dp_input": 4486,
+        "n_dp_output": 841,
+        "n_dp_exceedances": 0,
+        "n_s_segments": 181,
+        "n_filtered_segments": 43,
+        "common_raw_points": 6259,
+        "common_covered_points": 4861,
+        "common_uncovered_points": 1398,
+        "common_over_5_points": 1636,
+        "raw_break_count": 121,
+        "raw_break_crossings": 0,
+        "raw_breaks_crossed": 0,
+        "raw_break_trigger_points_removed": 45,
+        "raw_windows": 181,
+        "raw_windows_covered": 138,
+        "direction_candidate_points": 375,
+        "direction_undefined_points": 1209,
+        "direction_windows_across_raw_breaks": 0,
+        "p_removed_raw_break_trigger_points": 0,
+        "n_records": 60,
+        "n_records_covered": 46,
+        "n_all_filtered_records": 14,
+        "n_no_output_records": 14,
+        "point_retention": 0.13436651222239973,
+        "point_retention_reason": null,
+        "record_coverage": 0.7666666666666667,
+        "record_coverage_reason": null,
+        "all_filtered_record_fraction": 0.23333333333333334,
+        "all_filtered_record_fraction_reason": null,
+        "no_output_record_fraction": 0.23333333333333334,
+        "no_output_record_fraction_reason": null,
+        "common_coverage": 0.7766416360440965,
+        "common_coverage_reason": null,
+        "dp_saving": 0.8125278644672314,
+        "dp_saving_reason": null,
+        "dp_max_error": 19.9658024792526,
+        "dp_max_error_reason": null,
+        "common_max_error": 184.45720996185406,
+        "common_max_error_reason": null,
+        "record_mean_point_retention": 0.129338102069709,
+        "record_mean_point_retention_denominator": 60,
+        "record_mean_point_retention_unavailable_records": 0,
+        "record_mean_dp_saving": 0.8122600777842662,
+        "record_mean_dp_saving_denominator": 46,
+        "record_mean_dp_saving_unavailable_records": 14,
+        "record_mean_common_coverage": 0.7544916169267962,
+        "record_mean_common_coverage_denominator": 60,
+        "record_mean_common_coverage_unavailable_records": 0,
+        "record_mean_common_max_error": 29.69846925002846,
+        "record_mean_common_max_error_denominator": 46,
+        "record_mean_common_max_error_unavailable_records": 14,
+        "record_mean_common_mean_error": 4.534543024208977,
+        "record_mean_common_mean_error_denominator": 46,
+        "record_mean_common_mean_error_unavailable_records": 14,
+        "filter_reason_segments": {
+          "TOO_FEW_POINTS": 24,
+          "TOO_SHORT_LENGTH": 27
+        },
+        "filter_reason_points": {
+          "TOO_FEW_POINTS": 60,
+          "TOO_SHORT_LENGTH": 1350
+        },
+        "direction_undefined_reasons": {
+          "ENDPOINT": 276,
+          "MISSING_FOLLOWING_OUTGOING_EDGE": 138,
+          "UNCOMPUTABLE_DIRECTION_IN_WINDOW": 795
+        },
+        "dp_checks_passed": true,
+        "aggregation_unit": "original_record; pooled counts explicitly identified"
+      }
+    },
+    {
+      "config_id": "cfg-6b37e535e1ea2046",
+      "order": "S-D-P",
+      "independent_summary": {
+        "n_input": 6259,
+        "n_final": 1371,
+        "n_filtered": 1398,
+        "n_direction_removed": 971,
+        "n_dp_removed": 2519,
+        "n_dp_input": 3890,
+        "n_dp_output": 1371,
+        "n_dp_exceedances": 0,
+        "n_s_segments": 181,
+        "n_filtered_segments": 43,
+        "common_raw_points": 6259,
+        "common_covered_points": 4861,
+        "common_uncovered_points": 1398,
+        "common_over_5_points": 431,
+        "raw_break_count": 121,
+        "raw_break_crossings": 0,
+        "raw_breaks_crossed": 0,
+        "raw_break_trigger_points_removed": 45,
+        "raw_windows": 181,
+        "raw_windows_covered": 138,
+        "direction_candidate_points": 971,
+        "direction_undefined_points": 1209,
+        "direction_windows_across_raw_breaks": 0,
+        "p_removed_raw_break_trigger_points": 0,
+        "n_records": 60,
+        "n_records_covered": 46,
+        "n_all_filtered_records": 14,
+        "n_no_output_records": 14,
+        "point_retention": 0.2190445758108324,
+        "point_retention_reason": null,
+        "record_coverage": 0.7666666666666667,
+        "record_coverage_reason": null,
+        "all_filtered_record_fraction": 0.23333333333333334,
+        "all_filtered_record_fraction_reason": null,
+        "no_output_record_fraction": 0.23333333333333334,
+        "no_output_record_fraction_reason": null,
+        "common_coverage": 0.7766416360440965,
+        "common_coverage_reason": null,
+        "dp_saving": 0.6475578406169666,
+        "dp_saving_reason": null,
+        "dp_max_error": 4.972634926201543,
+        "dp_max_error_reason": null,
+        "common_max_error": 184.45720996185406,
+        "common_max_error_reason": null,
+        "record_mean_point_retention": 0.21089941994370004,
+        "record_mean_point_retention_denominator": 60,
+        "record_mean_point_retention_unavailable_records": 0,
+        "record_mean_dp_saving": 0.6445184486949631,
+        "record_mean_dp_saving_denominator": 46,
+        "record_mean_dp_saving_unavailable_records": 14,
+        "record_mean_common_coverage": 0.7544916169267962,
+        "record_mean_common_coverage_denominator": 60,
+        "record_mean_common_coverage_unavailable_records": 0,
+        "record_mean_common_max_error": 46.87417568424903,
+        "record_mean_common_max_error_denominator": 46,
+        "record_mean_common_max_error_unavailable_records": 14,
+        "record_mean_common_mean_error": 3.3461683331560486,
+        "record_mean_common_mean_error_denominator": 46,
+        "record_mean_common_mean_error_unavailable_records": 14,
+        "filter_reason_segments": {
+          "TOO_FEW_POINTS": 24,
+          "TOO_SHORT_LENGTH": 27
+        },
+        "filter_reason_points": {
+          "TOO_FEW_POINTS": 60,
+          "TOO_SHORT_LENGTH": 1350
+        },
+        "direction_undefined_reasons": {
+          "ENDPOINT": 276,
+          "MISSING_FOLLOWING_OUTGOING_EDGE": 138,
+          "UNCOMPUTABLE_DIRECTION_IN_WINDOW": 795
+        },
+        "dp_checks_passed": true,
+        "aggregation_unit": "original_record; pooled counts explicitly identified"
+      }
+    },
+    {
+      "config_id": "cfg-893931df60c3d3d6",
+      "order": "S-D-P",
+      "independent_summary": {
+        "n_input": 6259,
+        "n_final": 1473,
+        "n_filtered": 1398,
+        "n_direction_removed": 580,
+        "n_dp_removed": 2808,
+        "n_dp_input": 4281,
+        "n_dp_output": 1473,
+        "n_dp_exceedances": 0,
+        "n_s_segments": 181,
+        "n_filtered_segments": 43,
+        "common_raw_points": 6259,
+        "common_covered_points": 4861,
+        "common_uncovered_points": 1398,
+        "common_over_5_points": 234,
+        "raw_break_count": 121,
+        "raw_break_crossings": 0,
+        "raw_breaks_crossed": 0,
+        "raw_break_trigger_points_removed": 45,
+        "raw_windows": 181,
+        "raw_windows_covered": 138,
+        "direction_candidate_points": 580,
+        "direction_undefined_points": 1209,
+        "direction_windows_across_raw_breaks": 0,
+        "p_removed_raw_break_trigger_points": 0,
+        "n_records": 60,
+        "n_records_covered": 46,
+        "n_all_filtered_records": 14,
+        "n_no_output_records": 14,
+        "point_retention": 0.2353411088033232,
+        "point_retention_reason": null,
+        "record_coverage": 0.7666666666666667,
+        "record_coverage_reason": null,
+        "all_filtered_record_fraction": 0.23333333333333334,
+        "all_filtered_record_fraction_reason": null,
+        "no_output_record_fraction": 0.23333333333333334,
+        "no_output_record_fraction_reason": null,
+        "common_coverage": 0.7766416360440965,
+        "common_coverage_reason": null,
+        "dp_saving": 0.6559215136650316,
+        "dp_saving_reason": null,
+        "dp_max_error": 4.988893781697602,
+        "dp_max_error_reason": null,
+        "common_max_error": 184.45720996185406,
+        "common_max_error_reason": null,
+        "record_mean_point_retention": 0.2260531614463761,
+        "record_mean_point_retention_denominator": 60,
+        "record_mean_point_retention_unavailable_records": 0,
+        "record_mean_dp_saving": 0.6551896182533474,
+        "record_mean_dp_saving_denominator": 46,
+        "record_mean_dp_saving_unavailable_records": 14,
+        "record_mean_common_coverage": 0.7544916169267962,
+        "record_mean_common_coverage_denominator": 60,
+        "record_mean_common_coverage_unavailable_records": 0,
+        "record_mean_common_max_error": 34.97803785320556,
+        "record_mean_common_max_error_denominator": 46,
+        "record_mean_common_max_error_unavailable_records": 14,
+        "record_mean_common_mean_error": 2.289898418375809,
+        "record_mean_common_mean_error_denominator": 46,
+        "record_mean_common_mean_error_unavailable_records": 14,
+        "filter_reason_segments": {
+          "TOO_FEW_POINTS": 24,
+          "TOO_SHORT_LENGTH": 27
+        },
+        "filter_reason_points": {
+          "TOO_FEW_POINTS": 60,
+          "TOO_SHORT_LENGTH": 1350
+        },
+        "direction_undefined_reasons": {
+          "ENDPOINT": 276,
+          "MISSING_FOLLOWING_OUTGOING_EDGE": 138,
+          "UNCOMPUTABLE_DIRECTION_IN_WINDOW": 795
+        },
+        "dp_checks_passed": true,
+        "aggregation_unit": "original_record; pooled counts explicitly identified"
+      }
+    },
+    {
+      "config_id": "cfg-24646b7acfafee8e",
+      "order": "S-D-P",
+      "independent_summary": {
+        "n_input": 6259,
+        "n_final": 1589,
+        "n_filtered": 1398,
+        "n_direction_removed": 240,
+        "n_dp_removed": 3032,
+        "n_dp_input": 4621,
+        "n_dp_output": 1589,
+        "n_dp_exceedances": 0,
+        "n_s_segments": 181,
+        "n_filtered_segments": 43,
+        "common_raw_points": 6259,
+        "common_covered_points": 4861,
+        "common_uncovered_points": 1398,
+        "common_over_5_points": 53,
+        "raw_break_count": 121,
+        "raw_break_crossings": 0,
+        "raw_breaks_crossed": 0,
+        "raw_break_trigger_points_removed": 45,
+        "raw_windows": 181,
+        "raw_windows_covered": 138,
+        "direction_candidate_points": 240,
+        "direction_undefined_points": 1209,
+        "direction_windows_across_raw_breaks": 0,
+        "p_removed_raw_break_trigger_points": 0,
+        "n_records": 60,
+        "n_records_covered": 46,
+        "n_all_filtered_records": 14,
+        "n_no_output_records": 14,
+        "point_retention": 0.253874420833999,
+        "point_retention_reason": null,
+        "record_coverage": 0.7666666666666667,
+        "record_coverage_reason": null,
+        "all_filtered_record_fraction": 0.23333333333333334,
+        "all_filtered_record_fraction_reason": null,
+        "no_output_record_fraction": 0.23333333333333334,
+        "no_output_record_fraction_reason": null,
+        "common_coverage": 0.7766416360440965,
+        "common_coverage_reason": null,
+        "dp_saving": 0.656135035706557,
+        "dp_saving_reason": null,
+        "dp_max_error": 4.995835006551938,
+        "dp_max_error_reason": null,
+        "common_max_error": 184.45720996185406,
+        "common_max_error_reason": null,
+        "record_mean_point_retention": 0.24336490416561019,
+        "record_mean_point_retention_denominator": 60,
+        "record_mean_point_retention_unavailable_records": 0,
+        "record_mean_dp_saving": 0.6567667492329144,
+        "record_mean_dp_saving_denominator": 46,
+        "record_mean_dp_saving_unavailable_records": 14,
+        "record_mean_common_coverage": 0.7544916169267962,
+        "record_mean_common_coverage_denominator": 60,
+        "record_mean_common_coverage_unavailable_records": 0,
+        "record_mean_common_max_error": 17.49813950034076,
+        "record_mean_common_max_error_denominator": 46,
+        "record_mean_common_max_error_unavailable_records": 14,
+        "record_mean_common_mean_error": 1.3124717702337845,
+        "record_mean_common_mean_error_denominator": 46,
+        "record_mean_common_mean_error_unavailable_records": 14,
+        "filter_reason_segments": {
+          "TOO_FEW_POINTS": 24,
+          "TOO_SHORT_LENGTH": 27
+        },
+        "filter_reason_points": {
+          "TOO_FEW_POINTS": 60,
+          "TOO_SHORT_LENGTH": 1350
+        },
+        "direction_undefined_reasons": {
+          "ENDPOINT": 276,
+          "MISSING_FOLLOWING_OUTGOING_EDGE": 138,
+          "UNCOMPUTABLE_DIRECTION_IN_WINDOW": 795
+        },
+        "dp_checks_passed": true,
+        "aggregation_unit": "original_record; pooled counts explicitly identified"
+      }
+    },
+    {
+      "config_id": "cfg-a5483ca9cb883a91",
+      "order": "S-D-P",
+      "independent_summary": {
+        "n_input": 6259,
+        "n_final": 1613,
+        "n_filtered": 1398,
+        "n_direction_removed": 160,
+        "n_dp_removed": 3088,
+        "n_dp_input": 4701,
+        "n_dp_output": 1613,
+        "n_dp_exceedances": 0,
+        "n_s_segments": 181,
+        "n_filtered_segments": 43,
+        "common_raw_points": 6259,
+        "common_covered_points": 4861,
+        "common_uncovered_points": 1398,
+        "common_over_5_points": 33,
+        "raw_break_count": 121,
+        "raw_break_crossings": 0,
+        "raw_breaks_crossed": 0,
+        "raw_break_trigger_points_removed": 45,
+        "raw_windows": 181,
+        "raw_windows_covered": 138,
+        "direction_candidate_points": 160,
+        "direction_undefined_points": 1209,
+        "direction_windows_across_raw_breaks": 0,
+        "p_removed_raw_break_trigger_points": 0,
+        "n_records": 60,
+        "n_records_covered": 46,
+        "n_all_filtered_records": 14,
+        "n_no_output_records": 14,
+        "point_retention": 0.25770889918517337,
+        "point_retention_reason": null,
+        "record_coverage": 0.7666666666666667,
+        "record_coverage_reason": null,
+        "all_filtered_record_fraction": 0.23333333333333334,
+        "all_filtered_record_fraction_reason": null,
+        "no_output_record_fraction": 0.23333333333333334,
+        "no_output_record_fraction_reason": null,
+        "common_coverage": 0.7766416360440965,
+        "common_coverage_reason": null,
+        "dp_saving": 0.6568815145713678,
+        "dp_saving_reason": null,
+        "dp_max_error": 4.999875072946156,
+        "dp_max_error_reason": null,
+        "common_max_error": 184.45720996185406,
+        "common_max_error_reason": null,
+        "record_mean_point_retention": 0.24685035647866427,
+        "record_mean_point_retention_denominator": 60,
+        "record_mean_point_retention_unavailable_records": 0,
+        "record_mean_dp_saving": 0.6579622755844312,
+        "record_mean_dp_saving_denominator": 46,
+        "record_mean_dp_saving_unavailable_records": 14,
+        "record_mean_common_coverage": 0.7544916169267962,
+        "record_mean_common_coverage_denominator": 60,
+        "record_mean_common_coverage_unavailable_records": 0,
+        "record_mean_common_max_error": 15.900672769748988,
+        "record_mean_common_max_error_denominator": 46,
+        "record_mean_common_max_error_unavailable_records": 14,
+        "record_mean_common_mean_error": 1.2589874304476933,
+        "record_mean_common_mean_error_denominator": 46,
+        "record_mean_common_mean_error_unavailable_records": 14,
+        "filter_reason_segments": {
+          "TOO_FEW_POINTS": 24,
+          "TOO_SHORT_LENGTH": 27
+        },
+        "filter_reason_points": {
+          "TOO_FEW_POINTS": 60,
+          "TOO_SHORT_LENGTH": 1350
+        },
+        "direction_undefined_reasons": {
+          "ENDPOINT": 276,
+          "MISSING_FOLLOWING_OUTGOING_EDGE": 138,
+          "UNCOMPUTABLE_DIRECTION_IN_WINDOW": 795
+        },
+        "dp_checks_passed": true,
+        "aggregation_unit": "original_record; pooled counts explicitly identified"
+      }
+    },
+    {
+      "config_id": "cfg-5f3726776663985b",
+      "order": "S-D-P",
+      "independent_summary": {
+        "n_input": 6259,
+        "n_final": 1543,
+        "n_filtered": 3516,
+        "n_direction_removed": 101,
+        "n_dp_removed": 1099,
+        "n_dp_input": 2642,
+        "n_dp_output": 1543,
+        "n_dp_exceedances": 0,
+        "n_s_segments": 1273,
+        "n_filtered_segments": 833,
+        "common_raw_points": 6259,
+        "common_covered_points": 2743,
+        "common_uncovered_points": 3516,
+        "common_over_5_points": 59,
+        "raw_break_count": 121,
+        "raw_break_crossings": 0,
+        "raw_breaks_crossed": 0,
+        "raw_break_trigger_points_removed": 88,
+        "raw_windows": 181,
+        "raw_windows_covered": 124,
+        "direction_candidate_points": 101,
+        "direction_undefined_points": 1387,
+        "direction_windows_across_raw_breaks": 0,
+        "p_removed_raw_break_trigger_points": 0,
+        "n_records": 60,
+        "n_records_covered": 38,
+        "n_all_filtered_records": 22,
+        "n_no_output_records": 22,
+        "point_retention": 0.2465250039942483,
+        "point_retention_reason": null,
+        "record_coverage": 0.6333333333333333,
+        "record_coverage_reason": null,
+        "all_filtered_record_fraction": 0.36666666666666664,
+        "all_filtered_record_fraction_reason": null,
+        "no_output_record_fraction": 0.36666666666666664,
+        "no_output_record_fraction_reason": null,
+        "common_coverage": 0.43824892155296374,
+        "common_coverage_reason": null,
+        "dp_saving": 0.4159727479182438,
+        "dp_saving_reason": null,
+        "dp_max_error": 4.989270973944105,
+        "dp_max_error_reason": null,
+        "common_max_error": 184.45720996185406,
+        "common_max_error_reason": null,
+        "record_mean_point_retention": 0.23505587481320428,
+        "record_mean_point_retention_denominator": 60,
+        "record_mean_point_retention_unavailable_records": 0,
+        "record_mean_dp_saving": 0.4169001242226577,
+        "record_mean_dp_saving_denominator": 38,
+        "record_mean_dp_saving_unavailable_records": 22,
+        "record_mean_common_coverage": 0.4167066951459832,
+        "record_mean_common_coverage_denominator": 60,
+        "record_mean_common_coverage_unavailable_records": 0,
+        "record_mean_common_max_error": 18.766597256367756,
+        "record_mean_common_max_error_denominator": 38,
+        "record_mean_common_max_error_unavailable_records": 22,
+        "record_mean_common_mean_error": 1.2024911953708992,
+        "record_mean_common_mean_error_denominator": 38,
+        "record_mean_common_mean_error_unavailable_records": 22,
+        "filter_reason_segments": {
+          "TOO_FEW_POINTS": 289,
+          "TOO_SHORT_LENGTH": 742
+        },
+        "filter_reason_points": {
+          "TOO_FEW_POINTS": 699,
+          "TOO_SHORT_LENGTH": 3238
+        },
+        "direction_undefined_reasons": {
+          "ENDPOINT": 880,
+          "MISSING_FOLLOWING_OUTGOING_EDGE": 440,
+          "UNCOMPUTABLE_DIRECTION_IN_WINDOW": 67
+        },
+        "dp_checks_passed": true,
+        "aggregation_unit": "original_record; pooled counts explicitly identified"
+      }
+    },
+    {
+      "config_id": "cfg-d4ff6528d1731c17",
+      "order": "S-D-P",
+      "independent_summary": {
+        "n_input": 6259,
+        "n_final": 1532,
+        "n_filtered": 1375,
+        "n_direction_removed": 392,
+        "n_dp_removed": 2960,
+        "n_dp_input": 4492,
+        "n_dp_output": 1532,
+        "n_dp_exceedances": 0,
+        "n_s_segments": 159,
+        "n_filtered_segments": 35,
+        "common_raw_points": 6259,
+        "common_covered_points": 4816,
+        "common_uncovered_points": 1443,
+        "common_over_5_points": 114,
+        "raw_break_count": 121,
+        "raw_break_crossings": 19,
+        "raw_breaks_crossed": 19,
+        "raw_break_trigger_points_removed": 58,
+        "raw_windows": 181,
+        "raw_windows_covered": 143,
+        "direction_candidate_points": 392,
+        "direction_undefined_points": 1167,
+        "direction_windows_across_raw_breaks": 54,
+        "p_removed_raw_break_trigger_points": 14,
+        "n_records": 60,
+        "n_records_covered": 46,
+        "n_all_filtered_records": 14,
+        "n_no_output_records": 14,
+        "point_retention": 0.24476753474996005,
+        "point_retention_reason": null,
+        "record_coverage": 0.7666666666666667,
+        "record_coverage_reason": null,
+        "all_filtered_record_fraction": 0.23333333333333334,
+        "all_filtered_record_fraction_reason": null,
+        "no_output_record_fraction": 0.23333333333333334,
+        "no_output_record_fraction_reason": null,
+        "common_coverage": 0.7694519891356447,
+        "common_coverage_reason": null,
+        "dp_saving": 0.6589492430988424,
+        "dp_saving_reason": null,
+        "dp_max_error": 4.988893781697602,
+        "dp_max_error_reason": null,
+        "common_max_error": 184.45720996185406,
+        "common_max_error_reason": null,
+        "record_mean_point_retention": 0.23499208128042412,
+        "record_mean_point_retention_denominator": 60,
+        "record_mean_point_retention_unavailable_records": 0,
+        "record_mean_dp_saving": 0.6591198034810718,
+        "record_mean_dp_saving_denominator": 46,
+        "record_mean_dp_saving_unavailable_records": 14,
+        "record_mean_common_coverage": 0.7476880488741023,
+        "record_mean_common_coverage_denominator": 60,
+        "record_mean_common_coverage_unavailable_records": 0,
+        "record_mean_common_max_error": 23.135981264770606,
+        "record_mean_common_max_error_denominator": 46,
+        "record_mean_common_max_error_unavailable_records": 14,
+        "record_mean_common_mean_error": 1.5769230067325328,
+        "record_mean_common_mean_error_denominator": 46,
+        "record_mean_common_mean_error_unavailable_records": 14,
+        "filter_reason_segments": {
+          "TOO_FEW_POINTS": 20,
+          "TOO_SHORT_LENGTH": 20
+        },
+        "filter_reason_points": {
+          "TOO_FEW_POINTS": 52,
+          "TOO_SHORT_LENGTH": 1329
+        },
+        "direction_undefined_reasons": {
+          "ENDPOINT": 248,
+          "MISSING_FOLLOWING_OUTGOING_EDGE": 124,
+          "UNCOMPUTABLE_DIRECTION_IN_WINDOW": 795
+        },
+        "dp_checks_passed": true,
+        "aggregation_unit": "original_record; pooled counts explicitly identified"
+      }
+    },
+    {
+      "config_id": "cfg-0ad662cd1af68eaf",
+      "order": "S-D-P",
+      "independent_summary": {
+        "n_input": 6259,
+        "n_final": 818,
+        "n_filtered": 3235,
+        "n_direction_removed": 300,
+        "n_dp_removed": 1906,
+        "n_dp_input": 2724,
+        "n_dp_output": 818,
+        "n_dp_exceedances": 0,
+        "n_s_segments": 1576,
+        "n_filtered_segments": 1388,
+        "common_raw_points": 6259,
+        "common_covered_points": 3024,
+        "common_uncovered_points": 3235,
+        "common_over_5_points": 64,
+        "raw_break_count": 121,
+        "raw_break_crossings": 0,
+        "raw_breaks_crossed": 0,
+        "raw_break_trigger_points_removed": 217,
+        "raw_windows": 181,
+        "raw_windows_covered": 66,
+        "direction_candidate_points": 300,
+        "direction_undefined_points": 1224,
+        "direction_windows_across_raw_breaks": 0,
+        "p_removed_raw_break_trigger_points": 0,
+        "n_records": 60,
+        "n_records_covered": 44,
+        "n_all_filtered_records": 16,
+        "n_no_output_records": 16,
+        "point_retention": 0.13069180380252438,
+        "point_retention_reason": null,
+        "record_coverage": 0.7333333333333333,
+        "record_coverage_reason": null,
+        "all_filtered_record_fraction": 0.26666666666666666,
+        "all_filtered_record_fraction_reason": null,
+        "no_output_record_fraction": 0.26666666666666666,
+        "no_output_record_fraction_reason": null,
+        "common_coverage": 0.4831442722479629,
+        "common_coverage_reason": null,
+        "dp_saving": 0.6997063142437592,
+        "dp_saving_reason": null,
+        "dp_max_error": 4.991300871447325,
+        "dp_max_error_reason": null,
+        "common_max_error": 37.373531119769865,
+        "common_max_error_reason": null,
+        "record_mean_point_retention": 0.12248573280116982,
+        "record_mean_point_retention_denominator": 60,
+        "record_mean_point_retention_unavailable_records": 0,
+        "record_mean_dp_saving": 0.6455663078756033,
+        "record_mean_dp_saving_denominator": 44,
+        "record_mean_dp_saving_unavailable_records": 16,
+        "record_mean_common_coverage": 0.4685825095848753,
+        "record_mean_common_coverage_denominator": 60,
+        "record_mean_common_coverage_unavailable_records": 0,
+        "record_mean_common_max_error": 10.486903945493411,
+        "record_mean_common_max_error_denominator": 44,
+        "record_mean_common_max_error_unavailable_records": 16,
+        "record_mean_common_mean_error": 1.2453289059491042,
+        "record_mean_common_mean_error_denominator": 44,
+        "record_mean_common_mean_error_unavailable_records": 16,
+        "filter_reason_segments": {
+          "TOO_SHORT_LENGTH": 1303,
+          "TOO_FEW_POINTS": 1336
+        },
+        "filter_reason_points": {
+          "TOO_FEW_POINTS": 1665,
+          "TOO_SHORT_LENGTH": 2966
+        },
+        "direction_undefined_reasons": {
+          "ENDPOINT": 376,
+          "MISSING_FOLLOWING_OUTGOING_EDGE": 188,
+          "UNCOMPUTABLE_DIRECTION_IN_WINDOW": 660
+        },
+        "dp_checks_passed": true,
+        "aggregation_unit": "original_record; pooled counts explicitly identified"
+      }
+    },
+    {
+      "config_id": "cfg-7261bd230cb316ee",
+      "order": "S-D-P",
+      "independent_summary": {
+        "n_input": 6259,
+        "n_final": 1536,
+        "n_filtered": 1351,
+        "n_direction_removed": 382,
+        "n_dp_removed": 2990,
+        "n_dp_input": 4526,
+        "n_dp_output": 1536,
+        "n_dp_exceedances": 0,
+        "n_s_segments": 95,
+        "n_filtered_segments": 26,
+        "common_raw_points": 6259,
+        "common_covered_points": 4795,
+        "common_uncovered_points": 1464,
+        "common_over_5_points": 118,
+        "raw_break_count": 121,
+        "raw_break_crossings": 83,
+        "raw_breaks_crossed": 86,
+        "raw_break_trigger_points_removed": 70,
+        "raw_windows": 181,
+        "raw_windows_covered": 152,
+        "direction_candidate_points": 382,
+        "direction_undefined_points": 1002,
+        "direction_windows_across_raw_breaks": 249,
+        "p_removed_raw_break_trigger_points": 47,
+        "n_records": 60,
+        "n_records_covered": 46,
+        "n_all_filtered_records": 14,
+        "n_no_output_records": 14,
+        "point_retention": 0.24540661447515577,
+        "point_retention_reason": null,
+        "record_coverage": 0.7666666666666667,
+        "record_coverage_reason": null,
+        "all_filtered_record_fraction": 0.23333333333333334,
+        "all_filtered_record_fraction_reason": null,
+        "no_output_record_fraction": 0.23333333333333334,
+        "no_output_record_fraction_reason": null,
+        "common_coverage": 0.7660968205783671,
+        "common_coverage_reason": null,
+        "dp_saving": 0.6606274856385329,
+        "dp_saving_reason": null,
+        "dp_max_error": 4.989313004438724,
+        "dp_max_error_reason": null,
+        "common_max_error": 184.45720996185406,
+        "common_max_error_reason": null,
+        "record_mean_point_retention": 0.23558761763823666,
+        "record_mean_point_retention_denominator": 60,
+        "record_mean_point_retention_unavailable_records": 0,
+        "record_mean_dp_saving": 0.6638452075084261,
+        "record_mean_dp_saving_denominator": 46,
+        "record_mean_dp_saving_unavailable_records": 14,
+        "record_mean_common_coverage": 0.7438592496778048,
+        "record_mean_common_coverage_denominator": 60,
+        "record_mean_common_coverage_unavailable_records": 0,
+        "record_mean_common_max_error": 24.238153069507213,
+        "record_mean_common_max_error_denominator": 46,
+        "record_mean_common_max_error_unavailable_records": 14,
+        "record_mean_common_mean_error": 1.587285881231809,
+        "record_mean_common_mean_error_denominator": 46,
+        "record_mean_common_mean_error_unavailable_records": 14,
+        "filter_reason_segments": {
+          "TOO_FEW_POINTS": 7,
+          "TOO_SHORT_LENGTH": 24
+        },
+        "filter_reason_points": {
+          "TOO_FEW_POINTS": 13,
+          "TOO_SHORT_LENGTH": 1347
+        },
+        "direction_undefined_reasons": {
+          "ENDPOINT": 138,
+          "MISSING_FOLLOWING_OUTGOING_EDGE": 69,
+          "UNCOMPUTABLE_DIRECTION_IN_WINDOW": 795
+        },
+        "dp_checks_passed": true,
+        "aggregation_unit": "original_record; pooled counts explicitly identified"
+      }
+    },
+    {
+      "config_id": "cfg-6599edd5fcbf75b1",
+      "order": "S-D-P",
+      "independent_summary": {
+        "n_input": 6259,
+        "n_final": 1580,
+        "n_filtered": 1350,
+        "n_direction_removed": 375,
+        "n_dp_removed": 2954,
+        "n_dp_input": 4534,
+        "n_dp_output": 1580,
+        "n_dp_exceedances": 0,
+        "n_s_segments": 181,
+        "n_filtered_segments": 27,
+        "common_raw_points": 6259,
+        "common_covered_points": 4909,
+        "common_uncovered_points": 1350,
+        "common_over_5_points": 118,
+        "raw_break_count": 121,
+        "raw_break_crossings": 0,
+        "raw_breaks_crossed": 0,
+        "raw_break_trigger_points_removed": 19,
+        "raw_windows": 181,
+        "raw_windows_covered": 154,
+        "direction_candidate_points": 375,
+        "direction_undefined_points": 1252,
+        "direction_windows_across_raw_breaks": 0,
+        "p_removed_raw_break_trigger_points": 0,
+        "n_records": 60,
+        "n_records_covered": 46,
+        "n_all_filtered_records": 14,
+        "n_no_output_records": 14,
+        "point_retention": 0.2524364914523087,
+        "point_retention_reason": null,
+        "record_coverage": 0.7666666666666667,
+        "record_coverage_reason": null,
+        "all_filtered_record_fraction": 0.23333333333333334,
+        "all_filtered_record_fraction_reason": null,
+        "no_output_record_fraction": 0.23333333333333334,
+        "no_output_record_fraction_reason": null,
+        "common_coverage": 0.7843105927464451,
+        "common_coverage_reason": null,
+        "dp_saving": 0.6515218350242611,
+        "dp_saving_reason": null,
+        "dp_max_error": 4.989313004438724,
+        "dp_max_error_reason": null,
+        "common_max_error": 184.45720996185406,
+        "common_max_error_reason": null,
+        "record_mean_point_retention": 0.24259432013361307,
+        "record_mean_point_retention_denominator": 60,
+        "record_mean_point_retention_unavailable_records": 0,
+        "record_mean_dp_saving": 0.6552028334046663,
+        "record_mean_dp_saving_denominator": 46,
+        "record_mean_dp_saving_unavailable_records": 14,
+        "record_mean_common_coverage": 0.7622352837644671,
+        "record_mean_common_coverage_denominator": 60,
+        "record_mean_common_coverage_unavailable_records": 0,
+        "record_mean_common_max_error": 23.683959375173423,
+        "record_mean_common_max_error_denominator": 46,
+        "record_mean_common_max_error_unavailable_records": 14,
+        "record_mean_common_mean_error": 1.5548880420304556,
+        "record_mean_common_mean_error_denominator": 46,
+        "record_mean_common_mean_error_unavailable_records": 14,
+        "filter_reason_segments": {
+          "TOO_FEW_POINTS": 6,
+          "TOO_SHORT_LENGTH": 27
+        },
+        "filter_reason_points": {
+          "TOO_FEW_POINTS": 6,
+          "TOO_SHORT_LENGTH": 1350
+        },
+        "direction_undefined_reasons": {
+          "ENDPOINT": 308,
+          "MISSING_FOLLOWING_OUTGOING_EDGE": 149,
+          "UNCOMPUTABLE_DIRECTION_IN_WINDOW": 795
+        },
+        "dp_checks_passed": true,
+        "aggregation_unit": "original_record; pooled counts explicitly identified"
+      }
+    },
+    {
+      "config_id": "cfg-d4df6d869dc800d6",
+      "order": "S-D-P",
+      "independent_summary": {
+        "n_input": 6259,
+        "n_final": 1570,
+        "n_filtered": 1360,
+        "n_direction_removed": 375,
+        "n_dp_removed": 2954,
+        "n_dp_input": 4524,
+        "n_dp_output": 1570,
+        "n_dp_exceedances": 0,
+        "n_s_segments": 181,
+        "n_filtered_segments": 32,
+        "common_raw_points": 6259,
+        "common_covered_points": 4899,
+        "common_uncovered_points": 1360,
+        "common_over_5_points": 118,
+        "raw_break_count": 121,
+        "raw_break_crossings": 0,
+        "raw_breaks_crossed": 0,
+        "raw_break_trigger_points_removed": 27,
+        "raw_windows": 181,
+        "raw_windows_covered": 149,
+        "direction_candidate_points": 375,
+        "direction_undefined_points": 1242,
+        "direction_windows_across_raw_breaks": 0,
+        "p_removed_raw_break_trigger_points": 0,
+        "n_records": 60,
+        "n_records_covered": 46,
+        "n_all_filtered_records": 14,
+        "n_no_output_records": 14,
+        "point_retention": 0.25083879213931937,
+        "point_retention_reason": null,
+        "record_coverage": 0.7666666666666667,
+        "record_coverage_reason": null,
+        "all_filtered_record_fraction": 0.23333333333333334,
+        "all_filtered_record_fraction_reason": null,
+        "no_output_record_fraction": 0.23333333333333334,
+        "no_output_record_fraction_reason": null,
+        "common_coverage": 0.7827128934334558,
+        "common_coverage_reason": null,
+        "dp_saving": 0.6529619805481874,
+        "dp_saving_reason": null,
+        "dp_max_error": 4.989313004438724,
+        "dp_max_error_reason": null,
+        "common_max_error": 184.45720996185406,
+        "common_max_error_reason": null,
+        "record_mean_point_retention": 0.2409496757004356,
+        "record_mean_point_retention_denominator": 60,
+        "record_mean_point_retention_unavailable_records": 0,
+        "record_mean_dp_saving": 0.6559945619177511,
+        "record_mean_dp_saving_denominator": 46,
+        "record_mean_dp_saving_unavailable_records": 14,
+        "record_mean_common_coverage": 0.7605906393312896,
+        "record_mean_common_coverage_denominator": 60,
+        "record_mean_common_coverage_unavailable_records": 0,
+        "record_mean_common_max_error": 23.683959375173423,
+        "record_mean_common_max_error_denominator": 46,
+        "record_mean_common_max_error_unavailable_records": 14,
+        "record_mean_common_mean_error": 1.5599726633465654,
+        "record_mean_common_mean_error_denominator": 46,
+        "record_mean_common_mean_error_unavailable_records": 14,
+        "filter_reason_segments": {
+          "TOO_FEW_POINTS": 12,
+          "TOO_SHORT_LENGTH": 27
+        },
+        "filter_reason_points": {
+          "TOO_FEW_POINTS": 18,
+          "TOO_SHORT_LENGTH": 1350
+        },
+        "direction_undefined_reasons": {
+          "ENDPOINT": 298,
+          "MISSING_FOLLOWING_OUTGOING_EDGE": 149,
+          "UNCOMPUTABLE_DIRECTION_IN_WINDOW": 795
+        },
+        "dp_checks_passed": true,
+        "aggregation_unit": "original_record; pooled counts explicitly identified"
+      }
+    },
+    {
+      "config_id": "cfg-38b5af70752afcf3",
+      "order": "S-D-P",
+      "independent_summary": {
+        "n_input": 6259,
+        "n_final": 1343,
+        "n_filtered": 1669,
+        "n_direction_removed": 374,
+        "n_dp_removed": 2873,
+        "n_dp_input": 4216,
+        "n_dp_output": 1343,
+        "n_dp_exceedances": 0,
+        "n_s_segments": 181,
+        "n_filtered_segments": 97,
+        "common_raw_points": 6259,
+        "common_covered_points": 4590,
+        "common_uncovered_points": 1669,
+        "common_over_5_points": 117,
+        "raw_break_count": 121,
+        "raw_break_crossings": 0,
+        "raw_breaks_crossed": 0,
+        "raw_break_trigger_points_removed": 152,
+        "raw_windows": 181,
+        "raw_windows_covered": 84,
+        "direction_candidate_points": 374,
+        "direction_undefined_points": 1047,
+        "direction_windows_across_raw_breaks": 0,
+        "p_removed_raw_break_trigger_points": 0,
+        "n_records": 60,
+        "n_records_covered": 45,
+        "n_all_filtered_records": 15,
+        "n_no_output_records": 15,
+        "point_retention": 0.21457101773446238,
+        "point_retention_reason": null,
+        "record_coverage": 0.75,
+        "record_coverage_reason": null,
+        "all_filtered_record_fraction": 0.25,
+        "all_filtered_record_fraction_reason": null,
+        "no_output_record_fraction": 0.25,
+        "no_output_record_fraction_reason": null,
+        "common_coverage": 0.7333439846620866,
+        "common_coverage_reason": null,
+        "dp_saving": 0.6814516129032258,
+        "dp_saving_reason": null,
+        "dp_max_error": 4.989313004438724,
+        "dp_max_error_reason": null,
+        "common_max_error": 113.69653629607582,
+        "common_max_error_reason": null,
+        "record_mean_point_retention": 0.20424296156082974,
+        "record_mean_point_retention_denominator": 60,
+        "record_mean_point_retention_unavailable_records": 0,
+        "record_mean_dp_saving": 0.6710937434350308,
+        "record_mean_dp_saving_denominator": 45,
+        "record_mean_dp_saving_unavailable_records": 15,
+        "record_mean_common_coverage": 0.7106540802104792,
+        "record_mean_common_coverage_denominator": 60,
+        "record_mean_common_coverage_unavailable_records": 0,
+        "record_mean_common_max_error": 21.391355128124996,
+        "record_mean_common_max_error_denominator": 45,
+        "record_mean_common_max_error_unavailable_records": 15,
+        "record_mean_common_mean_error": 1.6284121524792292,
+        "record_mean_common_mean_error_denominator": 45,
+        "record_mean_common_mean_error_unavailable_records": 15,
+        "filter_reason_segments": {
+          "TOO_FEW_POINTS": 78,
+          "TOO_SHORT_LENGTH": 27
+        },
+        "filter_reason_points": {
+          "TOO_FEW_POINTS": 331,
+          "TOO_SHORT_LENGTH": 1350
+        },
+        "direction_undefined_reasons": {
+          "ENDPOINT": 168,
+          "MISSING_FOLLOWING_OUTGOING_EDGE": 84,
+          "UNCOMPUTABLE_DIRECTION_IN_WINDOW": 795
+        },
+        "dp_checks_passed": true,
+        "aggregation_unit": "original_record; pooled counts explicitly identified"
+      }
+    },
+    {
+      "config_id": "cfg-63139d05595c253c",
+      "order": "S-D-P",
+      "independent_summary": {
+        "n_input": 6259,
+        "n_final": 1581,
+        "n_filtered": 60,
+        "n_direction_removed": 405,
+        "n_dp_removed": 4213,
+        "n_dp_input": 5794,
+        "n_dp_output": 1581,
+        "n_dp_exceedances": 0,
+        "n_s_segments": 181,
+        "n_filtered_segments": 24,
+        "common_raw_points": 6259,
+        "common_covered_points": 6199,
+        "common_uncovered_points": 60,
+        "common_over_5_points": 122,
+        "raw_break_count": 121,
+        "raw_break_crossings": 0,
+        "raw_breaks_crossed": 0,
+        "raw_break_trigger_points_removed": 35,
+        "raw_windows": 181,
+        "raw_windows_covered": 157,
+        "direction_candidate_points": 405,
+        "direction_undefined_points": 2493,
+        "direction_windows_across_raw_breaks": 0,
+        "p_removed_raw_break_trigger_points": 0,
+        "n_records": 60,
+        "n_records_covered": 60,
+        "n_all_filtered_records": 0,
+        "n_no_output_records": 0,
+        "point_retention": 0.2525962613836076,
+        "point_retention_reason": null,
+        "record_coverage": 1.0,
+        "record_coverage_reason": null,
+        "all_filtered_record_fraction": 0.0,
+        "all_filtered_record_fraction_reason": null,
+        "no_output_record_fraction": 0.0,
+        "no_output_record_fraction_reason": null,
+        "common_coverage": 0.9904138041220643,
+        "common_coverage_reason": null,
+        "dp_saving": 0.727131515360718,
+        "dp_saving_reason": null,
+        "dp_max_error": 4.989313004438724,
+        "dp_max_error_reason": null,
+        "common_max_error": 184.45720996185406,
+        "common_max_error_reason": null,
+        "record_mean_point_retention": 0.24441896030727508,
+        "record_mean_point_retention_denominator": 60,
+        "record_mean_point_retention_unavailable_records": 0,
+        "record_mean_dp_saving": 0.7274881355049784,
+        "record_mean_dp_saving_denominator": 60,
+        "record_mean_dp_saving_unavailable_records": 0,
+        "record_mean_common_coverage": 0.9902692613178861,
+        "record_mean_common_coverage_denominator": 60,
+        "record_mean_common_coverage_unavailable_records": 0,
+        "record_mean_common_max_error": 18.527766719708556,
+        "record_mean_common_max_error_denominator": 60,
+        "record_mean_common_max_error_unavailable_records": 0,
+        "record_mean_common_mean_error": 1.3671776062286303,
+        "record_mean_common_mean_error_denominator": 60,
+        "record_mean_common_mean_error_unavailable_records": 0,
+        "filter_reason_segments": {
+          "TOO_FEW_POINTS": 24
+        },
+        "filter_reason_points": {
+          "TOO_FEW_POINTS": 60
+        },
+        "direction_undefined_reasons": {
+          "ENDPOINT": 314,
+          "MISSING_FOLLOWING_OUTGOING_EDGE": 157,
+          "UNCOMPUTABLE_DIRECTION_IN_WINDOW": 2022
+        },
+        "dp_checks_passed": true,
+        "aggregation_unit": "original_record; pooled counts explicitly identified"
+      }
+    },
+    {
+      "config_id": "cfg-5279f18a16a391af",
+      "order": "S-D-P",
+      "independent_summary": {
+        "n_input": 6259,
+        "n_final": 1547,
+        "n_filtered": 1382,
+        "n_direction_removed": 382,
+        "n_dp_removed": 2948,
+        "n_dp_input": 4495,
+        "n_dp_output": 1547,
+        "n_dp_exceedances": 0,
+        "n_s_segments": 181,
+        "n_filtered_segments": 41,
+        "common_raw_points": 6259,
+        "common_covered_points": 4877,
+        "common_uncovered_points": 1382,
+        "common_over_5_points": 122,
+        "raw_break_count": 121,
+        "raw_break_crossings": 0,
+        "raw_breaks_crossed": 0,
+        "raw_break_trigger_points_removed": 42,
+        "raw_windows": 181,
+        "raw_windows_covered": 140,
+        "direction_candidate_points": 382,
+        "direction_undefined_points": 1215,
+        "direction_windows_across_raw_breaks": 0,
+        "p_removed_raw_break_trigger_points": 0,
+        "n_records": 60,
+        "n_records_covered": 46,
+        "n_all_filtered_records": 14,
+        "n_no_output_records": 14,
+        "point_retention": 0.247164083719444,
+        "point_retention_reason": null,
+        "record_coverage": 0.7666666666666667,
+        "record_coverage_reason": null,
+        "all_filtered_record_fraction": 0.23333333333333334,
+        "all_filtered_record_fraction_reason": null,
+        "no_output_record_fraction": 0.23333333333333334,
+        "no_output_record_fraction_reason": null,
+        "common_coverage": 0.7791979549448794,
+        "common_coverage_reason": null,
+        "dp_saving": 0.6558398220244717,
+        "dp_saving_reason": null,
+        "dp_max_error": 4.989313004438724,
+        "dp_max_error_reason": null,
+        "common_max_error": 184.45720996185406,
+        "common_max_error_reason": null,
+        "record_mean_point_retention": 0.2372945617345031,
+        "record_mean_point_retention_denominator": 60,
+        "record_mean_point_retention_unavailable_records": 0,
+        "record_mean_dp_saving": 0.6560569053399632,
+        "record_mean_dp_saving_denominator": 46,
+        "record_mean_dp_saving_unavailable_records": 14,
+        "record_mean_common_coverage": 0.7571059960117635,
+        "record_mean_common_coverage_denominator": 60,
+        "record_mean_common_coverage_unavailable_records": 0,
+        "record_mean_common_max_error": 23.683959375173423,
+        "record_mean_common_max_error_denominator": 46,
+        "record_mean_common_max_error_unavailable_records": 14,
+        "record_mean_common_mean_error": 1.589028665958035,
+        "record_mean_common_mean_error_denominator": 46,
+        "record_mean_common_mean_error_unavailable_records": 14,
+        "filter_reason_segments": {
+          "TOO_FEW_POINTS": 24,
+          "TOO_SHORT_LENGTH": 25
+        },
+        "filter_reason_points": {
+          "TOO_FEW_POINTS": 60,
+          "TOO_SHORT_LENGTH": 1334
+        },
+        "direction_undefined_reasons": {
+          "ENDPOINT": 280,
+          "MISSING_FOLLOWING_OUTGOING_EDGE": 140,
+          "UNCOMPUTABLE_DIRECTION_IN_WINDOW": 795
+        },
+        "dp_checks_passed": true,
+        "aggregation_unit": "original_record; pooled counts explicitly identified"
+      }
+    },
+    {
+      "config_id": "cfg-dc3bdca5d6cb9c1f",
+      "order": "S-D-P",
+      "independent_summary": {
+        "n_input": 6259,
+        "n_final": 1522,
+        "n_filtered": 1632,
+        "n_direction_removed": 348,
+        "n_dp_removed": 2757,
+        "n_dp_input": 4279,
+        "n_dp_output": 1522,
+        "n_dp_exceedances": 0,
+        "n_s_segments": 181,
+        "n_filtered_segments": 47,
+        "common_raw_points": 6259,
+        "common_covered_points": 4627,
+        "common_uncovered_points": 1632,
+        "common_over_5_points": 115,
+        "raw_break_count": 121,
+        "raw_break_crossings": 0,
+        "raw_breaks_crossed": 0,
+        "raw_break_trigger_points_removed": 49,
+        "raw_windows": 181,
+        "raw_windows_covered": 134,
+        "direction_candidate_points": 348,
+        "direction_undefined_points": 1092,
+        "direction_windows_across_raw_breaks": 0,
+        "p_removed_raw_break_trigger_points": 0,
+        "n_records": 60,
+        "n_records_covered": 44,
+        "n_all_filtered_records": 16,
+        "n_no_output_records": 16,
+        "point_retention": 0.24316983543697077,
+        "point_retention_reason": null,
+        "record_coverage": 0.7333333333333333,
+        "record_coverage_reason": null,
+        "all_filtered_record_fraction": 0.26666666666666666,
+        "all_filtered_record_fraction_reason": null,
+        "no_output_record_fraction": 0.26666666666666666,
+        "no_output_record_fraction_reason": null,
+        "common_coverage": 0.739255472120147,
+        "common_coverage_reason": null,
+        "dp_saving": 0.6443094180883384,
+        "dp_saving_reason": null,
+        "dp_max_error": 4.988893781697602,
+        "dp_max_error_reason": null,
+        "common_max_error": 184.45720996185406,
+        "common_max_error_reason": null,
+        "record_mean_point_retention": 0.23317344864280176,
+        "record_mean_point_retention_denominator": 60,
+        "record_mean_point_retention_unavailable_records": 0,
+        "record_mean_dp_saving": 0.6428374189483972,
+        "record_mean_dp_saving_denominator": 44,
+        "record_mean_dp_saving_unavailable_records": 16,
+        "record_mean_common_coverage": 0.7154393293450969,
+        "record_mean_common_coverage_denominator": 60,
+        "record_mean_common_coverage_unavailable_records": 0,
+        "record_mean_common_max_error": 24.55520570177432,
+        "record_mean_common_max_error_denominator": 44,
+        "record_mean_common_max_error_unavailable_records": 16,
+        "record_mean_common_mean_error": 1.5934018527650589,
+        "record_mean_common_mean_error_denominator": 44,
+        "record_mean_common_mean_error_unavailable_records": 16,
+        "filter_reason_segments": {
+          "TOO_FEW_POINTS": 24,
+          "TOO_SHORT_LENGTH": 32
+        },
+        "filter_reason_points": {
+          "TOO_FEW_POINTS": 60,
+          "TOO_SHORT_LENGTH": 1586
+        },
+        "direction_undefined_reasons": {
+          "ENDPOINT": 268,
+          "MISSING_FOLLOWING_OUTGOING_EDGE": 134,
+          "UNCOMPUTABLE_DIRECTION_IN_WINDOW": 690
+        },
+        "dp_checks_passed": true,
+        "aggregation_unit": "original_record; pooled counts explicitly identified"
+      }
+    }
+  ],
+  "memory": {
+    "snapshot_sha256": "2330543c3a443532891936ac29d4080cb6e5f45c58e2976cc81c8fa67c6607d6",
+    "demo_entries": 60,
+    "retrieval_checks": [
+      {
+        "record_id": "3549",
+        "partition": "DEVELOPMENT",
+        "eligible": 7,
+        "delivered": [
+          "DEMO-2125",
+          "DEMO-2065",
+          "DEMO-8194"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "3203",
+        "partition": "DEVELOPMENT",
+        "eligible": 7,
+        "delivered": [
+          "DEMO-8194",
+          "DEMO-11076",
+          "DEMO-2065"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "867",
+        "partition": "DEVELOPMENT",
+        "eligible": 7,
+        "delivered": [
+          "DEMO-2125",
+          "DEMO-9636",
+          "DEMO-2065"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "10449",
+        "partition": "DEVELOPMENT",
+        "eligible": 7,
+        "delivered": [
+          "DEMO-2065",
+          "DEMO-8194",
+          "DEMO-11076"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "2308",
+        "partition": "DEVELOPMENT",
+        "eligible": 7,
+        "delivered": [
+          "DEMO-2125",
+          "DEMO-9636",
+          "DEMO-2065"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "11355",
+        "partition": "DEVELOPMENT",
+        "eligible": 7,
+        "delivered": [
+          "DEMO-2065",
+          "DEMO-11076",
+          "DEMO-9600"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "3357",
+        "partition": "DEVELOPMENT",
+        "eligible": 7,
+        "delivered": [
+          "DEMO-2065",
+          "DEMO-8194",
+          "DEMO-11076"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "9779",
+        "partition": "DEVELOPMENT",
+        "eligible": 7,
+        "delivered": [
+          "DEMO-3456",
+          "DEMO-9600",
+          "DEMO-11076"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "4773",
+        "partition": "DEVELOPMENT",
+        "eligible": 7,
+        "delivered": [
+          "DEMO-2125",
+          "DEMO-2065",
+          "DEMO-8194"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "3291",
+        "partition": "DEVELOPMENT",
+        "eligible": 7,
+        "delivered": [
+          "DEMO-3456",
+          "DEMO-9600",
+          "DEMO-2065"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "10433",
+        "partition": "DEVELOPMENT",
+        "eligible": 7,
+        "delivered": [
+          "DEMO-9636",
+          "DEMO-2125",
+          "DEMO-2065"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "9994",
+        "partition": "DEVELOPMENT",
+        "eligible": 7,
+        "delivered": [
+          "DEMO-9600",
+          "DEMO-11076",
+          "DEMO-3456"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "1944",
+        "partition": "DEVELOPMENT",
+        "eligible": 7,
+        "delivered": [
+          "DEMO-9820",
+          "DEMO-10471",
+          "DEMO-2254"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "8430",
+        "partition": "DEVELOPMENT",
+        "eligible": 7,
+        "delivered": [
+          "DEMO-5605",
+          "DEMO-10417",
+          "DEMO-8718"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "1860",
+        "partition": "DEVELOPMENT",
+        "eligible": 7,
+        "delivered": [
+          "DEMO-9820",
+          "DEMO-10471",
+          "DEMO-2254"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "9222",
+        "partition": "DEVELOPMENT",
+        "eligible": 7,
+        "delivered": [
+          "DEMO-10471",
+          "DEMO-9820",
+          "DEMO-8718"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "5431",
+        "partition": "DEVELOPMENT",
+        "eligible": 7,
+        "delivered": [
+          "DEMO-10471",
+          "DEMO-9820",
+          "DEMO-8718"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "9145",
+        "partition": "DEVELOPMENT",
+        "eligible": 7,
+        "delivered": [
+          "DEMO-5605",
+          "DEMO-10417",
+          "DEMO-8718"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "7186",
+        "partition": "DEVELOPMENT",
+        "eligible": 7,
+        "delivered": [
+          "DEMO-10417",
+          "DEMO-8718",
+          "DEMO-5605"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "11326",
+        "partition": "DEVELOPMENT",
+        "eligible": 7,
+        "delivered": [
+          "DEMO-661",
+          "DEMO-10471",
+          "DEMO-8718"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "4378",
+        "partition": "DEVELOPMENT",
+        "eligible": 7,
+        "delivered": [
+          "DEMO-8718",
+          "DEMO-10471",
+          "DEMO-2254"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "11021",
+        "partition": "DEVELOPMENT",
+        "eligible": 7,
+        "delivered": [
+          "DEMO-8718",
+          "DEMO-10471",
+          "DEMO-2254"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "5049",
+        "partition": "DEVELOPMENT",
+        "eligible": 7,
+        "delivered": [
+          "DEMO-9820",
+          "DEMO-10471",
+          "DEMO-2254"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "4381",
+        "partition": "DEVELOPMENT",
+        "eligible": 7,
+        "delivered": [
+          "DEMO-8718",
+          "DEMO-10471",
+          "DEMO-10417"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "1378",
+        "partition": "DEVELOPMENT",
+        "eligible": 7,
+        "delivered": [
+          "DEMO-1837",
+          "DEMO-9491",
+          "DEMO-7057"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "9613",
+        "partition": "DEVELOPMENT",
+        "eligible": 7,
+        "delivered": [
+          "DEMO-10744",
+          "DEMO-8843",
+          "DEMO-1837"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "1605",
+        "partition": "DEVELOPMENT",
+        "eligible": 7,
+        "delivered": [
+          "DEMO-10744",
+          "DEMO-8843",
+          "DEMO-9491"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "6831",
+        "partition": "DEVELOPMENT",
+        "eligible": 7,
+        "delivered": [
+          "DEMO-10744",
+          "DEMO-1837",
+          "DEMO-7057"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "2150",
+        "partition": "DEVELOPMENT",
+        "eligible": 7,
+        "delivered": [
+          "DEMO-4458",
+          "DEMO-3009",
+          "DEMO-7057"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "1076",
+        "partition": "DEVELOPMENT",
+        "eligible": 7,
+        "delivered": [
+          "DEMO-10744",
+          "DEMO-8843",
+          "DEMO-1837"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "3189",
+        "partition": "DEVELOPMENT",
+        "eligible": 7,
+        "delivered": [
+          "DEMO-3009",
+          "DEMO-4458",
+          "DEMO-9491"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "8246",
+        "partition": "DEVELOPMENT",
+        "eligible": 7,
+        "delivered": [
+          "DEMO-1837",
+          "DEMO-7057",
+          "DEMO-9491"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "11017",
+        "partition": "DEVELOPMENT",
+        "eligible": 7,
+        "delivered": [
+          "DEMO-8843",
+          "DEMO-10744",
+          "DEMO-1837"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "3680",
+        "partition": "DEVELOPMENT",
+        "eligible": 7,
+        "delivered": [
+          "DEMO-8843",
+          "DEMO-1837",
+          "DEMO-10744"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "6412",
+        "partition": "DEVELOPMENT",
+        "eligible": 7,
+        "delivered": [
+          "DEMO-9491",
+          "DEMO-7057",
+          "DEMO-3009"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "2069",
+        "partition": "DEVELOPMENT",
+        "eligible": 7,
+        "delivered": [
+          "DEMO-3009",
+          "DEMO-4458",
+          "DEMO-9491"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "6596",
+        "partition": "DEVELOPMENT",
+        "eligible": 7,
+        "delivered": [
+          "DEMO-7166",
+          "DEMO-4568",
+          "DEMO-9175"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "5027",
+        "partition": "DEVELOPMENT",
+        "eligible": 7,
+        "delivered": [
+          "DEMO-7166",
+          "DEMO-4568",
+          "DEMO-9175"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "10155",
+        "partition": "DEVELOPMENT",
+        "eligible": 7,
+        "delivered": [
+          "DEMO-9175",
+          "DEMO-7166",
+          "DEMO-9699"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "2759",
+        "partition": "DEVELOPMENT",
+        "eligible": 7,
+        "delivered": [
+          "DEMO-9699",
+          "DEMO-9175",
+          "DEMO-9388"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "5366",
+        "partition": "DEVELOPMENT",
+        "eligible": 7,
+        "delivered": [
+          "DEMO-9175",
+          "DEMO-9699",
+          "DEMO-4568"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "2668",
+        "partition": "DEVELOPMENT",
+        "eligible": 7,
+        "delivered": [
+          "DEMO-3811",
+          "DEMO-3929",
+          "DEMO-7166"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "5256",
+        "partition": "DEVELOPMENT",
+        "eligible": 7,
+        "delivered": [
+          "DEMO-9175",
+          "DEMO-9699",
+          "DEMO-9388"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "3186",
+        "partition": "DEVELOPMENT",
+        "eligible": 7,
+        "delivered": [
+          "DEMO-9175",
+          "DEMO-9699",
+          "DEMO-7166"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "4915",
+        "partition": "DEVELOPMENT",
+        "eligible": 7,
+        "delivered": [
+          "DEMO-4568",
+          "DEMO-7166",
+          "DEMO-3929"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "5707",
+        "partition": "DEVELOPMENT",
+        "eligible": 7,
+        "delivered": [
+          "DEMO-3929",
+          "DEMO-3811",
+          "DEMO-7166"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "1718",
+        "partition": "DEVELOPMENT",
+        "eligible": 7,
+        "delivered": [
+          "DEMO-9175",
+          "DEMO-9699",
+          "DEMO-9388"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "9002",
+        "partition": "DEVELOPMENT",
+        "eligible": 7,
+        "delivered": [
+          "DEMO-9175",
+          "DEMO-7166",
+          "DEMO-4568"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "3262",
+        "partition": "DEVELOPMENT",
+        "eligible": 6,
+        "delivered": [
+          "DEMO-1347",
+          "DEMO-7597",
+          "DEMO-3279"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "4732",
+        "partition": "DEVELOPMENT",
+        "eligible": 6,
+        "delivered": [
+          "DEMO-4319",
+          "DEMO-3279",
+          "DEMO-7597"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "9729",
+        "partition": "DEVELOPMENT",
+        "eligible": 6,
+        "delivered": [
+          "DEMO-3279",
+          "DEMO-7597",
+          "DEMO-4319"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "5",
+        "partition": "DEVELOPMENT",
+        "eligible": 6,
+        "delivered": [
+          "DEMO-292",
+          "DEMO-6865",
+          "DEMO-4319"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "5414",
+        "partition": "DEVELOPMENT",
+        "eligible": 6,
+        "delivered": [
+          "DEMO-292",
+          "DEMO-6865",
+          "DEMO-4319"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "4751",
+        "partition": "DEVELOPMENT",
+        "eligible": 6,
+        "delivered": [
+          "DEMO-7597",
+          "DEMO-3279",
+          "DEMO-4319"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "11304",
+        "partition": "DEVELOPMENT",
+        "eligible": 6,
+        "delivered": [
+          "DEMO-7597",
+          "DEMO-3279",
+          "DEMO-4319"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "7330",
+        "partition": "DEVELOPMENT",
+        "eligible": 6,
+        "delivered": [
+          "DEMO-6865",
+          "DEMO-292",
+          "DEMO-4319"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "5503",
+        "partition": "DEVELOPMENT",
+        "eligible": 6,
+        "delivered": [
+          "DEMO-3279",
+          "DEMO-7597",
+          "DEMO-4319"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "5293",
+        "partition": "DEVELOPMENT",
+        "eligible": 6,
+        "delivered": [
+          "DEMO-292",
+          "DEMO-4319",
+          "DEMO-6865"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "8240",
+        "partition": "DEVELOPMENT",
+        "eligible": 6,
+        "delivered": [
+          "DEMO-292",
+          "DEMO-6865",
+          "DEMO-4319"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "9441",
+        "partition": "DEVELOPMENT",
+        "eligible": 6,
+        "delivered": [
+          "DEMO-4319",
+          "DEMO-3279",
+          "DEMO-7597"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "217",
+        "partition": "DEVELOPMENT",
+        "eligible": 5,
+        "delivered": [
+          "DEMO-1149",
+          "DEMO-3769",
+          "DEMO-5830"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "130",
+        "partition": "DEVELOPMENT",
+        "eligible": 5,
+        "delivered": [
+          "DEMO-1149",
+          "DEMO-3769",
+          "DEMO-5830"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "799",
+        "partition": "DEVELOPMENT",
+        "eligible": 5,
+        "delivered": [
+          "DEMO-2244",
+          "DEMO-5830",
+          "DEMO-3769"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "4318",
+        "partition": "DEVELOPMENT",
+        "eligible": 5,
+        "delivered": [
+          "DEMO-1149",
+          "DEMO-3769",
+          "DEMO-5830"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "6867",
+        "partition": "DEVELOPMENT",
+        "eligible": 5,
+        "delivered": [
+          "DEMO-3769",
+          "DEMO-1149",
+          "DEMO-5830"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "4492",
+        "partition": "DEVELOPMENT",
+        "eligible": 5,
+        "delivered": [
+          "DEMO-3769",
+          "DEMO-1149",
+          "DEMO-5830"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "4782",
+        "partition": "DEVELOPMENT",
+        "eligible": 5,
+        "delivered": [
+          "DEMO-6699",
+          "DEMO-2244",
+          "DEMO-1149"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "4460",
+        "partition": "DEVELOPMENT",
+        "eligible": 5,
+        "delivered": [
+          "DEMO-1149",
+          "DEMO-3769",
+          "DEMO-2244"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "7736",
+        "partition": "DEVELOPMENT",
+        "eligible": 5,
+        "delivered": [
+          "DEMO-2244",
+          "DEMO-6699",
+          "DEMO-1149"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "9056",
+        "partition": "DEVELOPMENT",
+        "eligible": 5,
+        "delivered": [
+          "DEMO-1149",
+          "DEMO-3769",
+          "DEMO-2244"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "8877",
+        "partition": "DEVELOPMENT",
+        "eligible": 5,
+        "delivered": [
+          "DEMO-1149",
+          "DEMO-3769",
+          "DEMO-5830"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "611",
+        "partition": "DEVELOPMENT",
+        "eligible": 5,
+        "delivered": [
+          "DEMO-1149",
+          "DEMO-3769",
+          "DEMO-5830"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "6313",
+        "partition": "DEVELOPMENT",
+        "eligible": 5,
+        "delivered": [
+          "DEMO-3972",
+          "DEMO-11343",
+          "DEMO-1431"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "10089",
+        "partition": "DEVELOPMENT",
+        "eligible": 5,
+        "delivered": [
+          "DEMO-1431",
+          "DEMO-11343",
+          "DEMO-3972"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "10232",
+        "partition": "DEVELOPMENT",
+        "eligible": 5,
+        "delivered": [
+          "DEMO-3972",
+          "DEMO-11343",
+          "DEMO-1431"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "11272",
+        "partition": "DEVELOPMENT",
+        "eligible": 5,
+        "delivered": [
+          "DEMO-3972",
+          "DEMO-11343",
+          "DEMO-1431"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "5633",
+        "partition": "DEVELOPMENT",
+        "eligible": 5,
+        "delivered": [
+          "DEMO-5202",
+          "DEMO-2086",
+          "DEMO-3972"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "8061",
+        "partition": "DEVELOPMENT",
+        "eligible": 5,
+        "delivered": [
+          "DEMO-3972",
+          "DEMO-11343",
+          "DEMO-2086"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "89",
+        "partition": "DEVELOPMENT",
+        "eligible": 5,
+        "delivered": [
+          "DEMO-11343",
+          "DEMO-1431",
+          "DEMO-3972"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "6225",
+        "partition": "DEVELOPMENT",
+        "eligible": 5,
+        "delivered": [
+          "DEMO-11343",
+          "DEMO-3972",
+          "DEMO-1431"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "82",
+        "partition": "DEVELOPMENT",
+        "eligible": 5,
+        "delivered": [
+          "DEMO-3972",
+          "DEMO-11343",
+          "DEMO-1431"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "2713",
+        "partition": "DEVELOPMENT",
+        "eligible": 5,
+        "delivered": [
+          "DEMO-11343",
+          "DEMO-3972",
+          "DEMO-1431"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "647",
+        "partition": "DEVELOPMENT",
+        "eligible": 5,
+        "delivered": [
+          "DEMO-11343",
+          "DEMO-3972",
+          "DEMO-1431"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "3367",
+        "partition": "DEVELOPMENT",
+        "eligible": 5,
+        "delivered": [
+          "DEMO-11343",
+          "DEMO-1431",
+          "DEMO-3972"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "9565",
+        "partition": "DEVELOPMENT",
+        "eligible": 5,
+        "delivered": [
+          "DEMO-6919",
+          "DEMO-9879",
+          "DEMO-7672"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "2141",
+        "partition": "DEVELOPMENT",
+        "eligible": 5,
+        "delivered": [
+          "DEMO-7672",
+          "DEMO-10170",
+          "DEMO-1180"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "11193",
+        "partition": "DEVELOPMENT",
+        "eligible": 5,
+        "delivered": [
+          "DEMO-10170",
+          "DEMO-1180",
+          "DEMO-7672"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "2286",
+        "partition": "DEVELOPMENT",
+        "eligible": 5,
+        "delivered": [
+          "DEMO-9879",
+          "DEMO-6919",
+          "DEMO-7672"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "4448",
+        "partition": "DEVELOPMENT",
+        "eligible": 5,
+        "delivered": [
+          "DEMO-10170",
+          "DEMO-1180",
+          "DEMO-7672"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "1628",
+        "partition": "DEVELOPMENT",
+        "eligible": 5,
+        "delivered": [
+          "DEMO-7672",
+          "DEMO-10170",
+          "DEMO-1180"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "10169",
+        "partition": "DEVELOPMENT",
+        "eligible": 5,
+        "delivered": [
+          "DEMO-7672",
+          "DEMO-10170",
+          "DEMO-1180"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "7151",
+        "partition": "DEVELOPMENT",
+        "eligible": 5,
+        "delivered": [
+          "DEMO-10170",
+          "DEMO-1180",
+          "DEMO-7672"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "10547",
+        "partition": "DEVELOPMENT",
+        "eligible": 5,
+        "delivered": [
+          "DEMO-7672",
+          "DEMO-10170",
+          "DEMO-1180"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "10796",
+        "partition": "DEVELOPMENT",
+        "eligible": 5,
+        "delivered": [
+          "DEMO-9879",
+          "DEMO-6919",
+          "DEMO-7672"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "7831",
+        "partition": "DEVELOPMENT",
+        "eligible": 5,
+        "delivered": [
+          "DEMO-10170",
+          "DEMO-1180",
+          "DEMO-7672"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "4805",
+        "partition": "DEVELOPMENT",
+        "eligible": 5,
+        "delivered": [
+          "DEMO-10170",
+          "DEMO-1180",
+          "DEMO-7672"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "2232",
+        "partition": "DEVELOPMENT",
+        "eligible": 5,
+        "delivered": [
+          "DEMO-3296",
+          "DEMO-3971",
+          "DEMO-4461"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "7764",
+        "partition": "DEVELOPMENT",
+        "eligible": 5,
+        "delivered": [
+          "DEMO-4461",
+          "DEMO-3971",
+          "DEMO-3296"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "2197",
+        "partition": "DEVELOPMENT",
+        "eligible": 5,
+        "delivered": [
+          "DEMO-3008",
+          "DEMO-7842",
+          "DEMO-3971"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "6876",
+        "partition": "DEVELOPMENT",
+        "eligible": 5,
+        "delivered": [
+          "DEMO-7842",
+          "DEMO-3296",
+          "DEMO-3971"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "7875",
+        "partition": "DEVELOPMENT",
+        "eligible": 5,
+        "delivered": [
+          "DEMO-7842",
+          "DEMO-3008",
+          "DEMO-3971"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "1686",
+        "partition": "DEVELOPMENT",
+        "eligible": 5,
+        "delivered": [
+          "DEMO-7842",
+          "DEMO-3971",
+          "DEMO-3296"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "4838",
+        "partition": "DEVELOPMENT",
+        "eligible": 5,
+        "delivered": [
+          "DEMO-4461",
+          "DEMO-3971",
+          "DEMO-3296"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "1818",
+        "partition": "DEVELOPMENT",
+        "eligible": 5,
+        "delivered": [
+          "DEMO-3008",
+          "DEMO-7842",
+          "DEMO-3971"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "10810",
+        "partition": "DEVELOPMENT",
+        "eligible": 5,
+        "delivered": [
+          "DEMO-3296",
+          "DEMO-3971",
+          "DEMO-4461"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "4953",
+        "partition": "DEVELOPMENT",
+        "eligible": 5,
+        "delivered": [
+          "DEMO-3971",
+          "DEMO-3296",
+          "DEMO-4461"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "7404",
+        "partition": "DEVELOPMENT",
+        "eligible": 5,
+        "delivered": [
+          "DEMO-7842",
+          "DEMO-3971",
+          "DEMO-3296"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "3615",
+        "partition": "DEVELOPMENT",
+        "eligible": 5,
+        "delivered": [
+          "DEMO-7842",
+          "DEMO-3296",
+          "DEMO-3971"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "3439",
+        "partition": "DEVELOPMENT",
+        "eligible": 5,
+        "delivered": [
+          "DEMO-8952",
+          "DEMO-7902",
+          "DEMO-3694"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "9352",
+        "partition": "DEVELOPMENT",
+        "eligible": 5,
+        "delivered": [
+          "DEMO-8952",
+          "DEMO-7902",
+          "DEMO-3694"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "5029",
+        "partition": "DEVELOPMENT",
+        "eligible": 5,
+        "delivered": [
+          "DEMO-77",
+          "DEMO-263",
+          "DEMO-3694"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "10000",
+        "partition": "DEVELOPMENT",
+        "eligible": 5,
+        "delivered": [
+          "DEMO-3694",
+          "DEMO-263",
+          "DEMO-8952"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "2340",
+        "partition": "DEVELOPMENT",
+        "eligible": 5,
+        "delivered": [
+          "DEMO-3694",
+          "DEMO-8952",
+          "DEMO-263"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "7920",
+        "partition": "DEVELOPMENT",
+        "eligible": 5,
+        "delivered": [
+          "DEMO-263",
+          "DEMO-3694",
+          "DEMO-77"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "10442",
+        "partition": "DEVELOPMENT",
+        "eligible": 5,
+        "delivered": [
+          "DEMO-263",
+          "DEMO-77",
+          "DEMO-3694"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "2034",
+        "partition": "DEVELOPMENT",
+        "eligible": 5,
+        "delivered": [
+          "DEMO-263",
+          "DEMO-3694",
+          "DEMO-77"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "10051",
+        "partition": "DEVELOPMENT",
+        "eligible": 5,
+        "delivered": [
+          "DEMO-8952",
+          "DEMO-3694",
+          "DEMO-7902"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "6556",
+        "partition": "DEVELOPMENT",
+        "eligible": 5,
+        "delivered": [
+          "DEMO-7902",
+          "DEMO-8952",
+          "DEMO-3694"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "8456",
+        "partition": "DEVELOPMENT",
+        "eligible": 5,
+        "delivered": [
+          "DEMO-8952",
+          "DEMO-7902",
+          "DEMO-3694"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "1676",
+        "partition": "DEVELOPMENT",
+        "eligible": 5,
+        "delivered": [
+          "DEMO-3694",
+          "DEMO-8952",
+          "DEMO-7902"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "9600",
+        "partition": "DEMO_MEMORY_SELF_LEAKAGE_TEST",
+        "eligible": 6,
+        "delivered": [
+          "DEMO-11076",
+          "DEMO-3456",
+          "DEMO-8194"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "9636",
+        "partition": "DEMO_MEMORY_SELF_LEAKAGE_TEST",
+        "eligible": 6,
+        "delivered": [
+          "DEMO-2125",
+          "DEMO-2065",
+          "DEMO-8194"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "8194",
+        "partition": "DEMO_MEMORY_SELF_LEAKAGE_TEST",
+        "eligible": 6,
+        "delivered": [
+          "DEMO-11076",
+          "DEMO-9600",
+          "DEMO-3456"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "3456",
+        "partition": "DEMO_MEMORY_SELF_LEAKAGE_TEST",
+        "eligible": 6,
+        "delivered": [
+          "DEMO-9600",
+          "DEMO-11076",
+          "DEMO-8194"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "2125",
+        "partition": "DEMO_MEMORY_SELF_LEAKAGE_TEST",
+        "eligible": 6,
+        "delivered": [
+          "DEMO-9636",
+          "DEMO-2065",
+          "DEMO-8194"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "11076",
+        "partition": "DEMO_MEMORY_SELF_LEAKAGE_TEST",
+        "eligible": 6,
+        "delivered": [
+          "DEMO-9600",
+          "DEMO-3456",
+          "DEMO-8194"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "2254",
+        "partition": "DEMO_MEMORY_SELF_LEAKAGE_TEST",
+        "eligible": 6,
+        "delivered": [
+          "DEMO-10471",
+          "DEMO-8718",
+          "DEMO-9820"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "661",
+        "partition": "DEMO_MEMORY_SELF_LEAKAGE_TEST",
+        "eligible": 6,
+        "delivered": [
+          "DEMO-9820",
+          "DEMO-10471",
+          "DEMO-2254"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "5605",
+        "partition": "DEMO_MEMORY_SELF_LEAKAGE_TEST",
+        "eligible": 6,
+        "delivered": [
+          "DEMO-10417",
+          "DEMO-8718",
+          "DEMO-2254"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "10417",
+        "partition": "DEMO_MEMORY_SELF_LEAKAGE_TEST",
+        "eligible": 6,
+        "delivered": [
+          "DEMO-5605",
+          "DEMO-8718",
+          "DEMO-10471"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "10471",
+        "partition": "DEMO_MEMORY_SELF_LEAKAGE_TEST",
+        "eligible": 6,
+        "delivered": [
+          "DEMO-9820",
+          "DEMO-8718",
+          "DEMO-2254"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "8718",
+        "partition": "DEMO_MEMORY_SELF_LEAKAGE_TEST",
+        "eligible": 6,
+        "delivered": [
+          "DEMO-10471",
+          "DEMO-2254",
+          "DEMO-9820"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "4458",
+        "partition": "DEMO_MEMORY_SELF_LEAKAGE_TEST",
+        "eligible": 6,
+        "delivered": [
+          "DEMO-3009",
+          "DEMO-7057",
+          "DEMO-9491"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "8843",
+        "partition": "DEMO_MEMORY_SELF_LEAKAGE_TEST",
+        "eligible": 6,
+        "delivered": [
+          "DEMO-10744",
+          "DEMO-1837",
+          "DEMO-7057"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "7057",
+        "partition": "DEMO_MEMORY_SELF_LEAKAGE_TEST",
+        "eligible": 6,
+        "delivered": [
+          "DEMO-9491",
+          "DEMO-3009",
+          "DEMO-4458"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "3009",
+        "partition": "DEMO_MEMORY_SELF_LEAKAGE_TEST",
+        "eligible": 6,
+        "delivered": [
+          "DEMO-4458",
+          "DEMO-7057",
+          "DEMO-9491"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "1837",
+        "partition": "DEMO_MEMORY_SELF_LEAKAGE_TEST",
+        "eligible": 6,
+        "delivered": [
+          "DEMO-7057",
+          "DEMO-9491",
+          "DEMO-4458"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "9491",
+        "partition": "DEMO_MEMORY_SELF_LEAKAGE_TEST",
+        "eligible": 6,
+        "delivered": [
+          "DEMO-7057",
+          "DEMO-3009",
+          "DEMO-4458"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "3929",
+        "partition": "DEMO_MEMORY_SELF_LEAKAGE_TEST",
+        "eligible": 6,
+        "delivered": [
+          "DEMO-3811",
+          "DEMO-7166",
+          "DEMO-9175"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "9175",
+        "partition": "DEMO_MEMORY_SELF_LEAKAGE_TEST",
+        "eligible": 6,
+        "delivered": [
+          "DEMO-9699",
+          "DEMO-7166",
+          "DEMO-9388"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "4568",
+        "partition": "DEMO_MEMORY_SELF_LEAKAGE_TEST",
+        "eligible": 6,
+        "delivered": [
+          "DEMO-7166",
+          "DEMO-9175",
+          "DEMO-3929"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "7166",
+        "partition": "DEMO_MEMORY_SELF_LEAKAGE_TEST",
+        "eligible": 6,
+        "delivered": [
+          "DEMO-9175",
+          "DEMO-4568",
+          "DEMO-3929"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "3811",
+        "partition": "DEMO_MEMORY_SELF_LEAKAGE_TEST",
+        "eligible": 6,
+        "delivered": [
+          "DEMO-3929",
+          "DEMO-7166",
+          "DEMO-4568"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "9388",
+        "partition": "DEMO_MEMORY_SELF_LEAKAGE_TEST",
+        "eligible": 6,
+        "delivered": [
+          "DEMO-9175",
+          "DEMO-9699",
+          "DEMO-3929"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "1347",
+        "partition": "DEMO_MEMORY_SELF_LEAKAGE_TEST",
+        "eligible": 5,
+        "delivered": [
+          "DEMO-7597",
+          "DEMO-3279",
+          "DEMO-4319"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "3279",
+        "partition": "DEMO_MEMORY_SELF_LEAKAGE_TEST",
+        "eligible": 5,
+        "delivered": [
+          "DEMO-4319",
+          "DEMO-7597",
+          "DEMO-6865"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "292",
+        "partition": "DEMO_MEMORY_SELF_LEAKAGE_TEST",
+        "eligible": 5,
+        "delivered": [
+          "DEMO-6865",
+          "DEMO-4319",
+          "DEMO-3279"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "7597",
+        "partition": "DEMO_MEMORY_SELF_LEAKAGE_TEST",
+        "eligible": 5,
+        "delivered": [
+          "DEMO-3279",
+          "DEMO-4319",
+          "DEMO-1347"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "6865",
+        "partition": "DEMO_MEMORY_SELF_LEAKAGE_TEST",
+        "eligible": 5,
+        "delivered": [
+          "DEMO-292",
+          "DEMO-4319",
+          "DEMO-3279"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "4319",
+        "partition": "DEMO_MEMORY_SELF_LEAKAGE_TEST",
+        "eligible": 5,
+        "delivered": [
+          "DEMO-3279",
+          "DEMO-7597",
+          "DEMO-6865"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "7949",
+        "partition": "DEMO_MEMORY_SELF_LEAKAGE_TEST",
+        "eligible": 0,
+        "delivered": [],
+        "empty_reason": "NO_APPLICABLE_VERIFIED_DEMONSTRATION"
+      },
+      {
+        "record_id": "5830",
+        "partition": "DEMO_MEMORY_SELF_LEAKAGE_TEST",
+        "eligible": 4,
+        "delivered": [
+          "DEMO-3769",
+          "DEMO-2244",
+          "DEMO-1149"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "6699",
+        "partition": "DEMO_MEMORY_SELF_LEAKAGE_TEST",
+        "eligible": 4,
+        "delivered": [
+          "DEMO-1149",
+          "DEMO-3769",
+          "DEMO-2244"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "2244",
+        "partition": "DEMO_MEMORY_SELF_LEAKAGE_TEST",
+        "eligible": 4,
+        "delivered": [
+          "DEMO-5830",
+          "DEMO-3769",
+          "DEMO-1149"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "1149",
+        "partition": "DEMO_MEMORY_SELF_LEAKAGE_TEST",
+        "eligible": 4,
+        "delivered": [
+          "DEMO-3769",
+          "DEMO-2244",
+          "DEMO-5830"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "3769",
+        "partition": "DEMO_MEMORY_SELF_LEAKAGE_TEST",
+        "eligible": 4,
+        "delivered": [
+          "DEMO-5830",
+          "DEMO-2244",
+          "DEMO-1149"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "1431",
+        "partition": "DEMO_MEMORY_SELF_LEAKAGE_TEST",
+        "eligible": 4,
+        "delivered": [
+          "DEMO-11343",
+          "DEMO-3972",
+          "DEMO-2086"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "2086",
+        "partition": "DEMO_MEMORY_SELF_LEAKAGE_TEST",
+        "eligible": 4,
+        "delivered": [
+          "DEMO-5202",
+          "DEMO-3972",
+          "DEMO-11343"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "5202",
+        "partition": "DEMO_MEMORY_SELF_LEAKAGE_TEST",
+        "eligible": 4,
+        "delivered": [
+          "DEMO-2086",
+          "DEMO-3972",
+          "DEMO-11343"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "11343",
+        "partition": "DEMO_MEMORY_SELF_LEAKAGE_TEST",
+        "eligible": 4,
+        "delivered": [
+          "DEMO-3972",
+          "DEMO-1431",
+          "DEMO-2086"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "3972",
+        "partition": "DEMO_MEMORY_SELF_LEAKAGE_TEST",
+        "eligible": 4,
+        "delivered": [
+          "DEMO-11343",
+          "DEMO-1431",
+          "DEMO-2086"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "10170",
+        "partition": "DEMO_MEMORY_SELF_LEAKAGE_TEST",
+        "eligible": 4,
+        "delivered": [
+          "DEMO-1180",
+          "DEMO-7672",
+          "DEMO-9879"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "6919",
+        "partition": "DEMO_MEMORY_SELF_LEAKAGE_TEST",
+        "eligible": 4,
+        "delivered": [
+          "DEMO-9879",
+          "DEMO-7672",
+          "DEMO-10170"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "7672",
+        "partition": "DEMO_MEMORY_SELF_LEAKAGE_TEST",
+        "eligible": 4,
+        "delivered": [
+          "DEMO-10170",
+          "DEMO-1180",
+          "DEMO-6919"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "1180",
+        "partition": "DEMO_MEMORY_SELF_LEAKAGE_TEST",
+        "eligible": 4,
+        "delivered": [
+          "DEMO-10170",
+          "DEMO-7672",
+          "DEMO-9879"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "9879",
+        "partition": "DEMO_MEMORY_SELF_LEAKAGE_TEST",
+        "eligible": 4,
+        "delivered": [
+          "DEMO-6919",
+          "DEMO-7672",
+          "DEMO-10170"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "4461",
+        "partition": "DEMO_MEMORY_SELF_LEAKAGE_TEST",
+        "eligible": 4,
+        "delivered": [
+          "DEMO-3971",
+          "DEMO-3296",
+          "DEMO-7842"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "3296",
+        "partition": "DEMO_MEMORY_SELF_LEAKAGE_TEST",
+        "eligible": 4,
+        "delivered": [
+          "DEMO-3971",
+          "DEMO-4461",
+          "DEMO-7842"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "3971",
+        "partition": "DEMO_MEMORY_SELF_LEAKAGE_TEST",
+        "eligible": 4,
+        "delivered": [
+          "DEMO-4461",
+          "DEMO-3296",
+          "DEMO-7842"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "3008",
+        "partition": "DEMO_MEMORY_SELF_LEAKAGE_TEST",
+        "eligible": 4,
+        "delivered": [
+          "DEMO-7842",
+          "DEMO-3971",
+          "DEMO-4461"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "7842",
+        "partition": "DEMO_MEMORY_SELF_LEAKAGE_TEST",
+        "eligible": 4,
+        "delivered": [
+          "DEMO-3008",
+          "DEMO-3971",
+          "DEMO-4461"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "3694",
+        "partition": "DEMO_MEMORY_SELF_LEAKAGE_TEST",
+        "eligible": 4,
+        "delivered": [
+          "DEMO-263",
+          "DEMO-8952",
+          "DEMO-7902"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "8952",
+        "partition": "DEMO_MEMORY_SELF_LEAKAGE_TEST",
+        "eligible": 4,
+        "delivered": [
+          "DEMO-7902",
+          "DEMO-3694",
+          "DEMO-263"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "7902",
+        "partition": "DEMO_MEMORY_SELF_LEAKAGE_TEST",
+        "eligible": 4,
+        "delivered": [
+          "DEMO-8952",
+          "DEMO-3694",
+          "DEMO-263"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "77",
+        "partition": "DEMO_MEMORY_SELF_LEAKAGE_TEST",
+        "eligible": 4,
+        "delivered": [
+          "DEMO-263",
+          "DEMO-3694",
+          "DEMO-7902"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "263",
+        "partition": "DEMO_MEMORY_SELF_LEAKAGE_TEST",
+        "eligible": 4,
+        "delivered": [
+          "DEMO-3694",
+          "DEMO-77",
+          "DEMO-7902"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "2065",
+        "partition": "DEMO_MEMORY_SELF_LEAKAGE_TEST",
+        "eligible": 6,
+        "delivered": [
+          "DEMO-11076",
+          "DEMO-9600",
+          "DEMO-8194"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "9820",
+        "partition": "DEMO_MEMORY_SELF_LEAKAGE_TEST",
+        "eligible": 6,
+        "delivered": [
+          "DEMO-10471",
+          "DEMO-2254",
+          "DEMO-8718"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "10744",
+        "partition": "DEMO_MEMORY_SELF_LEAKAGE_TEST",
+        "eligible": 6,
+        "delivered": [
+          "DEMO-8843",
+          "DEMO-1837",
+          "DEMO-7057"
+        ],
+        "empty_reason": null
+      },
+      {
+        "record_id": "9699",
+        "partition": "DEMO_MEMORY_SELF_LEAKAGE_TEST",
+        "eligible": 6,
+        "delivered": [
+          "DEMO-9175",
+          "DEMO-9388",
+          "DEMO-7166"
+        ],
+        "empty_reason": null
+      }
+    ],
+    "model_consumption": "NOT_CHECKED_UNTIL_REAL_MODE_RUNS",
+    "writes_rejected": true
+  },
+  "elapsed_seconds": 15.63014060599744,
+  "new_model_calls": 0
+}

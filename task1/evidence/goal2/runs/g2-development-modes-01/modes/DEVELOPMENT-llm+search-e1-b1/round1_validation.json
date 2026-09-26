@@ -1,0 +1,186 @@
+{
+  "errors": [],
+  "accepted_record_ids": [
+    "1076",
+    "5027",
+    "2759",
+    "5256",
+    "4732",
+    "9729",
+    "9056",
+    "217"
+  ],
+  "original_response": {
+    "records": [
+      {
+        "record_id": "1076",
+        "proposals": [
+          {
+            "candidate_id": "1076-r1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 35,
+              "dp": 2
+            },
+            "metric_id": "n_final",
+            "predicted_sign": "not_predicted",
+            "reason": "Test tighter DP fidelity with unchanged S/D. Retained count cannot decrease, but a strict increase is unknown."
+          }
+        ],
+        "stop": false,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "5027",
+        "proposals": [
+          {
+            "candidate_id": "5027-r1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 35,
+              "dp": 2
+            },
+            "metric_id": "n_final",
+            "predicted_sign": "not_predicted",
+            "reason": "Test tighter DP fidelity while preserving segmentation and direction filtering. A strict retained-count change is unknown."
+          }
+        ],
+        "stop": false,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "2759",
+        "proposals": [
+          {
+            "candidate_id": "2759-r1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 35,
+              "dp": 2
+            },
+            "metric_id": "n_final",
+            "predicted_sign": "not_predicted",
+            "reason": "Explore tighter DP tolerance without changing S/D; duplicate counts alone do not establish a strict retained-count change."
+          }
+        ],
+        "stop": false,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "5256",
+        "proposals": [
+          {
+            "candidate_id": "5256-r1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 65,
+              "direction": 35,
+              "dp": 2
+            },
+            "metric_id": "n_final",
+            "predicted_sign": "not_predicted",
+            "reason": "Evaluate the fidelity/compression tradeoff from tighter DP with unchanged S/D. A strict count change is unknown."
+          }
+        ],
+        "stop": false,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "4732",
+        "proposals": [
+          {
+            "candidate_id": "4732-r1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 0,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "common_covered_points",
+            "predicted_sign": "increase",
+            "reason": "Total path length is below the reference length cutoff. Removing that cutoff admits the otherwise sufficiently populated segment for coverage evaluation."
+          }
+        ],
+        "stop": false,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "9729",
+        "proposals": [
+          {
+            "candidate_id": "9729-r1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 0,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "common_covered_points",
+            "predicted_sign": "increase",
+            "reason": "The reference length cutoff excludes this short path. A zero cutoff tests coverage recovery while retaining all other parameters."
+          }
+        ],
+        "stop": false,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "9056",
+        "proposals": [
+          {
+            "candidate_id": "9056-r1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 0,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "common_covered_points",
+            "predicted_sign": "increase",
+            "reason": "The path is shorter than 65 working metres and has no raw breaks. Remove the length cutoff to evaluate recovered coverage."
+          }
+        ],
+        "stop": false,
+        "memory_ids_used": []
+      },
+      {
+        "record_id": "217",
+        "proposals": [
+          {
+            "candidate_id": "217-r1",
+            "parameters": {
+              "dt": 30,
+              "distance": 400,
+              "min_points": 5,
+              "min_length": 0,
+              "direction": 35,
+              "dp": 5
+            },
+            "metric_id": "common_covered_points",
+            "predicted_sign": "increase",
+            "reason": "Both raw segments are below the reference length cutoff. Removing it should recover eligible coverage while preserving the raw time break."
+          }
+        ],
+        "stop": false,
+        "memory_ids_used": []
+      }
+    ]
+  },
+  "raw_proposals_preserved_before_validation": true
+}

@@ -1,0 +1,260 @@
+{
+  "goal_id": "SC-LAB1-G2-EXPERIMENTS-001",
+  "role": "A",
+  "classification": "ACTUAL_DEVELOPMENT_FOLLOWUP_NOT_HUMAN_APPROVAL",
+  "created_at": "2026-09-26T19:38:52.224268+00:00",
+  "input_manifest_hashes": {
+    "task1/evidence/goal2/runs/g2-development-parameters-01/manifest.json": "92bec0c62a89c98ad5b5c05e38cc2fb2722919da2a4eedaba964a0c1038be0e7",
+    "task1/evidence/goal2/runs/g2-development-orders-01/manifest.json": "5ac5e7e047672ce34d45a5f84ce337cf08376203e03eb72be12b2ee60b21f326",
+    "task1/evidence/goal2/runs/g2-demo-memory-01/manifest.json": "c2e325539dac7a702cab72af39590127b319967debc513f91ca915b1bbc09fb4"
+  },
+  "contract_sha256": "db758c097509139596fbc52b4c3f65e921eb1f12d9fb4c239e308abdb57f31f8",
+  "analysis_source_sha256": "0002549b796898baa22aab576af0b75f0468eaa76f8b66b4b22b98be4d244f18",
+  "question": "Complete registered development evidence is available: lock mandatory single candidates by existing rules, then complete genuine development-mode validation before freezing evaluation.",
+  "baseline": {
+    "dt": 30,
+    "distance": 400,
+    "min_points": 5,
+    "min_length": 65,
+    "direction": 35,
+    "dp": 5
+  },
+  "development_configuration_count": 59,
+  "records_per_configuration": 120,
+  "reference_readings": {
+    "n_input": 11777,
+    "n_final": 2601,
+    "n_filtered": 3369,
+    "n_direction_removed": 669,
+    "n_dp_input": 7739,
+    "n_dp_output": 2601,
+    "dp_saving": 0.663910065899987,
+    "dp_max_error": 4.9960113231523335,
+    "common_covered_points": 8408,
+    "common_raw_points": 11777,
+    "n_all_filtered_records": 33,
+    "n_no_output_records": 33
+  },
+  "candidate_families": {
+    "C-S": {
+      "domain_size": 49,
+      "feasible_config_ids": [
+        "cfg-b15b8281b73592fb",
+        "cfg-6599edd5fcbf75b1",
+        "cfg-d4df6d869dc800d6",
+        "cfg-63139d05595c253c",
+        "cfg-5279f18a16a391af",
+        "cfg-1e535c3fe3cc8ae1",
+        "cfg-81a89e633001f457",
+        "cfg-a676557c7da6251e",
+        "cfg-901645379df0db06"
+      ],
+      "feasible_frontier": [
+        {
+          "config_id": "cfg-1e535c3fe3cc8ae1",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 2,
+            "min_length": 0,
+            "direction": 35,
+            "dp": 5
+          },
+          "status": "SUPPORTED_WITHIN_SCOPE"
+        }
+      ],
+      "protected_gain_ids": [
+        "cfg-6599edd5fcbf75b1",
+        "cfg-d4df6d869dc800d6",
+        "cfg-63139d05595c253c",
+        "cfg-5279f18a16a391af",
+        "cfg-1e535c3fe3cc8ae1",
+        "cfg-81a89e633001f457",
+        "cfg-a676557c7da6251e",
+        "cfg-901645379df0db06"
+      ]
+    },
+    "C-D": {
+      "domain_size": 5,
+      "feasible_config_ids": [
+        "cfg-b15b8281b73592fb"
+      ],
+      "feasible_frontier": [
+        {
+          "config_id": "cfg-b15b8281b73592fb",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 35,
+            "dp": 5
+          },
+          "status": "NO_DEMONSTRATED_GAIN"
+        }
+      ],
+      "protected_gain_ids": []
+    },
+    "C-P": {
+      "domain_size": 7,
+      "feasible_config_ids": [
+        "cfg-b15b8281b73592fb",
+        "cfg-b64eb945a846910c",
+        "cfg-59d5d0c23b67d172",
+        "cfg-322e68540606f046",
+        "cfg-df6f00206fb03678"
+      ],
+      "feasible_frontier": [
+        {
+          "config_id": "cfg-b15b8281b73592fb",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 35,
+            "dp": 5
+          },
+          "status": "NO_DEMONSTRATED_GAIN"
+        },
+        {
+          "config_id": "cfg-b64eb945a846910c",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 35,
+            "dp": 0
+          },
+          "status": "NO_DEMONSTRATED_GAIN"
+        },
+        {
+          "config_id": "cfg-59d5d0c23b67d172",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 35,
+            "dp": 0.5
+          },
+          "status": "NO_DEMONSTRATED_GAIN"
+        },
+        {
+          "config_id": "cfg-322e68540606f046",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 35,
+            "dp": 1
+          },
+          "status": "NO_DEMONSTRATED_GAIN"
+        },
+        {
+          "config_id": "cfg-df6f00206fb03678",
+          "parameters": {
+            "dt": 30,
+            "distance": 400,
+            "min_points": 5,
+            "min_length": 65,
+            "direction": 35,
+            "dp": 2
+          },
+          "status": "NO_DEMONSTRATED_GAIN"
+        }
+      ],
+      "protected_gain_ids": []
+    }
+  },
+  "order_evidence": [
+    {
+      "order": "S-D-P",
+      "n_records": 120,
+      "safety_failure_records": 0,
+      "raw_break_crossings": 0,
+      "direction_windows_across_raw_breaks": 0,
+      "p_removed_raw_break_trigger_points": 0,
+      "research_status": "NO_DEMONSTRATED_GAIN"
+    },
+    {
+      "order": "S-P-D",
+      "n_records": 120,
+      "safety_failure_records": 0,
+      "raw_break_crossings": 0,
+      "direction_windows_across_raw_breaks": 0,
+      "p_removed_raw_break_trigger_points": 0,
+      "research_status": "TRADEOFF"
+    },
+    {
+      "order": "D-S-P",
+      "n_records": 120,
+      "safety_failure_records": 46,
+      "raw_break_crossings": 1,
+      "direction_windows_across_raw_breaks": 612,
+      "p_removed_raw_break_trigger_points": 1,
+      "research_status": "REJECTED_BY_CONSTRAINT"
+    },
+    {
+      "order": "D-P-S",
+      "n_records": 120,
+      "safety_failure_records": 87,
+      "raw_break_crossings": 1,
+      "direction_windows_across_raw_breaks": 612,
+      "p_removed_raw_break_trigger_points": 188,
+      "research_status": "REJECTED_BY_CONSTRAINT"
+    },
+    {
+      "order": "P-S-D",
+      "n_records": 120,
+      "safety_failure_records": 87,
+      "raw_break_crossings": 0,
+      "direction_windows_across_raw_breaks": 0,
+      "p_removed_raw_break_trigger_points": 193,
+      "research_status": "REJECTED_BY_CONSTRAINT"
+    },
+    {
+      "order": "P-D-S",
+      "n_records": 120,
+      "safety_failure_records": 87,
+      "raw_break_crossings": 1,
+      "direction_windows_across_raw_breaks": 453,
+      "p_removed_raw_break_trigger_points": 193,
+      "research_status": "REJECTED_BY_CONSTRAINT"
+    }
+  ],
+  "followups": [
+    {
+      "task": "Lock C-S/C-D/C-P",
+      "action": "Run existing candidate_lock with complete development parameter/order manifests; preserve all eligible/frontier/tradeoff evidence. Retain reference if no unique comparable protected gain.",
+      "change_allowed": "Only pre-registered parameter family; no combinations or criterion changes.",
+      "end_condition": "Hash-bound candidate_lock written before G2_EVAL."
+    },
+    {
+      "task": "Consume unsafe order results",
+      "action": "Retain all four unsafe naive-order traces and index-level failure evidence; do not repair the algorithms to pass. Only frozen safe orders proceed to holdout.",
+      "budget": "No additional unsafe-order expansions needed: all six already ran over 120 records.",
+      "end_condition": "C verifies raw-break/covered-identity failure evidence and safe-order list."
+    },
+    {
+      "task": "Complete development four-mode validation",
+      "action": "Build verifier-admitted DEMO_MEMORY then execute same fixed DEVELOPMENT24 for four modes; observe actual delivery, citation, action consistency and any live response failures.",
+      "budget": "Frozen one dev episode per mode; search modes20 candidate evaluations per record, up to3 decisions; llm-only1proposal.",
+      "end_condition": "Real model evidence, zero-call search sentinel, memory read-only/leakage checks, then freeze all evaluation settings."
+    }
+  ],
+  "new_structural_candidates": "NOT_ADMITTED_WITH_REASON retained; no clear new development definition is introduced.",
+  "required_additional_parameter_experiments": false,
+  "evaluation_read_for_this_diagnosis": false,
+  "final_method_selected": false,
+  "conclusion_boundary": "Geometric/coverage evidence and protected compression only; no true quality claim, population inference or global optimum.",
+  "analysis_recomputed_after_input_binding_hardening": true,
+  "development_conclusions_unchanged": true,
+  "supersedes": {
+    "path": "task1/evidence/goal2/a_followup_archive/b58045b9433c1ad3/a_followup_development.json",
+    "source_sha256": "b58045b9433c1ad3561ff58d2e542d5cc9790113c0a7b4d34427aba1df4d47b0"
+  },
+  "verification": "The entire 59-config and six-order development trace derivation was repeated with the hardened generator; equality of family, reference and order evidence was asserted."
+}

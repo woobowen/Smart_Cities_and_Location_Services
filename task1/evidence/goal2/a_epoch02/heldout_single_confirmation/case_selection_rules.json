@@ -1,0 +1,29 @@
+{
+  "registered_at": "2026-09-26T20:45:30.637265+00:00",
+  "contract_sha256": "db758c097509139596fbc52b4c3f65e921eb1f12d9fb4c239e308abdb57f31f8",
+  "original_frozen_case_rules": {
+    "registered_before_figures": true,
+    "representative": "per raw span stratum closest to within-stratum median span, stable ID tie",
+    "worst_coverage": "largest common raw coverage loss versus reference, stable ID tie",
+    "worst_error": "largest comparable common raw error, stable ID tie",
+    "near_boundary": "smallest positive absolute distance between actual P residual and its registered threshold, stable ID tie",
+    "direction_case": "at least one actual changed D neighborhood if present",
+    "include": [
+      "favorable",
+      "degradation",
+      "uncertainty"
+    ],
+    "on_missing": "explicit no available case, no hidden substitution"
+  },
+  "scope": "Each locked single candidate on the same120 G2_EVAL records; descriptive case choice only, never parameter selection.",
+  "stable_id_tie": "lexicographic original record_id string; original index then segment ID for within-record ties",
+  "representative": "Within each LOW/MIDDLE/HIGH raw-span layer present in G2_EVAL, closest raw span to that layer median; no candidate metrics used. Actual labels are read from existing stratum prefix.",
+  "worst_coverage": "Largest positive (reference covered count - candidate covered count); no positive loss yields explicit NO_OBSERVED_COVERAGE_LOSS and null case.",
+  "worst_error": "Largest candidate_max_on_baseline_covered among nonnull comparable readings; report whether actually degraded, do not label largest absolute error automatically as a regression.",
+  "near_boundary": "Smallest positive abs(actual nonzero immediate-P per-original-index residual - registered tolerance), then stable record/index/segment tie; no new DP calculation.",
+  "direction_case": "First record with a new adjacent pair in that candidate D output versus its D input, then first pair; record whether reference also has this change. This is stage mechanism, not automatically candidate-vs-reference degradation.",
+  "additional_failure": "First record violating a frozen protection, or explicit none.",
+  "additional_favorable": "First strict-gain record under frozen compare, or explicit none.",
+  "additional_null": "First record where baseline or candidate common/DP error is null, or explicit none.",
+  "no_method_or_selection_rule_changed": true
+}

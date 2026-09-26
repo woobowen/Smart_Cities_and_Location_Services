@@ -1,0 +1,44 @@
+{
+  "classification": "BOUND_MANUAL_REVIEW_OF_THREE_PORTABILITY_FLAGS",
+  "at": "2026-09-26T21:55:55.633806+00:00",
+  "reviewer": "B /root/b_engine",
+  "findings": [
+    {
+      "path": "task1/docs/goal2/REPRODUCE.md",
+      "classification": "DOCUMENTED_ENVIRONMENT_REQUIREMENT_AND_REPLACEABLE_TEMPORARY_OUTPUT_EXAMPLES",
+      "disposition": "REVIEWED_DOCUMENTED_LIMITATION",
+      "reason": "Lines20/41areuser-replaceableoutputexamples;lines26/28explicitlydisclosethereusedLIVECLIpathandseparatezeromodelRECOMPUTE.",
+      "supported_by": [
+        "ActualreadREPRODUCE.mdlines1-55",
+        "ThreefreshkernelNotebookswithzeroProvidercalls",
+        "ExperimentProviderexplicitexecutableargument"
+      ],
+      "sha256": "671421d1a953b1a4642cf61c2a2b9c38e2f85fdfbccee9a69c979c28fcbbf4bc"
+    },
+    {
+      "path": "task1/workflow/g2_provider.py",
+      "classification": "FROZEN_LIVE_ENVIRONMENT_EXECUTABLE_DEFAULT",
+      "disposition": "REVIEWED_DOCUMENTED_LIMITATION",
+      "reason": "Line17fixesexistingauthenticatedCLIlocationforrecordedLIVE;constructorlines37-38acceptsanexplicitexecutable.NewLIVEenvironmentchangerequiresversionregistration.DefaultNotebookRECOMPUTEdoesnotcallthisCLI.",
+      "supported_by": [
+        "Actualreadg2_provider.py",
+        "REPRODUCE.mdline26",
+        "NotebookProvidercallsentinelreceipts"
+      ],
+      "sha256": "636a6edaf95ef31e1982d27e1361697d145156fccb99760028ba5e0d77949bb1"
+    },
+    {
+      "path": "task1/figures/goal2/raster_checks.log",
+      "classification": "ACTUAL_RENDER_CHECK_EXECUTION_EVIDENCE_NOT_RUNTIME_DEPENDENCY",
+      "disposition": "REVIEWED_EVIDENCE_PATH",
+      "reason": "ElevenlinesrecordactualgeneratedPNGpaths,dimensionsandchannelvariation;retainingobservedpathsdoesnotmakeNotebooksourceabsolute-dependent.",
+      "supported_by": [
+        "Actualreadall11loglines",
+        "Formalfiguremanifesthashbindings"
+      ],
+      "sha256": "1de42ca2ac41dffc2bfa2908651ca2c59ebdb056e66dcd79366775c99043a455"
+    }
+  ],
+  "rule": "Theseareexact-byteclassifications,notpath-basedallowlists.Ifcontentschange,freshreviewisrequired.Originalscannerreportispreserved;noneofthethreeflagsisasecretorcodechange.",
+  "unchecked": "IndependentCpublicationacceptanceandfinalstageddelta"
+}

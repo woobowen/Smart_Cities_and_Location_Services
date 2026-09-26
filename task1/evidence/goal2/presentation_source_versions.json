@@ -1,0 +1,96 @@
+{
+  "at": "2026-09-26T21:39:18.537631+00:00",
+  "classification": "PRESENTATION_AND_ANALYSIS_VERSION_LINEAGE",
+  "sources": [
+    {
+      "active_source": "task1/scripts/build_goal2_figures.py",
+      "active_sha256": "646547b63e6da6ab80a95ae71b3db908f6ea3dce95900ec12aa642b9939916eb",
+      "processing_commit_copy": {
+        "code_commit": "c1c6272606716f9f59aa785d48bfeadb09c7a30e",
+        "sha256": "d3171f14677c16a465f32e3ff89387f4bb3fb9f981acdb71145c418fcf5b1c76"
+      },
+      "historical_issue_reviews": [
+        {
+          "issue_id": "G2-B-FIGURE-001",
+          "source_hash_at_issue_review": "d3171f14677c16a465f32e3ff89387f4bb3fb9f981acdb71145c418fcf5b1c76",
+          "exact_archive_files": [
+            "task1/evidence/goal2/presentation_checks/candidate_preview_02/generator_before.py"
+          ],
+          "matches_current_source": false,
+          "closure_scope": "Only the actual source version reviewed then; current full task must be separately reviewed."
+        },
+        {
+          "issue_id": "G2-B-CANDIDATE-FIGURE-001",
+          "source_hash_at_issue_review": "f1e7acda8f6ee7a56d8e45839a0d66d619b7c364b380d614b82126e0dd05f6dd",
+          "exact_archive_files": [
+            "task1/evidence/goal2/presentation_checks/case_configuration_labels/generator_before.py",
+            "task1/evidence/goal2/presentation_checks/candidate_preview_02/generator_after.py"
+          ],
+          "matches_current_source": false,
+          "closure_scope": "Only the actual source version reviewed then; current full task must be separately reviewed."
+        },
+        {
+          "issue_id": "G2-B-CASE-CONFIG-001",
+          "source_hash_at_issue_review": "0269ee69590a6c343ed8ff8b4397f55091e87fe0c2faa1c722bdb4194b339c10",
+          "exact_archive_files": [
+            "task1/evidence/goal2/presentation_checks/formal_mode_layout/build_goal2_figures.before.py",
+            "task1/evidence/goal2/presentation_checks/case_configuration_labels/generator_after.py"
+          ],
+          "matches_current_source": false,
+          "closure_scope": "Only the actual source version reviewed then; current full task must be separately reviewed."
+        },
+        {
+          "issue_id": "G2-B-MODE-FIGURE-001",
+          "source_hash_at_issue_review": "646547b63e6da6ab80a95ae71b3db908f6ea3dce95900ec12aa642b9939916eb",
+          "exact_archive_files": [
+            "task1/evidence/goal2/presentation_checks/formal_mode_layout/build_goal2_figures.after.py"
+          ],
+          "matches_current_source": true,
+          "closure_scope": "Only the actual source version reviewed then; current full task must be separately reviewed."
+        }
+      ]
+    },
+    {
+      "active_source": "task1/scripts/build_goal2_notebooks.py",
+      "active_sha256": "93093383ab2d2aa4bb6fc4dda1568982727d01c05b7470e92cef8d93e27f3fa0",
+      "processing_commit_copy": {
+        "code_commit": "c1c6272606716f9f59aa785d48bfeadb09c7a30e",
+        "sha256": "a0b8b254f67e710031de96491dd6b7d3fc592a4432269249bb0e320a98ee71da"
+      },
+      "historical_issue_reviews": [
+        {
+          "issue_id": "G2-B-NOTEBOOK-001",
+          "source_hash_at_issue_review": "a0b8b254f67e710031de96491dd6b7d3fc592a4432269249bb0e320a98ee71da",
+          "exact_archive_files": [
+            "task1/evidence/goal2/notebook_checks/heldout_display/build_goal2_notebooks.before.py"
+          ],
+          "matches_current_source": false,
+          "closure_scope": "Only the actual source version reviewed then; current full task must be separately reviewed."
+        },
+        {
+          "issue_id": "G2-B-NOTEBOOK-CONFIRMATION-001",
+          "source_hash_at_issue_review": "93093383ab2d2aa4bb6fc4dda1568982727d01c05b7470e92cef8d93e27f3fa0",
+          "exact_archive_files": [
+            "task1/evidence/goal2/notebook_checks/heldout_display/build_goal2_notebooks.after.py"
+          ],
+          "matches_current_source": true,
+          "closure_scope": "Only the actual source version reviewed then; current full task must be separately reviewed."
+        }
+      ]
+    },
+    {
+      "active_source": "task1/scripts/build_goal2_analysis.py",
+      "active_sha256": "2ccf9fb06b8e7633fc118b0798fce348661c07eed8a3cfa4d08a9e08559c2e38",
+      "processing_commit_copy": null,
+      "historical_issue_reviews": []
+    }
+  ],
+  "processing_epoch_unchanged": true,
+  "processing_freeze_sha256": "98317896571ace54de1aed61fb6f486400a1ec092330bde6502cd57256c1cb60",
+  "current_whole_source_acceptance_required": [
+    "figures",
+    "notebooks",
+    "analysis"
+  ],
+  "closed_issue_receipts_are_not_reused_as_current_whole_source_certificates": true
+}
