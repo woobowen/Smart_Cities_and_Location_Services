@@ -57,7 +57,8 @@ def run_current(run_id):
     run['status']='BLOCKED_EXTERNAL' if baseline['status']=='BLOCKED' else 'AWAITING_INDEPENDENT_C'
     g.event('PROCESSING_BRANCH_RECORDED',run_id=run_id,status=run['status'],ledger_sha256=digest(ledger_path))
     manifest={'at':now(),'code_sha':code,'policy_sha256':digest(CONFIG),'input_sha256':digest(DATA),
-              'run_id':run_id,'classification':'CURRENT_RUN_REAL_DATA','execution':'RECOMPUTE',
+              'run_id':run_id,'classification':'CURRENT_RUN_CONDITIONAL_ANALYSIS','execution':'RECOMPUTE',
+              'source_crs':'UNVERIFIED','analysis_contract_id':policy['method']['approved_contract_id'],
               'new_model_calls':0,'record_scope':pilot['ids'],'artifacts':run['artifacts'],
               'reviews':run['reviews'],'point_actions':g.attach(ledger_path),'coverage':g.coverage(run_id),
               'baseline_status':baseline['status'],'goal1_complete':False}
@@ -87,7 +88,7 @@ def recompute_saved(run_id):
         checks.append(check)
     passed=all(c['exact_match'] and c.get('independent_review',{}).get('status','VERIFIED')=='VERIFIED' for c in checks)
     return {'mode':'RECOMPUTE','new_model_calls':0,'status':'VERIFIED' if passed else 'REJECTED',
-            'scope':'diagnostic recomputation and honest baseline gate; not Goal completion',
+            'scope':'fresh raw diagnostics and conditional baseline recomputation; not Goal completion',
             'source_run':run_id,'source_code_sha':manifest['code_sha'],'checks':checks}
 
 

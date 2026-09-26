@@ -140,3 +140,21 @@ def test_unknown_crs_cannot_be_bypassed_by_approval_strings(setup):
     p['semantics']['crs']['status']='APPROVED';p['semantics']['distance_policy']['status']='APPROVED'
     p['method']['processing_status']='APPROVED_FOR_REAL_INPUT'
     assert tools.execute_tool('baseline',list(raw),p)['status']=='BLOCKED'
+
+
+@pytest.mark.parametrize('components', [[], ['profile_counts'], list(goal.FOLLOWUP_COMPONENTS[:-1]), ' '.join(goal.FOLLOWUP_COMPONENTS)])
+def test_followup_coverage_cannot_shrink_or_borrow_unrelated_target(components):
+    audit={'status':'VERIFIED','target_sha256':'fixed-target',
+           'checked_components':components,'unchecked_components':[]}
+    assert not goal.followup_review_complete(audit, {'sha256':'fixed-target'})
+
+
+def test_followup_exact_target_complete_scope_and_explicit_unchecked_required():
+    audit={'status':'VERIFIED','target_sha256':'fixed-target',
+           'checked_components':list(goal.FOLLOWUP_COMPONENTS),'unchecked_components':[]}
+    assert goal.followup_review_complete(audit, {'sha256':'fixed-target'})
+    assert not goal.followup_review_complete(audit, {'sha256':'other-target'})
+    audit['unchecked_components']=['direction_threshold']
+    assert not goal.followup_review_complete(audit, {'sha256':'fixed-target'})
+    del audit['unchecked_components']
+    assert not goal.followup_review_complete(audit, {'sha256':'fixed-target'})

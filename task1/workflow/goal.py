@@ -23,6 +23,21 @@ REVIEW_ACTIONS = {'profile_pilot':'verify_profiles', 'time_boundaries':'verify_t
                   'duplicate_details':'verify_duplicate_details', 'baseline':'verify_baseline'}
 TASK_ARTIFACTS = {'diagnostics':['profile_pilot','time_boundaries','duplicate_details'],
                   'real_baseline':['baseline'], 'processing_feedback':['baseline']}
+FOLLOWUP_COMPONENTS = (
+    'trusted_raw_scope', 'approved_analysis_contract', 'independent_coordinates',
+    'local_distance_error', 'distance_split_threshold', 'short_segment_threshold',
+    'direction_threshold', 'dp_interval_sensitivity', 'source_semantics_limitations',
+)
+
+
+def followup_review_complete(audit, target):
+    """A sensitivity review must cover its own predicates, not another artifact's."""
+    checked = audit.get('checked_components')
+    return (audit.get('status') == 'VERIFIED'
+            and audit.get('target_sha256') == target['sha256']
+            and isinstance(checked, list)
+            and all(component in checked for component in FOLLOWUP_COMPONENTS)
+            and audit.get('unchecked_components') == [])
 
 
 class GoalJournal:
@@ -129,8 +144,7 @@ class GoalJournal:
             for path,sha in followup['source_hashes'].items():
                 if digest(ROOT/path)!=sha: raise ValueError('FOLLOWUP_SOURCE_CHANGED')
             audit=read_json(ROOT/item['followup_review']['path'])
-            if (audit.get('status')!='VERIFIED' or audit.get('target_sha256')!=followup['sha256']
-                    or not audit.get('checked_components') or audit.get('unchecked_components')):
+            if not followup_review_complete(audit, followup):
                 raise ValueError('FOLLOWUP_TARGET_REVIEW_INCOMPLETE')
             row['followup_review']=item['followup_review']
         row.update(status='VERIFIED', evidence=item['evidence']+[self.attach(report_path)], verifier=verifier)
@@ -219,9 +233,12 @@ class GoalJournal:
             for name,sha in run['runtime_source_hashes'].items():
                 if digest(ROOT/name)!=sha: raise ValueError('RUNTIME_CODE_CHANGED')
             write_json(path,result,exclusive=True)
-            source_names = ['io.py','tools.py','diagnostics.py'] + (['pipeline.py','geometry.py','evaluation.py'] if action=='baseline' else [])
+            source_names = ['io.py','tools.py','diagnostics.py'] + (['pipeline.py','geometry.py','evaluation.py','coordinates.py'] if action=='baseline' else [])
+            sources = {str(Path('task1/workflow')/name):digest(ROOT/'task1/workflow'/name) for name in source_names}
+            if action=='baseline':
+                sources['task1/config/conditional_planar.json']=digest(ROOT/'task1/config/conditional_planar.json')
             artifact = {**self.attach(path),'artifact_id':op,'output_sha256':object_hash(result),'action':action,'valid':True,
-                        'source_hashes':{str((Path('task1/workflow')/name)):digest(ROOT/'task1/workflow'/name) for name in source_names}}
+                        'source_hashes':sources}
             run['artifacts'][action] = artifact; self.state['inflight'] = None
             self.event('TOOL_EXECUTED',operation=op,artifact=artifact)
             return result
@@ -321,6 +338,8 @@ class GoalJournal:
                     else:
                         self.check_evidence([f,row['followup_review']])
                         if any(digest(ROOT/p)!=h for p,h in f['source_hashes'].items()): row['status']='PENDING'
+                        audit=read_json(ROOT/row['followup_review']['path'])
+                        if not followup_review_complete(audit, f): row['status']='PENDING'
         self.invalidate_dependents()
         statuses=[r['status'] for r in self.state['tasks'].values()]
         open_issues=any(i['status']!='VERIFIED' for i in self.state['issues'].values())
