@@ -2,7 +2,7 @@
 
 **A. 总结**
 
-Goal `SC-LAB1-G1-FOUNDATION-001`，执行 `SC-LAB1-G1-COMPLETE-001`。内部工程状态 **ENGINEERING_READY_FOR_GPT_REVIEW**：九项任务已消费独立C回执并全部VERIFIED，获准的工程与真实条件化分析已完成；实际Git发布尚待本轮最后一步。`GPT_SECOND_REVIEW=PENDING`，`Submission=NOT_READY`，Understanding 由用户真实理解决定。Goal 2/3 未执行。
+Goal `SC-LAB1-G1-FOUNDATION-001`，执行 `SC-LAB1-G1-COMPLETE-001`。内部工程状态 **ENGINEERING_READY_FOR_GPT_REVIEW**：九项任务已消费独立C回执并全部VERIFIED，获准的工程与真实条件化分析已完成，并已在内部验收后实际发布到main。`GPT_SECOND_REVIEW=PENDING`，`Submission=NOT_READY`，Understanding 由用户真实理解决定。Goal 2/3 未执行。
 
 最新用户明确批准 D2，并允许在来源 datum 未证实的情况下固定有依据的局部模型开展开发性真实 pilot。源 CRS 事实仍 `UNVERIFIED`；条件化计算的有效性与真实地理语义是否查明分别登记。本轮不产生绝对定位、道路匹配或真实地面误差结论。
 
@@ -51,7 +51,7 @@ cwd 为仓库根目录 `/home/addaswsw/lab/Smart_Cities_and_Location_Services`�
 
 实际运行命令 `.venv/bin/python -m task1.scripts.complete_goal1 recompute --run-id g1-complete-pilot-03`。复算入口 `.venv/bin/python -m task1.scripts.complete_goal1 verify --run-id g1-complete-pilot-03` 真正从raw重算，默认不调用模型。C额外独立审查为真实处理383项、诊断/绑定64项、后续敏感性1322项；这些是各自范围的独立检查，不加进pytest数量或当作真实准确率。
 
-两工作 Notebook 使用 `.venv/bin/python -m task1.scripts.build_goal1_notebooks --execute` 新内核执行，三图使用 `.venv/bin/python -m task1.scripts.build_complete_figures` 生成；已实际运行成功：两本各8个连续代码单元、零error，Notebook01完整baseline、Notebook02四目标均从raw重算并匹配保存产物。三图均保存SVG/PDF/300dpi PNG与200dpi PDF渲染，架构另有.drawio；B/C与主线程已实际查看。回执见 [B-Run](b_run/RECEIPT.md)，最终状态由C总回执和 [acceptance](../../acceptance.json) 登记。Notebook02显示其执行时的任务状态快照，总验收登记在之后，最终状态以当前REVIEW_PACKET为准。GC01–GC15及原G1-A01–A17内部PASS；GC16/G1-A18内部可发布范围通过，实际push先保持NOT_RUN，随后以发布回执更新。完整scope/命令/预期/结果在 [独立C矩阵](c_acceptance/acceptance_matrix.json) 与当前acceptance登记；没有未关闭工程问题。
+两工作 Notebook 使用 `.venv/bin/python -m task1.scripts.build_goal1_notebooks --execute` 新内核执行，三图使用 `.venv/bin/python -m task1.scripts.build_complete_figures` 生成；已实际运行成功：两本各8个连续代码单元、零error，Notebook01完整baseline、Notebook02四目标均从raw重算并匹配保存产物。三图均保存SVG/PDF/300dpi PNG与200dpi PDF渲染，架构另有.drawio；B/C与主线程已实际查看。回执见 [B-Run](b_run/RECEIPT.md)，最终状态由C总回执和 [acceptance](../../acceptance.json) 登记。Notebook02显示其执行时的任务状态快照，总验收登记在之后，最终状态以当前REVIEW_PACKET为准。GC01–GC16及原G1-A01–A18均已按本轮明确作用域登记PASS，其中GC16/G1-A18由内部验收后的实际push、remote与固定SHA回读证据关闭。GC08通过范围是原值保护与获准条件化合同；来源datum事实仍UNVERIFIED，未强改为PASS。完整scope/命令/预期/结果在 [独立C矩阵](c_acceptance/acceptance_matrix.json) 与当前acceptance登记；没有未关闭工程问题。
 
 **F. 模型与修复循环**
 
@@ -61,7 +61,7 @@ cwd 为仓库根目录 `/home/addaswsw/lab/Smart_Cities_and_Location_Services`�
 
 **G. 产物与Git**
 
-Repository https://github.com/woobowen/Smart_Cities_and_Location_Services ，Branch `main`。CODE_SHA 如上；最终 ARTIFACT_SHA 与实际 remote 在完成push后登记publication回执及最终会话，文件不声称包含生成自己的尚不存在提交SHA。当前尚未push，不声称发布完成。
+Repository https://github.com/woobowen/Smart_Cities_and_Location_Services ，Branch `main`。CODE_SHA 如上；完整产物首发SHA为 `2474c70c9d924b79906a866e71aca2999340e665`，已实际push，核对Local HEAD、origin/main与实际Remote一致，并通过10个固定SHA文件HTTPS回读。见 [publication回执](publication.json)。随后仅提交本次核对及状态记录；最终ARTIFACT_SHA/Remote SHA由最后push后的会话报告，避免文件声称包含生成自己的尚不存在SHA。
 
 图/Notebook生成器的显示修正由各自回执绑定实际source hash，已重建并执行受影响产物；未变化的数学核心仍绑定上述CODE。
 
@@ -71,4 +71,12 @@ Repository https://github.com/woobowen/Smart_Cities_and_Location_Services ，Bra
 
 **H. 下一步**
 
-完成内部总验收和真实发布后停止在Goal1，等待GPT读取固定远程SHA二重验收；不自行进入G2/G3，不另造转发Prompt。尚未证明的datum事实和真实地理精度保留为明确限制；这不撤销用户已授予的条件化分析权限。两份正式报告与教师提交ZIP在G3另行整理，本轮不发邮件、不宣称SUBMITTED。
+内部总验收和真实发布已完成，停止在Goal1，等待GPT读取固定远程SHA二重验收；不自行进入G2/G3，不另造转发Prompt。尚未证明的datum事实和真实地理精度保留为明确限制；这不撤销用户已授予的条件化分析权限。两份正式报告与教师提交ZIP在G3另行整理，本轮不发邮件、不宣称SUBMITTED。
+
+固定已发布内容链接：
+
+- [计算核心](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/2474c70c9d924b79906a866e71aca2999340e665/task1/workflow/evaluation.py)
+- [真实run03 manifest](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/2474c70c9d924b79906a866e71aca2999340e665/task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/manifest.json)
+- [独立C完整报告](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/2474c70c9d924b79906a866e71aca2999340e665/task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/C_INTERNAL_REVIEW.md)
+- [工作Notebook01](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/2474c70c9d924b79906a866e71aca2999340e665/task1/notebooks/01_baseline_and_audit.ipynb) · [Notebook02](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/2474c70c9d924b79906a866e71aca2999340e665/task1/notebooks/02_agent_loop_recompute.ipynb)
+- [三图及原生源索引](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/2474c70c9d924b79906a866e71aca2999340e665/task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/figure_manifest.json)

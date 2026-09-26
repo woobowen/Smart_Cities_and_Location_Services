@@ -3,7 +3,7 @@
   "goal_id": "SC-LAB1-G1-FOUNDATION-001",
   "engineering_status": "ENGINEERING_READY_FOR_GPT_REVIEW",
   "goal1_engineering_complete_under_current_authorization": true,
-  "goal1_complete": false,
+  "goal1_complete": true,
   "completion_scope": "CONDITIONAL_ANALYSIS_WITH_UNVERIFIED_SOURCE_DATUM",
   "unconditional_geographic_completion": false,
   "source_crs": "UNVERIFIED",
@@ -13,8 +13,8 @@
   "goal2_goal3": "NOT_RUN",
   "processing_code_sha": "f229d9a4113bcc0dd763e1b410f1f5fb73903a62",
   "current_run": "g1-complete-pilot-03",
-  "updated_at": "2026-09-26T17:30:50.496559+00:00",
-  "publication_status": "NOT_RUN",
+  "updated_at": "2026-09-26T17:35:05.445803+00:00",
+  "publication_status": "VERIFIED",
   "acceptance": [
     {
       "id": "GC01",
@@ -1161,11 +1161,11 @@
     },
     {
       "id": "GC16",
-      "status": "NOT_RUN",
+      "status": "PASS",
       "scope": "Final effective code/config/input/result binding, independent internal review, actual safe push, remote equality and immutable core links exist; GPT second review remains pending.",
-      "verification_method_or_command": "C internal total report/receipt; fixed source and artifact hashes; local entry/link checks",
+      "verification_method_or_command": "git push origin main; git rev-parse HEAD; git rev-parse origin/main; git ls-remote --heads origin main; 10 fixed-SHA HTTPS reads with SHA256 comparison",
       "expected": "internally reviewable package ready; later actual safe push and remote identity checked separately",
-      "actual": "internal processing/artifact lineage and reviewed claims verified; publication NOT_RUN in this receipt; GPT second review PENDING",
+      "actual": "Normal push main succeeded; local HEAD/origin/main/actual remote equal 2474c70c9d924b79906a866e71aca2999340e665; 10 fixed-SHA HTTPS files returned 200 and exact content hashes. Proof commit only records this verification.",
       "evidence": [
         {
           "path": "AGENTS.md",
@@ -1262,9 +1262,14 @@
         {
           "path": "task1/作业/作业/traj_dict.json",
           "sha256": "c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/publication.json",
+          "sha256": "7454db152d14f2acd21200178251e8b64e4149db3bafa172af978d07fd9290d6"
         }
       ],
-      "independent_internal_status": "INTERNAL_VERIFIED_PUBLICATION_NOT_RUN"
+      "independent_internal_status": "INTERNAL_VERIFIED_PUBLICATION_NOT_RUN",
+      "publication_status": "VERIFIED"
     }
   ],
   "original_g1_acceptance": [
@@ -3616,15 +3621,13 @@
     {
       "id": "G1-A18",
       "requirement": "完整安全的GitHub审核包同步",
-      "status": "NOT_RUN",
+      "status": "PASS",
       "gc_ids": [
         "GC16"
       ],
       "scope": "Old publication PASS proves only the old commit; this execution needs actual remote verification.",
       "current_actual_scope": "Current conditional pilot; publication is separately pending",
-      "actual": [
-        "internal processing/artifact lineage and reviewed claims verified; publication NOT_RUN in this receipt; GPT second review PENDING"
-      ],
+      "actual": "Normal push main succeeded; local HEAD/origin/main/actual remote equal 2474c70c9d924b79906a866e71aca2999340e665; 10 fixed-SHA HTTPS files returned 200 and exact content hashes. Proof commit only records this verification.",
       "evidence": [
         {
           "path": "AGENTS.md",
@@ -3721,10 +3724,16 @@
         {
           "path": "task1/作业/作业/traj_dict.json",
           "sha256": "c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/publication.json",
+          "sha256": "7454db152d14f2acd21200178251e8b64e4149db3bafa172af978d07fd9290d6"
         }
       ],
       "independent_internal_status": "INTERNAL_VERIFIED_PUBLICATION_NOT_RUN",
-      "history_preserved": true
+      "history_preserved": true,
+      "publication_status": "VERIFIED",
+      "verification_method_or_command": "git push origin main; git rev-parse HEAD; git rev-parse origin/main; git ls-remote --heads origin main; 10 fixed-SHA HTTPS reads with SHA256 comparison"
     }
   ],
   "independent_c_receipt": {
@@ -3740,7 +3749,11 @@
   "remaining_unproven_facts": [
     "source datum/offset and absolute ground truth accuracy"
   ],
-  "remaining_current_delivery_actions": [
-    "actual push and remote fixed-SHA readback"
-  ]
+  "remaining_current_delivery_actions": [],
+  "published_content_sha": "2474c70c9d924b79906a866e71aca2999340e665",
+  "publication_proof": {
+    "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/publication.json",
+    "sha256": "7454db152d14f2acd21200178251e8b64e4149db3bafa172af978d07fd9290d6"
+  },
+  "project_deliverable": "PENDING_GPT_SECOND_REVIEW"
 }

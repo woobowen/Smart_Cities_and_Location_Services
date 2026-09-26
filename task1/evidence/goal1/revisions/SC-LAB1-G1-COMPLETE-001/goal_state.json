@@ -1969,6 +1969,24 @@
       "previous_hash": "bbc212c9bf7bc9ab3e9dbce18a755566d92447214ed6d44ad50e36c7df21c42a",
       "status": "ENGINEERING_READY_FOR_GPT_REVIEW",
       "hash": "0c277747be616b988a2f3071330d45ac600efcebaa1adf1725f935707056a31f"
+    },
+    {
+      "sequence": 91,
+      "at": "2026-09-26T17:35:05.442581+00:00",
+      "kind": "PUBLICATION_VERIFIED",
+      "previous_hash": "0c277747be616b988a2f3071330d45ac600efcebaa1adf1725f935707056a31f",
+      "content_sha": "2474c70c9d924b79906a866e71aca2999340e665",
+      "remote_sha": "2474c70c9d924b79906a866e71aca2999340e665",
+      "fixed_http_files": 10,
+      "hash": "fcf4f85972ea2d3db82898d00a0d857be7d2576f9c92b653d48c2aaf8f29293d"
+    },
+    {
+      "sequence": 92,
+      "at": "2026-09-26T17:35:05.619406+00:00",
+      "kind": "GOAL_REEVALUATED",
+      "previous_hash": "fcf4f85972ea2d3db82898d00a0d857be7d2576f9c92b653d48c2aaf8f29293d",
+      "status": "ENGINEERING_READY_FOR_GPT_REVIEW",
+      "hash": "d1200b8a23c290bcebb98021e70a9a2143aad2d03a4d9e9ee52746f73dc2dd8b"
     }
   ],
   "runs": {
@@ -2382,5 +2400,13 @@
   },
   "inflight": null,
   "current_code_sha": "f229d9a4113bcc0dd763e1b410f1f5fb73903a62",
-  "current_run": "g1-complete-pilot-03"
+  "current_run": "g1-complete-pilot-03",
+  "publication": {
+    "status": "VERIFIED",
+    "content_sha": "2474c70c9d924b79906a866e71aca2999340e665",
+    "evidence": {
+      "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/publication.json",
+      "sha256": "7454db152d14f2acd21200178251e8b64e4149db3bafa172af978d07fd9290d6"
+    }
+  }
 }

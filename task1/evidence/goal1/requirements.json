@@ -10,7 +10,7 @@
     "BLOCKED"
   ],
   "status_rule": "逐要求标当前作用域；VERIFIED_FOR_CURRENT_SCOPE仅限明确列出的G1证据。后续G2/G3任务NOT_STARTED不单独导致G1失败；必要G1真实处理/真实角色/反馈受阻不能由离线通过抵消。",
-  "goal1_completion_claim": false,
+  "goal1_completion_claim": true,
   "gpt_second_review": "PENDING",
   "submission": "NOT_READY",
   "understanding": "USER_DETERMINED_NOT_INFERRED_FROM_TESTS",
@@ -1141,8 +1141,8 @@
         "G2": "同一阶段出口流程",
         "G3": "全量成果最终远程验收"
       },
-      "status": "IN_PROGRESS",
-      "status_scope": "内部可发布范围通过，等待本轮实际push/remote验证，不提前标发布完成。",
+      "status": "VERIFIED_FOR_CURRENT_SCOPE",
+      "status_scope": "内部验收通过后已实际push main；本地/origin/main/实际remote一致，10个固定SHA文件回读逐字节一致。GPT二审仍PENDING。",
       "necessary_goal1_component": true,
       "sources": [
         {
@@ -1157,8 +1157,8 @@
         }
       ],
       "current_work": [
-        "最终工程源码、合同、真实结果、审核回执与输入hash绑定；C总验收/发布前保护检查后才push。",
-        "仓库11-file upload bundle已同步且字节检查；没有声称ChatGPT UI已上传。实际发布核对由当前发布步骤完成，GPT二审保持PENDING。"
+        "最终工程源码、合同、真实结果、审核回执与输入hash绑定；C总验收与发布保护检查通过后实际push main，远程与本地一致。",
+        "仓库11-file upload bundle已同步并通过字节核验，未声称ChatGPT UI已上传；10个核心文件从固定SHA实际HTTPS回读并逐字节匹配。"
       ],
       "evidence": [
         {
@@ -1192,6 +1192,10 @@
         {
           "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/acceptance_matrix.json",
           "supports": "本轮独立C全部GC和原G1对应；发布需另取真实回执"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/publication.json",
+          "supports": "实际push与remote/固定SHA内容核对"
         }
       ],
       "blocking_ids": [],
@@ -1415,7 +1419,8 @@
     "current_run": "g1-complete-pilot-03",
     "baseline_status": "VERIFIED_BY_INDEPENDENT_RUNTIME_REVIEW",
     "goal2_goal3": "NOT_RUN",
-    "publication_status": "NOT_RUN"
+    "publication_status": "VERIFIED",
+    "published_content_sha": "2474c70c9d924b79906a866e71aca2999340e665"
   },
   "historical_unresolved": [
     {
@@ -1464,5 +1469,6 @@
       "conditional_pilot_authorized": true,
       "reason": "用户未提供绑定文件的datum/offset说明；本轮不将模型假设改写为事实"
     }
-  ]
+  ],
+  "completion_scope": "User-authorized conditional engineering and fixed real pilot; source datum remains UNVERIFIED; GPT review PENDING"
 }
