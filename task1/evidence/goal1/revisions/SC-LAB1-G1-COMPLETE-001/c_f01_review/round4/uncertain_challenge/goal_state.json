@@ -1,0 +1,171 @@
+{
+  "goal_id": "SC-LAB1-G1-FOUNDATION-001",
+  "execution": "SC-LAB1-G1-COMPLETE-001",
+  "status": "INTERRUPTED_CHECKPOINT",
+  "gpt_second_review": "PENDING",
+  "submission": "NOT_READY",
+  "tasks": {
+    "governance": {
+      "status": "PENDING",
+      "depends_on": [],
+      "evidence": []
+    },
+    "review_targets": {
+      "status": "PENDING",
+      "depends_on": [],
+      "evidence": []
+    },
+    "trusted_baseline": {
+      "status": "PENDING",
+      "depends_on": [],
+      "evidence": []
+    },
+    "diagnostics": {
+      "status": "PENDING",
+      "depends_on": [
+        "review_targets"
+      ],
+      "evidence": []
+    },
+    "real_baseline": {
+      "status": "PENDING",
+      "depends_on": [
+        "trusted_baseline",
+        "diagnostics"
+      ],
+      "evidence": []
+    },
+    "processing_feedback": {
+      "status": "PENDING",
+      "depends_on": [
+        "real_baseline"
+      ],
+      "evidence": []
+    },
+    "notebooks": {
+      "status": "PENDING",
+      "depends_on": [
+        "diagnostics"
+      ],
+      "evidence": []
+    },
+    "figures": {
+      "status": "PENDING",
+      "depends_on": [
+        "diagnostics"
+      ],
+      "evidence": []
+    },
+    "internal_review": {
+      "status": "PENDING",
+      "depends_on": [
+        "governance",
+        "review_targets",
+        "trusted_baseline",
+        "diagnostics",
+        "notebooks",
+        "figures"
+      ],
+      "evidence": []
+    }
+  },
+  "issues": {},
+  "events": [
+    {
+      "sequence": 0,
+      "at": "2026-09-26T16:55:16.318201+00:00",
+      "kind": "CODE_BOUND",
+      "previous_hash": "ROOT",
+      "code_sha": "ENGINEERING_TEST_VERSION_1",
+      "changed_paths": [],
+      "hash": "f39db468cde4d80e164784f9ec4253675db134a19c55500d8c01c5348002204a"
+    },
+    {
+      "sequence": 1,
+      "at": "2026-09-26T16:55:16.319224+00:00",
+      "kind": "RUN_STARTED",
+      "previous_hash": "f39db468cde4d80e164784f9ec4253675db134a19c55500d8c01c5348002204a",
+      "run_id": "uncertain",
+      "hash": "af67a7d0695390411e55a65658ac52a6d07c7ab887f06337c22f71c4efa1f7e5"
+    },
+    {
+      "sequence": 2,
+      "at": "2026-09-26T16:55:16.319999+00:00",
+      "kind": "TOOL_DISPATCHED",
+      "previous_hash": "af67a7d0695390411e55a65658ac52a6d07c7ab887f06337c22f71c4efa1f7e5",
+      "operation": "uncertain:profile_pilot",
+      "hash": "01cf3379428281e62d274e2c6cc8a5d606a5c8db2a5c500f6175f4c312919fbe"
+    },
+    {
+      "sequence": 3,
+      "at": "2026-09-26T16:55:16.320346+00:00",
+      "kind": "TOOL_FAILED_OUTCOME_REQUIRES_RECONCILIATION",
+      "previous_hash": "01cf3379428281e62d274e2c6cc8a5d606a5c8db2a5c500f6175f4c312919fbe",
+      "operation": "uncertain:profile_pilot",
+      "error": "C_CONSTRUCTED_POST_DISPATCH_FAILURE",
+      "hash": "50286fb1503184ab3407d489d2f9a62a982e4c17ef2d3dddfbd3347c13277eb9"
+    },
+    {
+      "sequence": 4,
+      "at": "2026-09-26T16:55:16.320785+00:00",
+      "kind": "RECOVERY_INSPECTION",
+      "previous_hash": "50286fb1503184ab3407d489d2f9a62a982e4c17ef2d3dddfbd3347c13277eb9",
+      "operation": "uncertain:profile_pilot",
+      "output_exists": false,
+      "automatic_retry": false,
+      "hash": "d18cb2795f5df5775ebd8d7ba34bb2ed79f8ea59fc6ccc9e94a64ec86291446d"
+    },
+    {
+      "sequence": 5,
+      "at": "2026-09-26T16:55:16.321012+00:00",
+      "kind": "GOAL_REEVALUATED",
+      "previous_hash": "d18cb2795f5df5775ebd8d7ba34bb2ed79f8ea59fc6ccc9e94a64ec86291446d",
+      "status": "INTERRUPTED_CHECKPOINT",
+      "hash": "12d531af57190021b0c7e8a71a5fcf87e079be29ad122e21cc66f0c55154782f"
+    }
+  ],
+  "runs": {
+    "uncertain": {
+      "status": "INTERRUPTED_CHECKPOINT",
+      "code_sha": "ENGINEERING_TEST_VERSION_1",
+      "policy_hash": "9837ce87e0fc4b7f89c46a423e6f26980aed238d91dc7cf536582c230293f175",
+      "input_sha256": "1c8a4f48c5faf8416aa7474d1a43215fdba759795cefd3414b60ea22edd2f451",
+      "record_ids": [
+        "fixture:edges",
+        "fixture:missing",
+        "fixture:empty"
+      ],
+      "artifacts": {},
+      "reviews": {},
+      "mode": "RECOMPUTE",
+      "new_model_calls": 0,
+      "runtime_source_hashes": {
+        "task1/workflow/recompute.py": "4c198a016adec8554602c9ad04e0446bb90866ed970789834b96c51ebbec9b56",
+        "task1/workflow/coordinates.py": "d99b270a65c88f8530669d5e7d0887d7563b3e54e19770ab7a9eb695117e075d",
+        "task1/workflow/goal.py": "d313d408961adf07b9791972b03ac6a99db808e805efe1aa06abe85a075e863a",
+        "task1/workflow/diagnostics.py": "e2ef635bbd95db505b3eff336ca59074a60217a70b2bc644624c3fbd0280acda",
+        "task1/workflow/inventory.py": "42bceb3ea1bab9ca386b88ce29104dc4bb518fee6df8f25aae50360633e7d5a1",
+        "task1/workflow/io.py": "0d3d72dd0beb4718f4020a07a5f1c0ca89193943049a479816b5c496806321b2",
+        "task1/workflow/budget.py": "c275047dffcafb7160b0c3fcd8de4e56bbc1f86dc05925691ff5af43aea312ca",
+        "task1/workflow/coordinate_review.py": "13305c6dda7bc0699822cd880e4e9051f2946371d4dd83f4ae0ea946dd5c897c",
+        "task1/workflow/__init__.py": "bd23709231145ce415c01c88880b886e8c8343199a47dbe0762d68841aeb73ff",
+        "task1/workflow/artifact_review.py": "dfa0b91149662baf26861a9ec0e51223842d0ac62ada29015eca7b119c68da48",
+        "task1/workflow/pipeline.py": "160bedcc0d8dffce71d833dffc4de28928bc7007077ae8d03c57c96d827548c7",
+        "task1/workflow/__main__.py": "b96a66d5fe543f8082d528e81e7e70de2c0090b20ab60b090532ab65647713e8",
+        "task1/workflow/geometry.py": "2ad3ca3b49e98e997684e3f5af948771be80dfb03b31b2ae4cc4483856e93d74",
+        "task1/workflow/provider.py": "d778316bcdbdec1643707a93c1d0e00e52caa4c0b941c9299b33da547adbc28b",
+        "task1/workflow/evaluation.py": "92424a94c20ce897606d546ba69c0f205c0f5f75a17b609134ac8125a241c7ad",
+        "task1/workflow/tools.py": "0fde0acebfe3ec97bd2653744ac8f0444c1e9a162c61970bccf8a94a9fbd0b3f",
+        "task1/workflow/sources.py": "74b42f79abfe172b7d2e29ba55a631b22f3e6d46c7cb2a08c0c7634eaf44ba90",
+        "task1/workflow/controller.py": "16793b102fd077cc243eae6f1e714632f312a77e421850d424b8562a2909eb6d"
+      }
+    }
+  },
+  "inflight": {
+    "id": "uncertain:profile_pilot",
+    "kind": "tool",
+    "action": "profile_pilot"
+  },
+  "current_code_sha": "ENGINEERING_TEST_VERSION_1",
+  "current_run": "uncertain"
+}

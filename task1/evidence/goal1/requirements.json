@@ -1,7 +1,7 @@
 {
   "task_id": "SC-LAB1-G1-FOUNDATION-001",
   "current_goal": 1,
-  "recorded_at_utc": "2026-09-26T11:34:01.361743+00:00",
+  "recorded_at_utc": "2026-09-26T16:43:41.698201+00:00",
   "classification": "REQUIREMENT_TO_EVIDENCE_MAP_NOT_FINAL_ACCEPTANCE",
   "status_vocabulary": [
     "NOT_STARTED",
@@ -14,53 +14,6 @@
   "gpt_second_review": "PENDING",
   "submission": "NOT_READY",
   "understanding": "USER_DETERMINED_NOT_INFERRED_FROM_TESTS",
-  "snapshot": {
-    "raw_records": 11386,
-    "raw_points": 1173410,
-    "raw_inventory_only": true,
-    "pilot_ids": [
-      "0",
-      "1",
-      "2",
-      "246",
-      "256",
-      "306",
-      "352"
-    ],
-    "pilot_points": 783,
-    "time_only_partitions": 12,
-    "pilot_deleted_points": 0,
-    "pilot_modified_points": 0,
-    "complete_real_baseline": "BLOCKED",
-    "live_run": "g1-live-20260926-03",
-    "live_role_outcome": {
-      "A": "REAL_SUCCESS_AND_SOURCE_EVIDENCE_EXECUTED",
-      "B": "WORKSPACE_ROUTING_DISCOVERY_FAILED",
-      "C": "NOT_CALLED",
-      "feedback_cycle": "NOT_COMPLETED"
-    },
-    "visible_transport_reconnect_notifications": 9,
-    "visible_transport_fallback_notifications": 1,
-    "underlying_request_count": "unavailable",
-    "new_live_calls": "FROZEN_ACROSS_RUN_IDS",
-    "offline_engineering_tests": {
-      "passed": 108,
-      "failed": 0,
-      "skipped": 0,
-      "evidence": "task1/evidence/goal1/tests/final_bound.xml",
-      "independent_review": "task1/evidence/goal1/tests/INDEPENDENT_CONTROL_REVIEW.md",
-      "not_a_live_or_real_cleaning_pass": true
-    },
-    "notebooks": {
-      "fresh_kernels": 2,
-      "code_cells_each": 6,
-      "mode": "RECOMPUTE",
-      "new_model_calls": 0,
-      "evidence": "task1/evidence/goal1/validation/notebooks.json"
-    },
-    "current_diagnostic_code_sha": "ea3b20ad13c65ab01cf2c761db6b09c185855b53",
-    "historical_live_code_sha": "d1444eb07035ef651a36a3e89269f004186581df"
-  },
   "requirements": [
     {
       "id": "R01",
@@ -71,8 +24,8 @@
         "G2": "批准距离口径后补充真实物理诊断与方法实验",
         "G3": "独立确认及总体边界复核"
       },
-      "status": "BLOCKED",
-      "status_scope": "原始结构和权限边界已核验；数据专属 CRS 与距离口径未确认，不能将语义核查整体标为完成",
+      "status": "VERIFIED_FOR_CURRENT_SCOPE",
+      "status_scope": "内部C已通过本轮明确授权的G1工程/固定真实条件化pilot范围；源datum仍UNVERIFIED，后续G2/G3要求未执行。",
       "necessary_goal1_component": true,
       "sources": [
         {
@@ -97,9 +50,9 @@
         }
       ],
       "current_work": [
-        "全量只读核对11386条记录、1173410点；无全量正式清洗或方法选择",
-        "原始数组顺序和数值保留；同时间异位置/重复位置/时间差分项统计",
-        "Unix秒和(lon,lat)度为SOURCE_DECLARED；CRS为UNKNOWN，距离口径待批准；原始哈希前后一致"
+        "历史全量只读结构盘点11386条/1173410点保留；本轮实际处理仅固定7条/783点。",
+        "A核对teacher/starter文件绑定的坐标顺序、度数、Unix秒结构声明；source_crs保持UNVERIFIED。",
+        "最新用户授权下，固定数学椭球ENU工作模型及范围/核验方法，保留原始值和raw→working关系；不作地面精度结论。"
       ],
       "evidence": [
         {
@@ -117,20 +70,46 @@
         {
           "path": "task1/config/goal1.json",
           "supports": "可程序检查的语义及影响操作"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/a_scope/source_audit.json",
+          "supports": "本轮当前作用域；详见该产物分类和审核范围"
+        },
+        {
+          "path": "task1/config/conditional_planar.json",
+          "supports": "本轮当前作用域；详见该产物分类和审核范围"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/USER_DECISIONS.json",
+          "supports": "本轮当前作用域；详见该产物分类和审核范围"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/acceptance_matrix.json",
+          "supports": "本轮独立C全部GC和原G1对应；发布需另取真实回执"
         }
       ],
-      "blocking_ids": [
-        "U01_CRS_DISTANCE"
-      ],
+      "blocking_ids": [],
       "future_acceptance": [
-        "取得绑定该JSON的数据基准可靠来源，并明确米制距离/投影口径",
-        "不因时区未知阻断可靠相对时间差；仅在批准范围补做受影响真实运算"
+        "保留datum未证实限制；如获得新的文件级可靠来源，再单独登记事实及受影响结论。"
       ],
       "related_goal1_acceptance_ids": [
         "G1-A02",
         "G1-A03",
         "G1-A04",
         "G1-A11"
+      ],
+      "historical_status_scope": "原始结构和权限边界已核验；数据专属 CRS 与距离口径未确认，不能将语义核查整体标为完成",
+      "historical_current_work": [
+        "全量只读核对11386条记录、1173410点；无全量正式清洗或方法选择",
+        "原始数组顺序和数值保留；同时间异位置/重复位置/时间差分项统计",
+        "Unix秒和(lon,lat)度为SOURCE_DECLARED；CRS为UNKNOWN，距离口径待批准；原始哈希前后一致"
+      ],
+      "historical_future_acceptance": [
+        "取得绑定该JSON的数据基准可靠来源，并明确米制距离/投影口径",
+        "不因时区未知阻断可靠相对时间差；仅在批准范围补做受影响真实运算"
+      ],
+      "historical_blocking_ids": [
+        "U01_CRS_DISTANCE"
       ]
     },
     {
@@ -142,8 +121,8 @@
         "G2": "完整三组参数实验中的分段组",
         "G3": "冻结参数后的全量产出"
       },
-      "status": "BLOCKED",
-      "status_scope": "时间诊断实际完成；空间切分和长度过滤受阻，12个时间分区不能称完整教学分段",
+      "status": "VERIFIED_FOR_CURRENT_SCOPE",
+      "status_scope": "内部C已通过本轮明确授权的G1工程/固定真实条件化pilot范围；源datum仍UNVERIFIED，后续G2/G3要求未执行。",
       "necessary_goal1_component": true,
       "sources": [
         {
@@ -163,9 +142,8 @@
         }
       ],
       "current_work": [
-        "分段和短片段过滤分别实现，边界右点归新段、等号不切、过滤原因独立",
-        "七条pilot 0/1/2/246/256/306/352共783点，以>30来源秒得到12个索引分区，0删除、0改值",
-        "构造测试验证守恒/不跨记录/短片段原因；真实空间部分未运行"
+        "获准参考链实际执行：严格>30秒或>400工作米切分，负dt独立切，边界右归；独立短段过滤。",
+        "run03共30段，7段过滤，309点有完整过滤原因；切断边不算段长，全部原始点账本守恒。"
       ],
       "evidence": [
         {
@@ -187,18 +165,40 @@
         {
           "path": "task1/results/goal1/point_actions.jsonl",
           "supports": "逐点保留及阻断去向"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/baseline.json",
+          "supports": "本轮当前作用域；详见该产物分类和审核范围"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/baseline_review.json",
+          "supports": "本轮当前作用域；详见该产物分类和审核范围"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/acceptance_matrix.json",
+          "supports": "本轮独立C全部GC和原G1对应；发布需另取真实回执"
         }
       ],
-      "blocking_ids": [
-        "U01_CRS_DISTANCE"
-      ],
+      "blocking_ids": [],
       "future_acceptance": [
-        "U01解除后在事前pilot上实际执行时间+空间分段和独立短段过滤",
-        "G2批准参数范围后比较分段参数；保留失败与全输入分母"
+        "G2按既定计划做三组参数和必要顺序比较；不以G1开发pilot冒充正式实验。"
       ],
       "related_goal1_acceptance_ids": [
         "G1-A05",
         "G1-A11"
+      ],
+      "historical_status_scope": "时间诊断实际完成；空间切分和长度过滤受阻，12个时间分区不能称完整教学分段",
+      "historical_current_work": [
+        "分段和短片段过滤分别实现，边界右点归新段、等号不切、过滤原因独立",
+        "七条pilot 0/1/2/246/256/306/352共783点，以>30来源秒得到12个索引分区，0删除、0改值",
+        "构造测试验证守恒/不跨记录/短片段原因；真实空间部分未运行"
+      ],
+      "historical_future_acceptance": [
+        "U01解除后在事前pilot上实际执行时间+空间分段和独立短段过滤",
+        "G2批准参数范围后比较分段参数；保留失败与全输入分母"
+      ],
+      "historical_blocking_ids": [
+        "U01_CRS_DISTANCE"
       ]
     },
     {
@@ -206,12 +206,12 @@
       "requirement": "基于教师方向关系的去噪及验证",
       "nature": "教师基础任务 T1",
       "goal_allocation": {
-        "G1": "核实教师谓词，验证环形角差/可计算性并暴露定义歧义",
-        "G2": "明确删除调度后实际基线和去噪参数优化",
+        "G1": "教师谓词与获批一次同时删除规则实现、独立审核、固定pilot条件化真实基线",
+        "G2": "三组参数中的去噪参数及必要替代策略验证",
         "G3": "冻结方法的独立确认和正式处理"
       },
-      "status": "BLOCKED",
-      "status_scope": "outgoing方向谓词明确；删除调度、端点/不可算邻域尚未批准，真实删点未执行",
+      "status": "VERIFIED_FOR_CURRENT_SCOPE",
+      "status_scope": "内部C已通过本轮明确授权的G1工程/固定真实条件化pilot范围；源datum仍UNVERIFIED，后续G2/G3要求未执行。",
       "necessary_goal1_component": true,
       "sources": [
         {
@@ -231,9 +231,8 @@
         }
       ],
       "current_work": [
-        "明确d_i与d_(i-1)、d_(i+1)两个环形角差均>35°的参考关系",
-        "direction_candidates仅报告可算窗口候选；实际denoise入口对未决方法抛MethodUnresolved",
-        "两个CONSTRUCTED_FIXTURE真实验证一次/迭代/即时重算删除集合不同；没有自选一种作为教师实现"
+        "用户明确批准D2一次计算双侧方向谓词、完整标记同时删除、首尾/缺方向/零位移窗口保留、不迭代、下游重算。",
+        "run03真实删除13点；方向值仅有派生浮点比较修复，35度严格谓词、索引和删除集合标准未放宽。"
       ],
       "evidence": [
         {
@@ -255,19 +254,45 @@
         {
           "path": "task1/evidence/goal1/tests/final_bound.xml",
           "supports": "构造角差/不可计算方向/特征对齐测试"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/baseline.json",
+          "supports": "本轮当前作用域；详见该产物分类和审核范围"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/USER_DECISIONS.json",
+          "supports": "本轮当前作用域；详见该产物分类和审核范围"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/direction_roundoff_receipt.json",
+          "supports": "本轮当前作用域；详见该产物分类和审核范围"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/acceptance_matrix.json",
+          "supports": "本轮独立C全部GC和原G1对应；发布需另取真实回执"
         }
       ],
-      "blocking_ids": [
-        "U01_CRS_DISTANCE",
-        "U02_DIRECTION_EXECUTION"
-      ],
+      "blocking_ids": [],
       "future_acceptance": [
-        "GPT/用户确认同时或在线、一次或迭代，以及端点和不可计算方向行为",
-        "U01/U02解除后进行真实删点、原因记录、特征重算和复核；随后G2单项参数实验"
+        "G2按既定计划评价必要替代调度；G1不静默改为迭代删除。"
       ],
       "related_goal1_acceptance_ids": [
         "G1-A06",
         "G1-A11"
+      ],
+      "historical_status_scope": "outgoing方向谓词明确；删除调度、端点/不可算邻域尚未批准，真实删点未执行",
+      "historical_current_work": [
+        "明确d_i与d_(i-1)、d_(i+1)两个环形角差均>35°的参考关系",
+        "direction_candidates仅报告可算窗口候选；实际denoise入口对未决方法抛MethodUnresolved",
+        "两个CONSTRUCTED_FIXTURE真实验证一次/迭代/即时重算删除集合不同；没有自选一种作为教师实现"
+      ],
+      "historical_future_acceptance": [
+        "GPT/用户确认同时或在线、一次或迭代，以及端点和不可计算方向行为",
+        "U01/U02解除后进行真实删点、原因记录、特征重算和复核；随后G2单项参数实验"
+      ],
+      "historical_blocking_ids": [
+        "U01_CRS_DISTANCE",
+        "U02_DIRECTION_EXECUTION"
       ]
     },
     {
@@ -279,8 +304,8 @@
         "G2": "简化参数实验",
         "G3": "冻结后独立确认/全量结果"
       },
-      "status": "BLOCKED",
-      "status_scope": "有限平面数学与索引原语通过构造核验；真实米制DP及完整链没有运行",
+      "status": "VERIFIED_FOR_CURRENT_SCOPE",
+      "status_scope": "内部C已通过本轮明确授权的G1工程/固定真实条件化pilot范围；源datum仍UNVERIFIED，后续G2/G3要求未执行。",
       "necessary_goal1_component": true,
       "sources": [
         {
@@ -300,9 +325,8 @@
         }
       ],
       "current_work": [
-        "有序原始索引DP、有限线段/退化距离实现，避免浮点坐标相等反查",
-        "独立直接距离按原始索引区间审查，含p=(2,1),a=(0,0),b=(1,0)距离sqrt(2)反例",
-        "构造端点、闭合、重复、回头及几何不变性等测试；真实米制运算被U01门控，完整链另受U02影响"
+        "有限线段DP、直接保存原始索引；clean参考461点，最终188点，DP省点273，saving=0.5921908893709328。",
+        "实际输出按索引区间独立核验max_error=4.938319812632411工作米；无跨记录/断点最近段匹配。"
       ],
       "evidence": [
         {
@@ -324,20 +348,38 @@
         {
           "path": "task1/evidence/goal1/tests/final_bound.xml",
           "supports": "108项离线测试结果"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/baseline_review.json",
+          "supports": "本轮当前作用域；详见该产物分类和审核范围"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/acceptance_matrix.json",
+          "supports": "本轮独立C全部GC和原G1对应；发布需另取真实回执"
         }
       ],
-      "blocking_ids": [
-        "U01_CRS_DISTANCE",
-        "U02_DIRECTION_EXECUTION"
-      ],
+      "blocking_ids": [],
       "future_acceptance": [
-        "U01批准后在相同简化前输入上实际执行并验证米制误差/索引",
-        "与前序基线串联须同时解决U02；G2实验只按共同指标比较"
+        "G2容差实验；G3冻结后独立确认。"
       ],
       "related_goal1_acceptance_ids": [
         "G1-A07",
         "G1-A08",
         "G1-A11"
+      ],
+      "historical_status_scope": "有限平面数学与索引原语通过构造核验；真实米制DP及完整链没有运行",
+      "historical_current_work": [
+        "有序原始索引DP、有限线段/退化距离实现，避免浮点坐标相等反查",
+        "独立直接距离按原始索引区间审查，含p=(2,1),a=(0,0),b=(1,0)距离sqrt(2)反例",
+        "构造端点、闭合、重复、回头及几何不变性等测试；真实米制运算被U01门控，完整链另受U02影响"
+      ],
+      "historical_future_acceptance": [
+        "U01批准后在相同简化前输入上实际执行并验证米制误差/索引",
+        "与前序基线串联须同时解决U02；G2实验只按共同指标比较"
+      ],
+      "historical_blocking_ids": [
+        "U01_CRS_DISTANCE",
+        "U02_DIRECTION_EXECUTION"
       ]
     },
     {
@@ -350,7 +392,7 @@
         "G3": "独立确认并解释正式结果"
       },
       "status": "VERIFIED_FOR_CURRENT_SCOPE",
-      "status_scope": "仅G1已明确的描述性/硬检查和待审核准入逻辑；不等于已证明质量改善",
+      "status_scope": "内部C已通过本轮明确授权的G1工程/固定真实条件化pilot范围；源datum仍UNVERIFIED，后续G2/G3要求未执行。",
       "necessary_goal1_component": true,
       "sources": [
         {
@@ -365,9 +407,8 @@
         }
       ],
       "current_work": [
-        "指标注明对象、参考、单位、分母、适用条件、不可用原因和可支持结论",
-        "实现全输入去向、简化前同参考saving、索引区间最大误差、长度变化、可计算性与调用状态",
-        "缺收益门槛、退化额度或选择集返回PENDING_RESEARCH_REVIEW；不沿用旧综合目标/regret，不称真值恢复"
+        "指标分母固定：过滤309、去噪13与简化273分开；全部783点有终态，未处理0，原值修改0。",
+        "DP误差相对clean输入，不证明之前去噪的真实准确率；无标签不输出误删率/恢复率，未知datum不作真实地面误差结论。"
       ],
       "evidence": [
         {
@@ -389,18 +430,40 @@
         {
           "path": "task1/evidence/goal1/tests/final_bound.xml",
           "supports": "数值和控制器离线测试"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/baseline_review.json",
+          "supports": "本轮当前作用域；详见该产物分类和审核范围"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/point_actions.jsonl",
+          "supports": "本轮当前作用域；详见该产物分类和审核范围"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/acceptance_matrix.json",
+          "supports": "本轮独立C全部GC和原G1对应；发布需另取真实回执"
         }
       ],
       "blocking_ids": [],
       "future_acceptance": [
-        "G2前批准主要收益阈值、保护项退化额度、选择数据/预算",
-        "真实结果仅支持保真和约束变化；无标签不升级为准确率"
+        "G2/G3完整结果分析，任何新增质量判据需符合项目研究规则。"
       ],
       "related_goal1_acceptance_ids": [
         "G1-A08",
         "G1-A10",
         "G1-A17"
-      ]
+      ],
+      "historical_status_scope": "仅G1已明确的描述性/硬检查和待审核准入逻辑；不等于已证明质量改善",
+      "historical_current_work": [
+        "指标注明对象、参考、单位、分母、适用条件、不可用原因和可支持结论",
+        "实现全输入去向、简化前同参考saving、索引区间最大误差、长度变化、可计算性与调用状态",
+        "缺收益门槛、退化额度或选择集返回PENDING_RESEARCH_REVIEW；不沿用旧综合目标/regret，不称真值恢复"
+      ],
+      "historical_future_acceptance": [
+        "G2前批准主要收益阈值、保护项退化额度、选择数据/预算",
+        "真实结果仅支持保真和约束变化；无标签不升级为准确率"
+      ],
+      "historical_blocking_ids": []
     },
     {
       "id": "R06",
@@ -412,7 +475,7 @@
         "G3": "保留参数的独立确认"
       },
       "status": "NOT_STARTED",
-      "status_scope": "属于后续效果实验；G1材料与STARTER_REFERENCE登记不算已做参数实验",
+      "status_scope": "G2或G3正式要求保留，本轮未开展。",
       "necessary_goal1_component": false,
       "sources": [
         {
@@ -459,7 +522,7 @@
         "G3": "采用顺序的独立复核"
       },
       "status": "NOT_STARTED",
-      "status_scope": "没有正式顺序对照；记录Notebook顺序不算完成讨论/实验",
+      "status_scope": "G2或G3正式要求保留，本轮未开展。",
       "necessary_goal1_component": false,
       "sources": [
         {
@@ -510,8 +573,8 @@
         "G2": "单项候选/模式作用验证",
         "G3": "组合及独立确认中的持续复核"
       },
-      "status": "BLOCKED",
-      "status_scope": "三个角色代码已实现，只有A成功接入当前控制器；B实际失败，C和反馈未完成",
+      "status": "VERIFIED_FOR_CURRENT_SCOPE",
+      "status_scope": "内部C已通过本轮明确授权的G1工程/固定真实条件化pilot范围；源datum仍UNVERIFIED，后续G2/G3要求未执行。",
       "necessary_goal1_component": true,
       "sources": [
         {
@@ -531,9 +594,9 @@
         }
       ],
       "current_work": [
-        "三角色11项职责、独立调用schema、实际权限/沙盒与工具白名单已实现",
-        "run03 A真实返回结构化请求并触发source_evidence；B workspace routing discovery failed；C未调用",
-        "run01/02失败和run03成功/失败保留；没有Mock回退冒充LIVE，亦未后补虚假交接"
+        "本轮真实原生A研究诊断/B-Run与B-Repair/C独立审查；root承担Goal控制和实际工具调度，不把响应拆成虚构角色。",
+        "A给出批准空间内TaskPlan；外部GPT C2问题由B实际修复、C独立反例核验，父任务恢复执行固定pilot。",
+        "历史4次与后续6次CLI分开保留；本轮新增CLI/API调用0，native派发与不可观测请求分开登记。"
       ],
       "evidence": [
         {
@@ -555,15 +618,27 @@
         {
           "path": "task1/evidence/goal1/runs/budget_live.json",
           "supports": "跨run预算及LIVE冻结"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/a_scope/TaskPlan.json",
+          "supports": "本轮当前作用域；详见该产物分类和审核范围"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/resources.json",
+          "supports": "本轮当前作用域；详见该产物分类和审核范围"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/goal_state.json",
+          "supports": "本轮当前作用域；详见该产物分类和审核范围"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/acceptance_matrix.json",
+          "supports": "本轮独立C全部GC和原G1对应；发布需另取真实回执"
         }
       ],
-      "blocking_ids": [
-        "LIVE_PROVIDER_ROUTING",
-        "LIVE_TRANSPORT_BUDGET_FROZEN"
-      ],
+      "blocking_ids": [],
       "future_acceptance": [
-        "先审查合法provider路径和可验证内部重试预算；不得未批准自动解冻",
-        "在当前可恢复代码状态真实完成A→B→数值审核+C→A反馈后动作→最终复核"
+        "G2正式执行llm-only/search-only/llm+search/llm+memory+search对照；search-only无LLM，留出记忆只读。"
       ],
       "related_goal1_acceptance_ids": [
         "G1-A09",
@@ -571,6 +646,20 @@
         "G1-A12",
         "G1-A13",
         "G1-A14"
+      ],
+      "historical_status_scope": "三个角色代码已实现，只有A成功接入当前控制器；B实际失败，C和反馈未完成",
+      "historical_current_work": [
+        "三角色11项职责、独立调用schema、实际权限/沙盒与工具白名单已实现",
+        "run03 A真实返回结构化请求并触发source_evidence；B workspace routing discovery failed；C未调用",
+        "run01/02失败和run03成功/失败保留；没有Mock回退冒充LIVE，亦未后补虚假交接"
+      ],
+      "historical_future_acceptance": [
+        "先审查合法provider路径和可验证内部重试预算；不得未批准自动解冻",
+        "在当前可恢复代码状态真实完成A→B→数值审核+C→A反馈后动作→最终复核"
+      ],
+      "historical_blocking_ids": [
+        "LIVE_PROVIDER_ROUTING",
+        "LIVE_TRANSPORT_BUDGET_FROZEN"
       ]
     },
     {
@@ -583,7 +672,7 @@
         "G3": "最终独立确认"
       },
       "status": "NOT_STARTED",
-      "status_scope": "模式权限测试存在，但完整真实四模式效果实验未执行",
+      "status_scope": "G2或G3正式要求保留，本轮未开展。",
       "necessary_goal1_component": false,
       "sources": [
         {
@@ -634,8 +723,8 @@
         "G2": "形成实际方法候选的反例、前后指标与拒绝原因",
         "G3": "汇总为真实AI批判与过程报告"
       },
-      "status": "IN_PROGRESS",
-      "status_scope": "已形成工程反例和真实失败，尚无完整方法效果前后比较；不伪造Human–AI争论",
+      "status": "VERIFIED_FOR_CURRENT_SCOPE",
+      "status_scope": "内部C已通过本轮明确授权的G1工程/固定真实条件化pilot范围；源datum仍UNVERIFIED，后续G2/G3要求未执行。",
       "necessary_goal1_component": true,
       "sources": [
         {
@@ -655,9 +744,9 @@
         }
       ],
       "current_work": [
-        "材料审计纠正352历史事实、字段错配和指标范围；保留构造去噪调度反例",
-        "独立控制器挑战暴露CR-01至CR-09并保留修复前后真实离线结果",
-        "真实B路由失败、内部重试预算失守和冻结原因保留；工程测试不计为自然Agent争论或质量改善"
+        "C2外部审核反例真实复现：双侧改值、空记录伪汇总等旧候选自证；新可信审核拒绝这些反例。",
+        "真实pilot01独立审核拒绝暴露派生角差数值比较误报，B定位并修复，C验证严格决策/容差未改变，失败原件保留。",
+        "不把工程审核通过率当轨迹质量提升，不制造模型错误、人机争论或真实恢复准确率。"
       ],
       "evidence": [
         {
@@ -671,18 +760,40 @@
         {
           "path": "task1/evidence/goal1/runs/budget_live.json",
           "supports": "真实预算失败及拒绝继续LIVE"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_combined_review/round2/combined_closure.json",
+          "supports": "本轮当前作用域；详见该产物分类和审核范围"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/b_repair/direction_roundoff/root_cause.json",
+          "supports": "本轮当前作用域；详见该产物分类和审核范围"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/acceptance_matrix.json",
+          "supports": "本轮独立C全部GC和原G1对应；发布需另取真实回执"
         }
       ],
       "blocking_ids": [],
       "future_acceptance": [
-        "G2/G3用实际候选和共同指标形成至少一组真实方法反例及前后量值/拒绝理由",
-        "正式过程报告只引用真实互动，需Evidence Master批准后再制作/Lock"
+        "G2/G3形成完整AI批判与修改前后实验解释；保留本轮真实反例/拒绝/修复素材。"
       ],
       "related_goal1_acceptance_ids": [
         "G1-A08",
         "G1-A13",
         "G1-A17"
-      ]
+      ],
+      "historical_status_scope": "已形成工程反例和真实失败，尚无完整方法效果前后比较；不伪造Human–AI争论",
+      "historical_current_work": [
+        "材料审计纠正352历史事实、字段错配和指标范围；保留构造去噪调度反例",
+        "独立控制器挑战暴露CR-01至CR-09并保留修复前后真实离线结果",
+        "真实B路由失败、内部重试预算失守和冻结原因保留；工程测试不计为自然Agent争论或质量改善"
+      ],
+      "historical_future_acceptance": [
+        "G2/G3用实际候选和共同指标形成至少一组真实方法反例及前后量值/拒绝理由",
+        "正式过程报告只引用真实互动，需Evidence Master批准后再制作/Lock"
+      ],
+      "historical_blocking_ids": []
     },
     {
       "id": "R11",
@@ -693,8 +804,8 @@
         "G2": "补充有效实验结果及报告素材",
         "G3": "完整实验报告、过程报告及正式交付"
       },
-      "status": "IN_PROGRESS",
-      "status_scope": "两工作Notebook新内核复算通过；正式报告未开始定稿，真实处理和闭环缺项显式展示",
+      "status": "VERIFIED_FOR_CURRENT_SCOPE",
+      "status_scope": "内部C已通过本轮明确授权的G1工程/固定真实条件化pilot范围；源datum仍UNVERIFIED，后续G2/G3要求未执行。",
       "necessary_goal1_component": true,
       "sources": [
         {
@@ -714,10 +825,8 @@
         }
       ],
       "current_work": [
-        "创建基础处理审核与Agent闭环复算工作Notebook，保留教师源映射，调用共有实现",
-        "两Notebook各6个code cells以独立新内核执行PASS，模式RECOMPUTE，new_model_calls=0",
-        "Notebook从原始输入实际重算；旧LIVE来源只复算已有source_evidence，不称新完整模型实验",
-        "只形成阶段说明；未完成正式Experiment Report、未伪造Process Report或Evidence Lock"
+        "公共实现与两份工作Notebook已实际新内核各8cell执行、0error、0新模型调用；三张真实图及可编辑源通过渲染和独立C审查。",
+        "教师原Notebook/ZIP/PPT/数据不覆盖；Experiment Report与Process Report仅维护阶段技术材料，G3再定稿。"
       ],
       "evidence": [
         {
@@ -735,17 +844,32 @@
         {
           "path": "task1/docs/goal1/README.md",
           "supports": "工作入口与阶段说明"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/acceptance_matrix.json",
+          "supports": "本轮独立C全部GC和原G1对应；发布需另取真实回执"
         }
       ],
       "blocking_ids": [],
       "future_acceptance": [
-        "G2补齐有效实验，G3冻结后完成正式Notebook、两报告及可复現工程",
-        "两报告分别经GPT审核，不从代码测试自动推断用户理解或正式交付通过"
+        "G3整理正式两报告、Notebook与教师提交ZIP；本轮不发送邮件。"
       ],
       "related_goal1_acceptance_ids": [
         "G1-A15",
         "G1-A17"
-      ]
+      ],
+      "historical_status_scope": "两工作Notebook新内核复算通过；正式报告未开始定稿，真实处理和闭环缺项显式展示",
+      "historical_current_work": [
+        "创建基础处理审核与Agent闭环复算工作Notebook，保留教师源映射，调用共有实现",
+        "两Notebook各6个code cells以独立新内核执行PASS，模式RECOMPUTE，new_model_calls=0",
+        "Notebook从原始输入实际重算；旧LIVE来源只复算已有source_evidence，不称新完整模型实验",
+        "只形成阶段说明；未完成正式Experiment Report、未伪造Process Report或Evidence Lock"
+      ],
+      "historical_future_acceptance": [
+        "G2补齐有效实验，G3冻结后完成正式Notebook、两报告及可复現工程",
+        "两报告分别经GPT审核，不从代码测试自动推断用户理解或正式交付通过"
+      ],
+      "historical_blocking_ids": []
     },
     {
       "id": "R12",
@@ -756,8 +880,8 @@
         "G2": "单项候选反馈/复验",
         "G3": "组合、接受/回退、独立确认反馈"
       },
-      "status": "BLOCKED",
-      "status_scope": "控制器具备反馈阶段，但真实执行在B失败停止，feedback→plan→tool→review没有完成",
+      "status": "VERIFIED_FOR_CURRENT_SCOPE",
+      "status_scope": "内部C已通过本轮明确授权的G1工程/固定真实条件化pilot范围；源datum仍UNVERIFIED，后续G2/G3要求未执行。",
       "necessary_goal1_component": true,
       "sources": [
         {
@@ -772,9 +896,9 @@
         }
       ],
       "current_work": [
-        "固定A来源→B诊断→C独立核查→反馈A→批准补查→C裁决阶段",
-        "恢复/拒绝/缓存/状态/内部重试问题经独立反例修复；108项离线工程测试通过",
-        "真实run03只有A和source_evidence，不能以恢复fixture或离线RECOMPUTE替代闭环"
+        "GoalJournal按未完成任务、依赖、问题、版本、实际目标审核覆盖、修复和恢复推进；旧五阶段只保留为历史受限片段。",
+        "已有C2-F01/F02以及运行方向数值误报、坐标方向敏感性与时间诊断scope问题均实际进入B修复/C复验/父任务恢复。",
+        "同一Goal继续真实baseline与基于审核的后续检查；不以固定角色调用次数或旧profile回执关闭新任务。"
       ],
       "evidence": [
         {
@@ -796,21 +920,43 @@
         {
           "path": "task1/evidence/goal1/runs/budget_live.json",
           "supports": "停止条件持久化"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/goal_state.json",
+          "supports": "本轮当前作用域；详见该产物分类和审核范围"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/manifest.json",
+          "supports": "本轮当前作用域；详见该产物分类和审核范围"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/acceptance_matrix.json",
+          "supports": "本轮独立C全部GC和原G1对应；发布需另取真实回执"
         }
       ],
-      "blocking_ids": [
-        "LIVE_PROVIDER_ROUTING",
-        "LIVE_TRANSPORT_BUDGET_FROZEN"
-      ],
+      "blocking_ids": [],
       "future_acceptance": [
-        "先审查并解除真实调用阻断；按预算在最终代码完成真实反馈链",
-        "后续动作必须引用真实审核反馈，不能无理由重跑或越权调参"
+        "GPT二审反馈后仍在相应Goal内部修复；G2单项、G3组合和回退按批准阶段执行。"
       ],
       "related_goal1_acceptance_ids": [
         "G1-A09",
         "G1-A12",
         "G1-A13",
         "G1-A14"
+      ],
+      "historical_status_scope": "控制器具备反馈阶段，但真实执行在B失败停止，feedback→plan→tool→review没有完成",
+      "historical_current_work": [
+        "固定A来源→B诊断→C独立核查→反馈A→批准补查→C裁决阶段",
+        "恢复/拒绝/缓存/状态/内部重试问题经独立反例修复；108项离线工程测试通过",
+        "真实run03只有A和source_evidence，不能以恢复fixture或离线RECOMPUTE替代闭环"
+      ],
+      "historical_future_acceptance": [
+        "先审查并解除真实调用阻断；按预算在最终代码完成真实反馈链",
+        "后续动作必须引用真实审核反馈，不能无理由重跑或越权调参"
+      ],
+      "historical_blocking_ids": [
+        "LIVE_PROVIDER_ROUTING",
+        "LIVE_TRANSPORT_BUDGET_FROZEN"
       ]
     },
     {
@@ -823,7 +969,7 @@
         "G3": "独立验证后再研究兼容性/组合、接受或回退"
       },
       "status": "VERIFIED_FOR_CURRENT_SCOPE",
-      "status_scope": "仅本Goal遵守范围与准入规则；未来执行仍需按同合同审查",
+      "status_scope": "内部C已通过本轮明确授权的G1工程/固定真实条件化pilot范围；源datum仍UNVERIFIED，后续G2/G3要求未执行。",
       "necessary_goal1_component": true,
       "sources": [
         {
@@ -838,9 +984,8 @@
         }
       ],
       "current_work": [
-        "未实现论文增强批量算法，未做候选大扫描、组合或最终留出选择",
-        "同一结构/保真审核与硬条件固定；未冻结收益参数时不升级候选",
-        "原始失败/拒绝/历史材料保留，缺失研究原件如实登记，没有重写冒充或凑论文采用数"
+        "保持三Goal路线：本轮只G1实现/固定pilot/工程审核/闭环；G2参数/順序/模式对照和单项候选、G3组合/正式报告/提交未执行。",
+        "没有新一轮文献搜索、完整论文算法分支、全量清洗、逐轨迹LLM或未经批准的质量综合分。"
       ],
       "evidence": [
         {
@@ -858,16 +1003,38 @@
         {
           "path": "task1/evidence/goal1/tests/INDEPENDENT_CONTROL_REVIEW.md",
           "supports": "负例及修复前后均保留"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/AUTHORIZATION_SUPPLEMENT.md",
+          "supports": "本轮当前作用域；详见该产物分类和审核范围"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/a_scope/TaskPlan.json",
+          "supports": "本轮当前作用域；详见该产物分类和审核范围"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/acceptance_matrix.json",
+          "supports": "本轮独立C全部GC和原G1对应；发布需另取真实回执"
         }
       ],
       "blocking_ids": [],
       "future_acceptance": [
-        "G2按共同认可基线先验证单项，保留负结果；只阅读/借鉴少量有明确任务缺口的来源",
-        "G3组合前需单项证据、兼容性假设和事前保护项；无额外价值优先简单方案"
+        "任何G2/G3推进等待阶段确认。"
       ],
       "related_goal1_acceptance_ids": [
         "G1-A17"
-      ]
+      ],
+      "historical_status_scope": "仅本Goal遵守范围与准入规则；未来执行仍需按同合同审查",
+      "historical_current_work": [
+        "未实现论文增强批量算法，未做候选大扫描、组合或最终留出选择",
+        "同一结构/保真审核与硬条件固定；未冻结收益参数时不升级候选",
+        "原始失败/拒绝/历史材料保留，缺失研究原件如实登记，没有重写冒充或凑论文采用数"
+      ],
+      "historical_future_acceptance": [
+        "G2按共同认可基线先验证单项，保留负结果；只阅读/借鉴少量有明确任务缺口的来源",
+        "G3组合前需单项证据、兼容性假设和事前保护项；无额外价值优先简单方案"
+      ],
+      "historical_blocking_ids": []
     },
     {
       "id": "R14",
@@ -879,7 +1046,7 @@
         "G3": "正式图表与P2/XeLaTeX报告"
       },
       "status": "VERIFIED_FOR_CURRENT_SCOPE",
-      "status_scope": "G1必要诊断/架构图已生成和视觉核查；真实完整基线前后图因U01/U02受阻，不声称存在",
+      "status_scope": "内部C已通过本轮明确授权的G1工程/固定真实条件化pilot范围；源datum仍UNVERIFIED，后续G2/G3要求未执行。",
       "necessary_goal1_component": true,
       "sources": [
         {
@@ -904,10 +1071,8 @@
         }
       ],
       "current_work": [
-        "七条开发诊断图及由当前实现/真实run状态生成的架构图，保留SVG/PDF/PNG和.drawio",
-        "最终生成命令与输入/代码/配色hash保存；主线程实际view_image检查中文、数据值与图状态",
-        "架构图标明A成功、B失败、C未调/反馈未完成；不叠未确认基准底图",
-        "没有完整基线前后输出，figure manifest明确BLOCKED；尚未制作正式报告"
+        "复用publication-plots与P2，原生可编辑图由同一run03真实结果生成；原始点散点，处理轨迹按实际片段分别连接。",
+        "当前架构图包含实际B-Repair→C→父任务恢复路径；保留.drawio/SVG/PDF与渲染检查，不冒充Evidence Master互动演变图。"
       ],
       "evidence": [
         {
@@ -933,16 +1098,39 @@
         {
           "path": "task1/results/goal1/pilot_diagnostics.json",
           "supports": "图所用真实结构数据"
+        },
+        {
+          "path": "task1/scripts/build_complete_figures.py",
+          "supports": "本轮当前作用域；详见该产物分类和审核范围"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/acceptance_matrix.json",
+          "supports": "本轮独立C全部GC和原G1对应；发布需另取真实回执"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/b_run/figure_verification.json",
+          "supports": "真实run03图源/输出/渲染和视觉核查"
         }
       ],
       "blocking_ids": [],
       "future_acceptance": [
-        "U01/U02解除后再补真实完整基线输入—动作—输出图，不能用合成图补齐",
-        "G3报告按P2/XeLaTeX正式编译/渲染核查；本轮不冻结最终报告"
+        "G3正式图表和报告图，在真实结果和Evidence Master批准范围制作。"
       ],
       "related_goal1_acceptance_ids": [
         "G1-A16"
-      ]
+      ],
+      "historical_status_scope": "G1必要诊断/架构图已生成和视觉核查；真实完整基线前后图因U01/U02受阻，不声称存在",
+      "historical_current_work": [
+        "七条开发诊断图及由当前实现/真实run状态生成的架构图，保留SVG/PDF/PNG和.drawio",
+        "最终生成命令与输入/代码/配色hash保存；主线程实际view_image检查中文、数据值与图状态",
+        "架构图标明A成功、B失败、C未调/反馈未完成；不叠未确认基准底图",
+        "没有完整基线前后输出，figure manifest明确BLOCKED；尚未制作正式报告"
+      ],
+      "historical_future_acceptance": [
+        "U01/U02解除后再补真实完整基线输入—动作—输出图，不能用合成图补齐",
+        "G3报告按P2/XeLaTeX正式编译/渲染核查；本轮不冻结最终报告"
+      ],
+      "historical_blocking_ids": []
     },
     {
       "id": "R15",
@@ -954,7 +1142,7 @@
         "G3": "全量成果最终远程验收"
       },
       "status": "IN_PROGRESS",
-      "status_scope": "自检证据已有；发布在主线程进行，本文不预报远程一致或GPT通过",
+      "status_scope": "内部可发布范围通过，等待本轮实际push/remote验证，不提前标发布完成。",
       "necessary_goal1_component": true,
       "sources": [
         {
@@ -969,9 +1157,8 @@
         }
       ],
       "current_work": [
-        "保存初始环境/工作区、材料、现状基线、最终108项测试、独立控制器审查和Notebook复算",
-        "已授权main提交/推送；最终ARTIFACT_SHA、remote SHA和clean状态由最终发布证据确认",
-        "GPT_SECOND_REVIEW保持PENDING，核心受阻不能由其他PASS抵消"
+        "最终工程源码、合同、真实结果、审核回执与输入hash绑定；C总验收/发布前保护检查后才push。",
+        "仓库11-file upload bundle已同步且字节检查；没有声称ChatGPT UI已上传。实际发布核对由当前发布步骤完成，GPT二审保持PENDING。"
       ],
       "evidence": [
         {
@@ -993,17 +1180,39 @@
         {
           "path": "task1/evidence/goal1/validation/notebooks.json",
           "supports": "新内核复算"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/bundle_sync.json",
+          "supports": "本轮当前作用域；详见该产物分类和审核范围"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/manifest.json",
+          "supports": "本轮当前作用域；详见该产物分类和审核范围"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/acceptance_matrix.json",
+          "supports": "本轮独立C全部GC和原G1对应；发布需另取真实回执"
         }
       ],
       "blocking_ids": [],
       "future_acceptance": [
-        "主线程完成完整审核包和安全发布检查，实际push后核对最终本地/远程SHA",
-        "GPT读取真实远程代码/数据/图/日志进行二重验收；在此之前不得宣布项目最终PASS"
+        "实际push/remote核对并等待GPT真实远程二审；不自判项目最终Deliverable或Submission通过。"
       ],
       "related_goal1_acceptance_ids": [
         "G1-A01",
         "G1-A18"
-      ]
+      ],
+      "historical_status_scope": "自检证据已有；发布在主线程进行，本文不预报远程一致或GPT通过",
+      "historical_current_work": [
+        "保存初始环境/工作区、材料、现状基线、最终108项测试、独立控制器审查和Notebook复算",
+        "已授权main提交/推送；最终ARTIFACT_SHA、remote SHA和clean状态由最终发布证据确认",
+        "GPT_SECOND_REVIEW保持PENDING，核心受阻不能由其他PASS抵消"
+      ],
+      "historical_future_acceptance": [
+        "主线程完成完整审核包和安全发布检查，实际push后核对最终本地/远程SHA",
+        "GPT读取真实远程代码/数据/图/日志进行二重验收；在此之前不得宣布项目最终PASS"
+      ],
+      "historical_blocking_ids": []
     },
     {
       "id": "R16",
@@ -1015,7 +1224,7 @@
         "G3": "最终教师包、提交前验收与单独发布确认"
       },
       "status": "NOT_STARTED",
-      "status_scope": "最终教师提交包/邮件属于G3，尚未制作或发送；要求已核实不等于已交付",
+      "status_scope": "G2或G3正式要求保留，本轮未开展。",
       "necessary_goal1_component": false,
       "sources": [
         {
@@ -1064,45 +1273,6 @@
       ]
     }
   ],
-  "critical_unresolved": [
-    {
-      "id": "U01_CRS_DISTANCE",
-      "question": "该JSON的数据专属CRS/基准及允许的米制距离口径",
-      "affected": "真实速度/长度/空间分段/长度过滤/方向去噪/米制DP/底图",
-      "evidence": [
-        "task1/docs/goal1/CONTRACTS.md",
-        "task1/evidence/goal1/materials/findings.md",
-        "task1/config/goal1.json"
-      ]
-    },
-    {
-      "id": "U02_DIRECTION_EXECUTION",
-      "question": "教师方向候选的删除调度、端点及不可计算邻域行为",
-      "affected": "真实去噪、依赖它的完整基线",
-      "evidence": [
-        "task1/docs/goal1/CONTRACTS.md",
-        "task1/evidence/goal1/materials/direction_ambiguity_fixtures.json"
-      ]
-    },
-    {
-      "id": "LIVE_PROVIDER_ROUTING",
-      "question": "合法现有访问下的workspace routing失败",
-      "affected": "B/C真实独立调用及反馈闭环",
-      "evidence": [
-        "task1/evidence/goal1/runs/g1-live-20260926-03/manifest.json",
-        "task1/docs/goal1/ARCHITECTURE.md"
-      ]
-    },
-    {
-      "id": "LIVE_TRANSPORT_BUDGET_FROZEN",
-      "question": "原CLI内部重连超出外层计数范围；新限制仅有离线验证",
-      "affected": "所有新LIVE请求；跨run冻结",
-      "evidence": [
-        "task1/evidence/goal1/runs/budget_live.json",
-        "task1/evidence/goal1/tests/INDEPENDENT_CONTROL_REVIEW.md"
-      ]
-    }
-  ],
   "teacher_submission": {
     "source": "task1/实验课1.pptx",
     "pages": [
@@ -1145,18 +1315,24 @@
   "missing_provided_research_files": [
     {
       "name": "Task1_Literature_Review_2025_2026_Merged.md",
-      "status": "NOT_PROVIDED_OR_NOT_FOUND",
-      "replacement_fabricated": false
+      "status": "PRESENT_HISTORICAL_REFERENCE",
+      "replacement_fabricated": false,
+      "path": "task1/docs/research/Task1_Literature_Review_2025_2026_Merged.md",
+      "sha256": "83e50286c71fde18f26595d4c042e4ae5a36aee6f5bec69750a85ce31df31c26"
     },
     {
       "name": "Task1_Source_Audit_2025_2026_Merged.json",
-      "status": "NOT_PROVIDED_OR_NOT_FOUND",
-      "replacement_fabricated": false
+      "status": "PRESENT_HISTORICAL_REFERENCE",
+      "replacement_fabricated": false,
+      "path": "task1/docs/research/Task1_Source_Audit_2025_2026_Merged.json",
+      "sha256": "fc6d597ddaa413c000a689737b23840a639b93cf626464f57841a8ef0cc966f7"
     },
     {
       "name": "Task1_Stage01_Readonly_Audit.md",
-      "status": "NOT_PROVIDED_OR_NOT_FOUND",
-      "replacement_fabricated": false
+      "status": "PRESENT_HISTORICAL_REFERENCE",
+      "replacement_fabricated": false,
+      "path": "task1/docs/research/Task1_Stage01_Readonly_Audit.md",
+      "sha256": "ffe30283c71250dabf4cf90c55d673f0e56c639f32324c7415048ee3a298e15f"
     }
   ],
   "scope_not_executed": [
@@ -1177,5 +1353,116 @@
     "referenced_existing_files": 44,
     "missing_references": [],
     "scope": "仅文档结构、来源路径与状态枚举；不新增算法/模型/处理验收"
-  }
+  },
+  "execution": "SC-LAB1-G1-COMPLETE-001",
+  "current_authorization": [
+    "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/handoff/SC-LAB1-G1-COMPLETE-001_CODEX_PROMPT.md",
+    "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/AUTHORIZATION_SUPPLEMENT.md"
+  ],
+  "historical_snapshot": {
+    "raw_records": 11386,
+    "raw_points": 1173410,
+    "raw_inventory_only": true,
+    "pilot_ids": [
+      "0",
+      "1",
+      "2",
+      "246",
+      "256",
+      "306",
+      "352"
+    ],
+    "pilot_points": 783,
+    "time_only_partitions": 12,
+    "pilot_deleted_points": 0,
+    "pilot_modified_points": 0,
+    "complete_real_baseline": "BLOCKED",
+    "live_run": "g1-live-20260926-03",
+    "live_role_outcome": {
+      "A": "REAL_SUCCESS_AND_SOURCE_EVIDENCE_EXECUTED",
+      "B": "WORKSPACE_ROUTING_DISCOVERY_FAILED",
+      "C": "NOT_CALLED",
+      "feedback_cycle": "NOT_COMPLETED"
+    },
+    "visible_transport_reconnect_notifications": 9,
+    "visible_transport_fallback_notifications": 1,
+    "underlying_request_count": "unavailable",
+    "new_live_calls": "FROZEN_ACROSS_RUN_IDS",
+    "offline_engineering_tests": {
+      "passed": 108,
+      "failed": 0,
+      "skipped": 0,
+      "evidence": "task1/evidence/goal1/tests/final_bound.xml",
+      "independent_review": "task1/evidence/goal1/tests/INDEPENDENT_CONTROL_REVIEW.md",
+      "not_a_live_or_real_cleaning_pass": true
+    },
+    "notebooks": {
+      "fresh_kernels": 2,
+      "code_cells_each": 6,
+      "mode": "RECOMPUTE",
+      "new_model_calls": 0,
+      "evidence": "task1/evidence/goal1/validation/notebooks.json"
+    },
+    "current_diagnostic_code_sha": "ea3b20ad13c65ab01cf2c761db6b09c185855b53",
+    "historical_live_code_sha": "d1444eb07035ef651a36a3e89269f004186581df"
+  },
+  "snapshot": {
+    "execution": "SC-LAB1-G1-COMPLETE-001",
+    "engineering_status": "ENGINEERING_READY_FOR_GPT_REVIEW",
+    "source_crs": "UNVERIFIED",
+    "conditional_analysis": "VERIFIED_WITH_UNVERIFIED_SOURCE_DATUM",
+    "direction_schedule": "USER_APPROVED",
+    "current_run": "g1-complete-pilot-03",
+    "baseline_status": "VERIFIED_BY_INDEPENDENT_RUNTIME_REVIEW",
+    "goal2_goal3": "NOT_RUN",
+    "publication_status": "NOT_RUN"
+  },
+  "historical_unresolved": [
+    {
+      "id": "U01_CRS_DISTANCE",
+      "question": "该JSON的数据专属CRS/基准及允许的米制距离口径",
+      "affected": "真实速度/长度/空间分段/长度过滤/方向去噪/米制DP/底图",
+      "evidence": [
+        "task1/docs/goal1/CONTRACTS.md",
+        "task1/evidence/goal1/materials/findings.md",
+        "task1/config/goal1.json"
+      ]
+    },
+    {
+      "id": "U02_DIRECTION_EXECUTION",
+      "question": "教师方向候选的删除调度、端点及不可计算邻域行为",
+      "affected": "真实去噪、依赖它的完整基线",
+      "evidence": [
+        "task1/docs/goal1/CONTRACTS.md",
+        "task1/evidence/goal1/materials/direction_ambiguity_fixtures.json"
+      ]
+    },
+    {
+      "id": "LIVE_PROVIDER_ROUTING",
+      "question": "合法现有访问下的workspace routing失败",
+      "affected": "B/C真实独立调用及反馈闭环",
+      "evidence": [
+        "task1/evidence/goal1/runs/g1-live-20260926-03/manifest.json",
+        "task1/docs/goal1/ARCHITECTURE.md"
+      ]
+    },
+    {
+      "id": "LIVE_TRANSPORT_BUDGET_FROZEN",
+      "question": "原CLI内部重连超出外层计数范围；新限制仅有离线验证",
+      "affected": "所有新LIVE请求；跨run冻结",
+      "evidence": [
+        "task1/evidence/goal1/runs/budget_live.json",
+        "task1/evidence/goal1/tests/INDEPENDENT_CONTROL_REVIEW.md"
+      ]
+    }
+  ],
+  "critical_unresolved": [
+    {
+      "id": "SOURCE_DATUM_FACT",
+      "status": "UNVERIFIED",
+      "blocks": "unconditional geographic/ground-truth claims only",
+      "conditional_pilot_authorized": true,
+      "reason": "用户未提供绑定文件的datum/offset说明；本轮不将模型假设改写为事实"
+    }
+  ]
 }

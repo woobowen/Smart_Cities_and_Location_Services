@@ -1,0 +1,137 @@
+{
+  "artifact_type": "A_TECHNICAL_HANDOFF_FIXED_WORKING_MODEL_NOT_PRODUCTION_REGISTRY",
+  "goal_id": "SC-LAB1-G1-FOUNDATION-001",
+  "execution_label": "SC-LAB1-G1-COMPLETE-001",
+  "authority": {
+    "user_supplement": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/AUTHORIZATION_SUPPLEMENT.md",
+    "user_decisions": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/USER_DECISIONS.json",
+    "scope": "Fixed-pilot conditional real-data analysis with autonomous technically justified local-model choice; D2 explicitly approved.",
+    "model_choice_owner": "Main Goal controller",
+    "choice_basis": "Original fixed-pilot extent and implementation simplicity, before processing scores; no method-quality selection.",
+    "controller_choice_record": "ECEF→ENU 局部切平面：数学椭球 a=6378137, 1/f=298.257223563，h=0；中心bbox(121.343555,31.3561015)，source datum始终UNVERIFIED。"
+  },
+  "data_facts": {
+    "raw_path": "task1/作业/作业/traj_dict.json",
+    "raw_sha256": "c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3",
+    "record_ids": ["0", "1", "2", "246", "256", "306", "352"],
+    "record_count": 7,
+    "point_count": 783,
+    "coordinate_order": {"value": "longitude, latitude", "unit": "degrees", "status": "SOURCE_DECLARED", "source": "Supplemental student lecture slide4, unchanged original hash in source_audit.json"},
+    "timestamp_unit": {"value": "Unix seconds", "status": "SOURCE_DECLARED"},
+    "source_crs": "UNVERIFIED",
+    "original_offset_or_conversion_history": "UNKNOWN",
+    "height_observed": false
+  },
+  "analysis_assumptions": {
+    "input_interpretation": "Treat supplied angular pairs as coordinates on the explicitly chosen mathematical ellipsoid, conditionally and without a source-datum identification claim.",
+    "semimajor_axis_m": 6378137.0,
+    "inverse_flattening": 298.257223563,
+    "height_m": 0.0,
+    "origin_longitude_degrees": 121.343555,
+    "origin_latitude_degrees": 31.3561015,
+    "origin_height_m": 0.0,
+    "origin_rule": "Midpoint of the raw bounding box of all seven prescribed pilot records; freeze before processing and do not recenter after filtering.",
+    "ellipsoid_label_limit": "The constants specify a mathematical shape. They do not identify the teacher data as WGS84 or any EPSG CRS.",
+    "coordinate_conversion": "None for any WGS84/GCJ02/BD09 datum offset; only declared model ECEF/ENU derivation.",
+    "epsg": null,
+    "working_coordinates": ["East", "North"],
+    "working_unit": "conditional model meters",
+    "Up_role": "Optional diagnostic curvature coordinate, never observed altitude or terrain height.",
+    "result_classification": "REAL_DATA_CONDITIONAL_ANALYSIS"
+  },
+  "mathematical_definition": [
+    "Convert input longitude lambda and latitude phi from degrees to radians; f=1/inverse_flattening, e2=f*(2-f).",
+    "nu(phi)=a/sqrt(1-e2*sin(phi)^2). With h=0: X=nu*cos(phi)*cos(lambda), Y=nu*cos(phi)*sin(lambda), Z=nu*(1-e2)*sin(phi).",
+    "Compute (X0,Y0,Z0) at the frozen origin with the same formula and h0=0; let (dX,dY,dZ)=(X-X0,Y-Y0,Z-Z0).",
+    "E=-sin(lambda0)*dX+cos(lambda0)*dY.",
+    "N=-sin(phi0)*cos(lambda0)*dX-sin(phi0)*sin(lambda0)*dY+cos(phi0)*dZ.",
+    "U=cos(phi0)*cos(lambda0)*dX+cos(phi0)*sin(lambda0)*dY+sin(phi0)*dZ.",
+    "All pipeline planar distances and finite-segment DP use (E,N). Grid heading is degrees(atan2(deltaE,deltaN)) modulo 360, consistent with the existing CLOCKWISE_FROM_POSITIVE_Y convention."
+  ],
+  "fixed_reference_pipeline": {
+    "order": ["split", "independent_short_fragment_filter", "direction_denoise", "douglas_peucker"],
+    "parameters": {"dt_source_seconds": 30, "distance_model_m": 400, "min_points": 5, "min_length_model_m": 65, "direction_degrees": 35, "dp_tolerance_model_m": 5},
+    "parameter_role": "STARTER_REFERENCE, no parameter scan and no optimality claim",
+    "split_rule": "Break before the right point iff dt>30 or model_distance>400; preserve original ordering, equality does not split, negative dt remains separately explicit.",
+    "filter_rule": "After splitting, a segment is short iff point_count<5 or within-segment cumulative model_length<65; keep both reasons and never include a broken edge in length.",
+    "direction_method": "single_pass_simultaneous_keep_undefined",
+    "direction_rule": "On each surviving input segment, compute outgoing directions once; an eligible interior point is marked only if BOTH circular differences to adjacent outgoing directions exceed 35 degrees; simultaneous deletion; endpoints and required undefined/zero-displacement windows retained and labeled; no iterative pass.",
+    "dp_rule": "Finite Euclidean segment distance in the fixed working plane, original-index ordered subsequence, approved strict threshold behavior and existing fixed numerical review allowance; actual reference is the identical clean pre-simplification input.",
+    "recompute_after_adjacency_change": true,
+    "no_extra_rules": ["No smoothing", "No interpolation", "No duplicate collapse", "No speed cleanup", "No new direction noise floor", "No post-denoise resplitting", "No map matching"]
+  },
+  "independent_verification_plan": [
+    {
+      "id": "MODEL-V01",
+      "target": "Adapter implementation and lineage",
+      "method": "Compare production direct formula coordinates point-by-point with installed PROJ cart -> topocentric using only explicit a/rf/origin/h parameters; verify raw values and indices independently from the immutable JSON.",
+      "fixed_coordinate_crosscheck_absolute_tolerance_m": 0.000001,
+      "tolerance_basis": "1 micrometer exceeds 512*binary64_epsilon*a (~0.725 micrometer) as a conservative ECEF subtraction/rotation check, fixed before comparison against the production adapter. It is only an adapter numerical crosscheck tolerance.",
+      "not_allowed": "Do not add this tolerance to split/filter/angle/DP processing thresholds or replace the preexisting DP audit allowance.",
+      "checks": ["All 783 points finite and ordered", "Raw timestamp/lon/lat are exact copies", "Origin maps to zero", "Rotation is orthonormal", "Same coordinates map to same E/N and remain zero displacement", "Model/adapter/contract versions and hashes are candidate-external"]
+    },
+    {
+      "id": "MODEL-V02",
+      "target": "Local-model scale and domain",
+      "method": "Record raw bbox, E/N/U range, maximum horizontal radius and distance to origin on the same mathematical ellipsoid. Check tangent-plane differential singular values 1 and abs(n dot n0) over the small bbox, and compare actual distances to independent ellipsoid geodesics.",
+      "scope_limit": "Local differential scale is not a finite-DP-chord error theorem. Model agreement is not a source datum or ground-truth proof.",
+      "current_evidence": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/a_scope/local_model_diagnostics.json"
+    },
+    {
+      "id": "MODEL-V03",
+      "target": "30-second temporal split",
+      "method": "Recompute every raw delta from immutable times, preserving exact >30/equality rules and right-point ownership. Coordinates and model assumptions must not change temporal results.",
+      "actual_equality_case": "Record 1, original edge 0->1 has dt=30 and must not be split by time alone."
+    },
+    {
+      "id": "MODEL-V04",
+      "target": "400 model-meter distance split",
+      "method": "For all 776 original in-record edges, record ENU distance, same-ellipsoid geodesic distance, margin to 400, distance-only boolean disagreement and combined time-or-distance split disagreement. Preserve the fixed ENU result.",
+      "current_scope_result": "A's full raw-edge diagnosis has zero disagreements and closest margin 3.418025911952043 model meters; not a replacement for final B output/C partition audit.",
+      "checks": ["Do not compare across records", "Do not ignore equality", "A time-triggered split does not conceal a geometric boolean disagreement in the sensitivity report"]
+    },
+    {
+      "id": "MODEL-V05",
+      "target": "65 model-meter cumulative length and five-point filter",
+      "method": "Using each actual ENU-defined post-split segment, independently sum only its retained original adjacent edges in ENU and same-ellipsoid geodesic metrics; record lengths, absolute difference, margin to 65 and length-only/full-filter disagreement. Verify point-count<5 separately.",
+      "checks": ["No broken-edge contribution", "Every filtered segment retains raw IDs and exact filtering reason", "Both reasons may hold", "Equality at five points/65 length is not less than the threshold", "A point-count rejection must not hide a length sensitivity disagreement"],
+      "status_at_A_handoff": "NOT_RUN_REQUIRES_ACTUAL_B_SEGMENTS"
+    },
+    {
+      "id": "MODEL-V06",
+      "target": "35-degree direction predicate and undefined windows",
+      "method": "For each actual pre-denoise input segment, independently recompute outgoing ENU headings and BOTH circular differences with original indices. Record each difference's margin to 35, undefined reason and actual simultaneous deletion decision. To quantify representation sensitivity, map the same angular points once to same-ellipsoid fixed-center AEQD and evaluate those same windows only; do not rerun cleaning or select a better model.",
+      "checks": ["Use the same fixed-center axis convention when comparing projected headings", "Do not compare ENU grid heading as if identical to a changing local geodesic north bearing", "Zero displacement gives undefined, not zero heading", "Do not introduce a centimeter/meter noise floor", "No deletion-dependent iteration", "Exact equality does not satisfy strict >35"],
+      "scope_limit": "AEQD is a bounded independent geometric sensitivity check, not an alternate processing candidate. If the predicates differ, disclose model sensitivity; no tuning is authorized.",
+      "status_at_A_handoff": "NOT_RUN_REQUIRES_ACTUAL_B_SEGMENTS"
+    },
+    {
+      "id": "MODEL-V07",
+      "target": "5 model-meter DP guarantee",
+      "method": "First independently check every actual clean input point against the finite ENU segment between its corresponding retained original-index neighbors under the externally fixed 5m tolerance and existing numeric allowance. Then, as representation sensitivity only, map the same clean/final points to same-ellipsoid fixed-center AEQD and recompute finite-chord residuals for the same retained-index intervals; record maximum change and any 5m crossing.",
+      "checks": ["Clean-to-final reference only", "Ordered original indices; no nearest segment elsewhere", "Finite segment with clamped parameter, including degenerate segments", "Compare all actual points, not only producer maxima", "Never enlarge ENU tolerance because an alternate representation differs", "Raw-to-final displacement and losses are reported separately"],
+      "scope_limit": "Passing the ENU contract proves conditional model geometry. AEQD agreement does not establish geographic truth; differing AEQD residuals constrain cross-model claims but do not redefine the approved ENU algorithm.",
+      "status_at_A_handoff": "NOT_RUN_REQUIRES_ACTUAL_B_CLEAN_FINAL"
+    },
+    {
+      "id": "MODEL-V08",
+      "target": "Real processing feedback",
+      "method": "After the actual baseline C review, choose one observed case with greatest DP residual or smallest relevant threshold margin for targeted source-to-ledger/geometry recheck; B executes and C reviews the new product. If C finds an ordinary defect, repair and rebuild instead.",
+      "checks": ["Selection reason comes from actual output", "No fabricated flaw or forced improvement", "Keep fixed model/parameters", "Record task/issue/artifact/version linkage"]
+    }
+  ],
+  "interpretation_contract": {
+    "separate_statuses": ["ENGINEERING_VERIFICATION", "CONDITIONAL_ANALYSIS_VALIDITY", "SOURCE_GEOGRAPHIC_SEMANTICS"],
+    "allowed_claims": ["The authorized teaching reference ran on the seven real input records under the frozen mathematical model", "All original points and values are traceable", "Finite-segment DP meets the stated tolerance in conditional model meters", "Measured model sensitivity has the stated actual scope"],
+    "forbidden_claims": ["Source datum is WGS84/GCJ02/EPSG-confirmed", "Ground-truth trajectory was recovered", "Unlabeled accuracy or false-deletion rate", "True terrain altitude from U", "Road alignment or absolute positioning accuracy", "Geometric fidelity proves temporal fidelity", "Consistency between two projections removes unknown source uncertainty"],
+    "stop_scope": "Only conclusions that require unresolved geographic facts are blocked; proceed with authorized conditional development and all ordinary engineering. Escalate only if the model cannot support even its explicitly conditional task, not merely because datum remains unknown."
+  },
+  "implementation_handoff": {
+    "B_owner": "Main Goal controller / B-Repair",
+    "A_changes_production_code": false,
+    "C_reference_rule": "Use trusted JSON + frozen candidate-external contract/adapter definitions + actual output, never candidate-generated truth.",
+    "official_documentation_owner": "Main thread has checked PROJ cart/topocentric/geodesic primary documentation; link its actual saved record when registering the production contract.",
+    "no_new_dependency_requested_by_A": true,
+    "reuse_environment": ".venv; installed pyproj managed and logged by the main thread"
+  }
+}

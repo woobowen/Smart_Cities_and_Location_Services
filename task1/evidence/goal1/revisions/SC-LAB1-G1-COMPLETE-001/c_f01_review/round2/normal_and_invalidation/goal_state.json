@@ -1,0 +1,558 @@
+{
+  "goal_id": "SC-LAB1-G1-FOUNDATION-001",
+  "execution": "SC-LAB1-G1-COMPLETE-001",
+  "status": "IMPLEMENTING",
+  "gpt_second_review": "PENDING",
+  "submission": "NOT_READY",
+  "tasks": {
+    "governance": {
+      "status": "VERIFIED",
+      "depends_on": [],
+      "evidence": [
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_f01_review/round2/constructed_raw.json",
+          "sha256": "1c8a4f48c5faf8416aa7474d1a43215fdba759795cefd3414b60ea22edd2f451"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_f01_review/round2/normal_and_invalidation/governance_C_fixture.json",
+          "sha256": "bbc4fd66a31b72e9d5dbf2a281984519410a481e1ee447799ccf643349f62846"
+        }
+      ],
+      "verifier": "C:fixture-independent"
+    },
+    "review_targets": {
+      "status": "VERIFIED",
+      "depends_on": [],
+      "evidence": [
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_f01_review/round2/constructed_raw.json",
+          "sha256": "1c8a4f48c5faf8416aa7474d1a43215fdba759795cefd3414b60ea22edd2f451"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_f01_review/round2/normal_and_invalidation/review_targets_C_fixture.json",
+          "sha256": "acac00984d561885991c22beb86682228e16eeaebe525469143c3a0b8b177165"
+        }
+      ],
+      "verifier": "C:fixture-independent"
+    },
+    "trusted_baseline": {
+      "status": "VERIFIED",
+      "depends_on": [],
+      "evidence": [
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_f01_review/round2/constructed_raw.json",
+          "sha256": "1c8a4f48c5faf8416aa7474d1a43215fdba759795cefd3414b60ea22edd2f451"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_f01_review/round2/normal_and_invalidation/trusted_baseline_C_fixture.json",
+          "sha256": "3907a0b0eb37a0a31ff2c61e1d846904f280bb46d63142a82a6a76e0683d83a2"
+        }
+      ],
+      "verifier": "C:fixture-independent"
+    },
+    "diagnostics": {
+      "status": "PENDING",
+      "depends_on": [
+        "review_targets"
+      ],
+      "evidence": [
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_f01_review/round2/normal_and_invalidation/runs/three-targets/profile_pilot.json",
+          "sha256": "83f34ed473d796a1f017ad1c24b86d57130414d3ce59f420070fd4c264b70b2d"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_f01_review/round2/normal_and_invalidation/runs/three-targets/time_boundaries.json",
+          "sha256": "30eeb7624be05d3bbacc5aa9be863274c924dece3fa5781ebd198ac58c2253e0"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_f01_review/round2/normal_and_invalidation/runs/three-targets/duplicate_details.json",
+          "sha256": "e21b21a0b268fb090503fd3a160db3cd854f6c1f740000c4fd80820d4abea38b"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_f01_review/round2/normal_and_invalidation/runs/three-targets/profile_pilot_review.json",
+          "sha256": "be657ef6b7072aa019f837ecb2ccb36bfd56752da40a1116ee7b6d0cd2107dd1"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_f01_review/round2/normal_and_invalidation/runs/three-targets/time_boundaries_review.json",
+          "sha256": "aafa3ae753160f2b384eb17f00472037683fb538f8672bc3d75e82eebba48858"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_f01_review/round2/normal_and_invalidation/runs/three-targets/duplicate_details_review.json",
+          "sha256": "3513d3446ed290e070df65d03119ed927172b94ddd9b408139ebe0a63256bc09"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_f01_review/round2/normal_and_invalidation/diagnostics_C_fixture.json",
+          "sha256": "acb7719bdfcc6535b9d20c98c836725ce0b19b57ca29c999f826b29b805f8ed2"
+        }
+      ],
+      "run_id": "three-targets",
+      "verifier": "C:fixture-independent"
+    },
+    "real_baseline": {
+      "status": "PENDING",
+      "depends_on": [
+        "trusted_baseline",
+        "diagnostics"
+      ],
+      "evidence": []
+    },
+    "processing_feedback": {
+      "status": "PENDING",
+      "depends_on": [
+        "real_baseline"
+      ],
+      "evidence": []
+    },
+    "notebooks": {
+      "status": "PENDING",
+      "depends_on": [
+        "diagnostics"
+      ],
+      "evidence": [
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_f01_review/round2/constructed_raw.json",
+          "sha256": "1c8a4f48c5faf8416aa7474d1a43215fdba759795cefd3414b60ea22edd2f451"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_f01_review/round2/normal_and_invalidation/notebooks_C_fixture.json",
+          "sha256": "538887ced83604a3efb892c946a483b0545ae8226f30e86c0307b7e3852a28d6"
+        }
+      ],
+      "verifier": "C:fixture-independent"
+    },
+    "figures": {
+      "status": "PENDING",
+      "depends_on": [
+        "diagnostics"
+      ],
+      "evidence": [
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_f01_review/round2/constructed_raw.json",
+          "sha256": "1c8a4f48c5faf8416aa7474d1a43215fdba759795cefd3414b60ea22edd2f451"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_f01_review/round2/normal_and_invalidation/figures_C_fixture.json",
+          "sha256": "b093fa0e84b7635781c8fe9d98850a26bceedffcbe4cc855ddb7be330e131be2"
+        }
+      ],
+      "verifier": "C:fixture-independent"
+    },
+    "internal_review": {
+      "status": "PENDING",
+      "depends_on": [
+        "governance",
+        "review_targets",
+        "trusted_baseline",
+        "diagnostics",
+        "notebooks",
+        "figures"
+      ],
+      "evidence": [
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_f01_review/round2/constructed_raw.json",
+          "sha256": "1c8a4f48c5faf8416aa7474d1a43215fdba759795cefd3414b60ea22edd2f451"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_f01_review/round2/normal_and_invalidation/internal_review_C_fixture.json",
+          "sha256": "b9ce4675458aec54d74ca9d5cfeea96d2c740910679e875bec69bab899445c3b"
+        }
+      ],
+      "verifier": "C:fixture-independent"
+    }
+  },
+  "issues": {
+    "fixture:F01": {
+      "issue_id": "fixture:F01",
+      "parent_task": "review_targets",
+      "source": "CONSTRUCTED_STATE_TRANSITION",
+      "actual_error": "fixture defect",
+      "violated_contract": "fixture closure",
+      "severity": "BLOCKING",
+      "affected_artifacts": [],
+      "repairer": "B:fixture",
+      "verifier": "C:fixture-independent",
+      "status": "VERIFIED",
+      "closure_evidence": [
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_f01_review/round2/normal_and_invalidation/constructed_C_issue_review.json",
+          "sha256": "882d1bf1f3c19fae3c3be49574258a2259c60dd37967fb55bd8cc103acdb2063"
+        }
+      ],
+      "repair_evidence": [
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_f01_review/probe_f01.py",
+          "sha256": "2fefb0bf2d3b439be624a585ea2da4fa901337e1a49c5c79d1a44d8a1a7668ed"
+        }
+      ]
+    }
+  },
+  "events": [
+    {
+      "sequence": 0,
+      "at": "2026-09-26T16:36:50.067076+00:00",
+      "kind": "CODE_BOUND",
+      "previous_hash": "ROOT",
+      "code_sha": "ENGINEERING_TEST_C2_1",
+      "changed_paths": [],
+      "hash": "7115b6f1eccb218e0d6cc7bd6127cb721584e4906e7949bf35d359e9c44eda7f"
+    },
+    {
+      "sequence": 1,
+      "at": "2026-09-26T16:36:50.067244+00:00",
+      "kind": "ISSUE_OPENED",
+      "previous_hash": "7115b6f1eccb218e0d6cc7bd6127cb721584e4906e7949bf35d359e9c44eda7f",
+      "issue_id": "fixture:F01",
+      "source": "CONSTRUCTED_STATE_TRANSITION",
+      "hash": "076418aaeac5617bee0f4e5c92cb0b91233a50313f602991f38cad242f83f5ce"
+    },
+    {
+      "sequence": 2,
+      "at": "2026-09-26T16:36:50.067418+00:00",
+      "kind": "B_REPAIR_CONSUMED",
+      "previous_hash": "076418aaeac5617bee0f4e5c92cb0b91233a50313f602991f38cad242f83f5ce",
+      "issue_id": "fixture:F01",
+      "actor": "B:fixture",
+      "hash": "e1d618e2f1217dfff3e524e9207f85fac103a613439574177c34842b1ab12c62"
+    },
+    {
+      "sequence": 3,
+      "at": "2026-09-26T16:36:50.067738+00:00",
+      "kind": "REPAIR_SUBMITTED",
+      "previous_hash": "e1d618e2f1217dfff3e524e9207f85fac103a613439574177c34842b1ab12c62",
+      "issue_id": "fixture:F01",
+      "actor": "B:fixture",
+      "hash": "7391473d6ea6adb3e3a6a64fbe7460ae2400232f39812edee5a80702fda2925e"
+    },
+    {
+      "sequence": 4,
+      "at": "2026-09-26T16:36:50.069067+00:00",
+      "kind": "C_VERIFIED_PARENT_RESUMED",
+      "previous_hash": "7391473d6ea6adb3e3a6a64fbe7460ae2400232f39812edee5a80702fda2925e",
+      "issue_id": "fixture:F01",
+      "parent_task": "review_targets",
+      "verifier": "C:fixture-independent",
+      "hash": "d2f9d6fc0119b6d542f97c31229fd651947cac921fecc34e5d1a8bf8f91725bd"
+    },
+    {
+      "sequence": 5,
+      "at": "2026-09-26T16:36:50.069811+00:00",
+      "kind": "TASK_VERIFIED",
+      "previous_hash": "d2f9d6fc0119b6d542f97c31229fd651947cac921fecc34e5d1a8bf8f91725bd",
+      "task": "review_targets",
+      "verifier": "C:fixture-independent",
+      "hash": "7d41eb1f89d06c3591b4ccab18f48038c18eb39d5e912473d2fe79f0573cfc9d"
+    },
+    {
+      "sequence": 6,
+      "at": "2026-09-26T16:36:50.070903+00:00",
+      "kind": "RUN_STARTED",
+      "previous_hash": "7d41eb1f89d06c3591b4ccab18f48038c18eb39d5e912473d2fe79f0573cfc9d",
+      "run_id": "three-targets",
+      "hash": "2be8084674db0ccbd41777fd068bb52bd6bcc905948dc71b13874c103688fce8"
+    },
+    {
+      "sequence": 7,
+      "at": "2026-09-26T16:36:50.071536+00:00",
+      "kind": "TOOL_DISPATCHED",
+      "previous_hash": "2be8084674db0ccbd41777fd068bb52bd6bcc905948dc71b13874c103688fce8",
+      "operation": "three-targets:profile_pilot",
+      "hash": "aa081e89c4e8528361bd427da4589cfc039ce504564487fe165d6ee2e282ec92"
+    },
+    {
+      "sequence": 8,
+      "at": "2026-09-26T16:36:50.073019+00:00",
+      "kind": "TOOL_EXECUTED",
+      "previous_hash": "aa081e89c4e8528361bd427da4589cfc039ce504564487fe165d6ee2e282ec92",
+      "operation": "three-targets:profile_pilot",
+      "artifact": {
+        "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_f01_review/round2/normal_and_invalidation/runs/three-targets/profile_pilot.json",
+        "sha256": "83f34ed473d796a1f017ad1c24b86d57130414d3ce59f420070fd4c264b70b2d",
+        "artifact_id": "three-targets:profile_pilot",
+        "output_sha256": "84a641b266a66e0cc6a4ab2d528b152a6e4fa0f99c612c239c778167c3a572a1",
+        "action": "profile_pilot",
+        "valid": false,
+        "source_hashes": {
+          "task1/workflow/io.py": "0d3d72dd0beb4718f4020a07a5f1c0ca89193943049a479816b5c496806321b2",
+          "task1/workflow/tools.py": "c3e8013619a40c0491797cad4068c0537b2bb1f0fc8a579bdc62a5c125ee3b3a",
+          "task1/workflow/diagnostics.py": "e2ef635bbd95db505b3eff336ca59074a60217a70b2bc644624c3fbd0280acda"
+        },
+        "invalid_reason": "SOURCE_CHANGED_REBUILD_REQUIRED"
+      },
+      "hash": "e7f39146e00f4d78e00aff7c712823b8517ca9f98b1a270f3151a14a3735134e"
+    },
+    {
+      "sequence": 9,
+      "at": "2026-09-26T16:36:50.074245+00:00",
+      "kind": "NUMERIC_REVIEW_EXECUTED",
+      "previous_hash": "e7f39146e00f4d78e00aff7c712823b8517ca9f98b1a270f3151a14a3735134e",
+      "run_id": "three-targets",
+      "target": "three-targets:profile_pilot",
+      "status": "VERIFIED",
+      "hash": "8ef8d1b8e83df62e0c9f8176576c41601e84c87b85d5c86f5bcc7c16e9a89907"
+    },
+    {
+      "sequence": 10,
+      "at": "2026-09-26T16:36:50.074890+00:00",
+      "kind": "TOOL_DISPATCHED",
+      "previous_hash": "8ef8d1b8e83df62e0c9f8176576c41601e84c87b85d5c86f5bcc7c16e9a89907",
+      "operation": "three-targets:time_boundaries",
+      "hash": "f05908da8af9b2ca0ea94e53a923d5d6aba43b84bc72d917d2cb2cfe2643b4ed"
+    },
+    {
+      "sequence": 11,
+      "at": "2026-09-26T16:36:50.076635+00:00",
+      "kind": "TOOL_EXECUTED",
+      "previous_hash": "f05908da8af9b2ca0ea94e53a923d5d6aba43b84bc72d917d2cb2cfe2643b4ed",
+      "operation": "three-targets:time_boundaries",
+      "artifact": {
+        "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_f01_review/round2/normal_and_invalidation/runs/three-targets/time_boundaries.json",
+        "sha256": "30eeb7624be05d3bbacc5aa9be863274c924dece3fa5781ebd198ac58c2253e0",
+        "artifact_id": "three-targets:time_boundaries",
+        "output_sha256": "2c1788bc9d985c5dedcceb0cff472e6f052f3e72a19490fd5afe311c290653f8",
+        "action": "time_boundaries",
+        "valid": false,
+        "source_hashes": {
+          "task1/workflow/io.py": "0d3d72dd0beb4718f4020a07a5f1c0ca89193943049a479816b5c496806321b2",
+          "task1/workflow/tools.py": "c3e8013619a40c0491797cad4068c0537b2bb1f0fc8a579bdc62a5c125ee3b3a",
+          "task1/workflow/diagnostics.py": "e2ef635bbd95db505b3eff336ca59074a60217a70b2bc644624c3fbd0280acda"
+        },
+        "invalid_reason": "SOURCE_CHANGED_REBUILD_REQUIRED"
+      },
+      "hash": "fc79ee85dd738f4033b836ebc86d1b3bc0357d1c76acd1ac714639517f64d248"
+    },
+    {
+      "sequence": 12,
+      "at": "2026-09-26T16:36:50.078497+00:00",
+      "kind": "NUMERIC_REVIEW_EXECUTED",
+      "previous_hash": "fc79ee85dd738f4033b836ebc86d1b3bc0357d1c76acd1ac714639517f64d248",
+      "run_id": "three-targets",
+      "target": "three-targets:time_boundaries",
+      "status": "VERIFIED",
+      "hash": "3cd0c73b161e5bc8e05124e124ab62c004de4ba1aef4a46cba87e681da3e6f3a"
+    },
+    {
+      "sequence": 13,
+      "at": "2026-09-26T16:36:50.079402+00:00",
+      "kind": "TOOL_DISPATCHED",
+      "previous_hash": "3cd0c73b161e5bc8e05124e124ab62c004de4ba1aef4a46cba87e681da3e6f3a",
+      "operation": "three-targets:duplicate_details",
+      "hash": "9f2ce7e0b440ae9766ba3a9c01046fd4c74a45a056e0cac85a49bfdedbd80112"
+    },
+    {
+      "sequence": 14,
+      "at": "2026-09-26T16:36:50.081026+00:00",
+      "kind": "TOOL_EXECUTED",
+      "previous_hash": "9f2ce7e0b440ae9766ba3a9c01046fd4c74a45a056e0cac85a49bfdedbd80112",
+      "operation": "three-targets:duplicate_details",
+      "artifact": {
+        "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_f01_review/round2/normal_and_invalidation/runs/three-targets/duplicate_details.json",
+        "sha256": "e21b21a0b268fb090503fd3a160db3cd854f6c1f740000c4fd80820d4abea38b",
+        "artifact_id": "three-targets:duplicate_details",
+        "output_sha256": "0a96c3563d9799ad458dd53c3dcb4c98fc39094555f220df20592183db7379d6",
+        "action": "duplicate_details",
+        "valid": false,
+        "source_hashes": {
+          "task1/workflow/io.py": "0d3d72dd0beb4718f4020a07a5f1c0ca89193943049a479816b5c496806321b2",
+          "task1/workflow/tools.py": "c3e8013619a40c0491797cad4068c0537b2bb1f0fc8a579bdc62a5c125ee3b3a",
+          "task1/workflow/diagnostics.py": "e2ef635bbd95db505b3eff336ca59074a60217a70b2bc644624c3fbd0280acda"
+        },
+        "invalid_reason": "SOURCE_CHANGED_REBUILD_REQUIRED"
+      },
+      "hash": "bcc54b45a613fe4b0b08d5c448355e4a15d598206db15efaac118fe125ae8361"
+    },
+    {
+      "sequence": 15,
+      "at": "2026-09-26T16:36:50.082441+00:00",
+      "kind": "NUMERIC_REVIEW_EXECUTED",
+      "previous_hash": "bcc54b45a613fe4b0b08d5c448355e4a15d598206db15efaac118fe125ae8361",
+      "run_id": "three-targets",
+      "target": "three-targets:duplicate_details",
+      "status": "VERIFIED",
+      "hash": "4077dbf4bb1a8061f7ac595127640444ed3a0220b2f1ebd36ed128ed7141f50e"
+    },
+    {
+      "sequence": 16,
+      "at": "2026-09-26T16:36:50.090224+00:00",
+      "kind": "TASK_VERIFIED",
+      "previous_hash": "4077dbf4bb1a8061f7ac595127640444ed3a0220b2f1ebd36ed128ed7141f50e",
+      "task": "diagnostics",
+      "verifier": "C:fixture-independent",
+      "hash": "af4b918561d670527a5493a12cefb4d75f21dee1ed8ea3ad811d93a82c74e3e9"
+    },
+    {
+      "sequence": 17,
+      "at": "2026-09-26T16:36:50.091413+00:00",
+      "kind": "TASK_VERIFIED",
+      "previous_hash": "af4b918561d670527a5493a12cefb4d75f21dee1ed8ea3ad811d93a82c74e3e9",
+      "task": "governance",
+      "verifier": "C:fixture-independent",
+      "hash": "23c94e19e19e01204be813d101117942ad555a53ae4ee96e40585781c2e3caf2"
+    },
+    {
+      "sequence": 18,
+      "at": "2026-09-26T16:36:50.092348+00:00",
+      "kind": "TASK_VERIFIED",
+      "previous_hash": "23c94e19e19e01204be813d101117942ad555a53ae4ee96e40585781c2e3caf2",
+      "task": "trusted_baseline",
+      "verifier": "C:fixture-independent",
+      "hash": "85435959d0b504f82fcb56fe5bdb10aa53703137c4a445d2023cd169f08b503a"
+    },
+    {
+      "sequence": 19,
+      "at": "2026-09-26T16:36:50.093261+00:00",
+      "kind": "TASK_VERIFIED",
+      "previous_hash": "85435959d0b504f82fcb56fe5bdb10aa53703137c4a445d2023cd169f08b503a",
+      "task": "notebooks",
+      "verifier": "C:fixture-independent",
+      "hash": "38f4c740008b40cac0c59e3c62f8f915338b09f887fae72fddfcdd8f8653586a"
+    },
+    {
+      "sequence": 20,
+      "at": "2026-09-26T16:36:50.094039+00:00",
+      "kind": "TASK_VERIFIED",
+      "previous_hash": "38f4c740008b40cac0c59e3c62f8f915338b09f887fae72fddfcdd8f8653586a",
+      "task": "figures",
+      "verifier": "C:fixture-independent",
+      "hash": "6a8070e9fc0d6d7688bd197692a476bf223915393a1ed88b4a4907b0f5005af5"
+    },
+    {
+      "sequence": 21,
+      "at": "2026-09-26T16:36:50.094794+00:00",
+      "kind": "TASK_VERIFIED",
+      "previous_hash": "6a8070e9fc0d6d7688bd197692a476bf223915393a1ed88b4a4907b0f5005af5",
+      "task": "internal_review",
+      "verifier": "C:fixture-independent",
+      "hash": "3bf0125332662d847caeddc8da88f455271711487e724d62159d9108455322da"
+    },
+    {
+      "sequence": 22,
+      "at": "2026-09-26T16:36:50.095213+00:00",
+      "kind": "CODE_BOUND",
+      "previous_hash": "3bf0125332662d847caeddc8da88f455271711487e724d62159d9108455322da",
+      "code_sha": "ENGINEERING_TEST_C2_2",
+      "changed_paths": [
+        "task1/workflow/geometry.py"
+      ],
+      "hash": "ec7e673ae401e4db9bf5009f8102d4819dc46c0b1cef0beff44909964c7a11b2"
+    },
+    {
+      "sequence": 23,
+      "at": "2026-09-26T16:36:50.095633+00:00",
+      "kind": "CODE_BOUND",
+      "previous_hash": "ec7e673ae401e4db9bf5009f8102d4819dc46c0b1cef0beff44909964c7a11b2",
+      "code_sha": "ENGINEERING_TEST_C2_3",
+      "changed_paths": [
+        "task1/workflow/diagnostics.py"
+      ],
+      "hash": "6ad695d17dfb93bd81a9bfe64515045764a3374c33458423e6c67146b65ed99d"
+    }
+  ],
+  "runs": {
+    "three-targets": {
+      "status": "STALE",
+      "code_sha": "ENGINEERING_TEST_C2_1",
+      "policy_hash": "3a28666737142b0765512f21457fcb8f0eb7763b9e9dc0a24a3d1556825afd1a",
+      "input_sha256": "1c8a4f48c5faf8416aa7474d1a43215fdba759795cefd3414b60ea22edd2f451",
+      "record_ids": [
+        "fixture:edges",
+        "fixture:missing",
+        "fixture:empty"
+      ],
+      "artifacts": {
+        "profile_pilot": {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_f01_review/round2/normal_and_invalidation/runs/three-targets/profile_pilot.json",
+          "sha256": "83f34ed473d796a1f017ad1c24b86d57130414d3ce59f420070fd4c264b70b2d",
+          "artifact_id": "three-targets:profile_pilot",
+          "output_sha256": "84a641b266a66e0cc6a4ab2d528b152a6e4fa0f99c612c239c778167c3a572a1",
+          "action": "profile_pilot",
+          "valid": false,
+          "source_hashes": {
+            "task1/workflow/io.py": "0d3d72dd0beb4718f4020a07a5f1c0ca89193943049a479816b5c496806321b2",
+            "task1/workflow/tools.py": "c3e8013619a40c0491797cad4068c0537b2bb1f0fc8a579bdc62a5c125ee3b3a",
+            "task1/workflow/diagnostics.py": "e2ef635bbd95db505b3eff336ca59074a60217a70b2bc644624c3fbd0280acda"
+          },
+          "invalid_reason": "SOURCE_CHANGED_REBUILD_REQUIRED"
+        },
+        "time_boundaries": {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_f01_review/round2/normal_and_invalidation/runs/three-targets/time_boundaries.json",
+          "sha256": "30eeb7624be05d3bbacc5aa9be863274c924dece3fa5781ebd198ac58c2253e0",
+          "artifact_id": "three-targets:time_boundaries",
+          "output_sha256": "2c1788bc9d985c5dedcceb0cff472e6f052f3e72a19490fd5afe311c290653f8",
+          "action": "time_boundaries",
+          "valid": false,
+          "source_hashes": {
+            "task1/workflow/io.py": "0d3d72dd0beb4718f4020a07a5f1c0ca89193943049a479816b5c496806321b2",
+            "task1/workflow/tools.py": "c3e8013619a40c0491797cad4068c0537b2bb1f0fc8a579bdc62a5c125ee3b3a",
+            "task1/workflow/diagnostics.py": "e2ef635bbd95db505b3eff336ca59074a60217a70b2bc644624c3fbd0280acda"
+          },
+          "invalid_reason": "SOURCE_CHANGED_REBUILD_REQUIRED"
+        },
+        "duplicate_details": {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_f01_review/round2/normal_and_invalidation/runs/three-targets/duplicate_details.json",
+          "sha256": "e21b21a0b268fb090503fd3a160db3cd854f6c1f740000c4fd80820d4abea38b",
+          "artifact_id": "three-targets:duplicate_details",
+          "output_sha256": "0a96c3563d9799ad458dd53c3dcb4c98fc39094555f220df20592183db7379d6",
+          "action": "duplicate_details",
+          "valid": false,
+          "source_hashes": {
+            "task1/workflow/io.py": "0d3d72dd0beb4718f4020a07a5f1c0ca89193943049a479816b5c496806321b2",
+            "task1/workflow/tools.py": "c3e8013619a40c0491797cad4068c0537b2bb1f0fc8a579bdc62a5c125ee3b3a",
+            "task1/workflow/diagnostics.py": "e2ef635bbd95db505b3eff336ca59074a60217a70b2bc644624c3fbd0280acda"
+          },
+          "invalid_reason": "SOURCE_CHANGED_REBUILD_REQUIRED"
+        }
+      },
+      "reviews": {
+        "profile_pilot": {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_f01_review/round2/normal_and_invalidation/runs/three-targets/profile_pilot_review.json",
+          "sha256": "be657ef6b7072aa019f837ecb2ccb36bfd56752da40a1116ee7b6d0cd2107dd1",
+          "source_hashes": {
+            "task1/workflow/artifact_review.py": "5d4bd7b1994437635565377937661b1f337691df134052d4aea11ff09a2c1a43",
+            "task1/workflow/evaluation.py": "cfb3d98f112f55bb2aad1f815db264db7232a3fab47a7bead3dec9759f4d1071"
+          }
+        },
+        "time_boundaries": {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_f01_review/round2/normal_and_invalidation/runs/three-targets/time_boundaries_review.json",
+          "sha256": "aafa3ae753160f2b384eb17f00472037683fb538f8672bc3d75e82eebba48858",
+          "source_hashes": {
+            "task1/workflow/artifact_review.py": "5d4bd7b1994437635565377937661b1f337691df134052d4aea11ff09a2c1a43",
+            "task1/workflow/evaluation.py": "cfb3d98f112f55bb2aad1f815db264db7232a3fab47a7bead3dec9759f4d1071"
+          }
+        },
+        "duplicate_details": {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_f01_review/round2/normal_and_invalidation/runs/three-targets/duplicate_details_review.json",
+          "sha256": "3513d3446ed290e070df65d03119ed927172b94ddd9b408139ebe0a63256bc09",
+          "source_hashes": {
+            "task1/workflow/artifact_review.py": "5d4bd7b1994437635565377937661b1f337691df134052d4aea11ff09a2c1a43",
+            "task1/workflow/evaluation.py": "cfb3d98f112f55bb2aad1f815db264db7232a3fab47a7bead3dec9759f4d1071"
+          }
+        }
+      },
+      "mode": "RECOMPUTE",
+      "new_model_calls": 0,
+      "runtime_source_hashes": {
+        "task1/workflow/recompute.py": "4c198a016adec8554602c9ad04e0446bb90866ed970789834b96c51ebbec9b56",
+        "task1/workflow/coordinates.py": "d99b270a65c88f8530669d5e7d0887d7563b3e54e19770ab7a9eb695117e075d",
+        "task1/workflow/goal.py": "fd4707cd97f4e44ff09ab86562d6af70a8027ba62fe0c4017e51a70499865015",
+        "task1/workflow/diagnostics.py": "e2ef635bbd95db505b3eff336ca59074a60217a70b2bc644624c3fbd0280acda",
+        "task1/workflow/inventory.py": "42bceb3ea1bab9ca386b88ce29104dc4bb518fee6df8f25aae50360633e7d5a1",
+        "task1/workflow/io.py": "0d3d72dd0beb4718f4020a07a5f1c0ca89193943049a479816b5c496806321b2",
+        "task1/workflow/budget.py": "c275047dffcafb7160b0c3fcd8de4e56bbc1f86dc05925691ff5af43aea312ca",
+        "task1/workflow/coordinate_review.py": "13305c6dda7bc0699822cd880e4e9051f2946371d4dd83f4ae0ea946dd5c897c",
+        "task1/workflow/__init__.py": "bd23709231145ce415c01c88880b886e8c8343199a47dbe0762d68841aeb73ff",
+        "task1/workflow/artifact_review.py": "5d4bd7b1994437635565377937661b1f337691df134052d4aea11ff09a2c1a43",
+        "task1/workflow/pipeline.py": "160bedcc0d8dffce71d833dffc4de28928bc7007077ae8d03c57c96d827548c7",
+        "task1/workflow/__main__.py": "b96a66d5fe543f8082d528e81e7e70de2c0090b20ab60b090532ab65647713e8",
+        "task1/workflow/geometry.py": "4d0e6eddda27ec48e4ca9c37d1cf052acb891ea6b02513a65768cef9b943f70e",
+        "task1/workflow/provider.py": "d778316bcdbdec1643707a93c1d0e00e52caa4c0b941c9299b33da547adbc28b",
+        "task1/workflow/evaluation.py": "cfb3d98f112f55bb2aad1f815db264db7232a3fab47a7bead3dec9759f4d1071",
+        "task1/workflow/tools.py": "c3e8013619a40c0491797cad4068c0537b2bb1f0fc8a579bdc62a5c125ee3b3a",
+        "task1/workflow/sources.py": "74b42f79abfe172b7d2e29ba55a631b22f3e6d46c7cb2a08c0c7634eaf44ba90",
+        "task1/workflow/controller.py": "16793b102fd077cc243eae6f1e714632f312a77e421850d424b8562a2909eb6d"
+      }
+    }
+  },
+  "inflight": null,
+  "current_code_sha": "ENGINEERING_TEST_C2_3",
+  "current_run": "three-targets"
+}

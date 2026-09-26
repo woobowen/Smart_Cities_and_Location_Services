@@ -1,0 +1,74 @@
+{
+  "tool_id": "f5d7213085c6ab2dea81499eb20a2f413a1598f5a66c2e0a6115b8b392166129",
+  "request_hash": "f5d7213085c6ab2dea81499eb20a2f413a1598f5a66c2e0a6115b8b392166129",
+  "role": "review",
+  "call_id": "C-review-profile",
+  "request": {
+    "role": "review",
+    "call_id": "C-review-profile",
+    "action": "verify_profiles",
+    "record_ids": [
+      "fixture:edges",
+      "fixture:missing",
+      "fixture:empty"
+    ],
+    "feedback_refs": [],
+    "evidence_refs": [
+      "CONSTRUCTED_FIXTURE"
+    ],
+    "summary": "Independent constructed C probe",
+    "reason": "ENGINEERING_TEST target and coverage check",
+    "request_status": "PROPOSED",
+    "candidate_for_future_review": null
+  },
+  "run_id": "c-f01-binding",
+  "mode": "MOCK_TEST",
+  "classification": "MOCK_TEST",
+  "code_sha": "7e6cd4082c2cdad2452fa5a1006e99dcfb050d17",
+  "output": {
+    "classification": "MOCK_TEST",
+    "input_sha256": "1c8a4f48c5faf8416aa7474d1a43215fdba759795cefd3414b60ea22edd2f451",
+    "record_ids": [
+      "fixture:edges",
+      "fixture:missing",
+      "fixture:empty"
+    ],
+    "input_records": 3,
+    "input_points": 9,
+    "modified_values": 0,
+    "parent_version": "RAW:1c8a4f48c5faf8416aa7474d1a43215fdba759795cefd3414b60ea22edd2f451",
+    "semantics_version": "g1-semantics-v1",
+    "metrics_version": "g1-metrics-v1",
+    "status": "VERIFIED",
+    "result": {
+      "status": "VERIFIED",
+      "target_action": "profile_pilot",
+      "target_artifact_id": "feb99759212596836dcb597b8aeff3944ba4b92f77ac408a4a385f7a7dc0a71b",
+      "target_artifact_hash": "37c0c0de25a6d537810c9cea7524f3ce74c35a28a2c7a9d2d2ebbc55984989a5",
+      "target_output_hash": "457d7a6e370ee24d07faab870ba52b9de0e17dc16fc135f8bd79e62f8d7fd11f",
+      "trusted_reference": {
+        "raw_sha256": "1c8a4f48c5faf8416aa7474d1a43215fdba759795cefd3414b60ea22edd2f451",
+        "parent_version": "RAW:1c8a4f48c5faf8416aa7474d1a43215fdba759795cefd3414b60ea22edd2f451",
+        "policy_sha256": "153cdb41897caaeca566f7bac9e0739178d6638df656314102bc294a28d65e6d"
+      },
+      "record_scope": [
+        "fixture:edges",
+        "fixture:missing",
+        "fixture:empty"
+      ],
+      "contract_version": "g1-policy-v1",
+      "checked_components": [
+        "record_scope",
+        "profile_fields",
+        "profile_counts",
+        "summary"
+      ],
+      "unchecked_components": [],
+      "unchecked_reasons": {},
+      "errors": []
+    }
+  },
+  "output_sha256": "c4e5da470e36830d11c895a9b5f51d70db5490e73c0d1e560aa5d5b745b87267",
+  "elapsed_seconds": 0.0014380530010384973,
+  "completed_at": "2026-09-26T16:29:58.703429+00:00"
+}

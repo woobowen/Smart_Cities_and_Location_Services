@@ -1,0 +1,39 @@
+{
+  "classification": "CURRENT_RUN_REAL_DATA",
+  "input_sha256": "8319264c059dc6c7186b41d4b16cd3b3cd3fc2f8d49244f2dd356cad6ad260c8",
+  "record_ids": [
+    "fixture:review"
+  ],
+  "input_records": 1,
+  "input_points": 4,
+  "modified_values": 0,
+  "parent_version": "RAW:8319264c059dc6c7186b41d4b16cd3b3cd3fc2f8d49244f2dd356cad6ad260c8",
+  "semantics_version": "g1-semantics-v1",
+  "metrics_version": "g1-metrics-v1",
+  "status": "VERIFIED",
+  "result": {
+    "status": "VERIFIED",
+    "target_action": "duplicate_details",
+    "target_artifact_id": "test:duplicate_details",
+    "target_artifact_hash": "272f0c35aa890a46db1fe1a26f948e584f080b7731401c944504d9b339abc023",
+    "target_output_hash": "57edaeaceaefe3bbdf59c16ee955b937b396bfd31d91b0f4f2815ab30297295d",
+    "trusted_reference": {
+      "raw_sha256": "8319264c059dc6c7186b41d4b16cd3b3cd3fc2f8d49244f2dd356cad6ad260c8",
+      "parent_version": "RAW:8319264c059dc6c7186b41d4b16cd3b3cd3fc2f8d49244f2dd356cad6ad260c8",
+      "policy_sha256": "b17ca1c0548055b2503a694c9b04a29a0d0fd430242a83f0f008ef36f6b21bc3"
+    },
+    "record_scope": [
+      "fixture:review"
+    ],
+    "contract_version": "g1-policy-v2-conditional",
+    "checked_components": [
+      "record_scope",
+      "complete_events",
+      "event_types",
+      "event_indices"
+    ],
+    "unchecked_components": [],
+    "unchecked_reasons": {},
+    "errors": []
+  }
+}

@@ -1,0 +1,643 @@
+{
+  "at": "2026-09-26T16:37:57.441836+00:00",
+  "classification": "ENGINEERING_TEST",
+  "input_source": "CONSTRUCTED_FIXTURE",
+  "external_issue_source": "GPT external review; c_initial/initial_reference_probes.json",
+  "scope_note": "Interface adapted to external trusted handle; original mutations preserved.",
+  "live_model_calls": 0,
+  "real_baseline_runs": 0,
+  "inputs": [
+    {
+      "record_id": "fixture:a",
+      "indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "timestamps": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "xy": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ]
+      ]
+    }
+  ],
+  "additional_scope_input": {
+    "record_id": "fixture:b",
+    "indices": [
+      0
+    ],
+    "timestamps": [
+      0
+    ],
+    "xy": [
+      [
+        0,
+        0
+      ]
+    ]
+  },
+  "contract": {
+    "scope": "CONSTRUCTED_PLANAR_ONLY",
+    "approval": "ENGINEERING_TEST_ONLY",
+    "method": "single_pass_simultaneous_keep_undefined",
+    "parameters": {
+      "dt": 30,
+      "distance": 100,
+      "min_points": 0,
+      "min_length": 0,
+      "direction": 35,
+      "dp": 0.1,
+      "time_reliable": true
+    }
+  },
+  "trusted_handle": {
+    "contract": {
+      "scope": "CONSTRUCTED_PLANAR_ONLY",
+      "approval": "ENGINEERING_TEST_ONLY",
+      "method": "single_pass_simultaneous_keep_undefined",
+      "parameters": {
+        "dt": 30,
+        "distance": 100,
+        "min_points": 0,
+        "min_length": 0,
+        "direction": 35,
+        "dp": 0.1,
+        "time_reliable": true
+      },
+      "contract_version": "BASELINE_CONTRACT_V2",
+      "order": [
+        "split",
+        "filter",
+        "denoise",
+        "simplify"
+      ],
+      "units": {
+        "xy": "fixture_planar_unit",
+        "time": "fixture_time_unit",
+        "direction": "degrees"
+      },
+      "adapter_version": "constructed_identity:v1",
+      "contract_id": "fixture:4caa7670453976d8b29fcc057586d9755e2089433cb6066ee50999a626d64beb"
+    },
+    "provenance": {
+      "source_kind": "CONSTRUCTED_FIXTURE",
+      "raw_sha256": "3dc530eb0ecddf2daeb6ae2147b27623adc4e43be524c6fe0c5b0d46e16dc0a3",
+      "raw_scope_sha256": "3dc530eb0ecddf2daeb6ae2147b27623adc4e43be524c6fe0c5b0d46e16dc0a3",
+      "reference_sha256": "3dc530eb0ecddf2daeb6ae2147b27623adc4e43be524c6fe0c5b0d46e16dc0a3",
+      "record_scope": [
+        "fixture:a"
+      ],
+      "parent_version": "CONSTRUCTED:3dc530eb0ecddf2daeb6ae2147b27623adc4e43be524c6fe0c5b0d46e16dc0a3",
+      "adapter_version": "constructed_identity:v1",
+      "contract_id": "fixture:4caa7670453976d8b29fcc057586d9755e2089433cb6066ee50999a626d64beb",
+      "contract_version": "BASELINE_CONTRACT_V2",
+      "contract_sha256": "f5fd9f9bc1300de09ac3032211b583e0732e42c3f88ebff0737d1f7610c1331f"
+    }
+  },
+  "source_sha256": {
+    "evaluation.py": "cfb3d98f112f55bb2aad1f815db264db7232a3fab47a7bead3dec9759f4d1071",
+    "pipeline.py": "160bedcc0d8dffce71d833dffc4de28928bc7007077ae8d03c57c96d827548c7"
+  },
+  "probes": [
+    {
+      "case": "valid_control",
+      "expected": "VERIFIED",
+      "actual": {
+        "status": "VERIFIED",
+        "errors": [],
+        "quality_status": "PENDING_RESEARCH_REVIEW",
+        "checked_components": [
+          "provenance",
+          "contract",
+          "segmentation",
+          "filtering",
+          "direction",
+          "actual_values",
+          "dp_intervals",
+          "point_accounting",
+          "summaries"
+        ],
+        "unchecked_components": [],
+        "scope": "Complete trusted input, approved method, actual artifacts; no ground-truth claim",
+        "trusted_reference": {
+          "source_kind": "CONSTRUCTED_FIXTURE",
+          "raw_sha256": "3dc530eb0ecddf2daeb6ae2147b27623adc4e43be524c6fe0c5b0d46e16dc0a3",
+          "raw_scope_sha256": "3dc530eb0ecddf2daeb6ae2147b27623adc4e43be524c6fe0c5b0d46e16dc0a3",
+          "reference_sha256": "3dc530eb0ecddf2daeb6ae2147b27623adc4e43be524c6fe0c5b0d46e16dc0a3",
+          "record_scope": [
+            "fixture:a"
+          ],
+          "parent_version": "CONSTRUCTED:3dc530eb0ecddf2daeb6ae2147b27623adc4e43be524c6fe0c5b0d46e16dc0a3",
+          "adapter_version": "constructed_identity:v1",
+          "contract_id": "fixture:4caa7670453976d8b29fcc057586d9755e2089433cb6066ee50999a626d64beb",
+          "contract_version": "BASELINE_CONTRACT_V2",
+          "contract_sha256": "f5fd9f9bc1300de09ac3032211b583e0732e42c3f88ebff0737d1f7610c1331f"
+        },
+        "record_scope": [
+          "fixture:a"
+        ],
+        "contract_version": "BASELINE_CONTRACT_V2",
+        "accounting": {
+          "status": "VERIFIED",
+          "input_records": 1,
+          "input_points": 4,
+          "stage_points": {
+            "filtered": 0,
+            "denoised": 0,
+            "simplified": 2,
+            "retained": 2
+          },
+          "errors": [],
+          "count_conserved": true,
+          "modified_point_count": 0
+        },
+        "record_reviews": [
+          {
+            "record_id": "fixture:a",
+            "stage_counts": {
+              "input": 4,
+              "segmented": 1,
+              "filtered": 0,
+              "denoised": 0,
+              "simplified": 2,
+              "retained": 2,
+              "not_processed": 0
+            },
+            "segment_counts": {
+              "total": 1,
+              "filtered": 0,
+              "processed": 1
+            },
+            "terminal_status": "PROCESSED"
+          }
+        ],
+        "stage_counts": {
+          "input": 4,
+          "segmented": 1,
+          "filtered": 0,
+          "denoised": 0,
+          "simplified": 2,
+          "retained": 2,
+          "not_processed": 0
+        },
+        "segment_counts": {
+          "total": 1,
+          "filtered": 0,
+          "processed": 1
+        },
+        "output_limitation": "GEOMETRY_IS_NOT_GROUND_TRUTH_OR_QUALITY_IMPROVEMENT"
+      },
+      "candidate_sha256": "21738ebaf20c3bf3628d7469ed538749396b5414dd9a1ff4a7a67dba3d1c6366",
+      "trusted_reference_sha256": "3dc530eb0ecddf2daeb6ae2147b27623adc4e43be524c6fe0c5b0d46e16dc0a3",
+      "matches_expected": true
+    },
+    {
+      "case": "only_final_coordinate_modified",
+      "expected": "REJECTED",
+      "actual": {
+        "status": "REJECTED",
+        "errors": [
+          {
+            "code": "VALUE_MODIFIED",
+            "index": 0,
+            "object": "fixture:a:segment:0:final"
+          },
+          {
+            "code": "STORED_NUMERIC_REVIEW_MISMATCH",
+            "object": "fixture:a:segment:0"
+          },
+          {
+            "code": "ACTUAL_PARENT_OR_VALUE_MISMATCH",
+            "object": "fixture:a:segment:0:final",
+            "field": "xy"
+          }
+        ],
+        "quality_status": "PENDING_RESEARCH_REVIEW",
+        "checked_components": [
+          "provenance",
+          "contract",
+          "segmentation",
+          "filtering",
+          "direction",
+          "actual_values",
+          "dp_intervals",
+          "point_accounting",
+          "summaries"
+        ],
+        "unchecked_components": [],
+        "scope": "Complete trusted input, approved method, actual artifacts; no ground-truth claim",
+        "trusted_reference": {
+          "source_kind": "CONSTRUCTED_FIXTURE",
+          "raw_sha256": "3dc530eb0ecddf2daeb6ae2147b27623adc4e43be524c6fe0c5b0d46e16dc0a3",
+          "raw_scope_sha256": "3dc530eb0ecddf2daeb6ae2147b27623adc4e43be524c6fe0c5b0d46e16dc0a3",
+          "reference_sha256": "3dc530eb0ecddf2daeb6ae2147b27623adc4e43be524c6fe0c5b0d46e16dc0a3",
+          "record_scope": [
+            "fixture:a"
+          ],
+          "parent_version": "CONSTRUCTED:3dc530eb0ecddf2daeb6ae2147b27623adc4e43be524c6fe0c5b0d46e16dc0a3",
+          "adapter_version": "constructed_identity:v1",
+          "contract_id": "fixture:4caa7670453976d8b29fcc057586d9755e2089433cb6066ee50999a626d64beb",
+          "contract_version": "BASELINE_CONTRACT_V2",
+          "contract_sha256": "f5fd9f9bc1300de09ac3032211b583e0732e42c3f88ebff0737d1f7610c1331f"
+        },
+        "record_scope": [
+          "fixture:a"
+        ],
+        "contract_version": "BASELINE_CONTRACT_V2",
+        "accounting": {
+          "status": "VERIFIED",
+          "input_records": 1,
+          "input_points": 4,
+          "stage_points": {
+            "filtered": 0,
+            "denoised": 0,
+            "simplified": 2,
+            "retained": 2
+          },
+          "errors": [],
+          "count_conserved": true,
+          "modified_point_count": 0
+        },
+        "record_reviews": [
+          {
+            "record_id": "fixture:a",
+            "stage_counts": {
+              "input": 4,
+              "segmented": 1,
+              "filtered": 0,
+              "denoised": 0,
+              "simplified": 2,
+              "retained": 2,
+              "not_processed": 0
+            },
+            "segment_counts": {
+              "total": 1,
+              "filtered": 0,
+              "processed": 1
+            },
+            "terminal_status": "PROCESSED"
+          }
+        ],
+        "stage_counts": {
+          "input": 4,
+          "segmented": 1,
+          "filtered": 0,
+          "denoised": 0,
+          "simplified": 2,
+          "retained": 2,
+          "not_processed": 0
+        },
+        "segment_counts": {
+          "total": 1,
+          "filtered": 0,
+          "processed": 1
+        },
+        "output_limitation": "GEOMETRY_IS_NOT_GROUND_TRUTH_OR_QUALITY_IMPROVEMENT"
+      },
+      "candidate_sha256": "6e26ef10ce3a5ff1b21d3227b2c5ebdb746d0b00b47b225e96a951d32163d7e5",
+      "trusted_reference_sha256": "3dc530eb0ecddf2daeb6ae2147b27623adc4e43be524c6fe0c5b0d46e16dc0a3",
+      "matches_expected": true
+    },
+    {
+      "case": "clean_and_final_shifted_ledger_unchanged",
+      "expected": "REJECTED",
+      "actual": {
+        "status": "REJECTED",
+        "errors": [
+          {
+            "code": "ACTUAL_PARENT_OR_VALUE_MISMATCH",
+            "object": "fixture:a:segment:0:clean",
+            "field": "xy"
+          },
+          {
+            "code": "VALUE_MODIFIED",
+            "index": 0,
+            "object": "fixture:a:segment:0:final"
+          },
+          {
+            "code": "VALUE_MODIFIED",
+            "index": 3,
+            "object": "fixture:a:segment:0:final"
+          },
+          {
+            "code": "STORED_NUMERIC_REVIEW_MISMATCH",
+            "object": "fixture:a:segment:0"
+          },
+          {
+            "code": "ACTUAL_PARENT_OR_VALUE_MISMATCH",
+            "object": "fixture:a:segment:0:final",
+            "field": "xy"
+          }
+        ],
+        "quality_status": "PENDING_RESEARCH_REVIEW",
+        "checked_components": [
+          "provenance",
+          "contract",
+          "segmentation",
+          "filtering",
+          "direction",
+          "actual_values",
+          "dp_intervals",
+          "point_accounting",
+          "summaries"
+        ],
+        "unchecked_components": [],
+        "scope": "Complete trusted input, approved method, actual artifacts; no ground-truth claim",
+        "trusted_reference": {
+          "source_kind": "CONSTRUCTED_FIXTURE",
+          "raw_sha256": "3dc530eb0ecddf2daeb6ae2147b27623adc4e43be524c6fe0c5b0d46e16dc0a3",
+          "raw_scope_sha256": "3dc530eb0ecddf2daeb6ae2147b27623adc4e43be524c6fe0c5b0d46e16dc0a3",
+          "reference_sha256": "3dc530eb0ecddf2daeb6ae2147b27623adc4e43be524c6fe0c5b0d46e16dc0a3",
+          "record_scope": [
+            "fixture:a"
+          ],
+          "parent_version": "CONSTRUCTED:3dc530eb0ecddf2daeb6ae2147b27623adc4e43be524c6fe0c5b0d46e16dc0a3",
+          "adapter_version": "constructed_identity:v1",
+          "contract_id": "fixture:4caa7670453976d8b29fcc057586d9755e2089433cb6066ee50999a626d64beb",
+          "contract_version": "BASELINE_CONTRACT_V2",
+          "contract_sha256": "f5fd9f9bc1300de09ac3032211b583e0732e42c3f88ebff0737d1f7610c1331f"
+        },
+        "record_scope": [
+          "fixture:a"
+        ],
+        "contract_version": "BASELINE_CONTRACT_V2",
+        "accounting": {
+          "status": "VERIFIED",
+          "input_records": 1,
+          "input_points": 4,
+          "stage_points": {
+            "filtered": 0,
+            "denoised": 0,
+            "simplified": 2,
+            "retained": 2
+          },
+          "errors": [],
+          "count_conserved": true,
+          "modified_point_count": 0
+        },
+        "record_reviews": [
+          {
+            "record_id": "fixture:a",
+            "stage_counts": {
+              "input": 4,
+              "segmented": 1,
+              "filtered": 0,
+              "denoised": 0,
+              "simplified": 2,
+              "retained": 2,
+              "not_processed": 0
+            },
+            "segment_counts": {
+              "total": 1,
+              "filtered": 0,
+              "processed": 1
+            },
+            "terminal_status": "PROCESSED"
+          }
+        ],
+        "stage_counts": {
+          "input": 4,
+          "segmented": 1,
+          "filtered": 0,
+          "denoised": 0,
+          "simplified": 2,
+          "retained": 2,
+          "not_processed": 0
+        },
+        "segment_counts": {
+          "total": 1,
+          "filtered": 0,
+          "processed": 1
+        },
+        "output_limitation": "GEOMETRY_IS_NOT_GROUND_TRUTH_OR_QUALITY_IMPROVEMENT"
+      },
+      "candidate_sha256": "a23e308e76481fad79a3684295338c1ed84c16123e83c97cd615117ee979cf96",
+      "trusted_reference_sha256": "3dc530eb0ecddf2daeb6ae2147b27623adc4e43be524c6fe0c5b0d46e16dc0a3",
+      "matches_expected": true
+    },
+    {
+      "case": "all_records_and_ledger_dropped_counts_unchanged",
+      "expected": "REJECTED",
+      "actual": {
+        "status": "REJECTED",
+        "errors": [
+          {
+            "code": "COMPLETE_RECORD_SCOPE_MISMATCH"
+          }
+        ],
+        "quality_status": "PENDING_RESEARCH_REVIEW",
+        "checked_components": [
+          "provenance",
+          "contract"
+        ],
+        "unchecked_components": [
+          "segmentation",
+          "filtering",
+          "direction",
+          "actual_values",
+          "dp_intervals",
+          "point_accounting",
+          "summaries"
+        ],
+        "scope": "Complete trusted input, approved method, actual artifacts; no ground-truth claim",
+        "trusted_reference": {
+          "source_kind": "CONSTRUCTED_FIXTURE",
+          "raw_sha256": "3dc530eb0ecddf2daeb6ae2147b27623adc4e43be524c6fe0c5b0d46e16dc0a3",
+          "raw_scope_sha256": "3dc530eb0ecddf2daeb6ae2147b27623adc4e43be524c6fe0c5b0d46e16dc0a3",
+          "reference_sha256": "3dc530eb0ecddf2daeb6ae2147b27623adc4e43be524c6fe0c5b0d46e16dc0a3",
+          "record_scope": [
+            "fixture:a"
+          ],
+          "parent_version": "CONSTRUCTED:3dc530eb0ecddf2daeb6ae2147b27623adc4e43be524c6fe0c5b0d46e16dc0a3",
+          "adapter_version": "constructed_identity:v1",
+          "contract_id": "fixture:4caa7670453976d8b29fcc057586d9755e2089433cb6066ee50999a626d64beb",
+          "contract_version": "BASELINE_CONTRACT_V2",
+          "contract_sha256": "f5fd9f9bc1300de09ac3032211b583e0732e42c3f88ebff0737d1f7610c1331f"
+        },
+        "record_scope": [
+          "fixture:a"
+        ],
+        "contract_version": "BASELINE_CONTRACT_V2"
+      },
+      "candidate_sha256": "e6099f8bf159a4498e8e0cee3114d09d7a4b8742ece86c32d5fb91a53ae5fdd1",
+      "trusted_reference_sha256": "3dc530eb0ecddf2daeb6ae2147b27623adc4e43be524c6fe0c5b0d46e16dc0a3",
+      "matches_expected": true
+    },
+    {
+      "case": "stage_counts_modified",
+      "expected": "REJECTED",
+      "actual": {
+        "status": "REJECTED",
+        "errors": [
+          {
+            "code": "GLOBAL_SUMMARY_MISMATCH",
+            "field": "stage_counts"
+          }
+        ],
+        "quality_status": "PENDING_RESEARCH_REVIEW",
+        "checked_components": [
+          "provenance",
+          "contract",
+          "segmentation",
+          "filtering",
+          "direction",
+          "actual_values",
+          "dp_intervals",
+          "point_accounting",
+          "summaries"
+        ],
+        "unchecked_components": [],
+        "scope": "Complete trusted input, approved method, actual artifacts; no ground-truth claim",
+        "trusted_reference": {
+          "source_kind": "CONSTRUCTED_FIXTURE",
+          "raw_sha256": "3dc530eb0ecddf2daeb6ae2147b27623adc4e43be524c6fe0c5b0d46e16dc0a3",
+          "raw_scope_sha256": "3dc530eb0ecddf2daeb6ae2147b27623adc4e43be524c6fe0c5b0d46e16dc0a3",
+          "reference_sha256": "3dc530eb0ecddf2daeb6ae2147b27623adc4e43be524c6fe0c5b0d46e16dc0a3",
+          "record_scope": [
+            "fixture:a"
+          ],
+          "parent_version": "CONSTRUCTED:3dc530eb0ecddf2daeb6ae2147b27623adc4e43be524c6fe0c5b0d46e16dc0a3",
+          "adapter_version": "constructed_identity:v1",
+          "contract_id": "fixture:4caa7670453976d8b29fcc057586d9755e2089433cb6066ee50999a626d64beb",
+          "contract_version": "BASELINE_CONTRACT_V2",
+          "contract_sha256": "f5fd9f9bc1300de09ac3032211b583e0732e42c3f88ebff0737d1f7610c1331f"
+        },
+        "record_scope": [
+          "fixture:a"
+        ],
+        "contract_version": "BASELINE_CONTRACT_V2",
+        "accounting": {
+          "status": "VERIFIED",
+          "input_records": 1,
+          "input_points": 4,
+          "stage_points": {
+            "filtered": 0,
+            "denoised": 0,
+            "simplified": 2,
+            "retained": 2
+          },
+          "errors": [],
+          "count_conserved": true,
+          "modified_point_count": 0
+        },
+        "record_reviews": [
+          {
+            "record_id": "fixture:a",
+            "stage_counts": {
+              "input": 4,
+              "segmented": 1,
+              "filtered": 0,
+              "denoised": 0,
+              "simplified": 2,
+              "retained": 2,
+              "not_processed": 0
+            },
+            "segment_counts": {
+              "total": 1,
+              "filtered": 0,
+              "processed": 1
+            },
+            "terminal_status": "PROCESSED"
+          }
+        ],
+        "stage_counts": {
+          "input": 4,
+          "segmented": 1,
+          "filtered": 0,
+          "denoised": 0,
+          "simplified": 2,
+          "retained": 2,
+          "not_processed": 0
+        },
+        "segment_counts": {
+          "total": 1,
+          "filtered": 0,
+          "processed": 1
+        },
+        "output_limitation": "GEOMETRY_IS_NOT_GROUND_TRUTH_OR_QUALITY_IMPROVEMENT"
+      },
+      "candidate_sha256": "9c60cf9207f24cb65a387213803420f4485fa77fe8cac7e66dd525cf359cbe97",
+      "trusted_reference_sha256": "3dc530eb0ecddf2daeb6ae2147b27623adc4e43be524c6fe0c5b0d46e16dc0a3",
+      "matches_expected": true
+    },
+    {
+      "case": "candidate_does_not_cover_current_complete_reference",
+      "expected": "REJECTED",
+      "actual": {
+        "status": "REJECTED",
+        "errors": [
+          {
+            "code": "BASELINE_ENVELOPE_MISMATCH",
+            "field": "input_hash"
+          },
+          {
+            "code": "BASELINE_ENVELOPE_MISMATCH",
+            "field": "provenance"
+          },
+          {
+            "code": "COMPLETE_RECORD_SCOPE_MISMATCH"
+          }
+        ],
+        "quality_status": "PENDING_RESEARCH_REVIEW",
+        "checked_components": [
+          "provenance",
+          "contract"
+        ],
+        "unchecked_components": [
+          "segmentation",
+          "filtering",
+          "direction",
+          "actual_values",
+          "dp_intervals",
+          "point_accounting",
+          "summaries"
+        ],
+        "scope": "Complete trusted input, approved method, actual artifacts; no ground-truth claim",
+        "trusted_reference": {
+          "source_kind": "CONSTRUCTED_FIXTURE",
+          "raw_sha256": "893f38d75a267b08d3972283ea83b0f7af6c0ee0c43c15bb413922f822fb4422",
+          "raw_scope_sha256": "893f38d75a267b08d3972283ea83b0f7af6c0ee0c43c15bb413922f822fb4422",
+          "reference_sha256": "893f38d75a267b08d3972283ea83b0f7af6c0ee0c43c15bb413922f822fb4422",
+          "record_scope": [
+            "fixture:a",
+            "fixture:b"
+          ],
+          "parent_version": "CONSTRUCTED:893f38d75a267b08d3972283ea83b0f7af6c0ee0c43c15bb413922f822fb4422",
+          "adapter_version": "constructed_identity:v1",
+          "contract_id": "fixture:4caa7670453976d8b29fcc057586d9755e2089433cb6066ee50999a626d64beb",
+          "contract_version": "BASELINE_CONTRACT_V2",
+          "contract_sha256": "f5fd9f9bc1300de09ac3032211b583e0732e42c3f88ebff0737d1f7610c1331f"
+        },
+        "record_scope": [
+          "fixture:a",
+          "fixture:b"
+        ],
+        "contract_version": "BASELINE_CONTRACT_V2"
+      },
+      "candidate_sha256": "21738ebaf20c3bf3628d7469ed538749396b5414dd9a1ff4a7a67dba3d1c6366",
+      "trusted_reference_sha256": "893f38d75a267b08d3972283ea83b0f7af6c0ee0c43c15bb413922f822fb4422",
+      "matches_expected": true
+    }
+  ],
+  "all_expectations_met": true
+}

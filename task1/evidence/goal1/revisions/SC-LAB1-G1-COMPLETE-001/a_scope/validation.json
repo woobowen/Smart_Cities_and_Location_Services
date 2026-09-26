@@ -1,0 +1,62 @@
+{
+  "classification": "A_HANDOFF_DOCUMENT_AND_READ_ONLY_DIAGNOSTIC_VALIDATION_ONLY",
+  "created_at_utc": "2026-09-26T16:46:10.575555+00:00",
+  "status": "PASS_FOR_BOUNDED_A_HANDOFF",
+  "json_files_parsed": [
+    "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/a_scope/TaskPlan.initial.json",
+    "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/a_scope/TaskPlan.json",
+    "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/a_scope/local_model_contract.json",
+    "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/a_scope/local_model_diagnostics.json",
+    "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/a_scope/source_audit.initial.json",
+    "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/a_scope/source_audit.json"
+  ],
+  "python_scripts_ast_valid": [
+    "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/a_scope/local_model_diagnostics.py",
+    "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/a_scope/verify_sources.py"
+  ],
+  "task_count": 15,
+  "dependency_graph_acyclic": true,
+  "one_valid_task_order": [
+    "A-T01",
+    "A-T02",
+    "A-T03",
+    "A-T04",
+    "A-T05",
+    "A-T06",
+    "A-T11",
+    "A-T07",
+    "A-T08",
+    "A-T12",
+    "A-T13",
+    "A-T09",
+    "A-T10",
+    "A-T14",
+    "A-T15"
+  ],
+  "canonical_requirement_ids_unchanged": true,
+  "gc_ids": 16,
+  "original_g1_ids": 18,
+  "current_external_D1_D2_wait_dependencies": 0,
+  "current_user_authority_bound": true,
+  "source_crs_stays_unverified": true,
+  "point_and_raw_hash_agreement": true,
+  "local_markdown_links_checked": 14,
+  "missing_links": [],
+  "artifact_sha256": {
+    "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/a_scope/TaskPlan.initial.json": "a8ffed850602040f7e8cf3a3d58e5b988754ffcbc82382ef776490b6930677bb",
+    "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/a_scope/TaskPlan.initial.md": "184eb4aad7cec5ce2fe24b7530bfdb9df55c5971b6c5dea3c28e007c0e40464b",
+    "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/a_scope/TaskPlan.json": "fb4ccd560b7c133888fb65b78125a82c4149da4c8ae79c39d4350b97a0817f90",
+    "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/a_scope/TaskPlan.md": "4ef44bf886f76f069820e431326b66eb1565c10bcc0356d1b7c60b37c1fad2be",
+    "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/a_scope/local_model_contract.json": "ae3ab78de2a7ab6159631c0340e11e344ed4401276a59bfa04c4e9689b700453",
+    "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/a_scope/local_model_diagnostics.json": "0d1da29c4f22cbc209f2084646424a1dfb291055ad5125b6683b6ee018b4f31d",
+    "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/a_scope/local_model_diagnostics.py": "431ea1c09869c1617a744b3cce04873f241bb12725179bf64b809f4b50f42281",
+    "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/a_scope/source_audit.initial.json": "684738f953cbd7104eceaad21843f60207ddb4a1b7d1cfeb1279e6d38f4eaf12",
+    "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/a_scope/source_audit.json": "49bf91b2803b69fe8ee5d56ef5bbd0901530a624ae7e7fd520eeb15139c5986b",
+    "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/a_scope/verify_sources.py": "cedc15d0d959232b26044bc23442a0de3b105d0c1e1f561931f5edda5bcc29c2"
+  },
+  "processing_tests_run_by_A": false,
+  "full_goal_tests_run_by_A": false,
+  "formal_baseline_run_by_A": false,
+  "packages_installed_by_A": [],
+  "main_goal_acceptance": "NOT_DETERMINED_BY_THIS_CHECK"
+}

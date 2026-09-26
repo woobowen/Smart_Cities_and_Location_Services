@@ -1,0 +1,150 @@
+{
+  "goal_id": "SC-LAB1-G1-FOUNDATION-001",
+  "execution": "SC-LAB1-G1-COMPLETE-001",
+  "status": "INTERRUPTED_CHECKPOINT",
+  "gpt_second_review": "PENDING",
+  "submission": "NOT_READY",
+  "tasks": {
+    "governance": {
+      "status": "PENDING",
+      "depends_on": [],
+      "evidence": []
+    },
+    "review_targets": {
+      "status": "PENDING",
+      "depends_on": [],
+      "evidence": []
+    },
+    "trusted_baseline": {
+      "status": "PENDING",
+      "depends_on": [],
+      "evidence": []
+    },
+    "diagnostics": {
+      "status": "PENDING",
+      "depends_on": [
+        "review_targets"
+      ],
+      "evidence": []
+    },
+    "real_baseline": {
+      "status": "PENDING",
+      "depends_on": [
+        "trusted_baseline",
+        "diagnostics"
+      ],
+      "evidence": []
+    },
+    "processing_feedback": {
+      "status": "PENDING",
+      "depends_on": [
+        "real_baseline"
+      ],
+      "evidence": []
+    },
+    "notebooks": {
+      "status": "PENDING",
+      "depends_on": [
+        "diagnostics"
+      ],
+      "evidence": []
+    },
+    "figures": {
+      "status": "PENDING",
+      "depends_on": [
+        "diagnostics"
+      ],
+      "evidence": []
+    },
+    "internal_review": {
+      "status": "PENDING",
+      "depends_on": [
+        "governance",
+        "review_targets",
+        "trusted_baseline",
+        "diagnostics",
+        "notebooks",
+        "figures"
+      ],
+      "evidence": []
+    }
+  },
+  "issues": {},
+  "events": [
+    {
+      "sequence": 0,
+      "at": "2026-09-26T16:29:58.810173+00:00",
+      "kind": "CODE_BOUND",
+      "previous_hash": "ROOT",
+      "code_sha": "ENGINEERING_TEST_VERSION_1",
+      "changed_paths": [],
+      "hash": "fceba2ad2134ff670047a67572062ca459d4256c9c9b8cf266b41a89012d220e"
+    },
+    {
+      "sequence": 1,
+      "at": "2026-09-26T16:29:58.811612+00:00",
+      "kind": "RUN_STARTED",
+      "previous_hash": "fceba2ad2134ff670047a67572062ca459d4256c9c9b8cf266b41a89012d220e",
+      "run_id": "uncertain",
+      "hash": "801aa16e575291b4617e128249f951e6f1f05bc0a84c1d013e95f4c10d1287f4"
+    },
+    {
+      "sequence": 2,
+      "at": "2026-09-26T16:29:58.812249+00:00",
+      "kind": "TOOL_DISPATCHED",
+      "previous_hash": "801aa16e575291b4617e128249f951e6f1f05bc0a84c1d013e95f4c10d1287f4",
+      "operation": "uncertain:profile_pilot",
+      "hash": "4c9ae1f8f629baa8c159dbf07dca9cdf36b5a0e7df6f1dc3545caf04d982c591"
+    },
+    {
+      "sequence": 3,
+      "at": "2026-09-26T16:29:58.812542+00:00",
+      "kind": "TOOL_FAILED_OUTCOME_REQUIRES_RECONCILIATION",
+      "previous_hash": "4c9ae1f8f629baa8c159dbf07dca9cdf36b5a0e7df6f1dc3545caf04d982c591",
+      "operation": "uncertain:profile_pilot",
+      "error": "C_CONSTRUCTED_POST_DISPATCH_FAILURE",
+      "hash": "2edb373467a189bb84ad6df96878f98a7d5c73ac8ccba95562dd97eff790af17"
+    },
+    {
+      "sequence": 4,
+      "at": "2026-09-26T16:29:58.813024+00:00",
+      "kind": "RECOVERY_INSPECTION",
+      "previous_hash": "2edb373467a189bb84ad6df96878f98a7d5c73ac8ccba95562dd97eff790af17",
+      "operation": "uncertain:profile_pilot",
+      "output_exists": false,
+      "automatic_retry": false,
+      "hash": "fb21e9ad5b27bb9c67c493f676a1e5258a21c0f3662806bf2d1706fb4700bbed"
+    },
+    {
+      "sequence": 5,
+      "at": "2026-09-26T16:29:58.813241+00:00",
+      "kind": "GOAL_REEVALUATED",
+      "previous_hash": "fb21e9ad5b27bb9c67c493f676a1e5258a21c0f3662806bf2d1706fb4700bbed",
+      "status": "INTERRUPTED_CHECKPOINT",
+      "hash": "7452eac70bd5285a931795ebb1ddfaa2e272b3dab04484ada334465c76130a49"
+    }
+  ],
+  "runs": {
+    "uncertain": {
+      "status": "INTERRUPTED_CHECKPOINT",
+      "code_sha": "ENGINEERING_TEST_VERSION_1",
+      "policy_hash": "153cdb41897caaeca566f7bac9e0739178d6638df656314102bc294a28d65e6d",
+      "input_sha256": "1c8a4f48c5faf8416aa7474d1a43215fdba759795cefd3414b60ea22edd2f451",
+      "record_ids": [
+        "fixture:edges",
+        "fixture:missing",
+        "fixture:empty"
+      ],
+      "artifacts": {},
+      "reviews": {},
+      "mode": "RECOMPUTE",
+      "new_model_calls": 0
+    }
+  },
+  "inflight": {
+    "id": "uncertain:profile_pilot",
+    "kind": "tool",
+    "action": "profile_pilot"
+  },
+  "current_code_sha": "ENGINEERING_TEST_VERSION_1"
+}

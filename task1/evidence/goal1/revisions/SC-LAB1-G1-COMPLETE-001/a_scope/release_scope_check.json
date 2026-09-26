@@ -1,0 +1,247 @@
+{
+  "check_id": "A_RELEASE_SCOPE_STATIC_01",
+  "created_at_utc": "2026-09-26T17:09:31.853417+00:00",
+  "started_at_utc": "2026-09-26T17:09:30.734407+00:00",
+  "classification": "READ_ONLY_STATIC_PROTECTION_GOVERNANCE_SCOPE_CHECK",
+  "status": "PROTECTION_AND_GOVERNANCE_PASS_FINAL_DOCUMENTATION_PENDING",
+  "current_head": "f229d9a4113bcc0dd763e1b410f1f5fb73903a62",
+  "anchor_source": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/workspace_initial.json",
+  "anchor_commit": "7e6cd4082c2cdad2452fa5a1006e99dcfb050d17",
+  "writes_by_A": [
+    "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/a_scope/release_scope_check.json",
+    "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/a_scope/release_scope_check.md"
+  ],
+  "core_numeric_recomputation": "NOT_RUN_BY_DESIGN",
+  "authoritative_initial_protection": {
+    "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/initial_protected_hashes.json",
+    "manifest_sha256": "64c39370d8ee9faf20b8e4fc2a6fdad89e2bf3ab5f3c5fe84f6849e1d1d570b6",
+    "entries": 273,
+    "unchanged_entries": 272,
+    "allowed_current_entry_exceptions": [
+      "task1/evidence/goal1/REVIEW_PACKET.md",
+      "task1/evidence/goal1/acceptance.json",
+      "task1/evidence/goal1/requirements.json"
+    ],
+    "changed_entries": [
+      {
+        "path": "task1/evidence/goal1/requirements.json",
+        "initial_sha256": "dc0f2a7b3e6a500bb31f68e0bed696231453521c7068a71d24148c888c5338c1",
+        "current_sha256": "ff973adb03a00d101387f062da27dbdb6e6238da02573907cd9517014e4d977e",
+        "allowed_current_entry": true
+      }
+    ],
+    "unauthorized_changes": [],
+    "missing_or_nonregular": [],
+    "status": "PASS",
+    "coverage_note": "Original table covers historical evidence and two user ZIPs, but does not contain teacher/raw/template/plots entries. It was not replaced or expanded; those files are checked separately against the recorded initial Git commit."
+  },
+  "initial_commit_byte_comparison": {
+    "scope_roots": [
+      "task1/作业",
+      "task1/作业.zip",
+      "task1/实验课1.pptx",
+      "templates",
+      "tools/skills/publication-plots",
+      "releases/chatgpt-project-sources/publication-plots.zip",
+      "task1/results/goal1",
+      "task1/figures/goal1"
+    ],
+    "files_checked": 150,
+    "category_counts": {
+      "plots_zip": 1,
+      "historical_results_figures": 11,
+      "teacher_materials_starter_raw": 106,
+      "templates": 26,
+      "installed_plots_skill": 6
+    },
+    "comparison": "Exact current bytes == git show recorded initial commit:path; no new protection allowlist created",
+    "mismatches": [],
+    "missing_or_nonregular": [],
+    "status": "PASS"
+  },
+  "user_untracked_zip_preservation": [
+    {
+      "path": "SC-LAB1-G1-CLOSURE-002_HANDOFF.zip",
+      "initial_sha256": "43db2c0316f7773bb568cc335ba563b29c013f41a4bf82ba74b1c36e90add4fe",
+      "current_sha256": "43db2c0316f7773bb568cc335ba563b29c013f41a4bf82ba74b1c36e90add4fe",
+      "byte_hash_matches": true,
+      "git_status": "?? SC-LAB1-G1-CLOSURE-002_HANDOFF.zip"
+    },
+    {
+      "path": "SC-LAB1-G1-COMPLETE-001_HANDOFF.zip",
+      "initial_sha256": "95d467b764b0c358e5248ed5392c4d8704a3767f6a907f56a76527d0c50a8c68",
+      "current_sha256": "95d467b764b0c358e5248ed5392c4d8704a3767f6a907f56a76527d0c50a8c68",
+      "byte_hash_matches": true,
+      "git_status": "?? SC-LAB1-G1-COMPLETE-001_HANDOFF.zip"
+    }
+  ],
+  "authorized_governance_diffs": [
+    {
+      "path": "AGENTS.md",
+      "initial_commit_sha256": "cbff3157e2289b58f370d422124f6799bcde255892d999afdf94410fcda7578f",
+      "current_sha256": "6950ca3d95e1c599626b172eaba2c6f15f72bddcf641077e7f53415360204334",
+      "added_lines": 23,
+      "deleted_lines": 0,
+      "diff": "--- 7e6cd4082c2cdad2452fa5a1006e99dcfb050d17:AGENTS.md\n+++ AGENTS.md\n@@ -87,6 +87,23 @@\n \n 禁止一开始大规模重写工程或重新设计整个系统。\n \n+### 同一 Goal 内持续闭环\n+\n+主线程对当前批准 Goal 的全部未完成要求持续负责。审核发现普通工程问题时，继续执行\n+“复现 → 最小修复 → 专项测试 → 独立复验 → 使受影响旧产物失效并重建 → 恢复父任务”；\n+子角色返回审核报告、内部 commit、进度记录或局部修复完成都不是父 Goal 的完成条件。\n+\n+把实现修正到已批准定义属于工程修复；改变方法定义、指标、参数原则或时空语义属于研究决定。\n+数值结果因正确修复而变化本身不构成越权。运行时角色不得修改原始数据与批准合同；\n+工程修复允许修正评价器实现，但不得降低评价标准。修复期间暂停受影响运行，固定新代码后\n+重跑受影响任务，不在原 run 内热替换源码。\n+\n+当前批准 Prompt 可以规定先完成内部全验收再发布；中间本地 commit 不意味着等待用户。\n+全部必需项满足并完成独立内部验收后，才正常发布供 GPT 远程二重审核。\n+真实研究、权限、服务或资源阻碍只暂停受影响部分；其他必需工作继续，全部剩余工作\n+确实依赖外部条件时保存明确 BLOCKED 的可恢复检查点。不得把检查点声明为 Goal 完成，\n+也不得以新的修复 Prompt 替代本轮仍可执行的修复。\n+\n ---\n \n ## 4. Engineering style\n@@ -143,6 +160,12 @@\n 按 [Research Protocol §G](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/docs/research/SMART_CITIES_RESEARCH_PROTOCOL.md#g-spatiotemporal-correctness) 的完整检查项核验坐标、时间、尺度与样本边界，并保存检查命令、输入与结果。不得为未知数据静默指定 CRS/时区或混淆坐标、方向、速度、距离单位。\n \n 关键语义无法确认时，停止受影响正式实验，返回证据、候选解释、影响与待确认事项。\n+\n+若当前用户明确授权在未知 datum 下做条件化分析，应将数据来源事实、分析模型假设与\n+派生工作坐标分别登记。保留 source_crs=UNVERIFIED，预先固定局部模型、单位、参数与\n+独立核验，记录近似误差和阈值敏感性；不改原始值、不擅做加偏转换、不以 EPSG 标签\n+替代来源证明。按授权继续可完成的开发性处理，仅阻断无依据的地理精度或绝对定位结论。\n+授权内可逆技术选择与普通工程修复自主执行，不重复请求已获批准事项。\n \n ---\n ",
+      "review": "AUTHORIZED_SMALL_ADDITIONS_ONLY",
+      "basis": [
+        "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/handoff/SC-LAB1-G1-COMPLETE-001_CODEX_PROMPT.md section 3",
+        "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/AUTHORIZATION_SUPPLEMENT.md sections 2 and 5"
+      ]
+    },
+    {
+      "path": "docs/research/SMART_CITIES_RESEARCH_PROTOCOL.md",
+      "initial_commit_sha256": "9f94c4f73358af90e8fce1a74b9e688e9b33c2ff375a9a42fc384f6623397699",
+      "current_sha256": "102c03b2107040345d15d631fa56bb8425de2ec79e0f8997d6b67d01be6e92cd",
+      "added_lines": 13,
+      "deleted_lines": 0,
+      "diff": "--- 7e6cd4082c2cdad2452fa5a1006e99dcfb050d17:docs/research/SMART_CITIES_RESEARCH_PROTOCOL.md\n+++ docs/research/SMART_CITIES_RESEARCH_PROTOCOL.md\n@@ -30,6 +30,13 @@\n 老师材料 → 完整读题与范围确认 → T1/T2 / Deliverables / grading / submission → 必要网络研究 → Source Audit → starter/data 检查 → requirement checklist → spatiotemporal correctness → GPT 候选 → User review / challenge / modify / reject / select → CONFIRMED / CANDIDATE / UNRESOLVED → 必要公平实验 → 方案冻结 → Codex implementation → real execution → results → GPT audit → human interpretation → formal conclusion。\n \n GPT 提供研究候选与审核，用户审阅、质疑、修改、否决或选择；Codex 执行批准方案。Git commit/push 的执行规则由 AGENTS 管理。\n+\n+批准 Goal 内，审核发现工程缺陷后持续修复、回归、重建受影响产物并恢复父任务，\n+不以审核报告、局部完成或子角色结束代替 Goal 验收。实现偏离批准定义的修正属于工程修复；\n+改变定义、指标、关键参数原则或时空语义才需要研究决定，结果数值变化本身不自动越权。\n+运行时角色不能改原始数据或批准合同；评价器可以修复实现，不能降低标准。\n+内部进度与 commit 不代表等待用户；按当前 Prompt 完成内部总验收后发布，\n+真实外部阻碍保存可恢复状态并诚实说明，仍继续所有不受影响的必要工作。\n \n ## D. Source Audit\n \n@@ -67,6 +74,12 @@\n - sampling mechanism；representativeness；bias；sample vs population。\n \n 禁止无依据把经纬度直接用于米制欧氏距离、为未知数据默认指定 CRS/时区、无物理依据插值缺失轨迹、混淆方向与速度字段、混淆单位、把样本结果直接外推总体。关键语义无法确认时停止受影响正式实验，返回证据、候选解释与影响。\n+\n+用户明确授权条件化分析时，允许在有依据的坐标顺序/角度单位与结构事实之上，预先固定\n+适合任务尺度的局部数学模型及工作坐标，独立检查实现、近似误差与阈值影响。\n+source_crs 仍为 UNVERIFIED；数学椭球/投影假设不是文件 datum 证明，不能按清洗分数选择。\n+原始值不变，产物明确标为真实数据上的条件化分析。工程正确、条件化结果有效和真实地理\n+语义确认分别验收；不放宽共同审核标准，也不以未知事实阻断授权内的全部处理。\n \n ## H. Parameter Rationale\n ",
+      "review": "AUTHORIZED_SMALL_ADDITIONS_ONLY",
+      "basis": [
+        "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/handoff/SC-LAB1-G1-COMPLETE-001_CODEX_PROMPT.md section 3",
+        "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/AUTHORIZATION_SUPPLEMENT.md sections 2 and 5"
+      ]
+    }
+  ],
+  "other_active_governance": [
+    {
+      "path": "docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md",
+      "byte_equal_to_initial_commit": true,
+      "sha256": "fa640db61ce7b1e1487083a1d6f663c75eb11ff6ee6b7b01b21f48dbcdc7b06a"
+    },
+    {
+      "path": "docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md",
+      "byte_equal_to_initial_commit": true,
+      "sha256": "10cd5024641f4877fa0e7d569c507c4246bc3d0574901658e490ab0f5ff70d6c"
+    }
+  ],
+  "bundle": {
+    "command": ".venv/bin/python evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/sync_sources.py --check",
+    "cwd": "/home/addaswsw/lab/Smart_Cities_and_Location_Services",
+    "exit_code": 0,
+    "stdout": "UPLOAD_BUNDLE_CONTENT: PASS; EXACTLY 11; internal manifest verified\n",
+    "stderr": "",
+    "existing_allowlist_used": true,
+    "exact_file_count": 11,
+    "all_entries_ordinary_files": true,
+    "active_bytes_equal_bundle": true,
+    "canonical_hashes": {
+      "SMART_CITIES_RESEARCH_PROTOCOL.md": "102c03b2107040345d15d631fa56bb8425de2ec79e0f8997d6b67d01be6e92cd",
+      "WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md": "fa640db61ce7b1e1487083a1d6f663c75eb11ff6ee6b7b01b21f48dbcdc7b06a",
+      "SMART_CITIES_VISUAL_SYSTEM.md": "10cd5024641f4877fa0e7d569c507c4246bc3d0574901658e490ab0f5ff70d6c",
+      "AGENTS.md": "6950ca3d95e1c599626b172eaba2c6f15f72bddcf641077e7f53415360204334",
+      "Process_Report_P2_Locked_v1.pdf": "3903042ef7935a722d32871a9f55ba973b1262ee0fe290363b0a6c3bda09dcfa",
+      "Experiment_Report_P2_Exact.pdf": "6fd543f5123ba4d67985193d5658802ae820c6585dc3f509071b8b2d39b323dd",
+      "实验课1.pptx": "cf5fdbdd0e116818f4bf195e8761dd55c4733443d7c360c986cf1cdfddfda075",
+      "作业.zip": "818d483cf719aeb1145ea97b551b2648913559ed1fca0be220ed41eff8ba42cc",
+      "任务3_LLM辅助评估清洗.ipynb": "4ecffe64024e002c0cffe7830e18b5f6ded04cd5aa9dd645d6798fc9b0715add",
+      "作业1轨迹数据预处理.ipynb": "8601d1dfecaef062fef553992cc9774d3a0eb551751c70536f5b52f1343b158a",
+      "publication-plots.zip": "b3d20aec75a8450e62effcb51399115c952fa6c3787c254fa09305e44a9c3041"
+    },
+    "plots_archive_fixed_hash": "b3d20aec75a8450e62effcb51399115c952fa6c3787c254fa09305e44a9c3041",
+    "plots_archive_effective_members_equal_installed": 6,
+    "internal_manifest_sha256": "d1a43a5c318a89ecccfb3998cfb53cd870aada672c49c208970087ebb7a90aae",
+    "chatgpt_ui_uploaded": false
+  },
+  "current_docs": {
+    "hashes": {
+      "task1/docs/goal1/README.md": "85ee7ea1501ad983086aab24b545bd612ff0b63a906522ff419bd4d4e9bdc658",
+      "task1/docs/goal1/CONTRACTS.md": "1a476f3290a2edd7224b8c41fde5e0a0c6f6eaf1f12e7f06909f9a52870c756b",
+      "task1/docs/goal1/ARCHITECTURE.md": "5fd62ae3134264970a3f0b7d17fc7fc9cd3e9e839c074c42759c74e2ffef1e7e",
+      "task1/docs/goal1/geometry_notes.md": "093b93f28b339b5deb471af14e35b31760718bb7bd3b89e69faeaae4a24e48c1"
+    },
+    "geometry_obsolete_gate_phrases_remaining": [],
+    "geometry_previous_issue": "RESOLVED_DURING_THIS_CHECK",
+    "historical_contract_appendix": "Old empty-REAL_CONTRACTS and six-call statements are explicitly under the historical REPAIR heading; not current authorization and preserved as history.",
+    "g2_g3_scope": "Current README/ARCHITECTURE/CONTRACTS defer parameter/order/mode experiments, final full-data work, final reports and teacher submission; current notebooks agree.",
+    "readme_verify_example_run": "g1-complete-pilot-03"
+  },
+  "requirements_refresh": {
+    "path": "task1/evidence/goal1/requirements.json",
+    "sha256": "ff973adb03a00d101387f062da27dbdb6e6238da02573907cd9517014e4d977e",
+    "top_level_current_authority": {
+      "execution": "SC-LAB1-G1-COMPLETE-001",
+      "engineering_status": "IMPLEMENTING",
+      "source_crs": "UNVERIFIED",
+      "conditional_analysis": "EXECUTED_AWAITING_TOTAL_ACCEPTANCE",
+      "direction_schedule": "USER_APPROVED",
+      "current_run": "g1-complete-pilot-03",
+      "baseline_status": "VERIFIED_BY_INDEPENDENT_RUNTIME_REVIEW",
+      "goal2_goal3": "NOT_RUN"
+    },
+    "critical_unresolved": [
+      {
+        "id": "SOURCE_DATUM_FACT",
+        "status": "UNVERIFIED",
+        "blocks": "unconditional geographic/ground-truth claims only",
+        "conditional_pilot_authorized": true,
+        "reason": "用户未提供绑定文件的datum/offset说明；本轮不将模型假设改写为事实"
+      }
+    ],
+    "status": "PASS_STATIC_SCOPE",
+    "findings": [],
+    "resolution_during_check": "Earlier row-level stale current_work/blocking_ids/future_acceptance findings were resolved by the main thread before the final snapshot: prior values are historical and current fields describe native roles and the conditional chain. Actual referenced runtime/figure evidence remains for C total review."
+  },
+  "notebooks": [
+    {
+      "path": "task1/notebooks/01_baseline_and_audit.ipynb",
+      "sha256": "b8a8eebaf13048f1a620959625ef54a531401a8dce7ad28ef00e99be10bf031c",
+      "source_text_status": "PASS_CURRENT_CONDITIONAL_SCOPE",
+      "obsolete_gate_claims": [],
+      "code_cells": 8,
+      "executed_code_cells": 0,
+      "output_cells": 0,
+      "execution_by_A": "NOT_RUN",
+      "fresh_kernel_final_run_review": "PENDING_MAIN_AND_C",
+      "default_recompute": true,
+      "declares_no_new_model_calls": true,
+      "g2_g3_deferred": true
+    },
+    {
+      "path": "task1/notebooks/02_agent_loop_recompute.ipynb",
+      "sha256": "80b964da2b3d690a7f21c179c8c9559f98ccc16be319d6fe8a867aa1bf5fbfe8",
+      "source_text_status": "PASS_CURRENT_CONDITIONAL_SCOPE",
+      "obsolete_gate_claims": [],
+      "code_cells": 8,
+      "executed_code_cells": 0,
+      "output_cells": 0,
+      "execution_by_A": "NOT_RUN",
+      "fresh_kernel_final_run_review": "PENDING_MAIN_AND_C",
+      "default_recompute": true,
+      "declares_no_new_model_calls": true,
+      "g2_g3_deferred": true
+    }
+  ],
+  "final_entries": [
+    {
+      "path": "task1/evidence/goal1/REVIEW_PACKET.md",
+      "sha256": "bbbb33ccd154297643ac869d2f73a7cedf60f90de7982cd776d1c7c79b09a1e6",
+      "status": "PENDING_FINAL_CURRENT_ENTRY_REFRESH",
+      "reason": "Main reports final valid run/notebook evidence and current entry are still being generated; historical entry content is not treated as the final release."
+    },
+    {
+      "path": "task1/evidence/goal1/acceptance.json",
+      "sha256": "80fbf3ed3f1b0516e883b995026f644f867dbfabbe82202283efb8af2b239e99",
+      "status": "PENDING_FINAL_CURRENT_ENTRY_REFRESH",
+      "reason": "Main reports final valid run/notebook evidence and current entry are still being generated; historical entry content is not treated as the final release."
+    }
+  ],
+  "deferred_checks": [
+    "Final valid run identity and CODE_SHA/contract/output binding after ongoing repair and scope-message rebuild",
+    "Final fresh-kernel Notebook execution evidence and matching figures",
+    "Final requirements evidence references, acceptance and unique REVIEW_PACKET",
+    "Final commit/push and actual local-remote SHA equality"
+  ],
+  "not_findings": [
+    "Unknown source datum is not a whole-G1 failure under the explicit conditional-analysis authorization",
+    "Initial Prompt/historical evidence still containing former D1/D2 blocks is expected and must not be rewritten",
+    "A has not asserted any baseline numerical pass or final release approval"
+  ],
+  "supporting_acceptance_scope": [
+    "GC01 protected files and user work",
+    "GC02 authorized governance and distribution",
+    "GC14 current source/assumption/scope language, with requirements rows pending",
+    "GC16 static pre-release evidence only; actual publication deferred"
+  ],
+  "environment_changes_by_A": []
+}

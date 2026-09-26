@@ -1,0 +1,159 @@
+{
+  "tool_id": "feb99759212596836dcb597b8aeff3944ba4b92f77ac408a4a385f7a7dc0a71b",
+  "request_hash": "feb99759212596836dcb597b8aeff3944ba4b92f77ac408a4a385f7a7dc0a71b",
+  "role": "execution",
+  "call_id": "C-create-profile_pilot",
+  "request": {
+    "role": "execution",
+    "call_id": "C-create-profile_pilot",
+    "action": "profile_pilot",
+    "record_ids": [
+      "fixture:edges",
+      "fixture:missing",
+      "fixture:empty"
+    ],
+    "feedback_refs": [],
+    "evidence_refs": [
+      "CONSTRUCTED_FIXTURE"
+    ],
+    "summary": "Independent constructed C probe",
+    "reason": "ENGINEERING_TEST target and coverage check",
+    "request_status": "PROPOSED",
+    "candidate_for_future_review": null
+  },
+  "run_id": "c-f01-binding",
+  "mode": "MOCK_TEST",
+  "classification": "MOCK_TEST",
+  "code_sha": "7e6cd4082c2cdad2452fa5a1006e99dcfb050d17",
+  "output": {
+    "classification": "MOCK_TEST",
+    "input_sha256": "1c8a4f48c5faf8416aa7474d1a43215fdba759795cefd3414b60ea22edd2f451",
+    "record_ids": [
+      "fixture:edges",
+      "fixture:missing",
+      "fixture:empty"
+    ],
+    "input_records": 3,
+    "input_points": 9,
+    "modified_values": 0,
+    "parent_version": "RAW:1c8a4f48c5faf8416aa7474d1a43215fdba759795cefd3414b60ea22edd2f451",
+    "semantics_version": "g1-semantics-v1",
+    "metrics_version": "g1-metrics-v1",
+    "status": "EXECUTED",
+    "result": {
+      "profiles": [
+        {
+          "record_id": "fixture:edges",
+          "classification": "MOCK_TEST",
+          "valid_structure": true,
+          "n_points": 6,
+          "n_timestamps": 6,
+          "invalid_timestamps": 0,
+          "invalid_coordinates": 0,
+          "negative_dt": 1,
+          "zero_dt": 1,
+          "positive_dt": 3,
+          "same_time_different_position": 1,
+          "consecutive_duplicate_position": 2,
+          "long_gap_gt_30_source_seconds": 1,
+          "edges_total": 5,
+          "dt_computable": 5,
+          "position_pairs_computable": 5,
+          "time_span_raw": 90,
+          "dt_min_raw": -1.0,
+          "dt_max_raw": 31.0,
+          "dt_counts": {
+            "30": 2,
+            "31": 1,
+            "-1": 1,
+            "0": 1
+          },
+          "issues": []
+        },
+        {
+          "record_id": "fixture:missing",
+          "classification": "MOCK_TEST",
+          "valid_structure": true,
+          "n_points": 3,
+          "n_timestamps": 3,
+          "invalid_timestamps": 1,
+          "invalid_coordinates": 0,
+          "negative_dt": 0,
+          "zero_dt": 1,
+          "positive_dt": 0,
+          "same_time_different_position": 1,
+          "consecutive_duplicate_position": 1,
+          "long_gap_gt_30_source_seconds": 0,
+          "edges_total": 2,
+          "dt_computable": 1,
+          "position_pairs_computable": 2,
+          "time_span_raw": null,
+          "dt_min_raw": 0.0,
+          "dt_max_raw": 0.0,
+          "dt_counts": {
+            "0": 1
+          },
+          "issues": [
+            "NONFINITE_TIME"
+          ]
+        },
+        {
+          "record_id": "fixture:empty",
+          "classification": "MOCK_TEST",
+          "valid_structure": true,
+          "n_points": 0,
+          "n_timestamps": 0,
+          "invalid_timestamps": 0,
+          "invalid_coordinates": 0,
+          "negative_dt": 0,
+          "zero_dt": 0,
+          "positive_dt": 0,
+          "same_time_different_position": 0,
+          "consecutive_duplicate_position": 0,
+          "long_gap_gt_30_source_seconds": 0,
+          "edges_total": 0,
+          "dt_computable": 0,
+          "position_pairs_computable": 0,
+          "time_span_raw": null,
+          "dt_min_raw": null,
+          "dt_max_raw": null,
+          "dt_counts": {},
+          "issues": []
+        }
+      ],
+      "summary": {
+        "n_records": 3,
+        "valid_structure_records": 3,
+        "n_points": 9,
+        "n_timestamps": 9,
+        "invalid_timestamps": 1,
+        "invalid_coordinates": 0,
+        "negative_dt": 1,
+        "zero_dt": 2,
+        "positive_dt": 3,
+        "same_time_different_position": 2,
+        "consecutive_duplicate_position": 3,
+        "long_gap_gt_30_source_seconds": 1,
+        "edges_total": 7,
+        "dt_computable": 6,
+        "position_pairs_computable": 7,
+        "dt_counts": {
+          "-1": 1,
+          "0": 2,
+          "30": 2,
+          "31": 1
+        },
+        "point_count_min": 0,
+        "point_count_max": 6,
+        "modifications": 0,
+        "physical_distance": {
+          "value": null,
+          "reason": "CRS_AND_DISTANCE_POLICY_UNRESOLVED"
+        }
+      }
+    }
+  },
+  "output_sha256": "457d7a6e370ee24d07faab870ba52b9de0e17dc16fc135f8bd79e62f8d7fd11f",
+  "elapsed_seconds": 0.0017033160002029035,
+  "completed_at": "2026-09-26T16:29:58.585956+00:00"
+}

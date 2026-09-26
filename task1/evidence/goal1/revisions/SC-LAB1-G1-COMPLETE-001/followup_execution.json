@@ -1,0 +1,32 @@
+{
+  "mode": "RECOMPUTE",
+  "new_model_calls": 0,
+  "command": "GoalJournal.execute_followup(g1-complete-pilot-03, c_acceptance/followup_request_run03.json)",
+  "status": "VERIFIED",
+  "artifact": {
+    "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/coordinate_sensitivity.json",
+    "sha256": "0ccffb15396c6ab1e57cc29fdb3e4ab9879104c73f95679dc1ac09d109d6de9f",
+    "source_hashes": {
+      "task1/workflow/coordinate_review.py": "af4f0d753d162666bcb5da07edeccb846e008c33adf0f56b34939ac526eaf951",
+      "task1/workflow/coordinates.py": "d99b270a65c88f8530669d5e7d0887d7563b3e54e19770ab7a9eb695117e075d",
+      "task1/workflow/evaluation.py": "7cf224fbc290d3e83acd5d83a3fe335e6dc437c762f7053d8132817aa91025b2"
+    }
+  },
+  "trigger": "actual C independent review: 306:segment0:index2 near DP threshold",
+  "summary": {
+    "status": "VERIFIED",
+    "source_crs": "UNVERIFIED",
+    "points_checked": 783,
+    "within_record_pairs_checked": 45457,
+    "max_coordinate_crosscheck_error_m": 3.637978807091713e-12,
+    "max_model_geodesic_radius_m": 31131.317939847395,
+    "max_pair_distance_relative_difference": 1.1826369614622246e-05,
+    "max_pair_distance_absolute_difference_m": 0.036456552836170886,
+    "edge_400m_disagreements": 0,
+    "segment_65m_disagreements": 0,
+    "direction_35deg_disagreements": 0,
+    "direction_undefined_disagreements": 0,
+    "dp_5m_disagreements": 0,
+    "source_datum_proven": false
+  }
+}

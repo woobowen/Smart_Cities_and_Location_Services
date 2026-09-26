@@ -1,0 +1,51 @@
+{
+  "classification": "ENGINEERING_TEST",
+  "role": "C_INDEPENDENT_INITIAL_REVIEW",
+  "status": "REPRODUCED_REPAIR_REQUIRED",
+  "source_of_findings": "EXTERNAL_GPT_SECOND_REVIEW_ROUND2",
+  "baseline_cases": 6,
+  "baseline_false_accepts": [
+    "clean_and_final_shifted_ledger_unchanged",
+    "all_records_and_ledger_dropped_counts_unchanged",
+    "stage_counts_modified",
+    "verify_baseline_tool_different_raw_records_and_shifted_candidate"
+  ],
+  "profile_regressions": 10,
+  "profile_regressions_expected_pass": 4,
+  "profile_regressions_expected_reject": 6,
+  "original_probe_exit_code": 0,
+  "required_followup": "B_REPAIR_THEN_C_INDEPENDENT_RECHECK_AND_PARENT_TASK_RESUME",
+  "C2-F01": "OPEN_REPAIR_REQUIRED",
+  "C2-F02": "OPEN_REPAIR_REQUIRED",
+  "programmatic_model_calls": 0,
+  "network_calls": 0,
+  "installed_dependencies": [],
+  "report": "C_INITIAL_REVIEW.md",
+  "source_versions": {
+    "diagnostics.py": {
+      "git_blob": "9ff8ea95c016f83f808d7a5f5f2821a19c4eb094",
+      "expected_at_7e6cd408": "9ff8ea95c016f83f808d7a5f5f2821a19c4eb094",
+      "matches_audited_commit": true,
+      "sha256": "e2ef635bbd95db505b3eff336ca59074a60217a70b2bc644624c3fbd0280acda"
+    },
+    "evaluation.py": {
+      "git_blob": "206bb5a5b26db10a80cfb6853dce5faf56c569ed",
+      "expected_at_7e6cd408": "206bb5a5b26db10a80cfb6853dce5faf56c569ed",
+      "matches_audited_commit": true,
+      "sha256": "debb251902159f9186e79dc5f29c2bac23f952f036801fd829430ebc231cc7f0"
+    },
+    "tools.py": {
+      "git_blob": "08af4334ddf51059deadce86135c51641cb2733c",
+      "expected_at_7e6cd408": "08af4334ddf51059deadce86135c51641cb2733c",
+      "matches_audited_commit": true,
+      "sha256": "bb6769b534c7dd498e9edeb6b7fe962e4cb90ef789e84877cbef39beface17db"
+    },
+    "io.py": {
+      "git_blob": "25ac484dcfcf376d0f8a9e760eec565a7857749a",
+      "expected_at_7e6cd408": "25ac484dcfcf376d0f8a9e760eec565a7857749a",
+      "matches_audited_commit": true,
+      "sha256": "0d3d72dd0beb4718f4020a07a5f1c0ca89193943049a479816b5c496806321b2"
+    }
+  },
+  "report_local_links_checked": 3
+}

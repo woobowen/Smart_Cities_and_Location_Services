@@ -108,6 +108,7 @@ def plot_trajectories(baseline, out, colors):
         ax.margins(.10)
         ax.xaxis.set_major_locator(MaxNLocator(4))
         ax.yaxis.set_major_locator(MaxNLocator(4))
+        ax.ticklabel_format(axis='both', style='plain', useOffset=False)
         ax.grid(True, color=colors['Rule'], linewidth=.55, zorder=0)
     key = axes.flat[-1]
     key.axis('off')
@@ -189,10 +190,10 @@ def architecture_xml(run_id, state, out, colors):
     node('C', 'C · independent review\nTrusted inputs and contract\nSpecific artifact / hash / scope', 1020, 160, 340, 130, fill='P4')
     node('journal', 'Deterministic Goal journal\nPending tasks · dependencies · registered artifacts · audit coverage · recoverable state\nCurrent run: ' + run_id,
          80, 395, 1280, 125, size=20)
-    node('issue', 'Actual external issues\nC2-F01 / C2-F02\nBlocking parent task recorded', 80, 635, 275, 125, size=18)
-    node('repair', 'B-Repair\nConsume task → change code\nTargeted tests and receipt', 415, 635, 275, 125, size=18)
-    node('verify', 'C regression\nIndependent counterexamples\nApprove or reopen issue', 750, 635, 275, 125, size=18)
-    node('rebuild', 'Rebuild and resume\nInvalidate affected results\nFix code version → rerun', 1085, 635, 275, 125, size=18)
+    node('issue', 'Actual external issues\nC2-F01 / C2-F02\nParent task blocked', 80, 635, 275, 125, size=18)
+    node('repair', 'B-Repair\nConsume task → repair\nTests + visible receipt', 415, 635, 275, 125, size=18)
+    node('verify', 'C regression\nIndependent probes\nApprove or reopen', 750, 635, 275, 125, size=18)
+    node('rebuild', 'Rebuild and resume\nInvalidate stale outputs\nFix code → rerun', 1085, 635, 275, 125, size=18)
     node('later', 'Later scope · not executed here\nGoal 2: parameter / order comparisons    |    Goal 3: final reports and submission',
          80, 885, 1280, 85, size=19, dashed=True)
     edge('A_to_B', 'A', 'B', [(420, 225), (550, 225)])

@@ -1,0 +1,3666 @@
+{
+  "classification": "INDEPENDENT_C_ACCEPTANCE_NOT_SECOND_REQUIREMENTS_TABLE",
+  "goal_id": "SC-LAB1-G1-FOUNDATION-001",
+  "execution": "SC-LAB1-G1-COMPLETE-001",
+  "run_id": "g1-complete-pilot-03",
+  "processing_code_sha": "f229d9a4113bcc0dd763e1b410f1f5fb73903a62",
+  "internal_status": "VERIFIED",
+  "publication_status": "NOT_RUN",
+  "gpt_second_review": "PENDING",
+  "submission": "NOT_READY",
+  "goal2_goal3": "NOT_RUN",
+  "GC": [
+    {
+      "id": "GC01",
+      "status": "VERIFIED",
+      "scope": "Initial/final branch/worktree and original/historical hashes prove no unauthorized overwriting; user handoff ZIPs remain accurately accounted for.",
+      "verification_method_or_command": "workspace/protected-file checks; A initial Git blob audit; git status --short --branch",
+      "expected": "main and user data/history preserved; only authorized working entries change",
+      "actual": "273 initial protected evidence entries checked; teacher/starter/raw/template/old outputs 150-file audit preserved; user ZIPs preserved; no force/reset",
+      "evidence": [
+        {
+          "path": "AGENTS.md",
+          "sha256": "6950ca3d95e1c599626b172eaba2c6f15f72bddcf641077e7f53415360204334"
+        },
+        {
+          "path": "docs/research/SMART_CITIES_RESEARCH_PROTOCOL.md",
+          "sha256": "102c03b2107040345d15d631fa56bb8425de2ec79e0f8997d6b67d01be6e92cd"
+        },
+        {
+          "path": "task1/config/conditional_planar.json",
+          "sha256": "5b1ab7dbf25797a51405a2cddd93a8d2ea3e3b69530369366d0e05be7abb8169"
+        },
+        {
+          "path": "task1/config/goal1.json",
+          "sha256": "5418632734964fda81fe653e4996d1519b9de3a6cf51ed191556c243770542da"
+        },
+        {
+          "path": "task1/docs/goal1/ARCHITECTURE.md",
+          "sha256": "5fd62ae3134264970a3f0b7d17fc7fc9cd3e9e839c074c42759c74e2ffef1e7e"
+        },
+        {
+          "path": "task1/docs/goal1/CONTRACTS.md",
+          "sha256": "1a476f3290a2edd7224b8c41fde5e0a0c6f6eaf1f12e7f06909f9a52870c756b"
+        },
+        {
+          "path": "task1/docs/goal1/README.md",
+          "sha256": "85ee7ea1501ad983086aab24b545bd612ff0b63a906522ff419bd4d4e9bdc658"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/AUTHORIZATION_SUPPLEMENT.md",
+          "sha256": "2bce4b21939de5843678bdda1de18c64e9703c3e924fd63ff3d7988f69fe5248"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/USER_DECISIONS.json",
+          "sha256": "2b68e39573ab9256a353484842438a118445bb62ddbaca1c42fbd4eee9fe4f0e"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/a_scope/TaskPlan.json",
+          "sha256": "fb4ccd560b7c133888fb65b78125a82c4149da4c8ae79c39d4350b97a0817f90"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/a_scope/release_scope_check.json",
+          "sha256": "34d317e90d62e2029ff107b3b9f96001f9cfe7fd790aef61c5effa40e33332da"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/a_scope/release_scope_check.md",
+          "sha256": "634dba35e12522f4514b1948c55a63bd3cca619a2ce39043ae4e1dcbc8869ce5"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/a_scope/source_audit.json",
+          "sha256": "49bf91b2803b69fe8ee5d56ef5bbd0901530a624ae7e7fd520eeb15139c5986b"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/bundle_sync.json",
+          "sha256": "39a21e1e7a3630982078d05dcc4ba5ab61701da3951ec062d0a87d2c13507bd8"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/final_bindings_review.json",
+          "sha256": "cf350fee77264f6ec3f523db220e1d6e0ac41a452479b231884a87f33eda3804"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/reviewed_requirements.json",
+          "sha256": "ff973adb03a00d101387f062da27dbdb6e6238da02573907cd9517014e4d977e"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/handoff/SC-LAB1-G1-COMPLETE-001_CODEX_PROMPT.md",
+          "sha256": "19e444f4a526c364087510a186c0be627e1fdcf97eaaebd4c97f6772aa662616"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/initial_protected_hashes.json",
+          "sha256": "64c39370d8ee9faf20b8e4fc2a6fdad89e2bf3ab5f3c5fe84f6849e1d1d570b6"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/prepublication_check.snapshot_before_acceptance.json",
+          "sha256": "7bf82ebf3e56893d6b296e00105e62b39f3a0a8c627f14e5cda2178e8b920bbb"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/workspace_initial.json",
+          "sha256": "6e703894d36a43afb255e594ed815c295b726b76221c01fd944420f6bf161dea"
+        },
+        {
+          "path": "task1/作业/作业/traj_dict.json",
+          "sha256": "c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3"
+        }
+      ]
+    },
+    {
+      "id": "GC02",
+      "status": "VERIFIED",
+      "scope": "The existing R01-R16 source/Goal allocation is current, approved small governance diffs are recorded, and all 11 bundle files match active bytes/hash.",
+      "verification_method_or_command": "A source audit; read active R01–R16; sync_sources.py --check",
+      "expected": "one active requirements list, latest authority, limited governance diff, exactly 11 identical distribution files",
+      "actual": "R01–R16 retained; latest conditional and D2 authority consumed; AGENTS +23/Protocol +13; bundle EXACTLY11 and bytes/hash pass",
+      "evidence": [
+        {
+          "path": "AGENTS.md",
+          "sha256": "6950ca3d95e1c599626b172eaba2c6f15f72bddcf641077e7f53415360204334"
+        },
+        {
+          "path": "docs/research/SMART_CITIES_RESEARCH_PROTOCOL.md",
+          "sha256": "102c03b2107040345d15d631fa56bb8425de2ec79e0f8997d6b67d01be6e92cd"
+        },
+        {
+          "path": "task1/config/conditional_planar.json",
+          "sha256": "5b1ab7dbf25797a51405a2cddd93a8d2ea3e3b69530369366d0e05be7abb8169"
+        },
+        {
+          "path": "task1/config/goal1.json",
+          "sha256": "5418632734964fda81fe653e4996d1519b9de3a6cf51ed191556c243770542da"
+        },
+        {
+          "path": "task1/docs/goal1/ARCHITECTURE.md",
+          "sha256": "5fd62ae3134264970a3f0b7d17fc7fc9cd3e9e839c074c42759c74e2ffef1e7e"
+        },
+        {
+          "path": "task1/docs/goal1/CONTRACTS.md",
+          "sha256": "1a476f3290a2edd7224b8c41fde5e0a0c6f6eaf1f12e7f06909f9a52870c756b"
+        },
+        {
+          "path": "task1/docs/goal1/README.md",
+          "sha256": "85ee7ea1501ad983086aab24b545bd612ff0b63a906522ff419bd4d4e9bdc658"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/AUTHORIZATION_SUPPLEMENT.md",
+          "sha256": "2bce4b21939de5843678bdda1de18c64e9703c3e924fd63ff3d7988f69fe5248"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/USER_DECISIONS.json",
+          "sha256": "2b68e39573ab9256a353484842438a118445bb62ddbaca1c42fbd4eee9fe4f0e"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/a_scope/TaskPlan.json",
+          "sha256": "fb4ccd560b7c133888fb65b78125a82c4149da4c8ae79c39d4350b97a0817f90"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/a_scope/release_scope_check.json",
+          "sha256": "34d317e90d62e2029ff107b3b9f96001f9cfe7fd790aef61c5effa40e33332da"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/a_scope/release_scope_check.md",
+          "sha256": "634dba35e12522f4514b1948c55a63bd3cca619a2ce39043ae4e1dcbc8869ce5"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/a_scope/source_audit.json",
+          "sha256": "49bf91b2803b69fe8ee5d56ef5bbd0901530a624ae7e7fd520eeb15139c5986b"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/bundle_sync.json",
+          "sha256": "39a21e1e7a3630982078d05dcc4ba5ab61701da3951ec062d0a87d2c13507bd8"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/final_bindings_review.json",
+          "sha256": "cf350fee77264f6ec3f523db220e1d6e0ac41a452479b231884a87f33eda3804"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/reviewed_requirements.json",
+          "sha256": "ff973adb03a00d101387f062da27dbdb6e6238da02573907cd9517014e4d977e"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/handoff/SC-LAB1-G1-COMPLETE-001_CODEX_PROMPT.md",
+          "sha256": "19e444f4a526c364087510a186c0be627e1fdcf97eaaebd4c97f6772aa662616"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/initial_protected_hashes.json",
+          "sha256": "64c39370d8ee9faf20b8e4fc2a6fdad89e2bf3ab5f3c5fe84f6849e1d1d570b6"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/prepublication_check.snapshot_before_acceptance.json",
+          "sha256": "7bf82ebf3e56893d6b296e00105e62b39f3a0a8c627f14e5cda2178e8b920bbb"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/workspace_initial.json",
+          "sha256": "6e703894d36a43afb255e594ed815c295b726b76221c01fd944420f6bf161dea"
+        },
+        {
+          "path": "task1/作业/作业/traj_dict.json",
+          "sha256": "c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3"
+        }
+      ]
+    },
+    {
+      "id": "GC03",
+      "status": "VERIFIED",
+      "scope": "Actual A/B-Run/B-Repair/C inputs, outputs and tool actions exist; a single model response is not relabeled as multiple roles.",
+      "verification_method_or_command": "read actual A/B/C handoffs and resource/journal snapshots; firsthand C role messages",
+      "expected": "independent actual role contexts and explicit main-thread execution ownership",
+      "actual": "A, B, two separate C contexts plus main actually worked; resources distinguish 13 native dispatches from historical 4+6 CLI; hidden requests unknown",
+      "evidence": [
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/g1-complete-pilot-03_diagnostics.json",
+          "sha256": "01f386c00e911920521402f949c30537bff2ac178e07203f39ff32777065ba54"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/review_time_goal_snapshot.json",
+          "sha256": "4f6dcc3a19abef6e07131b2a16b32d3ed74128c545dc18e45e88da9560023e01"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/review_time_resources_snapshot.json",
+          "sha256": "299eefcbe84e38251ef5dcdb20a1b4be0be19e988934a99625cb1db696547c9a"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/validation_review.json",
+          "sha256": "ceb78959b0f51fd5290f83c7475c818ff062b8257121e8f3981aad778d059fe2"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/workflow_trace_review.json",
+          "sha256": "4264642e798d174b60ec674ca6fed24aac5042b0044817d871f28596fe2facc2"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_combined_review/round2/combined_closure.json",
+          "sha256": "a67d902f1e878c36f7451f4deff258f4a0d0747dbdc093ea783a72b3e4f8446b"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/tests_pilot03.xml",
+          "sha256": "2b05ade71170f55a87c514632e3f96d021aebe73b2571c202ef6b07e1745d0bc"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/validation_pilot03.json",
+          "sha256": "6354e712f0a1aec6bb0344d4d4f3c3797df979eed08cdd86db54567af29f2fbc"
+        },
+        {
+          "path": "task1/workflow/artifact_review.py",
+          "sha256": "dfa0b91149662baf26861a9ec0e51223842d0ac62ada29015eca7b119c68da48"
+        },
+        {
+          "path": "task1/workflow/controller.py",
+          "sha256": "16793b102fd077cc243eae6f1e714632f312a77e421850d424b8562a2909eb6d"
+        },
+        {
+          "path": "task1/workflow/goal.py",
+          "sha256": "d313d408961adf07b9791972b03ac6a99db808e805efe1aa06abe85a075e863a"
+        },
+        {
+          "path": "task1/workflow/tools.py",
+          "sha256": "0fde0acebfe3ec97bd2653744ac8f0444c1e9a162c61970bccf8a94a9fbd0b3f"
+        }
+      ]
+    },
+    {
+      "id": "GC04",
+      "status": "VERIFIED",
+      "scope": "Goal completion follows mandatory tasks, dependencies and reviewed artifacts, not five phases; extra work and recovery are exercised.",
+      "verification_method_or_command": "read goal.py; C gate regressions; 79-event snapshot trace review",
+      "expected": "mandatory tasks/dependencies and valid target reviews control completion beyond phase five",
+      "actual": "task DAG, open issue blocking, current code/run binding and additional actual sensitivity work exercised; not phase==5 completion",
+      "evidence": [
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/g1-complete-pilot-03_diagnostics.json",
+          "sha256": "01f386c00e911920521402f949c30537bff2ac178e07203f39ff32777065ba54"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/review_time_goal_snapshot.json",
+          "sha256": "4f6dcc3a19abef6e07131b2a16b32d3ed74128c545dc18e45e88da9560023e01"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/review_time_resources_snapshot.json",
+          "sha256": "299eefcbe84e38251ef5dcdb20a1b4be0be19e988934a99625cb1db696547c9a"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/validation_review.json",
+          "sha256": "ceb78959b0f51fd5290f83c7475c818ff062b8257121e8f3981aad778d059fe2"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/workflow_trace_review.json",
+          "sha256": "4264642e798d174b60ec674ca6fed24aac5042b0044817d871f28596fe2facc2"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_combined_review/round2/combined_closure.json",
+          "sha256": "a67d902f1e878c36f7451f4deff258f4a0d0747dbdc093ea783a72b3e4f8446b"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/tests_pilot03.xml",
+          "sha256": "2b05ade71170f55a87c514632e3f96d021aebe73b2571c202ef6b07e1745d0bc"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/validation_pilot03.json",
+          "sha256": "6354e712f0a1aec6bb0344d4d4f3c3797df979eed08cdd86db54567af29f2fbc"
+        },
+        {
+          "path": "task1/workflow/artifact_review.py",
+          "sha256": "dfa0b91149662baf26861a9ec0e51223842d0ac62ada29015eca7b119c68da48"
+        },
+        {
+          "path": "task1/workflow/controller.py",
+          "sha256": "16793b102fd077cc243eae6f1e714632f312a77e421850d424b8562a2909eb6d"
+        },
+        {
+          "path": "task1/workflow/goal.py",
+          "sha256": "d313d408961adf07b9791972b03ac6a99db808e805efe1aa06abe85a075e863a"
+        },
+        {
+          "path": "task1/workflow/tools.py",
+          "sha256": "0fde0acebfe3ec97bd2653744ac8f0444c1e9a162c61970bccf8a94a9fbd0b3f"
+        }
+      ]
+    },
+    {
+      "id": "GC05",
+      "status": "VERIFIED",
+      "scope": "Known external issue -> actual repair executor -> independent regression -> affected artifact rebuild -> original task resumption is traceable.",
+      "verification_method_or_command": "read all five actual repair transitions and scoped independent issue receipts",
+      "expected": "real issue -> repair consumption -> regression -> invalidate/rebuild -> parent resume",
+      "actual": "all five issues VERIFIED; failed run01 and superseded run02 preserved; run03 regenerated under fixed code",
+      "evidence": [
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/coordinate_issue_receipt.json",
+          "sha256": "54dcc9ecd8a353b4382fb6beb921853a1fcd754082964f31941fe49bfadeb976"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/direction_roundoff_receipt.json",
+          "sha256": "1003de087bf2f71561bb75add022491af8e33bb05795bf1b4cf62b7073405a18"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/g1-complete-pilot-03_diagnostics.json",
+          "sha256": "01f386c00e911920521402f949c30537bff2ac178e07203f39ff32777065ba54"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/review_time_goal_snapshot.json",
+          "sha256": "4f6dcc3a19abef6e07131b2a16b32d3ed74128c545dc18e45e88da9560023e01"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/review_time_resources_snapshot.json",
+          "sha256": "299eefcbe84e38251ef5dcdb20a1b4be0be19e988934a99625cb1db696547c9a"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/time_scope_receipt.json",
+          "sha256": "fde6c11494e7d07a49e33f591e6277f55dccfd2b68f18c139933ddadfa17aa1b"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/validation_review.json",
+          "sha256": "ceb78959b0f51fd5290f83c7475c818ff062b8257121e8f3981aad778d059fe2"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/workflow_trace_review.json",
+          "sha256": "4264642e798d174b60ec674ca6fed24aac5042b0044817d871f28596fe2facc2"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_combined_review/round2/combined_closure.json",
+          "sha256": "a67d902f1e878c36f7451f4deff258f4a0d0747dbdc093ea783a72b3e4f8446b"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/tests_pilot03.xml",
+          "sha256": "2b05ade71170f55a87c514632e3f96d021aebe73b2571c202ef6b07e1745d0bc"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/validation_pilot03.json",
+          "sha256": "6354e712f0a1aec6bb0344d4d4f3c3797df979eed08cdd86db54567af29f2fbc"
+        },
+        {
+          "path": "task1/workflow/artifact_review.py",
+          "sha256": "dfa0b91149662baf26861a9ec0e51223842d0ac62ada29015eca7b119c68da48"
+        },
+        {
+          "path": "task1/workflow/controller.py",
+          "sha256": "16793b102fd077cc243eae6f1e714632f312a77e421850d424b8562a2909eb6d"
+        },
+        {
+          "path": "task1/workflow/goal.py",
+          "sha256": "d313d408961adf07b9791972b03ac6a99db808e805efe1aa06abe85a075e863a"
+        },
+        {
+          "path": "task1/workflow/tools.py",
+          "sha256": "0fde0acebfe3ec97bd2653744ac8f0444c1e9a162c61970bccf8a94a9fbd0b3f"
+        }
+      ]
+    },
+    {
+      "id": "GC06",
+      "status": "VERIFIED",
+      "scope": "Profiles, all duplicate events and time partitions have correct target/hash/reference/scope/contract coverage; missing required reviews cannot close tasks.",
+      "verification_method_or_command": "remaining_probe.py g1-complete-pilot-03; C2 diagnostic manual controls",
+      "expected": "all required events/partitions/summaries and exact target/hash/scope/components verified",
+      "actual": "64 raw diagnostics/version checks pass; all four registered target reviews have complete checked and empty unchecked scope",
+      "evidence": [
+        {
+          "path": "task1/config/conditional_planar.json",
+          "sha256": "5b1ab7dbf25797a51405a2cddd93a8d2ea3e3b69530369366d0e05be7abb8169"
+        },
+        {
+          "path": "task1/config/goal1.json",
+          "sha256": "5418632734964fda81fe653e4996d1519b9de3a6cf51ed191556c243770542da"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/AUTHORIZATION_SUPPLEMENT.md",
+          "sha256": "2bce4b21939de5843678bdda1de18c64e9703c3e924fd63ff3d7988f69fe5248"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/USER_DECISIONS.json",
+          "sha256": "2b68e39573ab9256a353484842438a118445bb62ddbaca1c42fbd4eee9fe4f0e"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/g1-complete-pilot-03_diagnostics.json",
+          "sha256": "01f386c00e911920521402f949c30537bff2ac178e07203f39ff32777065ba54"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/remaining_probe.py",
+          "sha256": "f423728bbebd542b307a7ee5958efee979b1917e4489a98bd09462c18ebb7b4b"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/time_scope_receipt.json",
+          "sha256": "fde6c11494e7d07a49e33f591e6277f55dccfd2b68f18c139933ddadfa17aa1b"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/duplicate_details.json",
+          "sha256": "2af0cd5d718fa8cc5bd955eeea4c1fdd05374d7a173fdf9d9bc1c56f0d49e32d"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/duplicate_details_review.json",
+          "sha256": "d8c54ea93c3144c984cf2fc71277dbc337418860be05695da8c26e3a1c4cef68"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/manifest.json",
+          "sha256": "7554dc9d4e22408ac0fe00292c037af61eb7aa970c97bb369ea1631504f0a6a5"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/profile_pilot.json",
+          "sha256": "ed6d427bf712a433650bc28238ce58522065ad8dfc754301733ea005cb30ac71"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/profile_pilot_review.json",
+          "sha256": "e4cddcaabc30fd6264a7b774921569c02006eed665122de12d58449110bc8262"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/time_boundaries.json",
+          "sha256": "bf0b0e9da04e08e170d98907cde40959d5325619ec2f2377db44c11d053a7edd"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/time_boundaries_review.json",
+          "sha256": "06468744879f9ebc1c94da31b2676202696abda2a7a8f53806e13d533ce6ac26"
+        },
+        {
+          "path": "task1/workflow/artifact_review.py",
+          "sha256": "dfa0b91149662baf26861a9ec0e51223842d0ac62ada29015eca7b119c68da48"
+        },
+        {
+          "path": "task1/workflow/diagnostics.py",
+          "sha256": "aee1e4dd46ff7b15a8f3d854aaf1ed9668ee5ef4d4991a624beb479ff0f82745"
+        },
+        {
+          "path": "task1/作业/作业/traj_dict.json",
+          "sha256": "c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3"
+        }
+      ]
+    },
+    {
+      "id": "GC07",
+      "status": "VERIFIED",
+      "scope": "Candidate-external trusted full raw input, explicit conditional model and method contract drive the reviewer; adversarial self-consistency attacks fail, legitimate edges pass, and the actual conditional baseline receives its own full review.",
+      "verification_method_or_command": "C2 37 manual attacks; independent_probe.py; roundoff scoped regression",
+      "expected": "trusted candidate-external raw/contract, actual values and structure reject self-consistency attacks",
+      "actual": "manual adversarial baseline cases preserved; current actual raw and approved contract independently recomputed with 383 checks",
+      "evidence": [
+        {
+          "path": "task1/config/conditional_planar.json",
+          "sha256": "5b1ab7dbf25797a51405a2cddd93a8d2ea3e3b69530369366d0e05be7abb8169"
+        },
+        {
+          "path": "task1/config/goal1.json",
+          "sha256": "5418632734964fda81fe653e4996d1519b9de3a6cf51ed191556c243770542da"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/AUTHORIZATION_SUPPLEMENT.md",
+          "sha256": "2bce4b21939de5843678bdda1de18c64e9703c3e924fd63ff3d7988f69fe5248"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/USER_DECISIONS.json",
+          "sha256": "2b68e39573ab9256a353484842438a118445bb62ddbaca1c42fbd4eee9fe4f0e"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/direction_roundoff_receipt.json",
+          "sha256": "1003de087bf2f71561bb75add022491af8e33bb05795bf1b4cf62b7073405a18"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/g1-complete-pilot-03_independent.json",
+          "sha256": "1150d318fa5709fdb854b34304b4918618baab800c6e5b1094d885bc485ec3f4"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/independent_probe.py",
+          "sha256": "82249a790476b07986159a74995a3706bf95bac872caf6068cf91e9b5ecfcaf9"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/validation_review.json",
+          "sha256": "ceb78959b0f51fd5290f83c7475c818ff062b8257121e8f3981aad778d059fe2"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_combined_review/round2/combined_closure.json",
+          "sha256": "a67d902f1e878c36f7451f4deff258f4a0d0747dbdc093ea783a72b3e4f8446b"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/tests_pilot03.xml",
+          "sha256": "2b05ade71170f55a87c514632e3f96d021aebe73b2571c202ef6b07e1745d0bc"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/validation_pilot03.json",
+          "sha256": "6354e712f0a1aec6bb0344d4d4f3c3797df979eed08cdd86db54567af29f2fbc"
+        },
+        {
+          "path": "task1/workflow/coordinates.py",
+          "sha256": "d99b270a65c88f8530669d5e7d0887d7563b3e54e19770ab7a9eb695117e075d"
+        },
+        {
+          "path": "task1/workflow/evaluation.py",
+          "sha256": "7cf224fbc290d3e83acd5d83a3fe335e6dc437c762f7053d8132817aa91025b2"
+        },
+        {
+          "path": "task1/workflow/geometry.py",
+          "sha256": "2ad3ca3b49e98e997684e3f5af948771be80dfb03b31b2ae4cc4483856e93d74"
+        },
+        {
+          "path": "task1/workflow/pipeline.py",
+          "sha256": "160bedcc0d8dffce71d833dffc4de28928bc7007077ae8d03c57c96d827548c7"
+        },
+        {
+          "path": "task1/作业/作业/traj_dict.json",
+          "sha256": "c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3"
+        }
+      ]
+    },
+    {
+      "id": "GC08",
+      "status": "VERIFIED",
+      "scope": "Raw values/hash and declared angular order/units are protected; D2 and conditional authority are archived; source datum stays UNVERIFIED. Authorized model derivation and assumption/error checks permit the fixed real pilot without claiming fact confirmation.",
+      "verification_method_or_command": "teacher ZIP/XML exact excerpts; raw hash; authorization and local-model contract check",
+      "expected": "unknown datum preserved; fixed conditional model and approved D2 govern actual pilot",
+      "actual": "source_crs UNVERIFIED; source EPSG absent, datum conversion absent; raw unchanged; user authority distinct from factual source proof",
+      "evidence": [
+        {
+          "path": "task1/config/conditional_planar.json",
+          "sha256": "5b1ab7dbf25797a51405a2cddd93a8d2ea3e3b69530369366d0e05be7abb8169"
+        },
+        {
+          "path": "task1/config/goal1.json",
+          "sha256": "5418632734964fda81fe653e4996d1519b9de3a6cf51ed191556c243770542da"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/AUTHORIZATION_SUPPLEMENT.md",
+          "sha256": "2bce4b21939de5843678bdda1de18c64e9703c3e924fd63ff3d7988f69fe5248"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/USER_DECISIONS.json",
+          "sha256": "2b68e39573ab9256a353484842438a118445bb62ddbaca1c42fbd4eee9fe4f0e"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/direction_roundoff_receipt.json",
+          "sha256": "1003de087bf2f71561bb75add022491af8e33bb05795bf1b4cf62b7073405a18"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/g1-complete-pilot-03_independent.json",
+          "sha256": "1150d318fa5709fdb854b34304b4918618baab800c6e5b1094d885bc485ec3f4"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/independent_probe.py",
+          "sha256": "82249a790476b07986159a74995a3706bf95bac872caf6068cf91e9b5ecfcaf9"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/validation_review.json",
+          "sha256": "ceb78959b0f51fd5290f83c7475c818ff062b8257121e8f3981aad778d059fe2"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_combined_review/round2/combined_closure.json",
+          "sha256": "a67d902f1e878c36f7451f4deff258f4a0d0747dbdc093ea783a72b3e4f8446b"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/tests_pilot03.xml",
+          "sha256": "2b05ade71170f55a87c514632e3f96d021aebe73b2571c202ef6b07e1745d0bc"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/validation_pilot03.json",
+          "sha256": "6354e712f0a1aec6bb0344d4d4f3c3797df979eed08cdd86db54567af29f2fbc"
+        },
+        {
+          "path": "task1/workflow/coordinates.py",
+          "sha256": "d99b270a65c88f8530669d5e7d0887d7563b3e54e19770ab7a9eb695117e075d"
+        },
+        {
+          "path": "task1/workflow/evaluation.py",
+          "sha256": "7cf224fbc290d3e83acd5d83a3fe335e6dc437c762f7053d8132817aa91025b2"
+        },
+        {
+          "path": "task1/workflow/geometry.py",
+          "sha256": "2ad3ca3b49e98e997684e3f5af948771be80dfb03b31b2ae4cc4483856e93d74"
+        },
+        {
+          "path": "task1/workflow/pipeline.py",
+          "sha256": "160bedcc0d8dffce71d833dffc4de28928bc7007077ae8d03c57c96d827548c7"
+        },
+        {
+          "path": "task1/作业/作业/traj_dict.json",
+          "sha256": "c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3"
+        }
+      ]
+    },
+    {
+      "id": "GC09",
+      "status": "VERIFIED",
+      "scope": "Split/filter, approved single-pass D2, adjacency recomputation and finite-segment/index DP are independently correct in the fixed conditional ENU model; constructed tests do not replace actual processing.",
+      "verification_method_or_command": "independent raw partitions/filter; outgoing direction; recursive DP and Decimal finite intervals",
+      "expected": "exact approved order, strict thresholds, simultaneous D2, no cross-break adjacency and proper clean DP reference",
+      "actual": "all 30 segments and 461 clean-point actual intervals pass; near5m case 4.938319812632412m; fixed numerical allowance independent of candidate",
+      "evidence": [
+        {
+          "path": "task1/config/conditional_planar.json",
+          "sha256": "5b1ab7dbf25797a51405a2cddd93a8d2ea3e3b69530369366d0e05be7abb8169"
+        },
+        {
+          "path": "task1/config/goal1.json",
+          "sha256": "5418632734964fda81fe653e4996d1519b9de3a6cf51ed191556c243770542da"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/AUTHORIZATION_SUPPLEMENT.md",
+          "sha256": "2bce4b21939de5843678bdda1de18c64e9703c3e924fd63ff3d7988f69fe5248"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/USER_DECISIONS.json",
+          "sha256": "2b68e39573ab9256a353484842438a118445bb62ddbaca1c42fbd4eee9fe4f0e"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/g1-complete-pilot-03_independent.json",
+          "sha256": "1150d318fa5709fdb854b34304b4918618baab800c6e5b1094d885bc485ec3f4"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/independent_probe.py",
+          "sha256": "82249a790476b07986159a74995a3706bf95bac872caf6068cf91e9b5ecfcaf9"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/summary_review.json",
+          "sha256": "a19f1b6035ff8b545744eacba6def467e6287c3a0fc494a92a4f7d0b82c9f348"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/recompute_verification.json",
+          "sha256": "9980234c7d0a39bb1b7d5d04930307cf09ac7b68ef53ab15bf1e6c1ac0006e18"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/result_summary.json",
+          "sha256": "9c6d34865004019e76cee2e7760d2b3e0c1646dfcae16ae885efa4a66f6b4693"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/baseline.json",
+          "sha256": "865710aea34a316fe83088d7cf2ac1aec68c96623269bfcf06255b5db2930fd8"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/baseline_review.json",
+          "sha256": "849f1aa9d5415a3f4bd45336181edc0abfe0582997a2332b85bdcc5e04ac1206"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/manifest.json",
+          "sha256": "7554dc9d4e22408ac0fe00292c037af61eb7aa970c97bb369ea1631504f0a6a5"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/point_actions.jsonl",
+          "sha256": "dc149e6901d2f9515c1003a0a790645d0edfbc29dd1dfe255ec839f4722dffd5"
+        },
+        {
+          "path": "task1/作业/作业/traj_dict.json",
+          "sha256": "c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3"
+        }
+      ]
+    },
+    {
+      "id": "GC10",
+      "status": "VERIFIED",
+      "scope": "All seven real records and 783 points complete the authorized conditional pipeline with full accounting and independent review; real-data conditional is neither a fixture nor an unconditional geographic-truth result.",
+      "verification_method_or_command": "independent_probe.py; summary_review; external point_actions.jsonl membership",
+      "expected": "all fixed seven real records and 783 points processed and accounted once",
+      "actual": "309 filtered +13 direction-deleted +273 DP-omitted +188 retained =783; 0 unprocessed; 7 filtered/23 processed segments",
+      "evidence": [
+        {
+          "path": "task1/config/conditional_planar.json",
+          "sha256": "5b1ab7dbf25797a51405a2cddd93a8d2ea3e3b69530369366d0e05be7abb8169"
+        },
+        {
+          "path": "task1/config/goal1.json",
+          "sha256": "5418632734964fda81fe653e4996d1519b9de3a6cf51ed191556c243770542da"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/AUTHORIZATION_SUPPLEMENT.md",
+          "sha256": "2bce4b21939de5843678bdda1de18c64e9703c3e924fd63ff3d7988f69fe5248"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/USER_DECISIONS.json",
+          "sha256": "2b68e39573ab9256a353484842438a118445bb62ddbaca1c42fbd4eee9fe4f0e"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/g1-complete-pilot-03_independent.json",
+          "sha256": "1150d318fa5709fdb854b34304b4918618baab800c6e5b1094d885bc485ec3f4"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/independent_probe.py",
+          "sha256": "82249a790476b07986159a74995a3706bf95bac872caf6068cf91e9b5ecfcaf9"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/summary_review.json",
+          "sha256": "a19f1b6035ff8b545744eacba6def467e6287c3a0fc494a92a4f7d0b82c9f348"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/recompute_verification.json",
+          "sha256": "9980234c7d0a39bb1b7d5d04930307cf09ac7b68ef53ab15bf1e6c1ac0006e18"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/result_summary.json",
+          "sha256": "9c6d34865004019e76cee2e7760d2b3e0c1646dfcae16ae885efa4a66f6b4693"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/baseline.json",
+          "sha256": "865710aea34a316fe83088d7cf2ac1aec68c96623269bfcf06255b5db2930fd8"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/baseline_review.json",
+          "sha256": "849f1aa9d5415a3f4bd45336181edc0abfe0582997a2332b85bdcc5e04ac1206"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/manifest.json",
+          "sha256": "7554dc9d4e22408ac0fe00292c037af61eb7aa970c97bb369ea1631504f0a6a5"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/point_actions.jsonl",
+          "sha256": "dc149e6901d2f9515c1003a0a790645d0edfbc29dd1dfe255ec839f4722dffd5"
+        },
+        {
+          "path": "task1/作业/作业/traj_dict.json",
+          "sha256": "c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3"
+        }
+      ]
+    },
+    {
+      "id": "GC11",
+      "status": "VERIFIED",
+      "scope": "Actual processing review triggers a meaningful follow-up that runs and has corresponding product verification; history/diagnostic-only loops do not substitute.",
+      "verification_method_or_command": "C actual near5m request -> execute_followup; remaining_probe.py followup review",
+      "expected": "real processing feedback consumed and resulting target completely independently reviewed",
+      "actual": "actual coordinate_sensitivity bound to baseline/request/trigger/code; 1322 checks and all9 components verified; no threshold disagreement",
+      "evidence": [
+        {
+          "path": "task1/config/conditional_planar.json",
+          "sha256": "5b1ab7dbf25797a51405a2cddd93a8d2ea3e3b69530369366d0e05be7abb8169"
+        },
+        {
+          "path": "task1/config/goal1.json",
+          "sha256": "5418632734964fda81fe653e4996d1519b9de3a6cf51ed191556c243770542da"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/AUTHORIZATION_SUPPLEMENT.md",
+          "sha256": "2bce4b21939de5843678bdda1de18c64e9703c3e924fd63ff3d7988f69fe5248"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/USER_DECISIONS.json",
+          "sha256": "2b68e39573ab9256a353484842438a118445bb62ddbaca1c42fbd4eee9fe4f0e"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/a_scope/local_model_contract.json",
+          "sha256": "ae3ab78de2a7ab6159631c0340e11e344ed4401276a59bfa04c4e9689b700453"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/coordinate_issue_receipt.json",
+          "sha256": "54dcc9ecd8a353b4382fb6beb921853a1fcd754082964f31941fe49bfadeb976"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/followup_request_run03.json",
+          "sha256": "baff383be63c53ea1bd5a791c89e170faa7c3cd08b1fa7fc741eeb001e03a707"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/followup_review.json",
+          "sha256": "2e96dec63ba0df3d01d48616e854aea603acf823b33f7d1bef90b289d864e761"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/remaining_probe.py",
+          "sha256": "f423728bbebd542b307a7ee5958efee979b1917e4489a98bd09462c18ebb7b4b"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/followup_execution.json",
+          "sha256": "b3ad8b6f142901cb86fccb0e282619e895af36b27d8a46e640e697c0662e1707"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/baseline.json",
+          "sha256": "865710aea34a316fe83088d7cf2ac1aec68c96623269bfcf06255b5db2930fd8"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/baseline_review.json",
+          "sha256": "849f1aa9d5415a3f4bd45336181edc0abfe0582997a2332b85bdcc5e04ac1206"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/coordinate_sensitivity.json",
+          "sha256": "0ccffb15396c6ab1e57cc29fdb3e4ab9879104c73f95679dc1ac09d109d6de9f"
+        },
+        {
+          "path": "task1/workflow/coordinate_review.py",
+          "sha256": "af4f0d753d162666bcb5da07edeccb846e008c33adf0f56b34939ac526eaf951"
+        },
+        {
+          "path": "task1/workflow/coordinates.py",
+          "sha256": "d99b270a65c88f8530669d5e7d0887d7563b3e54e19770ab7a9eb695117e075d"
+        },
+        {
+          "path": "task1/workflow/evaluation.py",
+          "sha256": "7cf224fbc290d3e83acd5d83a3fe335e6dc437c762f7053d8132817aa91025b2"
+        },
+        {
+          "path": "task1/作业/作业/traj_dict.json",
+          "sha256": "c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3"
+        }
+      ]
+    },
+    {
+      "id": "GC12",
+      "status": "VERIFIED",
+      "scope": "Current cumulative resources, permissions/modes, failure receipts, stop rules and recoverable uncertain states work without duplicate ambiguous calls/writes.",
+      "verification_method_or_command": "read cumulative resources/guardrails; C stop/recovery/epoch controls; actual failed run receipt",
+      "expected": "mode/permissions/resource scopes explicit and ambiguous operations not blindly repeated",
+      "actual": "native vs CLI and deterministic calls separated; 1 real numeric refusal preserved; inflight/old epoch guards tested; no inflight now",
+      "evidence": [
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/g1-complete-pilot-03_diagnostics.json",
+          "sha256": "01f386c00e911920521402f949c30537bff2ac178e07203f39ff32777065ba54"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/review_time_goal_snapshot.json",
+          "sha256": "4f6dcc3a19abef6e07131b2a16b32d3ed74128c545dc18e45e88da9560023e01"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/review_time_resources_snapshot.json",
+          "sha256": "299eefcbe84e38251ef5dcdb20a1b4be0be19e988934a99625cb1db696547c9a"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/validation_review.json",
+          "sha256": "ceb78959b0f51fd5290f83c7475c818ff062b8257121e8f3981aad778d059fe2"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/workflow_trace_review.json",
+          "sha256": "4264642e798d174b60ec674ca6fed24aac5042b0044817d871f28596fe2facc2"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_combined_review/round2/combined_closure.json",
+          "sha256": "a67d902f1e878c36f7451f4deff258f4a0d0747dbdc093ea783a72b3e4f8446b"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/tests_pilot03.xml",
+          "sha256": "2b05ade71170f55a87c514632e3f96d021aebe73b2571c202ef6b07e1745d0bc"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/validation_pilot03.json",
+          "sha256": "6354e712f0a1aec6bb0344d4d4f3c3797df979eed08cdd86db54567af29f2fbc"
+        },
+        {
+          "path": "task1/workflow/artifact_review.py",
+          "sha256": "dfa0b91149662baf26861a9ec0e51223842d0ac62ada29015eca7b119c68da48"
+        },
+        {
+          "path": "task1/workflow/controller.py",
+          "sha256": "16793b102fd077cc243eae6f1e714632f312a77e421850d424b8562a2909eb6d"
+        },
+        {
+          "path": "task1/workflow/goal.py",
+          "sha256": "d313d408961adf07b9791972b03ac6a99db808e805efe1aa06abe85a075e863a"
+        },
+        {
+          "path": "task1/workflow/tools.py",
+          "sha256": "0fde0acebfe3ec97bd2653744ac8f0444c1e9a162c61970bccf8a94a9fbd0b3f"
+        }
+      ]
+    },
+    {
+      "id": "GC13",
+      "status": "VERIFIED",
+      "scope": "The effective final version passes task1/tests, relevant regressions and meaningful end-to-end coverage; both notebooks run in fresh kernels and necessary figures are inspected.",
+      "verification_method_or_command": "261-test final JUnit; B two fresh kernels; C notebook/figure/independent artifact reviews",
+      "expected": "effective core test suite, real reproducibility and honest inspected figures pass",
+      "actual": "261 passed; each notebook8 cells without errors; four fresh outputs exact; three figures inspected at200dpi; starter292/1 remains historical",
+      "evidence": [
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/b_run/figure_verification.json",
+          "sha256": "aa413f0f7efd6a8bef9368601cdf172154e57633ec9bf7d8d3c7b366f8b5b6e3"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/b_run/notebook_execution.json",
+          "sha256": "46afb2d4d5120a546b3518e97bdf739cc04a722b05f81ff3da7be06cfdf9f2dc"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/b_run/notebook_verification.json",
+          "sha256": "407865b19066db92dd7bd7d8f7f8384bc6eff5c77d7eaf25644cc14a0cebc80a"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/figure_review.json",
+          "sha256": "2cdda73a9e6f462c8cf5b434b150c084d0586529198bb3e70800da4ce3ab4516"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/final_evidence_probe.py",
+          "sha256": "31d6844ab0a40564e6b16b78657a5cd5563e7108dec0574ccaaed16d6e511c12"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/notebook_review.json",
+          "sha256": "1b7affaf82a1c5d3f21005dd75224404d41b9ace9c4ad316a2022c54ad97ee3b"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/validation_review.json",
+          "sha256": "ceb78959b0f51fd5290f83c7475c818ff062b8257121e8f3981aad778d059fe2"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/conditional_pilot_trajectories.pdf",
+          "sha256": "8c812448406a5fb18adb8fdc10af31c370b533283801b8543dbaa98407f38148"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/conditional_pilot_trajectories.png",
+          "sha256": "a492bb7e7dc2dafff2db442a79938c7cd3999f3a65501b75fe2069ffd0987bf8"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/conditional_pilot_trajectories.svg",
+          "sha256": "d20b64d74aed30841ae94fa3cb189e32e2caad04c63f6909d59d9dfd5b09152c"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/figure_manifest.json",
+          "sha256": "bb8b6ce36928ca71a1ea9b623f2d3473774ae7eb576c0df25da7b50857977fdc"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/goal1_execution_structure.drawio",
+          "sha256": "4a8d254fbdc09fe7f732c23f6b7aa8452c259fcd172d993f26db7bddb71ae084"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/goal1_execution_structure.pdf",
+          "sha256": "245995cee688a9750f6a961e7305a9a683799480bd581c35a8e4a429d908d882"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/goal1_execution_structure.png",
+          "sha256": "62461a336585bfdd5405709c57b5ce45ec5ef2af15056b982724b2684ff80aea"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/goal1_execution_structure.svg",
+          "sha256": "082890e2fe2cbcd7f24dfd56a8c2144d2f04cd533565e3342dae1af99b2cbae5"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/point_terminal_counts.pdf",
+          "sha256": "7d5f3d2e602db74b579ae8d03e5e5fdcc65e876125b57188fb1c6c46bd45c6d2"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/point_terminal_counts.png",
+          "sha256": "fe53c546648e125e01fcdb76b904a76c7c836e58d1f41fef5df113a4ece4532f"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/point_terminal_counts.svg",
+          "sha256": "dd894599e5b6a088b74f9498733f835f32e543b552d87e1166ed680a2a6fdfd8"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/manifest.json",
+          "sha256": "7554dc9d4e22408ac0fe00292c037af61eb7aa970c97bb369ea1631504f0a6a5"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/tests_pilot03.xml",
+          "sha256": "2b05ade71170f55a87c514632e3f96d021aebe73b2571c202ef6b07e1745d0bc"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/validation_pilot03.json",
+          "sha256": "6354e712f0a1aec6bb0344d4d4f3c3797df979eed08cdd86db54567af29f2fbc"
+        },
+        {
+          "path": "task1/notebooks/01_baseline_and_audit.ipynb",
+          "sha256": "a1c612acfc2826eb1b78fe4979c7d1f2feec741b04fb4cccf74aa0406daef86d"
+        },
+        {
+          "path": "task1/notebooks/02_agent_loop_recompute.ipynb",
+          "sha256": "2b38b9ec852f8f26f481da0cd1e141cac085524365ec90a0ca2645a892b17f7f"
+        },
+        {
+          "path": "task1/scripts/build_complete_figures.py",
+          "sha256": "89b1c96ef3e7821ab46857d3e9b0223839d8b768907ed0b91265c40aa3f7b7c1"
+        },
+        {
+          "path": "task1/scripts/build_goal1_notebooks.py",
+          "sha256": "e3adbca56ad1a9179725a8cb17848ef548cbe56f4a4cdc9727be3cff70472022"
+        },
+        {
+          "path": "task1/scripts/complete_goal1.py",
+          "sha256": "d3b4d3e0aa290ed2cb52b99a9680d81c0ff12894651f4e165888fc7c3f53b460"
+        },
+        {
+          "path": "templates/latex/common/p2_cloud_sorbet_colors.tex",
+          "sha256": "2aa820c3f68ba6c14cf1b52082b12336071d77bb5466db2b05b2fab6890aa243"
+        }
+      ]
+    },
+    {
+      "id": "GC14",
+      "status": "VERIFIED",
+      "scope": "LIVE/current tool recompute/history/replay/fixtures are distinct, blocked counts are honest, and claims do not invent accuracy, truth recovery or optimization.",
+      "verification_method_or_command": "read artifacts, notebooks, entry snapshots, resource labels; C raw/summary review",
+      "expected": "no fixture/history mislabeled real, no unsupported accuracy/optimization/full-data claim",
+      "actual": "current real conditional fixed pilot distinct from ENGINEERING_TEST, historical CLI and RECOMPUTE; removal and conditional geometry are descriptive",
+      "evidence": [
+        {
+          "path": "task1/config/conditional_planar.json",
+          "sha256": "5b1ab7dbf25797a51405a2cddd93a8d2ea3e3b69530369366d0e05be7abb8169"
+        },
+        {
+          "path": "task1/config/goal1.json",
+          "sha256": "5418632734964fda81fe653e4996d1519b9de3a6cf51ed191556c243770542da"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/AUTHORIZATION_SUPPLEMENT.md",
+          "sha256": "2bce4b21939de5843678bdda1de18c64e9703c3e924fd63ff3d7988f69fe5248"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/USER_DECISIONS.json",
+          "sha256": "2b68e39573ab9256a353484842438a118445bb62ddbaca1c42fbd4eee9fe4f0e"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/entry_review.json",
+          "sha256": "3681c00315a7b0e6be5116a240a167117f0aff581d0d7c3c8c07dd19f2e8bc95"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/g1-complete-pilot-03_independent.json",
+          "sha256": "1150d318fa5709fdb854b34304b4918618baab800c6e5b1094d885bc485ec3f4"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/independent_probe.py",
+          "sha256": "82249a790476b07986159a74995a3706bf95bac872caf6068cf91e9b5ecfcaf9"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/reviewed_FINAL_RESPONSE.md.txt",
+          "sha256": "bcb647b416f93dc2e0c1bc4cd61d72532c03c02c6ad3f04231dd0557d7811a47"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/reviewed_REVIEW_PACKET.md.txt",
+          "sha256": "f3a472d33db02503aaba6e6866a4261c02587b85e649171fb6180348426f116f"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/summary_review.json",
+          "sha256": "a19f1b6035ff8b545744eacba6def467e6287c3a0fc494a92a4f7d0b82c9f348"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/recompute_verification.json",
+          "sha256": "9980234c7d0a39bb1b7d5d04930307cf09ac7b68ef53ab15bf1e6c1ac0006e18"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/result_summary.json",
+          "sha256": "9c6d34865004019e76cee2e7760d2b3e0c1646dfcae16ae885efa4a66f6b4693"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/baseline.json",
+          "sha256": "865710aea34a316fe83088d7cf2ac1aec68c96623269bfcf06255b5db2930fd8"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/baseline_review.json",
+          "sha256": "849f1aa9d5415a3f4bd45336181edc0abfe0582997a2332b85bdcc5e04ac1206"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/manifest.json",
+          "sha256": "7554dc9d4e22408ac0fe00292c037af61eb7aa970c97bb369ea1631504f0a6a5"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/point_actions.jsonl",
+          "sha256": "dc149e6901d2f9515c1003a0a790645d0edfbc29dd1dfe255ec839f4722dffd5"
+        },
+        {
+          "path": "task1/作业/作业/traj_dict.json",
+          "sha256": "c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3"
+        }
+      ]
+    },
+    {
+      "id": "GC15",
+      "status": "VERIFIED",
+      "scope": "All ordinary in-scope engineering work is completed within this Goal. Initial D1/D2 waiting instructions are superseded. Only a demonstrated obstacle preventing authorized conditional scope can block that part, while other work continues.",
+      "verification_method_or_command": "all issues and latest authorization reviewed; actual rebuilt outputs and followup complete",
+      "expected": "ordinary authorized repairs completed in same Goal, no obsolete datum blanket block or new prompt deferral",
+      "actual": "all authorized internal tasks have evidence and all five issues closed; no further engineering or research decision is required for scoped Goal1",
+      "evidence": [
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/g1-complete-pilot-03_diagnostics.json",
+          "sha256": "01f386c00e911920521402f949c30537bff2ac178e07203f39ff32777065ba54"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/review_time_goal_snapshot.json",
+          "sha256": "4f6dcc3a19abef6e07131b2a16b32d3ed74128c545dc18e45e88da9560023e01"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/review_time_resources_snapshot.json",
+          "sha256": "299eefcbe84e38251ef5dcdb20a1b4be0be19e988934a99625cb1db696547c9a"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/validation_review.json",
+          "sha256": "ceb78959b0f51fd5290f83c7475c818ff062b8257121e8f3981aad778d059fe2"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/workflow_trace_review.json",
+          "sha256": "4264642e798d174b60ec674ca6fed24aac5042b0044817d871f28596fe2facc2"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_combined_review/round2/combined_closure.json",
+          "sha256": "a67d902f1e878c36f7451f4deff258f4a0d0747dbdc093ea783a72b3e4f8446b"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/tests_pilot03.xml",
+          "sha256": "2b05ade71170f55a87c514632e3f96d021aebe73b2571c202ef6b07e1745d0bc"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/validation_pilot03.json",
+          "sha256": "6354e712f0a1aec6bb0344d4d4f3c3797df979eed08cdd86db54567af29f2fbc"
+        },
+        {
+          "path": "task1/workflow/artifact_review.py",
+          "sha256": "dfa0b91149662baf26861a9ec0e51223842d0ac62ada29015eca7b119c68da48"
+        },
+        {
+          "path": "task1/workflow/controller.py",
+          "sha256": "16793b102fd077cc243eae6f1e714632f312a77e421850d424b8562a2909eb6d"
+        },
+        {
+          "path": "task1/workflow/goal.py",
+          "sha256": "d313d408961adf07b9791972b03ac6a99db808e805efe1aa06abe85a075e863a"
+        },
+        {
+          "path": "task1/workflow/tools.py",
+          "sha256": "0fde0acebfe3ec97bd2653744ac8f0444c1e9a162c61970bccf8a94a9fbd0b3f"
+        }
+      ]
+    },
+    {
+      "id": "GC16",
+      "status": "INTERNAL_VERIFIED_PUBLICATION_NOT_RUN",
+      "scope": "Final effective code/config/input/result binding, independent internal review, actual safe push, remote equality and immutable core links exist; GPT second review remains pending.",
+      "verification_method_or_command": "C internal total report/receipt; fixed source and artifact hashes; local entry/link checks",
+      "expected": "internally reviewable package ready; later actual safe push and remote identity checked separately",
+      "actual": "internal processing/artifact lineage and reviewed claims verified; publication NOT_RUN in this receipt; GPT second review PENDING",
+      "evidence": [
+        {
+          "path": "AGENTS.md",
+          "sha256": "6950ca3d95e1c599626b172eaba2c6f15f72bddcf641077e7f53415360204334"
+        },
+        {
+          "path": "docs/research/SMART_CITIES_RESEARCH_PROTOCOL.md",
+          "sha256": "102c03b2107040345d15d631fa56bb8425de2ec79e0f8997d6b67d01be6e92cd"
+        },
+        {
+          "path": "task1/config/conditional_planar.json",
+          "sha256": "5b1ab7dbf25797a51405a2cddd93a8d2ea3e3b69530369366d0e05be7abb8169"
+        },
+        {
+          "path": "task1/config/goal1.json",
+          "sha256": "5418632734964fda81fe653e4996d1519b9de3a6cf51ed191556c243770542da"
+        },
+        {
+          "path": "task1/docs/goal1/ARCHITECTURE.md",
+          "sha256": "5fd62ae3134264970a3f0b7d17fc7fc9cd3e9e839c074c42759c74e2ffef1e7e"
+        },
+        {
+          "path": "task1/docs/goal1/CONTRACTS.md",
+          "sha256": "1a476f3290a2edd7224b8c41fde5e0a0c6f6eaf1f12e7f06909f9a52870c756b"
+        },
+        {
+          "path": "task1/docs/goal1/README.md",
+          "sha256": "85ee7ea1501ad983086aab24b545bd612ff0b63a906522ff419bd4d4e9bdc658"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/AUTHORIZATION_SUPPLEMENT.md",
+          "sha256": "2bce4b21939de5843678bdda1de18c64e9703c3e924fd63ff3d7988f69fe5248"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/USER_DECISIONS.json",
+          "sha256": "2b68e39573ab9256a353484842438a118445bb62ddbaca1c42fbd4eee9fe4f0e"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/a_scope/TaskPlan.json",
+          "sha256": "fb4ccd560b7c133888fb65b78125a82c4149da4c8ae79c39d4350b97a0817f90"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/a_scope/release_scope_check.json",
+          "sha256": "34d317e90d62e2029ff107b3b9f96001f9cfe7fd790aef61c5effa40e33332da"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/a_scope/release_scope_check.md",
+          "sha256": "634dba35e12522f4514b1948c55a63bd3cca619a2ce39043ae4e1dcbc8869ce5"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/a_scope/source_audit.json",
+          "sha256": "49bf91b2803b69fe8ee5d56ef5bbd0901530a624ae7e7fd520eeb15139c5986b"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/bundle_sync.json",
+          "sha256": "39a21e1e7a3630982078d05dcc4ba5ab61701da3951ec062d0a87d2c13507bd8"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/entry_review.json",
+          "sha256": "3681c00315a7b0e6be5116a240a167117f0aff581d0d7c3c8c07dd19f2e8bc95"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/final_bindings_review.json",
+          "sha256": "cf350fee77264f6ec3f523db220e1d6e0ac41a452479b231884a87f33eda3804"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/reviewed_FINAL_RESPONSE.md.txt",
+          "sha256": "bcb647b416f93dc2e0c1bc4cd61d72532c03c02c6ad3f04231dd0557d7811a47"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/reviewed_REVIEW_PACKET.md.txt",
+          "sha256": "f3a472d33db02503aaba6e6866a4261c02587b85e649171fb6180348426f116f"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/reviewed_requirements.json",
+          "sha256": "ff973adb03a00d101387f062da27dbdb6e6238da02573907cd9517014e4d977e"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/handoff/SC-LAB1-G1-COMPLETE-001_CODEX_PROMPT.md",
+          "sha256": "19e444f4a526c364087510a186c0be627e1fdcf97eaaebd4c97f6772aa662616"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/initial_protected_hashes.json",
+          "sha256": "64c39370d8ee9faf20b8e4fc2a6fdad89e2bf3ab5f3c5fe84f6849e1d1d570b6"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/prepublication_check.snapshot_before_acceptance.json",
+          "sha256": "7bf82ebf3e56893d6b296e00105e62b39f3a0a8c627f14e5cda2178e8b920bbb"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/workspace_initial.json",
+          "sha256": "6e703894d36a43afb255e594ed815c295b726b76221c01fd944420f6bf161dea"
+        },
+        {
+          "path": "task1/作业/作业/traj_dict.json",
+          "sha256": "c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3"
+        }
+      ]
+    }
+  ],
+  "original_G1": [
+    {
+      "id": "G1-A01",
+      "requirement": "正确仓库、分支、工作区与用户工作保护",
+      "status": "VERIFIED",
+      "gc_ids": [
+        "GC01",
+        "GC16"
+      ],
+      "scope": "Historical worktree protection PASS does not replace this execution's before/after check.",
+      "current_actual_scope": "Current approved Goal1 internal scope verified; no geographic truth or G2/G3 claim",
+      "actual": [
+        "273 initial protected evidence entries checked; teacher/starter/raw/template/old outputs 150-file audit preserved; user ZIPs preserved; no force/reset",
+        "internal processing/artifact lineage and reviewed claims verified; publication NOT_RUN in this receipt; GPT second review PENDING"
+      ],
+      "evidence": [
+        {
+          "path": "AGENTS.md",
+          "sha256": "6950ca3d95e1c599626b172eaba2c6f15f72bddcf641077e7f53415360204334"
+        },
+        {
+          "path": "docs/research/SMART_CITIES_RESEARCH_PROTOCOL.md",
+          "sha256": "102c03b2107040345d15d631fa56bb8425de2ec79e0f8997d6b67d01be6e92cd"
+        },
+        {
+          "path": "task1/config/conditional_planar.json",
+          "sha256": "5b1ab7dbf25797a51405a2cddd93a8d2ea3e3b69530369366d0e05be7abb8169"
+        },
+        {
+          "path": "task1/config/goal1.json",
+          "sha256": "5418632734964fda81fe653e4996d1519b9de3a6cf51ed191556c243770542da"
+        },
+        {
+          "path": "task1/docs/goal1/ARCHITECTURE.md",
+          "sha256": "5fd62ae3134264970a3f0b7d17fc7fc9cd3e9e839c074c42759c74e2ffef1e7e"
+        },
+        {
+          "path": "task1/docs/goal1/CONTRACTS.md",
+          "sha256": "1a476f3290a2edd7224b8c41fde5e0a0c6f6eaf1f12e7f06909f9a52870c756b"
+        },
+        {
+          "path": "task1/docs/goal1/README.md",
+          "sha256": "85ee7ea1501ad983086aab24b545bd612ff0b63a906522ff419bd4d4e9bdc658"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/AUTHORIZATION_SUPPLEMENT.md",
+          "sha256": "2bce4b21939de5843678bdda1de18c64e9703c3e924fd63ff3d7988f69fe5248"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/USER_DECISIONS.json",
+          "sha256": "2b68e39573ab9256a353484842438a118445bb62ddbaca1c42fbd4eee9fe4f0e"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/a_scope/TaskPlan.json",
+          "sha256": "fb4ccd560b7c133888fb65b78125a82c4149da4c8ae79c39d4350b97a0817f90"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/a_scope/release_scope_check.json",
+          "sha256": "34d317e90d62e2029ff107b3b9f96001f9cfe7fd790aef61c5effa40e33332da"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/a_scope/release_scope_check.md",
+          "sha256": "634dba35e12522f4514b1948c55a63bd3cca619a2ce39043ae4e1dcbc8869ce5"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/a_scope/source_audit.json",
+          "sha256": "49bf91b2803b69fe8ee5d56ef5bbd0901530a624ae7e7fd520eeb15139c5986b"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/bundle_sync.json",
+          "sha256": "39a21e1e7a3630982078d05dcc4ba5ab61701da3951ec062d0a87d2c13507bd8"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/final_bindings_review.json",
+          "sha256": "cf350fee77264f6ec3f523db220e1d6e0ac41a452479b231884a87f33eda3804"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/reviewed_requirements.json",
+          "sha256": "ff973adb03a00d101387f062da27dbdb6e6238da02573907cd9517014e4d977e"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/handoff/SC-LAB1-G1-COMPLETE-001_CODEX_PROMPT.md",
+          "sha256": "19e444f4a526c364087510a186c0be627e1fdcf97eaaebd4c97f6772aa662616"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/initial_protected_hashes.json",
+          "sha256": "64c39370d8ee9faf20b8e4fc2a6fdad89e2bf3ab5f3c5fe84f6849e1d1d570b6"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/prepublication_check.snapshot_before_acceptance.json",
+          "sha256": "7bf82ebf3e56893d6b296e00105e62b39f3a0a8c627f14e5cda2178e8b920bbb"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/workspace_initial.json",
+          "sha256": "6e703894d36a43afb255e594ed815c295b726b76221c01fd944420f6bf161dea"
+        },
+        {
+          "path": "task1/作业/作业/traj_dict.json",
+          "sha256": "c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/entry_review.json",
+          "sha256": "3681c00315a7b0e6be5116a240a167117f0aff581d0d7c3c8c07dd19f2e8bc95"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/reviewed_FINAL_RESPONSE.md.txt",
+          "sha256": "bcb647b416f93dc2e0c1bc4cd61d72532c03c02c6ad3f04231dd0557d7811a47"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/reviewed_REVIEW_PACKET.md.txt",
+          "sha256": "f3a472d33db02503aaba6e6866a4261c02587b85e649171fb6180348426f116f"
+        }
+      ]
+    },
+    {
+      "id": "G1-A02",
+      "requirement": "完整材料读取与任务对应",
+      "status": "VERIFIED",
+      "gc_ids": [
+        "GC02",
+        "GC08"
+      ],
+      "scope": "Inherit unchanged material hashes/read coverage; current A source check updates only relevant locators and scope.",
+      "current_actual_scope": "Current approved Goal1 internal scope verified; no geographic truth or G2/G3 claim",
+      "actual": [
+        "R01–R16 retained; latest conditional and D2 authority consumed; AGENTS +23/Protocol +13; bundle EXACTLY11 and bytes/hash pass",
+        "source_crs UNVERIFIED; source EPSG absent, datum conversion absent; raw unchanged; user authority distinct from factual source proof"
+      ],
+      "evidence": [
+        {
+          "path": "AGENTS.md",
+          "sha256": "6950ca3d95e1c599626b172eaba2c6f15f72bddcf641077e7f53415360204334"
+        },
+        {
+          "path": "docs/research/SMART_CITIES_RESEARCH_PROTOCOL.md",
+          "sha256": "102c03b2107040345d15d631fa56bb8425de2ec79e0f8997d6b67d01be6e92cd"
+        },
+        {
+          "path": "task1/config/conditional_planar.json",
+          "sha256": "5b1ab7dbf25797a51405a2cddd93a8d2ea3e3b69530369366d0e05be7abb8169"
+        },
+        {
+          "path": "task1/config/goal1.json",
+          "sha256": "5418632734964fda81fe653e4996d1519b9de3a6cf51ed191556c243770542da"
+        },
+        {
+          "path": "task1/docs/goal1/ARCHITECTURE.md",
+          "sha256": "5fd62ae3134264970a3f0b7d17fc7fc9cd3e9e839c074c42759c74e2ffef1e7e"
+        },
+        {
+          "path": "task1/docs/goal1/CONTRACTS.md",
+          "sha256": "1a476f3290a2edd7224b8c41fde5e0a0c6f6eaf1f12e7f06909f9a52870c756b"
+        },
+        {
+          "path": "task1/docs/goal1/README.md",
+          "sha256": "85ee7ea1501ad983086aab24b545bd612ff0b63a906522ff419bd4d4e9bdc658"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/AUTHORIZATION_SUPPLEMENT.md",
+          "sha256": "2bce4b21939de5843678bdda1de18c64e9703c3e924fd63ff3d7988f69fe5248"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/USER_DECISIONS.json",
+          "sha256": "2b68e39573ab9256a353484842438a118445bb62ddbaca1c42fbd4eee9fe4f0e"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/a_scope/TaskPlan.json",
+          "sha256": "fb4ccd560b7c133888fb65b78125a82c4149da4c8ae79c39d4350b97a0817f90"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/a_scope/release_scope_check.json",
+          "sha256": "34d317e90d62e2029ff107b3b9f96001f9cfe7fd790aef61c5effa40e33332da"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/a_scope/release_scope_check.md",
+          "sha256": "634dba35e12522f4514b1948c55a63bd3cca619a2ce39043ae4e1dcbc8869ce5"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/a_scope/source_audit.json",
+          "sha256": "49bf91b2803b69fe8ee5d56ef5bbd0901530a624ae7e7fd520eeb15139c5986b"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/bundle_sync.json",
+          "sha256": "39a21e1e7a3630982078d05dcc4ba5ab61701da3951ec062d0a87d2c13507bd8"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/final_bindings_review.json",
+          "sha256": "cf350fee77264f6ec3f523db220e1d6e0ac41a452479b231884a87f33eda3804"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/reviewed_requirements.json",
+          "sha256": "ff973adb03a00d101387f062da27dbdb6e6238da02573907cd9517014e4d977e"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/handoff/SC-LAB1-G1-COMPLETE-001_CODEX_PROMPT.md",
+          "sha256": "19e444f4a526c364087510a186c0be627e1fdcf97eaaebd4c97f6772aa662616"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/initial_protected_hashes.json",
+          "sha256": "64c39370d8ee9faf20b8e4fc2a6fdad89e2bf3ab5f3c5fe84f6849e1d1d570b6"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/prepublication_check.snapshot_before_acceptance.json",
+          "sha256": "7bf82ebf3e56893d6b296e00105e62b39f3a0a8c627f14e5cda2178e8b920bbb"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/workspace_initial.json",
+          "sha256": "6e703894d36a43afb255e594ed815c295b726b76221c01fd944420f6bf161dea"
+        },
+        {
+          "path": "task1/作业/作业/traj_dict.json",
+          "sha256": "c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/direction_roundoff_receipt.json",
+          "sha256": "1003de087bf2f71561bb75add022491af8e33bb05795bf1b4cf62b7073405a18"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/g1-complete-pilot-03_independent.json",
+          "sha256": "1150d318fa5709fdb854b34304b4918618baab800c6e5b1094d885bc485ec3f4"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/independent_probe.py",
+          "sha256": "82249a790476b07986159a74995a3706bf95bac872caf6068cf91e9b5ecfcaf9"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/validation_review.json",
+          "sha256": "ceb78959b0f51fd5290f83c7475c818ff062b8257121e8f3981aad778d059fe2"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_combined_review/round2/combined_closure.json",
+          "sha256": "a67d902f1e878c36f7451f4deff258f4a0d0747dbdc093ea783a72b3e4f8446b"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/tests_pilot03.xml",
+          "sha256": "2b05ade71170f55a87c514632e3f96d021aebe73b2571c202ef6b07e1745d0bc"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/validation_pilot03.json",
+          "sha256": "6354e712f0a1aec6bb0344d4d4f3c3797df979eed08cdd86db54567af29f2fbc"
+        },
+        {
+          "path": "task1/workflow/coordinates.py",
+          "sha256": "d99b270a65c88f8530669d5e7d0887d7563b3e54e19770ab7a9eb695117e075d"
+        },
+        {
+          "path": "task1/workflow/evaluation.py",
+          "sha256": "7cf224fbc290d3e83acd5d83a3fe335e6dc437c762f7053d8132817aa91025b2"
+        },
+        {
+          "path": "task1/workflow/geometry.py",
+          "sha256": "2ad3ca3b49e98e997684e3f5af948771be80dfb03b31b2ae4cc4483856e93d74"
+        },
+        {
+          "path": "task1/workflow/pipeline.py",
+          "sha256": "160bedcc0d8dffce71d833dffc4de28928bc7007077ae8d03c57c96d827548c7"
+        }
+      ]
+    },
+    {
+      "id": "G1-A03",
+      "requirement": "原始数据与历史结果区分",
+      "status": "VERIFIED",
+      "gc_ids": [
+        "GC08",
+        "GC14"
+      ],
+      "scope": "Retain historical provenance checks and verify new evidence labels.",
+      "current_actual_scope": "Current approved Goal1 internal scope verified; no geographic truth or G2/G3 claim",
+      "actual": [
+        "source_crs UNVERIFIED; source EPSG absent, datum conversion absent; raw unchanged; user authority distinct from factual source proof",
+        "current real conditional fixed pilot distinct from ENGINEERING_TEST, historical CLI and RECOMPUTE; removal and conditional geometry are descriptive"
+      ],
+      "evidence": [
+        {
+          "path": "task1/config/conditional_planar.json",
+          "sha256": "5b1ab7dbf25797a51405a2cddd93a8d2ea3e3b69530369366d0e05be7abb8169"
+        },
+        {
+          "path": "task1/config/goal1.json",
+          "sha256": "5418632734964fda81fe653e4996d1519b9de3a6cf51ed191556c243770542da"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/AUTHORIZATION_SUPPLEMENT.md",
+          "sha256": "2bce4b21939de5843678bdda1de18c64e9703c3e924fd63ff3d7988f69fe5248"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/USER_DECISIONS.json",
+          "sha256": "2b68e39573ab9256a353484842438a118445bb62ddbaca1c42fbd4eee9fe4f0e"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/direction_roundoff_receipt.json",
+          "sha256": "1003de087bf2f71561bb75add022491af8e33bb05795bf1b4cf62b7073405a18"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/g1-complete-pilot-03_independent.json",
+          "sha256": "1150d318fa5709fdb854b34304b4918618baab800c6e5b1094d885bc485ec3f4"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/independent_probe.py",
+          "sha256": "82249a790476b07986159a74995a3706bf95bac872caf6068cf91e9b5ecfcaf9"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/validation_review.json",
+          "sha256": "ceb78959b0f51fd5290f83c7475c818ff062b8257121e8f3981aad778d059fe2"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_combined_review/round2/combined_closure.json",
+          "sha256": "a67d902f1e878c36f7451f4deff258f4a0d0747dbdc093ea783a72b3e4f8446b"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/tests_pilot03.xml",
+          "sha256": "2b05ade71170f55a87c514632e3f96d021aebe73b2571c202ef6b07e1745d0bc"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/validation_pilot03.json",
+          "sha256": "6354e712f0a1aec6bb0344d4d4f3c3797df979eed08cdd86db54567af29f2fbc"
+        },
+        {
+          "path": "task1/workflow/coordinates.py",
+          "sha256": "d99b270a65c88f8530669d5e7d0887d7563b3e54e19770ab7a9eb695117e075d"
+        },
+        {
+          "path": "task1/workflow/evaluation.py",
+          "sha256": "7cf224fbc290d3e83acd5d83a3fe335e6dc437c762f7053d8132817aa91025b2"
+        },
+        {
+          "path": "task1/workflow/geometry.py",
+          "sha256": "2ad3ca3b49e98e997684e3f5af948771be80dfb03b31b2ae4cc4483856e93d74"
+        },
+        {
+          "path": "task1/workflow/pipeline.py",
+          "sha256": "160bedcc0d8dffce71d833dffc4de28928bc7007077ae8d03c57c96d827548c7"
+        },
+        {
+          "path": "task1/作业/作业/traj_dict.json",
+          "sha256": "c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/entry_review.json",
+          "sha256": "3681c00315a7b0e6be5116a240a167117f0aff581d0d7c3c8c07dd19f2e8bc95"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/reviewed_FINAL_RESPONSE.md.txt",
+          "sha256": "bcb647b416f93dc2e0c1bc4cd61d72532c03c02c6ad3f04231dd0557d7811a47"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/reviewed_REVIEW_PACKET.md.txt",
+          "sha256": "f3a472d33db02503aaba6e6866a4261c02587b85e649171fb6180348426f116f"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/summary_review.json",
+          "sha256": "a19f1b6035ff8b545744eacba6def467e6287c3a0fc494a92a4f7d0b82c9f348"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/recompute_verification.json",
+          "sha256": "9980234c7d0a39bb1b7d5d04930307cf09ac7b68ef53ab15bf1e6c1ac0006e18"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/result_summary.json",
+          "sha256": "9c6d34865004019e76cee2e7760d2b3e0c1646dfcae16ae885efa4a66f6b4693"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/baseline.json",
+          "sha256": "865710aea34a316fe83088d7cf2ac1aec68c96623269bfcf06255b5db2930fd8"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/baseline_review.json",
+          "sha256": "849f1aa9d5415a3f4bd45336181edc0abfe0582997a2332b85bdcc5e04ac1206"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/manifest.json",
+          "sha256": "7554dc9d4e22408ac0fe00292c037af61eb7aa970c97bb369ea1631504f0a6a5"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/point_actions.jsonl",
+          "sha256": "dc149e6901d2f9515c1003a0a790645d0edfbc29dd1dfe255ec839f4722dffd5"
+        }
+      ]
+    },
+    {
+      "id": "G1-A04",
+      "requirement": "时空语义与计算权限",
+      "status": "VERIFIED",
+      "gc_ids": [
+        "GC08",
+        "GC09",
+        "GC12"
+      ],
+      "scope": "Keep historical correct gate enforcement. Now separately record source datum UNVERIFIED, conditional local-model authorization and explicit D2 approval; do not collapse those three facts into a geographic-semantic PASS.",
+      "current_actual_scope": "Current approved Goal1 internal scope verified; no geographic truth or G2/G3 claim",
+      "actual": [
+        "source_crs UNVERIFIED; source EPSG absent, datum conversion absent; raw unchanged; user authority distinct from factual source proof",
+        "all 30 segments and 461 clean-point actual intervals pass; near5m case 4.938319812632412m; fixed numerical allowance independent of candidate",
+        "native vs CLI and deterministic calls separated; 1 real numeric refusal preserved; inflight/old epoch guards tested; no inflight now"
+      ],
+      "evidence": [
+        {
+          "path": "task1/config/conditional_planar.json",
+          "sha256": "5b1ab7dbf25797a51405a2cddd93a8d2ea3e3b69530369366d0e05be7abb8169"
+        },
+        {
+          "path": "task1/config/goal1.json",
+          "sha256": "5418632734964fda81fe653e4996d1519b9de3a6cf51ed191556c243770542da"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/AUTHORIZATION_SUPPLEMENT.md",
+          "sha256": "2bce4b21939de5843678bdda1de18c64e9703c3e924fd63ff3d7988f69fe5248"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/USER_DECISIONS.json",
+          "sha256": "2b68e39573ab9256a353484842438a118445bb62ddbaca1c42fbd4eee9fe4f0e"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/direction_roundoff_receipt.json",
+          "sha256": "1003de087bf2f71561bb75add022491af8e33bb05795bf1b4cf62b7073405a18"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/g1-complete-pilot-03_independent.json",
+          "sha256": "1150d318fa5709fdb854b34304b4918618baab800c6e5b1094d885bc485ec3f4"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/independent_probe.py",
+          "sha256": "82249a790476b07986159a74995a3706bf95bac872caf6068cf91e9b5ecfcaf9"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/validation_review.json",
+          "sha256": "ceb78959b0f51fd5290f83c7475c818ff062b8257121e8f3981aad778d059fe2"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_combined_review/round2/combined_closure.json",
+          "sha256": "a67d902f1e878c36f7451f4deff258f4a0d0747dbdc093ea783a72b3e4f8446b"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/tests_pilot03.xml",
+          "sha256": "2b05ade71170f55a87c514632e3f96d021aebe73b2571c202ef6b07e1745d0bc"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/validation_pilot03.json",
+          "sha256": "6354e712f0a1aec6bb0344d4d4f3c3797df979eed08cdd86db54567af29f2fbc"
+        },
+        {
+          "path": "task1/workflow/coordinates.py",
+          "sha256": "d99b270a65c88f8530669d5e7d0887d7563b3e54e19770ab7a9eb695117e075d"
+        },
+        {
+          "path": "task1/workflow/evaluation.py",
+          "sha256": "7cf224fbc290d3e83acd5d83a3fe335e6dc437c762f7053d8132817aa91025b2"
+        },
+        {
+          "path": "task1/workflow/geometry.py",
+          "sha256": "2ad3ca3b49e98e997684e3f5af948771be80dfb03b31b2ae4cc4483856e93d74"
+        },
+        {
+          "path": "task1/workflow/pipeline.py",
+          "sha256": "160bedcc0d8dffce71d833dffc4de28928bc7007077ae8d03c57c96d827548c7"
+        },
+        {
+          "path": "task1/作业/作业/traj_dict.json",
+          "sha256": "c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/summary_review.json",
+          "sha256": "a19f1b6035ff8b545744eacba6def467e6287c3a0fc494a92a4f7d0b82c9f348"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/recompute_verification.json",
+          "sha256": "9980234c7d0a39bb1b7d5d04930307cf09ac7b68ef53ab15bf1e6c1ac0006e18"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/result_summary.json",
+          "sha256": "9c6d34865004019e76cee2e7760d2b3e0c1646dfcae16ae885efa4a66f6b4693"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/baseline.json",
+          "sha256": "865710aea34a316fe83088d7cf2ac1aec68c96623269bfcf06255b5db2930fd8"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/baseline_review.json",
+          "sha256": "849f1aa9d5415a3f4bd45336181edc0abfe0582997a2332b85bdcc5e04ac1206"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/manifest.json",
+          "sha256": "7554dc9d4e22408ac0fe00292c037af61eb7aa970c97bb369ea1631504f0a6a5"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/point_actions.jsonl",
+          "sha256": "dc149e6901d2f9515c1003a0a790645d0edfbc29dd1dfe255ec839f4722dffd5"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/g1-complete-pilot-03_diagnostics.json",
+          "sha256": "01f386c00e911920521402f949c30537bff2ac178e07203f39ff32777065ba54"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/review_time_goal_snapshot.json",
+          "sha256": "4f6dcc3a19abef6e07131b2a16b32d3ed74128c545dc18e45e88da9560023e01"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/review_time_resources_snapshot.json",
+          "sha256": "299eefcbe84e38251ef5dcdb20a1b4be0be19e988934a99625cb1db696547c9a"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/workflow_trace_review.json",
+          "sha256": "4264642e798d174b60ec674ca6fed24aac5042b0044817d871f28596fe2facc2"
+        },
+        {
+          "path": "task1/workflow/artifact_review.py",
+          "sha256": "dfa0b91149662baf26861a9ec0e51223842d0ac62ada29015eca7b119c68da48"
+        },
+        {
+          "path": "task1/workflow/controller.py",
+          "sha256": "16793b102fd077cc243eae6f1e714632f312a77e421850d424b8562a2909eb6d"
+        },
+        {
+          "path": "task1/workflow/goal.py",
+          "sha256": "d313d408961adf07b9791972b03ac6a99db808e805efe1aa06abe85a075e863a"
+        },
+        {
+          "path": "task1/workflow/tools.py",
+          "sha256": "0fde0acebfe3ec97bd2653744ac8f0444c1e9a162c61970bccf8a94a9fbd0b3f"
+        }
+      ]
+    },
+    {
+      "id": "G1-A05",
+      "requirement": "分段和过滤正确且可追踪",
+      "status": "VERIFIED",
+      "gc_ids": [
+        "GC09",
+        "GC10"
+      ],
+      "scope": "Initial physical split/filter was blocked; the actual current conditional real-pilot split/filter now must execute and be independently verified.",
+      "current_actual_scope": "Current approved Goal1 internal scope verified; no geographic truth or G2/G3 claim",
+      "actual": [
+        "all 30 segments and 461 clean-point actual intervals pass; near5m case 4.938319812632412m; fixed numerical allowance independent of candidate",
+        "309 filtered +13 direction-deleted +273 DP-omitted +188 retained =783; 0 unprocessed; 7 filtered/23 processed segments"
+      ],
+      "evidence": [
+        {
+          "path": "task1/config/conditional_planar.json",
+          "sha256": "5b1ab7dbf25797a51405a2cddd93a8d2ea3e3b69530369366d0e05be7abb8169"
+        },
+        {
+          "path": "task1/config/goal1.json",
+          "sha256": "5418632734964fda81fe653e4996d1519b9de3a6cf51ed191556c243770542da"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/AUTHORIZATION_SUPPLEMENT.md",
+          "sha256": "2bce4b21939de5843678bdda1de18c64e9703c3e924fd63ff3d7988f69fe5248"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/USER_DECISIONS.json",
+          "sha256": "2b68e39573ab9256a353484842438a118445bb62ddbaca1c42fbd4eee9fe4f0e"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/g1-complete-pilot-03_independent.json",
+          "sha256": "1150d318fa5709fdb854b34304b4918618baab800c6e5b1094d885bc485ec3f4"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/independent_probe.py",
+          "sha256": "82249a790476b07986159a74995a3706bf95bac872caf6068cf91e9b5ecfcaf9"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/summary_review.json",
+          "sha256": "a19f1b6035ff8b545744eacba6def467e6287c3a0fc494a92a4f7d0b82c9f348"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/recompute_verification.json",
+          "sha256": "9980234c7d0a39bb1b7d5d04930307cf09ac7b68ef53ab15bf1e6c1ac0006e18"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/result_summary.json",
+          "sha256": "9c6d34865004019e76cee2e7760d2b3e0c1646dfcae16ae885efa4a66f6b4693"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/baseline.json",
+          "sha256": "865710aea34a316fe83088d7cf2ac1aec68c96623269bfcf06255b5db2930fd8"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/baseline_review.json",
+          "sha256": "849f1aa9d5415a3f4bd45336181edc0abfe0582997a2332b85bdcc5e04ac1206"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/manifest.json",
+          "sha256": "7554dc9d4e22408ac0fe00292c037af61eb7aa970c97bb369ea1631504f0a6a5"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/point_actions.jsonl",
+          "sha256": "dc149e6901d2f9515c1003a0a790645d0edfbc29dd1dfe255ec839f4722dffd5"
+        },
+        {
+          "path": "task1/作业/作业/traj_dict.json",
+          "sha256": "c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3"
+        }
+      ]
+    },
+    {
+      "id": "G1-A06",
+      "requirement": "忠于明确教师去噪方法且不混字段",
+      "status": "VERIFIED",
+      "gc_ids": [
+        "GC09",
+        "GC10"
+      ],
+      "scope": "D2 is now explicitly approved and real conditional direction execution is required; the original unapproved period remains historical.",
+      "current_actual_scope": "Current approved Goal1 internal scope verified; no geographic truth or G2/G3 claim",
+      "actual": [
+        "all 30 segments and 461 clean-point actual intervals pass; near5m case 4.938319812632412m; fixed numerical allowance independent of candidate",
+        "309 filtered +13 direction-deleted +273 DP-omitted +188 retained =783; 0 unprocessed; 7 filtered/23 processed segments"
+      ],
+      "evidence": [
+        {
+          "path": "task1/config/conditional_planar.json",
+          "sha256": "5b1ab7dbf25797a51405a2cddd93a8d2ea3e3b69530369366d0e05be7abb8169"
+        },
+        {
+          "path": "task1/config/goal1.json",
+          "sha256": "5418632734964fda81fe653e4996d1519b9de3a6cf51ed191556c243770542da"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/AUTHORIZATION_SUPPLEMENT.md",
+          "sha256": "2bce4b21939de5843678bdda1de18c64e9703c3e924fd63ff3d7988f69fe5248"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/USER_DECISIONS.json",
+          "sha256": "2b68e39573ab9256a353484842438a118445bb62ddbaca1c42fbd4eee9fe4f0e"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/g1-complete-pilot-03_independent.json",
+          "sha256": "1150d318fa5709fdb854b34304b4918618baab800c6e5b1094d885bc485ec3f4"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/independent_probe.py",
+          "sha256": "82249a790476b07986159a74995a3706bf95bac872caf6068cf91e9b5ecfcaf9"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/summary_review.json",
+          "sha256": "a19f1b6035ff8b545744eacba6def467e6287c3a0fc494a92a4f7d0b82c9f348"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/recompute_verification.json",
+          "sha256": "9980234c7d0a39bb1b7d5d04930307cf09ac7b68ef53ab15bf1e6c1ac0006e18"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/result_summary.json",
+          "sha256": "9c6d34865004019e76cee2e7760d2b3e0c1646dfcae16ae885efa4a66f6b4693"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/baseline.json",
+          "sha256": "865710aea34a316fe83088d7cf2ac1aec68c96623269bfcf06255b5db2930fd8"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/baseline_review.json",
+          "sha256": "849f1aa9d5415a3f4bd45336181edc0abfe0582997a2332b85bdcc5e04ac1206"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/manifest.json",
+          "sha256": "7554dc9d4e22408ac0fe00292c037af61eb7aa970c97bb369ea1631504f0a6a5"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/point_actions.jsonl",
+          "sha256": "dc149e6901d2f9515c1003a0a790645d0edfbc29dd1dfe255ec839f4722dffd5"
+        },
+        {
+          "path": "task1/作业/作业/traj_dict.json",
+          "sha256": "c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3"
+        }
+      ]
+    },
+    {
+      "id": "G1-A07",
+      "requirement": "DP及索引映射正确",
+      "status": "VERIFIED",
+      "gc_ids": [
+        "GC09",
+        "GC10",
+        "GC13"
+      ],
+      "scope": "Inherit finite-segment/index mathematical checks if unaffected, then validate current trusted review and real pipeline separately.",
+      "current_actual_scope": "Current approved Goal1 internal scope verified; no geographic truth or G2/G3 claim",
+      "actual": [
+        "all 30 segments and 461 clean-point actual intervals pass; near5m case 4.938319812632412m; fixed numerical allowance independent of candidate",
+        "309 filtered +13 direction-deleted +273 DP-omitted +188 retained =783; 0 unprocessed; 7 filtered/23 processed segments",
+        "261 passed; each notebook8 cells without errors; four fresh outputs exact; three figures inspected at200dpi; starter292/1 remains historical"
+      ],
+      "evidence": [
+        {
+          "path": "task1/config/conditional_planar.json",
+          "sha256": "5b1ab7dbf25797a51405a2cddd93a8d2ea3e3b69530369366d0e05be7abb8169"
+        },
+        {
+          "path": "task1/config/goal1.json",
+          "sha256": "5418632734964fda81fe653e4996d1519b9de3a6cf51ed191556c243770542da"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/AUTHORIZATION_SUPPLEMENT.md",
+          "sha256": "2bce4b21939de5843678bdda1de18c64e9703c3e924fd63ff3d7988f69fe5248"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/USER_DECISIONS.json",
+          "sha256": "2b68e39573ab9256a353484842438a118445bb62ddbaca1c42fbd4eee9fe4f0e"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/g1-complete-pilot-03_independent.json",
+          "sha256": "1150d318fa5709fdb854b34304b4918618baab800c6e5b1094d885bc485ec3f4"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/independent_probe.py",
+          "sha256": "82249a790476b07986159a74995a3706bf95bac872caf6068cf91e9b5ecfcaf9"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/summary_review.json",
+          "sha256": "a19f1b6035ff8b545744eacba6def467e6287c3a0fc494a92a4f7d0b82c9f348"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/recompute_verification.json",
+          "sha256": "9980234c7d0a39bb1b7d5d04930307cf09ac7b68ef53ab15bf1e6c1ac0006e18"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/result_summary.json",
+          "sha256": "9c6d34865004019e76cee2e7760d2b3e0c1646dfcae16ae885efa4a66f6b4693"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/baseline.json",
+          "sha256": "865710aea34a316fe83088d7cf2ac1aec68c96623269bfcf06255b5db2930fd8"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/baseline_review.json",
+          "sha256": "849f1aa9d5415a3f4bd45336181edc0abfe0582997a2332b85bdcc5e04ac1206"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/manifest.json",
+          "sha256": "7554dc9d4e22408ac0fe00292c037af61eb7aa970c97bb369ea1631504f0a6a5"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/point_actions.jsonl",
+          "sha256": "dc149e6901d2f9515c1003a0a790645d0edfbc29dd1dfe255ec839f4722dffd5"
+        },
+        {
+          "path": "task1/作业/作业/traj_dict.json",
+          "sha256": "c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/b_run/figure_verification.json",
+          "sha256": "aa413f0f7efd6a8bef9368601cdf172154e57633ec9bf7d8d3c7b366f8b5b6e3"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/b_run/notebook_execution.json",
+          "sha256": "46afb2d4d5120a546b3518e97bdf739cc04a722b05f81ff3da7be06cfdf9f2dc"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/b_run/notebook_verification.json",
+          "sha256": "407865b19066db92dd7bd7d8f7f8384bc6eff5c77d7eaf25644cc14a0cebc80a"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/figure_review.json",
+          "sha256": "2cdda73a9e6f462c8cf5b434b150c084d0586529198bb3e70800da4ce3ab4516"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/final_evidence_probe.py",
+          "sha256": "31d6844ab0a40564e6b16b78657a5cd5563e7108dec0574ccaaed16d6e511c12"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/notebook_review.json",
+          "sha256": "1b7affaf82a1c5d3f21005dd75224404d41b9ace9c4ad316a2022c54ad97ee3b"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/validation_review.json",
+          "sha256": "ceb78959b0f51fd5290f83c7475c818ff062b8257121e8f3981aad778d059fe2"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/conditional_pilot_trajectories.pdf",
+          "sha256": "8c812448406a5fb18adb8fdc10af31c370b533283801b8543dbaa98407f38148"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/conditional_pilot_trajectories.png",
+          "sha256": "a492bb7e7dc2dafff2db442a79938c7cd3999f3a65501b75fe2069ffd0987bf8"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/conditional_pilot_trajectories.svg",
+          "sha256": "d20b64d74aed30841ae94fa3cb189e32e2caad04c63f6909d59d9dfd5b09152c"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/figure_manifest.json",
+          "sha256": "bb8b6ce36928ca71a1ea9b623f2d3473774ae7eb576c0df25da7b50857977fdc"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/goal1_execution_structure.drawio",
+          "sha256": "4a8d254fbdc09fe7f732c23f6b7aa8452c259fcd172d993f26db7bddb71ae084"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/goal1_execution_structure.pdf",
+          "sha256": "245995cee688a9750f6a961e7305a9a683799480bd581c35a8e4a429d908d882"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/goal1_execution_structure.png",
+          "sha256": "62461a336585bfdd5405709c57b5ce45ec5ef2af15056b982724b2684ff80aea"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/goal1_execution_structure.svg",
+          "sha256": "082890e2fe2cbcd7f24dfd56a8c2144d2f04cd533565e3342dae1af99b2cbae5"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/point_terminal_counts.pdf",
+          "sha256": "7d5f3d2e602db74b579ae8d03e5e5fdcc65e876125b57188fb1c6c46bd45c6d2"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/point_terminal_counts.png",
+          "sha256": "fe53c546648e125e01fcdb76b904a76c7c836e58d1f41fef5df113a4ece4532f"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/point_terminal_counts.svg",
+          "sha256": "dd894599e5b6a088b74f9498733f835f32e543b552d87e1166ed680a2a6fdfd8"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/tests_pilot03.xml",
+          "sha256": "2b05ade71170f55a87c514632e3f96d021aebe73b2571c202ef6b07e1745d0bc"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/validation_pilot03.json",
+          "sha256": "6354e712f0a1aec6bb0344d4d4f3c3797df979eed08cdd86db54567af29f2fbc"
+        },
+        {
+          "path": "task1/notebooks/01_baseline_and_audit.ipynb",
+          "sha256": "a1c612acfc2826eb1b78fe4979c7d1f2feec741b04fb4cccf74aa0406daef86d"
+        },
+        {
+          "path": "task1/notebooks/02_agent_loop_recompute.ipynb",
+          "sha256": "2b38b9ec852f8f26f481da0cd1e141cac085524365ec90a0ca2645a892b17f7f"
+        },
+        {
+          "path": "task1/scripts/build_complete_figures.py",
+          "sha256": "89b1c96ef3e7821ab46857d3e9b0223839d8b768907ed0b91265c40aa3f7b7c1"
+        },
+        {
+          "path": "task1/scripts/build_goal1_notebooks.py",
+          "sha256": "e3adbca56ad1a9179725a8cb17848ef548cbe56f4a4cdc9727be3cff70472022"
+        },
+        {
+          "path": "task1/scripts/complete_goal1.py",
+          "sha256": "d3b4d3e0aa290ed2cb52b99a9680d81c0ff12894651f4e165888fc7c3f53b460"
+        },
+        {
+          "path": "templates/latex/common/p2_cloud_sorbet_colors.tex",
+          "sha256": "2aa820c3f68ba6c14cf1b52082b12336071d77bb5466db2b05b2fab6890aa243"
+        }
+      ]
+    },
+    {
+      "id": "G1-A08",
+      "requirement": "独立评价器可测对",
+      "status": "VERIFIED",
+      "gc_ids": [
+        "GC06",
+        "GC07",
+        "GC13"
+      ],
+      "scope": "Reopen affected broad evaluator PASS due to C2-F01/F02 while preserving valid profile-only tests and historical failure records.",
+      "current_actual_scope": "Current approved Goal1 internal scope verified; no geographic truth or G2/G3 claim",
+      "actual": [
+        "64 raw diagnostics/version checks pass; all four registered target reviews have complete checked and empty unchecked scope",
+        "manual adversarial baseline cases preserved; current actual raw and approved contract independently recomputed with 383 checks",
+        "261 passed; each notebook8 cells without errors; four fresh outputs exact; three figures inspected at200dpi; starter292/1 remains historical"
+      ],
+      "evidence": [
+        {
+          "path": "task1/config/conditional_planar.json",
+          "sha256": "5b1ab7dbf25797a51405a2cddd93a8d2ea3e3b69530369366d0e05be7abb8169"
+        },
+        {
+          "path": "task1/config/goal1.json",
+          "sha256": "5418632734964fda81fe653e4996d1519b9de3a6cf51ed191556c243770542da"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/AUTHORIZATION_SUPPLEMENT.md",
+          "sha256": "2bce4b21939de5843678bdda1de18c64e9703c3e924fd63ff3d7988f69fe5248"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/USER_DECISIONS.json",
+          "sha256": "2b68e39573ab9256a353484842438a118445bb62ddbaca1c42fbd4eee9fe4f0e"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/g1-complete-pilot-03_diagnostics.json",
+          "sha256": "01f386c00e911920521402f949c30537bff2ac178e07203f39ff32777065ba54"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/remaining_probe.py",
+          "sha256": "f423728bbebd542b307a7ee5958efee979b1917e4489a98bd09462c18ebb7b4b"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/time_scope_receipt.json",
+          "sha256": "fde6c11494e7d07a49e33f591e6277f55dccfd2b68f18c139933ddadfa17aa1b"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/duplicate_details.json",
+          "sha256": "2af0cd5d718fa8cc5bd955eeea4c1fdd05374d7a173fdf9d9bc1c56f0d49e32d"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/duplicate_details_review.json",
+          "sha256": "d8c54ea93c3144c984cf2fc71277dbc337418860be05695da8c26e3a1c4cef68"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/manifest.json",
+          "sha256": "7554dc9d4e22408ac0fe00292c037af61eb7aa970c97bb369ea1631504f0a6a5"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/profile_pilot.json",
+          "sha256": "ed6d427bf712a433650bc28238ce58522065ad8dfc754301733ea005cb30ac71"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/profile_pilot_review.json",
+          "sha256": "e4cddcaabc30fd6264a7b774921569c02006eed665122de12d58449110bc8262"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/time_boundaries.json",
+          "sha256": "bf0b0e9da04e08e170d98907cde40959d5325619ec2f2377db44c11d053a7edd"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/time_boundaries_review.json",
+          "sha256": "06468744879f9ebc1c94da31b2676202696abda2a7a8f53806e13d533ce6ac26"
+        },
+        {
+          "path": "task1/workflow/artifact_review.py",
+          "sha256": "dfa0b91149662baf26861a9ec0e51223842d0ac62ada29015eca7b119c68da48"
+        },
+        {
+          "path": "task1/workflow/diagnostics.py",
+          "sha256": "aee1e4dd46ff7b15a8f3d854aaf1ed9668ee5ef4d4991a624beb479ff0f82745"
+        },
+        {
+          "path": "task1/作业/作业/traj_dict.json",
+          "sha256": "c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/direction_roundoff_receipt.json",
+          "sha256": "1003de087bf2f71561bb75add022491af8e33bb05795bf1b4cf62b7073405a18"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/g1-complete-pilot-03_independent.json",
+          "sha256": "1150d318fa5709fdb854b34304b4918618baab800c6e5b1094d885bc485ec3f4"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/independent_probe.py",
+          "sha256": "82249a790476b07986159a74995a3706bf95bac872caf6068cf91e9b5ecfcaf9"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/validation_review.json",
+          "sha256": "ceb78959b0f51fd5290f83c7475c818ff062b8257121e8f3981aad778d059fe2"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_combined_review/round2/combined_closure.json",
+          "sha256": "a67d902f1e878c36f7451f4deff258f4a0d0747dbdc093ea783a72b3e4f8446b"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/tests_pilot03.xml",
+          "sha256": "2b05ade71170f55a87c514632e3f96d021aebe73b2571c202ef6b07e1745d0bc"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/validation_pilot03.json",
+          "sha256": "6354e712f0a1aec6bb0344d4d4f3c3797df979eed08cdd86db54567af29f2fbc"
+        },
+        {
+          "path": "task1/workflow/coordinates.py",
+          "sha256": "d99b270a65c88f8530669d5e7d0887d7563b3e54e19770ab7a9eb695117e075d"
+        },
+        {
+          "path": "task1/workflow/evaluation.py",
+          "sha256": "7cf224fbc290d3e83acd5d83a3fe335e6dc437c762f7053d8132817aa91025b2"
+        },
+        {
+          "path": "task1/workflow/geometry.py",
+          "sha256": "2ad3ca3b49e98e997684e3f5af948771be80dfb03b31b2ae4cc4483856e93d74"
+        },
+        {
+          "path": "task1/workflow/pipeline.py",
+          "sha256": "160bedcc0d8dffce71d833dffc4de28928bc7007077ae8d03c57c96d827548c7"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/b_run/figure_verification.json",
+          "sha256": "aa413f0f7efd6a8bef9368601cdf172154e57633ec9bf7d8d3c7b366f8b5b6e3"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/b_run/notebook_execution.json",
+          "sha256": "46afb2d4d5120a546b3518e97bdf739cc04a722b05f81ff3da7be06cfdf9f2dc"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/b_run/notebook_verification.json",
+          "sha256": "407865b19066db92dd7bd7d8f7f8384bc6eff5c77d7eaf25644cc14a0cebc80a"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/figure_review.json",
+          "sha256": "2cdda73a9e6f462c8cf5b434b150c084d0586529198bb3e70800da4ce3ab4516"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/final_evidence_probe.py",
+          "sha256": "31d6844ab0a40564e6b16b78657a5cd5563e7108dec0574ccaaed16d6e511c12"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/notebook_review.json",
+          "sha256": "1b7affaf82a1c5d3f21005dd75224404d41b9ace9c4ad316a2022c54ad97ee3b"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/conditional_pilot_trajectories.pdf",
+          "sha256": "8c812448406a5fb18adb8fdc10af31c370b533283801b8543dbaa98407f38148"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/conditional_pilot_trajectories.png",
+          "sha256": "a492bb7e7dc2dafff2db442a79938c7cd3999f3a65501b75fe2069ffd0987bf8"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/conditional_pilot_trajectories.svg",
+          "sha256": "d20b64d74aed30841ae94fa3cb189e32e2caad04c63f6909d59d9dfd5b09152c"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/figure_manifest.json",
+          "sha256": "bb8b6ce36928ca71a1ea9b623f2d3473774ae7eb576c0df25da7b50857977fdc"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/goal1_execution_structure.drawio",
+          "sha256": "4a8d254fbdc09fe7f732c23f6b7aa8452c259fcd172d993f26db7bddb71ae084"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/goal1_execution_structure.pdf",
+          "sha256": "245995cee688a9750f6a961e7305a9a683799480bd581c35a8e4a429d908d882"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/goal1_execution_structure.png",
+          "sha256": "62461a336585bfdd5405709c57b5ce45ec5ef2af15056b982724b2684ff80aea"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/goal1_execution_structure.svg",
+          "sha256": "082890e2fe2cbcd7f24dfd56a8c2144d2f04cd533565e3342dae1af99b2cbae5"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/point_terminal_counts.pdf",
+          "sha256": "7d5f3d2e602db74b579ae8d03e5e5fdcc65e876125b57188fb1c6c46bd45c6d2"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/point_terminal_counts.png",
+          "sha256": "fe53c546648e125e01fcdb76b904a76c7c836e58d1f41fef5df113a4ece4532f"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/point_terminal_counts.svg",
+          "sha256": "dd894599e5b6a088b74f9498733f835f32e543b552d87e1166ed680a2a6fdfd8"
+        },
+        {
+          "path": "task1/notebooks/01_baseline_and_audit.ipynb",
+          "sha256": "a1c612acfc2826eb1b78fe4979c7d1f2feec741b04fb4cccf74aa0406daef86d"
+        },
+        {
+          "path": "task1/notebooks/02_agent_loop_recompute.ipynb",
+          "sha256": "2b38b9ec852f8f26f481da0cd1e141cac085524365ec90a0ca2645a892b17f7f"
+        },
+        {
+          "path": "task1/scripts/build_complete_figures.py",
+          "sha256": "89b1c96ef3e7821ab46857d3e9b0223839d8b768907ed0b91265c40aa3f7b7c1"
+        },
+        {
+          "path": "task1/scripts/build_goal1_notebooks.py",
+          "sha256": "e3adbca56ad1a9179725a8cb17848ef548cbe56f4a4cdc9727be3cff70472022"
+        },
+        {
+          "path": "task1/scripts/complete_goal1.py",
+          "sha256": "d3b4d3e0aa290ed2cb52b99a9680d81c0ff12894651f4e165888fc7c3f53b460"
+        },
+        {
+          "path": "templates/latex/common/p2_cloud_sorbet_colors.tex",
+          "sha256": "2aa820c3f68ba6c14cf1b52082b12336071d77bb5466db2b05b2fab6890aa243"
+        }
+      ]
+    },
+    {
+      "id": "G1-A09",
+      "requirement": "三个角色实际独立调用与职责",
+      "status": "VERIFIED",
+      "gc_ids": [
+        "GC03",
+        "GC05",
+        "GC11"
+      ],
+      "scope": "Prior independent A/B/C calls were diagnostic only; current actual repair/processing roles require their own evidence.",
+      "current_actual_scope": "Current approved Goal1 internal scope verified; no geographic truth or G2/G3 claim",
+      "actual": [
+        "A, B, two separate C contexts plus main actually worked; resources distinguish 13 native dispatches from historical 4+6 CLI; hidden requests unknown",
+        "all five issues VERIFIED; failed run01 and superseded run02 preserved; run03 regenerated under fixed code",
+        "actual coordinate_sensitivity bound to baseline/request/trigger/code; 1322 checks and all9 components verified; no threshold disagreement"
+      ],
+      "evidence": [
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/g1-complete-pilot-03_diagnostics.json",
+          "sha256": "01f386c00e911920521402f949c30537bff2ac178e07203f39ff32777065ba54"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/review_time_goal_snapshot.json",
+          "sha256": "4f6dcc3a19abef6e07131b2a16b32d3ed74128c545dc18e45e88da9560023e01"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/review_time_resources_snapshot.json",
+          "sha256": "299eefcbe84e38251ef5dcdb20a1b4be0be19e988934a99625cb1db696547c9a"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/validation_review.json",
+          "sha256": "ceb78959b0f51fd5290f83c7475c818ff062b8257121e8f3981aad778d059fe2"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/workflow_trace_review.json",
+          "sha256": "4264642e798d174b60ec674ca6fed24aac5042b0044817d871f28596fe2facc2"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_combined_review/round2/combined_closure.json",
+          "sha256": "a67d902f1e878c36f7451f4deff258f4a0d0747dbdc093ea783a72b3e4f8446b"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/tests_pilot03.xml",
+          "sha256": "2b05ade71170f55a87c514632e3f96d021aebe73b2571c202ef6b07e1745d0bc"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/validation_pilot03.json",
+          "sha256": "6354e712f0a1aec6bb0344d4d4f3c3797df979eed08cdd86db54567af29f2fbc"
+        },
+        {
+          "path": "task1/workflow/artifact_review.py",
+          "sha256": "dfa0b91149662baf26861a9ec0e51223842d0ac62ada29015eca7b119c68da48"
+        },
+        {
+          "path": "task1/workflow/controller.py",
+          "sha256": "16793b102fd077cc243eae6f1e714632f312a77e421850d424b8562a2909eb6d"
+        },
+        {
+          "path": "task1/workflow/goal.py",
+          "sha256": "d313d408961adf07b9791972b03ac6a99db808e805efe1aa06abe85a075e863a"
+        },
+        {
+          "path": "task1/workflow/tools.py",
+          "sha256": "0fde0acebfe3ec97bd2653744ac8f0444c1e9a162c61970bccf8a94a9fbd0b3f"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/coordinate_issue_receipt.json",
+          "sha256": "54dcc9ecd8a353b4382fb6beb921853a1fcd754082964f31941fe49bfadeb976"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/direction_roundoff_receipt.json",
+          "sha256": "1003de087bf2f71561bb75add022491af8e33bb05795bf1b4cf62b7073405a18"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/time_scope_receipt.json",
+          "sha256": "fde6c11494e7d07a49e33f591e6277f55dccfd2b68f18c139933ddadfa17aa1b"
+        },
+        {
+          "path": "task1/config/conditional_planar.json",
+          "sha256": "5b1ab7dbf25797a51405a2cddd93a8d2ea3e3b69530369366d0e05be7abb8169"
+        },
+        {
+          "path": "task1/config/goal1.json",
+          "sha256": "5418632734964fda81fe653e4996d1519b9de3a6cf51ed191556c243770542da"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/AUTHORIZATION_SUPPLEMENT.md",
+          "sha256": "2bce4b21939de5843678bdda1de18c64e9703c3e924fd63ff3d7988f69fe5248"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/USER_DECISIONS.json",
+          "sha256": "2b68e39573ab9256a353484842438a118445bb62ddbaca1c42fbd4eee9fe4f0e"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/a_scope/local_model_contract.json",
+          "sha256": "ae3ab78de2a7ab6159631c0340e11e344ed4401276a59bfa04c4e9689b700453"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/followup_request_run03.json",
+          "sha256": "baff383be63c53ea1bd5a791c89e170faa7c3cd08b1fa7fc741eeb001e03a707"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/followup_review.json",
+          "sha256": "2e96dec63ba0df3d01d48616e854aea603acf823b33f7d1bef90b289d864e761"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/remaining_probe.py",
+          "sha256": "f423728bbebd542b307a7ee5958efee979b1917e4489a98bd09462c18ebb7b4b"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/followup_execution.json",
+          "sha256": "b3ad8b6f142901cb86fccb0e282619e895af36b27d8a46e640e697c0662e1707"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/baseline.json",
+          "sha256": "865710aea34a316fe83088d7cf2ac1aec68c96623269bfcf06255b5db2930fd8"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/baseline_review.json",
+          "sha256": "849f1aa9d5415a3f4bd45336181edc0abfe0582997a2332b85bdcc5e04ac1206"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/coordinate_sensitivity.json",
+          "sha256": "0ccffb15396c6ab1e57cc29fdb3e4ab9879104c73f95679dc1ac09d109d6de9f"
+        },
+        {
+          "path": "task1/workflow/coordinate_review.py",
+          "sha256": "af4f0d753d162666bcb5da07edeccb846e008c33adf0f56b34939ac526eaf951"
+        },
+        {
+          "path": "task1/workflow/coordinates.py",
+          "sha256": "d99b270a65c88f8530669d5e7d0887d7563b3e54e19770ab7a9eb695117e075d"
+        },
+        {
+          "path": "task1/workflow/evaluation.py",
+          "sha256": "7cf224fbc290d3e83acd5d83a3fe335e6dc437c762f7053d8132817aa91025b2"
+        },
+        {
+          "path": "task1/作业/作业/traj_dict.json",
+          "sha256": "c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3"
+        }
+      ]
+    },
+    {
+      "id": "G1-A10",
+      "requirement": "运行控制与权限生效",
+      "status": "VERIFIED",
+      "gc_ids": [
+        "GC04",
+        "GC05",
+        "GC06",
+        "GC07",
+        "GC12"
+      ],
+      "scope": "Retain unchanged permission checks; revalidate Goal scheduling, repair handoff and target closure semantics.",
+      "current_actual_scope": "Current approved Goal1 internal scope verified; no geographic truth or G2/G3 claim",
+      "actual": [
+        "task DAG, open issue blocking, current code/run binding and additional actual sensitivity work exercised; not phase==5 completion",
+        "all five issues VERIFIED; failed run01 and superseded run02 preserved; run03 regenerated under fixed code",
+        "64 raw diagnostics/version checks pass; all four registered target reviews have complete checked and empty unchecked scope",
+        "manual adversarial baseline cases preserved; current actual raw and approved contract independently recomputed with 383 checks",
+        "native vs CLI and deterministic calls separated; 1 real numeric refusal preserved; inflight/old epoch guards tested; no inflight now"
+      ],
+      "evidence": [
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/g1-complete-pilot-03_diagnostics.json",
+          "sha256": "01f386c00e911920521402f949c30537bff2ac178e07203f39ff32777065ba54"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/review_time_goal_snapshot.json",
+          "sha256": "4f6dcc3a19abef6e07131b2a16b32d3ed74128c545dc18e45e88da9560023e01"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/review_time_resources_snapshot.json",
+          "sha256": "299eefcbe84e38251ef5dcdb20a1b4be0be19e988934a99625cb1db696547c9a"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/validation_review.json",
+          "sha256": "ceb78959b0f51fd5290f83c7475c818ff062b8257121e8f3981aad778d059fe2"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/workflow_trace_review.json",
+          "sha256": "4264642e798d174b60ec674ca6fed24aac5042b0044817d871f28596fe2facc2"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_combined_review/round2/combined_closure.json",
+          "sha256": "a67d902f1e878c36f7451f4deff258f4a0d0747dbdc093ea783a72b3e4f8446b"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/tests_pilot03.xml",
+          "sha256": "2b05ade71170f55a87c514632e3f96d021aebe73b2571c202ef6b07e1745d0bc"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/validation_pilot03.json",
+          "sha256": "6354e712f0a1aec6bb0344d4d4f3c3797df979eed08cdd86db54567af29f2fbc"
+        },
+        {
+          "path": "task1/workflow/artifact_review.py",
+          "sha256": "dfa0b91149662baf26861a9ec0e51223842d0ac62ada29015eca7b119c68da48"
+        },
+        {
+          "path": "task1/workflow/controller.py",
+          "sha256": "16793b102fd077cc243eae6f1e714632f312a77e421850d424b8562a2909eb6d"
+        },
+        {
+          "path": "task1/workflow/goal.py",
+          "sha256": "d313d408961adf07b9791972b03ac6a99db808e805efe1aa06abe85a075e863a"
+        },
+        {
+          "path": "task1/workflow/tools.py",
+          "sha256": "0fde0acebfe3ec97bd2653744ac8f0444c1e9a162c61970bccf8a94a9fbd0b3f"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/coordinate_issue_receipt.json",
+          "sha256": "54dcc9ecd8a353b4382fb6beb921853a1fcd754082964f31941fe49bfadeb976"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/direction_roundoff_receipt.json",
+          "sha256": "1003de087bf2f71561bb75add022491af8e33bb05795bf1b4cf62b7073405a18"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/time_scope_receipt.json",
+          "sha256": "fde6c11494e7d07a49e33f591e6277f55dccfd2b68f18c139933ddadfa17aa1b"
+        },
+        {
+          "path": "task1/config/conditional_planar.json",
+          "sha256": "5b1ab7dbf25797a51405a2cddd93a8d2ea3e3b69530369366d0e05be7abb8169"
+        },
+        {
+          "path": "task1/config/goal1.json",
+          "sha256": "5418632734964fda81fe653e4996d1519b9de3a6cf51ed191556c243770542da"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/AUTHORIZATION_SUPPLEMENT.md",
+          "sha256": "2bce4b21939de5843678bdda1de18c64e9703c3e924fd63ff3d7988f69fe5248"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/USER_DECISIONS.json",
+          "sha256": "2b68e39573ab9256a353484842438a118445bb62ddbaca1c42fbd4eee9fe4f0e"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/remaining_probe.py",
+          "sha256": "f423728bbebd542b307a7ee5958efee979b1917e4489a98bd09462c18ebb7b4b"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/duplicate_details.json",
+          "sha256": "2af0cd5d718fa8cc5bd955eeea4c1fdd05374d7a173fdf9d9bc1c56f0d49e32d"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/duplicate_details_review.json",
+          "sha256": "d8c54ea93c3144c984cf2fc71277dbc337418860be05695da8c26e3a1c4cef68"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/manifest.json",
+          "sha256": "7554dc9d4e22408ac0fe00292c037af61eb7aa970c97bb369ea1631504f0a6a5"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/profile_pilot.json",
+          "sha256": "ed6d427bf712a433650bc28238ce58522065ad8dfc754301733ea005cb30ac71"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/profile_pilot_review.json",
+          "sha256": "e4cddcaabc30fd6264a7b774921569c02006eed665122de12d58449110bc8262"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/time_boundaries.json",
+          "sha256": "bf0b0e9da04e08e170d98907cde40959d5325619ec2f2377db44c11d053a7edd"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/time_boundaries_review.json",
+          "sha256": "06468744879f9ebc1c94da31b2676202696abda2a7a8f53806e13d533ce6ac26"
+        },
+        {
+          "path": "task1/workflow/diagnostics.py",
+          "sha256": "aee1e4dd46ff7b15a8f3d854aaf1ed9668ee5ef4d4991a624beb479ff0f82745"
+        },
+        {
+          "path": "task1/作业/作业/traj_dict.json",
+          "sha256": "c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/g1-complete-pilot-03_independent.json",
+          "sha256": "1150d318fa5709fdb854b34304b4918618baab800c6e5b1094d885bc485ec3f4"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/independent_probe.py",
+          "sha256": "82249a790476b07986159a74995a3706bf95bac872caf6068cf91e9b5ecfcaf9"
+        },
+        {
+          "path": "task1/workflow/coordinates.py",
+          "sha256": "d99b270a65c88f8530669d5e7d0887d7563b3e54e19770ab7a9eb695117e075d"
+        },
+        {
+          "path": "task1/workflow/evaluation.py",
+          "sha256": "7cf224fbc290d3e83acd5d83a3fe335e6dc437c762f7053d8132817aa91025b2"
+        },
+        {
+          "path": "task1/workflow/geometry.py",
+          "sha256": "2ad3ca3b49e98e997684e3f5af948771be80dfb03b31b2ae4cc4483856e93d74"
+        },
+        {
+          "path": "task1/workflow/pipeline.py",
+          "sha256": "160bedcc0d8dffce71d833dffc4de28928bc7007077ae8d03c57c96d827548c7"
+        }
+      ]
+    },
+    {
+      "id": "G1-A11",
+      "requirement": "小规模真实完整基线处理",
+      "status": "VERIFIED",
+      "gc_ids": [
+        "GC10"
+      ],
+      "scope": "Pending actual fixed-pilot conditional complete baseline and review; source datum unknown alone no longer blocks the permitted processing.",
+      "current_actual_scope": "Current approved Goal1 internal scope verified; no geographic truth or G2/G3 claim",
+      "actual": [
+        "309 filtered +13 direction-deleted +273 DP-omitted +188 retained =783; 0 unprocessed; 7 filtered/23 processed segments"
+      ],
+      "evidence": [
+        {
+          "path": "task1/config/conditional_planar.json",
+          "sha256": "5b1ab7dbf25797a51405a2cddd93a8d2ea3e3b69530369366d0e05be7abb8169"
+        },
+        {
+          "path": "task1/config/goal1.json",
+          "sha256": "5418632734964fda81fe653e4996d1519b9de3a6cf51ed191556c243770542da"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/AUTHORIZATION_SUPPLEMENT.md",
+          "sha256": "2bce4b21939de5843678bdda1de18c64e9703c3e924fd63ff3d7988f69fe5248"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/USER_DECISIONS.json",
+          "sha256": "2b68e39573ab9256a353484842438a118445bb62ddbaca1c42fbd4eee9fe4f0e"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/g1-complete-pilot-03_independent.json",
+          "sha256": "1150d318fa5709fdb854b34304b4918618baab800c6e5b1094d885bc485ec3f4"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/independent_probe.py",
+          "sha256": "82249a790476b07986159a74995a3706bf95bac872caf6068cf91e9b5ecfcaf9"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/summary_review.json",
+          "sha256": "a19f1b6035ff8b545744eacba6def467e6287c3a0fc494a92a4f7d0b82c9f348"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/recompute_verification.json",
+          "sha256": "9980234c7d0a39bb1b7d5d04930307cf09ac7b68ef53ab15bf1e6c1ac0006e18"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/result_summary.json",
+          "sha256": "9c6d34865004019e76cee2e7760d2b3e0c1646dfcae16ae885efa4a66f6b4693"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/baseline.json",
+          "sha256": "865710aea34a316fe83088d7cf2ac1aec68c96623269bfcf06255b5db2930fd8"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/baseline_review.json",
+          "sha256": "849f1aa9d5415a3f4bd45336181edc0abfe0582997a2332b85bdcc5e04ac1206"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/manifest.json",
+          "sha256": "7554dc9d4e22408ac0fe00292c037af61eb7aa970c97bb369ea1631504f0a6a5"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/point_actions.jsonl",
+          "sha256": "dc149e6901d2f9515c1003a0a790645d0edfbc29dd1dfe255ec839f4722dffd5"
+        },
+        {
+          "path": "task1/作业/作业/traj_dict.json",
+          "sha256": "c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3"
+        }
+      ]
+    },
+    {
+      "id": "G1-A12",
+      "requirement": "审核反馈进入真实后续动作",
+      "status": "VERIFIED",
+      "gc_ids": [
+        "GC05",
+        "GC11"
+      ],
+      "scope": "Prior diagnostic feedback occurred, but C05 did not check its full requested target. Current repair return and actual processing feedback must close their own coverage.",
+      "current_actual_scope": "Current approved Goal1 internal scope verified; no geographic truth or G2/G3 claim",
+      "actual": [
+        "all five issues VERIFIED; failed run01 and superseded run02 preserved; run03 regenerated under fixed code",
+        "actual coordinate_sensitivity bound to baseline/request/trigger/code; 1322 checks and all9 components verified; no threshold disagreement"
+      ],
+      "evidence": [
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/coordinate_issue_receipt.json",
+          "sha256": "54dcc9ecd8a353b4382fb6beb921853a1fcd754082964f31941fe49bfadeb976"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/direction_roundoff_receipt.json",
+          "sha256": "1003de087bf2f71561bb75add022491af8e33bb05795bf1b4cf62b7073405a18"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/g1-complete-pilot-03_diagnostics.json",
+          "sha256": "01f386c00e911920521402f949c30537bff2ac178e07203f39ff32777065ba54"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/review_time_goal_snapshot.json",
+          "sha256": "4f6dcc3a19abef6e07131b2a16b32d3ed74128c545dc18e45e88da9560023e01"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/review_time_resources_snapshot.json",
+          "sha256": "299eefcbe84e38251ef5dcdb20a1b4be0be19e988934a99625cb1db696547c9a"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/time_scope_receipt.json",
+          "sha256": "fde6c11494e7d07a49e33f591e6277f55dccfd2b68f18c139933ddadfa17aa1b"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/validation_review.json",
+          "sha256": "ceb78959b0f51fd5290f83c7475c818ff062b8257121e8f3981aad778d059fe2"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/workflow_trace_review.json",
+          "sha256": "4264642e798d174b60ec674ca6fed24aac5042b0044817d871f28596fe2facc2"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_combined_review/round2/combined_closure.json",
+          "sha256": "a67d902f1e878c36f7451f4deff258f4a0d0747dbdc093ea783a72b3e4f8446b"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/tests_pilot03.xml",
+          "sha256": "2b05ade71170f55a87c514632e3f96d021aebe73b2571c202ef6b07e1745d0bc"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/validation_pilot03.json",
+          "sha256": "6354e712f0a1aec6bb0344d4d4f3c3797df979eed08cdd86db54567af29f2fbc"
+        },
+        {
+          "path": "task1/workflow/artifact_review.py",
+          "sha256": "dfa0b91149662baf26861a9ec0e51223842d0ac62ada29015eca7b119c68da48"
+        },
+        {
+          "path": "task1/workflow/controller.py",
+          "sha256": "16793b102fd077cc243eae6f1e714632f312a77e421850d424b8562a2909eb6d"
+        },
+        {
+          "path": "task1/workflow/goal.py",
+          "sha256": "d313d408961adf07b9791972b03ac6a99db808e805efe1aa06abe85a075e863a"
+        },
+        {
+          "path": "task1/workflow/tools.py",
+          "sha256": "0fde0acebfe3ec97bd2653744ac8f0444c1e9a162c61970bccf8a94a9fbd0b3f"
+        },
+        {
+          "path": "task1/config/conditional_planar.json",
+          "sha256": "5b1ab7dbf25797a51405a2cddd93a8d2ea3e3b69530369366d0e05be7abb8169"
+        },
+        {
+          "path": "task1/config/goal1.json",
+          "sha256": "5418632734964fda81fe653e4996d1519b9de3a6cf51ed191556c243770542da"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/AUTHORIZATION_SUPPLEMENT.md",
+          "sha256": "2bce4b21939de5843678bdda1de18c64e9703c3e924fd63ff3d7988f69fe5248"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/USER_DECISIONS.json",
+          "sha256": "2b68e39573ab9256a353484842438a118445bb62ddbaca1c42fbd4eee9fe4f0e"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/a_scope/local_model_contract.json",
+          "sha256": "ae3ab78de2a7ab6159631c0340e11e344ed4401276a59bfa04c4e9689b700453"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/followup_request_run03.json",
+          "sha256": "baff383be63c53ea1bd5a791c89e170faa7c3cd08b1fa7fc741eeb001e03a707"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/followup_review.json",
+          "sha256": "2e96dec63ba0df3d01d48616e854aea603acf823b33f7d1bef90b289d864e761"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/remaining_probe.py",
+          "sha256": "f423728bbebd542b307a7ee5958efee979b1917e4489a98bd09462c18ebb7b4b"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/followup_execution.json",
+          "sha256": "b3ad8b6f142901cb86fccb0e282619e895af36b27d8a46e640e697c0662e1707"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/baseline.json",
+          "sha256": "865710aea34a316fe83088d7cf2ac1aec68c96623269bfcf06255b5db2930fd8"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/baseline_review.json",
+          "sha256": "849f1aa9d5415a3f4bd45336181edc0abfe0582997a2332b85bdcc5e04ac1206"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/coordinate_sensitivity.json",
+          "sha256": "0ccffb15396c6ab1e57cc29fdb3e4ab9879104c73f95679dc1ac09d109d6de9f"
+        },
+        {
+          "path": "task1/workflow/coordinate_review.py",
+          "sha256": "af4f0d753d162666bcb5da07edeccb846e008c33adf0f56b34939ac526eaf951"
+        },
+        {
+          "path": "task1/workflow/coordinates.py",
+          "sha256": "d99b270a65c88f8530669d5e7d0887d7563b3e54e19770ab7a9eb695117e075d"
+        },
+        {
+          "path": "task1/workflow/evaluation.py",
+          "sha256": "7cf224fbc290d3e83acd5d83a3fe335e6dc437c762f7053d8132817aa91025b2"
+        },
+        {
+          "path": "task1/作业/作业/traj_dict.json",
+          "sha256": "c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3"
+        }
+      ]
+    },
+    {
+      "id": "G1-A13",
+      "requirement": "拒绝、回退、恢复和预算受控",
+      "status": "VERIFIED",
+      "gc_ids": [
+        "GC04",
+        "GC05",
+        "GC12"
+      ],
+      "scope": "Preserve old stop/budget failures and valid receipts; apply current cumulative plan and exercise recovery.",
+      "current_actual_scope": "Current approved Goal1 internal scope verified; no geographic truth or G2/G3 claim",
+      "actual": [
+        "task DAG, open issue blocking, current code/run binding and additional actual sensitivity work exercised; not phase==5 completion",
+        "all five issues VERIFIED; failed run01 and superseded run02 preserved; run03 regenerated under fixed code",
+        "native vs CLI and deterministic calls separated; 1 real numeric refusal preserved; inflight/old epoch guards tested; no inflight now"
+      ],
+      "evidence": [
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/g1-complete-pilot-03_diagnostics.json",
+          "sha256": "01f386c00e911920521402f949c30537bff2ac178e07203f39ff32777065ba54"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/review_time_goal_snapshot.json",
+          "sha256": "4f6dcc3a19abef6e07131b2a16b32d3ed74128c545dc18e45e88da9560023e01"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/review_time_resources_snapshot.json",
+          "sha256": "299eefcbe84e38251ef5dcdb20a1b4be0be19e988934a99625cb1db696547c9a"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/validation_review.json",
+          "sha256": "ceb78959b0f51fd5290f83c7475c818ff062b8257121e8f3981aad778d059fe2"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/workflow_trace_review.json",
+          "sha256": "4264642e798d174b60ec674ca6fed24aac5042b0044817d871f28596fe2facc2"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_combined_review/round2/combined_closure.json",
+          "sha256": "a67d902f1e878c36f7451f4deff258f4a0d0747dbdc093ea783a72b3e4f8446b"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/tests_pilot03.xml",
+          "sha256": "2b05ade71170f55a87c514632e3f96d021aebe73b2571c202ef6b07e1745d0bc"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/validation_pilot03.json",
+          "sha256": "6354e712f0a1aec6bb0344d4d4f3c3797df979eed08cdd86db54567af29f2fbc"
+        },
+        {
+          "path": "task1/workflow/artifact_review.py",
+          "sha256": "dfa0b91149662baf26861a9ec0e51223842d0ac62ada29015eca7b119c68da48"
+        },
+        {
+          "path": "task1/workflow/controller.py",
+          "sha256": "16793b102fd077cc243eae6f1e714632f312a77e421850d424b8562a2909eb6d"
+        },
+        {
+          "path": "task1/workflow/goal.py",
+          "sha256": "d313d408961adf07b9791972b03ac6a99db808e805efe1aa06abe85a075e863a"
+        },
+        {
+          "path": "task1/workflow/tools.py",
+          "sha256": "0fde0acebfe3ec97bd2653744ac8f0444c1e9a162c61970bccf8a94a9fbd0b3f"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/coordinate_issue_receipt.json",
+          "sha256": "54dcc9ecd8a353b4382fb6beb921853a1fcd754082964f31941fe49bfadeb976"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/direction_roundoff_receipt.json",
+          "sha256": "1003de087bf2f71561bb75add022491af8e33bb05795bf1b4cf62b7073405a18"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/time_scope_receipt.json",
+          "sha256": "fde6c11494e7d07a49e33f591e6277f55dccfd2b68f18c139933ddadfa17aa1b"
+        }
+      ]
+    },
+    {
+      "id": "G1-A14",
+      "requirement": "LIVE/REPLAY/MOCK严格区分",
+      "status": "VERIFIED",
+      "gc_ids": [
+        "GC12",
+        "GC14"
+      ],
+      "scope": "Apply existing provenance and mode distinction to new actual role/tool/fixture records.",
+      "current_actual_scope": "Current approved Goal1 internal scope verified; no geographic truth or G2/G3 claim",
+      "actual": [
+        "native vs CLI and deterministic calls separated; 1 real numeric refusal preserved; inflight/old epoch guards tested; no inflight now",
+        "current real conditional fixed pilot distinct from ENGINEERING_TEST, historical CLI and RECOMPUTE; removal and conditional geometry are descriptive"
+      ],
+      "evidence": [
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/g1-complete-pilot-03_diagnostics.json",
+          "sha256": "01f386c00e911920521402f949c30537bff2ac178e07203f39ff32777065ba54"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/review_time_goal_snapshot.json",
+          "sha256": "4f6dcc3a19abef6e07131b2a16b32d3ed74128c545dc18e45e88da9560023e01"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/review_time_resources_snapshot.json",
+          "sha256": "299eefcbe84e38251ef5dcdb20a1b4be0be19e988934a99625cb1db696547c9a"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/validation_review.json",
+          "sha256": "ceb78959b0f51fd5290f83c7475c818ff062b8257121e8f3981aad778d059fe2"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/workflow_trace_review.json",
+          "sha256": "4264642e798d174b60ec674ca6fed24aac5042b0044817d871f28596fe2facc2"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_combined_review/round2/combined_closure.json",
+          "sha256": "a67d902f1e878c36f7451f4deff258f4a0d0747dbdc093ea783a72b3e4f8446b"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/tests_pilot03.xml",
+          "sha256": "2b05ade71170f55a87c514632e3f96d021aebe73b2571c202ef6b07e1745d0bc"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/validation_pilot03.json",
+          "sha256": "6354e712f0a1aec6bb0344d4d4f3c3797df979eed08cdd86db54567af29f2fbc"
+        },
+        {
+          "path": "task1/workflow/artifact_review.py",
+          "sha256": "dfa0b91149662baf26861a9ec0e51223842d0ac62ada29015eca7b119c68da48"
+        },
+        {
+          "path": "task1/workflow/controller.py",
+          "sha256": "16793b102fd077cc243eae6f1e714632f312a77e421850d424b8562a2909eb6d"
+        },
+        {
+          "path": "task1/workflow/goal.py",
+          "sha256": "d313d408961adf07b9791972b03ac6a99db808e805efe1aa06abe85a075e863a"
+        },
+        {
+          "path": "task1/workflow/tools.py",
+          "sha256": "0fde0acebfe3ec97bd2653744ac8f0444c1e9a162c61970bccf8a94a9fbd0b3f"
+        },
+        {
+          "path": "task1/config/conditional_planar.json",
+          "sha256": "5b1ab7dbf25797a51405a2cddd93a8d2ea3e3b69530369366d0e05be7abb8169"
+        },
+        {
+          "path": "task1/config/goal1.json",
+          "sha256": "5418632734964fda81fe653e4996d1519b9de3a6cf51ed191556c243770542da"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/AUTHORIZATION_SUPPLEMENT.md",
+          "sha256": "2bce4b21939de5843678bdda1de18c64e9703c3e924fd63ff3d7988f69fe5248"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/USER_DECISIONS.json",
+          "sha256": "2b68e39573ab9256a353484842438a118445bb62ddbaca1c42fbd4eee9fe4f0e"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/entry_review.json",
+          "sha256": "3681c00315a7b0e6be5116a240a167117f0aff581d0d7c3c8c07dd19f2e8bc95"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/g1-complete-pilot-03_independent.json",
+          "sha256": "1150d318fa5709fdb854b34304b4918618baab800c6e5b1094d885bc485ec3f4"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/independent_probe.py",
+          "sha256": "82249a790476b07986159a74995a3706bf95bac872caf6068cf91e9b5ecfcaf9"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/reviewed_FINAL_RESPONSE.md.txt",
+          "sha256": "bcb647b416f93dc2e0c1bc4cd61d72532c03c02c6ad3f04231dd0557d7811a47"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/reviewed_REVIEW_PACKET.md.txt",
+          "sha256": "f3a472d33db02503aaba6e6866a4261c02587b85e649171fb6180348426f116f"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/summary_review.json",
+          "sha256": "a19f1b6035ff8b545744eacba6def467e6287c3a0fc494a92a4f7d0b82c9f348"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/recompute_verification.json",
+          "sha256": "9980234c7d0a39bb1b7d5d04930307cf09ac7b68ef53ab15bf1e6c1ac0006e18"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/result_summary.json",
+          "sha256": "9c6d34865004019e76cee2e7760d2b3e0c1646dfcae16ae885efa4a66f6b4693"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/baseline.json",
+          "sha256": "865710aea34a316fe83088d7cf2ac1aec68c96623269bfcf06255b5db2930fd8"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/baseline_review.json",
+          "sha256": "849f1aa9d5415a3f4bd45336181edc0abfe0582997a2332b85bdcc5e04ac1206"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/manifest.json",
+          "sha256": "7554dc9d4e22408ac0fe00292c037af61eb7aa970c97bb369ea1631504f0a6a5"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/point_actions.jsonl",
+          "sha256": "dc149e6901d2f9515c1003a0a790645d0edfbc29dd1dfe255ec839f4722dffd5"
+        },
+        {
+          "path": "task1/作业/作业/traj_dict.json",
+          "sha256": "c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3"
+        }
+      ]
+    },
+    {
+      "id": "G1-A15",
+      "requirement": "Notebook及工具可复算",
+      "status": "VERIFIED",
+      "gc_ids": [
+        "GC13"
+      ],
+      "scope": "Old fresh-kernel runs remain historical; current Notebook versions need new-kernel execution.",
+      "current_actual_scope": "Current approved Goal1 internal scope verified; no geographic truth or G2/G3 claim",
+      "actual": [
+        "261 passed; each notebook8 cells without errors; four fresh outputs exact; three figures inspected at200dpi; starter292/1 remains historical"
+      ],
+      "evidence": [
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/b_run/figure_verification.json",
+          "sha256": "aa413f0f7efd6a8bef9368601cdf172154e57633ec9bf7d8d3c7b366f8b5b6e3"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/b_run/notebook_execution.json",
+          "sha256": "46afb2d4d5120a546b3518e97bdf739cc04a722b05f81ff3da7be06cfdf9f2dc"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/b_run/notebook_verification.json",
+          "sha256": "407865b19066db92dd7bd7d8f7f8384bc6eff5c77d7eaf25644cc14a0cebc80a"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/figure_review.json",
+          "sha256": "2cdda73a9e6f462c8cf5b434b150c084d0586529198bb3e70800da4ce3ab4516"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/final_evidence_probe.py",
+          "sha256": "31d6844ab0a40564e6b16b78657a5cd5563e7108dec0574ccaaed16d6e511c12"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/notebook_review.json",
+          "sha256": "1b7affaf82a1c5d3f21005dd75224404d41b9ace9c4ad316a2022c54ad97ee3b"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/validation_review.json",
+          "sha256": "ceb78959b0f51fd5290f83c7475c818ff062b8257121e8f3981aad778d059fe2"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/conditional_pilot_trajectories.pdf",
+          "sha256": "8c812448406a5fb18adb8fdc10af31c370b533283801b8543dbaa98407f38148"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/conditional_pilot_trajectories.png",
+          "sha256": "a492bb7e7dc2dafff2db442a79938c7cd3999f3a65501b75fe2069ffd0987bf8"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/conditional_pilot_trajectories.svg",
+          "sha256": "d20b64d74aed30841ae94fa3cb189e32e2caad04c63f6909d59d9dfd5b09152c"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/figure_manifest.json",
+          "sha256": "bb8b6ce36928ca71a1ea9b623f2d3473774ae7eb576c0df25da7b50857977fdc"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/goal1_execution_structure.drawio",
+          "sha256": "4a8d254fbdc09fe7f732c23f6b7aa8452c259fcd172d993f26db7bddb71ae084"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/goal1_execution_structure.pdf",
+          "sha256": "245995cee688a9750f6a961e7305a9a683799480bd581c35a8e4a429d908d882"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/goal1_execution_structure.png",
+          "sha256": "62461a336585bfdd5405709c57b5ce45ec5ef2af15056b982724b2684ff80aea"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/goal1_execution_structure.svg",
+          "sha256": "082890e2fe2cbcd7f24dfd56a8c2144d2f04cd533565e3342dae1af99b2cbae5"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/point_terminal_counts.pdf",
+          "sha256": "7d5f3d2e602db74b579ae8d03e5e5fdcc65e876125b57188fb1c6c46bd45c6d2"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/point_terminal_counts.png",
+          "sha256": "fe53c546648e125e01fcdb76b904a76c7c836e58d1f41fef5df113a4ece4532f"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/point_terminal_counts.svg",
+          "sha256": "dd894599e5b6a088b74f9498733f835f32e543b552d87e1166ed680a2a6fdfd8"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/manifest.json",
+          "sha256": "7554dc9d4e22408ac0fe00292c037af61eb7aa970c97bb369ea1631504f0a6a5"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/tests_pilot03.xml",
+          "sha256": "2b05ade71170f55a87c514632e3f96d021aebe73b2571c202ef6b07e1745d0bc"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/validation_pilot03.json",
+          "sha256": "6354e712f0a1aec6bb0344d4d4f3c3797df979eed08cdd86db54567af29f2fbc"
+        },
+        {
+          "path": "task1/notebooks/01_baseline_and_audit.ipynb",
+          "sha256": "a1c612acfc2826eb1b78fe4979c7d1f2feec741b04fb4cccf74aa0406daef86d"
+        },
+        {
+          "path": "task1/notebooks/02_agent_loop_recompute.ipynb",
+          "sha256": "2b38b9ec852f8f26f481da0cd1e141cac085524365ec90a0ca2645a892b17f7f"
+        },
+        {
+          "path": "task1/scripts/build_complete_figures.py",
+          "sha256": "89b1c96ef3e7821ab46857d3e9b0223839d8b768907ed0b91265c40aa3f7b7c1"
+        },
+        {
+          "path": "task1/scripts/build_goal1_notebooks.py",
+          "sha256": "e3adbca56ad1a9179725a8cb17848ef548cbe56f4a4cdc9727be3cff70472022"
+        },
+        {
+          "path": "task1/scripts/complete_goal1.py",
+          "sha256": "d3b4d3e0aa290ed2cb52b99a9680d81c0ff12894651f4e165888fc7c3f53b460"
+        },
+        {
+          "path": "templates/latex/common/p2_cloud_sorbet_colors.tex",
+          "sha256": "2aa820c3f68ba6c14cf1b52082b12336071d77bb5466db2b05b2fab6890aa243"
+        }
+      ]
+    },
+    {
+      "id": "G1-A16",
+      "requirement": "必要图表可重建且忠于数据",
+      "status": "VERIFIED",
+      "gc_ids": [
+        "GC13",
+        "GC14"
+      ],
+      "scope": "Reuse only unchanged valid figure/source pairs; current repair architecture and new processing plots need actual-source checks.",
+      "current_actual_scope": "Current approved Goal1 internal scope verified; no geographic truth or G2/G3 claim",
+      "actual": [
+        "261 passed; each notebook8 cells without errors; four fresh outputs exact; three figures inspected at200dpi; starter292/1 remains historical",
+        "current real conditional fixed pilot distinct from ENGINEERING_TEST, historical CLI and RECOMPUTE; removal and conditional geometry are descriptive"
+      ],
+      "evidence": [
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/b_run/figure_verification.json",
+          "sha256": "aa413f0f7efd6a8bef9368601cdf172154e57633ec9bf7d8d3c7b366f8b5b6e3"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/b_run/notebook_execution.json",
+          "sha256": "46afb2d4d5120a546b3518e97bdf739cc04a722b05f81ff3da7be06cfdf9f2dc"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/b_run/notebook_verification.json",
+          "sha256": "407865b19066db92dd7bd7d8f7f8384bc6eff5c77d7eaf25644cc14a0cebc80a"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/figure_review.json",
+          "sha256": "2cdda73a9e6f462c8cf5b434b150c084d0586529198bb3e70800da4ce3ab4516"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/final_evidence_probe.py",
+          "sha256": "31d6844ab0a40564e6b16b78657a5cd5563e7108dec0574ccaaed16d6e511c12"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/notebook_review.json",
+          "sha256": "1b7affaf82a1c5d3f21005dd75224404d41b9ace9c4ad316a2022c54ad97ee3b"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/validation_review.json",
+          "sha256": "ceb78959b0f51fd5290f83c7475c818ff062b8257121e8f3981aad778d059fe2"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/conditional_pilot_trajectories.pdf",
+          "sha256": "8c812448406a5fb18adb8fdc10af31c370b533283801b8543dbaa98407f38148"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/conditional_pilot_trajectories.png",
+          "sha256": "a492bb7e7dc2dafff2db442a79938c7cd3999f3a65501b75fe2069ffd0987bf8"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/conditional_pilot_trajectories.svg",
+          "sha256": "d20b64d74aed30841ae94fa3cb189e32e2caad04c63f6909d59d9dfd5b09152c"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/figure_manifest.json",
+          "sha256": "bb8b6ce36928ca71a1ea9b623f2d3473774ae7eb576c0df25da7b50857977fdc"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/goal1_execution_structure.drawio",
+          "sha256": "4a8d254fbdc09fe7f732c23f6b7aa8452c259fcd172d993f26db7bddb71ae084"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/goal1_execution_structure.pdf",
+          "sha256": "245995cee688a9750f6a961e7305a9a683799480bd581c35a8e4a429d908d882"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/goal1_execution_structure.png",
+          "sha256": "62461a336585bfdd5405709c57b5ce45ec5ef2af15056b982724b2684ff80aea"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/goal1_execution_structure.svg",
+          "sha256": "082890e2fe2cbcd7f24dfd56a8c2144d2f04cd533565e3342dae1af99b2cbae5"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/point_terminal_counts.pdf",
+          "sha256": "7d5f3d2e602db74b579ae8d03e5e5fdcc65e876125b57188fb1c6c46bd45c6d2"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/point_terminal_counts.png",
+          "sha256": "fe53c546648e125e01fcdb76b904a76c7c836e58d1f41fef5df113a4ece4532f"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/point_terminal_counts.svg",
+          "sha256": "dd894599e5b6a088b74f9498733f835f32e543b552d87e1166ed680a2a6fdfd8"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/manifest.json",
+          "sha256": "7554dc9d4e22408ac0fe00292c037af61eb7aa970c97bb369ea1631504f0a6a5"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/tests_pilot03.xml",
+          "sha256": "2b05ade71170f55a87c514632e3f96d021aebe73b2571c202ef6b07e1745d0bc"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/validation_pilot03.json",
+          "sha256": "6354e712f0a1aec6bb0344d4d4f3c3797df979eed08cdd86db54567af29f2fbc"
+        },
+        {
+          "path": "task1/notebooks/01_baseline_and_audit.ipynb",
+          "sha256": "a1c612acfc2826eb1b78fe4979c7d1f2feec741b04fb4cccf74aa0406daef86d"
+        },
+        {
+          "path": "task1/notebooks/02_agent_loop_recompute.ipynb",
+          "sha256": "2b38b9ec852f8f26f481da0cd1e141cac085524365ec90a0ca2645a892b17f7f"
+        },
+        {
+          "path": "task1/scripts/build_complete_figures.py",
+          "sha256": "89b1c96ef3e7821ab46857d3e9b0223839d8b768907ed0b91265c40aa3f7b7c1"
+        },
+        {
+          "path": "task1/scripts/build_goal1_notebooks.py",
+          "sha256": "e3adbca56ad1a9179725a8cb17848ef548cbe56f4a4cdc9727be3cff70472022"
+        },
+        {
+          "path": "task1/scripts/complete_goal1.py",
+          "sha256": "d3b4d3e0aa290ed2cb52b99a9680d81c0ff12894651f4e165888fc7c3f53b460"
+        },
+        {
+          "path": "templates/latex/common/p2_cloud_sorbet_colors.tex",
+          "sha256": "2aa820c3f68ba6c14cf1b52082b12336071d77bb5466db2b05b2fab6890aa243"
+        },
+        {
+          "path": "task1/config/conditional_planar.json",
+          "sha256": "5b1ab7dbf25797a51405a2cddd93a8d2ea3e3b69530369366d0e05be7abb8169"
+        },
+        {
+          "path": "task1/config/goal1.json",
+          "sha256": "5418632734964fda81fe653e4996d1519b9de3a6cf51ed191556c243770542da"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/AUTHORIZATION_SUPPLEMENT.md",
+          "sha256": "2bce4b21939de5843678bdda1de18c64e9703c3e924fd63ff3d7988f69fe5248"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/USER_DECISIONS.json",
+          "sha256": "2b68e39573ab9256a353484842438a118445bb62ddbaca1c42fbd4eee9fe4f0e"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/entry_review.json",
+          "sha256": "3681c00315a7b0e6be5116a240a167117f0aff581d0d7c3c8c07dd19f2e8bc95"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/g1-complete-pilot-03_independent.json",
+          "sha256": "1150d318fa5709fdb854b34304b4918618baab800c6e5b1094d885bc485ec3f4"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/independent_probe.py",
+          "sha256": "82249a790476b07986159a74995a3706bf95bac872caf6068cf91e9b5ecfcaf9"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/reviewed_FINAL_RESPONSE.md.txt",
+          "sha256": "bcb647b416f93dc2e0c1bc4cd61d72532c03c02c6ad3f04231dd0557d7811a47"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/reviewed_REVIEW_PACKET.md.txt",
+          "sha256": "f3a472d33db02503aaba6e6866a4261c02587b85e649171fb6180348426f116f"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/summary_review.json",
+          "sha256": "a19f1b6035ff8b545744eacba6def467e6287c3a0fc494a92a4f7d0b82c9f348"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/recompute_verification.json",
+          "sha256": "9980234c7d0a39bb1b7d5d04930307cf09ac7b68ef53ab15bf1e6c1ac0006e18"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/result_summary.json",
+          "sha256": "9c6d34865004019e76cee2e7760d2b3e0c1646dfcae16ae885efa4a66f6b4693"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/baseline.json",
+          "sha256": "865710aea34a316fe83088d7cf2ac1aec68c96623269bfcf06255b5db2930fd8"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/baseline_review.json",
+          "sha256": "849f1aa9d5415a3f4bd45336181edc0abfe0582997a2332b85bdcc5e04ac1206"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/point_actions.jsonl",
+          "sha256": "dc149e6901d2f9515c1003a0a790645d0edfbc29dd1dfe255ec839f4722dffd5"
+        },
+        {
+          "path": "task1/作业/作业/traj_dict.json",
+          "sha256": "c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3"
+        }
+      ]
+    },
+    {
+      "id": "G1-A17",
+      "requirement": "Goal范围未越界",
+      "status": "VERIFIED",
+      "gc_ids": [
+        "GC02",
+        "GC14",
+        "GC15"
+      ],
+      "scope": "No G2/G3, new algorithm, parameter search, unapproved assumption or final report scope is introduced.",
+      "current_actual_scope": "Current approved Goal1 internal scope verified; no geographic truth or G2/G3 claim",
+      "actual": [
+        "R01–R16 retained; latest conditional and D2 authority consumed; AGENTS +23/Protocol +13; bundle EXACTLY11 and bytes/hash pass",
+        "current real conditional fixed pilot distinct from ENGINEERING_TEST, historical CLI and RECOMPUTE; removal and conditional geometry are descriptive",
+        "all authorized internal tasks have evidence and all five issues closed; no further engineering or research decision is required for scoped Goal1"
+      ],
+      "evidence": [
+        {
+          "path": "AGENTS.md",
+          "sha256": "6950ca3d95e1c599626b172eaba2c6f15f72bddcf641077e7f53415360204334"
+        },
+        {
+          "path": "docs/research/SMART_CITIES_RESEARCH_PROTOCOL.md",
+          "sha256": "102c03b2107040345d15d631fa56bb8425de2ec79e0f8997d6b67d01be6e92cd"
+        },
+        {
+          "path": "task1/config/conditional_planar.json",
+          "sha256": "5b1ab7dbf25797a51405a2cddd93a8d2ea3e3b69530369366d0e05be7abb8169"
+        },
+        {
+          "path": "task1/config/goal1.json",
+          "sha256": "5418632734964fda81fe653e4996d1519b9de3a6cf51ed191556c243770542da"
+        },
+        {
+          "path": "task1/docs/goal1/ARCHITECTURE.md",
+          "sha256": "5fd62ae3134264970a3f0b7d17fc7fc9cd3e9e839c074c42759c74e2ffef1e7e"
+        },
+        {
+          "path": "task1/docs/goal1/CONTRACTS.md",
+          "sha256": "1a476f3290a2edd7224b8c41fde5e0a0c6f6eaf1f12e7f06909f9a52870c756b"
+        },
+        {
+          "path": "task1/docs/goal1/README.md",
+          "sha256": "85ee7ea1501ad983086aab24b545bd612ff0b63a906522ff419bd4d4e9bdc658"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/AUTHORIZATION_SUPPLEMENT.md",
+          "sha256": "2bce4b21939de5843678bdda1de18c64e9703c3e924fd63ff3d7988f69fe5248"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/USER_DECISIONS.json",
+          "sha256": "2b68e39573ab9256a353484842438a118445bb62ddbaca1c42fbd4eee9fe4f0e"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/a_scope/TaskPlan.json",
+          "sha256": "fb4ccd560b7c133888fb65b78125a82c4149da4c8ae79c39d4350b97a0817f90"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/a_scope/release_scope_check.json",
+          "sha256": "34d317e90d62e2029ff107b3b9f96001f9cfe7fd790aef61c5effa40e33332da"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/a_scope/release_scope_check.md",
+          "sha256": "634dba35e12522f4514b1948c55a63bd3cca619a2ce39043ae4e1dcbc8869ce5"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/a_scope/source_audit.json",
+          "sha256": "49bf91b2803b69fe8ee5d56ef5bbd0901530a624ae7e7fd520eeb15139c5986b"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/bundle_sync.json",
+          "sha256": "39a21e1e7a3630982078d05dcc4ba5ab61701da3951ec062d0a87d2c13507bd8"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/final_bindings_review.json",
+          "sha256": "cf350fee77264f6ec3f523db220e1d6e0ac41a452479b231884a87f33eda3804"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/reviewed_requirements.json",
+          "sha256": "ff973adb03a00d101387f062da27dbdb6e6238da02573907cd9517014e4d977e"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/handoff/SC-LAB1-G1-COMPLETE-001_CODEX_PROMPT.md",
+          "sha256": "19e444f4a526c364087510a186c0be627e1fdcf97eaaebd4c97f6772aa662616"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/initial_protected_hashes.json",
+          "sha256": "64c39370d8ee9faf20b8e4fc2a6fdad89e2bf3ab5f3c5fe84f6849e1d1d570b6"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/prepublication_check.snapshot_before_acceptance.json",
+          "sha256": "7bf82ebf3e56893d6b296e00105e62b39f3a0a8c627f14e5cda2178e8b920bbb"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/workspace_initial.json",
+          "sha256": "6e703894d36a43afb255e594ed815c295b726b76221c01fd944420f6bf161dea"
+        },
+        {
+          "path": "task1/作业/作业/traj_dict.json",
+          "sha256": "c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/entry_review.json",
+          "sha256": "3681c00315a7b0e6be5116a240a167117f0aff581d0d7c3c8c07dd19f2e8bc95"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/g1-complete-pilot-03_independent.json",
+          "sha256": "1150d318fa5709fdb854b34304b4918618baab800c6e5b1094d885bc485ec3f4"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/independent_probe.py",
+          "sha256": "82249a790476b07986159a74995a3706bf95bac872caf6068cf91e9b5ecfcaf9"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/reviewed_FINAL_RESPONSE.md.txt",
+          "sha256": "bcb647b416f93dc2e0c1bc4cd61d72532c03c02c6ad3f04231dd0557d7811a47"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/reviewed_REVIEW_PACKET.md.txt",
+          "sha256": "f3a472d33db02503aaba6e6866a4261c02587b85e649171fb6180348426f116f"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/summary_review.json",
+          "sha256": "a19f1b6035ff8b545744eacba6def467e6287c3a0fc494a92a4f7d0b82c9f348"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/recompute_verification.json",
+          "sha256": "9980234c7d0a39bb1b7d5d04930307cf09ac7b68ef53ab15bf1e6c1ac0006e18"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/result_summary.json",
+          "sha256": "9c6d34865004019e76cee2e7760d2b3e0c1646dfcae16ae885efa4a66f6b4693"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/baseline.json",
+          "sha256": "865710aea34a316fe83088d7cf2ac1aec68c96623269bfcf06255b5db2930fd8"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/baseline_review.json",
+          "sha256": "849f1aa9d5415a3f4bd45336181edc0abfe0582997a2332b85bdcc5e04ac1206"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/manifest.json",
+          "sha256": "7554dc9d4e22408ac0fe00292c037af61eb7aa970c97bb369ea1631504f0a6a5"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/point_actions.jsonl",
+          "sha256": "dc149e6901d2f9515c1003a0a790645d0edfbc29dd1dfe255ec839f4722dffd5"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/g1-complete-pilot-03_diagnostics.json",
+          "sha256": "01f386c00e911920521402f949c30537bff2ac178e07203f39ff32777065ba54"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/review_time_goal_snapshot.json",
+          "sha256": "4f6dcc3a19abef6e07131b2a16b32d3ed74128c545dc18e45e88da9560023e01"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/review_time_resources_snapshot.json",
+          "sha256": "299eefcbe84e38251ef5dcdb20a1b4be0be19e988934a99625cb1db696547c9a"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/validation_review.json",
+          "sha256": "ceb78959b0f51fd5290f83c7475c818ff062b8257121e8f3981aad778d059fe2"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/workflow_trace_review.json",
+          "sha256": "4264642e798d174b60ec674ca6fed24aac5042b0044817d871f28596fe2facc2"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_combined_review/round2/combined_closure.json",
+          "sha256": "a67d902f1e878c36f7451f4deff258f4a0d0747dbdc093ea783a72b3e4f8446b"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/tests_pilot03.xml",
+          "sha256": "2b05ade71170f55a87c514632e3f96d021aebe73b2571c202ef6b07e1745d0bc"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/validation_pilot03.json",
+          "sha256": "6354e712f0a1aec6bb0344d4d4f3c3797df979eed08cdd86db54567af29f2fbc"
+        },
+        {
+          "path": "task1/workflow/artifact_review.py",
+          "sha256": "dfa0b91149662baf26861a9ec0e51223842d0ac62ada29015eca7b119c68da48"
+        },
+        {
+          "path": "task1/workflow/controller.py",
+          "sha256": "16793b102fd077cc243eae6f1e714632f312a77e421850d424b8562a2909eb6d"
+        },
+        {
+          "path": "task1/workflow/goal.py",
+          "sha256": "d313d408961adf07b9791972b03ac6a99db808e805efe1aa06abe85a075e863a"
+        },
+        {
+          "path": "task1/workflow/tools.py",
+          "sha256": "0fde0acebfe3ec97bd2653744ac8f0444c1e9a162c61970bccf8a94a9fbd0b3f"
+        }
+      ]
+    },
+    {
+      "id": "G1-A18",
+      "requirement": "完整安全的GitHub审核包同步",
+      "status": "INTERNAL_VERIFIED_PUBLICATION_NOT_RUN",
+      "gc_ids": [
+        "GC16"
+      ],
+      "scope": "Old publication PASS proves only the old commit; this execution needs actual remote verification.",
+      "current_actual_scope": "Current conditional pilot; publication is separately pending",
+      "actual": [
+        "internal processing/artifact lineage and reviewed claims verified; publication NOT_RUN in this receipt; GPT second review PENDING"
+      ],
+      "evidence": [
+        {
+          "path": "AGENTS.md",
+          "sha256": "6950ca3d95e1c599626b172eaba2c6f15f72bddcf641077e7f53415360204334"
+        },
+        {
+          "path": "docs/research/SMART_CITIES_RESEARCH_PROTOCOL.md",
+          "sha256": "102c03b2107040345d15d631fa56bb8425de2ec79e0f8997d6b67d01be6e92cd"
+        },
+        {
+          "path": "task1/config/conditional_planar.json",
+          "sha256": "5b1ab7dbf25797a51405a2cddd93a8d2ea3e3b69530369366d0e05be7abb8169"
+        },
+        {
+          "path": "task1/config/goal1.json",
+          "sha256": "5418632734964fda81fe653e4996d1519b9de3a6cf51ed191556c243770542da"
+        },
+        {
+          "path": "task1/docs/goal1/ARCHITECTURE.md",
+          "sha256": "5fd62ae3134264970a3f0b7d17fc7fc9cd3e9e839c074c42759c74e2ffef1e7e"
+        },
+        {
+          "path": "task1/docs/goal1/CONTRACTS.md",
+          "sha256": "1a476f3290a2edd7224b8c41fde5e0a0c6f6eaf1f12e7f06909f9a52870c756b"
+        },
+        {
+          "path": "task1/docs/goal1/README.md",
+          "sha256": "85ee7ea1501ad983086aab24b545bd612ff0b63a906522ff419bd4d4e9bdc658"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/AUTHORIZATION_SUPPLEMENT.md",
+          "sha256": "2bce4b21939de5843678bdda1de18c64e9703c3e924fd63ff3d7988f69fe5248"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/USER_DECISIONS.json",
+          "sha256": "2b68e39573ab9256a353484842438a118445bb62ddbaca1c42fbd4eee9fe4f0e"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/a_scope/TaskPlan.json",
+          "sha256": "fb4ccd560b7c133888fb65b78125a82c4149da4c8ae79c39d4350b97a0817f90"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/a_scope/release_scope_check.json",
+          "sha256": "34d317e90d62e2029ff107b3b9f96001f9cfe7fd790aef61c5effa40e33332da"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/a_scope/release_scope_check.md",
+          "sha256": "634dba35e12522f4514b1948c55a63bd3cca619a2ce39043ae4e1dcbc8869ce5"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/a_scope/source_audit.json",
+          "sha256": "49bf91b2803b69fe8ee5d56ef5bbd0901530a624ae7e7fd520eeb15139c5986b"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/bundle_sync.json",
+          "sha256": "39a21e1e7a3630982078d05dcc4ba5ab61701da3951ec062d0a87d2c13507bd8"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/entry_review.json",
+          "sha256": "3681c00315a7b0e6be5116a240a167117f0aff581d0d7c3c8c07dd19f2e8bc95"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/final_bindings_review.json",
+          "sha256": "cf350fee77264f6ec3f523db220e1d6e0ac41a452479b231884a87f33eda3804"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/reviewed_FINAL_RESPONSE.md.txt",
+          "sha256": "bcb647b416f93dc2e0c1bc4cd61d72532c03c02c6ad3f04231dd0557d7811a47"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/reviewed_REVIEW_PACKET.md.txt",
+          "sha256": "f3a472d33db02503aaba6e6866a4261c02587b85e649171fb6180348426f116f"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/reviewed_requirements.json",
+          "sha256": "ff973adb03a00d101387f062da27dbdb6e6238da02573907cd9517014e4d977e"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/handoff/SC-LAB1-G1-COMPLETE-001_CODEX_PROMPT.md",
+          "sha256": "19e444f4a526c364087510a186c0be627e1fdcf97eaaebd4c97f6772aa662616"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/initial_protected_hashes.json",
+          "sha256": "64c39370d8ee9faf20b8e4fc2a6fdad89e2bf3ab5f3c5fe84f6849e1d1d570b6"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/prepublication_check.snapshot_before_acceptance.json",
+          "sha256": "7bf82ebf3e56893d6b296e00105e62b39f3a0a8c627f14e5cda2178e8b920bbb"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/workspace_initial.json",
+          "sha256": "6e703894d36a43afb255e594ed815c295b726b76221c01fd944420f6bf161dea"
+        },
+        {
+          "path": "task1/作业/作业/traj_dict.json",
+          "sha256": "c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3"
+        }
+      ]
+    }
+  ]
+}

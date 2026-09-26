@@ -1,0 +1,38 @@
+{
+  "started_at": "2026-09-26T17:11:48.116538+00:00",
+  "ended_at": "2026-09-26T17:11:59.086484+00:00",
+  "duration_seconds": 10.969942634999825,
+  "command": ".venv/bin/python -m task1.scripts.build_goal1_notebooks --execute",
+  "cwd": "repository root",
+  "returncode": 0,
+  "stdout": "{\n  \"generated\": [\n    \"task1/notebooks/01_baseline_and_audit.ipynb\",\n    \"task1/notebooks/02_agent_loop_recompute.ipynb\"\n  ],\n  \"executed\": true,\n  \"executions\": [\n    {\n      \"notebook\": \"task1/notebooks/01_baseline_and_audit.ipynb\",\n      \"sha256\": \"a1c612acfc2826eb1b78fe4979c7d1f2feec741b04fb4cccf74aa0406daef86d\",\n      \"new_kernel\": true,\n      \"new_model_calls\": 0,\n      \"code_cells\": 8,\n      \"status\": \"VERIFIED\"\n    },\n    {\n      \"notebook\": \"task1/notebooks/02_agent_loop_recompute.ipynb\",\n      \"sha256\": \"2b38b9ec852f8f26f481da0cd1e141cac085524365ec90a0ca2645a892b17f7f\",\n      \"new_kernel\": true,\n      \"new_model_calls\": 0,\n      \"code_cells\": 8,\n      \"status\": \"VERIFIED\"\n    }\n  ]\n}\n",
+  "stderr": "[IPKernelApp] WARNING | Kernel is running over TCP without encryption. All communication (including code and outputs) is sent in plain text and is susceptible to eavesdropping. Use IPC transport or launch with kernel manager-provisioned CurveZMQ keys to enable transport encryption.\n[IPKernelApp] WARNING | Kernel is running over TCP without encryption. All communication (including code and outputs) is sent in plain text and is susceptible to eavesdropping. Use IPC transport or launch with kernel manager-provisioned CurveZMQ keys to enable transport encryption.\n",
+  "new_model_calls": 0,
+  "generator_sha256": "e3adbca56ad1a9179725a8cb17848ef548cbe56f4a4cdc9727be3cff70472022",
+  "resources_snapshot_sha256": "299eefcbe84e38251ef5dcdb20a1b4be0be19e988934a99625cb1db696547c9a",
+  "result": {
+    "generated": [
+      "task1/notebooks/01_baseline_and_audit.ipynb",
+      "task1/notebooks/02_agent_loop_recompute.ipynb"
+    ],
+    "executed": true,
+    "executions": [
+      {
+        "notebook": "task1/notebooks/01_baseline_and_audit.ipynb",
+        "sha256": "a1c612acfc2826eb1b78fe4979c7d1f2feec741b04fb4cccf74aa0406daef86d",
+        "new_kernel": true,
+        "new_model_calls": 0,
+        "code_cells": 8,
+        "status": "VERIFIED"
+      },
+      {
+        "notebook": "task1/notebooks/02_agent_loop_recompute.ipynb",
+        "sha256": "2b38b9ec852f8f26f481da0cd1e141cac085524365ec90a0ca2645a892b17f7f",
+        "new_kernel": true,
+        "new_model_calls": 0,
+        "code_cells": 8,
+        "status": "VERIFIED"
+      }
+    ]
+  }
+}

@@ -1,0 +1,837 @@
+{
+  "classification": "ENGINEERING_TEST",
+  "scope": "C2-F01_AND_GOAL_CONTROL_NOT_F02_OR_GOAL_ACCEPTANCE",
+  "programmatic_model_calls": 0,
+  "source_hashes_before": {
+    "task1/workflow/artifact_review.py": "36716cecf05eae363281c4c425d44f3b67bd975b05b4ad4a64f0a3c88fc07358",
+    "task1/workflow/tools.py": "c3e8013619a40c0491797cad4068c0537b2bb1f0fc8a579bdc62a5c125ee3b3a",
+    "task1/workflow/controller.py": "16793b102fd077cc243eae6f1e714632f312a77e421850d424b8562a2909eb6d",
+    "task1/workflow/goal.py": "84b26a5d9c3372c2e6da3cd49ee7f1760b4c7f3605a91d6132e2e5f189cc0fe4",
+    "task1/workflow/diagnostics.py": "e2ef635bbd95db505b3eff336ca59074a60217a70b2bc644624c3fbd0280acda",
+    "task1/workflow/io.py": "0d3d72dd0beb4718f4020a07a5f1c0ca89193943049a479816b5c496806321b2"
+  },
+  "source_hashes_after": {
+    "task1/workflow/artifact_review.py": "36716cecf05eae363281c4c425d44f3b67bd975b05b4ad4a64f0a3c88fc07358",
+    "task1/workflow/tools.py": "c3e8013619a40c0491797cad4068c0537b2bb1f0fc8a579bdc62a5c125ee3b3a",
+    "task1/workflow/controller.py": "16793b102fd077cc243eae6f1e714632f312a77e421850d424b8562a2909eb6d",
+    "task1/workflow/goal.py": "84b26a5d9c3372c2e6da3cd49ee7f1760b4c7f3605a91d6132e2e5f189cc0fe4",
+    "task1/workflow/diagnostics.py": "e2ef635bbd95db505b3eff336ca59074a60217a70b2bc644624c3fbd0280acda",
+    "task1/workflow/io.py": "0d3d72dd0beb4718f4020a07a5f1c0ca89193943049a479816b5c496806321b2"
+  },
+  "diagnostic_challenges": [
+    {
+      "case": "profile_pilot:correct",
+      "expected": "VERIFIED",
+      "actual": "VERIFIED",
+      "result": {
+        "status": "VERIFIED",
+        "target_action": "profile_pilot",
+        "target_artifact_id": "C:constructed-target",
+        "target_artifact_hash": "CONSTRUCTED_REGISTERED_FILE_HASH",
+        "target_output_hash": "4894f8bd84c19ff55eaf40256ba8b3289449f2b16124ecb5ab8b33afb6fd6394",
+        "trusted_reference": {
+          "raw_sha256": "1c8a4f48c5faf8416aa7474d1a43215fdba759795cefd3414b60ea22edd2f451",
+          "parent_version": "RAW:1c8a4f48c5faf8416aa7474d1a43215fdba759795cefd3414b60ea22edd2f451",
+          "policy_sha256": "153cdb41897caaeca566f7bac9e0739178d6638df656314102bc294a28d65e6d"
+        },
+        "record_scope": [
+          "fixture:edges",
+          "fixture:missing",
+          "fixture:empty"
+        ],
+        "contract_version": "g1-policy-v1",
+        "checked_components": [
+          "record_scope",
+          "profile_fields",
+          "profile_counts",
+          "summary"
+        ],
+        "unchecked_components": [],
+        "unchecked_reasons": {},
+        "errors": []
+      }
+    },
+    {
+      "case": "profile_pilot:unsupported_component",
+      "expected": "REJECTED",
+      "actual": "REJECTED",
+      "result": {
+        "status": "REJECTED",
+        "target_action": "profile_pilot",
+        "target_artifact_id": "C:constructed-target",
+        "target_artifact_hash": "CONSTRUCTED_REGISTERED_FILE_HASH",
+        "target_output_hash": "4894f8bd84c19ff55eaf40256ba8b3289449f2b16124ecb5ab8b33afb6fd6394",
+        "trusted_reference": {
+          "raw_sha256": "1c8a4f48c5faf8416aa7474d1a43215fdba759795cefd3414b60ea22edd2f451",
+          "parent_version": "RAW:1c8a4f48c5faf8416aa7474d1a43215fdba759795cefd3414b60ea22edd2f451",
+          "policy_sha256": "153cdb41897caaeca566f7bac9e0739178d6638df656314102bc294a28d65e6d"
+        },
+        "record_scope": [
+          "fixture:edges",
+          "fixture:missing",
+          "fixture:empty"
+        ],
+        "contract_version": "g1-policy-v1",
+        "checked_components": [
+          "record_scope",
+          "profile_fields",
+          "profile_counts",
+          "summary"
+        ],
+        "unchecked_components": [
+          "physical_ground_truth"
+        ],
+        "unchecked_reasons": {
+          "physical_ground_truth": "TOOL_CAPABILITY_NOT_IMPLEMENTED"
+        },
+        "errors": []
+      }
+    },
+    {
+      "case": "time_boundaries:correct",
+      "expected": "VERIFIED",
+      "actual": "VERIFIED",
+      "result": {
+        "status": "VERIFIED",
+        "target_action": "time_boundaries",
+        "target_artifact_id": "C:constructed-target",
+        "target_artifact_hash": "CONSTRUCTED_REGISTERED_FILE_HASH",
+        "target_output_hash": "6a1f8e930aadee43da8c305596810c695fd156785ffbf4b3c2fdb178c0f69e45",
+        "trusted_reference": {
+          "raw_sha256": "1c8a4f48c5faf8416aa7474d1a43215fdba759795cefd3414b60ea22edd2f451",
+          "parent_version": "RAW:1c8a4f48c5faf8416aa7474d1a43215fdba759795cefd3414b60ea22edd2f451",
+          "policy_sha256": "153cdb41897caaeca566f7bac9e0739178d6638df656314102bc294a28d65e6d"
+        },
+        "record_scope": [
+          "fixture:edges",
+          "fixture:missing",
+          "fixture:empty"
+        ],
+        "contract_version": "g1-policy-v1",
+        "checked_components": [
+          "record_scope",
+          "raw_time",
+          "threshold",
+          "strict_inequality",
+          "boundaries",
+          "index_order",
+          "point_coverage"
+        ],
+        "unchecked_components": [],
+        "unchecked_reasons": {},
+        "errors": []
+      }
+    },
+    {
+      "case": "time_boundaries:unsupported_component",
+      "expected": "REJECTED",
+      "actual": "REJECTED",
+      "result": {
+        "status": "REJECTED",
+        "target_action": "time_boundaries",
+        "target_artifact_id": "C:constructed-target",
+        "target_artifact_hash": "CONSTRUCTED_REGISTERED_FILE_HASH",
+        "target_output_hash": "6a1f8e930aadee43da8c305596810c695fd156785ffbf4b3c2fdb178c0f69e45",
+        "trusted_reference": {
+          "raw_sha256": "1c8a4f48c5faf8416aa7474d1a43215fdba759795cefd3414b60ea22edd2f451",
+          "parent_version": "RAW:1c8a4f48c5faf8416aa7474d1a43215fdba759795cefd3414b60ea22edd2f451",
+          "policy_sha256": "153cdb41897caaeca566f7bac9e0739178d6638df656314102bc294a28d65e6d"
+        },
+        "record_scope": [
+          "fixture:edges",
+          "fixture:missing",
+          "fixture:empty"
+        ],
+        "contract_version": "g1-policy-v1",
+        "checked_components": [
+          "record_scope",
+          "raw_time",
+          "threshold",
+          "strict_inequality",
+          "boundaries",
+          "index_order",
+          "point_coverage"
+        ],
+        "unchecked_components": [
+          "physical_ground_truth"
+        ],
+        "unchecked_reasons": {
+          "physical_ground_truth": "TOOL_CAPABILITY_NOT_IMPLEMENTED"
+        },
+        "errors": []
+      }
+    },
+    {
+      "case": "duplicate_details:correct",
+      "expected": "VERIFIED",
+      "actual": "VERIFIED",
+      "result": {
+        "status": "VERIFIED",
+        "target_action": "duplicate_details",
+        "target_artifact_id": "C:constructed-target",
+        "target_artifact_hash": "CONSTRUCTED_REGISTERED_FILE_HASH",
+        "target_output_hash": "f3fa2ca1e4d96c96b0c15e64dd394acf585dbe8eadce49b08c577ea1b660d371",
+        "trusted_reference": {
+          "raw_sha256": "1c8a4f48c5faf8416aa7474d1a43215fdba759795cefd3414b60ea22edd2f451",
+          "parent_version": "RAW:1c8a4f48c5faf8416aa7474d1a43215fdba759795cefd3414b60ea22edd2f451",
+          "policy_sha256": "153cdb41897caaeca566f7bac9e0739178d6638df656314102bc294a28d65e6d"
+        },
+        "record_scope": [
+          "fixture:edges",
+          "fixture:missing",
+          "fixture:empty"
+        ],
+        "contract_version": "g1-policy-v1",
+        "checked_components": [
+          "record_scope",
+          "complete_events",
+          "event_types",
+          "event_indices"
+        ],
+        "unchecked_components": [],
+        "unchecked_reasons": {},
+        "errors": []
+      }
+    },
+    {
+      "case": "duplicate_details:unsupported_component",
+      "expected": "REJECTED",
+      "actual": "REJECTED",
+      "result": {
+        "status": "REJECTED",
+        "target_action": "duplicate_details",
+        "target_artifact_id": "C:constructed-target",
+        "target_artifact_hash": "CONSTRUCTED_REGISTERED_FILE_HASH",
+        "target_output_hash": "f3fa2ca1e4d96c96b0c15e64dd394acf585dbe8eadce49b08c577ea1b660d371",
+        "trusted_reference": {
+          "raw_sha256": "1c8a4f48c5faf8416aa7474d1a43215fdba759795cefd3414b60ea22edd2f451",
+          "parent_version": "RAW:1c8a4f48c5faf8416aa7474d1a43215fdba759795cefd3414b60ea22edd2f451",
+          "policy_sha256": "153cdb41897caaeca566f7bac9e0739178d6638df656314102bc294a28d65e6d"
+        },
+        "record_scope": [
+          "fixture:edges",
+          "fixture:missing",
+          "fixture:empty"
+        ],
+        "contract_version": "g1-policy-v1",
+        "checked_components": [
+          "record_scope",
+          "complete_events",
+          "event_types",
+          "event_indices"
+        ],
+        "unchecked_components": [
+          "physical_ground_truth"
+        ],
+        "unchecked_reasons": {
+          "physical_ground_truth": "TOOL_CAPABILITY_NOT_IMPLEMENTED"
+        },
+        "errors": []
+      }
+    },
+    {
+      "case": "time:missing_gap",
+      "expected": "REJECTED",
+      "actual": "REJECTED",
+      "result": {
+        "status": "REJECTED",
+        "target_action": "time_boundaries",
+        "target_artifact_id": "C:constructed-target",
+        "target_artifact_hash": "CONSTRUCTED_REGISTERED_FILE_HASH",
+        "target_output_hash": "cab4ebf632c2b136c856949576f6f6d19f3401aa0be0bd866c02bcae0c3a0daf",
+        "trusted_reference": {
+          "raw_sha256": "1c8a4f48c5faf8416aa7474d1a43215fdba759795cefd3414b60ea22edd2f451",
+          "parent_version": "RAW:1c8a4f48c5faf8416aa7474d1a43215fdba759795cefd3414b60ea22edd2f451",
+          "policy_sha256": "153cdb41897caaeca566f7bac9e0739178d6638df656314102bc294a28d65e6d"
+        },
+        "record_scope": [
+          "fixture:edges",
+          "fixture:missing",
+          "fixture:empty"
+        ],
+        "contract_version": "g1-policy-v1",
+        "checked_components": [
+          "record_scope",
+          "raw_time",
+          "threshold",
+          "strict_inequality",
+          "boundaries",
+          "index_order",
+          "point_coverage"
+        ],
+        "unchecked_components": [],
+        "unchecked_reasons": {},
+        "errors": [
+          "fixture:edges:cuts"
+        ]
+      }
+    },
+    {
+      "case": "time:equal_cut",
+      "expected": "REJECTED",
+      "actual": "REJECTED",
+      "result": {
+        "status": "REJECTED",
+        "target_action": "time_boundaries",
+        "target_artifact_id": "C:constructed-target",
+        "target_artifact_hash": "CONSTRUCTED_REGISTERED_FILE_HASH",
+        "target_output_hash": "db672355052f1d53d708e1d0511054439ee331b9bcc927eeef0c397b44bc863d",
+        "trusted_reference": {
+          "raw_sha256": "1c8a4f48c5faf8416aa7474d1a43215fdba759795cefd3414b60ea22edd2f451",
+          "parent_version": "RAW:1c8a4f48c5faf8416aa7474d1a43215fdba759795cefd3414b60ea22edd2f451",
+          "policy_sha256": "153cdb41897caaeca566f7bac9e0739178d6638df656314102bc294a28d65e6d"
+        },
+        "record_scope": [
+          "fixture:edges",
+          "fixture:missing",
+          "fixture:empty"
+        ],
+        "contract_version": "g1-policy-v1",
+        "checked_components": [
+          "record_scope",
+          "raw_time",
+          "threshold",
+          "strict_inequality",
+          "boundaries",
+          "index_order",
+          "point_coverage"
+        ],
+        "unchecked_components": [],
+        "unchecked_reasons": {},
+        "errors": [
+          "fixture:edges:cuts"
+        ]
+      }
+    },
+    {
+      "case": "time:wrong_order",
+      "expected": "REJECTED",
+      "actual": "REJECTED",
+      "result": {
+        "status": "REJECTED",
+        "target_action": "time_boundaries",
+        "target_artifact_id": "C:constructed-target",
+        "target_artifact_hash": "CONSTRUCTED_REGISTERED_FILE_HASH",
+        "target_output_hash": "9572c40354b6d5c11fda8d61745ec35d35f5dd0978dda4218864fc739bd55cb8",
+        "trusted_reference": {
+          "raw_sha256": "1c8a4f48c5faf8416aa7474d1a43215fdba759795cefd3414b60ea22edd2f451",
+          "parent_version": "RAW:1c8a4f48c5faf8416aa7474d1a43215fdba759795cefd3414b60ea22edd2f451",
+          "policy_sha256": "153cdb41897caaeca566f7bac9e0739178d6638df656314102bc294a28d65e6d"
+        },
+        "record_scope": [
+          "fixture:edges",
+          "fixture:missing",
+          "fixture:empty"
+        ],
+        "contract_version": "g1-policy-v1",
+        "checked_components": [
+          "record_scope",
+          "raw_time",
+          "threshold",
+          "strict_inequality",
+          "boundaries",
+          "index_order",
+          "point_coverage"
+        ],
+        "unchecked_components": [],
+        "unchecked_reasons": {},
+        "errors": [
+          "fixture:edges:partitions"
+        ]
+      }
+    },
+    {
+      "case": "time:boolean_original_index",
+      "expected": "REJECTED",
+      "actual": "VERIFIED",
+      "result": {
+        "status": "VERIFIED",
+        "target_action": "time_boundaries",
+        "target_artifact_id": "C:constructed-target",
+        "target_artifact_hash": "CONSTRUCTED_REGISTERED_FILE_HASH",
+        "target_output_hash": "6f429a506de737a1390972eaacb9c9fad8845027925c6f11b79115fe1b37a344",
+        "trusted_reference": {
+          "raw_sha256": "1c8a4f48c5faf8416aa7474d1a43215fdba759795cefd3414b60ea22edd2f451",
+          "parent_version": "RAW:1c8a4f48c5faf8416aa7474d1a43215fdba759795cefd3414b60ea22edd2f451",
+          "policy_sha256": "153cdb41897caaeca566f7bac9e0739178d6638df656314102bc294a28d65e6d"
+        },
+        "record_scope": [
+          "fixture:edges",
+          "fixture:missing",
+          "fixture:empty"
+        ],
+        "contract_version": "g1-policy-v1",
+        "checked_components": [
+          "record_scope",
+          "raw_time",
+          "threshold",
+          "strict_inequality",
+          "boundaries",
+          "index_order",
+          "point_coverage"
+        ],
+        "unchecked_components": [],
+        "unchecked_reasons": {},
+        "errors": []
+      }
+    },
+    {
+      "case": "time:wrong_delta",
+      "expected": "REJECTED",
+      "actual": "REJECTED",
+      "result": {
+        "status": "REJECTED",
+        "target_action": "time_boundaries",
+        "target_artifact_id": "C:constructed-target",
+        "target_artifact_hash": "CONSTRUCTED_REGISTERED_FILE_HASH",
+        "target_output_hash": "bd3e64b2eb71195966732a544f0452dc1adc246b95c8e7f93d00b1c8ea1dce3d",
+        "trusted_reference": {
+          "raw_sha256": "1c8a4f48c5faf8416aa7474d1a43215fdba759795cefd3414b60ea22edd2f451",
+          "parent_version": "RAW:1c8a4f48c5faf8416aa7474d1a43215fdba759795cefd3414b60ea22edd2f451",
+          "policy_sha256": "153cdb41897caaeca566f7bac9e0739178d6638df656314102bc294a28d65e6d"
+        },
+        "record_scope": [
+          "fixture:edges",
+          "fixture:missing",
+          "fixture:empty"
+        ],
+        "contract_version": "g1-policy-v1",
+        "checked_components": [
+          "record_scope",
+          "raw_time",
+          "threshold",
+          "strict_inequality",
+          "boundaries",
+          "index_order",
+          "point_coverage"
+        ],
+        "unchecked_components": [],
+        "unchecked_reasons": {},
+        "errors": [
+          "fixture:edges:cuts"
+        ]
+      }
+    },
+    {
+      "case": "duplicate:missing_event",
+      "expected": "REJECTED",
+      "actual": "REJECTED",
+      "result": {
+        "status": "REJECTED",
+        "target_action": "duplicate_details",
+        "target_artifact_id": "C:constructed-target",
+        "target_artifact_hash": "CONSTRUCTED_REGISTERED_FILE_HASH",
+        "target_output_hash": "d4220f79e56bc9c8a26708faf5dc564cf860cdf66dbf20892f5dd09da198473c",
+        "trusted_reference": {
+          "raw_sha256": "1c8a4f48c5faf8416aa7474d1a43215fdba759795cefd3414b60ea22edd2f451",
+          "parent_version": "RAW:1c8a4f48c5faf8416aa7474d1a43215fdba759795cefd3414b60ea22edd2f451",
+          "policy_sha256": "153cdb41897caaeca566f7bac9e0739178d6638df656314102bc294a28d65e6d"
+        },
+        "record_scope": [
+          "fixture:edges",
+          "fixture:missing",
+          "fixture:empty"
+        ],
+        "contract_version": "g1-policy-v1",
+        "checked_components": [
+          "record_scope",
+          "complete_events",
+          "event_types",
+          "event_indices"
+        ],
+        "unchecked_components": [],
+        "unchecked_reasons": {},
+        "errors": [
+          "fixture:edges:events"
+        ]
+      }
+    },
+    {
+      "case": "duplicate:wrong_reason",
+      "expected": "REJECTED",
+      "actual": "REJECTED",
+      "result": {
+        "status": "REJECTED",
+        "target_action": "duplicate_details",
+        "target_artifact_id": "C:constructed-target",
+        "target_artifact_hash": "CONSTRUCTED_REGISTERED_FILE_HASH",
+        "target_output_hash": "761a87f832c9feef0fea8e593970464dfd8270352cfd9f26e6c79cf1fd30cba1",
+        "trusted_reference": {
+          "raw_sha256": "1c8a4f48c5faf8416aa7474d1a43215fdba759795cefd3414b60ea22edd2f451",
+          "parent_version": "RAW:1c8a4f48c5faf8416aa7474d1a43215fdba759795cefd3414b60ea22edd2f451",
+          "policy_sha256": "153cdb41897caaeca566f7bac9e0739178d6638df656314102bc294a28d65e6d"
+        },
+        "record_scope": [
+          "fixture:edges",
+          "fixture:missing",
+          "fixture:empty"
+        ],
+        "contract_version": "g1-policy-v1",
+        "checked_components": [
+          "record_scope",
+          "complete_events",
+          "event_types",
+          "event_indices"
+        ],
+        "unchecked_components": [],
+        "unchecked_reasons": {},
+        "errors": [
+          "fixture:edges:events"
+        ]
+      }
+    },
+    {
+      "case": "duplicate:boolean_original_index",
+      "expected": "REJECTED",
+      "actual": "VERIFIED",
+      "result": {
+        "status": "VERIFIED",
+        "target_action": "duplicate_details",
+        "target_artifact_id": "C:constructed-target",
+        "target_artifact_hash": "CONSTRUCTED_REGISTERED_FILE_HASH",
+        "target_output_hash": "bf3daa763bd51f68e7cf618f09c764ab358cbae6263a2a085723d0af107df133",
+        "trusted_reference": {
+          "raw_sha256": "1c8a4f48c5faf8416aa7474d1a43215fdba759795cefd3414b60ea22edd2f451",
+          "parent_version": "RAW:1c8a4f48c5faf8416aa7474d1a43215fdba759795cefd3414b60ea22edd2f451",
+          "policy_sha256": "153cdb41897caaeca566f7bac9e0739178d6638df656314102bc294a28d65e6d"
+        },
+        "record_scope": [
+          "fixture:edges",
+          "fixture:missing",
+          "fixture:empty"
+        ],
+        "contract_version": "g1-policy-v1",
+        "checked_components": [
+          "record_scope",
+          "complete_events",
+          "event_types",
+          "event_indices"
+        ],
+        "unchecked_components": [],
+        "unchecked_reasons": {},
+        "errors": []
+      }
+    },
+    {
+      "case": "duplicate:integer_boolean_flag",
+      "expected": "REJECTED",
+      "actual": "VERIFIED",
+      "result": {
+        "status": "VERIFIED",
+        "target_action": "duplicate_details",
+        "target_artifact_id": "C:constructed-target",
+        "target_artifact_hash": "CONSTRUCTED_REGISTERED_FILE_HASH",
+        "target_output_hash": "1b47aaf2b96bbf0f73a4a7e764b1621652a4cdf75ad8367ec8b0c8798987dc42",
+        "trusted_reference": {
+          "raw_sha256": "1c8a4f48c5faf8416aa7474d1a43215fdba759795cefd3414b60ea22edd2f451",
+          "parent_version": "RAW:1c8a4f48c5faf8416aa7474d1a43215fdba759795cefd3414b60ea22edd2f451",
+          "policy_sha256": "153cdb41897caaeca566f7bac9e0739178d6638df656314102bc294a28d65e6d"
+        },
+        "record_scope": [
+          "fixture:edges",
+          "fixture:missing",
+          "fixture:empty"
+        ],
+        "contract_version": "g1-policy-v1",
+        "checked_components": [
+          "record_scope",
+          "complete_events",
+          "event_types",
+          "event_indices"
+        ],
+        "unchecked_components": [],
+        "unchecked_reasons": {},
+        "errors": []
+      }
+    },
+    {
+      "case": "duplicate:invented_missing_time_delta",
+      "expected": "REJECTED",
+      "actual": "REJECTED",
+      "result": {
+        "status": "REJECTED",
+        "target_action": "duplicate_details",
+        "target_artifact_id": "C:constructed-target",
+        "target_artifact_hash": "CONSTRUCTED_REGISTERED_FILE_HASH",
+        "target_output_hash": "23724f0cd149a040b08286bd0013de4ec016ef29d87029c3c0267d6796d7f0ee",
+        "trusted_reference": {
+          "raw_sha256": "1c8a4f48c5faf8416aa7474d1a43215fdba759795cefd3414b60ea22edd2f451",
+          "parent_version": "RAW:1c8a4f48c5faf8416aa7474d1a43215fdba759795cefd3414b60ea22edd2f451",
+          "policy_sha256": "153cdb41897caaeca566f7bac9e0739178d6638df656314102bc294a28d65e6d"
+        },
+        "record_scope": [
+          "fixture:edges",
+          "fixture:missing",
+          "fixture:empty"
+        ],
+        "contract_version": "g1-policy-v1",
+        "checked_components": [
+          "record_scope",
+          "complete_events",
+          "event_types",
+          "event_indices"
+        ],
+        "unchecked_components": [],
+        "unchecked_reasons": {},
+        "errors": [
+          "fixture:missing:events"
+        ]
+      }
+    },
+    {
+      "case": "profiles:false_summary",
+      "expected": "REJECTED",
+      "actual": "REJECTED",
+      "result": {
+        "status": "REJECTED",
+        "target_action": "profile_pilot",
+        "target_artifact_id": "C:constructed-target",
+        "target_artifact_hash": "CONSTRUCTED_REGISTERED_FILE_HASH",
+        "target_output_hash": "abc9fa5cfeffcd7e544b9c00241089d4790d386e79efc81c8899ac424015cd63",
+        "trusted_reference": {
+          "raw_sha256": "1c8a4f48c5faf8416aa7474d1a43215fdba759795cefd3414b60ea22edd2f451",
+          "parent_version": "RAW:1c8a4f48c5faf8416aa7474d1a43215fdba759795cefd3414b60ea22edd2f451",
+          "policy_sha256": "153cdb41897caaeca566f7bac9e0739178d6638df656314102bc294a28d65e6d"
+        },
+        "record_scope": [
+          "fixture:edges",
+          "fixture:missing",
+          "fixture:empty"
+        ],
+        "contract_version": "g1-policy-v1",
+        "checked_components": [
+          "record_scope",
+          "profile_fields",
+          "profile_counts",
+          "summary"
+        ],
+        "unchecked_components": [],
+        "unchecked_reasons": {},
+        "errors": [
+          "PROFILE_SUMMARY_MISMATCH"
+        ]
+      }
+    },
+    {
+      "case": "profiles:changed_bytes",
+      "expected": "REJECTED",
+      "actual": "REJECTED",
+      "result": {
+        "status": "REJECTED",
+        "target_action": "profile_pilot",
+        "target_artifact_id": "C:constructed-target",
+        "target_artifact_hash": "CONSTRUCTED_REGISTERED_FILE_HASH",
+        "target_output_hash": "4894f8bd84c19ff55eaf40256ba8b3289449f2b16124ecb5ab8b33afb6fd6394",
+        "trusted_reference": {
+          "raw_sha256": "1c8a4f48c5faf8416aa7474d1a43215fdba759795cefd3414b60ea22edd2f451",
+          "parent_version": "RAW:1c8a4f48c5faf8416aa7474d1a43215fdba759795cefd3414b60ea22edd2f451",
+          "policy_sha256": "153cdb41897caaeca566f7bac9e0739178d6638df656314102bc294a28d65e6d"
+        },
+        "record_scope": [
+          "fixture:edges",
+          "fixture:missing",
+          "fixture:empty"
+        ],
+        "contract_version": "g1-policy-v1",
+        "checked_components": [],
+        "unchecked_components": [],
+        "unchecked_reasons": {},
+        "errors": [
+          "TARGET_HASH_MISMATCH"
+        ]
+      }
+    }
+  ],
+  "controller": {
+    "profile_only": {
+      "status": "NEEDS_REVIEW",
+      "unchecked_artifact_ids": [
+        "17cdc57de0b21d7a7e0fc17535246e1ef902917d6b0d058973ae041591f35cb4",
+        "dad1059d2638823b7fbb7b45468b6d06da4a57790489676a19cd7115709bb09a"
+      ]
+    },
+    "all_targets": {
+      "status": "VERIFIED",
+      "unchecked_artifact_ids": []
+    },
+    "unknown_target": {
+      "returned": [
+        {
+          "classification": "MOCK_TEST",
+          "input_sha256": "1c8a4f48c5faf8416aa7474d1a43215fdba759795cefd3414b60ea22edd2f451",
+          "record_ids": [
+            "fixture:edges",
+            "fixture:missing",
+            "fixture:empty"
+          ],
+          "input_records": 3,
+          "input_points": 9,
+          "modified_values": 0,
+          "parent_version": "RAW:1c8a4f48c5faf8416aa7474d1a43215fdba759795cefd3414b60ea22edd2f451",
+          "semantics_version": "g1-semantics-v1",
+          "metrics_version": "g1-metrics-v1",
+          "status": "EXECUTED",
+          "result": {
+            "trajectories": [
+              {
+                "record_id": "fixture:edges",
+                "events": [
+                  {
+                    "left_index": 1,
+                    "right_index": 2,
+                    "dt_raw": 31,
+                    "dt_reason": null,
+                    "position_pair_computable": true,
+                    "reasons": [
+                      "REPEATED_POSITION_NOT_AUTOMATIC_NOISE"
+                    ]
+                  },
+                  {
+                    "left_index": 3,
+                    "right_index": 4,
+                    "dt_raw": 0,
+                    "dt_reason": null,
+                    "position_pair_computable": true,
+                    "reasons": [
+                      "ZERO_DT_SPEED_UNAVAILABLE",
+                      "SAME_TIME_DIFFERENT_POSITION"
+                    ]
+                  },
+                  {
+                    "left_index": 4,
+                    "right_index": 5,
+                    "dt_raw": 30,
+                    "dt_reason": null,
+                    "position_pair_computable": true,
+                    "reasons": [
+                      "REPEATED_POSITION_NOT_AUTOMATIC_NOISE"
+                    ]
+                  }
+                ],
+                "modified": 0,
+                "deleted": 0,
+                "status": "EXECUTED"
+              },
+              {
+                "record_id": "fixture:missing",
+                "events": [
+                  {
+                    "left_index": 0,
+                    "right_index": 1,
+                    "dt_raw": null,
+                    "dt_reason": "MISSING_OR_INVALID_TIME",
+                    "position_pair_computable": true,
+                    "reasons": [
+                      "MISSING_OR_INVALID_TIME",
+                      "REPEATED_POSITION_NOT_AUTOMATIC_NOISE"
+                    ]
+                  },
+                  {
+                    "left_index": 1,
+                    "right_index": 2,
+                    "dt_raw": 0,
+                    "dt_reason": null,
+                    "position_pair_computable": true,
+                    "reasons": [
+                      "ZERO_DT_SPEED_UNAVAILABLE",
+                      "SAME_TIME_DIFFERENT_POSITION"
+                    ]
+                  }
+                ],
+                "modified": 0,
+                "deleted": 0,
+                "status": "EXECUTED"
+              },
+              {
+                "record_id": "fixture:empty",
+                "events": [],
+                "modified": 0,
+                "deleted": 0,
+                "status": "EXECUTED"
+              }
+            ],
+            "scope": "EXACT_RAW_REPETITIONS; no noise judgment or deletion"
+          }
+        },
+        {
+          "artifact_id": "dad1059d2638823b7fbb7b45468b6d06da4a57790489676a19cd7115709bb09a",
+          "sha256": "4c747f7da2664256669dd5af10241c0b779b2cc0407c9ccc9dcc4897340386c4",
+          "output_sha256": "809900c98759bce8c9c6f350d509d81363bb424d6daeada0562f2988adfddb0e",
+          "action": "duplicate_details"
+        }
+      ]
+    },
+    "ambiguous_targets": {
+      "exception_type": "GateError",
+      "message": "AMBIGUOUS_REVIEW_TARGET"
+    }
+  },
+  "goal_gate": {
+    "unreviewed_target": {
+      "coverage": {
+        "status": "NEEDS_REVIEW",
+        "missing": [
+          "time_boundaries:UNREVIEWED"
+        ]
+      },
+      "finalize": "ENGINEERING_READY_FOR_GPT_REVIEW",
+      "constructed_task_reports": [
+        "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_f01_review/gate_challenge/governance_constructed_C_report.json",
+        "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_f01_review/gate_challenge/review_targets_constructed_C_report.json",
+        "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_f01_review/gate_challenge/trusted_baseline_constructed_C_report.json",
+        "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_f01_review/gate_challenge/diagnostics_constructed_C_report.json",
+        "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_f01_review/gate_challenge/real_baseline_constructed_C_report.json",
+        "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_f01_review/gate_challenge/processing_feedback_constructed_C_report.json",
+        "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_f01_review/gate_challenge/notebooks_constructed_C_report.json",
+        "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_f01_review/gate_challenge/figures_constructed_C_report.json",
+        "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_f01_review/gate_challenge/internal_review_constructed_C_report.json"
+      ]
+    },
+    "fully_reviewed_before_change": {
+      "coverage": {
+        "status": "VERIFIED",
+        "missing": []
+      },
+      "finalize": "ENGINEERING_READY_FOR_GPT_REVIEW"
+    },
+    "changed_source": {
+      "coverage": {
+        "status": "NEEDS_REVIEW",
+        "missing": [
+          "profile_pilot:INVALID_REVIEW",
+          "time_boundaries:INVALID_REVIEW"
+        ]
+      },
+      "run_status": "STALE",
+      "finalize": "ENGINEERING_READY_FOR_GPT_REVIEW",
+      "task_statuses": {
+        "governance": "VERIFIED",
+        "review_targets": "VERIFIED",
+        "trusted_baseline": "VERIFIED",
+        "diagnostics": "VERIFIED",
+        "real_baseline": "VERIFIED",
+        "processing_feedback": "VERIFIED",
+        "notebooks": "VERIFIED",
+        "figures": "VERIFIED",
+        "internal_review": "VERIFIED"
+      }
+    }
+  },
+  "uncertain_operation": {
+    "first_failure": {
+      "exception_type": "OSError",
+      "message": "C_CONSTRUCTED_POST_DISPATCH_FAILURE"
+    },
+    "retry": {
+      "exception_type": "ValueError",
+      "message": "UNCERTAIN_OPERATION_DO_NOT_REPEAT"
+    },
+    "new_execute_calls": 0,
+    "reconcile": {
+      "status": "MANUAL_RECONCILIATION_REQUIRED",
+      "output_exists": false,
+      "automatic_retry": false
+    },
+    "finalize": "INTERRUPTED_CHECKPOINT"
+  }
+}

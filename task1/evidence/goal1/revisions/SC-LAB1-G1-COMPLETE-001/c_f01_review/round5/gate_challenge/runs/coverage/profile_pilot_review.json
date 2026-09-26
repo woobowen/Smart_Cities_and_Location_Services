@@ -1,0 +1,43 @@
+{
+  "classification": "CURRENT_RUN_REAL_DATA",
+  "input_sha256": "1c8a4f48c5faf8416aa7474d1a43215fdba759795cefd3414b60ea22edd2f451",
+  "record_ids": [
+    "fixture:edges",
+    "fixture:missing",
+    "fixture:empty"
+  ],
+  "input_records": 3,
+  "input_points": 9,
+  "modified_values": 0,
+  "parent_version": "RAW:1c8a4f48c5faf8416aa7474d1a43215fdba759795cefd3414b60ea22edd2f451",
+  "semantics_version": "g1-semantics-v1",
+  "metrics_version": "g1-metrics-v1",
+  "status": "VERIFIED",
+  "result": {
+    "status": "VERIFIED",
+    "target_action": "profile_pilot",
+    "target_artifact_id": "coverage:profile_pilot",
+    "target_artifact_hash": "83f34ed473d796a1f017ad1c24b86d57130414d3ce59f420070fd4c264b70b2d",
+    "target_output_hash": "84a641b266a66e0cc6a4ab2d528b152a6e4fa0f99c612c239c778167c3a572a1",
+    "trusted_reference": {
+      "raw_sha256": "1c8a4f48c5faf8416aa7474d1a43215fdba759795cefd3414b60ea22edd2f451",
+      "parent_version": "RAW:1c8a4f48c5faf8416aa7474d1a43215fdba759795cefd3414b60ea22edd2f451",
+      "policy_sha256": "9837ce87e0fc4b7f89c46a423e6f26980aed238d91dc7cf536582c230293f175"
+    },
+    "record_scope": [
+      "fixture:edges",
+      "fixture:missing",
+      "fixture:empty"
+    ],
+    "contract_version": "g1-policy-v2-conditional",
+    "checked_components": [
+      "record_scope",
+      "profile_fields",
+      "profile_counts",
+      "summary"
+    ],
+    "unchecked_components": [],
+    "unchecked_reasons": {},
+    "errors": []
+  }
+}

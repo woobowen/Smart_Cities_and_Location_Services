@@ -1,0 +1,66 @@
+{
+  "verified_at": "2026-09-26T17:16:47.389806+00:00",
+  "status": "ENGINEERING_CHECKS_VERIFIED",
+  "independent_acceptance": "PENDING_C_REVIEW",
+  "run_id": "g1-complete-pilot-03",
+  "processing_code_sha": "f229d9a4113bcc0dd763e1b410f1f5fb73903a62",
+  "execution_receipt_sha256": "46afb2d4d5120a546b3518e97bdf739cc04a722b05f81ff3da7be06cfdf9f2dc",
+  "generator_sha256": "e3adbca56ad1a9179725a8cb17848ef548cbe56f4a4cdc9727be3cff70472022",
+  "resources_snapshot_sha256": "299eefcbe84e38251ef5dcdb20a1b4be0be19e988934a99625cb1db696547c9a",
+  "notebooks": [
+    {
+      "notebook": "task1/notebooks/01_baseline_and_audit.ipynb",
+      "sha256": "a1c612acfc2826eb1b78fe4979c7d1f2feec741b04fb4cccf74aa0406daef86d",
+      "new_kernel": true,
+      "new_model_calls": 0,
+      "code_cells": 8,
+      "status": "VERIFIED",
+      "execution_counts": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "error_outputs": [],
+      "embedded_image_sha256": [
+        "a492bb7e7dc2dafff2db442a79938c7cd3999f3a65501b75fe2069ffd0987bf8",
+        "fe53c546648e125e01fcdb76b904a76c7c836e58d1f41fef5df113a4ece4532f"
+      ],
+      "schema_valid": true,
+      "code_cells_compile": true
+    },
+    {
+      "notebook": "task1/notebooks/02_agent_loop_recompute.ipynb",
+      "sha256": "2b38b9ec852f8f26f481da0cd1e141cac085524365ec90a0ca2645a892b17f7f",
+      "new_kernel": true,
+      "new_model_calls": 0,
+      "code_cells": 8,
+      "status": "VERIFIED",
+      "execution_counts": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "error_outputs": [],
+      "embedded_image_sha256": [
+        "62461a336585bfdd5405709c57b5ce45ec5ef2af15056b982724b2684ff80aea"
+      ],
+      "schema_valid": true,
+      "code_cells_compile": true
+    }
+  ],
+  "new_model_calls": 0,
+  "observed_execution_warning": "Existing local ipykernel warned about unencrypted TCP transport; both fresh kernels completed without cell errors. No Provider was invoked.",
+  "new_dependencies": [],
+  "persistent_configuration_changes": [],
+  "scope": "Seven-record current conditional pilot. Formal reports remain working material; final project acceptance is separate."
+}

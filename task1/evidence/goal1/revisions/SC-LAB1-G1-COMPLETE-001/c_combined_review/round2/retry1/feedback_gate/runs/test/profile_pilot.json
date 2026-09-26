@@ -1,0 +1,70 @@
+{
+  "classification": "CURRENT_RUN_REAL_DATA",
+  "input_sha256": "8319264c059dc6c7186b41d4b16cd3b3cd3fc2f8d49244f2dd356cad6ad260c8",
+  "record_ids": [
+    "fixture:review"
+  ],
+  "input_records": 1,
+  "input_points": 4,
+  "modified_values": 0,
+  "parent_version": "RAW:8319264c059dc6c7186b41d4b16cd3b3cd3fc2f8d49244f2dd356cad6ad260c8",
+  "semantics_version": "g1-semantics-v1",
+  "metrics_version": "g1-metrics-v1",
+  "status": "EXECUTED",
+  "result": {
+    "profiles": [
+      {
+        "record_id": "fixture:review",
+        "classification": "CURRENT_RUN_REAL_DATA",
+        "valid_structure": true,
+        "n_points": 4,
+        "n_timestamps": 4,
+        "invalid_timestamps": 0,
+        "invalid_coordinates": 0,
+        "negative_dt": 0,
+        "zero_dt": 0,
+        "positive_dt": 3,
+        "same_time_different_position": 0,
+        "consecutive_duplicate_position": 0,
+        "long_gap_gt_30_source_seconds": 0,
+        "edges_total": 3,
+        "dt_computable": 3,
+        "position_pairs_computable": 3,
+        "time_span_raw": 3,
+        "dt_min_raw": 1.0,
+        "dt_max_raw": 1.0,
+        "dt_counts": {
+          "1": 3
+        },
+        "issues": []
+      }
+    ],
+    "summary": {
+      "n_records": 1,
+      "valid_structure_records": 1,
+      "n_points": 4,
+      "n_timestamps": 4,
+      "invalid_timestamps": 0,
+      "invalid_coordinates": 0,
+      "negative_dt": 0,
+      "zero_dt": 0,
+      "positive_dt": 3,
+      "same_time_different_position": 0,
+      "consecutive_duplicate_position": 0,
+      "long_gap_gt_30_source_seconds": 0,
+      "edges_total": 3,
+      "dt_computable": 3,
+      "position_pairs_computable": 3,
+      "dt_counts": {
+        "1": 3
+      },
+      "point_count_min": 4,
+      "point_count_max": 4,
+      "modifications": 0,
+      "physical_distance": {
+        "value": null,
+        "reason": "CRS_AND_DISTANCE_POLICY_UNRESOLVED"
+      }
+    }
+  }
+}

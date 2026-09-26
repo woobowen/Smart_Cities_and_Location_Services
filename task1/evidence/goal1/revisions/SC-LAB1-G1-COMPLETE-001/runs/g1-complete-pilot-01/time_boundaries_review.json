@@ -1,0 +1,54 @@
+{
+  "classification": "CURRENT_RUN_REAL_DATA",
+  "input_sha256": "c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3",
+  "record_ids": [
+    "0",
+    "1",
+    "2",
+    "246",
+    "256",
+    "306",
+    "352"
+  ],
+  "input_records": 7,
+  "input_points": 783,
+  "modified_values": 0,
+  "parent_version": "RAW:c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3",
+  "semantics_version": "g1-semantics-v1",
+  "metrics_version": "g1-metrics-v1",
+  "status": "VERIFIED",
+  "result": {
+    "status": "VERIFIED",
+    "target_action": "time_boundaries",
+    "target_artifact_id": "g1-complete-pilot-01:time_boundaries",
+    "target_artifact_hash": "e50a6451fa93cc505fe3c710c84a3dd50aa12f3e3a2594ce30bde6dea5578274",
+    "target_output_hash": "8b34dfa30df221b25a254f057b58c3325b121d9d5dfb8d34f6882672b0f06980",
+    "trusted_reference": {
+      "raw_sha256": "c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3",
+      "parent_version": "RAW:c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3",
+      "policy_sha256": "cbe01c9f33414edcebc0738d3c09f7206a94e1e98dceee545998522e04736688"
+    },
+    "record_scope": [
+      "0",
+      "1",
+      "2",
+      "246",
+      "256",
+      "306",
+      "352"
+    ],
+    "contract_version": "g1-policy-v2-conditional",
+    "checked_components": [
+      "record_scope",
+      "raw_time",
+      "threshold",
+      "strict_inequality",
+      "boundaries",
+      "index_order",
+      "point_coverage"
+    ],
+    "unchecked_components": [],
+    "unchecked_reasons": {},
+    "errors": []
+  }
+}

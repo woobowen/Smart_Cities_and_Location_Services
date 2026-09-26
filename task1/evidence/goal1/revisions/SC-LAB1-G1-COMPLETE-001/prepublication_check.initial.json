@@ -1,0 +1,46 @@
+{
+  "classification": "PREPUBLICATION_ENGINEERING_CHECK",
+  "checked_files": 520,
+  "secrets_pattern_findings": [],
+  "over_50MiB_files": [],
+  "symlinks": [],
+  "broken_local_links": [
+    {
+      "file": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/handoff/reference_only/GPT_SECOND_REVIEW_ROUND2.md",
+      "link": "probes/results.json"
+    }
+  ],
+  "absolute_paths_in_reproduction_entrypoints": [],
+  "absolute_paths_in_evidence": [
+    "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/FINAL_RESPONSE.md",
+    "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/a_scope/release_scope_check.json",
+    "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/tests_code_bound.xml",
+    "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/tests_development.xml",
+    "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/tests_final.xml",
+    "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/tests_pilot02.xml",
+    "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/tests_pilot03.xml",
+    "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/tests_precommit.xml",
+    "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/tests_release.xml",
+    "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/validation_code_bound.json",
+    "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/validation_pilot02.json",
+    "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/validation_pilot03.json",
+    "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/validation_release.json"
+  ],
+  "absolute_path_note": "Required cwd/command logs and archived probes retain historical absolute paths; not runtime input paths. No credential content printed.",
+  "protected_total": 273,
+  "authorized_protected_changes": [
+    {
+      "path": "task1/evidence/goal1/REVIEW_PACKET.md",
+      "before_sha256": "bbbb33ccd154297643ac869d2f73a7cedf60f90de7982cd776d1c7c79b09a1e6",
+      "after_sha256": "f3a472d33db02503aaba6e6866a4261c02587b85e649171fb6180348426f116f",
+      "explicitly_authorized_current_entry": true
+    },
+    {
+      "path": "task1/evidence/goal1/requirements.json",
+      "before_sha256": "dc0f2a7b3e6a500bb31f68e0bed696231453521c7068a71d24148c888c5338c1",
+      "after_sha256": "ff973adb03a00d101387f062da27dbdb6e6238da02573907cd9517014e4d977e",
+      "explicitly_authorized_current_entry": true
+    }
+  ],
+  "unauthorized_protected_changes": []
+}

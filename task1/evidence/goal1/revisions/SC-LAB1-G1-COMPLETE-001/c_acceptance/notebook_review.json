@@ -1,0 +1,138 @@
+{
+  "status": "VERIFIED",
+  "run_id": "g1-complete-pilot-03",
+  "classification": "INDEPENDENT_C_PRODUCT_REVIEW",
+  "checks": [
+    {
+      "name": "execution_exit_status",
+      "passed": true
+    },
+    {
+      "name": "generator_hash",
+      "passed": true
+    },
+    {
+      "name": "fresh_kernel_implementation",
+      "passed": true
+    },
+    {
+      "name": "new_model_calls_zero",
+      "passed": true
+    },
+    {
+      "name": "01_baseline_and_audit.ipynb:receipt_and_counts",
+      "passed": true
+    },
+    {
+      "name": "01_baseline_and_audit.ipynb:sequential_execution",
+      "passed": true
+    },
+    {
+      "name": "01_baseline_and_audit.ipynb:no_cell_errors",
+      "passed": true
+    },
+    {
+      "name": "01_baseline_and_audit.ipynb:relative_sources",
+      "passed": true
+    },
+    {
+      "name": "01_baseline_and_audit.ipynb:actual_current_binding",
+      "passed": true
+    },
+    {
+      "name": "01_baseline_and_audit.ipynb:default_recompute",
+      "passed": true
+    },
+    {
+      "name": "02_agent_loop_recompute.ipynb:receipt_and_counts",
+      "passed": true
+    },
+    {
+      "name": "02_agent_loop_recompute.ipynb:sequential_execution",
+      "passed": true
+    },
+    {
+      "name": "02_agent_loop_recompute.ipynb:no_cell_errors",
+      "passed": true
+    },
+    {
+      "name": "02_agent_loop_recompute.ipynb:relative_sources",
+      "passed": true
+    },
+    {
+      "name": "02_agent_loop_recompute.ipynb:actual_current_binding",
+      "passed": true
+    },
+    {
+      "name": "02_agent_loop_recompute.ipynb:default_recompute",
+      "passed": true
+    },
+    {
+      "name": "baseline_actual_stage_table",
+      "passed": true
+    },
+    {
+      "name": "baseline_actual_DP_table",
+      "passed": true
+    },
+    {
+      "name": "baseline_raw_reexecution_and_review",
+      "passed": true
+    },
+    {
+      "name": "agent_default_live_disabled",
+      "passed": true
+    },
+    {
+      "name": "four_actual_recomputations",
+      "passed": true
+    },
+    {
+      "name": "actual_embedded_figure_bytes",
+      "passed": true
+    }
+  ],
+  "check_count": 22,
+  "evidence": [
+    {
+      "path": "task1/notebooks/01_baseline_and_audit.ipynb",
+      "sha256": "a1c612acfc2826eb1b78fe4979c7d1f2feec741b04fb4cccf74aa0406daef86d"
+    },
+    {
+      "path": "task1/notebooks/02_agent_loop_recompute.ipynb",
+      "sha256": "2b38b9ec852f8f26f481da0cd1e141cac085524365ec90a0ca2645a892b17f7f"
+    },
+    {
+      "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/b_run/notebook_execution.json",
+      "sha256": "46afb2d4d5120a546b3518e97bdf739cc04a722b05f81ff3da7be06cfdf9f2dc"
+    },
+    {
+      "path": "task1/scripts/build_goal1_notebooks.py",
+      "sha256": "e3adbca56ad1a9179725a8cb17848ef548cbe56f4a4cdc9727be3cff70472022"
+    },
+    {
+      "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/manifest.json",
+      "sha256": "7554dc9d4e22408ac0fe00292c037af61eb7aa970c97bb369ea1631504f0a6a5"
+    },
+    {
+      "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/coordinate_sensitivity.json",
+      "sha256": "0ccffb15396c6ab1e57cc29fdb3e4ab9879104c73f95679dc1ac09d109d6de9f"
+    },
+    {
+      "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/figure_manifest.json",
+      "sha256": "bb8b6ce36928ca71a1ea9b623f2d3473774ae7eb576c0df25da7b50857977fdc"
+    },
+    {
+      "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/summary_review.json",
+      "sha256": "a19f1b6035ff8b545744eacba6def467e6287c3a0fc494a92a4f7d0b82c9f348"
+    },
+    {
+      "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/final_evidence_probe.py",
+      "sha256": "31d6844ab0a40564e6b16b78657a5cd5563e7108dec0574ccaaed16d6e511c12"
+    }
+  ],
+  "limitations": [
+    "This C independently reviewed B actual fresh-kernel receipts, source and outputs; C did not relaunch model calls.",
+    "Notebook02 captures IMPLEMENTING before subsequent C task registration; final journal status is a later event."
+  ]
+}

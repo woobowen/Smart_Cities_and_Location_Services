@@ -1,0 +1,526 @@
+{
+  "status": "VERIFIED",
+  "classification": "CONSTRUCTED_FIXTURE",
+  "parameters": {
+    "dt": 30,
+    "distance": 10,
+    "min_points": 3,
+    "min_length": 0,
+    "direction": 35,
+    "dp": 1,
+    "time_reliable": true
+  },
+  "contract": {
+    "scope": "CONSTRUCTED_PLANAR_ONLY",
+    "approval": "ENGINEERING_TEST_ONLY",
+    "method": "single_pass_simultaneous_keep_undefined",
+    "parameters": {
+      "dt": 30,
+      "distance": 10,
+      "min_points": 3,
+      "min_length": 0,
+      "direction": 35,
+      "dp": 1,
+      "time_reliable": true
+    },
+    "contract_version": "BASELINE_CONTRACT_V2",
+    "order": [
+      "split",
+      "filter",
+      "denoise",
+      "simplify"
+    ],
+    "units": {
+      "xy": "fixture_planar_unit",
+      "time": "fixture_time_unit",
+      "direction": "degrees"
+    },
+    "adapter_version": "constructed_identity:v1",
+    "contract_id": "fixture:8ddaa348a01afb9c5ae5c94209031b0a2f4c7a13c7db9f11269773309d4602c0"
+  },
+  "provenance": {
+    "source_kind": "CONSTRUCTED_FIXTURE",
+    "raw_sha256": "291155c6c2efb2794ed8ff5fb3565ea833d6680b8b811759a421cd0826753668",
+    "raw_scope_sha256": "291155c6c2efb2794ed8ff5fb3565ea833d6680b8b811759a421cd0826753668",
+    "reference_sha256": "291155c6c2efb2794ed8ff5fb3565ea833d6680b8b811759a421cd0826753668",
+    "record_scope": [
+      "fixture:review"
+    ],
+    "parent_version": "CONSTRUCTED:291155c6c2efb2794ed8ff5fb3565ea833d6680b8b811759a421cd0826753668",
+    "adapter_version": "constructed_identity:v1",
+    "contract_id": "fixture:8ddaa348a01afb9c5ae5c94209031b0a2f4c7a13c7db9f11269773309d4602c0",
+    "contract_version": "BASELINE_CONTRACT_V2",
+    "contract_sha256": "40b7ac89f0f61251f46bb121bd8ab9e0a156fbe748579f988382006f1876cc16"
+  },
+  "input_hash": "291155c6c2efb2794ed8ff5fb3565ea833d6680b8b811759a421cd0826753668",
+  "records": [
+    {
+      "record_id": "fixture:review",
+      "source_record": {
+        "record_id": "fixture:review",
+        "indices": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "timestamps": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "xy": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            0
+          ]
+        ]
+      },
+      "parent_hash": "fc645e36dd3b3f496fcd3244913b26f80d699a4f832cc9785a6a23df312485c8",
+      "boundaries": [],
+      "filtered_segments": [],
+      "processed_segments": [
+        {
+          "segment_index": 0,
+          "input": {
+            "record_id": "fixture:review",
+            "indices": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "timestamps": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "xy": [
+              [
+                0,
+                0
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                3,
+                0
+              ]
+            ],
+            "features": {
+              "edges": [
+                {
+                  "from_index": 0,
+                  "to_index": 1,
+                  "dt": 1,
+                  "dt_reason": null,
+                  "distance": 1.0,
+                  "speed": 1.0,
+                  "speed_reason": null,
+                  "direction_degrees": 90.0,
+                  "direction_reason": null
+                },
+                {
+                  "from_index": 1,
+                  "to_index": 2,
+                  "dt": 1,
+                  "dt_reason": null,
+                  "distance": 1.0,
+                  "speed": 1.0,
+                  "speed_reason": null,
+                  "direction_degrees": 90.0,
+                  "direction_reason": null
+                },
+                {
+                  "from_index": 2,
+                  "to_index": 3,
+                  "dt": 1,
+                  "dt_reason": null,
+                  "distance": 1.0,
+                  "speed": 1.0,
+                  "speed_reason": null,
+                  "direction_degrees": 90.0,
+                  "direction_reason": null
+                }
+              ],
+              "length": 3.0,
+              "direction_convention": "CLOCKWISE_FROM_POSITIVE_Y",
+              "time_reliable": true,
+              "coverage": {
+                "edge_denominator": 3,
+                "speed_computable": 3,
+                "direction_computable": 3,
+                "reason": null
+              }
+            },
+            "parent_hash": "fc645e36dd3b3f496fcd3244913b26f80d699a4f832cc9785a6a23df312485c8",
+            "segment_index": 0,
+            "filter_reasons": []
+          },
+          "denoise": {
+            "record": {
+              "record_id": "fixture:review",
+              "indices": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "timestamps": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "xy": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  1,
+                  0
+                ],
+                [
+                  2,
+                  0
+                ],
+                [
+                  3,
+                  0
+                ]
+              ],
+              "features": {
+                "edges": [
+                  {
+                    "from_index": 0,
+                    "to_index": 1,
+                    "dt": 1,
+                    "dt_reason": null,
+                    "distance": 1.0,
+                    "speed": 1.0,
+                    "speed_reason": null,
+                    "direction_degrees": 90.0,
+                    "direction_reason": null
+                  },
+                  {
+                    "from_index": 1,
+                    "to_index": 2,
+                    "dt": 1,
+                    "dt_reason": null,
+                    "distance": 1.0,
+                    "speed": 1.0,
+                    "speed_reason": null,
+                    "direction_degrees": 90.0,
+                    "direction_reason": null
+                  },
+                  {
+                    "from_index": 2,
+                    "to_index": 3,
+                    "dt": 1,
+                    "dt_reason": null,
+                    "distance": 1.0,
+                    "speed": 1.0,
+                    "speed_reason": null,
+                    "direction_degrees": 90.0,
+                    "direction_reason": null
+                  }
+                ],
+                "length": 3.0,
+                "direction_convention": "CLOCKWISE_FROM_POSITIVE_Y",
+                "time_reliable": true,
+                "coverage": {
+                  "edge_denominator": 3,
+                  "speed_computable": 3,
+                  "direction_computable": 3,
+                  "reason": null
+                }
+              },
+              "parent_hash": "78da3c291d717781ac82a8f36182dac17e0ed9f26f6167b7e9dae10565944f7a"
+            },
+            "deleted_indices": [],
+            "decisions": [
+              {
+                "index": 0,
+                "candidate": null,
+                "reason": "ENDPOINT",
+                "previous_difference_degrees": null,
+                "following_difference_degrees": null
+              },
+              {
+                "index": 1,
+                "candidate": false,
+                "reason": null,
+                "previous_difference_degrees": 0.0,
+                "following_difference_degrees": 0.0
+              },
+              {
+                "index": 2,
+                "candidate": null,
+                "reason": "MISSING_FOLLOWING_OUTGOING_EDGE",
+                "previous_difference_degrees": null,
+                "following_difference_degrees": null
+              },
+              {
+                "index": 3,
+                "candidate": null,
+                "reason": "ENDPOINT",
+                "previous_difference_degrees": null,
+                "following_difference_degrees": null
+              }
+            ],
+            "method": "single_pass_simultaneous_keep_undefined",
+            "passes": 1,
+            "modified_values": 0
+          },
+          "output": {
+            "record_id": "fixture:review",
+            "indices": [
+              0,
+              3
+            ],
+            "timestamps": [
+              0,
+              3
+            ],
+            "xy": [
+              [
+                0,
+                0
+              ],
+              [
+                3,
+                0
+              ]
+            ],
+            "features": {
+              "edges": [
+                {
+                  "from_index": 0,
+                  "to_index": 3,
+                  "dt": 3,
+                  "dt_reason": null,
+                  "distance": 3.0,
+                  "speed": 1.0,
+                  "speed_reason": null,
+                  "direction_degrees": 90.0,
+                  "direction_reason": null
+                }
+              ],
+              "length": 3.0,
+              "direction_convention": "CLOCKWISE_FROM_POSITIVE_Y",
+              "time_reliable": true,
+              "coverage": {
+                "edge_denominator": 1,
+                "speed_computable": 1,
+                "direction_computable": 1,
+                "reason": null
+              }
+            },
+            "parent_hash": "1109bbe9a9bb4d9b0280cf8375467ca09a580e9022c4a10e9c63fcd63fb44340"
+          },
+          "independent_review": {
+            "status": "VERIFIED",
+            "quality_status": "PENDING_RESEARCH_REVIEW",
+            "errors": [],
+            "reference_scope": "SAME_SIMPLIFICATION_INPUT",
+            "floating_allowance": 4.263256414560601e-14,
+            "floating_allowance_formula": "64 * binary64_epsilon * max(1, coordinate_extent, absolute_coordinate, tolerance)",
+            "algorithm_tolerance": 1,
+            "error_by_original_index": [
+              {
+                "index": 0,
+                "error": 0.0
+              },
+              {
+                "index": 1,
+                "error": 0.0
+              },
+              {
+                "index": 2,
+                "error": 0.0
+              },
+              {
+                "index": 3,
+                "error": 0.0
+              }
+            ],
+            "exceeding_points": [],
+            "metrics": {
+              "reference_points": {
+                "value": 4,
+                "reason": null
+              },
+              "simplified_points": {
+                "value": 2,
+                "reason": null
+              },
+              "saving": {
+                "value": 0.5,
+                "reason": null
+              },
+              "max_error": {
+                "value": 0.0,
+                "reason": null
+              },
+              "reference_length": {
+                "value": 3.0,
+                "reason": null
+              },
+              "simplified_length": {
+                "value": 3.0,
+                "reason": null
+              },
+              "length_change": {
+                "value": 0.0,
+                "reason": null
+              },
+              "relative_length_change": {
+                "value": 0.0,
+                "reason": null
+              }
+            },
+            "claims_supported": [
+              "ORDERED_SUBSEQUENCE",
+              "VALUES_UNCHANGED",
+              "INDEX_INTERVAL_ERROR_CHECK"
+            ],
+            "claims_not_supported": [
+              "GROUND_TRUTH_RECOVERY",
+              "DETECTION_ACCURACY",
+              "QUALITY_IMPROVEMENT"
+            ]
+          }
+        }
+      ],
+      "stage_counts": {
+        "input": 4,
+        "segmented": 1,
+        "filtered": 0,
+        "denoised": 0,
+        "simplified": 2,
+        "retained": 2,
+        "not_processed": 0
+      },
+      "segment_counts": {
+        "total": 1,
+        "filtered": 0,
+        "processed": 1
+      },
+      "terminal_status": "PROCESSED"
+    }
+  ],
+  "point_actions": [
+    {
+      "record_id": "fixture:review",
+      "original_index": 0,
+      "segment_index": 0,
+      "action": "retained",
+      "reasons": [
+        "DP_RETAINED"
+      ],
+      "parent_hash": "1109bbe9a9bb4d9b0280cf8375467ca09a580e9022c4a10e9c63fcd63fb44340",
+      "timestamp": 0,
+      "xy": [
+        0,
+        0
+      ]
+    },
+    {
+      "record_id": "fixture:review",
+      "original_index": 1,
+      "segment_index": 0,
+      "action": "simplified",
+      "reasons": [
+        "DP_WITHIN_TOLERANCE"
+      ],
+      "parent_hash": "1109bbe9a9bb4d9b0280cf8375467ca09a580e9022c4a10e9c63fcd63fb44340",
+      "timestamp": 1,
+      "xy": [
+        1,
+        0
+      ]
+    },
+    {
+      "record_id": "fixture:review",
+      "original_index": 2,
+      "segment_index": 0,
+      "action": "simplified",
+      "reasons": [
+        "DP_WITHIN_TOLERANCE"
+      ],
+      "parent_hash": "1109bbe9a9bb4d9b0280cf8375467ca09a580e9022c4a10e9c63fcd63fb44340",
+      "timestamp": 2,
+      "xy": [
+        2,
+        0
+      ]
+    },
+    {
+      "record_id": "fixture:review",
+      "original_index": 3,
+      "segment_index": 0,
+      "action": "retained",
+      "reasons": [
+        "DP_RETAINED"
+      ],
+      "parent_hash": "1109bbe9a9bb4d9b0280cf8375467ca09a580e9022c4a10e9c63fcd63fb44340",
+      "timestamp": 3,
+      "xy": [
+        3,
+        0
+      ]
+    }
+  ],
+  "stage_counts": {
+    "input": 4,
+    "segmented": 1,
+    "filtered": 0,
+    "denoised": 0,
+    "simplified": 2,
+    "retained": 2,
+    "not_processed": 0
+  },
+  "segment_counts": {
+    "total": 1,
+    "filtered": 0,
+    "processed": 1
+  },
+  "accounting": {
+    "status": "VERIFIED",
+    "input_records": 1,
+    "input_points": 4,
+    "stage_points": {
+      "filtered": 0,
+      "denoised": 0,
+      "simplified": 2,
+      "retained": 2
+    },
+    "errors": [],
+    "count_conserved": true,
+    "modified_point_count": 0
+  },
+  "quality_status": "PENDING_RESEARCH_REVIEW",
+  "modified_values": 0,
+  "output_limitation": "GEOMETRY_IS_NOT_GROUND_TRUTH_OR_QUALITY_IMPROVEMENT"
+}

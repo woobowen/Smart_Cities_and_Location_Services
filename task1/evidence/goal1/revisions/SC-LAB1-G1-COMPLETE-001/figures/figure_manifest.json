@@ -1,0 +1,339 @@
+{
+  "classification": "CURRENT_RUN_CONDITIONAL_ANALYSIS",
+  "source_crs": "UNVERIFIED",
+  "run_id": "g1-complete-pilot-03",
+  "code_sha": "f229d9a4113bcc0dd763e1b410f1f5fb73903a62",
+  "baseline": {
+    "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/baseline.json",
+    "sha256": "865710aea34a316fe83088d7cf2ac1aec68c96623269bfcf06255b5db2930fd8",
+    "artifact_id": "g1-complete-pilot-03:baseline",
+    "output_sha256": "36b39abfa1d1e79fe6999831083eb36a1d9e2a4f737e374e1514f08ef5016eab",
+    "action": "baseline",
+    "valid": true,
+    "source_hashes": {
+      "task1/workflow/io.py": "0d3d72dd0beb4718f4020a07a5f1c0ca89193943049a479816b5c496806321b2",
+      "task1/workflow/tools.py": "0fde0acebfe3ec97bd2653744ac8f0444c1e9a162c61970bccf8a94a9fbd0b3f",
+      "task1/workflow/diagnostics.py": "aee1e4dd46ff7b15a8f3d854aaf1ed9668ee5ef4d4991a624beb479ff0f82745",
+      "task1/workflow/pipeline.py": "160bedcc0d8dffce71d833dffc4de28928bc7007077ae8d03c57c96d827548c7",
+      "task1/workflow/geometry.py": "2ad3ca3b49e98e997684e3f5af948771be80dfb03b31b2ae4cc4483856e93d74",
+      "task1/workflow/evaluation.py": "7cf224fbc290d3e83acd5d83a3fe335e6dc437c762f7053d8132817aa91025b2",
+      "task1/workflow/coordinates.py": "d99b270a65c88f8530669d5e7d0887d7563b3e54e19770ab7a9eb695117e075d",
+      "task1/config/conditional_planar.json": "5b1ab7dbf25797a51405a2cddd93a8d2ea3e3b69530369366d0e05be7abb8169"
+    }
+  },
+  "new_model_calls": 0,
+  "renderer": "Matplotlib; draw.io mxGeometry parsed for all architecture exports",
+  "palette_source": "templates/latex/common/p2_cloud_sorbet_colors.tex",
+  "palette_sha256": "2aa820c3f68ba6c14cf1b52082b12336071d77bb5466db2b05b2fab6890aa243",
+  "generator": "task1/scripts/build_complete_figures.py",
+  "generator_sha256": "89b1c96ef3e7821ab46857d3e9b0223839d8b768907ed0b91265c40aa3f7b7c1",
+  "figure_count": 3,
+  "raster_dpi": 300,
+  "record_scope": [
+    "0",
+    "1",
+    "2",
+    "246",
+    "256",
+    "306",
+    "352"
+  ],
+  "stage_counts": {
+    "input": 783,
+    "segmented": 30,
+    "filtered": 309,
+    "denoised": 13,
+    "simplified": 273,
+    "retained": 188,
+    "not_processed": 0
+  },
+  "actual_repair_event_evidence": [
+    {
+      "sequence": 0,
+      "kind": "ISSUE_OPENED",
+      "issue_id": "C2-F01",
+      "hash": "487bbf6259fd36b1b65e83387a793a69398a7eafff691cdfb3103795fd46c2fc"
+    },
+    {
+      "sequence": 1,
+      "kind": "B_REPAIR_CONSUMED",
+      "issue_id": "C2-F01",
+      "hash": "c16b4c2ce63bd21e4c35cf32cb84473781ceb9aaf618d3974aba89fb50603ed3"
+    },
+    {
+      "sequence": 2,
+      "kind": "ISSUE_OPENED",
+      "issue_id": "C2-F02",
+      "hash": "835dea3b3072ea1916bb45084ae8b32f9860b6d3e4a49e9c76c3d3a63a6c399a"
+    },
+    {
+      "sequence": 3,
+      "kind": "B_REPAIR_CONSUMED",
+      "issue_id": "C2-F02",
+      "hash": "c7e260a956a79ca5bfeccb3c96a042990b1939d9693e503fe074a353c5222bdc"
+    },
+    {
+      "sequence": 6,
+      "kind": "REPAIR_SUBMITTED",
+      "issue_id": "C2-F02",
+      "hash": "cd60989c02c51909fc87ce0d26302033382aa897eb5a696b62d4b88b8b1841bd"
+    },
+    {
+      "sequence": 9,
+      "kind": "B_REPAIR_CONSUMED",
+      "issue_id": "C2-F02",
+      "hash": "605263db9bf9b7fa32ec6dbfd535117895fd076803eb08babc90e596ab34ae62"
+    },
+    {
+      "sequence": 10,
+      "kind": "REPAIR_SUBMITTED",
+      "issue_id": "C2-F02",
+      "hash": "edc8ca9433699e23a94cf00e48156b4dc976eeef61bfcd63802ac3850744f208"
+    },
+    {
+      "sequence": 11,
+      "kind": "REPAIR_SUBMITTED",
+      "issue_id": "C2-F01",
+      "hash": "03e32f1c1b502404600d1b3733c9eca0f7494d067573380d11832a2cb621eac8"
+    },
+    {
+      "sequence": 13,
+      "kind": "C_VERIFIED_PARENT_RESUMED",
+      "issue_id": "C2-F02",
+      "parent_task": "trusted_baseline",
+      "hash": "2df5709b5c8690fda2af1d81cdd03d4cfccf4d5cbe4e71e1453a4fbe5b8a3947"
+    },
+    {
+      "sequence": 14,
+      "kind": "B_REPAIR_CONSUMED",
+      "issue_id": "C2-F01",
+      "hash": "4c27075c1be157e1efa615ea48ce61e87da517201407f0f2382c24e1c3c2508b"
+    },
+    {
+      "sequence": 15,
+      "kind": "REPAIR_SUBMITTED",
+      "issue_id": "C2-F01",
+      "hash": "3d8856bd2474876d68d4a6d06bcb02607eb506bb4deb7c005babb3225ebda5b9"
+    },
+    {
+      "sequence": 17,
+      "kind": "C_VERIFIED_PARENT_RESUMED",
+      "issue_id": "C2-F01",
+      "parent_task": "review_targets",
+      "hash": "95df2b7bebe5237f67122e86c1af7da7d965e7105f4e571e41212b726840ed87"
+    },
+    {
+      "sequence": 20,
+      "kind": "RUN_STARTED",
+      "run_id": "g1-complete-pilot-01",
+      "hash": "2e85a0b5c3b7c729718ec77f1fff182da341bf1362e087c73dd34eb67dfa0cf1"
+    },
+    {
+      "sequence": 22,
+      "kind": "TOOL_EXECUTED",
+      "operation": "g1-complete-pilot-01:profile_pilot",
+      "hash": "b3bb8c2cac035363943cf25a8d4220db66f6c224abbbca8bac630d10d27a77f9"
+    },
+    {
+      "sequence": 25,
+      "kind": "TOOL_EXECUTED",
+      "operation": "g1-complete-pilot-01:duplicate_details",
+      "hash": "0a19d406708c2b5ec04fda44ebe1e42235316150ae2ad454cd97a731c1fe2186"
+    },
+    {
+      "sequence": 28,
+      "kind": "TOOL_EXECUTED",
+      "operation": "g1-complete-pilot-01:time_boundaries",
+      "hash": "7096ab6da629d331d6151f01227e00929973d2c09ba4275aed56c4f07110bc76"
+    },
+    {
+      "sequence": 31,
+      "kind": "TOOL_EXECUTED",
+      "operation": "g1-complete-pilot-01:baseline",
+      "hash": "28134ebf21b07a6d1d2ff4c6d5a24d25b222a9c4333350e3af869cb8bdcf6bc9"
+    },
+    {
+      "sequence": 33,
+      "kind": "ISSUE_OPENED",
+      "issue_id": "NUMERIC:g1-complete-pilot-01:baseline",
+      "hash": "8db27ad87c4798e18ddaaff9cf6cb303d8bea718fe68d8ba01f86a65230e8d22"
+    },
+    {
+      "sequence": 34,
+      "kind": "B_REPAIR_CONSUMED",
+      "issue_id": "NUMERIC:g1-complete-pilot-01:baseline",
+      "hash": "ad29417198cd3a9e5be685f4cce6594b4240a1c6771864cf2566f28c31ddd2f8"
+    },
+    {
+      "sequence": 35,
+      "kind": "ISSUE_OPENED",
+      "issue_id": "C3-COORDINATE-DIRECTION",
+      "hash": "dfee4ba38b727517d151e52c948e3b290b004e0a055aabcbdd44b62f5b822601"
+    },
+    {
+      "sequence": 36,
+      "kind": "B_REPAIR_CONSUMED",
+      "issue_id": "C3-COORDINATE-DIRECTION",
+      "hash": "d30b0d3550b8fdd065c637d5676109ee17f9fcfc65d3817e09a4f7fd787c9771"
+    },
+    {
+      "sequence": 38,
+      "kind": "REPAIR_SUBMITTED",
+      "issue_id": "C3-COORDINATE-DIRECTION",
+      "hash": "780d34ca3a580fc36642eb30f323a68b581d11f1d03eedc73d9cd95da0956ff8"
+    },
+    {
+      "sequence": 39,
+      "kind": "REPAIR_SUBMITTED",
+      "issue_id": "NUMERIC:g1-complete-pilot-01:baseline",
+      "hash": "7c157a9e67f155a7f40a7fb75c01ffde4e2005a72e00805f0658804f061346ce"
+    },
+    {
+      "sequence": 40,
+      "kind": "C_VERIFIED_PARENT_RESUMED",
+      "issue_id": "C3-COORDINATE-DIRECTION",
+      "parent_task": "processing_feedback",
+      "hash": "78d7863c2571f0bbce949db635859faaf36ba4b5cff1e297fa6f2cc33d0432fb"
+    },
+    {
+      "sequence": 41,
+      "kind": "C_VERIFIED_PARENT_RESUMED",
+      "issue_id": "NUMERIC:g1-complete-pilot-01:baseline",
+      "parent_task": "real_baseline",
+      "hash": "fc7fc67a4230403c8706e475621a99c229ca7e0496c82897dad0ac9667f12534"
+    },
+    {
+      "sequence": 43,
+      "kind": "RUN_STARTED",
+      "run_id": "g1-complete-pilot-02",
+      "hash": "331eb0199ac6f1963814bc824faa49aabbaaa673065ea0dbbc9b7a3fc0758205"
+    },
+    {
+      "sequence": 45,
+      "kind": "TOOL_EXECUTED",
+      "operation": "g1-complete-pilot-02:profile_pilot",
+      "hash": "671328c7fdac0ea505ef38b54481cb68b34fe4a203640fde957f5df6a2990652"
+    },
+    {
+      "sequence": 48,
+      "kind": "TOOL_EXECUTED",
+      "operation": "g1-complete-pilot-02:duplicate_details",
+      "hash": "c8d1b51e70cbe068bfa6ced8997e7d1e4ef68ce854df2183dec18bd20e0e3447"
+    },
+    {
+      "sequence": 51,
+      "kind": "TOOL_EXECUTED",
+      "operation": "g1-complete-pilot-02:time_boundaries",
+      "hash": "8db8efec5626cce1c542664ed8e28e5bbe8cdc579ac4fd88c90807dc36fd6a5a"
+    },
+    {
+      "sequence": 54,
+      "kind": "TOOL_EXECUTED",
+      "operation": "g1-complete-pilot-02:baseline",
+      "hash": "c81960e4b14cee012ac9f01f265bf0ac87661d4b99f52bc198505826a7e82cfa"
+    },
+    {
+      "sequence": 57,
+      "kind": "ISSUE_OPENED",
+      "issue_id": "C3-TIME-SCOPE",
+      "hash": "47ba5b7e0b06113537e59c783f2fed8788d547d8359ed9ca5c7894ad52a99b67"
+    },
+    {
+      "sequence": 58,
+      "kind": "B_REPAIR_CONSUMED",
+      "issue_id": "C3-TIME-SCOPE",
+      "hash": "c800ae2dd23a1e335170213b9bae18c25d3f37e0b16106a832323bae480fc558"
+    },
+    {
+      "sequence": 60,
+      "kind": "REPAIR_SUBMITTED",
+      "issue_id": "C3-TIME-SCOPE",
+      "hash": "59438efb38833b6f98d41b0f9568a1a5f2d42ece7e366413c6413e8d8d7742e3"
+    },
+    {
+      "sequence": 61,
+      "kind": "C_VERIFIED_PARENT_RESUMED",
+      "issue_id": "C3-TIME-SCOPE",
+      "parent_task": "diagnostics",
+      "hash": "a3c0ffe54da3a828e13f31abf67b14233d62f0ff7dc0776ef97bb92d270cfdc2"
+    },
+    {
+      "sequence": 63,
+      "kind": "RUN_STARTED",
+      "run_id": "g1-complete-pilot-03",
+      "hash": "2181e11797bf68a1944cc2a5603bbd964d995d8971f3d884be96699c22c32de7"
+    },
+    {
+      "sequence": 65,
+      "kind": "TOOL_EXECUTED",
+      "operation": "g1-complete-pilot-03:profile_pilot",
+      "hash": "42166843d4d4b8ec967c8c80a07d11cc737137cb12196d531e01ed2b5c33b3a0"
+    },
+    {
+      "sequence": 68,
+      "kind": "TOOL_EXECUTED",
+      "operation": "g1-complete-pilot-03:duplicate_details",
+      "hash": "81bbf226564e396780566a14e837899619fc96d61b47d925c59a6b6072e43d91"
+    },
+    {
+      "sequence": 71,
+      "kind": "TOOL_EXECUTED",
+      "operation": "g1-complete-pilot-03:time_boundaries",
+      "hash": "39b37d58d69974f490536133cff253a356a3082412ff5c56c41df517969a434c"
+    },
+    {
+      "sequence": 74,
+      "kind": "TOOL_EXECUTED",
+      "operation": "g1-complete-pilot-03:baseline",
+      "hash": "86ea5ad66887d30a66609e0d9448ea23da55592704b8531c4bec24b9eb16710c"
+    }
+  ],
+  "claims_not_supported": [
+    "SOURCE_DATUM_IDENTIFIED",
+    "ACCURACY",
+    "GROUND_TRUTH_RECOVERY",
+    "QUALITY_IMPROVEMENT"
+  ],
+  "files": [
+    {
+      "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/conditional_pilot_trajectories.svg",
+      "sha256": "d20b64d74aed30841ae94fa3cb189e32e2caad04c63f6909d59d9dfd5b09152c"
+    },
+    {
+      "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/conditional_pilot_trajectories.pdf",
+      "sha256": "8c812448406a5fb18adb8fdc10af31c370b533283801b8543dbaa98407f38148"
+    },
+    {
+      "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/conditional_pilot_trajectories.png",
+      "sha256": "a492bb7e7dc2dafff2db442a79938c7cd3999f3a65501b75fe2069ffd0987bf8"
+    },
+    {
+      "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/point_terminal_counts.svg",
+      "sha256": "dd894599e5b6a088b74f9498733f835f32e543b552d87e1166ed680a2a6fdfd8"
+    },
+    {
+      "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/point_terminal_counts.pdf",
+      "sha256": "7d5f3d2e602db74b579ae8d03e5e5fdcc65e876125b57188fb1c6c46bd45c6d2"
+    },
+    {
+      "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/point_terminal_counts.png",
+      "sha256": "fe53c546648e125e01fcdb76b904a76c7c836e58d1f41fef5df113a4ece4532f"
+    },
+    {
+      "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/goal1_execution_structure.svg",
+      "sha256": "082890e2fe2cbcd7f24dfd56a8c2144d2f04cd533565e3342dae1af99b2cbae5"
+    },
+    {
+      "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/goal1_execution_structure.pdf",
+      "sha256": "245995cee688a9750f6a961e7305a9a683799480bd581c35a8e4a429d908d882"
+    },
+    {
+      "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/goal1_execution_structure.png",
+      "sha256": "62461a336585bfdd5405709c57b5ce45ec5ef2af15056b982724b2684ff80aea"
+    },
+    {
+      "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/goal1_execution_structure.drawio",
+      "sha256": "4a8d254fbdc09fe7f732c23f6b7aa8452c259fcd172d993f26db7bddb71ae084"
+    }
+  ]
+}

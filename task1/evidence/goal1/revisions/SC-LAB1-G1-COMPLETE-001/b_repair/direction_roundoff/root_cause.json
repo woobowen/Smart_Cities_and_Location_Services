@@ -1,0 +1,120 @@
+{
+  "at": "2026-09-26T16:59:38.314714+00:00",
+  "classification": "CURRENT_RUN_CONDITIONAL_ANALYSIS_DIAGNOSTIC",
+  "source_run": "g1-complete-pilot-01",
+  "source_artifact": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-01/baseline.json",
+  "source_artifact_sha256": "865710aea34a316fe83088d7cf2ac1aec68c96623269bfcf06255b5db2930fd8",
+  "failed_review_sha256": "49823c6cc17773447a551131bc718acfb428086f4630afb182927fd8bd7b7eb3",
+  "evaluation_before_sha256": "92424a94c20ce897606d546ba69c0f205c0f5f75a17b609134ac8125a241c7ad",
+  "raw_sha256": "c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3",
+  "cases": [
+    {
+      "record_id": "246",
+      "segment_index": 0,
+      "input_window_indices": [
+        37,
+        38,
+        39,
+        40
+      ],
+      "input_window_xy": [
+        [
+          2704.8739117069113,
+          -15239.824243165327
+        ],
+        [
+          2707.0146746145083,
+          -15042.13724982291
+        ],
+        [
+          2706.3292265859104,
+          -14970.291748253701
+        ],
+        [
+          2719.169588334366,
+          -14881.700920097152
+        ]
+      ],
+      "normalized_bearings_degrees": [
+        0.6204347753152492,
+        359.4533813984956,
+        8.24702475091106
+      ],
+      "expected": {
+        "index": 38,
+        "candidate": false,
+        "reason": null,
+        "previous_difference_degrees": 1.1670533768196378,
+        "following_difference_degrees": 8.793643352415472
+      },
+      "actual": {
+        "index": 38,
+        "candidate": false,
+        "reason": null,
+        "previous_difference_degrees": 1.1670533768196947,
+        "following_difference_degrees": 8.793643352415529
+      },
+      "differences": {
+        "previous_difference_degrees": 5.684341886080802e-14,
+        "following_difference_degrees": 5.684341886080802e-14
+      }
+    },
+    {
+      "record_id": "246",
+      "segment_index": 0,
+      "input_window_indices": [
+        63,
+        64,
+        65,
+        66
+      ],
+      "input_window_xy": [
+        [
+          4238.076365511912,
+          -10648.050956026771
+        ],
+        [
+          4245.615270772798,
+          -10448.364163284863
+        ],
+        [
+          4244.457192107819,
+          -10410.778400863572
+        ],
+        [
+          4245.116276199837,
+          -10391.9295806833
+        ]
+      ],
+      "normalized_bearings_degrees": [
+        2.1620979498986177,
+        358.23518188892047,
+        2.0026376790500104
+      ],
+      "expected": {
+        "index": 64,
+        "candidate": false,
+        "reason": null,
+        "previous_difference_degrees": 3.926916060978158,
+        "following_difference_degrees": 3.7674557901295316
+      },
+      "actual": {
+        "index": 64,
+        "candidate": false,
+        "reason": null,
+        "previous_difference_degrees": 3.926916060978101,
+        "following_difference_degrees": 3.7674557901295884
+      },
+      "differences": {
+        "previous_difference_degrees": -5.684341886080802e-14,
+        "following_difference_degrees": 5.684341886080802e-14
+      }
+    }
+  ],
+  "deletion_disagreement": false,
+  "root_cause": "Both formulas compute the same unsigned circular difference. The modulo formula adds/subtracts a half-turn; cancellation makes error scale with normalized bearings rather than only the small final difference. The generic relative comparison missed that input scale.",
+  "production_changes": false,
+  "dp_changes": false,
+  "provider_calls": 0,
+  "baseline_reruns": 0
+}

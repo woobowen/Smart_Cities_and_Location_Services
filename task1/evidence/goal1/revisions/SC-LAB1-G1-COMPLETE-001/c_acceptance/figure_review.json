@@ -1,0 +1,135 @@
+{
+  "status": "VERIFIED",
+  "classification": "INDEPENDENT_C_VISUAL_AND_DATA_SOURCE_REVIEW",
+  "run_id": "g1-complete-pilot-03",
+  "code_sha": "f229d9a4113bcc0dd763e1b410f1f5fb73903a62",
+  "figure_manifest_sha256": "bb8b6ce36928ca71a1ea9b623f2d3473774ae7eb576c0df25da7b50857977fdc",
+  "files": [
+    {
+      "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/conditional_pilot_trajectories.svg",
+      "sha256": "d20b64d74aed30841ae94fa3cb189e32e2caad04c63f6909d59d9dfd5b09152c",
+      "matches": true
+    },
+    {
+      "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/conditional_pilot_trajectories.pdf",
+      "sha256": "8c812448406a5fb18adb8fdc10af31c370b533283801b8543dbaa98407f38148",
+      "matches": true
+    },
+    {
+      "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/conditional_pilot_trajectories.png",
+      "sha256": "a492bb7e7dc2dafff2db442a79938c7cd3999f3a65501b75fe2069ffd0987bf8",
+      "matches": true
+    },
+    {
+      "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/point_terminal_counts.svg",
+      "sha256": "dd894599e5b6a088b74f9498733f835f32e543b552d87e1166ed680a2a6fdfd8",
+      "matches": true
+    },
+    {
+      "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/point_terminal_counts.pdf",
+      "sha256": "7d5f3d2e602db74b579ae8d03e5e5fdcc65e876125b57188fb1c6c46bd45c6d2",
+      "matches": true
+    },
+    {
+      "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/point_terminal_counts.png",
+      "sha256": "fe53c546648e125e01fcdb76b904a76c7c836e58d1f41fef5df113a4ece4532f",
+      "matches": true
+    },
+    {
+      "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/goal1_execution_structure.svg",
+      "sha256": "082890e2fe2cbcd7f24dfd56a8c2144d2f04cd533565e3342dae1af99b2cbae5",
+      "matches": true
+    },
+    {
+      "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/goal1_execution_structure.pdf",
+      "sha256": "245995cee688a9750f6a961e7305a9a683799480bd581c35a8e4a429d908d882",
+      "matches": true
+    },
+    {
+      "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/goal1_execution_structure.png",
+      "sha256": "62461a336585bfdd5405709c57b5ce45ec5ef2af15056b982724b2684ff80aea",
+      "matches": true
+    },
+    {
+      "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/goal1_execution_structure.drawio",
+      "sha256": "4a8d254fbdc09fe7f732c23f6b7aa8452c259fcd172d993f26db7bddb71ae084",
+      "matches": true
+    }
+  ],
+  "visual_inspection": {
+    "method": "C personally viewed all three actual 200dpi PDF renders using view_image",
+    "dpi": 200,
+    "pages": [
+      {
+        "name": "conditional_pilot_trajectories",
+        "result": "Legible seven panels, all input/clean/final counts agree with C independent audit; equal x/y scales within each panel; raw scatter only; actual segment lines never bridge cuts; no basemap; unverified datum explicit"
+      },
+      {
+        "name": "point_terminal_counts",
+        "result": "All 783 points count once; four mutually exclusive terminal categories have distinct color/hatch; 7 row totals and bars agree with C independent stage counts; no quality/accuracy claim"
+      },
+      {
+        "name": "goal1_execution_structure",
+        "result": "Native roles and deterministic journal distinguished; actual C2 repair consumption, independent regression, reopen and parent resume arrows visible; G2/G3 explicitly later not executed"
+      }
+    ]
+  },
+  "render_hashes": {
+    "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/point_terminal_counts_pdf_render.png": "f61d1420956943413f8f4d550b45e3fb792b9ec8a2126f9fd2a2cba64bda3c19",
+    "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/goal1_execution_structure_pdf_render.png": "6c4ad390b7141bb3a11f51d0ecaa5b7073cc1243bda691175652c6f56f6b8cb6",
+    "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/conditional_pilot_trajectories_pdf_render.png": "e1c98cbe62c1582a5263afeec6b3c94460e94cb289f74e88e652488cc999c575"
+  },
+  "drawio_edges": {
+    "A_to_B": [
+      "A",
+      "B"
+    ],
+    "B_to_C": [
+      "B",
+      "C"
+    ],
+    "C_to_journal": [
+      "C",
+      "journal"
+    ],
+    "journal_to_A": [
+      "journal",
+      "A"
+    ],
+    "journal_to_issue": [
+      "journal",
+      "issue"
+    ],
+    "issue_to_repair": [
+      "issue",
+      "repair"
+    ],
+    "repair_to_verify": [
+      "repair",
+      "verify"
+    ],
+    "verify_to_rebuild": [
+      "verify",
+      "rebuild"
+    ],
+    "rebuild_to_parent": [
+      "rebuild",
+      "journal"
+    ],
+    "reopen": [
+      "verify",
+      "repair"
+    ]
+  },
+  "source_code_review": [
+    "Actual plotter reads registered run and verifies baseline hash before plotting",
+    "No trajectory lines drawn for filtered segments",
+    "Every clean/final polyline drawn separately per processed segment; /1000 is display-only",
+    "Architecture render parses same draw.io XML geometry and labels",
+    "P2 colors read from installed shared TeX palette"
+  ],
+  "source_hashes": {
+    "task1/scripts/build_complete_figures.py": "89b1c96ef3e7821ab46857d3e9b0223839d8b768907ed0b91265c40aa3f7b7c1",
+    "templates/latex/common/p2_cloud_sorbet_colors.tex": "2aa820c3f68ba6c14cf1b52082b12336071d77bb5466db2b05b2fab6890aa243"
+  }
+}

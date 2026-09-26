@@ -1,0 +1,54 @@
+{
+  "status": "VERIFIED",
+  "classification": "INDEPENDENT_C_FINAL_TEST_EVIDENCE_AND_SYNTAX_CHECK",
+  "code_sha": "f229d9a4113bcc0dd763e1b410f1f5fb73903a62",
+  "work_tests": 261,
+  "failures_errors": [],
+  "skips": 0,
+  "source_hash_mismatches": [],
+  "syntax_parsed_current_files": [
+    "task1/workflow/recompute.py",
+    "task1/workflow/coordinates.py",
+    "task1/workflow/goal.py",
+    "task1/workflow/diagnostics.py",
+    "task1/workflow/inventory.py",
+    "task1/workflow/io.py",
+    "task1/workflow/budget.py",
+    "task1/workflow/coordinate_review.py",
+    "task1/workflow/__init__.py",
+    "task1/workflow/artifact_review.py",
+    "task1/workflow/pipeline.py",
+    "task1/workflow/__main__.py",
+    "task1/workflow/geometry.py",
+    "task1/workflow/provider.py",
+    "task1/workflow/evaluation.py",
+    "task1/workflow/tools.py",
+    "task1/workflow/sources.py",
+    "task1/workflow/controller.py",
+    "task1/scripts/build_complete_figures.py",
+    "task1/scripts/build_repair_figures.py",
+    "task1/scripts/recompute_archived_run.py",
+    "task1/scripts/repair_goal1.py",
+    "task1/scripts/complete_goal1.py",
+    "task1/scripts/build_goal1_notebooks.py",
+    "task1/scripts/build_goal1_figures.py",
+    "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/remaining_probe.py",
+    "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/independent_probe.py"
+  ],
+  "test_report": {
+    "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/tests_pilot03.xml",
+    "sha256": "2b05ade71170f55a87c514632e3f96d021aebe73b2571c202ef6b07e1745d0bc"
+  },
+  "validation_report": {
+    "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/validation_pilot03.json",
+    "sha256": "6354e712f0a1aec6bb0344d4d4f3c3797df979eed08cdd86db54567af29f2fbc"
+  },
+  "scope": "Main actually ran full suite; C verifies exact source hashes/test cases and separately runs independent artifact mathematics rather than claiming the same suite as independent numerical evidence.",
+  "starter_evidence": {
+    "classification": "INHERITED_HISTORICAL",
+    "passed": 292,
+    "skipped": 1,
+    "fresh_rerun": false,
+    "basis": "A initial-Git-blob audit verifies all 106 teacher/starter/raw files unchanged; no dependencies modified by this task except added pyproj for new conditional adapter"
+  }
+}

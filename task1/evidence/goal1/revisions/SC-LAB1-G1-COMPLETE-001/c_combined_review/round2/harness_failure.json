@@ -1,0 +1,15 @@
+{
+  "classification": "ENGINEERING_TEST_HARNESS_FAILURE",
+  "command": ".venv/bin/python -B task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_combined_review/recheck_final.py",
+  "exit_code": 1,
+  "exception": "KeyError: followup",
+  "location": "recheck_final.py line 48 in initial version",
+  "cause": "The negative-only preceding fixture assigned followup in memory, but correctly rejected all completion attempts before an event saved it. Reloaded fixture lacked followup.",
+  "fix": "Fresh output subtree; explicitly register the existing ENGINEERING_TEST followup file before normal/finalize checks.",
+  "production_defect": false,
+  "completed_before_failure": {
+    "F01_assertions": 23,
+    "F02_cases": 37,
+    "extra_gate_checks": 14
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "status": "VERIFIED",
+  "run_id": "g1-complete-pilot-03",
+  "classification": "INDEPENDENT_C_PRODUCT_REVIEW",
+  "checks": [
+    {
+      "name": "REVIEW_PACKET.md:local_links_exist",
+      "passed": true
+    },
+    {
+      "name": "FINAL_RESPONSE.md:local_links_exist",
+      "passed": true
+    },
+    {
+      "name": "current_numeric_claims",
+      "passed": true
+    },
+    {
+      "name": "conditional_claim_and_unpublished_boundary",
+      "passed": true
+    },
+    {
+      "name": "no_accuracy_or_final_report_claim",
+      "passed": true
+    },
+    {
+      "name": "counts_separated",
+      "passed": true
+    }
+  ],
+  "check_count": 6,
+  "evidence": [
+    {
+      "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/reviewed_REVIEW_PACKET.md.txt",
+      "sha256": "f3a472d33db02503aaba6e6866a4261c02587b85e649171fb6180348426f116f"
+    },
+    {
+      "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/reviewed_FINAL_RESPONSE.md.txt",
+      "sha256": "bcb647b416f93dc2e0c1bc4cd61d72532c03c02c6ad3f04231dd0557d7811a47"
+    },
+    {
+      "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/reviewed_requirements.json",
+      "sha256": "ff973adb03a00d101387f062da27dbdb6e6238da02573907cd9517014e4d977e"
+    },
+    {
+      "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/summary_review.json",
+      "sha256": "a19f1b6035ff8b545744eacba6def467e6287c3a0fc494a92a4f7d0b82c9f348"
+    },
+    {
+      "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/workflow_trace_review.json",
+      "sha256": "4264642e798d174b60ec674ca6fed24aac5042b0044817d871f28596fe2facc2"
+    }
+  ],
+  "snapshots": [
+    {
+      "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/reviewed_REVIEW_PACKET.md.txt",
+      "sha256": "f3a472d33db02503aaba6e6866a4261c02587b85e649171fb6180348426f116f",
+      "source_original_path": "task1/evidence/goal1/REVIEW_PACKET.md",
+      "classification": "READ_ONLY_ORIGINAL_BYTES_SNAPSHOT_NOT_ACTIVE_ENTRY"
+    },
+    {
+      "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/reviewed_FINAL_RESPONSE.md.txt",
+      "sha256": "bcb647b416f93dc2e0c1bc4cd61d72532c03c02c6ad3f04231dd0557d7811a47",
+      "source_original_path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/FINAL_RESPONSE.md",
+      "classification": "READ_ONLY_ORIGINAL_BYTES_SNAPSHOT_NOT_ACTIVE_ENTRY"
+    },
+    {
+      "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/reviewed_requirements.json",
+      "sha256": "ff973adb03a00d101387f062da27dbdb6e6238da02573907cd9517014e4d977e",
+      "source_original_path": "task1/evidence/goal1/requirements.json",
+      "classification": "READ_ONLY_ORIGINAL_BYTES_SNAPSHOT_NOT_ACTIVE_ENTRY"
+    }
+  ],
+  "human_review": "C read A–H and current entry in full; claims match independently reviewed scope, counts, failures, modes and limitations.",
+  "status_update_rule": "Original active entry/requirements may subsequently record actual C acceptance and publication; this review binds immutable observed snapshots only.",
+  "pending": [
+    "Actual push/remote equality and final publication links",
+    "GPT remote second review"
+  ]
+}

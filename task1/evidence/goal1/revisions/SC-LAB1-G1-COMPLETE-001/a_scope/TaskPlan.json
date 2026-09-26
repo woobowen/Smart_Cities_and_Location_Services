@@ -1,0 +1,1043 @@
+{
+  "artifact_type": "A_ROLE_TASKPLAN_HANDOFF",
+  "goal_id": "SC-LAB1-G1-FOUNDATION-001",
+  "execution_label": "SC-LAB1-G1-COMPLETE-001",
+  "scope": "Derived execution tasks for the current approved Prompt; not a replacement requirements table or final acceptance report.",
+  "canonical_requirements": "task1/evidence/goal1/requirements.json",
+  "canonical_review_entry": "task1/evidence/goal1/REVIEW_PACKET.md",
+  "approval_source": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/handoff/SC-LAB1-G1-COMPLETE-001_CODEX_PROMPT.md",
+  "source_audit": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/a_scope/source_audit.json",
+  "original_requirement_ids_preserved": [
+    "R01",
+    "R02",
+    "R03",
+    "R04",
+    "R05",
+    "R06",
+    "R07",
+    "R08",
+    "R09",
+    "R10",
+    "R11",
+    "R12",
+    "R13",
+    "R14",
+    "R15",
+    "R16"
+  ],
+  "goal_status_at_handoff": "IMPLEMENTING_AUTHORIZED_CONDITIONAL_REAL_PILOT",
+  "acceptance_status_is_not_inferred_from_this_plan": true,
+  "source_findings": [
+    "Six targeted teacher/starter files match the existing extraction-index SHA256; three saved D1/D2 PPT excerpts match the original XML exactly.",
+    "The raw JSON SHA256 matches the approved input; the fixed seven records contain 783 points by this read-only check.",
+    "Notebook Cell1 confirms STARTER_REFERENCE values 65/5/30/400/35/5; PPT24 95m is a separate teaching example. Neither is a newly selected optimum.",
+    "PPT20 defines the outgoing-direction predicate but not deletion scheduling. D2 remains a real approval dependency.",
+    "No new source-datum fact was found. A later actual user supplement approves D2 and permits a frozen local-model assumption for conditional real-pilot processing; this replaces the earlier all-real-processing blockade without relabeling the datum as known.",
+    "The current requirements table contains obsolete pre-REPAIR live-call states and missing-research-file claims. It must be refreshed in place, preserving history and IDs.",
+    "The controller fixed the explicit ellipsoid ECEF->ENU model before processing. A read-only scale diagnosis records all 783 points and 776 raw neighbor edges; it does not execute the baseline."
+  ],
+  "tasks": [
+    {
+      "task_id": "A-T01",
+      "title": "Verify existing source and scope bindings",
+      "owner": "A",
+      "readiness_at_handoff": "COMPLETED_FOR_BOUNDED_A_SCOPE",
+      "depends_on": [],
+      "external_dependencies": [],
+      "requirement_ids": [
+        "R01",
+        "R02",
+        "R03",
+        "R04",
+        "R06",
+        "R07",
+        "R09",
+        "R11",
+        "R16"
+      ],
+      "gc_ids": [
+        "GC02",
+        "GC08",
+        "GC14",
+        "GC15"
+      ],
+      "actions": [
+        "Read the latest Prompt and inherited requirements/contracts",
+        "Compare source bytes with saved extraction hashes and key XML excerpts",
+        "Identify the current D1/D2 state and all mandatory work beyond two audit patches"
+      ],
+      "close_when": [
+        "Source audit is reproducible and exact comparisons pass",
+        "Task dependencies and GC/G1 mappings cover the approved Goal without adding a second requirements table"
+      ],
+      "evidence_paths": [
+        "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/a_scope/source_audit.json",
+        "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/a_scope/TaskPlan.json"
+      ]
+    },
+    {
+      "task_id": "A-T02",
+      "title": "Refresh current requirements, active execution rules and working entrypoints",
+      "owner": "Main / B-Repair",
+      "readiness_at_handoff": "READY",
+      "depends_on": [
+        "A-T01"
+      ],
+      "external_dependencies": [],
+      "requirement_ids": [
+        "R01",
+        "R03",
+        "R05",
+        "R08",
+        "R11",
+        "R12",
+        "R14",
+        "R15"
+      ],
+      "gc_ids": [
+        "GC01",
+        "GC02",
+        "GC14",
+        "GC15"
+      ],
+      "actions": [
+        "Consume requirements_refresh below in the existing table",
+        "Apply only approved continuous-execution rule changes to AGENTS/research protocol",
+        "Use the existing 11-file sync tool after active-source changes",
+        "Update current CONTRACTS/README/ARCHITECTURE/config routing to distinguish old frozen batches from the new authorized Goal; retain the historical ledgers and rules as history"
+      ],
+      "close_when": [
+        "R01-R16 remain the unique requirements list",
+        "G1 actual baseline is assigned to G1 after approval; G2/G3 remain separate",
+        "No current working entry claims that an exhausted old six-call batch ends this Goal",
+        "The 11-file allowlist and active/bundle byte/hash equality check passes",
+        "D2 approval and conditional-model authority are current; source datum remains UNVERIFIED and historical blocked states are preserved."
+      ]
+    },
+    {
+      "task_id": "A-T03",
+      "title": "Close C2-F01 with runtime target-bound audit coverage",
+      "owner": "B-Repair; C independent verification",
+      "readiness_at_handoff": "READY",
+      "depends_on": [
+        "A-T01"
+      ],
+      "external_dependencies": [],
+      "requirement_ids": [
+        "R05",
+        "R08",
+        "R10",
+        "R12"
+      ],
+      "gc_ids": [
+        "GC05",
+        "GC06",
+        "GC13"
+      ],
+      "actions": [
+        "Expose actual profile, duplicate-event, time-boundary and baseline audits through the runtime tool path",
+        "Resolve target identity/hash, reference, record scope and contract version from the controller registry",
+        "Reject uncovered requested components and stale/wrong targets"
+      ],
+      "close_when": [
+        "Time-boundary omissions, wrong equality and wrong indices are rejected",
+        "Missing or wrong-type duplicate events are rejected against all events",
+        "Full valid outputs and valid profile reorder pass",
+        "No old profile PASS closes a newer time/duplicate/baseline review",
+        "The C review closes the issue and the parent task actually resumes"
+      ]
+    },
+    {
+      "task_id": "A-T04",
+      "title": "Close C2-F02 with external trusted inputs and contract",
+      "owner": "B-Repair; C independent verification",
+      "readiness_at_handoff": "READY_FOR_CONSTRUCTED_AND_GATE_VERIFICATION",
+      "depends_on": [
+        "A-T01"
+      ],
+      "external_dependencies": [],
+      "requirement_ids": [
+        "R02",
+        "R03",
+        "R04",
+        "R05",
+        "R10",
+        "R12"
+      ],
+      "gc_ids": [
+        "GC05",
+        "GC07",
+        "GC08",
+        "GC09",
+        "GC13"
+      ],
+      "actions": [
+        "Require trusted raw input/record scope/parent and adapter version plus an external approved contract",
+        "Check actual output values, ordered original indices, split/filter reasons, denoising rule, clean-to-final DP intervals and full accounting",
+        "Keep fixture contracts separate from production; reject config-string/fixture bypasses and require the archived conditional-analysis authority plus frozen model contract for real input."
+      ],
+      "close_when": [
+        "The normal four-point fixture passes; single-final and clean+final translation attacks fail",
+        "Empty records/ledger with nonempty claimed input, 999 summaries, foreign scope, parameter swap, wrong parent and false filtering reasons fail",
+        "Legitimate empty input and legitimate all-filtered cases have valid structural results and explicit unavailable quality metrics",
+        "Reviewer does not obtain the reference or tolerance from the candidate and does not merely invoke the production runner twice",
+        "Constructed adversarial tests remain distinct from the newly authorized real conditional baseline; neither substitutes for the other."
+      ]
+    },
+    {
+      "task_id": "A-T05",
+      "title": "Connect Goal-driven scheduling to actual engineering repair and recovery",
+      "owner": "Main / B-Repair; C verifies",
+      "readiness_at_handoff": "READY",
+      "depends_on": [
+        "A-T03",
+        "A-T04"
+      ],
+      "external_dependencies": [],
+      "requirement_ids": [
+        "R08",
+        "R12",
+        "R13"
+      ],
+      "gc_ids": [
+        "GC03",
+        "GC04",
+        "GC05",
+        "GC12",
+        "GC15"
+      ],
+      "actions": [
+        "Use a small task/issue queue with dependencies, current artifact reviews and explicit repair states",
+        "Replace phase==5 completion as the Goal success rule; retain any five-call chain only as history or a scheduling fragment",
+        "Route a real review issue to a real B-Repair executor or explicit main-thread takeover",
+        "After C regression approval, invalidate affected old outputs, rebuild them and resume the linked parent",
+        "Keep C read-only for candidate/core contract; runtime actors cannot modify raw inputs or approved contracts"
+      ],
+      "close_when": [
+        "Known external C2 issue -> actual B repair -> targeted test -> independent C verification -> parent resumption is evidenced",
+        "Unreviewed required targets and still-open repairable issues prevent completion",
+        "A task after the fifth phase remains schedulable; a genuinely blocked conclusion does not block other authorized work.",
+        "State and artifact/version dependencies survive a stop/resume; unknown completed model/write operations are not silently repeated",
+        "This is implemented and exercised, not only a request_repair tool or narrative"
+      ]
+    },
+    {
+      "task_id": "A-T06",
+      "title": "Keep one cumulative resource, permission and recovery record",
+      "owner": "Main / B; C verifies",
+      "readiness_at_handoff": "READY",
+      "depends_on": [],
+      "external_dependencies": [],
+      "requirement_ids": [
+        "R08",
+        "R09",
+        "R12",
+        "R13",
+        "R15"
+      ],
+      "gc_ids": [
+        "GC01",
+        "GC03",
+        "GC12",
+        "GC14"
+      ],
+      "actions": [
+        "Record current root session, actual A/B/C dispatches, completed turns, outputs and tools separately",
+        "Reference the old four-call and six-call ledgers without resetting them",
+        "Record a conservative remaining-work plan and runtime guards; exact unavailable request/billing counts stay unknown",
+        "Use only existing lawful Codex/ChatGPT access and explicit mode separation",
+        "Exercise launch, timeout, malformed event, stop and ambiguous-recovery paths without extra provider experiments"
+      ],
+      "close_when": [
+        "Current usage is cumulative and linked to the COMPLETE authorization",
+        "No new run ID clears prior usage or stop records",
+        "Resource and recovery tests preserve existing error receipts and permission boundaries",
+        "No extra paid provider, token exposure or global account reconfiguration occurs"
+      ]
+    },
+    {
+      "task_id": "A-T07",
+      "title": "Fix the effective code version and run final relevant regression",
+      "owner": "B; C independent review",
+      "readiness_at_handoff": "WAITING_FOR_ENGINEERING_DEPENDENCIES",
+      "depends_on": [
+        "A-T02",
+        "A-T03",
+        "A-T04",
+        "A-T05",
+        "A-T06",
+        "A-T11"
+      ],
+      "external_dependencies": [],
+      "requirement_ids": [
+        "R02",
+        "R03",
+        "R04",
+        "R05",
+        "R08",
+        "R11",
+        "R12",
+        "R15"
+      ],
+      "gc_ids": [
+        "GC07",
+        "GC09",
+        "GC12",
+        "GC13",
+        "GC16"
+      ],
+      "actions": [
+        "Bind effective workflow/config/tests to an existing CODE_SHA and content hashes before final artifact generation",
+        "Run syntax checks, all task1/tests and necessary end-to-end/coverage checks",
+        "Regress affected starter tests; if unchanged, cite the historical 292-pass/1-skip record as inherited evidence",
+        "Any new implementation defect returns to B-Repair and C verification in this Goal"
+      ],
+      "close_when": [
+        "The final effective code passes the complete task1/tests suite and targeted adversarial cases",
+        "Newly run and inherited results are distinct",
+        "A code change invalidates and rebuilds all affected evidence; unmodified reliable evidence is retained"
+      ]
+    },
+    {
+      "task_id": "A-T08",
+      "title": "Recompute and independently review authorized current diagnostics",
+      "owner": "B-Run; C",
+      "readiness_at_handoff": "WAITING_FOR_AUDIT_FIXES",
+      "depends_on": [
+        "A-T07"
+      ],
+      "external_dependencies": [],
+      "requirement_ids": [
+        "R01",
+        "R02",
+        "R05",
+        "R11",
+        "R12"
+      ],
+      "gc_ids": [
+        "GC04",
+        "GC06",
+        "GC08",
+        "GC13",
+        "GC14"
+      ],
+      "actions": [
+        "From the raw hash and fixed seven IDs, compute current profiles, all duplicate details and >30-second time partitions",
+        "Audit each actual target/hash through the repaired runtime path using raw input and contract",
+        "Recompute the baseline preflight truthfully: authorized model assumptions and D2 now allow the registered conditional branch; no stale D1-unknown check may blanket-block it.",
+        "Link these actions to the restored parent tasks and actual role records; do not rerun six old model calls"
+      ],
+      "close_when": [
+        "Every diagnostic target has a matching independent coverage receipt",
+        "Temporal boundaries preserve full index coverage and equality behavior",
+        "Any actually unexecuted stage is NOT_RUN/BLOCKED with a reason; factual datum uncertainty is preserved separately from conditional processing status.",
+        "Raw values/hash remain unchanged and results bind the current effective code"
+      ]
+    },
+    {
+      "task_id": "A-T09",
+      "title": "Make both working Notebooks current and actually recomputable",
+      "owner": "B; C output/coverage check",
+      "readiness_at_handoff": "WAITING_FOR_CURRENT_ARTIFACTS",
+      "depends_on": [
+        "A-T08",
+        "A-T12",
+        "A-T13"
+      ],
+      "external_dependencies": [],
+      "requirement_ids": [
+        "R01",
+        "R05",
+        "R08",
+        "R11",
+        "R12"
+      ],
+      "gc_ids": [
+        "GC03",
+        "GC05",
+        "GC13",
+        "GC14"
+      ],
+      "actions": [
+        "Notebook01 exposes source fact, fixed model assumptions, actual conditional stage results, metrics and limits separately.",
+        "Notebook02 exposes actual role tasks, target coverage, repair/resume links and recompute entrypoints",
+        "Default Run All reads raw inputs and executes deterministic computation with zero model calls",
+        "Keep historic replay, this execution's role collaboration, current deterministic recompute and fixtures labeled separately",
+        "Execute both notebooks in fresh kernels using the existing .venv"
+      ],
+      "close_when": [
+        "Both new-kernel runs pass with consistent code/config/inputs and outputs",
+        "Notebook02 can rebuild the current diagnostic and repair-verification material, not merely print old CSV/JSON",
+        "Notebooks run the authorized real conditional pipeline; no synthetic substitution or unconditional geographical-accuracy claim.",
+        "Remove obsolete mandatory BLOCKED assertions; preserve initial blocked history with its real authorization context."
+      ]
+    },
+    {
+      "task_id": "A-T10",
+      "title": "Update only the necessary native figures and architecture",
+      "owner": "B; C visual/semantic check",
+      "readiness_at_handoff": "WAITING_FOR_CURRENT_ARTIFACTS",
+      "depends_on": [
+        "A-T05",
+        "A-T08",
+        "A-T12",
+        "A-T13"
+      ],
+      "external_dependencies": [],
+      "requirement_ids": [
+        "R11",
+        "R14"
+      ],
+      "gc_ids": [
+        "GC04",
+        "GC05",
+        "GC13",
+        "GC14"
+      ],
+      "actions": [
+        "Read the installed publication-plots skill, P2 and relevant visual rules before plotting",
+        "Architecture shows actual B-Repair/C recheck/parent-return routes and distinguishes actual, unavailable and blocked behavior",
+        "Preserve .drawio and SVG/PDF plus rebuild command; reuse unchanged diagnostic graphs only with valid source bindings",
+        "Add actual conditional-baseline before/after plots after real processing; label model coordinates and source datum uncertainty, retain discontinuities, do not add basemaps."
+      ],
+      "close_when": [
+        "Necessary figures match current actual artifacts/implementation and are readable after rendering",
+        "Editable source and exports agree",
+        "No fake comparison, AI-generated technical figure, reconnection across gaps or visual sampling in numerical computation"
+      ]
+    },
+    {
+      "task_id": "A-T11",
+      "title": "Register the authorized conditional model, method and trusted production adapter",
+      "owner": "User provides/approves; A records; B implements; C verifies",
+      "readiness_at_handoff": "READY_AFTER_ENGINEERING_DEPENDENCIES",
+      "depends_on": [
+        "A-T04",
+        "A-T05",
+        "A-T06"
+      ],
+      "external_dependencies": [],
+      "requirement_ids": [
+        "R01",
+        "R02",
+        "R03",
+        "R04",
+        "R05"
+      ],
+      "gc_ids": [
+        "GC07",
+        "GC08",
+        "GC09"
+      ],
+      "actions": [
+        "Archive the actual USER_DECISIONS and AUTHORIZATION_SUPPLEMENT with hashes; no repeat D1/D2 question",
+        "Register candidate-external raw hash, fixed pilot IDs, approved D2, fixed ENU model, units, starter parameters, sequence and versions",
+        "Implement the controller-fixed ECEF->ENU adapter while preserving exact raw time/coordinates and original indices",
+        "Use the unchanged STARTER_REFERENCE 65/5/30/400/35/5, with model meters and no parameter search",
+        "Execute MODEL-V01 through MODEL-V07 in local_model_contract.json against actual stage products; source datum remains UNVERIFIED"
+      ],
+      "close_when": [
+        "The archived supplement authorizes this exact kind of conditional analysis and D2 is explicitly approved",
+        "Trusted raw-to-working lineage, explicit ellipsoid/origin/h=0 assumptions and units are independently checked; the candidate cannot choose its own adapter/tolerance",
+        "Endpoint, zero-displacement and undefined-direction rules match the approved D2",
+        "Numerical implementation, local approximation and threshold sensitivity are checked at their actual scope; unproved geographic conclusions stay unproved without halting the permitted pilot"
+      ]
+    },
+    {
+      "task_id": "A-T12",
+      "title": "Execute the fixed seven-record real-data conditional baseline and independent full audit",
+      "owner": "B-Run; C",
+      "readiness_at_handoff": "WAITING_FOR_FIXED_CONTRACT_AND_ENGINEERING",
+      "depends_on": [
+        "A-T11",
+        "A-T07"
+      ],
+      "external_dependencies": [],
+      "requirement_ids": [
+        "R01",
+        "R02",
+        "R03",
+        "R04",
+        "R05",
+        "R08",
+        "R11",
+        "R12"
+      ],
+      "gc_ids": [
+        "GC07",
+        "GC08",
+        "GC09",
+        "GC10",
+        "GC14"
+      ],
+      "actions": [
+        "Process exactly records 0,1,2,246,256,306,352 from original JSON under the fixed effective CODE_SHA and external conditional-model contract",
+        "Run split -> separate short-fragment filter -> approved direction rule -> finite-segment DP",
+        "Produce per-point terminal ledger, per-record results, segment counts, loss reasons, references and unavailable-metric reasons",
+        "Use candidate-independent trusted input/contract to review all actual stages and returned values"
+      ],
+      "close_when": [
+        "All seven records and all 783 input points have explainable terminal states; no difficult sample is removed",
+        "No original time/coordinate values are overwritten; downstream features follow new adjacency",
+        "DP saving uses only identical clean pre-simplification input; maximum deviation uses each original-index interval",
+        "Correct zero deletions are allowed, while not-run stages cannot masquerade as zero",
+        "No unlabeled accuracy, false-deletion rate, physical-truth recovery or geometric-to-temporal fidelity overclaim",
+        "Engineering verification, conditional-analysis validity and geographic source-semantic status are distinct; datum remains UNVERIFIED even when the first two pass."
+      ]
+    },
+    {
+      "task_id": "A-T13",
+      "title": "Close the actual processing feedback with a meaningful follow-up and review",
+      "owner": "A or controller -> B -> C",
+      "readiness_at_handoff": "WAITING_FOR_ACTUAL_CONDITIONAL_BASELINE",
+      "depends_on": [
+        "A-T12"
+      ],
+      "external_dependencies": [],
+      "requirement_ids": [
+        "R08",
+        "R10",
+        "R12"
+      ],
+      "gc_ids": [
+        "GC03",
+        "GC04",
+        "GC05",
+        "GC11",
+        "GC15"
+      ],
+      "actions": [
+        "Read actual C baseline findings and choose a traceable follow-up inside the approved contract",
+        "If an ordinary defect exists, repair/review/rebuild/resume it immediately",
+        "If no defect exists, select a meaningful localized check grounded in the actual output, for example the segment with the largest DP residual or an observed undefined-direction window",
+        "Execute that check and have C review its new concrete output; do not invent an error or demand improvement"
+      ],
+      "close_when": [
+        "Actual baseline review -> reasoned subsequent action -> actual new result -> matching independent review is linked",
+        "A historical diagnostic chain or an ENGINEERING_TEST replay is not presented as the actual-processing loop",
+        "No new candidate search, order comparison or threshold optimization is introduced"
+      ]
+    },
+    {
+      "task_id": "A-T14",
+      "title": "Perform internal total review and prepare an honest review packet",
+      "owner": "Main; independent C",
+      "readiness_at_handoff": "WAITING_FOR_ALL_READY_TASKS",
+      "depends_on": [
+        "A-T02",
+        "A-T03",
+        "A-T04",
+        "A-T05",
+        "A-T06",
+        "A-T07",
+        "A-T08",
+        "A-T09",
+        "A-T10",
+        "A-T11",
+        "A-T12",
+        "A-T13"
+      ],
+      "external_dependencies": [],
+      "requirement_ids": [
+        "R01",
+        "R02",
+        "R03",
+        "R04",
+        "R05",
+        "R08",
+        "R10",
+        "R11",
+        "R12",
+        "R13",
+        "R14",
+        "R15"
+      ],
+      "gc_ids": [
+        "GC01",
+        "GC02",
+        "GC03",
+        "GC04",
+        "GC05",
+        "GC06",
+        "GC07",
+        "GC08",
+        "GC09",
+        "GC10",
+        "GC11",
+        "GC12",
+        "GC13",
+        "GC14",
+        "GC15",
+        "GC16"
+      ],
+      "actions": [
+        "Update the existing requirements/acceptance and unique REVIEW_PACKET with current evidence while preserving old failures",
+        "Record GC01-GC16 and original G1-A01-A18 with scope, action/command, expected/actual and evidence path",
+        "Have C inspect raw trusted inputs and actual artifacts independently; consume findings as repair work",
+        "Prepare FINAL_RESPONSE with environment changes, restrictions, counts, report/evidence state and explicit remaining work"
+      ],
+      "close_when": [
+        "Normal current route: all authorized conditional G1 products, actual fixed pilot/feedback and independent reviews pass under one effective code/config/result lineage; unknown source datum is explicitly retained.",
+        "Only a genuinely remaining external issue that prevents even the authorized scoped analysis may justify a checkpoint after all independent work is complete; the old D1/D2 wait is superseded. No N/A for real baseline.",
+        "GPT_SECOND_REVIEW remains PENDING; Understanding is user-determined and Submission NOT_READY",
+        "Experiment/Process Reports remain working material, not claimed final"
+      ]
+    },
+    {
+      "task_id": "A-T15",
+      "title": "Publish the reviewed artifact or accurately blocked checkpoint",
+      "owner": "Main",
+      "readiness_at_handoff": "WAITING_FOR_INTERNAL_REVIEW",
+      "depends_on": [
+        "A-T14"
+      ],
+      "external_dependencies": [],
+      "requirement_ids": [
+        "R15",
+        "R16"
+      ],
+      "gc_ids": [
+        "GC01",
+        "GC16"
+      ],
+      "actions": [
+        "Check diff, secrets, large files, unintended absolute paths, links, notebook output, original integrity and approved governance changes",
+        "Commit artifacts with existing CODE_SHA binding; preserve user ZIPs and unrelated work",
+        "Push main without force and verify local HEAD/origin/main/actual remote SHA plus fixed-commit core-file links"
+      ],
+      "close_when": [
+        "Actual repository, branch, CODE_SHA, ARTIFACT_SHA and Remote SHA are recorded and consistent",
+        "A blocked checkpoint is labeled BLOCKED and verified only for its actual published scope",
+        "No claim of ChatGPT UI upload, teacher submission or GPT final acceptance is fabricated"
+      ]
+    }
+  ],
+  "requirements_refresh": [
+    {
+      "target": "requirements.json:R03.goal_allocation.G1/G2",
+      "issue": "The old G2 allocation includes actual baseline after schedule clarification.",
+      "required_update": "G1 includes approved direction execution and fixed-pilot baseline; G2 holds parameter/effect experiments. Preserve R03 and its historical status.",
+      "basis": "COMPLETE sections 1.3, 8"
+    },
+    {
+      "target": "requirements.json:snapshot; R08; R12; critical_unresolved",
+      "issue": "The table still describes only A succeeding, B failing, C not called and globally frozen new live calls, predating the recorded REPAIR role run.",
+      "required_update": "Separate historical run03 failure, inherited successful diagnostic calls, and this Goal's actual role/repair results. Do not transform past failure into success or let the historical freeze override new authorization.",
+      "basis": "COMPLETE sections 2.3, 9, 11"
+    },
+    {
+      "target": "requirements.json:missing_provided_research_files",
+      "issue": "Three research attachments are still marked missing but now exist under task1/docs/research/ with recorded hashes.",
+      "required_update": "Reference the existing files and preserved handoff provenance; do not demand another upload or undertake new literature review.",
+      "basis": "source_audit.json:previously_missing_research_files_now_present; COMPLETE sections 1.2, 2.2"
+    },
+    {
+      "target": "requirements.json:R05 and original G1-A08",
+      "issue": "A general verified evaluator claim cannot cover the known C2 baseline self-reference and target-coverage defects.",
+      "required_update": "Retain valid metric definitions and profile-specific historical PASS only in their actual scope; reopen affected baseline/target review claims and close them with current C evidence.",
+      "basis": "COMPLETE sections 6, 13"
+    },
+    {
+      "target": "requirements.json:R14; docs/goal1/ARCHITECTURE.md; current diagrams",
+      "issue": "The existing architecture describes a five-stage chain and does not establish actual engineering repair consumption/return.",
+      "required_update": "Document and depict the implemented Goal queue and actual B-Repair/C/parent recovery; preserve old diagrams as historical.",
+      "basis": "COMPLETE sections 4, 5, 9, 12"
+    },
+    {
+      "target": "docs/goal1/README.md; CONTRACTS.md repair supplement; config and current source registry",
+      "issue": "Working entrypoints present old six-call exhaustion and only-wait conclusions as current, and source authorization points to the REPAIR prompt.",
+      "required_update": "Point current authorization to COMPLETE and distinguish historical ledgers/clauses; retain D1/D2 gates and update executable interface documentation after actual changes.",
+      "basis": "COMPLETE sections 0, 3, 7, 11, 15"
+    },
+    {
+      "target": "materials/requirements_sources.md:R02/R03/R04 stage wording",
+      "issue": "The source map under-describes G1's now-explicit real pilot obligations.",
+      "required_update": "Keep original source locators and R IDs; state G1 pilot after approvals, G2 full parameter/order experiments, G3 final full-dataset delivery.",
+      "basis": "COMPLETE sections 1.2, 1.3, 8"
+    },
+    {
+      "target": "requirements.json:R01/R02/R03/R04; CONTRACTS/config; current acceptance/REVIEW_PACKET",
+      "issue": "The initial D1/D2 blanket real-processing block is superseded by the current actual user supplement.",
+      "required_update": "Record source_crs UNVERIFIED, D2 USER_APPROVED, local model ASSUMPTION_AUTHORIZED and real-data CONDITIONAL_ANALYSIS separately. Execute/verify the current fixed pilot and retain the original blocked history; do not demand another fact or method confirmation.",
+      "basis": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/AUTHORIZATION_SUPPLEMENT.md"
+    }
+  ],
+  "gc_closure_map": [
+    {
+      "id": "GC01",
+      "tasks": [
+        "A-T02",
+        "A-T06",
+        "A-T14",
+        "A-T15"
+      ],
+      "close_standard": "Initial/final branch/worktree and original/historical hashes prove no unauthorized overwriting; user handoff ZIPs remain accurately accounted for."
+    },
+    {
+      "id": "GC02",
+      "tasks": [
+        "A-T01",
+        "A-T02",
+        "A-T14"
+      ],
+      "close_standard": "The existing R01-R16 source/Goal allocation is current, approved small governance diffs are recorded, and all 11 bundle files match active bytes/hash."
+    },
+    {
+      "id": "GC03",
+      "tasks": [
+        "A-T05",
+        "A-T06",
+        "A-T09",
+        "A-T13"
+      ],
+      "close_standard": "Actual A/B-Run/B-Repair/C inputs, outputs and tool actions exist; a single model response is not relabeled as multiple roles."
+    },
+    {
+      "id": "GC04",
+      "tasks": [
+        "A-T05",
+        "A-T08",
+        "A-T10",
+        "A-T13"
+      ],
+      "close_standard": "Goal completion follows mandatory tasks, dependencies and reviewed artifacts, not five phases; extra work and recovery are exercised."
+    },
+    {
+      "id": "GC05",
+      "tasks": [
+        "A-T03",
+        "A-T04",
+        "A-T05",
+        "A-T09",
+        "A-T13"
+      ],
+      "close_standard": "Known external issue -> actual repair executor -> independent regression -> affected artifact rebuild -> original task resumption is traceable."
+    },
+    {
+      "id": "GC06",
+      "tasks": [
+        "A-T03",
+        "A-T08"
+      ],
+      "close_standard": "Profiles, all duplicate events and time partitions have correct target/hash/reference/scope/contract coverage; missing required reviews cannot close tasks."
+    },
+    {
+      "id": "GC07",
+      "tasks": [
+        "A-T04",
+        "A-T07",
+        "A-T11",
+        "A-T12"
+      ],
+      "close_standard": "Candidate-external trusted full raw input, explicit conditional model and method contract drive the reviewer; adversarial self-consistency attacks fail, legitimate edges pass, and the actual conditional baseline receives its own full review."
+    },
+    {
+      "id": "GC08",
+      "tasks": [
+        "A-T01",
+        "A-T04",
+        "A-T08",
+        "A-T11",
+        "A-T12"
+      ],
+      "close_standard": "Raw values/hash and declared angular order/units are protected; D2 and conditional authority are archived; source datum stays UNVERIFIED. Authorized model derivation and assumption/error checks permit the fixed real pilot without claiming fact confirmation."
+    },
+    {
+      "id": "GC09",
+      "tasks": [
+        "A-T04",
+        "A-T07",
+        "A-T11",
+        "A-T12"
+      ],
+      "close_standard": "Split/filter, approved single-pass D2, adjacency recomputation and finite-segment/index DP are independently correct in the fixed conditional ENU model; constructed tests do not replace actual processing."
+    },
+    {
+      "id": "GC10",
+      "tasks": [
+        "A-T12"
+      ],
+      "close_standard": "All seven real records and 783 points complete the authorized conditional pipeline with full accounting and independent review; real-data conditional is neither a fixture nor an unconditional geographic-truth result."
+    },
+    {
+      "id": "GC11",
+      "tasks": [
+        "A-T13"
+      ],
+      "close_standard": "Actual processing review triggers a meaningful follow-up that runs and has corresponding product verification; history/diagnostic-only loops do not substitute."
+    },
+    {
+      "id": "GC12",
+      "tasks": [
+        "A-T05",
+        "A-T06",
+        "A-T07"
+      ],
+      "close_standard": "Current cumulative resources, permissions/modes, failure receipts, stop rules and recoverable uncertain states work without duplicate ambiguous calls/writes."
+    },
+    {
+      "id": "GC13",
+      "tasks": [
+        "A-T03",
+        "A-T04",
+        "A-T07",
+        "A-T08",
+        "A-T09",
+        "A-T10"
+      ],
+      "close_standard": "The effective final version passes task1/tests, relevant regressions and meaningful end-to-end coverage; both notebooks run in fresh kernels and necessary figures are inspected."
+    },
+    {
+      "id": "GC14",
+      "tasks": [
+        "A-T01",
+        "A-T02",
+        "A-T06",
+        "A-T08",
+        "A-T09",
+        "A-T10",
+        "A-T12",
+        "A-T14"
+      ],
+      "close_standard": "LIVE/current tool recompute/history/replay/fixtures are distinct, blocked counts are honest, and claims do not invent accuracy, truth recovery or optimization."
+    },
+    {
+      "id": "GC15",
+      "tasks": [
+        "A-T02",
+        "A-T05",
+        "A-T13",
+        "A-T14"
+      ],
+      "close_standard": "All ordinary in-scope engineering work is completed within this Goal. Initial D1/D2 waiting instructions are superseded. Only a demonstrated obstacle preventing authorized conditional scope can block that part, while other work continues."
+    },
+    {
+      "id": "GC16",
+      "tasks": [
+        "A-T07",
+        "A-T14",
+        "A-T15"
+      ],
+      "close_standard": "Final effective code/config/input/result binding, independent internal review, actual safe push, remote equality and immutable core links exist; GPT second review remains pending."
+    }
+  ],
+  "original_g1_map": [
+    {
+      "id": "G1-A01",
+      "gc_ids": [
+        "GC01",
+        "GC16"
+      ],
+      "inheritance": "Historical worktree protection PASS does not replace this execution's before/after check."
+    },
+    {
+      "id": "G1-A02",
+      "gc_ids": [
+        "GC02",
+        "GC08"
+      ],
+      "inheritance": "Inherit unchanged material hashes/read coverage; current A source check updates only relevant locators and scope."
+    },
+    {
+      "id": "G1-A03",
+      "gc_ids": [
+        "GC08",
+        "GC14"
+      ],
+      "inheritance": "Retain historical provenance checks and verify new evidence labels."
+    },
+    {
+      "id": "G1-A04",
+      "gc_ids": [
+        "GC08",
+        "GC09",
+        "GC12"
+      ],
+      "inheritance": "Keep historical correct gate enforcement. Now separately record source datum UNVERIFIED, conditional local-model authorization and explicit D2 approval; do not collapse those three facts into a geographic-semantic PASS."
+    },
+    {
+      "id": "G1-A05",
+      "gc_ids": [
+        "GC09",
+        "GC10"
+      ],
+      "inheritance": "Initial physical split/filter was blocked; the actual current conditional real-pilot split/filter now must execute and be independently verified."
+    },
+    {
+      "id": "G1-A06",
+      "gc_ids": [
+        "GC09",
+        "GC10"
+      ],
+      "inheritance": "D2 is now explicitly approved and real conditional direction execution is required; the original unapproved period remains historical."
+    },
+    {
+      "id": "G1-A07",
+      "gc_ids": [
+        "GC09",
+        "GC10",
+        "GC13"
+      ],
+      "inheritance": "Inherit finite-segment/index mathematical checks if unaffected, then validate current trusted review and real pipeline separately."
+    },
+    {
+      "id": "G1-A08",
+      "gc_ids": [
+        "GC06",
+        "GC07",
+        "GC13"
+      ],
+      "inheritance": "Reopen affected broad evaluator PASS due to C2-F01/F02 while preserving valid profile-only tests and historical failure records."
+    },
+    {
+      "id": "G1-A09",
+      "gc_ids": [
+        "GC03",
+        "GC05",
+        "GC11"
+      ],
+      "inheritance": "Prior independent A/B/C calls were diagnostic only; current actual repair/processing roles require their own evidence."
+    },
+    {
+      "id": "G1-A10",
+      "gc_ids": [
+        "GC04",
+        "GC05",
+        "GC06",
+        "GC07",
+        "GC12"
+      ],
+      "inheritance": "Retain unchanged permission checks; revalidate Goal scheduling, repair handoff and target closure semantics."
+    },
+    {
+      "id": "G1-A11",
+      "gc_ids": [
+        "GC10"
+      ],
+      "inheritance": "Pending actual fixed-pilot conditional complete baseline and review; source datum unknown alone no longer blocks the permitted processing."
+    },
+    {
+      "id": "G1-A12",
+      "gc_ids": [
+        "GC05",
+        "GC11"
+      ],
+      "inheritance": "Prior diagnostic feedback occurred, but C05 did not check its full requested target. Current repair return and actual processing feedback must close their own coverage."
+    },
+    {
+      "id": "G1-A13",
+      "gc_ids": [
+        "GC04",
+        "GC05",
+        "GC12"
+      ],
+      "inheritance": "Preserve old stop/budget failures and valid receipts; apply current cumulative plan and exercise recovery."
+    },
+    {
+      "id": "G1-A14",
+      "gc_ids": [
+        "GC12",
+        "GC14"
+      ],
+      "inheritance": "Apply existing provenance and mode distinction to new actual role/tool/fixture records."
+    },
+    {
+      "id": "G1-A15",
+      "gc_ids": [
+        "GC13"
+      ],
+      "inheritance": "Old fresh-kernel runs remain historical; current Notebook versions need new-kernel execution."
+    },
+    {
+      "id": "G1-A16",
+      "gc_ids": [
+        "GC13",
+        "GC14"
+      ],
+      "inheritance": "Reuse only unchanged valid figure/source pairs; current repair architecture and new processing plots need actual-source checks."
+    },
+    {
+      "id": "G1-A17",
+      "gc_ids": [
+        "GC02",
+        "GC14",
+        "GC15"
+      ],
+      "inheritance": "No G2/G3, new algorithm, parameter search, unapproved assumption or final report scope is introduced."
+    },
+    {
+      "id": "G1-A18",
+      "gc_ids": [
+        "GC16"
+      ],
+      "inheritance": "Old publication PASS proves only the old commit; this execution needs actual remote verification."
+    }
+  ],
+  "not_goal1_blockers": [
+    "G2 minimum-gain/maximum-degradation research thresholds",
+    "Three formal parameter scans",
+    "Formal order comparison",
+    "Four-mode effect ablation",
+    "Paper adoption count or complete paper algorithms",
+    "Full-dataset cleaning",
+    "Final Experiment Report / Process Report typesetting",
+    "Teacher ZIP/email submission",
+    "All descriptive metrics improving",
+    "Precise inaccessible account balance or invisible request counts",
+    "Unverified source datum by itself, when the authorized frozen model supports the explicitly conditional development task"
+  ],
+  "do_not_execute": [
+    "New broad literature search",
+    "Default or result-selected CRS",
+    "Unapproved smoothing/interpolation/speed cleanup/map matching",
+    "Artificial role disputes or fabricated Human Decisions",
+    "Replacing real pilot with fixtures",
+    "Overwriting historical raw/results/ledgers",
+    "Additional paid API/provider or new global authentication",
+    "A new active requirements file"
+  ],
+  "scope_of_A_work": {
+    "writes_only": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/a_scope/",
+    "code_or_contract_mutation": false,
+    "external_provider_calls": 0,
+    "subagents_spawned": 0,
+    "packages_installed": []
+  },
+  "authorization_update": {
+    "source": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/AUTHORIZATION_SUPPLEMENT.md",
+    "sha256": "2bce4b21939de5843678bdda1de18c64e9703c3e924fd63ff3d7988f69fe5248",
+    "decisions": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/USER_DECISIONS.json",
+    "supersedes": "Original COMPLETE sections 7/14 D1/D2 blocking policy where in conflict",
+    "initial_snapshot": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/a_scope/TaskPlan.initial.json",
+    "current_scope": "Authorized real-data conditional pilot; datum fact remains UNVERIFIED; D2 approved; no repeated technical approval"
+  },
+  "research_decisions": [
+    {
+      "id": "D1_DATUM_FACT",
+      "state": "UNVERIFIED",
+      "owner": "Data provider/source fact",
+      "blocks_conditional_pilot": false,
+      "still_blocks": [
+        "Unconditional absolute geographic accuracy",
+        "Ground-truth recovery/road alignment claims"
+      ],
+      "evidence": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/USER_DECISIONS.json"
+    },
+    {
+      "id": "WORKING_MODEL",
+      "state": "FIXED_BY_MAIN_BEFORE_PROCESSING",
+      "model": "Explicit mathematical ellipsoid ECEF->ENU, a=6378137m, inverse_flattening=298.257223563, h=0, origin=(121.343555deg,31.3561015deg)",
+      "definition": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/a_scope/local_model_contract.json",
+      "reason": "Fixed raw spatial extent and numerical geometry; no cleaning score used"
+    },
+    {
+      "id": "D2_DIRECTION_APPROVAL",
+      "state": "USER_APPROVED",
+      "method": "single_pass_simultaneous_keep_undefined",
+      "evidence": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/USER_DECISIONS.json"
+    }
+  ],
+  "remaining_external_gates": [],
+  "current_technical_handoff": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/a_scope/local_model_contract.json",
+  "geometry_diagnostic_evidence": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/a_scope/local_model_diagnostics.json"
+}

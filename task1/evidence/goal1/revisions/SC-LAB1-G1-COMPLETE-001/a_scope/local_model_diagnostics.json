@@ -1,0 +1,304 @@
+{
+  "classification": "CURRENT_RAW_PILOT_CONDITIONAL_GEOMETRY_DIAGNOSIS_ONLY",
+  "created_at_utc": "2026-09-26T16:36:50.860090+00:00",
+  "not_a_processing_result": true,
+  "source_crs": "UNVERIFIED",
+  "raw_path": "task1/作业/作业/traj_dict.json",
+  "raw_sha256": "c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3",
+  "model_selection_basis": "Main controller fixed ECEF-to-ENU using raw pilot extent before cleaning scores; this diagnostic does not compare or select methods.",
+  "model": {
+    "a_m": 6378137.0,
+    "inverse_flattening": 298.257223563,
+    "height_m": 0,
+    "center_lon_degrees": 121.343555,
+    "center_lat_degrees": 31.3561015,
+    "working_axes": [
+      "E",
+      "N"
+    ],
+    "units": "conditional_model_meters",
+    "epsg": null,
+    "pipeline_for_independent_calculation": "+proj=pipeline +step +proj=cart +a=6378137.0 +rf=298.257223563 +step +proj=topocentric +a=6378137.0 +rf=298.257223563 +lon_0=121.343555 +lat_0=31.3561015 +h_0=0"
+  },
+  "software": {
+    "python": "3.12.3",
+    "pyproj": "3.7.2",
+    "PROJ": "9.5.1",
+    "installation_note": "Existing shared .venv; main controller manages any installation log. A installed nothing."
+  },
+  "raw_bbox": {
+    "lon_min": 121.21471499999998,
+    "lon_max": 121.472395,
+    "lat_min": 31.097935,
+    "lat_max": 31.614268
+  },
+  "points": 783,
+  "per_record": [
+    {
+      "record_id": "0",
+      "points": 99,
+      "raw_bbox": {
+        "lon_min": 121.472353,
+        "lon_max": 121.472395,
+        "lat_min": 31.314592,
+        "lat_max": 31.31464
+      },
+      "raw_neighbor_edges": 98,
+      "zero_displacement_edges": 78,
+      "zero_dt_edges": 0,
+      "dt_over_30_edges": 0
+    },
+    {
+      "record_id": "1",
+      "points": 97,
+      "raw_bbox": {
+        "lon_min": 121.21471499999998,
+        "lon_max": 121.214905,
+        "lat_min": 31.614215,
+        "lat_max": 31.614268
+      },
+      "raw_neighbor_edges": 96,
+      "zero_displacement_edges": 76,
+      "zero_dt_edges": 0,
+      "dt_over_30_edges": 0
+    },
+    {
+      "record_id": "2",
+      "points": 99,
+      "raw_bbox": {
+        "lon_min": 121.405577,
+        "lon_max": 121.405598,
+        "lat_min": 31.13554,
+        "lat_max": 31.135547
+      },
+      "raw_neighbor_edges": 98,
+      "zero_displacement_edges": 82,
+      "zero_dt_edges": 0,
+      "dt_over_30_edges": 0
+    },
+    {
+      "record_id": "246",
+      "points": 108,
+      "raw_bbox": {
+        "lon_min": 121.371942,
+        "lon_max": 121.401193,
+        "lat_min": 31.213490000000004,
+        "lat_max": 31.288927
+      },
+      "raw_neighbor_edges": 107,
+      "zero_displacement_edges": 0,
+      "zero_dt_edges": 1,
+      "dt_over_30_edges": 0
+    },
+    {
+      "record_id": "256",
+      "points": 99,
+      "raw_bbox": {
+        "lon_min": 121.32384,
+        "lon_max": 121.401132,
+        "lat_min": 31.16702,
+        "lat_max": 31.29228
+      },
+      "raw_neighbor_edges": 98,
+      "zero_displacement_edges": 7,
+      "zero_dt_edges": 0,
+      "dt_over_30_edges": 0
+    },
+    {
+      "record_id": "306",
+      "points": 111,
+      "raw_bbox": {
+        "lon_min": 121.253078,
+        "lon_max": 121.32327,
+        "lat_min": 31.193865,
+        "lat_max": 31.321518
+      },
+      "raw_neighbor_edges": 110,
+      "zero_displacement_edges": 4,
+      "zero_dt_edges": 5,
+      "dt_over_30_edges": 4
+    },
+    {
+      "record_id": "352",
+      "points": 170,
+      "raw_bbox": {
+        "lon_min": 121.373945,
+        "lon_max": 121.39686299999998,
+        "lat_min": 31.097935,
+        "lat_max": 31.124838
+      },
+      "raw_neighbor_edges": 169,
+      "zero_displacement_edges": 76,
+      "zero_dt_edges": 116,
+      "dt_over_30_edges": 1
+    }
+  ],
+  "working_extent": {
+    "E_range_m": [
+      -12225.180238856616,
+      12264.178397535523
+    ],
+    "N_range_m": [
+      -28623.294239876606,
+      28631.98799363058
+    ],
+    "U_range_m": [
+      -76.22053834167309,
+      -3.449442082456926
+    ],
+    "maximum_horizontal_radius_m": 31131.193529927947,
+    "maximum_same_ellipsoid_geodesic_radius_m": 31131.317939847395
+  },
+  "local_differential_scale": {
+    "corner_normal_cosines": [
+      {
+        "lon": 121.21471499999998,
+        "lat": 31.097935,
+        "normal_dot_origin_normal": 0.9999879999056488
+      },
+      {
+        "lon": 121.21471499999998,
+        "lat": 31.614268,
+        "normal_dot_origin_normal": 0.9999880100299309
+      },
+      {
+        "lon": 121.472395,
+        "lat": 31.097935,
+        "normal_dot_origin_normal": 0.9999879999056488
+      },
+      {
+        "lon": 121.472395,
+        "lat": 31.614268,
+        "normal_dot_origin_normal": 0.9999880100299309
+      }
+    ],
+    "maximum_normal_tilt_degrees": 0.28069223261686826,
+    "minimum_singular_value": 0.9999879999056488,
+    "maximum_singular_value": 1.0,
+    "maximum_local_length_shrink_fraction": 1.2000094351205526e-05,
+    "scope": "Orthogonal projection of each mathematical ellipsoid tangent plane onto the origin EN plane has singular values 1 and abs(n dot n0). In this small symmetric lon/lat rectangle the smallest dot product is at a corner. This is a local differential bound, not a theorem bounding finite DP chord-to-point error or unknown source-datum error."
+  },
+  "raw_edge_comparison": {
+    "edges": 776,
+    "nonzero_edges": 453,
+    "zero_edges": 323,
+    "maximum_absolute_difference_m": 0.002179279357591213,
+    "maximum_relative_difference": 1.1826369614622246e-05,
+    "maximum_absolute_difference_edge": {
+      "record_id": "352",
+      "left_index": 117,
+      "right_index": 118,
+      "dt_source_seconds": 1,
+      "enu_model_distance_m": 242.03078389458213,
+      "same_ellipsoid_geodesic_m": 242.03296317393972,
+      "enu_minus_geodesic_m": -0.002179279357591213,
+      "relative_difference": -9.004060145415189e-06,
+      "margin_to_400_model_m": 157.96921610541787,
+      "distance_only_threshold_disagreement": false,
+      "combined_time_space_threshold_disagreement": false
+    },
+    "nearest_400_edges": [
+      {
+        "record_id": "246",
+        "left_index": 61,
+        "right_index": 62,
+        "dt_source_seconds": 28,
+        "enu_model_distance_m": 396.58197408804796,
+        "same_ellipsoid_geodesic_m": 396.58247771308993,
+        "enu_minus_geodesic_m": -0.0005036250419721,
+        "relative_difference": -1.2699124905272559e-06,
+        "margin_to_400_model_m": 3.418025911952043,
+        "distance_only_threshold_disagreement": false,
+        "combined_time_space_threshold_disagreement": false
+      },
+      {
+        "record_id": "256",
+        "left_index": 71,
+        "right_index": 72,
+        "dt_source_seconds": 19,
+        "enu_model_distance_m": 403.88185525979094,
+        "same_ellipsoid_geodesic_m": 403.8831346286317,
+        "enu_minus_geodesic_m": -0.0012793688407555237,
+        "relative_difference": -3.167670870762891e-06,
+        "margin_to_400_model_m": 3.881855259790939,
+        "distance_only_threshold_disagreement": false,
+        "combined_time_space_threshold_disagreement": false
+      },
+      {
+        "record_id": "256",
+        "left_index": 96,
+        "right_index": 97,
+        "dt_source_seconds": 20,
+        "enu_model_distance_m": 394.96284414922945,
+        "same_ellipsoid_geodesic_m": 394.9632896835066,
+        "enu_minus_geodesic_m": -0.00044553427716209626,
+        "relative_difference": -1.1280397160939018e-06,
+        "margin_to_400_model_m": 5.037155850770546,
+        "distance_only_threshold_disagreement": false,
+        "combined_time_space_threshold_disagreement": false
+      },
+      {
+        "record_id": "256",
+        "left_index": 31,
+        "right_index": 32,
+        "dt_source_seconds": 20,
+        "enu_model_distance_m": 392.94309323001346,
+        "same_ellipsoid_geodesic_m": 392.943382129922,
+        "enu_minus_geodesic_m": -0.00028889990852576375,
+        "relative_difference": -7.352201911629154e-07,
+        "margin_to_400_model_m": 7.05690676998654,
+        "distance_only_threshold_disagreement": false,
+        "combined_time_space_threshold_disagreement": false
+      },
+      {
+        "record_id": "256",
+        "left_index": 91,
+        "right_index": 92,
+        "dt_source_seconds": 20,
+        "enu_model_distance_m": 407.59207029171296,
+        "same_ellipsoid_geodesic_m": 407.5926896233132,
+        "enu_minus_geodesic_m": -0.0006193316002622851,
+        "relative_difference": -1.519486526695696e-06,
+        "margin_to_400_model_m": 7.592070291712957,
+        "distance_only_threshold_disagreement": false,
+        "combined_time_space_threshold_disagreement": false
+      }
+    ],
+    "distance_threshold_disagreements": 0,
+    "combined_threshold_disagreements": 0,
+    "smallest_nonzero_edge": {
+      "record_id": "0",
+      "left_index": 41,
+      "right_index": 42,
+      "dt_source_seconds": 10,
+      "enu_model_distance_m": 0.09518910248296727,
+      "same_ellipsoid_geodesic_m": 0.0951892773941709,
+      "enu_minus_geodesic_m": -1.7491120361812218e-07,
+      "relative_difference": -1.8375095221474305e-06,
+      "margin_to_400_model_m": 399.90481089751705,
+      "distance_only_threshold_disagreement": false,
+      "combined_time_space_threshold_disagreement": false
+    },
+    "dt_equals_30_edges": [
+      {
+        "record_id": "1",
+        "left_index": 0,
+        "right_index": 1
+      }
+    ],
+    "scope": "All original in-record neighbor edges before any segmentation or removal; post-removal neighbor edges and DP chords are not covered by this aggregate."
+  },
+  "unexecuted_checks": [
+    "65m actual post-split segment length sensitivity",
+    "35 degree actual pre-denoise window sensitivity",
+    "5m actual clean-to-final interval DP residual sensitivity",
+    "actual baseline independent audit"
+  ],
+  "claim_limits": [
+    "No datum identification or offset conversion",
+    "No absolute positioning/road matching/ground truth error",
+    "The U coordinate reflects curvature under h=0, not measured terrain elevation",
+    "Model agreement does not bound all unknown source errors",
+    "No segmentation/deletion/DP processing took place in this diagnostic"
+  ]
+}

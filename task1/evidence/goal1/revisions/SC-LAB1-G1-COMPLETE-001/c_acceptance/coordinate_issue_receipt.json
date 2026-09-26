@@ -1,0 +1,27 @@
+{
+  "classification": "INDEPENDENT_C_ENGINEERING_ISSUE_RECHECK_REAL_GEOMETRY_OF_FAILED_RUN_NOT_FINAL_ACCEPTANCE",
+  "issues": {
+    "C3-COORDINATE-DIRECTION": {
+      "status": "VERIFIED",
+      "checked": [
+        "All 474 actual retained-segment input points independently rebuilt from raw/contract",
+        "ENU and fixed-center AEQD common grid angles match independent C formula",
+        "All endpoint/missing/zero windows are represented",
+        "Actual simultaneous deletions equal ENU predicates",
+        "Strict equality 90deg fixture is retained; zero displacement windows remain undefined",
+        "Production pipeline and fixed ENU contract unchanged"
+      ],
+      "source_hashes": {
+        "task1/workflow/coordinate_review.py": "af4f0d753d162666bcb5da07edeccb846e008c33adf0f56b34939ac526eaf951",
+        "task1/tests/test_coordinates.py": "514cb0823d15df24f035bc2d595fd4c673d7171d713faf11cb7d429cb61e5329"
+      },
+      "errors": [],
+      "direction_points_checked": 474,
+      "undefined_points": 194,
+      "independent_probe": {
+        "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/g1-complete-pilot-01_independent.json",
+        "sha256": "47e295e8bf744472e095bfd9b19273e30720a3b169f5c367decc3dd9d0772673"
+      }
+    }
+  }
+}

@@ -1,0 +1,1579 @@
+{
+  "goal_id": "SC-LAB1-G1-FOUNDATION-001",
+  "execution": "SC-LAB1-G1-COMPLETE-001",
+  "status": "IMPLEMENTING",
+  "gpt_second_review": "PENDING",
+  "submission": "NOT_READY",
+  "tasks": {
+    "governance": {
+      "status": "PENDING",
+      "depends_on": [],
+      "evidence": []
+    },
+    "review_targets": {
+      "status": "PENDING",
+      "depends_on": [],
+      "evidence": []
+    },
+    "trusted_baseline": {
+      "status": "PENDING",
+      "depends_on": [],
+      "evidence": []
+    },
+    "diagnostics": {
+      "status": "PENDING",
+      "depends_on": [
+        "review_targets"
+      ],
+      "evidence": []
+    },
+    "real_baseline": {
+      "status": "PENDING",
+      "depends_on": [
+        "trusted_baseline",
+        "diagnostics"
+      ],
+      "evidence": []
+    },
+    "processing_feedback": {
+      "status": "PENDING",
+      "depends_on": [
+        "real_baseline"
+      ],
+      "evidence": []
+    },
+    "notebooks": {
+      "status": "PENDING",
+      "depends_on": [
+        "diagnostics"
+      ],
+      "evidence": []
+    },
+    "figures": {
+      "status": "PENDING",
+      "depends_on": [
+        "diagnostics"
+      ],
+      "evidence": []
+    },
+    "internal_review": {
+      "status": "PENDING",
+      "depends_on": [
+        "governance",
+        "review_targets",
+        "trusted_baseline",
+        "diagnostics",
+        "notebooks",
+        "figures"
+      ],
+      "evidence": []
+    }
+  },
+  "issues": {
+    "C2-F01": {
+      "issue_id": "C2-F01",
+      "parent_task": "review_targets",
+      "source": "GPT external review; independently reproduced by C:c_defects",
+      "actual_error": "recompute_check only checked profiles and fixed phase allowed closure",
+      "violated_contract": "COMPLETE §6 C2-F01",
+      "severity": "BLOCKING",
+      "affected_artifacts": [
+        "historical C05 and followup coverage"
+      ],
+      "repairer": "B-Repair:root",
+      "verifier": "C:c_defects",
+      "status": "VERIFIED",
+      "closure_evidence": [
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_combined_review/combined_closure.json",
+          "sha256": "83073242a00302bdb0c87da91f30853790d9ce1454967dbaac5560d4afe350da"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_combined_review/round2/combined_closure.json",
+          "sha256": "a67d902f1e878c36f7451f4deff258f4a0d0747dbdc093ea783a72b3e4f8446b"
+        }
+      ],
+      "repair_evidence": [
+        {
+          "path": "task1/workflow/goal.py",
+          "sha256": "d313d408961adf07b9791972b03ac6a99db808e805efe1aa06abe85a075e863a"
+        },
+        {
+          "path": "task1/workflow/tools.py",
+          "sha256": "0fde0acebfe3ec97bd2653744ac8f0444c1e9a162c61970bccf8a94a9fbd0b3f"
+        },
+        {
+          "path": "task1/workflow/artifact_review.py",
+          "sha256": "dfa0b91149662baf26861a9ec0e51223842d0ac62ada29015eca7b119c68da48"
+        },
+        {
+          "path": "task1/tests/test_goal_completion.py",
+          "sha256": "0270360da4c692dcce8ed2d6b6a2fff3f12c7b08d42043788db15974deecd5e8"
+        }
+      ]
+    },
+    "C2-F02": {
+      "issue_id": "C2-F02",
+      "parent_task": "trusted_baseline",
+      "source": "GPT external review; independently reproduced by C:c_defects",
+      "actual_error": "candidate-provided reference/parameters admitted four invalid candidates",
+      "violated_contract": "COMPLETE §6 C2-F02",
+      "severity": "BLOCKING",
+      "affected_artifacts": [
+        "baseline independent reviewer"
+      ],
+      "repairer": "B-Repair:root",
+      "verifier": "C:c_defects",
+      "status": "VERIFIED",
+      "closure_evidence": [
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_f02_review/initial_review.json",
+          "sha256": "ad4bbfe762de378809f4fc4b9a381139afcaeb1ba28e95bf307007b9ef5729c7"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_combined_review/combined_closure.json",
+          "sha256": "83073242a00302bdb0c87da91f30853790d9ce1454967dbaac5560d4afe350da"
+        }
+      ],
+      "repair_evidence": [
+        {
+          "path": "task1/workflow/pipeline.py",
+          "sha256": "160bedcc0d8dffce71d833dffc4de28928bc7007077ae8d03c57c96d827548c7"
+        },
+        {
+          "path": "task1/workflow/evaluation.py",
+          "sha256": "92424a94c20ce897606d546ba69c0f205c0f5f75a17b609134ac8125a241c7ad"
+        },
+        {
+          "path": "task1/tests/test_baseline_trust.py",
+          "sha256": "fcf87df8872903d0aca13b31a67004247dae3135b6ddb4c2aff31ca0993b0bd5"
+        }
+      ]
+    },
+    "NUMERIC:g1-complete-pilot-01:baseline": {
+      "issue_id": "NUMERIC:g1-complete-pilot-01:baseline",
+      "parent_task": "real_baseline",
+      "source": "independent numeric runtime check",
+      "actual_error": [
+        {
+          "code": "DIRECTION_DECISIONS_MISMATCH",
+          "object": "246:segment:0"
+        }
+      ],
+      "violated_contract": "approved contract",
+      "severity": "BLOCKING",
+      "affected_artifacts": [
+        "g1-complete-pilot-01:baseline"
+      ],
+      "repairer": "B-Repair:b_baseline",
+      "verifier": "C:c_acceptance",
+      "status": "VERIFIED",
+      "closure_evidence": [
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/direction_roundoff_receipt.json",
+          "sha256": "1003de087bf2f71561bb75add022491af8e33bb05795bf1b4cf62b7073405a18"
+        }
+      ],
+      "repair_evidence": [
+        {
+          "path": "task1/workflow/evaluation.py",
+          "sha256": "7cf224fbc290d3e83acd5d83a3fe335e6dc437c762f7053d8132817aa91025b2"
+        },
+        {
+          "path": "task1/tests/test_baseline_trust.py",
+          "sha256": "bd962103d7b7eef682e172b8e839247dc508242aa7cb27bdfa9f7363addae848"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/b_repair/direction_roundoff/root_cause.json",
+          "sha256": "9a514a8a0f4004c38931e1f896869ef895d97cb6d158d1fa44dbef57b8c86970"
+        },
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/b_repair/direction_roundoff/candidate_recheck.json",
+          "sha256": "9eecda035cd3fecfbf43c6d294549ce8b3496bd37317e0b73593f4f4445d7bef"
+        }
+      ]
+    },
+    "C3-COORDINATE-DIRECTION": {
+      "issue_id": "C3-COORDINATE-DIRECTION",
+      "parent_task": "processing_feedback",
+      "source": "C:c_acceptance independent static review",
+      "actual_error": "direction sensitivity used local geodesic bearings instead of common-grid AEQD headings",
+      "violated_contract": "A local_model_contract MODEL-V06 common coordinate axis sensitivity",
+      "severity": "BLOCKING",
+      "affected_artifacts": [
+        "coordinate_sensitivity implementation"
+      ],
+      "repairer": "B-Repair:root",
+      "verifier": "C:c_acceptance",
+      "status": "VERIFIED",
+      "closure_evidence": [
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/coordinate_issue_receipt.json",
+          "sha256": "54dcc9ecd8a353b4382fb6beb921853a1fcd754082964f31941fe49bfadeb976"
+        }
+      ],
+      "repair_evidence": [
+        {
+          "path": "task1/workflow/coordinate_review.py",
+          "sha256": "af4f0d753d162666bcb5da07edeccb846e008c33adf0f56b34939ac526eaf951"
+        },
+        {
+          "path": "task1/tests/test_coordinates.py",
+          "sha256": "514cb0823d15df24f035bc2d595fd4c673d7171d713faf11cb7d429cb61e5329"
+        }
+      ]
+    },
+    "C3-TIME-SCOPE": {
+      "issue_id": "C3-TIME-SCOPE",
+      "parent_task": "diagnostics",
+      "source": "C:c_acceptance independent current artifact inspection",
+      "actual_error": "time-only diagnostic describes all spatial processing as BLOCKED despite current conditional authorization",
+      "violated_contract": "artifact scope must not claim unrelated pipeline status",
+      "severity": "BLOCKING",
+      "affected_artifacts": [
+        "g1-complete-pilot-02:time_boundaries"
+      ],
+      "repairer": "B-Repair:root",
+      "verifier": "C:c_acceptance",
+      "status": "VERIFIED",
+      "closure_evidence": [
+        {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/time_scope_receipt.json",
+          "sha256": "fde6c11494e7d07a49e33f591e6277f55dccfd2b68f18c139933ddadfa17aa1b"
+        }
+      ],
+      "repair_evidence": [
+        {
+          "path": "task1/workflow/diagnostics.py",
+          "sha256": "aee1e4dd46ff7b15a8f3d854aaf1ed9668ee5ef4d4991a624beb479ff0f82745"
+        }
+      ]
+    }
+  },
+  "events": [
+    {
+      "sequence": 0,
+      "at": "2026-09-26T16:23:40.697200+00:00",
+      "kind": "ISSUE_OPENED",
+      "previous_hash": "ROOT",
+      "issue_id": "C2-F01",
+      "source": "GPT external review; independently reproduced by C:c_defects",
+      "hash": "487bbf6259fd36b1b65e83387a793a69398a7eafff691cdfb3103795fd46c2fc"
+    },
+    {
+      "sequence": 1,
+      "at": "2026-09-26T16:23:40.697584+00:00",
+      "kind": "B_REPAIR_CONSUMED",
+      "previous_hash": "487bbf6259fd36b1b65e83387a793a69398a7eafff691cdfb3103795fd46c2fc",
+      "issue_id": "C2-F01",
+      "actor": "B-Repair:root",
+      "hash": "c16b4c2ce63bd21e4c35cf32cb84473781ceb9aaf618d3974aba89fb50603ed3"
+    },
+    {
+      "sequence": 2,
+      "at": "2026-09-26T16:23:40.697820+00:00",
+      "kind": "ISSUE_OPENED",
+      "previous_hash": "c16b4c2ce63bd21e4c35cf32cb84473781ceb9aaf618d3974aba89fb50603ed3",
+      "issue_id": "C2-F02",
+      "source": "GPT external review; independently reproduced by C:c_defects",
+      "hash": "835dea3b3072ea1916bb45084ae8b32f9860b6d3e4a49e9c76c3d3a63a6c399a"
+    },
+    {
+      "sequence": 3,
+      "at": "2026-09-26T16:23:40.698038+00:00",
+      "kind": "B_REPAIR_CONSUMED",
+      "previous_hash": "835dea3b3072ea1916bb45084ae8b32f9860b6d3e4a49e9c76c3d3a63a6c399a",
+      "issue_id": "C2-F02",
+      "actor": "B-Repair:b_baseline",
+      "hash": "c7e260a956a79ca5bfeccb3c96a042990b1939d9693e503fe074a353c5222bdc"
+    },
+    {
+      "sequence": 4,
+      "at": "2026-09-26T16:23:40.698230+00:00",
+      "kind": "GOAL_REEVALUATED",
+      "previous_hash": "c7e260a956a79ca5bfeccb3c96a042990b1939d9693e503fe074a353c5222bdc",
+      "status": "IMPLEMENTING",
+      "hash": "ddb8001d3ba75529773f7f1aad3276abdb7bbe54f7b39bb778f4f52756809fa3"
+    },
+    {
+      "sequence": 5,
+      "at": "2026-09-26T16:32:00.470439+00:00",
+      "kind": "C_REJECTED_DURING_B_REPAIR",
+      "previous_hash": "ddb8001d3ba75529773f7f1aad3276abdb7bbe54f7b39bb778f4f52756809fa3",
+      "issue_id": "C2-F01",
+      "source": "c_f01_review/initial_review.json",
+      "findings": [
+        "Goal finalize ignored current run coverage",
+        "bool versus integer accepted in nested diagnostics",
+        "empty old run could execute new code epoch"
+      ],
+      "response": "B-Repair:root implementing and testing before independent repeat",
+      "hash": "e8b3bd3669c6b74390691e3d83617156ff7cffe3ef57c717efe1e9389a626d66"
+    },
+    {
+      "sequence": 6,
+      "at": "2026-09-26T16:39:46.548192+00:00",
+      "kind": "REPAIR_SUBMITTED",
+      "previous_hash": "e8b3bd3669c6b74390691e3d83617156ff7cffe3ef57c717efe1e9389a626d66",
+      "issue_id": "C2-F02",
+      "actor": "B-Repair:b_baseline",
+      "hash": "cd60989c02c51909fc87ce0d26302033382aa897eb5a696b62d4b88b8b1841bd"
+    },
+    {
+      "sequence": 7,
+      "at": "2026-09-26T16:39:46.549019+00:00",
+      "kind": "SCOPE_AUTHORIZATION_UPDATED",
+      "previous_hash": "cd60989c02c51909fc87ce0d26302033382aa897eb5a696b62d4b88b8b1841bd",
+      "source": "AUTHORIZATION_SUPPLEMENT.md",
+      "D2": "USER_APPROVED",
+      "D1_fact": "UNVERIFIED",
+      "D1_analysis": "CONDITIONAL_ANALYSIS_AUTHORIZED",
+      "hash": "1b7a4dff4caab4032598f32fb606a84def2ee19431d7ce6a348c534a8f478e83"
+    },
+    {
+      "sequence": 8,
+      "at": "2026-09-26T16:44:06.164400+00:00",
+      "kind": "C_REOPENED",
+      "previous_hash": "1b7a4dff4caab4032598f32fb606a84def2ee19431d7ce6a348c534a8f478e83",
+      "issue_id": "C2-F02",
+      "verifier": "C:c_defects",
+      "hash": "925eeb1e4a8a93164ade1d90a1b6468585d52635666b2a81ae16e45b473ee218"
+    },
+    {
+      "sequence": 9,
+      "at": "2026-09-26T16:44:06.165047+00:00",
+      "kind": "B_REPAIR_CONSUMED",
+      "previous_hash": "925eeb1e4a8a93164ade1d90a1b6468585d52635666b2a81ae16e45b473ee218",
+      "issue_id": "C2-F02",
+      "actor": "B-Repair:root",
+      "hash": "605263db9bf9b7fa32ec6dbfd535117895fd076803eb08babc90e596ab34ae62"
+    },
+    {
+      "sequence": 10,
+      "at": "2026-09-26T16:44:21.480119+00:00",
+      "kind": "REPAIR_SUBMITTED",
+      "previous_hash": "605263db9bf9b7fa32ec6dbfd535117895fd076803eb08babc90e596ab34ae62",
+      "issue_id": "C2-F02",
+      "actor": "B-Repair:root",
+      "hash": "edc8ca9433699e23a94cf00e48156b4dc976eeef61bfcd63802ac3850744f208"
+    },
+    {
+      "sequence": 11,
+      "at": "2026-09-26T16:52:51.646173+00:00",
+      "kind": "REPAIR_SUBMITTED",
+      "previous_hash": "edc8ca9433699e23a94cf00e48156b4dc976eeef61bfcd63802ac3850744f208",
+      "issue_id": "C2-F01",
+      "actor": "B-Repair:root",
+      "hash": "03e32f1c1b502404600d1b3733c9eca0f7494d067573380d11832a2cb621eac8"
+    },
+    {
+      "sequence": 12,
+      "at": "2026-09-26T16:52:51.649106+00:00",
+      "kind": "C_REOPENED",
+      "previous_hash": "03e32f1c1b502404600d1b3733c9eca0f7494d067573380d11832a2cb621eac8",
+      "issue_id": "C2-F01",
+      "verifier": "C:c_defects",
+      "hash": "36d6b5e62d77427f3137b2376bd3943417ca2c8d9c60e832a0f5416fc0ed7274"
+    },
+    {
+      "sequence": 13,
+      "at": "2026-09-26T16:52:51.652421+00:00",
+      "kind": "C_VERIFIED_PARENT_RESUMED",
+      "previous_hash": "36d6b5e62d77427f3137b2376bd3943417ca2c8d9c60e832a0f5416fc0ed7274",
+      "issue_id": "C2-F02",
+      "parent_task": "trusted_baseline",
+      "verifier": "C:c_defects",
+      "hash": "2df5709b5c8690fda2af1d81cdd03d4cfccf4d5cbe4e71e1453a4fbe5b8a3947"
+    },
+    {
+      "sequence": 14,
+      "at": "2026-09-26T16:52:51.653133+00:00",
+      "kind": "B_REPAIR_CONSUMED",
+      "previous_hash": "2df5709b5c8690fda2af1d81cdd03d4cfccf4d5cbe4e71e1453a4fbe5b8a3947",
+      "issue_id": "C2-F01",
+      "actor": "B-Repair:root",
+      "hash": "4c27075c1be157e1efa615ea48ce61e87da517201407f0f2382c24e1c3c2508b"
+    },
+    {
+      "sequence": 15,
+      "at": "2026-09-26T16:53:25.806228+00:00",
+      "kind": "REPAIR_SUBMITTED",
+      "previous_hash": "4c27075c1be157e1efa615ea48ce61e87da517201407f0f2382c24e1c3c2508b",
+      "issue_id": "C2-F01",
+      "actor": "B-Repair:root",
+      "hash": "3d8856bd2474876d68d4a6d06bcb02607eb506bb4deb7c005babb3225ebda5b9"
+    },
+    {
+      "sequence": 16,
+      "at": "2026-09-26T16:54:55.260120+00:00",
+      "kind": "PENDING_REPAIR_DEPENDENCY_BINDING_COMPLETED",
+      "previous_hash": "3d8856bd2474876d68d4a6d06bcb02607eb506bb4deb7c005babb3225ebda5b9",
+      "issue_id": "C2-F01",
+      "changed_paths": [
+        "task1/workflow/goal.py"
+      ],
+      "reason": "coordinate adapter and frozen model are baseline dependencies",
+      "hash": "19b92a3bcb08f10d8cbfa8bc947618e31b199959b1990387fbd753b765ba9a3b"
+    },
+    {
+      "sequence": 17,
+      "at": "2026-09-26T16:56:56.862218+00:00",
+      "kind": "C_VERIFIED_PARENT_RESUMED",
+      "previous_hash": "19b92a3bcb08f10d8cbfa8bc947618e31b199959b1990387fbd753b765ba9a3b",
+      "issue_id": "C2-F01",
+      "parent_task": "review_targets",
+      "verifier": "C:c_defects",
+      "hash": "95df2b7bebe5237f67122e86c1af7da7d965e7105f4e571e41212b726840ed87"
+    },
+    {
+      "sequence": 18,
+      "at": "2026-09-26T16:56:56.862892+00:00",
+      "kind": "F02_FINAL_VERSION_ALIGNMENT",
+      "previous_hash": "95df2b7bebe5237f67122e86c1af7da7d965e7105f4e571e41212b726840ed87",
+      "issue_id": "C2-F02",
+      "evidence": {
+        "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_combined_review/round2/combined_closure.json",
+        "sha256": "a67d902f1e878c36f7451f4deff258f4a0d0747dbdc093ea783a72b3e4f8446b"
+      },
+      "scope": "independent baseline predicates remain verified after controller-only repair",
+      "hash": "afdca463558578638adc051385da89fc6185adf6b4a06f1a494d9a3bd71f4fc2"
+    },
+    {
+      "sequence": 19,
+      "at": "2026-09-26T16:56:56.947565+00:00",
+      "kind": "CODE_BOUND",
+      "previous_hash": "afdca463558578638adc051385da89fc6185adf6b4a06f1a494d9a3bd71f4fc2",
+      "code_sha": "93e0ff7327e977dee0da8430b776efa509050af5",
+      "changed_paths": [],
+      "hash": "43b7b7eca8875d168be46165a33cc72a413e71cafd70bce14dba30f9264ec585"
+    },
+    {
+      "sequence": 20,
+      "at": "2026-09-26T16:56:56.949229+00:00",
+      "kind": "RUN_STARTED",
+      "previous_hash": "43b7b7eca8875d168be46165a33cc72a413e71cafd70bce14dba30f9264ec585",
+      "run_id": "g1-complete-pilot-01",
+      "hash": "2e85a0b5c3b7c729718ec77f1fff182da341bf1362e087c73dd34eb67dfa0cf1"
+    },
+    {
+      "sequence": 21,
+      "at": "2026-09-26T16:56:56.949990+00:00",
+      "kind": "TOOL_DISPATCHED",
+      "previous_hash": "2e85a0b5c3b7c729718ec77f1fff182da341bf1362e087c73dd34eb67dfa0cf1",
+      "operation": "g1-complete-pilot-01:profile_pilot",
+      "hash": "08f4807d63314b8d20daafead21d454b327ac9deb6539d5f4d92488383520cbe"
+    },
+    {
+      "sequence": 22,
+      "at": "2026-09-26T16:56:57.531052+00:00",
+      "kind": "TOOL_EXECUTED",
+      "previous_hash": "08f4807d63314b8d20daafead21d454b327ac9deb6539d5f4d92488383520cbe",
+      "operation": "g1-complete-pilot-01:profile_pilot",
+      "artifact": {
+        "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-01/profile_pilot.json",
+        "sha256": "ed6d427bf712a433650bc28238ce58522065ad8dfc754301733ea005cb30ac71",
+        "artifact_id": "g1-complete-pilot-01:profile_pilot",
+        "output_sha256": "ca15bc89da9c64243093c031562f7bb275579bb4b67792780b3c993469ca6333",
+        "action": "profile_pilot",
+        "valid": true,
+        "source_hashes": {
+          "task1/workflow/io.py": "0d3d72dd0beb4718f4020a07a5f1c0ca89193943049a479816b5c496806321b2",
+          "task1/workflow/tools.py": "0fde0acebfe3ec97bd2653744ac8f0444c1e9a162c61970bccf8a94a9fbd0b3f",
+          "task1/workflow/diagnostics.py": "e2ef635bbd95db505b3eff336ca59074a60217a70b2bc644624c3fbd0280acda"
+        }
+      },
+      "hash": "b3bb8c2cac035363943cf25a8d4220db66f6c224abbbca8bac630d10d27a77f9"
+    },
+    {
+      "sequence": 23,
+      "at": "2026-09-26T16:56:58.083181+00:00",
+      "kind": "NUMERIC_REVIEW_EXECUTED",
+      "previous_hash": "b3bb8c2cac035363943cf25a8d4220db66f6c224abbbca8bac630d10d27a77f9",
+      "run_id": "g1-complete-pilot-01",
+      "target": "g1-complete-pilot-01:profile_pilot",
+      "status": "VERIFIED",
+      "hash": "e361a2588a3072159041c1b9572f186ac3d3e1428ffa3b7a89d027ab03590cc3"
+    },
+    {
+      "sequence": 24,
+      "at": "2026-09-26T16:56:58.084115+00:00",
+      "kind": "TOOL_DISPATCHED",
+      "previous_hash": "e361a2588a3072159041c1b9572f186ac3d3e1428ffa3b7a89d027ab03590cc3",
+      "operation": "g1-complete-pilot-01:duplicate_details",
+      "hash": "45706d406cc8d53242b093efbbc1551a5563ba551e451f8c4b35dee2d62a470a"
+    },
+    {
+      "sequence": 25,
+      "at": "2026-09-26T16:56:58.723048+00:00",
+      "kind": "TOOL_EXECUTED",
+      "previous_hash": "45706d406cc8d53242b093efbbc1551a5563ba551e451f8c4b35dee2d62a470a",
+      "operation": "g1-complete-pilot-01:duplicate_details",
+      "artifact": {
+        "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-01/duplicate_details.json",
+        "sha256": "2af0cd5d718fa8cc5bd955eeea4c1fdd05374d7a173fdf9d9bc1c56f0d49e32d",
+        "artifact_id": "g1-complete-pilot-01:duplicate_details",
+        "output_sha256": "4d0e4d47d6231a3e64e22ff59b94d0e0f37b447b73bad8f15745b2f64685a69e",
+        "action": "duplicate_details",
+        "valid": true,
+        "source_hashes": {
+          "task1/workflow/io.py": "0d3d72dd0beb4718f4020a07a5f1c0ca89193943049a479816b5c496806321b2",
+          "task1/workflow/tools.py": "0fde0acebfe3ec97bd2653744ac8f0444c1e9a162c61970bccf8a94a9fbd0b3f",
+          "task1/workflow/diagnostics.py": "e2ef635bbd95db505b3eff336ca59074a60217a70b2bc644624c3fbd0280acda"
+        }
+      },
+      "hash": "0a19d406708c2b5ec04fda44ebe1e42235316150ae2ad454cd97a731c1fe2186"
+    },
+    {
+      "sequence": 26,
+      "at": "2026-09-26T16:56:59.221281+00:00",
+      "kind": "NUMERIC_REVIEW_EXECUTED",
+      "previous_hash": "0a19d406708c2b5ec04fda44ebe1e42235316150ae2ad454cd97a731c1fe2186",
+      "run_id": "g1-complete-pilot-01",
+      "target": "g1-complete-pilot-01:duplicate_details",
+      "status": "VERIFIED",
+      "hash": "f8e88c27f4b56330c0489c126e806338ce8b0a75e232feeacbc9583184168ed1"
+    },
+    {
+      "sequence": 27,
+      "at": "2026-09-26T16:56:59.222187+00:00",
+      "kind": "TOOL_DISPATCHED",
+      "previous_hash": "f8e88c27f4b56330c0489c126e806338ce8b0a75e232feeacbc9583184168ed1",
+      "operation": "g1-complete-pilot-01:time_boundaries",
+      "hash": "f78632ee3276dca165d694977d241b9f311fefc02c869694bdfe27c706a0a6e1"
+    },
+    {
+      "sequence": 28,
+      "at": "2026-09-26T16:56:59.708923+00:00",
+      "kind": "TOOL_EXECUTED",
+      "previous_hash": "f78632ee3276dca165d694977d241b9f311fefc02c869694bdfe27c706a0a6e1",
+      "operation": "g1-complete-pilot-01:time_boundaries",
+      "artifact": {
+        "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-01/time_boundaries.json",
+        "sha256": "e50a6451fa93cc505fe3c710c84a3dd50aa12f3e3a2594ce30bde6dea5578274",
+        "artifact_id": "g1-complete-pilot-01:time_boundaries",
+        "output_sha256": "8b34dfa30df221b25a254f057b58c3325b121d9d5dfb8d34f6882672b0f06980",
+        "action": "time_boundaries",
+        "valid": true,
+        "source_hashes": {
+          "task1/workflow/io.py": "0d3d72dd0beb4718f4020a07a5f1c0ca89193943049a479816b5c496806321b2",
+          "task1/workflow/tools.py": "0fde0acebfe3ec97bd2653744ac8f0444c1e9a162c61970bccf8a94a9fbd0b3f",
+          "task1/workflow/diagnostics.py": "e2ef635bbd95db505b3eff336ca59074a60217a70b2bc644624c3fbd0280acda"
+        }
+      },
+      "hash": "7096ab6da629d331d6151f01227e00929973d2c09ba4275aed56c4f07110bc76"
+    },
+    {
+      "sequence": 29,
+      "at": "2026-09-26T16:57:00.226497+00:00",
+      "kind": "NUMERIC_REVIEW_EXECUTED",
+      "previous_hash": "7096ab6da629d331d6151f01227e00929973d2c09ba4275aed56c4f07110bc76",
+      "run_id": "g1-complete-pilot-01",
+      "target": "g1-complete-pilot-01:time_boundaries",
+      "status": "VERIFIED",
+      "hash": "c02c2ae9d51533274dbf42e8492829c379dcca06fc3844f8899e80f9f49672b6"
+    },
+    {
+      "sequence": 30,
+      "at": "2026-09-26T16:57:00.227581+00:00",
+      "kind": "TOOL_DISPATCHED",
+      "previous_hash": "c02c2ae9d51533274dbf42e8492829c379dcca06fc3844f8899e80f9f49672b6",
+      "operation": "g1-complete-pilot-01:baseline",
+      "hash": "7a9b02edc26650e62d2ab58336d0d2a03bdce0b6c2870e2d4372fba941e2b5ef"
+    },
+    {
+      "sequence": 31,
+      "at": "2026-09-26T16:57:02.128690+00:00",
+      "kind": "TOOL_EXECUTED",
+      "previous_hash": "7a9b02edc26650e62d2ab58336d0d2a03bdce0b6c2870e2d4372fba941e2b5ef",
+      "operation": "g1-complete-pilot-01:baseline",
+      "artifact": {
+        "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-01/baseline.json",
+        "sha256": "865710aea34a316fe83088d7cf2ac1aec68c96623269bfcf06255b5db2930fd8",
+        "artifact_id": "g1-complete-pilot-01:baseline",
+        "output_sha256": "36b39abfa1d1e79fe6999831083eb36a1d9e2a4f737e374e1514f08ef5016eab",
+        "action": "baseline",
+        "valid": true,
+        "source_hashes": {
+          "task1/workflow/io.py": "0d3d72dd0beb4718f4020a07a5f1c0ca89193943049a479816b5c496806321b2",
+          "task1/workflow/tools.py": "0fde0acebfe3ec97bd2653744ac8f0444c1e9a162c61970bccf8a94a9fbd0b3f",
+          "task1/workflow/diagnostics.py": "e2ef635bbd95db505b3eff336ca59074a60217a70b2bc644624c3fbd0280acda",
+          "task1/workflow/pipeline.py": "160bedcc0d8dffce71d833dffc4de28928bc7007077ae8d03c57c96d827548c7",
+          "task1/workflow/geometry.py": "2ad3ca3b49e98e997684e3f5af948771be80dfb03b31b2ae4cc4483856e93d74",
+          "task1/workflow/evaluation.py": "92424a94c20ce897606d546ba69c0f205c0f5f75a17b609134ac8125a241c7ad",
+          "task1/workflow/coordinates.py": "d99b270a65c88f8530669d5e7d0887d7563b3e54e19770ab7a9eb695117e075d",
+          "task1/config/conditional_planar.json": "5b1ab7dbf25797a51405a2cddd93a8d2ea3e3b69530369366d0e05be7abb8169"
+        }
+      },
+      "hash": "28134ebf21b07a6d1d2ff4c6d5a24d25b222a9c4333350e3af869cb8bdcf6bc9"
+    },
+    {
+      "sequence": 32,
+      "at": "2026-09-26T16:57:03.355721+00:00",
+      "kind": "NUMERIC_REVIEW_EXECUTED",
+      "previous_hash": "28134ebf21b07a6d1d2ff4c6d5a24d25b222a9c4333350e3af869cb8bdcf6bc9",
+      "run_id": "g1-complete-pilot-01",
+      "target": "g1-complete-pilot-01:baseline",
+      "status": "REJECTED",
+      "hash": "4e0afa426ee51c9b0812f74a2139e66b60e38653676aaf952c66fd7252f13766"
+    },
+    {
+      "sequence": 33,
+      "at": "2026-09-26T16:57:03.356340+00:00",
+      "kind": "ISSUE_OPENED",
+      "previous_hash": "4e0afa426ee51c9b0812f74a2139e66b60e38653676aaf952c66fd7252f13766",
+      "issue_id": "NUMERIC:g1-complete-pilot-01:baseline",
+      "source": "independent numeric runtime check",
+      "hash": "8db27ad87c4798e18ddaaff9cf6cb303d8bea718fe68d8ba01f86a65230e8d22"
+    },
+    {
+      "sequence": 34,
+      "at": "2026-09-26T16:58:27.496373+00:00",
+      "kind": "B_REPAIR_CONSUMED",
+      "previous_hash": "8db27ad87c4798e18ddaaff9cf6cb303d8bea718fe68d8ba01f86a65230e8d22",
+      "issue_id": "NUMERIC:g1-complete-pilot-01:baseline",
+      "actor": "B-Repair:b_baseline",
+      "hash": "ad29417198cd3a9e5be685f4cce6594b4240a1c6771864cf2566f28c31ddd2f8"
+    },
+    {
+      "sequence": 35,
+      "at": "2026-09-26T16:58:27.498142+00:00",
+      "kind": "ISSUE_OPENED",
+      "previous_hash": "ad29417198cd3a9e5be685f4cce6594b4240a1c6771864cf2566f28c31ddd2f8",
+      "issue_id": "C3-COORDINATE-DIRECTION",
+      "source": "C:c_acceptance independent static review",
+      "hash": "dfee4ba38b727517d151e52c948e3b290b004e0a055aabcbdd44b62f5b822601"
+    },
+    {
+      "sequence": 36,
+      "at": "2026-09-26T16:58:27.498690+00:00",
+      "kind": "B_REPAIR_CONSUMED",
+      "previous_hash": "dfee4ba38b727517d151e52c948e3b290b004e0a055aabcbdd44b62f5b822601",
+      "issue_id": "C3-COORDINATE-DIRECTION",
+      "actor": "B-Repair:root",
+      "hash": "d30b0d3550b8fdd065c637d5676109ee17f9fcfc65d3817e09a4f7fd787c9771"
+    },
+    {
+      "sequence": 37,
+      "at": "2026-09-26T16:58:27.499203+00:00",
+      "kind": "PROCESSING_PAUSED_FOR_REPAIR",
+      "previous_hash": "d30b0d3550b8fdd065c637d5676109ee17f9fcfc65d3817e09a4f7fd787c9771",
+      "run_id": "g1-complete-pilot-01",
+      "reason": "independent baseline audit rejected direction decision detail",
+      "next_run_must_be_new": true,
+      "hash": "70d5dc66d6d82444056bf8254e57f0db989d66aeb2a87f7c055b064b8c553e95"
+    },
+    {
+      "sequence": 38,
+      "at": "2026-09-26T17:00:06.293109+00:00",
+      "kind": "REPAIR_SUBMITTED",
+      "previous_hash": "70d5dc66d6d82444056bf8254e57f0db989d66aeb2a87f7c055b064b8c553e95",
+      "issue_id": "C3-COORDINATE-DIRECTION",
+      "actor": "B-Repair:root",
+      "hash": "780d34ca3a580fc36642eb30f323a68b581d11f1d03eedc73d9cd95da0956ff8"
+    },
+    {
+      "sequence": 39,
+      "at": "2026-09-26T17:02:29.143651+00:00",
+      "kind": "REPAIR_SUBMITTED",
+      "previous_hash": "780d34ca3a580fc36642eb30f323a68b581d11f1d03eedc73d9cd95da0956ff8",
+      "issue_id": "NUMERIC:g1-complete-pilot-01:baseline",
+      "actor": "B-Repair:b_baseline",
+      "hash": "7c157a9e67f155a7f40a7fb75c01ffde4e2005a72e00805f0658804f061346ce"
+    },
+    {
+      "sequence": 40,
+      "at": "2026-09-26T17:03:25.526570+00:00",
+      "kind": "C_VERIFIED_PARENT_RESUMED",
+      "previous_hash": "7c157a9e67f155a7f40a7fb75c01ffde4e2005a72e00805f0658804f061346ce",
+      "issue_id": "C3-COORDINATE-DIRECTION",
+      "parent_task": "processing_feedback",
+      "verifier": "C:c_acceptance",
+      "hash": "78d7863c2571f0bbce949db635859faaf36ba4b5cff1e297fa6f2cc33d0432fb"
+    },
+    {
+      "sequence": 41,
+      "at": "2026-09-26T17:04:22.549471+00:00",
+      "kind": "C_VERIFIED_PARENT_RESUMED",
+      "previous_hash": "78d7863c2571f0bbce949db635859faaf36ba4b5cff1e297fa6f2cc33d0432fb",
+      "issue_id": "NUMERIC:g1-complete-pilot-01:baseline",
+      "parent_task": "real_baseline",
+      "verifier": "C:c_acceptance",
+      "hash": "fc7fc67a4230403c8706e475621a99c229ca7e0496c82897dad0ac9667f12534"
+    },
+    {
+      "sequence": 42,
+      "at": "2026-09-26T17:04:24.013208+00:00",
+      "kind": "CODE_BOUND",
+      "previous_hash": "fc7fc67a4230403c8706e475621a99c229ca7e0496c82897dad0ac9667f12534",
+      "code_sha": "02f4b771db95fb396ef3a0bfa03f1fbd83333585",
+      "changed_paths": [
+        "task1/workflow/evaluation.py"
+      ],
+      "hash": "2e74d57fc5059c0c14a4b26a259f3fc2050b31c6eda3fad1d1ca905ceeb71412"
+    },
+    {
+      "sequence": 43,
+      "at": "2026-09-26T17:04:24.015547+00:00",
+      "kind": "RUN_STARTED",
+      "previous_hash": "2e74d57fc5059c0c14a4b26a259f3fc2050b31c6eda3fad1d1ca905ceeb71412",
+      "run_id": "g1-complete-pilot-02",
+      "hash": "331eb0199ac6f1963814bc824faa49aabbaaa673065ea0dbbc9b7a3fc0758205"
+    },
+    {
+      "sequence": 44,
+      "at": "2026-09-26T17:04:24.016626+00:00",
+      "kind": "TOOL_DISPATCHED",
+      "previous_hash": "331eb0199ac6f1963814bc824faa49aabbaaa673065ea0dbbc9b7a3fc0758205",
+      "operation": "g1-complete-pilot-02:profile_pilot",
+      "hash": "497287792168ba178669e80cdef18362f46c185847bacc22d5efaa7484ae8292"
+    },
+    {
+      "sequence": 45,
+      "at": "2026-09-26T17:04:24.575848+00:00",
+      "kind": "TOOL_EXECUTED",
+      "previous_hash": "497287792168ba178669e80cdef18362f46c185847bacc22d5efaa7484ae8292",
+      "operation": "g1-complete-pilot-02:profile_pilot",
+      "artifact": {
+        "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-02/profile_pilot.json",
+        "sha256": "ed6d427bf712a433650bc28238ce58522065ad8dfc754301733ea005cb30ac71",
+        "artifact_id": "g1-complete-pilot-02:profile_pilot",
+        "output_sha256": "ca15bc89da9c64243093c031562f7bb275579bb4b67792780b3c993469ca6333",
+        "action": "profile_pilot",
+        "valid": true,
+        "source_hashes": {
+          "task1/workflow/io.py": "0d3d72dd0beb4718f4020a07a5f1c0ca89193943049a479816b5c496806321b2",
+          "task1/workflow/tools.py": "0fde0acebfe3ec97bd2653744ac8f0444c1e9a162c61970bccf8a94a9fbd0b3f",
+          "task1/workflow/diagnostics.py": "e2ef635bbd95db505b3eff336ca59074a60217a70b2bc644624c3fbd0280acda"
+        }
+      },
+      "hash": "671328c7fdac0ea505ef38b54481cb68b34fe4a203640fde957f5df6a2990652"
+    },
+    {
+      "sequence": 46,
+      "at": "2026-09-26T17:04:25.051746+00:00",
+      "kind": "NUMERIC_REVIEW_EXECUTED",
+      "previous_hash": "671328c7fdac0ea505ef38b54481cb68b34fe4a203640fde957f5df6a2990652",
+      "run_id": "g1-complete-pilot-02",
+      "target": "g1-complete-pilot-02:profile_pilot",
+      "status": "VERIFIED",
+      "hash": "17ee7f04a946736825d67d3f4cff625766d4147fb56c9006cbb5272025199501"
+    },
+    {
+      "sequence": 47,
+      "at": "2026-09-26T17:04:25.052945+00:00",
+      "kind": "TOOL_DISPATCHED",
+      "previous_hash": "17ee7f04a946736825d67d3f4cff625766d4147fb56c9006cbb5272025199501",
+      "operation": "g1-complete-pilot-02:duplicate_details",
+      "hash": "85b6bb344e02a53d9512fef0c7fc9b64e7af9bd4ff96dffcfe51f82778564825"
+    },
+    {
+      "sequence": 48,
+      "at": "2026-09-26T17:04:25.647966+00:00",
+      "kind": "TOOL_EXECUTED",
+      "previous_hash": "85b6bb344e02a53d9512fef0c7fc9b64e7af9bd4ff96dffcfe51f82778564825",
+      "operation": "g1-complete-pilot-02:duplicate_details",
+      "artifact": {
+        "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-02/duplicate_details.json",
+        "sha256": "2af0cd5d718fa8cc5bd955eeea4c1fdd05374d7a173fdf9d9bc1c56f0d49e32d",
+        "artifact_id": "g1-complete-pilot-02:duplicate_details",
+        "output_sha256": "4d0e4d47d6231a3e64e22ff59b94d0e0f37b447b73bad8f15745b2f64685a69e",
+        "action": "duplicate_details",
+        "valid": true,
+        "source_hashes": {
+          "task1/workflow/io.py": "0d3d72dd0beb4718f4020a07a5f1c0ca89193943049a479816b5c496806321b2",
+          "task1/workflow/tools.py": "0fde0acebfe3ec97bd2653744ac8f0444c1e9a162c61970bccf8a94a9fbd0b3f",
+          "task1/workflow/diagnostics.py": "e2ef635bbd95db505b3eff336ca59074a60217a70b2bc644624c3fbd0280acda"
+        }
+      },
+      "hash": "c8d1b51e70cbe068bfa6ced8997e7d1e4ef68ce854df2183dec18bd20e0e3447"
+    },
+    {
+      "sequence": 49,
+      "at": "2026-09-26T17:04:26.133125+00:00",
+      "kind": "NUMERIC_REVIEW_EXECUTED",
+      "previous_hash": "c8d1b51e70cbe068bfa6ced8997e7d1e4ef68ce854df2183dec18bd20e0e3447",
+      "run_id": "g1-complete-pilot-02",
+      "target": "g1-complete-pilot-02:duplicate_details",
+      "status": "VERIFIED",
+      "hash": "aa07deef2768fb24d8209a147f8f106f2e4a9749c57a9729cb26aa50a9512cb5"
+    },
+    {
+      "sequence": 50,
+      "at": "2026-09-26T17:04:26.134356+00:00",
+      "kind": "TOOL_DISPATCHED",
+      "previous_hash": "aa07deef2768fb24d8209a147f8f106f2e4a9749c57a9729cb26aa50a9512cb5",
+      "operation": "g1-complete-pilot-02:time_boundaries",
+      "hash": "393b359cae5e8390c2c9102c7a3ba69ec7ae03886ae99dfe0ce83093f971404a"
+    },
+    {
+      "sequence": 51,
+      "at": "2026-09-26T17:04:26.605278+00:00",
+      "kind": "TOOL_EXECUTED",
+      "previous_hash": "393b359cae5e8390c2c9102c7a3ba69ec7ae03886ae99dfe0ce83093f971404a",
+      "operation": "g1-complete-pilot-02:time_boundaries",
+      "artifact": {
+        "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-02/time_boundaries.json",
+        "sha256": "e50a6451fa93cc505fe3c710c84a3dd50aa12f3e3a2594ce30bde6dea5578274",
+        "artifact_id": "g1-complete-pilot-02:time_boundaries",
+        "output_sha256": "8b34dfa30df221b25a254f057b58c3325b121d9d5dfb8d34f6882672b0f06980",
+        "action": "time_boundaries",
+        "valid": true,
+        "source_hashes": {
+          "task1/workflow/io.py": "0d3d72dd0beb4718f4020a07a5f1c0ca89193943049a479816b5c496806321b2",
+          "task1/workflow/tools.py": "0fde0acebfe3ec97bd2653744ac8f0444c1e9a162c61970bccf8a94a9fbd0b3f",
+          "task1/workflow/diagnostics.py": "e2ef635bbd95db505b3eff336ca59074a60217a70b2bc644624c3fbd0280acda"
+        }
+      },
+      "hash": "8db8efec5626cce1c542664ed8e28e5bbe8cdc579ac4fd88c90807dc36fd6a5a"
+    },
+    {
+      "sequence": 52,
+      "at": "2026-09-26T17:04:27.120073+00:00",
+      "kind": "NUMERIC_REVIEW_EXECUTED",
+      "previous_hash": "8db8efec5626cce1c542664ed8e28e5bbe8cdc579ac4fd88c90807dc36fd6a5a",
+      "run_id": "g1-complete-pilot-02",
+      "target": "g1-complete-pilot-02:time_boundaries",
+      "status": "VERIFIED",
+      "hash": "b2644bfd85ccfb62c9ad3f66abc0caced1ae8385ce14064cf19f8735cd98c752"
+    },
+    {
+      "sequence": 53,
+      "at": "2026-09-26T17:04:27.131624+00:00",
+      "kind": "TOOL_DISPATCHED",
+      "previous_hash": "b2644bfd85ccfb62c9ad3f66abc0caced1ae8385ce14064cf19f8735cd98c752",
+      "operation": "g1-complete-pilot-02:baseline",
+      "hash": "d0a55614a31d33986848a5754fbbb146af4cf6afbc02a10d81466515ac9065b6"
+    },
+    {
+      "sequence": 54,
+      "at": "2026-09-26T17:04:28.387452+00:00",
+      "kind": "TOOL_EXECUTED",
+      "previous_hash": "d0a55614a31d33986848a5754fbbb146af4cf6afbc02a10d81466515ac9065b6",
+      "operation": "g1-complete-pilot-02:baseline",
+      "artifact": {
+        "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-02/baseline.json",
+        "sha256": "865710aea34a316fe83088d7cf2ac1aec68c96623269bfcf06255b5db2930fd8",
+        "artifact_id": "g1-complete-pilot-02:baseline",
+        "output_sha256": "36b39abfa1d1e79fe6999831083eb36a1d9e2a4f737e374e1514f08ef5016eab",
+        "action": "baseline",
+        "valid": true,
+        "source_hashes": {
+          "task1/workflow/io.py": "0d3d72dd0beb4718f4020a07a5f1c0ca89193943049a479816b5c496806321b2",
+          "task1/workflow/tools.py": "0fde0acebfe3ec97bd2653744ac8f0444c1e9a162c61970bccf8a94a9fbd0b3f",
+          "task1/workflow/diagnostics.py": "e2ef635bbd95db505b3eff336ca59074a60217a70b2bc644624c3fbd0280acda",
+          "task1/workflow/pipeline.py": "160bedcc0d8dffce71d833dffc4de28928bc7007077ae8d03c57c96d827548c7",
+          "task1/workflow/geometry.py": "2ad3ca3b49e98e997684e3f5af948771be80dfb03b31b2ae4cc4483856e93d74",
+          "task1/workflow/evaluation.py": "7cf224fbc290d3e83acd5d83a3fe335e6dc437c762f7053d8132817aa91025b2",
+          "task1/workflow/coordinates.py": "d99b270a65c88f8530669d5e7d0887d7563b3e54e19770ab7a9eb695117e075d",
+          "task1/config/conditional_planar.json": "5b1ab7dbf25797a51405a2cddd93a8d2ea3e3b69530369366d0e05be7abb8169"
+        }
+      },
+      "hash": "c81960e4b14cee012ac9f01f265bf0ac87661d4b99f52bc198505826a7e82cfa"
+    },
+    {
+      "sequence": 55,
+      "at": "2026-09-26T17:04:29.585378+00:00",
+      "kind": "NUMERIC_REVIEW_EXECUTED",
+      "previous_hash": "c81960e4b14cee012ac9f01f265bf0ac87661d4b99f52bc198505826a7e82cfa",
+      "run_id": "g1-complete-pilot-02",
+      "target": "g1-complete-pilot-02:baseline",
+      "status": "VERIFIED",
+      "hash": "e849f03f714ed9449a846eb979fc6e2c61800978b60509d460c499088f13bb98"
+    },
+    {
+      "sequence": 56,
+      "at": "2026-09-26T17:04:29.985387+00:00",
+      "kind": "PROCESSING_BRANCH_RECORDED",
+      "previous_hash": "e849f03f714ed9449a846eb979fc6e2c61800978b60509d460c499088f13bb98",
+      "run_id": "g1-complete-pilot-02",
+      "status": "AWAITING_INDEPENDENT_C",
+      "ledger_sha256": "dc149e6901d2f9515c1003a0a790645d0edfbc29dd1dfe255ec839f4722dffd5",
+      "hash": "3d49dae1109d7f3f2d5570c91a1e861926ee313338dcf2648fdb5df3b0547cca"
+    },
+    {
+      "sequence": 57,
+      "at": "2026-09-26T17:05:46.473900+00:00",
+      "kind": "ISSUE_OPENED",
+      "previous_hash": "3d49dae1109d7f3f2d5570c91a1e861926ee313338dcf2648fdb5df3b0547cca",
+      "issue_id": "C3-TIME-SCOPE",
+      "source": "C:c_acceptance independent current artifact inspection",
+      "hash": "47ba5b7e0b06113537e59c783f2fed8788d547d8359ed9ca5c7894ad52a99b67"
+    },
+    {
+      "sequence": 58,
+      "at": "2026-09-26T17:05:46.475510+00:00",
+      "kind": "B_REPAIR_CONSUMED",
+      "previous_hash": "47ba5b7e0b06113537e59c783f2fed8788d547d8359ed9ca5c7894ad52a99b67",
+      "issue_id": "C3-TIME-SCOPE",
+      "actor": "B-Repair:root",
+      "hash": "c800ae2dd23a1e335170213b9bae18c25d3f37e0b16106a832323bae480fc558"
+    },
+    {
+      "sequence": 59,
+      "at": "2026-09-26T17:05:46.477017+00:00",
+      "kind": "AFFECTED_ARTIFACT_REBUILD_REQUIRED",
+      "previous_hash": "c800ae2dd23a1e335170213b9bae18c25d3f37e0b16106a832323bae480fc558",
+      "run_id": "g1-complete-pilot-02",
+      "artifact": "time_boundaries",
+      "reason": "numerical checks passed; current scope text is stale",
+      "hash": "7cc40fb9339df5c89a83f2e65475df0cb984c4ed0f1b29b0804480c69a5ce68e"
+    },
+    {
+      "sequence": 60,
+      "at": "2026-09-26T17:05:46.479156+00:00",
+      "kind": "REPAIR_SUBMITTED",
+      "previous_hash": "7cc40fb9339df5c89a83f2e65475df0cb984c4ed0f1b29b0804480c69a5ce68e",
+      "issue_id": "C3-TIME-SCOPE",
+      "actor": "B-Repair:root",
+      "hash": "59438efb38833b6f98d41b0f9568a1a5f2d42ece7e366413c6413e8d8d7742e3"
+    },
+    {
+      "sequence": 61,
+      "at": "2026-09-26T17:06:57.982165+00:00",
+      "kind": "C_VERIFIED_PARENT_RESUMED",
+      "previous_hash": "59438efb38833b6f98d41b0f9568a1a5f2d42ece7e366413c6413e8d8d7742e3",
+      "issue_id": "C3-TIME-SCOPE",
+      "parent_task": "diagnostics",
+      "verifier": "C:c_acceptance",
+      "hash": "a3c0ffe54da3a828e13f31abf67b14233d62f0ff7dc0776ef97bb92d270cfdc2"
+    },
+    {
+      "sequence": 62,
+      "at": "2026-09-26T17:06:58.059951+00:00",
+      "kind": "CODE_BOUND",
+      "previous_hash": "a3c0ffe54da3a828e13f31abf67b14233d62f0ff7dc0776ef97bb92d270cfdc2",
+      "code_sha": "f229d9a4113bcc0dd763e1b410f1f5fb73903a62",
+      "changed_paths": [
+        "task1/workflow/diagnostics.py",
+        "task1/workflow/evaluation.py"
+      ],
+      "hash": "b9d537a2427941a045b90d7453463603fc87751ec5b9be3825c86cfc640a906f"
+    },
+    {
+      "sequence": 63,
+      "at": "2026-09-26T17:06:58.062644+00:00",
+      "kind": "RUN_STARTED",
+      "previous_hash": "b9d537a2427941a045b90d7453463603fc87751ec5b9be3825c86cfc640a906f",
+      "run_id": "g1-complete-pilot-03",
+      "hash": "2181e11797bf68a1944cc2a5603bbd964d995d8971f3d884be96699c22c32de7"
+    },
+    {
+      "sequence": 64,
+      "at": "2026-09-26T17:06:58.063796+00:00",
+      "kind": "TOOL_DISPATCHED",
+      "previous_hash": "2181e11797bf68a1944cc2a5603bbd964d995d8971f3d884be96699c22c32de7",
+      "operation": "g1-complete-pilot-03:profile_pilot",
+      "hash": "8a8f30e839461aac9fa8200ace15e6728561eb7fd2f0dfe225fed55eb6332ce8"
+    },
+    {
+      "sequence": 65,
+      "at": "2026-09-26T17:06:58.542582+00:00",
+      "kind": "TOOL_EXECUTED",
+      "previous_hash": "8a8f30e839461aac9fa8200ace15e6728561eb7fd2f0dfe225fed55eb6332ce8",
+      "operation": "g1-complete-pilot-03:profile_pilot",
+      "artifact": {
+        "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/profile_pilot.json",
+        "sha256": "ed6d427bf712a433650bc28238ce58522065ad8dfc754301733ea005cb30ac71",
+        "artifact_id": "g1-complete-pilot-03:profile_pilot",
+        "output_sha256": "ca15bc89da9c64243093c031562f7bb275579bb4b67792780b3c993469ca6333",
+        "action": "profile_pilot",
+        "valid": true,
+        "source_hashes": {
+          "task1/workflow/io.py": "0d3d72dd0beb4718f4020a07a5f1c0ca89193943049a479816b5c496806321b2",
+          "task1/workflow/tools.py": "0fde0acebfe3ec97bd2653744ac8f0444c1e9a162c61970bccf8a94a9fbd0b3f",
+          "task1/workflow/diagnostics.py": "aee1e4dd46ff7b15a8f3d854aaf1ed9668ee5ef4d4991a624beb479ff0f82745"
+        }
+      },
+      "hash": "42166843d4d4b8ec967c8c80a07d11cc737137cb12196d531e01ed2b5c33b3a0"
+    },
+    {
+      "sequence": 66,
+      "at": "2026-09-26T17:06:59.031047+00:00",
+      "kind": "NUMERIC_REVIEW_EXECUTED",
+      "previous_hash": "42166843d4d4b8ec967c8c80a07d11cc737137cb12196d531e01ed2b5c33b3a0",
+      "run_id": "g1-complete-pilot-03",
+      "target": "g1-complete-pilot-03:profile_pilot",
+      "status": "VERIFIED",
+      "hash": "45cccaa42031b3b4a2a34890e52ba5762db58d7aaaa4a7b8f822193ccb0b2ddf"
+    },
+    {
+      "sequence": 67,
+      "at": "2026-09-26T17:06:59.032436+00:00",
+      "kind": "TOOL_DISPATCHED",
+      "previous_hash": "45cccaa42031b3b4a2a34890e52ba5762db58d7aaaa4a7b8f822193ccb0b2ddf",
+      "operation": "g1-complete-pilot-03:duplicate_details",
+      "hash": "cfe6fb739032d4d59ebc38de489886ad5ed03ee6be22d092253b8b0f96ca3dd2"
+    },
+    {
+      "sequence": 68,
+      "at": "2026-09-26T17:06:59.642624+00:00",
+      "kind": "TOOL_EXECUTED",
+      "previous_hash": "cfe6fb739032d4d59ebc38de489886ad5ed03ee6be22d092253b8b0f96ca3dd2",
+      "operation": "g1-complete-pilot-03:duplicate_details",
+      "artifact": {
+        "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/duplicate_details.json",
+        "sha256": "2af0cd5d718fa8cc5bd955eeea4c1fdd05374d7a173fdf9d9bc1c56f0d49e32d",
+        "artifact_id": "g1-complete-pilot-03:duplicate_details",
+        "output_sha256": "4d0e4d47d6231a3e64e22ff59b94d0e0f37b447b73bad8f15745b2f64685a69e",
+        "action": "duplicate_details",
+        "valid": true,
+        "source_hashes": {
+          "task1/workflow/io.py": "0d3d72dd0beb4718f4020a07a5f1c0ca89193943049a479816b5c496806321b2",
+          "task1/workflow/tools.py": "0fde0acebfe3ec97bd2653744ac8f0444c1e9a162c61970bccf8a94a9fbd0b3f",
+          "task1/workflow/diagnostics.py": "aee1e4dd46ff7b15a8f3d854aaf1ed9668ee5ef4d4991a624beb479ff0f82745"
+        }
+      },
+      "hash": "81bbf226564e396780566a14e837899619fc96d61b47d925c59a6b6072e43d91"
+    },
+    {
+      "sequence": 69,
+      "at": "2026-09-26T17:07:00.143325+00:00",
+      "kind": "NUMERIC_REVIEW_EXECUTED",
+      "previous_hash": "81bbf226564e396780566a14e837899619fc96d61b47d925c59a6b6072e43d91",
+      "run_id": "g1-complete-pilot-03",
+      "target": "g1-complete-pilot-03:duplicate_details",
+      "status": "VERIFIED",
+      "hash": "bbb8992e585d6b5a3f8b90bbcd8b149b35fa2daed6b8deec52375b6ae2730524"
+    },
+    {
+      "sequence": 70,
+      "at": "2026-09-26T17:07:00.145132+00:00",
+      "kind": "TOOL_DISPATCHED",
+      "previous_hash": "bbb8992e585d6b5a3f8b90bbcd8b149b35fa2daed6b8deec52375b6ae2730524",
+      "operation": "g1-complete-pilot-03:time_boundaries",
+      "hash": "ae11978bc04ab857b91e6a254692845345bed4aad07eb3481d299700496c4e48"
+    },
+    {
+      "sequence": 71,
+      "at": "2026-09-26T17:07:00.617756+00:00",
+      "kind": "TOOL_EXECUTED",
+      "previous_hash": "ae11978bc04ab857b91e6a254692845345bed4aad07eb3481d299700496c4e48",
+      "operation": "g1-complete-pilot-03:time_boundaries",
+      "artifact": {
+        "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/time_boundaries.json",
+        "sha256": "bf0b0e9da04e08e170d98907cde40959d5325619ec2f2377db44c11d053a7edd",
+        "artifact_id": "g1-complete-pilot-03:time_boundaries",
+        "output_sha256": "6181f45943ce04984bfd18d2e886a6fa89fbebbfd0d1026f2bd11f8fa4b04308",
+        "action": "time_boundaries",
+        "valid": true,
+        "source_hashes": {
+          "task1/workflow/io.py": "0d3d72dd0beb4718f4020a07a5f1c0ca89193943049a479816b5c496806321b2",
+          "task1/workflow/tools.py": "0fde0acebfe3ec97bd2653744ac8f0444c1e9a162c61970bccf8a94a9fbd0b3f",
+          "task1/workflow/diagnostics.py": "aee1e4dd46ff7b15a8f3d854aaf1ed9668ee5ef4d4991a624beb479ff0f82745"
+        }
+      },
+      "hash": "39b37d58d69974f490536133cff253a356a3082412ff5c56c41df517969a434c"
+    },
+    {
+      "sequence": 72,
+      "at": "2026-09-26T17:07:01.104438+00:00",
+      "kind": "NUMERIC_REVIEW_EXECUTED",
+      "previous_hash": "39b37d58d69974f490536133cff253a356a3082412ff5c56c41df517969a434c",
+      "run_id": "g1-complete-pilot-03",
+      "target": "g1-complete-pilot-03:time_boundaries",
+      "status": "VERIFIED",
+      "hash": "3e27468aef512019bbaa4f9e80dbf562976d05f6643c44384b7f78194efabc61"
+    },
+    {
+      "sequence": 73,
+      "at": "2026-09-26T17:07:01.105980+00:00",
+      "kind": "TOOL_DISPATCHED",
+      "previous_hash": "3e27468aef512019bbaa4f9e80dbf562976d05f6643c44384b7f78194efabc61",
+      "operation": "g1-complete-pilot-03:baseline",
+      "hash": "0a3db6c12e76cc7db90d4a9b6e5628b90f35752f4a85ac7935e57241008563d4"
+    },
+    {
+      "sequence": 74,
+      "at": "2026-09-26T17:07:02.318667+00:00",
+      "kind": "TOOL_EXECUTED",
+      "previous_hash": "0a3db6c12e76cc7db90d4a9b6e5628b90f35752f4a85ac7935e57241008563d4",
+      "operation": "g1-complete-pilot-03:baseline",
+      "artifact": {
+        "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/baseline.json",
+        "sha256": "865710aea34a316fe83088d7cf2ac1aec68c96623269bfcf06255b5db2930fd8",
+        "artifact_id": "g1-complete-pilot-03:baseline",
+        "output_sha256": "36b39abfa1d1e79fe6999831083eb36a1d9e2a4f737e374e1514f08ef5016eab",
+        "action": "baseline",
+        "valid": true,
+        "source_hashes": {
+          "task1/workflow/io.py": "0d3d72dd0beb4718f4020a07a5f1c0ca89193943049a479816b5c496806321b2",
+          "task1/workflow/tools.py": "0fde0acebfe3ec97bd2653744ac8f0444c1e9a162c61970bccf8a94a9fbd0b3f",
+          "task1/workflow/diagnostics.py": "aee1e4dd46ff7b15a8f3d854aaf1ed9668ee5ef4d4991a624beb479ff0f82745",
+          "task1/workflow/pipeline.py": "160bedcc0d8dffce71d833dffc4de28928bc7007077ae8d03c57c96d827548c7",
+          "task1/workflow/geometry.py": "2ad3ca3b49e98e997684e3f5af948771be80dfb03b31b2ae4cc4483856e93d74",
+          "task1/workflow/evaluation.py": "7cf224fbc290d3e83acd5d83a3fe335e6dc437c762f7053d8132817aa91025b2",
+          "task1/workflow/coordinates.py": "d99b270a65c88f8530669d5e7d0887d7563b3e54e19770ab7a9eb695117e075d",
+          "task1/config/conditional_planar.json": "5b1ab7dbf25797a51405a2cddd93a8d2ea3e3b69530369366d0e05be7abb8169"
+        }
+      },
+      "hash": "86ea5ad66887d30a66609e0d9448ea23da55592704b8531c4bec24b9eb16710c"
+    },
+    {
+      "sequence": 75,
+      "at": "2026-09-26T17:07:03.446542+00:00",
+      "kind": "NUMERIC_REVIEW_EXECUTED",
+      "previous_hash": "86ea5ad66887d30a66609e0d9448ea23da55592704b8531c4bec24b9eb16710c",
+      "run_id": "g1-complete-pilot-03",
+      "target": "g1-complete-pilot-03:baseline",
+      "status": "VERIFIED",
+      "hash": "915343254d25b3ab637dcf102c64d6bb54119eaefc52fca662b866d15cb2ca4f"
+    },
+    {
+      "sequence": 76,
+      "at": "2026-09-26T17:07:03.846999+00:00",
+      "kind": "PROCESSING_BRANCH_RECORDED",
+      "previous_hash": "915343254d25b3ab637dcf102c64d6bb54119eaefc52fca662b866d15cb2ca4f",
+      "run_id": "g1-complete-pilot-03",
+      "status": "AWAITING_INDEPENDENT_C",
+      "ledger_sha256": "dc149e6901d2f9515c1003a0a790645d0edfbc29dd1dfe255ec839f4722dffd5",
+      "hash": "09a7175a52f7e4459cfd67cf145cabfb9b4765f40144f304b6e674a299e6b305"
+    },
+    {
+      "sequence": 77,
+      "at": "2026-09-26T17:09:31.724261+00:00",
+      "kind": "FOLLOWUP_DISPATCHED",
+      "previous_hash": "09a7175a52f7e4459cfd67cf145cabfb9b4765f40144f304b6e674a299e6b305",
+      "request": {
+        "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/followup_request_run03.json",
+        "sha256": "baff383be63c53ea1bd5a791c89e170faa7c3cd08b1fa7fc741eeb001e03a707"
+      },
+      "review": {
+        "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/baseline_review.json",
+        "sha256": "849f1aa9d5415a3f4bd45336181edc0abfe0582997a2332b85bdcc5e04ac1206",
+        "source_hashes": {
+          "task1/workflow/artifact_review.py": "dfa0b91149662baf26861a9ec0e51223842d0ac62ada29015eca7b119c68da48",
+          "task1/workflow/evaluation.py": "7cf224fbc290d3e83acd5d83a3fe335e6dc437c762f7053d8132817aa91025b2"
+        }
+      },
+      "hash": "a970e5b8898f4beac8d746e493fc9f0b9253a7d45cea6f9d237dbdad7a65f68c"
+    },
+    {
+      "sequence": 78,
+      "at": "2026-09-26T17:09:32.513500+00:00",
+      "kind": "FOLLOWUP_EXECUTED",
+      "previous_hash": "a970e5b8898f4beac8d746e493fc9f0b9253a7d45cea6f9d237dbdad7a65f68c",
+      "artifact": {
+        "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/coordinate_sensitivity.json",
+        "sha256": "0ccffb15396c6ab1e57cc29fdb3e4ab9879104c73f95679dc1ac09d109d6de9f",
+        "source_hashes": {
+          "task1/workflow/coordinate_review.py": "af4f0d753d162666bcb5da07edeccb846e008c33adf0f56b34939ac526eaf951",
+          "task1/workflow/coordinates.py": "d99b270a65c88f8530669d5e7d0887d7563b3e54e19770ab7a9eb695117e075d",
+          "task1/workflow/evaluation.py": "7cf224fbc290d3e83acd5d83a3fe335e6dc437c762f7053d8132817aa91025b2"
+        }
+      },
+      "hash": "6ca316f89c1d63cc389c968400ce545cc893e9e28ade6ed91d5a7f8343da1d30"
+    }
+  ],
+  "runs": {
+    "g1-complete-pilot-01": {
+      "status": "STALE",
+      "code_sha": "93e0ff7327e977dee0da8430b776efa509050af5",
+      "policy_hash": "cbe01c9f33414edcebc0738d3c09f7206a94e1e98dceee545998522e04736688",
+      "input_sha256": "c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3",
+      "record_ids": [
+        "0",
+        "1",
+        "2",
+        "246",
+        "256",
+        "306",
+        "352"
+      ],
+      "artifacts": {
+        "profile_pilot": {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-01/profile_pilot.json",
+          "sha256": "ed6d427bf712a433650bc28238ce58522065ad8dfc754301733ea005cb30ac71",
+          "artifact_id": "g1-complete-pilot-01:profile_pilot",
+          "output_sha256": "ca15bc89da9c64243093c031562f7bb275579bb4b67792780b3c993469ca6333",
+          "action": "profile_pilot",
+          "valid": false,
+          "source_hashes": {
+            "task1/workflow/io.py": "0d3d72dd0beb4718f4020a07a5f1c0ca89193943049a479816b5c496806321b2",
+            "task1/workflow/tools.py": "0fde0acebfe3ec97bd2653744ac8f0444c1e9a162c61970bccf8a94a9fbd0b3f",
+            "task1/workflow/diagnostics.py": "e2ef635bbd95db505b3eff336ca59074a60217a70b2bc644624c3fbd0280acda"
+          },
+          "invalid_reason": "SOURCE_CHANGED_REBUILD_REQUIRED"
+        },
+        "duplicate_details": {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-01/duplicate_details.json",
+          "sha256": "2af0cd5d718fa8cc5bd955eeea4c1fdd05374d7a173fdf9d9bc1c56f0d49e32d",
+          "artifact_id": "g1-complete-pilot-01:duplicate_details",
+          "output_sha256": "4d0e4d47d6231a3e64e22ff59b94d0e0f37b447b73bad8f15745b2f64685a69e",
+          "action": "duplicate_details",
+          "valid": false,
+          "source_hashes": {
+            "task1/workflow/io.py": "0d3d72dd0beb4718f4020a07a5f1c0ca89193943049a479816b5c496806321b2",
+            "task1/workflow/tools.py": "0fde0acebfe3ec97bd2653744ac8f0444c1e9a162c61970bccf8a94a9fbd0b3f",
+            "task1/workflow/diagnostics.py": "e2ef635bbd95db505b3eff336ca59074a60217a70b2bc644624c3fbd0280acda"
+          },
+          "invalid_reason": "SOURCE_CHANGED_REBUILD_REQUIRED"
+        },
+        "time_boundaries": {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-01/time_boundaries.json",
+          "sha256": "e50a6451fa93cc505fe3c710c84a3dd50aa12f3e3a2594ce30bde6dea5578274",
+          "artifact_id": "g1-complete-pilot-01:time_boundaries",
+          "output_sha256": "8b34dfa30df221b25a254f057b58c3325b121d9d5dfb8d34f6882672b0f06980",
+          "action": "time_boundaries",
+          "valid": false,
+          "source_hashes": {
+            "task1/workflow/io.py": "0d3d72dd0beb4718f4020a07a5f1c0ca89193943049a479816b5c496806321b2",
+            "task1/workflow/tools.py": "0fde0acebfe3ec97bd2653744ac8f0444c1e9a162c61970bccf8a94a9fbd0b3f",
+            "task1/workflow/diagnostics.py": "e2ef635bbd95db505b3eff336ca59074a60217a70b2bc644624c3fbd0280acda"
+          },
+          "invalid_reason": "SOURCE_CHANGED_REBUILD_REQUIRED"
+        },
+        "baseline": {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-01/baseline.json",
+          "sha256": "865710aea34a316fe83088d7cf2ac1aec68c96623269bfcf06255b5db2930fd8",
+          "artifact_id": "g1-complete-pilot-01:baseline",
+          "output_sha256": "36b39abfa1d1e79fe6999831083eb36a1d9e2a4f737e374e1514f08ef5016eab",
+          "action": "baseline",
+          "valid": false,
+          "source_hashes": {
+            "task1/workflow/io.py": "0d3d72dd0beb4718f4020a07a5f1c0ca89193943049a479816b5c496806321b2",
+            "task1/workflow/tools.py": "0fde0acebfe3ec97bd2653744ac8f0444c1e9a162c61970bccf8a94a9fbd0b3f",
+            "task1/workflow/diagnostics.py": "e2ef635bbd95db505b3eff336ca59074a60217a70b2bc644624c3fbd0280acda",
+            "task1/workflow/pipeline.py": "160bedcc0d8dffce71d833dffc4de28928bc7007077ae8d03c57c96d827548c7",
+            "task1/workflow/geometry.py": "2ad3ca3b49e98e997684e3f5af948771be80dfb03b31b2ae4cc4483856e93d74",
+            "task1/workflow/evaluation.py": "92424a94c20ce897606d546ba69c0f205c0f5f75a17b609134ac8125a241c7ad",
+            "task1/workflow/coordinates.py": "d99b270a65c88f8530669d5e7d0887d7563b3e54e19770ab7a9eb695117e075d",
+            "task1/config/conditional_planar.json": "5b1ab7dbf25797a51405a2cddd93a8d2ea3e3b69530369366d0e05be7abb8169"
+          },
+          "invalid_reason": "SOURCE_CHANGED_REBUILD_REQUIRED"
+        }
+      },
+      "reviews": {
+        "profile_pilot": {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-01/profile_pilot_review.json",
+          "sha256": "ea38c637e7b7424f7b21cb4cff5d0c725f2d86f9f9ffa5ab9a3e9d977e13f2a4",
+          "source_hashes": {
+            "task1/workflow/artifact_review.py": "dfa0b91149662baf26861a9ec0e51223842d0ac62ada29015eca7b119c68da48",
+            "task1/workflow/evaluation.py": "92424a94c20ce897606d546ba69c0f205c0f5f75a17b609134ac8125a241c7ad"
+          }
+        },
+        "duplicate_details": {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-01/duplicate_details_review.json",
+          "sha256": "729cd9bb014685e9be602df44b90863beb484c62ea4a1c04e433a72232779742",
+          "source_hashes": {
+            "task1/workflow/artifact_review.py": "dfa0b91149662baf26861a9ec0e51223842d0ac62ada29015eca7b119c68da48",
+            "task1/workflow/evaluation.py": "92424a94c20ce897606d546ba69c0f205c0f5f75a17b609134ac8125a241c7ad"
+          }
+        },
+        "time_boundaries": {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-01/time_boundaries_review.json",
+          "sha256": "52f238411bca3be46a881afea890c44282465fd04581d1e3b48d26e02b3421d7",
+          "source_hashes": {
+            "task1/workflow/artifact_review.py": "dfa0b91149662baf26861a9ec0e51223842d0ac62ada29015eca7b119c68da48",
+            "task1/workflow/evaluation.py": "92424a94c20ce897606d546ba69c0f205c0f5f75a17b609134ac8125a241c7ad"
+          }
+        },
+        "baseline": {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-01/baseline_review.json",
+          "sha256": "49823c6cc17773447a551131bc718acfb428086f4630afb182927fd8bd7b7eb3",
+          "source_hashes": {
+            "task1/workflow/artifact_review.py": "dfa0b91149662baf26861a9ec0e51223842d0ac62ada29015eca7b119c68da48",
+            "task1/workflow/evaluation.py": "92424a94c20ce897606d546ba69c0f205c0f5f75a17b609134ac8125a241c7ad"
+          }
+        }
+      },
+      "mode": "RECOMPUTE",
+      "new_model_calls": 0,
+      "runtime_source_hashes": {
+        "task1/workflow/recompute.py": "4c198a016adec8554602c9ad04e0446bb90866ed970789834b96c51ebbec9b56",
+        "task1/workflow/coordinates.py": "d99b270a65c88f8530669d5e7d0887d7563b3e54e19770ab7a9eb695117e075d",
+        "task1/workflow/goal.py": "d313d408961adf07b9791972b03ac6a99db808e805efe1aa06abe85a075e863a",
+        "task1/workflow/diagnostics.py": "e2ef635bbd95db505b3eff336ca59074a60217a70b2bc644624c3fbd0280acda",
+        "task1/workflow/inventory.py": "42bceb3ea1bab9ca386b88ce29104dc4bb518fee6df8f25aae50360633e7d5a1",
+        "task1/workflow/io.py": "0d3d72dd0beb4718f4020a07a5f1c0ca89193943049a479816b5c496806321b2",
+        "task1/workflow/budget.py": "c275047dffcafb7160b0c3fcd8de4e56bbc1f86dc05925691ff5af43aea312ca",
+        "task1/workflow/coordinate_review.py": "13305c6dda7bc0699822cd880e4e9051f2946371d4dd83f4ae0ea946dd5c897c",
+        "task1/workflow/__init__.py": "bd23709231145ce415c01c88880b886e8c8343199a47dbe0762d68841aeb73ff",
+        "task1/workflow/artifact_review.py": "dfa0b91149662baf26861a9ec0e51223842d0ac62ada29015eca7b119c68da48",
+        "task1/workflow/pipeline.py": "160bedcc0d8dffce71d833dffc4de28928bc7007077ae8d03c57c96d827548c7",
+        "task1/workflow/__main__.py": "b96a66d5fe543f8082d528e81e7e70de2c0090b20ab60b090532ab65647713e8",
+        "task1/workflow/geometry.py": "2ad3ca3b49e98e997684e3f5af948771be80dfb03b31b2ae4cc4483856e93d74",
+        "task1/workflow/provider.py": "d778316bcdbdec1643707a93c1d0e00e52caa4c0b941c9299b33da547adbc28b",
+        "task1/workflow/evaluation.py": "92424a94c20ce897606d546ba69c0f205c0f5f75a17b609134ac8125a241c7ad",
+        "task1/workflow/tools.py": "0fde0acebfe3ec97bd2653744ac8f0444c1e9a162c61970bccf8a94a9fbd0b3f",
+        "task1/workflow/sources.py": "74b42f79abfe172b7d2e29ba55a631b22f3e6d46c7cb2a08c0c7634eaf44ba90",
+        "task1/workflow/controller.py": "16793b102fd077cc243eae6f1e714632f312a77e421850d424b8562a2909eb6d"
+      }
+    },
+    "g1-complete-pilot-02": {
+      "status": "STALE",
+      "code_sha": "02f4b771db95fb396ef3a0bfa03f1fbd83333585",
+      "policy_hash": "cbe01c9f33414edcebc0738d3c09f7206a94e1e98dceee545998522e04736688",
+      "input_sha256": "c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3",
+      "record_ids": [
+        "0",
+        "1",
+        "2",
+        "246",
+        "256",
+        "306",
+        "352"
+      ],
+      "artifacts": {
+        "profile_pilot": {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-02/profile_pilot.json",
+          "sha256": "ed6d427bf712a433650bc28238ce58522065ad8dfc754301733ea005cb30ac71",
+          "artifact_id": "g1-complete-pilot-02:profile_pilot",
+          "output_sha256": "ca15bc89da9c64243093c031562f7bb275579bb4b67792780b3c993469ca6333",
+          "action": "profile_pilot",
+          "valid": false,
+          "source_hashes": {
+            "task1/workflow/io.py": "0d3d72dd0beb4718f4020a07a5f1c0ca89193943049a479816b5c496806321b2",
+            "task1/workflow/tools.py": "0fde0acebfe3ec97bd2653744ac8f0444c1e9a162c61970bccf8a94a9fbd0b3f",
+            "task1/workflow/diagnostics.py": "e2ef635bbd95db505b3eff336ca59074a60217a70b2bc644624c3fbd0280acda"
+          },
+          "invalid_reason": "SOURCE_CHANGED_REBUILD_REQUIRED"
+        },
+        "duplicate_details": {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-02/duplicate_details.json",
+          "sha256": "2af0cd5d718fa8cc5bd955eeea4c1fdd05374d7a173fdf9d9bc1c56f0d49e32d",
+          "artifact_id": "g1-complete-pilot-02:duplicate_details",
+          "output_sha256": "4d0e4d47d6231a3e64e22ff59b94d0e0f37b447b73bad8f15745b2f64685a69e",
+          "action": "duplicate_details",
+          "valid": false,
+          "source_hashes": {
+            "task1/workflow/io.py": "0d3d72dd0beb4718f4020a07a5f1c0ca89193943049a479816b5c496806321b2",
+            "task1/workflow/tools.py": "0fde0acebfe3ec97bd2653744ac8f0444c1e9a162c61970bccf8a94a9fbd0b3f",
+            "task1/workflow/diagnostics.py": "e2ef635bbd95db505b3eff336ca59074a60217a70b2bc644624c3fbd0280acda"
+          },
+          "invalid_reason": "SOURCE_CHANGED_REBUILD_REQUIRED"
+        },
+        "time_boundaries": {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-02/time_boundaries.json",
+          "sha256": "e50a6451fa93cc505fe3c710c84a3dd50aa12f3e3a2594ce30bde6dea5578274",
+          "artifact_id": "g1-complete-pilot-02:time_boundaries",
+          "output_sha256": "8b34dfa30df221b25a254f057b58c3325b121d9d5dfb8d34f6882672b0f06980",
+          "action": "time_boundaries",
+          "valid": false,
+          "source_hashes": {
+            "task1/workflow/io.py": "0d3d72dd0beb4718f4020a07a5f1c0ca89193943049a479816b5c496806321b2",
+            "task1/workflow/tools.py": "0fde0acebfe3ec97bd2653744ac8f0444c1e9a162c61970bccf8a94a9fbd0b3f",
+            "task1/workflow/diagnostics.py": "e2ef635bbd95db505b3eff336ca59074a60217a70b2bc644624c3fbd0280acda"
+          },
+          "invalid_reason": "SOURCE_CHANGED_REBUILD_REQUIRED"
+        },
+        "baseline": {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-02/baseline.json",
+          "sha256": "865710aea34a316fe83088d7cf2ac1aec68c96623269bfcf06255b5db2930fd8",
+          "artifact_id": "g1-complete-pilot-02:baseline",
+          "output_sha256": "36b39abfa1d1e79fe6999831083eb36a1d9e2a4f737e374e1514f08ef5016eab",
+          "action": "baseline",
+          "valid": false,
+          "source_hashes": {
+            "task1/workflow/io.py": "0d3d72dd0beb4718f4020a07a5f1c0ca89193943049a479816b5c496806321b2",
+            "task1/workflow/tools.py": "0fde0acebfe3ec97bd2653744ac8f0444c1e9a162c61970bccf8a94a9fbd0b3f",
+            "task1/workflow/diagnostics.py": "e2ef635bbd95db505b3eff336ca59074a60217a70b2bc644624c3fbd0280acda",
+            "task1/workflow/pipeline.py": "160bedcc0d8dffce71d833dffc4de28928bc7007077ae8d03c57c96d827548c7",
+            "task1/workflow/geometry.py": "2ad3ca3b49e98e997684e3f5af948771be80dfb03b31b2ae4cc4483856e93d74",
+            "task1/workflow/evaluation.py": "7cf224fbc290d3e83acd5d83a3fe335e6dc437c762f7053d8132817aa91025b2",
+            "task1/workflow/coordinates.py": "d99b270a65c88f8530669d5e7d0887d7563b3e54e19770ab7a9eb695117e075d",
+            "task1/config/conditional_planar.json": "5b1ab7dbf25797a51405a2cddd93a8d2ea3e3b69530369366d0e05be7abb8169"
+          },
+          "invalid_reason": "SOURCE_CHANGED_REBUILD_REQUIRED"
+        }
+      },
+      "reviews": {
+        "profile_pilot": {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-02/profile_pilot_review.json",
+          "sha256": "33636300e8fd3b9cf49f4fd284ceb1981911d92810c215878d381882ad5f484f",
+          "source_hashes": {
+            "task1/workflow/artifact_review.py": "dfa0b91149662baf26861a9ec0e51223842d0ac62ada29015eca7b119c68da48",
+            "task1/workflow/evaluation.py": "7cf224fbc290d3e83acd5d83a3fe335e6dc437c762f7053d8132817aa91025b2"
+          }
+        },
+        "duplicate_details": {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-02/duplicate_details_review.json",
+          "sha256": "53bac6bd0a84e68db144d7187dc8a7d90aad9c8764e7d29f1e712c822d992d6b",
+          "source_hashes": {
+            "task1/workflow/artifact_review.py": "dfa0b91149662baf26861a9ec0e51223842d0ac62ada29015eca7b119c68da48",
+            "task1/workflow/evaluation.py": "7cf224fbc290d3e83acd5d83a3fe335e6dc437c762f7053d8132817aa91025b2"
+          }
+        },
+        "time_boundaries": {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-02/time_boundaries_review.json",
+          "sha256": "3206b23ef98f3047c6d7d3dc445d66f4e36665fbe2f17a18826489c9c9c10d0e",
+          "source_hashes": {
+            "task1/workflow/artifact_review.py": "dfa0b91149662baf26861a9ec0e51223842d0ac62ada29015eca7b119c68da48",
+            "task1/workflow/evaluation.py": "7cf224fbc290d3e83acd5d83a3fe335e6dc437c762f7053d8132817aa91025b2"
+          }
+        },
+        "baseline": {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-02/baseline_review.json",
+          "sha256": "4f02b0f531fb5875a8b30c0aa487fb0e36aca3233990a5c2ba2533de3c5f49e1",
+          "source_hashes": {
+            "task1/workflow/artifact_review.py": "dfa0b91149662baf26861a9ec0e51223842d0ac62ada29015eca7b119c68da48",
+            "task1/workflow/evaluation.py": "7cf224fbc290d3e83acd5d83a3fe335e6dc437c762f7053d8132817aa91025b2"
+          }
+        }
+      },
+      "mode": "RECOMPUTE",
+      "new_model_calls": 0,
+      "runtime_source_hashes": {
+        "task1/workflow/recompute.py": "4c198a016adec8554602c9ad04e0446bb90866ed970789834b96c51ebbec9b56",
+        "task1/workflow/coordinates.py": "d99b270a65c88f8530669d5e7d0887d7563b3e54e19770ab7a9eb695117e075d",
+        "task1/workflow/goal.py": "d313d408961adf07b9791972b03ac6a99db808e805efe1aa06abe85a075e863a",
+        "task1/workflow/diagnostics.py": "e2ef635bbd95db505b3eff336ca59074a60217a70b2bc644624c3fbd0280acda",
+        "task1/workflow/inventory.py": "42bceb3ea1bab9ca386b88ce29104dc4bb518fee6df8f25aae50360633e7d5a1",
+        "task1/workflow/io.py": "0d3d72dd0beb4718f4020a07a5f1c0ca89193943049a479816b5c496806321b2",
+        "task1/workflow/budget.py": "c275047dffcafb7160b0c3fcd8de4e56bbc1f86dc05925691ff5af43aea312ca",
+        "task1/workflow/coordinate_review.py": "af4f0d753d162666bcb5da07edeccb846e008c33adf0f56b34939ac526eaf951",
+        "task1/workflow/__init__.py": "bd23709231145ce415c01c88880b886e8c8343199a47dbe0762d68841aeb73ff",
+        "task1/workflow/artifact_review.py": "dfa0b91149662baf26861a9ec0e51223842d0ac62ada29015eca7b119c68da48",
+        "task1/workflow/pipeline.py": "160bedcc0d8dffce71d833dffc4de28928bc7007077ae8d03c57c96d827548c7",
+        "task1/workflow/__main__.py": "b96a66d5fe543f8082d528e81e7e70de2c0090b20ab60b090532ab65647713e8",
+        "task1/workflow/geometry.py": "2ad3ca3b49e98e997684e3f5af948771be80dfb03b31b2ae4cc4483856e93d74",
+        "task1/workflow/provider.py": "d778316bcdbdec1643707a93c1d0e00e52caa4c0b941c9299b33da547adbc28b",
+        "task1/workflow/evaluation.py": "7cf224fbc290d3e83acd5d83a3fe335e6dc437c762f7053d8132817aa91025b2",
+        "task1/workflow/tools.py": "0fde0acebfe3ec97bd2653744ac8f0444c1e9a162c61970bccf8a94a9fbd0b3f",
+        "task1/workflow/sources.py": "74b42f79abfe172b7d2e29ba55a631b22f3e6d46c7cb2a08c0c7634eaf44ba90",
+        "task1/workflow/controller.py": "16793b102fd077cc243eae6f1e714632f312a77e421850d424b8562a2909eb6d"
+      }
+    },
+    "g1-complete-pilot-03": {
+      "status": "AWAITING_INDEPENDENT_C",
+      "code_sha": "f229d9a4113bcc0dd763e1b410f1f5fb73903a62",
+      "policy_hash": "cbe01c9f33414edcebc0738d3c09f7206a94e1e98dceee545998522e04736688",
+      "input_sha256": "c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3",
+      "record_ids": [
+        "0",
+        "1",
+        "2",
+        "246",
+        "256",
+        "306",
+        "352"
+      ],
+      "artifacts": {
+        "profile_pilot": {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/profile_pilot.json",
+          "sha256": "ed6d427bf712a433650bc28238ce58522065ad8dfc754301733ea005cb30ac71",
+          "artifact_id": "g1-complete-pilot-03:profile_pilot",
+          "output_sha256": "ca15bc89da9c64243093c031562f7bb275579bb4b67792780b3c993469ca6333",
+          "action": "profile_pilot",
+          "valid": true,
+          "source_hashes": {
+            "task1/workflow/io.py": "0d3d72dd0beb4718f4020a07a5f1c0ca89193943049a479816b5c496806321b2",
+            "task1/workflow/tools.py": "0fde0acebfe3ec97bd2653744ac8f0444c1e9a162c61970bccf8a94a9fbd0b3f",
+            "task1/workflow/diagnostics.py": "aee1e4dd46ff7b15a8f3d854aaf1ed9668ee5ef4d4991a624beb479ff0f82745"
+          }
+        },
+        "duplicate_details": {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/duplicate_details.json",
+          "sha256": "2af0cd5d718fa8cc5bd955eeea4c1fdd05374d7a173fdf9d9bc1c56f0d49e32d",
+          "artifact_id": "g1-complete-pilot-03:duplicate_details",
+          "output_sha256": "4d0e4d47d6231a3e64e22ff59b94d0e0f37b447b73bad8f15745b2f64685a69e",
+          "action": "duplicate_details",
+          "valid": true,
+          "source_hashes": {
+            "task1/workflow/io.py": "0d3d72dd0beb4718f4020a07a5f1c0ca89193943049a479816b5c496806321b2",
+            "task1/workflow/tools.py": "0fde0acebfe3ec97bd2653744ac8f0444c1e9a162c61970bccf8a94a9fbd0b3f",
+            "task1/workflow/diagnostics.py": "aee1e4dd46ff7b15a8f3d854aaf1ed9668ee5ef4d4991a624beb479ff0f82745"
+          }
+        },
+        "time_boundaries": {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/time_boundaries.json",
+          "sha256": "bf0b0e9da04e08e170d98907cde40959d5325619ec2f2377db44c11d053a7edd",
+          "artifact_id": "g1-complete-pilot-03:time_boundaries",
+          "output_sha256": "6181f45943ce04984bfd18d2e886a6fa89fbebbfd0d1026f2bd11f8fa4b04308",
+          "action": "time_boundaries",
+          "valid": true,
+          "source_hashes": {
+            "task1/workflow/io.py": "0d3d72dd0beb4718f4020a07a5f1c0ca89193943049a479816b5c496806321b2",
+            "task1/workflow/tools.py": "0fde0acebfe3ec97bd2653744ac8f0444c1e9a162c61970bccf8a94a9fbd0b3f",
+            "task1/workflow/diagnostics.py": "aee1e4dd46ff7b15a8f3d854aaf1ed9668ee5ef4d4991a624beb479ff0f82745"
+          }
+        },
+        "baseline": {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/baseline.json",
+          "sha256": "865710aea34a316fe83088d7cf2ac1aec68c96623269bfcf06255b5db2930fd8",
+          "artifact_id": "g1-complete-pilot-03:baseline",
+          "output_sha256": "36b39abfa1d1e79fe6999831083eb36a1d9e2a4f737e374e1514f08ef5016eab",
+          "action": "baseline",
+          "valid": true,
+          "source_hashes": {
+            "task1/workflow/io.py": "0d3d72dd0beb4718f4020a07a5f1c0ca89193943049a479816b5c496806321b2",
+            "task1/workflow/tools.py": "0fde0acebfe3ec97bd2653744ac8f0444c1e9a162c61970bccf8a94a9fbd0b3f",
+            "task1/workflow/diagnostics.py": "aee1e4dd46ff7b15a8f3d854aaf1ed9668ee5ef4d4991a624beb479ff0f82745",
+            "task1/workflow/pipeline.py": "160bedcc0d8dffce71d833dffc4de28928bc7007077ae8d03c57c96d827548c7",
+            "task1/workflow/geometry.py": "2ad3ca3b49e98e997684e3f5af948771be80dfb03b31b2ae4cc4483856e93d74",
+            "task1/workflow/evaluation.py": "7cf224fbc290d3e83acd5d83a3fe335e6dc437c762f7053d8132817aa91025b2",
+            "task1/workflow/coordinates.py": "d99b270a65c88f8530669d5e7d0887d7563b3e54e19770ab7a9eb695117e075d",
+            "task1/config/conditional_planar.json": "5b1ab7dbf25797a51405a2cddd93a8d2ea3e3b69530369366d0e05be7abb8169"
+          }
+        }
+      },
+      "reviews": {
+        "profile_pilot": {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/profile_pilot_review.json",
+          "sha256": "e4cddcaabc30fd6264a7b774921569c02006eed665122de12d58449110bc8262",
+          "source_hashes": {
+            "task1/workflow/artifact_review.py": "dfa0b91149662baf26861a9ec0e51223842d0ac62ada29015eca7b119c68da48",
+            "task1/workflow/evaluation.py": "7cf224fbc290d3e83acd5d83a3fe335e6dc437c762f7053d8132817aa91025b2"
+          }
+        },
+        "duplicate_details": {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/duplicate_details_review.json",
+          "sha256": "d8c54ea93c3144c984cf2fc71277dbc337418860be05695da8c26e3a1c4cef68",
+          "source_hashes": {
+            "task1/workflow/artifact_review.py": "dfa0b91149662baf26861a9ec0e51223842d0ac62ada29015eca7b119c68da48",
+            "task1/workflow/evaluation.py": "7cf224fbc290d3e83acd5d83a3fe335e6dc437c762f7053d8132817aa91025b2"
+          }
+        },
+        "time_boundaries": {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/time_boundaries_review.json",
+          "sha256": "06468744879f9ebc1c94da31b2676202696abda2a7a8f53806e13d533ce6ac26",
+          "source_hashes": {
+            "task1/workflow/artifact_review.py": "dfa0b91149662baf26861a9ec0e51223842d0ac62ada29015eca7b119c68da48",
+            "task1/workflow/evaluation.py": "7cf224fbc290d3e83acd5d83a3fe335e6dc437c762f7053d8132817aa91025b2"
+          }
+        },
+        "baseline": {
+          "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/baseline_review.json",
+          "sha256": "849f1aa9d5415a3f4bd45336181edc0abfe0582997a2332b85bdcc5e04ac1206",
+          "source_hashes": {
+            "task1/workflow/artifact_review.py": "dfa0b91149662baf26861a9ec0e51223842d0ac62ada29015eca7b119c68da48",
+            "task1/workflow/evaluation.py": "7cf224fbc290d3e83acd5d83a3fe335e6dc437c762f7053d8132817aa91025b2"
+          }
+        }
+      },
+      "mode": "RECOMPUTE",
+      "new_model_calls": 0,
+      "runtime_source_hashes": {
+        "task1/workflow/recompute.py": "4c198a016adec8554602c9ad04e0446bb90866ed970789834b96c51ebbec9b56",
+        "task1/workflow/coordinates.py": "d99b270a65c88f8530669d5e7d0887d7563b3e54e19770ab7a9eb695117e075d",
+        "task1/workflow/goal.py": "d313d408961adf07b9791972b03ac6a99db808e805efe1aa06abe85a075e863a",
+        "task1/workflow/diagnostics.py": "aee1e4dd46ff7b15a8f3d854aaf1ed9668ee5ef4d4991a624beb479ff0f82745",
+        "task1/workflow/inventory.py": "42bceb3ea1bab9ca386b88ce29104dc4bb518fee6df8f25aae50360633e7d5a1",
+        "task1/workflow/io.py": "0d3d72dd0beb4718f4020a07a5f1c0ca89193943049a479816b5c496806321b2",
+        "task1/workflow/budget.py": "c275047dffcafb7160b0c3fcd8de4e56bbc1f86dc05925691ff5af43aea312ca",
+        "task1/workflow/coordinate_review.py": "af4f0d753d162666bcb5da07edeccb846e008c33adf0f56b34939ac526eaf951",
+        "task1/workflow/__init__.py": "bd23709231145ce415c01c88880b886e8c8343199a47dbe0762d68841aeb73ff",
+        "task1/workflow/artifact_review.py": "dfa0b91149662baf26861a9ec0e51223842d0ac62ada29015eca7b119c68da48",
+        "task1/workflow/pipeline.py": "160bedcc0d8dffce71d833dffc4de28928bc7007077ae8d03c57c96d827548c7",
+        "task1/workflow/__main__.py": "b96a66d5fe543f8082d528e81e7e70de2c0090b20ab60b090532ab65647713e8",
+        "task1/workflow/geometry.py": "2ad3ca3b49e98e997684e3f5af948771be80dfb03b31b2ae4cc4483856e93d74",
+        "task1/workflow/provider.py": "d778316bcdbdec1643707a93c1d0e00e52caa4c0b941c9299b33da547adbc28b",
+        "task1/workflow/evaluation.py": "7cf224fbc290d3e83acd5d83a3fe335e6dc437c762f7053d8132817aa91025b2",
+        "task1/workflow/tools.py": "0fde0acebfe3ec97bd2653744ac8f0444c1e9a162c61970bccf8a94a9fbd0b3f",
+        "task1/workflow/sources.py": "74b42f79abfe172b7d2e29ba55a631b22f3e6d46c7cb2a08c0c7634eaf44ba90",
+        "task1/workflow/controller.py": "16793b102fd077cc243eae6f1e714632f312a77e421850d424b8562a2909eb6d"
+      },
+      "followup": {
+        "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/coordinate_sensitivity.json",
+        "sha256": "0ccffb15396c6ab1e57cc29fdb3e4ab9879104c73f95679dc1ac09d109d6de9f",
+        "source_hashes": {
+          "task1/workflow/coordinate_review.py": "af4f0d753d162666bcb5da07edeccb846e008c33adf0f56b34939ac526eaf951",
+          "task1/workflow/coordinates.py": "d99b270a65c88f8530669d5e7d0887d7563b3e54e19770ab7a9eb695117e075d",
+          "task1/workflow/evaluation.py": "7cf224fbc290d3e83acd5d83a3fe335e6dc437c762f7053d8132817aa91025b2"
+        }
+      }
+    }
+  },
+  "inflight": null,
+  "current_code_sha": "f229d9a4113bcc0dd763e1b410f1f5fb73903a62",
+  "current_run": "g1-complete-pilot-03"
+}

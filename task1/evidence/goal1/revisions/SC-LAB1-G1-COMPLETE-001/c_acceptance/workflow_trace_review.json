@@ -1,0 +1,112 @@
+{
+  "status": "VERIFIED",
+  "classification": "INDEPENDENT_C_REAL_REPAIR_AND_VERSION_TRACE_AUDIT",
+  "snapshot_goal_sha256": "4f6dcc3a19abef6e07131b2a16b32d3ed74128c545dc18e45e88da9560023e01",
+  "snapshot_resources_sha256": "299eefcbe84e38251ef5dcdb20a1b4be0be19e988934a99625cb1db696547c9a",
+  "event_hashes_verified": 79,
+  "issues": [
+    {
+      "issue_id": "C2-F01",
+      "repair_path": [
+        "ISSUE_OPENED",
+        "B_REPAIR_CONSUMED",
+        "C_REJECTED_DURING_B_REPAIR",
+        "REPAIR_SUBMITTED",
+        "C_REOPENED",
+        "B_REPAIR_CONSUMED",
+        "REPAIR_SUBMITTED",
+        "PENDING_REPAIR_DEPENDENCY_BINDING_COMPLETED",
+        "C_VERIFIED_PARENT_RESUMED"
+      ],
+      "status": "VERIFIED",
+      "complete_path": true,
+      "all_closure_receipts_match": true
+    },
+    {
+      "issue_id": "C2-F02",
+      "repair_path": [
+        "ISSUE_OPENED",
+        "B_REPAIR_CONSUMED",
+        "REPAIR_SUBMITTED",
+        "C_REOPENED",
+        "B_REPAIR_CONSUMED",
+        "REPAIR_SUBMITTED",
+        "C_VERIFIED_PARENT_RESUMED",
+        "F02_FINAL_VERSION_ALIGNMENT"
+      ],
+      "status": "VERIFIED",
+      "complete_path": true,
+      "all_closure_receipts_match": true
+    },
+    {
+      "issue_id": "NUMERIC:g1-complete-pilot-01:baseline",
+      "repair_path": [
+        "ISSUE_OPENED",
+        "B_REPAIR_CONSUMED",
+        "REPAIR_SUBMITTED",
+        "C_VERIFIED_PARENT_RESUMED"
+      ],
+      "status": "VERIFIED",
+      "complete_path": true,
+      "all_closure_receipts_match": true
+    },
+    {
+      "issue_id": "C3-COORDINATE-DIRECTION",
+      "repair_path": [
+        "ISSUE_OPENED",
+        "B_REPAIR_CONSUMED",
+        "REPAIR_SUBMITTED",
+        "C_VERIFIED_PARENT_RESUMED"
+      ],
+      "status": "VERIFIED",
+      "complete_path": true,
+      "all_closure_receipts_match": true
+    },
+    {
+      "issue_id": "C3-TIME-SCOPE",
+      "repair_path": [
+        "ISSUE_OPENED",
+        "B_REPAIR_CONSUMED",
+        "REPAIR_SUBMITTED",
+        "C_VERIFIED_PARENT_RESUMED"
+      ],
+      "status": "VERIFIED",
+      "complete_path": true,
+      "all_closure_receipts_match": true
+    }
+  ],
+  "current_run": "g1-complete-pilot-03",
+  "code_sha": "f229d9a4113bcc0dd763e1b410f1f5fb73903a62",
+  "inflight": null,
+  "superseded_runs": {
+    "g1-complete-pilot-01": "STALE",
+    "g1-complete-pilot-02": "STALE"
+  },
+  "scope_limit": "Recorded native dispatches are actual role tasks, not independently observable provider billing/request counts. C personally received raw/contract task, sent 3 real issues, saw repair return, and requested followup consumed by main journal.",
+  "role_dispatches_at_snapshot": 13,
+  "hidden_provider_requests": "unknown",
+  "semantic_statuses": {
+    "engineering_audit": "VERIFIED_FOR_CHECKED_ARTIFACTS",
+    "conditional_analysis": "VERIFIED",
+    "source_geographic_semantics": "UNVERIFIED",
+    "gpt_second_review": "PENDING",
+    "goal2_goal3": "NOT_RUN"
+  },
+  "numeric_summary": {
+    "dp_reference_points": 461,
+    "dp_saving": 0.5921908893709328,
+    "max_DP_error_m": 4.938319812632412,
+    "DP_allowance_range": [
+      8.102734306383885e-11,
+      4.067488557241065e-10
+    ],
+    "max_coordinate_crosscheck_error_m": 3.637978807091713e-12,
+    "model_geodesic_radius_m": 31131.317939847395,
+    "pair_count": 45457,
+    "max_pair_absolute_difference_m": 0.036456552836170886,
+    "max_pair_relative_difference": 1.1826369614622246e-05,
+    "direction_windows": 474,
+    "direction_undefined_points": 194,
+    "max_AEQD_DP_error_m": 4.9383265211291345
+  }
+}

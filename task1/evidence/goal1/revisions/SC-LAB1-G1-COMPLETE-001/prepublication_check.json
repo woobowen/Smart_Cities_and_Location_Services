@@ -1,0 +1,56 @@
+{
+  "classification": "PREPUBLICATION_ENGINEERING_CHECK",
+  "command": "PYTHONPATH=. .venv/bin/python task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/release_checks.py",
+  "checked_files": 544,
+  "secrets_pattern_findings": [],
+  "over_50MiB_files": [],
+  "symlinks": [],
+  "broken_local_links": [],
+  "absolute_paths_in_reproduction_entrypoints": [],
+  "absolute_paths_in_evidence": [
+    "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/FINAL_RESPONSE.md",
+    "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/a_scope/release_scope_check.json",
+    "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/final_evidence_probe.py",
+    "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/reviewed_FINAL_RESPONSE.md.txt",
+    "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/release_checks.py",
+    "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/tests_code_bound.xml",
+    "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/tests_development.xml",
+    "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/tests_final.xml",
+    "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/tests_pilot02.xml",
+    "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/tests_pilot03.xml",
+    "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/tests_precommit.xml",
+    "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/tests_release.xml",
+    "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/validation_code_bound.json",
+    "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/validation_pilot02.json",
+    "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/validation_pilot03.json",
+    "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/validation_release.json"
+  ],
+  "absolute_path_note": "Required cwd/commands and archived probes retain historical paths; executable reproduction inputs use project-relative paths.",
+  "protected_total": 273,
+  "authorized_protected_changes": [
+    {
+      "path": "task1/evidence/goal1/REVIEW_PACKET.md",
+      "before_sha256": "bbbb33ccd154297643ac869d2f73a7cedf60f90de7982cd776d1c7c79b09a1e6",
+      "after_sha256": "19373a6e177f93f519778f3774dfe131f110c70d937440acb082f9902bbcaeba",
+      "explicitly_authorized_current_entry": true
+    },
+    {
+      "path": "task1/evidence/goal1/acceptance.json",
+      "before_sha256": "80fbf3ed3f1b0516e883b995026f644f867dbfabbe82202283efb8af2b239e99",
+      "after_sha256": "a24e8b4823811e575c555b62c7bd52f16b504378baa002004fabe230c438f9fe",
+      "explicitly_authorized_current_entry": true
+    },
+    {
+      "path": "task1/evidence/goal1/requirements.json",
+      "before_sha256": "dc0f2a7b3e6a500bb31f68e0bed696231453521c7068a71d24148c888c5338c1",
+      "after_sha256": "da02d860511106350dccb4d1ac34cff16b88d021854dcff222d517cee289fc2e",
+      "explicitly_authorized_current_entry": true
+    }
+  ],
+  "unauthorized_protected_changes": [],
+  "notebook_errors": [],
+  "original_material_git_byte_audit": "a_scope/release_scope_check.json: 150 additional original material/template/plot/history files matched initial Git bytes",
+  "raw_sha256": "c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3",
+  "source_bundle_check": "sync_sources.py --check: recorded separately; exactly 11 active byte-equal files",
+  "status": "PASS"
+}

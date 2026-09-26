@@ -1,0 +1,273 @@
+{
+  "classification": "A_ROLE_CURRENT_READ_ONLY_SOURCE_AUDIT_NOT_EXPERIMENT_ACCEPTANCE",
+  "created_at_utc": "2026-09-26T16:23:37.251185+00:00",
+  "head_at_read": "7e6cd4082c2cdad2452fa5a1006e99dcfb050d17",
+  "source_checks": [
+    {
+      "path": "task1/实验课1.pptx",
+      "sha256": "cf5fdbdd0e116818f4bf195e8761dd55c4733443d7c360c986cf1cdfddfda075",
+      "historical_extract_sha256": "cf5fdbdd0e116818f4bf195e8761dd55c4733443d7c360c986cf1cdfddfda075",
+      "bytes_match_historical_extract": true
+    },
+    {
+      "path": "task1/作业/作业/作业1轨迹数据预处理.ipynb",
+      "sha256": "8601d1dfecaef062fef553992cc9774d3a0eb551751c70536f5b52f1343b158a",
+      "historical_extract_sha256": "8601d1dfecaef062fef553992cc9774d3a0eb551751c70536f5b52f1343b158a",
+      "bytes_match_historical_extract": true
+    },
+    {
+      "path": "task1/作业/作业/build_ppt/out/轨迹数据清洗_学生讲义.pptx",
+      "sha256": "ad145a1209a6a2ed9dcb89b2813af8ee78942db8bb5cc424f42fff410196905d",
+      "historical_extract_sha256": "ad145a1209a6a2ed9dcb89b2813af8ee78942db8bb5cc424f42fff410196905d",
+      "bytes_match_historical_extract": true
+    },
+    {
+      "path": "task1/作业/作业/utils/util.py",
+      "sha256": "8c935fff8947eb3329d5812764256d7bf9b44d41f2d06d074f38c3278a3bf3f3",
+      "historical_extract_sha256": "8c935fff8947eb3329d5812764256d7bf9b44d41f2d06d074f38c3278a3bf3f3",
+      "bytes_match_historical_extract": true
+    },
+    {
+      "path": "task1/作业/作业/traj_agent/core/geo.py",
+      "sha256": "9ff0049b1d7ea2c73c5525ad93b5587f99638c9cf427ac6c4190d76c3ebaf792",
+      "historical_extract_sha256": "9ff0049b1d7ea2c73c5525ad93b5587f99638c9cf427ac6c4190d76c3ebaf792",
+      "bytes_match_historical_extract": true
+    },
+    {
+      "path": "task1/作业/作业/DECISIONS.md",
+      "sha256": "3a797e79dc31d1251c23651607bf9d641dc9229453f8fb6c96f119d76feffd8e",
+      "historical_extract_sha256": "3a797e79dc31d1251c23651607bf9d641dc9229453f8fb6c96f119d76feffd8e",
+      "bytes_match_historical_extract": true
+    }
+  ],
+  "targeted_excerpts": [
+    {
+      "id": "teacher:13:body",
+      "path": "task1/实验课1.pptx",
+      "member": "ppt/slides/slide13.xml",
+      "source_sha256": "cf5fdbdd0e116818f4bf195e8761dd55c4733443d7c360c986cf1cdfddfda075",
+      "saved_excerpt_exact_match": true,
+      "excerpt": "GPS\n坐标系\nWGS84\n坐标系\n       \n即地球坐标系（\nWorld Geodetic System\n），国际上通用的坐标系。设备包含的\nGPS\n芯片或者北斗芯片获取的经纬度一般都是为\nWGS84\n地理坐标系，目前谷歌地图采用的是\nWGS84\n坐标系。\nGCJ02\n坐标系\n       \n即火星坐标系，国测局坐标系。是由中国国家测绘局制定。由\nWGS84\n坐标系经加密后的坐标系。谷歌中国和搜搜中国采用的\nGCJ02\n地理坐标系。",
+      "claim_status": "DATUM_NOT_BOUND_TO_JSON"
+    },
+    {
+      "id": "teacher:13:notes",
+      "path": "task1/实验课1.pptx",
+      "member": "ppt/notesSlides/notesSlide13.xml",
+      "source_sha256": "cf5fdbdd0e116818f4bf195e8761dd55c4733443d7c360c986cf1cdfddfda075",
+      "saved_excerpt_exact_match": true,
+      "excerpt": "通俗来讲，国内收集的\nGPS\n轨迹数据都是\nGCJ02\n坐标系的，而国际上的数据则普遍为\nWGS84\n坐标系，如\nopen\n \nstreet\n \nmap\n、\nbing\n等开源地图，在日常使用时。",
+      "claim_status": "DATUM_NOT_BOUND_TO_JSON"
+    },
+    {
+      "id": "teacher:20",
+      "path": "task1/实验课1.pptx",
+      "member": "ppt/slides/slide20.xml",
+      "source_sha256": "cf5fdbdd0e116818f4bf195e8761dd55c4733443d7c360c986cf1cdfddfda075",
+      "saved_excerpt_exact_match": true,
+      "excerpt": "为什么需要轨迹数据预处理\n漂移点\n解决方法：轨迹去噪\nStep1:\n \n计算每个轨迹点的方向：当前轨迹点与后序轨迹点连成线段的方向\nStep2:\n \n定位方向与其前后序轨迹点方向都存在较大差异的漂移轨迹点，删除该点并连接其前后序轨迹点\nInput\n：单条轨迹数据 \ntr\n=\n{\n(\n𝑝\n0\n, \n𝑡\n0\n),\n(\n𝑝\n1\n, \n𝑡\n1\n),\n…,\n(\n𝑝\n𝑛\n, \n𝑡\n𝑛\n)\n}\n \n𝑝\n2\n的\n方向\n与\n𝑝\n1\n、\n𝑝\n3\n的\n方向\n差异\n均\n大于\n一定\n阈值\n，\n删除\n𝑝\n2\n \nOutput\n：\ntr\n=\n{\n(\n𝑝\n0\n, \n𝑡\n0\n),\n(\n𝑝\n1\n, \n𝑡\n1\n),\n(\n𝑝\n3\n, \n𝑡\n3\n),…,\n(\n𝑝\n𝑛\n, \n𝑡\n𝑛\n)\n}\n \n𝑝\n0\n \n𝑝\n1\n \n𝑝\n2\n \n𝑝\n3\n \n𝑝\n4\n \n𝑝\n5\n \n𝑝\n6\n \n𝑝\n3\n的\n方向\n为\n线段\n𝑝\n3\n→\n𝑝\n4\n的\n方向\n \n并\n连接\n𝑝\n1\n、\n𝑝\n3\n ",
+      "claim_status": "PREDICATE_ONLY_SCHEDULE_UNAPPROVED"
+    },
+    {
+      "id": "teacher:17",
+      "path": "task1/实验课1.pptx",
+      "member": "ppt/slides/slide17.xml",
+      "source_sha256": "cf5fdbdd0e116818f4bf195e8761dd55c4733443d7c360c986cf1cdfddfda075",
+      "excerpt": "为什么需要轨迹数据预处理\n背景：\n由于用户误关闭设备或者\nGPS\n设备故障导致相邻轨迹点的采样时间间隔远大于平均采样间隔\n影响：\n相邻轨迹点连成的线段无法表示移动对象真实通行的路径\n数据分析：\n相邻轨迹点的采样时间间隔远大于平均采样间隔；相邻轨迹点的位移距离远大于平均位移距离。\nGPS\n信号中断\n𝑝\n0\n \n𝑝\n1\n \n𝑝\n3\n \n𝑝\n2\n \n𝑝\n4\n \n𝑡\n2\n−\n𝑡\n1\n=\n3\n𝑠\n \n𝑡\n3\n−\n𝑡\n2\n=\n30\n𝑠\n \n𝑝\n5\n \n𝑝\n6\n "
+    },
+    {
+      "id": "teacher:18",
+      "path": "task1/实验课1.pptx",
+      "member": "ppt/slides/slide18.xml",
+      "source_sha256": "cf5fdbdd0e116818f4bf195e8761dd55c4733443d7c360c986cf1cdfddfda075",
+      "excerpt": "为什么需要轨迹数据预处理\nStep1:\n \n定位距离异常、时间间隔异常的相邻轨迹点\n解决方法：轨迹分段\nStep2:\n \n根据定位结果将轨迹分段为多条子轨迹\n(\n𝑝\n2\n, \n𝑝\n3\n)\n \n𝑝\n0\n \n𝑝\n1\n \n𝑝\n3\n \n𝑝\n2\n \n𝑝\n4\n \n𝑡\n2\n−\n𝑡\n1\n=\n3\n𝑠\n \n𝑡\n3\n−\n𝑡\n2\n=\n30\n𝑠\n \n𝑝\n5\n \n𝑝\n6\n \nInput\n：单条轨迹数据 \ntr\n=\n{\n(\n𝑝\n0\n, \n𝑡\n0\n),\n(\n𝑝\n1\n, \n𝑡\n1\n),\n…,\n(\n𝑝\n𝑛\n, \n𝑡\n𝑛\n)\n}\n \n将\ntr\n划分为\n{\n(\n𝑝\n0\n, \n𝑡\n0\n),\n…,\n(\n𝑝\n2\n, \n𝑡\n2\n)\n}\n与\n{\n(\n𝑝\n3\n, \n𝑡\n3\n),\n…,(\n𝑝\nn\n, \n𝑡\n𝑛\n)}\n \nStep3:\n \n删除分段结果中距离过短或点数过少的子轨迹\n删除\n{\n(\n𝑝\n0\n, \n𝑡\n0\n),\n…,\n(\n𝑝\n2\n, \n𝑡\n2\n)\n}\n \nOutput\n：\ntr\n=\n{\n{\n(\n𝑝\n3\n, \n𝑡\n3\n)\n,\n…,\n(\n𝑝\ni\n, \n𝑡\n𝑖\n)\n}, …\n{\n(\n𝑝\n𝑗\n, \n𝑡\n𝑗\n),…,\n(\n𝑝\n𝑛\n, \n𝑡\n𝑛\n)}\n}\n "
+    },
+    {
+      "id": "teacher:22",
+      "path": "task1/实验课1.pptx",
+      "member": "ppt/slides/slide22.xml",
+      "source_sha256": "cf5fdbdd0e116818f4bf195e8761dd55c4733443d7c360c986cf1cdfddfda075",
+      "excerpt": "为什么需要轨迹数据预处理\n解决方法：轨迹压缩\nStep1:\n找到轨迹中离起终点连成线段最远的轨迹点，计算该点到起终点连成线段的距离\nStep2:\n \n若该距离大于一定阈值，则说明该点是轨迹\ntr\n中的形态关键点，应当保留，将轨迹按该点分割为两条子轨迹，反之则仅保留两个端点，删除其他轨迹点。\nInput\n：单条轨迹数据 \ntr\n=\n{\n(\n𝑝\n0\n, \n𝑡\n0\n),\n(\n𝑝\n1\n, \n𝑡\n1\n),\n…,\n(\n𝑝\n5\n, \n𝑡\n5\n)\n}\n \nOutput\n：\ntr\n=\n{\n(\n𝑝\n0\n, \n𝑡\n0\n),\n(\n𝑝\n2\n, \n𝑡\n2\n),\n(\n𝑝\n3\n, \n𝑡\n3\n)\n,\n(\n𝑝\n5\n, \n𝑡\n5\n)\n}\n \n计算\n𝑝\n3\n到\n线段\n𝑝\n0\n→\n𝑝\n5\n的\n距离\n \n道格拉斯普克算法示意图\n𝑝\n0\n \n𝑝\n1\n \n𝑝\n2\n \n𝑝\n3\n \n𝑝\n4\n \n𝑝\n5\n \n𝑝\n0\n \n𝑝\n2\n \n𝑝\n3\n \n𝑝\n5\n \nStep3:\n \n重复执行上述步骤直到无法继续压缩。"
+    },
+    {
+      "id": "teacher:24",
+      "path": "task1/实验课1.pptx",
+      "member": "ppt/slides/slide24.xml",
+      "source_sha256": "cf5fdbdd0e116818f4bf195e8761dd55c4733443d7c360c986cf1cdfddfda075",
+      "excerpt": "轨迹预处理效果评估\n分段距离阈值选择\n分段处理：将相邻轨迹点中距离超过阈值的点视为噪声点，在噪声点处将轨迹分段。\n通过轨迹保存率及先验最大距离计算公式确定分段阈值：\n最大距离计算公式：\n其中平均采样时间计算为\n1\n2\ns左右，骑行速度上界为2\n5\nkm\n/\nh，计算得到最大行驶距离约为8\n3\nm左右，结合图像及实际情况（超速），取分段阈值设置为9\n5\nm。"
+    },
+    {
+      "id": "teacher:26",
+      "path": "task1/实验课1.pptx",
+      "member": "ppt/slides/slide26.xml",
+      "source_sha256": "cf5fdbdd0e116818f4bf195e8761dd55c4733443d7c360c986cf1cdfddfda075",
+      "excerpt": "作业细则\n轨迹数据预处理\n（\n必做\n）\n：\n完成\nTrajectory_preprocessing.ipynb\n的空缺部分与实验报告。\n设计评价轨迹数据预处理效果的评估指标，需给出设计逻辑以及结果分析。\n基于LLM辅助的轨迹数据质量提升智能体系统（选\n做\n）\n：\n基于助教开发的\n系统。\n思考与讨论（选做）\n作业提交：\n在\n10\n月\n5\n日\n前将\n.\nipynb\n文件与实验报告压缩至\n.zip\n文件格式发送至\n52285903012@stu.ecnu.ed\nu.cn\n,\n 作业命名为 学号\n_\n姓名\n_\n实验一\n.zip/.\nipynb\n/.docx/.pdf"
+    },
+    {
+      "id": "teacher:37",
+      "path": "task1/实验课1.pptx",
+      "member": "ppt/slides/slide37.xml",
+      "source_sha256": "cf5fdbdd0e116818f4bf195e8761dd55c4733443d7c360c986cf1cdfddfda075",
+      "excerpt": "验证方法\n消融实验：怎么证明这套流程有效\n四种模式必须结构性不同\nllm-only：只有 LLM，没有实测依据\nsearch-only：只有确定性搜索，不含任何 LLM 调用\nllm+search：加上实测依据\nllm+memory+search：再加上历史经验\n两个必须避开的陷阱\n信息泄漏：在评测轨迹上边跑边攒记忆，agent 会把这条轨迹自己的上次结果检索回来。等于考试时把答案摆桌上。\n标签造假：search-only 若仍调用 LLM，与含 LLM 的模式就不可比。所以它必须真的不调用，并有测试断言轮次为 0。\n做法：先在示范集上积累记忆，再在完全不重叠的留出集上评测。评测阶段只读不写。\n10"
+    },
+    {
+      "id": "teacher:42",
+      "path": "task1/实验课1.pptx",
+      "member": "ppt/slides/slide42.xml",
+      "source_sha256": "cf5fdbdd0e116818f4bf195e8761dd55c4733443d7c360c986cf1cdfddfda075",
+      "excerpt": "思考与讨论\n轨迹分段、轨迹去噪、轨迹简化三个步骤可不可以调换顺序？"
+    },
+    {
+      "id": "supplement:4",
+      "path": "task1/作业/作业/build_ppt/out/轨迹数据清洗_学生讲义.pptx",
+      "member": "ppt/slides/slide4.xml",
+      "source_sha256": "ad145a1209a6a2ed9dcb89b2813af8ee78942db8bb5cc424f42fff410196905d",
+      "excerpt": "数据概览\n数据格式：车辆 ID 到时间戳与坐标\n{ \"0\": [\n    [1523293209, 1523293229, ...],\n    [[121.472353, 31.31464], ...]\n  ] }\n车辆 ID → [时间戳列表, 坐标列表]\n两个列表等长、按时间升序\n坐标是 (经度, 纬度)，单位是度\n时间戳是 Unix 秒\n顺序很重要。一旦两个列表错位，后面所有速度计算都会出错，而且代码不会报错。\n可以现场打开 traj_dict.json 让学生看一眼真实结构\n4",
+      "claim_status": "LON_LAT_DEGREES_UNIX_SECONDS_DECLARED_NOT_DATUM"
+    },
+    {
+      "id": "notebook:1",
+      "path": "task1/作业/作业/作业1轨迹数据预处理.ipynb",
+      "cell_index_zero_based": 1,
+      "source_sha256": "8601d1dfecaef062fef553992cc9774d3a0eb551751c70536f5b52f1343b158a",
+      "excerpt": "# 需要调整的阈值\nLIMIT_LENGTH = 65  # 轨迹长度小于该值的将被过滤掉\nLIMIT_POINT = 5  # 轨迹点数小于该值的将被过滤掉\nLIMIT_DT = 30  # 时间戳间隔大于该值的将被分段 3 * 平均采样间隔（10s）\nLIMIT_DISTANCE = 400  # 距离大于该值的将被分段 2 * 平均采样间隔（10s）* 城市限速（20m/s）\nLIMIT_DIRECTION = 35  # 方向变换大于该值的将去噪\nDP_THRESHOLD = 5  # 道格拉斯-普克 阈值"
+    },
+    {
+      "id": "notebook:4",
+      "path": "task1/作业/作业/作业1轨迹数据预处理.ipynb",
+      "cell_index_zero_based": 4,
+      "source_sha256": "8601d1dfecaef062fef553992cc9774d3a0eb551751c70536f5b52f1343b158a",
+      "excerpt": "# 轨迹分段 \ndef split_traj(traj):  # traj {'id':[[时间戳],[坐标点]]}\n    res = {}\n    # 待填充\n    return res"
+    },
+    {
+      "id": "notebook:6",
+      "path": "task1/作业/作业/作业1轨迹数据预处理.ipynb",
+      "cell_index_zero_based": 6,
+      "source_sha256": "8601d1dfecaef062fef553992cc9774d3a0eb551751c70536f5b52f1343b158a",
+      "excerpt": "# 轨迹去噪\ndef denoise_traj(traj):  # traj {'id':[[时间戳],[坐标点],[方向],[速度]]}\n    res = {}\n    # 待填充\n    return res"
+    },
+    {
+      "id": "notebook:8",
+      "path": "task1/作业/作业/作业1轨迹数据预处理.ipynb",
+      "cell_index_zero_based": 8,
+      "source_sha256": "8601d1dfecaef062fef553992cc9774d3a0eb551751c70536f5b52f1343b158a",
+      "excerpt": "## 3.完成轨迹简化代码实现# 轨迹去噪\ndef simplify_traj(traj):  # traj {'id':[[时间戳],[坐标点],[方向],[速度]]}\n    res = {}\n    # 待填充\n    return res"
+    },
+    {
+      "id": "notebook:10",
+      "path": "task1/作业/作业/作业1轨迹数据预处理.ipynb",
+      "cell_index_zero_based": 10,
+      "source_sha256": "8601d1dfecaef062fef553992cc9774d3a0eb551751c70536f5b52f1343b158a",
+      "excerpt": "traj_dict = json.load(open('traj_dict.json'))\ntra_split = split_traj(traj_dict)\ntra_denoise = denoise_traj(tra_split)\ntra_simplify = simplify_traj(tra_denoise)"
+    },
+    {
+      "id": "notebook:12",
+      "path": "task1/作业/作业/作业1轨迹数据预处理.ipynb",
+      "cell_index_zero_based": 12,
+      "source_sha256": "8601d1dfecaef062fef553992cc9774d3a0eb551751c70536f5b52f1343b158a",
+      "excerpt": "##### 5.轨迹分段超参数实验（提示：距离、时间阈值对分段后剩余轨迹点数量的影响）选做"
+    },
+    {
+      "id": "notebook:14",
+      "path": "task1/作业/作业/作业1轨迹数据预处理.ipynb",
+      "cell_index_zero_based": 14,
+      "source_sha256": "8601d1dfecaef062fef553992cc9774d3a0eb551751c70536f5b52f1343b158a",
+      "excerpt": "##### 6.轨迹去噪超参数实验 选做"
+    },
+    {
+      "id": "notebook:16",
+      "path": "task1/作业/作业/作业1轨迹数据预处理.ipynb",
+      "cell_index_zero_based": 16,
+      "source_sha256": "8601d1dfecaef062fef553992cc9774d3a0eb551751c70536f5b52f1343b158a",
+      "excerpt": "##### 7.轨迹简化超参数实验 选做"
+    }
+  ],
+  "raw_integrity": {
+    "path": "task1/作业/作业/traj_dict.json",
+    "sha256": "c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3",
+    "expected_sha256": "c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3",
+    "matches": true,
+    "operation": "read-only hash and fixed-pilot point counts"
+  },
+  "pilot_record_ids": [
+    "0",
+    "1",
+    "2",
+    "246",
+    "256",
+    "306",
+    "352"
+  ],
+  "pilot_point_counts": {
+    "0": 99,
+    "1": 97,
+    "2": 99,
+    "246": 108,
+    "256": 99,
+    "306": 111,
+    "352": 170
+  },
+  "pilot_points": 783,
+  "D1": {
+    "file_bound_datum_source_found_in_checked_sources": false,
+    "coordinate_fact_status": "UNKNOWN",
+    "distance_approval_status": "ASSUMPTION_REQUIRING_APPROVAL",
+    "conclusion": "PPT general coordinate descriptions and starter function assumptions do not establish this JSON datum; source fact and distance-policy approval remain separate gates."
+  },
+  "D2": {
+    "new_explicit_user_approval_found_in_checked_sources": false,
+    "production_method_status": "BLOCKED",
+    "conclusion": "Current COMPLETE prompt section 7.2 explicitly states that the one-pass simultaneous candidate is recommended but not independently approved."
+  },
+  "checked_approval_entries": [
+    "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/handoff/SC-LAB1-G1-COMPLETE-001_CODEX_PROMPT.md#7",
+    "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/handoff/README.md",
+    "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/handoff/reference_only/GPT_SECOND_REVIEW_ROUND2.md",
+    "task1/docs/goal1/CONTRACTS.md",
+    "task1/config/goal1.json",
+    "task1/config/goal1_sources.json",
+    "task1/evidence/goal1/revisions/SC-LAB1-G1-REPAIR-001/SEMANTICS.md",
+    "task1/作业/作业/DECISIONS.md"
+  ],
+  "search_scope_limit": "Targeted active/handoff entries, saved source excerpts, original matching PPT/Notebook/source bytes, and approval-like filenames under task1. This is not an assertion about unprovided user messages or external data-provider replies.",
+  "naming_collision": "Starter DECISIONS.md D1/D2 are historical algorithm decisions, not the current user-approval gates; its direction/curvature/noise-floor rules are not authorization for this G1.",
+  "previously_missing_research_files_now_present": [
+    {
+      "path": "task1/docs/research/Task1_Literature_Review_2025_2026_Merged.md",
+      "exists": true,
+      "sha256": "83e50286c71fde18f26595d4c042e4ae5a36aee6f5bec69750a85ce31df31c26"
+    },
+    {
+      "path": "task1/docs/research/Task1_Source_Audit_2025_2026_Merged.json",
+      "exists": true,
+      "sha256": "fc6d597ddaa413c000a689737b23840a639b93cf626464f57841a8ef0cc966f7"
+    },
+    {
+      "path": "task1/docs/research/Task1_Stage01_Readonly_Audit.md",
+      "exists": true,
+      "sha256": "ffe30283c71250dabf4cf90c55d673f0e56c639f32324c7415048ee3a298e15f"
+    }
+  ],
+  "source_snapshot_sha256": {
+    "AGENTS.md": "af96768645eecc7a8fed31ff435d69c749e7d6000d8aed5d334fb0e9f5d8923b",
+    "docs/research/SMART_CITIES_RESEARCH_PROTOCOL.md": "873fae9d19be17c2d6f2df0ea9add99913d93fbb4bd3e65ae45ed8d47a1e40a7",
+    "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/handoff/SC-LAB1-G1-COMPLETE-001_CODEX_PROMPT.md": "19e444f4a526c364087510a186c0be627e1fdcf97eaaebd4c97f6772aa662616",
+    "task1/evidence/goal1/requirements.json": "dc0f2a7b3e6a500bb31f68e0bed696231453521c7068a71d24148c888c5338c1",
+    "task1/evidence/goal1/acceptance.json": "80fbf3ed3f1b0516e883b995026f644f867dbfabbe82202283efb8af2b239e99",
+    "task1/evidence/goal1/REVIEW_PACKET.md": "bbbb33ccd154297643ac869d2f73a7cedf60f90de7982cd776d1c7c79b09a1e6",
+    "task1/docs/goal1/CONTRACTS.md": "aa302e9ce6d465ddd7154d139799b7b0416aa6dade73ce5acf0f2c243f4f6186",
+    "task1/config/goal1.json": "b751a06544416fb156bd5eac22c20d901cb95dffd73dc54d85968291aae16de9",
+    "task1/config/goal1_sources.json": "411d6eb81c71d7001fde7b5388e30b3311c86b8a6ab83bcb5b8a4c82455f6ef2",
+    "task1/workflow/controller.py": "16793b102fd077cc243eae6f1e714632f312a77e421850d424b8562a2909eb6d",
+    "task1/workflow/pipeline.py": "be438f36ed4464bb49b90315da90f73dde20178c29df0152b129a588af306cb0",
+    "task1/docs/goal1/ARCHITECTURE.md": "c65d89f893375db1a07cf57d2785d6b6b92bc70c120248bcf677229d3f27eb72",
+    "task1/docs/goal1/README.md": "99bc44242b410fc1b0c5efa5444d1230fc5f02a76298818e123e85b087ebdfa8",
+    "task1/scripts/build_goal1_notebooks.py": "ea92fd765ba65e33398272176c9ee2aeabdde223c8d126919467846e363b69a0",
+    "task1/evidence/goal1/revisions/SC-LAB1-G1-REPAIR-001/source_excerpts.json": "d359b2e32129e4bc6c2bcbf7b0176631e21f100ffa1a5dde5f3e56d1bb65e06f"
+  },
+  "new_packages": [],
+  "external_provider_calls": 0,
+  "new_agents_spawned": 0,
+  "full_slide_rerender": false,
+  "real_spatial_processing": "NOT_RUN"
+}

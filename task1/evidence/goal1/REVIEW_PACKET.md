@@ -1,26 +1,20 @@
-# Goal 1 当前修复审阅入口
+# Goal 1 当前审阅入口
 
-**SC-LAB1-G1-REPAIR-001：PARTIAL_BLOCKED。REAL_DIAGNOSTIC_LOOP已发生；完整真实baseline仍BLOCKED。新提交GPT_SECOND_REVIEW=PENDING。**
+当前执行 **SC-LAB1-G1-COMPLETE-001**，主Goal仍为 **SC-LAB1-G1-FOUNDATION-001**。本页替代旧批次当前入口；历史原件不倒写。
 
-旧c2e3ffe的GPT二重审核为REVISE / NOT_PASS。保留旧失败及历史结论；新增真实探针和5次角色均成功，6完成turn/6有效结构响应/5工具，没有可见重试；底层请求数unknown。D1/D2未获批准，未进入Goal2/3。
+当前内部状态：**ENGINEERING_READY_FOR_GPT_REVIEW**。九项任务全部VERIFIED、无未关闭工程问题；获准的G1工程与条件化pilot完成，**Git实际发布尚未执行**。 source_crs事实仍 **UNVERIFIED**；D2及条件化分析权限已明确批准。GPT_SECOND_REVIEW=PENDING，Goal2/3未执行，Submission=NOT_READY。
 
-请从[完整中文回复](revisions/SC-LAB1-G1-REPAIR-001/FINAL_RESPONSE.md)开始，随后核对以下实际产物。
+- [完整实际结果 A–H](revisions/SC-LAB1-G1-COMPLETE-001/FINAL_RESPONSE.md)
+- [当前逐项验收](acceptance.json)（内部GC01–15通过；GC16实际发布待核对）与[唯一requirements表](requirements.json)
+- [最新用户补充原文](revisions/SC-LAB1-G1-COMPLETE-001/AUTHORIZATION_SUPPLEMENT.md)、[初始执行指令](revisions/SC-LAB1-G1-COMPLETE-001/handoff/SC-LAB1-G1-COMPLETE-001_CODEX_PROMPT.md)、[方法合同](../../docs/goal1/CONTRACTS.md)
+- [有效真实运行manifest](revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/manifest.json)、[逐点账本](revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/point_actions.jsonl)、[结果摘要](revisions/SC-LAB1-G1-COMPLETE-001/result_summary.json)
+- [实际问题→修复→独立复验→恢复](revisions/SC-LAB1-G1-COMPLETE-001/goal_state.json)、[C2最终回执](revisions/SC-LAB1-G1-COMPLETE-001/c_combined_review/round2/combined_closure.json)、[本轮资源记录](revisions/SC-LAB1-G1-COMPLETE-001/resources.json)
+- [C从原始输入独立核验](revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/g1-complete-pilot-03_independent.json)、[真实后续请求](revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/followup_request_run03.json)、[后续产物独立回执](revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/followup_review.json)
+- [工作Notebook01](../../notebooks/01_baseline_and_audit.ipynb)、[Notebook02](../../notebooks/02_agent_loop_recompute.ipynb)、[图与可编辑源manifest](revisions/SC-LAB1-G1-COMPLETE-001/figures/figure_manifest.json)、[可复算入口](../../docs/goal1/README.md)
+- [最终代码完整测试](revisions/SC-LAB1-G1-COMPLETE-001/validation_pilot03.json)：261 passed；旧starter292/1为继承历史
 
-| 内容 | 当前入口 |
-|---|---|
-| 修复前审核与Prompt | [GPT_SECOND_REVIEW](revisions/SC-LAB1-G1-REPAIR-001/handoff/GPT_SECOND_REVIEW.md)、[批准范围](revisions/SC-LAB1-G1-REPAIR-001/handoff/SC-LAB1-G1-REPAIR-001_CODEX_PROMPT.md) |
-| 对照/探针/异常 | [R1-F01—F05](revisions/SC-LAB1-G1-REPAIR-001/REPAIR_COMPARISON.md)、[before/after](revisions/SC-LAB1-G1-REPAIR-001/probe_comparison.json)、[探针适配](revisions/SC-LAB1-G1-REPAIR-001/PROBE_ADAPTATION.md)、[实际异常](revisions/SC-LAB1-G1-REPAIR-001/actual_failure_probes.json) |
-| 合同/门控/来源 | [CONTRACTS](../../docs/goal1/CONTRACTS.md)、[config](../../config/goal1.json)、[D1/D2](revisions/SC-LAB1-G1-REPAIR-001/SEMANTICS.md)、[来源原文](revisions/SC-LAB1-G1-REPAIR-001/source_excerpts.json) |
-| 实现 | [workflow](../../workflow/)、[tests](../../tests/)、[完整构造链与独立审核](revisions/SC-LAB1-G1-REPAIR-001/constructed_pipeline.json) |
-| 最终测试 | [绑定与命令](revisions/SC-LAB1-G1-REPAIR-001/validation.json)、[156核心测试](revisions/SC-LAB1-G1-REPAIR-001/tests_final.xml)、[starter完整测试](revisions/SC-LAB1-G1-REPAIR-001/starter_full.txt) |
-| Provider/预算 | [版本源码证据](revisions/SC-LAB1-G1-REPAIR-001/provider_version_evidence.json)、[启动资格](revisions/SC-LAB1-G1-REPAIR-001/live_qualification.json)、[新累计ledger](runs/budget_repair_001.json)、[旧冻结ledger](runs/budget_live.json) |
-| 实际LIVE/反馈 | [小探针](revisions/SC-LAB1-G1-REPAIR-001/runs/g1-repair-connectivity-01/manifest.json)、[五角色manifest](revisions/SC-LAB1-G1-REPAIR-001/runs/g1-repair-roles-01/manifest.json)、[逐call/工具独立审核](revisions/SC-LAB1-G1-REPAIR-001/live_audit.json) |
-| 真实诊断/去向 | [profiles](revisions/SC-LAB1-G1-REPAIR-001/results/profile_pilot.json)、[时间分区](revisions/SC-LAB1-G1-REPAIR-001/results/time_boundaries.json)、[783点未处理账本](revisions/SC-LAB1-G1-REPAIR-001/results/point_actions.jsonl)、[真实baseline阻断](revisions/SC-LAB1-G1-REPAIR-001/results/baseline.json) |
-| Notebook/图 | [01](../../notebooks/01_baseline_and_audit.ipynb)、[02](../../notebooks/02_agent_loop_recompute.ipynb)、[新内核执行](revisions/SC-LAB1-G1-REPAIR-001/notebooks.json)、[当前图源/导出](revisions/SC-LAB1-G1-REPAIR-001/figures/manifest.json)、[200dpi检查](revisions/SC-LAB1-G1-REPAIR-001/figures/visual_inspection.json) |
-| 验收/发布 | [R1及原G1机器表](acceptance.json)、[原始/历史文件保护](revisions/SC-LAB1-G1-REPAIR-001/protected_integrity.json)、[文件清单](revisions/SC-LAB1-G1-REPAIR-001/file_manifest.json)、[发布核对](revisions/SC-LAB1-G1-REPAIR-001/publication.json) |
+计算CODE_SHA：`f229d9a4113bcc0dd763e1b410f1f5fb73903a62`。固定7条/783点：过滤309、方向删除13、DP省点273、保留188；全部点可追踪。DP以461个clean点为参考，最大索引区间误差4.93832工作米。原始datum未知，局部模型一致性不证明真实地理精度，也不证明删点恢复真值。
 
-C05文本请求范围大于recompute_check的实际profile核验范围。时间分区和重复事件另由明确标为离线的audit_live.py核对；不把模型摘要当额外评价器能力。本批无LIVE异常，实时故障终止仅在离线实际进程中测试。
+历史： [REPAIR最终结果](revisions/SC-LAB1-G1-REPAIR-001/FINAL_RESPONSE.md)、[前轮验收原件](revisions/SC-LAB1-G1-COMPLETE-001/historical_acceptance_before_complete.json)、[run01真实拒绝](revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-01/failure.json)。本轮保留旧C05审核覆盖不足的历史事实，不用新增核验倒写旧通过。
 
-[原始c2e3ffe审核入口](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/c2e3ffe2f5af92ee03dac16a2865ec7c42f576e0/task1/evidence/goal1/REVIEW_PACKET.md)保留旧任务全材料导航。旧run01/02/03、旧图、旧测试与原FINAL_RESPONSE未改；移入本修复目录的historical_副本是原字节快照，其相对链接以原目录为基准。
-
-有效最终运行CODE_SHA：880290a5dada84c711248844038daa3ee35eeefb。完整artifact SHA以发布核对和最终会话回复为准。原始11,386条/1,173,410点未全量正式处理；本批只有固定7条/783点诊断。Experiment/Process Report均未定稿。等待GPT实际读取新远程进行二重验收。
+[独立C总审查](revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/C_INTERNAL_REVIEW.md) · [9-task回执](revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/review_receipt.json) · [实际消费登记](revisions/SC-LAB1-G1-COMPLETE-001/internal_acceptance_consumption.json)

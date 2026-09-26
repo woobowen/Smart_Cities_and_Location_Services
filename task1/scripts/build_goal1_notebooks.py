@@ -231,13 +231,16 @@ def loop_notebook():
              "    print('Trigger:',json.dumps({k:actual_followup.get(k) for k in ['request','trigger_review','parent_artifact_id','parent_sha256','status']},ensure_ascii=False,indent=2))"),
         markdown('## 当前任务状态与解释边界\n\nVERIFIED 表示其明示范围内的工程检查成立；'
                  '它不是 QUALITY_ACCEPTED、未知真值恢复或项目最终验收。普通工程缺陷继续当前 Goal 的修复循环。'
-                 '最终 GPT 远程二审仍待真实审核；不自动进入 Goal 2/3。'),
+                 '最终 GPT 远程二审仍待真实审核；不自动进入 Goal 2/3。\n\n'
+                 '下方是 **Notebook 执行时的 journal 快照**；最终总审查登记在其后。'
+                 '最终状态见 `task1/evidence/goal1/REVIEW_PACKET.md`，不能把执行中快照误称为最终状态。'),
         code("show_table([{'task':name,'status':row['status'],'depends_on':row['depends_on']} for name,row in state['tasks'].items()])\n"
-             "print('Journal status:',state['status'])\n"
+             "print('Journal snapshot at Notebook execution:',state['status'])\n"
              "print('GPT second review:',state['gpt_second_review'])\n"
              "print('Submission:',state['submission'])\n"
              "print('Raw unchanged:',digest(DATA)==manifest['input_sha256'])\n"
-             "print('Notebook mode:',MODE,'; default new model calls: 0')"),
+             "print('Notebook mode:',MODE,'; default new model calls: 0')\n"
+             "print('Final review is registered after this Notebook run; final status: task1/evidence/goal1/REVIEW_PACKET.md')"),
     ]
 
 

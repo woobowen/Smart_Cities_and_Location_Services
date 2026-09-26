@@ -1,0 +1,46 @@
+{
+  "classification": "CURRENT_RUN_REAL_DATA",
+  "input_sha256": "1c8a4f48c5faf8416aa7474d1a43215fdba759795cefd3414b60ea22edd2f451",
+  "record_ids": [
+    "fixture:edges",
+    "fixture:missing",
+    "fixture:empty"
+  ],
+  "input_records": 3,
+  "input_points": 9,
+  "modified_values": 0,
+  "parent_version": "RAW:1c8a4f48c5faf8416aa7474d1a43215fdba759795cefd3414b60ea22edd2f451",
+  "semantics_version": "g1-semantics-v1",
+  "metrics_version": "g1-metrics-v1",
+  "status": "VERIFIED",
+  "result": {
+    "status": "VERIFIED",
+    "target_action": "time_boundaries",
+    "target_artifact_id": "three-targets:time_boundaries",
+    "target_artifact_hash": "30eeb7624be05d3bbacc5aa9be863274c924dece3fa5781ebd198ac58c2253e0",
+    "target_output_hash": "2c1788bc9d985c5dedcceb0cff472e6f052f3e72a19490fd5afe311c290653f8",
+    "trusted_reference": {
+      "raw_sha256": "1c8a4f48c5faf8416aa7474d1a43215fdba759795cefd3414b60ea22edd2f451",
+      "parent_version": "RAW:1c8a4f48c5faf8416aa7474d1a43215fdba759795cefd3414b60ea22edd2f451",
+      "policy_sha256": "3a28666737142b0765512f21457fcb8f0eb7763b9e9dc0a24a3d1556825afd1a"
+    },
+    "record_scope": [
+      "fixture:edges",
+      "fixture:missing",
+      "fixture:empty"
+    ],
+    "contract_version": "g1-policy-v1",
+    "checked_components": [
+      "record_scope",
+      "raw_time",
+      "threshold",
+      "strict_inequality",
+      "boundaries",
+      "index_order",
+      "point_coverage"
+    ],
+    "unchecked_components": [],
+    "unchecked_reasons": {},
+    "errors": []
+  }
+}

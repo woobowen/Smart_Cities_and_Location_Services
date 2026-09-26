@@ -1,0 +1,153 @@
+{
+  "goal_id": "SC-LAB1-G1-FOUNDATION-001",
+  "execution": "SC-LAB1-G1-COMPLETE-001",
+  "status": "IMPLEMENTING",
+  "gpt_second_review": "PENDING",
+  "submission": "NOT_READY",
+  "tasks": {
+    "governance": {
+      "status": "PENDING",
+      "depends_on": [],
+      "evidence": []
+    },
+    "review_targets": {
+      "status": "PENDING",
+      "depends_on": [],
+      "evidence": []
+    },
+    "trusted_baseline": {
+      "status": "NEEDS_REPAIR",
+      "depends_on": [],
+      "evidence": []
+    },
+    "diagnostics": {
+      "status": "PENDING",
+      "depends_on": [
+        "review_targets"
+      ],
+      "evidence": []
+    },
+    "real_baseline": {
+      "status": "PENDING",
+      "depends_on": [
+        "trusted_baseline",
+        "diagnostics"
+      ],
+      "evidence": []
+    },
+    "processing_feedback": {
+      "status": "PENDING",
+      "depends_on": [
+        "real_baseline"
+      ],
+      "evidence": []
+    },
+    "notebooks": {
+      "status": "PENDING",
+      "depends_on": [
+        "diagnostics"
+      ],
+      "evidence": []
+    },
+    "figures": {
+      "status": "PENDING",
+      "depends_on": [
+        "diagnostics"
+      ],
+      "evidence": []
+    },
+    "internal_review": {
+      "status": "PENDING",
+      "depends_on": [
+        "governance",
+        "review_targets",
+        "trusted_baseline",
+        "diagnostics",
+        "notebooks",
+        "figures"
+      ],
+      "evidence": []
+    }
+  },
+  "issues": {
+    "fixture:open": {
+      "issue_id": "fixture:open",
+      "parent_task": "trusted_baseline",
+      "source": "ENGINEERING_TEST",
+      "actual_error": "fixture fault",
+      "violated_contract": "fixture required repair",
+      "severity": "BLOCKING",
+      "affected_artifacts": [],
+      "repairer": "B:fixture",
+      "verifier": null,
+      "status": "NEEDS_REPAIR",
+      "closure_evidence": []
+    }
+  },
+  "events": [
+    {
+      "sequence": 0,
+      "at": "2026-09-26T16:56:26.294592+00:00",
+      "kind": "CODE_BOUND",
+      "previous_hash": "ROOT",
+      "code_sha": "CONSTRUCTED_CODE",
+      "changed_paths": [],
+      "hash": "8ff299b900193dcd117540942aa87a0ec10d209760797d47d8a2c7b342c9a0e4"
+    },
+    {
+      "sequence": 1,
+      "at": "2026-09-26T16:56:26.295996+00:00",
+      "kind": "RUN_STARTED",
+      "previous_hash": "8ff299b900193dcd117540942aa87a0ec10d209760797d47d8a2c7b342c9a0e4",
+      "run_id": "test",
+      "hash": "a262495ddd02136018e9b7aec10eb04f33003a829ed7ddd465641b9648c0b5e3"
+    },
+    {
+      "sequence": 2,
+      "at": "2026-09-26T16:56:26.296214+00:00",
+      "kind": "ISSUE_OPENED",
+      "previous_hash": "a262495ddd02136018e9b7aec10eb04f33003a829ed7ddd465641b9648c0b5e3",
+      "issue_id": "fixture:open",
+      "source": "ENGINEERING_TEST",
+      "hash": "161506d17ced9ae30a5822ccc6c6307f741f3d01ad55254e1b6cbb7b5cb69e2f"
+    }
+  ],
+  "runs": {
+    "test": {
+      "status": "RUNNING",
+      "code_sha": "CONSTRUCTED_CODE",
+      "policy_hash": "b17ca1c0548055b2503a694c9b04a29a0d0fd430242a83f0f008ef36f6b21bc3",
+      "input_sha256": "8319264c059dc6c7186b41d4b16cd3b3cd3fc2f8d49244f2dd356cad6ad260c8",
+      "record_ids": [
+        "fixture:review"
+      ],
+      "artifacts": {},
+      "reviews": {},
+      "mode": "RECOMPUTE",
+      "new_model_calls": 0,
+      "runtime_source_hashes": {
+        "task1/workflow/recompute.py": "4c198a016adec8554602c9ad04e0446bb90866ed970789834b96c51ebbec9b56",
+        "task1/workflow/coordinates.py": "d99b270a65c88f8530669d5e7d0887d7563b3e54e19770ab7a9eb695117e075d",
+        "task1/workflow/goal.py": "d313d408961adf07b9791972b03ac6a99db808e805efe1aa06abe85a075e863a",
+        "task1/workflow/diagnostics.py": "e2ef635bbd95db505b3eff336ca59074a60217a70b2bc644624c3fbd0280acda",
+        "task1/workflow/inventory.py": "42bceb3ea1bab9ca386b88ce29104dc4bb518fee6df8f25aae50360633e7d5a1",
+        "task1/workflow/io.py": "0d3d72dd0beb4718f4020a07a5f1c0ca89193943049a479816b5c496806321b2",
+        "task1/workflow/budget.py": "c275047dffcafb7160b0c3fcd8de4e56bbc1f86dc05925691ff5af43aea312ca",
+        "task1/workflow/coordinate_review.py": "13305c6dda7bc0699822cd880e4e9051f2946371d4dd83f4ae0ea946dd5c897c",
+        "task1/workflow/__init__.py": "bd23709231145ce415c01c88880b886e8c8343199a47dbe0762d68841aeb73ff",
+        "task1/workflow/artifact_review.py": "dfa0b91149662baf26861a9ec0e51223842d0ac62ada29015eca7b119c68da48",
+        "task1/workflow/pipeline.py": "160bedcc0d8dffce71d833dffc4de28928bc7007077ae8d03c57c96d827548c7",
+        "task1/workflow/__main__.py": "b96a66d5fe543f8082d528e81e7e70de2c0090b20ab60b090532ab65647713e8",
+        "task1/workflow/geometry.py": "2ad3ca3b49e98e997684e3f5af948771be80dfb03b31b2ae4cc4483856e93d74",
+        "task1/workflow/provider.py": "d778316bcdbdec1643707a93c1d0e00e52caa4c0b941c9299b33da547adbc28b",
+        "task1/workflow/evaluation.py": "92424a94c20ce897606d546ba69c0f205c0f5f75a17b609134ac8125a241c7ad",
+        "task1/workflow/tools.py": "0fde0acebfe3ec97bd2653744ac8f0444c1e9a162c61970bccf8a94a9fbd0b3f",
+        "task1/workflow/sources.py": "74b42f79abfe172b7d2e29ba55a631b22f3e6d46c7cb2a08c0c7634eaf44ba90",
+        "task1/workflow/controller.py": "16793b102fd077cc243eae6f1e714632f312a77e421850d424b8562a2909eb6d"
+      }
+    }
+  },
+  "inflight": null,
+  "current_code_sha": "CONSTRUCTED_CODE",
+  "current_run": "test"
+}

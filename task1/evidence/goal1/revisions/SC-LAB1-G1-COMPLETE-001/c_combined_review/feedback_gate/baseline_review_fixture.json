@@ -1,0 +1,90 @@
+{
+  "classification": "ENGINEERING_TEST_IMPORTED_C_RESULT",
+  "result": {
+    "status": "VERIFIED",
+    "errors": [],
+    "quality_status": "PENDING_RESEARCH_REVIEW",
+    "checked_components": [
+      "provenance",
+      "contract",
+      "segmentation",
+      "filtering",
+      "direction",
+      "actual_values",
+      "dp_intervals",
+      "point_accounting",
+      "summaries"
+    ],
+    "unchecked_components": [],
+    "scope": "Complete trusted input, approved method, actual artifacts; no ground-truth claim",
+    "trusted_reference": {
+      "source_kind": "CONSTRUCTED_FIXTURE",
+      "raw_sha256": "291155c6c2efb2794ed8ff5fb3565ea833d6680b8b811759a421cd0826753668",
+      "raw_scope_sha256": "291155c6c2efb2794ed8ff5fb3565ea833d6680b8b811759a421cd0826753668",
+      "reference_sha256": "291155c6c2efb2794ed8ff5fb3565ea833d6680b8b811759a421cd0826753668",
+      "record_scope": [
+        "fixture:review"
+      ],
+      "parent_version": "CONSTRUCTED:291155c6c2efb2794ed8ff5fb3565ea833d6680b8b811759a421cd0826753668",
+      "adapter_version": "constructed_identity:v1",
+      "contract_id": "fixture:8ddaa348a01afb9c5ae5c94209031b0a2f4c7a13c7db9f11269773309d4602c0",
+      "contract_version": "BASELINE_CONTRACT_V2",
+      "contract_sha256": "40b7ac89f0f61251f46bb121bd8ab9e0a156fbe748579f988382006f1876cc16"
+    },
+    "record_scope": [
+      "fixture:review"
+    ],
+    "contract_version": "BASELINE_CONTRACT_V2",
+    "accounting": {
+      "status": "VERIFIED",
+      "input_records": 1,
+      "input_points": 4,
+      "stage_points": {
+        "filtered": 0,
+        "denoised": 0,
+        "simplified": 2,
+        "retained": 2
+      },
+      "errors": [],
+      "count_conserved": true,
+      "modified_point_count": 0
+    },
+    "record_reviews": [
+      {
+        "record_id": "fixture:review",
+        "stage_counts": {
+          "input": 4,
+          "segmented": 1,
+          "filtered": 0,
+          "denoised": 0,
+          "simplified": 2,
+          "retained": 2,
+          "not_processed": 0
+        },
+        "segment_counts": {
+          "total": 1,
+          "filtered": 0,
+          "processed": 1
+        },
+        "terminal_status": "PROCESSED"
+      }
+    ],
+    "stage_counts": {
+      "input": 4,
+      "segmented": 1,
+      "filtered": 0,
+      "denoised": 0,
+      "simplified": 2,
+      "retained": 2,
+      "not_processed": 0
+    },
+    "segment_counts": {
+      "total": 1,
+      "filtered": 0,
+      "processed": 1
+    },
+    "output_limitation": "GEOMETRY_IS_NOT_GROUND_TRUTH_OR_QUALITY_IMPROVEMENT",
+    "target_artifact_id": "test:baseline",
+    "target_artifact_hash": "ad7c5d15dd1ef0346953a0ad68b162fb10a51675f210b9169a059ba9b41826b9"
+  }
+}

@@ -1,0 +1,107 @@
+COMMAND: .venv/bin/python -B task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/handoff/reference_only/probes/verify_round2_findings.py --repo . --output task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_initial/initial_reference_probes.json
+CWD: repository root
+RETURN CODE: 0
+STDOUT:
+{
+  "source_exact": true,
+  "review_cases": [
+    [
+      "valid_control",
+      "VERIFIED"
+    ],
+    [
+      "only_final_coordinate_modified",
+      "REJECTED"
+    ],
+    [
+      "clean_and_final_shifted_ledger_unchanged",
+      "VERIFIED"
+    ],
+    [
+      "all_records_and_ledger_dropped_counts_unchanged",
+      "VERIFIED"
+    ],
+    [
+      "stage_counts_modified",
+      "VERIFIED"
+    ],
+    [
+      "verify_baseline_tool_different_raw_records_and_shifted_candidate",
+      "VERIFIED"
+    ]
+  ],
+  "F01_cases": [
+    [
+      "normal",
+      "verify_profiles",
+      "VERIFIED"
+    ],
+    [
+      "normal",
+      "recompute_check",
+      "VERIFIED"
+    ],
+    [
+      "legally_reordered",
+      "verify_profiles",
+      "VERIFIED"
+    ],
+    [
+      "legally_reordered",
+      "recompute_check",
+      "VERIFIED"
+    ],
+    [
+      "duplicate_id",
+      "verify_profiles",
+      "REJECTED"
+    ],
+    [
+      "duplicate_id",
+      "recompute_check",
+      "REJECTED"
+    ],
+    [
+      "missing_id",
+      "verify_profiles",
+      "REJECTED"
+    ],
+    [
+      "missing_id",
+      "recompute_check",
+      "REJECTED"
+    ],
+    [
+      "foreign_id",
+      "verify_profiles",
+      "REJECTED"
+    ],
+    [
+      "foreign_id",
+      "recompute_check",
+      "REJECTED"
+    ]
+  ],
+  "missing_time": {
+    "record_id": "fixture:missing",
+    "events": [
+      {
+        "left_index": 0,
+        "right_index": 1,
+        "dt_raw": null,
+        "dt_reason": "MISSING_OR_INVALID_TIME",
+        "position_pair_computable": true,
+        "reasons": [
+          "MISSING_OR_INVALID_TIME",
+          "REPEATED_POSITION_NOT_AUTOMATIC_NOISE"
+        ]
+      }
+    ],
+    "modified": 0,
+    "deleted": 0,
+    "status": "EXECUTED"
+  },
+  "output": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_initial/initial_reference_probes.json"
+}
+
+STDERR:

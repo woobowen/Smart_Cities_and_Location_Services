@@ -1,0 +1,79 @@
+[
+  [
+    {
+      "record_id": "fixture:review",
+      "indices": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "timestamps": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "xy": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          3,
+          0
+        ]
+      ]
+    }
+  ],
+  {
+    "scope": "CONSTRUCTED_PLANAR_ONLY",
+    "approval": "ENGINEERING_TEST_ONLY",
+    "method": "single_pass_simultaneous_keep_undefined",
+    "parameters": {
+      "dt": 30,
+      "distance": 10,
+      "min_points": 3,
+      "min_length": 0,
+      "direction": 35,
+      "dp": 1,
+      "time_reliable": true
+    },
+    "contract_version": "BASELINE_CONTRACT_V2",
+    "order": [
+      "split",
+      "filter",
+      "denoise",
+      "simplify"
+    ],
+    "units": {
+      "xy": "fixture_planar_unit",
+      "time": "fixture_time_unit",
+      "direction": "degrees"
+    },
+    "adapter_version": "constructed_identity:v1",
+    "contract_id": "fixture:8ddaa348a01afb9c5ae5c94209031b0a2f4c7a13c7db9f11269773309d4602c0"
+  },
+  {
+    "source_kind": "CONSTRUCTED_FIXTURE",
+    "raw_sha256": "291155c6c2efb2794ed8ff5fb3565ea833d6680b8b811759a421cd0826753668",
+    "raw_scope_sha256": "291155c6c2efb2794ed8ff5fb3565ea833d6680b8b811759a421cd0826753668",
+    "reference_sha256": "291155c6c2efb2794ed8ff5fb3565ea833d6680b8b811759a421cd0826753668",
+    "record_scope": [
+      "fixture:review"
+    ],
+    "parent_version": "CONSTRUCTED:291155c6c2efb2794ed8ff5fb3565ea833d6680b8b811759a421cd0826753668",
+    "adapter_version": "constructed_identity:v1",
+    "contract_id": "fixture:8ddaa348a01afb9c5ae5c94209031b0a2f4c7a13c7db9f11269773309d4602c0",
+    "contract_version": "BASELINE_CONTRACT_V2",
+    "contract_sha256": "40b7ac89f0f61251f46bb121bd8ab9e0a156fbe748579f988382006f1876cc16"
+  }
+]

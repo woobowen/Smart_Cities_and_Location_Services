@@ -1,0 +1,206 @@
+{
+  "classification": "ENGINEERING_TEST",
+  "scope": "C2-F01_AND_GOAL_STATE_ONLY",
+  "original_probe": "../probe_f01.py",
+  "adaptation": "Original diagnostic mutations and gate inputs unchanged; catch newly raised completion denials. Added valid complete run and source-change boundaries.",
+  "task_gate_refusals": [
+    {
+      "task": "diagnostics",
+      "error": "CURRENT_RUN_REVIEW_REQUIRED"
+    },
+    {
+      "task": "real_baseline",
+      "error": "DEPENDENCY_NOT_VERIFIED"
+    },
+    {
+      "task": "processing_feedback",
+      "error": "DEPENDENCY_NOT_VERIFIED"
+    },
+    {
+      "task": "notebooks",
+      "error": "DEPENDENCY_NOT_VERIFIED"
+    },
+    {
+      "task": "figures",
+      "error": "DEPENDENCY_NOT_VERIFIED"
+    },
+    {
+      "task": "internal_review",
+      "error": "DEPENDENCY_NOT_VERIFIED"
+    }
+  ],
+  "checks": [
+    {
+      "case": "all_original_18_diagnostic_cases_match",
+      "expected": 18,
+      "actual": 18,
+      "pass": true
+    },
+    {
+      "case": "missing_review_not_ready",
+      "expected": "IMPLEMENTING",
+      "actual": "IMPLEMENTING",
+      "pass": true
+    },
+    {
+      "case": "stale_sources_not_ready",
+      "expected": "IMPLEMENTING",
+      "actual": "IMPLEMENTING",
+      "pass": true
+    },
+    {
+      "case": "failed_operation_not_reexecuted",
+      "expected": 0,
+      "actual": 0,
+      "pass": true
+    },
+    {
+      "case": "uncertain_final_state",
+      "expected": "INTERRUPTED_CHECKPOINT",
+      "actual": "INTERRUPTED_CHECKPOINT",
+      "pass": true
+    },
+    {
+      "case": "controller_all_targets_checked",
+      "expected": "VERIFIED",
+      "actual": "VERIFIED",
+      "pass": true
+    },
+    {
+      "case": "controller_partial_targets_not_closed",
+      "expected": "NEEDS_REVIEW",
+      "actual": "NEEDS_REVIEW",
+      "pass": true
+    },
+    {
+      "case": "verified_repair_resumes_parent",
+      "expected": "PENDING",
+      "actual": "PENDING",
+      "pass": true
+    },
+    {
+      "case": "wrong_run_report_denied",
+      "expected": "CURRENT_RUN_REVIEW_REQUIRED",
+      "actual": "CURRENT_RUN_REVIEW_REQUIRED",
+      "pass": true
+    },
+    {
+      "case": "audit_receipts_required",
+      "expected": "ARTIFACT_EVIDENCE_NOT_BOUND",
+      "actual": "ARTIFACT_EVIDENCE_NOT_BOUND",
+      "pass": true
+    },
+    {
+      "case": "valid_complete_diagnostics_allowed",
+      "expected": "VERIFIED",
+      "actual": "VERIFIED",
+      "pass": true
+    },
+    {
+      "case": "unrelated_geometry_does_not_invalidate_diagnostics",
+      "expected": "VERIFIED",
+      "actual": "VERIFIED",
+      "pass": true
+    },
+    {
+      "case": "changed_diagnostics_invalidate_task",
+      "expected": "PENDING",
+      "actual": "PENDING",
+      "pass": true
+    },
+    {
+      "case": "changed_source_invalidates_dependent_notebooks",
+      "expected": "PENDING",
+      "actual": "PENDING",
+      "pass": true
+    },
+    {
+      "case": "changed_source_invalidates_dependent_figures",
+      "expected": "PENDING",
+      "actual": "PENDING",
+      "pass": true
+    },
+    {
+      "case": "changed_source_invalidates_dependent_internal_review",
+      "expected": "PENDING",
+      "actual": "PENDING",
+      "pass": true
+    },
+    {
+      "case": "changed_source_does_not_reset_governance",
+      "expected": "VERIFIED",
+      "actual": "VERIFIED",
+      "pass": true
+    },
+    {
+      "case": "old_empty_run_cannot_execute_new_epoch",
+      "expected": "RUN_OR_CONTRACT_CHANGED",
+      "actual": "RUN_OR_CONTRACT_CHANGED",
+      "pass": true
+    },
+    {
+      "case": "old_epoch_has_no_tool_artifacts",
+      "expected": 0,
+      "actual": 0,
+      "pass": true
+    },
+    {
+      "case": "source_change_during_execution_refused",
+      "expected": "RUNTIME_CODE_CHANGED",
+      "actual": "RUNTIME_CODE_CHANGED",
+      "pass": true
+    },
+    {
+      "case": "changed_source_output_not_registered",
+      "expected": 0,
+      "actual": 0,
+      "pass": true
+    },
+    {
+      "case": "changed_source_dispatch_uncertainty_retained",
+      "expected": "INTERRUPTED_CHECKPOINT",
+      "actual": "INTERRUPTED_CHECKPOINT",
+      "pass": true
+    },
+    {
+      "case": "reviewed_source_bytes_stable",
+      "expected": {
+        "task1/workflow/artifact_review.py": "dfa0b91149662baf26861a9ec0e51223842d0ac62ada29015eca7b119c68da48",
+        "task1/workflow/tools.py": "0fde0acebfe3ec97bd2653744ac8f0444c1e9a162c61970bccf8a94a9fbd0b3f",
+        "task1/workflow/controller.py": "16793b102fd077cc243eae6f1e714632f312a77e421850d424b8562a2909eb6d",
+        "task1/workflow/goal.py": "997db7a63dd01f0bac2173c4a5204c04835205afc95e8005b19d508e4db4f208",
+        "task1/workflow/diagnostics.py": "e2ef635bbd95db505b3eff336ca59074a60217a70b2bc644624c3fbd0280acda",
+        "task1/workflow/io.py": "0d3d72dd0beb4718f4020a07a5f1c0ca89193943049a479816b5c496806321b2"
+      },
+      "actual": {
+        "task1/workflow/artifact_review.py": "dfa0b91149662baf26861a9ec0e51223842d0ac62ada29015eca7b119c68da48",
+        "task1/workflow/tools.py": "0fde0acebfe3ec97bd2653744ac8f0444c1e9a162c61970bccf8a94a9fbd0b3f",
+        "task1/workflow/controller.py": "16793b102fd077cc243eae6f1e714632f312a77e421850d424b8562a2909eb6d",
+        "task1/workflow/goal.py": "997db7a63dd01f0bac2173c4a5204c04835205afc95e8005b19d508e4db4f208",
+        "task1/workflow/diagnostics.py": "e2ef635bbd95db505b3eff336ca59074a60217a70b2bc644624c3fbd0280acda",
+        "task1/workflow/io.py": "0d3d72dd0beb4718f4020a07a5f1c0ca89193943049a479816b5c496806321b2"
+      },
+      "pass": true
+    }
+  ],
+  "source_hashes_before": {
+    "task1/workflow/artifact_review.py": "dfa0b91149662baf26861a9ec0e51223842d0ac62ada29015eca7b119c68da48",
+    "task1/workflow/tools.py": "0fde0acebfe3ec97bd2653744ac8f0444c1e9a162c61970bccf8a94a9fbd0b3f",
+    "task1/workflow/controller.py": "16793b102fd077cc243eae6f1e714632f312a77e421850d424b8562a2909eb6d",
+    "task1/workflow/goal.py": "997db7a63dd01f0bac2173c4a5204c04835205afc95e8005b19d508e4db4f208",
+    "task1/workflow/diagnostics.py": "e2ef635bbd95db505b3eff336ca59074a60217a70b2bc644624c3fbd0280acda",
+    "task1/workflow/io.py": "0d3d72dd0beb4718f4020a07a5f1c0ca89193943049a479816b5c496806321b2"
+  },
+  "source_hashes_after": {
+    "task1/workflow/artifact_review.py": "dfa0b91149662baf26861a9ec0e51223842d0ac62ada29015eca7b119c68da48",
+    "task1/workflow/tools.py": "0fde0acebfe3ec97bd2653744ac8f0444c1e9a162c61970bccf8a94a9fbd0b3f",
+    "task1/workflow/controller.py": "16793b102fd077cc243eae6f1e714632f312a77e421850d424b8562a2909eb6d",
+    "task1/workflow/goal.py": "997db7a63dd01f0bac2173c4a5204c04835205afc95e8005b19d508e4db4f208",
+    "task1/workflow/diagnostics.py": "e2ef635bbd95db505b3eff336ca59074a60217a70b2bc644624c3fbd0280acda",
+    "task1/workflow/io.py": "0d3d72dd0beb4718f4020a07a5f1c0ca89193943049a479816b5c496806321b2"
+  },
+  "programmatic_model_calls": 0,
+  "network_calls": 0,
+  "original_probe_sha256": "2fefb0bf2d3b439be624a585ea2da4fa901337e1a49c5c79d1a44d8a1a7668ed",
+  "status": "VERIFIED"
+}

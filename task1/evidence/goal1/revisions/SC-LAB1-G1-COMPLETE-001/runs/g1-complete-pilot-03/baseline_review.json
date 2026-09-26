@@ -1,0 +1,263 @@
+{
+  "classification": "CURRENT_RUN_REAL_DATA",
+  "input_sha256": "c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3",
+  "record_ids": [
+    "0",
+    "1",
+    "2",
+    "246",
+    "256",
+    "306",
+    "352"
+  ],
+  "input_records": 7,
+  "input_points": 783,
+  "modified_values": 0,
+  "parent_version": "RAW:c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3",
+  "semantics_version": "g1-semantics-v1",
+  "metrics_version": "g1-metrics-v1",
+  "status": "VERIFIED",
+  "result": {
+    "status": "VERIFIED",
+    "target_action": "baseline",
+    "target_artifact_id": "g1-complete-pilot-03:baseline",
+    "target_artifact_hash": "865710aea34a316fe83088d7cf2ac1aec68c96623269bfcf06255b5db2930fd8",
+    "target_output_hash": "36b39abfa1d1e79fe6999831083eb36a1d9e2a4f737e374e1514f08ef5016eab",
+    "trusted_reference": {
+      "raw_sha256": "c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3",
+      "parent_version": "RAW:c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3",
+      "policy_sha256": "cbe01c9f33414edcebc0738d3c09f7206a94e1e98dceee545998522e04736688"
+    },
+    "record_scope": [
+      "0",
+      "1",
+      "2",
+      "246",
+      "256",
+      "306",
+      "352"
+    ],
+    "contract_version": "g1-policy-v2-conditional",
+    "checked_components": [
+      "provenance",
+      "contract",
+      "segmentation",
+      "filtering",
+      "direction",
+      "actual_values",
+      "dp_intervals",
+      "point_accounting",
+      "summaries"
+    ],
+    "unchecked_components": [],
+    "unchecked_reasons": {},
+    "errors": [],
+    "baseline_review": {
+      "status": "VERIFIED",
+      "errors": [],
+      "quality_status": "PENDING_RESEARCH_REVIEW",
+      "checked_components": [
+        "provenance",
+        "contract",
+        "segmentation",
+        "filtering",
+        "direction",
+        "actual_values",
+        "dp_intervals",
+        "point_accounting",
+        "summaries"
+      ],
+      "unchecked_components": [],
+      "scope": "Complete trusted input, approved method, actual artifacts; no ground-truth claim",
+      "trusted_reference": {
+        "source_kind": "CURRENT_RUN_CONDITIONAL_ANALYSIS",
+        "raw_sha256": "c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3",
+        "raw_scope_sha256": "a98c638ce71bf2da36c9f27dfc7638731408250a27cfeb59e2ace6a576957f92",
+        "reference_sha256": "27160aa567ff33ab560bdb27d722b3c74828d9c0ac894cdf445f8333b5a572dc",
+        "record_scope": [
+          "0",
+          "1",
+          "2",
+          "246",
+          "256",
+          "306",
+          "352"
+        ],
+        "parent_version": "RAW:c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3",
+        "adapter_version": "conditional_ellipsoid_enu:v1",
+        "contract_id": "G1_CONDITIONAL_ENU_V1",
+        "contract_version": "BASELINE_CONTRACT_V2",
+        "contract_sha256": "a817413dd8a7fa52fbfc8aa52a3fcb19bad10968a99f87a04bf71de1660626a2"
+      },
+      "record_scope": [
+        "0",
+        "1",
+        "2",
+        "246",
+        "256",
+        "306",
+        "352"
+      ],
+      "contract_version": "BASELINE_CONTRACT_V2",
+      "direction_numeric_allowance_degrees": 5.115907697472721e-12,
+      "direction_numeric_allowance_rule": "64 * binary64_epsilon * 360; derived angles only, strict decisions unchanged",
+      "accounting": {
+        "status": "VERIFIED",
+        "input_records": 7,
+        "input_points": 783,
+        "stage_points": {
+          "filtered": 309,
+          "denoised": 13,
+          "simplified": 273,
+          "retained": 188
+        },
+        "errors": [],
+        "count_conserved": true,
+        "modified_point_count": 0
+      },
+      "record_reviews": [
+        {
+          "record_id": "0",
+          "stage_counts": {
+            "input": 99,
+            "segmented": 1,
+            "filtered": 99,
+            "denoised": 0,
+            "simplified": 0,
+            "retained": 0,
+            "not_processed": 0
+          },
+          "segment_counts": {
+            "total": 1,
+            "filtered": 1,
+            "processed": 0
+          },
+          "terminal_status": "ALL_FILTERED"
+        },
+        {
+          "record_id": "1",
+          "stage_counts": {
+            "input": 97,
+            "segmented": 1,
+            "filtered": 97,
+            "denoised": 0,
+            "simplified": 0,
+            "retained": 0,
+            "not_processed": 0
+          },
+          "segment_counts": {
+            "total": 1,
+            "filtered": 1,
+            "processed": 0
+          },
+          "terminal_status": "ALL_FILTERED"
+        },
+        {
+          "record_id": "2",
+          "stage_counts": {
+            "input": 99,
+            "segmented": 1,
+            "filtered": 99,
+            "denoised": 0,
+            "simplified": 0,
+            "retained": 0,
+            "not_processed": 0
+          },
+          "segment_counts": {
+            "total": 1,
+            "filtered": 1,
+            "processed": 0
+          },
+          "terminal_status": "ALL_FILTERED"
+        },
+        {
+          "record_id": "246",
+          "stage_counts": {
+            "input": 108,
+            "segmented": 1,
+            "filtered": 0,
+            "denoised": 3,
+            "simplified": 69,
+            "retained": 36,
+            "not_processed": 0
+          },
+          "segment_counts": {
+            "total": 1,
+            "filtered": 0,
+            "processed": 1
+          },
+          "terminal_status": "PROCESSED"
+        },
+        {
+          "record_id": "256",
+          "stage_counts": {
+            "input": 99,
+            "segmented": 9,
+            "filtered": 0,
+            "denoised": 0,
+            "simplified": 45,
+            "retained": 54,
+            "not_processed": 0
+          },
+          "segment_counts": {
+            "total": 9,
+            "filtered": 0,
+            "processed": 9
+          },
+          "terminal_status": "PROCESSED"
+        },
+        {
+          "record_id": "306",
+          "stage_counts": {
+            "input": 111,
+            "segmented": 11,
+            "filtered": 4,
+            "denoised": 2,
+            "simplified": 36,
+            "retained": 69,
+            "not_processed": 0
+          },
+          "segment_counts": {
+            "total": 11,
+            "filtered": 1,
+            "processed": 10
+          },
+          "terminal_status": "PROCESSED"
+        },
+        {
+          "record_id": "352",
+          "stage_counts": {
+            "input": 170,
+            "segmented": 6,
+            "filtered": 10,
+            "denoised": 8,
+            "simplified": 123,
+            "retained": 29,
+            "not_processed": 0
+          },
+          "segment_counts": {
+            "total": 6,
+            "filtered": 3,
+            "processed": 3
+          },
+          "terminal_status": "PROCESSED"
+        }
+      ],
+      "stage_counts": {
+        "input": 783,
+        "segmented": 30,
+        "filtered": 309,
+        "denoised": 13,
+        "simplified": 273,
+        "retained": 188,
+        "not_processed": 0
+      },
+      "segment_counts": {
+        "total": 30,
+        "filtered": 7,
+        "processed": 23
+      },
+      "output_limitation": "GEOMETRY_IS_NOT_GROUND_TRUTH_OR_QUALITY_IMPROVEMENT"
+    }
+  }
+}

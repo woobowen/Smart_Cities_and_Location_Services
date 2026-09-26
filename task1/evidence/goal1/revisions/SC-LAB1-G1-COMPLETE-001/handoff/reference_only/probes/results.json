@@ -1,0 +1,394 @@
+{
+  "audit_target": "7e6cd4082c2cdad2452fa5a1006e99dcfb050d17",
+  "at": "2026-09-26T15:07:42.492306+00:00",
+  "classification": "ENGINEERING_TEST",
+  "input_source": "CONSTRUCTED_FIXTURE",
+  "live_model_calls": 0,
+  "repository_modified": false,
+  "source_versions": {
+    "diagnostics.py": {
+      "git_blob": "9ff8ea95c016f83f808d7a5f5f2821a19c4eb094",
+      "expected_at_7e6cd408": "9ff8ea95c016f83f808d7a5f5f2821a19c4eb094",
+      "matches_audited_commit": true,
+      "sha256": "e2ef635bbd95db505b3eff336ca59074a60217a70b2bc644624c3fbd0280acda"
+    },
+    "evaluation.py": {
+      "git_blob": "206bb5a5b26db10a80cfb6853dce5faf56c569ed",
+      "expected_at_7e6cd408": "206bb5a5b26db10a80cfb6853dce5faf56c569ed",
+      "matches_audited_commit": true,
+      "sha256": "debb251902159f9186e79dc5f29c2bac23f952f036801fd829430ebc231cc7f0"
+    },
+    "tools.py": {
+      "git_blob": "08af4334ddf51059deadce86135c51641cb2733c",
+      "expected_at_7e6cd408": "08af4334ddf51059deadce86135c51641cb2733c",
+      "matches_audited_commit": true,
+      "sha256": "bb6769b534c7dd498e9edeb6b7fe962e4cb90ef789e84877cbef39beface17db"
+    },
+    "io.py": {
+      "git_blob": "25ac484dcfcf376d0f8a9e760eec565a7857749a",
+      "expected_at_7e6cd408": "25ac484dcfcf376d0f8a9e760eec565a7857749a",
+      "matches_audited_commit": true,
+      "sha256": "0d3d72dd0beb4718f4020a07a5f1c0ca89193943049a479816b5c496806321b2"
+    }
+  },
+  "baseline_review_probes": [
+    {
+      "case": "valid_control",
+      "expected_for_trusted_complete_review": "VERIFIED",
+      "actual": {
+        "status": "VERIFIED",
+        "errors": [],
+        "accounting": {
+          "status": "VERIFIED",
+          "input_records": 1,
+          "input_points": 4,
+          "stage_points": {
+            "filtered": 0,
+            "denoised": 0,
+            "simplified": 2,
+            "retained": 2
+          },
+          "errors": [],
+          "count_conserved": true,
+          "modified_point_count": 0
+        },
+        "scope": "Stored direction schedule, DP geometry and terminal accounting; not ground truth"
+      },
+      "submitted_stage_counts": {
+        "input": 4,
+        "segmented": 1,
+        "filtered": 0,
+        "denoised": 0,
+        "simplified": 2,
+        "retained": 2,
+        "not_processed": 0
+      }
+    },
+    {
+      "case": "only_final_coordinate_modified",
+      "expected_for_trusted_complete_review": "REJECTED",
+      "actual": {
+        "status": "REJECTED",
+        "errors": [
+          {
+            "code": "VALUE_MODIFIED",
+            "index": 0
+          }
+        ],
+        "accounting": {
+          "status": "VERIFIED",
+          "input_records": 1,
+          "input_points": 4,
+          "stage_points": {
+            "filtered": 0,
+            "denoised": 0,
+            "simplified": 2,
+            "retained": 2
+          },
+          "errors": [],
+          "count_conserved": true,
+          "modified_point_count": 0
+        },
+        "scope": "Stored direction schedule, DP geometry and terminal accounting; not ground truth"
+      },
+      "submitted_stage_counts": {
+        "input": 4,
+        "segmented": 1,
+        "filtered": 0,
+        "denoised": 0,
+        "simplified": 2,
+        "retained": 2,
+        "not_processed": 0
+      }
+    },
+    {
+      "case": "clean_and_final_shifted_ledger_unchanged",
+      "expected_for_trusted_complete_review": "REJECTED",
+      "actual": {
+        "status": "VERIFIED",
+        "errors": [],
+        "accounting": {
+          "status": "VERIFIED",
+          "input_records": 1,
+          "input_points": 4,
+          "stage_points": {
+            "filtered": 0,
+            "denoised": 0,
+            "simplified": 2,
+            "retained": 2
+          },
+          "errors": [],
+          "count_conserved": true,
+          "modified_point_count": 0
+        },
+        "scope": "Stored direction schedule, DP geometry and terminal accounting; not ground truth"
+      },
+      "submitted_stage_counts": {
+        "input": 4,
+        "segmented": 1,
+        "filtered": 0,
+        "denoised": 0,
+        "simplified": 2,
+        "retained": 2,
+        "not_processed": 0
+      }
+    },
+    {
+      "case": "all_records_and_ledger_dropped_counts_unchanged",
+      "expected_for_trusted_complete_review": "REJECTED",
+      "actual": {
+        "status": "VERIFIED",
+        "errors": [],
+        "accounting": {
+          "status": "VERIFIED",
+          "input_records": 0,
+          "input_points": 0,
+          "stage_points": {
+            "filtered": 0,
+            "denoised": 0,
+            "simplified": 0,
+            "retained": 0
+          },
+          "errors": [],
+          "count_conserved": true,
+          "modified_point_count": 0
+        },
+        "scope": "Stored direction schedule, DP geometry and terminal accounting; not ground truth"
+      },
+      "submitted_stage_counts": {
+        "input": 4,
+        "segmented": 1,
+        "filtered": 0,
+        "denoised": 0,
+        "simplified": 2,
+        "retained": 2,
+        "not_processed": 0
+      }
+    },
+    {
+      "case": "stage_counts_modified",
+      "expected_for_trusted_complete_review": "REJECTED",
+      "actual": {
+        "status": "VERIFIED",
+        "errors": [],
+        "accounting": {
+          "status": "VERIFIED",
+          "input_records": 1,
+          "input_points": 4,
+          "stage_points": {
+            "filtered": 0,
+            "denoised": 0,
+            "simplified": 2,
+            "retained": 2
+          },
+          "errors": [],
+          "count_conserved": true,
+          "modified_point_count": 0
+        },
+        "scope": "Stored direction schedule, DP geometry and terminal accounting; not ground truth"
+      },
+      "submitted_stage_counts": {
+        "input": 999,
+        "segmented": 1,
+        "filtered": 0,
+        "denoised": 0,
+        "simplified": 2,
+        "retained": 999,
+        "not_processed": 0
+      }
+    },
+    {
+      "case": "verify_baseline_tool_different_raw_records_and_shifted_candidate",
+      "expected_for_trusted_complete_review": "REJECTED",
+      "actual": {
+        "classification": "ENGINEERING_TEST",
+        "input_sha256": "3c638da5c127b1f24d6b98c921e99e777c3dbbe75b4124398a0b316028e959d8",
+        "record_ids": [
+          "fixture:a",
+          "fixture:b"
+        ],
+        "input_records": 2,
+        "input_points": 5,
+        "modified_values": 0,
+        "parent_version": "RAW:3c638da5c127b1f24d6b98c921e99e777c3dbbe75b4124398a0b316028e959d8",
+        "semantics_version": "ENGINEERING_TEST",
+        "metrics_version": "ENGINEERING_TEST",
+        "status": "VERIFIED",
+        "result": {
+          "status": "VERIFIED",
+          "errors": [],
+          "accounting": {
+            "status": "VERIFIED",
+            "input_records": 1,
+            "input_points": 4,
+            "stage_points": {
+              "filtered": 0,
+              "denoised": 0,
+              "simplified": 2,
+              "retained": 2
+            },
+            "errors": [],
+            "count_conserved": true,
+            "modified_point_count": 0
+          },
+          "scope": "Stored direction schedule, DP geometry and terminal accounting; not ground truth"
+        }
+      }
+    }
+  ],
+  "previous_F01_regression": [
+    {
+      "case": "normal",
+      "action": "verify_profiles",
+      "status": "VERIFIED",
+      "result": {
+        "status": "VERIFIED",
+        "errors": [],
+        "records_checked": 2,
+        "claim": "Structural counts only; no physical accuracy or cleaning quality claim"
+      }
+    },
+    {
+      "case": "normal",
+      "action": "recompute_check",
+      "status": "VERIFIED",
+      "result": {
+        "status": "VERIFIED",
+        "errors": [],
+        "records_checked": 2,
+        "claim": "Structural counts only; no physical accuracy or cleaning quality claim",
+        "recomputed_sha256": "6908d4a247f2b132c5b01d3e6144f2603b0451d79b0332c8e9df70ea591fd182",
+        "stored_sha256": "6908d4a247f2b132c5b01d3e6144f2603b0451d79b0332c8e9df70ea591fd182",
+        "exact_match": true
+      }
+    },
+    {
+      "case": "legally_reordered",
+      "action": "verify_profiles",
+      "status": "VERIFIED",
+      "result": {
+        "status": "VERIFIED",
+        "errors": [],
+        "records_checked": 2,
+        "claim": "Structural counts only; no physical accuracy or cleaning quality claim"
+      }
+    },
+    {
+      "case": "legally_reordered",
+      "action": "recompute_check",
+      "status": "VERIFIED",
+      "result": {
+        "status": "VERIFIED",
+        "errors": [],
+        "records_checked": 2,
+        "claim": "Structural counts only; no physical accuracy or cleaning quality claim",
+        "recomputed_sha256": "6908d4a247f2b132c5b01d3e6144f2603b0451d79b0332c8e9df70ea591fd182",
+        "stored_sha256": "6908d4a247f2b132c5b01d3e6144f2603b0451d79b0332c8e9df70ea591fd182",
+        "exact_match": true
+      }
+    },
+    {
+      "case": "duplicate_id",
+      "action": "verify_profiles",
+      "status": "REJECTED",
+      "result": {
+        "status": "REJECTED",
+        "errors": [
+          "DUPLICATE_RECORD_ID",
+          "RECORD_COVERAGE"
+        ],
+        "records_checked": 0,
+        "claim": "Full submitted list rejected before alignment; no rows discarded"
+      }
+    },
+    {
+      "case": "duplicate_id",
+      "action": "recompute_check",
+      "status": "REJECTED",
+      "result": {
+        "status": "REJECTED",
+        "errors": [
+          "DUPLICATE_RECORD_ID",
+          "RECORD_COVERAGE"
+        ],
+        "records_checked": 0,
+        "claim": "Full submitted list rejected before alignment; no rows discarded",
+        "exact_match": false
+      }
+    },
+    {
+      "case": "missing_id",
+      "action": "verify_profiles",
+      "status": "REJECTED",
+      "result": {
+        "status": "REJECTED",
+        "errors": [
+          "RECORD_COVERAGE"
+        ],
+        "records_checked": 0,
+        "claim": "Full submitted list rejected before alignment; no rows discarded"
+      }
+    },
+    {
+      "case": "missing_id",
+      "action": "recompute_check",
+      "status": "REJECTED",
+      "result": {
+        "status": "REJECTED",
+        "errors": [
+          "RECORD_COVERAGE"
+        ],
+        "records_checked": 0,
+        "claim": "Full submitted list rejected before alignment; no rows discarded",
+        "exact_match": false
+      }
+    },
+    {
+      "case": "foreign_id",
+      "action": "verify_profiles",
+      "status": "REJECTED",
+      "result": {
+        "status": "REJECTED",
+        "errors": [
+          "RECORD_COVERAGE"
+        ],
+        "records_checked": 0,
+        "claim": "Full submitted list rejected before alignment; no rows discarded"
+      }
+    },
+    {
+      "case": "foreign_id",
+      "action": "recompute_check",
+      "status": "REJECTED",
+      "result": {
+        "status": "REJECTED",
+        "errors": [
+          "RECORD_COVERAGE"
+        ],
+        "records_checked": 0,
+        "claim": "Full submitted list rejected before alignment; no rows discarded",
+        "exact_match": false
+      }
+    }
+  ],
+  "previous_missing_timestamp_regression": {
+    "record_id": "fixture:missing",
+    "events": [
+      {
+        "left_index": 0,
+        "right_index": 1,
+        "dt_raw": null,
+        "dt_reason": "MISSING_OR_INVALID_TIME",
+        "position_pair_computable": true,
+        "reasons": [
+          "MISSING_OR_INVALID_TIME",
+          "REPEATED_POSITION_NOT_AUTOMATIC_NOISE"
+        ]
+      }
+    ],
+    "modified": 0,
+    "deleted": 0,
+    "status": "EXECUTED"
+  },
+  "interpretation": "Failed challenge cases show reviewer capability gaps, not corruption of published real pilot data."
+}

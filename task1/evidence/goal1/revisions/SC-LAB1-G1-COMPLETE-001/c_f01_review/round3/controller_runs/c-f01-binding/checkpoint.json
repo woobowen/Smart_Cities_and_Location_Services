@@ -1,0 +1,88 @@
+{
+  "run_id": "c-f01-binding",
+  "mode": "MOCK_TEST",
+  "status": "VERIFIED",
+  "phase": 0,
+  "inflight_model": null,
+  "policy_sha256": "13bff55a7de97ad27c8cc7d6fb70194f822098cfb3189ce294b0f00603e7b7f7",
+  "pilot_sha256": "b82206d1bfa35b07ca447f9bde9c7a3802fc11d6e7fad767eb33d46f33742a40",
+  "input_sha256": "1c8a4f48c5faf8416aa7474d1a43215fdba759795cefd3414b60ea22edd2f451",
+  "started_at": "2026-09-26T16:49:07.176810+00:00",
+  "code_sha": "4b94ad4605b3631600ea68fb9f7cd5ad9cbf8d48",
+  "source_hashes": {
+    "task1/workflow/__init__.py": "bd23709231145ce415c01c88880b886e8c8343199a47dbe0762d68841aeb73ff",
+    "task1/workflow/__main__.py": "b96a66d5fe543f8082d528e81e7e70de2c0090b20ab60b090532ab65647713e8",
+    "task1/workflow/artifact_review.py": "dfa0b91149662baf26861a9ec0e51223842d0ac62ada29015eca7b119c68da48",
+    "task1/workflow/budget.py": "c275047dffcafb7160b0c3fcd8de4e56bbc1f86dc05925691ff5af43aea312ca",
+    "task1/workflow/controller.py": "16793b102fd077cc243eae6f1e714632f312a77e421850d424b8562a2909eb6d",
+    "task1/workflow/coordinate_review.py": "13305c6dda7bc0699822cd880e4e9051f2946371d4dd83f4ae0ea946dd5c897c",
+    "task1/workflow/coordinates.py": "d99b270a65c88f8530669d5e7d0887d7563b3e54e19770ab7a9eb695117e075d",
+    "task1/workflow/diagnostics.py": "e2ef635bbd95db505b3eff336ca59074a60217a70b2bc644624c3fbd0280acda",
+    "task1/workflow/evaluation.py": "92424a94c20ce897606d546ba69c0f205c0f5f75a17b609134ac8125a241c7ad",
+    "task1/workflow/geometry.py": "2ad3ca3b49e98e997684e3f5af948771be80dfb03b31b2ae4cc4483856e93d74",
+    "task1/workflow/goal.py": "997db7a63dd01f0bac2173c4a5204c04835205afc95e8005b19d508e4db4f208",
+    "task1/workflow/inventory.py": "42bceb3ea1bab9ca386b88ce29104dc4bb518fee6df8f25aae50360633e7d5a1",
+    "task1/workflow/io.py": "0d3d72dd0beb4718f4020a07a5f1c0ca89193943049a479816b5c496806321b2",
+    "task1/workflow/pipeline.py": "160bedcc0d8dffce71d833dffc4de28928bc7007077ae8d03c57c96d827548c7",
+    "task1/workflow/provider.py": "d778316bcdbdec1643707a93c1d0e00e52caa4c0b941c9299b33da547adbc28b",
+    "task1/workflow/recompute.py": "4c198a016adec8554602c9ad04e0446bb90866ed970789834b96c51ebbec9b56",
+    "task1/workflow/sources.py": "74b42f79abfe172b7d2e29ba55a631b22f3e6d46c7cb2a08c0c7634eaf44ba90",
+    "task1/workflow/tools.py": "0fde0acebfe3ec97bd2653744ac8f0444c1e9a162c61970bccf8a94a9fbd0b3f",
+    "task1/config/goal1_sources.json": "411d6eb81c71d7001fde7b5388e30b3311c86b8a6ab83bcb5b8a4c82455f6ef2"
+  },
+  "tools": [
+    {
+      "tool_id": "1d777d0694b31d0c61a341ea7473ead73db4a69143e382baaf99a5abb4cd6301",
+      "artifact": "tools/1d777d0694b31d0c61a341ea7473ead73db4a69143e382baaf99a5abb4cd6301.json",
+      "sha256": "a66c2b875e95dccc73cce8fb071df604ce505cb8133b54bf9adfb3ebc4533a27",
+      "action": "profile_pilot",
+      "call_id": "C-create-profile_pilot",
+      "status": "EXECUTED"
+    },
+    {
+      "tool_id": "aa6a6cb1d7ea21e33df9506e1af4cea19b709ad269db450136bdbead6753a4cd",
+      "artifact": "tools/aa6a6cb1d7ea21e33df9506e1af4cea19b709ad269db450136bdbead6753a4cd.json",
+      "sha256": "26477c3f8d115485963b5ca22df6fb35b82dffa7055b06541836a886cdfca1f8",
+      "action": "time_boundaries",
+      "call_id": "C-create-time_boundaries",
+      "status": "EXECUTED"
+    },
+    {
+      "tool_id": "d9fb84b94b18b9dadacf99a17d27113dd19a455c5da48b6e416d4123d1eaac18",
+      "artifact": "tools/d9fb84b94b18b9dadacf99a17d27113dd19a455c5da48b6e416d4123d1eaac18.json",
+      "sha256": "b903c276b8c418c06aec71c1cb67e52586b04d87888674f87be2d548e4ee4c46",
+      "action": "duplicate_details",
+      "call_id": "C-create-duplicate_details",
+      "status": "EXECUTED"
+    },
+    {
+      "tool_id": "a4be7075a4b912dc8d2ae76f65bbc0db8cd4424ca6c449a951c839c411bc04cd",
+      "artifact": "tools/a4be7075a4b912dc8d2ae76f65bbc0db8cd4424ca6c449a951c839c411bc04cd.json",
+      "sha256": "c0e5f05daa93e1a421eabe7bb2b2d3c927d996fd481f0fe89ff31f7e3ef206be",
+      "action": "verify_profiles",
+      "call_id": "C-review-profile",
+      "status": "VERIFIED"
+    },
+    {
+      "tool_id": "26a2be01863679e696e2c05e9fca5d5afc7eff4ab6fe61efce02bfa1ea02204e",
+      "artifact": "tools/26a2be01863679e696e2c05e9fca5d5afc7eff4ab6fe61efce02bfa1ea02204e.json",
+      "sha256": "9ae6c8854b4c2063b346e26c68c7f2c4215e251a1e26d8694a945cd645f8b12c",
+      "action": "verify_time_boundaries",
+      "call_id": "C-review-time_boundaries",
+      "status": "VERIFIED"
+    },
+    {
+      "tool_id": "5f46e32acbfa1cdef75f4338063a0c5734720c9b0b5c1e6bada88d7c707c4e2a",
+      "artifact": "tools/5f46e32acbfa1cdef75f4338063a0c5734720c9b0b5c1e6bada88d7c707c4e2a.json",
+      "sha256": "070853ab1bc059c1da65ae59952355a5ce5b04670ff8fa92623773d5d594522c",
+      "action": "verify_duplicate_details",
+      "call_id": "C-review-duplicate_details",
+      "status": "VERIFIED"
+    }
+  ],
+  "calls": [],
+  "model_dispatches": {},
+  "decisions": [],
+  "accepted_version": null,
+  "errors": []
+}

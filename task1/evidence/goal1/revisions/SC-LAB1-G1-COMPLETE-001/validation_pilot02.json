@@ -1,0 +1,70 @@
+{
+  "classification": "ENGINEERING_TEST",
+  "commands": [
+    {
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "compileall",
+        "-q",
+        "task1/workflow",
+        "task1/tests",
+        "task1/scripts/complete_goal1.py",
+        "task1/scripts/build_goal1_notebooks.py",
+        "task1/scripts/build_complete_figures.py"
+      ],
+      "cwd": "/home/addaswsw/lab/Smart_Cities_and_Location_Services",
+      "exit_code": 0,
+      "elapsed_seconds": 0.04921691799972905,
+      "log": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/syntax_pilot02.log"
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "pytest",
+        "task1/tests",
+        "-q",
+        "--junitxml=task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/tests_pilot02.xml"
+      ],
+      "cwd": "/home/addaswsw/lab/Smart_Cities_and_Location_Services",
+      "exit_code": 0,
+      "elapsed_seconds": 5.873318795000159,
+      "log": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/tests_pilot02.log"
+    }
+  ],
+  "source_hashes": {
+    "task1/workflow/recompute.py": "4c198a016adec8554602c9ad04e0446bb90866ed970789834b96c51ebbec9b56",
+    "task1/workflow/coordinates.py": "d99b270a65c88f8530669d5e7d0887d7563b3e54e19770ab7a9eb695117e075d",
+    "task1/workflow/goal.py": "d313d408961adf07b9791972b03ac6a99db808e805efe1aa06abe85a075e863a",
+    "task1/workflow/diagnostics.py": "e2ef635bbd95db505b3eff336ca59074a60217a70b2bc644624c3fbd0280acda",
+    "task1/workflow/inventory.py": "42bceb3ea1bab9ca386b88ce29104dc4bb518fee6df8f25aae50360633e7d5a1",
+    "task1/workflow/io.py": "0d3d72dd0beb4718f4020a07a5f1c0ca89193943049a479816b5c496806321b2",
+    "task1/workflow/budget.py": "c275047dffcafb7160b0c3fcd8de4e56bbc1f86dc05925691ff5af43aea312ca",
+    "task1/workflow/coordinate_review.py": "af4f0d753d162666bcb5da07edeccb846e008c33adf0f56b34939ac526eaf951",
+    "task1/workflow/__init__.py": "bd23709231145ce415c01c88880b886e8c8343199a47dbe0762d68841aeb73ff",
+    "task1/workflow/artifact_review.py": "dfa0b91149662baf26861a9ec0e51223842d0ac62ada29015eca7b119c68da48",
+    "task1/workflow/pipeline.py": "160bedcc0d8dffce71d833dffc4de28928bc7007077ae8d03c57c96d827548c7",
+    "task1/workflow/__main__.py": "b96a66d5fe543f8082d528e81e7e70de2c0090b20ab60b090532ab65647713e8",
+    "task1/workflow/geometry.py": "2ad3ca3b49e98e997684e3f5af948771be80dfb03b31b2ae4cc4483856e93d74",
+    "task1/workflow/provider.py": "d778316bcdbdec1643707a93c1d0e00e52caa4c0b941c9299b33da547adbc28b",
+    "task1/workflow/evaluation.py": "7cf224fbc290d3e83acd5d83a3fe335e6dc437c762f7053d8132817aa91025b2",
+    "task1/workflow/tools.py": "0fde0acebfe3ec97bd2653744ac8f0444c1e9a162c61970bccf8a94a9fbd0b3f",
+    "task1/workflow/sources.py": "74b42f79abfe172b7d2e29ba55a631b22f3e6d46c7cb2a08c0c7634eaf44ba90",
+    "task1/workflow/controller.py": "16793b102fd077cc243eae6f1e714632f312a77e421850d424b8562a2909eb6d",
+    "task1/tests/test_coordinates.py": "514cb0823d15df24f035bc2d595fd4c673d7171d713faf11cb7d429cb61e5329",
+    "task1/tests/test_goal_completion.py": "0270360da4c692dcce8ed2d6b6a2fff3f12c7b08d42043788db15974deecd5e8",
+    "task1/tests/test_evaluation.py": "d8f342bb62103e4f50235271bf6dcaa70746c4f33db740e256a1888cff0b3915",
+    "task1/tests/test_repair.py": "628f49667e6b680a0f366e9d0feeaebbdb860874f5b76df99d339c6bd37302fc",
+    "task1/tests/test_baseline_trust.py": "bd962103d7b7eef682e172b8e839247dc508242aa7cb27bdfa9f7363addae848",
+    "task1/tests/test_control.py": "59d31aa7fe28b36bb61317c8dce4311e74761b39da7464cd57f9532d4b2d7ba2",
+    "task1/tests/test_geometry.py": "2836d0ff7c5bd59c39f18e5bcb37326a5d0be594d0e4207ab962a6ced5008dec"
+  },
+  "code_sha": "02f4b771db95fb396ef3a0bfa03f1fbd83333585",
+  "inherited_starter_evidence": {
+    "passed": 292,
+    "skipped": 1,
+    "rerun": false,
+    "reason": "starter and its implementation dependencies unchanged"
+  }
+}

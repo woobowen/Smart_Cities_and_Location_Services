@@ -1,0 +1,353 @@
+{
+  "task_id": "SC-LAB1-G1-REPAIR-001",
+  "engineering_status": "PARTIAL_BLOCKED",
+  "goal1_complete": false,
+  "gpt_second_review": "PENDING",
+  "previous_review": {
+    "commit": "c2e3ffe2f5af92ee03dac16a2865ec7c42f576e0",
+    "result": "REVISE / NOT_PASS",
+    "source": "handoff/GPT_SECOND_REVIEW.md"
+  },
+  "diagnostic_loop": "REAL_DIAGNOSTIC_LOOP",
+  "complete_real_baseline": "BLOCKED",
+  "goal2_goal3": "NOT_RUN",
+  "updated_at": "2026-09-26T13:30:16.698029+00:00",
+  "acceptance": [
+    {
+      "id": "R1-A01",
+      "status": "PASS",
+      "affected_scope": "审核基点/工作区、320项受保护文件及旧失败记录保留",
+      "evidence_paths": [
+        "task1/evidence/goal1/revisions/SC-LAB1-G1-REPAIR-001/workspace_check.json",
+        "task1/evidence/goal1/revisions/SC-LAB1-G1-REPAIR-001/protected_integrity.json"
+      ]
+    },
+    {
+      "id": "R1-A02",
+      "status": "PASS",
+      "affected_scope": "完整profile列表先校验；重复/多余/缺失/字段错误拒绝，合法重排通过",
+      "evidence_paths": [
+        "task1/evidence/goal1/revisions/SC-LAB1-G1-REPAIR-001/probe_comparison.json",
+        "task1/evidence/goal1/revisions/SC-LAB1-G1-REPAIR-001/tests_final.xml"
+      ]
+    },
+    {
+      "id": "R1-A03",
+      "status": "PASS",
+      "affected_scope": "可预期数据/事件/启动/超时/工具异常形成失败回执；永久写盘失败明确EVIDENCE_MISSING",
+      "evidence_paths": [
+        "task1/evidence/goal1/revisions/SC-LAB1-G1-REPAIR-001/actual_failure_probes.json",
+        "task1/evidence/goal1/revisions/SC-LAB1-G1-REPAIR-001/probes_after_adapted.json",
+        "task1/evidence/goal1/revisions/SC-LAB1-G1-REPAIR-001/tests_final.xml"
+      ]
+    },
+    {
+      "id": "R1-A04",
+      "status": "PASS",
+      "affected_scope": "来源片段、文件hash、父版本、当前审核与数值回执绑定；验证范围按工具实际输出",
+      "evidence_paths": [
+        "task1/evidence/goal1/revisions/SC-LAB1-G1-REPAIR-001/source_excerpts.json",
+        "task1/evidence/goal1/revisions/SC-LAB1-G1-REPAIR-001/live_audit.json",
+        "task1/evidence/goal1/revisions/SC-LAB1-G1-REPAIR-001/tests_final.xml"
+      ]
+    },
+    {
+      "id": "R1-A05",
+      "status": "PASS",
+      "affected_scope": "构造平面完整链实际执行及独立核验；真实合同/适配器缺失仍BLOCKED",
+      "evidence_paths": [
+        "task1/evidence/goal1/revisions/SC-LAB1-G1-REPAIR-001/constructed_pipeline.json",
+        "task1/evidence/goal1/revisions/SC-LAB1-G1-REPAIR-001/results/baseline.json"
+      ]
+    },
+    {
+      "id": "R1-A06",
+      "status": "PASS",
+      "affected_scope": "0.157.1版本/schema/官方源码及进程组停止测试；已识别并移除无效重试覆盖",
+      "evidence_paths": [
+        "task1/evidence/goal1/revisions/SC-LAB1-G1-REPAIR-001/provider_version_evidence.json",
+        "task1/evidence/goal1/revisions/SC-LAB1-G1-REPAIR-001/cli_schema_evidence.json",
+        "task1/evidence/goal1/revisions/SC-LAB1-G1-REPAIR-001/tests_final.xml"
+      ]
+    },
+    {
+      "id": "R1-A07",
+      "status": "PASS",
+      "affected_scope": "1次真实小探针成功后才串行角色链；本批6派发、无可见重试；内部请求unknown",
+      "evidence_paths": [
+        "task1/evidence/goal1/revisions/SC-LAB1-G1-REPAIR-001/live_qualification.json",
+        "task1/evidence/goal1/revisions/SC-LAB1-G1-REPAIR-001/live_audit.json",
+        "task1/evidence/goal1/revisions/SC-LAB1-G1-REPAIR-001/runs/g1-repair-connectivity-01/manifest.json"
+      ]
+    },
+    {
+      "id": "R1-A08",
+      "status": "PASS",
+      "affected_scope": "三个角色5次真实调用，C→A反馈和时间补诊断发生；仅REAL_DIAGNOSTIC_LOOP",
+      "evidence_paths": [
+        "task1/evidence/goal1/revisions/SC-LAB1-G1-REPAIR-001/runs/g1-repair-roles-01/manifest.json",
+        "task1/evidence/goal1/revisions/SC-LAB1-G1-REPAIR-001/live_audit.json"
+      ]
+    },
+    {
+      "id": "R1-A09",
+      "status": "BLOCKED",
+      "affected_scope": "D1 UNKNOWN/D2未获用户批准；未执行同pilot真实空间baseline",
+      "evidence_paths": [
+        "task1/evidence/goal1/revisions/SC-LAB1-G1-REPAIR-001/SEMANTICS.md",
+        "task1/evidence/goal1/revisions/SC-LAB1-G1-REPAIR-001/results/baseline.json"
+      ]
+    },
+    {
+      "id": "R1-A10",
+      "status": "PASS",
+      "affected_scope": "核心156pass；starter292pass/1字体skip；两Notebook各9cell新内核执行，无新模型",
+      "evidence_paths": [
+        "task1/evidence/goal1/revisions/SC-LAB1-G1-REPAIR-001/validation.json",
+        "task1/evidence/goal1/revisions/SC-LAB1-G1-REPAIR-001/starter_full.txt",
+        "task1/evidence/goal1/revisions/SC-LAB1-G1-REPAIR-001/notebooks.json",
+        "task1/evidence/goal1/revisions/SC-LAB1-G1-REPAIR-001/figures/visual_inspection.json"
+      ]
+    },
+    {
+      "id": "R1-A11",
+      "status": "PASS",
+      "affected_scope": "CODE_SHA绑定与输入/源码/结果hash；原始文件、旧run和旧ledger不变",
+      "evidence_paths": [
+        "task1/evidence/goal1/revisions/SC-LAB1-G1-REPAIR-001/live_audit.json",
+        "task1/evidence/goal1/revisions/SC-LAB1-G1-REPAIR-001/protected_integrity.json",
+        "task1/evidence/goal1/revisions/SC-LAB1-G1-REPAIR-001/file_manifest.json",
+        "task1/evidence/goal1/revisions/SC-LAB1-G1-REPAIR-001/release_check.json"
+      ]
+    },
+    {
+      "id": "R1-A12",
+      "status": "PASS",
+      "affected_scope": "完整artifact a82db66已push；本地/远程SHA一致，6个核心文件从固定提交实际HTTPS回读且hash一致。随后仅归档发布核对与验收状态；GPT新审核仍PENDING",
+      "evidence_paths": [
+        "task1/evidence/goal1/revisions/SC-LAB1-G1-REPAIR-001/publication.json"
+      ]
+    }
+  ],
+  "original_g1_acceptance": [
+    {
+      "id": "G1-A01",
+      "requirement": "正确仓库、分支、工作区与用户工作保护",
+      "status": "PASS",
+      "affected_scope": "本轮初始main=审核基点，原材料/旧run保留",
+      "previous_codex_status": "PASS",
+      "gpt_c2e3_review": "See historical GPT_SECOND_REVIEW",
+      "history_preserved": true,
+      "evidence_paths": [
+        "task1/evidence/goal1/revisions/SC-LAB1-G1-REPAIR-001/protected_integrity.json"
+      ]
+    },
+    {
+      "id": "G1-A02",
+      "requirement": "完整材料读取与任务对应",
+      "status": "PASS",
+      "affected_scope": "三研究附件原字节补齐；定点核读相关来源，非新实验",
+      "previous_codex_status": "PASS",
+      "gpt_c2e3_review": "See historical GPT_SECOND_REVIEW",
+      "history_preserved": true,
+      "evidence_paths": [
+        "task1/evidence/goal1/revisions/SC-LAB1-G1-REPAIR-001/handoff_provenance.json"
+      ]
+    },
+    {
+      "id": "G1-A03",
+      "requirement": "原始数据与历史结果区分",
+      "status": "PASS",
+      "affected_scope": "原始/构造/LIVE/历史/REPLAY区分",
+      "previous_codex_status": "PASS",
+      "gpt_c2e3_review": "See historical GPT_SECOND_REVIEW",
+      "history_preserved": true,
+      "evidence_paths": [
+        "task1/evidence/goal1/revisions/SC-LAB1-G1-REPAIR-001/live_audit.json"
+      ]
+    },
+    {
+      "id": "G1-A04",
+      "requirement": "时空语义与计算权限",
+      "status": "PASS",
+      "affected_scope": "未知语义仍门控；无真实CRS或去噪方法批准",
+      "previous_codex_status": "PASS",
+      "gpt_c2e3_review": "See historical GPT_SECOND_REVIEW",
+      "history_preserved": true,
+      "evidence_paths": [
+        "task1/evidence/goal1/revisions/SC-LAB1-G1-REPAIR-001/SEMANTICS.md"
+      ]
+    },
+    {
+      "id": "G1-A05",
+      "requirement": "分段和过滤正确且可追踪",
+      "status": "BLOCKED",
+      "affected_scope": "构造链已跑；真实空间分段/长度过滤仍未批准",
+      "previous_codex_status": "BLOCKED",
+      "gpt_c2e3_review": "See historical GPT_SECOND_REVIEW",
+      "history_preserved": true,
+      "evidence_paths": [
+        "task1/evidence/goal1/revisions/SC-LAB1-G1-REPAIR-001/constructed_pipeline.json"
+      ]
+    },
+    {
+      "id": "G1-A06",
+      "requirement": "忠于明确教师去噪方法且不混字段",
+      "status": "BLOCKED",
+      "affected_scope": "单次同时删除候选已独立构造验证；真实采用未批准",
+      "previous_codex_status": "BLOCKED",
+      "gpt_c2e3_review": "See historical GPT_SECOND_REVIEW",
+      "history_preserved": true,
+      "evidence_paths": [
+        "task1/evidence/goal1/revisions/SC-LAB1-G1-REPAIR-001/SEMANTICS.md"
+      ]
+    },
+    {
+      "id": "G1-A07",
+      "requirement": "DP及索引映射正确",
+      "status": "PASS",
+      "affected_scope": "原DP数学验证保持，构造完整链中的DP亦核验",
+      "previous_codex_status": "PASS",
+      "gpt_c2e3_review": "See historical GPT_SECOND_REVIEW",
+      "history_preserved": true,
+      "evidence_paths": [
+        "task1/evidence/goal1/revisions/SC-LAB1-G1-REPAIR-001/tests_final.xml"
+      ]
+    },
+    {
+      "id": "G1-A08",
+      "requirement": "独立评价器可测对",
+      "status": "PASS",
+      "affected_scope": "二重审核重开后，完整profile列表和独立审核反例修复",
+      "previous_codex_status": "PASS",
+      "gpt_c2e3_review": "REVISE",
+      "history_preserved": true,
+      "evidence_paths": [
+        "task1/evidence/goal1/revisions/SC-LAB1-G1-REPAIR-001/probe_comparison.json"
+      ]
+    },
+    {
+      "id": "G1-A09",
+      "requirement": "三个角色实际独立调用与职责",
+      "status": "PASS",
+      "affected_scope": "五次独立上下文真实A/B/C调用；范围为诊断",
+      "previous_codex_status": "BLOCKED",
+      "gpt_c2e3_review": "See historical GPT_SECOND_REVIEW",
+      "history_preserved": true,
+      "evidence_paths": [
+        "task1/evidence/goal1/revisions/SC-LAB1-G1-REPAIR-001/live_audit.json"
+      ]
+    },
+    {
+      "id": "G1-A10",
+      "requirement": "运行控制与权限生效",
+      "status": "PASS",
+      "affected_scope": "重开后补错误结束状态/来源反馈绑定/保护测试；LIVE实际生效",
+      "previous_codex_status": "PASS",
+      "gpt_c2e3_review": "REVISE",
+      "history_preserved": true,
+      "evidence_paths": [
+        "task1/evidence/goal1/revisions/SC-LAB1-G1-REPAIR-001/actual_failure_probes.json"
+      ]
+    },
+    {
+      "id": "G1-A11",
+      "requirement": "小规模真实完整基线处理",
+      "status": "BLOCKED",
+      "affected_scope": "真实完整基线未执行；783点原样未处理",
+      "previous_codex_status": "BLOCKED",
+      "gpt_c2e3_review": "See historical GPT_SECOND_REVIEW",
+      "history_preserved": true,
+      "evidence_paths": [
+        "task1/evidence/goal1/revisions/SC-LAB1-G1-REPAIR-001/results/baseline.json"
+      ]
+    },
+    {
+      "id": "G1-A12",
+      "requirement": "审核反馈进入真实后续动作",
+      "status": "PASS",
+      "affected_scope": "真实C03审核→A04时间边界→C05复算；非机械重复",
+      "previous_codex_status": "BLOCKED",
+      "gpt_c2e3_review": "See historical GPT_SECOND_REVIEW",
+      "history_preserved": true,
+      "evidence_paths": [
+        "task1/evidence/goal1/revisions/SC-LAB1-G1-REPAIR-001/live_audit.json"
+      ]
+    },
+    {
+      "id": "G1-A13",
+      "requirement": "拒绝、回退、恢复和预算受控",
+      "status": "PASS",
+      "affected_scope": "本批外层预算与无重提运行已验证；停止异常路径为离线实测。旧run03 FAIL永久保留；不保证内部零重试",
+      "previous_codex_status": "FAIL",
+      "gpt_c2e3_review": "FAIL",
+      "history_preserved": true,
+      "evidence_paths": [
+        "task1/evidence/goal1/revisions/SC-LAB1-G1-REPAIR-001/provider_version_evidence.json"
+      ]
+    },
+    {
+      "id": "G1-A14",
+      "requirement": "LIVE/REPLAY/MOCK严格区分",
+      "status": "PASS",
+      "affected_scope": "新LIVE/历史REPLAY/构造测试保持区分；没有Mock回填",
+      "previous_codex_status": "PASS",
+      "gpt_c2e3_review": "See historical GPT_SECOND_REVIEW",
+      "history_preserved": true,
+      "evidence_paths": [
+        "task1/evidence/goal1/revisions/SC-LAB1-G1-REPAIR-001/live_audit.json"
+      ]
+    },
+    {
+      "id": "G1-A15",
+      "requirement": "Notebook及工具可复算",
+      "status": "PASS",
+      "affected_scope": "两Notebook新内核各9codecell；旧source_evidence由历史CODE复算",
+      "previous_codex_status": "PASS",
+      "gpt_c2e3_review": "See historical GPT_SECOND_REVIEW",
+      "history_preserved": true,
+      "evidence_paths": [
+        "task1/evidence/goal1/revisions/SC-LAB1-G1-REPAIR-001/notebooks.json"
+      ]
+    },
+    {
+      "id": "G1-A16",
+      "requirement": "必要图表可重建且忠于数据",
+      "status": "PASS",
+      "affected_scope": "当前原始诊断/实际调用状态图已生成与200dpi检查；无假前后图",
+      "previous_codex_status": "PASS",
+      "gpt_c2e3_review": "See historical GPT_SECOND_REVIEW",
+      "history_preserved": true,
+      "evidence_paths": [
+        "task1/evidence/goal1/revisions/SC-LAB1-G1-REPAIR-001/figures/visual_inspection.json"
+      ]
+    },
+    {
+      "id": "G1-A17",
+      "requirement": "Goal范围未越界",
+      "status": "PASS",
+      "affected_scope": "Goal2/3、论文筛选、扫描、融合、全量正式处理未执行",
+      "previous_codex_status": "PASS",
+      "gpt_c2e3_review": "See historical GPT_SECOND_REVIEW",
+      "history_preserved": true,
+      "evidence_paths": [
+        "task1/evidence/goal1/revisions/SC-LAB1-G1-REPAIR-001/SEMANTICS.md"
+      ]
+    },
+    {
+      "id": "G1-A18",
+      "requirement": "完整安全的GitHub审核包同步",
+      "status": "PASS",
+      "affected_scope": "完整artifact a82db66已push；本地/远程SHA一致，6个核心文件从固定提交实际HTTPS回读且hash一致。随后仅归档发布核对与验收状态；GPT新审核仍PENDING",
+      "previous_codex_status": "PASS",
+      "gpt_c2e3_review": "See historical GPT_SECOND_REVIEW",
+      "history_preserved": true,
+      "evidence_paths": [
+        "task1/evidence/goal1/revisions/SC-LAB1-G1-REPAIR-001/publication.json"
+      ]
+    }
+  ],
+  "review_scope_limitation": "C05 text asks for time partition checks, but recompute_check actually verifies profiles only. Do not treat its prose as extra evaluator coverage. Time boundaries and duplicate event lists are additionally verified by OFFLINE audit_live.py; this is not an extra model call or a full cleaning loop.",
+  "published_artifact_sha": "a82db66e29a2393055fa6940d47c75052a5bf895",
+  "publication_proof_scope": "完整运行artifact首轮发布后的实际ls-remote及固定提交raw HTTPS回读；本文件与最终验收状态的后续提交另由最终会话核对"
+}

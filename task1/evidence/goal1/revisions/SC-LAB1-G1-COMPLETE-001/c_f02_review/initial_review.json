@@ -1,0 +1,76 @@
+{
+  "classification": "ENGINEERING_TEST",
+  "scope": "C2-F02_TRUST_BOUNDARY_NOT_REAL_PILOT_ACCEPTANCE",
+  "issues": {
+    "C2-F02": {
+      "status": "REJECTED",
+      "checked": [
+        "normal_four_point_manual_control",
+        "only_final_coordinate_modified",
+        "clean_and_final_shifted_ledger_unchanged",
+        "all_records_and_ledger_dropped_counts_unchanged",
+        "stage_counts_modified",
+        "source_clean_final_and_ledger_shifted_together",
+        "parameters_and_contract_dp_both_relaxed",
+        "per_record_counts_forged",
+        "accounting_forged",
+        "missing_ledger_entry",
+        "duplicate_ledger_entry",
+        "wrong_terminal_reason",
+        "boolean_point_index",
+        "boolean_ledger_index",
+        "boolean_processed_wrapper_segment_index",
+        "float_processed_wrapper_segment_index",
+        "boolean_denosing_decision",
+        "wrong_input_parent",
+        "wrong_clean_parent",
+        "wrong_final_parent",
+        "wrong_raw_parent_version",
+        "wrong_adapter_version",
+        "wrong_raw_hash",
+        "wrong_raw_scope",
+        "forged_numeric_review",
+        "wrong_filter_reason_on_kept_input",
+        "missing_processed_segment",
+        "legitimate_empty_task",
+        "legitimate_empty_record",
+        "legitimate_all_filtered",
+        "omitted_filter_reason",
+        "complete_multiple_records",
+        "empty_record_omitted",
+        "legal_record_and_ledger_reordering",
+        "no_external_handle",
+        "trusted_reference_hash_detects_mutation",
+        "verify_baseline_tool_different_raw_records"
+      ],
+      "source_hashes": {
+        "task1/workflow/pipeline.py": "160bedcc0d8dffce71d833dffc4de28928bc7007077ae8d03c57c96d827548c7",
+        "task1/workflow/evaluation.py": "cfb3d98f112f55bb2aad1f815db264db7232a3fab47a7bead3dec9759f4d1071",
+        "task1/workflow/coordinates.py": "d99b270a65c88f8530669d5e7d0887d7563b3e54e19770ab7a9eb695117e075d",
+        "task1/workflow/geometry.py": "2ad3ca3b49e98e997684e3f5af948771be80dfb03b31b2ae4cc4483856e93d74",
+        "task1/workflow/tools.py": "c3e8013619a40c0491797cad4068c0537b2bb1f0fc8a579bdc62a5c125ee3b3a",
+        "task1/workflow/artifact_review.py": "dfa0b91149662baf26861a9ec0e51223842d0ac62ada29015eca7b119c68da48",
+        "task1/workflow/io.py": "0d3d72dd0beb4718f4020a07a5f1c0ca89193943049a479816b5c496806321b2",
+        "task1/config/goal1.json": "5418632734964fda81fe653e4996d1519b9de3a6cf51ed191556c243770542da",
+        "task1/config/conditional_planar.json": "5b1ab7dbf25797a51405a2cddd93a8d2ea3e3b69530369366d0e05be7abb8169",
+        "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/USER_DECISIONS.json": "2b68e39573ab9256a353484842438a118445bb62ddbaca1c42fbd4eee9fe4f0e",
+        "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/AUTHORIZATION_SUPPLEMENT.md": "2bce4b21939de5843678bdda1de18c64e9703c3e924fd63ff3d7988f69fe5248"
+      },
+      "failed": [
+        {
+          "case": "boolean_processed_wrapper_segment_index",
+          "expected": "REJECTED",
+          "actual": "VERIFIED"
+        },
+        {
+          "case": "float_processed_wrapper_segment_index",
+          "expected": "REJECTED",
+          "actual": "VERIFIED"
+        }
+      ],
+      "finding": "processed segment wrapper index 0 compares equal to false/0.0 through ordinary Python list equality; use strict index types or _same for both segment lists",
+      "closure": "Original 37 independent cases match, including both wrapper index type counterexamples; preserve producer-call count 0 and positive empty/all-filter controls",
+      "evidence": "initial_results.json"
+    }
+  }
+}

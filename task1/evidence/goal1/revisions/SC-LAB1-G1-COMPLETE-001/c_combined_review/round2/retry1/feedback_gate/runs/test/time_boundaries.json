@@ -1,0 +1,39 @@
+{
+  "classification": "CURRENT_RUN_REAL_DATA",
+  "input_sha256": "8319264c059dc6c7186b41d4b16cd3b3cd3fc2f8d49244f2dd356cad6ad260c8",
+  "record_ids": [
+    "fixture:review"
+  ],
+  "input_records": 1,
+  "input_points": 4,
+  "modified_values": 0,
+  "parent_version": "RAW:8319264c059dc6c7186b41d4b16cd3b3cd3fc2f8d49244f2dd356cad6ad260c8",
+  "semantics_version": "g1-semantics-v1",
+  "metrics_version": "g1-metrics-v1",
+  "status": "EXECUTED",
+  "result": {
+    "trajectories": [
+      {
+        "record_id": "fixture:review",
+        "status": "EXECUTED",
+        "classification": "CURRENT_RUN_REAL_DATA",
+        "threshold_source_seconds": 30,
+        "cuts": [],
+        "partitions": [
+          [
+            0,
+            1,
+            2,
+            3
+          ]
+        ],
+        "n_input": 4,
+        "n_accounted": 4,
+        "deleted": 0,
+        "modified": 0,
+        "limitation": "TIME_ONLY; space cuts, length filtering, denoising and DP remain BLOCKED"
+      }
+    ],
+    "scope": "TIME_ONLY_DIAGNOSTIC_NOT_BASELINE"
+  }
+}

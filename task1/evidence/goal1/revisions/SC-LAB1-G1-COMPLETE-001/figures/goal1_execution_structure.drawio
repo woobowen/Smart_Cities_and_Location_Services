@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net">
+  <diagram name="Current Goal 1 execution structure">
+    <mxGraphModel page="1" pageWidth="1440" pageHeight="1000">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" vertex="1" value="Goal 1 · actual roles, tools and repair return" style="rounded=1;html=0;fillColor=none;strokeColor=#DDE3E7;fontColor=#2D3238;fontSize=30;dashed=0;">
+          <mxGeometry x="60" y="10" width="1320" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle" parent="1" vertex="1" value="Native role sessions; deterministic execution and reviews are recorded separately" style="rounded=1;html=0;fillColor=none;strokeColor=#DDE3E7;fontColor=#2D3238;fontSize=18;dashed=0;">
+          <mxGeometry x="60" y="77" width="1320" height="45" as="geometry" />
+        </mxCell>
+        <mxCell id="A" parent="1" vertex="1" value="A · plan and follow-up&#10;Approved method space&#10;Evidence-based next action" style="rounded=1;html=0;fillColor=#D3EAF5;strokeColor=#DDE3E7;fontColor=#2D3238;fontSize=20;dashed=0;">
+          <mxGeometry x="80" y="160" width="340" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="B" parent="1" vertex="1" value="B-Run · seven fixed records&#10;Split / filter → denoise → DP&#10;Raw values remain available" style="rounded=1;html=0;fillColor=#FFFDFC;strokeColor=#DDE3E7;fontColor=#2D3238;fontSize=20;dashed=0;">
+          <mxGeometry x="550" y="160" width="340" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="C" parent="1" vertex="1" value="C · independent review&#10;Trusted inputs and contract&#10;Specific artifact / hash / scope" style="rounded=1;html=0;fillColor=#D7D3EA;strokeColor=#DDE3E7;fontColor=#2D3238;fontSize=20;dashed=0;">
+          <mxGeometry x="1020" y="160" width="340" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="journal" parent="1" vertex="1" value="Deterministic Goal journal&#10;Pending tasks · dependencies · registered artifacts · audit coverage · recoverable state&#10;Current run: g1-complete-pilot-03" style="rounded=1;html=0;fillColor=#FFFDFC;strokeColor=#DDE3E7;fontColor=#2D3238;fontSize=20;dashed=0;">
+          <mxGeometry x="80" y="395" width="1280" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="issue" parent="1" vertex="1" value="Actual external issues&#10;C2-F01 / C2-F02&#10;Parent task blocked" style="rounded=1;html=0;fillColor=#FFFDFC;strokeColor=#DDE3E7;fontColor=#2D3238;fontSize=18;dashed=0;">
+          <mxGeometry x="80" y="635" width="275" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="repair" parent="1" vertex="1" value="B-Repair&#10;Consume task → repair&#10;Tests + visible receipt" style="rounded=1;html=0;fillColor=#FFFDFC;strokeColor=#DDE3E7;fontColor=#2D3238;fontSize=18;dashed=0;">
+          <mxGeometry x="415" y="635" width="275" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="verify" parent="1" vertex="1" value="C regression&#10;Independent probes&#10;Approve or reopen" style="rounded=1;html=0;fillColor=#FFFDFC;strokeColor=#DDE3E7;fontColor=#2D3238;fontSize=18;dashed=0;">
+          <mxGeometry x="750" y="635" width="275" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="rebuild" parent="1" vertex="1" value="Rebuild and resume&#10;Invalidate stale outputs&#10;Fix code → rerun" style="rounded=1;html=0;fillColor=#FFFDFC;strokeColor=#DDE3E7;fontColor=#2D3238;fontSize=18;dashed=0;">
+          <mxGeometry x="1085" y="635" width="275" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="later" parent="1" vertex="1" value="Later scope · not executed here&#10;Goal 2: parameter / order comparisons    |    Goal 3: final reports and submission" style="rounded=1;html=0;fillColor=#FFFDFC;strokeColor=#DDE3E7;fontColor=#2D3238;fontSize=19;dashed=1;">
+          <mxGeometry x="80" y="885" width="1280" height="85" as="geometry" />
+        </mxCell>
+        <mxCell id="A_to_B" parent="1" edge="1" source="A" target="B" value="" style="endArrow=block;strokeColor=#5B9FBE;dashed=0;">
+          <mxGeometry relative="1" labelX="0" labelY="0" as="geometry">
+            <mxPoint x="420" y="225" as="sourcePoint" />
+            <Array as="points" />
+            <mxPoint x="550" y="225" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="B_to_C" parent="1" edge="1" source="B" target="C" value="" style="endArrow=block;strokeColor=#5B9FBE;dashed=0;">
+          <mxGeometry relative="1" labelX="0" labelY="0" as="geometry">
+            <mxPoint x="890" y="225" as="sourcePoint" />
+            <Array as="points" />
+            <mxPoint x="1020" y="225" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="C_to_journal" parent="1" edge="1" source="C" target="journal" value="review result" style="endArrow=block;strokeColor=#5B9FBE;dashed=0;">
+          <mxGeometry relative="1" labelX="1210" labelY="350" as="geometry">
+            <mxPoint x="1190" y="290" as="sourcePoint" />
+            <Array as="points" />
+            <mxPoint x="1190" y="395" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="journal_to_A" parent="1" edge="1" source="journal" target="A" value="next task" style="endArrow=block;strokeColor=#5B9FBE;dashed=0;">
+          <mxGeometry relative="1" labelX="48" labelY="355" as="geometry">
+            <mxPoint x="80" y="450" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="35" y="450" />
+              <mxPoint x="35" y="225" />
+            </Array>
+            <mxPoint x="80" y="225" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="journal_to_issue" parent="1" edge="1" source="journal" target="issue" value="defect found" style="endArrow=block;strokeColor=#5B9FBE;dashed=0;">
+          <mxGeometry relative="1" labelX="240" labelY="582" as="geometry">
+            <mxPoint x="215" y="520" as="sourcePoint" />
+            <Array as="points" />
+            <mxPoint x="215" y="635" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="issue_to_repair" parent="1" edge="1" source="issue" target="repair" value="" style="endArrow=block;strokeColor=#5B9FBE;dashed=0;">
+          <mxGeometry relative="1" labelX="0" labelY="0" as="geometry">
+            <mxPoint x="355" y="698" as="sourcePoint" />
+            <Array as="points" />
+            <mxPoint x="415" y="698" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="repair_to_verify" parent="1" edge="1" source="repair" target="verify" value="" style="endArrow=block;strokeColor=#5B9FBE;dashed=0;">
+          <mxGeometry relative="1" labelX="0" labelY="0" as="geometry">
+            <mxPoint x="690" y="698" as="sourcePoint" />
+            <Array as="points" />
+            <mxPoint x="750" y="698" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="verify_to_rebuild" parent="1" edge="1" source="verify" target="rebuild" value="" style="endArrow=block;strokeColor=#5B9FBE;dashed=0;">
+          <mxGeometry relative="1" labelX="0" labelY="0" as="geometry">
+            <mxPoint x="1025" y="698" as="sourcePoint" />
+            <Array as="points" />
+            <mxPoint x="1085" y="698" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rebuild_to_parent" parent="1" edge="1" source="rebuild" target="journal" value="resume parent" style="endArrow=block;strokeColor=#5B9FBE;dashed=0;">
+          <mxGeometry relative="1" labelX="1035" labelY="582" as="geometry">
+            <mxPoint x="1225" y="635" as="sourcePoint" />
+            <Array as="points" />
+            <mxPoint x="1225" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="reopen" parent="1" edge="1" source="verify" target="repair" value="failed regression → repair again" style="endArrow=block;strokeColor=#5B9FBE;dashed=0;">
+          <mxGeometry relative="1" labelX="610" labelY="844" as="geometry">
+            <mxPoint x="885" y="760" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="885" y="815" />
+              <mxPoint x="550" y="815" />
+            </Array>
+            <mxPoint x="550" y="760" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

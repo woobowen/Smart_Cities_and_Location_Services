@@ -1,0 +1,18 @@
+{
+  "classification": "CURRENT_RUN_CONDITIONAL_ANALYSIS",
+  "status": "REJECTED",
+  "code_sha": "93e0ff7327e977dee0da8430b776efa509050af5",
+  "command": ".venv/bin/python -m task1.scripts.complete_goal1 recompute --run-id g1-complete-pilot-01",
+  "exit_code": 1,
+  "error": "RUNTIME_REVIEW_REJECTED_REPAIR_REQUIRED:baseline",
+  "audit": {
+    "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-01/baseline_review.json",
+    "sha256": "49823c6cc17773447a551131bc718acfb428086f4630afb182927fd8bd7b7eb3",
+    "source_hashes": {
+      "task1/workflow/artifact_review.py": "dfa0b91149662baf26861a9ec0e51223842d0ac62ada29015eca7b119c68da48",
+      "task1/workflow/evaluation.py": "92424a94c20ce897606d546ba69c0f205c0f5f75a17b609134ac8125a241c7ad"
+    }
+  },
+  "no_final_manifest": true,
+  "retained_for_repair_provenance": true
+}

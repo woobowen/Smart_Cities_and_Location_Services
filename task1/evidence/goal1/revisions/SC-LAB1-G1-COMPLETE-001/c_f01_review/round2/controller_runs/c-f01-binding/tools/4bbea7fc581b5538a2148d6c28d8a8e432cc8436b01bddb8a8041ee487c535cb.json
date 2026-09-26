@@ -1,0 +1,74 @@
+{
+  "tool_id": "4bbea7fc581b5538a2148d6c28d8a8e432cc8436b01bddb8a8041ee487c535cb",
+  "request_hash": "4bbea7fc581b5538a2148d6c28d8a8e432cc8436b01bddb8a8041ee487c535cb",
+  "role": "review",
+  "call_id": "C-review-duplicate_details",
+  "request": {
+    "role": "review",
+    "call_id": "C-review-duplicate_details",
+    "action": "verify_duplicate_details",
+    "record_ids": [
+      "fixture:edges",
+      "fixture:missing",
+      "fixture:empty"
+    ],
+    "feedback_refs": [],
+    "evidence_refs": [
+      "2e9b5d771efef16a48f6032f437158f3d6c4eb8623dd26db0b420566dc221c55"
+    ],
+    "summary": "Independent constructed C probe",
+    "reason": "ENGINEERING_TEST target and coverage check",
+    "request_status": "PROPOSED",
+    "candidate_for_future_review": null
+  },
+  "run_id": "c-f01-binding",
+  "mode": "MOCK_TEST",
+  "classification": "MOCK_TEST",
+  "code_sha": "7e6cd4082c2cdad2452fa5a1006e99dcfb050d17",
+  "output": {
+    "classification": "MOCK_TEST",
+    "input_sha256": "1c8a4f48c5faf8416aa7474d1a43215fdba759795cefd3414b60ea22edd2f451",
+    "record_ids": [
+      "fixture:edges",
+      "fixture:missing",
+      "fixture:empty"
+    ],
+    "input_records": 3,
+    "input_points": 9,
+    "modified_values": 0,
+    "parent_version": "RAW:1c8a4f48c5faf8416aa7474d1a43215fdba759795cefd3414b60ea22edd2f451",
+    "semantics_version": "g1-semantics-v1",
+    "metrics_version": "g1-metrics-v1",
+    "status": "VERIFIED",
+    "result": {
+      "status": "VERIFIED",
+      "target_action": "duplicate_details",
+      "target_artifact_id": "2e9b5d771efef16a48f6032f437158f3d6c4eb8623dd26db0b420566dc221c55",
+      "target_artifact_hash": "76884630e0ace5580a72cc95efd7742ba0857810f8743c13295548dcf10c5421",
+      "target_output_hash": "809900c98759bce8c9c6f350d509d81363bb424d6daeada0562f2988adfddb0e",
+      "trusted_reference": {
+        "raw_sha256": "1c8a4f48c5faf8416aa7474d1a43215fdba759795cefd3414b60ea22edd2f451",
+        "parent_version": "RAW:1c8a4f48c5faf8416aa7474d1a43215fdba759795cefd3414b60ea22edd2f451",
+        "policy_sha256": "3a28666737142b0765512f21457fcb8f0eb7763b9e9dc0a24a3d1556825afd1a"
+      },
+      "record_scope": [
+        "fixture:edges",
+        "fixture:missing",
+        "fixture:empty"
+      ],
+      "contract_version": "g1-policy-v1",
+      "checked_components": [
+        "record_scope",
+        "complete_events",
+        "event_types",
+        "event_indices"
+      ],
+      "unchecked_components": [],
+      "unchecked_reasons": {},
+      "errors": []
+    }
+  },
+  "output_sha256": "209732e4bd8435713e74a1e4dd479c56bf0fa08772e97871d96b2bb18768e870",
+  "elapsed_seconds": 0.001165653999123606,
+  "completed_at": "2026-09-26T16:36:50.036837+00:00"
+}

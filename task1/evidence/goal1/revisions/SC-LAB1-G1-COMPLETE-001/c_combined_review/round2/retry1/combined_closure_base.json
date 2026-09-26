@@ -1,0 +1,346 @@
+{
+  "classification": "ENGINEERING_TEST",
+  "scope": "VERSION_ALIGNED_F01_F02_AND_REQUESTED_INTERFACE_GATES_NOT_GOAL_ACCEPTANCE",
+  "adaptation": "Only rerun output directories change round2 to round5 in the archived adapters; original probes/expectations unchanged.",
+  "extra_checks": [
+    {
+      "case": "legacy_verify_profiles_cannot_request_unbound_coverage",
+      "pass": true,
+      "actual": {
+        "exception_type": "ValueError",
+        "message": "REGISTERED_TARGET_REQUIRED_FOR_COVERAGE_REQUEST"
+      }
+    },
+    {
+      "case": "legacy_recompute_check_cannot_request_unbound_coverage",
+      "pass": true,
+      "actual": {
+        "exception_type": "ValueError",
+        "message": "REGISTERED_TARGET_REQUIRED_FOR_COVERAGE_REQUEST"
+      }
+    },
+    {
+      "case": "legacy_verify_baseline_cannot_request_unbound_coverage",
+      "pass": true,
+      "actual": {
+        "exception_type": "ValueError",
+        "message": "REGISTERED_TARGET_REQUIRED_FOR_COVERAGE_REQUEST"
+      }
+    },
+    {
+      "case": "legacy_verify_profiles_states_unchecked",
+      "pass": true,
+      "actual": {
+        "classification": "ENGINEERING_TEST",
+        "input_sha256": "8319264c059dc6c7186b41d4b16cd3b3cd3fc2f8d49244f2dd356cad6ad260c8",
+        "record_ids": [
+          "fixture:review"
+        ],
+        "input_records": 1,
+        "input_points": 4,
+        "modified_values": 0,
+        "parent_version": "RAW:8319264c059dc6c7186b41d4b16cd3b3cd3fc2f8d49244f2dd356cad6ad260c8",
+        "semantics_version": "g1-semantics-v1",
+        "metrics_version": "g1-metrics-v1",
+        "status": "VERIFIED",
+        "result": {
+          "status": "VERIFIED",
+          "errors": [],
+          "records_checked": 1,
+          "claim": "Structural counts only; no physical accuracy or cleaning quality claim",
+          "checked_components": [
+            "record_scope",
+            "profile_fields",
+            "profile_counts"
+          ],
+          "unchecked_components": [
+            "summary",
+            "artifact_binding"
+          ],
+          "scope": "UNBOUND_PROFILE_LIST_HELPER_NOT_TASK_CLOSURE"
+        }
+      }
+    },
+    {
+      "case": "legacy_recompute_check_states_unchecked",
+      "pass": true,
+      "actual": {
+        "classification": "ENGINEERING_TEST",
+        "input_sha256": "8319264c059dc6c7186b41d4b16cd3b3cd3fc2f8d49244f2dd356cad6ad260c8",
+        "record_ids": [
+          "fixture:review"
+        ],
+        "input_records": 1,
+        "input_points": 4,
+        "modified_values": 0,
+        "parent_version": "RAW:8319264c059dc6c7186b41d4b16cd3b3cd3fc2f8d49244f2dd356cad6ad260c8",
+        "semantics_version": "g1-semantics-v1",
+        "metrics_version": "g1-metrics-v1",
+        "status": "VERIFIED",
+        "result": {
+          "status": "VERIFIED",
+          "errors": [],
+          "records_checked": 1,
+          "claim": "Structural counts only; no physical accuracy or cleaning quality claim",
+          "checked_components": [
+            "record_scope",
+            "profile_fields",
+            "profile_counts"
+          ],
+          "unchecked_components": [
+            "summary",
+            "artifact_binding"
+          ],
+          "scope": "UNBOUND_PROFILE_LIST_HELPER_NOT_TASK_CLOSURE",
+          "recomputed_sha256": "1724e30f1f865b9b2c0dbd5c677d2301c01a36ae7255fcf883995f49e574ae04",
+          "stored_sha256": "1724e30f1f865b9b2c0dbd5c677d2301c01a36ae7255fcf883995f49e574ae04",
+          "exact_match": true
+        }
+      }
+    },
+    {
+      "case": "open_review_targets_blocks_profile_pilot",
+      "pass": true,
+      "actual": {
+        "response": {
+          "exception_type": "ValueError",
+          "message": "OPEN_BLOCKING_ISSUE_REPAIR_BEFORE_PROCESSING"
+        },
+        "execute_calls": 0
+      }
+    },
+    {
+      "case": "open_review_targets_blocks_baseline",
+      "pass": true,
+      "actual": {
+        "response": {
+          "exception_type": "ValueError",
+          "message": "OPEN_BLOCKING_ISSUE_REPAIR_BEFORE_PROCESSING"
+        },
+        "execute_calls": 0
+      }
+    },
+    {
+      "case": "open_trusted_baseline_blocks_baseline",
+      "pass": true,
+      "actual": {
+        "response": {
+          "exception_type": "ValueError",
+          "message": "OPEN_BLOCKING_ISSUE_REPAIR_BEFORE_PROCESSING"
+        },
+        "execute_calls": 0
+      }
+    },
+    {
+      "case": "feedback_requires_actual_followup",
+      "pass": true,
+      "actual": {
+        "exception_type": "ValueError",
+        "message": "REAL_FOLLOWUP_REVIEW_REQUIRED"
+      }
+    },
+    {
+      "case": "feedback_requires_C_review",
+      "pass": true,
+      "actual": {
+        "exception_type": "ValueError",
+        "message": "REAL_FOLLOWUP_REVIEW_REQUIRED"
+      }
+    },
+    {
+      "case": "feedback_rejects_wrong_hash",
+      "pass": true,
+      "actual": {
+        "exception_type": "ValueError",
+        "message": "FOLLOWUP_TARGET_REVIEW_INCOMPLETE"
+      }
+    },
+    {
+      "case": "feedback_rejects_empty_coverage",
+      "pass": true,
+      "actual": {
+        "exception_type": "ValueError",
+        "message": "FOLLOWUP_TARGET_REVIEW_INCOMPLETE"
+      }
+    },
+    {
+      "case": "feedback_rejects_unrelated_profile_coverage",
+      "pass": true,
+      "actual": {
+        "exception_type": "ValueError",
+        "message": "FOLLOWUP_TARGET_REVIEW_INCOMPLETE"
+      }
+    },
+    {
+      "case": "core_source_hashes_stable",
+      "pass": true,
+      "actual": {
+        "before": {
+          "task1/config/conditional_planar.json": "5b1ab7dbf25797a51405a2cddd93a8d2ea3e3b69530369366d0e05be7abb8169",
+          "task1/config/goal1.json": "5418632734964fda81fe653e4996d1519b9de3a6cf51ed191556c243770542da",
+          "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/AUTHORIZATION_SUPPLEMENT.md": "2bce4b21939de5843678bdda1de18c64e9703c3e924fd63ff3d7988f69fe5248",
+          "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/USER_DECISIONS.json": "2b68e39573ab9256a353484842438a118445bb62ddbaca1c42fbd4eee9fe4f0e",
+          "task1/workflow/artifact_review.py": "dfa0b91149662baf26861a9ec0e51223842d0ac62ada29015eca7b119c68da48",
+          "task1/workflow/controller.py": "16793b102fd077cc243eae6f1e714632f312a77e421850d424b8562a2909eb6d",
+          "task1/workflow/coordinate_review.py": "13305c6dda7bc0699822cd880e4e9051f2946371d4dd83f4ae0ea946dd5c897c",
+          "task1/workflow/coordinates.py": "d99b270a65c88f8530669d5e7d0887d7563b3e54e19770ab7a9eb695117e075d",
+          "task1/workflow/diagnostics.py": "e2ef635bbd95db505b3eff336ca59074a60217a70b2bc644624c3fbd0280acda",
+          "task1/workflow/evaluation.py": "92424a94c20ce897606d546ba69c0f205c0f5f75a17b609134ac8125a241c7ad",
+          "task1/workflow/geometry.py": "2ad3ca3b49e98e997684e3f5af948771be80dfb03b31b2ae4cc4483856e93d74",
+          "task1/workflow/goal.py": "d313d408961adf07b9791972b03ac6a99db808e805efe1aa06abe85a075e863a",
+          "task1/workflow/io.py": "0d3d72dd0beb4718f4020a07a5f1c0ca89193943049a479816b5c496806321b2",
+          "task1/workflow/pipeline.py": "160bedcc0d8dffce71d833dffc4de28928bc7007077ae8d03c57c96d827548c7",
+          "task1/workflow/tools.py": "0fde0acebfe3ec97bd2653744ac8f0444c1e9a162c61970bccf8a94a9fbd0b3f"
+        },
+        "after": {
+          "task1/config/conditional_planar.json": "5b1ab7dbf25797a51405a2cddd93a8d2ea3e3b69530369366d0e05be7abb8169",
+          "task1/config/goal1.json": "5418632734964fda81fe653e4996d1519b9de3a6cf51ed191556c243770542da",
+          "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/AUTHORIZATION_SUPPLEMENT.md": "2bce4b21939de5843678bdda1de18c64e9703c3e924fd63ff3d7988f69fe5248",
+          "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/USER_DECISIONS.json": "2b68e39573ab9256a353484842438a118445bb62ddbaca1c42fbd4eee9fe4f0e",
+          "task1/workflow/artifact_review.py": "dfa0b91149662baf26861a9ec0e51223842d0ac62ada29015eca7b119c68da48",
+          "task1/workflow/controller.py": "16793b102fd077cc243eae6f1e714632f312a77e421850d424b8562a2909eb6d",
+          "task1/workflow/coordinate_review.py": "13305c6dda7bc0699822cd880e4e9051f2946371d4dd83f4ae0ea946dd5c897c",
+          "task1/workflow/coordinates.py": "d99b270a65c88f8530669d5e7d0887d7563b3e54e19770ab7a9eb695117e075d",
+          "task1/workflow/diagnostics.py": "e2ef635bbd95db505b3eff336ca59074a60217a70b2bc644624c3fbd0280acda",
+          "task1/workflow/evaluation.py": "92424a94c20ce897606d546ba69c0f205c0f5f75a17b609134ac8125a241c7ad",
+          "task1/workflow/geometry.py": "2ad3ca3b49e98e997684e3f5af948771be80dfb03b31b2ae4cc4483856e93d74",
+          "task1/workflow/goal.py": "d313d408961adf07b9791972b03ac6a99db808e805efe1aa06abe85a075e863a",
+          "task1/workflow/io.py": "0d3d72dd0beb4718f4020a07a5f1c0ca89193943049a479816b5c496806321b2",
+          "task1/workflow/pipeline.py": "160bedcc0d8dffce71d833dffc4de28928bc7007077ae8d03c57c96d827548c7",
+          "task1/workflow/tools.py": "0fde0acebfe3ec97bd2653744ac8f0444c1e9a162c61970bccf8a94a9fbd0b3f"
+        }
+      }
+    }
+  ],
+  "issues": {
+    "C2-F01": {
+      "status": "VERIFIED",
+      "checked": [
+        "all_original_18_diagnostic_cases_match",
+        "missing_review_not_ready",
+        "stale_sources_not_ready",
+        "failed_operation_not_reexecuted",
+        "uncertain_final_state",
+        "controller_all_targets_checked",
+        "controller_partial_targets_not_closed",
+        "verified_repair_resumes_parent",
+        "wrong_run_report_denied",
+        "audit_receipts_required",
+        "valid_complete_diagnostics_allowed",
+        "unrelated_geometry_does_not_invalidate_diagnostics",
+        "changed_diagnostics_invalidate_task",
+        "changed_source_invalidates_dependent_notebooks",
+        "changed_source_invalidates_dependent_figures",
+        "changed_source_invalidates_dependent_internal_review",
+        "changed_source_does_not_reset_governance",
+        "old_empty_run_cannot_execute_new_epoch",
+        "old_epoch_has_no_tool_artifacts",
+        "source_change_during_execution_refused",
+        "changed_source_output_not_registered",
+        "changed_source_dispatch_uncertainty_retained",
+        "reviewed_source_bytes_stable",
+        "legacy_verify_profiles_cannot_request_unbound_coverage",
+        "legacy_recompute_check_cannot_request_unbound_coverage",
+        "legacy_verify_baseline_cannot_request_unbound_coverage",
+        "legacy_verify_profiles_states_unchecked",
+        "legacy_recompute_check_states_unchecked",
+        "open_review_targets_blocks_profile_pilot",
+        "open_review_targets_blocks_baseline",
+        "open_trusted_baseline_blocks_baseline",
+        "feedback_requires_actual_followup",
+        "feedback_requires_C_review",
+        "feedback_rejects_wrong_hash",
+        "feedback_rejects_empty_coverage",
+        "feedback_rejects_unrelated_profile_coverage",
+        "core_source_hashes_stable"
+      ],
+      "failed": [],
+      "source_hashes": {
+        "task1/config/conditional_planar.json": "5b1ab7dbf25797a51405a2cddd93a8d2ea3e3b69530369366d0e05be7abb8169",
+        "task1/config/goal1.json": "5418632734964fda81fe653e4996d1519b9de3a6cf51ed191556c243770542da",
+        "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/AUTHORIZATION_SUPPLEMENT.md": "2bce4b21939de5843678bdda1de18c64e9703c3e924fd63ff3d7988f69fe5248",
+        "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/USER_DECISIONS.json": "2b68e39573ab9256a353484842438a118445bb62ddbaca1c42fbd4eee9fe4f0e",
+        "task1/workflow/artifact_review.py": "dfa0b91149662baf26861a9ec0e51223842d0ac62ada29015eca7b119c68da48",
+        "task1/workflow/controller.py": "16793b102fd077cc243eae6f1e714632f312a77e421850d424b8562a2909eb6d",
+        "task1/workflow/coordinate_review.py": "13305c6dda7bc0699822cd880e4e9051f2946371d4dd83f4ae0ea946dd5c897c",
+        "task1/workflow/coordinates.py": "d99b270a65c88f8530669d5e7d0887d7563b3e54e19770ab7a9eb695117e075d",
+        "task1/workflow/diagnostics.py": "e2ef635bbd95db505b3eff336ca59074a60217a70b2bc644624c3fbd0280acda",
+        "task1/workflow/evaluation.py": "92424a94c20ce897606d546ba69c0f205c0f5f75a17b609134ac8125a241c7ad",
+        "task1/workflow/geometry.py": "2ad3ca3b49e98e997684e3f5af948771be80dfb03b31b2ae4cc4483856e93d74",
+        "task1/workflow/goal.py": "d313d408961adf07b9791972b03ac6a99db808e805efe1aa06abe85a075e863a",
+        "task1/workflow/io.py": "0d3d72dd0beb4718f4020a07a5f1c0ca89193943049a479816b5c496806321b2",
+        "task1/workflow/pipeline.py": "160bedcc0d8dffce71d833dffc4de28928bc7007077ae8d03c57c96d827548c7",
+        "task1/workflow/tools.py": "0fde0acebfe3ec97bd2653744ac8f0444c1e9a162c61970bccf8a94a9fbd0b3f"
+      },
+      "evidence": "recheck_results.json",
+      "initial_rejection_preserved": "../initial_review.json"
+    },
+    "C2-F02": {
+      "status": "VERIFIED",
+      "checked": [
+        "normal_four_point_manual_control",
+        "only_final_coordinate_modified",
+        "clean_and_final_shifted_ledger_unchanged",
+        "all_records_and_ledger_dropped_counts_unchanged",
+        "stage_counts_modified",
+        "source_clean_final_and_ledger_shifted_together",
+        "parameters_and_contract_dp_both_relaxed",
+        "per_record_counts_forged",
+        "accounting_forged",
+        "missing_ledger_entry",
+        "duplicate_ledger_entry",
+        "wrong_terminal_reason",
+        "boolean_point_index",
+        "boolean_ledger_index",
+        "boolean_processed_wrapper_segment_index",
+        "float_processed_wrapper_segment_index",
+        "boolean_denosing_decision",
+        "wrong_input_parent",
+        "wrong_clean_parent",
+        "wrong_final_parent",
+        "wrong_raw_parent_version",
+        "wrong_adapter_version",
+        "wrong_raw_hash",
+        "wrong_raw_scope",
+        "forged_numeric_review",
+        "wrong_filter_reason_on_kept_input",
+        "missing_processed_segment",
+        "legitimate_empty_task",
+        "legitimate_empty_record",
+        "legitimate_all_filtered",
+        "omitted_filter_reason",
+        "complete_multiple_records",
+        "empty_record_omitted",
+        "legal_record_and_ledger_reordering",
+        "no_external_handle",
+        "trusted_reference_hash_detects_mutation",
+        "verify_baseline_tool_different_raw_records"
+      ],
+      "source_hashes": {
+        "task1/config/conditional_planar.json": "5b1ab7dbf25797a51405a2cddd93a8d2ea3e3b69530369366d0e05be7abb8169",
+        "task1/config/goal1.json": "5418632734964fda81fe653e4996d1519b9de3a6cf51ed191556c243770542da",
+        "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/AUTHORIZATION_SUPPLEMENT.md": "2bce4b21939de5843678bdda1de18c64e9703c3e924fd63ff3d7988f69fe5248",
+        "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/USER_DECISIONS.json": "2b68e39573ab9256a353484842438a118445bb62ddbaca1c42fbd4eee9fe4f0e",
+        "task1/workflow/artifact_review.py": "dfa0b91149662baf26861a9ec0e51223842d0ac62ada29015eca7b119c68da48",
+        "task1/workflow/controller.py": "16793b102fd077cc243eae6f1e714632f312a77e421850d424b8562a2909eb6d",
+        "task1/workflow/coordinate_review.py": "13305c6dda7bc0699822cd880e4e9051f2946371d4dd83f4ae0ea946dd5c897c",
+        "task1/workflow/coordinates.py": "d99b270a65c88f8530669d5e7d0887d7563b3e54e19770ab7a9eb695117e075d",
+        "task1/workflow/diagnostics.py": "e2ef635bbd95db505b3eff336ca59074a60217a70b2bc644624c3fbd0280acda",
+        "task1/workflow/evaluation.py": "92424a94c20ce897606d546ba69c0f205c0f5f75a17b609134ac8125a241c7ad",
+        "task1/workflow/geometry.py": "2ad3ca3b49e98e997684e3f5af948771be80dfb03b31b2ae4cc4483856e93d74",
+        "task1/workflow/goal.py": "d313d408961adf07b9791972b03ac6a99db808e805efe1aa06abe85a075e863a",
+        "task1/workflow/io.py": "0d3d72dd0beb4718f4020a07a5f1c0ca89193943049a479816b5c496806321b2",
+        "task1/workflow/pipeline.py": "160bedcc0d8dffce71d833dffc4de28928bc7007077ae8d03c57c96d827548c7",
+        "task1/workflow/tools.py": "0fde0acebfe3ec97bd2653744ac8f0444c1e9a162c61970bccf8a94a9fbd0b3f"
+      },
+      "failed": [],
+      "evidence": "initial_results.json",
+      "original_probe_sha256": "cd7bfaa5531ba2ff64e189d54365a4e5e236812fc831318ffedfc9d26304e112",
+      "initial_rejection_preserved": "../initial_review.json",
+      "reference_reader_evidence": "../registered_reference_check.json",
+      "production_runner_calls": 0,
+      "trusted_handle_unchanged": true,
+      "adaptation": "Only output directory changed; the original 37 cases and expectations are unchanged."
+    }
+  }
+}

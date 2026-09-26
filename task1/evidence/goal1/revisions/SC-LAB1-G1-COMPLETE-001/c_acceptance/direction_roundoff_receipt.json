@@ -1,0 +1,93 @@
+{
+  "classification": "INDEPENDENT_C_ENGINEERING_RECHECK_OF_ACTUAL_FAILED_ARTIFACT_NO_HISTORICAL_REWRITE",
+  "issues": {
+    "NUMERIC:g1-complete-pilot-01:baseline": {
+      "status": "VERIFIED",
+      "checked": [
+        "unchanged_actual_candidate_is_verified",
+        "reported_angle_beyond_fixed_allowance_rejected",
+        "false_to_true_candidate_rejected",
+        "deleted_index_injected_rejected",
+        "xy_both_sides_altered_rejected",
+        "tolerance_changed_rejected",
+        "typed_exact_index",
+        "typed_exact_candidate",
+        "typed_exact_reason",
+        "typed_exact_previous_difference_degrees",
+        "fixed_angle_allowance_0.5",
+        "fixed_angle_allowance_2",
+        "equality_predicate_cannot_flip_within_allowance",
+        "old_run_bytes_unchanged"
+      ],
+      "checks": [
+        {
+          "name": "unchanged_actual_candidate_is_verified",
+          "passed": true
+        },
+        {
+          "name": "reported_angle_beyond_fixed_allowance_rejected",
+          "passed": true
+        },
+        {
+          "name": "false_to_true_candidate_rejected",
+          "passed": true
+        },
+        {
+          "name": "deleted_index_injected_rejected",
+          "passed": true
+        },
+        {
+          "name": "xy_both_sides_altered_rejected",
+          "passed": true
+        },
+        {
+          "name": "tolerance_changed_rejected",
+          "passed": true
+        },
+        {
+          "name": "typed_exact_index",
+          "passed": true
+        },
+        {
+          "name": "typed_exact_candidate",
+          "passed": true
+        },
+        {
+          "name": "typed_exact_reason",
+          "passed": true
+        },
+        {
+          "name": "typed_exact_previous_difference_degrees",
+          "passed": true
+        },
+        {
+          "name": "fixed_angle_allowance_0.5",
+          "passed": true
+        },
+        {
+          "name": "fixed_angle_allowance_2",
+          "passed": true
+        },
+        {
+          "name": "equality_predicate_cannot_flip_within_allowance",
+          "passed": true
+        },
+        {
+          "name": "old_run_bytes_unchanged",
+          "passed": true
+        }
+      ],
+      "source_hashes": {
+        "task1/workflow/evaluation.py": "7cf224fbc290d3e83acd5d83a3fe335e6dc437c762f7053d8132817aa91025b2",
+        "task1/tests/test_baseline_trust.py": "bd962103d7b7eef682e172b8e839247dc508242aa7cb27bdfa9f7363addae848"
+      },
+      "candidate": {
+        "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-01/baseline.json",
+        "sha256": "865710aea34a316fe83088d7cf2ac1aec68c96623269bfcf06255b5db2930fd8"
+      },
+      "fixed_allowance_degrees": 5.115907697472721e-12,
+      "meaning": "Angle scalar verification at normalized 360deg input scale only; exact decision/identity/undefined checks and DP tolerance preserved.",
+      "next_action": "New code-bound run must rebuild production artifacts; failed original run remains historical."
+    }
+  }
+}

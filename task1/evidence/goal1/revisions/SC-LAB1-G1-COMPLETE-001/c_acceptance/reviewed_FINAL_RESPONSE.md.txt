@@ -1,0 +1,74 @@
+# SC-LAB1-G1-COMPLETE-001 实际执行结果
+
+**A. 总结**
+
+Goal `SC-LAB1-G1-FOUNDATION-001`，执行 `SC-LAB1-G1-COMPLETE-001`。工程与真实条件化分析已执行，当前等待内部 C 总回执与最终发布登记；不将其写成已完成。`GPT_SECOND_REVIEW=PENDING`，`Submission=NOT_READY`，Understanding 由用户真实理解决定。Goal 2/3 未执行。
+
+最新用户明确批准 D2，并允许在来源 datum 未证实的情况下固定有依据的局部模型开展开发性真实 pilot。源 CRS 事实仍 `UNVERIFIED`；条件化计算的有效性与真实地理语义是否查明分别登记。本轮不产生绝对定位、道路匹配或真实地面误差结论。
+
+**B. 相对起点的实际改变**
+
+起点为 main `7e6cd4082c2cdad2452fa5a1006e99dcfb050d17`，没有 reset；保留用户两份未跟踪 HANDOFF ZIP。新增目标专属审核 `artifact_review.py`、持续任务/问题 journal `goal.py`、条件化适配器与独立投影核验、当前确定性执行入口。修复 baseline 审核从候选自取输入/参数的问题，实际核对 clean/final、索引、账本、汇总、源版本和合同。更新两份工作 Notebook、必要原生图源与说明；未覆盖老师材料、原始 JSON、历史运行及失败。
+
+C2-F01：time_boundaries/duplicate_details/profile/baseline 各有匹配审核；控制器解析目标 ID/hash，回执含可信参考、完整记录集合及 checked/unchecked，旧 profile 通过不能关闭其他目标。五阶段不再决定整个 Goal 通过。C 进一步找到并促成关闭严格类型、旧代码 epoch、缺审核和 feedback 假覆盖等同类缺口，最终版本对齐回执见 [combined_closure](c_combined_review/round2/combined_closure.json)。
+
+C2-F02：候选外完整原始输入＋固定合同＋实际输出，拒绝双侧改值、漏记录/账本、伪汇总、参数偷换、错误父版本和错误过滤理由；正常、合法空输入、全过滤及合法重排通过。C 使用手工候选的37项独立反例，不调用生产 runner 制造真值；旧失败与后续修复均保留。
+
+**C. 工作流与角色**
+
+A `/root/a_scope` 核查教师/数据来源与完整要求，提交条件模型核验计划，随后检查原始保护和治理同步。B `/root/b_baseline` 实现可信 baseline 审核、修复实际数值故障并生成 Notebook/图；主线程作为 B-Repair 修复控制器和覆盖，作为 B-Run 实际消费任务与执行工具。C `/root/c_defects` 独立构造反例和复验；新独立上下文 C `/root/c_acceptance` 从 raw/固定合同重新核对真实产物。角色写权限按任务限定，C 未修改受审核心；未冒称原生角色拥有独立 OS 沙盒或是新 Provider。
+
+实际闭环例：外部 GPT C2 输入 → C 复现 → B 消费 journal 修复 → C 拒绝不足的 feedback 覆盖 → B 固定完整审核组件 → C 复验 → 父任务恢复 → 实际 pilot01。pilot01 的数值审核又拒绝 record246 的两个派生角差：约5.68e-14°舍入差，实际删留一致。B 修复圆周尺度的数值比较（不改35°决策或DP容差），C 14项专项反例复核后恢复真实处理。另修复 C 发现的 AEQD 同轴方向核验和时间诊断旧 BLOCKED 文案。所有 issue/修复者/验证者/关闭证据见 [goal_state](goal_state.json)，没有留给下一轮普通修复。
+
+最终 C 从实际最大 DP 残差 `306 / segment0 / index2`（距5米0.061680米）提出 [真实后续请求](c_acceptance/followup_request_run03.json)。控制器实际调用 coordinate_sensitivity，全范围执行，再由 C 独立核验，回执见 [followup_review](c_acceptance/followup_review.json)。没有为展示编造错误或提升。
+
+**D. 方法、语义与真实执行**
+
+来源支持 `(longitude, latitude)` 度和 Unix 秒结构，源 datum/offset 无文件绑定说明。用户批准原文见 [AUTHORIZATION_SUPPLEMENT](AUTHORIZATION_SUPPLEMENT.md)；[USER_DECISIONS](USER_DECISIONS.json)保存其hash与明确范围。分析模型在处理前固定：数学椭球 a=6378137米、1/f=298.257223563、h=0假设；原始角度→ECEF→以 (121.343555°,31.3561015°) 为中心的局部 ENU，最大半径40km。无源EPSG标签，无加偏转换。标准 cart/topocentric 计算及独立核验参考 [PROJ topocentric](https://proj.org/en/stable/operations/conversions/topocentric.html) 和 [PROJ geodesic](https://proj.org/en/stable/geodesic.html)。这些数学模型不证明源 datum。
+
+D2 使用一次标记、同时删除，保护首尾/缺方向/零位移窗口，不迭代，删除后重算。顺序为分段→独立短段过滤→方向去噪→DP。固定 STARTER_REFERENCE：最小长度65工作米、最少5点、时间30秒、距离400工作米、方向35°、DP5工作米；未扫描或挑选最优参数。
+
+有效运行 `g1-complete-pilot-03`，计算 CODE_SHA `f229d9a4113bcc0dd763e1b410f1f5fb73903a62`，固定记录7条、783点。run01拒绝原件保留，run02数值通过但因时间诊断旧范围文案被新版本替代；不把它们改写为最终有效运行。原始 JSON SHA256 `c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3`。
+
+| 记录 | 输入点 | 切分段 | 过滤点 | 方向删除 | DP省点 | 最终保留 |
+|---|---:|---:|---:|---:|---:|---:|
+| 0 | 99 | 1 | 99 | 0 | 0 | 0 |
+| 1 | 97 | 1 | 97 | 0 | 0 | 0 |
+| 2 | 99 | 1 | 99 | 0 | 0 | 0 |
+| 246 | 108 | 1 | 0 | 3 | 69 | 36 |
+| 256 | 99 | 9 | 0 | 0 | 45 | 54 |
+| 306 | 111 | 11 | 4 | 2 | 36 | 69 |
+| 352 | 170 | 6 | 10 | 8 | 123 | 29 |
+| 合计 | 783 | 30 | 309 | 13 | 273 | 188 |
+
+30段中7段过滤、23段处理。所有783点恰有终态，未处理0、原值修改0。记录0/1/2按批准长度规则全过滤，保留真实无输出及其质量限制，没有替换难样本。DP的独立分母为clean的461点，省点率59.2191%，最大实际索引区间有限线段误差4.938319812632411工作米。raw→final总点数减少75.9898%，其中过滤/方向/DP分别列出，不把这个总损失称作DP收益。无标签，不报告误删率、恢复准确率或已证明质量提升。
+
+局部核验实际检查783坐标、45457个记录内点对；与独立PROJ坐标实现最大差3.64e-12米，同数学椭球距离最大相对差1.18264e-5（约11.83ppm）、绝对差0.03646米，最大半径31.132km。400米切分、65米过滤、35°方向、不可计算窗口和实际DP区间在规定敏感性检查中均无判定差异。该有限pilot一致性不能消除未知datum造成的全部不确定性。详细数据见 [result_summary](result_summary.json) 与 [coordinate_sensitivity](runs/g1-complete-pilot-03/coordinate_sensitivity.json)。
+
+**E. 测试和审核**
+
+cwd 为仓库根目录 `/home/addaswsw/lab/Smart_Cities_and_Location_Services`。当前代码完整命令 `.venv/bin/python -m pytest task1/tests -q --junitxml=task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/tests_pilot03.xml`：**261 passed**。语法 compileall 已执行；最终字面文案改动由完整套件导入与实际运行验证。此前241/246等为本轮较早代码的历史回归，不与261相加。starter 的292通过/1跳过为已记录历史，starter及其实现依赖未动，本轮没有冒称重新执行。
+
+实际运行命令 `.venv/bin/python -m task1.scripts.complete_goal1 recompute --run-id g1-complete-pilot-03`。复算入口 `.venv/bin/python -m task1.scripts.complete_goal1 verify --run-id g1-complete-pilot-03` 真正从raw重算，默认不调用模型。C额外独立审查为真实处理383项、诊断/绑定64项、后续敏感性1322项；这些是各自范围的独立检查，不加进pytest数量或当作真实准确率。
+
+两工作 Notebook 使用 `.venv/bin/python -m task1.scripts.build_goal1_notebooks --execute` 新内核执行，三图使用 `.venv/bin/python -m task1.scripts.build_complete_figures` 生成；已实际运行成功：两本各8个连续代码单元、零error，Notebook01完整baseline、Notebook02四目标均从raw重算并匹配保存产物。三图均保存SVG/PDF/300dpi PNG与200dpi PDF渲染，架构另有.drawio；B/C与主线程已实际查看。回执见 [B-Run](b_run/RECEIPT.md)，最终状态由C总回执和 [acceptance](../../acceptance.json) 登记。Notebook02显示其执行时的任务状态快照，总验收登记在之后，最终状态以当前REVIEW_PACKET为准。GC01–GC16与原G1-A01–A18逐项保留实际scope/命令/预期/结果，不拿未做的G2/G3抵消G1要求。
+
+**F. 模型与修复循环**
+
+本輪使用1个主会话、4个真实命名子角色上下文，当前累计13次显式spawn/followup派发；后续send_message是任务内沟通，不凭它推算新完成turn。完成turn/不可观察底层请求/精确剩余额度为unknown。本轮新CLI派发0、额外付费API0；历史4次与修复6次单独保留。当前journal累计12次处理工具＋12次数值审核＋1次真实后续工具，包含3次版本化运行；测试与Notebook内部算术不混成模型调用数。详见 [resources](resources.json)。
+
+本轮实时native角色协作、raw确定性RECOMPUTE、历史CLI运行、构造ENGINEERING_TEST分别标注。可见真实运行审核失败1次；C回归夹具自身持久化错误1次，保存失败并修正夹具再测，不冒称生产缺陷或模型网络失败。没有观察到native transport失败，没有为凑次数重跑旧六次展示，不以调用数多证明系统质量。
+
+**G. 产物与Git**
+
+Repository https://github.com/woobowen/Smart_Cities_and_Location_Services ，Branch `main`。CODE_SHA 如上；最终 ARTIFACT_SHA 与实际 remote 在完成push后登记publication回执及最终会话，文件不声称包含生成自己的尚不存在提交SHA。当前尚未push，不声称发布完成。
+
+图/Notebook生成器的显示修正由各自回执绑定实际source hash，已重建并执行受影响产物；未变化的数学核心仍绑定上述CODE。
+
+核心路径：`task1/workflow/{goal,artifact_review,pipeline,evaluation,coordinates,coordinate_review}.py`、`task1/config/conditional_planar.json`、本目录 `runs/g1-complete-pilot-03/`、[两份工作Notebook](../../../../notebooks/01_baseline_and_audit.ipynb)、[Notebook02](../../../../notebooks/02_agent_loop_recompute.ipynb)、[图及原生源](figures/figure_manifest.json)、[独立C](c_acceptance/)。所有substantive证据在主仓库，不仅在外部临时目录。
+
+本轮获准的AGENTS/研究协议小范围变更单独审查；原始材料/旧结果另做字节保护。11-file upload bundle已通过exactly11/allowlist/active字节与hash检查，publication-plots分发ZIP未重打包；只报告仓库bundle已同步，未声称ChatGPT UI已更新。既有`.venv`保留用于复现，唯一新增包为pyproj==3.7.2，无系统包、无持久Jupyter/环境配置改动；安装日志归档。用户原有两份未跟踪ZIP保留且不误提交。
+
+**H. 下一步**
+
+完成内部总验收和真实发布后停止在Goal1，等待GPT读取固定远程SHA二重验收；不自行进入G2/G3，不另造转发Prompt。尚未证明的datum事实和真实地理精度保留为明确限制；这不撤销用户已授予的条件化分析权限。两份正式报告与教师提交ZIP在G3另行整理，本轮不发邮件、不宣称SUBMITTED。

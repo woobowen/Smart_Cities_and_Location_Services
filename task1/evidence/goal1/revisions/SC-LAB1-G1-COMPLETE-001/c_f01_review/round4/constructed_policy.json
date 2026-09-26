@@ -1,0 +1,259 @@
+{
+  "task_id": "SC-LAB1-G1-FOUNDATION-001",
+  "goal": 1,
+  "policy_version": "g1-policy-v2-conditional",
+  "semantics_version": "g1-semantics-v1",
+  "metrics_version": "g1-metrics-v1",
+  "approval_record": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/handoff/SC-LAB1-G1-COMPLETE-001_CODEX_PROMPT.md",
+  "raw_path": "task1/作业/作业/traj_dict.json",
+  "raw_sha256": "1c8a4f48c5faf8416aa7474d1a43215fdba759795cefd3414b60ea22edd2f451",
+  "semantics": {
+    "record_identity": {
+      "value": "dictionary key identifies vehicle/trajectory record",
+      "status": "SOURCE_DECLARED",
+      "source": "starter supplemental student lecture p4; raw JSON key structure verified",
+      "verification": "full structural inventory; key does not establish independent vehicle trip",
+      "affected_operations": [
+        "cross_record_join"
+      ]
+    },
+    "coordinate_order": {
+      "value": "(longitude, latitude), two dimensions, degrees",
+      "status": "SOURCE_DECLARED",
+      "source": "starter supplemental student lecture p4 paired with raw JSON example",
+      "verification": "raw arrays 2D verified; bounds do not prove datum",
+      "affected_operations": [
+        "projection",
+        "distance",
+        "direction"
+      ]
+    },
+    "crs": {
+      "value": null,
+      "status": "UNVERIFIED",
+      "source": "teacher PPT p13 body: GPS generally WGS84; notes: domestic GPS generally GCJ02; neither binds this file",
+      "verification": "source review conflict; function names and legacy geo.py conventions insufficient",
+      "affected_operations": [
+        "distance",
+        "speed",
+        "length_filter",
+        "space_segmentation",
+        "direction_denoise",
+        "dp_meters",
+        "map_overlay"
+      ]
+    },
+    "distance_policy": {
+      "value": "G1_CONDITIONAL_ENU_V1",
+      "status": "CONDITIONAL_ANALYSIS_AUTHORIZED",
+      "source": "task1/config/conditional_planar.json; AUTHORIZATION_SUPPLEMENT.md",
+      "verification": "pre-fixed local model; source datum remains UNVERIFIED",
+      "affected_operations": [
+        "distance",
+        "length_filter",
+        "space_segmentation",
+        "direction_denoise",
+        "dp_meters"
+      ]
+    },
+    "timestamp_unit": {
+      "value": "Unix seconds",
+      "status": "SOURCE_DECLARED",
+      "source": "starter supplemental build_ppt/out/轨迹数据清洗_学生讲义.pptx p4",
+      "verification": "relative deltas inspected without timezone assignment",
+      "affected_operations": [
+        "time_gap",
+        "relative_duration"
+      ]
+    },
+    "timestamp_timezone": {
+      "value": null,
+      "status": "UNKNOWN",
+      "source": "no reliable display timezone declaration found",
+      "verification": "Unix absolute instants do not require source local timezone for differences",
+      "affected_operations": [
+        "local_clock_interpretation",
+        "day_partition"
+      ]
+    },
+    "timestamp_order": {
+      "value": "input order preserved; monotonicity inspected per record",
+      "status": "VERIFIED",
+      "source": "raw JSON",
+      "verification": "profile uses exact source differences; no sorting",
+      "affected_operations": [
+        "time_gap",
+        "speed"
+      ]
+    },
+    "sampling": {
+      "value": "irregular observed; Notebook suggests average 10 seconds",
+      "status": "SOURCE_DECLARED",
+      "source": "basic Notebook Cell1 comments",
+      "verification": "full raw difference histogram; not verified constant sampling",
+      "affected_operations": [
+        "parameter_justification",
+        "representativeness"
+      ]
+    },
+    "speed_direction": {
+      "value": "raw JSON has no speed/direction arrays; Notebook calculates [time,coords,speed,direction]",
+      "status": "VERIFIED",
+      "source": "Notebook Cell2; util.get_velocity/get_direction",
+      "verification": "Cell6/8 comments reversed; working code uses named fields",
+      "affected_operations": [
+        "alignment",
+        "feature_recomputation"
+      ]
+    },
+    "labels": {
+      "value": null,
+      "status": "UNKNOWN",
+      "source": "no independent truth labels/reference trajectory in supplied package",
+      "verification": "material inventory; no detection accuracy/false deletion rate computed",
+      "affected_operations": [
+        "accuracy",
+        "false_deletion",
+        "truth_recovery"
+      ]
+    },
+    "duplicates": {
+      "value": "exact same position / same time diagnosed separately; no automatic deletion",
+      "status": "VERIFIED",
+      "source": "raw JSON plus approved prompt §5.1",
+      "verification": "original indices and values preserved",
+      "affected_operations": [
+        "denoise",
+        "stationary_duration"
+      ]
+    },
+    "population": {
+      "value": "supplied JSON records only; pilot is development exposure",
+      "status": "VERIFIED",
+      "source": "raw inventory plus pilot manifest",
+      "verification": "no holdout or representativeness claim",
+      "affected_operations": [
+        "generalization",
+        "final_selection"
+      ]
+    }
+  },
+  "starter_reference": {
+    "status": "STARTER_REFERENCE_NOT_FROZEN",
+    "source": "basic Notebook Cell1",
+    "min_length": 65,
+    "min_points": 5,
+    "dt_seconds": 30,
+    "distance": 400,
+    "direction_degrees": 35,
+    "dp_tolerance": 5,
+    "distance_units": "intended meters; projection unresolved"
+  },
+  "teacher_95m": {
+    "role": "TEACHING_EXAMPLE",
+    "source": "PPT p24 bicycle 25km/h, interval 12s; not Notebook400",
+    "not_active_parameter": true
+  },
+  "method": {
+    "order": [
+      "segment",
+      "filter",
+      "direction_denoise",
+      "dp"
+    ],
+    "order_status": "NOTEBOOK_REFERENCE_NOT_OPTIMALITY_CLAIM",
+    "direction_rule": "PPT20 outgoing bearings d_i; compare circular differences to d_(i-1) and d_(i+1), BOTH > threshold",
+    "direction_unresolved": [],
+    "processing_status": "APPROVED_CONDITIONAL_ANALYSIS",
+    "blocking_ids": [],
+    "scope": "fixed seven-record conditional real-data development baseline; source geographic semantics UNVERIFIED",
+    "direction_schedule": {
+      "method": "single_pass_simultaneous_keep_undefined",
+      "status": "USER_APPROVED",
+      "approval_path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/USER_DECISIONS.json",
+      "approval_sha256": "2b68e39573ab9256a353484842438a118445bb62ddbaca1c42fbd4eee9fe4f0e"
+    },
+    "approved_contract_id": "G1_CONDITIONAL_ENU_V1"
+  },
+  "permissions": {
+    "status": "APPROVED_BY_CURRENT_PROMPT",
+    "allow_value_changes": false,
+    "allow_interpolation": false,
+    "allow_map_matching": false,
+    "allow_training": false,
+    "allow_final_holdout": false,
+    "allow_search": false,
+    "allow_combination": false,
+    "allow_quality_acceptance": false
+  },
+  "actions": {
+    "research": [
+      "profile_pilot",
+      "time_boundaries",
+      "duplicate_details",
+      "verify_profiles",
+      "recompute_check",
+      "contract_snapshot",
+      "source_check",
+      "escalate",
+      "verify_time_boundaries",
+      "verify_duplicate_details"
+    ],
+    "execution": [
+      "profile_pilot",
+      "time_boundaries",
+      "duplicate_details",
+      "recompute_check",
+      "baseline",
+      "contract_snapshot",
+      "source_check",
+      "escalate"
+    ],
+    "review": [
+      "verify_profiles",
+      "recompute_check",
+      "contract_snapshot",
+      "source_check",
+      "escalate",
+      "verify_baseline",
+      "verify_time_boundaries",
+      "verify_duplicate_details"
+    ]
+  },
+  "budget": {
+    "max_pilot_records": 12,
+    "max_model_calls": 8,
+    "max_tool_calls": 18,
+    "max_retries_same_failure": 2,
+    "max_seconds_per_model_call": 180,
+    "concurrency": 1,
+    "authorization": "existing ChatGPT login only; no additional paid API; no global account config changes"
+  },
+  "improvement": {
+    "status": "DRAFT_FOR_NEXT_GOAL_REVIEW",
+    "logic": "hard checks AND gain>=threshold AND protected degradation<=limit AND valid fair comparison/evidence",
+    "minimum_gain": null,
+    "maximum_protected_degradation": null,
+    "selection_data": null,
+    "missing_action": "PENDING_RESEARCH_REVIEW"
+  },
+  "floating_point_check": {
+    "status": "ENGINEERING_NUMERIC_CHECK_ONLY",
+    "rule": "64 * binary64_epsilon * max(1, coordinate_extent, absolute_coordinate, tolerance)",
+    "source": "binary64 rounding allowance fixed before tests; does not change DP tolerance"
+  },
+  "allowed_states": [
+    "PLANNED",
+    "DISPATCHED",
+    "RUNNING",
+    "EXECUTED",
+    "VERIFIED",
+    "QUALITY_ACCEPTED",
+    "REJECTED",
+    "NEEDS_REVIEW",
+    "BLOCKED"
+  ],
+  "live_execution_enabled": false,
+  "live_stop_reason": "Run03 routing failure exposed hidden retries; no additional live calls until reviewed. Retry flags and process-group handling have only ENGINEERING_TEST validation.",
+  "authorization_supplement": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/AUTHORIZATION_SUPPLEMENT.md"
+}

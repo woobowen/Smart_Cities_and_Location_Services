@@ -1,0 +1,200 @@
+{
+  "goal_id": "SC-LAB1-G1-FOUNDATION-001",
+  "execution": "SC-LAB1-G1-COMPLETE-001",
+  "authorization": "handoff/SC-LAB1-G1-COMPLETE-001_CODEX_PROMPT.md §11",
+  "main_session": 1,
+  "historical_dispatches": {
+    "original": 4,
+    "repair_001": 6,
+    "source": "historical ledgers retained"
+  },
+  "planned_native_role_tasks": [
+    "C defect reproduction and independent review",
+    "A requirements and research boundary check",
+    "B-Repair bounded implementation",
+    "C final independent acceptance"
+  ],
+  "guardrails": {
+    "max_concurrent_children": 3,
+    "initial_role_task_budget": 10,
+    "reason": "bounded repairs and independent final verification; adjust explicitly only with new evidence",
+    "additional_paid_api": false,
+    "new_provider": false,
+    "repeat_identical_requests": false,
+    "planned_native_dispatch_ceiling": 14
+  },
+  "actual_native_dispatches": [
+    {
+      "operation": "spawn_agent",
+      "target": "/root/c_defects",
+      "role": "C",
+      "task": "external C2 reproduction"
+    },
+    {
+      "operation": "spawn_agent",
+      "target": "/root/a_scope",
+      "role": "A",
+      "task": "requirements and source audit"
+    },
+    {
+      "operation": "spawn_agent",
+      "target": "/root/b_baseline",
+      "role": "B-Repair",
+      "task": "trusted baseline implementation"
+    },
+    {
+      "operation": "followup_task",
+      "target": "/root/c_defects",
+      "role": "C",
+      "task": "F01 independent new counterexamples"
+    },
+    {
+      "operation": "followup_task",
+      "target": "/root/a_scope",
+      "role": "A",
+      "task": "conditional model and threshold check plan after new user authorization"
+    },
+    {
+      "operation": "followup_task",
+      "target": "/root/c_defects",
+      "role": "C",
+      "task": "F01 regression after rejection"
+    },
+    {
+      "operation": "followup_task",
+      "target": "/root/c_defects",
+      "role": "C",
+      "task": "F02 independent hand-constructed candidates and repeat"
+    },
+    {
+      "operation": "followup_task",
+      "target": "/root/b_baseline",
+      "role": "B-Run",
+      "task": "Notebook and native figure production"
+    },
+    {
+      "operation": "followup_task",
+      "target": "/root/c_defects",
+      "role": "C",
+      "task": "version-aligned F01/F02 and actual followup gate independent verification"
+    },
+    {
+      "operation": "followup_task",
+      "target": "/root/c_defects",
+      "role": "C",
+      "task": "repair regression for fixed followup coverage, legal complete scope and finalize"
+    },
+    {
+      "operation": "spawn_agent",
+      "target": "/root/c_acceptance",
+      "role": "C",
+      "task": "fresh independent context total Goal acceptance from approved requirements and raw/artifacts"
+    },
+    {
+      "operation": "followup_task",
+      "target": "/root/b_baseline",
+      "role": "B-Repair",
+      "task": "real pilot01 numeric rejection: direction derived-value cancellation; preserve failed run and regression"
+    },
+    {
+      "operation": "followup_task",
+      "target": "/root/a_scope",
+      "role": "A",
+      "task": "read-only protection and governance release-scope review alongside actual repairs"
+    }
+  ],
+  "completed_role_turns": "unknown; native tool does not export a reliable provider turn counter",
+  "cli_dispatches": 0,
+  "hidden_provider_requests": "unknown",
+  "remaining_platform_quota": "unknown",
+  "installations": [
+    {
+      "environment": ".venv",
+      "package": "pyproj==3.7.2",
+      "log": "install_pyproj.log",
+      "system_packages": [],
+      "configuration_changes": []
+    }
+  ],
+  "plan_adjustments": [
+    {
+      "reason": "C initial reproduction nearly complete; bounded independent B repair can start alongside A scope check",
+      "concurrency": 3
+    },
+    {
+      "reason": "user supplement authorizes actual conditional baseline, requiring independent baseline review plus Notebook/figure production and final acceptance",
+      "role_task_budget": 10
+    },
+    {
+      "reason": "C found additional same-root typed-index and feedback-coverage defects; each has new evidence and bounded repair/review. User supplemental conditional pilot requires a fresh-context total C acceptance. Retain old ledgers; no CLI/API usage added.",
+      "planned_native_dispatch_ceiling": 14
+    }
+  ],
+  "native_dispatch_requests": 13,
+  "native_completed_turns": "unknown; native tool does not export a reliable provider turn counter",
+  "new_cli_dispatches": 0,
+  "new_paid_api_dispatches": 0,
+  "native_visible_failures": "C rejection is review outcome, not transport failure",
+  "native_transport_failures_observed": 0,
+  "main_session_tool_calls": "unknown; no exported exact counter, visible calls retained in current conversation",
+  "deterministic_runs_so_far": [
+    {
+      "run_id": "g1-complete-pilot-01",
+      "outcome": "REJECTED_BY_INDEPENDENT_REVIEW",
+      "new_model_calls": 0,
+      "reason": "derived circular-angle cancellation caused overly strict detail comparison; preserved failure"
+    },
+    {
+      "run_id": "g1-complete-pilot-02",
+      "outcome": "NUMERIC_VERIFIED_SUPERSEDED_SCOPE_WORDING",
+      "new_model_calls": 0,
+      "reason": "time-only artifact had stale global BLOCKED wording; rebuilt without changing numerical method"
+    },
+    {
+      "run_id": "g1-complete-pilot-03",
+      "outcome": "NUMERIC_VERIFIED_AND_C_INDEPENDENT_VERIFIED",
+      "new_model_calls": 0,
+      "reason": "final fixed version, actual C-triggered sensitivity followup executed"
+    }
+  ],
+  "current_snapshot": "after run03 actual followup; before Notebook and final C task closure",
+  "classification": {
+    "native_roles": "LIVE_NATIVE_ROLE_COLLABORATION",
+    "math_runs": "RECOMPUTE_FROM_REAL_RAW_CONDITIONAL_ANALYSIS",
+    "adversarial_cases": "ENGINEERING_TEST",
+    "old_cli_batches": "HISTORICAL_NOT_RERUN"
+  },
+  "goal_journal_counts": {
+    "TOOL_DISPATCHED": 12,
+    "TOOL_EXECUTED": 12,
+    "NUMERIC_REVIEW_EXECUTED": 12,
+    "FOLLOWUP_DISPATCHED": 1,
+    "FOLLOWUP_EXECUTED": 1,
+    "B_REPAIR_CONSUMED": 7,
+    "C_REOPENED": 2,
+    "C_VERIFIED_PARENT_RESUMED": 5
+  },
+  "visible_failures": [
+    {
+      "classification": "REAL_EXECUTION_REVIEW_FAILURE",
+      "count": 1,
+      "evidence": "runs/g1-complete-pilot-01/failure.json"
+    },
+    {
+      "classification": "C_ENGINEERING_TEST_HARNESS_FAILURE",
+      "count": 1,
+      "evidence": "c_combined_review/round2/harness_failure.json",
+      "recovery": "fixed fixture persistence; rerun evidence retained"
+    }
+  ],
+  "completed_structured_role_artifacts": [
+    "a_scope/TaskPlan.json",
+    "c_combined_review/round2/combined_closure.json",
+    "b_repair/direction_roundoff/REPAIR_RECEIPT.md",
+    "c_acceptance/coordinate_issue_receipt.json",
+    "c_acceptance/direction_roundoff_receipt.json",
+    "c_acceptance/time_scope_receipt.json",
+    "c_acceptance/followup_review.json"
+  ],
+  "counts_note": "native dispatch requests count explicit spawn/followup operations, not backend model requests; send_message is steering, not automatically a new completed turn. Deterministic counts cover GoalJournal, not every test arithmetic operation or shell command."
+}

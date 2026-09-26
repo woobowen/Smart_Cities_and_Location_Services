@@ -1,0 +1,29 @@
+{
+  "action": "coordinate_sensitivity",
+  "parent_artifact_id": "g1-complete-pilot-02:baseline",
+  "parent_sha256": "865710aea34a316fe83088d7cf2ac1aec68c96623269bfcf06255b5db2930fd8",
+  "reason": "Independent C Decimal finite-segment audit found the largest valid DP residual at record306/segment0/original_index2: 4.938319812632412m, only 0.061680187367588m below the frozen 5m threshold. Validate fixed-model implementation and all threshold sensitivity, retaining actual intervals and decisions without choosing or changing a model.",
+  "selected_case": {
+    "record_id": "306",
+    "segment_index": 0,
+    "original_index": 2,
+    "enu_error_m": 4.938319812632412,
+    "margin_to_5m": 0.061680187367588
+  },
+  "independent_trigger": {
+    "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/g1-complete-pilot-02_independent.json",
+    "sha256": "80443ddfdd29aa15b6dd6491d747e7416740d6b22588b865ea582015db88673f"
+  },
+  "requested_components": [
+    "trusted_raw_scope",
+    "approved_analysis_contract",
+    "independent_coordinates",
+    "local_distance_error",
+    "distance_split_threshold",
+    "short_segment_threshold",
+    "direction_threshold",
+    "dp_interval_sensitivity",
+    "source_semantics_limitations"
+  ],
+  "scope": "same seven fixed records; same ENU contract; same pre-denoise windows and actual clean/final intervals; no method selection"
+}

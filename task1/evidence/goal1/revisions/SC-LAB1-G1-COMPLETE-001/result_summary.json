@@ -1,0 +1,176 @@
+{
+  "classification": "CURRENT_RUN_CONDITIONAL_ANALYSIS",
+  "run_id": "g1-complete-pilot-03",
+  "code_sha": "f229d9a4113bcc0dd763e1b410f1f5fb73903a62",
+  "source_crs": "UNVERIFIED",
+  "datum_proven": false,
+  "stage_counts": {
+    "input": 783,
+    "segmented": 30,
+    "filtered": 309,
+    "denoised": 13,
+    "simplified": 273,
+    "retained": 188,
+    "not_processed": 0
+  },
+  "segment_counts": {
+    "total": 30,
+    "filtered": 7,
+    "processed": 23
+  },
+  "rows": [
+    {
+      "record_id": "0",
+      "input": 99,
+      "segmented": 1,
+      "filtered": 99,
+      "denoised": 0,
+      "simplified": 0,
+      "retained": 0,
+      "not_processed": 0,
+      "segments": {
+        "total": 1,
+        "filtered": 1,
+        "processed": 0
+      },
+      "dp_reference_points": 0,
+      "dp_saving": null,
+      "max_dp_interval_error_m": null,
+      "terminal_status": "ALL_FILTERED"
+    },
+    {
+      "record_id": "1",
+      "input": 97,
+      "segmented": 1,
+      "filtered": 97,
+      "denoised": 0,
+      "simplified": 0,
+      "retained": 0,
+      "not_processed": 0,
+      "segments": {
+        "total": 1,
+        "filtered": 1,
+        "processed": 0
+      },
+      "dp_reference_points": 0,
+      "dp_saving": null,
+      "max_dp_interval_error_m": null,
+      "terminal_status": "ALL_FILTERED"
+    },
+    {
+      "record_id": "2",
+      "input": 99,
+      "segmented": 1,
+      "filtered": 99,
+      "denoised": 0,
+      "simplified": 0,
+      "retained": 0,
+      "not_processed": 0,
+      "segments": {
+        "total": 1,
+        "filtered": 1,
+        "processed": 0
+      },
+      "dp_reference_points": 0,
+      "dp_saving": null,
+      "max_dp_interval_error_m": null,
+      "terminal_status": "ALL_FILTERED"
+    },
+    {
+      "record_id": "246",
+      "input": 108,
+      "segmented": 1,
+      "filtered": 0,
+      "denoised": 3,
+      "simplified": 69,
+      "retained": 36,
+      "not_processed": 0,
+      "segments": {
+        "total": 1,
+        "filtered": 0,
+        "processed": 1
+      },
+      "dp_reference_points": 105,
+      "dp_saving": 0.6571428571428571,
+      "max_dp_interval_error_m": 4.768356861321128,
+      "terminal_status": "PROCESSED"
+    },
+    {
+      "record_id": "256",
+      "input": 99,
+      "segmented": 9,
+      "filtered": 0,
+      "denoised": 0,
+      "simplified": 45,
+      "retained": 54,
+      "not_processed": 0,
+      "segments": {
+        "total": 9,
+        "filtered": 0,
+        "processed": 9
+      },
+      "dp_reference_points": 99,
+      "dp_saving": 0.4545454545454546,
+      "max_dp_interval_error_m": 4.592745496123116,
+      "terminal_status": "PROCESSED"
+    },
+    {
+      "record_id": "306",
+      "input": 111,
+      "segmented": 11,
+      "filtered": 4,
+      "denoised": 2,
+      "simplified": 36,
+      "retained": 69,
+      "not_processed": 0,
+      "segments": {
+        "total": 11,
+        "filtered": 1,
+        "processed": 10
+      },
+      "dp_reference_points": 105,
+      "dp_saving": 0.34285714285714286,
+      "max_dp_interval_error_m": 4.938319812632411,
+      "terminal_status": "PROCESSED"
+    },
+    {
+      "record_id": "352",
+      "input": 170,
+      "segmented": 6,
+      "filtered": 10,
+      "denoised": 8,
+      "simplified": 123,
+      "retained": 29,
+      "not_processed": 0,
+      "segments": {
+        "total": 6,
+        "filtered": 3,
+        "processed": 3
+      },
+      "dp_reference_points": 152,
+      "dp_saving": 0.8092105263157895,
+      "max_dp_interval_error_m": 4.344985593528114,
+      "terminal_status": "PROCESSED"
+    }
+  ],
+  "dp_reference_points": 461,
+  "dp_saving": 0.5921908893709328,
+  "max_dp_interval_error_m": 4.938319812632411,
+  "raw_to_final_point_reduction": 0.7598978288633461,
+  "modified_raw_values": 0,
+  "source_inputs_unchanged": true,
+  "interpretation": "Point removal and conditional geometric error are descriptive, not ground-truth accuracy or demonstrated quality improvement.",
+  "coordinate_sensitivity": {
+    "points_checked": 783,
+    "within_record_pairs_checked": 45457,
+    "max_coordinate_crosscheck_error_m": 3.637978807091713e-12,
+    "max_model_geodesic_radius_m": 31131.317939847395,
+    "max_pair_distance_relative_difference": 1.1826369614622246e-05,
+    "max_pair_distance_absolute_difference_m": 0.036456552836170886,
+    "edge_400m_disagreements": 0,
+    "segment_65m_disagreements": 0,
+    "direction_35deg_disagreements": 0,
+    "direction_undefined_disagreements": 0,
+    "dp_5m_disagreements": 0
+  }
+}
