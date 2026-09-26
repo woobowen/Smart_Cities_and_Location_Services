@@ -1,6 +1,6 @@
 {
   "goal_id": "SC-LAB1-G2-EXPERIMENTS-001",
-  "status": "IMPLEMENTING",
+  "status": "VERIFIED",
   "gpt_second_review": "PENDING",
   "submission": "NOT_READY",
   "events": [
@@ -1345,6 +1345,39 @@
       "previous_hash": "9d057f74a91ff2c2629e591d95881d7413f76a7d441f599177c992e77f7ad5ba",
       "status": "IMPLEMENTING",
       "hash": "7f93e69ee5be67849d097cacbf5fc183e9e66904ff8a80e82ac60e2030ef43d0"
+    },
+    {
+      "sequence": 151,
+      "at": "2026-09-26T22:21:45.405137+00:00",
+      "kind": "TASK_SUBMITTED",
+      "previous_hash": "7f93e69ee5be67849d097cacbf5fc183e9e66904ff8a80e82ac60e2030ef43d0",
+      "task": "publication",
+      "hash": "6f4fa46369f337cfae3c439b13e38b1129d680a30d30453835e10aba0094d02e"
+    },
+    {
+      "sequence": 152,
+      "at": "2026-09-26T22:21:45.627603+00:00",
+      "kind": "CHECKPOINT",
+      "previous_hash": "6f4fa46369f337cfae3c439b13e38b1129d680a30d30453835e10aba0094d02e",
+      "status": "IMPLEMENTING",
+      "hash": "ed209785723e57904a4019e11711975386fc82cfbad1f90dc8473ef0a617a442"
+    },
+    {
+      "sequence": 153,
+      "at": "2026-09-26T22:27:02.108965+00:00",
+      "kind": "TASK_VERIFIED",
+      "previous_hash": "ed209785723e57904a4019e11711975386fc82cfbad1f90dc8473ef0a617a442",
+      "task": "publication",
+      "verifier": "C:/root/c_contract",
+      "hash": "c23e90e7a6eae97eea0543bc69e1857fde89b958f5125a7a925cd74073d442b7"
+    },
+    {
+      "sequence": 154,
+      "at": "2026-09-26T22:27:02.319841+00:00",
+      "kind": "CHECKPOINT",
+      "previous_hash": "c23e90e7a6eae97eea0543bc69e1857fde89b958f5125a7a925cd74073d442b7",
+      "status": "VERIFIED",
+      "hash": "0ea7083e434eb4d28dba40b9f30fe4e984ae1c9f748009f32a7bce375d0eb818"
     }
   ],
   "tasks": {
@@ -3031,11 +3064,122 @@
       }
     },
     "publication": {
-      "status": "PENDING",
+      "status": "VERIFIED",
       "depends_on": [
         "internal_acceptance"
       ],
-      "evidence": []
+      "evidence": [
+        {
+          "path": "task1/evidence/goal2/publication/artifact_commit.json",
+          "sha256": "88972f7b33f088d9c1fe562d0b50af645a578b491c7d8924e131ef74e12de249"
+        },
+        {
+          "path": "task1/evidence/goal2/publication/artifact_commit.log",
+          "sha256": "b99c6a25f0b48556dc83234e0f0b0765b61799047a63bcf390dfc03b0899e06a"
+        },
+        {
+          "path": "task1/evidence/goal2/publication/artifact_push.json",
+          "sha256": "9718416adbef172bab72e4a428da5ab9e96e3cc30d11ce332b55ea720080fab3"
+        },
+        {
+          "path": "task1/evidence/goal2/publication/artifact_push.log",
+          "sha256": "8611e2a1d4ea3af34859c94650b57dcfb5a01feda4221521a4dde05c93e50ccf"
+        },
+        {
+          "path": "task1/evidence/goal2/publication/artifact_readback_execution.json",
+          "sha256": "03cc68095594445c1f7e96da8e52df25f74a60b35238fccc33abef948b5b6ef3"
+        },
+        {
+          "path": "task1/evidence/goal2/publication/artifact_readback.log",
+          "sha256": "6c864f68a1d0788f0541e5286c4ee03fc688917ab35986440fce0ee7768fa3ba"
+        },
+        {
+          "path": "task1/evidence/goal2/publication/artifact_01/verification.json",
+          "sha256": "121041fb3f9493d177cb11927ad353913f1b2b7ab9140453da8fe3945d3b0487"
+        },
+        {
+          "path": "task1/evidence/goal2/publication/artifact_01/remote_tree.json",
+          "sha256": "406e937eb027f60c84b9611317ae7873239f978f0e4475250832a8853040ba37"
+        },
+        {
+          "path": "task1/evidence/goal2/publication/staged_content_check.json",
+          "sha256": "b9b80e467c757189017e97be0e246137fa59d8d7eb0d18b286112bd67f2bdffc"
+        },
+        {
+          "path": "task1/evidence/goal2/publication/staged_whitespace_check.json",
+          "sha256": "66ef928a5ad665892cb10bf329b998ad0943db08a7a45bc1f5bc4d98071c6fc3"
+        },
+        {
+          "path": "task1/evidence/goal2/publication/staging_logs.json",
+          "sha256": "1b79afb7cbee5509411b60f1f68cd17f1580476a749a4de0342188a79166fcaf"
+        },
+        {
+          "path": "task1/evidence/goal2/publication/goal_state_before_publication_acceptance.snapshot.json",
+          "sha256": "9bd672c23e11389d2ef84c0f090ec079cfb06530c01fac4594bdd074716160cf"
+        },
+        {
+          "path": "task1/evidence/goal2/release_checks/verify_publication.py",
+          "sha256": "f485eeb8f19d4750bed8a2be397fa68f155417fe00fb68715e29848bdf2d972c"
+        },
+        {
+          "path": "task1/evidence/goal2/release_checks/fixed_sha_readback_paths.json",
+          "sha256": "a2dcf1030473124e6fbe5a70461fe8c9ad234a2c5a89d7a6c6ac3a995253c243"
+        },
+        {
+          "path": "task1/evidence/goal2/release_checks/remote_api_readonly_smoke.json",
+          "sha256": "545178d84b90554879eb8496489cc306927dcc22041f0890f6ecf7559a45dde6"
+        },
+        {
+          "path": "task1/evidence/goal2/release_checks/delta_03/delta_reuse_receipt.json",
+          "sha256": "094153e586f35936da6966d9a8bbcbf14cf672e2a29aeb0fb28c8fa9a6eb1405"
+        },
+        {
+          "path": "task1/evidence/goal2/release_checks/delta_03/release_check.json",
+          "sha256": "e4fa30b49153ba5af92265e029b1bb22d814128da4d291693317c20532a35f5c"
+        },
+        {
+          "path": "task1/evidence/goal2/release_checks/delta_03/scope_inventory.json",
+          "sha256": "17358d2f4bbe5092c1fac3b41f736fc55e4b081c48ebbf22af06e50bcb71e7f6"
+        },
+        {
+          "path": "task1/evidence/goal2/c_contract/publication_preparation_receipt.json",
+          "sha256": "1a99f275ff1632890769609254548194d08639294eaa3a6963d58491e16873f2"
+        },
+        {
+          "path": "task1/evidence/goal2/c_contract/internal_acceptance_receipt_v2.json",
+          "sha256": "adfdbcf65b2820e1d6f4822f263b2cc6357cc1416b40c8162157e5cba7670d1f"
+        },
+        {
+          "path": "task1/evidence/goal2/internal_completion.json",
+          "sha256": "927823cad720ba70e2ee13630e218d5972e108dc5882d920dacf332d380590ac"
+        }
+      ],
+      "source_hashes": {
+        "task1/scripts/build_goal2_analysis.py": "2ccf9fb06b8e7633fc118b0798fce348661c07eed8a3cfa4d08a9e08559c2e38",
+        "task1/scripts/build_goal2_figures.py": "646547b63e6da6ab80a95ae71b3db908f6ea3dce95900ec12aa642b9939916eb",
+        "task1/scripts/build_goal2_notebooks.py": "93093383ab2d2aa4bb6fc4dda1568982727d01c05b7470e92cef8d93e27f3fa0",
+        "task1/scripts/goal2.py": "f62fe1e30bd3cccb461bd34794d2c0d204af39fdac3631b26af042dcb7a563f5",
+        "task1/scripts/goal2_coordinate_sensitivity.py": "9f072efd99839a9ab2593497f18b0a0ce221aef67aeaa8fd328f442d5278869b",
+        "task1/scripts/goal2_counterexamples.py": "dc32e77163a62d3f6543370c0d516f4be3094f3ea07a01751ff883c7aac622de",
+        "task1/workflow/coordinates.py": "d99b270a65c88f8530669d5e7d0887d7563b3e54e19770ab7a9eb695117e075d",
+        "task1/workflow/evaluation.py": "7cf224fbc290d3e83acd5d83a3fe335e6dc437c762f7053d8132817aa91025b2",
+        "task1/workflow/g2_data.py": "985453f073ec98ca7b17a827de1d316e8322dc89e452e6f8b45afa20b2a8a9f2",
+        "task1/workflow/g2_experiments.py": "713538f17d767e98c8ed802252ce33133c6f26dc4c6f7aeae208f6e0d64d2311",
+        "task1/workflow/g2_journal.py": "33b776f5c20f35844cc4c76ee28e38ee0b2e487ee3b13d4eff0c3d3a40d22c2a",
+        "task1/workflow/g2_memory.py": "e0784e6178cf4da3277c7fc8c1e16efce73b56b91b02b41acd3e8870d43a8c56",
+        "task1/workflow/g2_metrics.py": "8d80c8ff8e124b9d3d73f5d514a0c09af32f234034914379ea901e5e59cc3ebb",
+        "task1/workflow/g2_modes.py": "31e936448918b943dca3cfdc8e4590eb64da2c48b262899040862d7b1533704e",
+        "task1/workflow/g2_pipeline.py": "edb8f4c8dcaf65cda44b33533eb55e9d67ef946597895f0682860ba65499c441",
+        "task1/workflow/g2_provider.py": "636a6edaf95ef31e1982d27e1361697d145156fccb99760028ba5e0d77949bb1",
+        "task1/workflow/g2_selection.py": "590a7e9c427801fd65a6ec563fdbbff0d35b0e7bae6a155f28e43ab64bb8f3af",
+        "task1/workflow/geometry.py": "2ad3ca3b49e98e997684e3f5af948771be80dfb03b31b2ae4cc4483856e93d74",
+        "task1/workflow/io.py": "0d3d72dd0beb4718f4020a07a5f1c0ca89193943049a479816b5c496806321b2"
+      },
+      "verifier": "C:/root/c_contract",
+      "review": {
+        "path": "task1/evidence/goal2/c_contract/publication_receipt.json",
+        "sha256": "9c5f013721fe8a867d1fd66467fab1c26f82bcc2b1a6b09e15959042e1c87cb9"
+      }
     }
   },
   "issues": {

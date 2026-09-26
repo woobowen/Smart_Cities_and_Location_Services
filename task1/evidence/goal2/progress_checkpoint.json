@@ -1,6 +1,6 @@
 {
-  "at": "2026-09-26T22:11:40.955778+00:00",
-  "status": "INTERNAL_VERIFIED_PUBLICATION_PENDING",
+  "at": "2026-09-26T22:27:02.326303+00:00",
+  "status": "GOAL2_ARTIFACT_PUBLISHED_VERIFIED",
   "code_epoch": 2,
   "code_sha": "c1c6272606716f9f59aa785d48bfeadb09c7a30e",
   "current_completed_run_index": {
@@ -33,14 +33,12 @@
     "figures": "VERIFIED",
     "analysis": "VERIFIED",
     "internal_acceptance": "VERIFIED",
-    "publication": "PENDING"
+    "publication": "VERIFIED"
   },
   "open_issues": [],
   "g3_reserved_processing": 0,
   "next_actions": [
-    "Final safety delta, stage reviewed substantive engineering, artifact commit",
-    "Actual push main and fixed-SHA remote tree/file readback",
-    "Independent publication closure and final metadata commit/push/readback"
+    "Await webpage GPT remote second review; G3 remains unstarted"
   ],
   "restart_rule": "Inspect existing manifest, own PID and provider dispatch/receipt before any retry; do not duplicate active model call or relabel archived replay as LIVE.",
   "frozen_versions": {
@@ -48,5 +46,6 @@
     "evaluation_freeze.json": "eb61eea6948d8a1177bef512bfc03b9103ef8ecf2ee68e3d7a2407753ca8a40d",
     "candidate_lock.json": "a5ed67a3e28a6591063be28df3fb70b0698915b212b010acee7fa580e1aadef8",
     "data/split_manifest.json": "fd2ebc6916f63b4b8e23ff6977f22cc691c39849d450486035243db7e3eb2ee8"
-  }
+  },
+  "final_session_requirement": "The recording metadata commit must still be actually pushed and read back before the session reports completion; this checkpoint records the already verified artifact publication."
 }

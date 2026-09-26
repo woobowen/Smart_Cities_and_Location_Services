@@ -1,6 +1,6 @@
 # Goal 2 审阅入口
 
-Goal ID：SC-LAB1-G2-EXPERIMENTS-001。规定实验、单项确认及完整产物已通过独立 A01–A17 验收，正在执行实际发布步骤。工程与研究判断分开；本轮的条件化工作坐标不证明源 datum。G3 保留区不参加选择或正式模式评估。
+Goal ID：SC-LAB1-G2-EXPERIMENTS-001。规定实验、单项确认及完整产物已通过独立 A01–A17 验收并实际发布，发布也经独立 C 核验。工程与研究判断分开；本轮的条件化工作坐标不证明源 datum。G3 保留区不参加选择或正式模式评估。
 
 处理 CODE_SHA：`c1c6272606716f9f59aa785d48bfeadb09c7a30e`。图、Notebook 与分析生成器另有精确源码绑定；历史源码回执只对其当时版本有效。
 
@@ -65,6 +65,8 @@ C-S 的留出确认满足120/120条保护条件，53条有预登记指标的严�
 - [真实生产过程记录](PROCESS_RECORD.md)、[可见原生角色派发](governance_dispatches.json)、[环境与零新增依赖记录](environment_record.json)。
 - [完整可见资源分账](resource_ledger.json)：有效实验84次、失效/中断历史15次、工程资格1次；不可见底层请求/费用保持 unknown/unavailable，资格调用不进入效果分母。
 
-全部实验、Notebook、图与分析子任务及 A01–A17 总验收均已通过：[独立完整回执](c_contract/internal_acceptance_receipt_v2.json)、[检查范围及结论边界](c_contract/GOAL2_COMPLETE_ACCEPTANCE.md)、[独立发布准备核对](c_contract/release_preparation_receipt_v2.json)。回执覆盖176个目标和19项源码依赖；实际远程发布另行登记。独立 C 或主线程不能替代网页 GPT 二重审核。
+全部实验、Notebook、图与分析子任务及 A01–A17 总验收均已通过：[独立完整回执](c_contract/internal_acceptance_receipt_v2.json)、[检查范围及结论边界](c_contract/GOAL2_COMPLETE_ACCEPTANCE.md)、[独立发布准备核对](c_contract/release_preparation_receipt_v2.json)。回执覆盖176个目标和19项源码依赖。独立 C 或主线程不能替代网页 GPT 二重审核。
+
+[实际发布记录](publication_record.json) 和 [独立发布回执](c_contract/publication_receipt.json) 核验 ARTIFACT_SHA `1ac203c1c60b3c64490150cbd473d3091eac8564`：Local/origin/实际Remote一致，完整4,408文件条目与26个实际回读文件字节相同。此后仅提交本条发布记录和交接状态，并由本次会话再次实际核对最终 HEAD；不伪造包含自身内容的提交哈希。完整 A–H 交接见 [FINAL_RESPONSE.md](FINAL_RESPONSE.md)。
 
 GPT_SECOND_REVIEW=PENDING；Experiment Report / Process Report 本轮只提供素材；Submission=NOT_READY。Understanding 保留用户实际状态。

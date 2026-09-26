@@ -1,12 +1,12 @@
 # Goal 2 交付记录
 
-Goal ID：SC-LAB1-G2-EXPERIMENTS-001。内部 A01–A17 总验收已通过，当前处于实际发布准备；发布后补登记已经发生的 Git 核对。
+Goal ID：SC-LAB1-G2-EXPERIMENTS-001。内部 A01–A17 总验收及成果实际发布核对均已通过。本记录登记已经发生的成果提交与回读；包含本记录的后续元数据提交由本次会话再次实际推送、回读后报告最终 SHA。
 
 ## A. 状态与批准范围
 
 - Goal 2 内部工程：VERIFIED，规定实验、单项确认、分析、11张正式图和三份新内核 Notebook 均通过独立 A01–A17 总验收。
 - Goal 2 实验：规定开发、留出、真实四模式、示范记忆、单项与反例均已实际执行。负结果属于研究结果，不等同于实现失败。
-- Publication：READY_FOR_ACTUAL_PUBLICATION；GPT_SECOND_REVIEW：PENDING。
+- Publication：PUBLISHED_VERIFIED；GPT_SECOND_REVIEW：PENDING。
 - 实验一 Deliverable：IMPLEMENTING；Understanding：保留用户实际状态；Submission：NOT_READY。
 
 本轮执行教师规定实验、有限参数/顺序/模式比较及单项验证。源 datum 仍为 UNVERIFIED，全部距离和轨迹图采用冻结数学椭球、h=0、ECEF→ENU 的共同工作平面。没有声称真实地理精度、噪声检测准确率或最终方法最优。G1 的阶段验收依据是本轮用户转交的明确结论，没有伪造网页审核附件。
@@ -94,11 +94,13 @@ C-S 可按 SUPPORTED_WITHIN_SCOPE / KEEP 作为 Goal 3 单项备选；C-D、C-P 
 
 Repository：`https://github.com/woobowen/Smart_Cities_and_Location_Services.git`；Branch：`main`。
 
-CODE_SHA：`c1c6272606716f9f59aa785d48bfeadb09c7a30e`。ARTIFACT_SHA、实际 Remote SHA 和 Local–Remote 一致性尚待内部全部验收后的真实提交/推送核对，不在此预填未来值。最后只读远程观察仍为 G1 的 `a45d89f49f2041477b16485f535adc508c32f8ea`；此观察不是发布证明。
+CODE_SHA：`c1c6272606716f9f59aa785d48bfeadb09c7a30e`；ARTIFACT_SHA：`1ac203c1c60b3c64490150cbd473d3091eac8564`。主线程与独立 C 已分别实际核对该成果发布：Local HEAD = origin/main = 实际 Remote SHA = ARTIFACT_SHA，完整4,408个文件条目和26个关键固定 SHA 文件字节一致。证据为 [实际发布记录](publication_record.json)、[主线程回读](publication/artifact_01/verification.json) 与 [独立 C 发布回执](c_contract/publication_receipt.json)。
+
+本文件随后作为交接元数据提交，因此不循环预填包含自身内容的最终 SHA；该后续提交的 Local HEAD、实际 Remote SHA 与固定入口由本次会话完成再次推送和回读后给出。两个原有文件 `SC-LAB1-G1-CLOSURE-002_HANDOFF.zip`、`SC-LAB1-G1-COMPLETE-001_HANDOFF.zip` 仍未跟踪且字节不变；原已跟踪的 REPAIR ZIP 也保持原字节。
 
 当前有效实验84次可见模型调用，历史失效/中断实验15次，工程资格1次，共100次可见 CLI 派发；资格和旧调用均不进入当前效果分母。已登记的当前处理/核验函数调用为10,249次，此数不包括全部 Python helper、OS 工具或治理审查。可见 tokens、耗时、逻辑 request ID、thread ID 与不可见项分别保留于 [资源账](resource_ledger.json)。原生 A/B/C 派发另见 [governance_dispatches.json](governance_dispatches.json)，不能当作精确 provider 请求数或费用。
 
-审阅入口为 [REVIEW_PACKET.md](REVIEW_PACKET.md)。最终发布后提供固定 SHA 链接，并回读关键远程文件；不以易变 main 链接替代固定版本。没有修改 active 治理文档，不声称已更新 ChatGPT UI。
+审阅入口为 [REVIEW_PACKET.md](REVIEW_PACKET.md)，[已发布完整成果固定版本](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/1ac203c1c60b3c64490150cbd473d3091eac8564/task1/evidence/goal2/REVIEW_PACKET.md) 含实际实验与完整内部验收；本次会话另给包含发布回执的最终固定版本入口。没有修改 active 治理文档，不声称已更新 ChatGPT UI。
 
 ## H. 停点
 

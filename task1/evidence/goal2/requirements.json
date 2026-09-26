@@ -12,8 +12,8 @@
     "internal_A_C_is_human_approval": false
   },
   "engineering_status": "VERIFIED",
-  "experiment_status": "PRESCRIBED_RUNS_AND_SINGLE_CONFIRMATION_VERIFIED",
-  "publication_status": "READY_FOR_ACTUAL_PUBLICATION",
+  "experiment_status": "ALL_REQUIRED_GOAL2_EXPERIMENTS_VERIFIED",
+  "publication_status": "PUBLISHED_VERIFIED",
   "gpt_second_review": "PENDING",
   "project_deliverable": "IMPLEMENTING",
   "understanding": "UNCHANGED_USER_ACTUAL_STATE",
@@ -62,7 +62,7 @@
       ],
       "status": "VERIFIED",
       "conclusion_boundary": "All required grids actually run; no teacher extra mandatory grid found; quantities are current prompt settings, not teacher optimal values.",
-      "completion_boundary": "Independent A01-A17 passed; actual publication remains separately gated and not yet claimed."
+      "completion_boundary": "Goal2 internal engineering and artifact publication verified; webpage GPT second review pending; G3 and Submission not executed."
     },
     {
       "id": "R02",
@@ -95,7 +95,7 @@
       ],
       "status": "VERIFIED",
       "conclusion_boundary": "Unsafe order rejection with actual evidence counts as result; conceptual intuition alone does not.",
-      "completion_boundary": "Independent A01-A17 passed; actual publication remains separately gated and not yet claimed."
+      "completion_boundary": "Goal2 internal engineering and artifact publication verified; webpage GPT second review pending; G3 and Submission not executed."
     },
     {
       "id": "R03",
@@ -134,7 +134,7 @@
       ],
       "status": "VERIFIED",
       "conclusion_boundary": "Three LLM modes must contain this-round real requests; search-only zero; dev24 and eval24x3 exact common records.",
-      "completion_boundary": "Independent A01-A17 passed; actual publication remains separately gated and not yet claimed."
+      "completion_boundary": "Goal2 internal engineering and artifact publication verified; webpage GPT second review pending; G3 and Submission not executed."
     },
     {
       "id": "R04",
@@ -172,7 +172,7 @@
       ],
       "status": "VERIFIED",
       "conclusion_boundary": "No memory from eval, own record or prior eval episode; retrieval hit is not evidence of causal quality gain.",
-      "completion_boundary": "Independent A01-A17 passed; actual publication remains separately gated and not yet claimed."
+      "completion_boundary": "Goal2 internal engineering and artifact publication verified; webpage GPT second review pending; G3 and Submission not executed."
     },
     {
       "id": "R05",
@@ -205,7 +205,7 @@
       ],
       "status": "VERIFIED",
       "conclusion_boundary": "C-S/C-D/C-P independently evaluated; reference allowed; no combination or final adoption; optional structural candidates not admitted unless fully preregistered.",
-      "completion_boundary": "Independent A01-A17 passed; actual publication remains separately gated and not yet claimed."
+      "completion_boundary": "Goal2 internal engineering and artifact publication verified; webpage GPT second review pending; G3 and Submission not executed."
     },
     {
       "id": "R06",
@@ -252,7 +252,7 @@
       ],
       "status": "VERIFIED",
       "conclusion_boundary": "Conditional geometry/coverage/compression only; no unlabeled real error-detection accuracy or global-optimum claim.",
-      "completion_boundary": "Independent A01-A17 passed; actual publication remains separately gated and not yet claimed."
+      "completion_boundary": "Goal2 internal engineering and artifact publication verified; webpage GPT second review pending; G3 and Submission not executed."
     },
     {
       "id": "R07",
@@ -284,7 +284,7 @@
       ],
       "status": "VERIFIED",
       "conclusion_boundary": "Actual model quotes only; synthetic/history/current real sources separated; pilot is exposed development material.",
-      "completion_boundary": "Independent A01-A17 passed; actual publication remains separately gated and not yet claimed."
+      "completion_boundary": "Goal2 internal engineering and artifact publication verified; webpage GPT second review pending; G3 and Submission not executed."
     },
     {
       "id": "R08",
@@ -323,7 +323,7 @@
       ],
       "status": "VERIFIED",
       "conclusion_boundary": "Work artifacts only; no final two reports, Evidence Lock or submission-ready claim.",
-      "completion_boundary": "Independent A01-A17 passed; actual publication remains separately gated and not yet claimed."
+      "completion_boundary": "Goal2 internal engineering and artifact publication verified; webpage GPT second review pending; G3 and Submission not executed."
     },
     {
       "id": "R09",
@@ -361,7 +361,7 @@
       ],
       "status": "VERIFIED",
       "conclusion_boundary": "Native independent C required; ordinary errors consumed within this goal; test injections distinct from real incidents.",
-      "completion_boundary": "Independent A01-A17 passed; actual publication remains separately gated and not yet claimed."
+      "completion_boundary": "Goal2 internal engineering and artifact publication verified; webpage GPT second review pending; G3 and Submission not executed."
     },
     {
       "id": "R10",
@@ -385,14 +385,17 @@
       ],
       "artifacts": [
         "task1/evidence/goal2/FINAL_RESPONSE.md",
-        "task1/evidence/goal2/REVIEW_PACKET.md"
+        "task1/evidence/goal2/REVIEW_PACKET.md",
+        "task1/evidence/goal2/publication/artifact_01/verification.json",
+        "task1/evidence/goal2/publication/artifact_commit.json"
       ],
       "review_evidence": [
-        "task1/evidence/goal2/c_contract/internal_acceptance_receipt_v2.json"
+        "task1/evidence/goal2/c_contract/internal_acceptance_receipt_v2.json",
+        "task1/evidence/goal2/c_contract/publication_receipt.json"
       ],
-      "status": "INTERNAL_VERIFIED_PUBLICATION_PENDING",
+      "status": "VERIFIED",
       "conclusion_boundary": "Internal verified and publication separate; web GPT second review pending; no teacher ZIP/email.",
-      "completion_boundary": "Independent A01-A17 passed; actual publication remains separately gated and not yet claimed."
+      "completion_boundary": "Goal2 internal engineering and artifact publication verified; webpage GPT second review pending; G3 and Submission not executed."
     }
   ],
   "acceptance_items": [
@@ -551,5 +554,5 @@
     }
   ],
   "completion_rule": "Every R01-R10 and independent A01-A17 has current valid closed evidence, no blocking issues, then actual publication verified; never equate no-gain with engineering failure or missing experiment with completion.",
-  "updated_at_utc": "2026-09-26T22:11:40.945886+00:00"
+  "updated_at_utc": "2026-09-26T22:27:02.322576+00:00"
 }
