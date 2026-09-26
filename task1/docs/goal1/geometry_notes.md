@@ -1,6 +1,6 @@
 # Goal 1 平面几何与独立审核器
 
-本页范围是 `ENGINEERING_TEST / CONSTRUCTED_FIXTURE`。代码不投影经纬度、不替真实数据指定 CRS，不把这些测试标为真实教学基线已通过。真实输入能否进入计算由控制器的语义合同决定；当前 CRS 冲突和教师去噪未决项仍阻止真实完整处理。
+本页说明平面几何内核、独立审核以及历史构造测试。当前真实 pilot 通过另行登记的局部 ENU 适配器进入相同内核；source CRS 仍为 UNVERIFIED，D2 一次标记同时删除已获用户批准。条件化分析的合同、有效运行和限制见 [CONTRACTS](CONTRACTS.md) 与 [当前审阅入口](../../evidence/goal1/REVIEW_PACKET.md)，不能把构造测试当成真实结果。
 
 ## 来源、复用与保留
 
@@ -23,11 +23,11 @@
 | `filter_segments(segments,min_points,min_length,...)` | 分段之后独立过滤；点数或段内累计欧氏长度严格小于阈值时过滤，等号保留。两个原因分别保存，不把断点跳跃距离计入段长。 |
 | `douglas_peucker_indices(points,tolerance,indices=...)` | 有限线段 DP，保留首尾，最大偏差严格大于阈值才继续细分；相等可压缩。返回原始索引，不用坐标相等映射重复点。零容差沿用 starter 身份输出。 |
 | `direction_candidates(record,threshold)` | 同时计算候选诊断；不删除点、不改值，不代表完整教师去噪实现。 |
-| `denoise_trajectory(...)` | 显式抛出 `MethodUnresolved`。未知删除定义不能变成无操作成功。 |
+| `denoise_trajectory(...)` | 仅显式登记的 `single_pass_simultaneous_keep_undefined` 执行一次标记、同时删除并重算特征；其他或缺失 method 抛 `MethodUnresolved`。真实输入还须通过注册合同。 |
 
 零 `dt` 的速度是 `None / ZERO_TIME_DIFFERENCE`，负 `dt` 是 `None / NEGATIVE_TIME_DIFFERENCE`；没有时间是 `MISSING_TIMESTAMP`，尚未明确可靠时是 `UNRELIABLE_TIME`。默认 `time_reliable=False`，可靠性由调用方显式传入。原始数值时间差仍可作为结构事实读取。零位移的方向为 `None / ZERO_DISPLACEMENT`；零位移且正 `dt` 的速度可以是 0。首点不伪造一条零速度边。
 
-### 去噪的已知关系与未决项
+### 去噪关系与已批准调度
 
 定义 `d_i = direction(p_i → p_(i+1))`。只对 `i = 1,...,n−3` 的三条出边方向均可计算的窗口诊断：
 
@@ -35,7 +35,7 @@
 
 第一/最后点、缺少后续出边的倒数第二点、三边窗口有零位移的点，输出明确不可评估原因；不假造方向，不据此自动保留为“正常”或删除为“噪声”。
 
-最小构造反例 `[(0,0),(0,1),(0,2),(1,2),(1,3)]`，阈值 35°：同时候选只有原始点 2；如果在构造测试中删除点 2、重算方向，原始点 1 又成为候选。因此同时一次删除和迭代删除会产生不同结果，不能自行择一。该构造删除仅用于暴露方法歧义，未对真实数据执行。
+最小构造反例 `[(0,0),(0,1),(0,2),(1,2),(1,3)]`，阈值 35°：同时候选只有原始点 2；如果在构造测试中删除点 2、重算方向，原始点 1 又成为候选。因此同时一次删除和迭代删除会产生不同结果。该历史构造例用于暴露原始方法歧义；本轮用户已明确选定一次标记同时删除，生产实现不迭代。该批准不等于教师原文明确了全部细节。
 
 ## 独立评价及可支持结论
 
@@ -55,7 +55,7 @@
 
 数值核验误差在查看输出前按固定公式计算：`64 × binary64_epsilon × max(1, coordinate_extent, absolute_coordinate, tolerance)`。坐标绝对尺度用于覆盖平移后坐标相减的舍入，范围用于向量运算尺度，64 是固定保守浮点预算，不是研究质量门槛；每次核验输出其值。DP 使用原始算法阈值，不加该核验预算。超出浮点可表达范围的计算拒绝，不能由 NaN 比较漏洞获得通过。
 
-`audit_point_accounting` 对每个 `(record_id, original_index)` 检查一个且仅一个最终去向：`filtered / denoised / simplified / retained`，同时核对原始坐标和时间。它不以总数量相等代替点级守恒，不把不同记录同坐标点合并；空记录仍计入输入记录数。这里的去向组可以用于后续完整链，当前真实去噪仍被阻止。
+`audit_point_accounting` 对每个 `(record_id, original_index)` 检查一个且仅一个最终去向：`filtered / denoised / simplified / retained`，同时核对原始坐标和时间。它不以总数量相等代替点级守恒，不把不同记录同坐标点合并；空记录仍计入输入记录数。完整基线审核另以候选之外的可信原始输入和固定合同重建点终态，核对实际 clean/final 数值及全体汇总；当前条件化真实处理使用这条入口。
 
 `assess_improvement` 只实现已批准的布尔逻辑。正式收益门槛、保护项和有效性证据缺失时返回 `PENDING_RESEARCH_REVIEW`，硬条件明确失败时拒绝。测试里的显式数值门槛只属于 `CONSTRUCTED_FIXTURE`，不是项目质量合同，不可直接用于真实候选准入。
 
@@ -79,4 +79,4 @@
 | `test_eval06_*` 至 `test_eval11_*` | 空分母、零长度、简化分母、全体去向、跨记录错误、舍入界、实际重算一致、平面不变性 |
 | `test_eval12_*` 至 `test_eval14_*` | 未冻结阈值拦截、正例可通过/保护项失败可拒绝、非有限计算拒绝 |
 
-这里没有 teacher real-data 处理结果、模型调用、自然 Agent 失败、质量最优结论或最终报告。构造审核器挑战不作为人机争论证据。后续真实基线须先解决 CRS 与去噪定义，再通过同一代码和独立评价器执行。
+以上54项结果属于首次构造数学验证，不是本轮重跑数量。当前完整测试、真实条件化处理、自然运行失败及修复证据均由 [当前审阅入口](../../evidence/goal1/REVIEW_PACKET.md) 定位。构造审核器挑战不作为人机争论证据；方法未被宣称最优，未知来源datum与真实地面精度仍未证明。

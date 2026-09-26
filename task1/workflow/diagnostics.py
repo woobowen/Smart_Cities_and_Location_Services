@@ -87,7 +87,7 @@ def time_boundaries(record_id, value, threshold=30, classification='CURRENT_RUN_
     return {'record_id':record_id,'status':'EXECUTED','classification':classification,
             'threshold_source_seconds':threshold,'cuts':cuts,'partitions':partitions,
             'n_input':len(coords),'n_accounted':sum(map(len,partitions)),'deleted':0,'modified':0,
-            'limitation':'TIME_ONLY; space cuts, length filtering, denoising and DP remain BLOCKED'}
+            'limitation':'TIME_ONLY; spatial splitting, length filtering, denoising and DP are outside this artifact'}
 
 
 def duplicate_details(record_id, value):
