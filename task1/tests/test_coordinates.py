@@ -1,7 +1,7 @@
 import math
 import pytest
 from task1.workflow.coordinates import working_xy, conditional_contract, conditional_adapter
-from task1.workflow.coordinate_review import validate_coordinates
+from task1.workflow.coordinate_review import validate_coordinates, _direction_windows
 
 
 def test_origin_and_known_direction_independent_proj():
@@ -27,3 +27,24 @@ def test_adapter_preserves_raw_and_indices():
     assert r['indices']==[0,1,2] and r['timestamps']==[1,1,4]
     r['timestamps'][0]=999
     assert raw[0]==[1,1,4]
+
+
+def test_common_grid_direction_windows_keep_endpoints_missing_and_zero_edges():
+    xy=[[0,0],[0,10],[10,10],[10,20],[10,30]]
+    r=_direction_windows(xy,list(range(5)),35)
+    assert [x['candidate'] for x in r]==[None,True,False,None,None]
+    assert r[1]['differences_degrees']==[90,90]
+    assert r[3]['reason']=='MISSING_FOLLOWING_OUTGOING_EDGE'
+    xy[2]=xy[1]
+    r=_direction_windows(xy,list(range(5)),35)
+    assert r[1]['reason']==r[2]['reason']=='UNCOMPUTABLE_DIRECTION_IN_WINDOW'
+    assert all(x['candidate'] is not True for x in r)
+
+
+def test_direction_sensitivity_uses_same_grid_axis_and_fixed_strict_threshold():
+    # Clockwise headings 0,90,0: at equality the reference predicate is false.
+    xy=[[0,0],[0,10],[10,10],[10,20]]
+    assert _direction_windows(xy,list(range(4)),90)[1]['candidate'] is False
+    assert _direction_windows(xy,list(range(4)),35)[1]['candidate'] is True
+    translated=[[x+100,y-500] for x,y in xy]
+    assert _direction_windows(translated,list(range(4)),35)==_direction_windows(xy,list(range(4)),35)

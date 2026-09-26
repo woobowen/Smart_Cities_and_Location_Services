@@ -14,7 +14,7 @@ D2一次标记同时删除已明确批准；原始 datum 仍 `UNVERIFIED`。
 ```bash
 .venv/bin/python -m pytest task1/tests -q
 .venv/bin/python -m task1.scripts.complete_goal1 status
-.venv/bin/python -m task1.scripts.complete_goal1 verify --run-id g1-complete-pilot-01
+.venv/bin/python -m task1.scripts.complete_goal1 verify --run-id g1-complete-pilot-02
 ```
 
 `verify`真正重读原始JSON并重算，不调用模型。新运行使用新ID：

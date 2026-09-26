@@ -4,7 +4,8 @@ from copy import deepcopy
 import pytest
 
 from task1.workflow import geometry, pipeline, tools
-from task1.workflow.evaluation import review_baseline
+from task1.workflow.evaluation import (review_baseline, _direction_rows_same,
+                                      DIRECTION_FLOAT_ALLOWANCE_DEGREES)
 from task1.workflow.io import CONFIG, digest, object_hash, read_json, write_json
 
 
@@ -298,3 +299,64 @@ def test_config_approval_strings_alone_cannot_authorize_real_reference():
     policy['method']['approved_contract_id'] = 'invented'
     with pytest.raises(ValueError, match='NOT_REGISTERED'):
         pipeline.trusted_real_reference({}, [], policy)
+
+
+@pytest.mark.parametrize('points,indices', [
+    ([[2704.8739117069113, -15239.824243165327], [2707.0146746145083, -15042.13724982291],
+      [2706.3292265859104, -14970.291748253701], [2719.169588334366, -14881.700920097152]], [37, 38, 39, 40]),
+    ([[4238.076365511912, -10648.050956026771], [4245.615270772798, -10448.364163284863],
+      [4244.457192107819, -10410.778400863572], [4245.116276199837, -10391.9295806833]], [63, 64, 65, 66]),
+])
+def test_direction_wrap_roundoff_windows_from_failed_run_as_engineering_fixtures(points, indices):
+    # Derived regression windows from record 246 in failed pilot-01. They are
+    # explicitly reconstructed tests, not new teacher-data processing results.
+    output, trusted = make_case([record(points, indices=indices)], distance=None)
+    reviewed = review_baseline(output, *trusted)
+    assert reviewed['status'] == 'VERIFIED'
+    assert segment(output)['denoise']['deleted_indices'] == []
+    assert reviewed['direction_numeric_allowance_degrees'] == DIRECTION_FLOAT_ALLOWANCE_DEGREES
+
+
+def direction_row(previous=35.0, following=35.0, candidate=False):
+    return {'index': 1, 'candidate': candidate, 'reason': None,
+            'previous_difference_degrees': previous, 'following_difference_degrees': following}
+
+
+def test_direction_roundoff_comparison_does_not_relax_strict_threshold_predicate():
+    expected = [direction_row()]
+    rounding = DIRECTION_FLOAT_ALLOWANCE_DEGREES / 4
+    harmless = [direction_row(35 + rounding, 35 + rounding, False)]
+    assert _direction_rows_same(harmless, expected)
+    # Changing a strict-at-equality false decision to true still fails, even if
+    # the reported scalar differences differ by less than the numeric allowance.
+    incorrect_deletion = [direction_row(35 + rounding, 35 + rounding, True)]
+    assert not _direction_rows_same(incorrect_deletion, expected)
+
+
+@pytest.mark.parametrize('change', [
+    {'previous_difference_degrees': 35.00000001},
+    {'previous_difference_degrees': -1e-14},
+    {'previous_difference_degrees': 180.00000001},
+    {'previous_difference_degrees': 395.0},
+    {'previous_difference_degrees': True},
+    {'previous_difference_degrees': None},
+    {'candidate': 0}, {'index': 1.0}, {'reason': 'ENDPOINT'},
+])
+def test_direction_numeric_allowance_rejects_wrong_values_types_and_undefined_state(change):
+    expected = [direction_row()]
+    altered = deepcopy(expected)
+    altered[0].update(change)
+    assert not _direction_rows_same(altered, expected)
+
+
+def test_direction_unsigned_periodic_boundary_known_answers():
+    for a, b, expected in ((359.0, 1.0, 2.0), (1.0, 359.0, 2.0),
+                           (0.0, 360.0, 0.0), (0.0, 180.0, 180.0)):
+        actual = geometry.angular_difference(a, b)
+        assert _direction_rows_same([direction_row(actual, actual)], [direction_row(expected, expected)])
+    undefined = [{'index': 0, 'candidate': None, 'reason': 'ENDPOINT',
+                  'previous_difference_degrees': None, 'following_difference_degrees': None}]
+    assert _direction_rows_same(deepcopy(undefined), undefined)
+    wrong = deepcopy(undefined)
+    wrong[0]['previous_difference_degrees'] = 0.0
+    assert not _direction_rows_same(wrong, undefined)

@@ -6,6 +6,34 @@ from .evaluation import verify_simplification
 from .io import object_hash
 
 
+
+def _direction_windows(xy, indices, threshold):
+    """Independent common-grid headings; every point has a computable/undefined state."""
+    bearings = []
+    for i, j in zip(indices, indices[1:]):
+        a, b = xy[i], xy[j]
+        bearings.append(None if a == b else math.degrees(math.atan2(b[0]-a[0], b[1]-a[1])) % 360)
+    rows = []
+    for pos, index in enumerate(indices):
+        reason = None
+        if pos == 0 or pos == len(indices)-1:
+            reason = 'ENDPOINT'
+        elif pos+1 >= len(bearings):
+            reason = 'MISSING_FOLLOWING_OUTGOING_EDGE'
+        elif any(x is None for x in bearings[pos-1:pos+2]):
+            reason = 'UNCOMPUTABLE_DIRECTION_IN_WINDOW'
+        differences = None
+        if reason is None:
+            differences = []
+            for other in (bearings[pos-1], bearings[pos+1]):
+                direct = abs(bearings[pos]-other)
+                differences.append(min(direct, 360-direct))
+        rows.append({'index':index, 'reason':reason, 'differences_degrees':differences,
+                     'candidate':None if reason else all(d > threshold for d in differences),
+                     'margin_to_threshold_degrees':None if reason else min(abs(d-threshold) for d in differences)})
+    return rows
+
+
 def validate_coordinates(raw, baseline=None):
     c=conditional_contract();m=c['analysis_model'];v=c['validation']
     a=m['semi_major_m'];rf=m['inverse_flattening'];lon=m['origin_lon_degrees'];lat=m['origin_lat_degrees']
@@ -65,36 +93,41 @@ def validate_coordinates(raw, baseline=None):
                 'enu_length_m':enu,'ellipsoid_length_m':geo,'margin_to_65m':abs(enu-65),
                 'threshold_disagreement':(enu<65)!=(geo<65)})
             if not processed:continue
-            bearing_enu=[];bearing_geo=[]
-            for i,j in zip(indices,indices[1:]):
-                if coords[i]==coords[j]:bearing_enu.append(None);bearing_geo.append(None);continue
-                x,y=coordinates[rid][i],coordinates[rid][j]
-                bearing_enu.append(math.degrees(math.atan2(y[0]-x[0],y[1]-x[1]))%360)
-                bearing_geo.append(geod.inv(*coords[i],*coords[j])[0]%360)
-            circular=lambda x,y:abs((x-y+180)%360-180)
-            for pos in range(1,len(indices)-2):
-                en= bearing_enu[pos-1:pos+2]; ge=bearing_geo[pos-1:pos+2]
-                if None in en or None in ge:continue
-                en_d=[circular(en[1],b) for b in (en[0],en[2])]
-                ge_d=[circular(ge[1],b) for b in (ge[0],ge[2])]
-                direction_checks.append({'record_id':rid,'original_index':indices[pos],
-                    'enu_differences_degrees':en_d,'geodesic_azimuth_differences_degrees':ge_d,
-                    'margin_to_35deg':min(abs(x-35) for x in en_d),
-                    'predicate_disagreement':(min(en_d)>35)!=(min(ge_d)>35)})
+            enu_windows = _direction_windows(coordinates[rid], indices, c['parameters']['direction'])
+            aeqd_windows = _direction_windows(alternate_xy[rid], indices, c['parameters']['direction'])
+            actual = next(s for s in record['processed_segments'] if s['segment_index'] == segment['segment_index'])
+            for en, alt in zip(enu_windows, aeqd_windows):
+                direction_checks.append({'record_id':rid, 'segment_index':segment['segment_index'],
+                    'original_index':en['index'], 'direction_convention':'CLOCKWISE_FROM_POSITIVE_Y',
+                    'enu_differences_degrees':en['differences_degrees'],
+                    'aeqd_grid_differences_degrees':alt['differences_degrees'],
+                    'enu_undefined_reason':en['reason'], 'aeqd_undefined_reason':alt['reason'],
+                    'enu_candidate':en['candidate'], 'aeqd_candidate':alt['candidate'],
+                    'actual_deleted':en['index'] in actual['denoise']['deleted_indices'],
+                    'margin_to_35deg':en['margin_to_threshold_degrees'],
+                    'predicate_disagreement':en['candidate'] != alt['candidate'],
+                    'undefined_disagreement':en['reason'] != alt['reason']})
         for segment in record['processed_segments']:
             clean=segment['denoise']['record'];final=segment['output']
-            def rec(r):
+            def rec(r, source):
                 ids=r['indices'];return {'record_id':rid,'indices':ids,'timestamps':[times[i] for i in ids],
-                                        'xy':[alternate_xy[rid][i] for i in ids]}
-            checked=verify_simplification(rec(clean),rec(final),c['parameters']['dp'])
+                                        'xy':[source[rid][i] for i in ids]}
+            checked=verify_simplification(rec(clean,alternate_xy),rec(final,alternate_xy),c['parameters']['dp'])
+            enu_check=verify_simplification(rec(clean,coordinates),rec(final,coordinates),c['parameters']['dp'])
+            alt_error=checked['metrics']['max_error']['value']
+            enu_error=enu_check['metrics']['max_error']['value']
             dp_checks.append({'record_id':rid,'segment_index':segment['segment_index'],
                               'alternate_projection':'ellipsoid_AEQD_same_fixed_center_model_only',
-                              'status':checked['status'],'max_error_m':checked['metrics']['max_error']['value'],
+                              'status':checked['status'],'max_error_m':alt_error,
+                              'enu_status':enu_check['status'],'enu_max_error_m':enu_error,
+                              'max_error_change_m':None if alt_error is None or enu_error is None else alt_error-enu_error,
                               'exceeding_points':checked.get('exceeding_points',[])})
     result.update(processing_threshold_checks='EXECUTED',segment_65m_checks=segment_checks,
                   direction_35deg_checks=direction_checks,dp_5m_checks=dp_checks,
                   segment_65m_disagreements=sum(c['threshold_disagreement'] for c in segment_checks),
                   direction_35deg_disagreements=sum(c['predicate_disagreement'] for c in direction_checks),
+                  direction_undefined_disagreements=sum(c['undefined_disagreement'] for c in direction_checks),
+                  direction_undefined_points=sum(c['enu_undefined_reason'] is not None for c in direction_checks),
                   dp_5m_disagreements=sum(c['status']!='VERIFIED' for c in dp_checks),
                   interpretation='Disagreements limit robustness claims; they do not alter the fixed ENU contract or relax DP tolerance.')
     return result

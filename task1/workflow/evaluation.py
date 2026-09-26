@@ -248,6 +248,7 @@ def assess_improvement(*, hard_conditions, measured_gain=None, minimum_gain=None
 
 BASELINE_COMPONENTS = ['provenance', 'contract', 'segmentation', 'filtering', 'direction',
                        'actual_values', 'dp_intervals', 'point_accounting', 'summaries']
+DIRECTION_FLOAT_ALLOWANCE_DEGREES = FLOAT_ULP_FACTOR * sys.float_info.epsilon * 360.0
 
 
 def _same(actual, expected):
@@ -361,6 +362,33 @@ def _reference_direction(record, threshold):
     return rows, removed
 
 
+def _direction_rows_same(actual, expected):
+    """Compare angular arithmetic at the normalized input scale, not its residual.
+
+    Subtraction around a half/full turn can lose low bits when the final angle
+    difference is small. Only reported unsigned differences get this fixed
+    binary64 allowance. The strict threshold predicate, deletion decisions,
+    undefined reasons and identities retain exact comparison.
+    """
+    if not isinstance(actual, list) or len(actual) != len(expected):
+        return False
+    angle_fields = ('previous_difference_degrees', 'following_difference_degrees')
+    for row, reference in zip(actual, expected):
+        if not isinstance(row, dict) or set(row) != set(reference):
+            return False
+        if any(not _same(row[key], reference[key]) for key in ('index', 'candidate', 'reason')):
+            return False
+        for key in angle_fields:
+            value, truth = row[key], reference[key]
+            if truth is None:
+                if value is not None:
+                    return False
+            elif (not _finite(value) or not 0 <= value <= 180
+                  or abs(value - truth) > DIRECTION_FLOAT_ALLOWANCE_DEGREES):
+                return False
+    return True
+
+
 def _check_actual_record(actual, expected, errors, context):
     problem = _inspect(actual)
     if problem:
@@ -462,7 +490,9 @@ def review_baseline(output, trusted_complete_inputs=None, approved_contract=None
         return result
     result.update(trusted_reference=deepcopy(trusted_provenance),
                   record_scope=[r['record_id'] for r in trusted_complete_inputs],
-                  contract_version=approved_contract['contract_version'])
+                  contract_version=approved_contract['contract_version'],
+                  direction_numeric_allowance_degrees=DIRECTION_FLOAT_ALLOWANCE_DEGREES,
+                  direction_numeric_allowance_rule='64 * binary64_epsilon * 360; derived angles only, strict decisions unchanged')
     try:
         complete = _review_baseline_artifact(output, trusted_complete_inputs, approved_contract, trusted_provenance, result)
     except (ValueError, KeyError, TypeError, IndexError, ArithmeticError) as exc:
@@ -539,7 +569,7 @@ def _review_baseline_artifact(output, inputs, contract, provenance, result):
                                ('modified_values', 0), ('deleted_indices', removed)):
                 if not _same(denoise.get(key), value):
                     errors.append({'code': 'DIRECTION_SCHEDULE_MISMATCH', 'object': context, 'field': key})
-            if not _derived_same(denoise['decisions'], decisions):
+            if not _direction_rows_same(denoise['decisions'], decisions):
                 errors.append({'code': 'DIRECTION_DECISIONS_MISMATCH', 'object': context})
             clean = _reference_selection(expected, [i for i in expected['indices'] if i not in removed], parameters['time_reliable'])
             clean['parent_hash'] = object_hash(expected)
