@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="2" time="0.139" timestamp="2026-09-27T12:28:18.091421+08:00" hostname="LAPTOP-KI0GT6AJ"><testcase classname="task1.evidence.goal3.independent_c.test_relative_parent_cache" name="test_actual_relative_parent_cache_is_portable" time="0.013"><failure message="ValueError: 'task1/evidence/goal3/original' is not in the subpath of '/tmp/pytest-of-addaswsw/pytest-10/test_actual_relative_parent_ca0'">synthetic_runtime = PosixPath('/tmp/pytest-of-addaswsw/pytest-10/test_actual_relative_parent_ca0/task1/evidence/goal3')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x713c96584ef0&gt;
+
+    def test_actual_relative_parent_cache_is_portable(synthetic_runtime, monkeypatch):
+        monkeypatch.chdir(runtime.ROOT)
+        original = synthetic_runtime / "original"
+        runtime.evaluate("C07_ORIGINAL", "G3_DEVELOPMENT", ["R0"], output=original)
+        relative_parent = original.relative_to(runtime.ROOT)
+        assert not relative_parent.is_absolute()
+&gt;       replay = runtime.evaluate("C07_RELATIVE", "G3_DEVELOPMENT", ["R0"],
+            output=synthetic_runtime / "replay", parent=relative_parent)
+
+/home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/evidence/goal3/independent_c/test_relative_parent_cache.py:17: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/goal3/runtime.py:146: in evaluate
+    return _evaluate(run_id, partition, strategy_ids, output=output,
+/home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/goal3/runtime.py:203: in _evaluate
+    'parent_cache': None if parent is None else {'path': str(parent.relative_to(ROOT)),
+                                                             ^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('task1/evidence/goal3/original')
+other = PosixPath('/tmp/pytest-of-addaswsw/pytest-10/test_actual_relative_parent_ca0')
+walk_up = False, _deprecated = ()
+
+    def relative_to(self, other, /, *_deprecated, walk_up=False):
+        """Return the relative path to another path identified by the passed
+        arguments.  If the operation is not possible (because this is not
+        related to the other path), raise ValueError.
+    
+        The *walk_up* parameter controls whether `..` may be used to resolve
+        the path.
+        """
+        if _deprecated:
+            msg = ("support for supplying more than one positional argument "
+                   "to pathlib.PurePath.relative_to() is deprecated and "
+                   "scheduled for removal in Python {remove}")
+            warnings._deprecated("pathlib.PurePath.relative_to(*args)", msg,
+                                 remove=(3, 14))
+        other = self.with_segments(other, *_deprecated)
+        for step, path in enumerate([other] + list(other.parents)):
+            if self.is_relative_to(path):
+                break
+            elif not walk_up:
+&gt;               raise ValueError(f"{str(self)!r} is not in the subpath of {str(other)!r}")
+E               ValueError: 'task1/evidence/goal3/original' is not in the subpath of '/tmp/pytest-of-addaswsw/pytest-10/test_actual_relative_parent_ca0'
+
+/usr/lib/python3.12/pathlib.py:682: ValueError</failure></testcase><testcase classname="task1.evidence.goal3.independent_c.test_relative_parent_cache" name="test_old_epoch_parent_rejected_then_new_run_resumes" time="0.018"><failure message="ValueError: 'task1/evidence/goal3/fresh' is not in the subpath of '/tmp/pytest-of-addaswsw/pytest-10/test_old_epoch_parent_rejected0'">synthetic_runtime = PosixPath('/tmp/pytest-of-addaswsw/pytest-10/test_old_epoch_parent_rejected0/task1/evidence/goal3')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x713c948b3410&gt;
+
+    def test_old_epoch_parent_rejected_then_new_run_resumes(synthetic_runtime, monkeypatch):
+        monkeypatch.chdir(runtime.ROOT)
+        original = synthetic_runtime / "original"
+        runtime.evaluate("C07_OLD", "G3_DEVELOPMENT", ["R0"], output=original)
+        changed_source = runtime.ROOT / "changed_source_fixture.py"
+        changed_source.write_text('# Synthetic new source epoch\n')
+        monkeypatch.setattr(runtime, "source_snapshot", lambda: {changed_source.name: digest(changed_source)})
+        with pytest.raises(ValueError, match="PARENT_CACHE_SCOPE_OR_EPOCH_MISMATCH"):
+            runtime.evaluate("C07_STALE", "G3_DEVELOPMENT", ["R0"],
+                output=synthetic_runtime / "rejected_old_cache", parent=original.relative_to(runtime.ROOT))
+        fresh = synthetic_runtime / "fresh"
+        current = runtime.evaluate("C07_FRESH", "G3_DEVELOPMENT", ["R0"], output=fresh)
+        assert current["processing_evaluations"] == 2 and current["cached_trace_rechecks"] == 0
+&gt;       replay = runtime.evaluate("C07_RESUMED", "G3_DEVELOPMENT", ["R0"],
+            output=synthetic_runtime / "resumed", parent=fresh.relative_to(runtime.ROOT))
+
+/home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/evidence/goal3/independent_c/test_relative_parent_cache.py:36: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+/home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/goal3/runtime.py:146: in evaluate
+    return _evaluate(run_id, partition, strategy_ids, output=output,
+/home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/goal3/runtime.py:203: in _evaluate
+    'parent_cache': None if parent is None else {'path': str(parent.relative_to(ROOT)),
+                                                             ^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = PosixPath('task1/evidence/goal3/fresh')
+other = PosixPath('/tmp/pytest-of-addaswsw/pytest-10/test_old_epoch_parent_rejected0')
+walk_up = False, _deprecated = ()
+
+    def relative_to(self, other, /, *_deprecated, walk_up=False):
+        """Return the relative path to another path identified by the passed
+        arguments.  If the operation is not possible (because this is not
+        related to the other path), raise ValueError.
+    
+        The *walk_up* parameter controls whether `..` may be used to resolve
+        the path.
+        """
+        if _deprecated:
+            msg = ("support for supplying more than one positional argument "
+                   "to pathlib.PurePath.relative_to() is deprecated and "
+                   "scheduled for removal in Python {remove}")
+            warnings._deprecated("pathlib.PurePath.relative_to(*args)", msg,
+                                 remove=(3, 14))
+        other = self.with_segments(other, *_deprecated)
+        for step, path in enumerate([other] + list(other.parents)):
+            if self.is_relative_to(path):
+                break
+            elif not walk_up:
+&gt;               raise ValueError(f"{str(self)!r} is not in the subpath of {str(other)!r}")
+E               ValueError: 'task1/evidence/goal3/fresh' is not in the subpath of '/tmp/pytest-of-addaswsw/pytest-10/test_old_epoch_parent_rejected0'
+
+/usr/lib/python3.12/pathlib.py:682: ValueError</failure></testcase></testsuite></testsuites>

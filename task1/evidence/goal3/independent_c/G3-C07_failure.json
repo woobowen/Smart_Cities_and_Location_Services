@@ -1,0 +1,50 @@
+{
+  "role_context": "/root/c_protocol",
+  "issue_id": "G3-C07",
+  "status": "REPRODUCED",
+  "checked_at_utc": "2026-09-27T04:29:10.573505+00:00",
+  "classification": "SYNTHETIC_RELATIVE_PARENT_INTERFACE_TEST; also independently read actual pre-processing failure log",
+  "target": {
+    "path": "task1/goal3/runtime.py",
+    "sha256": "d9997f01888e59e319d3fe236d3d6fcc328b3989a79d4d0ebcec1913a8accc63",
+    "code_sha": "5c330a3f87f16560f0c1908a2e65cbd9dedff51a"
+  },
+  "evidence": [
+    {
+      "path": "task1/evidence/goal3/independent_c/C07_initial_failure.xml",
+      "sha256": "e6eb4cb2ba679c93342407897df056a07f155172ee59afd59832ed5629196e6b"
+    },
+    {
+      "path": "task1/evidence/goal3/independent_c/test_relative_parent_cache.py",
+      "sha256": "d3e1dd1411b8d7647ce101738d1563a85c7f2f7bff1ff85fcefed376197a6f34"
+    },
+    {
+      "path": "task1/evidence/goal3/logs/g3-development-routing-02.txt",
+      "sha256": "f510b4d1e822394456503f6a303c66ceb5f0d73c33b961e48f6f11d712317725"
+    },
+    {
+      "path": "task1/evidence/goal3/runs/g3-development-routing-02/failure.json",
+      "sha256": "800379ec60efb797b112478c4cfa969ddafbf290b9f7b47f10a58d7f39e1d60b"
+    }
+  ],
+  "actual_result": {
+    "tests": 2,
+    "failures": 2,
+    "common_root_cause": "Path(parent) remains relative before relative_to(absolute_ROOT)"
+  },
+  "checked_components": [
+    "real relative path reaches cache provenance recording",
+    "source epoch change rejects old parent cache before processing",
+    "fresh source epoch reconstruction completes but relative cache resume still fails before repair",
+    "actual routing-02 log has same error before any record was processed"
+  ],
+  "closure_requirements": [
+    "relative parent cache succeeds and counts cached rechecks separately from new processing",
+    "source changes reject old cache; rebuild new run and resume relative parent succeeds",
+    "current source regression passes",
+    "affected current runs/decisions are superseded and rebuilt with current source bindings"
+  ],
+  "unchecked_components": [
+    "repair not yet independently verified at this receipt"
+  ]
+}

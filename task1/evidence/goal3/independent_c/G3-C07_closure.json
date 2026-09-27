@@ -1,0 +1,43 @@
+{
+  "role_context": "/root/c_protocol",
+  "issue_id": "G3-C07",
+  "status": "VERIFIED",
+  "checked_at_utc": "2026-09-27T04:31:39.761313+00:00",
+  "targets": [
+    {
+      "path": "task1/goal3/runtime.py",
+      "sha256": "4e7478875945a3098581ff5bb9db97a3014e0b846997a61fbe31c23f0a1a13d3"
+    },
+    {
+      "path": "task1/evidence/goal3/C07_repair_regression.xml",
+      "sha256": "21da53ea6114b6257daa4ebbfa06cf85133a6eee7bca723e96b364e7fe4e0bf1"
+    },
+    {
+      "path": "task1/evidence/goal3/C07_impact.json",
+      "sha256": "382951189d199874217905788c6e277de10cc4fd83a4ef1f431fae903c8973b5"
+    }
+  ],
+  "checked_components": [
+    "one-line parent path normalization",
+    "actual relative cache positive case",
+    "old source epoch rejected, new raw processing and cached resume succeed",
+    "452 current-epoch full regression tests",
+    "old development runs explicitly superseded before rebuild"
+  ],
+  "test_receipt": {
+    "path": "task1/evidence/goal3/independent_c/core_after_C07_receipt.json",
+    "sha256": "bcbcb225b74698ad03d7e873191a8e55cf479060bc793aa69cba460bd90380fc"
+  },
+  "actual_test_result": {
+    "tests": 452,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "implementation_author": "B:root",
+  "reviewer_is_implementation_author": false,
+  "unchecked_components": [
+    "Current-epoch development outputs still must be rebuilt by parent; this fixture is not the dataset run"
+  ],
+  "scope": "Engineering interface fix; no method/metric/parameter change. Prior-epoch runs are preserved as superseded history."
+}

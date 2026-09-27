@@ -187,7 +187,7 @@ def _evaluate(run_id, partition, strategy_ids, *, output=None, allow_recompute=F
     inherited_rows = None
     parent_manifest = None
     if parent is not None:
-        parent = Path(parent)
+        parent = Path(parent).resolve()
         parent_manifest = read_json(parent/'manifest.json')
         if (parent_manifest['status'] != 'MACHINE_VERIFIED_PENDING_C' or parent_manifest['bindings'] != binding
                 or parent_manifest['provenance'] != provenance or parent_manifest['input_ids'] != ids):

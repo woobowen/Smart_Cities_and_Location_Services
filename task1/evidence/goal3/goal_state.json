@@ -75,7 +75,7 @@
         },
         {
           "path": "task1/goal3/runtime.py",
-          "sha256": "d9997f01888e59e319d3fe236d3d6fcc328b3989a79d4d0ebcec1913a8accc63"
+          "sha256": "4e7478875945a3098581ff5bb9db97a3014e0b846997a61fbe31c23f0a1a13d3"
         },
         {
           "path": "task1/goal3/selection.py",
@@ -86,20 +86,20 @@
           "sha256": "cf19a0130454635e5598838b5f77adfb95038a636060e23c05763d452ff2435e"
         },
         {
-          "path": "task1/evidence/goal3/independent_c/core_after_C06_regression.xml",
-          "sha256": "09e3a640ae7aded8a1ae70411bc0b5afcb2f05650b2971f6881b3282289600b7"
+          "path": "task1/evidence/goal3/independent_c/core_after_C07_regression.xml",
+          "sha256": "a4252298f14422e0dfe9637188dcbb0e4de6382056068555b584bdfa35f9751e"
         },
         {
-          "path": "task1/evidence/goal3/independent_c/test_portable_recompute.py",
-          "sha256": "01c3b569f7cea95f931f4e9c03e55a62fa674a61062b7d66970dc48525d8314a"
+          "path": "task1/evidence/goal3/independent_c/test_relative_parent_cache.py",
+          "sha256": "d3e1dd1411b8d7647ce101738d1563a85c7f2f7bff1ff85fcefed376197a6f34"
         },
         {
-          "path": "task1/evidence/goal3/C06_repair_regression.xml",
-          "sha256": "35aeb872b3d500e1d028bf91b93e564731c5f55570d2cf59d3870086fb181ff9"
+          "path": "task1/evidence/goal3/C07_repair_regression.xml",
+          "sha256": "21da53ea6114b6257daa4ebbfa06cf85133a6eee7bca723e96b364e7fe4e0bf1"
         },
         {
-          "path": "task1/evidence/goal3/C06_impact.json",
-          "sha256": "dd8ed1709d8f36f204313c38800ec13cc69b7c390caf2fb2a98c5b0a956b0954"
+          "path": "task1/evidence/goal3/C07_impact.json",
+          "sha256": "382951189d199874217905788c6e277de10cc4fd83a4ef1f431fae903c8973b5"
         }
       ],
       "source_hashes": {
@@ -132,14 +132,14 @@
         "task1/workflow/tools.py": "0fde0acebfe3ec97bd2653744ac8f0444c1e9a162c61970bccf8a94a9fbd0b3f",
         "task1/scripts/goal2.py": "f62fe1e30bd3cccb461bd34794d2c0d204af39fdac3631b26af042dcb7a563f5",
         "task1/goal3/data.py": "2142a0c4366ce1f22f9285c4737a903d546e1938e0a00f4e148cda6b9e821b21",
-        "task1/goal3/runtime.py": "d9997f01888e59e319d3fe236d3d6fcc328b3989a79d4d0ebcec1913a8accc63",
+        "task1/goal3/runtime.py": "4e7478875945a3098581ff5bb9db97a3014e0b846997a61fbe31c23f0a1a13d3",
         "task1/goal3/selection.py": "ff68536c3e80fe9b615fd4a6dc2402f7a6dd38359c6ffb6a1ebf57753654561f",
         "task1/goal3/control.py": "cf19a0130454635e5598838b5f77adfb95038a636060e23c05763d452ff2435e"
       },
       "author": "B:root",
       "receipt": {
-        "path": "task1/evidence/goal3/independent_c/core_after_C06_receipt.json",
-        "sha256": "c791ffb11397defafe554b61dcefcd90fad01b715c1aede3f41b53ae57d46033"
+        "path": "task1/evidence/goal3/independent_c/core_after_C07_receipt.json",
+        "sha256": "bcbcb225b74698ad03d7e873191a8e55cf479060bc793aa69cba460bd90380fc"
       },
       "verifier": "/root/c_protocol"
     },
@@ -451,6 +451,38 @@
       "receipt": {
         "path": "task1/evidence/goal3/independent_c/G3-C06_closure.json",
         "sha256": "d0035f8c79a617b832968e77e7d3bb4ba3ebd79e5bce40b16f8752fcdaddd063"
+      }
+    },
+    "G3-C07": {
+      "issue_id": "G3-C07",
+      "parent_task": "implementation",
+      "fact": "Relative parent path accepted by CLI fails at cache provenance serialization before record processing",
+      "affected": [
+        "task1/goal3/runtime.py",
+        "task1/evidence/goal3/runs/g3-development-parents-02",
+        "task1/evidence/goal3/runs/g3-development-routing-02"
+      ],
+      "repairer": "B:root",
+      "status": "VERIFIED",
+      "attempts": 1,
+      "repair_targets": [
+        {
+          "path": "task1/goal3/runtime.py",
+          "sha256": "4e7478875945a3098581ff5bb9db97a3014e0b846997a61fbe31c23f0a1a13d3"
+        },
+        {
+          "path": "task1/evidence/goal3/C07_repair_regression.xml",
+          "sha256": "21da53ea6114b6257daa4ebbfa06cf85133a6eee7bca723e96b364e7fe4e0bf1"
+        },
+        {
+          "path": "task1/evidence/goal3/C07_impact.json",
+          "sha256": "382951189d199874217905788c6e277de10cc4fd83a4ef1f431fae903c8973b5"
+        }
+      ],
+      "verifier": "/root/c_protocol",
+      "receipt": {
+        "path": "task1/evidence/goal3/independent_c/G3-C07_closure.json",
+        "sha256": "5b5537643ec8246ad75aa2b75a7ac266c444804ca8c47762076b45c6682806ed"
       }
     }
   },
@@ -883,6 +915,199 @@
         "g3-development-routing-02"
       ],
       "hash": "51118dc389391a836f79385d880e6462087c989f0e2b9228188d684c4aa706a9"
+    },
+    {
+      "at": "2026-09-27T04:22:58.856346+00:00",
+      "kind": "ACTUAL_B_RUN_DISPATCH",
+      "previous_hash": "51118dc389391a836f79385d880e6462087c989f0e2b9228188d684c4aa706a9",
+      "run_id": "g3-development-parents-02",
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "task1.goal3.runtime",
+        "--run-id",
+        "g3-development-parents-02",
+        "--partition",
+        "G3_DEVELOPMENT",
+        "--strategies",
+        "R0",
+        "S0",
+        "S_POINTS2",
+        "S_LENGTH0",
+        "D60",
+        "P2",
+        "P10"
+      ],
+      "classification": "RECOMPUTE_AFTER_C06_METADATA_REPAIR",
+      "hash": "b137523a1af96321778f754deb5d21c61a3a9514e48b6ccc2d90e380d6d8135f"
+    },
+    {
+      "at": "2026-09-27T04:25:43.873192+00:00",
+      "kind": "ACTUAL_B_RUN_RETURN",
+      "previous_hash": "b137523a1af96321778f754deb5d21c61a3a9514e48b6ccc2d90e380d6d8135f",
+      "run_id": "g3-development-parents-02",
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "task1.goal3.runtime",
+        "--run-id",
+        "g3-development-parents-02",
+        "--partition",
+        "G3_DEVELOPMENT",
+        "--strategies",
+        "R0",
+        "S0",
+        "S_POINTS2",
+        "S_LENGTH0",
+        "D60",
+        "P2",
+        "P10"
+      ],
+      "ended_at": "2026-09-27T04:25:43.872189+00:00",
+      "exit_code": 0,
+      "elapsed_seconds": 150.75760476100004,
+      "log_sha256": "fb3ee2c3bccdb9a5b4a583cb7a188eb29d2997541182288d6d01831f69854ddb",
+      "new_record_model_calls": 0,
+      "hash": "f45efd090f68a2aa804da90a0c7d4a36a7ca6b22e7f93229dd774784d15b5879"
+    },
+    {
+      "at": "2026-09-27T04:25:53.354470+00:00",
+      "kind": "ACTUAL_B_RUN_DISPATCH",
+      "previous_hash": "f45efd090f68a2aa804da90a0c7d4a36a7ca6b22e7f93229dd774784d15b5879",
+      "run_id": "g3-development-routing-02",
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "task1.goal3.runtime",
+        "--run-id",
+        "g3-development-routing-02",
+        "--partition",
+        "G3_DEVELOPMENT",
+        "--strategies",
+        "R0",
+        "S0",
+        "G0",
+        "--parent",
+        "task1/evidence/goal3/runs/g3-development-parents-02"
+      ],
+      "classification": "RECOMPUTE_AFTER_C06_METADATA_REPAIR",
+      "hash": "916f9608b58149a556bbd0aab15b74d7095d0a5a8f54e2c6c939e9137f417269"
+    },
+    {
+      "at": "2026-09-27T04:25:54.892267+00:00",
+      "kind": "ACTUAL_B_RUN_RETURN",
+      "previous_hash": "916f9608b58149a556bbd0aab15b74d7095d0a5a8f54e2c6c939e9137f417269",
+      "run_id": "g3-development-routing-02",
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "task1.goal3.runtime",
+        "--run-id",
+        "g3-development-routing-02",
+        "--partition",
+        "G3_DEVELOPMENT",
+        "--strategies",
+        "R0",
+        "S0",
+        "G0",
+        "--parent",
+        "task1/evidence/goal3/runs/g3-development-parents-02"
+      ],
+      "ended_at": "2026-09-27T04:25:54.891526+00:00",
+      "exit_code": 1,
+      "elapsed_seconds": 1.5361003879997952,
+      "log_sha256": "f510b4d1e822394456503f6a303c66ceb5f0d73c33b961e48f6f11d712317725",
+      "new_record_model_calls": 0,
+      "hash": "8c9c99b9a6a613db5922a6430315782702ff168be8eb2271e9ada3e9bed4f7fa"
+    },
+    {
+      "at": "2026-09-27T04:28:02.637727+00:00",
+      "kind": "ISSUE_OPENED_PARENT_PAUSED",
+      "previous_hash": "8c9c99b9a6a613db5922a6430315782702ff168be8eb2271e9ada3e9bed4f7fa",
+      "issue_id": "G3-C07",
+      "hash": "c42827808a3ee468d5ecfd83bbd1b4911666fed77a0a478d07a81fe3cd2afbfa"
+    },
+    {
+      "at": "2026-09-27T04:30:17.510278+00:00",
+      "kind": "SOURCE_INVALIDATION_PROPAGATED",
+      "previous_hash": "c42827808a3ee468d5ecfd83bbd1b4911666fed77a0a478d07a81fe3cd2afbfa",
+      "tasks": [],
+      "hash": "91e9559c2530a1ca7924ae01633ebe44c14cb4c4733f844dc2148b74ddd71e42"
+    },
+    {
+      "at": "2026-09-27T04:30:17.512459+00:00",
+      "kind": "ACTUAL_B_REPAIR_SUBMITTED",
+      "previous_hash": "91e9559c2530a1ca7924ae01633ebe44c14cb4c4733f844dc2148b74ddd71e42",
+      "issue_id": "G3-C07",
+      "hash": "dc7a40cc9ddb4476b61ab061e5d5d09a523c7c95d19325eccc584b2fba600c96"
+    },
+    {
+      "at": "2026-09-27T04:32:50.763665+00:00",
+      "kind": "INDEPENDENT_REPAIR_CLOSED_PARENT_RESUMED",
+      "previous_hash": "dc7a40cc9ddb4476b61ab061e5d5d09a523c7c95d19325eccc584b2fba600c96",
+      "issue_id": "G3-C07",
+      "task": "implementation",
+      "hash": "3b1be5360ae6524fd30812dbd9ec0716b2ec2c482941ac8a3152e2cc89dcaef3"
+    },
+    {
+      "at": "2026-09-27T04:32:50.799836+00:00",
+      "kind": "TASK_SUBMITTED",
+      "previous_hash": "3b1be5360ae6524fd30812dbd9ec0716b2ec2c482941ac8a3152e2cc89dcaef3",
+      "task": "implementation",
+      "targets": [
+        {
+          "path": "task1/goal3/data.py",
+          "sha256": "2142a0c4366ce1f22f9285c4737a903d546e1938e0a00f4e148cda6b9e821b21"
+        },
+        {
+          "path": "task1/goal3/runtime.py",
+          "sha256": "4e7478875945a3098581ff5bb9db97a3014e0b846997a61fbe31c23f0a1a13d3"
+        },
+        {
+          "path": "task1/goal3/selection.py",
+          "sha256": "ff68536c3e80fe9b615fd4a6dc2402f7a6dd38359c6ffb6a1ebf57753654561f"
+        },
+        {
+          "path": "task1/goal3/control.py",
+          "sha256": "cf19a0130454635e5598838b5f77adfb95038a636060e23c05763d452ff2435e"
+        },
+        {
+          "path": "task1/evidence/goal3/independent_c/core_after_C07_regression.xml",
+          "sha256": "a4252298f14422e0dfe9637188dcbb0e4de6382056068555b584bdfa35f9751e"
+        },
+        {
+          "path": "task1/evidence/goal3/independent_c/test_relative_parent_cache.py",
+          "sha256": "d3e1dd1411b8d7647ce101738d1563a85c7f2f7bff1ff85fcefed376197a6f34"
+        },
+        {
+          "path": "task1/evidence/goal3/C07_repair_regression.xml",
+          "sha256": "21da53ea6114b6257daa4ebbfa06cf85133a6eee7bca723e96b364e7fe4e0bf1"
+        },
+        {
+          "path": "task1/evidence/goal3/C07_impact.json",
+          "sha256": "382951189d199874217905788c6e277de10cc4fd83a4ef1f431fae903c8973b5"
+        }
+      ],
+      "hash": "ea48d475d2db834df837111ea389120409b65112b5d0d135893617b3120e0543"
+    },
+    {
+      "at": "2026-09-27T04:32:50.838340+00:00",
+      "kind": "C_TASK_CLOSED",
+      "previous_hash": "ea48d475d2db834df837111ea389120409b65112b5d0d135893617b3120e0543",
+      "task": "implementation",
+      "status": "VERIFIED",
+      "hash": "b86600f40d5a6c1d57faf953eb41331270ed56db2999c3567580ec924a91171f"
+    },
+    {
+      "at": "2026-09-27T04:32:50.841199+00:00",
+      "kind": "SOURCE_EPOCH_FROZEN_AFTER_C_REPAIR",
+      "previous_hash": "b86600f40d5a6c1d57faf953eb41331270ed56db2999c3567580ec924a91171f",
+      "issue_id": "G3-C07",
+      "next_runs": [
+        "g3-development-parents-03",
+        "g3-development-routing-03"
+      ],
+      "hash": "5065f5867cd365aa5432215b359d43f847ad5ff20a218faefae08db1bb3c6ddd"
     }
   ],
   "inflight": null,
