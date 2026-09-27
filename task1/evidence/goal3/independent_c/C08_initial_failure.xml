@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="4" skipped="0" tests="5" time="0.094" timestamp="2026-09-27T13:08:36.788644+08:00" hostname="LAPTOP-KI0GT6AJ"><testcase classname="task1.evidence.goal3.independent_c.test_freeze_artifact_gate" name="test_current_actual_artifact_accepted" time="0.005" /><testcase classname="task1.evidence.goal3.independent_c.test_freeze_artifact_gate" name="test_changed_shard_cannot_reuse_old_manifest_receipt" time="0.004"><failure message="Failed: DID NOT RAISE ValueError">tmp_path = PosixPath('/tmp/pytest-of-addaswsw/pytest-13/test_changed_shard_cannot_reus0')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x723f87057cb0&gt;
+
+    def test_changed_shard_cannot_reuse_old_manifest_receipt(tmp_path, monkeypatch):
+        shard, _, _, _ = fixture_run(tmp_path, monkeypatch)
+        shard.write_bytes(b'CHANGED_SYNTHETIC_ARTIFACT')
+&gt;       with pytest.raises(ValueError):
+E       Failed: DID NOT RAISE ValueError
+
+task1/evidence/goal3/independent_c/test_freeze_artifact_gate.py:46: Failed</failure></testcase><testcase classname="task1.evidence.goal3.independent_c.test_freeze_artifact_gate" name="test_receipt_from_different_source_epoch_rejected" time="0.002"><failure message="Failed: DID NOT RAISE ValueError">tmp_path = PosixPath('/tmp/pytest-of-addaswsw/pytest-13/test_receipt_from_different_so0')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x723f8708aae0&gt;
+
+    def test_receipt_from_different_source_epoch_rejected(tmp_path, monkeypatch):
+        _, receipt, _, _ = fixture_run(tmp_path, monkeypatch)
+        value = json.loads(receipt.read_text())
+        value['source_hashes'] = {'source.py': '0'*64}
+        receipt.write_text(json.dumps(value))
+&gt;       with pytest.raises(ValueError):
+E       Failed: DID NOT RAISE ValueError
+
+task1/evidence/goal3/independent_c/test_freeze_artifact_gate.py:55: Failed</failure></testcase><testcase classname="task1.evidence.goal3.independent_c.test_freeze_artifact_gate" name="test_additional_receipt_target_must_still_exist" time="0.002"><failure message="Failed: DID NOT RAISE any of (ValueError, OSError)">tmp_path = PosixPath('/tmp/pytest-of-addaswsw/pytest-13/test_additional_receipt_target0')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x723f8708ae70&gt;
+
+    def test_additional_receipt_target_must_still_exist(tmp_path, monkeypatch):
+        _, receipt, _, _ = fixture_run(tmp_path, monkeypatch)
+        value = json.loads(receipt.read_text())
+        value['targets'].append({'path': 'missing-reviewed-artifact', 'sha256': '0'*64})
+        receipt.write_text(json.dumps(value))
+&gt;       with pytest.raises((ValueError, OSError)):
+E       Failed: DID NOT RAISE any of (ValueError, OSError)
+
+task1/evidence/goal3/independent_c/test_freeze_artifact_gate.py:64: Failed</failure></testcase><testcase classname="task1.evidence.goal3.independent_c.test_freeze_artifact_gate" name="test_processing_epoch_must_match_current_sources" time="0.001"><failure message="Failed: DID NOT RAISE ValueError">tmp_path = PosixPath('/tmp/pytest-of-addaswsw/pytest-13/test_processing_epoch_must_mat0')
+monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x723f8708baa0&gt;
+
+    def test_processing_epoch_must_match_current_sources(tmp_path, monkeypatch):
+        fixture_run(tmp_path, monkeypatch)
+        monkeypatch.setattr(freezes, 'source_snapshot', lambda: {'source.py': '1'*64})
+&gt;       with pytest.raises(ValueError):
+E       Failed: DID NOT RAISE ValueError
+
+task1/evidence/goal3/independent_c/test_freeze_artifact_gate.py:71: Failed</failure></testcase></testsuite></testsuites>

@@ -1,0 +1,39 @@
+{
+  "issue_id": "G3-C08",
+  "role_context": "/root/c_protocol",
+  "status": "REPRODUCED_ENGINEERING_DEFECT",
+  "at_utc": "2026-09-27T05:08:52.522619+00:00",
+  "scope": "Auxiliary freezes.verified_run artifact freshness gate only; no processing definition, numeric source epoch, or actual development result affected. No selection/final run occurred.",
+  "synthetic_fixture": true,
+  "actual_result": {
+    "passed": 1,
+    "failed": 4,
+    "failures": [
+      "changed shard accepted with old manifest/receipt",
+      "receipt source epoch mismatch accepted",
+      "missing additional reviewed target accepted",
+      "current processing source mismatch accepted"
+    ]
+  },
+  "targets": [
+    {
+      "path": "task1/goal3/freezes.py",
+      "sha256": "4082ef4571064395c1c1e13332c5502afc90df251900eafcb0e95fa3ffef3882"
+    },
+    {
+      "path": "task1/evidence/goal3/independent_c/test_freeze_artifact_gate.py",
+      "sha256": "e23da2935fb51ac407348033de03ba200544b826d21e5f1cc736de0d3d2b3ca6"
+    },
+    {
+      "path": "task1/evidence/goal3/independent_c/C08_initial_failure.xml",
+      "sha256": "d95e98add9c300ceffe4c1fb004a38604c54cba475303dd6930222f177ea960f"
+    }
+  ],
+  "closure_criteria": [
+    "All five independent actual fixture tests pass",
+    "Check actual shards with manifest hashes and all receipt targets before consuming run",
+    "Bind receipt source hashes to run source hashes and current processing source snapshot",
+    "Independent recheck reads current real development manifest without mutation; no held-out effects opened"
+  ],
+  "actual_command": ".venv/bin/python -m pytest -q task1/evidence/goal3/independent_c/test_freeze_artifact_gate.py --junitxml=task1/evidence/goal3/independent_c/C08_initial_failure.xml"
+}
