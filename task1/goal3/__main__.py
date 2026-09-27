@@ -62,7 +62,8 @@ def live(run_id, enabled):
 
 def report_build(output):
     """Rebuild the reviewed-data deliverables and create a new review archive."""
-    target = output or ROOT/'task1/submission/REVIEW_ONLY_实验一.zip'
+    from .identity import read_identity
+    target = output or ROOT/'task1/submission'/read_identity(ROOT)['review_package_name']
     if target.exists() or target.with_suffix('.zip.tmp').exists():
         raise ValueError('EXISTING_PACKAGE_PROTECTED; use --output with a new REVIEW_ONLY_*.zip path')
     if not target.name.startswith('REVIEW_ONLY_') or target.suffix != '.zip':
@@ -86,7 +87,7 @@ def report_build(output):
                    cwd=ROOT, check=True)
     Journal().invalidate_changed()
     return {'status': 'REVIEW_ONLY_REBUILT', 'package_sha256': digest(target),
-            'new_model_calls': 0, 'submission_status': 'NOT_SUBMITTED',
+            'new_model_calls': 0, 'submission_status': 'NOT_READY', 'sent_to_teacher': False,
             'independent_visual_and_isolated_full_package_review': 'REQUIRED_FOR_THIS_NEW_BUILD'}
 
 

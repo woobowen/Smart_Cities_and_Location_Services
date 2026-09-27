@@ -110,6 +110,7 @@
 \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
 \setlength{\emergencystretch}{2em}
 \input{../metadata.tex}
+\hypersetup{pdftitle={实验一：Human–AI 工作流与实验决策},pdfauthor={\StudentName{} / \StudentID{}},pdfsubject={Process Report；互动证据待补送审稿}}
 \input{../history_values.tex}
 \begin{document}
 \hypersetup{pageanchor=false}
@@ -124,7 +125,7 @@
 内容结构 & Workflow Construction + Experiment Decision Process \\
 事实来源 & 原始授权文本、真实角色与工具记录、真实处理结果 \\
 版本状态 & \ProcessStatus{} \\
-日期 & \ReportDate{}
+修订日期 & \ReportDate{}
 \end{tabular}
 \vfill\noindent\color{P1}\rule{.30\linewidth}{3.2pt}\color{P2}\rule{.22\linewidth}{3.2pt}\color{P3}\rule{.24\linewidth}{3.2pt}\color{P4}\rule{.12\linewidth}{3.2pt}\par
 \vspace{5mm}{\small\color{Muted}当前文档交付可核实的过程正文。真实聊天截图、Evidence Master 批准呈现方案及 Evidence Lock 尚缺，相关页面明确待补；没有重建聊天界面、假冒用户逐项判断或把内部审核作为用户批准。}
@@ -144,7 +145,7 @@
 G1 授权补充与两条答复 & 条件化工作坐标、D2 一次标记同时删除的真实授权 & 每条历史参数都由用户逐项选择 \\
 G2 与 G3 用户原始任务文本 & 当前阶段范围、指标边界、授权内自动裁决 & 历史逐字聊天、没有保存的 Human Judgment \\
 真实角色与工具记录 & A/B/C 子任务、实际调用、问题、修复、产物与恢复 & 用户曾读懂某算法、用户已批准某截图裁切 \\
-G2 Provider response 与 trace & 该历史实验实际保存的原话、参数、执行与评价 & 不能替代本轮加密 native 消息的逐字内容或真实噪声标签 \\
+G2 Provider response 与 trace & 该历史实验实际保存的原话、参数、执行与评价 & 不能替代未取得的完整历史聊天或真实噪声标签 \\
 模板中的聊天样式素材 & 版式参考 & 真实互动证据 \\
 \bottomrule\end{tabularx}\end{table}
 
@@ -192,9 +193,7 @@ G2 参数评估提交了 manifest、执行记录与自检记录，但第一份 C
 \subsection{空值叙述、Notebook 和图形修复}
 真实 AI 批判的早稿把丢失参考覆盖后的不可计算误差与“误差恶化”并列。C 指出这个表述可能让人把 null 当成数值。B 只改解释，补充丢失的 11 个覆盖身份与不可计算原因；原话、参数、实验数值和机器拒绝标记不变。C 核查 148 条开发提议和 6 条引文后独立关闭问题。
 
-Notebook 最初依赖环境中不存在的 pandas，并含不成立的 Provider sentinel 文案。修复复用了已有环境和标准库，没有为表格新增依赖。另一次补齐 Notebook 对三个单项 G2 评估的展示后，三份 Notebook 新内核实际执行了 21 个代码单元、17,401 次确定性记录--候选复算，新增模型调用为 0。测试次数与复算次数没有用作独立样本数。
-
-正式图预览还暴露过图例遮挡、窄轨迹面板压缩、案例参数未标清，以及把 24 条记录$\times$3 次重复简写成 72 个 episode 的问题。修复只改变标签和布局，保留旧图和数值来源；独立 C 查看全部 11 张图及 200 dpi PDF 渲染。由图形表达造成的误读风险不通过修改数据来解决。
+Notebook 的完整复算与图形核查进一步验证了报告是否可由实际程序重现。具体环境故障和排版修复留在工程记录；正文只保留影响解释的修正，例如 24 条记录各 3 次重复属于 72 个记录观察，不能当成 72 个独立样本。可靠复现和准确呈现不等于方法质量提升。
 
 \subsection{中断与费用记录不填空白数字}
 G2 一次主动中断被误分类为认证或付费阻碍。根因是分类器在无关哈希中匹配 401 或 403。独立复算将其识别为真实中断检查点，保留原记录，没有编造服务认证失败。有效实验 \ValidModelCalls{} 次、历史中断/失效 \HistoricModelCalls{} 次和工程资格 1 次分别计账；底层请求与费用不可见时记为未知，不填 0。
@@ -251,7 +250,6 @@ G2 开发记录 7764 的带记忆模式提出更强空间分段并放宽过滤�
 现有原始授权与模型响应可以组成有来源的候选索引，记录主题、触发、原话来源、建议、可得的人类判断、引用实验与实际决定。但由哪一句作为 anchor、哪些语句高亮、箭头表达什么关系、如何安排截图顺序、采用哪个层级，仍由 Evidence Master 决定。本文不提前赋予这些选择，不把工程事实段落标成已 LOCK 的互动单元。
 
 \begin{table}[H]\centering\small\caption{影响报告闭合的外部输入。技术计算可继续，不以空白证据补成完成状态。}\begin{tabularx}{\linewidth}{@{}p{31mm}Y Y@{}}\toprule 待补对象 & 当前事实 & 影响与后续工程 \\ \midrule
-正式姓名、学号 & 限定任务输入与仓库中未获得可信值。 & 当前封面待补；提交包仅可 REVIEW\_ONLY，不能猜测 Git 作者或昵称。 \\
 真实原始截图或逐字材料 & 有授权文本和真实模型响应；缺完整聊天原图与消息范围。 & 不从当前 Prompt 重建历史对话，不生成 ChatGPT 截图。 \\
 Evidence Plan 与 annotation spec & 现有文件只有 schema，未登记获批呈现关系。 & 先保留候选索引；不自选高亮、裁切或因果箭头。 \\
 Evidence Master 最终检查与 Lock & 无可用 LOCK 记录。 & 真实页面实现后仍需本人检查，内部编译/视觉检查不能替代。 \\
@@ -263,6 +261,8 @@ Evidence Master 最终检查与 Lock & 无可用 LOCK 记录。 & 真实页面�
 Technical Handoff 面向复算：最终范围、角色与接口、方法参数、坐标限制、指标、历史及本轮比较、最终确认、全量终态、失败与回退、图源、报告和版本。Interaction Handoff 面向 Evidence Master：保存有来源的候选事实与原话位置，把实际 Human Judgment 和 NOT\_AVAILABLE 分开；它不负责 Tier、裁切或 Lock。
 
 用户是否理解由用户真实回答与操作决定。工程测试通过、报告可编译或内部 C 审核通过，都不设置 Understanding 为 PASS。网页 GPT 二重审核在实际远程检查前保持 PENDING；教师提交在用户最终审核前仍为 NOT\_READY。本轮不发送教师邮件，不把生成 ZIP 写成已经提交。
+
+本次收尾中，用户直接提供了封面身份，并将顺序明确调整为“先完成工程收尾，再深入讲解与审核”。这关闭了身份缺项，没有关闭互动证据或用户理解验收。后续按任务与要求、数据处理与评价、系统与实验循环、正式成果与收尾四个板块核查；指南只提供当前文件和证据入口，不记录尚未发生的回答、分数或理解通过。
 
 \appendix
 \section{过程事实的主要原始入口}

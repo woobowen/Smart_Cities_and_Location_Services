@@ -15,6 +15,7 @@ import subprocess
 import sys
 import tempfile
 import zipfile
+from .identity import read_identity
 
 ROOT = Path(__file__).resolve().parents[2]
 EV = 'task1/evidence/goal3/'
@@ -124,6 +125,7 @@ def closure(root=ROOT):
         return read_json(root, path) if (root/path).is_file() else None
 
     static = NOTEBOOKS + REPORTS + [
+        'task1/config/assignment.json', 'task1/reports/metadata.tex',
         'task1/作业/作业/traj_dict.json', 'task1/config/conditional_planar.json',
         'task1/config/goal1.json', 'task1/config/goal2/contract.json',
         'task1/config/goal2/experiment_matrix.json', 'task1/config/goal3/contract.json',
@@ -135,7 +137,7 @@ def closure(root=ROOT):
         EV+'contract_freeze.json', EV+'implementation_freeze.json', EV+'selection_freeze.json',
         EV+'final_freeze.json', EV+'production_freeze.json']
     static += ['task1/goal3/'+name+'.py' for name in
-               ('__init__', '__main__', 'data', 'runtime', 'selection', 'control', 'reproduce', 'offline_plots', 'package')]
+               ('__init__', '__main__', 'data', 'runtime', 'selection', 'control', 'reproduce', 'offline_plots', 'package', 'identity')]
     static += [str(p.relative_to(root)) for p in sorted((root/'task1/workflow').glob('*.py'))]
     static += ['task1/figures/goal2/'+n+'.png' for n in G2_FIGURES]
     static += ['task1/figures/goal3/'+n+'.png' for n in G3_FIGURES]
@@ -245,13 +247,13 @@ def closure(root=ROOT):
                         'source_sha256': sha(data), 'archive_sha256': sha(data),
                         'reasons': ['portable package instructions/dependencies'], 'transformations': []})
     result = {'status': 'STATIC_CLOSURE_COMPLETE' if not missing and not errors else 'NOT_READY',
-              'package_status': 'REVIEW_ONLY', 'submission_status': 'NOT_SUBMITTED',
+              'package_status': 'REVIEW_ONLY', 'submission_status': 'NOT_READY', 'sent_to_teacher': False,
               'member_count': len(members), 'total_uncompressed_bytes': sum(m['bytes'] for m in members),
               'members': sorted(members, key=lambda m: m['path']), 'missing': sorted(missing),
               'errors': errors, 'exclusions': EXCLUSIONS,
               'runtime_scope': 'offline FULL_RECOMPUTE and two completed Notebooks; no LIVE or REPORT_BUILD dependency claim',
               'isolated_full_recompute': 'NOT_RUN_BY_BUILDER', 'new_model_calls': 0,
-              'metadata': {'student_name': 'NOT_AVAILABLE', 'student_id': 'NOT_AVAILABLE',
+              'metadata': {**read_identity(root),
                            'evidence_master_spec_and_lock': 'NOT_AVAILABLE'}}
     return result, payload
 
@@ -359,7 +361,7 @@ def build(output, report, payload):
     return {'status': 'REVIEW_ONLY', 'zip_name': output.name, 'zip_sha256': sha(output.read_bytes()),
             'zip_bytes': output.stat().st_size, 'members_including_manifest': len(contents),
             'archive_crc_and_sha256': 'VERIFIED', 'isolated_full_recompute': 'NOT_RUN_BY_BUILDER',
-            'submission_status': 'NOT_SUBMITTED'}
+            'submission_status': 'NOT_READY', 'sent_to_teacher': False}
 
 
 def main():

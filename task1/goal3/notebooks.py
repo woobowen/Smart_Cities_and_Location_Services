@@ -6,6 +6,7 @@ import json
 import textwrap
 
 import nbformat as nbf
+from .identity import read_identity
 
 ROOT = Path(__file__).resolve().parents[2]
 DEST = ROOT/'task1/notebooks/final'
@@ -440,15 +441,20 @@ print('实际独立核验、恢复和版本入口：task1/evidence/goal3/REVIEW_
 
 def build():
     DEST.mkdir(parents=True,exist_ok=True)
+    identity = read_identity(ROOT)
     written=[]
     specs=[('作业1轨迹数据预处理_完成版.ipynb',basic(),'task1/作业/作业/作业1轨迹数据预处理.ipynb','8601d1dfecaef062fef553992cc9774d3a0eb551751c70536f5b52f1343b158a'),
            ('任务3_LLM辅助评估清洗_完成版.ipynb',system(),'task1/作业/作业/任务3_LLM辅助评估清洗.ipynb','4ecffe64024e002c0cffe7830e18b5f6ded04cd5aa9dd645d6798fc9b0715add')]
     for name,cells,starter,starter_hash in specs:
+        cells[0].source += ('\n\n姓名：'+identity['student_name']+'；学号：`'+identity['student_id']
+                            +'`。报告修订日期：'+identity['report_revision_date']
+                            +'；实验实际时间以各原始运行记录为准。当前为待审交付，用户理解审核尚未完成，未提交教师。')
         nb=nbf.v4.new_notebook(cells=cells,metadata={
             'kernelspec':{'display_name':'Python 3 (project dependencies)','language':'python','name':'python3'},
             'language_info':{'name':'python','version':'3'},
             'teacher_correspondence':{'starter':starter,'starter_sha256':starter_hash,'original_untouched':True},
             'default_execution':'FULL_RECOMPUTE','new_live_enabled':False,
+            'assignment_identity':{'student_name':identity['student_name'],'student_id':identity['student_id']},
             'generation_does_not_execute':True})
         for i,cell in enumerate(nb.cells):
             cell['id']='lab1-'+hashlib.sha256((name+str(i)+cell.source).encode()).hexdigest()[:16]
