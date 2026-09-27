@@ -1,7 +1,7 @@
 {
   "goal_id": "SC-LAB1-G3-FINAL-001",
-  "at": "2026-09-27T08:51:15.300459+00:00",
-  "phase": "INTERNAL_ACCEPTED_PENDING_PUBLICATION",
+  "at": "2026-09-27T09:28:03.506811+00:00",
+  "phase": "PARTIAL_BLOCKED",
   "technical_production": "VERIFIED",
   "main_full_run": "g3-full-production-01",
   "source_crs": "UNVERIFIED",
@@ -9,8 +9,9 @@
   "active_execution": null,
   "open_engineering_issues": [],
   "remaining": [
-    "artifact commit and push main",
-    "actual remote readback and independent publication closure"
+    "META_DEPENDENCY: trusted formal name and student number",
+    "EVIDENCE_MASTER_DEPENDENCY: real interaction originals, approved presentation specification and Evidence Lock",
+    "GPT_SECOND_REVIEW: external review pending; user final submission confirmation/Understanding remain user decisions"
   ],
   "external_dependencies": [
     "trusted formal name and student ID",
@@ -48,5 +49,12 @@
   "internal_acceptance": {
     "path": "task1/evidence/goal3/independent_c/internal_acceptance_receipt.json",
     "sha256": "488b7bb5de1272c3c2e0ee470b37830d69bb62ed7725b71ba9ad98e57ac01b87"
-  }
+  },
+  "artifact_sha": "fd559e451291b9d424682853ef0909aa5eb94b32",
+  "autonomous_stable_engineering": "VERIFIED_AND_ARTIFACT_PUBLISHED",
+  "publication_closure": {
+    "path": "task1/evidence/goal3/independent_documents/publication_closure_receipt.json",
+    "sha256": "8c204bb6cf52a84e4a69dcab70236b5452b6a05ad1612b78840d564424be5946"
+  },
+  "publication_record_scope": "ARTIFACT fd559e451291b9d424682853ef0909aa5eb94b32 was actually pushed and independently read back. This closure metadata is recorded in a following commit; final actual HEAD/remote equality is reported in chat, avoiding self-reference. On recovery, inspect actual local/remote commits before deciding whether any metadata push remains."
 }

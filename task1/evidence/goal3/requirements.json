@@ -502,12 +502,21 @@
     {
       "id": "G3-A20",
       "requirement": "GitHub发布",
-      "status": "NOT_RUN",
-      "actual_actions": [],
+      "status": "PASS",
+      "actual_actions": [
+        "git commit -m \"Complete lab1 goal3 artifacts and independent acceptance checkpoint\"",
+        "git push origin main（exit0，6fad842..fd559e4）",
+        "git rev-parse HEAD；git rev-parse origin/main；git ls-remote --heads origin main；HTTPS固定SHA回读8个关键文件并比对committed blob。"
+      ],
       "expected": "current USER_PROMPT §18",
-      "measured": null,
-      "evidence": [],
-      "scope": null
+      "measured": "ARTIFACT fd559e451291b9d424682853ef0909aa5eb94b32 已实际push。Local HEAD/origin/main/实际Remote SHA一致；8个固定SHA文件HTTP200且字节hash匹配，包括两报告、两Notebook和21,418,989字节ZIP。",
+      "evidence": [
+        {
+          "path": "task1/evidence/goal3/PUBLICATION_RECORD.json",
+          "sha256": "862462cf503a7036d5d15319ab6aa2c0b29ad9c643980fc483de97620bb42f5d"
+        }
+      ],
+      "scope": "真实ARTIFACT发布和远程回读；后续发布记录的独立核查与metadata commit不改变数学/结果/报告/包，最终实际HEAD由聊天报告。"
     }
   ],
   "external_dependencies": [
@@ -539,7 +548,13 @@
   ],
   "GPT_SECOND_REVIEW": "PENDING",
   "Submission": "NOT_READY",
-  "updated_at": "2026-09-27T08:51:15.300459+00:00",
+  "updated_at": "2026-09-27T09:18:15.621865+00:00",
   "goal_completion_claim": false,
-  "remaining_work": "Actual artifact commit/push and independent remote publication verification remain. All autonomous stable engineering is accepted; META/Evidence Master inputs still prevent formal submission readiness."
+  "remaining_work": "Formal deliverable dependencies: trusted META and Evidence Master inputs, then GPT/user final review. Actual publication closure/bookkeeping is tracked in goal_state.json; no overall completion or submission claim.",
+  "overall_status": "PARTIAL_BLOCKED",
+  "technical_status": "VERIFIED",
+  "research_status": "SUPPORTED_WITHIN_SCOPE",
+  "reports_status": "BLOCKED_EXTERNAL; AVAILABLE_ENGINEERING_VERIFIED",
+  "package_status": "REVIEW_ONLY; AVAILABLE_ENGINEERING_VERIFIED",
+  "publication_status": "ARTIFACT_REMOTE_VERIFIED"
 }

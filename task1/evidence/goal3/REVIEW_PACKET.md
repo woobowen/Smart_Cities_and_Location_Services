@@ -2,7 +2,7 @@
 
 Goal：`SC-LAB1-G3-FINAL-001`。本轮是实验一的第三个工程阶段，不是课程实验三。
 
-当前数值研究、一次性最终确认、全量生产、仓库与同一解压 ZIP 共四次 FULL Notebook、七张正式图和两报告可用工程已通过独立内部审核。Handoff 与包工程父任务也已独立闭合；[总验收](independent_c/internal_acceptance_receipt.json) 已核验全部 15 个前置任务、1,131 个目标和 222 个来源，获准发布 PARTIAL_BLOCKED 审查检查点。实际发布正在进行，此入口不代表实验一最终 PASS。可信姓名/学号、真实互动原图及 Evidence Master 批准呈现与 LOCK 仍属外部缺项。`GPT_SECOND_REVIEW=PENDING`，`Submission=NOT_READY`，没有代发邮件或提交平台。
+当前数值研究、一次性最终确认、全量生产、仓库与同一解压 ZIP 共四次 FULL Notebook、七张正式图和两报告可用工程已通过独立内部审核。Handoff 与包工程父任务也已独立闭合；[总验收](independent_c/internal_acceptance_receipt.json) 已核验全部 15 个前置任务、1,131 个目标和 222 个来源，获准发布 PARTIAL_BLOCKED 审查检查点。产物已实际推送 main，Local/Remote 均核对为 ARTIFACT `fd559e451291b9d424682853ef0909aa5eb94b32`，8 个固定 SHA 文件回读与提交字节一致。此入口不代表实验一最终 PASS。可信姓名/学号、真实互动原图及 Evidence Master 批准呈现与 LOCK 仍属外部缺项。`GPT_SECOND_REVIEW=PENDING`，`Submission=NOT_READY`，没有代发邮件或提交平台。
 
 ## 1. 建议阅读顺序
 
@@ -26,7 +26,7 @@ Goal：`SC-LAB1-G3-FINAL-001`。本轮是实验一的第三个工程阶段，不
 
 最终策略为统一确定性 **S-D-P：30 / 400 / 2 / 0 / 35 / 5**，参数顺序为 `dt / distance / min_points / min_length / direction / dp`。R0 的 `min_points/min_length=5/65`，其余相同。最终记录级处理新增模型调用为 0；治理 A/B/C 的实际调用另计，隐藏后端请求与费用保持 unknown。
 
-选择、确认与生产数值 CODE_SHA：`e12f8a27944210adb452730be92a0674dfc6b84b`。后续报告、图和 Notebook 兼容性修复没有改写这些数值运行的代码身份。结果提交与发布 HEAD 待实际发布核对后登记，不能预先声称自身 SHA。
+选择、确认与生产数值 CODE_SHA：`e12f8a27944210adb452730be92a0674dfc6b84b`。后续报告、图和 Notebook 兼容性修复没有改写这些数值运行的代码身份。ARTIFACT_SHA 为 `fd559e451291b9d424682853ef0909aa5eb94b32`，已实际发布；[发布记录](PUBLICATION_RECORD.json) 保存已经发生的 SHA 核对与回读。最终记录提交的 HEAD 在聊天中给出，避免自身 SHA 循环。
 
 ## 3. 不能省略的限制与负结果
 
@@ -44,4 +44,4 @@ Goal：`SC-LAB1-G3-FINAL-001`。本轮是实验一的第三个工程阶段，不
 
 仓库两份 Notebook 新内核 FULL 和独立复验已完成：[基础本回执](independent_c/repository_basic_full_02_receipt.json)、[系统本回执](independent_c/repository_system_full_02_current_receipt.json)。两报告全部 33 页已实际目视；统一 REPORT_BUILD 后独立重渲染与已看版本逐页字节一致，[当前重建复核](independent_documents/report_entry_delta_receipt.json) 按新产物绑定，未把旧 hash 说成当前 hash。
 
-[实际 REVIEW_ONLY ZIP](../../submission/REVIEW_ONLY_实验一.zip) 已构建并真实解压，113 个成员（含 manifest）、21,418,989 字节，SHA256 `97d5dbe2d7a5c87d09bcb21ae5798fa0b76374fabdd03f25447fb87c4f27c447`。包内两个 FULL 均已独立通过：[基础本](independent_c/isolated_package_basic_full_receipt.json)、[系统本](independent_c/isolated_package_system_full_receipt.json)。两者均从包内 raw/源码执行，新分片与正式结果一致，Provider attempts=0；静态依赖检查不替代这些全量运行。总验收已通过；实际远程核对将按真实结果补入[最终回复](FINAL_RESPONSE.md)，不预写通过。
+[实际 REVIEW_ONLY ZIP](../../submission/REVIEW_ONLY_实验一.zip) 已构建并真实解压，113 个成员（含 manifest）、21,418,989 字节，SHA256 `97d5dbe2d7a5c87d09bcb21ae5798fa0b76374fabdd03f25447fb87c4f27c447`。包内两个 FULL 均已独立通过：[基础本](independent_c/isolated_package_basic_full_receipt.json)、[系统本](independent_c/isolated_package_system_full_receipt.json)。两者均从包内 raw/源码执行，新分片与正式结果一致，Provider attempts=0；静态依赖检查不替代这些全量运行。[内部总验收](independent_c/internal_acceptance_receipt.json) 与真实 ARTIFACT 远程核对均已完成，详见[最终回复](FINAL_RESPONSE.md)及[发布记录](PUBLICATION_RECORD.json)。Report/Package 的外部缺项仍保持 BLOCKED，不宣称 SUBMITTED。

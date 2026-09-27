@@ -1,10 +1,10 @@
 # SC-LAB1-G3-FINAL-001 本轮结果
 
-本轮全部可自主完成的稳定工程已通过真实独立总验收。两报告和包的可用工程已核验，但可信身份及 Evidence Master 输入仍缺失；获准发布的是 `PARTIAL_BLOCKED` 审查检查点。实际 GitHub 发布及远程核对正在收尾，本文不宣称实验一最终 PASS。
+本轮研究、全量生产和全部可自主完成的交付工程已通过独立总验收，产物已实际推送 `main` 并从 GitHub 回读核验。总状态为 **PARTIAL_BLOCKED**：可信姓名/学号及 Evidence Master 输入仍缺失，不能直接向教师提交，也不是实验一最终 PASS。本文记录已经发生的 ARTIFACT 发布；最终记录提交的 HEAD 由最后聊天回复给出，避免 Git 自引用。
 
 ## A. 范围与状态
 
-本轮按用户批准的一次性范围，承接已验收 G2，完成有限候选、父项/组合/移除比较、选择、一次性最终确认及全量生产。仍属于实验一。当前 Technical 数值处理、完整交付复算和 Handoff 为 `VERIFIED`；Research 为范围内支持 S0 的覆盖改善；Reports 可用工程 `VERIFIED`、外部项 `BLOCKED_EXTERNAL`；Package 工程已独立 VERIFIED，整体仅因身份/Evidence 输入保持 BLOCKED_EXTERNAL / REVIEW_ONLY；Publication 已获内部工程验收，实际 push/远程核对尚待执行。`GPT_SECOND_REVIEW=PENDING`，不代替外部最终验收。
+本轮按用户批准的一次性范围，承接已验收 G2，完成有限候选、父项/组合/移除比较、选择、一次性最终确认及全量生产。仍属于实验一。当前 Technical 数值处理、完整交付复算和 Handoff 为 `VERIFIED`；Research 为范围内支持 S0 的覆盖改善；Reports 可用工程 `VERIFIED`、外部项 `BLOCKED_EXTERNAL`；Package 工程已独立 VERIFIED，整体仅因身份/Evidence 输入保持 BLOCKED_EXTERNAL / REVIEW_ONLY；Publication 的 ARTIFACT 已实际发布并核对远程；独立发布回执以 goal_state 中真实记录为准。`GPT_SECOND_REVIEW=PENDING`，不代替外部最终验收。
 
 可信姓名/学号及 Evidence Master 的真实原图、呈现规格和 LOCK 未提供，登记于 [teacher_mapping.json](teacher_mapping.json)。缺项只阻断身份填写、对应互动页面、正式 Process Report 和可直接提交状态；其余必需工作继续。
 
@@ -67,12 +67,16 @@ C01—C08 的实现/来源/缓存/审核门控问题、文档结构与参数呈�
 
 ## H. 验收与发布
 
-[G3-A01—A20](requirements.json) 是唯一逐项登记；[REVIEW_PACKET](REVIEW_PACKET.md) 是当前入口。[全量独立闭合](independent_c/production_closure_receipt.json) 绑定 313 个实际目标、37 个源码依赖，四次 FULL、图、两报告可用工程、两个 Handoff 和包工程也已分别独立闭合。[最终内部总验收](independent_c/internal_acceptance_receipt.json) 实际核对 15 个前置任务、1,131 个目标和 222 个源码依赖，全部工程问题已关闭；此范围不代替未来的实际远程核对。
+[G3-A01—A20](requirements.json) 是唯一逐项登记；[REVIEW_PACKET](REVIEW_PACKET.md) 是当前入口。[全量独立闭合](independent_c/production_closure_receipt.json) 绑定 313 个实际目标、37 个源码依赖，四次 FULL、图、两报告可用工程、两个 Handoff 和包工程也已分别独立闭合。[最终内部总验收](independent_c/internal_acceptance_receipt.json) 实际核对 15 个前置任务、1,131 个目标和 222 个源码依赖，全部工程问题已关闭；随后已实际完成产物推送与远程核对。G3-A01—A14、A17、A19、A20 为 PASS；A15、A16、A18 因明确外部缺项为 BLOCKED，可完成工程分别 VERIFIED。未将缺项改成 N/A。
 
-数值 CODE_SHA 为 `e12f8a27944210adb452730be92a0674dfc6b84b`。仓库 Notebook 实际执行代码为 `0b20be8`，32 个数值源码与正式生产相同；报告源码提交为 `cb4f211`，没有改写原数值运行身份。ARTIFACT_SHA、最终 HEAD、真实远程核对及固定链接将在[发布记录](PUBLICATION_RECORD.json)登记已经发生的动作；当前未 push。
+数值 CODE_SHA 为 `e12f8a27944210adb452730be92a0674dfc6b84b`。仓库 Notebook 实际执行代码为 `0b20be8`，32 个数值源码与正式生产相同；报告源码提交为 `cb4f211`，没有改写原数值运行身份。ARTIFACT_SHA 为 `fd559e451291b9d424682853ef0909aa5eb94b32`，已实际推送至 `https://github.com/woobowen/Smart_Cities_and_Location_Services.git` 的 `main`。发布时 Local HEAD、origin/main 与实际 Remote SHA 均为该值；固定 SHA 回读的 8 个关键文件全部 HTTP 200、哈希匹配。[发布记录](PUBLICATION_RECORD.json) 只登记已经发生的核对；最终包含本记录的 HEAD 由最后聊天回复报告。
 
-原有两份未跟踪 Handoff ZIP 保持未跟踪，三份既有 ZIP 字节未变；未覆盖用户未提交工作，未 force push 或改旧历史。报告源、完整结果、失败证据和原有有效工程保留在 GitHub 工程范围，教师包单独取必要闭包。
+固定产物链接：[Experiment Report](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/fd559e451291b9d424682853ef0909aa5eb94b32/task1/reports/experiment1/experiment1.pdf)、[Process Report 送审稿](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/fd559e451291b9d424682853ef0909aa5eb94b32/task1/reports/process1/process1.pdf)、[完整结果摘要](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/fd559e451291b9d424682853ef0909aa5eb94b32/task1/evidence/goal3/result_summary.json)、[审阅入口的 ARTIFACT 快照](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/fd559e451291b9d424682853ef0909aa5eb94b32/task1/evidence/goal3/REVIEW_PACKET.md)。最后一个快照保留形成时的发布待办；本目录当前 REVIEW_PACKET 和最终聊天链接指向随后真实完成的发布记录。
+
+本轮新增/修改集中于主 README、task1/goal3 与 config/goal3、tests、docs/goal3、evidence/goal3、notebooks/final、figures/goal3、两报告工程及 submission；完整路径和内容可从提交 diff 与独立清单核查，没有删除有效文件。原有两份未跟踪 Handoff ZIP 保持未跟踪，三份既有 ZIP 字节未变；未覆盖用户未提交工作，未 force push 或改旧历史。报告源、完整结果、失败证据和原有有效工程保留在 GitHub 工程范围，教师包单独取必要闭包。
 
 ## I. 最终边界
 
-可自主完成的稳定工程已通过独立总验收；实际发布仍在执行。身份与 Evidence Master 输入缺失，因此获准发布的总状态为 `PARTIAL_BLOCKED`，不能称作完整可提交成果。网页 GPT 二重审核保持 PENDING，Evidence LOCK、用户 Understanding 和最终提交确认均由对应真实角色完成。
+全部可自主完成的稳定工程已通过独立总验收并实际发布。可信身份与 Evidence Master 原始材料、批准呈现规格/LOCK 仍缺失，因此总状态保持 `PARTIAL_BLOCKED`，不能称作完整可提交成果。网页 GPT 二重审核保持 PENDING，Evidence LOCK、用户 Understanding 和最终提交确认均由对应真实角色完成。
+
+离线复算命令为 `.venv/bin/python -m task1.goal3 FULL_RECOMPUTE --output <新的结果目录>`；`LIVE` 需显式开启，本轮未新增 LIVE。本轮实际执行了 `.venv/bin/python -m task1.goal3 REPORT_BUILD`（当时目标 ZIP 不存在）以及四次新内核 Notebook；以后重建需 `REPORT_BUILD --output <新的REVIEW_ONLY_*.zip路径>`，不得覆盖已审核包。完整参数与本轮真实命令见 [README](../../README.md) 和执行回执。`git diff --cached --check` 实际返回 2，独立分类确认 167,289 条告警仅来自可解析 CSV 的 CRLF、原生 SVG、真实补丁及日志格式；原字节和[独立依据](independent_documents/staged_diff_check_receipt.json)保留，没有修改配置掩盖或重写冻结结果。
