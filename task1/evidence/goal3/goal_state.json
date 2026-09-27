@@ -4395,53 +4395,38 @@
       "verifier": "/root/c_independent"
     },
     "publication": {
-      "status": "STALE_REBUILD_REQUIRED",
+      "status": "VERIFIED",
       "depends_on": [
         "internal_acceptance"
       ],
       "targets": [
         {
-          "path": "task1/evidence/goal3/PUBLICATION_RECORD.json",
-          "sha256": "862462cf503a7036d5d15319ab6aa2c0b29ad9c643980fc483de97620bb42f5d"
+          "path": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/PUBLICATION_RECORD.json",
+          "sha256": "0fa812a50b1ae2124829e2a807ebd813b82fb01d188e7a51d959fe103fb0fb63"
         },
         {
-          "path": "task1/evidence/goal3/FINAL_RESPONSE.md",
-          "sha256": "07bab200c1672c504bcaf14cbafe1853f86c1110756a6889cbbb46e9f7cdd1c5"
-        },
-        {
-          "path": "task1/evidence/goal3/REVIEW_PACKET.md",
-          "sha256": "45bb5c6e8f40c5e1bb92a4a2be2bca2247d064dc31de6b899f2ed23e5f847f0e"
-        },
-        {
-          "path": "task1/evidence/goal3/requirements.json",
-          "sha256": "33f09d12f4a8f6a36c5ad9d77c3233e080bc134a66623951854903924d50560a"
-        },
-        {
-          "path": "task1/evidence/goal3/resource_plan.json",
-          "sha256": "49d8ab1058d145d0afa7d039748716a7d7b29a651855c5ecca29c1b81f9c63e2"
-        },
-        {
-          "path": "task1/evidence/goal3/publication_submission_snapshot.json",
-          "sha256": "6d139cb1bc7e92ac49cfbb3c9a5b563e3d91ab73c203e0d1d8d2289baed4d448"
+          "path": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/artifact_push_output.txt",
+          "sha256": "f37a0d9bb6ea883588865cc9d31f39a5926ccb0ea5cf75646db573901456deba"
         }
       ],
       "source_hashes": {
-        "task1/evidence/goal3/independent_c/internal_acceptance_receipt.json": "488b7bb5de1272c3c2e0ee470b37830d69bb62ed7725b71ba9ad98e57ac01b87",
-        "task1/evidence/goal3/independent_documents/publication_preflight_receipt.json": "db880a08c2327f13793f01c53de0c618e17d23ec80232c3fa9b01b3d287bef55",
-        "task1/evidence/goal3/independent_documents/publication_candidate_manifest.json": "91848d44db7b67a4ba809f98adc31b35bab1947bc882002e6702a4f7b8e578b2",
-        "task1/evidence/goal3/independent_documents/pre_artifact_closeout_receipt.json": "382faf4fb2558abce8e2816cad2e9c123944425f119eb29fa9cfc853f2e3a8d3",
-        "task1/evidence/goal3/independent_documents/staged_diff_check_receipt.json": "11338448907f878fecbb91e2480bdfce26284e45ef304882683ed1361fde0fb3",
-        "task1/evidence/goal3/staged_candidate_binding.json": "2545793e882b99927059407a241d4c06f2f4f5c2b13f0ca5646cb7575a91eda0",
-        "task1/evidence/goal3/source_bundle_final_check.json": "cae8d6b2a704a03d95b9ea2c603a609ba9daf4e98912c52ec4a3155aa6d72a43",
-        "task1/evidence/goal3/startup.json": "088efe8cdc9da620282bf0ac201752cae8857774877bdcb56fe2934bd1428337",
-        "task1/goal3/control.py": "cf19a0130454635e5598838b5f77adfb95038a636060e23c05763d452ff2435e"
+        "task1/docs/goal3/REVIEW_GUIDE.md": "85d5bbbf5b869a28a383bbd6d3f7ae53447b2636f938949c7c5c1f42b6b3a38c",
+        "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/a_diagnosis/MASTER_REQUIREMENTS_REVIEW.md": "43f7703489fec6f955702f69a16b230d82db83702bc549a5cce75521f325e997",
+        "task1/evidence/goal3/report_build/build_receipt.json": "5ebe7fcb4f2ca4037b4064d6fc6952b019ae4210d91521866ae90777b4a55c13",
+        "task1/reports/experiment1/experiment1.pdf": "5a7f01b64be6a9bc424b1e8cc90ccae9306e21a9959ff674363fcc4c046d7606",
+        "task1/reports/process1/process1.pdf": "9ff0fc21b2c843156b3d2bb648441dd19f51569dc451975d531a029971a34a88",
+        "task1/notebooks/final/作业1轨迹数据预处理_完成版.ipynb": "e64513b662c954b7097f429e93d67106916d7a246b093ce74ac9721153ec2df1",
+        "task1/notebooks/final/任务3_LLM辅助评估清洗_完成版.ipynb": "5e79f525fc194110282f974070bce087a09c14bc5aaa11c276abf08e87694277",
+        "task1/submission/REVIEW_ONLY_10245102410_吴博闻_实验一.zip": "efa6d259a45cf5c89725c4ebe3d2f02f5b3e1c6ca82c4672de2a6fd4ae78ecc0",
+        "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/c_review/internal_acceptance_receipt.json": "bdfd31aba7541cfe45268be39087a4615bac438a416c5ba060031f800e235050",
+        "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/readback_publication.py": "aae7b822fd67b0da4982148c05834f8939e5d750176cfa533e9e9394631d8c9e"
       },
       "author": "B:root",
       "receipt": {
-        "path": "task1/evidence/goal3/independent_documents/publication_closure_receipt.json",
-        "sha256": "8c204bb6cf52a84e4a69dcab70236b5452b6a05ad1612b78840d564424be5946"
+        "path": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/c_review/publication_task_receipt.json",
+        "sha256": "428facf6bff8c1311b38d7ebeccfbdaa0393418736f333b9c42e1ca96a782265"
       },
-      "verifier": "/root/c_documents"
+      "verifier": "/root/c_independent"
     }
   },
   "issues": {
@@ -20184,6 +20169,45 @@
       "task": "internal_acceptance",
       "status": "BLOCKED_EXTERNAL",
       "hash": "8e4be7857894d61c1a730cb31d090cb965a4ee61516fe8efcc87b6f3082ee421"
+    },
+    {
+      "at": "2026-09-27T18:03:20.654211+00:00",
+      "kind": "TASK_SUBMITTED",
+      "previous_hash": "8e4be7857894d61c1a730cb31d090cb965a4ee61516fe8efcc87b6f3082ee421",
+      "task": "publication",
+      "targets": [
+        {
+          "path": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/PUBLICATION_RECORD.json",
+          "sha256": "0fa812a50b1ae2124829e2a807ebd813b82fb01d188e7a51d959fe103fb0fb63"
+        },
+        {
+          "path": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/artifact_push_output.txt",
+          "sha256": "f37a0d9bb6ea883588865cc9d31f39a5926ccb0ea5cf75646db573901456deba"
+        }
+      ],
+      "hash": "fa43fa53bde15d429dbff7bd41d4e8a48b7e8971047a394dfe92629b9079e0c1"
+    },
+    {
+      "at": "2026-09-27T18:09:47.959252+00:00",
+      "kind": "C_TASK_CLOSED",
+      "previous_hash": "fa43fa53bde15d429dbff7bd41d4e8a48b7e8971047a394dfe92629b9079e0c1",
+      "task": "publication",
+      "status": "VERIFIED",
+      "hash": "bf3f86d5264300ac814f6e985cf77490e1ca022e60bdc322fc69751eccec452f"
+    },
+    {
+      "at": "2026-09-27T18:10:23.009139+00:00",
+      "kind": "SOURCE_INVALIDATION_PROPAGATED",
+      "previous_hash": "bf3f86d5264300ac814f6e985cf77490e1ca022e60bdc322fc69751eccec452f",
+      "tasks": [],
+      "hash": "17fd9c88a1b1aad0ffdeb1315812b3a60b12ca5d7d2ed3139a8b5ff1ddc9e1ba"
+    },
+    {
+      "at": "2026-09-27T18:10:23.024227+00:00",
+      "kind": "CHECKPOINT",
+      "previous_hash": "17fd9c88a1b1aad0ffdeb1315812b3a60b12ca5d7d2ed3139a8b5ff1ddc9e1ba",
+      "status": "PARTIAL_BLOCKED",
+      "hash": "cd98a8c01297c283313620fff5f3f6ee22fd653d13be45a9d716ab2d37080409"
     }
   ],
   "inflight": null,

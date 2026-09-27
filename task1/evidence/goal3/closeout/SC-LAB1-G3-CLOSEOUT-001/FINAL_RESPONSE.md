@@ -7,12 +7,15 @@ Task：`SC-LAB1-G3-CLOSEOUT-001`；Parent Goal：`SC-LAB1-G3-FINAL-001`。本记
 身份已同步为**吴博闻 / 字符串 10245102410**，生成链重建不会回退。两报告、两 Notebook、新具名待审包、65项要求对账、文献使用表及四块复盘指南已形成当前版本。旧研究保持冻结，没有新增 Goal 4、调参、候选、算法研究或实验记录级 LIVE 调用。
 
 <!-- CURRENT_CLOSEOUT_STATUS -->
-当前全部可自主交付内容已通过[独立C合并验收](c_review/internal_acceptance_receipt.json)：220个产物、258项来源绑定。正式Process互动证据仅因真实外部输入缺失保持BLOCKED，工程内容已完成。本次正在执行实际发布；CL16与远程一致性仍待真实动作，不预签。
+**Closeout Engineering：PARTIAL_BLOCKED。** 全部可自主收尾、四次FULL复现、独立内容/视觉审核和真实GitHub发布均已完成；只保留Process正式互动证据的外部缺项。身份依赖已经关闭。独立C合并验收核了220个产物、258项来源绑定，发布后另实际回读10个固定文件；[内部验收](c_review/internal_acceptance_receipt.json) / [独立发布核验](c_review/publication_task_receipt.json)。
+
+CL01—CL07、CL09—CL16共15项在登记工程范围内PASS；CL08因真实互动原件/spec/Lock缺失保持BLOCKED，可完成的过程报告工程已经核验。没有遗留普通工程问题，不宣称实验一最终PASS或用户已理解。
 <!-- END_CURRENT_CLOSEOUT_STATUS -->
 
 | 状态 | 当前含义 |
 |---|---|
 | Identity | `VERIFIED`；姓名、完整字符串学号及重建一致性已核实 |
+| Closeout Engineering | `PARTIAL_BLOCKED`；可自主工程和发布已完成，正式互动Evidence仍外部待补 |
 | Process Evidence | `BLOCKED_EXTERNAL_ORIGINALS_SPEC_LOCK` |
 | Deliverable | `FINAL_REVIEW`，内部工程检查不等于最终 Deliverable PASS |
 | Understanding | `LEARNING`；用户尚未逐项深入讲解与理解验收 |
@@ -107,7 +110,11 @@ Repository：`https://github.com/woobowen/Smart_Cities_and_Location_Services.git
 - Experiment PDF SHA256：`5a7f01b64be6a9bc424b1e8cc90ccae9306e21a9959ff674363fcc4c046d7606`；Process PDF SHA256：`9ff0fc21b2c843156b3d2bb648441dd19f51569dc451975d531a029971a34a88`。
 
 <!-- CURRENT_PUBLICATION_RECORD -->
-本段将在实际push和固定SHA回读之后登记已经发生的核对，不预填未来提交SHA，不制造文件自身提交的循环哈希。
+本次核心交付 **ARTIFACT_SHA=`029aa30bfb00253173de8284468f8964e5e17ce3`** 已真实push到main。核对时间 `2026-09-27T18:02:42.056936+00:00`，Local HEAD、origin/main、实际Remote SHA均为该值，一致。[真实发布回执](PUBLICATION_RECORD.json)和[git命令输出](artifact_push_output.txt)保存原始范围；10个固定SHA关键文件HTTP200且与committed blob逐字节相同，包括两PDF、两Notebook和15,776,719字节ZIP。
+
+固定核心成果链接：[当前审阅入口](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/029aa30bfb00253173de8284468f8964e5e17ce3/task1/evidence/goal3/REVIEW_PACKET.md)；[要求总账](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/029aa30bfb00253173de8284468f8964e5e17ce3/task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/a_diagnosis/MASTER_REQUIREMENTS_REVIEW.md)；[文献使用表](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/029aa30bfb00253173de8284468f8964e5e17ce3/task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/a_diagnosis/literature_use_map.md)；[四块复盘指南](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/029aa30bfb00253173de8284468f8964e5e17ce3/task1/docs/goal3/REVIEW_GUIDE.md)；[技术Handoff](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/029aa30bfb00253173de8284468f8964e5e17ce3/task1/docs/goal3/TECHNICAL_HANDOFF.md)；[互动Handoff](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/029aa30bfb00253173de8284468f8964e5e17ce3/task1/docs/goal3/INTERACTION_HANDOFF.md)；[Experiment PDF](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/029aa30bfb00253173de8284468f8964e5e17ce3/task1/reports/experiment1/experiment1.pdf)；[Experiment源码](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/029aa30bfb00253173de8284468f8964e5e17ce3/task1/reports/experiment1/experiment1.tex)；[Process PDF](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/029aa30bfb00253173de8284468f8964e5e17ce3/task1/reports/process1/process1.pdf)；[Process源码](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/029aa30bfb00253173de8284468f8964e5e17ce3/task1/reports/process1/process1.tex)；[分页文本与200dpi页图](https://github.com/woobowen/Smart_Cities_and_Location_Services/tree/029aa30bfb00253173de8284468f8964e5e17ce3/task1/evidence/goal3/report_build)；[基础Notebook](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/029aa30bfb00253173de8284468f8964e5e17ce3/task1/notebooks/final/%E4%BD%9C%E4%B8%9A1%E8%BD%A8%E8%BF%B9%E6%95%B0%E6%8D%AE%E9%A2%84%E5%A4%84%E7%90%86_%E5%AE%8C%E6%88%90%E7%89%88.ipynb)；[系统Notebook](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/029aa30bfb00253173de8284468f8964e5e17ce3/task1/notebooks/final/%E4%BB%BB%E5%8A%A13_LLM%E8%BE%85%E5%8A%A9%E8%AF%84%E4%BC%B0%E6%B8%85%E6%B4%97_%E5%AE%8C%E6%88%90%E7%89%88.ipynb)；[新待审ZIP](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/029aa30bfb00253173de8284468f8964e5e17ce3/task1/submission/REVIEW_ONLY_10245102410_%E5%90%B4%E5%8D%9A%E9%97%BB_%E5%AE%9E%E9%AA%8C%E4%B8%80.zip)。
+
+本文件、CL矩阵、父状态及发布回执在实际核对后另作metadata提交，不改核心报告/包/Notebook/图/MASTER字节。该后续提交的最终HEAD在实际push后再次核验并于聊天报告，不能在文件中预造尚未发生的自身提交SHA。上述固定核心成果版本与数值/文档构建版本的用途分别保留。
 <!-- END_CURRENT_PUBLICATION_RECORD -->
 
 用户原有未跟踪文件 `SC-LAB1-G1-CLOSURE-002_HANDOFF.zip`、`SC-LAB1-G1-COMPLETE-001_HANDOFF.zip`继续保留，未纳入本轮提交。无force push、远程历史改写、无关分支或文件清理。

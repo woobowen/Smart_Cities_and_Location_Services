@@ -18,13 +18,13 @@
 | CL12 | 复盘指南与Handoff | PASS | 4块/13理解问题、两份Handoff、当前Notebook/PDF/图源定位；C check_handoffs_task.py及真实全文阅读；Journal.accept handoffs；21targets/134sources，22TD当前cell/PDF定位、34页text/render绑定通过；四块13理解问题不预设用户通过。 | [handoffs_task_receipt.json](c_review/handoffs_task_receipt.json)<br>[guide_interaction_receipt.json](c_review/guide_interaction_receipt.json) | 后续用户与网页GPT实际深入讲解/审核 |
 | CL13 | 持续内部修复 | PASS | 普通包状态、引用、链接、措辞、表格已修；两次中断的同源新内核重试已独立闭合并恢复父任务；真实issue→修复/同源重试→回归/重建→独立C→Journal.close_issue；CL-C01/02/03均独立闭合并恢复父任务；辅助送审schema错误最小修复后真实提交成功且C核实。 | [CL-C01_closure.json](c_review/CL-C01_closure.json)<br>[CL-C02_closure.json](c_review/CL-C02_closure.json)<br>[CL-C03_closure.json](c_review/CL-C03_closure.json)<br>[controller_submission_repair.json](controller_submission_repair.json)<br>[notebooks_task_receipt.json](c_review/notebooks_task_receipt.json) | 无普通工程阻碍；SIGTERM发起原因unknown保留，不假称数学修复 |
 | CL14 | 当前版本一致 | PASS | 源码/报告/图/文本/包/导航分开绑定；数值CODE_SHA不改；当前六项叶任务的C回执与Journal.current检查；不可变治理快照及包内容等价绑定；源码/冻结结果/报告/34页图/两Notebook/116成员包/TD导航均绑定当前有效内容；旧回执与新执行范围分开。 | [handoffs_task_receipt.json](c_review/handoffs_task_receipt.json)<br>[notebooks_task_receipt.json](c_review/notebooks_task_receipt.json)<br>[package_task_receipt.json](c_review/package_task_receipt.json)<br>[review_input_snapshot_receipt.json](c_review/review_input_snapshot_receipt.json) | 最终实际发布SHA由CL16单列；不预造文件自身SHA |
-| CL15 | 安全与范围 | PASS | 无新调参、外部数据、LIVE；不发教师、不分发字体/论文全文；完整当前task1变更预检、C包安全路径/成员核验、11-file --check、当前导航检查、diff空白分类；294个变更/新增文件无凭据/大文件/越界；2396本地链接通过；未打包字体/私密材料，未发教师，未改变source_crs及标准。 | [PREFLIGHT.json](PREFLIGHT.json)<br>[CURRENT_LINKS.json](CURRENT_LINKS.json)<br>[WHITESPACE_CHECK.json](WHITESPACE_CHECK.json)<br>[package_receipt.json](c_review/package_receipt.json)<br>[upload_bundle_receipt.json](c_review/upload_bundle_receipt.json) | 仅正式Evidence与用户/网页审核；无新增安装或持久环境配置 |
-| CL16 | 发布 | NOT_RUN | 内部实际范围验收后发布准确PARTIAL_BLOCKED待审点；预检main实际远端仍1a5e26b；尚未push；没有提前签远程一致或最终PASS |  | 内部验收后push main并固定SHA回读 |
+| CL15 | 安全与范围 | PASS | 无新调参、外部数据、LIVE；不发教师、不分发字体/论文全文；完整当前task1变更预检、C包安全路径/成员核验、11-file --check、当前导航检查、diff空白分类；302个变更/新增文件无凭据/大文件/越界；2411本地链接通过；未打包字体/私密材料，未发教师，未改变source_crs及标准。 | [PREFLIGHT.json](PREFLIGHT.json)<br>[CURRENT_LINKS.json](CURRENT_LINKS.json)<br>[WHITESPACE_CHECK.json](WHITESPACE_CHECK.json)<br>[package_receipt.json](c_review/package_receipt.json)<br>[upload_bundle_receipt.json](c_review/upload_bundle_receipt.json) | 仅正式Evidence与用户/网页审核；无新增安装或持久环境配置 |
+| CL16 | 发布 | PASS | 内部实际范围验收后发布准确PARTIAL_BLOCKED待审点；真实push main；主线程与独立C分别核Local/origin/实际Remote SHA并HTTP读取10个固定SHA关键文件；核心ARTIFACT 029aa30bfb00253173de8284468f8964e5e17ce3 远程一致，10/10文件HTTP200且匹配committed blob，远程ZIP的CRC/成员/PDF/NOT_READY由C核实。 | [PUBLICATION_RECORD.json](PUBLICATION_RECORD.json)<br>[publication_task_receipt.json](c_review/publication_task_receipt.json)<br>[artifact_push_output.txt](artifact_push_output.txt) | 仅发布记录metadata提交的最终HEAD在聊天复核；新网页GPT内容验收仍PENDING |
 
 独立状态：
 
 - Identity：`VERIFIED`。
-- Closeout Engineering：`PARTIAL_BLOCKED; INTERNAL_EXECUTABLE_SCOPE_VERIFIED; PUBLICATION_PENDING`。
+- Closeout Engineering：`PARTIAL_BLOCKED`。
 - Process Evidence：`BLOCKED_EXTERNAL_ORIGINALS_SPEC_LOCK`。
 - Deliverable：`FINAL_REVIEW`。
 - Understanding：`LEARNING`。

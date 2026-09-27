@@ -65,7 +65,7 @@
     "package_status": "REVIEW_ONLY; AVAILABLE_ENGINEERING_VERIFIED",
     "publication_status": "ARTIFACT_REMOTE_VERIFIED"
   },
-  "current_review_stage": "INTERNAL_ACCEPTED_PENDING_ACTUAL_PUBLICATION",
+  "current_review_stage": "CURRENT_EXECUTABLE_SCOPE_INDEPENDENTLY_ACCEPTED_AND_PUBLISHED",
   "status_semantics": {
     "PASS": "当前回执明确的限定范围已通过，不等于整体或用户验收",
     "INHERITED_NUMERIC_EVIDENCE": "历史数值证据加本轮冻结字节/summary等价复核，不是本轮新实验",
@@ -1208,7 +1208,7 @@
       "id": "G3-A20",
       "requirement": "GitHub发布",
       "review_task": "SC-LAB1-G3-CLOSEOUT-001",
-      "status_as_of": "2026-09-27T17:47:18.406735+00:00",
+      "status_as_of": "2026-09-27T18:11:19.126997+00:00",
       "historical_as_of": "1a5e26b43189aef64a46f8986b3cc442fa50d2c5",
       "previous_acceptance": {
         "id": "G3-A20",
@@ -1230,16 +1230,21 @@
         "scope": "真实ARTIFACT发布和远程回读；后续发布记录的独立核查与metadata commit不改变数学/结果/报告/包，最终实际HEAD由聊天报告。"
       },
       "expected": "保留原Goal3要求；当前用户SC-LAB1-G3-CLOSEOUT-001仅调整收尾顺序和已授权工程范围。",
-      "status": "PENDING",
+      "status": "PASS",
       "actual_actions": [
-        "保留历史发布记录；本轮按用户授权在实际内部验收后push并固定SHA远程回读。"
+        "正常git push main；Local HEAD/origin/main/ls-remote核对；主线程及独立C分别HTTP回读10个固定SHA关键文件并逐字节对Git blob。"
       ],
-      "measured": "本轮尚未据此项登记新push/远程一致；历史fd559e4发布和1a5e26b锚点保持历史身份。",
+      "measured": "当前核心ARTIFACT 029aa30bfb00253173de8284468f8964e5e17ce3 已远程核实；两个报告、两个Notebook和当前ZIP均实读。后续只有发布状态metadata提交，不改核心内容。",
       "evidence": [
         {
-          "path": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/AUTHORIZATION.md",
-          "sha256": "fa41a7fc225e64dea703c0253447425c1d08917a0bdfe1e4a3ea809936e7810b",
-          "scope": "本轮用户授权节选与要求归并说明；不冒称完整历史逐字对话。"
+          "path": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/c_review/publication_task_receipt.json",
+          "sha256": "428facf6bff8c1311b38d7ebeccfbdaa0393418736f333b9c42e1ca96a782265",
+          "scope": "本轮核心交付实际发布、独立远程回读与现有C验收新鲜度；不是网页GPT最终文档验收。"
+        },
+        {
+          "path": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/PUBLICATION_RECORD.json",
+          "sha256": "0fa812a50b1ae2124829e2a807ebd813b82fb01d188e7a51d959fe103fb0fb63",
+          "scope": "已经发生的029aa30核心交付发布；自身随后metadata提交不预填。"
         }
       ],
       "scope": "不得以旧ARTIFACT_REMOTE_VERIFIED冒充本轮新报告/包已发布。",
@@ -1258,7 +1263,7 @@
   "current_acceptance_detail": {
     "json_path": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/ACCEPTANCE_MATRIX.json",
     "markdown_path": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/ACCEPTANCE_MATRIX.md",
-    "status": "CURRENT_CL01_CL15_COMPLETE_CL16_PENDING_ACTUAL_PUBLICATION",
+    "status": "CL01_CL16_CURRENT_SCOPE_CLOSED_EXCEPT_CL08_EXTERNAL_EVIDENCE",
     "hash_binding": "PATH_ONLY_TO_AVOID_CIRCULAR_BINDING"
   },
   "external_dependencies": [
@@ -1313,16 +1318,19 @@
   "Submission": "NOT_READY",
   "GPT_SECOND_REVIEW": "PENDING",
   "New_GPT_SECOND_REVIEW": "PENDING",
-  "updated_at": "2026-09-27T18:00:53.228231+00:00",
+  "updated_at": "2026-09-27T18:11:19.126997+00:00",
   "goal_completion_claim": false,
-  "remaining_work": "只待当前实际push与固定SHA远程回读；正式Process外部原件/spec/Lock及随后网页GPT、用户深入审核保持待办。",
+  "remaining_work": "仅正式Process的真实互动原件/批准spec/Lock，以及随后网页GPT读取当前远程成果和用户四块深入讲解、理解与最终提交决定。没有遗留普通工程debug。",
   "overall_status": "PARTIAL_BLOCKED",
   "technical_status": "VERIFIED_CURRENT_EXECUTABLE_SCOPE",
   "research_status": "INHERITED_NUMERIC_EVIDENCE_WITH_CURRENT_EQUIVALENCE_CHECK",
   "reports_status": "EXPERIMENT_INTERNAL_VERIFIED; PROCESS_ENGINEERING_VERIFIED_EXTERNAL_BLOCKED",
   "package_status": "REVIEW_ONLY_ENGINEERING_VERIFIED",
-  "publication_status": "PENDING_CURRENT_CLOSEOUT_PUBLICATION",
+  "publication_status": "CURRENT_CLOSEOUT_ARTIFACT_REMOTE_VERIFIED",
   "NUMERIC_CODE_SHA": "e12f8a27944210adb452730be92a0674dfc6b84b",
   "historical_ARTIFACT_SHA": "fd559e451291b9d424682853ef0909aa5eb94b32",
-  "current_record_level_model_calls_policy": "0 new LIVE; four actual FULL receipts independently verify attempted new calls 0; governance backend usage unknown"
+  "current_record_level_model_calls_policy": "0 new LIVE; four actual FULL receipts independently verify attempted new calls 0; governance backend usage unknown",
+  "CLOSEOUT_ARTIFACT_SHA": "029aa30bfb00253173de8284468f8964e5e17ce3",
+  "DOCUMENT_BUILD_CODE_SHA": "3912f4da2a21ea9da26f75acb6434d889e480462",
+  "PACKAGE_CONTENT_ID": "6a5ac3819e840980a05d0637ce07ea5e2a4c4aa53161c8dd3fd214dd63483f12"
 }

@@ -1,0 +1,156 @@
+{
+  "role_context": "/root/c_independent",
+  "checked_at": "2026-09-27T18:09:25.372324+00:00",
+  "tasks": {
+    "publication": {
+      "status": "VERIFIED",
+      "targets": [
+        {
+          "path": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/PUBLICATION_RECORD.json",
+          "sha256": "0fa812a50b1ae2124829e2a807ebd813b82fb01d188e7a51d959fe103fb0fb63"
+        },
+        {
+          "path": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/artifact_push_output.txt",
+          "sha256": "f37a0d9bb6ea883588865cc9d31f39a5926ccb0ea5cf75646db573901456deba"
+        }
+      ],
+      "source_hashes": {
+        "task1/docs/goal3/REVIEW_GUIDE.md": "85d5bbbf5b869a28a383bbd6d3f7ae53447b2636f938949c7c5c1f42b6b3a38c",
+        "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/a_diagnosis/MASTER_REQUIREMENTS_REVIEW.md": "43f7703489fec6f955702f69a16b230d82db83702bc549a5cce75521f325e997",
+        "task1/evidence/goal3/report_build/build_receipt.json": "5ebe7fcb4f2ca4037b4064d6fc6952b019ae4210d91521866ae90777b4a55c13",
+        "task1/reports/experiment1/experiment1.pdf": "5a7f01b64be6a9bc424b1e8cc90ccae9306e21a9959ff674363fcc4c046d7606",
+        "task1/reports/process1/process1.pdf": "9ff0fc21b2c843156b3d2bb648441dd19f51569dc451975d531a029971a34a88",
+        "task1/notebooks/final/作业1轨迹数据预处理_完成版.ipynb": "e64513b662c954b7097f429e93d67106916d7a246b093ce74ac9721153ec2df1",
+        "task1/notebooks/final/任务3_LLM辅助评估清洗_完成版.ipynb": "5e79f525fc194110282f974070bce087a09c14bc5aaa11c276abf08e87694277",
+        "task1/submission/REVIEW_ONLY_10245102410_吴博闻_实验一.zip": "efa6d259a45cf5c89725c4ebe3d2f02f5b3e1c6ca82c4672de2a6fd4ae78ecc0",
+        "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/c_review/internal_acceptance_receipt.json": "bdfd31aba7541cfe45268be39087a4615bac438a416c5ba060031f800e235050",
+        "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/readback_publication.py": "aae7b822fd67b0da4982148c05834f8939e5d750176cfa533e9e9394631d8c9e"
+      },
+      "checked_components": [
+        "Actual independent Git checks: exact approved repository/main and Local HEAD=origin/main=actual remote main=already published artifact029aa30bfb00253173de8284468f8964e5e17ce3, both before and after HTTP verification.",
+        "All2 submitted targets and10 immutable sources checked against current bytes; source bytes also match the actual artifact commit. Internal C220 targets/258 sources remain unchanged and its limited engineering PASS was actually accepted before publication.",
+        "Independent fresh HTTP GETs for all10 fixed-commit files, including both complete PDFs, both Notebooks and the15.78MB ZIP: all200 and byte-identical to committed blobs and the publisher record. This does not rely on B's HTTP result alone.",
+        "The remote ZIP itself reopened in memory: all116 members unique, CRC passes, both bundled PDF bytes match the same remote commit reports, Submission NOT_READY and sent_to_teacher=false.",
+        "NUMERIC_CODE_SHA, historical numeric ARTIFACT_SHA, document build3912f4d, package content ID and current closeout artifact are kept distinct. No new numerical/model execution was used for publication verification.",
+        "No Evidence Lock, final course PASS, new webpageGPT acceptance, user Understanding acceptance or teacher submission is implied. The later metadata commit is not predicted; final actual HEAD/remote must be verified after that publication."
+      ]
+    }
+  },
+  "submission": {
+    "path": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/publication_review_submission.json",
+    "sha256": "0e9efbc402628309c1b926cb1b3c744176c3552569e18186340d9cfa946cd48d"
+  },
+  "repository": "https://github.com/woobowen/Smart_Cities_and_Location_Services.git",
+  "branch": "main",
+  "artifact_commit": "029aa30bfb00253173de8284468f8964e5e17ce3",
+  "local_HEAD_at_check": "029aa30bfb00253173de8284468f8964e5e17ce3",
+  "origin_main_at_check": "029aa30bfb00253173de8284468f8964e5e17ce3",
+  "actual_remote_main_at_check": "029aa30bfb00253173de8284468f8964e5e17ce3",
+  "remote_files": [
+    {
+      "path": "task1/evidence/goal3/REVIEW_PACKET.md",
+      "fixed_url": "https://raw.githubusercontent.com/woobowen/Smart_Cities_and_Location_Services/029aa30bfb00253173de8284468f8964e5e17ce3/task1/evidence/goal3/REVIEW_PACKET.md",
+      "http_status": 200,
+      "bytes": 9226,
+      "sha256": "f1b9ff65d6d5bcce79aee223de3e71e8f8b61abb2ca9499d59538adcc5a16a39",
+      "equals_committed_blob": true
+    },
+    {
+      "path": "task1/evidence/goal3/requirements.json",
+      "fixed_url": "https://raw.githubusercontent.com/woobowen/Smart_Cities_and_Location_Services/029aa30bfb00253173de8284468f8964e5e17ce3/task1/evidence/goal3/requirements.json",
+      "http_status": 200,
+      "bytes": 75761,
+      "sha256": "472f492652b9d36aefcd2eaab7c9333e23fd9ce67e52c5c695cd3d7505ff9aba",
+      "equals_committed_blob": true
+    },
+    {
+      "path": "task1/docs/goal3/REVIEW_GUIDE.md",
+      "fixed_url": "https://raw.githubusercontent.com/woobowen/Smart_Cities_and_Location_Services/029aa30bfb00253173de8284468f8964e5e17ce3/task1/docs/goal3/REVIEW_GUIDE.md",
+      "http_status": 200,
+      "bytes": 17038,
+      "sha256": "85d5bbbf5b869a28a383bbd6d3f7ae53447b2636f938949c7c5c1f42b6b3a38c",
+      "equals_committed_blob": true
+    },
+    {
+      "path": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/a_diagnosis/MASTER_REQUIREMENTS_REVIEW.md",
+      "fixed_url": "https://raw.githubusercontent.com/woobowen/Smart_Cities_and_Location_Services/029aa30bfb00253173de8284468f8964e5e17ce3/task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/a_diagnosis/MASTER_REQUIREMENTS_REVIEW.md",
+      "http_status": 200,
+      "bytes": 389378,
+      "sha256": "43f7703489fec6f955702f69a16b230d82db83702bc549a5cce75521f325e997",
+      "equals_committed_blob": true
+    },
+    {
+      "path": "task1/evidence/goal3/report_build/build_receipt.json",
+      "fixed_url": "https://raw.githubusercontent.com/woobowen/Smart_Cities_and_Location_Services/029aa30bfb00253173de8284468f8964e5e17ce3/task1/evidence/goal3/report_build/build_receipt.json",
+      "http_status": 200,
+      "bytes": 14726,
+      "sha256": "5ebe7fcb4f2ca4037b4064d6fc6952b019ae4210d91521866ae90777b4a55c13",
+      "equals_committed_blob": true
+    },
+    {
+      "path": "task1/reports/experiment1/experiment1.pdf",
+      "fixed_url": "https://raw.githubusercontent.com/woobowen/Smart_Cities_and_Location_Services/029aa30bfb00253173de8284468f8964e5e17ce3/task1/reports/experiment1/experiment1.pdf",
+      "http_status": 200,
+      "bytes": 595823,
+      "sha256": "5a7f01b64be6a9bc424b1e8cc90ccae9306e21a9959ff674363fcc4c046d7606",
+      "equals_committed_blob": true
+    },
+    {
+      "path": "task1/reports/process1/process1.pdf",
+      "fixed_url": "https://raw.githubusercontent.com/woobowen/Smart_Cities_and_Location_Services/029aa30bfb00253173de8284468f8964e5e17ce3/task1/reports/process1/process1.pdf",
+      "http_status": 200,
+      "bytes": 385911,
+      "sha256": "9ff0fc21b2c843156b3d2bb648441dd19f51569dc451975d531a029971a34a88",
+      "equals_committed_blob": true
+    },
+    {
+      "path": "task1/notebooks/final/作业1轨迹数据预处理_完成版.ipynb",
+      "fixed_url": "https://raw.githubusercontent.com/woobowen/Smart_Cities_and_Location_Services/029aa30bfb00253173de8284468f8964e5e17ce3/task1/notebooks/final/%E4%BD%9C%E4%B8%9A1%E8%BD%A8%E8%BF%B9%E6%95%B0%E6%8D%AE%E9%A2%84%E5%A4%84%E7%90%86_%E5%AE%8C%E6%88%90%E7%89%88.ipynb",
+      "http_status": 200,
+      "bytes": 28856,
+      "sha256": "e64513b662c954b7097f429e93d67106916d7a246b093ce74ac9721153ec2df1",
+      "equals_committed_blob": true
+    },
+    {
+      "path": "task1/notebooks/final/任务3_LLM辅助评估清洗_完成版.ipynb",
+      "fixed_url": "https://raw.githubusercontent.com/woobowen/Smart_Cities_and_Location_Services/029aa30bfb00253173de8284468f8964e5e17ce3/task1/notebooks/final/%E4%BB%BB%E5%8A%A13_LLM%E8%BE%85%E5%8A%A9%E8%AF%84%E4%BC%B0%E6%B8%85%E6%B4%97_%E5%AE%8C%E6%88%90%E7%89%88.ipynb",
+      "http_status": 200,
+      "bytes": 21919,
+      "sha256": "5e79f525fc194110282f974070bce087a09c14bc5aaa11c276abf08e87694277",
+      "equals_committed_blob": true
+    },
+    {
+      "path": "task1/submission/REVIEW_ONLY_10245102410_吴博闻_实验一.zip",
+      "fixed_url": "https://raw.githubusercontent.com/woobowen/Smart_Cities_and_Location_Services/029aa30bfb00253173de8284468f8964e5e17ce3/task1/submission/REVIEW_ONLY_10245102410_%E5%90%B4%E5%8D%9A%E9%97%BB_%E5%AE%9E%E9%AA%8C%E4%B8%80.zip",
+      "http_status": 200,
+      "bytes": 15776719,
+      "sha256": "efa6d259a45cf5c89725c4ebe3d2f02f5b3e1c6ca82c4672de2a6fd4ae78ecc0",
+      "equals_committed_blob": true,
+      "remote_ZIP_CRC": "PASS",
+      "members": 116,
+      "remote_ZIP_PDFs_equal_same_commit_reports": true,
+      "remote_ZIP_submission": "NOT_READY",
+      "sent_to_teacher": false
+    }
+  ],
+  "fresh_internal_binding_check": {
+    "targets": 220,
+    "sources": 258,
+    "C_receipt_sha256": "bdfd31aba7541cfe45268be39087a4615bac438a416c5ba060031f800e235050"
+  },
+  "observed_mutable_Journal_sha256": "a7cda900edbff51e9ea512d431aab1571f43dff2e102fe252c83cb7e929d0d7c",
+  "checker": {
+    "path": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/c_review/check_publication.py",
+    "sha256": "a1f0c9ebffe9efc770eeef9d4408acf7b3c2249899ac1705841910f2bfe6d4d1"
+  },
+  "independent_states": {
+    "Identity": "VERIFIED",
+    "Closeout Engineering": "PARTIAL_BLOCKED",
+    "Process Evidence": "BLOCKED_EXTERNAL_ORIGINALS_SPEC_LOCK",
+    "Deliverable": "FINAL_REVIEW",
+    "Understanding": "LEARNING",
+    "Submission": "NOT_READY",
+    "New GPT_SECOND_REVIEW": "PENDING"
+  },
+  "scope_limit": "Publication engineering VERIFIED. Process Evidence still externally blocked; FINAL_REVIEW/LEARNING/NOT_READY and newGPTsecond PENDING. Future metadata publication and its final SHA are outside this already completed artifact check."
+}

@@ -4,7 +4,7 @@
 
 身份 **吴博闻 / 字符串 10245102410** 已写入唯一元数据源、生成器、两份报告、Notebook 及新待审包，并通过重建回归，`IDENTITY_PENDING` 已关闭。2026-09-28 是报告修订日期，原实验与冻结时间不变。当前两报告为 **22 + 12 页**，C 已对当前全部 34 页真实逐页查看；关键数值与旧产物一致。当前两个Notebook在仓库和同一ZIP解压目录各一次新内核FULL均已完成并由C核验（12/8/12/8代码单元），新增记录级模型调用0；旧四次FULL仍仅作历史。
 
-**当前可自主内容已通过独立C合并验收，正在执行实际发布。** [CL01—CL16状态](closeout/SC-LAB1-G3-CLOSEOUT-001/ACCEPTANCE_MATRIX.md)、[完整回复](closeout/SC-LAB1-G3-CLOSEOUT-001/FINAL_RESPONSE.md)和实际发布记录统一从本次收尾目录读取。真实互动原件、Evidence Master 批准的呈现规格与 Lock 仍未齐备；本轮不将技术事实送审稿称为完整正式 Process Evidence，也不替用户签理解验收或发送教师。
+**当前可自主工程与真实发布均已完成，整体PARTIAL_BLOCKED仅保留正式互动Evidence外部缺项。** [CL01—CL16状态](closeout/SC-LAB1-G3-CLOSEOUT-001/ACCEPTANCE_MATRIX.md)、[完整回复](closeout/SC-LAB1-G3-CLOSEOUT-001/FINAL_RESPONSE.md)和实际发布记录统一从本次收尾目录读取。真实互动原件、Evidence Master 批准的呈现规格与 Lock 仍未齐备；本轮不将技术事实送审稿称为完整正式 Process Evidence，也不替用户签理解验收或发送教师。
 
 ## 1. 深入讲解与审核入口
 
@@ -29,7 +29,7 @@
 
 最终策略为统一确定性 **S-D-P：30 / 400 / 2 / 0 / 35 / 5**，参数顺序为 `dt / distance / min_points / min_length / direction / dp`。R0 的 `min_points/min_length=5/65`，其余相同。最终记录级处理新增模型调用为 0；治理 A/B/C 的实际调用另计，隐藏后端请求与费用保持 unknown。
 
-选择、确认与生产数值 CODE_SHA：`e12f8a27944210adb452730be92a0674dfc6b84b`。后续报告、图和 Notebook 兼容性修复没有改写这些数值运行的代码身份。历史数值 ARTIFACT_SHA 为 `fd559e451291b9d424682853ef0909aa5eb94b32`；[历史发布记录](PUBLICATION_RECORD.json) 保留当时核对。本次文档构建代码为 `3912f4da2a21ea9da26f75acb6434d889e480462`，包内容身份见本次 [PACKAGE_VALIDATION.json](closeout/SC-LAB1-G3-CLOSEOUT-001/PACKAGE_VALIDATION.json)。本次最终发布记录另存于收尾目录，不用文档 HEAD 改写数值 CODE_SHA。
+选择、确认与生产数值 CODE_SHA：`e12f8a27944210adb452730be92a0674dfc6b84b`。后续报告、图和 Notebook 兼容性修复没有改写这些数值运行的代码身份。历史数值 ARTIFACT_SHA 为 `fd559e451291b9d424682853ef0909aa5eb94b32`；[历史发布记录](PUBLICATION_RECORD.json) 保留当时核对。本次文档构建代码为 `3912f4da2a21ea9da26f75acb6434d889e480462`，包内容身份见本次 [PACKAGE_VALIDATION.json](closeout/SC-LAB1-G3-CLOSEOUT-001/PACKAGE_VALIDATION.json)。本次核心交付 ARTIFACT_SHA=`029aa30bfb00253173de8284468f8964e5e17ce3`，已正常push并由主线程和独立C分别回读10个固定SHA关键文件。[本次发布回执](closeout/SC-LAB1-G3-CLOSEOUT-001/PUBLICATION_RECORD.json)明确已发生的远程一致；随后仅记录metadata，不用文档HEAD改写数值CODE_SHA。
 
 ## 3. 不能省略的限制与负结果
 
