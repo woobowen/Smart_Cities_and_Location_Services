@@ -1,0 +1,811 @@
+{
+  "classification": "REAL_PILOT_PREFIX_SMOKE_NOT_FULL",
+  "record_id": "246",
+  "points": 108,
+  "canvas": "FigureCanvasAgg",
+  "new_model_calls": 0,
+  "trace_review": "VERIFIED",
+  "memory_unchanged": true,
+  "actual_metrics": {
+    "record_id": "246",
+    "n_input": 108,
+    "n_final": 36,
+    "point_retention": 0.3333333333333333,
+    "point_retention_reason": null,
+    "record_covered": true,
+    "all_filtered": false,
+    "no_output": false,
+    "n_filtered": 0,
+    "n_direction_removed": 3,
+    "n_dp_removed": 69,
+    "n_dp_input": 105,
+    "n_dp_output": 36,
+    "dp_saving": 0.6571428571428571,
+    "dp_saving_reason": null,
+    "dp_max_error": 4.768356861321128,
+    "dp_mean_error": 1.1518843850612237,
+    "dp_p50_error": 0.5591886153855488,
+    "dp_p90_error": 3.4404298414693035,
+    "dp_p95_error": 3.8614961234094083,
+    "dp_p99_error": 4.435219128298553,
+    "dp_error_reason": null,
+    "dp_error_denominator": 105,
+    "n_dp_exceedances": 0,
+    "dp_checks_passed": true,
+    "n_s_segments": 1,
+    "n_filtered_segments": 0,
+    "filter_reason_segments": {},
+    "filter_reason_points": {},
+    "direction_candidate_points": 3,
+    "direction_undefined_points": 3,
+    "direction_undefined_reasons": {
+      "ENDPOINT": 2,
+      "MISSING_FOLLOWING_OUTGOING_EDGE": 1
+    },
+    "direction_windows_across_raw_breaks": 0,
+    "direction_window_crossing_details": [],
+    "p_removed_raw_break_trigger_points": 0,
+    "p_removed_raw_break_trigger_indices": [],
+    "raw_length": 11326.480988154068,
+    "raw_length_reason": null,
+    "final_length": 11224.635167417728,
+    "final_length_reason": null,
+    "stage_readings": {
+      "raw": {
+        "segments": 1,
+        "points": 108,
+        "length": 11326.480988154068,
+        "length_reason": null,
+        "edge_denominator": 107,
+        "speed_computable": 106,
+        "direction_computable": 107,
+        "speed_unavailable_reasons": {
+          "ZERO_TIME_DIFFERENCE": 1
+        },
+        "direction_unavailable_reasons": {},
+        "negative_dt_edges": 0,
+        "zero_dt_edges": 1,
+        "same_time_different_position_edges": 1,
+        "zero_displacement_edges": 0
+      },
+      "after_S": {
+        "segments": 1,
+        "points": 108,
+        "length": 11326.480988154068,
+        "length_reason": null,
+        "edge_denominator": 107,
+        "speed_computable": 106,
+        "direction_computable": 107,
+        "speed_unavailable_reasons": {
+          "ZERO_TIME_DIFFERENCE": 1
+        },
+        "direction_unavailable_reasons": {},
+        "negative_dt_edges": 0,
+        "zero_dt_edges": 1,
+        "same_time_different_position_edges": 1,
+        "zero_displacement_edges": 0,
+        "length_change": 0.0,
+        "length_change_reason": null,
+        "relative_length_change": 0.0,
+        "relative_length_change_reason": null
+      },
+      "after_D": {
+        "segments": 1,
+        "points": 105,
+        "length": 11236.485320873448,
+        "length_reason": null,
+        "edge_denominator": 104,
+        "speed_computable": 103,
+        "direction_computable": 104,
+        "speed_unavailable_reasons": {
+          "ZERO_TIME_DIFFERENCE": 1
+        },
+        "direction_unavailable_reasons": {},
+        "negative_dt_edges": 0,
+        "zero_dt_edges": 1,
+        "same_time_different_position_edges": 1,
+        "zero_displacement_edges": 0,
+        "length_change": -89.99566728062018,
+        "length_change_reason": null,
+        "relative_length_change": -0.00794559822903007,
+        "relative_length_change_reason": null
+      },
+      "after_P": {
+        "segments": 1,
+        "points": 36,
+        "length": 11224.635167417728,
+        "length_reason": null,
+        "edge_denominator": 35,
+        "speed_computable": 34,
+        "direction_computable": 35,
+        "speed_unavailable_reasons": {
+          "ZERO_TIME_DIFFERENCE": 1
+        },
+        "direction_unavailable_reasons": {},
+        "negative_dt_edges": 0,
+        "zero_dt_edges": 1,
+        "same_time_different_position_edges": 1,
+        "zero_displacement_edges": 0,
+        "length_change": -11.85015345571992,
+        "length_change_reason": null,
+        "relative_length_change": -0.0010546138865776822,
+        "relative_length_change_reason": null
+      }
+    },
+    "common_reference_id": "RAW_WINDOWS_DT30_DISTANCE400_V1",
+    "common_raw_points": 108,
+    "common_covered_points": 108,
+    "common_uncovered_points": 0,
+    "common_coverage": 1.0,
+    "common_coverage_reason": null,
+    "common_error_denominator": 108,
+    "common_max_error": 111.93999607553866,
+    "common_mean_error": 2.1880863653973637,
+    "common_p95_error": 4.014650389847434,
+    "common_error_reason": null,
+    "common_over_5_points": 1,
+    "common_error_budget": 5,
+    "common_floating_allowance": 2.246842436045194e-10,
+    "common_point_errors": [
+      {
+        "index": 0,
+        "error": 0.0,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 1,
+        "error": 1.0997077325179991,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 2,
+        "error": 2.5962782897118197,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 3,
+        "error": 2.6276411602449925,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 4,
+        "error": 2.563916723600242,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 5,
+        "error": 2.32428573060437,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 6,
+        "error": 2.098107213149224,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 7,
+        "error": 2.923912006122879,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 8,
+        "error": 2.983292477756353,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 9,
+        "error": 0.0,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 10,
+        "error": 3.2635526110949487,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 11,
+        "error": 0.31890532252079956,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 12,
+        "error": 0.0,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 13,
+        "error": 0.1135410552802513,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 14,
+        "error": 0.9539486750795574,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 15,
+        "error": 2.947401289193345,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 16,
+        "error": 0.5656759957417019,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 17,
+        "error": 0.18091995327915622,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 18,
+        "error": 0.2002608899131686,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 19,
+        "error": 1.683415845741564,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 20,
+        "error": 1.3273637427988871,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 21,
+        "error": 0.2656942897172944,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 22,
+        "error": 0.1475924475515138,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 23,
+        "error": 0.38626910078605736,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 24,
+        "error": 0.27243436681743494,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 25,
+        "error": 1.0113984768869833,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 26,
+        "error": 0.0,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 27,
+        "error": 0.0,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 28,
+        "error": 1.5095969299698955,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 29,
+        "error": 1.5119176099063023,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 30,
+        "error": 3.776270767046721,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 31,
+        "error": 0.8534954987468124,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 32,
+        "error": 0.2989065019701074,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 33,
+        "error": 0.0,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 34,
+        "error": 3.681056192971054,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 35,
+        "error": 0.0,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 36,
+        "error": 4.768356861321128,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 37,
+        "error": 0.0,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 38,
+        "error": 1.0733552839528593,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 39,
+        "error": 0.0,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 40,
+        "error": 0.03987737970405648,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 41,
+        "error": 0.0,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 42,
+        "error": 0.7185814964542011,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 43,
+        "error": 0.0,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 44,
+        "error": 0.0,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 45,
+        "error": 3.46840370449086,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 46,
+        "error": 0.0,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 47,
+        "error": 0.0,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 48,
+        "error": 111.93999607553866,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 49,
+        "error": 0.0,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 50,
+        "error": 0.0,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 51,
+        "error": 0.0,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 52,
+        "error": 0.0,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 53,
+        "error": 0.0,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 54,
+        "error": 2.6948411829785437,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 55,
+        "error": 0.0,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 56,
+        "error": 0.8326810374989719,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 57,
+        "error": 0.7716107061448556,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 58,
+        "error": 0.5591886153855488,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 59,
+        "error": 0.0,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 60,
+        "error": 0.0,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 61,
+        "error": 0.0,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 62,
+        "error": 0.0,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 63,
+        "error": 1.8294640120733894,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 64,
+        "error": 0.6145737703703753,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 65,
+        "error": 2.1887022674716805,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 66,
+        "error": 2.355855345421668,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 67,
+        "error": 3.869512001779419,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 68,
+        "error": 1.824707448581091,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 69,
+        "error": 0.0,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 70,
+        "error": 0.0,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 71,
+        "error": 0.0,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 72,
+        "error": 4.308416614027746,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 73,
+        "error": 1.3079115004345494,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 74,
+        "error": 2.6108121912465068,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 75,
+        "error": 2.9890560136300546,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 76,
+        "error": 3.398469046936967,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 77,
+        "error": 3.8294326099293663,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 78,
+        "error": 4.092801829576368,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 79,
+        "error": 3.7000319519039393,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 80,
+        "error": 0.0,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 81,
+        "error": 0.0,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 82,
+        "error": 0.0,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 83,
+        "error": 0.20916126309813163,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 84,
+        "error": 0.031823153852841124,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 85,
+        "error": 0.0,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 86,
+        "error": 0.3272343721029091,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 87,
+        "error": 0.6279640628905203,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 88,
+        "error": 0.4383515828605864,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 89,
+        "error": 0.0,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 90,
+        "error": 1.7361097450217189,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 91,
+        "error": 2.563855678033747,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 92,
+        "error": 0.8764051268795475,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 93,
+        "error": 1.0644875102640787,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 94,
+        "error": 0.0,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 95,
+        "error": 0.5523178657773629,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 96,
+        "error": 4.440502566393171,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 97,
+        "error": 4.09510313463121,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 98,
+        "error": 2.3076598440519716,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 99,
+        "error": 1.0701341027391025,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 100,
+        "error": 1.1152435590773133,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 101,
+        "error": 2.5685325765074536,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 102,
+        "error": 0.20513485868040351,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 103,
+        "error": 0.6946632533052433,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 104,
+        "error": 0.0,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 105,
+        "error": 1.1152453631737096,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 106,
+        "error": 0.0,
+        "reason": null,
+        "reference_window": 0
+      },
+      {
+        "index": 107,
+        "error": 0.0,
+        "reason": null,
+        "reference_window": 0
+      }
+    ],
+    "raw_break_count": 0,
+    "raw_break_crossings": 0,
+    "raw_breaks_crossed": 0,
+    "raw_boundaries": [],
+    "breakpoint_crossing_edges": [],
+    "raw_break_trigger_points_removed": 0,
+    "boundary_trigger_losses": [],
+    "raw_windows": 1,
+    "raw_windows_covered": 1,
+    "reference_window_length": 11326.480988154068,
+    "constraint_status": "NO_RAW_BREAK_CROSSING"
+  }
+}

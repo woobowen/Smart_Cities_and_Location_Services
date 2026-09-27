@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/goal3/runtime.py", line 309, in <module>
+    result = evaluate(args.run_id, args.partition, args.strategies, output=args.output, parent=args.parent)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/goal3/runtime.py", line 146, in evaluate
+    return _evaluate(run_id, partition, strategy_ids, output=output,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/goal3/runtime.py", line 203, in _evaluate
+    'parent_cache': None if parent is None else {'path': str(parent.relative_to(ROOT)),
+                                                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/pathlib.py", line 682, in relative_to
+    raise ValueError(f"{str(self)!r} is not in the subpath of {str(other)!r}")
+ValueError: 'task1/evidence/goal3/runs/g3-development-parents-02' is not in the subpath of '/home/addaswsw/lab/Smart_Cities_and_Location_Services'

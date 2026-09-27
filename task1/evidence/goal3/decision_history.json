@@ -1,0 +1,53 @@
+{
+  "at": "2026-09-27T05:34:14.088427+00:00",
+  "source_bindings": {
+    "task1/evidence/goal3/A1_RECOMPUTE03_DECISION.json": "32e90644615d653bc57642eedaa2bfbecb647abfeacf5a6224db23415701438e",
+    "task1/evidence/goal3/A2_DECISION.json": "297c8ec1e5f1af5fdc0841c66bc7b8060ee4cafeb95eed630d53f5b2d5f9dfad",
+    "task1/evidence/goal3/A3_DECISION.json": "01fea6c07ac49ff6f3207c0e8f85dac010f84c3fb42fd81f7149f47776980633",
+    "task1/evidence/goal3/selection_decision.json": "ff1d41e2bf708743d0b3c3e2f3d632c19ccb6c4392513ebdb52e5c52e04e48fb",
+    "task1/evidence/goal3/release_decision.json": "6407ca21175113cf206909dd12f0f067c114b19cfe4f3337af3c2de88e909024",
+    "task1/evidence/goal3/selection_freeze.json": "72ab2cf978380fb9a76d8b1d80558d3aca1a7f1f345317707ca9630eed3504a6",
+    "task1/evidence/goal3/final_freeze.json": "d64869cc4623b3751d365d54d2cc70305a188891c41b8c6de17b58f3fadb1e6e",
+    "task1/evidence/goal3/production_freeze.json": "5f6592b40e7d50d2409a94c42d309b8fb525d4a7881733f360b33722609e36ad",
+    "task1/evidence/goal3/independent_c/development_closure_receipt.json": "cf771eb9ac4deea584642b15fc0db7307bc27f5e5c117d35f4c6904c3937510a",
+    "task1/evidence/goal3/independent_c/selection_closure_receipt.json": "d780dcc0b762cd607040f9e926568a1838d1c93221fce38b130e2af2a2e2c274",
+    "task1/evidence/goal3/independent_c/confirmation_closure_receipt.json": "97c47c834cb0363ec82b7f166ae36daebf8bba6ce6d39b070cde9d29a82786bb"
+  },
+  "events": [
+    {
+      "stage": "Development A1",
+      "incumbent": "S0",
+      "reading": "240/240 protected; common coverage +6,704",
+      "source": "A1_RECOMPUTE03_DECISION.json"
+    },
+    {
+      "stage": "Development A2",
+      "incumbent": "S0",
+      "reading": "G0 trades coverage for geometry; retain S0",
+      "source": "A2_DECISION.json"
+    },
+    {
+      "stage": "Development A3",
+      "incumbent": "S0_G0",
+      "reading": "240/240 protected vs S0; 41 geometry gains",
+      "source": "A3_DECISION.json"
+    },
+    {
+      "stage": "Selection (240)",
+      "incumbent": "S0",
+      "reading": "G0 and S0_G0 fail on 3 records; S0 all protected",
+      "source": "selection_decision.json"
+    },
+    {
+      "stage": "Final confirm (600)",
+      "incumbent": "S0",
+      "reading": "600/600 protected; common coverage +26,352",
+      "source": "release_decision.json"
+    }
+  ],
+  "selection_initial_incumbent": "R0 as fixed before opening G3_SELECTION",
+  "not_quality_score": true,
+  "engineering_repair_is_not_method_quality_gain": true,
+  "human_judgment": "NOT_AVAILABLE per trial; actual system decisions within prior user authority",
+  "final_feedback_generated_new_candidates": false
+}

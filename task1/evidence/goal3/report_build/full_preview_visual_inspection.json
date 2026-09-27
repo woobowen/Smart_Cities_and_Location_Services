@@ -1,0 +1,87 @@
+{
+  "classification": "B_VISUAL_INSPECTION_NOT_INDEPENDENT_C",
+  "reports": [
+    {
+      "report": "experiment1",
+      "pdf_sha256": "cb5f08026713416791771d16f9f059b0cbc233bd09838d9025e0d2834c4d2487",
+      "source_render_dpi": 200,
+      "actually_viewed_pdf_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22
+      ],
+      "checked": [
+        "all text/table/figure readability",
+        "clipping and missing glyphs",
+        "pagination",
+        "draft status and external input boundary"
+      ]
+    },
+    {
+      "report": "process1",
+      "pdf_sha256": "1e269401281b5d4ede5d870425f9b6c2aa8bfbd67f2c46a727306249a21a9f6b",
+      "source_render_dpi": 200,
+      "actually_viewed_pdf_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "checked": [
+        "all text/table/figure readability",
+        "clipping and missing glyphs",
+        "pagination",
+        "draft status and external input boundary"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "id": "B-DOC-LAYOUT-01",
+      "description": "Both TOCs spill 1–2 entries onto near-empty extra page",
+      "status": "REPAIR_IN_PROGRESS"
+    },
+    {
+      "id": "B-DOC-LAYOUT-02",
+      "description": "Process PDF page 5 contains only subsection 2.3; custom immediate page-space test is affected by pending TeX page break",
+      "status": "REPAIR_IN_PROGRESS"
+    },
+    {
+      "id": "G3-FIG-01",
+      "description": "Trajectory action legend missing and workflow External text overflows; parent owns figure repair",
+      "status": "PARENT_REPAIR_IN_PROGRESS"
+    }
+  ],
+  "no_new_data_or_method_run": true,
+  "evidence_master_lock": "NOT_AVAILABLE",
+  "new_dependencies": [],
+  "execution_note": "Unqualified python was unavailable; this metadata capture was then run successfully with the existing .venv/bin/python. No dependency was installed."
+}

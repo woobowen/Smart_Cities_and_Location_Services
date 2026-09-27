@@ -1,0 +1,1182 @@
+{
+  "role_context": "/root/c_documents",
+  "target_id": "current_prepublication_content_classification",
+  "status": "READY_WITHIN_CURRENT_SCOPED_PREFLIGHT",
+  "checked_at_utc": "2026-09-27T08:13:37.301245+00:00",
+  "scan_cutoff_utc": "2026-09-27T08:04:21.292176+00:00",
+  "targets": [
+    {
+      "path": "task1/evidence/goal3/independent_documents/prepublication_current_preflight.json",
+      "sha256": "ddef6b73a28fa819db5ee01d1bc847dedef743bd0421b0b438cd649d134f6a42"
+    },
+    {
+      "path": "task1/evidence/goal3/independent_documents/prepublication_scan.py",
+      "sha256": "11dbfb55d7ba2acb8df21dd2ab3feecd27b16a9e238e5696414cf63c31b208f3"
+    },
+    {
+      "path": "task1/evidence/goal3/independent_documents/classify_current_prepublication.py",
+      "sha256": "fabf83c85d41e3a6507f9763dc2c0d2f0e6e7ab464fa14d0e09f122790bfd381"
+    },
+    {
+      "path": "task1/figures/goal2/goal2_actual_architecture.png",
+      "sha256": "06e5deea0f1022fec93f969fca7aee6819b0b2ea1909aafa4332742cd70ff3c9"
+    },
+    {
+      "path": "task1/submission/REVIEW_ONLY_实验一.zip",
+      "sha256": "97d5dbe2d7a5c87d09bcb21ae5798fa0b76374fabdd03f25447fb87c4f27c447"
+    },
+    {
+      "path": "task1/evidence/goal3/independent_documents/actual_zip_static_receipt.json",
+      "sha256": "ef585260abef03aa5ee6f8feb9fb6c38720dae51e5c380b0fc117e17408642af"
+    },
+    {
+      "path": "task1/evidence/goal3/independent_documents/report_entry_delta_receipt.json",
+      "sha256": "41ad20e028b8866df14bc40769d0222d71e1edf4cdfdb0200fb56b47bde5fab1"
+    },
+    {
+      "path": "task1/evidence/goal3/independent_documents/full_report_review_receipt.json",
+      "sha256": "9573f759db9056ef644b338c536824e380e5692250d2188aefeddda7dcbc62f4"
+    },
+    {
+      "path": "task1/evidence/goal3/independent_documents/figures_current_closure.json",
+      "sha256": "1a0d136f60b69b0b5466427199bd8955c55109f3c11d100a864eb2f4e79fd976"
+    }
+  ],
+  "scanned_target_manifest": {
+    "path": "task1/evidence/goal3/independent_documents/prepublication_current_preflight.json",
+    "sha256": "ddef6b73a28fa819db5ee01d1bc847dedef743bd0421b0b438cd649d134f6a42"
+  },
+  "content_scanned_or_hash_bound_targets": 1008,
+  "scanned_text_or_decompressed_bytes": 6971598166,
+  "proposed_worktree_inventory": {
+    "regular_files": 5441,
+    "regular_bytes": 1730012718,
+    "symlinks": [],
+    "files_at_least_100_MB": []
+  },
+  "classifications": [
+    {
+      "path": "task1/evidence/goal3/goal_state.json",
+      "categories": {
+        "PERSONAL_ABSOLUTE_PATH": 2
+      },
+      "sha256": "e60d81244dcd67e9a4b6e31d75d6d2043163bc35b7c9306cc22a44af66e2a7ac",
+      "internal_evidence": true,
+      "classification": "AUTHENTIC_INTERNAL_ENGINEERING_PATH",
+      "reason": "Actual journal/command or execution traceback provenance; these internal records are outside the teacher ZIP.",
+      "in_actual_teacher_zip": false,
+      "repair_required": false,
+      "matched_field_pointers": [
+        "/events/27/command/12",
+        "/events/28/command/12"
+      ]
+    },
+    {
+      "path": "task1/evidence/goal3/independent_c/C07_initial_failure.xml",
+      "categories": {
+        "PERSONAL_ABSOLUTE_PATH": 6
+      },
+      "sha256": "e6eb4cb2ba679c93342407897df056a07f155172ee59afd59832ed5629196e6b",
+      "internal_evidence": true,
+      "classification": "AUTHENTIC_INTERNAL_ENGINEERING_PATH",
+      "reason": "Preserved actual engineering failure traceback or error output, kept as historical repair evidence and excluded from the teacher ZIP.",
+      "in_actual_teacher_zip": false,
+      "repair_required": false,
+      "matched_line_numbers": [
+        13,
+        15,
+        17,
+        67,
+        69,
+        71
+      ]
+    },
+    {
+      "path": "task1/evidence/goal3/independent_c/NB01_first_repair_failure_receipt.json",
+      "categories": {
+        "PERSONAL_ABSOLUTE_PATH": 1
+      },
+      "sha256": "67834731bbff60b7539da7297389ea3101d78b880f348733ff7589ebbb0b6105",
+      "internal_evidence": true,
+      "classification": "AUTHENTIC_INTERNAL_ENGINEERING_PATH",
+      "reason": "Preserved actual engineering failure traceback or error output, kept as historical repair evidence and excluded from the teacher ZIP.",
+      "in_actual_teacher_zip": false,
+      "repair_required": false,
+      "matched_field_pointers": [
+        "/errors/0/evalue"
+      ]
+    },
+    {
+      "path": "task1/evidence/goal3/independent_c/NB01_smoke/basic_actual_prefix_executed.ipynb",
+      "categories": {
+        "PERSONAL_ABSOLUTE_PATH": 2
+      },
+      "sha256": "892b07eae1441d6c1523254e792415724087bab73973488ab1d51e10bc4b4a4b",
+      "internal_evidence": true,
+      "classification": "AUTHENTIC_INTERNAL_ENGINEERING_PATH",
+      "reason": "Preserved actual engineering failure traceback or error output, kept as historical repair evidence and excluded from the teacher ZIP.",
+      "in_actual_teacher_zip": false,
+      "repair_required": false,
+      "matched_field_pointers": [
+        "/cells/11/outputs/2/evalue",
+        "/cells/11/outputs/2/traceback/11"
+      ]
+    },
+    {
+      "path": "task1/evidence/goal3/independent_c/NB01_smoke/failure.json",
+      "categories": {
+        "PERSONAL_ABSOLUTE_PATH": 2
+      },
+      "sha256": "5d5dd2c048171d76b09131c3bbb471dc386e07d551524ee9c360eb63be067b0d",
+      "internal_evidence": true,
+      "classification": "AUTHENTIC_INTERNAL_ENGINEERING_PATH",
+      "reason": "Preserved actual engineering failure traceback or error output, kept as historical repair evidence and excluded from the teacher ZIP.",
+      "in_actual_teacher_zip": false,
+      "repair_required": false,
+      "matched_field_pointers": [
+        "/evalue",
+        "/traceback/11"
+      ]
+    },
+    {
+      "path": "task1/evidence/goal3/independent_c/isolated_package_system_full_receipt.json",
+      "categories": {
+        "PERSONAL_ABSOLUTE_PATH": 1
+      },
+      "sha256": "8a546a2ebb065ca3b1f837b08236b67dc963160b080f994d715fea5ee76baf97",
+      "internal_evidence": true,
+      "classification": "AUTHENTIC_INTERNAL_ENGINEERING_PATH",
+      "reason": "Actual independent isolated-run launch/checker command path; no credential value is recorded. It is not a teacher-package dependency.",
+      "in_actual_teacher_zip": false,
+      "repair_required": false,
+      "matched_field_pointers": [
+        "/actual_command"
+      ]
+    },
+    {
+      "path": "task1/evidence/goal3/independent_c/notebook_executor_smoke/deliberate_synthetic_failure/execution_receipt.json",
+      "categories": {
+        "PERSONAL_ABSOLUTE_PATH": 6
+      },
+      "sha256": "68b37576cb004a10c76f3aa1c6bdfbfe5dab6f4de5e4760088452d103049a427",
+      "internal_evidence": true,
+      "classification": "AUTHENTIC_INTERNAL_ENGINEERING_PATH",
+      "reason": "Explicitly labelled synthetic executor failure/test provenance, including real interpreter/traceback paths; not a fabricated research or human-interaction result.",
+      "in_actual_teacher_zip": false,
+      "repair_required": false,
+      "matched_field_pointers": [
+        "/python_executable",
+        "/failure"
+      ]
+    },
+    {
+      "path": "task1/evidence/goal3/independent_c/notebook_executor_smoke/deliberate_synthetic_failure/failure.txt",
+      "categories": {
+        "PERSONAL_ABSOLUTE_PATH": 5
+      },
+      "sha256": "f6aa2761e8f5dcff6c6d1a42093d9a2a79b6f06d664fddd4e3a5033d0cdd7d56",
+      "internal_evidence": true,
+      "classification": "AUTHENTIC_INTERNAL_ENGINEERING_PATH",
+      "reason": "Explicitly labelled synthetic executor failure/test provenance, including real interpreter/traceback paths; not a fabricated research or human-interaction result.",
+      "in_actual_teacher_zip": false,
+      "repair_required": false,
+      "matched_line_numbers": [
+        2,
+        4,
+        10,
+        12,
+        14
+      ]
+    },
+    {
+      "path": "task1/evidence/goal3/independent_c/notebook_executor_smoke/fresh_kernel_1/execution_receipt.json",
+      "categories": {
+        "PERSONAL_ABSOLUTE_PATH": 1
+      },
+      "sha256": "9d2ebe3e07b164f5cdb9e99dcce30ec5dbb5c64ff8f2118b00a2bc5bf926f463",
+      "internal_evidence": true,
+      "classification": "AUTHENTIC_INTERNAL_ENGINEERING_PATH",
+      "reason": "Actual interpreter, kernel working directory or failure provenance in an internal execution receipt. Canonical completed Notebook outputs and the teacher ZIP are checked separately.",
+      "in_actual_teacher_zip": false,
+      "repair_required": false,
+      "matched_field_pointers": [
+        "/python_executable"
+      ]
+    },
+    {
+      "path": "task1/evidence/goal3/independent_c/notebook_executor_smoke/fresh_kernel_2/execution_receipt.json",
+      "categories": {
+        "PERSONAL_ABSOLUTE_PATH": 1
+      },
+      "sha256": "eb51dcbcb7123da0796a60aad3652150e740e77e92bcb95e463a335556cae0f8",
+      "internal_evidence": true,
+      "classification": "AUTHENTIC_INTERNAL_ENGINEERING_PATH",
+      "reason": "Actual interpreter, kernel working directory or failure provenance in an internal execution receipt. Canonical completed Notebook outputs and the teacher ZIP are checked separately.",
+      "in_actual_teacher_zip": false,
+      "repair_required": false,
+      "matched_field_pointers": [
+        "/python_executable"
+      ]
+    },
+    {
+      "path": "task1/evidence/goal3/logs/g3-development-routing-01_command.json",
+      "categories": {
+        "PERSONAL_ABSOLUTE_PATH": 1
+      },
+      "sha256": "f1011bc24d6853730e5b06e126db9d8e4c234774b41a39ea8283eaf3f56db98a",
+      "internal_evidence": true,
+      "classification": "AUTHENTIC_INTERNAL_ENGINEERING_PATH",
+      "reason": "Actual journal/command or execution traceback provenance; these internal records are outside the teacher ZIP.",
+      "in_actual_teacher_zip": false,
+      "repair_required": false,
+      "matched_field_pointers": [
+        "/command/12"
+      ]
+    },
+    {
+      "path": "task1/evidence/goal3/logs/g3-development-routing-02.txt",
+      "categories": {
+        "PERSONAL_ABSOLUTE_PATH": 4
+      },
+      "sha256": "f510b4d1e822394456503f6a303c66ceb5f0d73c33b961e48f6f11d712317725",
+      "internal_evidence": true,
+      "classification": "AUTHENTIC_INTERNAL_ENGINEERING_PATH",
+      "reason": "Actual journal/command or execution traceback provenance; these internal records are outside the teacher ZIP.",
+      "in_actual_teacher_zip": false,
+      "repair_required": false,
+      "matched_line_numbers": [
+        4,
+        7,
+        10,
+        15
+      ]
+    },
+    {
+      "path": "task1/evidence/goal3/logs/g3-full-production-01_analysis_command.json",
+      "categories": {
+        "PERSONAL_ABSOLUTE_PATH": 1
+      },
+      "sha256": "4687ea02875febfd12a7749cde4c01526ed34a67f60f4525f84f59960c6b34e3",
+      "internal_evidence": true,
+      "classification": "AUTHENTIC_INTERNAL_ENGINEERING_PATH",
+      "reason": "Actual journal/command or execution traceback provenance; these internal records are outside the teacher ZIP.",
+      "in_actual_teacher_zip": false,
+      "repair_required": false,
+      "matched_field_pointers": [
+        "/command/3"
+      ]
+    },
+    {
+      "path": "task1/evidence/goal3/notebook_verification/isolated_system_full_01/execution_receipt.json",
+      "categories": {
+        "PERSONAL_ABSOLUTE_PATH": 1
+      },
+      "sha256": "2bc672f0aa26fcc363c5ddf0d43e11fd33c3a9dc0f9f9dda7418439dd2ba22f9",
+      "internal_evidence": true,
+      "classification": "AUTHENTIC_INTERNAL_ENGINEERING_PATH",
+      "reason": "Actual interpreter, kernel working directory or failure provenance in an internal execution receipt. Canonical completed Notebook outputs and the teacher ZIP are checked separately.",
+      "in_actual_teacher_zip": false,
+      "repair_required": false,
+      "matched_field_pointers": [
+        "/python_executable"
+      ]
+    },
+    {
+      "path": "task1/evidence/goal3/notebook_verification/isolated_system_full_01/任务3_LLM辅助评估清洗_完成版.ipynb",
+      "categories": {
+        "OPAQUE_PLATFORM_CIPHERTEXT": 1
+      },
+      "sha256": "617d919d7ba3e6b18b6bc3f4e53fa40e71363586ea87711088001898b481baac",
+      "internal_evidence": true,
+      "classification": "FALSE_POSITIVE_NATIVE_PNG_BASE64",
+      "reason": "Marker occurs inside a valid image/png MIME value. Complete decoded bytes equal the existing native Goal 2 architecture PNG; no ciphertext payload is present or recovered.",
+      "matched_field_pointers": [
+        "/cells/3/outputs/1/data/image~1png"
+      ],
+      "decoded_png_sha256": "06e5deea0f1022fec93f969fca7aee6819b0b2ea1909aafa4332742cd70ff3c9",
+      "decoded_png_dimensions": [
+        4200,
+        2880
+      ],
+      "exact_original_asset": "task1/figures/goal2/goal2_actual_architecture.png",
+      "in_actual_teacher_zip": false,
+      "repair_required": false
+    },
+    {
+      "path": "task1/evidence/goal3/notebook_verification/kernel_smoke/artifacts/notebook_receipt.json",
+      "categories": {
+        "PERSONAL_ABSOLUTE_PATH": 1
+      },
+      "sha256": "54506e8ec940b8b5839a42765ad263bbb5461924bf260fdab523c740b0ace18c",
+      "internal_evidence": true,
+      "classification": "AUTHENTIC_INTERNAL_ENGINEERING_PATH",
+      "reason": "Actual interpreter, kernel working directory or failure provenance in an internal execution receipt. Canonical completed Notebook outputs and the teacher ZIP are checked separately.",
+      "in_actual_teacher_zip": false,
+      "repair_required": false,
+      "matched_field_pointers": [
+        "/actual_python"
+      ]
+    },
+    {
+      "path": "task1/evidence/goal3/notebook_verification/kernel_smoke/execution_receipt.json",
+      "categories": {
+        "PERSONAL_ABSOLUTE_PATH": 1
+      },
+      "sha256": "ce65fae213b3cf5fa8f3c66510c3b879057305dfa6c2b31c9f23b219f55dceb2",
+      "internal_evidence": true,
+      "classification": "AUTHENTIC_INTERNAL_ENGINEERING_PATH",
+      "reason": "Actual interpreter, kernel working directory or failure provenance in an internal execution receipt. Canonical completed Notebook outputs and the teacher ZIP are checked separately.",
+      "in_actual_teacher_zip": false,
+      "repair_required": false,
+      "matched_field_pointers": [
+        "/python_executable"
+      ]
+    },
+    {
+      "path": "task1/evidence/goal3/notebook_verification/repository_basic_full/execution_receipt.json",
+      "categories": {
+        "PERSONAL_ABSOLUTE_PATH": 7
+      },
+      "sha256": "4f7c25966ea22bebc75c71538404f88e7e02c9da23ccbf6e8bef568c321d7599",
+      "internal_evidence": true,
+      "classification": "AUTHENTIC_INTERNAL_ENGINEERING_PATH",
+      "reason": "Actual interpreter, kernel working directory or failure provenance in an internal execution receipt. Canonical completed Notebook outputs and the teacher ZIP are checked separately.",
+      "in_actual_teacher_zip": false,
+      "repair_required": false,
+      "matched_field_pointers": [
+        "/python_executable",
+        "/kernel_cwd",
+        "/failure"
+      ]
+    },
+    {
+      "path": "task1/evidence/goal3/notebook_verification/repository_basic_full/failure.txt",
+      "categories": {
+        "PERSONAL_ABSOLUTE_PATH": 5
+      },
+      "sha256": "a0bfaff7c1e81a4ab041190e8efa02f5592a5c385d07878c6cf173698787d7bb",
+      "internal_evidence": true,
+      "classification": "AUTHENTIC_INTERNAL_ENGINEERING_PATH",
+      "reason": "Preserved actual engineering failure traceback or error output, kept as historical repair evidence and excluded from the teacher ZIP.",
+      "in_actual_teacher_zip": false,
+      "repair_required": false,
+      "matched_line_numbers": [
+        2,
+        4,
+        10,
+        12,
+        14
+      ]
+    },
+    {
+      "path": "task1/evidence/goal3/notebook_verification/repository_basic_full_02/execution_receipt.json",
+      "categories": {
+        "PERSONAL_ABSOLUTE_PATH": 2
+      },
+      "sha256": "ecca8c8ccf5c2624dbb439cdb6b11a46aae7c83ea6bad161f527874d8481cd3a",
+      "internal_evidence": true,
+      "classification": "AUTHENTIC_INTERNAL_ENGINEERING_PATH",
+      "reason": "Actual interpreter, kernel working directory or failure provenance in an internal execution receipt. Canonical completed Notebook outputs and the teacher ZIP are checked separately.",
+      "in_actual_teacher_zip": false,
+      "repair_required": false,
+      "matched_field_pointers": [
+        "/python_executable",
+        "/kernel_cwd"
+      ]
+    },
+    {
+      "path": "task1/evidence/goal3/notebook_verification/repository_system_full/execution_receipt.json",
+      "categories": {
+        "PERSONAL_ABSOLUTE_PATH": 7
+      },
+      "sha256": "524268a438626908b2c04ce24a1cf63955559418aed0599d3753d1c10f81eb7b",
+      "internal_evidence": true,
+      "classification": "AUTHENTIC_INTERNAL_ENGINEERING_PATH",
+      "reason": "Actual interpreter, kernel working directory or failure provenance in an internal execution receipt. Canonical completed Notebook outputs and the teacher ZIP are checked separately.",
+      "in_actual_teacher_zip": false,
+      "repair_required": false,
+      "matched_field_pointers": [
+        "/python_executable",
+        "/kernel_cwd",
+        "/failure"
+      ]
+    },
+    {
+      "path": "task1/evidence/goal3/notebook_verification/repository_system_full/failure.txt",
+      "categories": {
+        "PERSONAL_ABSOLUTE_PATH": 5
+      },
+      "sha256": "b86dd0d40de5d8cdc60e71bf2eecdd09bfb18878e0e451dd3b0eef3be3736b2c",
+      "internal_evidence": true,
+      "classification": "AUTHENTIC_INTERNAL_ENGINEERING_PATH",
+      "reason": "Preserved actual engineering failure traceback or error output, kept as historical repair evidence and excluded from the teacher ZIP.",
+      "in_actual_teacher_zip": false,
+      "repair_required": false,
+      "matched_line_numbers": [
+        2,
+        4,
+        10,
+        12,
+        14
+      ]
+    },
+    {
+      "path": "task1/evidence/goal3/notebook_verification/repository_system_full/任务3_LLM辅助评估清洗_完成版.ipynb",
+      "categories": {
+        "OPAQUE_PLATFORM_CIPHERTEXT": 1
+      },
+      "sha256": "4aca7d87291b148e15423b1ff01931f9f4f37625c982d66881cc564a7fc4cd96",
+      "internal_evidence": true,
+      "classification": "FALSE_POSITIVE_NATIVE_PNG_BASE64",
+      "reason": "Marker occurs inside a valid image/png MIME value. Complete decoded bytes equal the existing native Goal 2 architecture PNG; no ciphertext payload is present or recovered.",
+      "matched_field_pointers": [
+        "/cells/3/outputs/1/data/image~1png"
+      ],
+      "decoded_png_sha256": "06e5deea0f1022fec93f969fca7aee6819b0b2ea1909aafa4332742cd70ff3c9",
+      "decoded_png_dimensions": [
+        4200,
+        2880
+      ],
+      "exact_original_asset": "task1/figures/goal2/goal2_actual_architecture.png",
+      "in_actual_teacher_zip": false,
+      "repair_required": false
+    },
+    {
+      "path": "task1/evidence/goal3/notebook_verification/repository_system_full_02/execution_receipt.json",
+      "categories": {
+        "PERSONAL_ABSOLUTE_PATH": 2
+      },
+      "sha256": "aae5c71edffc8eb207922df37d691d36957ff3ab248968e46f47992de363734a",
+      "internal_evidence": true,
+      "classification": "AUTHENTIC_INTERNAL_ENGINEERING_PATH",
+      "reason": "Actual interpreter, kernel working directory or failure provenance in an internal execution receipt. Canonical completed Notebook outputs and the teacher ZIP are checked separately.",
+      "in_actual_teacher_zip": false,
+      "repair_required": false,
+      "matched_field_pointers": [
+        "/python_executable",
+        "/kernel_cwd"
+      ]
+    },
+    {
+      "path": "task1/evidence/goal3/notebook_verification/repository_system_full_02/任务3_LLM辅助评估清洗_完成版.ipynb",
+      "categories": {
+        "OPAQUE_PLATFORM_CIPHERTEXT": 1
+      },
+      "sha256": "045e1f84bd085c7c5a3a249174625e32a72bc034fdd2100f143dc3a8da620e9c",
+      "internal_evidence": true,
+      "classification": "FALSE_POSITIVE_NATIVE_PNG_BASE64",
+      "reason": "Marker occurs inside a valid image/png MIME value. Complete decoded bytes equal the existing native Goal 2 architecture PNG; no ciphertext payload is present or recovered.",
+      "matched_field_pointers": [
+        "/cells/3/outputs/1/data/image~1png"
+      ],
+      "decoded_png_sha256": "06e5deea0f1022fec93f969fca7aee6819b0b2ea1909aafa4332742cd70ff3c9",
+      "decoded_png_dimensions": [
+        4200,
+        2880
+      ],
+      "exact_original_asset": "task1/figures/goal2/goal2_actual_architecture.png",
+      "in_actual_teacher_zip": false,
+      "repair_required": false
+    },
+    {
+      "path": "task1/evidence/goal3/package/isolated_launches.json",
+      "categories": {
+        "PERSONAL_ABSOLUTE_PATH": 8
+      },
+      "sha256": "cb14ea954f52fb905a52131e8fff8b5ef63f8e84f51f2bea27f2a7d0c005cea9",
+      "internal_evidence": true,
+      "classification": "AUTHENTIC_INTERNAL_ENGINEERING_PATH",
+      "reason": "Actual independent isolated-run launch/checker command path; no credential value is recorded. It is not a teacher-package dependency.",
+      "in_actual_teacher_zip": false,
+      "repair_required": false,
+      "matched_field_pointers": [
+        "/jobs/0/evidence",
+        "/jobs/0/cmd",
+        "/jobs/1/evidence",
+        "/jobs/1/cmd"
+      ]
+    },
+    {
+      "path": "task1/evidence/goal3/package/report_build_entry_receipt.json",
+      "categories": {
+        "PERSONAL_ABSOLUTE_PATH": 1
+      },
+      "sha256": "ff5bfedf3ada49c9725d7813adfe4ba6f75f822e889aba947f93e0386adf6ff9",
+      "internal_evidence": true,
+      "classification": "AUTHENTIC_INTERNAL_ENGINEERING_PATH",
+      "reason": "Actual journal/command or execution traceback provenance; these internal records are outside the teacher ZIP.",
+      "in_actual_teacher_zip": false,
+      "repair_required": false,
+      "matched_field_pointers": [
+        "/actual_command/0"
+      ]
+    },
+    {
+      "path": "task1/evidence/goal3/report_build/experiment1_compile_output.txt",
+      "categories": {
+        "PERSONAL_ABSOLUTE_PATH": 178
+      },
+      "sha256": "0a736b7d4f4ccd7d2fee02a3758ea98441a2573ffd6fd31f8b3fa6b26ab5adf4",
+      "internal_evidence": true,
+      "classification": "AUTHENTIC_INTERNAL_ENGINEERING_PATH",
+      "reason": "Actual XeLaTeX invocation/package-resolution output, including a preserved earlier failed build; toolchain paths document execution and are not packaged runtime requirements.",
+      "in_actual_teacher_zip": false,
+      "repair_required": false,
+      "matched_line_numbers": [
+        31,
+        33,
+        34,
+        35,
+        36,
+        38,
+        39,
+        40,
+        41,
+        42,
+        44,
+        46,
+        47,
+        49,
+        50,
+        52,
+        53,
+        55,
+        56,
+        58,
+        59,
+        61,
+        63,
+        65,
+        66,
+        68,
+        69,
+        70,
+        71,
+        72,
+        73,
+        74,
+        75,
+        77,
+        79,
+        80,
+        81,
+        82,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91,
+        93,
+        95,
+        96,
+        97,
+        98,
+        100,
+        101,
+        102,
+        103,
+        105,
+        107,
+        109,
+        111,
+        113,
+        115,
+        116,
+        117,
+        119,
+        121,
+        123,
+        125,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        134,
+        135,
+        137,
+        139,
+        141,
+        143,
+        145,
+        147,
+        149,
+        151,
+        153,
+        155,
+        157,
+        159,
+        161,
+        163,
+        165,
+        167,
+        169,
+        171,
+        173,
+        175,
+        177,
+        179,
+        181,
+        183,
+        185,
+        187,
+        189,
+        191,
+        193,
+        195,
+        197,
+        199,
+        201,
+        203,
+        205,
+        207,
+        209,
+        211,
+        213,
+        215,
+        217,
+        219,
+        221,
+        223,
+        225,
+        227,
+        229,
+        231,
+        233,
+        235,
+        237,
+        239,
+        241,
+        243,
+        245,
+        247,
+        249,
+        251,
+        253,
+        255,
+        257,
+        258,
+        260,
+        262,
+        264,
+        266,
+        268,
+        270,
+        271,
+        272,
+        274,
+        278,
+        282,
+        284,
+        286,
+        290,
+        293,
+        294,
+        298,
+        302,
+        306,
+        310,
+        313,
+        314,
+        315,
+        316,
+        318,
+        327,
+        331,
+        335,
+        339,
+        343,
+        347,
+        349,
+        351,
+        355,
+        357,
+        359,
+        365,
+        366,
+        367,
+        368,
+        369
+      ]
+    },
+    {
+      "path": "task1/evidence/goal3/report_build/missing_optional_needspace.txt",
+      "categories": {
+        "PERSONAL_ABSOLUTE_PATH": 173
+      },
+      "sha256": "6e333062c30219d208782140478ff6db1391f77c05f537fd1f0dddfbfd2806cf",
+      "internal_evidence": true,
+      "classification": "AUTHENTIC_INTERNAL_ENGINEERING_PATH",
+      "reason": "Actual XeLaTeX invocation/package-resolution output, including a preserved earlier failed build; toolchain paths document execution and are not packaged runtime requirements.",
+      "in_actual_teacher_zip": false,
+      "repair_required": false,
+      "matched_line_numbers": [
+        23,
+        25,
+        26,
+        27,
+        28,
+        30,
+        31,
+        32,
+        33,
+        34,
+        36,
+        38,
+        39,
+        41,
+        42,
+        44,
+        45,
+        47,
+        48,
+        50,
+        51,
+        53,
+        55,
+        57,
+        58,
+        60,
+        61,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        69,
+        71,
+        72,
+        73,
+        74,
+        76,
+        77,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        85,
+        87,
+        88,
+        89,
+        90,
+        92,
+        93,
+        94,
+        95,
+        97,
+        99,
+        101,
+        103,
+        105,
+        107,
+        108,
+        109,
+        111,
+        113,
+        115,
+        117,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        126,
+        127,
+        129,
+        131,
+        133,
+        135,
+        137,
+        139,
+        141,
+        143,
+        145,
+        147,
+        149,
+        151,
+        153,
+        155,
+        157,
+        159,
+        161,
+        163,
+        165,
+        167,
+        169,
+        171,
+        173,
+        175,
+        177,
+        179,
+        181,
+        183,
+        185,
+        187,
+        189,
+        191,
+        193,
+        195,
+        197,
+        199,
+        201,
+        203,
+        205,
+        207,
+        209,
+        211,
+        213,
+        215,
+        217,
+        219,
+        221,
+        223,
+        225,
+        227,
+        229,
+        231,
+        233,
+        235,
+        237,
+        239,
+        241,
+        243,
+        245,
+        247,
+        249,
+        250,
+        252,
+        254,
+        256,
+        258,
+        260,
+        262,
+        263,
+        264,
+        266,
+        270,
+        274,
+        276,
+        278,
+        282,
+        285,
+        286,
+        290,
+        294,
+        298,
+        302,
+        305,
+        306,
+        307,
+        308,
+        310,
+        319,
+        323,
+        327,
+        331,
+        335,
+        339,
+        341,
+        343,
+        347,
+        349,
+        351
+      ]
+    },
+    {
+      "path": "task1/evidence/goal3/report_build/process1_compile_output.txt",
+      "categories": {
+        "PERSONAL_ABSOLUTE_PATH": 181
+      },
+      "sha256": "3d53be00e9b62f774a7af4f7086ff1b6ae5d91c5985a3374638362a6fdd6b0f0",
+      "internal_evidence": true,
+      "classification": "AUTHENTIC_INTERNAL_ENGINEERING_PATH",
+      "reason": "Actual XeLaTeX invocation/package-resolution output, including a preserved earlier failed build; toolchain paths document execution and are not packaged runtime requirements.",
+      "in_actual_teacher_zip": false,
+      "repair_required": false,
+      "matched_line_numbers": [
+        25,
+        27,
+        28,
+        29,
+        30,
+        32,
+        33,
+        34,
+        35,
+        36,
+        38,
+        40,
+        41,
+        43,
+        44,
+        46,
+        47,
+        49,
+        50,
+        52,
+        53,
+        55,
+        57,
+        59,
+        60,
+        62,
+        63,
+        64,
+        65,
+        66,
+        67,
+        68,
+        69,
+        71,
+        73,
+        74,
+        75,
+        76,
+        78,
+        79,
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        87,
+        89,
+        90,
+        91,
+        92,
+        93,
+        94,
+        95,
+        97,
+        99,
+        101,
+        103,
+        105,
+        107,
+        108,
+        109,
+        111,
+        113,
+        115,
+        117,
+        119,
+        120,
+        121,
+        122,
+        123,
+        124,
+        126,
+        127,
+        129,
+        131,
+        133,
+        135,
+        137,
+        139,
+        141,
+        143,
+        145,
+        147,
+        149,
+        151,
+        153,
+        155,
+        157,
+        159,
+        161,
+        163,
+        165,
+        167,
+        169,
+        171,
+        173,
+        175,
+        177,
+        179,
+        181,
+        183,
+        185,
+        187,
+        189,
+        191,
+        193,
+        195,
+        197,
+        199,
+        201,
+        203,
+        205,
+        207,
+        209,
+        211,
+        213,
+        215,
+        217,
+        219,
+        221,
+        223,
+        225,
+        227,
+        229,
+        231,
+        233,
+        235,
+        237,
+        239,
+        241,
+        243,
+        245,
+        247,
+        249,
+        250,
+        252,
+        254,
+        256,
+        258,
+        260,
+        262,
+        263,
+        264,
+        266,
+        270,
+        274,
+        276,
+        278,
+        282,
+        285,
+        286,
+        290,
+        294,
+        298,
+        302,
+        305,
+        306,
+        307,
+        308,
+        310,
+        319,
+        323,
+        327,
+        331,
+        335,
+        339,
+        341,
+        343,
+        347,
+        349,
+        351,
+        353,
+        355,
+        357,
+        359,
+        367,
+        368,
+        369,
+        370,
+        371
+      ]
+    },
+    {
+      "path": "task1/notebooks/final/任务3_LLM辅助评估清洗_完成版.ipynb",
+      "categories": {
+        "OPAQUE_PLATFORM_CIPHERTEXT": 1
+      },
+      "sha256": "045e1f84bd085c7c5a3a249174625e32a72bc034fdd2100f143dc3a8da620e9c",
+      "internal_evidence": false,
+      "classification": "FALSE_POSITIVE_NATIVE_PNG_BASE64",
+      "reason": "Marker occurs inside a valid image/png MIME value. Complete decoded bytes equal the existing native Goal 2 architecture PNG; no ciphertext payload is present or recovered.",
+      "matched_field_pointers": [
+        "/cells/3/outputs/1/data/image~1png"
+      ],
+      "decoded_png_sha256": "06e5deea0f1022fec93f969fca7aee6819b0b2ea1909aafa4332742cd70ff3c9",
+      "decoded_png_dimensions": [
+        4200,
+        2880
+      ],
+      "exact_original_asset": "task1/figures/goal2/goal2_actual_architecture.png",
+      "in_actual_teacher_zip": true,
+      "repair_required": false
+    }
+  ],
+  "genuine_secret_findings": [],
+  "ciphertext_or_reasoning_export_findings": [],
+  "font_paper_cache_findings": [],
+  "unresolved_issues": [],
+  "checked_components": [
+    "Completed scan binds 1008 changed/proposed files since accepted Goal 2 anchor and scans 6971598166 actual plaintext/decompressed bytes with recorded marker rules.",
+    "All 31 marker-hit files rehashed; 27 internal execution-path records manually classified and confirmed absent from the actual teacher ZIP.",
+    "All four ciphertext-marker hits occur in valid base64 PNG MIME output; independent decode/image verification and exact native-asset SHA256 comparison classify false positives.",
+    "Canonical Notebook outputs, both current PDFs and actual ZIP have separate current-byte checks; actual ZIP closed 1805 static checks including isolated no-Git import/freeze probe.",
+    "Independent current-PDF rerender matches all 7 figure and 33 report rasters already visually reviewed; this is explicit equality rebinding, not claimed repeated eyesight.",
+    "Governance export schema/source/hash checked: 198 metadata events, zero message bodies, no auth/reasoning/ciphertext-body export; original session log was not read.",
+    "No proposed >=100MiB file or symlink, font binary, full-paper import, cache or token-pattern finding within the recorded scope.",
+    "First preflight and scope receipt preserved byte-for-byte. All three original user ZIPs unchanged; both originally untracked archives remain untracked and excluded."
+  ],
+  "governance_export_review": {
+    "event_sha256": "17c29a6495d4d8f9162c8e60f3ce859accf4a3a9c2e12d2b6a592d1540e6c5f9",
+    "receipt_sha256": "62adb24af2e4ebf35f4f901da0de069e4ed1048b4225d396d8d3a172c7099bc5",
+    "source_sha256": "79fee7c7aeb296422d03b3021fb7d150bdc1a6c44e331760939e2cda7bbacc07",
+    "events": 198,
+    "message_bodies_exported": 0,
+    "clear_metadata_tool_outputs": 5,
+    "session_log_read_by_this_review": false,
+    "encrypted_payload_recovered": false,
+    "source_scope": "source filter and exported actual schema; original session/auth/reasoning not opened"
+  },
+  "protected_original_zip_status": {
+    "SC-LAB1-G1-COMPLETE-001_HANDOFF.zip": {
+      "sha256": "95d467b764b0c358e5248ed5392c4d8704a3767f6a907f56a76527d0c50a8c68",
+      "unchanged_since_start": true,
+      "tracked": false,
+      "untracked": true
+    },
+    "SC-LAB1-G1-REPAIR-001_HANDOFF.zip": {
+      "sha256": "e79ea04a803d2b49bed4699e1609412f8d615b209d529a9b816991188cb09fea",
+      "unchanged_since_start": true,
+      "tracked": true,
+      "untracked": false
+    },
+    "SC-LAB1-G1-CLOSURE-002_HANDOFF.zip": {
+      "sha256": "43db2c0316f7773bb568cc335ba563b29c013f41a4bf82ba74b1c36e90add4fe",
+      "unchanged_since_start": true,
+      "tracked": false,
+      "untracked": true
+    }
+  },
+  "previous_scan_preserved": [
+    {
+      "original": "task1/evidence/goal3/independent_documents/prepublication_preflight.json",
+      "snapshot": "task1/evidence/goal3/independent_documents/prepublication_initial_snapshot/prepublication_preflight.json",
+      "sha256": "7e3bd3bf0213b5f4f6d67f4feef0f2598612321e1c9329828652d437935ab362"
+    },
+    {
+      "original": "task1/evidence/goal3/independent_documents/prepublication_scope_receipt.json",
+      "snapshot": "task1/evidence/goal3/independent_documents/prepublication_initial_snapshot/prepublication_scope_receipt.json",
+      "sha256": "c780de78763b290c9906e59d79ce0929e559de0bc8a7c503f1417e7585af41d7"
+    }
+  ],
+  "unchecked_components": [
+    "isolated FULL outputs and final summary/handoff/publication files created after this scan cutoff; require bounded delta scan",
+    "immutable pre-G3 content bytes (only index/metadata checked)",
+    "arbitrary unrecognizable secret formats; no universal absence guarantee",
+    "remote publication and fixed-SHA reread; not final publication acceptance"
+  ],
+  "final_delta_scan_required": true,
+  "formal_publication_acceptance": false,
+  "isolated_full_package_acceptance": "PENDING_SEPARATE_NUMERICAL_REVIEW",
+  "submission_status": "NOT_READY_NOT_SUBMITTED",
+  "no_session_auth_or_unrelated_history_read": true,
+  "no_source_artifact_or_infrastructure_evidence_modified": true,
+  "new_processing_or_model_calls": 0,
+  "installed_dependencies": [],
+  "actual_command": ".venv/bin/python task1/evidence/goal3/independent_documents/classify_current_prepublication.py"
+}

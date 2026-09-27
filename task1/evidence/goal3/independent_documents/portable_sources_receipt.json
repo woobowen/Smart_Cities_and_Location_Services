@@ -1,0 +1,1276 @@
+{
+  "role_context": "/root/c_documents",
+  "target_id": "portable_delivery_source_preflight",
+  "status": "VERIFIED_WITHIN_CHECKED_SCOPE",
+  "checked_at_utc": "2026-09-27T05:55:08.206396+00:00",
+  "classification": "SOURCE_AND_SYNTHETIC_BOUNDARY_REVIEW; no formal FULL production recomputation",
+  "targets": [
+    {
+      "path": "task1/goal3/reproduce.py",
+      "sha256": "440f426ef60acde8475395d9a2dee955a2e6f9fd142cb06b9c67d549a749b334"
+    },
+    {
+      "path": "task1/goal3/offline_plots.py",
+      "sha256": "5a6b1d3841edfa18951643ceea1256d54eac1e707ccec618a47a09c3bff9f437"
+    },
+    {
+      "path": "task1/goal3/notebooks.py",
+      "sha256": "b8abab327307cf9f9074de555a66c8cf8f2ecd9ee3ee80e0b858113c01701bd5"
+    },
+    {
+      "path": "task1/goal3/execute_notebook.py",
+      "sha256": "b6fccd1fb76b6b72d8306042b1e8faf83b5798a2f1af9698923606187cc3fd9d"
+    },
+    {
+      "path": "task1/goal3/package.py",
+      "sha256": "0a44c986d7e551b2701984f04d431753c362a8020091a469d756455c4a154c5e"
+    },
+    {
+      "path": "task1/goal3/__main__.py",
+      "sha256": "35b62e69cb05d224d88d750e7a1c31229a6ad351766bfc58024a120e582f0c1d"
+    },
+    {
+      "path": "task1/goal3/PACKAGE_README.md",
+      "sha256": "80fe450923cc50f9a53c2c2b3c6fd9219fe215b6daae6d8e0aff559164cde32d"
+    },
+    {
+      "path": "task1/goal3/requirements-recompute.txt",
+      "sha256": "1a09c70aaac641b638a5693c1d620aba84cceeb51deffdc47d9be1b002001902"
+    },
+    {
+      "path": "task1/notebooks/final/作业1轨迹数据预处理_完成版.ipynb",
+      "sha256": "4af61fb1cec22b7327bfb5cd1ea52f8efb08786c48c990c1397e801a75eecb90"
+    },
+    {
+      "path": "task1/notebooks/final/任务3_LLM辅助评估清洗_完成版.ipynb",
+      "sha256": "89aa0605a51be9409e875da7d307998f7756de7a31461958b696b2d1c3e1c7d6"
+    }
+  ],
+  "sources_changed_during_review": [],
+  "check_count": 230,
+  "checks": [
+    {
+      "check": "python_ast:task1/goal3/reproduce.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "python_ast:task1/goal3/offline_plots.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "python_ast:task1/goal3/notebooks.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "python_ast:task1/goal3/execute_notebook.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "python_ast:task1/goal3/package.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "python_ast:task1/goal3/__main__.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "notebook_schema_and_all_code_compile:task1/notebooks/final/作业1轨迹数据预处理_完成版.ipynb",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "notebook_is_unexecuted_source:task1/notebooks/final/作业1轨迹数据预处理_完成版.ipynb",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "no_personal_path_or_secret_in_source_notebook:task1/notebooks/final/作业1轨迹数据预处理_完成版.ipynb",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "notebook_schema_and_all_code_compile:task1/notebooks/final/任务3_LLM辅助评估清洗_完成版.ipynb",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "notebook_is_unexecuted_source:task1/notebooks/final/任务3_LLM辅助评估清洗_完成版.ipynb",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "no_personal_path_or_secret_in_source_notebook:task1/notebooks/final/任务3_LLM辅助评估清洗_完成版.ipynb",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "actual_closure_has_no_safety_or_frozen_hash_errors",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "pending_inputs_are_explicit_not_fabricated",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/config/conditional_planar.json",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/config/goal1.json",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/config/goal2/contract.json",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/config/goal2/experiment_matrix.json",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/config/goal3/contract.json",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/docs/goal2/STAGE_ANALYSIS.md",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/docs/research/Task1_Source_Audit_2025_2026_Merged.json",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/AUTHORIZATION_SUPPLEMENT.md",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/USER_DECISIONS.json",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/a_scope/local_model_contract.json",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/evidence/goal2/a_epoch02/actual_ai_critique/actual_ai_critique.json",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/evidence/goal2/candidate_lock.json",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/evidence/goal2/counterexamples/formal-02/synthetic_cases.json",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/evidence/goal2/current_runs.json",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/evidence/goal2/data/raw_diagnostics.json",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/evidence/goal2/data/split_manifest.json",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/evidence/goal2/result_summary.json",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/evidence/goal2/runs/g2-demo-memory-02/memory_snapshot.json",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/evidence/goal2/tables/candidate_evaluation.csv",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/evidence/goal2/tables/memory_consumption.csv",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/evidence/goal2/tables/mode_record_results.csv",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/evidence/goal2/tables/parameter_configurations.csv",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/evidence/goal2/tables/parameter_record_pairs.csv",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/evidence/goal3/A3_DECISION.json",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/evidence/goal3/CONVERGENCE_REVIEW.json",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/evidence/goal3/USER_PROMPT.md",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/evidence/goal3/a_candidate_plan.json",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/evidence/goal3/contract_freeze.json",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/evidence/goal3/final_freeze.json",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/evidence/goal3/historical_recompute_registry.json.gz",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/evidence/goal3/historical_recompute_registry_binding.json",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/evidence/goal3/implementation_freeze.json",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/evidence/goal3/independent_c/confirmation_closure_receipt.json",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/evidence/goal3/independent_c/contract_split_receipt.json",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/evidence/goal3/independent_c/development_closure_receipt.json",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/evidence/goal3/independent_c/selection_closure_receipt.json",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/evidence/goal3/production_freeze.json",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/evidence/goal3/release_decision.json",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/evidence/goal3/selection_decision.json",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/evidence/goal3/selection_freeze.json",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/evidence/goal3/split_manifest.json",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/figures/goal2/direction_threshold_and_neighborhood.png",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/figures/goal2/dp_error_compression.png",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/figures/goal2/four_mode_failures_and_cost.png",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/figures/goal2/four_mode_paired_results.png",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/figures/goal2/goal2_actual_architecture.png",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/figures/goal2/memory_coverage_and_consumption.png",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/figures/goal2/order_protection_and_neighborhoods.png",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/figures/goal2/segmentation_filter_grids.png",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/figures/goal2/synthetic_metric_counterexamples.png",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/goal3/__init__.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/goal3/__main__.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/goal3/control.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/goal3/data.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/goal3/freezes.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/goal3/offline_plots.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/goal3/package.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/goal3/reproduce.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/goal3/runtime.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/goal3/selection.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/notebooks/final/任务3_LLM辅助评估清洗_完成版.ipynb",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/notebooks/final/作业1轨迹数据预处理_完成版.ipynb",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/reports/experiment1/experiment1.pdf",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/reports/process1/process1.pdf",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/scripts/goal2.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/workflow/__init__.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/workflow/__main__.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/workflow/artifact_review.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/workflow/budget.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/workflow/controller.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/workflow/coordinate_review.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/workflow/coordinates.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/workflow/diagnostics.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/workflow/evaluation.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/workflow/g2_data.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/workflow/g2_experiments.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/workflow/g2_journal.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/workflow/g2_memory.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/workflow/g2_metrics.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/workflow/g2_modes.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/workflow/g2_pipeline.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/workflow/g2_provider.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/workflow/g2_selection.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/workflow/geometry.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/workflow/goal.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/workflow/inventory.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/workflow/io.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/workflow/pipeline.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/workflow/provider.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/workflow/recompute.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/workflow/sources.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/workflow/tools.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:task1/作业/作业/traj_dict.json",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:templates/latex/common/p2_cloud_sorbet_colors.tex",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:README.md",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "allowlist_path:requirements.txt",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "only_designated_historical_metadata_is_transformed",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "all_historical_numbers_and_proposals_byte_values_unchanged",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "metadata_derivative_binds_original_hash",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:README.md",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:requirements.txt",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/config/conditional_planar.json",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/config/goal1.json",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/config/goal2/contract.json",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/config/goal2/experiment_matrix.json",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/config/goal3/contract.json",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/docs/goal2/STAGE_ANALYSIS.md",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/docs/research/Task1_Source_Audit_2025_2026_Merged.json",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/AUTHORIZATION_SUPPLEMENT.md",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/USER_DECISIONS.json",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/a_scope/local_model_contract.json",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/evidence/goal2/a_epoch02/actual_ai_critique/actual_ai_critique.json",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/evidence/goal2/candidate_lock.json",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/evidence/goal2/counterexamples/formal-02/synthetic_cases.json",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/evidence/goal2/current_runs.json",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/evidence/goal2/data/raw_diagnostics.json",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/evidence/goal2/data/split_manifest.json",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/evidence/goal2/runs/g2-demo-memory-02/memory_snapshot.json",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/evidence/goal2/tables/candidate_evaluation.csv",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/evidence/goal2/tables/memory_consumption.csv",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/evidence/goal2/tables/mode_record_results.csv",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/evidence/goal2/tables/parameter_configurations.csv",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/evidence/goal2/tables/parameter_record_pairs.csv",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/evidence/goal3/A3_DECISION.json",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/evidence/goal3/CONVERGENCE_REVIEW.json",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/evidence/goal3/USER_PROMPT.md",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/evidence/goal3/a_candidate_plan.json",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/evidence/goal3/contract_freeze.json",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/evidence/goal3/final_freeze.json",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/evidence/goal3/historical_recompute_registry.json.gz",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/evidence/goal3/historical_recompute_registry_binding.json",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/evidence/goal3/implementation_freeze.json",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/evidence/goal3/independent_c/confirmation_closure_receipt.json",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/evidence/goal3/independent_c/contract_split_receipt.json",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/evidence/goal3/independent_c/development_closure_receipt.json",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/evidence/goal3/independent_c/selection_closure_receipt.json",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/evidence/goal3/production_freeze.json",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/evidence/goal3/release_decision.json",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/evidence/goal3/selection_decision.json",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/evidence/goal3/selection_freeze.json",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/evidence/goal3/split_manifest.json",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/figures/goal2/direction_threshold_and_neighborhood.png",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/figures/goal2/dp_error_compression.png",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/figures/goal2/four_mode_failures_and_cost.png",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/figures/goal2/four_mode_paired_results.png",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/figures/goal2/goal2_actual_architecture.png",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/figures/goal2/memory_coverage_and_consumption.png",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/figures/goal2/order_protection_and_neighborhoods.png",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/figures/goal2/segmentation_filter_grids.png",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/figures/goal2/synthetic_metric_counterexamples.png",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/goal3/__init__.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/goal3/__main__.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/goal3/control.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/goal3/data.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/goal3/freezes.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/goal3/offline_plots.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/goal3/package.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/goal3/reproduce.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/goal3/runtime.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/goal3/selection.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/notebooks/final/任务3_LLM辅助评估清洗_完成版.ipynb",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/notebooks/final/作业1轨迹数据预处理_完成版.ipynb",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/reports/experiment1/experiment1.pdf",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/reports/process1/process1.pdf",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/scripts/goal2.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/workflow/__init__.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/workflow/__main__.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/workflow/artifact_review.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/workflow/budget.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/workflow/controller.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/workflow/coordinate_review.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/workflow/coordinates.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/workflow/diagnostics.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/workflow/evaluation.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/workflow/g2_data.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/workflow/g2_experiments.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/workflow/g2_journal.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/workflow/g2_memory.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/workflow/g2_metrics.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/workflow/g2_modes.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/workflow/g2_pipeline.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/workflow/g2_provider.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/workflow/g2_selection.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/workflow/geometry.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/workflow/goal.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/workflow/inventory.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/workflow/io.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/workflow/pipeline.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/workflow/provider.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/workflow/recompute.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/workflow/sources.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/workflow/tools.py",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:task1/作业/作业/traj_dict.json",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "unchanged_archive_input:templates/latex/common/p2_cloud_sorbet_colors.tex",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "actual_raw_sha256",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "raw_time_coordinate_arrays_aligned",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "actual_raw_full_structure_counts",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "actual_isolated_no_git_gate",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "isolated_changed_frozen_source_is_rejected",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "executed_notebook_stdout_path_is_rejected",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "compressed_registry_secret_is_rejected",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "full_recompute_refuses_existing_output",
+      "passed": true,
+      "scope": "NEW_OUTPUT_DIRECTORY_REQUIRED"
+    },
+    {
+      "check": "existing_output_is_unchanged",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "live_is_explicit_opt_in",
+      "passed": true,
+      "scope": "LIVE_REQUIRES_ENABLE_LIVE_NEW_RUN_ID_AND_FULL_GIT_CHECKOUT"
+    },
+    {
+      "check": "not_ready_zip_is_not_written",
+      "passed": true,
+      "scope": "PACKAGE_INPUTS_NOT_READY; inspect source_closure.json"
+    },
+    {
+      "check": "no_not_ready_archive_created",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "actual_full_entry_blocks_provider_before_transport",
+      "passed": true,
+      "scope": "FULL_RECOMPUTE_FORBIDS_NEW_MODEL_CALLS"
+    },
+    {
+      "check": "boundary_probe_ran_once",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "provider_methods_restored_after_failure",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "failed_boundary_probe_has_no_success_receipt",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "plot_gate:running_production",
+      "passed": true,
+      "scope": "NEW_COMPLETED_RECOMPUTE_TRACES_REQUIRED"
+    },
+    {
+      "check": "no_figure_on_rejected_scope:running_production",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "plot_gate:archived_non_recomputed",
+      "passed": true,
+      "scope": "NEW_COMPLETED_RECOMPUTE_TRACES_REQUIRED"
+    },
+    {
+      "check": "no_figure_on_rejected_scope:archived_non_recomputed",
+      "passed": true,
+      "scope": null
+    },
+    {
+      "check": "plot_gate:undeclared_sample",
+      "passed": true,
+      "scope": "UNREGISTERED_RECOMPUTE_PLOT_SCOPE"
+    },
+    {
+      "check": "no_figure_on_rejected_scope:undeclared_sample",
+      "passed": true,
+      "scope": null
+    }
+  ],
+  "actual_closure_status": "NOT_READY",
+  "actual_closure_member_count": 96,
+  "missing_actual_inputs": [
+    "task1/evidence/goal3/current_runs.json",
+    "task1/figures/goal3/development_candidates.png",
+    "task1/figures/goal3/final_confirmation_pairs.png",
+    "task1/figures/goal3/goal3_actual_workflow.png",
+    "task1/figures/goal3/incumbent_decision_path.png",
+    "task1/figures/goal3/point_fates_and_coverage.png",
+    "task1/figures/goal3/production_trajectory_cases.png",
+    "task1/figures/goal3/selection_tradeoffs.png"
+  ],
+  "actual_raw_structure": {
+    "records": 11386,
+    "points": 1173410
+  },
+  "isolated_no_git_probe": {
+    "status": "VERIFIED",
+    "root_is_isolated": true,
+    "git_present": false,
+    "new_model_calls": 0,
+    "historical_binding_check": "VERIFIED",
+    "contract_and_A_plan_check": "VERIFIED",
+    "production_gate": "VERIFIED",
+    "trajectory_runs": 0,
+    "registered_strategy_count": 11
+  },
+  "changed_source_probe": {
+    "classification": "SYNTHETIC_IN_MEMORY_MUTATION_ONLY",
+    "mutated_path": "task1/workflow/g2_pipeline.py",
+    "status": "FAILED",
+    "expected_rejection": "SOURCE_OR_CONTRACT_CHANGED_NEW_RUN_REQUIRED"
+  },
+  "notebooks": {
+    "task1/notebooks/final/作业1轨迹数据预处理_完成版.ipynb": {
+      "code_cells": 12,
+      "execution_status": "NOT_RUN_BY_THIS_REVIEW"
+    },
+    "task1/notebooks/final/任务3_LLM辅助评估清洗_完成版.ipynb": {
+      "code_cells": 8,
+      "execution_status": "NOT_RUN_BY_THIS_REVIEW"
+    }
+  },
+  "checked_components": [
+    "raw -> adapt -> run_record -> trusted review -> exact trace and summary target comparisons in historical recomputation",
+    "all actual registered historical tasks and original selected episode reconstruction remain distinct from new LIVE calls",
+    "production default calls evaluate with all frozen FULL_PRODUCTION input IDs and no parent cache; new shard hashes/metrics are compared",
+    "native new plot data flow uses recomputed metrics/new verified shards; archived figures remain explicitly labelled separately",
+    "model tripwire at actual top-level offline entry; failure restores providers and does not emit a success receipt",
+    "fresh output protection; no-.git isolated binding gate; changed frozen source refusal",
+    "actual package allowlist, exact frozen bytes, narrowly documented historical metadata-only derivative, raw count/hash",
+    "current Notebook schema/all code compilation and no secret/personal absolute path in unexecuted sources",
+    "executed-Notebook stdout and compressed-registry synthetic leak rejection",
+    "source executor preserves real outputs/errors; its internal absolute cwd/interpreter evidence is outside package allowlist"
+  ],
+  "unchecked_components": [
+    "actual complete FULL_RECOMPUTE on completed production; RUNNING production was not rerun",
+    "actual successful full Notebook outputs, cell counts, zero-model sentinel and post-execution path/secret scan",
+    "actual final ZIP construction, fresh extraction and complete recomputation",
+    "newly installed dependency environment; existing authorized Python environment was reused",
+    "final report numbers, latest development/selection prose, final all-page >=200dpi visual review",
+    "REPORT_BUILD package-producing repair; old entry missing ZIP step recorded separately"
+  ],
+  "trajectory_recomputations": 0,
+  "new_model_transport_calls": 0,
+  "synthetic_blocked_model_entry_attempts": 1,
+  "installed_dependencies": [],
+  "actual_command": ".venv/bin/python task1/evidence/goal3/independent_documents/review_portable_sources.py",
+  "review_harness_corrections": [
+    "Explicit repository import path added after direct script import initially failed.",
+    "Raw-count assertion corrected to count the aligned timestamp array in the actual [times, coordinates] record schema.",
+    "Mutation assertion corrected to the observed declared runtime exception SOURCE_OR_CONTRACT_CHANGED_NEW_RUN_REQUIRED."
+  ]
+}

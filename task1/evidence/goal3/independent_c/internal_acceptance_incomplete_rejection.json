@@ -1,0 +1,9 @@
+{
+  "classification": "ACTUAL_INCOMPLETE_STATE_REJECTION; not an experiment or repair failure",
+  "command": ".venv/bin/python task1/evidence/goal3/independent_c/review_internal_acceptance.py --mode accept --output /tmp/sc-lab1-g3-incomplete-acceptance-must-not-exist.json",
+  "chunk_id": "df62cb",
+  "wall_time_seconds": 0.000014375,
+  "exit_code": 1,
+  "original_token_count": 335,
+  "output": "Traceback (most recent call last):\n  File \"/home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/evidence/goal3/independent_c/review_internal_acceptance.py\", line 328, in <module>\n    if __name__=='__main__':main()\n                            ^^^^^^\n  File \"/home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/evidence/goal3/independent_c/review_internal_acceptance.py\", line 319, in main\n    args=parser.parse_args();result=perform(args)\n                                    ^^^^^^^^^^^^^\n  File \"/home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/evidence/goal3/independent_c/review_internal_acceptance.py\", line 273, in perform\n    assert not review.blockers,('INCOMPLETE_ENGINEERING',review.blockers)\n           ^^^^^^^^^^^^^^^^^^^\nAssertionError: ('INCOMPLETE_ENGINEERING', [{'kind': 'TASK_NOT_CLOSED', 'task': 'notebooks', 'actual_status': 'PENDING'}, {'kind': 'TASK_NOT_CLOSED', 'task': 'handoffs', 'actual_status': 'PENDING'}, {'kind': 'TASK_NOT_CLOSED', 'task': 'package', 'actual_status': 'PENDING'}, {'kind': 'FULL_NOTEBOOK_RECEIPT_MISSING', 'path': 'task1/evidence/goal3/independent_c/isolated_package_basic_full_receipt.json'}, {'kind': 'FINAL_PREPUBLICATION_INDEPENDENT_REVIEW_MISSING', 'scope': 'actual diff/secret/large-file/original-protection/local-link scan bound to exact proposed stable files'}])\n"
+}

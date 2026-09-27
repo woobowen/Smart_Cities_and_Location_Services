@@ -1,0 +1,101 @@
+--- before/task1/reports/process1/process1.tex
++++ after/task1/reports/process1/process1.tex
+@@ -151,17 +151,11 @@
+ \addcontentsline{toc}{part}{第一层：Workflow Construction}
+ 
+ \section{把不确定的输入变成明确的执行边界}
+-\subsection{坐标来源缺失没有被假标签补齐}
+-早期检查无法从文件绑定材料确认源 datum。G1 保存的 D1 用户答复为：
+-\begin{quote}“目前没有文件绑定的坐标说明”\end{quote}
+-这条答复说明缺少来源证明，不是确认某个 EPSG。随后保存的授权补充允许在明确固定的数学工作坐标下继续条件化处理，保留 \texttt{source\_crs=UNVERIFIED}，记录假设、单位和独立核验。后续没有把底图重合、算法一致或得分较高作为 datum 证据。
+-
+-这改变了可开展工作的边界：分段、方向、DP 和相对几何保护可以在固定模型内比较；绝对定位精度和真实地理准确率仍不能得出。G3 沿用这项授权扩大核验范围，没有把同一缺项重新变成重复弹窗。
+-
+-\subsection{方向规则的计算顺序先确认，再执行}
+-课件说明了方向差条件，但连续删除时的邻域更新次序会影响结果。保存的 D2 用户答复为：
+-\begin{quote}“批准采用上述一次标记、同时删除规则”\end{quote}
+-其对应的完整授权明确：先计算并完整标记、同时删除；首尾及必要方向不可计算窗口保留并标记；不迭代至收敛；下游重算特征。这是可执行语义，不是根据哪个结果更好再选调度。G1 pilot 的 7 条记录、783 点完成这一条件化处理：过滤 309 点、方向删除 13 点、DP 删除 273 点，最终保留 188 点。这里仅说明该历史执行，不把 pilot 当成最终独立测试。
++\subsection{未知事实与执行授权分别保存}
++来源事实没有证据时仍保留未知。用户可以批准在明确假设和限定结论下继续分析，但执行许可不能被当成事实证明。工作流因此分别保存“已经知道什么”“批准在什么条件下计算”和“仍不能声称什么”，不通过重复运行或看起来更好的结果填补来源信息。具体技术条件和原始授权见第~\ref{sec:technical-authorization}~节。
++
++\subsection{会影响结果的处理语义先固定}
++对会改变结果的计算语义，先保存完整批准文本与可执行合同，再开展正式处理。执行阶段不能按输出效果倒选定义，也不能把内部复验记作新的用户批准。这个原则对后续参数实验和工程修复共同适用；本实验中的具体语义、授权和历史执行结果统一放在第二层。
+ 
+ \subsection{当前授权支持规则内自动决定}
+ G3 用户明确授权在已研究参数域、固定保护与有限候选预算内自主补证、比较、回退、简化和冻结。普通实现缺陷由主线程修复并独立复验；改变目标、指标定义、坐标基准或新增研究方向仍超出授权。内部 C 检查机器合同是否与授权一致，不被登记为新用户批准。
+@@ -207,6 +201,19 @@
+ \clearpage
+ \part*{第二层：Experiment Decision Process}
+ \addcontentsline{toc}{part}{第二层：Experiment Decision Process}
++
++\section{先固定坐标假设与方向调度}\label{sec:technical-authorization}
++\subsection{坐标来源缺失没有被假标签补齐}
++早期检查无法从文件绑定材料确认源 datum。G1 保存的 D1 用户答复为：
++\begin{quote}“目前没有文件绑定的坐标说明”\end{quote}
++这条答复说明缺少来源证明，不是确认某个 EPSG。随后保存的授权补充允许在明确固定的数学工作坐标下继续条件化处理，保留 \texttt{source\_crs=UNVERIFIED}，记录假设、单位和独立核验。后续没有把底图重合、算法一致或得分较高作为 datum 证据。
++
++这改变了可开展工作的边界：分段、方向、DP 和相对几何保护可以在固定模型内比较；绝对定位精度和真实地理准确率仍不能得出。G3 沿用这项授权扩大核验范围，没有把同一缺项重新变成重复弹窗。
++
++\subsection{方向规则的计算顺序先确认，再执行}
++课件说明了方向差条件，但连续删除时的邻域更新次序会影响结果。保存的 D2 用户答复为：
++\begin{quote}“批准采用上述一次标记、同时删除规则”\end{quote}
++其对应的完整授权明确：先计算并完整标记、同时删除；首尾及必要方向不可计算窗口保留并标记；不迭代至收敛；下游重算特征。这是可执行语义，不是根据哪个结果更好再选调度。G1 pilot 的 7 条记录、783 点完成这一条件化处理：过滤 309 点、方向删除 13 点、DP 删除 273 点，最终保留 188 点。这里仅说明该历史执行，不把 pilot 当成最终独立测试。
+ 
+ \section{从基础答案到可比较的问题}
+ 基础处理回答“如何实现 S、D、P”，后续决策回答“哪个变化在共同范围内保留了什么、损失了什么”。因此比较不使用各候选自己的 clean 作为整体真值，而先在原始数据上固定时间/距离窗口，再核对共同覆盖身份、原始断点与几何偏差。没有真实噪声标签时，禁止把几何保护改写为噪声准确率。
+--- before/task1/reports/experiment1/experiment1.tex
++++ after/task1/reports/experiment1/experiment1.tex
+@@ -99,7 +99,7 @@
+ \end{align}
+ 这与 PROJ 官方文档所述的地理坐标到地心直角坐标、再到固定原点 ENU 的转换语义一致\cite{proj-cart,proj-topocentric}。本文的“工作米”表示这个数学模型中的长度，不证明输入 datum，也不等同绝对定位精度。未设置一个 EPSG 标签来替代来源证明，未做坐标加偏转换，未叠加道路底图。
+ 
+-G2 在 307 条、30,992 点上用同一假设椭球的独立 PROJ 路径核对坐标，最大差 $4.83\times10^{-10}$ 工作米，小于 $10^{-6}$ 的实现核验容差。该范围内对 1,594,527 个记录内点对比较 ENU 距离与椭球测地距离，最大绝对差为 3.503584 m、最大相对差约 0.015054\%。两者是近似模型的差异，不能写成测量误差。实际开发与 G2 评估处理轨迹的敏感性检查未观察到登记阶段动作差异；这只是已检查范围的结果，G3 扩大核验另列。
++G2 在 307 条、30,992 点上用同一假设椭球的独立 PROJ 路径核对坐标，最大差约 $4.82\times10^{-10}$ 工作米，小于 $10^{-6}$ 的实现核验容差。该范围内对 1,594,527 个记录内点对比较 ENU 距离与椭球测地距离，最大绝对差为 3.503584 m、最大相对差约 0.015054\%。两者是近似模型的差异，不能写成测量误差。实际开发与 G2 评估处理轨迹的敏感性检查未观察到登记阶段动作差异；这只是已检查范围的结果，G3 扩大核验另列。
+ 
+ \section{处理方法与明确约定}
+ \subsection{S：分段与短段过滤}
+@@ -173,6 +173,11 @@
+ \caption{G2 开发集分段与过滤网格的真实结果。短段覆盖、保留量和几何保护需共同解释；图中的样本范围是 120 条开发记录。}\end{figure}
+ 
+ 在被测单因素相邻取值中，没有出现阶段索引、覆盖和终态计数全部相同的精确稳定区间。这个结果只针对已测离散值，不能推广到未采样的连续范围。方向阈值改变上游删除集合，DP 容差改变几何精度与存储点数；都不能只按某一候选的自身 clean 误差选优。
++
++在同一 120 条、\DirectionDevelopmentPoints{} 个原始点的开发范围内，只改变方向阈值时，15、35、60 度分别删除 \DirectionLowRemoved{}、\DirectionRefRemoved{}、\DirectionHighRemoved{} 点；五个已测阈值的共同覆盖均为 \DirectionCovered{} 点。阈值放宽使该方向规则删除更少，但没有噪声真值，不能把这条数量趋势解释为准确率改善。方向规则在同时删除后改变相邻关系，下一阶段必须重算特征。
++
++\begin{figure}[H]\centering\includegraphics[width=.99\linewidth]{../../figures/goal2/direction_threshold_and_neighborhood.pdf}
++\caption{G2 方向组开发结果。左、中面板分别为方向删除点数与因不可计算或边界条件保留的点数，右面板展示一次实际删除后的邻接变化；不可计算而保留不是噪声真值标签。}\end{figure}
+ 
+ \begin{figure}[H]\centering\includegraphics[width=.97\linewidth]{../../figures/goal2/dp_error_compression.pdf}
+ \caption{G2 DP 参数实验。$\varepsilon=0$ 是无简化参考；10、20 工作米可揭示权衡，但实际超出共同 5 工作米预算时不能作为最终发布改进。}\end{figure}
+--- before/task1/reports/build_history_sources.py
++++ after/task1/reports/build_history_sources.py
+@@ -10,11 +10,18 @@
+     'structure': 'task1/evidence/goal1/inventory/structure_summary.json',
+     'ai': 'task1/evidence/goal2/a_epoch02/actual_ai_critique/actual_ai_critique.json',
+     'counterexamples': 'task1/evidence/goal2/counterexamples/formal-02/synthetic_cases.json',
++    'figures': 'task1/figures/goal2/figure_data.json',
+ }
+ DATA = {key: json.loads((ROOT / path).read_text()) for key, path in SOURCES.items()}
+ g2, st, ai = DATA['g2'], DATA['structure'], DATA['ai']
+ cs = next(v for v in g2['single_candidates'] if v['candidate'] == 'C-S')
+ r0 = next(v for v in g2['single_candidates'] if v['candidate'] == 'C-D')
++direction_rows = {r['parameters']['direction']: r['summary']
++                  for r in DATA['figures']['direction_threshold_and_neighborhood']['rows']}
++if set(direction_rows) != {15, 25, 35, 45, 60} or any(r['n_records'] != 120 for r in direction_rows.values()):
++    raise ValueError('HISTORICAL_DIRECTION_SCOPE_MISMATCH')
++if len({r['common_covered_points'] for r in direction_rows.values()}) != 1:
++    raise ValueError('DIRECTION_COMMON_COVERAGE_SENTENCE_CHANGED')
+ 
+ def tex(s):
+     return str(s).replace('&', r'\&').replace('_', r'\_').replace('%', r'\%')
+@@ -40,6 +47,11 @@
+     'MemoryDemo': g2['memory']['demonstration_records'],
+     'SyntheticCases': g2['counterexamples']['synthetic_cases'],
+     'KnownChecks': g2['counterexamples']['known_answer_checks'],
++    'DirectionDevelopmentPoints': direction_rows[35]['n_input'],
++    'DirectionLowRemoved': direction_rows[15]['n_direction_removed'],
++    'DirectionRefRemoved': direction_rows[35]['n_direction_removed'],
++    'DirectionHighRemoved': direction_rows[60]['n_direction_removed'],
++    'DirectionCovered': direction_rows[35]['common_covered_points'],
+ }
+ macros = ['% Generated by ../build_history_sources.py; historical evidence only.']
+ for key, value in values.items():

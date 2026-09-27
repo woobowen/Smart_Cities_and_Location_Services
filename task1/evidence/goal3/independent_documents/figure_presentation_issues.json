@@ -1,0 +1,45 @@
+{
+  "role_context": "/root/c_documents",
+  "status": "REPAIR_REQUIRED",
+  "targets": [
+    {
+      "path": "task1/figures/goal3/figure_manifest.json",
+      "sha256": "41ceb41bfef0518362907e50d48593656a7cb8b85115cff1a09fcdab598a5e00"
+    },
+    {
+      "path": "task1/figures/goal3/figure_data.json",
+      "sha256": "78ba1ff23183898ff9d82ed0a1d03e069a4b19df7c1f74a6b37d3948bc403648"
+    },
+    {
+      "path": "task1/goal3/figures.py",
+      "sha256": "9289b9d8e3ba33aad387fe5a60e1b402e2cb4eaa0cd91002edb0b4dc65c15262"
+    },
+    {
+      "path": "task1/figures/goal3/pdf-render-200dpi/production_trajectory_cases.png",
+      "sha256": "5aa701c5ecffbeb5212d7a28d786f6b2ce24470342573b111b01d1d8b7369927"
+    },
+    {
+      "path": "task1/figures/goal3/pdf-render-200dpi/goal3_actual_workflow.png",
+      "sha256": "95042ea3ab4f984af84d7cf1882d9925d32c7529df3408ea7abb95f501b26b26"
+    }
+  ],
+  "issues": [
+    {
+      "local_id": "FIG-ACTIONS",
+      "target": "production_trajectory_cases",
+      "actual": "S-filter crosses and D-removal plus signs are plotted without a visible legend. Figure manifest description has meanings, standalone figure does not.",
+      "closure_standard": "Native graphic contains readable S-filter/D-removal legend consistent with actual action colors and markers; no trajectory/data/index changes."
+    },
+    {
+      "local_id": "FIG-WORKFLOW",
+      "target": "goal3_actual_workflow",
+      "actual": "External node label crosses both box edges and the incoming arrow; A has no results-feedback incoming path, despite actual A1/A2/A3 iterative development.",
+      "closure_standard": "Fit/wrap text without overlap; show actual verified-development feedback via main/controller to A, restricted to prefreeze development and excluding FINAL_CONFIRM, consistently in native drawio and PDF/SVG."
+    }
+  ],
+  "unchecked": [
+    "Numeric comparison/plot-data review still underway",
+    "Final rebuilt figure/document acceptance",
+    "Parent task closure"
+  ]
+}

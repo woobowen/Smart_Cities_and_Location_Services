@@ -1,0 +1,18 @@
+{
+  "issue_id": "G3-DEL-01",
+  "at": "2026-09-27T06:04:18.426967+00:00",
+  "fact": "REPORT_BUILD previously compiled reports without the requested actual ZIP.",
+  "previous_entry_sha256": "a052acce796cd8ea9ce58a29ad1d442f63ce773a13a0dc069e2b019a0c70ee77",
+  "fixed_sources": {
+    "task1/goal3/__main__.py": "35b62e69cb05d224d88d750e7a1c31229a6ad351766bfc58024a120e582f0c1d",
+    "task1/goal3/figures.py": "050223d644a1bb0ba7dfc95ff093f40e6e06a31ed8d3372c0a16c7b75e7f52fa",
+    "task1/goal3/summarize.py": "fca49199bfe68fab084cfd8b04ca89ba87bd647b241967ca9e1967ad777b653b"
+  },
+  "impact": "Delivery orchestration only. Numerical definitions, source_snapshot, all completed scientific runs and active full production unchanged.",
+  "actual_independent_command": ".venv/bin/python task1/evidence/goal3/independent_documents/review_report_entry.py",
+  "checked_scope": "INDEPENDENT_SOURCE_REPAIR_AND_SYNTHETIC_ORCHESTRATION; not a final report/package acceptance",
+  "formal_REPORT_BUILD": "NOT_RUN",
+  "actual_submission_zip": "NOT_BUILT_YET",
+  "notebook_full_and_zip_full": "NOT_RUN",
+  "remaining_action": "Execute complete entry and independently verify exact final artifacts after full production is closed."
+}

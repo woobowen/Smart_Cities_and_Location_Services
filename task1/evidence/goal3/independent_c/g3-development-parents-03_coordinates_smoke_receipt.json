@@ -1,0 +1,71 @@
+{
+  "role_context": "/root/c_protocol",
+  "status": "VERIFIED",
+  "target_id": "coordinate_helper_development_smoke",
+  "checked_at_utc": "2026-09-27T04:37:04.697045+00:00",
+  "classification": "8-record DEVELOPMENT engineering smoke; explicitly NOT full production coordinate acceptance",
+  "targets": [
+    {
+      "path": "task1/evidence/goal3/runs/g3-development-parents-03/manifest.json",
+      "sha256": "0d8a27a4238a2e40bcf095377fd5c16db5cc90fdbe08bbfa5b0ab85fdcd06ef8"
+    },
+    {
+      "path": "task1/evidence/goal3/runs/g3-development-parents-03/traces-0000.jsonl.gz",
+      "sha256": "549be8201756d1ce6f4b8bf906d9f5749652b3b3b49174726ca6b1f6bb5bce2b"
+    },
+    {
+      "path": "task1/goal3/coordinates.py",
+      "sha256": "b260b95aa96149bcf37e4e6953a7498fb61d3f90a217489d9058c6f1731be171"
+    },
+    {
+      "path": "task1/scripts/goal2_coordinate_sensitivity.py",
+      "sha256": "9f072efd99839a9ab2593497f18b0a0ce221aef67aeaa8fd328f442d5278869b"
+    },
+    {
+      "path": "task1/config/goal3/contract.json",
+      "sha256": "fcf5b3962c4c5a2a59f42ae1f167fa180bfc2b9798fca85e256bcc8ccb3c558d"
+    },
+    {
+      "path": "task1/evidence/goal3/independent_c/g3-development-parents-03_coordinate_smoke/coordinate_checks.json",
+      "sha256": "32603da0b2193b8c8629d118892084c177654656b8abd6c4a9208c0490302a3f"
+    },
+    {
+      "path": "task1/evidence/goal3/independent_c/g3-development-parents-03_coordinate_smoke/threshold_differences.jsonl.gz",
+      "sha256": "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64"
+    },
+    {
+      "path": "task1/evidence/goal3/independent_c/g3-development-parents-03_coordinate_smoke/engineering_scope_fixture_manifest.json",
+      "sha256": "17df2af914a20f02669138a071bb79586ad048dd1fc69227fe99f58aecea3f70"
+    }
+  ],
+  "checked_components": [
+    "fixed-ellipsoid h=0 ENU vs independent PROJ",
+    "raw adjacent Geod distances",
+    "actual S distance/length, D windows, P full input/output intervals and same-ellipsoid AEQD sensitivity",
+    "independent stage cardinality reduction equals every reported count",
+    "difference log aggregation"
+  ],
+  "unchecked_components": [
+    "full original dataset coordinate check",
+    "source datum",
+    "source physical accuracy",
+    "full processing correctness; separately bound run C receipt required"
+  ],
+  "counts": {
+    "points_checked": 774,
+    "records_checked": 8,
+    "raw_adjacent_edges": 766,
+    "S_distance_edges": 5362,
+    "S_actual_segments_length": 343,
+    "D_windows": 5259,
+    "D_undefined_windows": 827,
+    "P_complete_input_points": 5006,
+    "P_immediate_output_points": 2382,
+    "P_segments": 279,
+    "unique_actual_traces_checked": 56
+  },
+  "difference_counts": {},
+  "max_PROJ_error_work_m": 3.637978807091713e-12,
+  "errors": [],
+  "actual_command": ".venv/bin/python task1/evidence/goal3/independent_c/review_coordinates_smoke.py task1/evidence/goal3/runs/g3-development-parents-03"
+}

@@ -1,0 +1,43 @@
+{
+  "role_context": "/root/c_protocol",
+  "status": "REJECTED",
+  "issue_id": "G3-NB-01",
+  "target_id": "NB01_first_repair_actual_prefix_smoke",
+  "at": "2026-09-27T06:47:31.853434+00:00",
+  "classification": "REAL_PILOT_PREFIX_SMOKE_NOT_FULL",
+  "observed_input_notebook_sha256": "39fa12427e328a96ff4024dea676725d17795cb01c65bcfbb7663f1bb6094993",
+  "targets": [
+    {
+      "path": "task1/evidence/goal3/independent_c/NB01_smoke/basic_actual_prefix_executed.ipynb",
+      "sha256": "892b07eae1441d6c1523254e792415724087bab73973488ab1d51e10bc4b4a4b"
+    },
+    {
+      "path": "task1/evidence/goal3/independent_c/NB01_smoke/failure.json",
+      "sha256": "5d5dd2c048171d76b09131c3bbb471dc386e07d551524ee9c360eb63be067b0d"
+    },
+    {
+      "path": "task1/evidence/goal3/independent_c/NB01_smoke/kernel_cells.json",
+      "sha256": "39ab15ad6bbd17f0911fae1f03dc7eef2e13baefc851edf9a0472a1326115f56"
+    }
+  ],
+  "checked_components": [
+    "First 12 actual authored cells, 6 code cells attempted in a fresh kernel using existing .venv",
+    "Real pipeline and independent raw review preceding plot succeeded",
+    "New Agg-only change still reaches incompatible pyplot IPython REPL display hook"
+  ],
+  "errors": [
+    {
+      "cell_index": 11,
+      "ename": "ImportError",
+      "evalue": "cannot import name 'backend2gui' from 'IPython.core.pylabtools' (/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/lib/python3.12/site-packages/IPython/core/pylabtools.py)"
+    }
+  ],
+  "unchecked_components": [
+    "Remaining Notebook full cells",
+    "Teacher package isolation"
+  ],
+  "closure_standard": "New-kernel actual prefix must finish real pilot native plotting and explicit display; then full Notebook remains separately mandatory",
+  "method_processing_issue": false,
+  "failure_is_research_negative": false,
+  "actual_command": ".venv/bin/python task1/evidence/goal3/independent_c/review_NB01_smoke.py"
+}

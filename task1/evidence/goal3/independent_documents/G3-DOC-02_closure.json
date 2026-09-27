@@ -1,0 +1,509 @@
+{
+  "role_context": "/root/c_documents",
+  "issue_id": "G3-DOC-02",
+  "status": "VERIFIED",
+  "created_at_utc": "2026-09-27T05:11:50.057949+00:00",
+  "targets": [
+    {
+      "path": "task1/reports/experiment1/experiment1.tex",
+      "sha256": "de319e58dc9b131396ff937177801a8916c5a71cecf295b9e68ce81529f52df5"
+    },
+    {
+      "path": "task1/reports/experiment1/experiment1.pdf",
+      "sha256": "13fb4bbf161692b5c1c66cc3f88133213b81eb0b7437e85c944475a7bdf7614d"
+    },
+    {
+      "path": "task1/evidence/goal3/report_build/document_C_repairs.json",
+      "sha256": "a16328bf499a78f93d2cc5e3433ab3ef37323cea1fcf39d1071124a0eb4e07a1"
+    },
+    {
+      "path": "task1/evidence/goal3/report_build/document_C_repairs.patch",
+      "sha256": "3e0915ded09dbad85296e57ca54f0bdc76f7ed5f7b6fc461ec238a1ee70109fa"
+    },
+    {
+      "path": "task1/evidence/goal3/report_build/build_receipt.json",
+      "sha256": "3b5245f42baebd87756efddd5530691c8424a793484dd444d691ae1135079b86"
+    }
+  ],
+  "checked_components": [
+    "exact_repair_target_hashes",
+    "actual_direction_result_figure",
+    "direction_values_independent_record_sums",
+    "sample_and_no_truth_boundary",
+    "actual_PDF_direction_text",
+    "compile_log",
+    "changed_pages_200dpi_visual"
+  ],
+  "checks": [
+    {
+      "name": "G3-DOC-01: exact repair target task1/reports/process1/process1.tex",
+      "actual": "65eddc20f436ef4a24d4500e51ce969a97b400d8cb823bf317b5528d0213d8cb",
+      "expected": "65eddc20f436ef4a24d4500e51ce969a97b400d8cb823bf317b5528d0213d8cb",
+      "passed": true
+    },
+    {
+      "name": "G3-DOC-01: exact repair target task1/reports/process1/process1.pdf",
+      "actual": "0efaa89f9f142733e08b21caa3cc1f50fa13d05e920fcbfee93a9b83c80c2f81",
+      "expected": "0efaa89f9f142733e08b21caa3cc1f50fa13d05e920fcbfee93a9b83c80c2f81",
+      "passed": true
+    },
+    {
+      "name": "G3-DOC-01: exact repair target task1/evidence/goal3/report_build/document_C_repairs.json",
+      "actual": "a16328bf499a78f93d2cc5e3433ab3ef37323cea1fcf39d1071124a0eb4e07a1",
+      "expected": "a16328bf499a78f93d2cc5e3433ab3ef37323cea1fcf39d1071124a0eb4e07a1",
+      "passed": true
+    },
+    {
+      "name": "G3-DOC-01: exact repair target task1/evidence/goal3/report_build/document_C_repairs.patch",
+      "actual": "3e0915ded09dbad85296e57ca54f0bdc76f7ed5f7b6fc461ec238a1ee70109fa",
+      "expected": "3e0915ded09dbad85296e57ca54f0bdc76f7ed5f7b6fc461ec238a1ee70109fa",
+      "passed": true
+    },
+    {
+      "name": "G3-DOC-01: exact repair target task1/evidence/goal3/report_build/build_receipt.json",
+      "actual": "3b5245f42baebd87756efddd5530691c8424a793484dd444d691ae1135079b86",
+      "expected": "3b5245f42baebd87756efddd5530691c8424a793484dd444d691ae1135079b86",
+      "passed": true
+    },
+    {
+      "name": "G3-DOC-02: exact repair target task1/reports/experiment1/experiment1.tex",
+      "actual": "de319e58dc9b131396ff937177801a8916c5a71cecf295b9e68ce81529f52df5",
+      "expected": "de319e58dc9b131396ff937177801a8916c5a71cecf295b9e68ce81529f52df5",
+      "passed": true
+    },
+    {
+      "name": "G3-DOC-02: exact repair target task1/reports/experiment1/experiment1.pdf",
+      "actual": "13fb4bbf161692b5c1c66cc3f88133213b81eb0b7437e85c944475a7bdf7614d",
+      "expected": "13fb4bbf161692b5c1c66cc3f88133213b81eb0b7437e85c944475a7bdf7614d",
+      "passed": true
+    },
+    {
+      "name": "G3-DOC-02: exact repair target task1/evidence/goal3/report_build/document_C_repairs.json",
+      "actual": "a16328bf499a78f93d2cc5e3433ab3ef37323cea1fcf39d1071124a0eb4e07a1",
+      "expected": "a16328bf499a78f93d2cc5e3433ab3ef37323cea1fcf39d1071124a0eb4e07a1",
+      "passed": true
+    },
+    {
+      "name": "G3-DOC-02: exact repair target task1/evidence/goal3/report_build/document_C_repairs.patch",
+      "actual": "3e0915ded09dbad85296e57ca54f0bdc76f7ed5f7b6fc461ec238a1ee70109fa",
+      "expected": "3e0915ded09dbad85296e57ca54f0bdc76f7ed5f7b6fc461ec238a1ee70109fa",
+      "passed": true
+    },
+    {
+      "name": "G3-DOC-02: exact repair target task1/evidence/goal3/report_build/build_receipt.json",
+      "actual": "3b5245f42baebd87756efddd5530691c8424a793484dd444d691ae1135079b86",
+      "expected": "3b5245f42baebd87756efddd5530691c8424a793484dd444d691ae1135079b86",
+      "passed": true
+    },
+    {
+      "name": "experiment1: build PDF hash",
+      "actual": "13fb4bbf161692b5c1c66cc3f88133213b81eb0b7437e85c944475a7bdf7614d",
+      "expected": "13fb4bbf161692b5c1c66cc3f88133213b81eb0b7437e85c944475a7bdf7614d",
+      "passed": true
+    },
+    {
+      "name": "experiment1: recorded compile exit",
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "experiment1: recorded diagnostics",
+      "actual": [],
+      "expected": [],
+      "passed": true
+    },
+    {
+      "name": "experiment1: build source binding task1/reports/experiment1/experiment1.tex",
+      "actual": "de319e58dc9b131396ff937177801a8916c5a71cecf295b9e68ce81529f52df5",
+      "expected": "de319e58dc9b131396ff937177801a8916c5a71cecf295b9e68ce81529f52df5",
+      "passed": true
+    },
+    {
+      "name": "experiment1: build source binding task1/reports/experiment1/generated.tex",
+      "actual": "d2519f1e50f3b905c2b17a1a1357b9901866f805bfdcc6841b6349e531252a25",
+      "expected": "d2519f1e50f3b905c2b17a1a1357b9901866f805bfdcc6841b6349e531252a25",
+      "passed": true
+    },
+    {
+      "name": "experiment1: build source binding task1/reports/experiment1/goal3_figure_slots.tex",
+      "actual": "7d65a9872861857a2b3cd1c45eb017c723c4beda68a7c65fdb08e9fac67ad322",
+      "expected": "7d65a9872861857a2b3cd1c45eb017c723c4beda68a7c65fdb08e9fac67ad322",
+      "passed": true
+    },
+    {
+      "name": "experiment1: build source binding task1/reports/experiment1/history_ai_table.tex",
+      "actual": "d55c09dd4374253985bf122760290c58ae5c5e48e0b74adb5abb9ee8f94151c9",
+      "expected": "d55c09dd4374253985bf122760290c58ae5c5e48e0b74adb5abb9ee8f94151c9",
+      "passed": true
+    },
+    {
+      "name": "experiment1: build source binding task1/reports/experiment1/history_candidate_table.tex",
+      "actual": "e27231cd51af16ca7cb24b97f8e964b1905fd1939bb4cc50395fced456e4fa07",
+      "expected": "e27231cd51af16ca7cb24b97f8e964b1905fd1939bb4cc50395fced456e4fa07",
+      "passed": true
+    },
+    {
+      "name": "experiment1: build source binding task1/reports/experiment1/history_modes_table.tex",
+      "actual": "c5da7d4274b8e6716cd26fb578c432da378c804b65c41c0c84dfe431f07e3779",
+      "expected": "c5da7d4274b8e6716cd26fb578c432da378c804b65c41c0c84dfe431f07e3779",
+      "passed": true
+    },
+    {
+      "name": "experiment1: build source binding task1/reports/experiment1/history_order_table.tex",
+      "actual": "ca20f9b28c7ada468a95d9da29a41e401712ca6ef2e8929efdb7b8e8959881aa",
+      "expected": "ca20f9b28c7ada468a95d9da29a41e401712ca6ef2e8929efdb7b8e8959881aa",
+      "passed": true
+    },
+    {
+      "name": "experiment1: build source binding task1/reports/experiment1/references.bib",
+      "actual": "90d5740b67844d74a0f0304d15fa723a7fb97ca1d2ca37cb94d5ea1145d304b1",
+      "expected": "90d5740b67844d74a0f0304d15fa723a7fb97ca1d2ca37cb94d5ea1145d304b1",
+      "passed": true
+    },
+    {
+      "name": "experiment1: build source binding task1/reports/metadata.tex",
+      "actual": "16e5d4a6eabeee17d17085ef660705cd58fb49fb579b493b2001fe5f885edd20",
+      "expected": "16e5d4a6eabeee17d17085ef660705cd58fb49fb579b493b2001fe5f885edd20",
+      "passed": true
+    },
+    {
+      "name": "experiment1: build source binding task1/reports/history_values.tex",
+      "actual": "18b0cbfa3403213946465d4027b9a18a6d32d02a915b6dd04ee85c0b2ad03263",
+      "expected": "18b0cbfa3403213946465d4027b9a18a6d32d02a915b6dd04ee85c0b2ad03263",
+      "passed": true
+    },
+    {
+      "name": "experiment1: build source binding templates/latex/common/p2_cloud_sorbet_colors.tex",
+      "actual": "2aa820c3f68ba6c14cf1b52082b12336071d77bb5466db2b05b2fab6890aa243",
+      "expected": "2aa820c3f68ba6c14cf1b52082b12336071d77bb5466db2b05b2fab6890aa243",
+      "passed": true
+    },
+    {
+      "name": "experiment1: actual PDF page count",
+      "actual": 13,
+      "expected": 13,
+      "passed": true
+    },
+    {
+      "name": "experiment1: actual build log blocking diagnostics",
+      "actual": [],
+      "expected": [],
+      "passed": true
+    },
+    {
+      "name": "process1: build PDF hash",
+      "actual": "0efaa89f9f142733e08b21caa3cc1f50fa13d05e920fcbfee93a9b83c80c2f81",
+      "expected": "0efaa89f9f142733e08b21caa3cc1f50fa13d05e920fcbfee93a9b83c80c2f81",
+      "passed": true
+    },
+    {
+      "name": "process1: recorded compile exit",
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "process1: recorded diagnostics",
+      "actual": [],
+      "expected": [],
+      "passed": true
+    },
+    {
+      "name": "process1: build source binding task1/reports/process1/components/interaction_evidence.tex",
+      "actual": "41828c96c51c21cf3cb9489cd72664e049be1d2d9d28144c265ba9caf0222dae",
+      "expected": "41828c96c51c21cf3cb9489cd72664e049be1d2d9d28144c265ba9caf0222dae",
+      "passed": true
+    },
+    {
+      "name": "process1: build source binding task1/reports/process1/generated.tex",
+      "actual": "fcc56bc334706c0241847aa838571d7fdb8dd358764a1a8c04350b607390ad29",
+      "expected": "fcc56bc334706c0241847aa838571d7fdb8dd358764a1a8c04350b607390ad29",
+      "passed": true
+    },
+    {
+      "name": "process1: build source binding task1/reports/process1/goal3_workflow_slot.tex",
+      "actual": "f146f96a98bdad1ebd4f0a5d6c19e0f1ec922b55f3f510067df7a298f0fb1618",
+      "expected": "f146f96a98bdad1ebd4f0a5d6c19e0f1ec922b55f3f510067df7a298f0fb1618",
+      "passed": true
+    },
+    {
+      "name": "process1: build source binding task1/reports/process1/process1.tex",
+      "actual": "65eddc20f436ef4a24d4500e51ce969a97b400d8cb823bf317b5528d0213d8cb",
+      "expected": "65eddc20f436ef4a24d4500e51ce969a97b400d8cb823bf317b5528d0213d8cb",
+      "passed": true
+    },
+    {
+      "name": "process1: build source binding task1/reports/metadata.tex",
+      "actual": "16e5d4a6eabeee17d17085ef660705cd58fb49fb579b493b2001fe5f885edd20",
+      "expected": "16e5d4a6eabeee17d17085ef660705cd58fb49fb579b493b2001fe5f885edd20",
+      "passed": true
+    },
+    {
+      "name": "process1: build source binding task1/reports/history_values.tex",
+      "actual": "18b0cbfa3403213946465d4027b9a18a6d32d02a915b6dd04ee85c0b2ad03263",
+      "expected": "18b0cbfa3403213946465d4027b9a18a6d32d02a915b6dd04ee85c0b2ad03263",
+      "passed": true
+    },
+    {
+      "name": "process1: build source binding templates/latex/common/p2_cloud_sorbet_colors.tex",
+      "actual": "2aa820c3f68ba6c14cf1b52082b12336071d77bb5466db2b05b2fab6890aa243",
+      "expected": "2aa820c3f68ba6c14cf1b52082b12336071d77bb5466db2b05b2fab6890aa243",
+      "passed": true
+    },
+    {
+      "name": "process1: actual PDF page count",
+      "actual": 10,
+      "expected": 10,
+      "passed": true
+    },
+    {
+      "name": "process1: actual build log blocking diagnostics",
+      "actual": [],
+      "expected": [],
+      "passed": true
+    },
+    {
+      "name": "D1/D2/pilot specifics absent from Part I",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "D1/D2/pilot specifics present in Part II",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "Part I points to technical section",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "Part II technical label exists",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "moved actual paragraph bytes equal removed patch paragraph",
+      "actual": "\\subsection{坐标来源缺失没有被假标签补齐}\n早期检查无法从文件绑定材料确认源 datum。G1 保存的 D1 用户答复为：\n\\begin{quote}“目前没有文件绑定的坐标说明”\\end{quote}\n这条答复说明缺少来源证明，不是确认某个 EPSG。随后保存的授权补充允许在明确固定的数学工作坐标下继续条件化处理，保留 \\texttt{source\\_crs=UNVERIFIED}，记录假设、单位和独立核验。后续没有把底图重合、算法一致或得分较高作为 datum 证据。\n\n这改变了可开展工作的边界：分段、方向、DP 和相对几何保护可以在固定模型内比较；绝对定位精度和真实地理准确率仍不能得出。G3 沿用这项授权扩大核验范围，没有把同一缺项重新变成重复弹窗。\n\n\\subsection{方向规则的计算顺序先确认，再执行}\n课件说明了方向差条件，但连续删除时的邻域更新次序会影响结果。保存的 D2 用户答复为：\n\\begin{quote}“批准采用上述一次标记、同时删除规则”\\end{quote}\n其对应的完整授权明确：先计算并完整标记、同时删除；首尾及必要方向不可计算窗口保留并标记；不迭代至收敛；下游重算特征。这是可执行语义，不是根据哪个结果更好再选调度。G1 pilot 的 7 条记录、783 点完成这一条件化处理：过滤 309 点、方向删除 13 点、DP 删除 273 点，最终保留 188 点。这里仅说明该历史执行，不把 pilot 当成最终独立测试。",
+      "expected": "\\subsection{坐标来源缺失没有被假标签补齐}\n早期检查无法从文件绑定材料确认源 datum。G1 保存的 D1 用户答复为：\n\\begin{quote}“目前没有文件绑定的坐标说明”\\end{quote}\n这条答复说明缺少来源证明，不是确认某个 EPSG。随后保存的授权补充允许在明确固定的数学工作坐标下继续条件化处理，保留 \\texttt{source\\_crs=UNVERIFIED}，记录假设、单位和独立核验。后续没有把底图重合、算法一致或得分较高作为 datum 证据。\n\n这改变了可开展工作的边界：分段、方向、DP 和相对几何保护可以在固定模型内比较；绝对定位精度和真实地理准确率仍不能得出。G3 沿用这项授权扩大核验范围，没有把同一缺项重新变成重复弹窗。\n\n\\subsection{方向规则的计算顺序先确认，再执行}\n课件说明了方向差条件，但连续删除时的邻域更新次序会影响结果。保存的 D2 用户答复为：\n\\begin{quote}“批准采用上述一次标记、同时删除规则”\\end{quote}\n其对应的完整授权明确：先计算并完整标记、同时删除；首尾及必要方向不可计算窗口保留并标记；不迭代至收敛；下游重算特征。这是可执行语义，不是根据哪个结果更好再选调度。G1 pilot 的 7 条记录、783 点完成这一条件化处理：过滤 309 点、方向删除 13 点、DP 删除 273 点，最终保留 188 点。这里仅说明该历史执行，不把 pilot 当成最终独立测试。",
+      "passed": true
+    },
+    {
+      "name": "actual PDF retains D1/D2 in Part II",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "actual PDF cross-reference resolved",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "direction 15: complete original records",
+      "actual": 120,
+      "expected": 120,
+      "passed": true
+    },
+    {
+      "name": "direction 25: complete original records",
+      "actual": 120,
+      "expected": 120,
+      "passed": true
+    },
+    {
+      "name": "direction 35: complete original records",
+      "actual": 120,
+      "expected": 120,
+      "passed": true
+    },
+    {
+      "name": "direction 45: complete original records",
+      "actual": 120,
+      "expected": 120,
+      "passed": true
+    },
+    {
+      "name": "direction 60: complete original records",
+      "actual": 120,
+      "expected": 120,
+      "passed": true
+    },
+    {
+      "name": "new generated direction macros match independent record sums",
+      "actual": {
+        "DirectionDevelopmentPoints": 11777,
+        "DirectionLowRemoved": 1649,
+        "DirectionRefRemoved": 669,
+        "DirectionHighRemoved": 278,
+        "DirectionCovered": 8408
+      },
+      "expected": {
+        "DirectionDevelopmentPoints": 11777,
+        "DirectionLowRemoved": 1649,
+        "DirectionRefRemoved": 669,
+        "DirectionHighRemoved": 278,
+        "DirectionCovered": 8408
+      },
+      "passed": true
+    },
+    {
+      "name": "all five directions retain stated common coverage",
+      "actual": [
+        8408
+      ],
+      "expected": [
+        8408
+      ],
+      "passed": true
+    },
+    {
+      "name": "actual direction figure included",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "direction noise-accuracy boundary present",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "actual PDF contains direction results",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "experiment1: independent 200dpi render page 6",
+      "actual": "d8854823bd7000dd4a9268f2021558a66c73a68e6a10a9427bb7b146c75f54ee",
+      "expected": "d8854823bd7000dd4a9268f2021558a66c73a68e6a10a9427bb7b146c75f54ee",
+      "passed": true
+    },
+    {
+      "name": "experiment1: independent 200dpi render page 7",
+      "actual": "27f0daa5d9374b890f78dde458f75d7158e2b160de0ec3874fddd50b38e12ceb",
+      "expected": "27f0daa5d9374b890f78dde458f75d7158e2b160de0ec3874fddd50b38e12ceb",
+      "passed": true
+    },
+    {
+      "name": "process1: independent 200dpi render page 3",
+      "actual": "9ce0fbb4a0050f46a250bce49104161c313802806b17f22d602cc7ca06b06b57",
+      "expected": "9ce0fbb4a0050f46a250bce49104161c313802806b17f22d602cc7ca06b06b57",
+      "passed": true
+    },
+    {
+      "name": "process1: independent 200dpi render page 7",
+      "actual": "8eb597ee1cc99d1fc2824404bd66927d49dc5f412087a93edb5cf89a7edcc2df",
+      "expected": "8eb597ee1cc99d1fc2824404bd66927d49dc5f412087a93edb5cf89a7edcc2df",
+      "passed": true
+    },
+    {
+      "name": "G3 placeholder remains visibly unfinished",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "current Process draft retains external Evidence boundary",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    }
+  ],
+  "references": [
+    "task1/evidence/goal3/independent_documents/preliminary_receipt.json",
+    "task1/evidence/goal2/tables/parameter_records.csv",
+    "docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md#18"
+  ],
+  "independent_record_sums": {
+    "15": {
+      "records": 120,
+      "n_input": 11777,
+      "n_direction_removed": 1649,
+      "common_covered_points": 8408
+    },
+    "25": {
+      "records": 120,
+      "n_input": 11777,
+      "n_direction_removed": 1058,
+      "common_covered_points": 8408
+    },
+    "35": {
+      "records": 120,
+      "n_input": 11777,
+      "n_direction_removed": 669,
+      "common_covered_points": 8408
+    },
+    "45": {
+      "records": 120,
+      "n_input": 11777,
+      "n_direction_removed": 441,
+      "common_covered_points": 8408
+    },
+    "60": {
+      "records": 120,
+      "n_input": 11777,
+      "n_direction_removed": 278,
+      "common_covered_points": 8408
+    }
+  },
+  "visual_inspection": [
+    {
+      "report": "experiment1",
+      "page_one_based": 6,
+      "dpi": 200,
+      "path": "task1/evidence/goal3/independent_documents/experiment1_repair_page_06.png",
+      "sha256": "d8854823bd7000dd4a9268f2021558a66c73a68e6a10a9427bb7b146c75f54ee",
+      "visually_inspected": true,
+      "inspection": "Readable full-page image; no clipping/overlap/missing text in repaired content. Image byte-identical to already viewed 200dpi build page."
+    },
+    {
+      "report": "experiment1",
+      "page_one_based": 7,
+      "dpi": 200,
+      "path": "task1/evidence/goal3/independent_documents/experiment1_repair_page_07.png",
+      "sha256": "27f0daa5d9374b890f78dde458f75d7158e2b160de0ec3874fddd50b38e12ceb",
+      "visually_inspected": true,
+      "inspection": "Readable full-page image; no clipping/overlap/missing text in repaired content. Image byte-identical to already viewed 200dpi build page."
+    },
+    {
+      "report": "process1",
+      "page_one_based": 3,
+      "dpi": 200,
+      "path": "task1/evidence/goal3/independent_documents/process1_repair_page_03.png",
+      "sha256": "9ce0fbb4a0050f46a250bce49104161c313802806b17f22d602cc7ca06b06b57",
+      "visually_inspected": true,
+      "inspection": "Readable full-page image; no clipping/overlap/missing text in repaired content. Image byte-identical to already viewed 200dpi build page."
+    },
+    {
+      "report": "process1",
+      "page_one_based": 7,
+      "dpi": 200,
+      "path": "task1/evidence/goal3/independent_documents/process1_repair_page_07.png",
+      "sha256": "8eb597ee1cc99d1fc2824404bd66927d49dc5f412087a93edb5cf89a7edcc2df",
+      "visually_inspected": true,
+      "inspection": "Readable full-page image; no clipping/overlap/missing text in repaired content. Image byte-identical to already viewed 200dpi build page."
+    }
+  ],
+  "unchecked": [
+    "final_G3_report_results",
+    "full_notebook_execution",
+    "ZIP_independent_recompute",
+    "all_final_report_pages_visual_acceptance",
+    "Evidence_Master_LOCK",
+    "trusted_identity"
+  ],
+  "final_report_acceptance": false,
+  "FINAL_CONFIRM_effects_read": false,
+  "research_or_core_changes": false,
+  "new_model_calls": 0,
+  "new_method_runs": 0
+}

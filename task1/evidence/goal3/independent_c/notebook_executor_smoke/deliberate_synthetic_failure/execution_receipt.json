@@ -1,0 +1,16 @@
+{
+  "status": "FAILED",
+  "started_from_clean_outputs_and_new_kernel": true,
+  "notebook_source_sha256": "26cc711ba918fe9635726733c11d3acf92649ff9609a9ecca93dfa79cc6a8d0f",
+  "executed_notebook_sha256": "1d36c2882e71205d46b10f25c2a80a76d92a3d78062ea99e7970e20ef8435771",
+  "python_executable": "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+  "kernel_cwd": "/tmp/g3-c-kernel-isolation-otezisi8",
+  "temporary_work_directory": "/tmp/g3-c-kernel-isolation-otezisi8/work_failure",
+  "elapsed_seconds": 0.7830660489998991,
+  "executed_code_cells": 1,
+  "total_code_cells": 1,
+  "preserved_artifacts": [],
+  "at": "2026-09-27T04:47:29.866686+00:00",
+  "failure": "Traceback (most recent call last):\n  File \"/home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/goal3/execute_notebook.py\", line 50, in execute\n    client.execute(cleanup_kc=True)\n  File \"/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/lib/python3.12/site-packages/jupyter_core/utils/__init__.py\", line 165, in wrapped\n    return loop.run_until_complete(inner)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/asyncio/base_events.py\", line 687, in run_until_complete\n    return future.result()\n           ^^^^^^^^^^^^^^^\n  File \"/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/lib/python3.12/site-packages/nbclient/client.py\", line 709, in async_execute\n    await self.async_execute_cell(\n  File \"/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/lib/python3.12/site-packages/nbclient/client.py\", line 1062, in async_execute_cell\n    await self._check_raise_for_error(cell, cell_index, exec_reply)\n  File \"/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/lib/python3.12/site-packages/nbclient/client.py\", line 918, in _check_raise_for_error\n    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)\nnbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:\n------------------\nraise RuntimeError('C_INTENTIONAL_ENGINEERING_FAILURE_PATH_TEST')\n------------------\n\n\n\u001b[31m---------------------------------------------------------------------------\u001b[39m\n\u001b[31mRuntimeError\u001b[39m                              Traceback (most recent call last)\n\u001b[36mCell\u001b[39m\u001b[36m \u001b[39m\u001b[32mIn[1]\u001b[39m\u001b[32m, line 1\u001b[39m\n\u001b[32m----> \u001b[39m\u001b[32m1\u001b[39m \u001b[38;5;28;01mraise\u001b[39;00m RuntimeError(\u001b[33m'C_INTENTIONAL_ENGINEERING_FAILURE_PATH_TEST'\u001b[39m)\n\n\u001b[31mRuntimeError\u001b[39m: C_INTENTIONAL_ENGINEERING_FAILURE_PATH_TEST\n\n",
+  "source_sha256": "b6fccd1fb76b6b72d8306042b1e8faf83b5798a2f1af9698923606187cc3fd9d"
+}

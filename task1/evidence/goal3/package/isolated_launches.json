@@ -1,0 +1,43 @@
+{
+  "status": "LAUNCHED_TWO_NEW_KERNELS_NOT_COMPLETED",
+  "zip_sha256": "97d5dbe2d7a5c87d09bcb21ae5798fa0b76374fabdd03f25447fb87c4f27c447",
+  "extracted_root": "/tmp/sc-lab1-g3-submission-isolated",
+  "jobs": [
+    {
+      "kind": "basic",
+      "name": "作业1轨迹数据预处理_完成版.ipynb",
+      "work": "/tmp/sc-lab1-g3-isolated-basic-full-01",
+      "evidence": "/home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/evidence/goal3/notebook_verification/isolated_basic_full_01",
+      "cache": "/tmp/sc-lab1-g3-isolated-basic-cache",
+      "cmd": "'env' '-u' 'OPENAI_API_KEY' '-u' 'CODEX_API_KEY' '-u' 'ANTHROPIC_API_KEY' '-u' 'GOOGLE_API_KEY' '-u' 'AZURE_OPENAI_API_KEY' 'PYTHONPATH=' 'PYTHONNOUSERSITE=1' 'PYTHONDONTWRITEBYTECODE=1' 'MPLCONFIGDIR=/tmp/sc-lab1-g3-isolated-basic-cache/matplotlib' 'IPYTHONDIR=/tmp/sc-lab1-g3-isolated-basic-cache/ipython' 'JUPYTER_CONFIG_DIR=/tmp/sc-lab1-g3-isolated-basic-cache/jupyter' '/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python' '-I' '-c' 'import runpy,sys;from pathlib import Path;sys.path.insert(0,str(Path.cwd()));runpy.run_path(\"/home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/goal3/execute_notebook.py\",run_name=\"__main__\")' 'task1/notebooks/final/作业1轨迹数据预处理_完成版.ipynb' '--cwd' '/tmp/sc-lab1-g3-submission-isolated' '--work' '/tmp/sc-lab1-g3-isolated-basic-full-01' '--evidence' '/home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/evidence/goal3/notebook_verification/isolated_basic_full_01'",
+      "actual_launch": {
+        "status": "fulfilled",
+        "value": {
+          "chunk_id": "0d69a8",
+          "wall_time_seconds": 1.001815163,
+          "session_id": 50639,
+          "original_token_count": 71,
+          "output": "[IPKernelApp] WARNING | Kernel is running over TCP without encryption. All communication (including code and outputs) is sent in plain text and is susceptible to eavesdropping. Use IPC transport or launch with kernel manager-provisioned CurveZMQ keys to enable transport encryption.\n"
+        }
+      }
+    },
+    {
+      "kind": "system",
+      "name": "任务3_LLM辅助评估清洗_完成版.ipynb",
+      "work": "/tmp/sc-lab1-g3-isolated-system-full-01",
+      "evidence": "/home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/evidence/goal3/notebook_verification/isolated_system_full_01",
+      "cache": "/tmp/sc-lab1-g3-isolated-system-cache",
+      "cmd": "'env' '-u' 'OPENAI_API_KEY' '-u' 'CODEX_API_KEY' '-u' 'ANTHROPIC_API_KEY' '-u' 'GOOGLE_API_KEY' '-u' 'AZURE_OPENAI_API_KEY' 'PYTHONPATH=' 'PYTHONNOUSERSITE=1' 'PYTHONDONTWRITEBYTECODE=1' 'MPLCONFIGDIR=/tmp/sc-lab1-g3-isolated-system-cache/matplotlib' 'IPYTHONDIR=/tmp/sc-lab1-g3-isolated-system-cache/ipython' 'JUPYTER_CONFIG_DIR=/tmp/sc-lab1-g3-isolated-system-cache/jupyter' '/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python' '-I' '-c' 'import runpy,sys;from pathlib import Path;sys.path.insert(0,str(Path.cwd()));runpy.run_path(\"/home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/goal3/execute_notebook.py\",run_name=\"__main__\")' 'task1/notebooks/final/任务3_LLM辅助评估清洗_完成版.ipynb' '--cwd' '/tmp/sc-lab1-g3-submission-isolated' '--work' '/tmp/sc-lab1-g3-isolated-system-full-01' '--evidence' '/home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/evidence/goal3/notebook_verification/isolated_system_full_01'",
+      "actual_launch": {
+        "status": "fulfilled",
+        "value": {
+          "chunk_id": "b6ecf6",
+          "wall_time_seconds": 1.001167202,
+          "session_id": 70789,
+          "original_token_count": 71,
+          "output": "[IPKernelApp] WARNING | Kernel is running over TCP without encryption. All communication (including code and outputs) is sent in plain text and is susceptible to eavesdropping. Use IPC transport or launch with kernel manager-provisioned CurveZMQ keys to enable transport encryption.\n"
+        }
+      }
+    }
+  ]
+}

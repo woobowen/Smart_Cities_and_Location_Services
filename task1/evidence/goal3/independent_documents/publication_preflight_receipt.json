@@ -1,0 +1,55 @@
+{
+  "role_context": "/root/c_documents",
+  "target_id": "publication_preflight",
+  "status": "VERIFIED",
+  "at_utc": "2026-09-27T08:47:33.025441+00:00",
+  "checks": {
+    "diff": "VERIFIED",
+    "secret_scan": "VERIFIED",
+    "large_files": "VERIFIED",
+    "original_protection": "VERIFIED",
+    "local_links": "VERIFIED"
+  },
+  "candidate_manifest_path": "task1/evidence/goal3/independent_documents/publication_candidate_manifest.json",
+  "candidate_manifest_sha256": "91848d44db7b67a4ba809f98adc31b35bab1947bc882002e6702a4f7b8e578b2",
+  "targets": [
+    {
+      "path": "task1/evidence/goal3/independent_documents/publication_candidate_manifest.json",
+      "sha256": "91848d44db7b67a4ba809f98adc31b35bab1947bc882002e6702a4f7b8e578b2"
+    },
+    {
+      "path": "task1/evidence/goal3/independent_documents/publication_delta_scan.json",
+      "sha256": "fdf587cfb9bf2d49ca3ae69f004d852dbed5bc981feca9319aa640364c1cd5bf"
+    }
+  ],
+  "source_hashes": {
+    "task1/evidence/goal3/independent_documents/review_publication_preflight.py": "c61006ebc8c49a9b16f5863af2212cf30c5d2c0d637afcdf54d61b1473c51d6d",
+    "task1/evidence/goal3/independent_documents/prepublication_scan.py": "11dbfb55d7ba2acb8df21dd2ab3feecd27b16a9e238e5696414cf63c31b208f3",
+    "task1/evidence/goal3/independent_documents/prepublication_current_preflight.json": "ddef6b73a28fa819db5ee01d1bc847dedef743bd0421b0b438cd649d134f6a42",
+    "task1/evidence/goal3/independent_documents/prepublication_current_scope_receipt.json": "cb75ae31b704baba6160bb68458c9d262d74f21616975a5fe921d7fc3d8b2d4e",
+    "task1/evidence/goal3/independent_documents/actual_zip_static_receipt.json": "ef585260abef03aa5ee6f8feb9fb6c38720dae51e5c380b0fc117e17408642af",
+    "task1/evidence/goal3/independent_documents/report_entry_delta_receipt.json": "41ad20e028b8866df14bc40769d0222d71e1edf4cdfdb0200fb56b47bde5fab1",
+    "task1/evidence/goal3/independent_documents/handoffs_current_closure.json": "e4b9a77e3d88d13635d67c83fa55ca15135c77ebf534eb0676e8ed18c7c6cda4",
+    "task1/evidence/goal3/independent_c/review_internal_acceptance.py": "9d63fd6573acbc0af7b3ae87c9dff4ffba895e60a9be2214f992f9df4c0face6",
+    "task1/goal3/export_governance.py": "79fee7c7aeb296422d03b3021fb7d150bdc1a6c44e331760939e2cda7bbacc07"
+  },
+  "errors": [],
+  "checked_components": [
+    "Actual stable publication candidate hashes; existing completed 1008-file/6971598166-byte scan inherited only where current bytes match, with new/changed content scanned independently.",
+    "Current Git diff and file inventory inspected; verbatim Prompt CRLF and authentic failed-test whitespace retained and specifically classified, no author source defect or project deletion.",
+    "Recorded secret/token/ciphertext/absolute-path markers, new PDFs text, exact previous PNG identity, no font/full-paper/cache/auth import; actual teacher ZIP has separate independent static/full checks.",
+    "Every proposed ordinary file remains below GitHub size threshold; protected original ZIP bytes exact and two original user archives stay untracked.",
+    "All explicit local Markdown and Notebook navigation links resolve; current mutable navigation observed but not misbound as frozen source.",
+    "Current governance export preserves metadata-only schema and SHA256 payload references; final report keeps its separate original fixed snapshot."
+  ],
+  "unchecked_components": [
+    "Later internal-acceptance and actual publication artifacts and mutable closeout bytes require their separate delta gate",
+    "Actual push, remote equality and fixed-SHA readback have not yet happened",
+    "Unmodified pre-Goal3 content was not rescanned; arbitrary unrecognizable secret formats are outside marker-based scan guarantees",
+    "Missing external identity/Evidence Master inputs, webpage GPT review, user Understanding and actual teacher submission"
+  ],
+  "new_processing_or_model_calls": 0,
+  "installed_dependencies": [],
+  "formal_remote_publication_acceptance": false,
+  "actual_command": ".venv/bin/python task1/evidence/goal3/independent_documents/review_publication_preflight.py"
+}

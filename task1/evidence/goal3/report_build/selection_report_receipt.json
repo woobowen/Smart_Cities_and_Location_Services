@@ -1,0 +1,36 @@
+{
+  "at_utc": "2026-09-27T05:29:07.896479+00:00",
+  "classification": "BOUND_SELECTION_REPORT_INTEGRATION",
+  "status": "B_COMPILED_PENDING_C_DOCUMENT_REVIEW",
+  "build_receipt_sha256": "4a7034c2ea135814f38f64571163f3361737df3cfda2531a6d5c5416ae33d501",
+  "selection_binding_receipt_sha256": "774c980451d123e6f32e4af90b36724327faabb54fb2b02bced68390b27b7761",
+  "pdf_targets": [
+    {
+      "pdf": "task1/reports/experiment1/experiment1.pdf",
+      "sha256": "40a748049f7865e18fdfcf572bda1ed5647ef5fef57e231268f20ea63660424c",
+      "pages": 16
+    },
+    {
+      "pdf": "task1/reports/process1/process1.pdf",
+      "sha256": "485d18b463eaf15ea6afebdecf9e9d7e707502b02137ad9fc182dfa1fc88ca7e",
+      "pages": 10
+    }
+  ],
+  "render_dpi": 200,
+  "rendered_pages": 26,
+  "direct_visual_inspection_scope": {
+    "experiment1_physical_pages": [
+      13,
+      14
+    ],
+    "process1_physical_pages": [
+      9
+    ]
+  },
+  "visual_result": "Both actual selection tables, full three-failure explanation and decision prose readable; no cropping, overlapping labels or isolated section heading on these pages. Final all-page acceptance not claimed.",
+  "scope": "Verified development and selection; no FINAL_CONFIRM effect file read or final/production number inserted.",
+  "actual_command": ".venv/bin/python task1/reports/build_reports.py --render",
+  "new_method_runs": 0,
+  "new_model_calls": 0,
+  "new_dependencies": []
+}

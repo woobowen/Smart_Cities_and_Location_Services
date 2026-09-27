@@ -1,0 +1,79 @@
+diff --git a/task1/goal3/figures.py b/task1/goal3/figures.py
+index c668eca..e083568 100644
+--- a/task1/goal3/figures.py
++++ b/task1/goal3/figures.py
+@@ -7,6 +7,7 @@ import xml.etree.ElementTree as ET
+ 
+ import matplotlib.pyplot as plt
+ from matplotlib.patches import FancyArrowPatch, FancyBboxPatch
++from matplotlib.lines import Line2D
+ import numpy as np
+ 
+ from task1.scripts.build_goal2_figures import FigureSet
+@@ -249,6 +250,12 @@ def trajectory_cases(writer):
+                       'origin_ENU_work_m': origin.tolist(), 'raw_xy_work_m': xy.tolist(),
+                       'display_original_indices': visible, 'new_coverage_witness': witness,
+                       'raw_breaks': r['metrics']['raw_boundaries'], 'reference': r, 'final': f})
++    fig.get_layout_engine().set(rect=(0, .055, 1, .945))
++    fig.legend(handles=[
++        Line2D([], [], marker='x', color=writer.p['C3'], linestyle='None', label='S filtered'),
++        Line2D([], [], marker='+', color=writer.p['C4'], linestyle='None', label='D removed'),
++        Line2D([], [], marker='.', color=writer.p['C1'], label='Stored output (R0 blue / S0 orange)')],
++        loc='lower center', bbox_to_anchor=(.5, .004), ncol=3, fontsize=9, frameon=False)
+     fig.suptitle('Production examples selected by fixed descriptive extrema · no basemap · gaps remain disconnected', fontsize=12)
+     writer.save(fig, 'production_trajectory_cases', cases,
+                 'Three deterministic post-freeze extrema; third row zooms the complete raw window containing the worst newly covered point. Same origin/limits within each row; crosses S-filtered, plus signs D-removed. No line reconnects raw breaks.')
+@@ -262,9 +269,9 @@ def architecture(writer):
+              ('c', 'C: independent review\nraw / contracts / actual output', 6.8, 1.7, 2.7, 1.0, 'C4'),
+              ('repair', 'B-Repair\npatch → tests → new run', 3.0, 1.7, 3.1, 1.0, 'C3'),
+              ('release', 'Confirm → full production\nreports / notebooks / ZIP', 3.0, .1, 3.1, 1.0, 'C1'),
+-             ('external', 'External: identity / Evidence Master\nGPT second review / submission', 6.8, .1, 2.7, 1.0, 'Muted')]
++             ('external', 'External: identity\nEvidence Master / GPT review\nuser submission decision', 6.8, .1, 2.7, 1.0, 'Muted')]
+     links = [('user', 'a'), ('a', 'ctl'), ('ctl', 'b'), ('b', 'c'), ('c', 'repair'),
+-             ('repair', 'ctl'), ('c', 'release'), ('release', 'external')]
++             ('repair', 'ctl'), ('c', 'release'), ('release', 'external'), ('c', 'ctl'), ('ctl', 'a')]
+     fig, ax = plt.subplots(figsize=(11.3, 7.0)); ax.set(xlim=(-.1, 9.9), ylim=(-.15, 6.1)); ax.axis('off')
+     diagram = ET.Element('mxfile', host='app.diagrams.net'); page = ET.SubElement(diagram, 'diagram', name='Actual Goal 3 workflow')
+     model = ET.SubElement(page, 'mxGraphModel'); root = ET.SubElement(model, 'root')
+@@ -279,6 +286,32 @@ def architecture(writer):
+         ET.SubElement(cell, 'mxGeometry', x=str(x*100), y=str((6-y-h)*100), width=str(w*100), height=str(h*100), **{'as': 'geometry'})
+     for i, (start, end) in enumerate(links):
+         s, t = lookup[start], lookup[end]
++        if (start, end) == ('c', 'ctl'):
++            # Reviewed development results return through the actual root/controller.
++            points = [(9.5, 2.2), (9.78, 2.2), (9.78, 4.62), (4.55, 4.62), (4.55, 4.3)]
++            ax.plot(*zip(*points[:-1]), color=writer.p['Muted'], lw=1.15)
++            ax.add_patch(FancyArrowPatch(points[-2], points[-1], arrowstyle='-|>',
++                mutation_scale=13, lw=1.15, color=writer.p['Muted']))
++            ax.text(6.9, 4.75, 'Reviewed development results · before freeze',
++                    fontsize=8.5, ha='center')
++            cell = ET.SubElement(root, 'mxCell', id=f'edge{i}', value='Reviewed development results; before freeze',
++                source=start, target=end, edge='1', parent='1',
++                style='edgeStyle=orthogonalEdgeStyle;endArrow=block;exitX=1;exitY=0.5;entryX=0.5;entryY=0;html=0;')
++            geom = ET.SubElement(cell, 'mxGeometry', relative='1', **{'as': 'geometry'})
++            array = ET.SubElement(geom, 'Array', **{'as': 'points'})
++            for x, y in points[1:-1]:
++                ET.SubElement(array, 'mxPoint', x=str(x*100), y=str((6-y)*100))
++            continue
++        if (start, end) == ('ctl', 'a'):
++            a, b = (3.0, 4.1), (2.4, 4.1)
++            ax.add_patch(FancyArrowPatch(a, b, arrowstyle='-|>', mutation_scale=13,
++                                        lw=1.15, color=writer.p['Muted']))
++            ax.text(2.7, 4.33, 'next plan', fontsize=8, ha='center')
++            cell = ET.SubElement(root, 'mxCell', id=f'edge{i}', value='Next development plan only',
++                source=start, target=end, edge='1', parent='1',
++                style='edgeStyle=orthogonalEdgeStyle;endArrow=block;exitX=0;exitY=0.25;entryX=1;entryY=0.25;html=0;')
++            ET.SubElement(cell, 'mxGeometry', relative='1', **{'as': 'geometry'})
++            continue
+         dx, dy = t[2]+t[4]/2-s[2]-s[4]/2, t[3]+t[5]/2-s[3]-s[5]/2
+         if abs(dx) > abs(dy)*1.1:
+             a = (s[2]+(s[4] if dx>0 else 0), s[3]+s[5]/2)
+@@ -291,7 +324,7 @@ def architecture(writer):
+                              style='edgeStyle=orthogonalEdgeStyle;endArrow=block;html=0;')
+         ET.SubElement(cell, 'mxGeometry', relative='1', **{'as': 'geometry'})
+     ax.text(.1, 5.95, 'Actual governance roles; record processing remains deterministic', fontsize=14)
+-    ax.text(.1, -.07, 'C does not author the reviewed core. External evidence gaps block only dependent deliverables.', fontsize=9)
++    ax.text(.1, -.07, 'FINAL_CONFIRM never feeds A. C does not author the reviewed core. External gaps block dependent deliverables.', fontsize=8.5)
+     path = writer.output/'goal3_actual_workflow.drawio'
+     ET.ElementTree(diagram).write(path, encoding='utf-8', xml_declaration=True)
+     writer.save(fig, 'goal3_actual_workflow', {'nodes': nodes, 'edges': links, 'drawio_sha256': digest(path)},

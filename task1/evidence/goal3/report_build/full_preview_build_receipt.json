@@ -1,0 +1,125 @@
+{
+  "started_at": "2026-09-27T06:41:19.226816+00:00",
+  "classification": "REPORT_BUILD_NOT_METHOD_EXECUTION",
+  "new_model_calls": 0,
+  "new_method_runs": 0,
+  "reports": [
+    {
+      "report": "experiment1",
+      "pdf": "task1/reports/experiment1/experiment1.pdf",
+      "sha256": "cb5f08026713416791771d16f9f059b0cbc233bd09838d9025e0d2834c4d2487",
+      "pages": 22,
+      "command": [
+        "latexmk",
+        "-xelatex",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-halt-on-error",
+        "-outdir=build",
+        "experiment1.tex"
+      ],
+      "compile_exit_code": 0,
+      "unresolved_diagnostics": [],
+      "source_sha256": {
+        "task1/reports/experiment1/conclusion_generated.tex": "beff9af77de08ffa0bb035b9521517d6fadf75e50b9209a3601e06fcdfbaed6e",
+        "task1/reports/experiment1/confirmation_generated.tex": "aa897d1cd9fbb5830bebef10b56b1ffbdb6221f0ff2bc156761ac85643cd5b09",
+        "task1/reports/experiment1/development_generated.tex": "14f4fd7b2023b34b8148f9b6c35af94e934c80c1d2f8c3fdb19ef3b6a8cd176d",
+        "task1/reports/experiment1/experiment1.tex": "33db41c2f7e8963e4a81bbdf3f7224304df9d6944d1dcb7f5c488cb01eebb168",
+        "task1/reports/experiment1/generated.tex": "28d76fb6e4de5746ff45157e64e50b6662301befdb7f152396ed9eca8bedefab",
+        "task1/reports/experiment1/goal3_figure_slots.tex": "ad1d42d99edb6e626c27a3fc12347173d0600e0224fea9d541b2dd30c3fe18e1",
+        "task1/reports/experiment1/history_ai_table.tex": "d55c09dd4374253985bf122760290c58ae5c5e48e0b74adb5abb9ee8f94151c9",
+        "task1/reports/experiment1/history_candidate_table.tex": "e27231cd51af16ca7cb24b97f8e964b1905fd1939bb4cc50395fced456e4fa07",
+        "task1/reports/experiment1/history_modes_table.tex": "c5da7d4274b8e6716cd26fb578c432da378c804b65c41c0c84dfe431f07e3779",
+        "task1/reports/experiment1/history_order_table.tex": "ca20f9b28c7ada468a95d9da29a41e401712ca6ef2e8929efdb7b8e8959881aa",
+        "task1/reports/experiment1/production_generated.tex": "0fca79b52259f15f484b4a3b0f7a00a77db1a4200008c78c32a3c1ea5d481e6a",
+        "task1/reports/experiment1/references.bib": "90d5740b67844d74a0f0304d15fa723a7fb97ca1d2ca37cb94d5ea1145d304b1",
+        "task1/reports/experiment1/selection_generated.tex": "161829782a6e1a1fdbbf5af9dab880484754fd5d839c477ffd31845b6c7c56e4"
+      },
+      "render": {
+        "dpi": 200,
+        "pages": 22,
+        "page_sha256": {
+          "task1/reports/experiment1/build/render200/page-01.png": "5e2a89417fa40d8d4a51265c0c58337e6a738d2a46d8a747b65e035f7c924460",
+          "task1/reports/experiment1/build/render200/page-02.png": "05df1ba16fab6ad5eaff909eecf65eb6815ef74a1bd40f8fb08b746f74394479",
+          "task1/reports/experiment1/build/render200/page-03.png": "debabb0c09edf9f039fe2c2e215f679fc5ca4da6f0d02ae2cada0f21ae7c794d",
+          "task1/reports/experiment1/build/render200/page-04.png": "3d7fdea784e27ac6cbc5b38f0af5f0952068dbe95c81f48b4d02e44f251f595d",
+          "task1/reports/experiment1/build/render200/page-05.png": "1bcc3d1a419b9c22cb9fd6066dd93b2d436d155ca091f4238647a1ec1e3728a7",
+          "task1/reports/experiment1/build/render200/page-06.png": "1cb1d1622bf182d1872029a4f9ca8d3d6cf388741b30f56bd1f0b2ffe2e64649",
+          "task1/reports/experiment1/build/render200/page-07.png": "69d32916cbc1152e2c10690e473a04b41b48ef4615c84b631f1eb5fea1ef3f65",
+          "task1/reports/experiment1/build/render200/page-08.png": "9864b999aa360947f73236e301e319bb1faae78f0225b5df17e89b36af561b9d",
+          "task1/reports/experiment1/build/render200/page-09.png": "0a786e0a98a5b8bd081ecbc2261b45b8e6af744bbc8d85ee37d39f91d9057488",
+          "task1/reports/experiment1/build/render200/page-10.png": "067ccacf3c36ffe8059852d084e8f48b7ddcc1654741b4c01c33308e00a8a99d",
+          "task1/reports/experiment1/build/render200/page-11.png": "470c852143dc4283d5eb7ded4360dc05f9d6a4ab572936be1c087de8dc1cef52",
+          "task1/reports/experiment1/build/render200/page-12.png": "c3c033fbefc66edcd4f06a975b2d0aca3c6373a0e8481b68e3f27d9742200c18",
+          "task1/reports/experiment1/build/render200/page-13.png": "dc182c04576403ef3fa1ccebc3c91f5d4062c5e4926496389a1b41ab609b91f2",
+          "task1/reports/experiment1/build/render200/page-14.png": "544072e601e11685f9a0857fe20f3adcd395209c6f314bb51b535f3cf484407e",
+          "task1/reports/experiment1/build/render200/page-15.png": "43acbd9597e6bea487a1968f335a2ce9894fa9114dcc6d148b27fb15a830d079",
+          "task1/reports/experiment1/build/render200/page-16.png": "cf62b3f84cc6430d48fb8ad51a2f9323276304764d780273e4f23b7822baf646",
+          "task1/reports/experiment1/build/render200/page-17.png": "8e928adb58cec76f2d9c5462171eae3b4137d30945a209a64c2a0201ce676ed1",
+          "task1/reports/experiment1/build/render200/page-18.png": "f843e6ae374d0eba876770eaa6fc982002204c616155c8d89b1af02a79a653da",
+          "task1/reports/experiment1/build/render200/page-19.png": "d044ae92a0f7c4d695152f696570b626861e28c84e865a970ffc87c85002c957",
+          "task1/reports/experiment1/build/render200/page-20.png": "1432e34e79cd22b26fd4e064dbad69841b20fc86cb32a2916247f330522ca475",
+          "task1/reports/experiment1/build/render200/page-21.png": "ea64aadebc24dba4bcfd06223a7005f3278fd8542adc6572ca8a06795d0887b0",
+          "task1/reports/experiment1/build/render200/page-22.png": "37059b689e1a98bc08bd3b844d2026ede608ffa3a28a0a9a6bd8ecbd6cbd8e33"
+        }
+      }
+    },
+    {
+      "report": "process1",
+      "pdf": "task1/reports/process1/process1.pdf",
+      "sha256": "1e269401281b5d4ede5d870425f9b6c2aa8bfbd67f2c46a727306249a21a9f6b",
+      "pages": 13,
+      "command": [
+        "latexmk",
+        "-xelatex",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-halt-on-error",
+        "-outdir=build",
+        "process1.tex"
+      ],
+      "compile_exit_code": 0,
+      "unresolved_diagnostics": [],
+      "source_sha256": {
+        "task1/reports/process1/components/interaction_evidence.tex": "41828c96c51c21cf3cb9489cd72664e049be1d2d9d28144c265ba9caf0222dae",
+        "task1/reports/process1/confirmation_generated.tex": "ff314e9597e902b10c243de28997028b051da38d4c34841478601de94212ab09",
+        "task1/reports/process1/development_generated.tex": "104b92263d778204a4b09c3876d79e5b3b6b48d1dc7c3b87cbe2c43e2b248213",
+        "task1/reports/process1/generated.tex": "e272064d89c9dbf215cb51e39634f52c1075039d9f7118408a09f3a29e7166c8",
+        "task1/reports/process1/goal3_workflow_slot.tex": "f146f96a98bdad1ebd4f0a5d6c19e0f1ec922b55f3f510067df7a298f0fb1618",
+        "task1/reports/process1/governance_generated.tex": "35b7bbd8f0bfd9bdfd1ea58338d9fa08e9f81e1f8938be0acccc7a10747d8a57",
+        "task1/reports/process1/process1.tex": "91bb73a4a20a42e09da5580361d403b5bd6cf3ab3e1712e511d47117302a3b9a",
+        "task1/reports/process1/production_generated.tex": "e782399acd476fdef12a207d2b385ca09d823e443983e0ee47c61b653768045c",
+        "task1/reports/process1/selection_generated.tex": "18a35d5e23a456f690ade47acdd23300ba654b7b6b67aea3154b19e97aae4353",
+        "task1/reports/process1/workflow_figure_generated.tex": "0f2a5a4f86bd42ccc67309a03d0e43c11a1fb5402e635acdb5894ba8317d70ee",
+        "task1/reports/process1/workflow_generated.tex": "4985d6d4c3829a27900b79121b8a4f99e1b36b522978813618e5ff8df2e78512"
+      },
+      "render": {
+        "dpi": 200,
+        "pages": 13,
+        "page_sha256": {
+          "task1/reports/process1/build/render200/page-01.png": "77e5998faf440c55c42af6af8705861909c2ebf9f06238141a38b7743c36fcb0",
+          "task1/reports/process1/build/render200/page-02.png": "f4de7e041635b88b96905c62d09678a596b41718093e77ae2259c1f90af03e56",
+          "task1/reports/process1/build/render200/page-03.png": "9e59df1b28408d41a8b7527d781976819a942c4b63b7ba17b83249a60f963c33",
+          "task1/reports/process1/build/render200/page-04.png": "dbc237530e4b5ba3ea217e4b35a08d80b52a466aeacc21ec34cb165eff2192e3",
+          "task1/reports/process1/build/render200/page-05.png": "7edead8fc506186fff20c22e83cc94c988ab6704b953cec1b577068fd2e0be21",
+          "task1/reports/process1/build/render200/page-06.png": "aea29ba053662ee27b9871ee349c83457b3a3d314ef00dc54dc2b4a270c3c9a8",
+          "task1/reports/process1/build/render200/page-07.png": "4771bc951d8dad6ada49f846e19331c536284570d77c2e7f5495b92ac730656b",
+          "task1/reports/process1/build/render200/page-08.png": "b5d10f0983283c2a28f735c5d0d435c98794d4503319dd8a8090108d5e001f4c",
+          "task1/reports/process1/build/render200/page-09.png": "0940be3a427a585d135b644f5303823373b5b161a02bdbb871b2d27fb64caf42",
+          "task1/reports/process1/build/render200/page-10.png": "de8e3c5923e668e5d8a0cd69395767c95a8d8f04c1c08085cd6b94279dcbb8fe",
+          "task1/reports/process1/build/render200/page-11.png": "8f1befe5b3c389d6f043d67a2e57badaed84d139654135365e7a6a56674d84af",
+          "task1/reports/process1/build/render200/page-12.png": "bcdcc32932a58995d5ae1d5d5b058e0df2ebbd74734c796add42b99843bd6c3d",
+          "task1/reports/process1/build/render200/page-13.png": "edf42656ad3205d998a4c4b725878783bfca74f3771c8445971a11e2ee53ca31"
+        }
+      }
+    }
+  ],
+  "installed_dependencies": [],
+  "visual_inspection": "NOT_PERFORMED_BY_THIS_SCRIPT",
+  "shared_source_sha256": {
+    "task1/reports/metadata.tex": "9cacdc2bafd818ddefefac897be15b3853df2c22c5a893651f1e394fff94c52c",
+    "task1/reports/history_values.tex": "18b0cbfa3403213946465d4027b9a18a6d32d02a915b6dd04ee85c0b2ad03263",
+    "templates/latex/common/p2_cloud_sorbet_colors.tex": "2aa820c3f68ba6c14cf1b52082b12336071d77bb5466db2b05b2fab6890aa243"
+  },
+  "finished_at": "2026-09-27T06:41:57.652498+00:00"
+}

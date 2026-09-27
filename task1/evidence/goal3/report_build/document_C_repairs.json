@@ -1,0 +1,84 @@
+{
+  "created_at_utc": "2026-09-27T05:08:23.394873+00:00",
+  "role_context": "B-Delivery:/root/b_delivery_inventory",
+  "status": "B_REPAIRED_PENDING_INDEPENDENT_C",
+  "issues": {
+    "G3-DOC-01": {
+      "target": "task1/reports/process1/process1.tex",
+      "action": "Moved the two concrete CRS/D1/D2 technical subsections and G1 pilot values unchanged into Part II; Part I retains governance principles and a cross-reference.",
+      "moved_text_exact_match": true,
+      "moved_text_sha256": "8e79f76912d968480a8d2f18fd6721c0fea89030b6cea2c925ca27e80f66c3b3",
+      "part_I_technical_quotes_and_pilot_values_absent": true
+    },
+    "G3-DOC-02": {
+      "target": "task1/reports/experiment1/experiment1.tex",
+      "action": "Added actual historical direction-sweep figure and generated numerical prose: 120 DEVELOPMENT records, 11777 raw points; removed 1649/669/278 points at 15/35/60 degrees; all five thresholds cover 8408 raw points. No noise-accuracy claim.",
+      "figure": "task1/figures/goal2/direction_threshold_and_neighborhood.pdf",
+      "figure_sha256": "bccc825979aa0a6d14e0124675deae3e1dba807666b2a5ac6184809e20626928",
+      "numbers_generated_from": "task1/figures/goal2/figure_data.json",
+      "source_sha256": "ad99fe5b33847ad89e1f87401f6ab58722b1913cdc2bd7af6e98a0a9fa4aec40"
+    }
+  },
+  "minor_rounding_correction": {
+    "source": "task1/evidence/goal2/coordinate_sensitivity/raw_preflight/coordinate_checks.json",
+    "sha256": "171238f0c83b07d92901bc895c412213adb1bcc466b86da8b70705e540eda831",
+    "actual_max_m": 4.823281158894599e-10,
+    "printed_value": "approximately 4.82e-10 m"
+  },
+  "source_changes": {
+    "task1/reports/process1/process1.tex": {
+      "before_sha256": "bc95533d182da8e5b17fe04d3109ee472cf64b810f624c7974aa8428d84ee78c",
+      "after_sha256": "65eddc20f436ef4a24d4500e51ce969a97b400d8cb823bf317b5528d0213d8cb"
+    },
+    "task1/reports/experiment1/experiment1.tex": {
+      "before_sha256": "ca9c37cff21750ce0442ad5178de321b262672d2da0c3641f679fe52111a04ba",
+      "after_sha256": "de319e58dc9b131396ff937177801a8916c5a71cecf295b9e68ce81529f52df5"
+    },
+    "task1/reports/build_history_sources.py": {
+      "before_sha256": "a3966c1b0bfb9a37d3d335a8eddaa4549469dccdb1492e26a810ff0bc1cde1f9",
+      "after_sha256": "3e29f65fdf6ac563af1e60f8cc633bf01367f4d811ced9eb88409ac5bf0a71dd"
+    }
+  },
+  "actual_patch": "task1/evidence/goal3/report_build/document_C_repairs.patch",
+  "actual_patch_sha256": "3e0915ded09dbad85296e57ca54f0bdc76f7ed5f7b6fc461ec238a1ee70109fa",
+  "build_receipt": "task1/evidence/goal3/report_build/build_receipt.json",
+  "build_receipt_sha256": "3b5245f42baebd87756efddd5530691c8424a793484dd444d691ae1135079b86",
+  "pdf_targets": {
+    "task1/reports/experiment1/experiment1.pdf": {
+      "sha256": "13fb4bbf161692b5c1c66cc3f88133213b81eb0b7437e85c944475a7bdf7614d",
+      "pages": 13
+    },
+    "task1/reports/process1/process1.pdf": {
+      "sha256": "0efaa89f9f142733e08b21caa3cc1f50fa13d05e920fcbfee93a9b83c80c2f81",
+      "pages": 10
+    }
+  },
+  "checks": {
+    "compile_both": true,
+    "unresolved_compile_diagnostics": [],
+    "all_pages_rendered_dpi": 200,
+    "actual_visual_inspection_this_revision": {
+      "experiment1": [
+        6,
+        7,
+        8
+      ],
+      "process1": [
+        3,
+        7
+      ]
+    },
+    "visual_result": "Listed changed pages inspected directly; no clipping, overlap or unreadable labels observed. This is not final all-page acceptance."
+  },
+  "not_checked": [
+    "Final Goal3 result chapters pending parent-provided verified results",
+    "Final all-page report visual acceptance after Goal3 integration",
+    "Evidence Master presentation/LOCK",
+    "Trusted student identity"
+  ],
+  "new_model_calls": 0,
+  "new_method_runs": 0,
+  "core_or_contract_changes": false,
+  "external_dependency_status": "Identity and approved interaction Evidence remain external dependencies; reports remain review drafts.",
+  "closure_authority": "Independent C; B has not closed these issues."
+}

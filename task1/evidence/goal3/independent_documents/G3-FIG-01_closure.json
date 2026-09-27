@@ -1,0 +1,124 @@
+{
+  "role_context": "/root/c_documents",
+  "issue_id": "G3-FIG-01",
+  "status": "VERIFIED",
+  "checked_at_utc": "2026-09-27T06:53:18.255219+00:00",
+  "targets": [
+    {
+      "path": "task1/goal3/figures.py",
+      "sha256": "8b9627d646f0fee9d6591214932dddb525789ceab4b1af777b2bcdb4bfb6bef8"
+    },
+    {
+      "path": "task1/figures/goal3/figure_manifest.json",
+      "sha256": "9f26e819fe3e0e2f4c3b65ff80a6a483a4e3c0432224c4f3b6680f275cab1573"
+    },
+    {
+      "path": "task1/figures/goal3/figure_data.json",
+      "sha256": "c4f8babaa94e4d82914dd22d0f2e2fb2a4b8ab45d3a43fcb17867ffa8136d145"
+    },
+    {
+      "path": "task1/figures/goal3/goal3_actual_workflow.drawio",
+      "sha256": "147af13c15e01210c1a8c9c1bf913e6f4bd3e73a105a43c22a677e47917c31ae"
+    },
+    {
+      "path": "task1/figures/goal3/goal3_actual_workflow.svg",
+      "sha256": "3162e941096593221f82b8edf094b116cb19f2225c389b68a9bfe6581e346e91"
+    },
+    {
+      "path": "task1/figures/goal3/goal3_actual_workflow.pdf",
+      "sha256": "4513795bb6898aecbabb0b1d66835d2f21aeea53a06e4403fa916e02ca24580f"
+    },
+    {
+      "path": "task1/figures/goal3/goal3_actual_workflow.png",
+      "sha256": "b5f105c03a3be8bcd8748c0a4156e89c7f9912e2eeb891cdc200095c1d5549d5"
+    },
+    {
+      "path": "task1/figures/goal3/pdf-render-200dpi/goal3_actual_workflow.png",
+      "sha256": "8a7ca06deeafb891ec30bf79ba90167acfa0c0fcaf0e2ed5818a9069cd5d60ce"
+    },
+    {
+      "path": "task1/figures/goal3/production_trajectory_cases.svg",
+      "sha256": "684b43d21165a375f40e5405ccf6f361827e4079c3540396fa59516565e0c6cd"
+    },
+    {
+      "path": "task1/figures/goal3/production_trajectory_cases.pdf",
+      "sha256": "eaa978520b74cd1e524ac12e96662509f7ff419bbc240a4d90a298ff86b29fc4"
+    },
+    {
+      "path": "task1/figures/goal3/production_trajectory_cases.png",
+      "sha256": "8211b20a0d67d74285338f8050855baa40cd75f3d5569e43697b799716a274f2"
+    },
+    {
+      "path": "task1/figures/goal3/pdf-render-200dpi/production_trajectory_cases.png",
+      "sha256": "310a0a06545b778fb49b7a880d6e3bdcdd65b3b0881c9d3ba1186f38e9e63e51"
+    },
+    {
+      "path": "task1/evidence/goal3/repairs/FIG01.patch",
+      "sha256": "442f139407bb1b8815ffb64a620e98fe289d17a24526039a4bd1896236d0f250"
+    },
+    {
+      "path": "task1/evidence/goal3/repairs/FIG01_impact.json",
+      "sha256": "1a85852cf78a200b2a40a27bf9f7287c33991907ec26d0b01bb6dea505a5e812"
+    },
+    {
+      "path": "task1/evidence/goal3/repairs/FIG01_root_visual.json",
+      "sha256": "596f413b02a07dc317deb2e694887592288e92511cafe0982f92d2b0805d125d"
+    }
+  ],
+  "checks": 46,
+  "data_checks": 2965,
+  "errors": [],
+  "data_receipt": {
+    "path": "task1/evidence/goal3/independent_documents/figure_data_repaired_receipt.json",
+    "sha256": "12bf729a693267cf1bad6539b593f67c6fbbb252f05155bacc80ce825ca2222c"
+  },
+  "checked_components": [
+    "All15actualsubmittedrepairhashes atstart/end; reviewed actual presentation-only patch/impact",
+    "Independent fresh2965checks ofnewmanifest/data/exports/renders and source CSV/actualtrace bindings",
+    "Actualcomplete200dpi revisedtrajectoryimage visuallyviewed: visibleS-filterx/D-removeplus/outputlegend, noaxisclip; complete352window preserved",
+    "Actualcomplete200dpi revisedworkflowimage visuallyviewed: External3lines fitinsidebox; incomingarrow clear; Cresults routed aroundBto controller andnextplan toA",
+    "Nativeeditable drawio10edges andlabels matchnewplot; developmentonly/beforefreeze restrictions; PDF/SVGfooter explicitly excludesFINAL_CONFIRMtoA",
+    "Other5previouslyviewed200dpirenders haveexactunchangedpixel-filehashes andcurrent source/data rechecked"
+  ],
+  "visual_observations": {
+    "production_trajectory_cases": "All9panels, lowerlegend, workingunit axes and4point labels read inactual200dpiimage; nooverlap/cropping atnewlegend.",
+    "goal3_actual_workflow": "Externalnode textfullycontained; revieweddevelopmentfeedback path avoidsBnode andreturnscontroller; next-plan arrow direction towardA; FINAL_CONFIRM neverfeedsA explicit."
+  },
+  "rebound_unchanged_figures": [
+    {
+      "name": "development_candidates",
+      "current_render_sha256": "08cbc3909df43c3fd1d99f6cf7b2ce7fa9fdde7657ef6c6650ece735c9b46cbc",
+      "visual_basis": "Prior actual whole-image review, exact rendered PNG hash unchanged"
+    },
+    {
+      "name": "selection_tradeoffs",
+      "current_render_sha256": "19d1624708cad37cec99dec689e28914f3f222dc17a0effa7c45746acec56865",
+      "visual_basis": "Prior actual whole-image review, exact rendered PNG hash unchanged"
+    },
+    {
+      "name": "point_fates_and_coverage",
+      "current_render_sha256": "5ecb85fa965dfcd6546b52758bf94ea2470c1f546d76db93a1963192fc35c0b9",
+      "visual_basis": "Prior actual whole-image review, exact rendered PNG hash unchanged"
+    },
+    {
+      "name": "final_confirmation_pairs",
+      "current_render_sha256": "9e036ef7795cce3e629ede1adb3ab2aecde010bf284477faa2dc94d60b87eb0f",
+      "visual_basis": "Prior actual whole-image review, exact rendered PNG hash unchanged"
+    },
+    {
+      "name": "incumbent_decision_path",
+      "current_render_sha256": "2e9d071f42fc0d3e058e7f4924ed21cdcd3af855d5cdf908df615c5aa73d2a9e",
+      "visual_basis": "Prior actual whole-image review, exact rendered PNG hash unchanged"
+    }
+  ],
+  "unchecked_components": [
+    "ThisclosesFIG01presentationissue only, notparentfigures task orGoal3",
+    "FinalExperiment/Processreportallpagevisual/textchecks andfinalNotebook/ZIPintegration",
+    "ExternalEvidenceMaster/identity/GPTsecondreview/Understanding"
+  ],
+  "trajectory_processing_evaluations": 0,
+  "new_model_calls": 0,
+  "parent_task_closed": false,
+  "actual_command": ".venv/bin/python task1/evidence/goal3/independent_documents/review_figure_repairs.py",
+  "checker_sha256": "12a06b7b2b9088d3b2bb84caceae3bccb1ce949a126bb7fa8e89c5eaa6d14c0e"
+}

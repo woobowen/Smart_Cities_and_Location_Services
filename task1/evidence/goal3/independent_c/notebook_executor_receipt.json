@@ -1,0 +1,46 @@
+{
+  "role_context": "/root/c_protocol",
+  "target_id": "notebook_executor_engineering",
+  "status": "VERIFIED",
+  "checked_at_utc": "2026-09-27T04:47:29.867125+00:00",
+  "classification": "SYNTHETIC_ENGINEERING_TEST; zero trajectory recomputations; deliberate error is only a failure-handling test",
+  "targets": [
+    {
+      "path": "task1/goal3/execute_notebook.py",
+      "sha256": "b6fccd1fb76b6b72d8306042b1e8faf83b5798a2f1af9698923606187cc3fd9d"
+    },
+    {
+      "path": "task1/evidence/goal3/independent_c/notebook_executor_smoke/fresh_kernel_1/execution_receipt.json",
+      "sha256": "9d2ebe3e07b164f5cdb9e99dcce30ec5dbb5c64ff8f2118b00a2bc5bf926f463"
+    },
+    {
+      "path": "task1/evidence/goal3/independent_c/notebook_executor_smoke/fresh_kernel_2/execution_receipt.json",
+      "sha256": "eb51dcbcb7123da0796a60aad3652150e740e77e92bcb95e463a335556cae0f8"
+    },
+    {
+      "path": "task1/evidence/goal3/independent_c/notebook_executor_smoke/deliberate_synthetic_failure/execution_receipt.json",
+      "sha256": "68b37576cb004a10c76f3aa1c6bdfbfe5dab6f4de5e4760088452d103049a427"
+    }
+  ],
+  "checked_components": [
+    "two genuinely separate fresh kernels with different PIDs",
+    "old outputs/execution counts removed",
+    "explicit isolated cwd and fresh work paths",
+    "PYTHONPATH cleared/user site disabled/no original task1 import in empty cwd",
+    "actual produced JSON artifacts preserved",
+    "actual synthetic cell error retains notebook/traceback and rejects execution"
+  ],
+  "unchecked_components": [
+    "full submitted Notebook contents and complete raw recompute",
+    "ZIP dependency closure",
+    "inner receipt numerical truth; full Notebook C acceptance must independently check data scale and model tripwire"
+  ],
+  "new_model_calls": 0,
+  "trajectory_recomputations": 0,
+  "kernel_instances": 3,
+  "successful_kernel_instances": 2,
+  "expected_failure_kernel_instances": 1,
+  "source_unchanged": true,
+  "errors": [],
+  "actual_command": ".venv/bin/python task1/evidence/goal3/independent_c/review_notebook_executor.py"
+}

@@ -1,0 +1,827 @@
+{
+  "role_context": "/root/c_protocol",
+  "status": "VERIFIED",
+  "target_id": "g3-selection-01:all_three_constraint_failures",
+  "checked_at_utc": "2026-09-27T05:21:54.928469+00:00",
+  "targets": [
+    {
+      "path": "task1/evidence/goal3/runs/g3-selection-01/manifest.json",
+      "sha256": "59a12231f93d8e5bc4fc4b675122648d10b39a81ce0bdaf49a8c5fe136bbeb9d"
+    },
+    {
+      "path": "task1/config/goal3/contract.json",
+      "sha256": "fcf5b3962c4c5a2a59f42ae1f167fa180bfc2b9798fca85e256bcc8ccb3c558d"
+    },
+    {
+      "path": "task1/evidence/goal3/selection_freeze.json",
+      "sha256": "72ab2cf978380fb9a76d8b1d80558d3aca1a7f1f345317707ca9630eed3504a6"
+    },
+    {
+      "path": "task1/evidence/goal3/independent_c/g3-selection-01_receipt.json",
+      "sha256": "e164bfb634b79f0b6e12697338792d6791972dc9731353fc2957361c07f339a5"
+    },
+    {
+      "path": "task1/evidence/goal2/c_contract/independent_numeric.py",
+      "sha256": "9c28775af3389fb9735d268bdaf776a0cedc683990518d0aee2736d5ff863865"
+    },
+    {
+      "path": "task1/evidence/goal3/runs/g3-selection-01/traces-0000.jsonl.gz",
+      "sha256": "32fff9b6a91ef6c9d93c1de813bb9bd2c1a1879e9dd90522bb32b427bbbe9c0a"
+    },
+    {
+      "path": "task1/evidence/goal3/runs/g3-selection-01/traces-0003.jsonl.gz",
+      "sha256": "74f5ce720b06aefd855edd65478e899b60afcd744ef2dfa412d39ff6f593feaf"
+    }
+  ],
+  "source_hashes": {
+    "task1/workflow/__init__.py": "bd23709231145ce415c01c88880b886e8c8343199a47dbe0762d68841aeb73ff",
+    "task1/workflow/__main__.py": "b96a66d5fe543f8082d528e81e7e70de2c0090b20ab60b090532ab65647713e8",
+    "task1/workflow/artifact_review.py": "dfa0b91149662baf26861a9ec0e51223842d0ac62ada29015eca7b119c68da48",
+    "task1/workflow/budget.py": "c275047dffcafb7160b0c3fcd8de4e56bbc1f86dc05925691ff5af43aea312ca",
+    "task1/workflow/controller.py": "16793b102fd077cc243eae6f1e714632f312a77e421850d424b8562a2909eb6d",
+    "task1/workflow/coordinate_review.py": "af4f0d753d162666bcb5da07edeccb846e008c33adf0f56b34939ac526eaf951",
+    "task1/workflow/coordinates.py": "d99b270a65c88f8530669d5e7d0887d7563b3e54e19770ab7a9eb695117e075d",
+    "task1/workflow/diagnostics.py": "aee1e4dd46ff7b15a8f3d854aaf1ed9668ee5ef4d4991a624beb479ff0f82745",
+    "task1/workflow/evaluation.py": "7cf224fbc290d3e83acd5d83a3fe335e6dc437c762f7053d8132817aa91025b2",
+    "task1/workflow/g2_data.py": "985453f073ec98ca7b17a827de1d316e8322dc89e452e6f8b45afa20b2a8a9f2",
+    "task1/workflow/g2_experiments.py": "713538f17d767e98c8ed802252ce33133c6f26dc4c6f7aeae208f6e0d64d2311",
+    "task1/workflow/g2_journal.py": "33b776f5c20f35844cc4c76ee28e38ee0b2e487ee3b13d4eff0c3d3a40d22c2a",
+    "task1/workflow/g2_memory.py": "e0784e6178cf4da3277c7fc8c1e16efce73b56b91b02b41acd3e8870d43a8c56",
+    "task1/workflow/g2_metrics.py": "8d80c8ff8e124b9d3d73f5d514a0c09af32f234034914379ea901e5e59cc3ebb",
+    "task1/workflow/g2_modes.py": "31e936448918b943dca3cfdc8e4590eb64da2c48b262899040862d7b1533704e",
+    "task1/workflow/g2_pipeline.py": "edb8f4c8dcaf65cda44b33533eb55e9d67ef946597895f0682860ba65499c441",
+    "task1/workflow/g2_provider.py": "636a6edaf95ef31e1982d27e1361697d145156fccb99760028ba5e0d77949bb1",
+    "task1/workflow/g2_selection.py": "590a7e9c427801fd65a6ec563fdbbff0d35b0e7bae6a155f28e43ab64bb8f3af",
+    "task1/workflow/geometry.py": "2ad3ca3b49e98e997684e3f5af948771be80dfb03b31b2ae4cc4483856e93d74",
+    "task1/workflow/goal.py": "d313d408961adf07b9791972b03ac6a99db808e805efe1aa06abe85a075e863a",
+    "task1/workflow/inventory.py": "42bceb3ea1bab9ca386b88ce29104dc4bb518fee6df8f25aae50360633e7d5a1",
+    "task1/workflow/io.py": "0d3d72dd0beb4718f4020a07a5f1c0ca89193943049a479816b5c496806321b2",
+    "task1/workflow/pipeline.py": "160bedcc0d8dffce71d833dffc4de28928bc7007077ae8d03c57c96d827548c7",
+    "task1/workflow/provider.py": "d778316bcdbdec1643707a93c1d0e00e52caa4c0b941c9299b33da547adbc28b",
+    "task1/workflow/recompute.py": "4c198a016adec8554602c9ad04e0446bb90866ed970789834b96c51ebbec9b56",
+    "task1/workflow/sources.py": "74b42f79abfe172b7d2e29ba55a631b22f3e6d46c7cb2a08c0c7634eaf44ba90",
+    "task1/workflow/tools.py": "0fde0acebfe3ec97bd2653744ac8f0444c1e9a162c61970bccf8a94a9fbd0b3f",
+    "task1/scripts/goal2.py": "f62fe1e30bd3cccb461bd34794d2c0d204af39fdac3631b26af042dcb7a563f5",
+    "task1/goal3/data.py": "2142a0c4366ce1f22f9285c4737a903d546e1938e0a00f4e148cda6b9e821b21",
+    "task1/goal3/runtime.py": "4e7478875945a3098581ff5bb9db97a3014e0b846997a61fbe31c23f0a1a13d3",
+    "task1/goal3/selection.py": "ff68536c3e80fe9b615fd4a6dc2402f7a6dd38359c6ffb6a1ebf57753654561f",
+    "task1/goal3/control.py": "cf19a0130454635e5598838b5f77adfb95038a636060e23c05763d452ff2435e"
+  },
+  "checked_components": [
+    "All3 actual selection geometric failures from trusted original bytes",
+    "12completestrategytrace independent Decimal/PROJ audits with stage/identity/ledger/metric validation",
+    "Same S/Dinput within each reference pair; relaxedD keeps strictly more original points",
+    "DP on changed complete upstream input removes some former retained indices and retains others at unchanged5tolerance",
+    "Raw-reference identity coverage preserved and independent raw-set maximum worsens beyond fixed numerical allowance",
+    "Both actual immediateDP errors still<=5workmetres; no rawbreak crossings; no implementation defect found"
+  ],
+  "unchecked_components": [
+    "Noise truth or source datum",
+    "FINAL_CONFIRM effects",
+    "Alternative parameters/methods were not tried"
+  ],
+  "interpretation": "Legitimate method tradeoff, not engineering failure. More D-retained input points change DP recursion and chosen vertices; fixed tolerance does not imply raw same-set maximum is nonincreasing. The registered selection protection correctly rejects these3cases.",
+  "candidate_or_parameter_changes": false,
+  "records": [
+    {
+      "record_id": "3017",
+      "raw_points": 109,
+      "runtime_group": "TIME_REGULAR",
+      "independent_mathematics": {
+        "R0": {
+          "status": "VERIFIED",
+          "record_id": "3017",
+          "checks": 1022,
+          "errors": [],
+          "coordinate_max_error_m": 1.8189894035458565e-12,
+          "fate_counts": {
+            "filtered": 2,
+            "denoised": 1,
+            "simplified": 67,
+            "retained": 39
+          },
+          "dp_reference_points": 106,
+          "dp_output_points": 39,
+          "dp_maximum": 4.785505633529111,
+          "checked_components": [
+            "trusted_raw_alignment",
+            "PROJ_coordinates",
+            "exact_frozen_parameters_order_contract",
+            "independent_split_filter_direction_DP",
+            "stage_actual_values_features",
+            "ledger_fates",
+            "reported_common_point_errors_coverage_and_counts",
+            "reported_DP_denominator_saving_max"
+          ],
+          "unchecked_components": [
+            "batch_scope",
+            "batch_aggregation",
+            "full_hash_graph",
+            "LLM_path",
+            "memory",
+            "selection",
+            "experiment_admission"
+          ]
+        },
+        "S0": {
+          "status": "VERIFIED",
+          "record_id": "3017",
+          "checks": 1063,
+          "errors": [],
+          "coordinate_max_error_m": 1.8189894035458565e-12,
+          "fate_counts": {
+            "denoised": 1,
+            "simplified": 67,
+            "retained": 41
+          },
+          "dp_reference_points": 108,
+          "dp_output_points": 41,
+          "dp_maximum": 4.785505633529111,
+          "checked_components": [
+            "trusted_raw_alignment",
+            "PROJ_coordinates",
+            "exact_frozen_parameters_order_contract",
+            "independent_split_filter_direction_DP",
+            "stage_actual_values_features",
+            "ledger_fates",
+            "reported_common_point_errors_coverage_and_counts",
+            "reported_DP_denominator_saving_max"
+          ],
+          "unchecked_components": [
+            "batch_scope",
+            "batch_aggregation",
+            "full_hash_graph",
+            "LLM_path",
+            "memory",
+            "selection",
+            "experiment_admission"
+          ]
+        },
+        "G0": {
+          "status": "VERIFIED",
+          "record_id": "3017",
+          "checks": 1022,
+          "errors": [],
+          "coordinate_max_error_m": 1.8189894035458565e-12,
+          "fate_counts": {
+            "filtered": 2,
+            "simplified": 69,
+            "retained": 38
+          },
+          "dp_reference_points": 107,
+          "dp_output_points": 38,
+          "dp_maximum": 4.957120870448936,
+          "checked_components": [
+            "trusted_raw_alignment",
+            "PROJ_coordinates",
+            "exact_frozen_parameters_order_contract",
+            "independent_split_filter_direction_DP",
+            "stage_actual_values_features",
+            "ledger_fates",
+            "reported_common_point_errors_coverage_and_counts",
+            "reported_DP_denominator_saving_max"
+          ],
+          "unchecked_components": [
+            "batch_scope",
+            "batch_aggregation",
+            "full_hash_graph",
+            "LLM_path",
+            "memory",
+            "selection",
+            "experiment_admission"
+          ]
+        },
+        "S0_G0": {
+          "status": "VERIFIED",
+          "record_id": "3017",
+          "checks": 1063,
+          "errors": [],
+          "coordinate_max_error_m": 1.8189894035458565e-12,
+          "fate_counts": {
+            "simplified": 69,
+            "retained": 40
+          },
+          "dp_reference_points": 109,
+          "dp_output_points": 40,
+          "dp_maximum": 4.957120870448936,
+          "checked_components": [
+            "trusted_raw_alignment",
+            "PROJ_coordinates",
+            "exact_frozen_parameters_order_contract",
+            "independent_split_filter_direction_DP",
+            "stage_actual_values_features",
+            "ledger_fates",
+            "reported_common_point_errors_coverage_and_counts",
+            "reported_DP_denominator_saving_max"
+          ],
+          "unchecked_components": [
+            "batch_scope",
+            "batch_aggregation",
+            "full_hash_graph",
+            "LLM_path",
+            "memory",
+            "selection",
+            "experiment_admission"
+          ]
+        }
+      },
+      "stage_pair_diagnoses": [
+        {
+          "candidate": "G0",
+          "reference": "R0",
+          "source_record": "3017",
+          "same_D_input": true,
+          "same_DP_tolerance_work_m": 5,
+          "D_before_after": {
+            "before": 106,
+            "after": 107,
+            "additional_retained_original_indices": [
+              104
+            ]
+          },
+          "P_before_after": {
+            "before": 39,
+            "after": 38,
+            "original_indices_no_longer_retained": [
+              103,
+              105,
+              107
+            ],
+            "newly_retained_original_indices": [
+              104,
+              106
+            ]
+          },
+          "common_covered_reference_points": 107,
+          "common_max_before_work_m_Decimal": 4.785505633529111,
+          "candidate_max_on_same_raw_set_work_m_Decimal": 4.957120870448936,
+          "strict_margin_work_m": 0.17161523691982516,
+          "allowed_numeric_margin_work_m": 2.811256103392521e-10,
+          "worst_candidate_original_index": 107,
+          "same_point_error_before_work_m_Decimal": 0.0,
+          "bracketing_final_edge_before": [
+            105,
+            107
+          ],
+          "bracketing_final_edge_after": [
+            106,
+            108
+          ],
+          "P_immediate_max_before_work_m_Decimal": 4.785505633529111,
+          "P_immediate_max_after_work_m_Decimal": 4.957120870448936,
+          "engineering": "VERIFIED",
+          "research": "TRADEOFF_COMMON_GEOMETRIC_PROTECTION_DEGRADED"
+        },
+        {
+          "candidate": "S0_G0",
+          "reference": "S0",
+          "source_record": "3017",
+          "same_D_input": true,
+          "same_DP_tolerance_work_m": 5,
+          "D_before_after": {
+            "before": 108,
+            "after": 109,
+            "additional_retained_original_indices": [
+              104
+            ]
+          },
+          "P_before_after": {
+            "before": 41,
+            "after": 40,
+            "original_indices_no_longer_retained": [
+              103,
+              105,
+              107
+            ],
+            "newly_retained_original_indices": [
+              104,
+              106
+            ]
+          },
+          "common_covered_reference_points": 109,
+          "common_max_before_work_m_Decimal": 4.785505633529111,
+          "candidate_max_on_same_raw_set_work_m_Decimal": 4.957120870448936,
+          "strict_margin_work_m": 0.17161523691982516,
+          "allowed_numeric_margin_work_m": 2.811256103392521e-10,
+          "worst_candidate_original_index": 107,
+          "same_point_error_before_work_m_Decimal": 0.0,
+          "bracketing_final_edge_before": [
+            105,
+            107
+          ],
+          "bracketing_final_edge_after": [
+            106,
+            108
+          ],
+          "P_immediate_max_before_work_m_Decimal": 4.785505633529111,
+          "P_immediate_max_after_work_m_Decimal": 4.957120870448936,
+          "engineering": "VERIFIED",
+          "research": "TRADEOFF_COMMON_GEOMETRIC_PROTECTION_DEGRADED"
+        }
+      ]
+    },
+    {
+      "record_id": "9311",
+      "raw_points": 99,
+      "runtime_group": "TIME_REGULAR",
+      "independent_mathematics": {
+        "R0": {
+          "status": "VERIFIED",
+          "record_id": "9311",
+          "checks": 825,
+          "errors": [],
+          "coordinate_max_error_m": 1.8189894035458565e-12,
+          "fate_counts": {
+            "denoised": 32,
+            "simplified": 57,
+            "retained": 10
+          },
+          "dp_reference_points": 67,
+          "dp_output_points": 10,
+          "dp_maximum": 3.953415192031143,
+          "checked_components": [
+            "trusted_raw_alignment",
+            "PROJ_coordinates",
+            "exact_frozen_parameters_order_contract",
+            "independent_split_filter_direction_DP",
+            "stage_actual_values_features",
+            "ledger_fates",
+            "reported_common_point_errors_coverage_and_counts",
+            "reported_DP_denominator_saving_max"
+          ],
+          "unchecked_components": [
+            "batch_scope",
+            "batch_aggregation",
+            "full_hash_graph",
+            "LLM_path",
+            "memory",
+            "selection",
+            "experiment_admission"
+          ]
+        },
+        "S0": {
+          "status": "VERIFIED",
+          "record_id": "9311",
+          "checks": 825,
+          "errors": [],
+          "coordinate_max_error_m": 1.8189894035458565e-12,
+          "fate_counts": {
+            "denoised": 32,
+            "simplified": 57,
+            "retained": 10
+          },
+          "dp_reference_points": 67,
+          "dp_output_points": 10,
+          "dp_maximum": 3.953415192031143,
+          "checked_components": [
+            "trusted_raw_alignment",
+            "PROJ_coordinates",
+            "exact_frozen_parameters_order_contract",
+            "independent_split_filter_direction_DP",
+            "stage_actual_values_features",
+            "ledger_fates",
+            "reported_common_point_errors_coverage_and_counts",
+            "reported_DP_denominator_saving_max"
+          ],
+          "unchecked_components": [
+            "batch_scope",
+            "batch_aggregation",
+            "full_hash_graph",
+            "LLM_path",
+            "memory",
+            "selection",
+            "experiment_admission"
+          ]
+        },
+        "G0": {
+          "status": "VERIFIED",
+          "record_id": "9311",
+          "checks": 843,
+          "errors": [],
+          "coordinate_max_error_m": 1.8189894035458565e-12,
+          "fate_counts": {
+            "denoised": 23,
+            "simplified": 66,
+            "retained": 10
+          },
+          "dp_reference_points": 76,
+          "dp_output_points": 10,
+          "dp_maximum": 4.276001980607148,
+          "checked_components": [
+            "trusted_raw_alignment",
+            "PROJ_coordinates",
+            "exact_frozen_parameters_order_contract",
+            "independent_split_filter_direction_DP",
+            "stage_actual_values_features",
+            "ledger_fates",
+            "reported_common_point_errors_coverage_and_counts",
+            "reported_DP_denominator_saving_max"
+          ],
+          "unchecked_components": [
+            "batch_scope",
+            "batch_aggregation",
+            "full_hash_graph",
+            "LLM_path",
+            "memory",
+            "selection",
+            "experiment_admission"
+          ]
+        },
+        "S0_G0": {
+          "status": "VERIFIED",
+          "record_id": "9311",
+          "checks": 843,
+          "errors": [],
+          "coordinate_max_error_m": 1.8189894035458565e-12,
+          "fate_counts": {
+            "denoised": 23,
+            "simplified": 66,
+            "retained": 10
+          },
+          "dp_reference_points": 76,
+          "dp_output_points": 10,
+          "dp_maximum": 4.276001980607148,
+          "checked_components": [
+            "trusted_raw_alignment",
+            "PROJ_coordinates",
+            "exact_frozen_parameters_order_contract",
+            "independent_split_filter_direction_DP",
+            "stage_actual_values_features",
+            "ledger_fates",
+            "reported_common_point_errors_coverage_and_counts",
+            "reported_DP_denominator_saving_max"
+          ],
+          "unchecked_components": [
+            "batch_scope",
+            "batch_aggregation",
+            "full_hash_graph",
+            "LLM_path",
+            "memory",
+            "selection",
+            "experiment_admission"
+          ]
+        }
+      },
+      "stage_pair_diagnoses": [
+        {
+          "candidate": "G0",
+          "reference": "R0",
+          "source_record": "9311",
+          "same_D_input": true,
+          "same_DP_tolerance_work_m": 5,
+          "D_before_after": {
+            "before": 67,
+            "after": 76,
+            "additional_retained_original_indices": [
+              21,
+              22,
+              23,
+              24,
+              29,
+              30,
+              83,
+              84,
+              95
+            ]
+          },
+          "P_before_after": {
+            "before": 10,
+            "after": 10,
+            "original_indices_no_longer_retained": [
+              27
+            ],
+            "newly_retained_original_indices": [
+              22
+            ]
+          },
+          "common_covered_reference_points": 99,
+          "common_max_before_work_m_Decimal": 3.953415192031143,
+          "candidate_max_on_same_raw_set_work_m_Decimal": 4.276001980607148,
+          "strict_margin_work_m": 0.3225867885760052,
+          "allowed_numeric_margin_work_m": 2.5657012844957757e-10,
+          "worst_candidate_original_index": 27,
+          "same_point_error_before_work_m_Decimal": 0.0,
+          "bracketing_final_edge_before": [
+            17,
+            27
+          ],
+          "bracketing_final_edge_after": [
+            22,
+            35
+          ],
+          "P_immediate_max_before_work_m_Decimal": 3.953415192031143,
+          "P_immediate_max_after_work_m_Decimal": 4.276001980607148,
+          "engineering": "VERIFIED",
+          "research": "TRADEOFF_COMMON_GEOMETRIC_PROTECTION_DEGRADED"
+        },
+        {
+          "candidate": "S0_G0",
+          "reference": "S0",
+          "source_record": "9311",
+          "same_D_input": true,
+          "same_DP_tolerance_work_m": 5,
+          "D_before_after": {
+            "before": 67,
+            "after": 76,
+            "additional_retained_original_indices": [
+              21,
+              22,
+              23,
+              24,
+              29,
+              30,
+              83,
+              84,
+              95
+            ]
+          },
+          "P_before_after": {
+            "before": 10,
+            "after": 10,
+            "original_indices_no_longer_retained": [
+              27
+            ],
+            "newly_retained_original_indices": [
+              22
+            ]
+          },
+          "common_covered_reference_points": 99,
+          "common_max_before_work_m_Decimal": 3.953415192031143,
+          "candidate_max_on_same_raw_set_work_m_Decimal": 4.276001980607148,
+          "strict_margin_work_m": 0.3225867885760052,
+          "allowed_numeric_margin_work_m": 2.5657012844957757e-10,
+          "worst_candidate_original_index": 27,
+          "same_point_error_before_work_m_Decimal": 0.0,
+          "bracketing_final_edge_before": [
+            17,
+            27
+          ],
+          "bracketing_final_edge_after": [
+            22,
+            35
+          ],
+          "P_immediate_max_before_work_m_Decimal": 3.953415192031143,
+          "P_immediate_max_after_work_m_Decimal": 4.276001980607148,
+          "engineering": "VERIFIED",
+          "research": "TRADEOFF_COMMON_GEOMETRIC_PROTECTION_DEGRADED"
+        }
+      ]
+    },
+    {
+      "record_id": "9534",
+      "raw_points": 98,
+      "runtime_group": "TIME_REGULAR",
+      "independent_mathematics": {
+        "R0": {
+          "status": "VERIFIED",
+          "record_id": "9534",
+          "checks": 859,
+          "errors": [],
+          "coordinate_max_error_m": 1.3642420526593924e-12,
+          "fate_counts": {
+            "denoised": 13,
+            "simplified": 73,
+            "retained": 12
+          },
+          "dp_reference_points": 85,
+          "dp_output_points": 12,
+          "dp_maximum": 3.718470037541277,
+          "checked_components": [
+            "trusted_raw_alignment",
+            "PROJ_coordinates",
+            "exact_frozen_parameters_order_contract",
+            "independent_split_filter_direction_DP",
+            "stage_actual_values_features",
+            "ledger_fates",
+            "reported_common_point_errors_coverage_and_counts",
+            "reported_DP_denominator_saving_max"
+          ],
+          "unchecked_components": [
+            "batch_scope",
+            "batch_aggregation",
+            "full_hash_graph",
+            "LLM_path",
+            "memory",
+            "selection",
+            "experiment_admission"
+          ]
+        },
+        "S0": {
+          "status": "VERIFIED",
+          "record_id": "9534",
+          "checks": 859,
+          "errors": [],
+          "coordinate_max_error_m": 1.3642420526593924e-12,
+          "fate_counts": {
+            "denoised": 13,
+            "simplified": 73,
+            "retained": 12
+          },
+          "dp_reference_points": 85,
+          "dp_output_points": 12,
+          "dp_maximum": 3.718470037541277,
+          "checked_components": [
+            "trusted_raw_alignment",
+            "PROJ_coordinates",
+            "exact_frozen_parameters_order_contract",
+            "independent_split_filter_direction_DP",
+            "stage_actual_values_features",
+            "ledger_fates",
+            "reported_common_point_errors_coverage_and_counts",
+            "reported_DP_denominator_saving_max"
+          ],
+          "unchecked_components": [
+            "batch_scope",
+            "batch_aggregation",
+            "full_hash_graph",
+            "LLM_path",
+            "memory",
+            "selection",
+            "experiment_admission"
+          ]
+        },
+        "G0": {
+          "status": "VERIFIED",
+          "record_id": "9534",
+          "checks": 875,
+          "errors": [],
+          "coordinate_max_error_m": 1.3642420526593924e-12,
+          "fate_counts": {
+            "denoised": 4,
+            "simplified": 83,
+            "retained": 11
+          },
+          "dp_reference_points": 94,
+          "dp_output_points": 11,
+          "dp_maximum": 4.464256068024215,
+          "checked_components": [
+            "trusted_raw_alignment",
+            "PROJ_coordinates",
+            "exact_frozen_parameters_order_contract",
+            "independent_split_filter_direction_DP",
+            "stage_actual_values_features",
+            "ledger_fates",
+            "reported_common_point_errors_coverage_and_counts",
+            "reported_DP_denominator_saving_max"
+          ],
+          "unchecked_components": [
+            "batch_scope",
+            "batch_aggregation",
+            "full_hash_graph",
+            "LLM_path",
+            "memory",
+            "selection",
+            "experiment_admission"
+          ]
+        },
+        "S0_G0": {
+          "status": "VERIFIED",
+          "record_id": "9534",
+          "checks": 875,
+          "errors": [],
+          "coordinate_max_error_m": 1.3642420526593924e-12,
+          "fate_counts": {
+            "denoised": 4,
+            "simplified": 83,
+            "retained": 11
+          },
+          "dp_reference_points": 94,
+          "dp_output_points": 11,
+          "dp_maximum": 4.464256068024215,
+          "checked_components": [
+            "trusted_raw_alignment",
+            "PROJ_coordinates",
+            "exact_frozen_parameters_order_contract",
+            "independent_split_filter_direction_DP",
+            "stage_actual_values_features",
+            "ledger_fates",
+            "reported_common_point_errors_coverage_and_counts",
+            "reported_DP_denominator_saving_max"
+          ],
+          "unchecked_components": [
+            "batch_scope",
+            "batch_aggregation",
+            "full_hash_graph",
+            "LLM_path",
+            "memory",
+            "selection",
+            "experiment_admission"
+          ]
+        }
+      },
+      "stage_pair_diagnoses": [
+        {
+          "candidate": "G0",
+          "reference": "R0",
+          "source_record": "9534",
+          "same_D_input": true,
+          "same_DP_tolerance_work_m": 5,
+          "D_before_after": {
+            "before": 85,
+            "after": 94,
+            "additional_retained_original_indices": [
+              6,
+              19,
+              26,
+              41,
+              44,
+              57,
+              60,
+              61,
+              88
+            ]
+          },
+          "P_before_after": {
+            "before": 12,
+            "after": 11,
+            "original_indices_no_longer_retained": [
+              42,
+              45,
+              89
+            ],
+            "newly_retained_original_indices": [
+              44,
+              88
+            ]
+          },
+          "common_covered_reference_points": 98,
+          "common_max_before_work_m_Decimal": 3.718470037541277,
+          "candidate_max_on_same_raw_set_work_m_Decimal": 4.464256068024215,
+          "strict_margin_work_m": 0.7457860304829382,
+          "allowed_numeric_margin_work_m": 2.3700022249073e-10,
+          "worst_candidate_original_index": 41,
+          "same_point_error_before_work_m_Decimal": 0.860726491840079,
+          "bracketing_final_edge_before": [
+            27,
+            42
+          ],
+          "bracketing_final_edge_after": [
+            27,
+            44
+          ],
+          "P_immediate_max_before_work_m_Decimal": 3.718470037541277,
+          "P_immediate_max_after_work_m_Decimal": 4.464256068024215,
+          "engineering": "VERIFIED",
+          "research": "TRADEOFF_COMMON_GEOMETRIC_PROTECTION_DEGRADED"
+        },
+        {
+          "candidate": "S0_G0",
+          "reference": "S0",
+          "source_record": "9534",
+          "same_D_input": true,
+          "same_DP_tolerance_work_m": 5,
+          "D_before_after": {
+            "before": 85,
+            "after": 94,
+            "additional_retained_original_indices": [
+              6,
+              19,
+              26,
+              41,
+              44,
+              57,
+              60,
+              61,
+              88
+            ]
+          },
+          "P_before_after": {
+            "before": 12,
+            "after": 11,
+            "original_indices_no_longer_retained": [
+              42,
+              45,
+              89
+            ],
+            "newly_retained_original_indices": [
+              44,
+              88
+            ]
+          },
+          "common_covered_reference_points": 98,
+          "common_max_before_work_m_Decimal": 3.718470037541277,
+          "candidate_max_on_same_raw_set_work_m_Decimal": 4.464256068024215,
+          "strict_margin_work_m": 0.7457860304829382,
+          "allowed_numeric_margin_work_m": 2.3700022249073e-10,
+          "worst_candidate_original_index": 41,
+          "same_point_error_before_work_m_Decimal": 0.860726491840079,
+          "bracketing_final_edge_before": [
+            27,
+            42
+          ],
+          "bracketing_final_edge_after": [
+            27,
+            44
+          ],
+          "P_immediate_max_before_work_m_Decimal": 3.718470037541277,
+          "P_immediate_max_after_work_m_Decimal": 4.464256068024215,
+          "engineering": "VERIFIED",
+          "research": "TRADEOFF_COMMON_GEOMETRIC_PROTECTION_DEGRADED"
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "actual_command": ".venv/bin/python task1/evidence/goal3/independent_c/review_selection_failures.py",
+  "checker_sha256": "cdd7863d49a083dbc6ef4dd9f9b4f2b2941a594b394f15e58bcafe0b338dca28"
+}

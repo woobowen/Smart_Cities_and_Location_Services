@@ -1,0 +1,63 @@
+{
+  "status": "SOURCE_VALIDATED_NOT_EXECUTED",
+  "notebooks": [
+    {
+      "path": "task1/notebooks/final/作业1轨迹数据预处理_完成版.ipynb",
+      "sha256": "1aee58d8e4d24f12ed9d3755e3678cafb7c3a2e7b17c9317670e7b774ac0e441",
+      "cells": 25,
+      "code_cells": 12,
+      "execution_status": "NOT_RUN_PENDING_FINAL_PRODUCTION",
+      "teacher_starter": "task1/作业/作业/作业1轨迹数据预处理.ipynb"
+    },
+    {
+      "path": "task1/notebooks/final/任务3_LLM辅助评估清洗_完成版.ipynb",
+      "sha256": "89aa0605a51be9409e875da7d307998f7756de7a31461958b696b2d1c3e1c7d6",
+      "cells": 17,
+      "code_cells": 8,
+      "execution_status": "NOT_RUN_PENDING_FINAL_PRODUCTION",
+      "teacher_starter": "task1/作业/作业/任务3_LLM辅助评估清洗.ipynb"
+    }
+  ],
+  "new_model_calls": 0,
+  "new_method_runs": 0,
+  "explicit_display_dependencies": {
+    "task1/evidence/goal2/result_summary.json": "4fbd16b754f25253b0803a27898e4758bc4eaf6debda03607454c374bba758a7",
+    "task1/evidence/goal2/a_epoch02/actual_ai_critique/actual_ai_critique.json": "6e224d48ab052faae8a54af47d763277181e02f547838129f20f90aff8b5db1b",
+    "task1/evidence/goal2/counterexamples/formal-02/synthetic_cases.json": "73407da777541c35201c613bef3e913896ff2dc701cb14431896f94f062f8d3a",
+    "task1/evidence/goal2/tables/memory_consumption.csv": "571115d5c31cc0d1c7bdbad5e5a28900780466784546a0fed595dc51cb39bb93",
+    "task1/evidence/goal2/runs/g2-demo-memory-02/memory_snapshot.json": "2330543c3a443532891936ac29d4080cb6e5f45c58e2976cc81c8fa67c6607d6",
+    "templates/latex/common/p2_cloud_sorbet_colors.tex": "2aa820c3f68ba6c14cf1b52082b12336071d77bb5466db2b05b2fab6890aa243",
+    "task1/figures/goal2/segmentation_filter_grids.png": "114fd20087ae92606d5ce2a4103fd406defda6ae121f01eebdf1e669a2ba958e",
+    "task1/figures/goal2/direction_threshold_and_neighborhood.png": "e6b2c495beb5d63eec10acbc13ee2809797c0e7115b2e9c78f5c26a0c9073422",
+    "task1/figures/goal2/dp_error_compression.png": "f7d51745cf774f8f5d6e890e9ec6fc9a9b6e29642ffcbc90cad2c3c88602ef6f",
+    "task1/figures/goal2/order_protection_and_neighborhoods.png": "8b150a234295b081982c9c2b83140a3928e9f558053f62e0d89c33a08737a730",
+    "task1/figures/goal2/synthetic_metric_counterexamples.png": "048388c4fe88c104ca9a8830fc3e3cad923bb7c97121303a1a849f9abf6e29cc",
+    "task1/figures/goal2/goal2_actual_architecture.png": "06e5deea0f1022fec93f969fca7aee6819b0b2ea1909aafa4332742cd70ff3c9",
+    "task1/figures/goal2/four_mode_paired_results.png": "ec7a87bbc8dd53a188a19815e26ff32f8ca2b66c46b0f227aab6e78cac0d5593",
+    "task1/figures/goal2/four_mode_failures_and_cost.png": "8c3a0cca4a96c3f6a531a758e0285980d28fefec3e89f82a480dd12c086dd048",
+    "task1/figures/goal2/memory_coverage_and_consumption.png": "a968f524e803479c9e7c12a05550451e877726b84093d2aab968d1986f15a683"
+  },
+  "full_runtime_dependency_closure": "Requires portable registry/raw/code/freeze package; isolated ZIP execution still NOT_RUN",
+  "static_checks": {
+    "code_ast": true,
+    "nbformat_v4": true,
+    "new_kernel_execution": false
+  },
+  "expected_generated_dependencies": [
+    "task1/figures/goal3/development_candidates.png",
+    "task1/figures/goal3/point_fates_and_coverage.png",
+    "task1/figures/goal3/final_confirmation_pairs.png",
+    "task1/figures/goal3/production_trajectory_cases.png",
+    "task1/figures/goal3/goal3_actual_workflow.png",
+    "task1/figures/goal3/incumbent_decision_path.png",
+    "task1/figures/goal3/selection_tradeoffs.png"
+  ],
+  "expected_full_recomputations": {
+    "basic_historical_parameters_orders": 9720,
+    "basic_synthetic_chains": 19,
+    "basic_exposed_pilot_examples": 1,
+    "basic_production_raw_records": 11386,
+    "system_historical_candidates_including_demo": 6001,
+    "system_original_record_episode_selections": 384
+  }
+}

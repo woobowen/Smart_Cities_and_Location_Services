@@ -10,192 +10,494 @@
     {
       "id": "G3-A01",
       "requirement": "承接和原件保护",
-      "status": "NOT_RUN",
-      "actual_actions": [],
+      "status": "PASS",
+      "actual_actions": [
+        "ls -la; pwd; git status --short; git rev-parse HEAD; git ls-remote origin refs/heads/main"
+      ],
       "expected": "current USER_PROMPT §18",
-      "measured": null,
-      "evidence": [],
-      "scope": null
+      "measured": "承接6fad842；原始数据/教师/starter及原有ZIP未覆盖；旧失败与旧epoch真实保留。",
+      "evidence": [
+        {
+          "path": "task1/evidence/goal3/startup.json",
+          "sha256": "088efe8cdc9da620282bf0ac201752cae8857774877bdcb56fe2934bd1428337"
+        },
+        {
+          "path": "task1/evidence/goal3/independent_c/initial_inventory_receipt.json",
+          "sha256": "21ae139df41cec6e3155e4306da7a6e8013115050534c12f9de580ce7ecf6e8a"
+        }
+      ],
+      "scope": "启动保护；发布前将再次核对原件/用户ZIP。"
     },
     {
       "id": "G3-A02",
       "requirement": "完整教学任务",
-      "status": "NOT_RUN",
-      "actual_actions": [],
+      "status": "PASS",
+      "actual_actions": [
+        "B 从实际Notebook sourcecells与两份PDF建立22项教学导航；C逐项核对90单元、45处页码/anchor、G1R01–16/G2R01–10。"
+      ],
       "expected": "current USER_PROMPT §18",
-      "measured": null,
-      "evidence": [],
-      "scope": null
+      "measured": "全部教师/G1/G2要求有明确可读作业位置；本轮新增分区/选择规则保持当前Prompt身份；外部身份/Process Evidence缺项没有伪装成可选。",
+      "evidence": [
+        {
+          "path": "task1/evidence/goal3/teacher_delivery_mapping.json",
+          "sha256": "ec68e70fd6710ce70c28ec716cb4dd3b7cba9e01a6c7e03f78d9e07028d7751c"
+        },
+        {
+          "path": "task1/evidence/goal3/teacher_delivery_mapping.md",
+          "sha256": "de1e784ef7b5a8026be7481961b8d8e9b3e0bbaf3a151431af63e0ab2de34af9"
+        },
+        {
+          "path": "task1/evidence/goal3/independent_documents/navigation_interaction_receipt.json",
+          "sha256": "d677263be65539880c3934d169bacae15cde6032217a1d397d353096b6594d06"
+        }
+      ],
+      "scope": "内容导航与教学任务覆盖；身份和正式Process闭合另在A15/A16/A18保留外部阻断。"
     },
     {
       "id": "G3-A03",
       "requirement": "候选与单项依据",
-      "status": "NOT_RUN",
-      "actual_actions": [],
+      "status": "PASS",
+      "actual_actions": [
+        "task1.goal3.runtime g3-development-parents-03 / routing-03 / interactions-01；各自独立 C 后由 A 裁决"
+      ],
       "expected": "current USER_PROMPT §18",
-      "measured": null,
-      "evidence": [],
-      "scope": null
+      "measured": "R0/S0真实复验；1项新结构单项、3项组合；方向/P机会与S父项全部保留。",
+      "evidence": [
+        {
+          "path": "task1/evidence/goal3/a_candidate_plan.json",
+          "sha256": "ccc11b8efadb3dbce8e6b6d69ccd8e484aa317d655422da2bfb9d8af59ed3f82"
+        },
+        {
+          "path": "task1/evidence/goal3/A1_RECOMPUTE03_DECISION.json",
+          "sha256": "32e90644615d653bc57642eedaa2bfbecb647abfeacf5a6224db23415701438e"
+        },
+        {
+          "path": "task1/evidence/goal3/A2_DECISION.json",
+          "sha256": "297c8ec1e5f1af5fdc0841c66bc7b8060ee4cafeb95eed630d53f5b2d5f9dfad"
+        },
+        {
+          "path": "task1/evidence/goal3/A3_DECISION.json",
+          "sha256": "01fea6c07ac49ff6f3207c0e8f85dac010f84c3fb42fd81f7149f47776980633"
+        },
+        {
+          "path": "task1/evidence/goal3/independent_c/development_closure_receipt.json",
+          "sha256": "cf771eb9ac4deea584642b15fc0db7307bc27f5e5c117d35f4c6904c3937510a"
+        }
+      ],
+      "scope": "240条已暴露开发记录，含历史G2_EVAL；不作为最终测试。"
     },
     {
       "id": "G3-A04",
       "requirement": "组合和回退",
-      "status": "NOT_RUN",
-      "actual_actions": [],
+      "status": "PASS",
+      "actual_actions": [
+        "11完整策略的实际开发比较；完整父项与去除组件配对"
+      ],
       "expected": "current USER_PROMPT §18",
-      "measured": null,
-      "evidence": [],
-      "scope": null
+      "measured": "S0_G0开发相对S0有41条几何严格改善，移除G0或S分别损失对应性质；P2/P10负结果保留。选择集三条退化后不采用G0组合。",
+      "evidence": [
+        {
+          "path": "task1/evidence/goal3/A3_DECISION.json",
+          "sha256": "01fea6c07ac49ff6f3207c0e8f85dac010f84c3fb42fd81f7149f47776980633"
+        },
+        {
+          "path": "task1/evidence/goal3/CONVERGENCE_REVIEW.json",
+          "sha256": "bfede469a54cb1cb2c251c153f2bf2b51bfe83b3d35b77c2eefe6bf83da09ee8"
+        },
+        {
+          "path": "task1/evidence/goal3/selection_decision.json",
+          "sha256": "ff1d41e2bf708743d0b3c3e2f3d632c19ccb6c4392513ebdb52e5c52e04e48fb"
+        },
+        {
+          "path": "task1/evidence/goal3/independent_c/selection_failure_receipt.json",
+          "sha256": "e6d374e3825fd17786b8f1ee548039fb2b476ae6a1d2e4a9ebfd59549d396c6c"
+        }
+      ],
+      "scope": "有限方法域；第二种删除保护因缺合理独立定义NOT_ADMITTED。"
     },
     {
       "id": "G3-A05",
       "requirement": "自动选择",
-      "status": "NOT_RUN",
-      "actual_actions": [],
+      "status": "PASS",
+      "actual_actions": [
+        "selection-freeze → runtime g3-selection-01 → independent C → selection-decision"
+      ],
       "expected": "current USER_PROMPT §18",
-      "measured": null,
-      "evidence": [],
-      "scope": null
+      "measured": "按固定R0→S0→G0→S0_G0规则选择S0；共同尺度/无权重；G0和组合共同几何三条失败不被局部P合格掩盖。",
+      "evidence": [
+        {
+          "path": "task1/evidence/goal3/selection_freeze.json",
+          "sha256": "72ab2cf978380fb9a76d8b1d80558d3aca1a7f1f345317707ca9630eed3504a6"
+        },
+        {
+          "path": "task1/evidence/goal3/selection_decision.json",
+          "sha256": "ff1d41e2bf708743d0b3c3e2f3d632c19ccb6c4392513ebdb52e5c52e04e48fb"
+        },
+        {
+          "path": "task1/evidence/goal3/independent_c/selection_closure_receipt.json",
+          "sha256": "d780dcc0b762cd607040f9e926568a1838d1c93221fce38b130e2af2a2e2c274"
+        }
+      ],
+      "scope": "240条G3_SELECTION，仅选择冻结短名单；不是最终独立确认。"
     },
     {
       "id": "G3-A06",
       "requirement": "数据隔离与冻结",
-      "status": "NOT_RUN",
-      "actual_actions": [],
+      "status": "PASS",
+      "actual_actions": [
+        "固定split hash；selection/final/production freezes；C frozen boundary检查"
+      ],
       "expected": "current USER_PROMPT §18",
-      "measured": null,
-      "evidence": [],
-      "scope": null
+      "measured": "7pilot/60DEMO/240dev/240selection/600final/10239remainder；完整组无拆分；A未收到最终效果；只读记忆hash固定。",
+      "evidence": [
+        {
+          "path": "task1/evidence/goal3/split_manifest.json",
+          "sha256": "c20747b7e2869b5e3ce755601764336dcd5e42ed4643e99d5e56be7a0ebba2f0"
+        },
+        {
+          "path": "task1/evidence/goal3/selection_freeze.json",
+          "sha256": "72ab2cf978380fb9a76d8b1d80558d3aca1a7f1f345317707ca9630eed3504a6"
+        },
+        {
+          "path": "task1/evidence/goal3/final_freeze.json",
+          "sha256": "d64869cc4623b3751d365d54d2cc70305a188891c41b8c6de17b58f3fadb1e6e"
+        },
+        {
+          "path": "task1/evidence/goal3/production_freeze.json",
+          "sha256": "5f6592b40e7d50d2409a94c42d309b8fb525d4a7881733f360b33722609e36ad"
+        },
+        {
+          "path": "task1/evidence/goal3/independent_c/contract_split_receipt.json",
+          "sha256": "a994261cbc5ae03414e29dfa315106dfd9c562ab6c9837fa76d0e6f60919e39c"
+        },
+        {
+          "path": "task1/evidence/goal3/independent_c/g3-final-confirm-01_freeze_boundary_receipt.json",
+          "sha256": "aa76bda0d332b64d2d4d91b16dcc2c397c4166483ff305965a9e607f3049d73f"
+        }
+      ],
+      "scope": "NO_DOCUMENTED_METHOD_EXPOSURE；原始结构盘点已披露，不声称独立用户或从未见过任何数据。"
     },
     {
       "id": "G3-A07",
       "requirement": "最终确认",
-      "status": "NOT_RUN",
-      "actual_actions": [],
+      "status": "PASS",
+      "actual_actions": [
+        "task1.goal3.runtime --run-id g3-final-confirm-01 --partition FINAL_CONFIRM --strategies R0 S0；独立C；release-decision"
+      ],
       "expected": "current USER_PROMPT §18",
-      "measured": null,
-      "evidence": [],
-      "scope": null
+      "measured": "600条/62284点；1200实际处理；600全部保护；349严格覆盖改善，+26352 common / +1123 stored；R0回退未触发，未调参。",
+      "evidence": [
+        {
+          "path": "task1/evidence/goal3/final_freeze.json",
+          "sha256": "d64869cc4623b3751d365d54d2cc70305a188891c41b8c6de17b58f3fadb1e6e"
+        },
+        {
+          "path": "task1/evidence/goal3/release_decision.json",
+          "sha256": "6407ca21175113cf206909dd12f0f067c114b19cfe4f3337af3c2de88e909024"
+        },
+        {
+          "path": "task1/evidence/goal3/independent_c/confirmation_closure_receipt.json",
+          "sha256": "97c47c834cb0363ec82b7f166ae36daebf8bba6ce6d39b070cde9d29a82786bb"
+        }
+      ],
+      "scope": "一次性冻结确认；有限记录样本，不能证明噪声准确率或普遍优势。"
     },
     {
       "id": "G3-A08",
       "requirement": "全量生产",
-      "status": "NOT_RUN",
-      "actual_actions": [],
+      "status": "PASS",
+      "actual_actions": [
+        "task1.goal3.runtime --run-id g3-full-production-01 --partition FULL_PRODUCTION --strategies R0 S0",
+        "review_run.py；review_pair_derivatives.py；review_execution_accounting.py；review_production_closure.py"
+      ],
       "expected": "current USER_PROMPT §18",
-      "measured": null,
-      "evidence": [],
-      "scope": null
+      "measured": "全11,386记录/1,173,410点，R0/S0共22,772实际处理；全部有终态、0失败/0回退；C逐trace原件审核和完整账本/配对通过。",
+      "evidence": [
+        {
+          "path": "task1/evidence/goal3/independent_c/production_closure_receipt.json",
+          "sha256": "2ef55d75e33d0f2927c872d10ad2957f9a9e69ec087369f1a3e19cfc23a2a488"
+        },
+        {
+          "path": "task1/evidence/goal3/independent_c/g3-full-production-01_accounting_receipt.json",
+          "sha256": "166e17c7ab54c4232deaafbfc41a5df5c7396f3a716e1b6cfde074f1257d6485"
+        }
+      ],
+      "scope": "全数据集生产描述，包含开发记录，不是第二个独立最终测试。"
     },
     {
       "id": "G3-A09",
       "requirement": "条件化坐标",
-      "status": "NOT_RUN",
-      "actual_actions": [],
+      "status": "PASS",
+      "actual_actions": [
+        "task1.goal3.coordinates --run-id g3-full-production-01",
+        "review_full_coordinates.py"
+      ],
       "expected": "current USER_PROMPT §18",
-      "measured": null,
-      "evidence": [],
-      "scope": null
+      "measured": "全部点PROJ/原始邻边Geod和实际阶段计数；B全阶段敏感性差异0；C独立56记录112trace及全部阶段极值见证通过；source_crs仍UNVERIFIED。",
+      "evidence": [
+        {
+          "path": "task1/evidence/goal3/coordinates/coordinate_checks.json",
+          "sha256": "16a962a03b50187af312c66abc81c5fb700254aaedc27272065df69f56503958"
+        },
+        {
+          "path": "task1/evidence/goal3/independent_c/g3-full-production-01_coordinates_receipt.json",
+          "sha256": "0e9576627442821f8326c557c329436c4ff548a8a2dc158508618c0784dfa302"
+        }
+      ],
+      "scope": "C独立阶段敏感性为预登记随机/类别/极值覆盖，非每条记录第二套全重算；固定实际输入，不是AEQD整链重跑。"
     },
     {
       "id": "G3-A10",
       "requirement": "审核器与正确性",
-      "status": "NOT_RUN",
-      "actual_actions": [],
+      "status": "PASS",
+      "actual_actions": [
+        ".venv/bin/python -m pytest -q task1/tests 与登记的独立回归集合",
+        "review_full_categories.py；review_production_closure.py"
+      ],
       "expected": "current USER_PROMPT §18",
-      "measured": null,
-      "evidence": [],
-      "scope": null
+      "measured": "最终有效辅助源码回归469测试+10子测通过（testsuite总数479，testcase节点469）；全量22,772trace原件审核及50记录100份独立Decimal/PROJ；修复均经独立复验，NB绘图兼容修复不改数值源。",
+      "evidence": [
+        {
+          "path": "task1/evidence/goal3/full_working_tests_final_receipt.json",
+          "sha256": "eb7d4c8ccc56eb4e2719573dac4ee16b772c911ba1c277ec1e6589a9c123756a"
+        },
+        {
+          "path": "task1/evidence/goal3/independent_c/production_closure_receipt.json",
+          "sha256": "2ef55d75e33d0f2927c872d10ad2957f9a9e69ec087369f1a3e19cfc23a2a488"
+        },
+        {
+          "path": "task1/evidence/goal3/independent_c/g3-full-production-01_categories_receipt.json",
+          "sha256": "e99cdeeee591ba1e4de731d06ffb5385d1eb318680f017f9ee05d53c959f9f88"
+        },
+        {
+          "path": "task1/evidence/goal3/independent_c/G3-NB-01_closure.json",
+          "sha256": "d10aeb062b1b61fb96984da236981f4f86ca048a0b8801114ad08b2f742321d2"
+        }
+      ],
+      "scope": "本项工程正确性不代替文档/Notebook/ZIP集成验收；未来相关源码若变更需失效/复验。"
     },
     {
       "id": "G3-A11",
       "requirement": "工作流真实使用",
-      "status": "NOT_RUN",
-      "actual_actions": [],
+      "status": "PASS",
+      "actual_actions": [
+        "实际native A/B/C分派、原件/合同审查、候选裁决、B修复→C复验→父任务恢复；独立检查Journal事件链与关闭目标"
+      ],
       "expected": "current USER_PROMPT §18",
-      "measured": null,
-      "evidence": [],
-      "scope": null
+      "measured": "13项真实修复闭合；C不写被审核心，主线程实际消费回执。所有实验、生产、图、四FULL、Handoff及报告/包可用工程父任务当前有效；总验收和发布继续。",
+      "evidence": [
+        {
+          "path": "task1/evidence/goal3/independent_c/final_acceptance_preparation_post_NB01.json",
+          "sha256": "9551230735084c7a2662e15b2f214e01830f2bb48473321c871e200e44afd570"
+        },
+        {
+          "path": "task1/evidence/goal3/independent_c/G3-NB-01_closure.json",
+          "sha256": "d10aeb062b1b61fb96984da236981f4f86ca048a0b8801114ad08b2f742321d2"
+        },
+        {
+          "path": "task1/evidence/goal3/independent_documents/G3-FIG-01_closure.json",
+          "sha256": "b06765a8ca1dd1b297938021884c71f5ac1311d86b9cef69431cedc3b87632c2"
+        }
+      ],
+      "scope": "生产治理与记录级处理分开；不伪造用户逐次裁决、不把一次响应模拟三方。"
     },
     {
       "id": "G3-A12",
       "requirement": "模式与成本",
-      "status": "NOT_RUN",
-      "actual_actions": [],
+      "status": "PASS",
+      "actual_actions": [
+        "冻结确定性S0并全量执行；继承真实G2四模式证据；system FULL重算6001候选/384episode并检查两Provider"
+      ],
       "expected": "current USER_PROMPT §18",
-      "measured": null,
-      "evidence": [],
-      "scope": null
+      "measured": "当前六有效run26960次实际处理/2280缓存重核/732同配置复用；新增record模型0。system FULL 6001历史候选重算、384历史选择，Provider attempts0、memory/raw哈希未变；治理后端费用unknown。",
+      "evidence": [
+        {
+          "path": "task1/evidence/goal3/independent_c/final_acceptance_preparation_post_NB01.json",
+          "sha256": "9551230735084c7a2662e15b2f214e01830f2bb48473321c871e200e44afd570"
+        },
+        {
+          "path": "task1/evidence/goal3/production_freeze.json",
+          "sha256": "5f6592b40e7d50d2409a94c42d309b8fb525d4a7881733f360b33722609e36ad"
+        },
+        {
+          "path": "task1/evidence/goal3/independent_c/repository_system_full_02_receipt.json",
+          "sha256": "ffa1430b8e4e1d1eb8780b582146009768d2eb050cee4dfb3bd805a56e1962fa"
+        }
+      ],
+      "scope": "没有新增模式收益主张或LIVE；工具事件数不是模型请求数；完整交付复算额外成本另计。"
     },
     {
       "id": "G3-A13",
       "requirement": "Notebook复现",
-      "status": "NOT_RUN",
-      "actual_actions": [],
+      "status": "PASS",
+      "actual_actions": [
+        "task1.goal3.execute_notebook 仓库basic FULL_02与system FULL_02；独立C当前checker读取实际执行产物、全部285新分片与新图。",
+        "同一真实ZIP解压后两个新内核FULL；独立C检查完整新分片、真实package imports、Provider哨兵与新图。"
+      ],
       "expected": "current USER_PROMPT §18",
-      "measured": null,
-      "evidence": [],
-      "scope": null
+      "measured": "仓库/同一ZIP解压目录各basic12/12+system8/8；每对历史raw处理9720+6001、384历史选择、22772全量生产、19构造、1pilot；四个Provider attempts=0，原件/记忆不变。canonical是仓库执行版；隔离执行版另存。",
+      "evidence": [
+        {
+          "path": "task1/evidence/goal3/independent_c/repository_basic_full_02_receipt.json",
+          "sha256": "569ce34af424cbae074f919f9cf39cdaa078c24f908d3ce347cf5695499a8a02"
+        },
+        {
+          "path": "task1/evidence/goal3/independent_c/repository_system_full_02_current_receipt.json",
+          "sha256": "1b8b2aa3ad34c7e44b64d36dd83a60ad344589cc8902c36c2d4502e115f1f8ec"
+        },
+        {
+          "path": "task1/evidence/goal3/independent_c/full_notebook_figure_visual_receipt.json",
+          "sha256": "4a22c7e27ea929cfdd7e161afb653918756bbc3cad70a9afc30d4d351a553158"
+        },
+        {
+          "path": "task1/evidence/goal3/notebook_verification/repository_basic_full_02/execution_receipt.json",
+          "sha256": "ecca8c8ccf5c2624dbb439cdb6b11a46aae7c83ea6bad161f527874d8481cd3a"
+        },
+        {
+          "path": "task1/evidence/goal3/notebook_verification/repository_system_full_02/execution_receipt.json",
+          "sha256": "aae5c71edffc8eb207922df37d691d36957ff3ab248968e46f47992de363734a"
+        },
+        {
+          "path": "task1/evidence/goal3/independent_c/isolated_package_basic_full_receipt.json",
+          "sha256": "87c52f9d8a56e1c32b77b5b899ba11f171ee836d100ff9cb720c92e665c2361f"
+        },
+        {
+          "path": "task1/evidence/goal3/independent_c/isolated_package_system_full_receipt.json",
+          "sha256": "8a546a2ebb065ca3b1f837b08236b67dc963160b080f994d715fea5ee76baf97"
+        },
+        {
+          "path": "task1/evidence/goal3/independent_c/notebooks_closure_receipt.json",
+          "sha256": "aa1c10a4ed3d15c805364fd01a444cdfb56d0782dcdf7cf033c9d473b05b403e"
+        }
+      ],
+      "scope": "四次真实新内核FULL，实际解压同一ZIP且不从原工作区导入任务模块；复算不是新LIVE或新独立实验，教师包外部缺项仍由A18登记。"
     },
     {
       "id": "G3-A14",
       "requirement": "正式可视化",
-      "status": "NOT_RUN",
-      "actual_actions": [],
+      "status": "PASS",
+      "actual_actions": [
+        "实际REPORT_BUILD生成7套SVG/PDF/PNG、数据与可编辑drawio；C重归并真实数据、独立重渲染并比较已逐图目视像素。"
+      ],
       "expected": "current USER_PROMPT §18",
-      "measured": null,
-      "evidence": [],
-      "scope": null
+      "measured": "7图含参数/选择/终态/确认/真实边界案例/实际系统/裁决路径；图例、真实反馈路径和266.017工作米边界保留；当前31targets/13sources全部核验。",
+      "evidence": [
+        {
+          "path": "task1/evidence/goal3/independent_documents/figures_current_closure.json",
+          "sha256": "1a0d136f60b69b0b5466427199bd8955c55109f3c11d100a864eb2f4e79fd976"
+        }
+      ],
+      "scope": "当前正式图及其实际数据/源文件；样本/全量与存储/覆盖严格区分。"
     },
     {
       "id": "G3-A15",
       "requirement": "Experiment Report",
-      "status": "NOT_RUN",
-      "actual_actions": [],
+      "status": "BLOCKED",
+      "actual_actions": [
+        "实际REPORT_BUILD完整XeLaTeX编译、全部33页200dpi渲染；独立全文/全页目视及重建后逐页像素/数字/来源复核。"
+      ],
       "expected": "current USER_PROMPT §18",
-      "measured": null,
-      "evidence": [],
-      "scope": null
+      "measured": "Experiment21页工程VERIFIED，504实际targets/21sources；仅可信姓名/学号缺项。",
+      "evidence": [
+        {
+          "path": "task1/evidence/goal3/independent_documents/experiment_report_current_closure.json",
+          "sha256": "24743948729bb6d7ea3e332748a7e9543c190833ab25d57d203ea0af4849525b"
+        }
+      ],
+      "scope": "正式技术送审稿，未填写未知姓名/学号，不影响已完成实验结论。"
     },
     {
       "id": "G3-A16",
       "requirement": "Process Report",
-      "status": "NOT_RUN",
-      "actual_actions": [],
+      "status": "BLOCKED",
+      "actual_actions": [
+        "实际REPORT_BUILD完整XeLaTeX编译、全部33页200dpi渲染；独立全文/全页目视及重建后逐页像素/数字/来源复核。"
+      ],
       "expected": "current USER_PROMPT §18",
-      "measured": null,
-      "evidence": [],
-      "scope": null
+      "measured": "Process12页可用内容与工程VERIFIED，493targets/19sources；两层结构、真实自治事实和来源完整，身份及原始互动/spec/LOCK待外部补齐。",
+      "evidence": [
+        {
+          "path": "task1/evidence/goal3/independent_documents/process_report_current_closure.json",
+          "sha256": "5bf63ab6f3cc95c8f8801eea830dd7b47cdb24169cbd47063984dddd1d095f0a"
+        }
+      ],
+      "scope": "可编译且独立核验的待补送审稿；没有伪造聊天、用户逐次判断、高亮关系或Evidence Lock。"
     },
     {
       "id": "G3-A17",
       "requirement": "两份Handoff",
-      "status": "NOT_RUN",
-      "actual_actions": [],
+      "status": "PASS",
+      "actual_actions": [
+        "完成Technical/Interaction Handoff与DEFENSE_NOTES；review_handoffs_final.py在实际Journal.submit后独立复绑；root Journal.accept。"
+      ],
       "expected": "current USER_PROMPT §18",
-      "measured": null,
-      "evidence": [],
-      "scope": null
+      "measured": "6 targets /111来源全部核验；19候选、11条有来源逐字原话、真实Human Judgment/NOT_AVAILABLE及四FULL/数值/输入边界均检查；642本次检查，80未变来源绑定先前1283项导航核验。",
+      "evidence": [
+        {
+          "path": "task1/evidence/goal3/independent_documents/handoffs_current_closure.json",
+          "sha256": "e4b9a77e3d88d13635d67c83fa55ca15135c77ebf534eb0676e8ed18c7c6cda4"
+        }
+      ],
+      "scope": "技术交接与真实互动候选索引完整；不代Evidence Master定Tier/箭头/LOCK，不代用户Understanding PASS。"
     },
     {
       "id": "G3-A18",
       "requirement": "教师提交包",
-      "status": "NOT_RUN",
-      "actual_actions": [],
+      "status": "BLOCKED",
+      "actual_actions": [
+        ".venv/bin/python -m task1.goal3 REPORT_BUILD（真实生成ZIP）；同一ZIP新目录解压；basic/system两个新内核FULL；review_full_notebook.py与prepare_delivery_submission.py --task package --mode accept；root Journal.accept。"
+      ],
       "expected": "current USER_PROMPT §18",
-      "measured": null,
-      "evidence": [],
-      "scope": null
+      "measured": "ZIP113成员/21418989字节；SHA97d5dbe2d7a5c87d09bcb21ae5798fa0b76374fabdd03f25447fb87c4f27c447。静态全部字节与两个实际隔离FULL独立通过，213targets/45sources；仅META/EVIDENCE外部缺项，REVIEW_ONLY/NOT_READY。",
+      "evidence": [
+        {
+          "path": "task1/evidence/goal3/independent_c/package_closure_receipt.json",
+          "sha256": "dc75243502632b9da7925accb45919e2f45b3ee04f7cdcf76729cbc9c64f3228"
+        },
+        {
+          "path": "task1/evidence/goal3/independent_documents/actual_zip_static_receipt.json",
+          "sha256": "ef585260abef03aa5ee6f8feb9fb6c38720dae51e5c380b0fc117e17408642af"
+        },
+        {
+          "path": "task1/evidence/goal3/independent_c/isolated_archive_binding_receipt.json",
+          "sha256": "f84b45f885670620aa4791d22c79bd059b3a2fecf488818a0c44a09ea5da2c49"
+        },
+        {
+          "path": "task1/evidence/goal3/independent_c/isolated_package_basic_full_receipt.json",
+          "sha256": "87c52f9d8a56e1c32b77b5b899ba11f171ee836d100ff9cb720c92e665c2361f"
+        },
+        {
+          "path": "task1/evidence/goal3/independent_c/isolated_package_system_full_receipt.json",
+          "sha256": "8a546a2ebb065ca3b1f837b08236b67dc963160b080f994d715fea5ee76baf97"
+        }
+      ],
+      "scope": "全部自主包工程完成，源/数据来自同一真实解压包，共用已存在语言依赖环境；缺可信姓名学号及Evidence规格/LOCK，不能称为正式可提交包。",
+      "engineering_status": "VERIFIED"
     },
     {
       "id": "G3-A19",
       "requirement": "内部全验收",
-      "status": "NOT_RUN",
-      "actual_actions": [],
+      "status": "PASS",
+      "actual_actions": [
+        "review_internal_acceptance.py --mode prepare；原字节goal_state快照；root Journal.submit；独立C --mode accept --snapshot internal_acceptance_submission_snapshot.json --prepublication-receipt publication_preflight_receipt.json；root Journal.accept。"
+      ],
       "expected": "current USER_PROMPT §18",
-      "measured": null,
-      "evidence": [],
-      "scope": null
+      "measured": "15个真实前置任务、1131 targets/222 sources、13已关闭工程问题、四FULL、469+10及最终稳定发布预检全部通过，open_engineering_blockers=[]。仅批准PARTIAL_BLOCKED审查检查点，不替代尚缺的META/Evidence或未来实际发布。",
+      "evidence": [
+        {
+          "path": "task1/evidence/goal3/independent_c/internal_acceptance_receipt.json",
+          "sha256": "488b7bb5de1272c3c2e0ee470b37830d69bb62ed7725b71ba9ad98e57ac01b87"
+        },
+        {
+          "path": "task1/evidence/goal3/internal_acceptance_submission_snapshot.json",
+          "sha256": "58bc33ead14e9f59bcb87ffd9257302a8469bcc9cefe0871affaf30ec49c4c39"
+        },
+        {
+          "path": "task1/evidence/goal3/independent_documents/publication_preflight_receipt.json",
+          "sha256": "db880a08c2327f13793f01c53de0c618e17d23ec80232c3fa9b01b3d287bef55"
+        }
+      ],
+      "scope": "全部可自主完成的稳定工程独立验收通过；A15/A16/A18外部缺项保留，Goal不宣称完整可提交或最终PASS。"
     },
     {
       "id": "G3-A20",
@@ -236,5 +538,8 @@
     }
   ],
   "GPT_SECOND_REVIEW": "PENDING",
-  "Submission": "NOT_READY"
+  "Submission": "NOT_READY",
+  "updated_at": "2026-09-27T08:51:15.300459+00:00",
+  "goal_completion_claim": false,
+  "remaining_work": "Actual artifact commit/push and independent remote publication verification remain. All autonomous stable engineering is accepted; META/Evidence Master inputs still prevent formal submission readiness."
 }

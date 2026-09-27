@@ -1,0 +1,61 @@
+diff --git a/task1/goal3/notebooks.py b/task1/goal3/notebooks.py
+index 8d91544..1768af3 100644
+--- a/task1/goal3/notebooks.py
++++ b/task1/goal3/notebooks.py
+@@ -237,6 +237,9 @@ show([{k:example['metrics'][k] for k in ['n_input','n_filtered','n_direction_rem
+       'common_covered_points','common_max_error','dp_max_error','raw_break_crossings']}])
+ show(example['point_actions'][:12],['original_index','action','reasons'])
+ 
++import matplotlib
++# 文件输出与显式显示不依赖 Notebook 前端的 inline 后端版本。
++matplotlib.use('Agg')
+ import matplotlib.pyplot as plt
+ palette_text=(ROOT/'templates/latex/common/p2_cloud_sorbet_colors.tex').read_text()
+ palette={name:'#'+value for name,value in re.findall(r'\\definecolor\{([^}]+)\}\{HTML\}\{([0-9A-Fa-f]{6})\}',palette_text)}
+@@ -250,7 +253,10 @@ for ax,title,parts,color in zip(axes,['Raw fixed windows','After S-D','After S-D
+     ax.set_title(title);ax.set_xlabel('East / working m');ax.set_ylabel('North / working m')
+     ax.set_aspect('equal',adjustable='datalim');ax.grid(alpha=.2)
+ fig.suptitle('Known-exposed pilot 246; conditional coordinates; no basemap')
+-fig.savefig(WORK/'pilot_steps.svg');plt.show()
++fig.savefig(WORK/'pilot_steps.svg')
++fig.savefig(WORK/'pilot_steps.png',dpi=200)
++plt.close(fig)
++display(Image(filename=str(WORK/'pilot_steps.png'),width=1000))
+ '''),
+         md('''## 4. 评价逻辑
+ 
+diff --git "a/task1/notebooks/final/\344\275\234\344\270\2321\350\275\250\350\277\271\346\225\260\346\215\256\351\242\204\345\244\204\347\220\206_\345\256\214\346\210\220\347\211\210.ipynb" "b/task1/notebooks/final/\344\275\234\344\270\2321\350\275\250\350\277\271\346\225\260\346\215\256\351\242\204\345\244\204\347\220\206_\345\256\214\346\210\220\347\211\210.ipynb"
+index bf73994..b06416a 100644
+--- "a/task1/notebooks/final/\344\275\234\344\270\2321\350\275\250\350\277\271\346\225\260\346\215\256\351\242\204\345\244\204\347\220\206_\345\256\214\346\210\220\347\211\210.ipynb"
++++ "b/task1/notebooks/final/\344\275\234\344\270\2321\350\275\250\350\277\271\346\225\260\346\215\256\351\242\204\345\244\204\347\220\206_\345\256\214\346\210\220\347\211\210.ipynb"
+@@ -299,7 +299,7 @@
+   {
+    "cell_type": "code",
+    "execution_count": null,
+-   "id": "lab1-1b659c94804da468",
++   "id": "lab1-0f8f48b10575acfe",
+    "metadata": {},
+    "outputs": [],
+    "source": [
+@@ -313,6 +313,9 @@
+     "      'common_covered_points','common_max_error','dp_max_error','raw_break_crossings']}])\n",
+     "show(example['point_actions'][:12],['original_index','action','reasons'])\n",
+     "\n",
++    "import matplotlib\n",
++    "# 文件输出与显式显示不依赖 Notebook 前端的 inline 后端版本。\n",
++    "matplotlib.use('Agg')\n",
+     "import matplotlib.pyplot as plt\n",
+     "palette_text=(ROOT/'templates/latex/common/p2_cloud_sorbet_colors.tex').read_text()\n",
+     "palette={name:'#'+value for name,value in re.findall(r'\\\\definecolor\\{([^}]+)\\}\\{HTML\\}\\{([0-9A-Fa-f]{6})\\}',palette_text)}\n",
+@@ -326,7 +329,10 @@
+     "    ax.set_title(title);ax.set_xlabel('East / working m');ax.set_ylabel('North / working m')\n",
+     "    ax.set_aspect('equal',adjustable='datalim');ax.grid(alpha=.2)\n",
+     "fig.suptitle('Known-exposed pilot 246; conditional coordinates; no basemap')\n",
+-    "fig.savefig(WORK/'pilot_steps.svg');plt.show()"
++    "fig.savefig(WORK/'pilot_steps.svg')\n",
++    "fig.savefig(WORK/'pilot_steps.png',dpi=200)\n",
++    "plt.close(fig)\n",
++    "display(Image(filename=str(WORK/'pilot_steps.png'),width=1000))"
+    ]
+   },
+   {

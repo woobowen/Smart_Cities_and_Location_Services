@@ -1,0 +1,104 @@
+Traceback (most recent call last):
+  File "/home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/goal3/execute_notebook.py", line 50, in execute
+    client.execute(cleanup_kc=True)
+  File "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/lib/python3.12/site-packages/jupyter_core/utils/__init__.py", line 165, in wrapped
+    return loop.run_until_complete(inner)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/asyncio/base_events.py", line 687, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/lib/python3.12/site-packages/nbclient/client.py", line 709, in async_execute
+    await self.async_execute_cell(
+  File "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/lib/python3.12/site-packages/nbclient/client.py", line 1062, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/lib/python3.12/site-packages/nbclient/client.py", line 918, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+mode_recompute=run_logged('modes',lambda:recompute_historical('modes',WORK/'modes'))
+assert mode_recompute['candidate_record_recomputations']==6001
+assert len(mode_recompute['selections'])==384
+assert all(row['selection_match'] for row in mode_recompute['selections'])
+recomputed_figure('modes','recomputed_modes')
+show(stage['mode_summary'],['partition','mode','original_records','episodes','record_episode_observations',
+                          'protected_gain_records_episodes','candidate_evaluations','experiment_model_dispatches',
+                          'fallback_records_episodes','elapsed_batch_seconds_sum'])
+assert all(r['experiment_model_dispatches']==0 for r in stage['mode_summary'] if r['mode']=='search-only')
+figure('four_mode_paired_results')
+figure('four_mode_failures_and_cost')
+------------------
+
+
+[31m---------------------------------------------------------------------------[39m
+[31mKeyboardInterrupt[39m                         Traceback (most recent call last)
+[36mCell[39m[36m [39m[32mIn[3][39m[32m, line 1[39m
+[32m----> [39m[32m1[39m mode_recompute=run_logged([33m'modes'[39m,[38;5;28;01mlambda[39;00m:recompute_historical([33m'modes'[39m,WORK/[33m'modes'[39m))
+[32m      2[39m [38;5;28;01massert[39;00m mode_recompute[[33m'candidate_record_recomputations'[39m]==[32m6001[39m
+[32m      3[39m [38;5;28;01massert[39;00m len(mode_recompute[[33m'selections'[39m])==[32m384[39m
+[32m      4[39m [38;5;28;01massert[39;00m all(row[[33m'selection_match'[39m] [38;5;28;01mfor[39;00m row [38;5;28;01min[39;00m mode_recompute[[33m'selections'[39m])
+
+[36mCell[39m[36m [39m[32mIn[1][39m[32m, line 92[39m, in [36mrun_logged[39m[34m(label, fn)[39m
+[32m     89[39m [38;5;28;01mdef[39;00m run_logged(label, fn):
+[32m     90[39m     capture=io.StringIO()
+[32m     91[39m     [38;5;28;01mwith[39;00m contextlib.redirect_stdout(capture):
+[32m---> [39m[32m92[39m         result=fn()
+[32m     93[39m     (WORK/(label+[33m'_progress.txt'[39m)).write_text(capture.getvalue(),encoding=[33m'utf8'[39m)
+[32m     94[39m     [38;5;28;01massert[39;00m result[[33m'status'[39m]==[33m'VERIFIED'[39m [38;5;28;01mand[39;00m result[[33m'new_model_calls'[39m]==[32m0[39m
+[32m     95[39m     print({k:v [38;5;28;01mfor[39;00m k,v [38;5;28;01min[39;00m result.items() [38;5;28;01mif[39;00m k [38;5;28;01mnot[39;00m [38;5;28;01min[39;00m {[33m'checks'[39m,[33m'selections'[39m}})
+
+[36mCell[39m[36m [39m[32mIn[3][39m[32m, line 1[39m, in [36m<lambda>[39m[34m()[39m
+[32m----> [39m[32m1[39m mode_recompute=run_logged([33m'modes'[39m,[38;5;28;01mlambda[39;00m:recompute_historical([33m'modes'[39m,WORK/[33m'modes'[39m))
+
+[36mFile [39m[32m~/lab/Smart_Cities_and_Location_Services/task1/goal3/reproduce.py:108[39m, in [36mrecompute_historical[39m[34m(topic, output)[39m
+[32m    106[39m [38;5;28;01mif[39;00m object_hash(result) != ref[[33m'[39m[33mtarget_hash[39m[33m'[39m]:
+[32m    107[39m     [38;5;28;01mraise[39;00m [38;5;167;01mValueError[39;00m([33m'[39m[33mFULL_HISTORICAL_RAW_RECOMPUTE_MISMATCH:[39m[33m'[39m + rid)
+[32m--> [39m[32m108[39m review = [30;43mreview_record[39;49m[30;43m([39;49m[30;43mresult[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mrecords[39;49m[30;43m[[39;49m[30;43mrid[39;49m[30;43m][39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mexpected_parameters[39;49m[30;43m=[39;49m[30;43mtask[39;49m[30;43m[[39;49m[30;43m'[39;49m[30;43mparameters[39;49m[30;43m'[39;49m[30;43m][39;49m[30;43m,[39;49m
+[32m    109[39m [30;43m    [39;49m[30;43mexpected_order[39;49m[30;43m=[39;49m[30;43mtask[39;49m[30;43m[[39;49m[30;43m'[39;49m[30;43morder[39;49m[30;43m'[39;49m[30;43m][39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mcontract_hash[39;49m[30;43m=[39;49m[30;43mtask[39;49m[30;43m[[39;49m[30;43m'[39;49m[30;43mcontract_hash[39;49m[30;43m'[39;49m[30;43m][39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mtrusted_provenance[39;49m[30;43m=[39;49m[30;43mtask[39;49m[30;43m[[39;49m[30;43m'[39;49m[30;43mprovenance[39;49m[30;43m'[39;49m[30;43m][39;49m[30;43m)[39;49m
+[32m    110[39m [38;5;28;01mif[39;00m review[[33m'[39m[33mstatus[39m[33m'[39m] != [33m'[39m[33mVERIFIED[39m[33m'[39m:
+[32m    111[39m     [38;5;28;01mraise[39;00m [38;5;167;01mValueError[39;00m([33m'[39m[33mHISTORICAL_RECOMPUTE_REVIEW_FAILED:[39m[33m'[39m + rid)
+
+[36mFile [39m[32m~/lab/Smart_Cities_and_Location_Services/task1/workflow/g2_metrics.py:400[39m, in [36mreview_record[39m[34m(candidate, trusted_record, expected_parameters, expected_order, contract_hash, trusted_provenance)[39m
+[32m    396[39m result = {[33m"[39m[33mstatus[39m[33m"[39m: [33m"[39m[33mREJECTED[39m[33m"[39m, [33m"[39m[33merrors[39m[33m"[39m: errors, [33m"[39m[33mchecked_components[39m[33m"[39m: checked,
+[32m    397[39m           [33m"[39m[33munchecked_components[39m[33m"[39m: [[33m"[39m[33msource_datum[39m[33m"[39m, [33m"[39m[33mground_truth_quality[39m[33m"[39m, [33m"[39m[33mmodel_authenticity[39m[33m"[39m],
+[32m    398[39m           [33m"[39m[33mtarget_hash[39m[33m"[39m: [38;5;28;01mNone[39;00m}
+[32m    399[39m [38;5;28;01mtry[39;00m:
+[32m--> [39m[32m400[39m     result[[33m"[39m[33mtarget_hash[39m[33m"[39m] = [30;43mobject_hash[39;49m[30;43m([39;49m[30;43mcandidate[39;49m[30;43m)[39;49m
+[32m    401[39m     [38;5;28;01mif[39;00m [38;5;129;01mnot[39;00m [38;5;28misinstance[39m(candidate, [38;5;28mdict[39m):
+[32m    402[39m         [38;5;28;01mraise[39;00m [38;5;167;01mValueError[39;00m([33m"[39m[33mCANDIDATE_RECORD_REQUIRED[39m[33m"[39m)
+
+[36mFile [39m[32m~/lab/Smart_Cities_and_Location_Services/task1/workflow/io.py:33[39m, in [36mobject_hash[39m[34m(value)[39m
+[32m     32[39m [38;5;28;01mdef[39;00m [34mobject_hash[39m(value):
+[32m---> [39m[32m33[39m     [38;5;28;01mreturn[39;00m hashlib.sha256([30;43mcanonical[39;49m[30;43m([39;49m[30;43mvalue[39;49m[30;43m)[39;49m.encode()).hexdigest()
+
+[36mFile [39m[32m~/lab/Smart_Cities_and_Location_Services/task1/workflow/io.py:29[39m, in [36mcanonical[39m[34m(value)[39m
+[32m     28[39m [38;5;28;01mdef[39;00m [34mcanonical[39m(value):
+[32m---> [39m[32m29[39m     [38;5;28;01mreturn[39;00m [30;43mjson[39;49m[30;43m.[39;49m[30;43mdumps[39;49m[30;43m([39;49m[30;43mvalue[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mensure_ascii[39;49m[30;43m=[39;49m[30;43;01mFalse[39;49;00m[30;43m,[39;49m[30;43m [39;49m[30;43msort_keys[39;49m[30;43m=[39;49m[30;43;01mTrue[39;49;00m[30;43m,[39;49m[30;43m [39;49m[30;43mallow_nan[39;49m[30;43m=[39;49m[30;43;01mFalse[39;49;00m[30;43m,[39;49m[30;43m [39;49m[30;43mseparators[39;49m[30;43m=[39;49m[30;43m([39;49m[30;43m'[39;49m[30;43m,[39;49m[30;43m'[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43m'[39;49m[30;43m:[39;49m[30;43m'[39;49m[30;43m)[39;49m[30;43m)[39;49m
+
+[36mFile [39m[32m/usr/lib/python3.12/json/__init__.py:238[39m, in [36mdumps[39m[34m(obj, skipkeys, ensure_ascii, check_circular, allow_nan, cls, indent, separators, default, sort_keys, **kw)[39m
+[32m    232[39m [38;5;28;01mif[39;00m [38;5;28mcls[39m [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m:
+[32m    233[39m     [38;5;28mcls[39m = JSONEncoder
+[32m    234[39m [38;5;28;01mreturn[39;00m [30;43mcls[39;49m[30;43m([39;49m
+[32m    235[39m [30;43m    [39;49m[30;43mskipkeys[39;49m[30;43m=[39;49m[30;43mskipkeys[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mensure_ascii[39;49m[30;43m=[39;49m[30;43mensure_ascii[39;49m[30;43m,[39;49m
+[32m    236[39m [30;43m    [39;49m[30;43mcheck_circular[39;49m[30;43m=[39;49m[30;43mcheck_circular[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mallow_nan[39;49m[30;43m=[39;49m[30;43mallow_nan[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mindent[39;49m[30;43m=[39;49m[30;43mindent[39;49m[30;43m,[39;49m
+[32m    237[39m [30;43m    [39;49m[30;43mseparators[39;49m[30;43m=[39;49m[30;43mseparators[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mdefault[39;49m[30;43m=[39;49m[30;43mdefault[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43msort_keys[39;49m[30;43m=[39;49m[30;43msort_keys[39;49m[30;43m,[39;49m
+[32m--> [39m[32m238[39m [30;43m    [39;49m[30;43m*[39;49m[30;43m*[39;49m[30;43mkw[39;49m[30;43m)[39;49m[30;43m.[39;49m[30;43mencode[39;49m[30;43m([39;49m[30;43mobj[39;49m[30;43m)[39;49m
+
+[36mFile [39m[32m/usr/lib/python3.12/json/encoder.py:200[39m, in [36mJSONEncoder.encode[39m[34m(self, o)[39m
+[32m    196[39m         [38;5;28;01mreturn[39;00m encode_basestring(o)
+[32m    197[39m [38;5;66;03m# This doesn't pass the iterator directly to ''.join() because the[39;00m
+[32m    198[39m [38;5;66;03m# exceptions aren't as detailed.  The list call should be roughly[39;00m
+[32m    199[39m [38;5;66;03m# equivalent to the PySequence_Fast that ''.join() would do.[39;00m
+[32m--> [39m[32m200[39m chunks = [30;43mself[39;49m[30;43m.[39;49m[30;43miterencode[39;49m[30;43m([39;49m[30;43mo[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43m_one_shot[39;49m[30;43m=[39;49m[30;43;01mTrue[39;49;00m[30;43m)[39;49m
+[32m    201[39m [38;5;28;01mif[39;00m [38;5;129;01mnot[39;00m [38;5;28misinstance[39m(chunks, ([38;5;28mlist[39m, [38;5;28mtuple[39m)):
+[32m    202[39m     chunks = [38;5;28mlist[39m(chunks)
+
+[36mFile [39m[32m/usr/lib/python3.12/json/encoder.py:258[39m, in [36mJSONEncoder.iterencode[39m[34m(self, o, _one_shot)[39m
+[32m    253[39m [38;5;28;01melse[39;00m:
+[32m    254[39m     _iterencode = _make_iterencode(
+[32m    255[39m         markers, [38;5;28mself[39m.default, _encoder, [38;5;28mself[39m.indent, floatstr,
+[32m    256[39m         [38;5;28mself[39m.key_separator, [38;5;28mself[39m.item_separator, [38;5;28mself[39m.sort_keys,
+[32m    257[39m         [38;5;28mself[39m.skipkeys, _one_shot)
+[32m--> [39m[32m258[39m [38;5;28;01mreturn[39;00m [30;43m_iterencode[39;49m[30;43m([39;49m[30;43mo[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43m0[39;49m[30;43m)[39;49m
+
+[31mKeyboardInterrupt[39m: 
+

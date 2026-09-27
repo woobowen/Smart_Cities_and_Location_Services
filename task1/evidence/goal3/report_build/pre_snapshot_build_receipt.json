@@ -1,0 +1,123 @@
+{
+  "started_at": "2026-09-27T06:52:54.901499+00:00",
+  "classification": "REPORT_BUILD_NOT_METHOD_EXECUTION",
+  "new_model_calls": 0,
+  "new_method_runs": 0,
+  "reports": [
+    {
+      "report": "experiment1",
+      "pdf": "task1/reports/experiment1/experiment1.pdf",
+      "sha256": "46e1b101ee3cfebc0beb6ff8a465c6801df74b777bf1631cf3cf9ba42dd29f54",
+      "pages": 21,
+      "command": [
+        "latexmk",
+        "-xelatex",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-halt-on-error",
+        "-outdir=build",
+        "experiment1.tex"
+      ],
+      "compile_exit_code": 0,
+      "unresolved_diagnostics": [],
+      "source_sha256": {
+        "task1/reports/experiment1/conclusion_generated.tex": "beff9af77de08ffa0bb035b9521517d6fadf75e50b9209a3601e06fcdfbaed6e",
+        "task1/reports/experiment1/confirmation_generated.tex": "aa897d1cd9fbb5830bebef10b56b1ffbdb6221f0ff2bc156761ac85643cd5b09",
+        "task1/reports/experiment1/development_generated.tex": "14f4fd7b2023b34b8148f9b6c35af94e934c80c1d2f8c3fdb19ef3b6a8cd176d",
+        "task1/reports/experiment1/experiment1.tex": "0791e8c9e45ef375ac45b4239ebd6660ba41908bbf9ece1ee3322c41f8fa75de",
+        "task1/reports/experiment1/generated.tex": "28d76fb6e4de5746ff45157e64e50b6662301befdb7f152396ed9eca8bedefab",
+        "task1/reports/experiment1/goal3_figure_slots.tex": "ad1d42d99edb6e626c27a3fc12347173d0600e0224fea9d541b2dd30c3fe18e1",
+        "task1/reports/experiment1/history_ai_table.tex": "d55c09dd4374253985bf122760290c58ae5c5e48e0b74adb5abb9ee8f94151c9",
+        "task1/reports/experiment1/history_candidate_table.tex": "e27231cd51af16ca7cb24b97f8e964b1905fd1939bb4cc50395fced456e4fa07",
+        "task1/reports/experiment1/history_modes_table.tex": "c5da7d4274b8e6716cd26fb578c432da378c804b65c41c0c84dfe431f07e3779",
+        "task1/reports/experiment1/history_order_table.tex": "ca20f9b28c7ada468a95d9da29a41e401712ca6ef2e8929efdb7b8e8959881aa",
+        "task1/reports/experiment1/production_generated.tex": "10ada206116f6e53aaf34afff1c2b7b68d42e991f1a6bc9e5bf3a3942131f5c9",
+        "task1/reports/experiment1/references.bib": "90d5740b67844d74a0f0304d15fa723a7fb97ca1d2ca37cb94d5ea1145d304b1",
+        "task1/reports/experiment1/selection_generated.tex": "161829782a6e1a1fdbbf5af9dab880484754fd5d839c477ffd31845b6c7c56e4"
+      },
+      "render": {
+        "dpi": 200,
+        "pages": 21,
+        "page_sha256": {
+          "task1/reports/experiment1/build/render200/page-01.png": "5e2a89417fa40d8d4a51265c0c58337e6a738d2a46d8a747b65e035f7c924460",
+          "task1/reports/experiment1/build/render200/page-02.png": "7a798ee9da965cec013dfef5c1b73a849fde4a1fa05e854579922098bb4f1a7e",
+          "task1/reports/experiment1/build/render200/page-03.png": "78363a2f7ecff21db9988530754adff92049d39d05ef2c83d3ab2e13ebc4f6ac",
+          "task1/reports/experiment1/build/render200/page-04.png": "ad75ce8cba7d59af0868c854960d61b73ccdfe9fda654006dc6caf1b9e2e1548",
+          "task1/reports/experiment1/build/render200/page-05.png": "a5c276b4ef88c5b6e9996cbadfef1e8f33880065a67cfd55f739f461b04eefda",
+          "task1/reports/experiment1/build/render200/page-06.png": "d8854823bd7000dd4a9268f2021558a66c73a68e6a10a9427bb7b146c75f54ee",
+          "task1/reports/experiment1/build/render200/page-07.png": "27f0daa5d9374b890f78dde458f75d7158e2b160de0ec3874fddd50b38e12ceb",
+          "task1/reports/experiment1/build/render200/page-08.png": "dc27bc01ef88b0534900bc3ea4d25f202a75739e667e25e70b0995c5f4c46733",
+          "task1/reports/experiment1/build/render200/page-09.png": "556bb1dfd701b2b7c7327902b7e565d40cecb73f724d07af967c6042ad63bc8e",
+          "task1/reports/experiment1/build/render200/page-10.png": "3f80dbfff102f86f4216295d276cbbea03ee131a863f85639d5b9943d867cd43",
+          "task1/reports/experiment1/build/render200/page-11.png": "3efffae3f99e4821093bc550a0418d4ec50ad57756e2ec87d6a6f867a302b0a8",
+          "task1/reports/experiment1/build/render200/page-12.png": "27b5c697b4a214adc2c236f7e47e85498b164794e996fe2e3407e8d5005986a3",
+          "task1/reports/experiment1/build/render200/page-13.png": "f26660029e84a137cb3c9382c3c77086c28bd3ac095f7669d10ba4e947aac03a",
+          "task1/reports/experiment1/build/render200/page-14.png": "68bd49898ba060c9d45cb9627db342c6d7610a75b6ea4e0be74c1e4eba1ca47b",
+          "task1/reports/experiment1/build/render200/page-15.png": "d900dddabc0b8451ed2381962939141a69010d4b36733267d1bda0ce16a3b85f",
+          "task1/reports/experiment1/build/render200/page-16.png": "0a1181a189b8976d914678e3dc108558599ed77d6768ec2bfd3a650014e72682",
+          "task1/reports/experiment1/build/render200/page-17.png": "f496c8ae53d01fcb6c3f822aa12cc33731f5945fca2192c7607dcb72ac8a838a",
+          "task1/reports/experiment1/build/render200/page-18.png": "9e1bcd9f2fa31e659141e68017cc6089154904793aebd29b4ec204801939c737",
+          "task1/reports/experiment1/build/render200/page-19.png": "ce80a88d0985e97ade6ff7160b48fdaaf27c1d0a887296710f5a90c7f570fb50",
+          "task1/reports/experiment1/build/render200/page-20.png": "6f321206c784666c02ed0c787993bd248116fdc8a15d1bfa504fb7649e57ddcf",
+          "task1/reports/experiment1/build/render200/page-21.png": "4ae134c36ed0216f19fd4955bd4d61e1da48a24ee85c7528890a682e2e9f3410"
+        }
+      }
+    },
+    {
+      "report": "process1",
+      "pdf": "task1/reports/process1/process1.pdf",
+      "sha256": "3359d0d3d3ebd352bd17afcfd1b210d2925291ddf62b9992f0e5801a7d810c74",
+      "pages": 12,
+      "command": [
+        "latexmk",
+        "-xelatex",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-halt-on-error",
+        "-outdir=build",
+        "process1.tex"
+      ],
+      "compile_exit_code": 0,
+      "unresolved_diagnostics": [],
+      "source_sha256": {
+        "task1/reports/process1/components/interaction_evidence.tex": "41828c96c51c21cf3cb9489cd72664e049be1d2d9d28144c265ba9caf0222dae",
+        "task1/reports/process1/confirmation_generated.tex": "ff314e9597e902b10c243de28997028b051da38d4c34841478601de94212ab09",
+        "task1/reports/process1/development_generated.tex": "104b92263d778204a4b09c3876d79e5b3b6b48d1dc7c3b87cbe2c43e2b248213",
+        "task1/reports/process1/generated.tex": "e272064d89c9dbf215cb51e39634f52c1075039d9f7118408a09f3a29e7166c8",
+        "task1/reports/process1/goal3_workflow_slot.tex": "f146f96a98bdad1ebd4f0a5d6c19e0f1ec922b55f3f510067df7a298f0fb1618",
+        "task1/reports/process1/governance_generated.tex": "3bf53e99fa1b3deeba711d8ffbd4fbcc9d2ef4d815aa922989e3acf612113c71",
+        "task1/reports/process1/process1.tex": "e0b23490dd190a4898a3950ea7a46d5ca871c6dc3e6095ead851cc038abcc835",
+        "task1/reports/process1/production_generated.tex": "e782399acd476fdef12a207d2b385ca09d823e443983e0ee47c61b653768045c",
+        "task1/reports/process1/selection_generated.tex": "18a35d5e23a456f690ade47acdd23300ba654b7b6b67aea3154b19e97aae4353",
+        "task1/reports/process1/workflow_figure_generated.tex": "0f2a5a4f86bd42ccc67309a03d0e43c11a1fb5402e635acdb5894ba8317d70ee",
+        "task1/reports/process1/workflow_generated.tex": "4985d6d4c3829a27900b79121b8a4f99e1b36b522978813618e5ff8df2e78512"
+      },
+      "render": {
+        "dpi": 200,
+        "pages": 12,
+        "page_sha256": {
+          "task1/reports/process1/build/render200/page-01.png": "77e5998faf440c55c42af6af8705861909c2ebf9f06238141a38b7743c36fcb0",
+          "task1/reports/process1/build/render200/page-02.png": "b468ccec3e84f3fcc4a396bb94bc3ec095ee859512700c2658bf870b59c53104",
+          "task1/reports/process1/build/render200/page-03.png": "60dc96a24b57a33f5ac54238a738e18d1209e2ad5c735a12e776dbec6aa639a4",
+          "task1/reports/process1/build/render200/page-04.png": "df547d66c08ec3c0aa854e1ce2289d5a9b3fbce1affd693e8027b12675a5654f",
+          "task1/reports/process1/build/render200/page-05.png": "e124b2329c6825799db9e3e7746f038d96150b9210fff40fc700a70a06eacbd6",
+          "task1/reports/process1/build/render200/page-06.png": "5e98525348a67222c1ec1787e7284232df09f8a3cd158b38888364d84c3adcbb",
+          "task1/reports/process1/build/render200/page-07.png": "50ca3e6775ca7fd531efae23f962c315cb42a6312f4a6b43e7d5c9b6896aab4e",
+          "task1/reports/process1/build/render200/page-08.png": "9cae6f6d93cb627d09c70f46775e2a035c4f899921deeeb745f62120bc3ac9c9",
+          "task1/reports/process1/build/render200/page-09.png": "bcc44c5e5ea4fc1921c045ce54a5a259e4b991d972387da09a8cc985d5a781a3",
+          "task1/reports/process1/build/render200/page-10.png": "1aa5ddccbe50fb5bcf71601141eeda8d782cdf50c1002753009fa0f1ad1a51e9",
+          "task1/reports/process1/build/render200/page-11.png": "0f4c6705a54a8a171cc5136ca42f2a2f56ef078e15b2cb97b6b02438164bd28c",
+          "task1/reports/process1/build/render200/page-12.png": "5659abb23f9dce0be9f8c4827b9f1819c4211adf8e7477e0bb243a3919bd9a3b"
+        }
+      }
+    }
+  ],
+  "installed_dependencies": [],
+  "visual_inspection": "NOT_PERFORMED_BY_THIS_SCRIPT",
+  "shared_source_sha256": {
+    "task1/reports/metadata.tex": "9cacdc2bafd818ddefefac897be15b3853df2c22c5a893651f1e394fff94c52c",
+    "task1/reports/history_values.tex": "18b0cbfa3403213946465d4027b9a18a6d32d02a915b6dd04ee85c0b2ad03263",
+    "templates/latex/common/p2_cloud_sorbet_colors.tex": "2aa820c3f68ba6c14cf1b52082b12336071d77bb5466db2b05b2fab6890aa243"
+  },
+  "finished_at": "2026-09-27T06:53:20.521961+00:00"
+}

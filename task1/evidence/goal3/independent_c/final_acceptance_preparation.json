@@ -1,0 +1,551 @@
+{
+  "role_context": "/root/c_protocol",
+  "status": "PREPARATION_ONLY_NOT_ACCEPTANCE",
+  "at": "2026-09-27T06:57:52.666483+00:00",
+  "observed_journal_snapshot_sha256": "2ff54f5232777c18230b3a7a7406400ba7d1dca911fd751df8d617a807810ce6",
+  "observed_last_event_hash": "fcd7008fd07bfc88d9e28ccb35c09cd5da71d5fc0dc836b0a1456160852f3883",
+  "journal_hash_chain_events_checked": 96,
+  "current_completed_task_bindings_checked": {
+    "handoff": {
+      "status": "VERIFIED",
+      "targets": 2,
+      "sources": 3,
+      "receipt": {
+        "path": "task1/evidence/goal3/independent_c/contract_controller_receipt.json",
+        "sha256": "e587152a1e4405da29a8aec22d1751d47afb1c911ebc43ba08e48cf1391fc1b5"
+      }
+    },
+    "contract_split": {
+      "status": "VERIFIED",
+      "targets": 3,
+      "sources": 8,
+      "receipt": {
+        "path": "task1/evidence/goal3/independent_c/contract_controller_receipt.json",
+        "sha256": "e587152a1e4405da29a8aec22d1751d47afb1c911ebc43ba08e48cf1391fc1b5"
+      }
+    },
+    "implementation": {
+      "status": "VERIFIED",
+      "targets": 8,
+      "sources": 32,
+      "receipt": {
+        "path": "task1/evidence/goal3/independent_c/core_after_C07_receipt.json",
+        "sha256": "bcbcb225b74698ad03d7e873191a8e55cf479060bc793aa69cba460bd90380fc"
+      }
+    },
+    "development": {
+      "status": "VERIFIED",
+      "targets": 18,
+      "sources": 32,
+      "receipt": {
+        "path": "task1/evidence/goal3/independent_c/development_closure_receipt.json",
+        "sha256": "cf771eb9ac4deea584642b15fc0db7307bc27f5e5c117d35f4c6904c3937510a"
+      }
+    },
+    "selection_freeze": {
+      "status": "VERIFIED",
+      "targets": 1,
+      "sources": 33,
+      "receipt": {
+        "path": "task1/evidence/goal3/independent_c/selection_freeze_receipt.json",
+        "sha256": "99be54be08522e8b53ae82644da06ff2adab1319c0baeff0747107b44313ba19"
+      }
+    },
+    "selection": {
+      "status": "VERIFIED",
+      "targets": 6,
+      "sources": 33,
+      "receipt": {
+        "path": "task1/evidence/goal3/independent_c/selection_closure_receipt.json",
+        "sha256": "d780dcc0b762cd607040f9e926568a1838d1c93221fce38b130e2af2a2e2c274"
+      }
+    },
+    "final_freeze": {
+      "status": "VERIFIED",
+      "targets": 1,
+      "sources": 33,
+      "receipt": {
+        "path": "task1/evidence/goal3/independent_c/final_freeze_receipt.json",
+        "sha256": "4bee1914a4fcac20a91c26ee2ef82c931a35dfa7909985abe10c9fe3cc0438d3"
+      }
+    },
+    "confirmation": {
+      "status": "VERIFIED",
+      "targets": 6,
+      "sources": 33,
+      "receipt": {
+        "path": "task1/evidence/goal3/independent_c/confirmation_closure_receipt.json",
+        "sha256": "97c47c834cb0363ec82b7f166ae36daebf8bba6ce6d39b070cde9d29a82786bb"
+      }
+    },
+    "production": {
+      "status": "VERIFIED",
+      "targets": 313,
+      "sources": 37,
+      "receipt": {
+        "path": "task1/evidence/goal3/independent_c/production_closure_receipt.json",
+        "sha256": "2ef55d75e33d0f2927c872d10ad2957f9a9e69ec087369f1a3e19cfc23a2a488"
+      }
+    }
+  },
+  "repair_history_checked": {
+    "G3-C01": {
+      "status": "VERIFIED",
+      "attempts": 1,
+      "repairer": "B:root",
+      "verifier": "/root/c_protocol",
+      "actual_event_kinds": [
+        "ISSUE_OPENED_PARENT_PAUSED",
+        "ACTUAL_B_REPAIR_SUBMITTED",
+        "INDEPENDENT_REPAIR_CLOSED_PARENT_STILL_BLOCKED"
+      ],
+      "historical_patch_note": "Older repaired file hashes may be superseded by separately reviewed later epochs; not claimed as current bytes."
+    },
+    "G3-C02": {
+      "status": "VERIFIED",
+      "attempts": 1,
+      "repairer": "B:root",
+      "verifier": "/root/c_protocol",
+      "actual_event_kinds": [
+        "ISSUE_OPENED_PARENT_PAUSED",
+        "ACTUAL_B_REPAIR_SUBMITTED",
+        "INDEPENDENT_REPAIR_CLOSED_PARENT_STILL_BLOCKED"
+      ],
+      "historical_patch_note": "Older repaired file hashes may be superseded by separately reviewed later epochs; not claimed as current bytes."
+    },
+    "G3-C03": {
+      "status": "VERIFIED",
+      "attempts": 1,
+      "repairer": "B:root",
+      "verifier": "/root/c_protocol",
+      "actual_event_kinds": [
+        "ISSUE_OPENED_PARENT_PAUSED",
+        "ACTUAL_B_REPAIR_SUBMITTED",
+        "INDEPENDENT_REPAIR_CLOSED_PARENT_STILL_BLOCKED"
+      ],
+      "historical_patch_note": "Older repaired file hashes may be superseded by separately reviewed later epochs; not claimed as current bytes."
+    },
+    "G3-C04": {
+      "status": "VERIFIED",
+      "attempts": 1,
+      "repairer": "B:root",
+      "verifier": "/root/c_protocol",
+      "actual_event_kinds": [
+        "ISSUE_OPENED_PARENT_PAUSED",
+        "ACTUAL_B_REPAIR_SUBMITTED",
+        "INDEPENDENT_REPAIR_CLOSED_PARENT_STILL_BLOCKED"
+      ],
+      "historical_patch_note": "Older repaired file hashes may be superseded by separately reviewed later epochs; not claimed as current bytes."
+    },
+    "G3-C05": {
+      "status": "VERIFIED",
+      "attempts": 1,
+      "repairer": "B:root",
+      "verifier": "/root/c_protocol",
+      "actual_event_kinds": [
+        "ISSUE_OPENED_PARENT_PAUSED",
+        "ACTUAL_B_REPAIR_SUBMITTED",
+        "INDEPENDENT_REPAIR_CLOSED_PARENT_RESUMED"
+      ],
+      "historical_patch_note": "Older repaired file hashes may be superseded by separately reviewed later epochs; not claimed as current bytes."
+    },
+    "G3-C06": {
+      "status": "VERIFIED",
+      "attempts": 1,
+      "repairer": "B:root",
+      "verifier": "/root/c_protocol",
+      "actual_event_kinds": [
+        "ISSUE_OPENED_PARENT_PAUSED",
+        "ACTUAL_B_REPAIR_SUBMITTED",
+        "INDEPENDENT_REPAIR_CLOSED_PARENT_RESUMED",
+        "SOURCE_EPOCH_FROZEN_AFTER_C_REPAIR"
+      ],
+      "historical_patch_note": "Older repaired file hashes may be superseded by separately reviewed later epochs; not claimed as current bytes."
+    },
+    "G3-C07": {
+      "status": "VERIFIED",
+      "attempts": 1,
+      "repairer": "B:root",
+      "verifier": "/root/c_protocol",
+      "actual_event_kinds": [
+        "ISSUE_OPENED_PARENT_PAUSED",
+        "ACTUAL_B_REPAIR_SUBMITTED",
+        "INDEPENDENT_REPAIR_CLOSED_PARENT_RESUMED",
+        "SOURCE_EPOCH_FROZEN_AFTER_C_REPAIR"
+      ],
+      "historical_patch_note": "Older repaired file hashes may be superseded by separately reviewed later epochs; not claimed as current bytes."
+    },
+    "G3-DOC-01": {
+      "status": "VERIFIED",
+      "attempts": 1,
+      "repairer": "/root/b_delivery_inventory",
+      "verifier": "/root/c_documents",
+      "actual_event_kinds": [
+        "ISSUE_OPENED_PARENT_PAUSED",
+        "ACTUAL_B_REPAIR_SUBMITTED",
+        "INDEPENDENT_REPAIR_CLOSED_PARENT_RESUMED"
+      ],
+      "historical_patch_note": "Older repaired file hashes may be superseded by separately reviewed later epochs; not claimed as current bytes."
+    },
+    "G3-DOC-02": {
+      "status": "VERIFIED",
+      "attempts": 1,
+      "repairer": "/root/b_delivery_inventory",
+      "verifier": "/root/c_documents",
+      "actual_event_kinds": [
+        "ISSUE_OPENED_PARENT_PAUSED",
+        "ACTUAL_B_REPAIR_SUBMITTED",
+        "INDEPENDENT_REPAIR_CLOSED_PARENT_RESUMED"
+      ],
+      "historical_patch_note": "Older repaired file hashes may be superseded by separately reviewed later epochs; not claimed as current bytes."
+    },
+    "G3-C08": {
+      "status": "VERIFIED",
+      "attempts": 1,
+      "repairer": "B:root",
+      "verifier": "/root/c_protocol",
+      "actual_event_kinds": [
+        "ISSUE_OPENED_PARENT_PAUSED",
+        "ACTUAL_B_REPAIR_SUBMITTED",
+        "INDEPENDENT_REPAIR_CLOSED_PARENT_RESUMED"
+      ],
+      "historical_patch_note": "Older repaired file hashes may be superseded by separately reviewed later epochs; not claimed as current bytes."
+    },
+    "G3-DEL-01": {
+      "status": "VERIFIED",
+      "attempts": 1,
+      "repairer": "B:root",
+      "verifier": "/root/c_documents",
+      "actual_event_kinds": [
+        "ISSUE_OPENED_PARENT_PAUSED",
+        "ACTUAL_B_REPAIR_SUBMITTED",
+        "INDEPENDENT_REPAIR_CLOSED_PARENT_RESUMED"
+      ],
+      "historical_patch_note": "Older repaired file hashes may be superseded by separately reviewed later epochs; not claimed as current bytes."
+    },
+    "G3-NB-01": {
+      "status": "VERIFIED",
+      "attempts": 2,
+      "repairer": "B:root",
+      "verifier": "/root/c_protocol",
+      "actual_event_kinds": [
+        "ISSUE_OPENED_PARENT_PAUSED",
+        "ACTUAL_B_REPAIR_SUBMITTED",
+        "INDEPENDENT_REPAIR_ATTEMPT_FAILED",
+        "ACTUAL_B_REPAIR_SUBMITTED",
+        "REPAIR_SUPPLEMENTARY_EVIDENCE",
+        "INDEPENDENT_REPAIR_CLOSED_PARENT_RESUMED"
+      ],
+      "historical_patch_note": "Older repaired file hashes may be superseded by separately reviewed later epochs; not claimed as current bytes."
+    },
+    "G3-FIG-01": {
+      "status": "VERIFIED",
+      "attempts": 1,
+      "repairer": "B:root",
+      "verifier": "/root/c_documents",
+      "actual_event_kinds": [
+        "ISSUE_OPENED_PARENT_PAUSED",
+        "ACTUAL_B_REPAIR_SUBMITTED",
+        "INDEPENDENT_REPAIR_CLOSED_PARENT_RESUMED"
+      ],
+      "historical_patch_note": "Older repaired file hashes may be superseded by separately reviewed later epochs; not claimed as current bytes."
+    }
+  },
+  "working_tests": {
+    "receipt_sha256": "ddd6baacf16d790cb3864283e4b7c1c6d615f42dd3c08b7f10daf1940d012baf",
+    "junit_sha256": "b8255e5e68a150e3161db79e7f55132381947a4130e0e7ed6ad51898f95a3562",
+    "passing_JUnit_testcase_nodes": 465,
+    "reported_suite_total_including_subtests": 475,
+    "recorded_pytest_case_count": 465,
+    "recorded_subtests": 10,
+    "topic_coverage": {
+      "raw_identity_values_full_scope_and_terminal_ledger": {
+        "tested_function_patterns": [
+          "test_actual_clean_and_final_values_bound_to_external_parent",
+          "test_removing_all_records_and_ledger_cannot_shrink_trusted_task",
+          "test_missing_duplicate_and_foreign_record_rejected",
+          "test_actual_terminal_ledger_checked_completely",
+          "test_complete_scope_and_batch_summary_tampering_rejected"
+        ],
+        "matching_passing_JUnit_entries": 19
+      },
+      "trusted_parent_parameters_geometric_reference_and_valid_empty": {
+        "tested_function_patterns": [
+          "test_missing_trusted_arguments_fail_closed",
+          "test_summaries_parameters_units_order_and_parent_versions_rejected",
+          "test_float_allowance_cannot_silently_loosen_a_registered_parameter",
+          "test_legitimate_empty_and_all_filtered_keep_quality_limit",
+          "test_legal_four_point_control_and_detached_trust_handle"
+        ],
+        "matching_passing_JUnit_entries": 24
+      },
+      "actual_review_target_scope_versions_and_source_invalidation": {
+        "tested_function_patterns": [
+          "test_single_receipt_defect_rejected",
+          "test_reviewed_artifact_mutation_invalidates_descendants",
+          "test_reviewed_receipt_mutation_invalidates_parent",
+          "test_changed_shard_cannot_reuse_old_manifest_receipt",
+          "test_receipt_from_different_source_epoch_rejected",
+          "test_processing_epoch_must_match_current_sources"
+        ],
+        "matching_passing_JUnit_entries": 10
+      },
+      "final_partition_isolation_and_frozen_strategy_gate": {
+        "tested_function_patterns": [
+          "test_development_gate_rejects_final_identity",
+          "test_final_gate_requires_real_freeze",
+          "test_final_gate_rejects_strategy_added_after_freeze"
+        ],
+        "matching_passing_JUnit_entries": 3
+      },
+      "mode_permissions_episode_reset_memory_write_and_illegal_proposal": {
+        "tested_function_patterns": [
+          "test_search_only_never_instantiates_a_model_or_reads_memory",
+          "test_search_feedback_is_sequential_own_record_only_and_ephemeral",
+          "test_memory_disk_write_detected_and_write_api_denied",
+          "test_memory_ineligible_cases_are_not_delivered",
+          "test_llm_only_preserves_illegal_original_without_clamping_or_revision"
+        ],
+        "matching_passing_JUnit_entries": 12
+      },
+      "quality_claim_counterexamples_and_point_identity_comparison": {
+        "tested_function_patterns": [
+          "test_changed_upstream_cannot_claim_dp_error_as_common_quality_gain",
+          "test_empty_output_cannot_win_by_zero_error_or_compression",
+          "test_equal_coverage_count_with_changed_point_identities_is_not_protected",
+          "test_all_counterexample_families_have_actual_known_answer_results"
+        ],
+        "matching_passing_JUnit_entries": 4
+      },
+      "repair_actual_consumption_parent_resume_and_recovery": {
+        "tested_function_patterns": [
+          "test_actual_repair_consumption_independent_rejection_then_parent_resume",
+          "test_genuine_issue_closure_resumes_parent_without_verifying_it",
+          "test_one_issue_close_does_not_resume_parent_with_another_open_issue",
+          "test_uncertain_operations_never_replayed_on_resume",
+          "test_old_epoch_parent_rejected_then_new_run_resumes"
+        ],
+        "matching_passing_JUnit_entries": 5
+      },
+      "full_shards_portable_scope_and_zip_engineering": {
+        "tested_function_patterns": [
+          "test_full_scope_shard_and_summary_agree_on_synthetic_data",
+          "test_parent_cache_rejects_extra_record_even_if_manifest_scope_claim_unchanged",
+          "test_frozen_portable_full_processing_without_git",
+          "test_changed_frozen_source_bytes_rejected",
+          "test_real_zip_hash_tamper_and_overwrite_checks",
+          "test_symlink_member_rejected"
+        ],
+        "matching_passing_JUnit_entries": 6
+      }
+    },
+    "current_source_changes_since_test": {
+      "task1/goal3/offline_plots.py": {
+        "tested_hash": "5a6b1d3841edfa18951643ceea1256d54eac1e707ccec618a47a09c3bff9f437",
+        "current_hash": "1af4ba7f6929b6200c2fba30a7a1827801271f65020b00c9b939974e1d413054"
+      }
+    },
+    "test_counts_are_not_method_experiment_counts": true
+  },
+  "additional_explicit_information_boundary_challenges": {
+    "passing_cases": 4,
+    "test_source": {
+      "path": "task1/evidence/goal3/independent_c/test_final_information_boundaries.py",
+      "sha256": "e4b988d7126a85ea6f70997ed79c8b620d435c4996e6896ead8100deb8cd19bf"
+    },
+    "junit_sha256": "9fa52ab44fc8f83771ef1e2cccb6f165c30359da47d7ecf1991b5badbb29dd24",
+    "scope": "synthetic only, no true selection/final examples or model calls"
+  },
+  "run_counters": [
+    {
+      "run_id": "g3-development-interactions-01",
+      "classification": "CURRENT_VALID_RESEARCH_OR_PRODUCTION",
+      "processing_evaluations": 600,
+      "review_record_calls": 2280,
+      "cached_trace_rechecks": 1680,
+      "reused_identical_configuration_observations": 360,
+      "new_record_model_calls": 0,
+      "elapsed_seconds": 130.6043224959999,
+      "manifest_sha256": "1dd7d32382ed79cd1a35fcb292af24e0c032383fb5f7d22c0dc77b80a229fd1b"
+    },
+    {
+      "run_id": "g3-development-parents-01",
+      "classification": "HISTORICAL_SUPERSEDED_ENGINEERING_EPOCH",
+      "processing_evaluations": 1680,
+      "review_record_calls": 1680,
+      "cached_trace_rechecks": 0,
+      "reused_identical_configuration_observations": 0,
+      "new_record_model_calls": 0,
+      "elapsed_seconds": 178.038910171,
+      "manifest_sha256": "c75300738d54c88c951735e48fd8521e7b352cbfcbdf9e6318d4808223d084a8"
+    },
+    {
+      "run_id": "g3-development-parents-02",
+      "classification": "HISTORICAL_SUPERSEDED_ENGINEERING_EPOCH",
+      "processing_evaluations": 1680,
+      "review_record_calls": 1680,
+      "cached_trace_rechecks": 0,
+      "reused_identical_configuration_observations": 0,
+      "new_record_model_calls": 0,
+      "elapsed_seconds": 149.65912540299996,
+      "manifest_sha256": "947e911552e83e16409ef87b480f33989ae703a7084b2d348d2cdf2b4b7113fe"
+    },
+    {
+      "run_id": "g3-development-parents-03",
+      "classification": "CURRENT_VALID_RESEARCH_OR_PRODUCTION",
+      "processing_evaluations": 1680,
+      "review_record_calls": 1680,
+      "cached_trace_rechecks": 0,
+      "reused_identical_configuration_observations": 0,
+      "new_record_model_calls": 0,
+      "elapsed_seconds": 122.99801695999986,
+      "manifest_sha256": "0d8a27a4238a2e40bcf095377fd5c16db5cc90fdbe08bbfa5b0ab85fdcd06ef8"
+    },
+    {
+      "run_id": "g3-development-routing-01",
+      "classification": "HISTORICAL_SUPERSEDED_ENGINEERING_EPOCH",
+      "processing_evaluations": 0,
+      "review_record_calls": 600,
+      "cached_trace_rechecks": 600,
+      "reused_identical_configuration_observations": 120,
+      "new_record_model_calls": 0,
+      "elapsed_seconds": 39.11562883400029,
+      "manifest_sha256": "5764a24066d7b9396c865c333d3fc23f66f781d7ca08288fb35c1934c4936908"
+    },
+    {
+      "run_id": "g3-development-routing-03",
+      "classification": "CURRENT_VALID_RESEARCH_OR_PRODUCTION",
+      "processing_evaluations": 0,
+      "review_record_calls": 600,
+      "cached_trace_rechecks": 600,
+      "reused_identical_configuration_observations": 120,
+      "new_record_model_calls": 0,
+      "elapsed_seconds": 29.688547320999987,
+      "manifest_sha256": "453d96ac74254398043ae07d0b55a3fa8507c3995787dddeb01ab04d6b09ed74"
+    },
+    {
+      "run_id": "g3-final-confirm-01",
+      "classification": "CURRENT_VALID_RESEARCH_OR_PRODUCTION",
+      "processing_evaluations": 1200,
+      "review_record_calls": 1200,
+      "cached_trace_rechecks": 0,
+      "reused_identical_configuration_observations": 0,
+      "new_record_model_calls": 0,
+      "elapsed_seconds": 93.68555739200019,
+      "manifest_sha256": "2696e9db3a77e94d4e8feea9f316ce170e2abc93f2f99256b5c1f0f8279553d0"
+    },
+    {
+      "run_id": "g3-full-production-01",
+      "classification": "CURRENT_VALID_RESEARCH_OR_PRODUCTION",
+      "processing_evaluations": 22772,
+      "review_record_calls": 22772,
+      "cached_trace_rechecks": 0,
+      "reused_identical_configuration_observations": 0,
+      "new_record_model_calls": 0,
+      "elapsed_seconds": 1763.6458256189999,
+      "manifest_sha256": "e5b2334580ebbc27aa19b0e7400c940f47f91c8f1e39f867eb756eea8fe8e409"
+    },
+    {
+      "run_id": "g3-selection-01",
+      "classification": "CURRENT_VALID_RESEARCH_OR_PRODUCTION",
+      "processing_evaluations": 708,
+      "review_record_calls": 708,
+      "cached_trace_rechecks": 0,
+      "reused_identical_configuration_observations": 252,
+      "new_record_model_calls": 0,
+      "elapsed_seconds": 61.27625398999953,
+      "manifest_sha256": "59a12231f93d8e5bc4fc4b675122648d10b39a81ce0bdaf49a8c5fe136bbeb9d"
+    }
+  ],
+  "current_run_totals": {
+    "processing_evaluations": 26960,
+    "review_record_calls": 29240,
+    "cached_trace_rechecks": 2280,
+    "reused_identical_configuration_observations": 732,
+    "new_record_model_calls": 0
+  },
+  "retired_epoch_totals": {
+    "processing_evaluations": 3360,
+    "review_record_calls": 3960,
+    "cached_trace_rechecks": 600,
+    "reused_identical_configuration_observations": 120,
+    "new_record_model_calls": 0
+  },
+  "early_routing_failure_preserved": {
+    "status": "INTERRUPTED_CHECKPOINT",
+    "run_id": "g3-development-routing-02",
+    "at": "2026-09-27T04:28:02.638905+00:00",
+    "failure_phase": "manifest construction before any record processing",
+    "processed_records": 0,
+    "manifest_written": false,
+    "reason": "relative parent path was not resolved before relative_to(ROOT)",
+    "log": "task1/evidence/goal3/logs/g3-development-routing-02.txt",
+    "log_sha256": "f510b4d1e822394456503f6a303c66ceb5f0d73c33b961e48f6f11d712317725",
+    "automatic_retry": false,
+    "repair_issue": "G3-C07"
+  },
+  "cost_unavailable": "governance backend requests and billing unknown; C checks/Notebook computations/smokes are separate from above method-run counters",
+  "governance_export_checked_through": "2026-09-27T06:54:34.496Z",
+  "requirements_observed": {
+    "G3-A01": "PASS",
+    "G3-A02": "NOT_RUN",
+    "G3-A03": "PASS",
+    "G3-A04": "PASS",
+    "G3-A05": "PASS",
+    "G3-A06": "PASS",
+    "G3-A07": "PASS",
+    "G3-A08": "PASS",
+    "G3-A09": "PASS",
+    "G3-A10": "PASS",
+    "G3-A11": "NOT_RUN",
+    "G3-A12": "NOT_RUN",
+    "G3-A13": "NOT_RUN",
+    "G3-A14": "NOT_RUN",
+    "G3-A15": "NOT_RUN",
+    "G3-A16": "NOT_RUN",
+    "G3-A17": "NOT_RUN",
+    "G3-A18": "NOT_RUN",
+    "G3-A19": "NOT_RUN",
+    "G3-A20": "NOT_RUN"
+  },
+  "remaining_engineering_gates": [
+    "Actual two successful current-source fresh-kernel FULL Notebooks",
+    "Final reports and required figures independent C with all-page200dpi inspection",
+    "Both final handoffs and teacher task correspondence",
+    "Actual REVIEW_ONLY ZIP with required inputs and two isolated extracted FULL Notebook executions",
+    "Current changed auxiliary sources regression, final required status/resource/governance refresh",
+    "Final actual artifact/secret/large-file/link/original-preservation review",
+    "Independent internal_acceptance on exact new submitted targets, followed by push and remote reread"
+  ],
+  "external_only_publication_policy": {
+    "allowed_dependencies": [
+      "META_DEPENDENCY",
+      "EVIDENCE_MASTER_DEPENDENCY"
+    ],
+    "all_autonomous_engineering_must_be_complete": true,
+    "allowed_report_package_tasks": [
+      "experiment_report",
+      "process_report",
+      "package"
+    ],
+    "notebooks_or_processing_failure_is_external": false,
+    "goal_status": "PARTIAL_BLOCKED",
+    "technical_status": "VERIFIED only for independently closed scope",
+    "package_status": "REVIEW_ONLY / NOT_READY",
+    "GPT_SECOND_REVIEW": "PENDING",
+    "Submission": "NOT_READY; never SUBMITTED",
+    "Understanding": "USER_DETERMINED",
+    "publication": "Explicitly labelled review checkpoint only after internal artifact acceptance"
+  },
+  "must_not_accept": [
+    "Prepared checker as completed review",
+    "Old C receipt for new target hash",
+    "Engineering or Notebook failure relabelled external dependency",
+    "Missing required experiment or report relabelled N/A",
+    "Current full production called an independent final test",
+    "Internal C presented as external GPT second review"
+  ],
+  "does_not_close_any_task": true,
+  "new_model_calls": 0,
+  "actual_command": ".venv/bin/python task1/evidence/goal3/independent_c/prepare_final_acceptance.py"
+}

@@ -1,0 +1,893 @@
+{
+  "role_context": "C-Documents:/root/c_documents",
+  "created_at_utc": "2026-09-27T04:59:40.586682+00:00",
+  "status": "FAIL",
+  "review_target": "G1/G2 draft report and completed notebook sources; pre-production review",
+  "targets": {
+    "task1/reports/experiment1/experiment1.tex": "ca9c37cff21750ce0442ad5178de321b262672d2da0c3641f679fe52111a04ba",
+    "task1/reports/experiment1/generated.tex": "d2519f1e50f3b905c2b17a1a1357b9901866f805bfdcc6841b6349e531252a25",
+    "task1/reports/experiment1/goal3_figure_slots.tex": "7d65a9872861857a2b3cd1c45eb017c723c4beda68a7c65fdb08e9fac67ad322",
+    "task1/reports/experiment1/history_ai_table.tex": "d55c09dd4374253985bf122760290c58ae5c5e48e0b74adb5abb9ee8f94151c9",
+    "task1/reports/experiment1/history_candidate_table.tex": "e27231cd51af16ca7cb24b97f8e964b1905fd1939bb4cc50395fced456e4fa07",
+    "task1/reports/experiment1/history_modes_table.tex": "c5da7d4274b8e6716cd26fb578c432da378c804b65c41c0c84dfe431f07e3779",
+    "task1/reports/experiment1/history_order_table.tex": "ca20f9b28c7ada468a95d9da29a41e401712ca6ef2e8929efdb7b8e8959881aa",
+    "task1/reports/history_values.tex": "8ddcb22b4050acbdb65804c2db3c6efd31d53de31aee03db3500fefd7002846b",
+    "task1/reports/metadata.tex": "16e5d4a6eabeee17d17085ef660705cd58fb49fb579b493b2001fe5f885edd20",
+    "task1/reports/process1/components/interaction_evidence.tex": "41828c96c51c21cf3cb9489cd72664e049be1d2d9d28144c265ba9caf0222dae",
+    "task1/reports/process1/generated.tex": "fcc56bc334706c0241847aa838571d7fdb8dd358764a1a8c04350b607390ad29",
+    "task1/reports/process1/goal3_workflow_slot.tex": "f146f96a98bdad1ebd4f0a5d6c19e0f1ec922b55f3f510067df7a298f0fb1618",
+    "task1/reports/process1/process1.tex": "bc95533d182da8e5b17fe04d3109ee472cf64b810f624c7974aa8428d84ee78c",
+    "task1/notebooks/final/任务3_LLM辅助评估清洗_完成版.ipynb": "89aa0605a51be9409e875da7d307998f7756de7a31461958b696b2d1c3e1c7d6",
+    "task1/notebooks/final/作业1轨迹数据预处理_完成版.ipynb": "6d85188656634a2f93a8b4a3954d847346a3fa6ca19c3c61714fc3f41ffc9b6d"
+  },
+  "source_hashes": {
+    "task1/figures/goal2/segmentation_filter_grids.pdf": "fc8bb70c9de97de0034f1d9b0dafb7c551e6a7f001f895cc641c032abb57bc8f",
+    "task1/figures/goal2/dp_error_compression.pdf": "6e3967487ee535a71dfadccba2ea1e7459932ef5d5c5ee2af7324348a1a311d7",
+    "task1/figures/goal2/four_mode_paired_results.pdf": "a7d562ee93974ac0bf1928d46eb1778159844a43ec4a92d41e6bd88ee2f92b77",
+    "task1/figures/goal2/synthetic_metric_counterexamples.pdf": "76866c27f7dbfb183ed71c6991bd1e3158b37db34814adf7517c47dee66ed68e",
+    "task1/实验课1.pptx": "cf5fdbdd0e116818f4bf195e8761dd55c4733443d7c360c986cf1cdfddfda075",
+    "task1/evidence/goal3/report_build/history_value_bindings.json": "88d665653bc00c7afa78970fdbb4f81b84c4f0da713d00c1790425d72fbec669",
+    "task1/evidence/goal2/result_summary.json": "4fbd16b754f25253b0803a27898e4758bc4eaf6debda03607454c374bba758a7",
+    "task1/evidence/goal1/inventory/structure_summary.json": "17d75060363562983b9741f198e3439d7aaac0574bff2bd3a5e7350ab97b67c7",
+    "task1/evidence/goal2/a_epoch02/actual_ai_critique/actual_ai_critique.json": "6e224d48ab052faae8a54af47d763277181e02f547838129f20f90aff8b5db1b",
+    "task1/evidence/goal2/counterexamples/formal-02/synthetic_cases.json": "73407da777541c35201c613bef3e913896ff2dc701cb14431896f94f062f8d3a",
+    "task1/reports/experiment1/history_ai_table.tex": "d55c09dd4374253985bf122760290c58ae5c5e48e0b74adb5abb9ee8f94151c9",
+    "task1/reports/experiment1/history_candidate_table.tex": "e27231cd51af16ca7cb24b97f8e964b1905fd1939bb4cc50395fced456e4fa07",
+    "task1/reports/experiment1/history_modes_table.tex": "c5da7d4274b8e6716cd26fb578c432da378c804b65c41c0c84dfe431f07e3779",
+    "task1/reports/experiment1/history_order_table.tex": "ca20f9b28c7ada468a95d9da29a41e401712ca6ef2e8929efdb7b8e8959881aa",
+    "task1/reports/history_values.tex": "8ddcb22b4050acbdb65804c2db3c6efd31d53de31aee03db3500fefd7002846b",
+    "task1/作业/作业/traj_dict.json": "c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3",
+    "task1/evidence/goal2/tables/candidate_record_pairs.csv": "458d88e27acd6cd0f9f3c567281415de57e4a20abccec35c226249a24ccf2280",
+    "task1/evidence/goal2/tables/mode_record_results.csv": "e8dac7e26d1aaefa692fbf6836581eb4f038dfdbbe79fd49268d9ac6eb0bb02f",
+    "task1/evidence/goal2/tables/model_calls.csv": "ee1386fc1517fe211c227c2fc1970d5b2d672cfa62863f03d19b65b7415912ea",
+    "task1/evidence/goal2/tables/historical_model_calls.csv": "a593d396d395312240b1ead73f613d29b2258cc94b7489a6dad474a196dba6d0",
+    "task1/evidence/goal2/tables/memory_consumption.csv": "571115d5c31cc0d1c7bdbad5e5a28900780466784546a0fed595dc51cb39bb93",
+    "task1/evidence/goal2/runs/g2-development-modes-02/modes/DEVELOPMENT-llm+memory+search-e1-b2/round2_call/attempt01/response.json": "fe36cab28325d549ba8118e21e59d53363b7147f4da77b45346d36404e58db98",
+    "task1/evidence/goal2/runs/g2-development-modes-02/modes/DEVELOPMENT-llm+memory+search-e1-b2/7764_candidate_traces.json.gz": "74032a47fb4abb9dd47986ba45910c32231719eb7bc65702ce34f7cb6a4956b4",
+    "task1/evidence/goal2/runs/g2-development-modes-02/modes/DEVELOPMENT-llm+memory+search-e1-b2/round3_call/attempt01/response.json": "9c635a83691ac1527de98b8dcf0212a57adf6b2410aa7bba07a087c06c388d82",
+    "task1/evidence/goal2/runs/g2-development-modes-02/modes/DEVELOPMENT-llm+search-e1-b2/round3_call/attempt01/response.json": "8ede213891e25566733c0627f53fbca6037e145361d321127e0238902fb9e517",
+    "task1/evidence/goal2/runs/g2-development-modes-02/modes/DEVELOPMENT-llm+search-e1-b2/7764_candidate_traces.json.gz": "f215cfae49edc8720000daddd90c2a6ada80338c6c8db919ff8fa1afe92f1f54",
+    "task1/evidence/goal2/runs/g2-development-modes-02/modes/DEVELOPMENT-llm+memory+search-e1-b2/10232_candidate_traces.json.gz": "cbbc2641d4b8054117152d08364d1f9d101b0b081817d87e0bfb85bea0c97cb2",
+    "task1/evidence/goal2/runs/g2-development-modes-02/modes/DEVELOPMENT-llm+memory+search-e1-b2/round1_call/attempt01/response.json": "6207cfd3ccfe3cee4b0cf7f12c807cf63a8f0175c9c77bcf3b1dc22c7059ce66",
+    "task1/evidence/goal2/coordinate_sensitivity/raw_preflight/coordinate_checks.json": "171238f0c83b07d92901bc895c412213adb1bcc466b86da8b70705e540eda831",
+    "task1/evidence/goal2/coordinate_sensitivity/development-02/summary.json": "34562909f25a373e3c29a445d7b5e65314f3832d331183df3aa545e730abbf4f",
+    "task1/evidence/goal2/coordinate_sensitivity/evaluation-01/summary.json": "8a43b2bdd2661a630289520718f527d2494e790d4ff6ea45c4f55e02e540fd19",
+    "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/result_summary.json": "9c6d34865004019e76cee2e7760d2b3e0c1646dfcae16ae885efa4a66f6b4693",
+    "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/USER_DECISIONS.json": "2b68e39573ab9256a353484842438a118445bb62ddbaca1c42fbd4eee9fe4f0e",
+    "task1/evidence/goal2/PROCESS_RECORD.md": "28b92443c43ea3229472006e6f8ad2a9d1a0815c9ec49fbe421c5099eaac3172",
+    "task1/evidence/goal3/report_build/SOURCE_READ_SCOPE.md": "368e2876c57f721a235c73c72be702b426b6eb88ee34aabe7ea77e7a94cf5cbe",
+    "task1/evidence/goal3/report_build/source_fetch_receipts.json": "879798de9fabd1c6225814c8d66178d1235766db3f10c45b22f2b09267178347"
+  },
+  "checks": [
+    {
+      "name": "task1/notebooks/final/任务3_LLM辅助评估清洗_完成版.ipynb: notebook v4",
+      "actual": 4,
+      "expected": 4,
+      "passed": true
+    },
+    {
+      "name": "task1/notebooks/final/任务3_LLM辅助评估清洗_完成版.ipynb: default FULL_RECOMPUTE",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "task1/notebooks/final/任务3_LLM辅助评估清洗_完成版.ipynb: two registered Provider sentinels",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "task1/notebooks/final/任务3_LLM辅助评估清洗_完成版.ipynb: no personal absolute path",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "task1/notebooks/final/任务3_LLM辅助评估清洗_完成版.ipynb: declared unexecuted source",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "task1/notebooks/final/作业1轨迹数据预处理_完成版.ipynb: notebook v4",
+      "actual": 4,
+      "expected": 4,
+      "passed": true
+    },
+    {
+      "name": "task1/notebooks/final/作业1轨迹数据预处理_完成版.ipynb: default FULL_RECOMPUTE",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "task1/notebooks/final/作业1轨迹数据预处理_完成版.ipynb: two registered Provider sentinels",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "task1/notebooks/final/作业1轨迹数据预处理_完成版.ipynb: no personal absolute path",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "task1/notebooks/final/作业1轨迹数据预处理_完成版.ipynb: declared unexecuted source",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "task1/reports/experiment1/experiment1.tex: shared exact P2 source",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "task1/reports/experiment1/experiment1.tex: no synthetic template asset included",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "task1/reports/experiment1/experiment1.tex: asset exists: ../../figures/goal2/segmentation_filter_grids.pdf",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "task1/reports/experiment1/experiment1.tex: asset exists: ../../figures/goal2/dp_error_compression.pdf",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "task1/reports/experiment1/experiment1.tex: asset exists: ../../figures/goal2/four_mode_paired_results.pdf",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "task1/reports/experiment1/experiment1.tex: asset exists: ../../figures/goal2/synthetic_metric_counterexamples.pdf",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "task1/reports/process1/process1.tex: shared exact P2 source",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "task1/reports/process1/process1.tex: no synthetic template asset included",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "teacher page 26 date",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "teacher page 26 recipient",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "teacher page 26 naming",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "teacher page 6 known-answer counterexample",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "teacher page 37 search-only zero calls",
+      "actual": false,
+      "expected": true,
+      "passed": false
+    },
+    {
+      "name": "teacher page 42 order discussion",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "bound historical source: task1/evidence/goal2/result_summary.json",
+      "actual": "4fbd16b754f25253b0803a27898e4758bc4eaf6debda03607454c374bba758a7",
+      "expected": "4fbd16b754f25253b0803a27898e4758bc4eaf6debda03607454c374bba758a7",
+      "passed": true
+    },
+    {
+      "name": "bound historical source: task1/evidence/goal1/inventory/structure_summary.json",
+      "actual": "17d75060363562983b9741f198e3439d7aaac0574bff2bd3a5e7350ab97b67c7",
+      "expected": "17d75060363562983b9741f198e3439d7aaac0574bff2bd3a5e7350ab97b67c7",
+      "passed": true
+    },
+    {
+      "name": "bound historical source: task1/evidence/goal2/a_epoch02/actual_ai_critique/actual_ai_critique.json",
+      "actual": "6e224d48ab052faae8a54af47d763277181e02f547838129f20f90aff8b5db1b",
+      "expected": "6e224d48ab052faae8a54af47d763277181e02f547838129f20f90aff8b5db1b",
+      "passed": true
+    },
+    {
+      "name": "bound historical source: task1/evidence/goal2/counterexamples/formal-02/synthetic_cases.json",
+      "actual": "73407da777541c35201c613bef3e913896ff2dc701cb14431896f94f062f8d3a",
+      "expected": "73407da777541c35201c613bef3e913896ff2dc701cb14431896f94f062f8d3a",
+      "passed": true
+    },
+    {
+      "name": "generated value file: task1/reports/experiment1/history_ai_table.tex",
+      "actual": "d55c09dd4374253985bf122760290c58ae5c5e48e0b74adb5abb9ee8f94151c9",
+      "expected": "d55c09dd4374253985bf122760290c58ae5c5e48e0b74adb5abb9ee8f94151c9",
+      "passed": true
+    },
+    {
+      "name": "generated value file: task1/reports/experiment1/history_candidate_table.tex",
+      "actual": "e27231cd51af16ca7cb24b97f8e964b1905fd1939bb4cc50395fced456e4fa07",
+      "expected": "e27231cd51af16ca7cb24b97f8e964b1905fd1939bb4cc50395fced456e4fa07",
+      "passed": true
+    },
+    {
+      "name": "generated value file: task1/reports/experiment1/history_modes_table.tex",
+      "actual": "c5da7d4274b8e6716cd26fb578c432da378c804b65c41c0c84dfe431f07e3779",
+      "expected": "c5da7d4274b8e6716cd26fb578c432da378c804b65c41c0c84dfe431f07e3779",
+      "passed": true
+    },
+    {
+      "name": "generated value file: task1/reports/experiment1/history_order_table.tex",
+      "actual": "ca20f9b28c7ada468a95d9da29a41e401712ca6ef2e8929efdb7b8e8959881aa",
+      "expected": "ca20f9b28c7ada468a95d9da29a41e401712ca6ef2e8929efdb7b8e8959881aa",
+      "passed": true
+    },
+    {
+      "name": "generated value file: task1/reports/history_values.tex",
+      "actual": "8ddcb22b4050acbdb65804c2db3c6efd31d53de31aee03db3500fefd7002846b",
+      "expected": "8ddcb22b4050acbdb65804c2db3c6efd31d53de31aee03db3500fefd7002846b",
+      "passed": true
+    },
+    {
+      "name": "raw scalar: RawPoints",
+      "actual": 1173410,
+      "expected": 1173410,
+      "passed": true
+    },
+    {
+      "name": "raw scalar: RawEdges",
+      "actual": 1162024,
+      "expected": 1162024,
+      "passed": true
+    },
+    {
+      "name": "raw scalar: ZeroDtEdges",
+      "actual": 42185,
+      "expected": 42185,
+      "passed": true
+    },
+    {
+      "name": "raw scalar: SameTimeMoved",
+      "actual": 29175,
+      "expected": 29175,
+      "passed": true
+    },
+    {
+      "name": "raw scalar: DuplicateEdges",
+      "actual": 575278,
+      "expected": 575278,
+      "passed": true
+    },
+    {
+      "name": "raw scalar: LongGapEdges",
+      "actual": 8272,
+      "expected": 8272,
+      "passed": true
+    },
+    {
+      "name": "raw scalar: RawRecords",
+      "actual": 11386,
+      "expected": 11386,
+      "passed": true
+    },
+    {
+      "name": "C-S: complete record denominator",
+      "actual": 120,
+      "expected": 120,
+      "passed": true
+    },
+    {
+      "name": "C-S: strict gains",
+      "actual": 53,
+      "expected": 53,
+      "passed": true
+    },
+    {
+      "name": "C-S: record sum n_final",
+      "actual": 2939,
+      "expected": 2939,
+      "passed": true
+    },
+    {
+      "name": "C-S: record sum n_filtered",
+      "actual": 11,
+      "expected": 11,
+      "passed": true
+    },
+    {
+      "name": "C-S: record sum n_direction_removed",
+      "actual": 829,
+      "expected": 829,
+      "passed": true
+    },
+    {
+      "name": "C-S: record sum common_covered_points",
+      "actual": 12162,
+      "expected": 12162,
+      "passed": true
+    },
+    {
+      "name": "C-D: complete record denominator",
+      "actual": 120,
+      "expected": 120,
+      "passed": true
+    },
+    {
+      "name": "C-D: strict gains",
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "C-D: record sum n_final",
+      "actual": 2748,
+      "expected": 2748,
+      "passed": true
+    },
+    {
+      "name": "C-D: record sum n_filtered",
+      "actual": 3368,
+      "expected": 3368,
+      "passed": true
+    },
+    {
+      "name": "C-D: record sum n_direction_removed",
+      "actual": 758,
+      "expected": 758,
+      "passed": true
+    },
+    {
+      "name": "C-D: record sum common_covered_points",
+      "actual": 8805,
+      "expected": 8805,
+      "passed": true
+    },
+    {
+      "name": "C-P: complete record denominator",
+      "actual": 120,
+      "expected": 120,
+      "passed": true
+    },
+    {
+      "name": "C-P: strict gains",
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "C-P: record sum n_final",
+      "actual": 2748,
+      "expected": 2748,
+      "passed": true
+    },
+    {
+      "name": "C-P: record sum n_filtered",
+      "actual": 3368,
+      "expected": 3368,
+      "passed": true
+    },
+    {
+      "name": "C-P: record sum n_direction_removed",
+      "actual": 758,
+      "expected": 758,
+      "passed": true
+    },
+    {
+      "name": "C-P: record sum common_covered_points",
+      "actual": 8805,
+      "expected": 8805,
+      "passed": true
+    },
+    {
+      "name": "valid visible model calls",
+      "actual": 84,
+      "expected": 84,
+      "passed": true
+    },
+    {
+      "name": "historical visible model calls",
+      "actual": 15,
+      "expected": 15,
+      "passed": true
+    },
+    {
+      "name": "DEVELOPMENT/llm+memory+search: observations",
+      "actual": 24,
+      "expected": 24,
+      "passed": true
+    },
+    {
+      "name": "DEVELOPMENT/llm+memory+search: protected gains",
+      "actual": 17,
+      "expected": 17,
+      "passed": true
+    },
+    {
+      "name": "DEVELOPMENT/llm+memory+search: model receipts",
+      "actual": 9,
+      "expected": 9,
+      "passed": true
+    },
+    {
+      "name": "DEVELOPMENT/llm+search: observations",
+      "actual": 24,
+      "expected": 24,
+      "passed": true
+    },
+    {
+      "name": "DEVELOPMENT/llm+search: protected gains",
+      "actual": 16,
+      "expected": 16,
+      "passed": true
+    },
+    {
+      "name": "DEVELOPMENT/llm+search: model receipts",
+      "actual": 9,
+      "expected": 9,
+      "passed": true
+    },
+    {
+      "name": "DEVELOPMENT/llm-only: observations",
+      "actual": 24,
+      "expected": 24,
+      "passed": true
+    },
+    {
+      "name": "DEVELOPMENT/llm-only: protected gains",
+      "actual": 8,
+      "expected": 8,
+      "passed": true
+    },
+    {
+      "name": "DEVELOPMENT/llm-only: model receipts",
+      "actual": 3,
+      "expected": 3,
+      "passed": true
+    },
+    {
+      "name": "DEVELOPMENT/search-only: observations",
+      "actual": 24,
+      "expected": 24,
+      "passed": true
+    },
+    {
+      "name": "DEVELOPMENT/search-only: protected gains",
+      "actual": 9,
+      "expected": 9,
+      "passed": true
+    },
+    {
+      "name": "DEVELOPMENT/search-only: model receipts",
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "G2_EVAL/llm+memory+search: observations",
+      "actual": 72,
+      "expected": 72,
+      "passed": true
+    },
+    {
+      "name": "G2_EVAL/llm+memory+search: protected gains",
+      "actual": 47,
+      "expected": 47,
+      "passed": true
+    },
+    {
+      "name": "G2_EVAL/llm+memory+search: model receipts",
+      "actual": 27,
+      "expected": 27,
+      "passed": true
+    },
+    {
+      "name": "G2_EVAL/llm+search: observations",
+      "actual": 72,
+      "expected": 72,
+      "passed": true
+    },
+    {
+      "name": "G2_EVAL/llm+search: protected gains",
+      "actual": 47,
+      "expected": 47,
+      "passed": true
+    },
+    {
+      "name": "G2_EVAL/llm+search: model receipts",
+      "actual": 27,
+      "expected": 27,
+      "passed": true
+    },
+    {
+      "name": "G2_EVAL/llm-only: observations",
+      "actual": 72,
+      "expected": 72,
+      "passed": true
+    },
+    {
+      "name": "G2_EVAL/llm-only: protected gains",
+      "actual": 15,
+      "expected": 15,
+      "passed": true
+    },
+    {
+      "name": "G2_EVAL/llm-only: model receipts",
+      "actual": 9,
+      "expected": 9,
+      "passed": true
+    },
+    {
+      "name": "G2_EVAL/search-only: observations",
+      "actual": 72,
+      "expected": 72,
+      "passed": true
+    },
+    {
+      "name": "G2_EVAL/search-only: protected gains",
+      "actual": 27,
+      "expected": 27,
+      "passed": true
+    },
+    {
+      "name": "G2_EVAL/search-only: model receipts",
+      "actual": 0,
+      "expected": 0,
+      "passed": true
+    },
+    {
+      "name": "memory denominators",
+      "actual": {
+        "observations": 96,
+        "rounds": 241,
+        "cited_rounds": 60,
+        "consistent_rounds": 49
+      },
+      "expected": {
+        "observations": 96,
+        "rounds": 241,
+        "cited_rounds": 60,
+        "consistent_rounds": 49
+      },
+      "passed": true
+    },
+    {
+      "name": "AI-DEV-01: original response hash",
+      "actual": "fe36cab28325d549ba8118e21e59d53363b7147f4da77b45346d36404e58db98",
+      "expected": "fe36cab28325d549ba8118e21e59d53363b7147f4da77b45346d36404e58db98",
+      "passed": true
+    },
+    {
+      "name": "AI-DEV-01: exact reason in original response",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "AI-DEV-01: saved candidate trace hash",
+      "actual": "74032a47fb4abb9dd47986ba45910c32231719eb7bc65702ce34f7cb6a4956b4",
+      "expected": "74032a47fb4abb9dd47986ba45910c32231719eb7bc65702ce34f7cb6a4956b4",
+      "passed": true
+    },
+    {
+      "name": "AI-DEV-02: original response hash",
+      "actual": "fe36cab28325d549ba8118e21e59d53363b7147f4da77b45346d36404e58db98",
+      "expected": "fe36cab28325d549ba8118e21e59d53363b7147f4da77b45346d36404e58db98",
+      "passed": true
+    },
+    {
+      "name": "AI-DEV-02: exact reason in original response",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "AI-DEV-02: saved candidate trace hash",
+      "actual": "74032a47fb4abb9dd47986ba45910c32231719eb7bc65702ce34f7cb6a4956b4",
+      "expected": "74032a47fb4abb9dd47986ba45910c32231719eb7bc65702ce34f7cb6a4956b4",
+      "passed": true
+    },
+    {
+      "name": "AI-DEV-03: original response hash",
+      "actual": "9c635a83691ac1527de98b8dcf0212a57adf6b2410aa7bba07a087c06c388d82",
+      "expected": "9c635a83691ac1527de98b8dcf0212a57adf6b2410aa7bba07a087c06c388d82",
+      "passed": true
+    },
+    {
+      "name": "AI-DEV-03: exact reason in original response",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "AI-DEV-03: saved candidate trace hash",
+      "actual": "74032a47fb4abb9dd47986ba45910c32231719eb7bc65702ce34f7cb6a4956b4",
+      "expected": "74032a47fb4abb9dd47986ba45910c32231719eb7bc65702ce34f7cb6a4956b4",
+      "passed": true
+    },
+    {
+      "name": "AI-DEV-04: original response hash",
+      "actual": "8ede213891e25566733c0627f53fbca6037e145361d321127e0238902fb9e517",
+      "expected": "8ede213891e25566733c0627f53fbca6037e145361d321127e0238902fb9e517",
+      "passed": true
+    },
+    {
+      "name": "AI-DEV-04: exact reason in original response",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "AI-DEV-04: saved candidate trace hash",
+      "actual": "f215cfae49edc8720000daddd90c2a6ada80338c6c8db919ff8fa1afe92f1f54",
+      "expected": "f215cfae49edc8720000daddd90c2a6ada80338c6c8db919ff8fa1afe92f1f54",
+      "passed": true
+    },
+    {
+      "name": "AI-DEV-05: original response hash",
+      "actual": "fe36cab28325d549ba8118e21e59d53363b7147f4da77b45346d36404e58db98",
+      "expected": "fe36cab28325d549ba8118e21e59d53363b7147f4da77b45346d36404e58db98",
+      "passed": true
+    },
+    {
+      "name": "AI-DEV-05: exact reason in original response",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "AI-DEV-05: saved candidate trace hash",
+      "actual": "cbbc2641d4b8054117152d08364d1f9d101b0b081817d87e0bfb85bea0c97cb2",
+      "expected": "cbbc2641d4b8054117152d08364d1f9d101b0b081817d87e0bfb85bea0c97cb2",
+      "passed": true
+    },
+    {
+      "name": "AI-DEV-06: original response hash",
+      "actual": "6207cfd3ccfe3cee4b0cf7f12c807cf63a8f0175c9c77bcf3b1dc22c7059ce66",
+      "expected": "6207cfd3ccfe3cee4b0cf7f12c807cf63a8f0175c9c77bcf3b1dc22c7059ce66",
+      "passed": true
+    },
+    {
+      "name": "AI-DEV-06: exact reason in original response",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "AI-DEV-06: saved candidate trace hash",
+      "actual": "cbbc2641d4b8054117152d08364d1f9d101b0b081817d87e0bfb85bea0c97cb2",
+      "expected": "cbbc2641d4b8054117152d08364d1f9d101b0b081817d87e0bfb85bea0c97cb2",
+      "passed": true
+    },
+    {
+      "name": "AI preserved proposals",
+      "actual": 148,
+      "expected": 148,
+      "passed": true
+    },
+    {
+      "name": "AI evaluable predictions",
+      "actual": 70,
+      "expected": 70,
+      "passed": true
+    },
+    {
+      "name": "synthetic case count",
+      "actual": 6,
+      "expected": 6,
+      "passed": true
+    },
+    {
+      "name": "synthetic executed chains",
+      "actual": 19,
+      "expected": 19,
+      "passed": true
+    },
+    {
+      "name": "synthetic known answers",
+      "actual": 25,
+      "expected": 25,
+      "passed": true
+    },
+    {
+      "name": "synthetic observed expected agree",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "G2 coordinate checked records",
+      "actual": 307,
+      "expected": 307,
+      "passed": true
+    },
+    {
+      "name": "G2 coordinate checked points",
+      "actual": 30992,
+      "expected": 30992,
+      "passed": true
+    },
+    {
+      "name": "G2 coordinate checked pairs",
+      "actual": 1594527,
+      "expected": 1594527,
+      "passed": true
+    },
+    {
+      "name": "G2 coordinate implementation tolerance",
+      "actual": true,
+      "expected": true,
+      "passed": true
+    },
+    {
+      "name": "g2-development-parameters-02: coordinate threshold differences",
+      "actual": {},
+      "expected": {},
+      "passed": true
+    },
+    {
+      "name": "g2-development-orders-02: coordinate threshold differences",
+      "actual": {},
+      "expected": {},
+      "passed": true
+    },
+    {
+      "name": "g2-demo-memory-02: coordinate threshold differences",
+      "actual": {},
+      "expected": {},
+      "passed": true
+    },
+    {
+      "name": "g2-development-modes-02: coordinate threshold differences",
+      "actual": {},
+      "expected": {},
+      "passed": true
+    },
+    {
+      "name": "g2-evaluation-parameters-01: coordinate threshold differences",
+      "actual": {},
+      "expected": {},
+      "passed": true
+    },
+    {
+      "name": "g2-evaluation-orders-01: coordinate threshold differences",
+      "actual": {},
+      "expected": {},
+      "passed": true
+    },
+    {
+      "name": "g2-evaluation-modes-01: coordinate threshold differences",
+      "actual": {},
+      "expected": {},
+      "passed": true
+    },
+    {
+      "name": "G1 pilot stage counts",
+      "actual": {
+        "input": 783,
+        "segmented": 30,
+        "filtered": 309,
+        "denoised": 13,
+        "simplified": 273,
+        "retained": 188,
+        "not_processed": 0
+      },
+      "expected": {
+        "input": 783,
+        "segmented": 30,
+        "filtered": 309,
+        "denoised": 13,
+        "simplified": 273,
+        "retained": 188,
+        "not_processed": 0
+      },
+      "passed": true
+    },
+    {
+      "name": "D1 preserved quote",
+      "actual": "目前没有文件绑定的坐标说明",
+      "expected": "目前没有文件绑定的坐标说明",
+      "passed": true
+    },
+    {
+      "name": "D2 preserved quote",
+      "actual": "批准采用上述一次标记、同时删除规则",
+      "expected": "批准采用上述一次标记、同时删除规则",
+      "passed": true
+    }
+  ],
+  "teacher_pages_checked": [
+    5,
+    6,
+    18,
+    20,
+    22,
+    24,
+    26,
+    37,
+    42
+  ],
+  "coordinate_sensitivity_scope": [
+    {
+      "run_id": "g2-development-parameters-02",
+      "traces_checked": 7080
+    },
+    {
+      "run_id": "g2-development-orders-02",
+      "traces_checked": 720
+    },
+    {
+      "run_id": "g2-demo-memory-02",
+      "traces_checked": 1200
+    },
+    {
+      "run_id": "g2-development-modes-02",
+      "traces_checked": 1218
+    },
+    {
+      "run_id": "g2-evaluation-parameters-01",
+      "traces_checked": 1680
+    },
+    {
+      "run_id": "g2-evaluation-orders-01",
+      "traces_checked": 240
+    },
+    {
+      "run_id": "g2-evaluation-modes-01",
+      "traces_checked": 3583
+    }
+  ],
+  "checked": [
+    "raw structural counts without method evaluation",
+    "23 historical numerical macros and source hashes",
+    "G2 C-S/C-D/C-P record pairing totals",
+    "G2 mode observations and visible calls",
+    "memory denominator distinction",
+    "all six cited model reasons in original responses",
+    "all six synthetic case metadata/25 known-answer records",
+    "G1 D1/D2 exact saved quotes",
+    "all notebook code cells AST and default offline boundary",
+    "shared P2/no demo asset use"
+  ],
+  "unchecked": [
+    "G3 development/selection/final effects",
+    "full notebook execution",
+    "ZIP isolated reproduction",
+    "final PDFs/all-page >=200dpi visual acceptance",
+    "teacher identity",
+    "Evidence Master decisions/LOCK",
+    "reexecution of historical core mathematics (separate C protocol scope)",
+    "whether unobserved upstream provider requests exist"
+  ],
+  "new_processing_runs": 0,
+  "new_model_calls": 0,
+  "FINAL_CONFIRM_effects_read": false
+}

@@ -1,0 +1,24 @@
+{
+  "record_type": "TOOL_RESULT_SUMMARY",
+  "recorded_at": "2026-09-27T04:37:19.775244+00:00",
+  "command": ".venv/bin/python -m unittest task1.evidence.goal3.package.test_package -v",
+  "observed_exit_code": 0,
+  "observed_tests_run": 8,
+  "observed_elapsed_seconds": 4.209,
+  "observed_status": "OK",
+  "scope": "Package engineering; actual isolated source imports and binding probe recorded separately in source_closure.json; no final candidate evaluation and no model calls",
+  "checks": [
+    "complete historical processing source snapshot included",
+    "real raw digest and bound content unchanged",
+    "only approved historical command metadata changes",
+    "unsafe paths/forbidden files rejected",
+    "safety scanner fixture positive/negative checks",
+    "NOT_READY blocks archive build",
+    "actual temporary ZIP CRC/hash, overwrite and tamper checks",
+    "symlink member refusal"
+  ],
+  "fixtures": "Temporary ENGINEERING_TEST_ONLY ZIP, deleted with tempfile context; no teacher ZIP claimed",
+  "python_ast": "VERIFIED",
+  "new_installed_packages": [],
+  "new_model_calls": 0
+}

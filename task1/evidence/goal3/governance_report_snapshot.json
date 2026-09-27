@@ -1,0 +1,2310 @@
+{
+  "at": "2026-09-27T06:56:21.624891+00:00",
+  "scope": "Only actual collaboration tool events from this task session; no reasoning, auth, unrelated history, ciphertext dumps, or invented dialogue.",
+  "session_id": "01a0e0ef-ee23-7ca0-91b2-10eb9f4fc925",
+  "cutoff": "2026-09-27T06:54:34.496Z",
+  "counts": {
+    "encrypted_message_fields": 99,
+    "spawn_agent": 4,
+    "CLEAR_TOOL_RETURN": 5,
+    "send_message": 61,
+    "EMPTY_TOOL_RETURN": 94,
+    "followup_task": 34
+  },
+  "events": [
+    {
+      "at": "2026-09-27T03:37:58.271Z",
+      "event": "function_call",
+      "tool": "spawn_agent",
+      "call_id": "call_rSH2WT571Wj9r9mE1xVhp642",
+      "source_event_sha256": "c801c5c80fd2c71095fbb6008a014ae95c098eb6b7c042b19a9d722fd68d175a",
+      "arguments_metadata": {
+        "task_name": "a_candidates"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "197d8225a68fe4970a8e4f17dbeb1ead42d2aa45f635ad0c0d7075a7a4d8bfe8",
+      "stored_message_payload_bytes": 1508
+    },
+    {
+      "at": "2026-09-27T03:37:58.397Z",
+      "event": "function_call_output",
+      "tool": "spawn_agent",
+      "call_id": "call_rSH2WT571Wj9r9mE1xVhp642",
+      "source_event_sha256": "43723013f3b708e286d421dade07ff5ad0f36ec4aafe803e79e09d33d9e0a5af",
+      "stored_output_payload_sha256": "233992c39b46d59d60b92f74742656ca7a0a1ee9266be6249ce032fe18ad4cfd",
+      "stored_output_payload_bytes": 34,
+      "availability": "CLEAR_TOOL_RETURN",
+      "output": {
+        "task_name": "/root/a_candidates"
+      }
+    },
+    {
+      "at": "2026-09-27T03:38:09.647Z",
+      "event": "function_call",
+      "tool": "spawn_agent",
+      "call_id": "call_yrWBRJ2Ffb7kgOw15ENyHddu",
+      "source_event_sha256": "bcdcaea98d9234794ff7891a6a4d046e323f63e4cd8b818835bb1d0fbaea950b",
+      "arguments_metadata": {
+        "task_name": "c_protocol"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "cc4bb9cee21b898c37bdfb6e35931bdab48ce9e7d673a8989f992a81d2340f5a",
+      "stored_message_payload_bytes": 1208
+    },
+    {
+      "at": "2026-09-27T03:38:09.760Z",
+      "event": "function_call_output",
+      "tool": "spawn_agent",
+      "call_id": "call_yrWBRJ2Ffb7kgOw15ENyHddu",
+      "source_event_sha256": "d8be11e03de6e487c8b835c20bff08a1ae1f67722069a5fe1c5478a6bbb77510",
+      "stored_output_payload_sha256": "f0fb92a64de991ee674eaa80e4cc0249d4325a156d32a09329818c0272d5b30e",
+      "stored_output_payload_bytes": 32,
+      "availability": "CLEAR_TOOL_RETURN",
+      "output": {
+        "task_name": "/root/c_protocol"
+      }
+    },
+    {
+      "at": "2026-09-27T03:38:18.917Z",
+      "event": "function_call",
+      "tool": "spawn_agent",
+      "call_id": "call_MSGwIHPKc1VmWonQBMGLxQP7",
+      "source_event_sha256": "257406671d326e2f727c8303c8c6eda1131fefb7d8f84a2d4795953e2b525b13",
+      "arguments_metadata": {
+        "task_name": "b_delivery_inventory"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "3c39fe0e062a6c23535d2cd857f236dab3301fa604f89c0be394289f03fb9b6f",
+      "stored_message_payload_bytes": 1528
+    },
+    {
+      "at": "2026-09-27T03:38:19.073Z",
+      "event": "function_call_output",
+      "tool": "spawn_agent",
+      "call_id": "call_MSGwIHPKc1VmWonQBMGLxQP7",
+      "source_event_sha256": "b7f2f26368ece7697cf9dcf9dc31b62595632457951233beadfc0d5cc768e13c",
+      "stored_output_payload_sha256": "366607992243c8204f39a256e92dedf881bb81fbdf6852b75d9dc814e595666d",
+      "stored_output_payload_bytes": 42,
+      "availability": "CLEAR_TOOL_RETURN",
+      "output": {
+        "task_name": "/root/b_delivery_inventory"
+      }
+    },
+    {
+      "at": "2026-09-27T03:40:11.875Z",
+      "event": "function_call",
+      "tool": "send_message",
+      "call_id": "call_7Q0es1tYhT9yz9KSlKB0GWPQ",
+      "source_event_sha256": "01f32951d16c49725794df4195d7c7514a820c0b0c4e7e7309a48ff2f97ab9c2",
+      "arguments_metadata": {
+        "target": "c_protocol"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "b2ce1e22ee0f4d4f2e934f570360d465eca4ec7600c1a569b4c613ddf3c01416",
+      "stored_message_payload_bytes": 740
+    },
+    {
+      "at": "2026-09-27T03:40:11.976Z",
+      "event": "function_call_output",
+      "tool": "send_message",
+      "call_id": "call_7Q0es1tYhT9yz9KSlKB0GWPQ",
+      "source_event_sha256": "701045ce9258dec8f7606e1998d1218558d46aad06cec0164a13d6d4d1c3629e",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T03:40:18.532Z",
+      "event": "function_call",
+      "tool": "send_message",
+      "call_id": "call_j8S4BueYihrStqL86AJjhzUC",
+      "source_event_sha256": "501ab38ea90c552e67828e7a1a7aa2e0d854ab2c59cf6d04dd3c9819d79d191c",
+      "arguments_metadata": {
+        "target": "a_candidates"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "ed17cc061a1a7d35d9cf8df1c0de81324196c8912157cf340469aeaa27ddf0e2",
+      "stored_message_payload_bytes": 568
+    },
+    {
+      "at": "2026-09-27T03:40:18.707Z",
+      "event": "function_call_output",
+      "tool": "send_message",
+      "call_id": "call_j8S4BueYihrStqL86AJjhzUC",
+      "source_event_sha256": "bfb2c031b3e15d24d8098176b4a60a893b84aa11748054c4108a5e348b270977",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T03:42:43.701Z",
+      "event": "function_call",
+      "tool": "followup_task",
+      "call_id": "call_0GtUKjRiwW9OcCVNbBbsEslE",
+      "source_event_sha256": "bbe44596c3c028c0a8248ba4c305a392412e436fe3396b688240e184e7b2bf32",
+      "arguments_metadata": {
+        "target": "c_protocol"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "db8ede85b3bc44c7bd13238e8aa961c654fb48084a4396dcaa989cd143756993",
+      "stored_message_payload_bytes": 888
+    },
+    {
+      "at": "2026-09-27T03:42:43.771Z",
+      "event": "function_call_output",
+      "tool": "followup_task",
+      "call_id": "call_0GtUKjRiwW9OcCVNbBbsEslE",
+      "source_event_sha256": "5bd7804020468320b2c10fbff199e4c6612ada3edf84ee2f6e9b7cdef7e70e38",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T03:42:54.421Z",
+      "event": "function_call",
+      "tool": "send_message",
+      "call_id": "call_KeiJHy0OqvSoyB6wKK4skfBG",
+      "source_event_sha256": "ae1ff1647925dd6a3482f6efedfd10e260290a8c493a5371a58c29dfb5fe556b",
+      "arguments_metadata": {
+        "target": "b_delivery_inventory"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "994566fda27f6fb783c843a54d701ed8f2c2242511aa9f9fb42ad61e2d515190",
+      "stored_message_payload_bytes": 972
+    },
+    {
+      "at": "2026-09-27T03:42:54.527Z",
+      "event": "function_call_output",
+      "tool": "send_message",
+      "call_id": "call_KeiJHy0OqvSoyB6wKK4skfBG",
+      "source_event_sha256": "527bddc4d69624a8e65d371ebe2ded3fd4597c069efb75887f9f9e09a86defea",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T03:44:25.597Z",
+      "event": "function_call",
+      "tool": "send_message",
+      "call_id": "call_y7hC1u6n3YpUOhZBxr7jpwkI",
+      "source_event_sha256": "a16f2348d06014a0a1c72bc40047e754c06acb1bdf9ea6fde9d3eb0985226516",
+      "arguments_metadata": {
+        "target": "c_protocol"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "6b0941b103a5b0210916beb1bfdb3e436e3fc318bb24fdf2a5e259e52d452344",
+      "stored_message_payload_bytes": 824
+    },
+    {
+      "at": "2026-09-27T03:44:25.720Z",
+      "event": "function_call_output",
+      "tool": "send_message",
+      "call_id": "call_y7hC1u6n3YpUOhZBxr7jpwkI",
+      "source_event_sha256": "e4c9b094210cd512baec89dd4138fa83b768600e792250f93a5b7470fbeefe85",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T03:47:56.721Z",
+      "event": "function_call",
+      "tool": "followup_task",
+      "call_id": "call_ujVUSox1KKFOX0EPLETXW06x",
+      "source_event_sha256": "85cdeac73ea0809667cfdfccf3cb699ee24a9c03399d77479c0ae1e97a8303ed",
+      "arguments_metadata": {
+        "target": "b_delivery_inventory"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "9d07c3f167b17e6ffa4524f9f14d21c353cff5ffb399684e3bbd9f44935ef9d9",
+      "stored_message_payload_bytes": 1592
+    },
+    {
+      "at": "2026-09-27T03:47:56.847Z",
+      "event": "function_call_output",
+      "tool": "followup_task",
+      "call_id": "call_ujVUSox1KKFOX0EPLETXW06x",
+      "source_event_sha256": "cdc18a80b0cd06e2fe4933f717109fd9e42267208b5ff70c4af3bf7276ff84cf",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T03:48:04.083Z",
+      "event": "function_call",
+      "tool": "followup_task",
+      "call_id": "call_SgbxBFQY8PqPhdB5FqVSMJwl",
+      "source_event_sha256": "d4a1faffbbc1af591d9af2647b21dc862364a04b108abae8530286865f799265",
+      "arguments_metadata": {
+        "target": "c_protocol"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "85fbefe3ad8862acba7ed0c9287dbd1e2c6f544859fbdc42612a34a9decef4e3",
+      "stored_message_payload_bytes": 908
+    },
+    {
+      "at": "2026-09-27T03:48:04.212Z",
+      "event": "function_call_output",
+      "tool": "followup_task",
+      "call_id": "call_SgbxBFQY8PqPhdB5FqVSMJwl",
+      "source_event_sha256": "5525d62434b13ee339723aed7916658ce3095c7d79bf78d65e8404c03ed73ea4",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T03:50:16.643Z",
+      "event": "function_call",
+      "tool": "send_message",
+      "call_id": "call_ehxy5moDoq6rd9xbHITGPF1P",
+      "source_event_sha256": "2fed7c4bd1bea5526c233f4444128a9e1728fdf410652061c49e542c747207a9",
+      "arguments_metadata": {
+        "target": "c_protocol"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "e267daac91e9c103e0f4d5dd2e6cafc66b0464d66a84ef4a4355d02097541e42",
+      "stored_message_payload_bytes": 844
+    },
+    {
+      "at": "2026-09-27T03:50:16.802Z",
+      "event": "function_call_output",
+      "tool": "send_message",
+      "call_id": "call_ehxy5moDoq6rd9xbHITGPF1P",
+      "source_event_sha256": "dd405280045fcee2133f94ac95b9a09ea52bec0ec89a2baf347ab4e6a16f96fe",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T03:51:54.080Z",
+      "event": "function_call",
+      "tool": "send_message",
+      "call_id": "call_lWlEOgPHnwar0Xct1bxmuZfw",
+      "source_event_sha256": "ad8b3803e4e420ec91058db806491be80bb5b01351787790c9b42810f980d97e",
+      "arguments_metadata": {
+        "target": "c_protocol"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "664afaa419fda284ddffb0ea22049c6b2da35aff1e5c3d124100bac81a54437d",
+      "stored_message_payload_bytes": 1356
+    },
+    {
+      "at": "2026-09-27T03:51:54.237Z",
+      "event": "function_call_output",
+      "tool": "send_message",
+      "call_id": "call_lWlEOgPHnwar0Xct1bxmuZfw",
+      "source_event_sha256": "4658631bb7b1209b141f48fed051af52e0d20df693650ea8c91b710ca4b84506",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T03:53:48.190Z",
+      "event": "function_call",
+      "tool": "followup_task",
+      "call_id": "call_pcgYKQvjbj72WU9oDxHShGf6",
+      "source_event_sha256": "f201d10ca778b500a9264f7c60293022966e2a04d08ec922af502aacf5fdac86",
+      "arguments_metadata": {
+        "target": "a_candidates"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "719c04a27b1428ab871cd893eec9abb96fa208fa1d8b2f21bb6dc8a30cf74aaf",
+      "stored_message_payload_bytes": 868
+    },
+    {
+      "at": "2026-09-27T03:53:48.323Z",
+      "event": "function_call_output",
+      "tool": "followup_task",
+      "call_id": "call_pcgYKQvjbj72WU9oDxHShGf6",
+      "source_event_sha256": "464fd9450edcaf95143c5e727ff2f14f07b52a98febaa3e4686dd8442dde8347",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T03:57:21.105Z",
+      "event": "function_call",
+      "tool": "send_message",
+      "call_id": "call_qkJwUOBGuM7DPg0wNC1ErhPt",
+      "source_event_sha256": "7181836c19b30735eb71799a64427f67828be4433da73ae04bf31fbdacd6bed8",
+      "arguments_metadata": {
+        "target": "c_protocol"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "d1889eae5c80fcc8f64cdb2d27b51c16b75649c8ee86e73746e4f8c56f8bcc8a",
+      "stored_message_payload_bytes": 1356
+    },
+    {
+      "at": "2026-09-27T03:57:21.224Z",
+      "event": "function_call_output",
+      "tool": "send_message",
+      "call_id": "call_qkJwUOBGuM7DPg0wNC1ErhPt",
+      "source_event_sha256": "1441b0b5e8ee9620cd502a75b3b6b6028d87146ccd261a498e515ccbfb40cb74",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T03:59:38.885Z",
+      "event": "function_call",
+      "tool": "send_message",
+      "call_id": "call_vrnB0rBL2qcDzgLn92mXnIVi",
+      "source_event_sha256": "a671e8aa576e3f14b0d802ffd6b9d229f6aeab60ef2bedf84b03ca8bf374c678",
+      "arguments_metadata": {
+        "target": "c_protocol"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "8adddded9defa659dc57005fd986249ea69f3f73db6b2d0b17202c95c6e6fcda",
+      "stored_message_payload_bytes": 612
+    },
+    {
+      "at": "2026-09-27T03:59:39.074Z",
+      "event": "function_call_output",
+      "tool": "send_message",
+      "call_id": "call_vrnB0rBL2qcDzgLn92mXnIVi",
+      "source_event_sha256": "fdedf42a08a73f166174e41dd180ded4dda7e8e023132a8bcbb02ce597c1b06e",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T04:01:50.037Z",
+      "event": "function_call",
+      "tool": "send_message",
+      "call_id": "call_dBbb4OJdzDJpDnA8fS2eYJcC",
+      "source_event_sha256": "f90ec55d249248d7a4e273c56b0e6abe468294fbb6c704e40b325287ffea928e",
+      "arguments_metadata": {
+        "target": "c_protocol"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "4b0342264cba0361227092d4b68ac84af7f979d26e8b940b07824515350ba9c0",
+      "stored_message_payload_bytes": 740
+    },
+    {
+      "at": "2026-09-27T04:01:50.160Z",
+      "event": "function_call_output",
+      "tool": "send_message",
+      "call_id": "call_dBbb4OJdzDJpDnA8fS2eYJcC",
+      "source_event_sha256": "9efcbb6ea30906dcbad6f53551d8561ae6f83ff5b39892a405ca10a8e96e91d6",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T04:06:54.792Z",
+      "event": "function_call",
+      "tool": "followup_task",
+      "call_id": "call_jWE0mOm1lOSRyewMSV2mvB2q",
+      "source_event_sha256": "682c3c6c4c3ec5967d1b639a6213d2504e47bae1424f44e64f83f8e60a9f7be0",
+      "arguments_metadata": {
+        "target": "c_protocol"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "03102ecc2fc5f65d6d89749a7b08ab39ba22b1722a7b2312a19683a99a5d4c89",
+      "stored_message_payload_bytes": 908
+    },
+    {
+      "at": "2026-09-27T04:06:54.925Z",
+      "event": "function_call_output",
+      "tool": "followup_task",
+      "call_id": "call_jWE0mOm1lOSRyewMSV2mvB2q",
+      "source_event_sha256": "9a890270ecbd05baac065f0c18f0a4e14c9607441728d62169d934aa1cf18fed",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T04:08:39.519Z",
+      "event": "function_call",
+      "tool": "send_message",
+      "call_id": "call_D6r0S2bU4x9CXrm3pJJW4mz1",
+      "source_event_sha256": "7d518cb4ebb37ff89ce6040cd9d54bf908be11e966cd68303995c71a0c421c27",
+      "arguments_metadata": {
+        "target": "b_delivery_inventory"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "d314fe742626ffa69a4221870a06035144af4ac91f8c524f65f56dd1546b91ee",
+      "stored_message_payload_bytes": 1804
+    },
+    {
+      "at": "2026-09-27T04:08:39.677Z",
+      "event": "function_call_output",
+      "tool": "send_message",
+      "call_id": "call_D6r0S2bU4x9CXrm3pJJW4mz1",
+      "source_event_sha256": "b1780989bd1a76627cd91e583aeaab0563d948105e6b568bec457ee766e9dde4",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T04:12:19.621Z",
+      "event": "function_call",
+      "tool": "followup_task",
+      "call_id": "call_Uph88GAZn3JFEjVN98AX3btv",
+      "source_event_sha256": "2355f32f4a40161b10c77a96a27b4cd4481db0519b6a6e558e64d02b6787c324",
+      "arguments_metadata": {
+        "target": "a_candidates"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "3f2ba2d322301fc97f985a98b974406e2c7f3ef3606c122ffe7be3228f305e71",
+      "stored_message_payload_bytes": 996
+    },
+    {
+      "at": "2026-09-27T04:12:19.709Z",
+      "event": "function_call_output",
+      "tool": "followup_task",
+      "call_id": "call_Uph88GAZn3JFEjVN98AX3btv",
+      "source_event_sha256": "6d5edd7237e5170531a8ba0095b2d750f534d6ba0ea3f855d779d348f74a66aa",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T04:13:15.854Z",
+      "event": "function_call",
+      "tool": "send_message",
+      "call_id": "call_tcATheOJDdO8uZvtT0absnJW",
+      "source_event_sha256": "d2b7bbd0b778b3ab6d45ab7b77aa9f702af0c4d00a0bad88b6a549f19d5282b7",
+      "arguments_metadata": {
+        "target": "c_protocol"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "ef37d511e0b09ffdd9d548dd618d392959da46fb1e14123b01371383cbca1431",
+      "stored_message_payload_bytes": 1124
+    },
+    {
+      "at": "2026-09-27T04:13:15.957Z",
+      "event": "function_call_output",
+      "tool": "send_message",
+      "call_id": "call_tcATheOJDdO8uZvtT0absnJW",
+      "source_event_sha256": "f380a3f6f2f52dd296d298681bb790f75012589d05b9285ae7c3ade851d9c70d",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T04:15:13.282Z",
+      "event": "function_call",
+      "tool": "send_message",
+      "call_id": "call_DOlOPuqm58XLigUphW2r8K8i",
+      "source_event_sha256": "3c325f7288768e4542237a6728f865fc2dba7e06856bd81f91e320aa92614c69",
+      "arguments_metadata": {
+        "target": "c_protocol"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "88338fdf255e82089812e4e0d1e48ddbe154b41ea64f71c46b8cdaa342965def",
+      "stored_message_payload_bytes": 932
+    },
+    {
+      "at": "2026-09-27T04:15:13.458Z",
+      "event": "function_call_output",
+      "tool": "send_message",
+      "call_id": "call_DOlOPuqm58XLigUphW2r8K8i",
+      "source_event_sha256": "3706c7c076655697a4d1a1f76838f1c05ed61d313fb7094928cd4994529ba305",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T04:15:37.907Z",
+      "event": "function_call",
+      "tool": "send_message",
+      "call_id": "call_D8AlrexlfAp3ybdsQKm3Mul1",
+      "source_event_sha256": "3f1c74f368004894fc0c220055cc7b7460528896e3da8a4498109e3189bba8f9",
+      "arguments_metadata": {
+        "target": "a_candidates"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "734017f9427c84e76b8f029c8e4acf123ba32c40f949ac60a0167d45058cf2bf",
+      "stored_message_payload_bytes": 740
+    },
+    {
+      "at": "2026-09-27T04:15:38.011Z",
+      "event": "function_call_output",
+      "tool": "send_message",
+      "call_id": "call_D8AlrexlfAp3ybdsQKm3Mul1",
+      "source_event_sha256": "1824d63c990d6ddbf2e57146ef184e03c466cb646fc0488dab8f833d70b5f381",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T04:17:06.526Z",
+      "event": "function_call",
+      "tool": "send_message",
+      "call_id": "call_Kf4lovuqE6IuKplcASdiR6ck",
+      "source_event_sha256": "5069641f321654097cdb9671bcc899ac5a0b4a6c264aad16bbfd33b36aebcbe4",
+      "arguments_metadata": {
+        "target": "c_protocol"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "ebba2e67e6dddf73f6293f473447340cc4cbf05930fe54689d1ce5f50cbd02f9",
+      "stored_message_payload_bytes": 932
+    },
+    {
+      "at": "2026-09-27T04:17:06.630Z",
+      "event": "function_call_output",
+      "tool": "send_message",
+      "call_id": "call_Kf4lovuqE6IuKplcASdiR6ck",
+      "source_event_sha256": "81eeec0818e774639879511a65e621d07afba5622e1d3f039f06300f0f9957d5",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T04:17:39.913Z",
+      "event": "function_call",
+      "tool": "send_message",
+      "call_id": "call_wZ6vkkyGv9yJK9M3aZre6Iik",
+      "source_event_sha256": "d45710156e529f516cf333f229c848bf4d70d0a35369e75f05721e08c13f984f",
+      "arguments_metadata": {
+        "target": "c_protocol"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "06c8bccf9705c50795b102fd08758d709732baaa506b0658c5bd5f887aae14bd",
+      "stored_message_payload_bytes": 676
+    },
+    {
+      "at": "2026-09-27T04:17:40.027Z",
+      "event": "function_call_output",
+      "tool": "send_message",
+      "call_id": "call_wZ6vkkyGv9yJK9M3aZre6Iik",
+      "source_event_sha256": "4c0f0af834ff75cdc19b595bd841ee0662e593609c9eff8f8554d97209b5aeb6",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T04:20:31.006Z",
+      "event": "function_call",
+      "tool": "send_message",
+      "call_id": "call_vuba5HBbS92geuXxw0VdWtdN",
+      "source_event_sha256": "9c251f2d001950e272acb4948c152dfddfde3a584dfb7e1e96fc6b92c743833a",
+      "arguments_metadata": {
+        "target": "b_delivery_inventory"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "815880f8ffd728f4c3b320aa02d85118c8c4eed3b4330b6546489679f5f28672",
+      "stored_message_payload_bytes": 952
+    },
+    {
+      "at": "2026-09-27T04:20:31.349Z",
+      "event": "function_call_output",
+      "tool": "send_message",
+      "call_id": "call_vuba5HBbS92geuXxw0VdWtdN",
+      "source_event_sha256": "242de4c2a364aec5b5863670e2e89b892d9ba4bd0c9fdcdc93f67f9de49b96e8",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T04:20:57.927Z",
+      "event": "function_call",
+      "tool": "followup_task",
+      "call_id": "call_8uyxV0DAYKjzM53QGHd7YJDs",
+      "source_event_sha256": "eb4a88021896e453980ee7c261fea3f8fa1a16ec560d576c6e0439101b7cbd77",
+      "arguments_metadata": {
+        "target": "a_candidates"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "a6b90ca8fd7ea4457626061b9a7a62dd44eb97e36516d3f53d48689b7b30bfc7",
+      "stored_message_payload_bytes": 1228
+    },
+    {
+      "at": "2026-09-27T04:20:58.041Z",
+      "event": "function_call_output",
+      "tool": "followup_task",
+      "call_id": "call_8uyxV0DAYKjzM53QGHd7YJDs",
+      "source_event_sha256": "f5c2c97ea774b4b9f05f3b7c68cba86202b3f5a055c8150b5bc12d83e692e84f",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T04:22:42.801Z",
+      "event": "function_call",
+      "tool": "followup_task",
+      "call_id": "call_FHO83XgtmCAy3tipiZO2PQxw",
+      "source_event_sha256": "3b44485db848dfc5904d6f17be6818c237f5204ae87e75b68745556b0b9cd2f3",
+      "arguments_metadata": {
+        "target": "b_delivery_inventory"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "22e3e643311379356c30344726872f4ff721bc2cdceeb5d72284f21c4e79a6df",
+      "stored_message_payload_bytes": 1912
+    },
+    {
+      "at": "2026-09-27T04:22:42.921Z",
+      "event": "function_call_output",
+      "tool": "followup_task",
+      "call_id": "call_FHO83XgtmCAy3tipiZO2PQxw",
+      "source_event_sha256": "72f98e5b9ddab3b8e1f187c5e87bd4bcba32bfa83830ee54cf32d6b2e43ede29",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T04:23:31.004Z",
+      "event": "function_call",
+      "tool": "send_message",
+      "call_id": "call_xIbIFhLQsET5sJFzrQRknqT4",
+      "source_event_sha256": "12ae81423fb1afeb56158ae7fc755fdf3e22de280ba85211e29f6c6a6267be22",
+      "arguments_metadata": {
+        "target": "c_protocol"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "2ee3b3547048c00ac732caa61675f867b928660b1ca48ca80f57e3997708b269",
+      "stored_message_payload_bytes": 760
+    },
+    {
+      "at": "2026-09-27T04:23:31.134Z",
+      "event": "function_call_output",
+      "tool": "send_message",
+      "call_id": "call_xIbIFhLQsET5sJFzrQRknqT4",
+      "source_event_sha256": "72739f63670ba70b74a97a715fd06ea63956b842f1995b91f99ac49b33dcf374",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T04:25:19.289Z",
+      "event": "function_call",
+      "tool": "send_message",
+      "call_id": "call_AMbY6TYK25LJgmzN5M7Uicg7",
+      "source_event_sha256": "2b514cc5dbeb11c425b704d6d66f28db3e8d42fc95bab42ba6a4197dd8a22d38",
+      "arguments_metadata": {
+        "target": "b_delivery_inventory"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "e4d62242e30e0bdc31b72fe255a67c56ebc52e5df141dde432c75ec8f8bc1e15",
+      "stored_message_payload_bytes": 740
+    },
+    {
+      "at": "2026-09-27T04:25:19.423Z",
+      "event": "function_call_output",
+      "tool": "send_message",
+      "call_id": "call_AMbY6TYK25LJgmzN5M7Uicg7",
+      "source_event_sha256": "4c5f9685fa9cde7d5dadd717bd139720a6021891d5f3dae7bbb39dbe93a71fbc",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T04:27:05.237Z",
+      "event": "function_call",
+      "tool": "send_message",
+      "call_id": "call_Gbsp6ToL9meDjyQlQ7AOrp9Z",
+      "source_event_sha256": "57b1b09f211368a3cfc153c0dddbc84dbfe5439ced6ba6ecebb31b79576e0cf3",
+      "arguments_metadata": {
+        "target": "c_protocol"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "7246da5e32d35912ed64ea2d46bd497eff44643015738774b6b09dae84b49303",
+      "stored_message_payload_bytes": 952
+    },
+    {
+      "at": "2026-09-27T04:27:05.379Z",
+      "event": "function_call_output",
+      "tool": "send_message",
+      "call_id": "call_Gbsp6ToL9meDjyQlQ7AOrp9Z",
+      "source_event_sha256": "dd403f7a01850bb17586b8a7d4bfa3c567a5387b505505fe6caf45288d3571f3",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T04:28:12.850Z",
+      "event": "function_call",
+      "tool": "send_message",
+      "call_id": "call_T2w4E1TzlECA7QzZ6Iv7DK02",
+      "source_event_sha256": "4b4d94e686c6a199c69983eabbb45c898654cb720ec32e297647f2228f3d1dbd",
+      "arguments_metadata": {
+        "target": "c_protocol"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "2dc8b41e3f90549191dee5df716263f76c4d9f2b07586082c43e89d9b46329f0",
+      "stored_message_payload_bytes": 548
+    },
+    {
+      "at": "2026-09-27T04:28:13.019Z",
+      "event": "function_call_output",
+      "tool": "send_message",
+      "call_id": "call_T2w4E1TzlECA7QzZ6Iv7DK02",
+      "source_event_sha256": "a822b9cf2f98257eb3e6f0b95293c526da3c17d868aa5c1bb6c8963072f5c74a",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T04:29:16.786Z",
+      "event": "function_call",
+      "tool": "send_message",
+      "call_id": "call_bVMNePj5kLJXP975HXs5CIYo",
+      "source_event_sha256": "d06a2bee40476aa74cf93e31b029ea1d4fa1f14eb4627da2bc6d710eef1b7ce5",
+      "arguments_metadata": {
+        "target": "b_delivery_inventory"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "62e0d87515816ad974451b20cfee098fa0bcda44c1758fab6bd4d13f4637949d",
+      "stored_message_payload_bytes": 676
+    },
+    {
+      "at": "2026-09-27T04:29:16.918Z",
+      "event": "function_call_output",
+      "tool": "send_message",
+      "call_id": "call_bVMNePj5kLJXP975HXs5CIYo",
+      "source_event_sha256": "711cacbe603b94e56f8230427f2534cecaf2aef3920a91818c56742f2b646416",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T04:30:24.300Z",
+      "event": "function_call",
+      "tool": "send_message",
+      "call_id": "call_epsvUtoIFgQwHl6Ft2YZtcok",
+      "source_event_sha256": "f60c8ddeb278d4766c39de5c540fe018ad1cd4080b7ca4896404dcb14d4d46a9",
+      "arguments_metadata": {
+        "target": "c_protocol"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "0978bb95238b04de10e64e975ae8a6435e9f08a7a63ea3799771ac0b86c191bd",
+      "stored_message_payload_bytes": 632
+    },
+    {
+      "at": "2026-09-27T04:30:24.469Z",
+      "event": "function_call_output",
+      "tool": "send_message",
+      "call_id": "call_epsvUtoIFgQwHl6Ft2YZtcok",
+      "source_event_sha256": "e655576f996978643ce18374e89b6eedbd93b353411bceb1f9bf85611743e2a6",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T04:33:38.102Z",
+      "event": "function_call",
+      "tool": "send_message",
+      "call_id": "call_dglVZxsVQvMje185Ix68OVnY",
+      "source_event_sha256": "8fe7417869cca3566e949b3b35bba070306c7b5951060af14c31d2f460b06c71",
+      "arguments_metadata": {
+        "target": "c_protocol"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "292ddb918d41de37841489e3b45694a2cd2801204a2f096ceee63cd433e9c751",
+      "stored_message_payload_bytes": 632
+    },
+    {
+      "at": "2026-09-27T04:33:38.233Z",
+      "event": "function_call_output",
+      "tool": "send_message",
+      "call_id": "call_dglVZxsVQvMje185Ix68OVnY",
+      "source_event_sha256": "68a59d46027753fc6674cbf2bca4df301271dfc44027888ca2f78d56b913c59d",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T04:34:17.142Z",
+      "event": "function_call",
+      "tool": "followup_task",
+      "call_id": "call_BeWQybOaJNJsKstXubGWLQsx",
+      "source_event_sha256": "056a6cb49daa94945f60a13b71ef3d35923927979c789dd9522982f8f7c7cf7b",
+      "arguments_metadata": {
+        "target": "c_protocol"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "5951a7c5030df9a221129996aeb60c64c7a2f8b4fdd086bbde48cfb6b4143926",
+      "stored_message_payload_bytes": 996
+    },
+    {
+      "at": "2026-09-27T04:34:17.274Z",
+      "event": "function_call_output",
+      "tool": "followup_task",
+      "call_id": "call_BeWQybOaJNJsKstXubGWLQsx",
+      "source_event_sha256": "9b33bab6de2210b5406528b9aef2331ccbaa796750628e10f254499ee721de68",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T04:34:51.461Z",
+      "event": "function_call",
+      "tool": "send_message",
+      "call_id": "call_zdTG44hMLqZS8VHKHvh3yMRm",
+      "source_event_sha256": "f56b0ba9ed7bb3693cd0134af7171e91322636e27a3518b2f53354c29202802c",
+      "arguments_metadata": {
+        "target": "b_delivery_inventory"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "d7a46ab7ed44e019a85a975deb8ca94b9c86095ec02e762186e1cbc05c06074b",
+      "stored_message_payload_bytes": 612
+    },
+    {
+      "at": "2026-09-27T04:34:51.620Z",
+      "event": "function_call_output",
+      "tool": "send_message",
+      "call_id": "call_zdTG44hMLqZS8VHKHvh3yMRm",
+      "source_event_sha256": "f66c1a8c588c24551655635ac704d5f9909f5b9eee4aa973439d2f20963510c2",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T04:36:25.484Z",
+      "event": "function_call",
+      "tool": "send_message",
+      "call_id": "call_9R23BmteY7Gl8ss6pCuMQ2IV",
+      "source_event_sha256": "d8db248ae8cd7ac6ed544c55caad55aaca1e3004c6d95ddfde518771dd64c9ed",
+      "arguments_metadata": {
+        "target": "c_protocol"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "e42614c8497636b3fe1d4288846af471cc8ffeab32ea37d43462ac712a9504ed",
+      "stored_message_payload_bytes": 548
+    },
+    {
+      "at": "2026-09-27T04:36:25.625Z",
+      "event": "function_call_output",
+      "tool": "send_message",
+      "call_id": "call_9R23BmteY7Gl8ss6pCuMQ2IV",
+      "source_event_sha256": "f6ebfb40e8c9fb0c7059bef46dcd0ce9c8404f377ccb993eb4aa0d700cdb2154",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T04:38:28.244Z",
+      "event": "function_call",
+      "tool": "followup_task",
+      "call_id": "call_0HTnp770ET99hPJsWV1GhoXe",
+      "source_event_sha256": "0618b3cc7ea367acf9a6695180b00e1ca2766116e2a0b4ae837607ddf1c82448",
+      "arguments_metadata": {
+        "target": "b_delivery_inventory"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "17b8b90fb74d68930a32974d3b295b70b7e3095372545de43b222c1a160da209",
+      "stored_message_payload_bytes": 1528
+    },
+    {
+      "at": "2026-09-27T04:38:28.377Z",
+      "event": "function_call_output",
+      "tool": "followup_task",
+      "call_id": "call_0HTnp770ET99hPJsWV1GhoXe",
+      "source_event_sha256": "edbc109e7dddc67ee3a7d143a0897f67bfa7534ea36b8f3307c281593db0e80e",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T04:40:02.897Z",
+      "event": "function_call",
+      "tool": "followup_task",
+      "call_id": "call_Q8fpo3N2ljtozibdIET2yCZH",
+      "source_event_sha256": "d4ec22c17abfdcd9f542e78cf103d3ce3c6ae2341158ff267137feb5ad6299ed",
+      "arguments_metadata": {
+        "target": "a_candidates"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "995754e5d876f0cd593ae83c3ba31a53742104c30fabd1d52607fdda960d23e3",
+      "stored_message_payload_bytes": 1036
+    },
+    {
+      "at": "2026-09-27T04:40:03.085Z",
+      "event": "function_call_output",
+      "tool": "followup_task",
+      "call_id": "call_Q8fpo3N2ljtozibdIET2yCZH",
+      "source_event_sha256": "fecde14b3976978f756eae56fa8335a930a869d9c3e526944a65e72f4f082612",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T04:40:11.436Z",
+      "event": "function_call",
+      "tool": "send_message",
+      "call_id": "call_5jJbz6b1yTWDAp5DogRP91bu",
+      "source_event_sha256": "81bbb8aed5ba9c2beeca71a152b2ac88fd92ff36b26f2adf431ea50fa4fc6c24",
+      "arguments_metadata": {
+        "target": "b_delivery_inventory"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "b7fca19268a6d34c93984d470499a70022286831ad5aad12caceb656329ad6d7",
+      "stored_message_payload_bytes": 868
+    },
+    {
+      "at": "2026-09-27T04:40:11.627Z",
+      "event": "function_call_output",
+      "tool": "send_message",
+      "call_id": "call_5jJbz6b1yTWDAp5DogRP91bu",
+      "source_event_sha256": "7c9ac17c40820fb1536619bf1b5efb317aeae26a0c2210c4aa8b54be6307aa98",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T04:44:24.872Z",
+      "event": "function_call",
+      "tool": "followup_task",
+      "call_id": "call_dqScTNo8N410Nm6KBS29OoZ1",
+      "source_event_sha256": "1bddc7325ebac58b0bda04abf68ce046a7e63fed7cbcc59030f7197c5e099827",
+      "arguments_metadata": {
+        "target": "c_protocol"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "87b7656bff53d3aba48d4478dceb68ae8d1c57930f41276ad29195c34dee2a69",
+      "stored_message_payload_bytes": 996
+    },
+    {
+      "at": "2026-09-27T04:44:25.062Z",
+      "event": "function_call_output",
+      "tool": "followup_task",
+      "call_id": "call_dqScTNo8N410Nm6KBS29OoZ1",
+      "source_event_sha256": "7959db1546e87d368e890d20edc5f4ad39cfe5bd4981f83909d2dc960c8a6e6a",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T04:50:50.577Z",
+      "event": "function_call",
+      "tool": "followup_task",
+      "call_id": "call_pXYL1fuJVwedlLVSOow2pON7",
+      "source_event_sha256": "22e8f140f8587aa9206600d2dbebd8ddc85043715ba4a080c4d79316ce9b49f5",
+      "arguments_metadata": {
+        "target": "a_candidates"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "c6a6f5dd031963c40d1cf0abce669f56d2fa7a32ed4b3e714506d8d442f42830",
+      "stored_message_payload_bytes": 1208
+    },
+    {
+      "at": "2026-09-27T04:50:50.860Z",
+      "event": "function_call_output",
+      "tool": "followup_task",
+      "call_id": "call_pXYL1fuJVwedlLVSOow2pON7",
+      "source_event_sha256": "f5aa8a7434990f14ab84f619a365ef901913087d29d99b726f36663901cf4cee",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T04:54:25.552Z",
+      "event": "function_call",
+      "tool": "spawn_agent",
+      "call_id": "call_WMYRJY5Ub4Yuyw4yxiSb0lZn",
+      "source_event_sha256": "053eb38efbf84bddfc5248246c024f765c857115acc19b0e9e273d5cd7e53268",
+      "arguments_metadata": {
+        "task_name": "c_documents"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "f5fc82398b4c4003a9612d791fafc8cd4bf168115e341d82ea9c3ad0ff7b2bc5",
+      "stored_message_payload_bytes": 1764
+    },
+    {
+      "at": "2026-09-27T04:54:25.889Z",
+      "event": "function_call_output",
+      "tool": "spawn_agent",
+      "call_id": "call_WMYRJY5Ub4Yuyw4yxiSb0lZn",
+      "source_event_sha256": "bfa6cd73b7e30ba02486212d1318bf1ef68e074ddb2a95ed6db9c14f946cb01e",
+      "stored_output_payload_sha256": "234d4525ea596726ac962b50e8e52b49c92be137f58547164848bbbcfa2f2d2b",
+      "stored_output_payload_bytes": 33,
+      "availability": "CLEAR_TOOL_RETURN",
+      "output": {
+        "task_name": "/root/c_documents"
+      }
+    },
+    {
+      "at": "2026-09-27T04:59:08.334Z",
+      "event": "function_call",
+      "tool": "followup_task",
+      "call_id": "call_MEcHbsWVeRaEO0uMsiMwQkbv",
+      "source_event_sha256": "c2d85f07a346648ab80422d2ecafcdeb1cc2afcf6963f23b7fae6e59c630802e",
+      "arguments_metadata": {
+        "target": "/root/b_delivery_inventory"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "c01c119e8994d00b9865549657e67e39ab97363c8e375a7c57d47d1358be8ce9",
+      "stored_message_payload_bytes": 996
+    },
+    {
+      "at": "2026-09-27T04:59:08.665Z",
+      "event": "function_call_output",
+      "tool": "followup_task",
+      "call_id": "call_MEcHbsWVeRaEO0uMsiMwQkbv",
+      "source_event_sha256": "227f76d68b0a9e5adc9c06e97637caa95a2e6c8b852c7a8c9c3dd2a474507f36",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T04:59:45.412Z",
+      "event": "function_call",
+      "tool": "send_message",
+      "call_id": "call_YCmKfYwQ1oxCsEujLifKJMLG",
+      "source_event_sha256": "240b3d8a36de58f61059a91455ce3f8b834c1a15a730b546ea664c5aed40b413",
+      "arguments_metadata": {
+        "target": "/root/c_documents"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "fa500bff91058da1e5ba82f7d89dc5a096d459dd8f22dce1f55cc0cb93899150",
+      "stored_message_payload_bytes": 568
+    },
+    {
+      "at": "2026-09-27T04:59:45.572Z",
+      "event": "function_call_output",
+      "tool": "send_message",
+      "call_id": "call_YCmKfYwQ1oxCsEujLifKJMLG",
+      "source_event_sha256": "0a7cc6c0ddb1f4a964e4f1f23d4c60d62981d0e893ed7550845f61a7a4a9242f",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T05:01:00.122Z",
+      "event": "function_call",
+      "tool": "followup_task",
+      "call_id": "call_pR1Jv6LnK6UEsjyEV4A15YoL",
+      "source_event_sha256": "862c97fe009de3b37e7a52e69a6cbabf075fdc4f7635ee432749b2afad5fee73",
+      "arguments_metadata": {
+        "target": "/root/c_protocol"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "88edf2678d1fce6da8089b5beb4b762f48b0ecd965339356f3f3baf04e6423c8",
+      "stored_message_payload_bytes": 1016
+    },
+    {
+      "at": "2026-09-27T05:01:00.216Z",
+      "event": "function_call_output",
+      "tool": "followup_task",
+      "call_id": "call_pR1Jv6LnK6UEsjyEV4A15YoL",
+      "source_event_sha256": "010689d6ca5455028499c448409219e7cefe216ffea8e4cf3a272e2ec19307c9",
+      "stored_output_payload_sha256": "dc89804663defc4d3a6d4ec4b1134c132021f39866c75d2f13b20a43c02158b6",
+      "stored_output_payload_bytes": 46,
+      "availability": "CLEAR_TOOL_RETURN",
+      "output": "collab tool failed: agent thread limit reached"
+    },
+    {
+      "at": "2026-09-27T05:01:14.245Z",
+      "event": "function_call",
+      "tool": "send_message",
+      "call_id": "call_ewGBbGqM98nxWEHCcTgjqvPK",
+      "source_event_sha256": "cd19857e28a40f63daa0d19a37dc37181de125d0aa3b4466c240fba0a7753f25",
+      "arguments_metadata": {
+        "target": "/root/a_candidates"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "5cefd92c6d6cbc838303fa2695d9a54e8b4d7200b954e53d3ff7673903484492",
+      "stored_message_payload_bytes": 484
+    },
+    {
+      "at": "2026-09-27T05:01:14.338Z",
+      "event": "function_call_output",
+      "tool": "send_message",
+      "call_id": "call_ewGBbGqM98nxWEHCcTgjqvPK",
+      "source_event_sha256": "0de89a53ba36e666b4f0f79d416edc0dd0ca997fb7a1c220050a7e8048716b07",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T05:03:32.173Z",
+      "event": "function_call",
+      "tool": "followup_task",
+      "call_id": "call_Dx93lU2Rm3V9VxLvQxcnZluY",
+      "source_event_sha256": "0b6d4cb3402e2c88b6c67b94ded4be21b800e6e7507286ee36d6cddd6867d890",
+      "arguments_metadata": {
+        "target": "/root/c_protocol"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "9de12f4544ba82682f21a4b10c527c02b9a19ffce0250baeff0a9f717cd3ad4f",
+      "stored_message_payload_bytes": 1272
+    },
+    {
+      "at": "2026-09-27T05:03:32.285Z",
+      "event": "function_call_output",
+      "tool": "followup_task",
+      "call_id": "call_Dx93lU2Rm3V9VxLvQxcnZluY",
+      "source_event_sha256": "fd7ecd96511435860b7488afc0761cdc099b80524e52a8b42e0d83c9fa20b5d2",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T05:04:11.714Z",
+      "event": "function_call",
+      "tool": "send_message",
+      "call_id": "call_10uKGOQFp9y8808xjoeb1vkK",
+      "source_event_sha256": "5529a04f7a7fe71d26fed6271a964e23130ff4d84fcdfa9b0bb913d14446f395",
+      "arguments_metadata": {
+        "target": "/root/b_delivery_inventory"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "f92ee3fdc96c550ad36af39fa25515ab91b482264bcdcd3621468dd56ef507d4",
+      "stored_message_payload_bytes": 780
+    },
+    {
+      "at": "2026-09-27T05:04:11.825Z",
+      "event": "function_call_output",
+      "tool": "send_message",
+      "call_id": "call_10uKGOQFp9y8808xjoeb1vkK",
+      "source_event_sha256": "ce3c8f1adafcb9e4ff65cff0f229f4be5a0788a0f317a8b87ddd7887eabadf35",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T05:06:29.081Z",
+      "event": "function_call",
+      "tool": "send_message",
+      "call_id": "call_44185932a21a482db0fc4adc68fffd6c",
+      "source_event_sha256": "ae8e108eb0afed779118bb3b5b4c6575c002b2ddc73a14492c4fb4d691580aef",
+      "arguments_metadata": {
+        "target": "/root/c_protocol"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "9dffe46002a03ecc9d55771579ccc64b7b970f7dba762a896411bacf763ad70e",
+      "stored_message_payload_bytes": 676
+    },
+    {
+      "at": "2026-09-27T05:06:29.247Z",
+      "event": "function_call_output",
+      "tool": "send_message",
+      "call_id": "call_44185932a21a482db0fc4adc68fffd6c",
+      "source_event_sha256": "ff773593a3e7dd0f608233803223465115d5bfd4907aaae6e453c06fe88317bd",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T05:08:00.199Z",
+      "event": "function_call",
+      "tool": "send_message",
+      "call_id": "call_hwEsuDnnEuEIwZmqY7aACXP9",
+      "source_event_sha256": "13ea1c329a2922bf5ae3ffd13bdcd8d935b65db2e962eb531ac93f7bbe179df6",
+      "arguments_metadata": {
+        "target": "/root/c_protocol"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "b46351451ead97ab349e5287f8abdb1e997121007fd0909545f2a341ed0e0f9a",
+      "stored_message_payload_bytes": 716
+    },
+    {
+      "at": "2026-09-27T05:08:00.313Z",
+      "event": "function_call_output",
+      "tool": "send_message",
+      "call_id": "call_hwEsuDnnEuEIwZmqY7aACXP9",
+      "source_event_sha256": "5210975c286fa52f3b337751b378531ebd1e834b56695e0613852eb928c45e65",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T05:09:07.138Z",
+      "event": "function_call",
+      "tool": "followup_task",
+      "call_id": "call_4zQBXQwexHVgWP9cWEYCNUi5",
+      "source_event_sha256": "b8722e1c5a5154b5c78d22901ca0a2ec478cd4882296751125e974d0d08f242b",
+      "arguments_metadata": {
+        "target": "/root/c_documents"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "2ed12087dba5b24a62956a62b6905c7b644656e602eb36acc5ccc9797e9dad70",
+      "stored_message_payload_bytes": 868
+    },
+    {
+      "at": "2026-09-27T05:09:07.370Z",
+      "event": "function_call_output",
+      "tool": "followup_task",
+      "call_id": "call_4zQBXQwexHVgWP9cWEYCNUi5",
+      "source_event_sha256": "64551bab9f5d79815880d09fc995a9c382f690d569f123e1669fc9441b0cb25b",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T05:10:07.860Z",
+      "event": "function_call",
+      "tool": "send_message",
+      "call_id": "call_2BZwprLdaclR7hPUIpVij6cy",
+      "source_event_sha256": "e09366fa7462a1b8c619f50a806587d0af2d5c8b819ab732581ea64ff9ce2da6",
+      "arguments_metadata": {
+        "target": "/root/c_protocol"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "5285382e82b574dfba89110614bfba07649905d328fd6436e324fcbe02ec18f0",
+      "stored_message_payload_bytes": 844
+    },
+    {
+      "at": "2026-09-27T05:10:07.971Z",
+      "event": "function_call_output",
+      "tool": "send_message",
+      "call_id": "call_2BZwprLdaclR7hPUIpVij6cy",
+      "source_event_sha256": "ac3df7ff27e9cab36ecb6e784cf23b1f95e5c7cc5a347b438deb30589fca9c50",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T05:11:55.935Z",
+      "event": "function_call",
+      "tool": "send_message",
+      "call_id": "call_aw7XhWM79gquxw5lXSS1l9FT",
+      "source_event_sha256": "2b3400b7cee452a390bf1ec6b1d2dc4d90c551ee1de89781e4e4ef864b5adf70",
+      "arguments_metadata": {
+        "target": "/root/c_protocol"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "0012009f8bcda3d02b0b2052209ec4c8e95e740679e37dd236bbdf19c50b6950",
+      "stored_message_payload_bytes": 588
+    },
+    {
+      "at": "2026-09-27T05:11:56.076Z",
+      "event": "function_call_output",
+      "tool": "send_message",
+      "call_id": "call_aw7XhWM79gquxw5lXSS1l9FT",
+      "source_event_sha256": "210344de26952a81df7c5756ccf9c3da9aea0072a9ef16fa85252ed0af669073",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T05:13:45.275Z",
+      "event": "function_call",
+      "tool": "followup_task",
+      "call_id": "call_cA1k0UzssN1WSAVjfctN8qHM",
+      "source_event_sha256": "036c4f79dce06c27187696862b7bb3d53e30d6d08d14f96d32107225d0446930",
+      "arguments_metadata": {
+        "target": "/root/c_protocol"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "737c515fd68bafa1ad528bd4face507717a147938150736f64cc7807c0935a70",
+      "stored_message_payload_bytes": 952
+    },
+    {
+      "at": "2026-09-27T05:13:45.408Z",
+      "event": "function_call_output",
+      "tool": "followup_task",
+      "call_id": "call_cA1k0UzssN1WSAVjfctN8qHM",
+      "source_event_sha256": "07041e9d2b273db2ed1e69e7d8384c139ae15a8c148ee4d5cda11cec692b5f7f",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T05:16:15.848Z",
+      "event": "function_call",
+      "tool": "followup_task",
+      "call_id": "call_PvB0wJ1REcPfwyndiUDOXONo",
+      "source_event_sha256": "38a5bbab2e4a1e05ab0bb8e4a27e6020f8d30539339aa1517dfcac098d073175",
+      "arguments_metadata": {
+        "target": "/root/b_delivery_inventory"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "e9214598bf2f36c379fd3c69b2c31000748217ed7c4984b0193706b9dc585a4d",
+      "stored_message_payload_bytes": 1188
+    },
+    {
+      "at": "2026-09-27T05:16:16.015Z",
+      "event": "function_call_output",
+      "tool": "followup_task",
+      "call_id": "call_PvB0wJ1REcPfwyndiUDOXONo",
+      "source_event_sha256": "cbd72c524e3ee57f17ebae7dc96fb9963b78d1617555593889fc5f9a9b56935e",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T05:17:34.244Z",
+      "event": "function_call",
+      "tool": "followup_task",
+      "call_id": "call_2hsYxACjsHfathP33WXdF6ld",
+      "source_event_sha256": "690aef136c9d55f001d9dcb32343ffa14f4446fb30c4163b5b9984ad3335ce6d",
+      "arguments_metadata": {
+        "target": "/root/c_protocol"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "ab31571c3743f7e550e014299da87b57716e47e43a2b48e9172085cff752c102",
+      "stored_message_payload_bytes": 888
+    },
+    {
+      "at": "2026-09-27T05:17:34.409Z",
+      "event": "function_call_output",
+      "tool": "followup_task",
+      "call_id": "call_2hsYxACjsHfathP33WXdF6ld",
+      "source_event_sha256": "6d27fb761c843fc668763557acc35eb1ff5c9564c7525a0610e7587799235784",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T05:19:46.981Z",
+      "event": "function_call",
+      "tool": "send_message",
+      "call_id": "call_bGW9g5g4ewJJBJPGuwflmWAG",
+      "source_event_sha256": "6f39778ff4e47005cfc1897f479b59fe2663c3de8c65227e7e251f825e639951",
+      "arguments_metadata": {
+        "target": "/root/c_protocol"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "db54b3ad48afc971b8ec7b277547cccbab5f5cc858a55a793fbf51cbe34f4116",
+      "stored_message_payload_bytes": 868
+    },
+    {
+      "at": "2026-09-27T05:19:47.125Z",
+      "event": "function_call_output",
+      "tool": "send_message",
+      "call_id": "call_bGW9g5g4ewJJBJPGuwflmWAG",
+      "source_event_sha256": "10d5963ca3d4c2870def2dabbe7c8febb8d165a1a1788bcdf525f13e50c0d2a3",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T05:20:17.800Z",
+      "event": "function_call",
+      "tool": "send_message",
+      "call_id": "call_92XHraFyFJui2Jg9gx2CUvIu",
+      "source_event_sha256": "ada1929fe952102d7711d88a8ca383b436737ad066c3dc3f42bc01e1b84f5698",
+      "arguments_metadata": {
+        "target": "/root/c_protocol"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "a797f054074c727720b2e95521ebf8450b1e186fd761db8dd99d82a8afd927d5",
+      "stored_message_payload_bytes": 824
+    },
+    {
+      "at": "2026-09-27T05:20:17.963Z",
+      "event": "function_call_output",
+      "tool": "send_message",
+      "call_id": "call_92XHraFyFJui2Jg9gx2CUvIu",
+      "source_event_sha256": "21093f9e2020afe8fa509d3d95f1e722fff83958ce92272b2338025b80dd17e4",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T05:20:29.322Z",
+      "event": "function_call",
+      "tool": "send_message",
+      "call_id": "call_kI1ZphCMCKkcHfl2G157wmax",
+      "source_event_sha256": "699db841cd6af35c8dbcf5bfe0ccd445e5344127decac91c1943e16d30cdb53b",
+      "arguments_metadata": {
+        "target": "/root/b_delivery_inventory"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "92d86ce231df367b05b2d9369d3dfdde785bfd1749565a476c6a3db15f09676c",
+      "stored_message_payload_bytes": 932
+    },
+    {
+      "at": "2026-09-27T05:20:29.462Z",
+      "event": "function_call_output",
+      "tool": "send_message",
+      "call_id": "call_kI1ZphCMCKkcHfl2G157wmax",
+      "source_event_sha256": "82ad368458bd211bdc1845779ad7095d4a35acfb4136c0b0dd59e0376496d3d7",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T05:22:32.450Z",
+      "event": "function_call",
+      "tool": "send_message",
+      "call_id": "call_9KAJgNcKrKeLfn2wf937G1ll",
+      "source_event_sha256": "e8fae04b28797d182e3ef779bf7ca419d5e170b5e40cfe96968333cbc7b7a5e8",
+      "arguments_metadata": {
+        "target": "/root/b_delivery_inventory"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "a147d44e3cecd4284cec24eebc867905599e896dbfabbd7b8b78819d978cf971",
+      "stored_message_payload_bytes": 780
+    },
+    {
+      "at": "2026-09-27T05:22:32.611Z",
+      "event": "function_call_output",
+      "tool": "send_message",
+      "call_id": "call_9KAJgNcKrKeLfn2wf937G1ll",
+      "source_event_sha256": "b5cb52f9ea3335b62ecb5372c3e0d607637430eae2874cccbca0debc36f8efd1",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T05:24:01.220Z",
+      "event": "function_call",
+      "tool": "followup_task",
+      "call_id": "call_hbM9iOmOfwtJ0OZh7ND17Er6",
+      "source_event_sha256": "75cfca44ea07772a83124c50db222ba0175580befc152da02b68391edf7bf55c",
+      "arguments_metadata": {
+        "target": "/root/c_protocol"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "592f2609f1841b69884ea0774db684f6c5eb238758b1cdbd561b0b02fd179dda",
+      "stored_message_payload_bytes": 844
+    },
+    {
+      "at": "2026-09-27T05:24:01.359Z",
+      "event": "function_call_output",
+      "tool": "followup_task",
+      "call_id": "call_hbM9iOmOfwtJ0OZh7ND17Er6",
+      "source_event_sha256": "a96f5f53e60b336ddb675da50c6099f9c5d0468ee890db84f9b52d1313c2a47c",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T05:24:14.273Z",
+      "event": "function_call",
+      "tool": "send_message",
+      "call_id": "call_CZuzW1z2VVXAIAt88FywUhT6",
+      "source_event_sha256": "ca45c5905c3bd919a4e35145b089247b85f092c8603cb411bf7a4b6c02fc0fd8",
+      "arguments_metadata": {
+        "target": "/root/b_delivery_inventory"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "0e9c3c727897b2cb14e094a6986bc9949f3c6996374fec98fdee89c28a44b0fe",
+      "stored_message_payload_bytes": 612
+    },
+    {
+      "at": "2026-09-27T05:24:14.443Z",
+      "event": "function_call_output",
+      "tool": "send_message",
+      "call_id": "call_CZuzW1z2VVXAIAt88FywUhT6",
+      "source_event_sha256": "e9a3389cdf70145c1765132b306e01d4f26734d14e1b4bc2c286ed58c65bf74f",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T05:29:00.919Z",
+      "event": "function_call",
+      "tool": "followup_task",
+      "call_id": "call_XbW5JnJj1JNa9Ja7NSExpImM",
+      "source_event_sha256": "eb73b5646f2df37d598feb3e847c6256c19391c706534295045f65c19bc08f45",
+      "arguments_metadata": {
+        "target": "/root/c_protocol"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "841226824813a1262b8063def7104fd6e481286203601e1ea3bc5853d15cd644",
+      "stored_message_payload_bytes": 804
+    },
+    {
+      "at": "2026-09-27T05:29:01.063Z",
+      "event": "function_call_output",
+      "tool": "followup_task",
+      "call_id": "call_XbW5JnJj1JNa9Ja7NSExpImM",
+      "source_event_sha256": "ae0ed47458c5c416c29f4617d7cb0c2e6d6bdd16ab574f4decb0eb1356579f76",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T05:31:34.019Z",
+      "event": "function_call",
+      "tool": "followup_task",
+      "call_id": "call_GSxoD3Hgm2lPRmnp9dWdPxVc",
+      "source_event_sha256": "b95321655d66babbedacf81ee37a0f757b405893e9d4bd69980d3b666ed82bd0",
+      "arguments_metadata": {
+        "target": "/root/c_protocol"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "f644aabb450e5b00acd88f3995c26d688e7767e01de249616a7cf301bdf34e7c",
+      "stored_message_payload_bytes": 804
+    },
+    {
+      "at": "2026-09-27T05:31:34.175Z",
+      "event": "function_call_output",
+      "tool": "followup_task",
+      "call_id": "call_GSxoD3Hgm2lPRmnp9dWdPxVc",
+      "source_event_sha256": "067f46750490ab8c16371556c6dc69369c3ab22475064d5290934726f067f9f5",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T05:31:47.337Z",
+      "event": "function_call",
+      "tool": "send_message",
+      "call_id": "call_gZotLuwcB8hdYs26sjQyOaPd",
+      "source_event_sha256": "bebcf3a596e7c92ad011b1600235c06efe5c303c6fc5e6f0b68dbb04b4ce6257",
+      "arguments_metadata": {
+        "target": "/root/b_delivery_inventory"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "e4639645e0dc75b0bb9419ea449571dd65582dcea31c651cbeb5a1191fa676ad",
+      "stored_message_payload_bytes": 908
+    },
+    {
+      "at": "2026-09-27T05:31:47.500Z",
+      "event": "function_call_output",
+      "tool": "send_message",
+      "call_id": "call_gZotLuwcB8hdYs26sjQyOaPd",
+      "source_event_sha256": "82c0d27f83d1e538fb9e52a4700c472c7c4925457802fe05c6c00f28513d7808",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T05:33:34.472Z",
+      "event": "function_call",
+      "tool": "followup_task",
+      "call_id": "call_3CiqQVdbmeFHClLXTOqKa7di",
+      "source_event_sha256": "6a75add46f937e30bd4e530fd3a858c6c36986da05554ff68ab34854c9be2fa3",
+      "arguments_metadata": {
+        "target": "/root/c_protocol"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "434a058e2bdf5e2d46dbeb62f1d689a2e9bfe020cffbfb62ed4cc23dfc488abf",
+      "stored_message_payload_bytes": 972
+    },
+    {
+      "at": "2026-09-27T05:33:34.628Z",
+      "event": "function_call_output",
+      "tool": "followup_task",
+      "call_id": "call_3CiqQVdbmeFHClLXTOqKa7di",
+      "source_event_sha256": "07218d3feddc0f2597432aa86e5b3641f593bb947e52584af3092c37f58e1a5c",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T05:41:29.893Z",
+      "event": "function_call",
+      "tool": "send_message",
+      "call_id": "call_iVKgV6ZnegcXLeIZu5POhGUc",
+      "source_event_sha256": "3a92a73d401eb4e2d76c3fcac316e7495c7f9ccc5be32f0e4a7c398796d4449b",
+      "arguments_metadata": {
+        "target": "/root/b_delivery_inventory"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "6875d5901ecb7920f23b5ae24e21b529aae2ffd101c5cc7dec6c3621512fe8c9",
+      "stored_message_payload_bytes": 1060
+    },
+    {
+      "at": "2026-09-27T05:41:30.061Z",
+      "event": "function_call_output",
+      "tool": "send_message",
+      "call_id": "call_iVKgV6ZnegcXLeIZu5POhGUc",
+      "source_event_sha256": "450a3198f82e1083887ca53f429fdf069eaaf2b9fb1f85d5850bff2d7a25de78",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T05:43:47.022Z",
+      "event": "function_call",
+      "tool": "followup_task",
+      "call_id": "call_pAqexKKszDkRRD03JXbQaLgC",
+      "source_event_sha256": "62e0a59e22de12360229c73ae47cc6096149f8424d6f7fbabdcb133b84c7de10",
+      "arguments_metadata": {
+        "target": "/root/c_documents"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "5c54fce44b9c5403f5b6a3de80e037b762df64aab01045b9c654dc4a62ee0c37",
+      "stored_message_payload_bytes": 1400
+    },
+    {
+      "at": "2026-09-27T05:43:47.247Z",
+      "event": "function_call_output",
+      "tool": "followup_task",
+      "call_id": "call_pAqexKKszDkRRD03JXbQaLgC",
+      "source_event_sha256": "dac53d2ca9df9d62b4e1d5bd32bfe631a4278d56bde8522b654c875190967cf7",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T05:48:28.939Z",
+      "event": "function_call",
+      "tool": "send_message",
+      "call_id": "call_1g6evDD0Wk7ehyc3U2W6XbkO",
+      "source_event_sha256": "e72892f3722c123eca608a3155c9aff90ec0b996d8ea793d0999a432b9b0937a",
+      "arguments_metadata": {
+        "target": "/root/c_documents"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "f9f7c571d011b298bb4d2e47ae13d31088aa69d3f99fee553bb2d6b258f625f3",
+      "stored_message_payload_bytes": 868
+    },
+    {
+      "at": "2026-09-27T05:48:29.146Z",
+      "event": "function_call_output",
+      "tool": "send_message",
+      "call_id": "call_1g6evDD0Wk7ehyc3U2W6XbkO",
+      "source_event_sha256": "26091a2e3a83cdfec526190e30f2a770a79a4b9ba50506b67ef9e42415c4e68b",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T05:56:08.352Z",
+      "event": "function_call",
+      "tool": "followup_task",
+      "call_id": "call_BqlkjBvqcVe894dD9mupJAbQ",
+      "source_event_sha256": "4080fdd3c6bdbedda1a36b142b48f203a72769190ff137d9c2f5949c0de410f6",
+      "arguments_metadata": {
+        "target": "/root/c_documents"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "6483c8825fecbdee4be389ba1a7d51e9f6243bfa727e202f7932bc244333adf4",
+      "stored_message_payload_bytes": 1420
+    },
+    {
+      "at": "2026-09-27T05:56:08.444Z",
+      "event": "function_call_output",
+      "tool": "followup_task",
+      "call_id": "call_BqlkjBvqcVe894dD9mupJAbQ",
+      "source_event_sha256": "8a44f666c956c077a82f43c83839178b5d44254cf208a0312441f652cc1880bc",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T05:56:36.872Z",
+      "event": "function_call",
+      "tool": "followup_task",
+      "call_id": "call_E7Mjwhppsb4OIRrhevYvzSd8",
+      "source_event_sha256": "07be8c6d1f23cccf66382d42be1fb0d6e05f8c33ebf183cf2184727a1e8fe5a9",
+      "arguments_metadata": {
+        "target": "/root/b_delivery_inventory"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "29d5fc79bb946a716894cf23e988e9cef1797e70bac85940ea2eea9039222c11",
+      "stored_message_payload_bytes": 1764
+    },
+    {
+      "at": "2026-09-27T05:56:36.961Z",
+      "event": "function_call_output",
+      "tool": "followup_task",
+      "call_id": "call_E7Mjwhppsb4OIRrhevYvzSd8",
+      "source_event_sha256": "17b8a3079fb6fc84fac0548c4f4b2ac26d83280c9d4041caf7738f1039a7a3b9",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T05:59:48.722Z",
+      "event": "function_call",
+      "tool": "followup_task",
+      "call_id": "call_pU809Yp9biHylEuk6g0fVcX0",
+      "source_event_sha256": "fe27c32186159f773ffc6449bc14f94f36017116a5f6696b131cdc2859615ebf",
+      "arguments_metadata": {
+        "target": "/root/c_protocol"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "e8759fe2d3514005bffde86d24a60ddcffe5019c25a8cca427fc25e358e26634",
+      "stored_message_payload_bytes": 1292
+    },
+    {
+      "at": "2026-09-27T05:59:48.854Z",
+      "event": "function_call_output",
+      "tool": "followup_task",
+      "call_id": "call_pU809Yp9biHylEuk6g0fVcX0",
+      "source_event_sha256": "e665697aef62445e6aba9d160014d7d639ea867338c8674ca3fe36b0136ee710",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T06:03:29.387Z",
+      "event": "function_call",
+      "tool": "followup_task",
+      "call_id": "call_tSoMEcVvmRtNh0zIwJajHzhM",
+      "source_event_sha256": "b7ef67140ecd7cd4ab60a63d7c442c1d263efd2dd16e66510c656175339a91de",
+      "arguments_metadata": {
+        "target": "/root/c_documents"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "7a40df37a0d7454d2a4998580b6fca822b3db59f4622dc5d033d9f8605991f3a",
+      "stored_message_payload_bytes": 1252
+    },
+    {
+      "at": "2026-09-27T06:03:29.490Z",
+      "event": "function_call_output",
+      "tool": "followup_task",
+      "call_id": "call_tSoMEcVvmRtNh0zIwJajHzhM",
+      "source_event_sha256": "317c549cefa2bad9ac606176c483d4bd89b7bdb79e54ce67e6d4a834ceba2a26",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T06:12:04.460Z",
+      "event": "function_call",
+      "tool": "send_message",
+      "call_id": "call_Byqgi5wrLjiRF4lV5fxveshK",
+      "source_event_sha256": "1d6e9c87c30d4d8ed373b86293a2cd9a80854efa6dcf4b8e9c588ace99e03569",
+      "arguments_metadata": {
+        "target": "/root/c_protocol"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "4ea22e8e20aefed263d1aef3663ba8dc911ad248fa9fb04fbb6f9a762197238c",
+      "stored_message_payload_bytes": 1080
+    },
+    {
+      "at": "2026-09-27T06:12:04.573Z",
+      "event": "function_call_output",
+      "tool": "send_message",
+      "call_id": "call_Byqgi5wrLjiRF4lV5fxveshK",
+      "source_event_sha256": "e00bef8b66eec9ba008eb3f1489d11160ceb3031f41d5f9d5ec933e6f2005daa",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T06:12:14.523Z",
+      "event": "function_call",
+      "tool": "send_message",
+      "call_id": "call_QJxSuh7dKjVJBoEVjGSMS6IC",
+      "source_event_sha256": "bdbfaa8973c5f641813a53a6cdf6b7f26597724084aa76c420ce53849f5197f6",
+      "arguments_metadata": {
+        "target": "/root/b_delivery_inventory"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "a898e6ee7f755cce3a6011e0b7e8366f70795150adf7fc2d9194bcfa5b7a2393",
+      "stored_message_payload_bytes": 972
+    },
+    {
+      "at": "2026-09-27T06:12:14.638Z",
+      "event": "function_call_output",
+      "tool": "send_message",
+      "call_id": "call_QJxSuh7dKjVJBoEVjGSMS6IC",
+      "source_event_sha256": "ad924bfc368ed0844141e67d8feba2c814d7c508dcdb30396a85993134584ad2",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T06:14:43.887Z",
+      "event": "function_call",
+      "tool": "send_message",
+      "call_id": "call_xM3395OwLuufUypHldTEcs9O",
+      "source_event_sha256": "a9cb644e12fe94d3d5029e3de7fa382a932f403e46c5d84154987bb0a830801e",
+      "arguments_metadata": {
+        "target": "/root/c_protocol"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "855d320a2f72cc4f58bc7bb4c112b721830c41a07013e89a3f5d05d5c9ea928b",
+      "stored_message_payload_bytes": 972
+    },
+    {
+      "at": "2026-09-27T06:14:44.003Z",
+      "event": "function_call_output",
+      "tool": "send_message",
+      "call_id": "call_xM3395OwLuufUypHldTEcs9O",
+      "source_event_sha256": "297c8c685de06e99ab651a42630351fb74e0c9609c89de0831bc3022f77ff884",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T06:16:34.878Z",
+      "event": "function_call",
+      "tool": "send_message",
+      "call_id": "call_u0BiJRbRem8klq4VBosG0KLc",
+      "source_event_sha256": "b580bde6f99129b3e95deb7e9e7b92983bbd8bdc28e2ed8f6255632cc5ab6068",
+      "arguments_metadata": {
+        "target": "/root/b_delivery_inventory"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "9a64d4777e76240cf50759f4f1b2829485865703f938bcac83e59c0c6aa271d8",
+      "stored_message_payload_bytes": 1060
+    },
+    {
+      "at": "2026-09-27T06:16:35.045Z",
+      "event": "function_call_output",
+      "tool": "send_message",
+      "call_id": "call_u0BiJRbRem8klq4VBosG0KLc",
+      "source_event_sha256": "e3486b1d81efa497ba1a6d96c77d550b096e2c92923c0703114a0efb48314e4b",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T06:18:46.758Z",
+      "event": "function_call",
+      "tool": "send_message",
+      "call_id": "call_KpqlXUhLBcrnaNhzhEQy1vr0",
+      "source_event_sha256": "7b5675442b0cb35d291d51964981b2120ac6d0ee17c4b37a3da4f2ed3803d4ba",
+      "arguments_metadata": {
+        "target": "/root/c_documents"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "71de841b7b7b0f36ba5bfc483fa4d0deac62e1716fda04feeedfa59185b4ed7c",
+      "stored_message_payload_bytes": 1036
+    },
+    {
+      "at": "2026-09-27T06:18:46.885Z",
+      "event": "function_call_output",
+      "tool": "send_message",
+      "call_id": "call_KpqlXUhLBcrnaNhzhEQy1vr0",
+      "source_event_sha256": "38e1fb3448548ae397c80f7005f5c9e546c2a20b9d027f29bc7195c1b9df7c2d",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T06:18:58.792Z",
+      "event": "function_call",
+      "tool": "send_message",
+      "call_id": "call_vakszHaZFZ6TAIN0R45OoJM2",
+      "source_event_sha256": "a141d9137cc0b9acaf4c9642f2e45dd4eb8828853f87867934a51bac1d1a1fff",
+      "arguments_metadata": {
+        "target": "/root/b_delivery_inventory"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "ccbb9218b1afadcb00d6eb0c42bc13826e17c7ba6a5ba9e2f7e60c6f9a0fbec4",
+      "stored_message_payload_bytes": 740
+    },
+    {
+      "at": "2026-09-27T06:18:58.912Z",
+      "event": "function_call_output",
+      "tool": "send_message",
+      "call_id": "call_vakszHaZFZ6TAIN0R45OoJM2",
+      "source_event_sha256": "27cd4012afa14290d2e6a359f3511c8a473c3e3a70adc7c153b302e413738a7c",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T06:19:08.819Z",
+      "event": "function_call",
+      "tool": "send_message",
+      "call_id": "call_NKj9YjoaPIRWSRWJAXg2zLWF",
+      "source_event_sha256": "d09a7c6076605e18551195a682026cfec159263a444f88d375df21f0775eb28c",
+      "arguments_metadata": {
+        "target": "/root/c_protocol"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "d19c65ff7b5b90ba53efdaef41601f8bcf16a7f2573ce87dafb37d65f155dc71",
+      "stored_message_payload_bytes": 652
+    },
+    {
+      "at": "2026-09-27T06:19:09.045Z",
+      "event": "function_call_output",
+      "tool": "send_message",
+      "call_id": "call_NKj9YjoaPIRWSRWJAXg2zLWF",
+      "source_event_sha256": "df7d89633cafd0565fdd4056db71be5d933ef2cfc5816df309cb54d7bbe60649",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T06:20:26.994Z",
+      "event": "function_call",
+      "tool": "send_message",
+      "call_id": "call_Lp93df1PJJsXJx38HYMVPXMb",
+      "source_event_sha256": "f3dfd4e3591f373df61bfa3544ea660d0714a65ffb0869b4ea223d48dc92a7bf",
+      "arguments_metadata": {
+        "target": "/root/c_protocol"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "ae66443482a2838a50fa264509f632bf1e2c39ca8c183191e6d1b9848d98cda5",
+      "stored_message_payload_bytes": 844
+    },
+    {
+      "at": "2026-09-27T06:20:27.206Z",
+      "event": "function_call_output",
+      "tool": "send_message",
+      "call_id": "call_Lp93df1PJJsXJx38HYMVPXMb",
+      "source_event_sha256": "04717950e5a815442ef19af50f51e279c95a0241b5e15b2dc58e44da0d87b1f5",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T06:20:35.748Z",
+      "event": "function_call",
+      "tool": "send_message",
+      "call_id": "call_VOxKFUgMaHp0ZT0s8ncpqCFG",
+      "source_event_sha256": "29bc9ea61c209fe0cd369fc3b66bf44b0e0d8c2ed418e9783ce0259865c78c5d",
+      "arguments_metadata": {
+        "target": "/root/b_delivery_inventory"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "614b12eee97ac094f9a39cde4db4fbb32d88926ee8abd388d9ffd3f31bcdeca2",
+      "stored_message_payload_bytes": 696
+    },
+    {
+      "at": "2026-09-27T06:20:35.881Z",
+      "event": "function_call_output",
+      "tool": "send_message",
+      "call_id": "call_VOxKFUgMaHp0ZT0s8ncpqCFG",
+      "source_event_sha256": "856c388c4e60d3a340990ebb3446fcbd15cb7eb9087ebe56a806d888625aeb5f",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T06:22:54.995Z",
+      "event": "function_call",
+      "tool": "send_message",
+      "call_id": "call_1aJ9sD10AxTTqaiYlDFgwqJ6",
+      "source_event_sha256": "92e0d99bf0038b331a899104c57b595265093d8f2f2812ef8f9c83ad959cfeff",
+      "arguments_metadata": {
+        "target": "/root/c_protocol"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "f8a6c465d3c85a6e201c1afcce5e6364f052706b654199d2e005c80bf944ec9b",
+      "stored_message_payload_bytes": 804
+    },
+    {
+      "at": "2026-09-27T06:22:55.154Z",
+      "event": "function_call_output",
+      "tool": "send_message",
+      "call_id": "call_1aJ9sD10AxTTqaiYlDFgwqJ6",
+      "source_event_sha256": "47fbdbf5c484ca48395d0698df031d129c48df93fbd968899abeb22021c1239a",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T06:23:04.482Z",
+      "event": "function_call",
+      "tool": "send_message",
+      "call_id": "call_6wQAIoDKv4opcAsBO1J4rZ2x",
+      "source_event_sha256": "a398fc212f717678691d3d3e93b02b80f736c554d9fe99545511d5a51f65a9e3",
+      "arguments_metadata": {
+        "target": "/root/b_delivery_inventory"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "183142565ce6666d76c36573dbd1048bac6f8d433afdce5457716b04d3af2a5e",
+      "stored_message_payload_bytes": 740
+    },
+    {
+      "at": "2026-09-27T06:23:04.644Z",
+      "event": "function_call_output",
+      "tool": "send_message",
+      "call_id": "call_6wQAIoDKv4opcAsBO1J4rZ2x",
+      "source_event_sha256": "a7362f48d8ad1f4f844ef5eca92086f6c31bdd611d27f6d7e9de7056166fbc6a",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T06:25:13.799Z",
+      "event": "function_call",
+      "tool": "followup_task",
+      "call_id": "call_SJkaprirO0iKAFKAbLY9kro4",
+      "source_event_sha256": "e2873394d9da4ce4cf6ce7d6b034f129e62ee56ba8c7e1fb037e1e6f3a4c3e2a",
+      "arguments_metadata": {
+        "target": "/root/c_documents"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "c97819baeb0fad2bc659cc0cfe73d9e3277b5e5ae68922fe30f7c065ab153789",
+      "stored_message_payload_bytes": 1272
+    },
+    {
+      "at": "2026-09-27T06:25:13.991Z",
+      "event": "function_call_output",
+      "tool": "followup_task",
+      "call_id": "call_SJkaprirO0iKAFKAbLY9kro4",
+      "source_event_sha256": "affc86e1d37b03a107003e20ce4e1bddcc66bc51e67c33c73bdaaaabb3b54da0",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T06:36:40.936Z",
+      "event": "function_call",
+      "tool": "send_message",
+      "call_id": "call_My7p4szOFA3WCrKUMBaRqdGo",
+      "source_event_sha256": "9739547442ce38ae584c17ead80a6f40725dec431b609c2ff9862b394adc3940",
+      "arguments_metadata": {
+        "target": "c_protocol"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "94dcf7ceca1cf6d685170530ca35ae02a16368ef404cd6c8b8dc94d6e7a7c1e8",
+      "stored_message_payload_bytes": 676
+    },
+    {
+      "at": "2026-09-27T06:36:41.202Z",
+      "event": "function_call_output",
+      "tool": "send_message",
+      "call_id": "call_My7p4szOFA3WCrKUMBaRqdGo",
+      "source_event_sha256": "288190d4e23f3f9e55a1cbba74c2ba704a07855d77437eb71759ef34d04f0931",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T06:36:54.499Z",
+      "event": "function_call",
+      "tool": "followup_task",
+      "call_id": "call_LV3Jdc1RR7Vj6u5L2iVvlfmx",
+      "source_event_sha256": "4ca28f37f5f9c96e4c4481b17ccd9ddbcc8f9d103e27e9cba49894c0e1e55eda",
+      "arguments_metadata": {
+        "target": "b_delivery_inventory"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "86ebb325f89b51d54c0a5bf5b3482d0801f4dbfb17c33e4fdd0ee9ef79679a31",
+      "stored_message_payload_bytes": 1100
+    },
+    {
+      "at": "2026-09-27T06:36:54.708Z",
+      "event": "function_call_output",
+      "tool": "followup_task",
+      "call_id": "call_LV3Jdc1RR7Vj6u5L2iVvlfmx",
+      "source_event_sha256": "1959efa639ada84b5c97f161134509320962f056946bfb254aeb86474340d6d9",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T06:39:23.480Z",
+      "event": "function_call",
+      "tool": "send_message",
+      "call_id": "call_qftozfeYLJWAVaKVdo3ioUvw",
+      "source_event_sha256": "0f4aae37421b160f14706213e6c2ad56fd81f23e47740ab06fb6a344163fd981",
+      "arguments_metadata": {
+        "target": "c_protocol"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "32bb687fe5ec94a9f8f7bb1b99c703dff0400d8c80fd7b93f76aa2e0886c95e2",
+      "stored_message_payload_bytes": 504
+    },
+    {
+      "at": "2026-09-27T06:39:23.601Z",
+      "event": "function_call_output",
+      "tool": "send_message",
+      "call_id": "call_qftozfeYLJWAVaKVdo3ioUvw",
+      "source_event_sha256": "a13a82e8d61d075dd61fb01248f34a80d41b224e3d6116fe2a90b563868df5d0",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T06:40:11.161Z",
+      "event": "function_call",
+      "tool": "followup_task",
+      "call_id": "call_g5Ski6HITdWZmQskQF1I2h03",
+      "source_event_sha256": "a5e5d1e34043cb3f11729c8dd3ec9f14f92d09358d174e17f62e678fd587d1cb",
+      "arguments_metadata": {
+        "target": "c_documents"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "a76157dd7f60628c466f81cc8c641f725c439b663f9bcdb280aa4f2571f2e40c",
+      "stored_message_payload_bytes": 1080
+    },
+    {
+      "at": "2026-09-27T06:40:11.665Z",
+      "event": "function_call_output",
+      "tool": "followup_task",
+      "call_id": "call_g5Ski6HITdWZmQskQF1I2h03",
+      "source_event_sha256": "85853b7115d66a1482df4b66a940631e29773522149368b331fbd1319feef5ba",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T06:40:55.349Z",
+      "event": "function_call",
+      "tool": "send_message",
+      "call_id": "call_z1hLHtmH9tkLzVrU6t7aU5a7",
+      "source_event_sha256": "e797d7aff36ad94e69b65882ea641f597c2d21e5ea74274c9e03eabde7d54fbb",
+      "arguments_metadata": {
+        "target": "b_delivery_inventory"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "f3b533cec4ad12b7848fa6eb1833726163e0c0bf0db0edaf9c94b8fa8d6e0619",
+      "stored_message_payload_bytes": 908
+    },
+    {
+      "at": "2026-09-27T06:40:55.466Z",
+      "event": "function_call_output",
+      "tool": "send_message",
+      "call_id": "call_z1hLHtmH9tkLzVrU6t7aU5a7",
+      "source_event_sha256": "f3c93bbe9f61bc4b93e7d278f350face66bafa35e63fad632eb7cfc4f2d973cb",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T06:41:14.887Z",
+      "event": "function_call",
+      "tool": "followup_task",
+      "call_id": "call_CIyd8cCR5zTagmIjGvC0Du5g",
+      "source_event_sha256": "774f2851bf6148415429afe89f8c7e7b450e86af90bf94fdbd9c9e9c3296c1c2",
+      "arguments_metadata": {
+        "target": "c_protocol"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "96ac573ebb4a369b9463c1f963da8d5218a2ee4634871f05ba610b0ec6da88e5",
+      "stored_message_payload_bytes": 1124
+    },
+    {
+      "at": "2026-09-27T06:41:14.995Z",
+      "event": "function_call_output",
+      "tool": "followup_task",
+      "call_id": "call_CIyd8cCR5zTagmIjGvC0Du5g",
+      "source_event_sha256": "bcc0382fce294506afe385b1666a8bd7840ff897b45abb95069fca66c2ac9cb8",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T06:43:54.645Z",
+      "event": "function_call",
+      "tool": "send_message",
+      "call_id": "call_P8bZ6DADsjSpFLWxQBEhL7eg",
+      "source_event_sha256": "6d52081a61a06d70fc9d35a54db79a10a4b5277cd627766439334e63cf28d993",
+      "arguments_metadata": {
+        "target": "c_protocol"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "bcee657daf50ccb2191f823c5fa3213ce90292bf74ca7279e66ae316cb00879d",
+      "stored_message_payload_bytes": 908
+    },
+    {
+      "at": "2026-09-27T06:43:54.764Z",
+      "event": "function_call_output",
+      "tool": "send_message",
+      "call_id": "call_P8bZ6DADsjSpFLWxQBEhL7eg",
+      "source_event_sha256": "348f9f5653ebe2c5e6e9cfc4a3f49c049038074682f7f7710b9db0b9be514f98",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T06:44:28.988Z",
+      "event": "function_call",
+      "tool": "send_message",
+      "call_id": "call_ZQ1FshzXotMKlhHkFBU6bQW4",
+      "source_event_sha256": "a846466c4516602d23ad34526fd630b238b5017b2d84b208a4be96df8120629a",
+      "arguments_metadata": {
+        "target": "c_documents"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "c96c561b7dc3b142054f3a3201643961519ebe49256a13e2b03fab8fabfa8316",
+      "stored_message_payload_bytes": 612
+    },
+    {
+      "at": "2026-09-27T06:44:29.099Z",
+      "event": "function_call_output",
+      "tool": "send_message",
+      "call_id": "call_ZQ1FshzXotMKlhHkFBU6bQW4",
+      "source_event_sha256": "c5ab17051e7da87f2c13f79c5ba6a6d7ca871f6b2cfc4f357bc0033427a50f5d",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T06:46:44.076Z",
+      "event": "function_call",
+      "tool": "send_message",
+      "call_id": "call_JIhwvhQCn2u5nMqA4cAMLyyF",
+      "source_event_sha256": "6187a85fed1917496a31e1ba4acb2cee74fec4dccd8b3afe982e88dd090f67a9",
+      "arguments_metadata": {
+        "target": "b_delivery_inventory"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "2a90f6afa67fcfeca1ec724a950075212aea63fc0ab60bbcb9d0a197e831b55e",
+      "stored_message_payload_bytes": 696
+    },
+    {
+      "at": "2026-09-27T06:46:44.247Z",
+      "event": "function_call_output",
+      "tool": "send_message",
+      "call_id": "call_JIhwvhQCn2u5nMqA4cAMLyyF",
+      "source_event_sha256": "8baca39d58b4c675e9b3411e44cfebe2790a9717644a97c3e079e92e04df5a05",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T06:50:02.736Z",
+      "event": "function_call",
+      "tool": "send_message",
+      "call_id": "call_bvbnhY0OewvS64JiVgcspTLN",
+      "source_event_sha256": "2ccb700a7edf76f967cc3ae7a71337b8f8508a5accd565461f9a383fa4598553",
+      "arguments_metadata": {
+        "target": "c_protocol"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "bdd527c2c4633672179011021cecdff8b36b004974087ff94c1bc0c82de3bc0a",
+      "stored_message_payload_bytes": 1016
+    },
+    {
+      "at": "2026-09-27T06:50:02.860Z",
+      "event": "function_call_output",
+      "tool": "send_message",
+      "call_id": "call_bvbnhY0OewvS64JiVgcspTLN",
+      "source_event_sha256": "68793070aefd38bd1477b25ca234510813c3e28b02799003e1a4c1b0a4bddc75",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T06:51:25.306Z",
+      "event": "function_call",
+      "tool": "followup_task",
+      "call_id": "call_13Ou3MkraLNXr7MDHp5uoV12",
+      "source_event_sha256": "91aba00510cf690b098eac02b85c92c2104acc87c79aa05655dcfe4e5e12bebf",
+      "arguments_metadata": {
+        "target": "c_documents"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "78d4a7a8b401947edf4c209cc3fe17515509bce7530d0309be1fce071c092153",
+      "stored_message_payload_bytes": 868
+    },
+    {
+      "at": "2026-09-27T06:51:25.475Z",
+      "event": "function_call_output",
+      "tool": "followup_task",
+      "call_id": "call_13Ou3MkraLNXr7MDHp5uoV12",
+      "source_event_sha256": "ada53de86b093f3e8235d72f9e824c1afc5bc9acf94c391e316b59dc4d658f44",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T06:52:29.548Z",
+      "event": "function_call",
+      "tool": "send_message",
+      "call_id": "call_txRZdzSfhdZtDMsYdqhXE9hb",
+      "source_event_sha256": "5ff3caa5dfb20c4ab859cc2b29f9e4a2b6ff55fba1d0a604adbfbbc0aa7912b1",
+      "arguments_metadata": {
+        "target": "c_protocol"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "5e52dcf4528281957980955647f7301bc67b7f9ae0505925627a20d98cf6fc61",
+      "stored_message_payload_bytes": 548
+    },
+    {
+      "at": "2026-09-27T06:52:29.682Z",
+      "event": "function_call_output",
+      "tool": "send_message",
+      "call_id": "call_txRZdzSfhdZtDMsYdqhXE9hb",
+      "source_event_sha256": "b9faea05b9d75b4702eac3347d2c4415eac485ba6ebfa01e8dbf6fb02e9817b7",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    },
+    {
+      "at": "2026-09-27T06:54:34.276Z",
+      "event": "function_call",
+      "tool": "send_message",
+      "call_id": "call_9IM7whPi4PelJ9UriMKBhNms",
+      "source_event_sha256": "a8b11f59bed7271995c0977e0e4d3a9406cc07221714bd2e58adab2e08e181e4",
+      "arguments_metadata": {
+        "target": "c_protocol"
+      },
+      "message_availability": "PLATFORM_ENCRYPTED_AT_REST; plaintext not recovered",
+      "stored_message_payload_sha256": "65e843a0650deb4ae54f9ce782329b4f8b9cbe13e3f864be9c9928383a6c6048",
+      "stored_message_payload_bytes": 652
+    },
+    {
+      "at": "2026-09-27T06:54:34.496Z",
+      "event": "function_call_output",
+      "tool": "send_message",
+      "call_id": "call_9IM7whPi4PelJ9UriMKBhNms",
+      "source_event_sha256": "b34a02d05839babf405be390e2d12c90102082e738236628fe9e97b6049a70cd",
+      "stored_output_payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stored_output_payload_bytes": 0,
+      "availability": "EMPTY_TOOL_RETURN"
+    }
+  ],
+  "message_text_limit": "Native message fields were platform-encrypted in the local session; stored payload hashes are not hashes of known plaintext. Role TaskPlans and review artifacts provide separately sourced readable decisions, not reconstructed message quotes.",
+  "native_model_identity": "inherited Codex environment; provider/hidden backend requests and billing unknown",
+  "record_level_new_model_calls": 0,
+  "source_sha256": "79fee7c7aeb296422d03b3021fb7d150bdc1a6c44e331760939e2cda7bbacc07"
+}

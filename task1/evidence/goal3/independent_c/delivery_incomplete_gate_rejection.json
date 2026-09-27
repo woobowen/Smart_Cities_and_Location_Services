@@ -1,0 +1,46 @@
+{
+  "role_context": "/root/c_protocol",
+  "at": "2026-09-27T08:33:24.445196+00:00",
+  "classification": "ACTUAL_INCOMPLETE_DELIVERY_GATE_REJECTION_NOT_FULL_RECOMPUTATION",
+  "status": "VERIFIED_WITHIN_REJECTION_SCOPE",
+  "checker_sha256": "783777e210f706b4f09c5e9d058cb62daf6285f3ba6a11b2a74300cb769e3321",
+  "actual_attempts": [
+    {
+      "task": "notebooks",
+      "actual_command": [
+        ".venv/bin/python",
+        "task1/evidence/goal3/independent_c/prepare_delivery_submission.py",
+        "--task",
+        "notebooks",
+        "--mode",
+        "accept",
+        "--output",
+        "/tmp/g3-c-delivery-reject-46_1thf0/notebooks.json"
+      ],
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/evidence/goal3/independent_c/prepare_delivery_submission.py\", line 172, in <module>\n    main()\n  File \"/home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/evidence/goal3/independent_c/prepare_delivery_submission.py\", line 150, in main\n    assert not review.blockers, ('INCOMPLETE_DELIVERY', review.blockers)\n           ^^^^^^^^^^^^^^^^^^^\nAssertionError: ('INCOMPLETE_DELIVERY', [{'kind': 'FULL_NOTEBOOK_RECEIPT_MISSING', 'path': 'task1/evidence/goal3/independent_c/isolated_package_basic_full_receipt.json'}])\n",
+      "acceptance_receipt_created": false
+    },
+    {
+      "task": "package",
+      "actual_command": [
+        ".venv/bin/python",
+        "task1/evidence/goal3/independent_c/prepare_delivery_submission.py",
+        "--task",
+        "package",
+        "--mode",
+        "accept",
+        "--output",
+        "/tmp/g3-c-delivery-reject-46_1thf0/package.json"
+      ],
+      "returncode": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"/home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/evidence/goal3/independent_c/prepare_delivery_submission.py\", line 172, in <module>\n    main()\n  File \"/home/addaswsw/lab/Smart_Cities_and_Location_Services/task1/evidence/goal3/independent_c/prepare_delivery_submission.py\", line 150, in main\n    assert not review.blockers, ('INCOMPLETE_DELIVERY', review.blockers)\n           ^^^^^^^^^^^^^^^^^^^\nAssertionError: ('INCOMPLETE_DELIVERY', [{'kind': 'FULL_NOTEBOOK_RECEIPT_MISSING', 'path': 'task1/evidence/goal3/independent_c/isolated_package_basic_full_receipt.json'}, {'kind': 'DEPENDENCY_NOT_CLOSED', 'task': 'notebooks', 'status': 'PENDING'}])\n",
+      "acceptance_receipt_created": false
+    }
+  ],
+  "new_numerical_processing": 0,
+  "new_model_calls": 0,
+  "goal_state_mutated": false
+}

@@ -1,0 +1,52 @@
+{
+  "goal_id": "SC-LAB1-G3-FINAL-001",
+  "at": "2026-09-27T08:51:15.300459+00:00",
+  "phase": "INTERNAL_ACCEPTED_PENDING_PUBLICATION",
+  "technical_production": "VERIFIED",
+  "main_full_run": "g3-full-production-01",
+  "source_crs": "UNVERIFIED",
+  "record_model_calls": 0,
+  "active_execution": null,
+  "open_engineering_issues": [],
+  "remaining": [
+    "artifact commit and push main",
+    "actual remote readback and independent publication closure"
+  ],
+  "external_dependencies": [
+    "trusted formal name and student ID",
+    "raw interaction evidence and Evidence Master approved presentation/LOCK"
+  ],
+  "resume_policy": "Read actual sessions/receipts before resuming; no duplicate unknown-running task. No autonomous background persistence beyond platform support.",
+  "completed_full_notebooks": [
+    {
+      "execution": "repository_basic_full_02",
+      "status": "VERIFIED",
+      "code_cells": 12
+    },
+    {
+      "execution": "repository_system_full_02",
+      "status": "VERIFIED",
+      "code_cells": 8
+    },
+    {
+      "execution": "isolated_basic_full_01",
+      "status": "VERIFIED",
+      "code_cells": 12
+    },
+    {
+      "execution": "isolated_system_full_01",
+      "status": "VERIFIED",
+      "code_cells": 8
+    }
+  ],
+  "parent_closures": {
+    "notebooks": "VERIFIED",
+    "handoffs": "VERIFIED",
+    "package": "BLOCKED_EXTERNAL; available engineering VERIFIED",
+    "reports": "BLOCKED_EXTERNAL; available engineering VERIFIED"
+  },
+  "internal_acceptance": {
+    "path": "task1/evidence/goal3/independent_c/internal_acceptance_receipt.json",
+    "sha256": "488b7bb5de1272c3c2e0ee470b37830d69bb62ed7725b71ba9ad98e57ac01b87"
+  }
+}

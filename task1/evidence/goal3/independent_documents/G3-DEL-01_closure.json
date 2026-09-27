@@ -1,0 +1,542 @@
+{
+  "role_context": "/root/c_documents",
+  "target_id": "REPORT_BUILD_MISSING_ARCHIVE_SOURCE_REPAIR",
+  "status": "VERIFIED",
+  "checked_at_utc": "2026-09-27T06:00:11.052904+00:00",
+  "targets": [
+    {
+      "path": "task1/goal3/__main__.py",
+      "sha256": "35b62e69cb05d224d88d750e7a1c31229a6ad351766bfc58024a120e582f0c1d"
+    },
+    {
+      "path": "task1/goal3/figures.py",
+      "sha256": "050223d644a1bb0ba7dfc95ff093f40e6e06a31ed8d3372c0a16c7b75e7f52fa"
+    },
+    {
+      "path": "task1/goal3/summarize.py",
+      "sha256": "fca49199bfe68fab084cfd8b04ca89ba87bd647b241967ca9e1967ad777b653b"
+    }
+  ],
+  "reference": {
+    "requirement": "Current Goal 3 prompt §12.1: REPORT_BUILD produces reports and the submission package.",
+    "previous_entry_sha256": "a052acce796cd8ea9ce58a29ad1d442f63ce773a13a0dc069e2b019a0c70ee77"
+  },
+  "checked_components": [
+    "existing ZIP and .tmp preservation and filename/full-repository prerequisites reject before report rewrite",
+    "production task and all four complete independently verified runs are checked before summary/figures/reports",
+    "shared verified_run source implementation checks bound source, exact manifest target, every independent-review target and actual shards",
+    "figures.run_source and summarize.build reuse the shared gate before reading/writing stage data",
+    "successful orchestration requests report render and package --build --probe in that order",
+    "two synthetic successful paths create an actual isolated synthetic ZIP using the real writer, verify CRC/hash after extraction",
+    "return value binds actual ZIP hash and explicitly retains REVIEW_ONLY, NOT_SUBMITTED and required independent review",
+    "subprocess failures propagate without a claimed archive/success result",
+    "changed deliverable audit state is invalidated after successful rebuild"
+  ],
+  "unchecked_components": [
+    "formal REPORT_BUILD integration on completed/independently verified production: NOT_RUN",
+    "true report generation, actual submission payload/ZIP dependency closure and isolated full recomputation: NOT_RUN",
+    "final report numerical consistency, source citations and all-page >=200dpi visual review: NOT_RUN",
+    "full successful Notebook executed outputs/paths/zero-model count: NOT_RUN"
+  ],
+  "classification": "INDEPENDENT_SOURCE_REPAIR_AND_SYNTHETIC_ORCHESTRATION; not a final report/package acceptance",
+  "checks": [
+    {
+      "check": "existing_zip:rejected",
+      "passed": true
+    },
+    {
+      "check": "existing_zip:before_any_report_or_summary_rewrite",
+      "passed": true
+    },
+    {
+      "check": "existing_zip:user_archive_unchanged",
+      "passed": true
+    },
+    {
+      "check": "existing_tmp:rejected",
+      "passed": true
+    },
+    {
+      "check": "existing_tmp:before_any_report_or_summary_rewrite",
+      "passed": true
+    },
+    {
+      "check": "existing_tmp:interrupted_archive_unchanged",
+      "passed": true
+    },
+    {
+      "check": "bad_prefix:rejected",
+      "passed": true
+    },
+    {
+      "check": "bad_prefix:before_any_report_or_summary_rewrite",
+      "passed": true
+    },
+    {
+      "check": "bad_prefix:no_archive_created",
+      "passed": true
+    },
+    {
+      "check": "bad_suffix:rejected",
+      "passed": true
+    },
+    {
+      "check": "bad_suffix:before_any_report_or_summary_rewrite",
+      "passed": true
+    },
+    {
+      "check": "bad_suffix:no_archive_created",
+      "passed": true
+    },
+    {
+      "check": "missing_git:rejected",
+      "passed": true
+    },
+    {
+      "check": "missing_git:before_any_report_or_summary_rewrite",
+      "passed": true
+    },
+    {
+      "check": "missing_git:no_archive_created",
+      "passed": true
+    },
+    {
+      "check": "missing_report_source:rejected",
+      "passed": true
+    },
+    {
+      "check": "missing_report_source:before_any_report_or_summary_rewrite",
+      "passed": true
+    },
+    {
+      "check": "missing_report_source:no_archive_created",
+      "passed": true
+    },
+    {
+      "check": "missing_current_index:rejected",
+      "passed": true
+    },
+    {
+      "check": "missing_current_index:before_any_report_or_summary_rewrite",
+      "passed": true
+    },
+    {
+      "check": "missing_current_index:no_archive_created",
+      "passed": true
+    },
+    {
+      "check": "unverified_production:rejected",
+      "passed": true
+    },
+    {
+      "check": "unverified_production:before_any_report_or_summary_rewrite",
+      "passed": true
+    },
+    {
+      "check": "unverified_production:no_archive_created",
+      "passed": true
+    },
+    {
+      "check": "unverified_development_run:rejected",
+      "passed": true
+    },
+    {
+      "check": "unverified_development_run:before_any_report_or_summary_rewrite",
+      "passed": true
+    },
+    {
+      "check": "unverified_development_run:no_archive_created",
+      "passed": true
+    },
+    {
+      "check": "unverified_selection_run:rejected",
+      "passed": true
+    },
+    {
+      "check": "unverified_selection_run:before_any_report_or_summary_rewrite",
+      "passed": true
+    },
+    {
+      "check": "unverified_selection_run:no_archive_created",
+      "passed": true
+    },
+    {
+      "check": "unverified_confirmation_run:rejected",
+      "passed": true
+    },
+    {
+      "check": "unverified_confirmation_run:before_any_report_or_summary_rewrite",
+      "passed": true
+    },
+    {
+      "check": "unverified_confirmation_run:no_archive_created",
+      "passed": true
+    },
+    {
+      "check": "unverified_production_run:rejected",
+      "passed": true
+    },
+    {
+      "check": "unverified_production_run:before_any_report_or_summary_rewrite",
+      "passed": true
+    },
+    {
+      "check": "unverified_production_run:no_archive_created",
+      "passed": true
+    },
+    {
+      "check": "report_subprocess_failure:subprocess_cwd_and_check",
+      "passed": true
+    },
+    {
+      "check": "report_subprocess_failure:report_render_requested",
+      "passed": true
+    },
+    {
+      "check": "report_subprocess_failure:subprocess_failure_propagated",
+      "passed": true
+    },
+    {
+      "check": "report_subprocess_failure:no_archive_claimed_or_created",
+      "passed": true
+    },
+    {
+      "check": "report_subprocess_failure:package_not_attempted_after_failed_report",
+      "passed": true
+    },
+    {
+      "check": "package_subprocess_failure:subprocess_cwd_and_check",
+      "passed": true
+    },
+    {
+      "check": "package_subprocess_failure:report_render_requested",
+      "passed": true
+    },
+    {
+      "check": "package_subprocess_failure:subprocess_cwd_and_check",
+      "passed": true
+    },
+    {
+      "check": "package_subprocess_failure:actual_package_cli_arguments",
+      "passed": true
+    },
+    {
+      "check": "package_subprocess_failure:subprocess_failure_propagated",
+      "passed": true
+    },
+    {
+      "check": "package_subprocess_failure:no_archive_claimed_or_created",
+      "passed": true
+    },
+    {
+      "check": "successful_explicit_archive:subprocess_cwd_and_check",
+      "passed": true
+    },
+    {
+      "check": "successful_explicit_archive:report_render_requested",
+      "passed": true
+    },
+    {
+      "check": "successful_explicit_archive:subprocess_cwd_and_check",
+      "passed": true
+    },
+    {
+      "check": "successful_explicit_archive:actual_package_cli_arguments",
+      "passed": true
+    },
+    {
+      "check": "successful_explicit_archive:all_gates_before_report_and_actual_zip_call",
+      "passed": true
+    },
+    {
+      "check": "successful_explicit_archive:new_review_archive_created",
+      "passed": true
+    },
+    {
+      "check": "successful_explicit_archive:returned_actual_hash_and_explicit_review_limits",
+      "passed": true
+    },
+    {
+      "check": "successful_explicit_archive:synthetic_archive_crc_and_identity",
+      "passed": true
+    },
+    {
+      "check": "successful_explicit_archive:synthetic_archive_exact_hash_verification",
+      "passed": true
+    },
+    {
+      "check": "successful_default_archive:subprocess_cwd_and_check",
+      "passed": true
+    },
+    {
+      "check": "successful_default_archive:report_render_requested",
+      "passed": true
+    },
+    {
+      "check": "successful_default_archive:subprocess_cwd_and_check",
+      "passed": true
+    },
+    {
+      "check": "successful_default_archive:actual_package_cli_arguments",
+      "passed": true
+    },
+    {
+      "check": "successful_default_archive:all_gates_before_report_and_actual_zip_call",
+      "passed": true
+    },
+    {
+      "check": "successful_default_archive:new_review_archive_created",
+      "passed": true
+    },
+    {
+      "check": "successful_default_archive:returned_actual_hash_and_explicit_review_limits",
+      "passed": true
+    },
+    {
+      "check": "successful_default_archive:synthetic_archive_crc_and_identity",
+      "passed": true
+    },
+    {
+      "check": "successful_default_archive:synthetic_archive_exact_hash_verification",
+      "passed": true
+    },
+    {
+      "check": "figure_source_real_gate_precedes_loading",
+      "passed": true
+    },
+    {
+      "check": "summary_real_gate_precedes_writing",
+      "passed": true
+    },
+    {
+      "check": "reviewed_sources_unchanged_during_review",
+      "passed": true
+    }
+  ],
+  "check_count": 68,
+  "synthetic_cases": [
+    {
+      "case": "existing_zip",
+      "events": [],
+      "outcome": null,
+      "expected_failure": true,
+      "failure_category": "ValueError:EXISTING_PACKAGE_PROTECTED; use --output with a new REVIEW_ONLY_*.zip path",
+      "classification": "SYNTHETIC_ORCHESTRATION_ONLY"
+    },
+    {
+      "case": "existing_tmp",
+      "events": [],
+      "outcome": null,
+      "expected_failure": true,
+      "failure_category": "ValueError:EXISTING_PACKAGE_PROTECTED; use --output with a new REVIEW_ONLY_*.zip path",
+      "classification": "SYNTHETIC_ORCHESTRATION_ONLY"
+    },
+    {
+      "case": "bad_prefix",
+      "events": [],
+      "outcome": null,
+      "expected_failure": true,
+      "failure_category": "ValueError:REPORT_BUILD_REQUIRES_REVIEW_ONLY_ZIP_FILENAME",
+      "classification": "SYNTHETIC_ORCHESTRATION_ONLY"
+    },
+    {
+      "case": "bad_suffix",
+      "events": [],
+      "outcome": null,
+      "expected_failure": true,
+      "failure_category": "ValueError:REPORT_BUILD_REQUIRES_REVIEW_ONLY_ZIP_FILENAME",
+      "classification": "SYNTHETIC_ORCHESTRATION_ONLY"
+    },
+    {
+      "case": "missing_git",
+      "events": [],
+      "outcome": null,
+      "expected_failure": true,
+      "failure_category": "ValueError:REPORT_BUILD_REQUIRES_COMPLETE_REPOSITORY_AND_REPORT_SOURCES",
+      "classification": "SYNTHETIC_ORCHESTRATION_ONLY"
+    },
+    {
+      "case": "missing_report_source",
+      "events": [],
+      "outcome": null,
+      "expected_failure": true,
+      "failure_category": "ValueError:REPORT_BUILD_REQUIRES_COMPLETE_REPOSITORY_AND_REPORT_SOURCES",
+      "classification": "SYNTHETIC_ORCHESTRATION_ONLY"
+    },
+    {
+      "case": "missing_current_index",
+      "events": [],
+      "outcome": null,
+      "expected_failure": true,
+      "failure_category": "FileNotFoundError:[Errno 2] No such file or directory: '<synthetic-root>/task1/evidence/goal3/current_runs.json'",
+      "classification": "SYNTHETIC_ORCHESTRATION_ONLY"
+    },
+    {
+      "case": "unverified_production",
+      "events": [
+        "invalidate_changed",
+        "verified_task:production"
+      ],
+      "outcome": null,
+      "expected_failure": true,
+      "failure_category": "ValueError:SYNTHETIC_UNVERIFIED_PRODUCTION",
+      "classification": "SYNTHETIC_ORCHESTRATION_ONLY"
+    },
+    {
+      "case": "unverified_development_run",
+      "events": [
+        "invalidate_changed",
+        "verified_task:production",
+        "verified_run:SYNTHETIC_development"
+      ],
+      "outcome": null,
+      "expected_failure": true,
+      "failure_category": "ValueError:SYNTHETIC_STALE_OR_CHANGED_RUN",
+      "classification": "SYNTHETIC_ORCHESTRATION_ONLY"
+    },
+    {
+      "case": "unverified_selection_run",
+      "events": [
+        "invalidate_changed",
+        "verified_task:production",
+        "verified_run:SYNTHETIC_development",
+        "verified_run:SYNTHETIC_selection"
+      ],
+      "outcome": null,
+      "expected_failure": true,
+      "failure_category": "ValueError:SYNTHETIC_STALE_OR_CHANGED_RUN",
+      "classification": "SYNTHETIC_ORCHESTRATION_ONLY"
+    },
+    {
+      "case": "unverified_confirmation_run",
+      "events": [
+        "invalidate_changed",
+        "verified_task:production",
+        "verified_run:SYNTHETIC_development",
+        "verified_run:SYNTHETIC_selection",
+        "verified_run:SYNTHETIC_confirmation"
+      ],
+      "outcome": null,
+      "expected_failure": true,
+      "failure_category": "ValueError:SYNTHETIC_STALE_OR_CHANGED_RUN",
+      "classification": "SYNTHETIC_ORCHESTRATION_ONLY"
+    },
+    {
+      "case": "unverified_production_run",
+      "events": [
+        "invalidate_changed",
+        "verified_task:production",
+        "verified_run:SYNTHETIC_development",
+        "verified_run:SYNTHETIC_selection",
+        "verified_run:SYNTHETIC_confirmation",
+        "verified_run:SYNTHETIC_production"
+      ],
+      "outcome": null,
+      "expected_failure": true,
+      "failure_category": "ValueError:SYNTHETIC_STALE_OR_CHANGED_RUN",
+      "classification": "SYNTHETIC_ORCHESTRATION_ONLY"
+    },
+    {
+      "case": "report_subprocess_failure",
+      "events": [
+        "invalidate_changed",
+        "verified_task:production",
+        "verified_run:SYNTHETIC_development",
+        "verified_run:SYNTHETIC_selection",
+        "verified_run:SYNTHETIC_confirmation",
+        "verified_run:SYNTHETIC_production",
+        "build_summary",
+        "build_figures",
+        "report_compile_render"
+      ],
+      "outcome": null,
+      "expected_failure": true,
+      "failure_category": "CalledProcessError:Command '['SYNTHETIC_REPORT_FAILURE']' returned non-zero exit status 17.",
+      "classification": "SYNTHETIC_ORCHESTRATION_ONLY"
+    },
+    {
+      "case": "package_subprocess_failure",
+      "events": [
+        "invalidate_changed",
+        "verified_task:production",
+        "verified_run:SYNTHETIC_development",
+        "verified_run:SYNTHETIC_selection",
+        "verified_run:SYNTHETIC_confirmation",
+        "verified_run:SYNTHETIC_production",
+        "build_summary",
+        "build_figures",
+        "report_compile_render",
+        "package_build_probe"
+      ],
+      "outcome": null,
+      "expected_failure": true,
+      "failure_category": "CalledProcessError:Command '['SYNTHETIC_PACKAGE_FAILURE']' returned non-zero exit status 19.",
+      "classification": "SYNTHETIC_ORCHESTRATION_ONLY"
+    },
+    {
+      "case": "successful_explicit_archive",
+      "events": [
+        "invalidate_changed",
+        "verified_task:production",
+        "verified_run:SYNTHETIC_development",
+        "verified_run:SYNTHETIC_selection",
+        "verified_run:SYNTHETIC_confirmation",
+        "verified_run:SYNTHETIC_production",
+        "build_summary",
+        "build_figures",
+        "report_compile_render",
+        "package_build_probe",
+        "invalidate_changed"
+      ],
+      "outcome": {
+        "status": "REVIEW_ONLY_REBUILT",
+        "package_sha256": "e6aeb8ab46b8cc165e52e2aacbb418126d31a069b269f0f6a1e9699375a33791",
+        "new_model_calls": 0,
+        "submission_status": "NOT_SUBMITTED",
+        "independent_visual_and_isolated_full_package_review": "REQUIRED_FOR_THIS_NEW_BUILD"
+      },
+      "expected_failure": false,
+      "failure_category": null,
+      "classification": "SYNTHETIC_ORCHESTRATION_ONLY"
+    },
+    {
+      "case": "successful_default_archive",
+      "events": [
+        "invalidate_changed",
+        "verified_task:production",
+        "verified_run:SYNTHETIC_development",
+        "verified_run:SYNTHETIC_selection",
+        "verified_run:SYNTHETIC_confirmation",
+        "verified_run:SYNTHETIC_production",
+        "build_summary",
+        "build_figures",
+        "report_compile_render",
+        "package_build_probe",
+        "invalidate_changed"
+      ],
+      "outcome": {
+        "status": "REVIEW_ONLY_REBUILT",
+        "package_sha256": "a18d08e9c17cb88d93477cf2f72c1cfd8d194cf0363341de23f77c096327304d",
+        "new_model_calls": 0,
+        "submission_status": "NOT_SUBMITTED",
+        "independent_visual_and_isolated_full_package_review": "REQUIRED_FOR_THIS_NEW_BUILD"
+      },
+      "expected_failure": false,
+      "failure_category": null,
+      "classification": "SYNTHETIC_ORCHESTRATION_ONLY"
+    }
+  ],
+  "formal_report_build_calls": 0,
+  "trajectory_recomputations": 0,
+  "new_model_calls": 0,
+  "synthetic_archives_created_and_removed": 2,
+  "actual_command": ".venv/bin/python task1/evidence/goal3/independent_documents/review_report_entry.py",
+  "installed_dependencies": [],
+  "issue_id": "G3-DEL-01",
+  "issue_closure_scope": "SOURCE_REPAIR_ONLY; formal integration, full Notebook/ZIP recompute and final all-page visual review remain NOT_RUN",
+  "derived_from": {
+    "path": "task1/evidence/goal3/independent_documents/report_build_source_closure.json",
+    "sha256": "a23f04cad022fa25b18cace9be0a4d049edb5ed06e2dcc327a0ffea3e0dc179c"
+  },
+  "closure_recorded_at_utc": "2026-09-27T06:04:18.616890+00:00"
+}

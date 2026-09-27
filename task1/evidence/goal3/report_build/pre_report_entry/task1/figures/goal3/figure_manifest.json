@@ -1,0 +1,227 @@
+{
+  "created_at": "2026-09-27T06:48:40.299304+00:00",
+  "sources": {
+    "task1/evidence/goal3/current_runs.json": "c66b9f47e07e7b897301039bf40bb3b05960b481c06e37a2104940611612f401",
+    "task1/goal3/figures.py": "8b9627d646f0fee9d6591214932dddb525789ceab4b1af777b2bcdb4bfb6bef8",
+    "templates/latex/common/p2_cloud_sorbet_colors.tex": "2aa820c3f68ba6c14cf1b52082b12336071d77bb5466db2b05b2fab6890aa243",
+    "task1/evidence/goal3/runs/g3-development-interactions-01/manifest.json": "1dd7d32382ed79cd1a35fcb292af24e0c032383fb5f7d22c0dc77b80a229fd1b",
+    "task1/evidence/goal3/independent_c/g3-development-interactions-01_receipt.json": "a01abb57225564e3695698b4ea482bd9015c50c2c44915d01898ae1d8abed76e",
+    "task1/evidence/goal3/runs/g3-selection-01/manifest.json": "59a12231f93d8e5bc4fc4b675122648d10b39a81ce0bdaf49a8c5fe136bbeb9d",
+    "task1/evidence/goal3/independent_c/g3-selection-01_receipt.json": "e164bfb634b79f0b6e12697338792d6791972dc9731353fc2957361c07f339a5",
+    "task1/evidence/goal3/runs/g3-final-confirm-01/manifest.json": "2696e9db3a77e94d4e8feea9f316ce170e2abc93f2f99256b5c1f0f8279553d0",
+    "task1/evidence/goal3/independent_c/g3-final-confirm-01_receipt.json": "05e6cf9bd92b352580f6fbb9efbc36960a950317479484f23220e20ecef64826",
+    "task1/evidence/goal3/runs/g3-full-production-01/manifest.json": "e5b2334580ebbc27aa19b0e7400c940f47f91c8f1e39f867eb756eea8fe8e409",
+    "task1/evidence/goal3/independent_c/g3-full-production-01_receipt.json": "0f31d74092f077c8cd6dc49b51f7294c522346bf55b1b3e26b6587f86ffab3d4",
+    "task1/evidence/goal3/final_freeze.json": "d64869cc4623b3751d365d54d2cc70305a188891c41b8c6de17b58f3fadb1e6e",
+    "task1/evidence/goal3/decision_history.json": "8d642b503553bf0b3ea463cc186fb7a5fe633ed05a3ab094222d0ca694be57af"
+  },
+  "figures": [
+    {
+      "name": "development_candidates",
+      "description": "All registered single/combination observations including rejected diagnostics; no weighted score.",
+      "formats": {
+        "svg": {
+          "file": "development_candidates.svg",
+          "sha256": "c65da9f02716abcd837af064fd310cf80572f4efddcd330e3ed6379e6d4aa72a"
+        },
+        "pdf": {
+          "file": "development_candidates.pdf",
+          "sha256": "ff1639c9aa363022d6e26f24ffd95561c1b7abbea9bef26c1d9b7a00fe75a6dc"
+        },
+        "png": {
+          "file": "development_candidates.png",
+          "sha256": "423d38ac93bb682eda812c55c8cafcf0a64dd2b1cf562bbee1923443fda7fd5f"
+        }
+      },
+      "png_size_pixels": [
+        3360,
+        1500
+      ],
+      "png_dpi": 300,
+      "pdf_render": {
+        "file": "pdf-render-200dpi/development_candidates.png",
+        "dpi": 200,
+        "sha256": "08cbc3909df43c3fd1d99f6cf7b2ce7fa9fdde7657ef6c6650ece735c9b46cbc"
+      },
+      "visual_inspection": "PENDING_ACTUAL_IMAGE_REVIEW"
+    },
+    {
+      "name": "selection_tradeoffs",
+      "description": "Fixed-protection failures cannot be offset by gains on other records; no parameter change follows these outcomes.",
+      "formats": {
+        "svg": {
+          "file": "selection_tradeoffs.svg",
+          "sha256": "0cbac09e3a26f6fcc3f80186e2fbcb4231f5ac7739a1a56603d57e4cc695af90"
+        },
+        "pdf": {
+          "file": "selection_tradeoffs.pdf",
+          "sha256": "5a8b779864af3e366c95afe3debe8d5f696c499618cfe72b9ed0eb62fc691e54"
+        },
+        "png": {
+          "file": "selection_tradeoffs.png",
+          "sha256": "f735caa082e6eb4a97b39f7a4a232f187b065d25071c4df1cb26b1c0077523d8"
+        }
+      },
+      "png_size_pixels": [
+        3210,
+        1350
+      ],
+      "png_dpi": 300,
+      "pdf_render": {
+        "file": "pdf-render-200dpi/selection_tradeoffs.png",
+        "dpi": 200,
+        "sha256": "19d1624708cad37cec99dec689e28914f3f222dc17a0effa7c45746acec56865"
+      },
+      "visual_inspection": "PENDING_ACTUAL_IMAGE_REVIEW"
+    },
+    {
+      "name": "point_fates_and_coverage",
+      "description": "Point terminal states sum to raw input. Coverage and stored output are distinct. Final sample and production are separate.",
+      "formats": {
+        "svg": {
+          "file": "point_fates_and_coverage.svg",
+          "sha256": "3ea39168b2dab3cd8cd5acb3ffbc2296008dc0d23f409413b162e99722c98f29"
+        },
+        "pdf": {
+          "file": "point_fates_and_coverage.pdf",
+          "sha256": "7c3eab0945be2150ed9e18d160e5315742144ab8c073dd7e85cf90686d005dfa"
+        },
+        "png": {
+          "file": "point_fates_and_coverage.png",
+          "sha256": "d42508d4d9478d056e0ecd535c9a20812a602677bdcddb94ff02ef0a2c4fa5f8"
+        }
+      },
+      "png_size_pixels": [
+        3210,
+        2010
+      ],
+      "png_dpi": 300,
+      "pdf_render": {
+        "file": "pdf-render-200dpi/point_fates_and_coverage.png",
+        "dpi": 200,
+        "sha256": "5ecb85fa965dfcd6546b52758bf94ea2470c1f546d76db93a1963192fc35c0b9"
+      },
+      "visual_inspection": "PENDING_ACTUAL_IMAGE_REVIEW"
+    },
+    {
+      "name": "final_confirmation_pairs",
+      "description": "All paired final-confirmation records; missing geometry is excluded only from scatter, never from coverage or guard counts.",
+      "formats": {
+        "svg": {
+          "file": "final_confirmation_pairs.svg",
+          "sha256": "cbe16491e90cf57fe88f3061827bb6ee1c573902dbb09c9f5d0dd96812a06eba"
+        },
+        "pdf": {
+          "file": "final_confirmation_pairs.pdf",
+          "sha256": "f2b369378f13c6675fef6eb19373a706bab9b91b2ffad9fbe9b8e3e6e86be7a9"
+        },
+        "png": {
+          "file": "final_confirmation_pairs.png",
+          "sha256": "89012c89353561d32136882665712b1119c416bf946b39718b66eb6380eb51d3"
+        }
+      },
+      "png_size_pixels": [
+        3120,
+        1350
+      ],
+      "png_dpi": 300,
+      "pdf_render": {
+        "file": "pdf-render-200dpi/final_confirmation_pairs.png",
+        "dpi": 200,
+        "sha256": "9e036ef7795cce3e629ede1adb3ab2aecde010bf284477faa2dc94d60b87eb0f"
+      },
+      "visual_inspection": "PENDING_ACTUAL_IMAGE_REVIEW"
+    },
+    {
+      "name": "production_trajectory_cases",
+      "description": "Three deterministic post-freeze extrema; third row zooms the complete raw window containing the worst newly covered point. Same origin/limits within each row; crosses S-filtered, plus signs D-removed. No line reconnects raw breaks.",
+      "formats": {
+        "svg": {
+          "file": "production_trajectory_cases.svg",
+          "sha256": "684b43d21165a375f40e5405ccf6f361827e4079c3540396fa59516565e0c6cd"
+        },
+        "pdf": {
+          "file": "production_trajectory_cases.pdf",
+          "sha256": "eaa978520b74cd1e524ac12e96662509f7ff419bbc240a4d90a298ff86b29fc4"
+        },
+        "png": {
+          "file": "production_trajectory_cases.png",
+          "sha256": "8211b20a0d67d74285338f8050855baa40cd75f3d5569e43697b799716a274f2"
+        }
+      },
+      "png_size_pixels": [
+        3390,
+        3060
+      ],
+      "png_dpi": 300,
+      "pdf_render": {
+        "file": "pdf-render-200dpi/production_trajectory_cases.png",
+        "dpi": 200,
+        "sha256": "310a0a06545b778fb49b7a880d6e3bdcdd65b3b0881c9d3ba1186f38e9e63e51"
+      },
+      "visual_inspection": "PENDING_ACTUAL_IMAGE_REVIEW"
+    },
+    {
+      "name": "goal3_actual_workflow",
+      "description": "Native editable diagram of actual role, deterministic controller, independent review and repair boundaries; not invented dialogue.",
+      "formats": {
+        "svg": {
+          "file": "goal3_actual_workflow.svg",
+          "sha256": "3162e941096593221f82b8edf094b116cb19f2225c389b68a9bfe6581e346e91"
+        },
+        "pdf": {
+          "file": "goal3_actual_workflow.pdf",
+          "sha256": "4513795bb6898aecbabb0b1d66835d2f21aeea53a06e4403fa916e02ca24580f"
+        },
+        "png": {
+          "file": "goal3_actual_workflow.png",
+          "sha256": "b5f105c03a3be8bcd8748c0a4156e89c7f9912e2eeb891cdc200095c1d5549d5"
+        }
+      },
+      "png_size_pixels": [
+        3390,
+        2100
+      ],
+      "png_dpi": 300,
+      "pdf_render": {
+        "file": "pdf-render-200dpi/goal3_actual_workflow.png",
+        "dpi": 200,
+        "sha256": "8a7ca06deeafb891ec30bf79ba90167acfa0c0fcaf0e2ed5818a9069cd5d60ce"
+      },
+      "visual_inspection": "PENDING_ACTUAL_IMAGE_REVIEW"
+    },
+    {
+      "name": "incumbent_decision_path",
+      "description": "Version-bound actual autonomous decisions under the approved policy; engineering repair is not represented as quality gain.",
+      "formats": {
+        "svg": {
+          "file": "incumbent_decision_path.svg",
+          "sha256": "40e5a8c1ee9b2ca84d66844b3a41a5480ab07bb1afa2aca8dd0032dfd1856e61"
+        },
+        "pdf": {
+          "file": "incumbent_decision_path.pdf",
+          "sha256": "cfb5ca715b6ee0ec4fcff9b78e5e52371acc4a4c2b45c9787924e5e704fb5f5d"
+        },
+        "png": {
+          "file": "incumbent_decision_path.png",
+          "sha256": "efc59522cc73f9bc6a4eec65873ca5a1321511a4dc6bc0901b688b182ce52c32"
+        }
+      },
+      "png_size_pixels": [
+        3180,
+        1380
+      ],
+      "png_dpi": 300,
+      "pdf_render": {
+        "file": "pdf-render-200dpi/incumbent_decision_path.png",
+        "dpi": 200,
+        "sha256": "2e9d071f42fc0d3e058e7f4924ed21cdcd3af855d5cdf908df615c5aa73d2a9e"
+      },
+      "visual_inspection": "PENDING_ACTUAL_IMAGE_REVIEW"
+    }
+  ],
+  "figure_data_sha256": "c4f8babaa94e4d82914dd22d0f2e2fb2a4b8ab45d3a43fcb17867ffa8136d145",
+  "source_crs": "UNVERIFIED",
+  "units": "conditional working metres",
+  "visual_inspection": "PENDING_ACTUAL_IMAGE_REVIEW"
+}

@@ -1,0 +1,55 @@
+{
+  "status": "VERIFIED",
+  "scope": "ENGINEERING_SMOKE_ONLY; exposed pilot246 and four real historical DEVELOPMENT record-episode pairs",
+  "actual_raw_pipeline_evaluations": 19,
+  "new_model_calls": 0,
+  "figures": [
+    {
+      "figure_count": 2,
+      "manifest_path": "figures/figure_manifest.json",
+      "manifest_sha256": "07ef878a1424ed9087d5e9732036f2f143f116960a3961f4731ff6edb5a75b45",
+      "plot_data_sha256": "39454d2e73036b54b3940338709129b71b8cc8b73bc5ae91764c2d5c02e8bb7b",
+      "lineage": "newly recomputed raw results; historical targets used only for equality checks"
+    },
+    {
+      "figure_count": 1,
+      "manifest_path": "figures/figure_manifest.json",
+      "manifest_sha256": "a633ce2e5862d6b74af3f3170f931d6aeeb2c01dd3975acd86ac1ce7d85f3ce5",
+      "plot_data_sha256": "d87c5c4de0eae142162ea432532a7018d9945d8bd950b7c4a55d4aa7539b5c03",
+      "lineage": "newly recomputed raw results; historical targets used only for equality checks"
+    },
+    {
+      "figure_count": 2,
+      "manifest_path": "figures/figure_manifest.json",
+      "manifest_sha256": "4e34e7ddea233bf886c8cfa51c09ba1e5bd991f5337f59e562813764dcd6a5ed",
+      "plot_data_sha256": "5e602ae4b5092cddb507be82bfcac2824bec84883f8495024d3596d1199a9ab1",
+      "lineage": "newly recomputed raw results; historical targets used only for equality checks"
+    }
+  ],
+  "point_ledger_to_new_summary_check": "VERIFIED",
+  "tampered_new_summary": "REJECTED",
+  "full_notebook_execution": "NOT_RUN",
+  "final_confirmation_accessed": false,
+  "engineering_smoke_runs_executed": 2,
+  "pipeline_evaluations_across_smoke_runs": 38,
+  "first_smoke": "Same scope, retained in ignored build directory; second run increased canvas heights for raster check",
+  "raster_validation": "5 PNGs PASS minimum 1600x1000 and nonblank check",
+  "actual_visual_review": "All 5 exported figures and all 5 PDF pages rendered at 200dpi inspected; labels/units/lines readable, no clipping observed",
+  "new_sources": {
+    "task1/goal3/reproduce.py": "440f426ef60acde8475395d9a2dee955a2e6f9fd142cb06b9c67d549a749b334",
+    "task1/goal3/offline_plots.py": "5a6b1d3841edfa18951643ceea1256d54eac1e707ccec618a47a09c3bff9f437",
+    "task1/goal3/notebooks.py": "eb35f5dfa34d21fba803f25c3bd4b395a0fc61686f5312ecbfb249935e6377c1",
+    "task1/goal3/package.py": "d51649e62845721d200fa94f070df82f578a7a9fb7727a0ac0d9ab9b63a59f3f"
+  },
+  "smoke_artifacts": "task1/evidence/goal3/report_build/offline_plot_smoke",
+  "formal_full_figures": "PENDING actual FULL runs; smoke is not an experimental result",
+  "package_closure_after_new_plot_module": {
+    "members": 85,
+    "bytes": 82019746,
+    "errors": 0,
+    "isolated_no_git_probe": "VERIFIED; production gate pending actual freeze",
+    "package_tests_repeated": 8,
+    "observed_test_elapsed_seconds": 4.978
+  },
+  "package_preproduction_signature_fix": "Corrected static probe execution_gate argument order to (partition,input_ids,strategy_ids) after direct source signature review; production branch not claimed executed before freeze."
+}

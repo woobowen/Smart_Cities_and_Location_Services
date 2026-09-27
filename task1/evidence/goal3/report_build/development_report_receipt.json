@@ -1,0 +1,43 @@
+{
+  "at_utc": "2026-09-27T05:24:13.713322+00:00",
+  "classification": "BOUND_DEVELOPMENT_REPORT_INTEGRATION",
+  "status": "B_COMPILED_PENDING_C_DOCUMENT_REVIEW",
+  "build_receipt_sha256": "5b8e2c26ae3d76c299f3f4758ab10ff8217a04ee679b5e5996d3c1cdef1f63d8",
+  "development_binding_receipt_sha256": "d8fd65b61111271213a775766ed30fbf9d9f943a42c0d66d29f57703a63af492",
+  "pdf_targets": [
+    {
+      "pdf": "task1/reports/experiment1/experiment1.pdf",
+      "sha256": "8a6ef64f6c44081fd290c69771aade53997e1a679a64ebbc562c10299bac37c8",
+      "pages": 15
+    },
+    {
+      "pdf": "task1/reports/process1/process1.pdf",
+      "sha256": "8c51f01c6da59a17042c1a0324335938d6f2cdbe6d6a20ef9ea3f373903d87fd",
+      "pages": 10
+    }
+  ],
+  "render_dpi": 200,
+  "rendered_pages": 25,
+  "direct_visual_inspection_scope": {
+    "experiment1_physical_pages": [
+      11,
+      12,
+      13,
+      14
+    ],
+    "process1_physical_pages": [
+      6,
+      8,
+      9
+    ]
+  },
+  "visual_finding": "Tables and new text readable without cropping or overlaps. Two orphan section headings identified in first preview were moved with their text and rerendered. Final full-report visual acceptance remains pending final G3 integration.",
+  "actual_commands": [
+    ".venv/bin/python task1/reports/build_goal3_sources.py",
+    ".venv/bin/python task1/reports/build_reports.py --render"
+  ],
+  "new_method_runs": 0,
+  "new_model_calls": 0,
+  "selection_final_or_production_numbers_inserted": false,
+  "new_dependencies": []
+}

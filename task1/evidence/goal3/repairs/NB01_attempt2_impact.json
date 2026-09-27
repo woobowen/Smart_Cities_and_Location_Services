@@ -1,0 +1,16 @@
+{
+  "at": "2026-09-27T06:49:39.465262+00:00",
+  "issue_id": "G3-NB-01",
+  "attempt": 2,
+  "root_cause": "Matplotlib3.6.3 pyplot interactive hook is incompatible with existing matplotlib-inline0.2.2/IPython; changing backend alone insufficient.",
+  "repair": "Direct matplotlib.figure.Figure and FigureCanvasAgg for all in-notebook plot construction; unchanged plot data, axes configuration, numerical processing, models and frozen contracts.",
+  "system_run": "repository_system_full interrupted by targeted SIGINT before editing shared offline_plots.py; generic executor FAILED receipt preserved, not a method failure or completed FULL.",
+  "partial_historical_recomputations": "NOT_CERTIFIED; no completed full receipt",
+  "system_notebook_bytes_unchanged": "89aa0605a51be9409e875da7d307998f7756de7a31461958b696b2d1c3e1c7d6",
+  "new_packages": [],
+  "source_hashes": {
+    "task1/goal3/notebooks.py": "608654d60317db206e9f0d3f4b4d5e52acac1d12dca70cc2ca856da24d4a872b",
+    "task1/goal3/offline_plots.py": "1af4ba7f6929b6200c2fba30a7a1827801271f65020b00c9b939974e1d413054",
+    "task1/notebooks/final/作业1轨迹数据预处理_完成版.ipynb": "1aee58d8e4d24f12ed9d3755e3678cafb7c3a2e7b17c9317670e7b774ac0e441"
+  }
+}

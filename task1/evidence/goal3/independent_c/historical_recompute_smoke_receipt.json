@@ -1,0 +1,71 @@
+{
+  "role_context": "/root/c_protocol",
+  "status": "VERIFIED",
+  "target_id": "historical_recompute_smoke",
+  "classification": "BOUNDED_REAL_RAW_ENGINEERING_SMOKE; not full G2/G3 experiment",
+  "checked_at_utc": "2026-09-27T04:22:47.502321+00:00",
+  "targets": [
+    {
+      "path": "task1/evidence/goal3/historical_recompute_registry.json.gz",
+      "sha256": "da9521c2c4ff252c94bd50b9b67c4e90ea8c9a71bb5a7304203d157d071b67f5"
+    },
+    {
+      "path": "task1/goal3/reproduce.py",
+      "sha256": "e82f293ac65a6840cd610001f590d1f4b43ead59856ef155bf429e6b24bb0ea5"
+    }
+  ],
+  "checked_components": [
+    "actual raw run_record + independent review_record for one record in every historical batch configuration/order",
+    "actual record episode candidate recomputation and selection for one episode in each of four modes",
+    "registry hash mutation rejection before any added processing",
+    "provider call tripwire not activated"
+  ],
+  "unchecked_components": [
+    "all 15721 historical tasks; actual full Notebook still required",
+    "full-batch summary rebuilding in this sampled smoke"
+  ],
+  "results": {
+    "parameters": {
+      "status": "VERIFIED",
+      "candidate_record_recomputations": 81,
+      "elapsed_seconds": 5.511923924999792,
+      "selections": []
+    },
+    "modes": {
+      "status": "VERIFIED",
+      "candidate_record_recomputations": 81,
+      "elapsed_seconds": 8.556625420999808,
+      "selections": [
+        {
+          "episode_id": "DEVELOPMENT-llm-only-e1-b0",
+          "record_id": "9779",
+          "selected_config_id": "cfg-b15b8281b73592fb",
+          "selection_match": true
+        },
+        {
+          "episode_id": "DEVELOPMENT-search-only-e1-b0",
+          "record_id": "9779",
+          "selected_config_id": "cfg-b15b8281b73592fb",
+          "selection_match": true
+        },
+        {
+          "episode_id": "DEVELOPMENT-llm+search-e1-b0",
+          "record_id": "9779",
+          "selected_config_id": "cfg-0413bdc17bd9f612",
+          "selection_match": true
+        },
+        {
+          "episode_id": "DEVELOPMENT-llm+memory+search-e1-b0",
+          "record_id": "9779",
+          "selected_config_id": "cfg-0413bdc17bd9f612",
+          "selection_match": true
+        }
+      ]
+    }
+  },
+  "observed_run_record_calls": 162,
+  "observed_review_record_calls": 162,
+  "observed_provider_calls": 0,
+  "tamper_rejected": true,
+  "actual_command": ".venv/bin/python task1/evidence/goal3/independent_c/smoke_historical_recompute.py"
+}
