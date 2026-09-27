@@ -1,0 +1,27 @@
+{
+  "role_context": "/root/c_protocol",
+  "issue_id": "G3-C06",
+  "classification": "SYNTHETIC_ARCHIVE_ENGINEERING_TEST; no dataset experiment",
+  "target": {
+    "path": "task1/goal3/runtime.py",
+    "sha256": "82a32bc11e21097d4bf5f771ba63de3acdf0877dfb70e63815632ec75f82396a"
+  },
+  "fixture_scope": "temporary non-Git root; source/partition/raw fixtures; real subprocess Git call",
+  "new_model_calls": 0,
+  "status": "REPRODUCED",
+  "error_type": "CalledProcessError",
+  "command": [
+    "git",
+    "rev-parse",
+    "HEAD"
+  ],
+  "returncode": 128,
+  "before_any_processing": true,
+  "closure_requirements": [
+    "A source-bound portable FULL_RECOMPUTE succeeds without .git and records honest frozen-source identity",
+    "Absent or mismatched frozen source binding is rejected; no unverified code SHA fabrication",
+    "A normal repository run records actual Git HEAD",
+    "Dependent previous-epoch runs remain historical; affected valid runs are rebuilt and independently reviewed",
+    "Final ZIP isolated full Notebook recomputation actually succeeds"
+  ]
+}

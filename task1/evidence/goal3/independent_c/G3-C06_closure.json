@@ -1,0 +1,43 @@
+{
+  "role_context": "/root/c_protocol",
+  "issue_id": "G3-C06",
+  "status": "VERIFIED",
+  "checked_at_utc": "2026-09-27T04:21:11.217528+00:00",
+  "targets": [
+    {
+      "path": "task1/goal3/runtime.py",
+      "sha256": "d9997f01888e59e319d3fe236d3d6fcc328b3989a79d4d0ebcec1913a8accc63"
+    },
+    {
+      "path": "task1/evidence/goal3/C06_repair_regression.xml",
+      "sha256": "35aeb872b3d500e1d028bf91b93e564731c5f55570d2cf59d3870086fb181ff9"
+    },
+    {
+      "path": "task1/evidence/goal3/C06_impact.json",
+      "sha256": "dd8ed1709d8f36f204313c38800ec13cc69b7c390caf2fb2a98c5b0a956b0954"
+    }
+  ],
+  "checked_components": [
+    "source-level portable code-identity repair",
+    "11 independent portable archive checks",
+    "450 current-epoch full regression tests",
+    "old development runs explicitly superseded before rebuild"
+  ],
+  "test_receipt": {
+    "path": "task1/evidence/goal3/independent_c/core_after_C06_receipt.json",
+    "sha256": "c791ffb11397defafe554b61dcefcd90fad01b715c1aede3f41b53ae57d46033"
+  },
+  "actual_test_result": {
+    "tests": 450,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "implementation_author": "B:root",
+  "reviewer_is_implementation_author": false,
+  "unchecked_components": [
+    "Actual full production ZIP recomputation; remains required before package acceptance",
+    "Current-epoch development outputs; parent must rebuild before research continuation"
+  ],
+  "scope": "Engineering defect fixed; ordinary processing metadata only. Prior-epoch A1/A2 are retained and must not be treated as current outputs."
+}

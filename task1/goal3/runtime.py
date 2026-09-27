@@ -6,6 +6,7 @@ import gzip
 import json
 import math
 from pathlib import Path
+import re
 import subprocess
 import time
 
@@ -64,6 +65,22 @@ def assert_binding(binding):
     for path, sha in binding.items():
         if digest(ROOT/path) != sha:
             raise ValueError('SOURCE_OR_CONTRACT_CHANGED_NEW_RUN_REQUIRED:' + path)
+
+
+def code_identity(source, partition, allow_recompute):
+    """A portable bundle carries its verified processing revision, not a local Git claim."""
+    if allow_recompute and not (ROOT/'.git').exists():
+        if partition != 'FULL_PRODUCTION':
+            raise ValueError('PORTABLE_RECOMPUTE_REQUIRES_FROZEN_PRODUCTION')
+        frozen = read_json(EV/'production_freeze.json')
+        assert_binding(frozen['bindings'])
+        sha = frozen.get('processing_code_sha', '')
+        if (frozen.get('processing_source_hashes') != source
+                or not isinstance(sha, str) or re.fullmatch('[0-9a-f]{40}', sha) is None):
+            raise ValueError('PORTABLE_PROCESSING_IDENTITY_MISMATCH')
+        return {'code_sha': sha, 'code_identity_source': 'FROZEN_SOURCE_BUNDLE'}
+    sha = subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip()
+    return {'code_sha': sha, 'code_identity_source': 'ACTUAL_LOCAL_GIT_HEAD'}
 
 
 def execution_gate(partition, ids, strategy_ids):
@@ -152,6 +169,7 @@ def _evaluate(run_id, partition, strategy_ids, *, output=None, allow_recompute=F
     selected = {cid: registry[cid] for cid in strategy_ids}
     execution_gate(partition, ids, strategy_ids)
     source = source_snapshot()
+    identity = code_identity(source, partition, allow_recompute)
     binding = {**source, 'task1/config/goal3/contract.json': digest(CFG/'contract.json'),
                'task1/evidence/goal3/split_manifest.json': digest(EV/'split_manifest.json'),
                'task1/evidence/goal3/a_candidate_plan.json': digest(EV/'a_candidate_plan.json')}
@@ -177,8 +195,7 @@ def _evaluate(run_id, partition, strategy_ids, *, output=None, allow_recompute=F
         inherited_rows = iter(read_rows(parent))
     manifest = {'goal_id': GOAL, 'run_id': run_id, 'partition': partition, 'started_at': now(),
                 'status': 'RUNNING', 'input_ids': ids, 'strategy_ids': strategy_ids, 'strategies': selected,
-                'bindings': binding, 'source_hashes': source, 'code_sha': subprocess.check_output(
-                    ['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip(),
+                'bindings': binding, 'source_hashes': source, **identity,
                 'provenance': provenance, 'shards': [], 'record_metrics': {}, 'comparisons': {},
                 'new_record_model_calls': 0, 'processing_evaluations': 0, 'strategy_record_observations': 0,
                 'reused_identical_configuration_observations': 0, 'review_record_calls': 0,
