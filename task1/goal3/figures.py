@@ -190,48 +190,68 @@ def trajectory_cases(writer):
         p = row['comparisons'][final+'|R0']; m = t['metrics']
         keys = {'largest_coverage_gain': (p['coverage_delta'], row['record_id']),
                 'largest_raw_geometry_error': (m['common_max_error'] if m['common_max_error'] is not None else -1, row['record_id']),
-                'most_raw_breaks': (m['raw_break_count'], row['record_id'])}
+                'largest_new_coverage_error': (p['newly_covered_max_error'] if p['newly_covered_max_error'] is not None else -1, row['record_id'])}
         for label, key in keys.items():
             if label not in selected or key > selected[label][0]:
                 selected[label] = (key, row)
     fig, axes = plt.subplots(3, 3, figsize=(11.3, 10.2), layout='constrained')
     cases = []
     labels = {'largest_coverage_gain': 'Largest coverage gain',
-              'largest_raw_geometry_error': 'Largest raw-to-final error', 'most_raw_breaks': 'Most raw breakpoints'}
+              'largest_raw_geometry_error': 'Largest raw-to-final error',
+              'largest_new_coverage_error': 'Largest added-coverage error · local raw window'}
     for i, (criterion, (score, row)) in enumerate(selected.items()):
         r = row['traces'][row['strategy_configs']['R0']]
         f = row['traces'][row['strategy_configs'][final]]
-        xy = np.array(r['source_record']['xy']); origin = xy[0]; local = xy-origin
+        xy = np.array(r['source_record']['xy'])
         bounds = [0] + [b['to_index'] for b in r['metrics']['raw_boundaries']] + [len(xy)]
-        raw_segments = [local[a:b] for a, b in zip(bounds, bounds[1:])]
+        visible = list(range(len(xy))); witness = None
+        if criterion == 'largest_new_coverage_error' and score[0] >= 0:
+            before = {p['index'] for p in r['metrics']['common_point_errors'] if p['error'] is not None}
+            added = [p for p in f['metrics']['common_point_errors'] if p['error'] is not None and p['index'] not in before]
+            witness = max(added, key=lambda p: (p['error'], p['index']))
+            a, b = next((a, b) for a, b in zip(bounds, bounds[1:]) if a <= witness['index'] < b)
+            visible = list(range(a, b))
+        origin = xy[visible[0]]; local = xy-origin; visible_set = set(visible)
+        raw_segments = [local[[k for k in range(a, b) if k in visible_set]] for a, b in zip(bounds, bounds[1:])
+                        if any(k in visible_set for k in range(a, b))]
         for j, (name, trace) in enumerate([('Raw (original windows)', r), ('R0', r), (final, f)]):
             ax = axes[i, j]
             for seg in raw_segments:
                 ax.plot(seg[:, 0], seg[:, 1], '-', color=writer.p['Muted'], lw=.7, alpha=.55)
             if j == 0:
-                ax.scatter(local[:, 0], local[:, 1], s=4, color=writer.p['Muted'])
+                ax.scatter(local[visible, 0], local[visible, 1], s=8, color=writer.p['Muted'])
+                stored = len(visible)
             else:
+                stored = 0
                 for seg in trace['final_segments']:
-                    arr = np.array(seg['xy'])-origin
+                    indices = [k for k in seg['indices'] if k in visible_set]
+                    if not indices:
+                        continue
+                    arr = local[indices]; stored += len(indices)
                     ax.plot(arr[:, 0], arr[:, 1], '.-', ms=3, color=writer.p['C1'] if j == 1 else writer.p['C2'], lw=1)
                 for action, marker, color in [('filtered', 'x', 'C3'), ('denoised', '+', 'C4')]:
-                    pts = [a['original_index'] for a in trace['point_actions'] if a['action'] == action]
+                    pts = [a['original_index'] for a in trace['point_actions']
+                           if a['action'] == action and a['original_index'] in visible_set]
                     if pts:
                         ax.scatter(local[pts, 0], local[pts, 1], marker=marker, s=14, linewidths=.6,
                                    color=writer.p[color], label=action)
-            limits = np.ptp(local, axis=0); pad = max(float(limits.max())*.06, 1)
-            ax.set(xlim=(local[:, 0].min()-pad, local[:, 0].max()+pad),
-                   ylim=(local[:, 1].min()-pad, local[:, 1].max()+pad),
+            limits = np.ptp(local[visible], axis=0); pad = max(float(limits.max())*.12, 1)
+            ax.set(xlim=(local[visible, 0].min()-pad, local[visible, 0].max()+pad),
+                   ylim=(local[visible, 1].min()-pad, local[visible, 1].max()+pad),
                    xlabel='East offset (work m)', ylabel='North offset (work m)')
             ax.set_aspect('equal', adjustable='box'); ax.tick_params(labelsize=7)
-            ax.set_title(f'{name} · stored {len(xy) if j == 0 else trace["metrics"]["n_final"]}', loc='left', fontsize=10)
+            ax.set_title(f'{name} · shown points {stored}', loc='left', fontsize=10)
+            if witness:
+                for k in visible:
+                    ax.annotate(str(k), local[k], xytext=(4, 4), textcoords='offset points', fontsize=8)
         axes[i, 0].text(0, 1.2, f'{labels[criterion]} · record {row["record_id"]}', transform=axes[i, 0].transAxes, fontsize=10)
         cases.append({'criterion': criterion, 'record_id': row['record_id'], 'criterion_value': score[0],
                       'origin_ENU_work_m': origin.tolist(), 'raw_xy_work_m': xy.tolist(),
+                      'display_original_indices': visible, 'new_coverage_witness': witness,
                       'raw_breaks': r['metrics']['raw_boundaries'], 'reference': r, 'final': f})
     fig.suptitle('Production examples selected by fixed descriptive extrema · no basemap · gaps remain disconnected', fontsize=12)
     writer.save(fig, 'production_trajectory_cases', cases,
-                'Three deterministic post-freeze extrema; same local origin and limits within each row; crosses S-filtered, plus signs D-removed.')
+                'Three deterministic post-freeze extrema; third row zooms the complete raw window containing the worst newly covered point. Same origin/limits within each row; crosses S-filtered, plus signs D-removed. No line reconnects raw breaks.')
 
 
 def architecture(writer):
