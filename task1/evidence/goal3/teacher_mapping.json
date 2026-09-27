@@ -1,0 +1,1006 @@
+{
+  "goal_id": "SC-LAB1-G3-FINAL-001",
+  "role": "B_DELIVERY_INPUT_INVENTORY",
+  "created_at_utc": "2026-09-27T03:44:12.155056+00:00",
+  "head_at_inventory": "6fad8420b09ba123fe0658a5cd805cb7b7b9e67b",
+  "status": "INPUTS_CHECKED_NOT_FINAL_DELIVERY_ACCEPTANCE",
+  "sources": {
+    "teacher_ppt": {
+      "path": "task1/实验课1.pptx",
+      "sha256": "cf5fdbdd0e116818f4bf195e8761dd55c4733443d7c360c986cf1cdfddfda075"
+    },
+    "basic_starter": {
+      "path": "task1/作业/作业/作业1轨迹数据预处理.ipynb",
+      "sha256": "8601d1dfecaef062fef553992cc9774d3a0eb551751c70536f5b52f1343b158a"
+    },
+    "llm_starter": {
+      "path": "task1/作业/作业/任务3_LLM辅助评估清洗.ipynb",
+      "sha256": "4ecffe64024e002c0cffe7830e18b5f6ded04cd5aa9dd645d6798fc9b0715add"
+    },
+    "g1_requirements": {
+      "path": "task1/evidence/goal1/requirements.json",
+      "sha256": "3d656f196f9aa30df4b80b5434b505a5fc5c553f93df9eaccc42a29673db7dd0"
+    },
+    "g2_requirements": {
+      "path": "task1/evidence/goal2/requirements.json",
+      "sha256": "a31ffe98f69f2e51b0ac41b76064e0f1e553ba7b58d457be94bb6d10e11fac5f"
+    },
+    "current_prompt": {
+      "path": "task1/evidence/goal3/USER_PROMPT.md",
+      "sha256": "e5fd60e707b3b5e4c62e8c522bbc58cbd17d89fe67ec29abaf2c3d037de723ec"
+    },
+    "visual_system": {
+      "path": "docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md",
+      "sha256": "10cd5024641f4877fa0e7d569c507c4246bc3d0574901658e490ab0f5ff70d6c"
+    },
+    "evidence_protocol": {
+      "path": "docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md",
+      "sha256": "fa640db61ce7b1e1487083a1d6f663c75eb11ff6ee6b7b01b21f48dbcdc7b06a"
+    },
+    "evidence_plan": {
+      "path": "evidence/process-report/workflow-construction/WORKFLOW_EVIDENCE_PLAN.md",
+      "sha256": "3b5ee984399eedc60e0641ea2a733da933d6b04458be19767f9dfaddb358ba5f"
+    },
+    "experiment_template": {
+      "path": "templates/latex/experiment-report/experiment_report_template.tex",
+      "sha256": "bd8e6165ef5b43195ad21637bdb88ea60dab4f0b3fdcd911472f48858a4a475d"
+    },
+    "process_template": {
+      "path": "templates/latex/process-report/process_report_template.tex",
+      "sha256": "faa2b492b43d370756168c83a6a05d3d7661a6b211ec3a8178d83da3bdfb0bf9"
+    },
+    "experiment_preview": {
+      "path": "templates/latex/experiment-report/preview/Experiment_Report_P2_Exact.pdf",
+      "sha256": "6fd543f5123ba4d67985193d5658802ae820c6585dc3f509071b8b2d39b323dd"
+    },
+    "process_preview": {
+      "path": "templates/latex/process-report/preview/Process_Report_P2_Locked_v1.pdf",
+      "sha256": "3903042ef7935a722d32871a9f55ba973b1262ee0fe290363b0a6c3bda09dcfa"
+    },
+    "common_palette": {
+      "path": "templates/latex/common/p2_cloud_sorbet_colors.tex",
+      "sha256": "2aa820c3f68ba6c14cf1b52082b12336071d77bb5466db2b05b2fab6890aa243"
+    },
+    "publication_plots": {
+      "path": "tools/skills/publication-plots/SKILL.md",
+      "sha256": "9a1c55f3c4ad3b0d0b15c86ed774397a85ea926750dbbffe33f60febe58666eb"
+    }
+  },
+  "teacher_original_xml_readback": {
+    "1": {
+      "member": "ppt/slides/slide1.xml",
+      "raw_text_runs": [
+        "实验课安排和考核方式",
+        "董",
+        "宜滔 ",
+        "20260917"
+      ],
+      "reading_scope": "TEXT_RUNS_FROM_ORIGINAL_XML; mathematical drawing interpretation inherited from verified G1 extracts"
+    },
+    "5": {
+      "member": "ppt/slides/slide5.xml",
+      "raw_text_runs": [
+        "实验课内容",
+        "实验模块",
+        "对应大纲章节",
+        "核心产出",
+        "评分",
+        "标准",
+        "实验一",
+        " ",
+        "轨迹数据预处理",
+        "第一章",
+        " ",
+        "智慧城市概述",
+        "轨迹数据清洗与压缩程序、数据处理评估报告、实验过程报告",
+        "（",
+        "包含",
+        "AI",
+        "批判",
+        "）",
+        "完成基础任务",
+        "60",
+        "分",
+        "+",
+        "完成拓展任务",
+        "90",
+        "分",
+        "+",
+        "实验二",
+        " ",
+        "停留热点挖掘",
+        "第二章",
+        " ",
+        "智慧交通与应用",
+        "停留点检测",
+        "与聚类程序、",
+        "POI",
+        "功能标注结果",
+        "表，",
+        "实验过程报告",
+        "完成基础任务",
+        "60",
+        "分",
+        "+",
+        "完成拓展任务",
+        "90",
+        "分",
+        "+",
+        "实验三",
+        " ",
+        "车货匹配",
+        "第三章",
+        " ",
+        "智慧物流与应用",
+        "车货匹配求解器程序、求解器性能报告、",
+        "实验过程报告",
+        "完成基础任务",
+        "60",
+        "分",
+        "+",
+        "完成拓展任务",
+        "90",
+        "分",
+        "+",
+        "综合课程设计",
+        "第四章",
+        " ",
+        "智慧城市应用前沿",
+        "研究报告、可复现代码",
+        "包、路演答辩"
+      ],
+      "reading_scope": "TEXT_RUNS_FROM_ORIGINAL_XML; mathematical drawing interpretation inherited from verified G1 extracts"
+    },
+    "6": {
+      "member": "ppt/slides/slide6.xml",
+      "raw_text_runs": [
+        "实验课内容",
+        "【",
+        "AI",
+        "生成内容的准确性批判】",
+        "提示词示例：“请为共享单车轨迹设计清洗流程并给出阈值。”",
+        "批判要求：检查其是否混淆速度单位、是否把经纬度直接当平面坐标、是否对缺失值做无依据插值；至少构造一组反例，记录修改前后指标，并说明哪些建议被拒绝以及原因。",
+        "【",
+        "AI",
+        "建议的隐含假设分析与批判】",
+        "提示词示例：“",
+        "AI",
+        "建议‘缺失值用线性插值’，其隐含假设是‘轨迹在缺失期间匀速直线运动’，这个假设在什么情况下不成立",
+        "？”",
+        "批判要求：可以主动向",
+        "AI",
+        "提问是否存在前提假设，也可以根据自己的思考对",
+        "AI",
+        "进行反问，相关内容需要写入实验报告。"
+      ],
+      "reading_scope": "TEXT_RUNS_FROM_ORIGINAL_XML; mathematical drawing interpretation inherited from verified G1 extracts"
+    },
+    "17": {
+      "member": "ppt/slides/slide17.xml",
+      "raw_text_runs": [
+        "为什么需要轨迹数据预处理",
+        "背景：",
+        "由于用户误关闭设备或者",
+        "GPS",
+        "设备故障导致相邻轨迹点的采样时间间隔远大于平均采样间隔",
+        "影响：",
+        "相邻轨迹点连成的线段无法表示移动对象真实通行的路径",
+        "数据分析：",
+        "相邻轨迹点的采样时间间隔远大于平均采样间隔；相邻轨迹点的位移距离远大于平均位移距离。",
+        "GPS",
+        "信号中断",
+        " ",
+        " ",
+        " ",
+        " ",
+        " ",
+        " ",
+        " ",
+        " ",
+        " "
+      ],
+      "reading_scope": "TEXT_RUNS_FROM_ORIGINAL_XML; mathematical drawing interpretation inherited from verified G1 extracts"
+    },
+    "18": {
+      "member": "ppt/slides/slide18.xml",
+      "raw_text_runs": [
+        "为什么需要轨迹数据预处理",
+        "Step1:",
+        " ",
+        "定位距离异常、时间间隔异常的相邻轨迹点",
+        "解决方法：轨迹分段",
+        "Step2:",
+        " ",
+        "根据定位结果将轨迹分段为多条子轨迹",
+        " ",
+        " ",
+        " ",
+        " ",
+        " ",
+        " ",
+        " ",
+        " ",
+        " ",
+        " ",
+        "Input",
+        "：单条轨迹数据 ",
+        " ",
+        "将",
+        "划分为",
+        " ",
+        "Step3:",
+        " ",
+        "删除分段结果中距离过短或点数过少的子轨迹",
+        "删除",
+        " ",
+        "Output",
+        "：",
+        " "
+      ],
+      "reading_scope": "TEXT_RUNS_FROM_ORIGINAL_XML; mathematical drawing interpretation inherited from verified G1 extracts"
+    },
+    "19": {
+      "member": "ppt/slides/slide19.xml",
+      "raw_text_runs": [
+        "为什么需要轨迹数据预处理",
+        "背景：",
+        "由于信号干扰等原因，",
+        " GPS",
+        "设备采集到的轨迹点位置与车辆的真实位置之间存在较大差异。",
+        "影响：",
+        "漂移点会被误识别为转向轨迹点，对后续路口识别、地图构建等任务产生不利影响。",
+        "数据分析：",
+        "漂移点的方向与其前序、后序轨迹点的方向都存在较大差异。",
+        "GPS",
+        "信号漂移",
+        "漂移点"
+      ],
+      "reading_scope": "TEXT_RUNS_FROM_ORIGINAL_XML; mathematical drawing interpretation inherited from verified G1 extracts"
+    },
+    "20": {
+      "member": "ppt/slides/slide20.xml",
+      "raw_text_runs": [
+        "为什么需要轨迹数据预处理",
+        "漂移点",
+        "解决方法：轨迹去噪",
+        "Step1:",
+        " ",
+        "计算每个轨迹点的方向：当前轨迹点与后序轨迹点连成线段的方向",
+        "Step2:",
+        " ",
+        "定位方向与其前后序轨迹点方向都存在较大差异的漂移轨迹点，删除该点并连接其前后序轨迹点",
+        "Input",
+        "：单条轨迹数据 ",
+        " ",
+        " ",
+        "Output",
+        "：",
+        " ",
+        " ",
+        " ",
+        " ",
+        " ",
+        " ",
+        " ",
+        " ",
+        " ",
+        " "
+      ],
+      "reading_scope": "TEXT_RUNS_FROM_ORIGINAL_XML; mathematical drawing interpretation inherited from verified G1 extracts"
+    },
+    "21": {
+      "member": "ppt/slides/slide21.xml",
+      "raw_text_runs": [
+        "为什么需要轨迹数据预处理",
+        "背景：",
+        "全国网与车在每小时都会产生大量的轨迹点数据，同时由于交通拥堵，同一车辆在局部区域会产生大量轨迹点。",
+        "影响：",
+        "基于轨迹数据的相关任务效率低下，且精度降低。",
+        "解决思路：",
+        "若删除当前轨迹点对整条轨迹的形态会产生较大影响，则将当前轨迹点视为关键点予以保留。",
+        "轨迹点数量过多且存在冗余",
+        "局部区域内一周时间收集了接近",
+        "10",
+        "万个轨迹点"
+      ],
+      "reading_scope": "TEXT_RUNS_FROM_ORIGINAL_XML; mathematical drawing interpretation inherited from verified G1 extracts"
+    },
+    "22": {
+      "member": "ppt/slides/slide22.xml",
+      "raw_text_runs": [
+        "为什么需要轨迹数据预处理",
+        "解决方法：轨迹压缩",
+        "Step1:",
+        "找到轨迹中离起终点连成线段最远的轨迹点，计算该点到起终点连成线段的距离",
+        "Step2:",
+        " ",
+        "若该距离大于一定阈值，则说明该点是轨迹",
+        "tr",
+        "中的形态关键点，应当保留，将轨迹按该点分割为两条子轨迹，反之则仅保留两个端点，删除其他轨迹点。",
+        "Input",
+        "：单条轨迹数据 ",
+        " ",
+        "Output",
+        "：",
+        " ",
+        " ",
+        "道格拉斯普克算法示意图",
+        " ",
+        " ",
+        " ",
+        " ",
+        " ",
+        " ",
+        " ",
+        " ",
+        " ",
+        " ",
+        "Step3:",
+        " ",
+        "重复执行上述步骤直到无法继续压缩。"
+      ],
+      "reading_scope": "TEXT_RUNS_FROM_ORIGINAL_XML; mathematical drawing interpretation inherited from verified G1 extracts"
+    },
+    "23": {
+      "member": "ppt/slides/slide23.xml",
+      "raw_text_runs": [
+        "轨迹压缩"
+      ],
+      "reading_scope": "TEXT_RUNS_FROM_ORIGINAL_XML; mathematical drawing interpretation inherited from verified G1 extracts"
+    },
+    "24": {
+      "member": "ppt/slides/slide24.xml",
+      "raw_text_runs": [
+        "轨迹预处理效果评估",
+        "分段距离阈值选择",
+        "分段处理：将相邻轨迹点中距离超过阈值的点视为噪声点，在噪声点处将轨迹分段。",
+        "通过轨迹保存率及先验最大距离计算公式确定分段阈值：",
+        "最大距离计算公式：",
+        "其中平均采样时间计算为",
+        "1",
+        "2",
+        "s左右，骑行速度上界为2",
+        "5",
+        "km",
+        "/",
+        "h，计算得到最大行驶距离约为8",
+        "3",
+        "m左右，结合图像及实际情况（超速），取分段阈值设置为9",
+        "5",
+        "m。"
+      ],
+      "reading_scope": "TEXT_RUNS_FROM_ORIGINAL_XML; mathematical drawing interpretation inherited from verified G1 extracts"
+    },
+    "25": {
+      "member": "ppt/slides/slide25.xml",
+      "raw_text_runs": [
+        "轨迹预处理效果评估",
+        "分段距离阈值选择",
+        "保留比例",
+        "(%)",
+        "（分段后轨迹点数量除以分段前轨迹点数量）"
+      ],
+      "reading_scope": "TEXT_RUNS_FROM_ORIGINAL_XML; mathematical drawing interpretation inherited from verified G1 extracts"
+    },
+    "26": {
+      "member": "ppt/slides/slide26.xml",
+      "raw_text_runs": [
+        "作业细则",
+        "轨迹数据预处理",
+        "（",
+        "必做",
+        "）",
+        "：",
+        "完成",
+        "Trajectory_preprocessing.ipynb",
+        "的空缺部分与实验报告。",
+        "设计评价轨迹数据预处理效果的评估指标，需给出设计逻辑以及结果分析。",
+        "基于LLM辅助的轨迹数据质量提升智能体系统（选",
+        "做",
+        "）",
+        "：",
+        "基于助教开发的",
+        "系统。",
+        "思考与讨论（选做）",
+        "作业提交：",
+        "在",
+        "10",
+        "月",
+        "5",
+        "日",
+        "前将",
+        ".",
+        "ipynb",
+        "文件与实验报告压缩至",
+        ".zip",
+        "文件格式发送至",
+        "52285903012@stu.ecnu.ed",
+        "u.cn",
+        ",",
+        " 作业命名为 学号",
+        "_",
+        "姓名",
+        "_",
+        "实验一",
+        ".zip/.",
+        "ipynb",
+        "/.docx/.pdf"
+      ],
+      "reading_scope": "TEXT_RUNS_FROM_ORIGINAL_XML; mathematical drawing interpretation inherited from verified G1 extracts"
+    },
+    "37": {
+      "member": "ppt/slides/slide37.xml",
+      "raw_text_runs": [
+        "验证方法",
+        "消融实验：怎么证明这套流程有效",
+        "四种模式必须结构性不同",
+        "llm-only：只有 LLM，没有实测依据",
+        "search-only：只有确定性搜索，不含任何 LLM 调用",
+        "llm+search：加上实测依据",
+        "llm+memory+search：再加上历史经验",
+        "两个必须避开的陷阱",
+        "信息泄漏：在评测轨迹上边跑边攒记忆，agent 会把这条轨迹自己的上次结果检索回来。等于考试时把答案摆桌上。",
+        "标签造假：search-only 若仍调用 LLM，与含 LLM 的模式就不可比。所以它必须真的不调用，并有测试断言轮次为 0。",
+        "做法：先在示范集上积累记忆，再在完全不重叠的留出集上评测。评测阶段只读不写。",
+        "10"
+      ],
+      "reading_scope": "TEXT_RUNS_FROM_ORIGINAL_XML; mathematical drawing interpretation inherited from verified G1 extracts"
+    },
+    "42": {
+      "member": "ppt/slides/slide42.xml",
+      "raw_text_runs": [
+        "思考与讨论",
+        "轨迹分段、轨迹去噪、轨迹简化三个步骤可不可以调换顺序？"
+      ],
+      "reading_scope": "TEXT_RUNS_FROM_ORIGINAL_XML; mathematical drawing interpretation inherited from verified G1 extracts"
+    }
+  },
+  "metadata": {
+    "course": "智慧城市与位置服务",
+    "experiment": "实验一：轨迹数据预处理",
+    "stage": "Goal 3 / 3，仍属实验一",
+    "teacher_cover_date_literal": "20260917",
+    "student_name": null,
+    "student_id": null,
+    "identity_status": "META_DEPENDENCY",
+    "identity_inference_forbidden": [
+      "git author",
+      "email",
+      "nickname",
+      "teacher email digits"
+    ],
+    "deadline_literal": "10月5日前",
+    "deadline_time": null,
+    "deadline_year_inference": "封面背景为2026；提交页未单写年份或具体时刻",
+    "submission_email": "52285903012@stu.ecnu.edu.cn",
+    "required_name_pattern": "学号_姓名_实验一",
+    "email_send_authorized": false,
+    "course_submission_authorized": false,
+    "package_when_identity_missing": "REVIEW_ONLY"
+  },
+  "notebook_name_mapping": {
+    "teacher_slide26_name": "Trajectory_preprocessing.ipynb",
+    "repository_correspondence": "task1/作业/作业/作业1轨迹数据预处理.ipynb",
+    "basis": "实际中文 Notebook 含相同三项 TODO 和主函数；无英文同名源文件，不覆盖或伪造教师原件。"
+  },
+  "requirements_mapping": [
+    {
+      "g1_requirement_id": "R01",
+      "requirement": "数据字段、时空语义、采样与质量盘点",
+      "g2_requirement_ids": [
+        "R06"
+      ],
+      "teacher_slide_pages_one_based": [
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "basic_starter_cell_indices_zero_based": [
+        2,
+        11
+      ],
+      "llm_starter_cell_indices_zero_based": [],
+      "teacher_vs_project_authority": "TEACHER_PLUS_CURRENT_USER_T2_SCOPE",
+      "existing_artifact_paths": [
+        "task1/config/conditional_planar.json",
+        "task1/evidence/goal1/inventory/structure_summary.json"
+      ],
+      "final_output_roles": [
+        "数据与质量问题",
+        "条件化工作坐标与无真值限制"
+      ],
+      "delivery_status_at_inventory": "PENDING_G3_PRODUCTION",
+      "note": "来源映射不是 G3 验收；历史结果须保留 G1/G2 身份。"
+    },
+    {
+      "g1_requirement_id": "R02",
+      "requirement": "时间/空间异常处分段，短片段处理",
+      "g2_requirement_ids": [
+        "R01"
+      ],
+      "teacher_slide_pages_one_based": [
+        17,
+        18,
+        26
+      ],
+      "basic_starter_cell_indices_zero_based": [
+        3,
+        4,
+        10
+      ],
+      "llm_starter_cell_indices_zero_based": [],
+      "teacher_vs_project_authority": "TEACHER_PLUS_CURRENT_USER_T2_SCOPE",
+      "existing_artifact_paths": [
+        "task1/workflow/geometry.py",
+        "task1/workflow/g2_pipeline.py"
+      ],
+      "final_output_roles": [
+        "基础Notebook：分段与过滤",
+        "Experiment Report：方法与全量阶段点数"
+      ],
+      "delivery_status_at_inventory": "PENDING_G3_PRODUCTION",
+      "note": "来源映射不是 G3 验收；历史结果须保留 G1/G2 身份。"
+    },
+    {
+      "g1_requirement_id": "R03",
+      "requirement": "基于教师方向关系的去噪及验证",
+      "g2_requirement_ids": [
+        "R01"
+      ],
+      "teacher_slide_pages_one_based": [
+        19,
+        20,
+        26
+      ],
+      "basic_starter_cell_indices_zero_based": [
+        5,
+        6,
+        10
+      ],
+      "llm_starter_cell_indices_zero_based": [],
+      "teacher_vs_project_authority": "TEACHER_PLUS_CURRENT_USER_T2_SCOPE",
+      "existing_artifact_paths": [
+        "task1/workflow/geometry.py",
+        "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/AUTHORIZATION_SUPPLEMENT.md"
+      ],
+      "final_output_roles": [
+        "基础Notebook：一次标记同时删除、不可计算窗口",
+        "Experiment Report：方向规则和局限"
+      ],
+      "delivery_status_at_inventory": "PENDING_G3_PRODUCTION",
+      "note": "来源映射不是 G3 验收；历史结果须保留 G1/G2 身份。"
+    },
+    {
+      "g1_requirement_id": "R04",
+      "requirement": "Douglas–Peucker 简化及验证",
+      "g2_requirement_ids": [
+        "R01"
+      ],
+      "teacher_slide_pages_one_based": [
+        21,
+        22,
+        23,
+        26
+      ],
+      "basic_starter_cell_indices_zero_based": [
+        7,
+        8,
+        10,
+        18
+      ],
+      "llm_starter_cell_indices_zero_based": [],
+      "teacher_vs_project_authority": "TEACHER_PLUS_CURRENT_USER_T2_SCOPE",
+      "existing_artifact_paths": [
+        "task1/workflow/geometry.py",
+        "task1/workflow/g2_metrics.py"
+      ],
+      "final_output_roles": [
+        "基础Notebook：有限线段 DP 与索引",
+        "Experiment Report：5 工作米预算与最终误差边界"
+      ],
+      "delivery_status_at_inventory": "PENDING_G3_PRODUCTION",
+      "note": "来源映射不是 G3 验收；历史结果须保留 G1/G2 身份。"
+    },
+    {
+      "g1_requirement_id": "R05",
+      "requirement": "自行设计指标，解释逻辑与结果",
+      "g2_requirement_ids": [
+        "R06"
+      ],
+      "teacher_slide_pages_one_based": [
+        24,
+        25,
+        26
+      ],
+      "basic_starter_cell_indices_zero_based": [],
+      "llm_starter_cell_indices_zero_based": [],
+      "teacher_vs_project_authority": "TEACHER_PLUS_CURRENT_USER_T2_SCOPE",
+      "existing_artifact_paths": [
+        "task1/docs/goal2/CONTRACT.md",
+        "task1/workflow/g2_metrics.py"
+      ],
+      "final_output_roles": [
+        "基础Notebook：评价设计逻辑与实测",
+        "Experiment Report：共同 raw 指标、保护、选择和确认"
+      ],
+      "delivery_status_at_inventory": "PENDING_G3_PRODUCTION",
+      "note": "来源映射不是 G3 验收；历史结果须保留 G1/G2 身份。"
+    },
+    {
+      "g1_requirement_id": "R06",
+      "requirement": "分段、去噪、简化三组参数实验",
+      "g2_requirement_ids": [
+        "R01"
+      ],
+      "teacher_slide_pages_one_based": [
+        26
+      ],
+      "basic_starter_cell_indices_zero_based": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17
+      ],
+      "llm_starter_cell_indices_zero_based": [],
+      "teacher_vs_project_authority": "TEACHER_PLUS_CURRENT_USER_T2_SCOPE",
+      "existing_artifact_paths": [
+        "task1/notebooks/goal2/01_parameters_and_orders.ipynb",
+        "task1/evidence/goal2/tables/parameter_records.csv"
+      ],
+      "final_output_roles": [
+        "基础Notebook：三组参数实验",
+        "Experiment Report：G2 历史参数实验与本轮比较"
+      ],
+      "delivery_status_at_inventory": "PENDING_G3_PRODUCTION",
+      "note": "来源映射不是 G3 验收；历史结果须保留 G1/G2 身份。"
+    },
+    {
+      "g1_requirement_id": "R07",
+      "requirement": "三步能否换序的讨论与必要实验",
+      "g2_requirement_ids": [
+        "R02"
+      ],
+      "teacher_slide_pages_one_based": [
+        42
+      ],
+      "basic_starter_cell_indices_zero_based": [
+        10
+      ],
+      "llm_starter_cell_indices_zero_based": [],
+      "teacher_vs_project_authority": "TEACHER_PLUS_CURRENT_USER_T2_SCOPE",
+      "existing_artifact_paths": [
+        "task1/evidence/goal2/tables/order_failure_mechanisms.csv",
+        "task1/notebooks/goal2/01_parameters_and_orders.ipynb"
+      ],
+      "final_output_roles": [
+        "基础Notebook：换序实验与拒绝机制",
+        "Experiment Report：完整六顺序与 P 后删除风险"
+      ],
+      "delivery_status_at_inventory": "PENDING_G3_PRODUCTION",
+      "note": "来源映射不是 G3 验收；历史结果须保留 G1/G2 身份。"
+    },
+    {
+      "g1_requirement_id": "R08",
+      "requirement": "基于助教系统的 LLM 质量提升工作流",
+      "g2_requirement_ids": [
+        "R03"
+      ],
+      "teacher_slide_pages_one_based": [
+        26,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40
+      ],
+      "basic_starter_cell_indices_zero_based": [],
+      "llm_starter_cell_indices_zero_based": [
+        0,
+        2,
+        6,
+        8,
+        10,
+        12,
+        13,
+        30
+      ],
+      "teacher_vs_project_authority": "TEACHER_PLUS_CURRENT_USER_T2_SCOPE",
+      "existing_artifact_paths": [
+        "task1/notebooks/goal2/02_real_modes_and_memory.ipynb",
+        "task1/evidence/goal2/PROCESS_RECORD.md"
+      ],
+      "final_output_roles": [
+        "系统Notebook：角色/工具/状态/修复入口",
+        "Process Report：实际工作流事实"
+      ],
+      "delivery_status_at_inventory": "PENDING_G3_PRODUCTION",
+      "note": "来源映射不是 G3 验收；历史结果须保留 G1/G2 身份。"
+    },
+    {
+      "g1_requirement_id": "R09",
+      "requirement": "LLM / 搜索 / 记忆的实际作用验证",
+      "g2_requirement_ids": [
+        "R03",
+        "R04"
+      ],
+      "teacher_slide_pages_one_based": [
+        37
+      ],
+      "basic_starter_cell_indices_zero_based": [],
+      "llm_starter_cell_indices_zero_based": [
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25
+      ],
+      "teacher_vs_project_authority": "TEACHER_PLUS_CURRENT_USER_T2_SCOPE",
+      "existing_artifact_paths": [
+        "task1/evidence/goal2/tables/mode_record_results.csv",
+        "task1/evidence/goal2/tables/memory_consumption.csv",
+        "task1/evidence/goal2/resource_ledger.json"
+      ],
+      "final_output_roles": [
+        "系统Notebook：四模式与记忆",
+        "Experiment Report：真实调用、失败和因果边界"
+      ],
+      "delivery_status_at_inventory": "PENDING_G3_PRODUCTION",
+      "note": "来源映射不是 G3 验收；历史结果须保留 G1/G2 身份。"
+    },
+    {
+      "g1_requirement_id": "R10",
+      "requirement": "AI准确性与隐含假设批判，至少一组反例及前后指标、拒绝原因",
+      "g2_requirement_ids": [
+        "R07"
+      ],
+      "teacher_slide_pages_one_based": [
+        6
+      ],
+      "basic_starter_cell_indices_zero_based": [],
+      "llm_starter_cell_indices_zero_based": [],
+      "teacher_vs_project_authority": "TEACHER_PLUS_CURRENT_USER_T2_SCOPE",
+      "existing_artifact_paths": [
+        "task1/evidence/goal2/a_epoch02/actual_ai_critique/ACTUAL_AI_CRITIQUE.md",
+        "task1/evidence/goal2/counterexamples/formal-02/manifest.json"
+      ],
+      "final_output_roles": [
+        "两份Notebook：真实 AI 建议与至少一组已知答案反例",
+        "Experiment Report：隐含假设、拒绝理由及前后指标",
+        "Process Report：真实过程事实与待补互动"
+      ],
+      "delivery_status_at_inventory": "PENDING_G3_PRODUCTION",
+      "note": "来源映射不是 G3 验收；历史结果须保留 G1/G2 身份。"
+    },
+    {
+      "g1_requirement_id": "R11",
+      "requirement": "实验程序、Notebook、实验报告、含AI批判的过程报告",
+      "g2_requirement_ids": [
+        "R08"
+      ],
+      "teacher_slide_pages_one_based": [
+        5,
+        26
+      ],
+      "basic_starter_cell_indices_zero_based": [],
+      "llm_starter_cell_indices_zero_based": [],
+      "teacher_vs_project_authority": "TEACHER_PLUS_CURRENT_USER_T2_SCOPE",
+      "existing_artifact_paths": [
+        "task1/notebooks/goal2/01_parameters_and_orders.ipynb",
+        "task1/notebooks/goal2/02_real_modes_and_memory.ipynb",
+        "task1/notebooks/goal2/03_candidates_counterexamples_and_cases.ipynb"
+      ],
+      "final_output_roles": [
+        "两份完成版 Notebook",
+        "Experiment Report tex/bib/PDF",
+        "Process Report tex/PDF 与明确外部缺项"
+      ],
+      "delivery_status_at_inventory": "PENDING_G3_PRODUCTION",
+      "note": "来源映射不是 G3 验收；历史结果须保留 G1/G2 身份。"
+    },
+    {
+      "g1_requirement_id": "R12",
+      "requirement": "实验一专用真实执行、审核与持续优化循环",
+      "g2_requirement_ids": [
+        "R09"
+      ],
+      "teacher_slide_pages_one_based": [],
+      "basic_starter_cell_indices_zero_based": [],
+      "llm_starter_cell_indices_zero_based": [],
+      "teacher_vs_project_authority": "CURRENT_USER_AND_PROJECT_REQUIREMENT",
+      "existing_artifact_paths": [
+        "task1/evidence/goal2/governance_dispatches.json",
+        "task1/evidence/goal2/PROCESS_RECORD.md",
+        "task1/workflow/g2_journal.py"
+      ],
+      "final_output_roles": [
+        "系统Notebook：实际角色和控制器入口",
+        "Technical Handoff：修复与恢复",
+        "Process Report：自治决定与用户判断区分"
+      ],
+      "delivery_status_at_inventory": "PENDING_G3_PRODUCTION",
+      "note": "来源映射不是 G3 验收；历史结果须保留 G1/G2 身份。"
+    },
+    {
+      "g1_requirement_id": "R13",
+      "requirement": "先单项后组合、少量论文、同标准比较、负结果保留",
+      "g2_requirement_ids": [
+        "R05"
+      ],
+      "teacher_slide_pages_one_based": [],
+      "basic_starter_cell_indices_zero_based": [],
+      "llm_starter_cell_indices_zero_based": [],
+      "teacher_vs_project_authority": "CURRENT_USER_AND_PROJECT_REQUIREMENT",
+      "existing_artifact_paths": [
+        "task1/evidence/goal2/candidate_lock.json",
+        "task1/docs/research/Task1_Literature_Review_2025_2026_Merged.md",
+        "task1/docs/research/Task1_Source_Audit_2025_2026_Merged.json"
+      ],
+      "final_output_roles": [
+        "Experiment Report：单项、组合、父项、精简与负结果",
+        "Technical Handoff：候选预算与停止理由"
+      ],
+      "delivery_status_at_inventory": "PENDING_G3_PRODUCTION",
+      "note": "来源映射不是 G3 验收；历史结果须保留 G1/G2 身份。"
+    },
+    {
+      "g1_requirement_id": "R14",
+      "requirement": "原生可复现图、draw.io结构源文件、P2 / XeLaTeX",
+      "g2_requirement_ids": [
+        "R08"
+      ],
+      "teacher_slide_pages_one_based": [],
+      "basic_starter_cell_indices_zero_based": [],
+      "llm_starter_cell_indices_zero_based": [],
+      "teacher_vs_project_authority": "CURRENT_USER_AND_PROJECT_REQUIREMENT",
+      "existing_artifact_paths": [
+        "task1/figures/goal2/figure_manifest.json",
+        "task1/figures/goal2/goal2_actual_architecture.drawio"
+      ],
+      "final_output_roles": [
+        "真实图与数据/源码 SVG/PDF",
+        "可编辑 .drawio 系统图",
+        "P2/XeLaTeX 两份报告"
+      ],
+      "delivery_status_at_inventory": "PENDING_G3_PRODUCTION",
+      "note": "来源映射不是 G3 验收；历史结果须保留 G1/G2 身份。"
+    },
+    {
+      "g1_requirement_id": "R15",
+      "requirement": "Codex自检、推送、GPT实际远程二重验收",
+      "g2_requirement_ids": [
+        "R10"
+      ],
+      "teacher_slide_pages_one_based": [],
+      "basic_starter_cell_indices_zero_based": [],
+      "llm_starter_cell_indices_zero_based": [],
+      "teacher_vs_project_authority": "CURRENT_USER_AND_PROJECT_REQUIREMENT",
+      "existing_artifact_paths": [
+        "task1/evidence/goal2/c_contract/internal_acceptance_receipt_v2.json",
+        "task1/evidence/goal2/publication_record.json"
+      ],
+      "final_output_roles": [
+        "内部独立全验收",
+        "GitHub 固定 SHA 与远程回读",
+        "网页 GPT 二重验收 PENDING"
+      ],
+      "delivery_status_at_inventory": "PENDING_G3_PRODUCTION",
+      "note": "来源映射不是 G3 验收；历史结果须保留 G1/G2 身份。"
+    },
+    {
+      "g1_requirement_id": "R16",
+      "requirement": "教师最终ZIP与GitHub完整工程分开",
+      "g2_requirement_ids": [
+        "R10"
+      ],
+      "teacher_slide_pages_one_based": [
+        26
+      ],
+      "basic_starter_cell_indices_zero_based": [],
+      "llm_starter_cell_indices_zero_based": [],
+      "teacher_vs_project_authority": "TEACHER_PLUS_CURRENT_USER_T2_SCOPE",
+      "existing_artifact_paths": [
+        "task1/evidence/goal1/materials/requirements_sources.md"
+      ],
+      "final_output_roles": [
+        "实际 REVIEW_ONLY ZIP（若元数据/Process Evidence 未齐）",
+        "独立目录解压复算",
+        "GitHub 完整工程"
+      ],
+      "delivery_status_at_inventory": "PENDING_G3_PRODUCTION",
+      "note": "来源映射不是 G3 验收；历史结果须保留 G1/G2 身份。"
+    }
+  ],
+  "external_dependencies": [
+    {
+      "id": "META_DEPENDENCY",
+      "missing": [
+        "可信正式姓名",
+        "学号"
+      ],
+      "blocks": [
+        "规范教师提交命名",
+        "可直接提交状态"
+      ],
+      "does_not_block": [
+        "实验",
+        "全量处理",
+        "送审报告",
+        "REVIEW_ONLY ZIP"
+      ]
+    },
+    {
+      "id": "PROCESS_EVIDENCE_DEPENDENCY",
+      "missing": [
+        "真实历史互动 raw 截图或完整逐字记录",
+        "Evidence Master 批准入选/crop/annotation/caption/顺序 spec",
+        "Evidence Lock"
+      ],
+      "available": [
+        "G1 直接授权文本与 USER_DECISIONS",
+        "G2 USER_PROMPT 与 source receipt",
+        "当前 G3 直接授权原文",
+        "真实 A/B/C 调用和实验记录（不等于 Human Judgment）"
+      ],
+      "blocks": [
+        "对应正式互动页面",
+        "完整正式 Process Report",
+        "Submission READY"
+      ],
+      "does_not_block": [
+        "可编译 Process Report 送审稿",
+        "Interaction Handoff 候选索引",
+        "其余实验与技术交付"
+      ]
+    }
+  ],
+  "reference_pdf_inspection": {
+    "dpi": 200,
+    "experiment_pages_rendered": 5,
+    "process_pages_rendered": 12,
+    "render_exit_codes": [
+      0,
+      0
+    ],
+    "render_pixel_size": [
+      1654,
+      2339
+    ],
+    "visual_scope": "全部17页 contact sheet 布局检查；Experiment 第3页、Process 第5页单页细看；仅参考模板阅读，非最终报告全页验收。",
+    "result": "参考样式和模板合成标识清楚；不得复制合成素材。"
+  },
+  "environment_audit": {
+    "tool": "latex-writing/scripts/check_latex_env.sh",
+    "exit_code": 0,
+    "pass": 56,
+    "warn": 2,
+    "fail": 0,
+    "tex": "Linux user TeX Live 2026",
+    "warnings": [
+      "PATH 存在重复项",
+      "WSL PATH 含 Windows TeX 路径，但 Linux TeX 当前优先"
+    ],
+    "dependencies_installed": [],
+    "configuration_changes": []
+  },
+  "not_checked": [
+    "未读取用户个人无关历史或系统认证目录",
+    "未开展新文献广泛检索",
+    "未把未提供的原始网页工具日志/截图推断为存在",
+    "未执行 G3 候选或 FINAL_CONFIRM"
+  ]
+}

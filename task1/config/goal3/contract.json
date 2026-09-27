@@ -1,0 +1,490 @@
+{
+  "goal_id": "SC-LAB1-G3-FINAL-001",
+  "contract_id": "G3_CONDITIONAL_ENU_V1",
+  "created_at": "2026-09-27T03:42:27.697047+00:00",
+  "status": "PREPARED_FOR_INDEPENDENT_C_REVIEW",
+  "authority": {
+    "type": "CURRENT_DIRECT_USER_PROMPT",
+    "path": "task1/evidence/goal3/USER_PROMPT.md",
+    "sha256": "e5fd60e707b3b5e4c62e8c522bbc58cbd17d89fe67ec29abaf2c3d037de723ec",
+    "internal_C_is_new_user_approval": false
+  },
+  "inherited_contract": {
+    "path": "task1/config/goal2/contract.json",
+    "sha256": "db758c097509139596fbc52b4c3f65e921eb1f12d9fb4c239e308abdb57f31f8"
+  },
+  "split_sha256": "c20747b7e2869b5e3ce755601764336dcd5e42ed4643e99d5e56be7a0ebba2f0",
+  "raw_path": "task1/作业/作业/traj_dict.json",
+  "raw_sha256": "c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3",
+  "expected_raw_records": 11386,
+  "expected_raw_points": 1173410,
+  "model": {
+    "adapter_version": "g2_conditional_ellipsoid_enu:v1",
+    "formula": "same ECEF_to_ENU as G1; independent domain guard only",
+    "semi_major_m": 6378137.0,
+    "inverse_flattening": 298.257223563,
+    "assumed_height_m": 0.0,
+    "origin_lon_degrees": 121.343555,
+    "origin_lat_degrees": 31.3561015,
+    "domain_max_radius_m": 200000.0,
+    "guard_is_accuracy_guarantee": false,
+    "source_epsg": null,
+    "datum_conversion": null,
+    "coordinate_order": "longitude,latitude",
+    "angular_unit": "degree",
+    "coordinate_crosscheck_absolute_tolerance_m": 1e-06,
+    "near_model_checks": [
+      "PROJ cart+topocentric on all selected points",
+      "Geod inverse raw/current edges and stage lengths",
+      "independent AEQD direction and DP decisions for all registered grid thresholds and actual stage indices"
+    ],
+    "sensitivity_difference_action": "retain record and differences; mark conditional dependence; no coordinate/model selection by cleaning score",
+    "outside_guard_action": "BLOCK_AFFECTED_RECORD_RETAIN_IN_DENOMINATOR_DO_NOT_REPLACE"
+  },
+  "units": {
+    "xy": "working_metre",
+    "time": "second",
+    "direction": "degree"
+  },
+  "source_crs": "UNVERIFIED",
+  "direction_method": "single_pass_simultaneous_keep_undefined",
+  "stage_rules": {
+    "S": "current-index strict dt>threshold OR dt<0 OR distance>threshold; right boundary point belongs only to right segment; immediately filter current segment min_points/min_length",
+    "D": "teacher both circular neighbor direction differences strictly greater than threshold; mark once and remove simultaneously; endpoints and undefined/zero-displacement windows preserved",
+    "P": "finite-segment DP, preserve endpoints, equality does not recurse, degenerate endpoint distance, zero tolerance keeps all",
+    "before_S": "raw record boundaries only; no implicit time/distance segmentation",
+    "after_each_stage": "recompute current adjacency features",
+    "after_P": "later D/S removals distinct from DP immediate output"
+  },
+  "parameter_grids": {
+    "dt": [
+      15,
+      20,
+      30,
+      45,
+      60
+    ],
+    "distance": [
+      95,
+      200,
+      400,
+      600,
+      800
+    ],
+    "min_points": [
+      2,
+      3,
+      5,
+      7,
+      10
+    ],
+    "min_length": [
+      0,
+      32.5,
+      65,
+      97.5,
+      130
+    ],
+    "direction": [
+      15,
+      25,
+      35,
+      45,
+      60
+    ],
+    "dp": [
+      0,
+      0.5,
+      1,
+      2,
+      5,
+      10,
+      20
+    ]
+  },
+  "numeric_audit": {
+    "linear_rule": "64 * binary64_epsilon * max(1,coordinate_extent,absolute_coordinate,tolerance)",
+    "direction_rule_degrees": "64 * binary64_epsilon * 360",
+    "does_not_change_algorithm_threshold": true,
+    "integer_gain_minimum": 1,
+    "dimensionless_ratio_comparison_epsilon": 1e-12
+  },
+  "common_reference": {
+    "id": "RAW_WINDOWS_DT30_DISTANCE400_V1",
+    "source": "trusted immutable complete raw records transformed by frozen G2 model",
+    "window_break": "dt>30 or dt<0 or adjacent distance>400",
+    "short_segment_filter": false,
+    "candidate_dependent": false,
+    "point_error": "retained raw point 0; otherwise finite segment distance only to bracketing same-final-segment consecutive indices within same fixed raw window; no cross-window interpolation",
+    "uncovered_value": null,
+    "uncovered_reason": "UNCOVERED_OR_NO_BRACKETING_EDGE",
+    "coverage_identity_set_required": true,
+    "crossing_rule": "any final same-segment edge a<b with original break index j satisfying a<j<=b",
+    "crossing_limit": 0
+  },
+  "metrics": [
+    {
+      "metric_id": "raw_point_retention",
+      "definition": "N_final/N_raw",
+      "reference": "complete raw record scope",
+      "unit": "ratio",
+      "denominator": "all raw points",
+      "direction": "DESCRIPTIVE",
+      "null_reason": "EMPTY_RAW"
+    },
+    {
+      "metric_id": "record_coverage",
+      "definition": "N_records_with_nonempty_final/N_input_records",
+      "reference": "complete input record set",
+      "unit": "ratio",
+      "denominator": "all input records including all-filtered",
+      "direction": "PROTECT_NONDECREASE",
+      "null_reason": "EMPTY_SCOPE"
+    },
+    {
+      "metric_id": "all_filtered_record_ratio",
+      "definition": "N_records_whose_all_raw_points_are_filtered_by_S/N_input_records",
+      "reference": "complete input record set",
+      "unit": "ratio",
+      "denominator": "all input records",
+      "direction": "DESCRIPTIVE",
+      "null_reason": "EMPTY_SCOPE"
+    },
+    {
+      "metric_id": "record_no_output_ratio",
+      "definition": "N_records_with_zero_final_points/N_input_records, regardless of prior D/P removals",
+      "reference": "complete input record set",
+      "unit": "ratio",
+      "denominator": "all input records including those removed by multiple stages",
+      "direction": "DESCRIPTIVE",
+      "null_reason": "EMPTY_SCOPE"
+    },
+    {
+      "metric_id": "stage_fates",
+      "definition": "per-record/per-stage input/output/removed counts, filter reasons and unique terminal ledger",
+      "reference": "all original point identities",
+      "unit": "count",
+      "denominator": "all raw points, all records, all S-created segments",
+      "direction": "CONSERVATION_AND_DESCRIPTION",
+      "null_reason": null
+    },
+    {
+      "metric_id": "dp_saving",
+      "definition": "1-N_P_immediate_output/N_P_complete_input",
+      "reference": "complete immediate P input, same upstream for comparisons",
+      "unit": "ratio",
+      "denominator": "all P input points",
+      "direction": "HIGHER_COMPRESSION_ONLY",
+      "null_reason": "EMPTY_DP_REFERENCE"
+    },
+    {
+      "metric_id": "dp_interval_error",
+      "definition": "finite-segment distance for every full P input point to its original-index bracketing immediate P output edge; max/mean/q50/q90/q95/q99/exceedances",
+      "reference": "complete P input for this actual order",
+      "unit": "working_metre",
+      "denominator": "all P input points",
+      "direction": "LOWER_GEOMETRIC_ERROR",
+      "null_reason": "EMPTY_DP_REFERENCE"
+    },
+    {
+      "metric_id": "common_raw_coverage",
+      "definition": "covered original point identity set and count divided by all raw points; retained point or bracketing final edge within fixed raw window",
+      "reference": "fixed raw 30/400 windows without filter",
+      "unit": "count_and_ratio",
+      "denominator": "all raw points",
+      "direction": "HIGHER_CONDITIONAL_COVERAGE",
+      "null_reason": "EMPTY_RAW"
+    },
+    {
+      "metric_id": "common_raw_error",
+      "definition": "finite segment error per covered raw point; uncovered null; full observed mask retained",
+      "reference": "fixed raw 30/400 windows without filter",
+      "unit": "working_metre",
+      "denominator": "all raw points with valid/invalid counts reported",
+      "direction": "LOWER_CONDITIONAL_GEOMETRIC_ERROR",
+      "null_reason": "UNCOVERED_OR_NO_BRACKETING_EDGE"
+    },
+    {
+      "metric_id": "common_error_on_baseline_covered",
+      "definition": "candidate and reference max error restricted to the same frozen reference covered original-index set",
+      "reference": "common raw plus reference covered identity set",
+      "unit": "working_metre",
+      "denominator": "reference covered point identities; set must be subset of candidate coverage",
+      "direction": "LOWER_OR_EQUAL_GUARD",
+      "null_reason": "EMPTY_BASELINE_COVERAGE"
+    },
+    {
+      "metric_id": "raw_breakpoint_crossings",
+      "definition": "final same-segment edges a<b spanning any fixed raw break j with a<j<=b; count edges and unique breaks separately",
+      "reference": "raw strict dt>30 or dt<0 or distance>400",
+      "unit": "count",
+      "denominator": "all fixed raw breaks and all candidate final edges",
+      "direction": "ZERO_HARD_CONSTRAINT",
+      "null_reason": null
+    },
+    {
+      "metric_id": "raw_breakpoint_trigger_retention",
+      "definition": "which original break adjacent indices remain after each stage; distinguish omission/no output from crossing",
+      "reference": "raw break index pairs",
+      "unit": "count_and_index_sets",
+      "denominator": "all raw breakpoint pairs",
+      "direction": "DESCRIPTIVE",
+      "null_reason": "NO_RAW_BREAKPOINTS"
+    },
+    {
+      "metric_id": "stage_length_change",
+      "definition": "sum of within-current-segment distances; delta and relative delta from stage input",
+      "reference": "each complete stage input",
+      "unit": "working_metre_and_ratio",
+      "denominator": "stage input length",
+      "direction": "DESCRIPTIVE_NOT_TRUTH",
+      "null_reason": "ZERO_REFERENCE_LENGTH"
+    },
+    {
+      "metric_id": "computability",
+      "definition": "speed/direction computable current edges and reasons for all others",
+      "reference": "current stage adjacency",
+      "unit": "count_and_ratio",
+      "denominator": "all current stage edges",
+      "direction": "DESCRIPTIVE",
+      "null_reason": "NO_EDGES"
+    },
+    {
+      "metric_id": "proposal_legal_rate",
+      "definition": "legal raw proposals / all raw proposals before any fallback; missing/malformed/rejected included",
+      "reference": "frozen full grid domain",
+      "unit": "ratio",
+      "denominator": "all attempted proposal slots with response/failure categories",
+      "direction": "HIGHER_LEGALITY_NOT_QUALITY",
+      "null_reason": "NO_PROPOSALS"
+    },
+    {
+      "metric_id": "proposal_execution_rate",
+      "definition": "valid raw proposals actually executed / all raw proposals; cache separately flagged",
+      "reference": "locked original proposals",
+      "unit": "ratio",
+      "denominator": "all raw proposals",
+      "direction": "DESCRIPTIVE",
+      "null_reason": "NO_PROPOSALS"
+    },
+    {
+      "metric_id": "predicted_direction_agreement",
+      "definition": "predicted metric sign vs actual paired delta bound before execution; evaluate only declared comparable metric with nonnearzero delta",
+      "reference": "explicit predecision reference handle",
+      "unit": "ratio",
+      "denominator": "declared and evaluable nonnearzero predictions; undeclared/unavailable/nearzero separately",
+      "direction": "HIGHER_CALIBRATION_NOT_QUALITY",
+      "null_reason": "NO_EVALUABLE_PREDICTIONS"
+    },
+    {
+      "metric_id": "memory_consumption",
+      "definition": "retrieved/eligible/delivered/cited/action-consistent counts and IDs, with same-pair proposal differences",
+      "reference": "frozen verified DEMO snapshot",
+      "unit": "count_and_ratio",
+      "denominator": "memory episodes/cards with separate eligible/cited denominators",
+      "direction": "DESCRIPTIVE_NOT_CAUSAL_GAIN",
+      "null_reason": "NO_ELIGIBLE_MEMORY"
+    },
+    {
+      "metric_id": "resources",
+      "definition": "separate actual governance dispatches, experiment dispatches, tools, candidate evaluations, cache/replay reads, visible wall/tokens/request IDs",
+      "reference": "actual receipts and controller ledger",
+      "unit": "count_seconds_tokens",
+      "denominator": "all attempted operations including failed attempts",
+      "direction": "COST_ONLY",
+      "null_reason": "UNKNOWN_OR_UNAVAILABLE"
+    }
+  ],
+  "reference_order": "S-D-P",
+  "references": {
+    "R0": {
+      "dt": 30,
+      "distance": 400,
+      "min_points": 5,
+      "min_length": 65,
+      "direction": 35,
+      "dp": 5
+    },
+    "S0": {
+      "dt": 30,
+      "distance": 400,
+      "min_points": 2,
+      "min_length": 0,
+      "direction": 35,
+      "dp": 5
+    }
+  },
+  "budget": {
+    "new_single_definitions_max": 8,
+    "combination_definitions_max": 12,
+    "enhancement_depth_max": 3,
+    "selection_shortlist_max": 4,
+    "final_comparison_max": 4,
+    "prior_configuration_recomputes_count_as_new": false
+  },
+  "partitions": {
+    "development": "G3_DEVELOPMENT",
+    "selection": "G3_SELECTION",
+    "confirmation": "FINAL_CONFIRM",
+    "full_production": "ALL_PARTITIONS",
+    "final_method_feedback_to_A_before_freeze": false,
+    "selection_requires_shortlist_freeze": true,
+    "confirmation_requires_method_and_code_freeze": true,
+    "selection_redevelopment_consumes_existing_budget": true
+  },
+  "selection": {
+    "initial_incumbent": "R0",
+    "predeclared_order": "A registers before each development round; shortlist order fixed before selection",
+    "fixed_and_incumbent_protection": true,
+    "all_records_must_pass": true,
+    "integer_gain_minimum": 1,
+    "SD_guards": [
+      "baseline_covered_index_set subset_of candidate_covered_index_set",
+      "candidate_max_error_on_baseline_covered <= baseline_max_error + fixed_numeric_epsilon",
+      "raw_breakpoint_crossings == 0",
+      "baseline nonempty record/window coverage not lost"
+    ],
+    "SD_primary": [
+      "strict increase in common covered raw point count",
+      "strict reduction in max common raw error evaluated on the same baseline-covered set"
+    ],
+    "P_guards": [
+      "each nonempty record immediate P max error <= 5 + fixed numeric epsilon",
+      "coverage identity set nondecreasing",
+      "original segment endpoints preserved",
+      "raw_breakpoint_crossings == 0"
+    ],
+    "P_complete_input_equality_required": true,
+    "P_same_upstream_dp5_parent_required": true,
+    "P_shared_actual_error_budget_work_m": 5,
+    "P_primary": "fewer immediate P output points at exactly identical complete P input, actual error <=5",
+    "null": "cannot establish geometric improvement; report coverage gain separately",
+    "all_pairwise_and_frontier_saved": true,
+    "weighted_quality_score": null,
+    "incomparable": "retain already protected incumbent; preserve tradeoffs",
+    "equivalent": [
+      "fewer enhancement modules",
+      "no added online model dependency",
+      "lower measured cost",
+      "canonical ID"
+    ],
+    "new_coverage_reporting": [
+      "identity_set",
+      "geometry_on_added_points",
+      "short_segments",
+      "near_stationary_descriptive_only"
+    ],
+    "noise_accuracy_available": false
+  },
+  "release_gate": {
+    "all_fixed_guards_pass": true,
+    "strict_predeclared_gain_required": true,
+    "on_no_support_or_tradeoff": "R0",
+    "retune_on_confirmation": false,
+    "engineering_error": "freeze affected runs; repair implementation; new code/run and disclose exposure",
+    "record_fallback": "NONE_UNLESS_PART_OF_REGISTERED_COMPLETE_CANDIDATE_BEFORE_SHORTLIST"
+  },
+  "mode": {
+    "default_candidate_mode": "DETERMINISTIC_FIXED_OR_RAW_DIAGNOSTIC_RULE",
+    "new_record_level_model_dispatches": 0,
+    "new_mode_gain_claim": false,
+    "G2_four_modes": "HISTORICAL_VERIFIED_INPUT; not Goal3 new LIVE",
+    "memory_path": "task1/evidence/goal2/runs/g2-demo-memory-02/memory_snapshot.json",
+    "memory_sha256": "2330543c3a443532891936ac29d4080cb6e5f45c58e2976cc81c8fa67c6607d6",
+    "memory_access": "FROZEN_READONLY; not used by deterministic record processing",
+    "new_provider_or_paid_service": false
+  },
+  "full_audit": {
+    "all_records": [
+      "raw_hash",
+      "identity_and_original_values",
+      "exact_scope",
+      "stage_and_final_indices",
+      "unique_point_terminal_ledger",
+      "summary_reduction",
+      "shard_hashes",
+      "frozen_parameters",
+      "actual_P_error_budget",
+      "original_break_crossings",
+      "machine_review_from_external_raw"
+    ],
+    "coordinate": "PROJ cart+topocentric for all points; raw adjacent Geod distances; actual stage thresholds and DP intervals under same-ellipsoid AEQD; no all-pairs requirement",
+    "independent_math_sample": {
+      "random_records": 40,
+      "salt": "SC_LAB1_G3_C_RAW_RECHECK_V1",
+      "categories": [
+        "all_filtered_R0",
+        "no_output_final",
+        "fallback",
+        "failure",
+        "near_S_threshold",
+        "near_D_threshold",
+        "near_P_threshold",
+        "extreme_span",
+        "new_coverage",
+        "worst_common_error"
+      ],
+      "representatives_per_present_category": 2,
+      "all_failures_and_fallback_receipts": true,
+      "category_representatives_not_all_category_records": true,
+      "random_algorithm": "SHA256(42|salt|complete_raw_group_hash) ascending; whole groups",
+      "category_selection": {
+        "all_filtered_R0": "stable random rank",
+        "no_output_final": "stable random rank",
+        "fallback": "stable random rank; all receipts additionally checked",
+        "failure": "stable random rank; all receipts additionally checked",
+        "near_S_threshold": "minimum absolute margin of actual adjacent distance to400 or segment length to active min_length, exact equality included; stable rank tie",
+        "near_D_threshold": "minimum absolute margin of calculable actual direction differences to active threshold; stable rank tie",
+        "near_P_threshold": "minimum absolute margin of actual interval residuals to5; stable rank tie",
+        "extreme_span": "descending original ENU bbox diagonal; stable rank tie",
+        "new_coverage": "descending added common raw point count; stable rank tie",
+        "worst_common_error": "descending final common max over its covered points; null excluded with reason; stable rank tie"
+      }
+    },
+    "uncertainty": "descriptive paired records and strata; no IID-person inference or true-noise accuracy"
+  },
+  "resources": {
+    "record_tools": "serial deterministic; preflight timings on development; bounded finite candidates",
+    "governance": "native Codex A/B/C contexts, separate from tested modes",
+    "reserve": "final confirmation + two full production strategies + full Notebook/isolated ZIP recomputation + report/C review",
+    "exact_hidden_requests_and_cost": "unknown"
+  },
+  "external_statuses": {
+    "GPT_SECOND_REVIEW": "PENDING",
+    "Understanding": "USER_DETERMINED",
+    "Submission": "NOT_READY",
+    "Evidence_Lock": "EVIDENCE_MASTER_ONLY"
+  },
+  "exploration_constraints": {
+    "parameter_domain": "registered G2 grids only; no continuous or six-factor exhaustive search",
+    "raw_diagnostic_rule_max": 1,
+    "raw_diagnostic_groups_max": 3,
+    "conservative_direction_protection_max": 1,
+    "group_boundaries_and_parameters_fixed_on": "G3_DEVELOPMENT only",
+    "unknown_group_fallback": "R0 or previously registered incumbent; exact choice fixed in strategy",
+    "runtime_features": "verified original diagnostics only, available at inference time",
+    "forbidden": [
+      "record_id answer routing",
+      "final labels or results in routing",
+      "new algorithm library",
+      "new training",
+      "smoothing",
+      "interpolation",
+      "time rewriting",
+      "external data",
+      "map matching",
+      "datum offset conversion",
+      "unverified physical speed limits",
+      "treating low displacement as measurement truth",
+      "coordinate choice by cleaning scores"
+    ],
+    "final_pre_freeze_forbidden_contexts": [
+      "A",
+      "memory",
+      "parameter_selection",
+      "mode_feedback",
+      "figure_preview"
+    ],
+    "full_candidate_execution_requires_confirmation_completed": true
+  }
+}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="2" skipped="0" tests="22" time="0.169" timestamp="2026-09-27T11:50:32.055046+08:00" hostname="LAPTOP-KI0GT6AJ"><testcase classname="task1.evidence.goal3.independent_c.test_goal3_independent" name="test_identical_reference_is_not_gain" time="0.003" /><testcase classname="task1.evidence.goal3.independent_c.test_goal3_independent" name="test_P_finer_geometry_is_not_compression_gain" time="0.003" /><testcase classname="task1.evidence.goal3.independent_c.test_goal3_independent" name="test_P_parent_complete_input_mismatch_rejected" time="0.003" /><testcase classname="task1.evidence.goal3.independent_c.test_goal3_independent" name="test_common_geometry_degradation_rejected_even_when_point_count_benefit" time="0.003" /><testcase classname="task1.evidence.goal3.independent_c.test_goal3_independent" name="test_null_reference_does_not_become_geometric_gain" time="0.003" /><testcase classname="task1.evidence.goal3.independent_c.test_goal3_independent" name="test_coverage_identity_loss_not_hidden_by_equal_cardinality" time="0.003" /><testcase classname="task1.evidence.goal3.independent_c.test_goal3_independent" name="test_different_raw_record_comparison_rejected" time="0.003" /><testcase classname="task1.evidence.goal3.independent_c.test_goal3_independent" name="test_different_raw_values_same_record_comparison_rejected" time="0.002" /><testcase classname="task1.evidence.goal3.independent_c.test_goal3_independent" name="test_wrong_contract_comparison_rejected" time="0.003"><failure message="AssertionError: mismatched trusted comparison was accepted&#10;assert not True">def test_wrong_contract_comparison_rejected():
+        reference, candidate = trace(), trace(2)
+        candidate["contract_hash"] = "b" * 64
+&gt;       reject_or_infeasible(lambda: selection.paired(candidate, reference))
+
+task1/evidence/goal3/independent_c/test_goal3_independent.py:96: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+call = &lt;function test_wrong_contract_comparison_rejected.&lt;locals&gt;.&lt;lambda&gt; at 0x7fabc2024180&gt;
+
+    def reject_or_infeasible(call):
+        try:
+            result = call()
+        except (ValueError, KeyError):
+            return
+&gt;       assert not result["feasible"], "mismatched trusted comparison was accepted"
+E       AssertionError: mismatched trusted comparison was accepted
+E       assert not True
+
+task1/evidence/goal3/independent_c/test_goal3_independent.py:31: AssertionError</failure></testcase><testcase classname="task1.evidence.goal3.independent_c.test_goal3_independent" name="test_raw_time_rule_and_undefined_fallback[times0-60]" time="0.001" /><testcase classname="task1.evidence.goal3.independent_c.test_goal3_independent" name="test_raw_time_rule_and_undefined_fallback[times1-60]" time="0.001" /><testcase classname="task1.evidence.goal3.independent_c.test_goal3_independent" name="test_raw_time_rule_and_undefined_fallback[times2-35]" time="0.001" /><testcase classname="task1.evidence.goal3.independent_c.test_goal3_independent" name="test_raw_time_rule_and_undefined_fallback[times3-35]" time="0.001" /><testcase classname="task1.evidence.goal3.independent_c.test_goal3_independent" name="test_raw_time_rule_and_undefined_fallback[times4-35]" time="0.001" /><testcase classname="task1.evidence.goal3.independent_c.test_goal3_independent" name="test_raw_time_rule_and_undefined_fallback[times5-35]" time="0.001" /><testcase classname="task1.evidence.goal3.independent_c.test_goal3_independent" name="test_raw_time_rule_and_undefined_fallback[times6-35]" time="0.001" /><testcase classname="task1.evidence.goal3.independent_c.test_goal3_independent" name="test_raw_time_rule_and_undefined_fallback[times7-35]" time="0.001" /><testcase classname="task1.evidence.goal3.independent_c.test_goal3_independent" name="test_raw_time_rule_and_undefined_fallback[times8-35]" time="0.001" /><testcase classname="task1.evidence.goal3.independent_c.test_goal3_independent" name="test_raw_time_rule_and_undefined_fallback[times9-35]" time="0.001" /><testcase classname="task1.evidence.goal3.independent_c.test_goal3_independent" name="test_development_gate_rejects_final_identity" time="0.000"><failure message="Failed: DID NOT RAISE any of (ValueError, KeyError)">monkeypatch = &lt;_pytest.monkeypatch.MonkeyPatch object at 0x7fabc1ff85f0&gt;
+
+    def test_development_gate_rejects_final_identity(monkeypatch):
+        fixtures = {
+            "contract_freeze.json": {"status": "INDEPENDENT_C_VERIFIED", "bindings": {}},
+            "split_manifest.json": {"partitions": {"G3_DEVELOPMENT": ["DEV"], "G3_SELECTION": ["SELECT"],
+                                                    "FINAL_CONFIRM": ["FINAL"]}},
+        }
+        monkeypatch.setattr(runtime, "read_json", lambda p: deepcopy(fixtures[Path(p).name]))
+        monkeypatch.setattr(runtime, "assert_binding", lambda x: None)
+&gt;       with pytest.raises((ValueError, KeyError)):
+E       Failed: DID NOT RAISE any of (ValueError, KeyError)
+
+task1/evidence/goal3/independent_c/test_goal3_independent.py:126: Failed</failure></testcase><testcase classname="task1.evidence.goal3.independent_c.test_goal3_independent" name="test_aggregate_does_not_hide_one_failing_record" time="0.005" /><testcase classname="task1.evidence.goal3.independent_c.test_goal3_independent" name="test_choose_requires_fixed_R0_and_incumbent" time="0.000" /></testsuite></testsuites>

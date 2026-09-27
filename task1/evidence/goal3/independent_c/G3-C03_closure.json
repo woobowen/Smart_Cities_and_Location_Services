@@ -1,0 +1,41 @@
+{
+  "role_context": "/root/c_protocol",
+  "issue_id": "G3-C03",
+  "status": "VERIFIED",
+  "checked_at_utc": "2026-09-27T03:59:35.030600+00:00",
+  "targets": [
+    {
+      "path": "task1/goal3/runtime.py",
+      "sha256": "82a32bc11e21097d4bf5f771ba63de3acdf0877dfb70e63815632ec75f82396a"
+    },
+    {
+      "path": "task1/goal3/selection.py",
+      "sha256": "ff68536c3e80fe9b615fd4a6dc2402f7a6dd38359c6ffb6a1ebf57753654561f"
+    },
+    {
+      "path": "task1/goal3/control.py",
+      "sha256": "cf19a0130454635e5598838b5f77adfb95038a636060e23c05763d452ff2435e"
+    },
+    {
+      "path": "task1/evidence/goal3/independent_c/test_goal3_independent.py",
+      "sha256": "74f6b39cffd1d10eb87ef07913a14076902f7809abc56c53f7774ebf8d80229e"
+    }
+  ],
+  "checked_components": [
+    "G3-C03 source record/value/contract comparability",
+    "current source epoch full regression"
+  ],
+  "test_receipt": {
+    "path": "task1/evidence/goal3/independent_c/core_receipt.json",
+    "sha256": "a577abec84be20b5a8b4afa432e5ef6622e9fb877fcc5cdcf770f8d944423807"
+  },
+  "actual_test_result": {
+    "tests": 439,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "implementation_author": "B:root",
+  "reviewer_is_implementation_author": false,
+  "scope": "pre-experiment wrapper repair; no G3 experimental artifacts need invalidation"
+}

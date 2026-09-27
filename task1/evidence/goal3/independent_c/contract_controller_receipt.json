@@ -1,0 +1,200 @@
+{
+  "role_context": "/root/c_protocol",
+  "status": "VERIFIED",
+  "checked_at_utc": "2026-09-27T03:59:35.030600+00:00",
+  "tasks": {
+    "handoff": {
+      "status": "VERIFIED",
+      "targets": [
+        {
+          "path": "task1/evidence/goal3/startup.json",
+          "sha256": "088efe8cdc9da620282bf0ac201752cae8857774877bdcb56fe2934bd1428337"
+        },
+        {
+          "path": "task1/evidence/goal3/USER_PROMPT.md",
+          "sha256": "e5fd60e707b3b5e4c62e8c522bbc58cbd17d89fe67ec29abaf2c3d037de723ec"
+        }
+      ],
+      "source_hashes": {
+        "task1/作业/作业/traj_dict.json": "c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3",
+        "task1/evidence/goal2/current_runs.json": "cd241536bbff6b84dc66dd9b757e813af3b13bd43bb9ff92ae2f55cc5adbced0",
+        "task1/evidence/goal2/candidate_lock.json": "a5ed67a3e28a6591063be28df3fb70b0698915b212b010acee7fa580e1aadef8"
+      },
+      "checked_components": [
+        "actual startup branch/HEAD/remote origin and current remote SHA",
+        "unchanged original protected ZIP bytes",
+        "raw scope/hash",
+        "actual user authorization and stage acceptance source identity"
+      ],
+      "unchecked_components": [
+        "external webpage tool logs not supplied",
+        "source datum",
+        "future experimental effects"
+      ]
+    },
+    "contract_split": {
+      "status": "VERIFIED",
+      "targets": [
+        {
+          "path": "task1/config/goal3/contract.json",
+          "sha256": "fcf5b3962c4c5a2a59f42ae1f167fa180bfc2b9798fca85e256bcc8ccb3c558d"
+        },
+        {
+          "path": "task1/evidence/goal3/split_manifest.json",
+          "sha256": "c20747b7e2869b5e3ce755601764336dcd5e42ed4643e99d5e56be7a0ebba2f0"
+        },
+        {
+          "path": "task1/evidence/goal3/a_candidate_plan.json",
+          "sha256": "ccc11b8efadb3dbce8e6b6d69ccd8e484aa317d655422da2bfb9d8af59ed3f82"
+        }
+      ],
+      "source_hashes": {
+        "task1/config/goal3/contract.json": "fcf5b3962c4c5a2a59f42ae1f167fa180bfc2b9798fca85e256bcc8ccb3c558d",
+        "task1/evidence/goal3/split_manifest.json": "c20747b7e2869b5e3ce755601764336dcd5e42ed4643e99d5e56be7a0ebba2f0",
+        "task1/goal3/data.py": "2142a0c4366ce1f22f9285c4737a903d546e1938e0a00f4e148cda6b9e821b21",
+        "task1/作业/作业/traj_dict.json": "c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3",
+        "task1/config/goal2/contract.json": "db758c097509139596fbc52b4c3f65e921eb1f12d9fb4c239e308abdb57f31f8",
+        "task1/evidence/goal2/data/split_manifest.json": "fd2ebc6916f63b4b8e23ff6977f22cc691c39849d450486035243db7e3eb2ee8",
+        "task1/evidence/goal2/data/raw_diagnostics.json": "b090eeb696df00940d6c707f5114c4a78f0e6b2f69ffdfa6ffcd6de84eb99442",
+        "task1/evidence/goal3/a_candidate_plan.json": "ccc11b8efadb3dbce8e6b6d69ccd8e484aa317d655422da2bfb9d8af59ed3f82"
+      },
+      "checked_components": [
+        "raw_hash",
+        "raw_counts",
+        "target_split_binding",
+        "generator_binding",
+        "G2_contract_binding",
+        "G2_split_binding",
+        "G2_diagnostics_binding",
+        "authority_binding",
+        "memory_binding",
+        "inherited_definition:model",
+        "inherited_definition:units",
+        "inherited_definition:source_crs",
+        "inherited_definition:direction_method",
+        "inherited_definition:stage_rules",
+        "inherited_definition:parameter_grids",
+        "inherited_definition:numeric_audit",
+        "inherited_definition:common_reference",
+        "inherited_definition:metrics",
+        "R0_exact",
+        "S0_exact",
+        "candidate_budgets",
+        "SD_guards_exact",
+        "P_budget_and_parent",
+        "fixed_and_incumbent_protection",
+        "no_weighted_score",
+        "confirmation_gate",
+        "record_model_default",
+        "group_membership_recomputed",
+        "group_count",
+        "duplicates_recomputed",
+        "diagnostic_raw_identities",
+        "independent_raw_span_PROJ",
+        "independent_raw_tertiles",
+        "independent_descriptive_strata",
+        "exact_partition_ordered_reconstruction",
+        "exact_complete_unique_scope",
+        "atomic_groups",
+        "selection_allocation",
+        "final_equal_group_pool",
+        "stratum_distributions",
+        "exposure_honesty",
+        "explicit_exploration_constraints",
+        "explicit_final_information_boundary",
+        "independent_sample_preregistered",
+        "candidate_evidence_binding:task1/evidence/goal3/USER_PROMPT.md",
+        "candidate_evidence_binding:task1/config/goal2/contract.json",
+        "candidate_evidence_binding:task1/evidence/goal2/candidate_lock.json",
+        "candidate_evidence_binding:task1/evidence/goal2/current_runs.json",
+        "candidate_evidence_binding:task1/evidence/goal2/tables/parameter_record_pairs.csv",
+        "candidate_evidence_binding:task1/evidence/goal2/tables/parameter_configurations.csv",
+        "candidate_evidence_binding:task1/evidence/goal2/tables/candidate_evaluation.csv",
+        "candidate_evidence_binding:task1/evidence/goal2/tables/mode_record_results.csv",
+        "candidate_evidence_binding:task1/docs/goal2/STAGE_ANALYSIS.md",
+        "candidate_evidence_binding:task1/workflow/g2_selection.py",
+        "candidate_evidence_binding:task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/AUTHORIZATION_SUPPLEMENT.md",
+        "candidate_evidence_binding:task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/a_scope/local_model_contract.json",
+        "candidate_evidence_binding:task1/docs/research/Task1_Source_Audit_2025_2026_Merged.json",
+        "candidate_identity_unique",
+        "candidate_grid:R0",
+        "candidate_order_model_scope:R0",
+        "candidate_parent_scope:R0",
+        "candidate_grid:S0",
+        "candidate_order_model_scope:S0",
+        "candidate_parent_scope:S0",
+        "candidate_grid:S_POINTS2",
+        "candidate_order_model_scope:S_POINTS2",
+        "candidate_parent_scope:S_POINTS2",
+        "candidate_grid:S_LENGTH0",
+        "candidate_order_model_scope:S_LENGTH0",
+        "candidate_parent_scope:S_LENGTH0",
+        "candidate_grid:D60",
+        "candidate_order_model_scope:D60",
+        "candidate_parent_scope:D60",
+        "candidate_grid:P2",
+        "candidate_order_model_scope:P2",
+        "candidate_parent_scope:P2",
+        "candidate_grid:P10",
+        "candidate_order_model_scope:P10",
+        "candidate_parent_scope:P10",
+        "candidate_grid:G0",
+        "candidate_order_model_scope:G0",
+        "candidate_parent_scope:G0",
+        "candidate_grid:S0_G0",
+        "candidate_order_model_scope:S0_G0",
+        "candidate_parent_scope:S0_G0",
+        "candidate_grid:S0_P2",
+        "candidate_order_model_scope:S0_P2",
+        "candidate_parent_scope:S0_P2",
+        "candidate_grid:S0_P10",
+        "candidate_order_model_scope:S0_P10",
+        "candidate_parent_scope:S0_P10",
+        "candidate_count_budgets",
+        "reference_candidate_definitions",
+        "conditional_rule:G0",
+        "conditional_rule:S0_G0",
+        "P_combinations_diagnostic_scope",
+        "factorial_parent_sets",
+        "G0_gate_before_combination",
+        "A_historical_direction:DEVELOPMENT:45",
+        "A_historical_direction:DEVELOPMENT:60",
+        "A_historical_direction:G2_EVAL:60",
+        "unchanged_during_review:contract",
+        "unchanged_during_review:split",
+        "unchanged_during_review:generator",
+        "unchanged_during_review:raw",
+        "unchanged_during_review:g2_contract",
+        "unchanged_during_review:g2_split",
+        "unchanged_during_review:g2_diagnostics",
+        "unchanged_during_review:candidate_plan"
+      ],
+      "unchecked_components": [
+        "external webpage tool logs not supplied",
+        "source datum",
+        "future experimental effects"
+      ]
+    }
+  },
+  "prior_evidence": [
+    {
+      "path": "task1/evidence/goal3/independent_c/initial_inventory_receipt.json",
+      "sha256": "21ae139df41cec6e3155e4306da7a6e8013115050534c12f9de580ce7ecf6e8a"
+    },
+    {
+      "path": "task1/evidence/goal3/independent_c/contract_split_receipt.json",
+      "sha256": "a994261cbc5ae03414e29dfa315106dfd9c562ab6c9837fa76d0e6f60919e39c"
+    }
+  ],
+  "actual_startup_recheck": {
+    "local_head": "6fad8420b09ba123fe0658a5cd805cb7b7b9e67b",
+    "remote_ls_remote": "6fad8420b09ba123fe0658a5cd805cb7b7b9e67b\trefs/heads/main",
+    "origin": "https://github.com/woobowen/Smart_Cities_and_Location_Services.git",
+    "protected_bytes_unchanged": {
+      "SC-LAB1-G1-COMPLETE-001_HANDOFF.zip": true,
+      "SC-LAB1-G1-REPAIR-001_HANDOFF.zip": true,
+      "SC-LAB1-G1-CLOSURE-002_HANDOFF.zip": true
+    }
+  },
+  "not_new_human_approval": true
+}
