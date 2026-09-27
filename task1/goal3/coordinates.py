@@ -11,7 +11,7 @@ import numpy as np
 import pyproj
 
 from task1.workflow.g2_data import raw_data, adapt
-from task1.workflow.io import digest, object_hash, read_json, write_json, now
+from task1.workflow.io import ROOT, digest, object_hash, read_json, write_json, now
 from task1.scripts.goal2_coordinate_sensitivity import inspect_trace
 from .data import CFG
 from .runtime import read_rows, assert_binding
@@ -90,11 +90,18 @@ def check_run(directory, output):
     if [r['record_id'] for r in records] != manifest['input_ids']:
         raise ValueError('COORDINATE_COMPLETE_SCOPE_MISMATCH')
     result = {'at': now(), 'implementation_status': 'VERIFIED' if not problems else 'REJECTED',
+              'run_id': manifest['run_id'], 'partition': manifest['partition'],
+              'input_record_count': len(manifest['input_ids']),
+              'classification': 'FULL_PRODUCTION_COORDINATE_CHECK' if manifest['partition'] == 'FULL_PRODUCTION'
+                                else 'DEVELOPMENT_COORDINATE_CHECK_NOT_FULL_DATASET',
               'source_crs': 'UNVERIFIED', 'source_datum_proven': False, 'ground_truth_accuracy_claim': False,
               'counts': dict(counts), 'difference_counts': dict(differences), 'extrema': maxima,
               'implementation_failures': problems, 'per_record': records,
               'scope': 'ALL points; ALL raw adjacent edges; ALL actual S lengths/D windows/P intervals and alternate DP keep-set sensitivity; no all-pairs computation',
               'input_manifest_sha256': digest(directory/'manifest.json'), 'source_sha256': digest(__file__),
+              'source_bindings': {**manifest['source_hashes'],
+                  'task1/goal3/coordinates.py': digest(__file__),
+                  'task1/scripts/goal2_coordinate_sensitivity.py': digest(ROOT/'task1/scripts/goal2_coordinate_sensitivity.py')},
               'pyproj': pyproj.__version__, 'PROJ': pyproj.proj_version_str,
               'threshold_differences_sha256': digest(output/'threshold_differences.jsonl.gz'),
               'elapsed_seconds': time.perf_counter()-started,
