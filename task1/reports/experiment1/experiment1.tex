@@ -1,0 +1,293 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[UTF8,fontset=none]{ctex}
+\usepackage{fontspec}
+\setmainfont{DejaVu Serif}
+\setsansfont{DejaVu Sans}
+\setCJKmainfont{Noto Serif CJK SC}
+\setCJKsansfont{Noto Sans CJK SC}
+\setCJKmonofont[Extension=.otf]{FandolFang-Regular}
+\usepackage[a4paper,top=18mm,bottom=19mm,left=19mm,right=19mm]{geometry}
+\usepackage{graphicx,booktabs,tabularx,array}
+
+\usepackage{amsmath,amssymb}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{caption,subcaption}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage[most]{tcolorbox}
+\usepackage{microtype}
+\usepackage{tikz}
+\usepackage{listings}
+\input{../../../templates/latex/common/p2_cloud_sorbet_colors.tex}
+\pagecolor{Paper}\color{Ink}
+\hypersetup{colorlinks=true,linkcolor=C1,urlcolor=C1,citecolor=C4}
+\setlength{\parindent}{2em}\setlength{\parskip}{0.24em}\linespread{1.17}
+\titleformat{\section}[hang]{\sffamily\bfseries}{\fontsize{26}{26}\selectfont\color{C1}\thesection}{0.68em}{\Large}
+\titleformat{\subsection}{\sffamily\large\bfseries\color{Ink}}{\thesubsection}{0.55em}{}
+\titlespacing*{\section}{0pt}{1.85em}{0.75em}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\sffamily\small\color{Muted}SMART CITIES \& LOCATION SERVICES}
+\fancyhead[R]{\sffamily\small\color{Muted}Experiment Report}
+\fancyfoot[C]{\sffamily\small\color{Muted}\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\captionsetup{font=small,labelfont={bf,sf,color=Ink},textfont={color=Ink},skip=5pt}
+\newtcolorbox{finding}{enhanced,boxrule=0pt,frame hidden,colback=P1!60!white,borderline west={2.4pt}{0pt}{C1},left=4mm,right=4mm,top=2.7mm,bottom=2.7mm,arc=0mm}
+\newtcolorbox{noteBox}{enhanced,boxrule=.5pt,colframe=Rule,colback=P2!55!white,left=4mm,right=4mm,top=2.5mm,bottom=2.5mm,arc=1mm}
+\newcommand{\metric}[3]{\begin{tcolorbox}[boxrule=0pt,colback=#1!55!white,arc=1.5mm,left=3mm,right=3mm,top=2.3mm,bottom=2.3mm]\sffamily\small\color{Muted}#2\\[-.4mm]{\Large\bfseries\color{Ink}#3}\end{tcolorbox}}
+\lstset{basicstyle=\ttfamily\small,frame=single,rulecolor=\color{Rule},backgroundcolor=\color{Panel},breaklines=true,showstringspaces=false}
+\usepackage{url,etoolbox}
+% Flexible vertical space lets TeX choose a break without testing stale page totals.
+\newcommand{\reportsectionroom}{\par\begingroup\dimen0=6\baselineskip\relax\vskip0pt plus\dimen0\penalty-100\vskip0pt plus-\dimen0\vskip\dimen0\penalty9999\vskip-\dimen0\vskip0pt\endgroup}
+\pretocmd{\section}{\reportsectionroom}{}{}
+\clubpenalty=10000\widowpenalty=10000
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\setlength{\emergencystretch}{2em}
+\input{../metadata.tex}
+\input{../history_values.tex}
+\begin{document}
+\hypersetup{pageanchor=false}
+\begin{titlepage}
+\thispagestyle{empty}\vspace*{25mm}
+{\sffamily\small\color{C1}\bfseries SMART CITIES \& LOCATION SERVICES}\par
+\vspace{5mm}{\sffamily\fontsize{27}{32}\selectfont\bfseries Experiment Report}\par
+\vspace{3mm}{\Large 实验一：轨迹分段、方向去噪与 DP 简化}\par
+\vspace{12mm}\noindent\color{Rule}\rule{\linewidth}{.8pt}\color{Ink}\vspace{10mm}
+\begin{tabular}{@{}>{\sffamily\color{Muted}}p{29mm}p{111mm}@{}}
+姓名 / 学号 & \StudentName{} / \StudentID{} \\
+课程 & 智慧城市与位置服务 \\
+报告范围 & 教师实验一；G1、G2 历史实验与 G3 最终交付 \\
+数据口径 & 原始记录；条件化 ENU 工作坐标；无真实噪声标签 \\
+版本状态 & \ExperimentStatus{} \\
+日期 & \ReportDate{}
+\end{tabular}
+\vfill
+\noindent\color{P1}\rule{.30\linewidth}{3.2pt}\color{P2}\rule{.22\linewidth}{3.2pt}\color{P3}\rule{.24\linewidth}{3.2pt}\color{P4}\rule{.12\linewidth}{3.2pt}\par
+\vspace{5mm}{\small\color{Muted}本报告中的 G2 数值来自已保存的真实实验。最终确认与全量生产分别列示；共同几何覆盖、显式保留点和真实清洗准确率不是同一概念。}
+\end{titlepage}\hypersetup{pageanchor=true}
+\begingroup\small\linespread{1.02}\selectfont\tableofcontents\endgroup\clearpage
+
+\section{数据、任务与结论边界}
+\begin{finding}
+本实验实现分段与短段过滤、方向规则删除、Douglas--Peucker（DP）简化，并通过参数、顺序和 LLM 辅助实验检查这些操作的影响。评价首先保护原始记录、原始断点和共同几何覆盖；数据没有噪声真值，因此不把“删得多”或“留得多”解释为识别准确率。
+\end{finding}
+
+\noindent\begin{minipage}[t]{.32\linewidth}\metric{P1}{原始记录}{\RawRecords{}}\end{minipage}\hfill
+\begin{minipage}[t]{.32\linewidth}\metric{P2}{原始点}{\RawPoints{}}\end{minipage}\hfill
+\begin{minipage}[t]{.32\linewidth}\metric{P3}{原始相邻边}{\RawEdges{}}\end{minipage}
+
+教师材料要求完成基础处理与评价逻辑，讨论参数和步骤顺序，并对 AI 的真实建议作技术批判。本次同时完成 LLM、搜索和记忆的选做内容。研究范围限于实验一的轨迹预处理，不包含停留点、热点、道路匹配或新模型训练。教师课件第 26 页要求将 Notebook 与报告压缩为以“学号\_姓名\_实验一”命名的 ZIP；本工程准备待审文件，不代发邮件或提交平台。
+
+输入文件 \texttt{traj\_dict.json} 的 SHA256 为
+\begin{quote}\small\nolinkurl{c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3}。\end{quote}
+全量结构盘点发现坐标、时间列表长度相符，无无效坐标、无效时间或负时间差；这不等于每个点都符合真实运动。相邻边中有 \ZeroDtEdges{} 条时间差为零，\SameTimeMoved{} 条同时刻位置不同，\DuplicateEdges{} 条相邻位置完全重复，\LongGapEdges{} 条时间差超过 30 秒。这些类别可能交叠，不能求和当成异常点数。记录键只是文件内身份，不能直接当成独立用户或完整行程。
+
+\subsection{时间、坐标与可计算性}
+使用源数据的秒级时间差，不添加时区推断，也不改写时间。时间差为零时速度不可计算，保留缺失原因；位移为零时方向不可计算，不能用数值零表示正北方向。不可计算不是已证实噪声。
+
+原始来源坐标系统仍为 \texttt{UNVERIFIED}。在用户批准的条件化分析下，固定椭球半长轴 $a=6\,378\,137$ m、反扁率 $1/f=298.257223563$，统一令椭球高 $h=0$。固定 ENU 中心为 $(\lambda_0,\phi_0)=(121.343555^\circ,31.3561015^\circ)$，它来自早期 pilot 包围盒，未按候选得分选择。
+
+对弧度制经纬度 $(\lambda,\phi)$，设 $e^2=f(2-f)$、$N_\phi=a/\sqrt{1-e^2\sin^2\phi}$，先计算
+\begin{align}
+X&=(N_\phi+h)\cos\phi\cos\lambda, &Y&=(N_\phi+h)\cos\phi\sin\lambda,\\
+Z&=[N_\phi(1-e^2)+h]\sin\phi .
+\end{align}
+减去固定中心的 ECEF 坐标后，工作平面坐标为
+\begin{align}
+E&=-\sin\lambda_0\Delta X+\cos\lambda_0\Delta Y,\\
+N&=-\sin\phi_0\cos\lambda_0\Delta X-\sin\phi_0\sin\lambda_0\Delta Y+\cos\phi_0\Delta Z.
+\end{align}
+这与 PROJ 官方文档所述的地理坐标到地心直角坐标、再到固定原点 ENU 的转换语义一致\cite{proj-cart,proj-topocentric}。本文的“工作米”表示这个数学模型中的长度，不证明输入 datum，也不等同绝对定位精度。未设置一个 EPSG 标签来替代来源证明，未做坐标加偏转换，未叠加道路底图。
+
+G2 在 307 条、30,992 点上用同一假设椭球的独立 PROJ 路径核对坐标，最大差约 $4.82\times10^{-10}$ 工作米，小于 $10^{-6}$ 的实现核验容差。该范围内对 1,594,527 个记录内点对比较 ENU 距离与椭球测地距离，最大绝对差为 3.503584 m、最大相对差约 0.015054\%。两者是近似模型的差异，不能写成测量误差。实际开发与 G2 评估处理轨迹的敏感性检查未观察到登记阶段动作差异；这只是已检查范围的结果，G3 扩大核验另列。
+
+\section{处理方法与明确约定}
+\subsection{S：分段与短段过滤}
+对当前输入的相邻点，若 $\Delta t>\tau_t$、$\Delta t<0$ 或工作距离 $d>\tau_d$，在右侧点前断开。等于阈值不分段；右点属于新段，不复制边界点。段内累计长度只累加未切断的边。
+
+分段后，点数少于 $n_{\min}$ 或累计长度小于 $L_{\min}$ 的段被过滤；两个条件同时成立时保存两个原因。完整保留参考过滤实现，才能比较取消正长度下限与降低点数门槛的影响。$L_{\min}=0$ 不代表真实短段已经被证明有用，更不代表教师取消了短段过滤任务。
+
+\subsection{D：方向异常候选的单次同时删除}
+对可计算边定义当前点到下一点的出边方向
+\[
+\alpha_i=\operatorname{atan2}(E_{i+1}-E_i,N_{i+1}-N_i)\pmod {360^\circ},\qquad
+\delta(a,b)=\min(|a-b|,360^\circ-|a-b|).
+\]
+只有 $\delta(\alpha_i,\alpha_{i-1})>\theta$ 和
+$\delta(\alpha_i,\alpha_{i+1})>\theta$ 同时成立，才把点 $i$ 标为待删除。先在本阶段完整输入上计算全部标记，再同时删除；不边删边改邻域，不迭代到收敛。首尾、缺少必要后继方向和零位移方向窗口保留并标注原因，后续阶段重算特征。这一执行次序来自已保存的 D2 用户授权。
+
+方向规则只指出局部形状变化，真实折返也可能触发，连续噪声也可能不触发。未引入未知交通方式的物理限速，也未把低位移阈值当作测量真值。
+
+\subsection{P：有限线段的 DP 简化}
+对于端点 $a,b$ 和区间内点 $p$，使用有限线段距离
+\[
+u=\operatorname{clip}_{[0,1]}\frac{(p-a)\cdot(b-a)}{\|b-a\|^2},\qquad d(p,[a,b])=\|p-a-u(b-a)\|.
+\]
+当端点重合时直接取点到端点的距离。若区间最大距离严格大于 $\varepsilon$，保留最远点并递归；否则只保留端点。$\varepsilon=0$ 被明确约定为不简化、保留所有输入点。输出沿用原始索引、坐标和时间。
+
+DP 的误差保证针对\textbf{它的完整即时输入}。若 DP 之后再删点，最终折线必须另算误差；不能沿用 P 阶段的证书。方向阶段已经删掉的点也不属于自身 P 误差的分母。
+
+\subsection{参数与点去向}
+教学参考 R0 为 S--D--P，参数
+$(\tau_t,\tau_d,n_{\min},L_{\min},\theta,\varepsilon)=(30,400,5,65,35,5)$，单位依次为秒、工作米、点、工作米、度、工作米。课件中的 95 m 是骑行示例阈值；没有把它静默替换为本工程的参考配置。
+
+每个原始点只具有一个最终状态：S 过滤、D 删除、P 删除或最终保留。阶段轨迹另外保存输入、标记、输出和原始索引，所以可以分清“覆盖到该原始点”和“实际存储该点”。全过滤记录仍出现在结果和分母中；未完成或失败不能用合法空输出代替。
+
+\section{评价：共同参考先于候选}
+\subsection{原始窗口、覆盖与几何偏差}
+在所有候选之前，用固定 $\Delta t=30$ 秒、距离 400 工作米及负时间差切出共同原始窗口，不应用短段过滤。对于原始点 $i$，若被最终显式保留，则几何误差为零；否则必须存在同一个最终段内相邻保留索引 $a<i<b$，且三者处在同一共同原始窗口，才计算 $d(p_i,[p_a,p_b])$。没有这样的夹持边时记为不可用，并保存原因。
+
+设 $C(M)$ 为策略 $M$ 下可计算共同误差的原始点身份集合，则
+\[
+\operatorname{coverage}(M)=\frac{|C(M)|}{N_{\rm raw}},\quad
+\operatorname{retention}(M)=\frac{N_{\rm final}}{N_{\rm raw}}.
+\]
+两者的分子不同。原始点落在保留边内部时计入覆盖，但没有被存储。几何误差衡量相对原始折线的保护，不是到真实道路或真实位置的误差。
+
+S、D 及其组合相对固定 R0 和当前已接受策略分别检查：原有覆盖集合不能丢失；原有非空记录和窗口不能丢失；不得跨越原始断点；在参考已覆盖点集合上的最大几何误差不能退化。通过全部保护后，覆盖至少增加一个点，或可比较的最大误差下降超过固定浮点余量，才能称为范围内严格改善。不可用变成可用可形成覆盖收益，不能算几何误差下降。新增覆盖点的误差另外报告。
+
+\subsection{P 的局部指标与整体指标分开}
+P 省点率为 $1-N_{P,\rm out}/N_{P,\rm in}$，最大误差遍历完整 P 即时输入与对应输出区间。当输入为空，误差和省点率都不可用，不赋值为零。只有上游完全相同、P 完整输入相同且实际误差满足共同 5 工作米预算时，才能比较 DP 省点收益。改变 S 或 D 后得到的更高省点率只作描述，不能归因于 DP 变好。
+
+浮点审核余量为 $64\epsilon_{64}\max(1,\text{范围},|\text{坐标}|,\text{容差})$；角度余量为 $64\epsilon_{64}\times360$。它用于数值比较，不改变实际算法阈值。不对不同指标临时加权形成总分；没有预先固定可比标量目标时，normalized regret 保持不可用。
+
+\subsection{数据使用边界与版本身份}
+G2 固定 7 条 pilot、60 条示范记忆、120 条开发、120 条 G2 评估以及 11,079 条 G3 保留记录。按记录完整身份与已核实关联组划分，不能拆片段制造独立样本。描述性分层使用原始跨度、时间异常标记和重复位置标记，不能解释为真实运动类别；稳定哈希 seed 为 42。分层样本的简单均值不代表总体均值。
+
+G2 开发包含 \DevelopmentConfigs{} 个唯一参数配置，G2 评估包含预登记的 \EvaluationConfigs{} 个代表配置。G2 评估结果在进入 G3 时已被查看，因此它保持历史评估身份，可以补充开发，不能再次改名为独立最终确认。将选择集与最后确认集分开，是为了限制有限样本上的反复选择偏差；Cawley 与 Talbot 的论文摘要支持这一一般风险，但不提供本任务的样本量或最优参数\cite{cawley2010}。
+
+\section{历史 G2 实验：参数、顺序与单项候选}
+\subsection{三组参数实验}
+分段/过滤、方向、DP 三组实验都保留真实结果。开发域见表~\ref{tab:grids}；分段部分同时检查时间--距离、点数--长度的 $5\times5$ 网格，与单因素配置去重后形成 \DevelopmentConfigs{} 个配置，并未遍历六参数笛卡尔积。
+\begin{table}[H]\centering\small\caption{预先登记的 G2 参数域。参考值为 30、400、5、65、35、5。}\label{tab:grids}
+\begin{tabular}{ll}\toprule 参数 & 实际取值 \\ \midrule
+时间差 / s & 15，20，30，45，60 \\
+距离 / 工作米 & 95，200，400，600，800 \\
+最少点数 & 2，3，5，7，10 \\
+最短长度 / 工作米 & 0，32.5，65，97.5，130 \\
+方向差 / 度 & 15，25，35，45，60 \\
+DP 容差 / 工作米 & 0，0.5，1，2，5，10，20 \\
+\bottomrule\end{tabular}\end{table}
+
+\begin{figure}[H]\centering\includegraphics[width=.97\linewidth]{../../figures/goal2/segmentation_filter_grids.pdf}
+\caption{G2 开发集分段与过滤网格的真实结果。短段覆盖、保留量和几何保护需共同解释；图中的样本范围是 120 条开发记录。}\end{figure}
+
+在被测单因素相邻取值中，没有出现阶段索引、覆盖和终态计数全部相同的精确稳定区间。这个结果只针对已测离散值，不能推广到未采样的连续范围。方向阈值改变上游删除集合，DP 容差改变几何精度与存储点数；都不能只按某一候选的自身 clean 误差选优。
+
+在同一 120 条、\DirectionDevelopmentPoints{} 个原始点的开发范围内，只改变方向阈值时，15、35、60 度分别删除 \DirectionLowRemoved{}、\DirectionRefRemoved{}、\DirectionHighRemoved{} 点；五个已测阈值的共同覆盖均为 \DirectionCovered{} 点。阈值放宽使该方向规则删除更少，但没有噪声真值，不能把这条数量趋势解释为准确率改善。方向规则在同时删除后改变相邻关系，下一阶段必须重算特征。
+
+\begin{figure}[H]\centering\includegraphics[width=.99\linewidth]{../../figures/goal2/direction_threshold_and_neighborhood.pdf}
+\caption{G2 方向组开发结果。左、中面板分别为方向删除点数与因不可计算或边界条件保留的点数，右面板展示一次实际删除后的邻接变化；不可计算而保留不是噪声真值标签。}\end{figure}
+
+\begin{figure}[H]\centering\includegraphics[width=.97\linewidth]{../../figures/goal2/dp_error_compression.pdf}
+\caption{G2 DP 参数实验。$\varepsilon=0$ 是无简化参考；10、20 工作米可揭示权衡，但实际超出共同 5 工作米预算时不能作为最终发布改进。}\end{figure}
+
+\subsection{C-S 的覆盖收益及未胜出的单项}
+G2 选出的 C-S 只把 $n_{\min}=5$ 改为 2、$L_{\min}=65$ 改为 0，其余参数保持 R0。G3 将此历史候选记作 S0。它在 G2\_EVAL 的 120 条记录中全部通过预登记保护，\CSStrictRecords{} 条严格改善；共同覆盖由 \RZeroCovered{} 增至 \CSCovered{}，新增 \AddedCovered{} 个覆盖点，无输出记录由 \RZeroEmpty{} 降为 \CSEmpty{}。
+\input{history_candidate_table.tex}
+这支持“参考短段过滤在该样本上损失了可恢复的几何覆盖”，没有证明新增点全都干净。共同误差超过 5 工作米的点从 249 增至 250，而 P 即时误差仍不超过 5，直接说明两个误差参考不同。最终显式保留点从 \RZeroFinal{} 增至 \CSFinal{}，也远小于共同覆盖点数。
+
+C-D 和 C-P 的最终配置均保持 R0，结论是未证明单项统一收益；它们不是两个已胜出的新组件。C-S 的 P 省点率变化涉及不同上游输入，不能写成 DP 算法改善。分组规则和保守删除保护在 G2 没有独立合理的条件定义，因此未强行纳入。是否存在有限的局部或交互机会由 G3 单独核验。
+
+\subsection{六种顺序}
+\input{history_order_table.tex}
+D 在分段之前可能跨越本应断开的窗口；P 在 S 之前可能删除触发断点的点，使后续 S 看不到原始边。这些是实际输入序列变化造成的风险，不能事后隐含预分段、再仍称为相同顺序。四种危险顺序被拒绝后没有进入正式候选。
+
+S--P--D 在开发及 G2 评估中未发生上述安全失败，但出现真实多指标权衡，没有替换参考 S--D--P。由于 P 后面还有删除，它的 P 即时误差不代表最终误差；报告保留 raw 到 final 的独立读数。
+
+\section{历史 G2 实验：四模式与只读记忆}
+\subsection{四种结构与相同预算}
+LLM only 只根据原始诊断提出参数，没有搜索反馈或记忆；提议原样验证后执行，再作评价。Search only 使用预先固定的 20 个配置序列，记录级模型调用严格为零。LLM + Search 允许最多 3 个反馈回合，累计候选上限依次为 8、14、20；LLM + Memory + Search 在相同流程上增加只读示范检索。每批最多 8 张诊断卡，一次批调用不能按卡数重复计数。非法提议不得偷偷截断到合法值，失败与回退均须入分母。
+
+开发阶段四模式使用同一 24 条记录、各 1 个 episode；G2 评估使用同一 24 条记录、各 3 个独立 episode。下表的 72 是 $24\times3$ 次记录观察，不是 72 个独立记录。治理 A/B/C 不在被测 Search only 的决策中提供实时参数提示。
+\input{history_modes_table.tex}
+
+\begin{figure}[H]\centering\includegraphics[width=.97\linewidth]{../../figures/goal2/four_mode_paired_results.pdf}
+\caption{G2 四模式的配对结果。记录、episode 和约束分母保持可追踪；不同指标之间不临时加权得分。}\end{figure}
+
+在有效 G2 运行中可见 \ValidModelCalls{} 次实验模型调用；另有 \HistoricModelCalls{} 次历史已失效或中断调用及 1 次 provider 资格检查，不能计入当前有效效果。模型为既有 Codex 通道的 \texttt{gpt-6-astra}、medium 推理配置；没有可声称固定的随机 seed 或模型快照。底层请求数量与货币费用不可见，保持 unknown。表中候选评估包括实际计量范围；LLM only 的独立参考评估不反馈给其决策。
+
+合法不意味着值得采用。有效开发中有 148 个原样提议，其中 70 个方向预测可评价且一致；其余 78 个因未预测、近零/不变或共同覆盖变化等原因不作为可评价预测。没有观察到非法提议、可评价方向预测错误或回退，不为完成批判任务制造这些事件。实际出现的 4 个合法权衡提议在下一节给出。
+
+\subsection{记忆被使用，不等于产生因果收益}
+示范记忆只来自 \MemoryDemo{} 条 DEMO 记录，其中 26 条在登记比较中获得支持，34 条无新增收益；其 SHA256 为
+\begin{quote}\small\nolinkurl{2330543c3a443532891936ac29d4080cb6e5f45c58e2976cc81c8fa67c6607d6}。\end{quote}
+检索用 6 个原始诊断量：点数、空间跨度、正时间差中位数的 $\log(1+x)$，零时间差比例、重复位置比例和原始断点比例。缩放范围只用示范集确定；固定描述性层内最多检索 3 个最近邻，排除自身及关联组，距离并列用稳定身份排序。没有额外的人写知识条目，也没有把评估记录写回长期记忆。
+
+开发与 G2 评估合计 96 次带记忆记录观察都收到检索结果；241 个决策回合中 60 个引用记忆，49 个满足已登记的动作一致判断。这三个分母分别对应送达、引用和决策动作，不能混用。评估阶段带记忆与不带记忆的 LLM + Search 均有 47/72 个支持输出，所见候选与 episode 又存在差异，因此不足以证明因果质量收益，也不足以证明所有情形等效。
+
+\section{AI 建议的技术批判与可复验反例}
+\subsection{真实建议：局部证书不能代替共同保护}
+以下例子直接来自 G2 开发运行的原始模型响应和处理轨迹。它们是实验期间真实提出、验证并作决定的建议，未借用教师 starter 中的历史示例来冒充本轮模型输出。
+
+\begin{noteBox}
+记录 7764，带记忆搜索第 2 回合，原话节选：
+\begin{quote}\small“Test additional spatial splits with relaxed segment filters; existing raw breaks remain separated, while coverage and fidelity require evaluation.”\end{quote}
+实际参数为 $(30,200,2,0,60,5)$。提议合法，且模型承认覆盖与保真需要实测；问题出在该候选实测后未满足共同几何保护，不能因为自身 P 误差合格就接受。
+\end{noteBox}
+\input{history_ai_table.tex}
+AI-DEV-01 在同一 122 点覆盖集合上把共同最大误差从 40.215 增至 69.145 工作米，超过固定数值余量；自身 P 最大误差却同为 4.826 工作米。系统保存该合法提议及负结果，拒绝把它作为锁定输出。AI-DEV-02 进一步空间分段后丢失 11 个原本覆盖点，先违反覆盖集合包含关系；此时不能把两组不同覆盖集合的最大值作配对增减。
+
+AI-DEV-03 恢复参考分段、使用方向 60 度与 DP 2 工作米后，自身 P 最大误差降低，但同集合 raw 最大误差仍从 40.215 增至 42.546 工作米，因而仍是权衡。对应另一模式的 AI-DEV-04 产生相同数学风险，原始记录均保留，没有只选好看的提议。
+
+另一方面，记录 10232 的 AI-DEV-05 正确预计方向删除点数下降：参考删除 32 点、候选删除 10 点，预测差为 $-22$；共同最大误差也降低。这个正例说明不能把所有未选提议都称为幻觉。局部预测正确仍不等于真实噪声识别准确，也不自动确立跨记录的统一方案。
+
+\subsection{已知答案构造：方向、顺序、空输出与距离定义}
+构造例只用于检验指定数学机制，标签是人为定义的，不迁移成真实数据的噪声真值。G2 实际运行 \SyntheticCases{} 组、19 条处理链，完成 \KnownChecks{} 个已知答案核对，另有 10 条已暴露 pilot 处理链。下列读数均来自保存的处理产物。
+\begin{table}[H]\centering\small
+\caption{已知答案反例及实际修改前后结果。每行分母属于该构造，不合并为真实准确率。}
+\begin{tabularx}{\linewidth}{@{}p{28mm}Y Y@{}}\toprule 构造 & 实际结果 & 拒绝的隐含假设 / 保留的规则 \\ \midrule
+方向歧义 & 5 个正常折返点中删除 2 个；另一个 5 点尖峰例删除 2 个，其中 1 个真噪声、1 个正常点。 & 方向突变不唯一对应噪声；正常直角例 5 点全留，也不能据此证明所有转弯都安全。 \\
+零值与缺失 & 5 点、4 边中 2 条零时间差速度不可用，1 条零位移方向不可用；方向不可计算窗口保留。 & 不用速度 0 或方向 0 代替不可计算，删除后重新计算分母和特征。 \\
+先 P 后 S & 时间间隔例的 S--D--P 由 5 点留 4 点、覆盖 100\%；P--S--D 无输出、覆盖 0。 & P 省点率 60\% 不能掩盖最终输出丢失。 \\
+隐藏距离断点 & 3 点例中 S--D--P 与 P--S--D 都留 2 点，但后者有 1 条跨原始断点边。 & 相同保留数与覆盖率不足以证明约束相同。 \\
+有限线段与等号 & 越界投影例距离为 $\sqrt2$，正确 DP 留 3 点；误差等于 1、阈值等于 1 时留 2 点。 & 不用无限直线距离；只在严格超过阈值时递归。 \\
+空输出 & 原始 3 点仍入分母；全过滤后覆盖 0，误差与 P 省点率不可用。 & 不把 null 当成零误差冠军。 \\
+自身 clean & 两种方向阈值的 P 自身误差均为 0，共同 raw 最大误差分别为 0.447214 与 0。 & 不同 clean 输入上的自证不能代替共同原始参考。 \\
+\bottomrule\end{tabularx}\end{table}
+
+\begin{figure}[H]\centering\includegraphics[width=.97\linewidth]{../../figures/goal2/synthetic_metric_counterexamples.pdf}
+\caption{G2 构造反例的真实计算图。合成例被明确标识；没有将其正常/噪声标签赋给真实轨迹。}\end{figure}
+
+\clearpage
+\section{G3：候选选择、最终确认与全量结果}
+\input{generated.tex}
+
+\clearpage
+\section{解释、局限与复现}
+\subsection{结果能说明什么}
+G2 支持降低短段过滤造成的覆盖损失，保留了无单项收益、危险顺序和合法 AI 权衡提议。它没有证明某个参数具有普遍清洗最优性，也没有证明增加 LLM 或记忆一定带来收益。
+\input{conclusion_generated.tex}
+
+本文没有真实道路、运动类别与测量误差标签。原始点的几何保护有助于防止删除过程悄悄破坏数据，却不能辨识所有真实噪声；提高覆盖可能同时保留近静止、短片段或异常位置。源 datum、时间来源和记录独立性仍限制地理解释。工作坐标数值核对只验证指定模型实现，无法反证这些来源限制。
+
+引用的两份 PROJ 文档只支持数学转换语义和独立核算；Cawley--Talbot 仅核读官方摘要与元数据，借鉴有限样本选择可能过拟合的提醒。本文没有声称完整复现该论文或其理论结论，也未把论文中的机器学习实验移用为本数据集证据。
+
+\subsection{如何复算与核对}
+基础完成版 Notebook 对应教师的轨迹预处理 starter，系统完成版对应 LLM 辅助评估 starter；原件保留。默认离线完整复算从原始输入与冻结规则重新处理、评价和画图，使用已保存的真实必要提议，新增模型调用为 0。LIVE 创建真实新调用和新 run，成本与随机差异另列。报告构建读取核验结果生成数值、图与 PDF，不能用只加载旧汇总表冒称完整复算。
+
+G2 的历史版本身份如下，短哈希仅用于正文识别，完整 SHA 见交接文件。
+\begin{center}\small\begin{tabular}{ll}\toprule 版本用途 & 提交前缀 \\ \midrule
+处理代码 & \texttt{c1c627260671} \\
+结果产物 & \texttt{1ac203c1c60b} \\
+已接受的 G2 交付锚点 & \texttt{6fad8420b09b} \\
+\bottomrule\end{tabular}\end{center}
+
+本报告的历史表由 \path{build_history_sources.py} 从保存 JSON 自动生成，图引用 G2 正式 PDF；重建报告不会把它们登记为新的 G3 实验。G3 最终入口、代码与结果版本在其专节及 Technical Handoff 中给出。
+
+\appendix
+\section{关键历史数值的可追踪来源}
+\begin{table}[H]\centering\small\begin{tabularx}{\linewidth}{@{}p{32mm}Y@{}}\toprule 内容 & 仓库内来源（相对 task1） \\ \midrule
+全量结构盘点 & \path{evidence/goal1/inventory/structure_summary.json} \\
+参数、顺序、模式与候选 & \path{evidence/goal2/result_summary.json}；完整逐记录表见其 tables 索引 \\
+真实模型建议与原话 & \path{evidence/goal2/a_epoch02/actual_ai_critique/actual_ai_critique.json}，含原始 response 路径、SHA256 与处理轨迹 \\
+构造反例 & \path{evidence/goal2/counterexamples/formal-02/synthetic_cases.json} \\
+历史复现 & \path{docs/goal2/REPRODUCE.md}；历史解释见 \path{docs/goal2/STAGE_ANALYSIS.md} \\
+当前报告数值绑定 & \path{evidence/goal3/report_build/history_value_bindings.json} \\
+\bottomrule\end{tabularx}\end{table}
+
+\begingroup\let\em\relax
+\bibliographystyle{plain}\bibliography{references}
+\endgroup
+\end{document}

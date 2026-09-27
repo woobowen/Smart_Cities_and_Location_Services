@@ -1,0 +1,46 @@
+% Shared palette and TikZ are loaded by the parent document.
+% No evidence-specific coordinates or semantic relations belong here.
+\tikzset{
+  ie before/.style={draw=C1,fill=P1},
+  ie user/.style={draw=C2,fill=P2},
+  ie user rose/.style={draw=C3,fill=P3},
+  ie after/.style={draw=C4,fill=P4},
+  ie connector/.style={draw=C1,line width=.8pt,-{Latex[length=2mm]},rounded corners=2pt},
+  ie note/.style={anchor=north west,align=left,text width=40mm,
+    font=\sffamily\small,text=Ink,inner sep=0pt},
+  ie label/.style={anchor=north west,align=left,font=\sffamily\scriptsize,
+    text=Muted,inner sep=0pt}
+}
+
+% Direct embed with graphicx options, including trim={L B R T},clip.
+\newcommand{\IEScreenshot}[3][]{\includegraphics[width=#3,#1]{#2}}
+
+% Coordinates inside are normalized to the displayed (possibly cropped) image.
+% (0,0) = bottom left; (1,1) = top right. Text sizes remain physical sizes.
+\newenvironment{interactionevidence}[3][]{%
+  \begin{tikzpicture}
+  \node[anchor=south west,inner sep=0pt,outer sep=0pt] (ieimage) at (0,0)
+    {\IEScreenshot[#1]{#2}{#3}};
+  \begin{scope}[x={(ieimage.south east)},y={(ieimage.north west)}]
+}{%
+  \end{scope}
+  \end{tikzpicture}%
+}
+
+\newcommand{\IEHighlight}[3][ie user]{%
+  \path[#1,fill opacity=.28,draw opacity=.8,line width=.6pt,
+    rounded corners=1.2pt] (#2) rectangle (#3);}
+\newcommand{\IEOutline}[3][ie user]{%
+  \path[#1,fill=none,line width=.8pt,rounded corners=1.2pt]
+    (#2) rectangle (#3);}
+\newcommand{\IEAnchor}[2]{\coordinate (#1) at (#2);}
+\newcommand{\IEMarker}[3][ie user]{%
+  \node[#1,circle,inner sep=1.6pt,font=\sffamily\scriptsize\bfseries,
+    text=Ink] at (#2) {#3};}
+\newcommand{\IECurvedArrow}[3][]{%
+  \draw[ie connector,#1] (#2) to[out=-20,in=20] (#3);}
+% #2 is an explicit TikZ route; endpoints are approved phrase anchors.
+\newcommand{\IERoutedArrow}[2][]{\draw[ie connector,#1] #2;}
+\newcommand{\IESideNote}[3][]{\node[ie note,#1] at (#2) {#3};}
+\newcommand{\IEProvenance}[3][]{\node[ie label,#1] at (#2) {#3};}
+\newcommand{\IEAssetLabel}[2]{\IEProvenance{#1}{Asset layer: #2}}

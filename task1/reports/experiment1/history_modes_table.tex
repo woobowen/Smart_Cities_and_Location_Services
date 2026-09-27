@@ -1,0 +1,16 @@
+\begin{table}[H]
+\centering\small
+\caption{G2 四模式实际执行。增益是通过保护且严格改善的锁定输出；分母为记录 $\times$ episode。时间为批次墙钟时间之和，不能当作每记录延迟。}
+\begin{tabular}{llrrrr}
+\toprule 分区 & 模式 & 增益 / 观察数 & 候选评估 & 可见模型调用 & 时间 / s \\ \midrule
+开发 & LLM only & 8/24 & 36 & 3 & 113.2 \\
+开发 & Search only & 9/24 & 480 & 0 & 30.8 \\
+开发 & LLM + Search & 16/24 & 372 & 9 & 320.8 \\
+开发 & LLM + Memory + Search & 17/24 & 330 & 9 & 297.0 \\
+\midrule
+G2 评估 & LLM only & 15/72 & 109 & 9 & 324.4 \\
+G2 评估 & Search only & 27/72 & 1440 & 0 & 88.6 \\
+G2 评估 & LLM + Search & 47/72 & 1080 & 27 & 1007.0 \\
+G2 评估 & LLM + Memory + Search & 47/72 & 954 & 27 & 892.1 \\
+\bottomrule\end{tabular}
+\end{table}

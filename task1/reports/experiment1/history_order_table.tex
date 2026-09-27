@@ -1,0 +1,13 @@
+\begin{table}[H]
+\centering\small
+\caption{G2 DEVELOPMENT 的六种顺序，均为 120 条记录。安全失败按记录计，其余按实际事件计。}
+\begin{tabular}{lrrrrl}
+\toprule 顺序 & 安全失败 & 跨原始断点边 & D 跨断点窗口 & P 删除断点触发点 & 结论 \\ \midrule
+S-D-P & 0 & 0 & 0 & 0 & 无新增收益 \\
+S-P-D & 0 & 0 & 0 & 0 & 权衡 \\
+D-S-P & 46 & 1 & 612 & 1 & 拒绝 \\
+D-P-S & 87 & 1 & 612 & 188 & 拒绝 \\
+P-S-D & 87 & 0 & 0 & 193 & 拒绝 \\
+P-D-S & 87 & 1 & 453 & 193 & 拒绝 \\
+\bottomrule\end{tabular}
+\end{table}
