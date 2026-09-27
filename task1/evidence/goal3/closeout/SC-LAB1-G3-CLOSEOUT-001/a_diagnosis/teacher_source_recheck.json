@@ -1,0 +1,146 @@
+{
+  "task": "SC-LAB1-G3-CLOSEOUT-001",
+  "role": "A",
+  "source": {
+    "path": "task1/实验课1.pptx",
+    "sha256": "cf5fdbdd0e116818f4bf195e8761dd55c4733443d7c360c986cf1cdfddfda075",
+    "locator": "",
+    "source_kind": "TEACHER_ORIGINAL",
+    "exists": true
+  },
+  "scope": "Selected original slide XML text; prior visual mathematics interpretation inherited, not re-rendered here.",
+  "slides": [
+    {
+      "physical_slide_one_based": 5,
+      "member": "ppt/slides/slide5.xml",
+      "member_sha256": "7af81acc3e261e0762a779f4dc6c3c4058b869ee14f0e61de846bc36a6571ece",
+      "text": "实验课内容\n实验模块\n对应大纲章节\n核心产出\n评分\n标准\n实验一\n \n轨迹数据预处理\n第一章\n \n智慧城市概述\n轨迹数据清洗与压缩程序、数据处理评估报告、实验过程报告\n（\n包含\nAI\n批判\n）\n完成基础任务\n60\n分\n+\n完成拓展任务\n90\n分\n+\n实验二\n \n停留热点挖掘\n第二章\n \n智慧交通与应用\n停留点检测\n与聚类程序、\nPOI\n功能标注结果\n表，\n实验过程报告\n完成基础任务\n60\n分\n+\n完成拓展任务\n90\n分\n+\n实验三\n \n车货匹配\n第三章\n \n智慧物流与应用\n车货匹配求解器程序、求解器性能报告、\n实验过程报告\n完成基础任务\n60\n分\n+\n完成拓展任务\n90\n分\n+\n综合课程设计\n第四章\n \n智慧城市应用前沿\n研究报告、可复现代码\n包、路演答辩"
+    },
+    {
+      "physical_slide_one_based": 6,
+      "member": "ppt/slides/slide6.xml",
+      "member_sha256": "c217700f03269264e02041ab04f16a596792547bd85ed798e932a1eacac090c8",
+      "text": "实验课内容\n【\nAI\n生成内容的准确性批判】\n提示词示例：“请为共享单车轨迹设计清洗流程并给出阈值。”\n批判要求：检查其是否混淆速度单位、是否把经纬度直接当平面坐标、是否对缺失值做无依据插值；至少构造一组反例，记录修改前后指标，并说明哪些建议被拒绝以及原因。\n【\nAI\n建议的隐含假设分析与批判】\n提示词示例：“\nAI\n建议‘缺失值用线性插值’，其隐含假设是‘轨迹在缺失期间匀速直线运动’，这个假设在什么情况下不成立\n？”\n批判要求：可以主动向\nAI\n提问是否存在前提假设，也可以根据自己的思考对\nAI\n进行反问，相关内容需要写入实验报告。"
+    },
+    {
+      "physical_slide_one_based": 8,
+      "member": "ppt/slides/slide8.xml",
+      "member_sha256": "87a8ffe5fb776523bfd08de6f95294ed119aa3f56e942a1dd6203f14ae65574d",
+      "text": "课程设计时间\n安排\n \nhttps://developer.ecnu.edu.cn/vitepress/llm/model.html\n建议大家用\ndeepseek harness\n能不用\ncodex\n、\nCC\n、\nKIMI CODE\n就不要用"
+    },
+    {
+      "physical_slide_one_based": 17,
+      "member": "ppt/slides/slide17.xml",
+      "member_sha256": "99db9e16b6652ca0b2784efa991633d6a6dc99331101127ca159f202aed2566c",
+      "text": "为什么需要轨迹数据预处理\n背景：\n由于用户误关闭设备或者\nGPS\n设备故障导致相邻轨迹点的采样时间间隔远大于平均采样间隔\n影响：\n相邻轨迹点连成的线段无法表示移动对象真实通行的路径\n数据分析：\n相邻轨迹点的采样时间间隔远大于平均采样间隔；相邻轨迹点的位移距离远大于平均位移距离。\nGPS\n信号中断\n𝑝\n0\n \n𝑝\n1\n \n𝑝\n3\n \n𝑝\n2\n \n𝑝\n4\n \n𝑡\n2\n−\n𝑡\n1\n=\n3\n𝑠\n \n𝑡\n3\n−\n𝑡\n2\n=\n30\n𝑠\n \n𝑝\n5\n \n𝑝\n6\n "
+    },
+    {
+      "physical_slide_one_based": 18,
+      "member": "ppt/slides/slide18.xml",
+      "member_sha256": "59b4697b2756acad97cdbf0ca37d6cbbadeaf087fb5c1a6629c5eecc3d84d009",
+      "text": "为什么需要轨迹数据预处理\nStep1:\n \n定位距离异常、时间间隔异常的相邻轨迹点\n解决方法：轨迹分段\nStep2:\n \n根据定位结果将轨迹分段为多条子轨迹\n(\n𝑝\n2\n, \n𝑝\n3\n)\n \n𝑝\n0\n \n𝑝\n1\n \n𝑝\n3\n \n𝑝\n2\n \n𝑝\n4\n \n𝑡\n2\n−\n𝑡\n1\n=\n3\n𝑠\n \n𝑡\n3\n−\n𝑡\n2\n=\n30\n𝑠\n \n𝑝\n5\n \n𝑝\n6\n \nInput\n：单条轨迹数据 \ntr\n=\n{\n(\n𝑝\n0\n, \n𝑡\n0\n),\n(\n𝑝\n1\n, \n𝑡\n1\n),\n…,\n(\n𝑝\n𝑛\n, \n𝑡\n𝑛\n)\n}\n \n将\ntr\n划分为\n{\n(\n𝑝\n0\n, \n𝑡\n0\n),\n…,\n(\n𝑝\n2\n, \n𝑡\n2\n)\n}\n与\n{\n(\n𝑝\n3\n, \n𝑡\n3\n),\n…,(\n𝑝\nn\n, \n𝑡\n𝑛\n)}\n \nStep3:\n \n删除分段结果中距离过短或点数过少的子轨迹\n删除\n{\n(\n𝑝\n0\n, \n𝑡\n0\n),\n…,\n(\n𝑝\n2\n, \n𝑡\n2\n)\n}\n \nOutput\n：\ntr\n=\n{\n{\n(\n𝑝\n3\n, \n𝑡\n3\n)\n,\n…,\n(\n𝑝\ni\n, \n𝑡\n𝑖\n)\n}, …\n{\n(\n𝑝\n𝑗\n, \n𝑡\n𝑗\n),…,\n(\n𝑝\n𝑛\n, \n𝑡\n𝑛\n)}\n}\n "
+    },
+    {
+      "physical_slide_one_based": 19,
+      "member": "ppt/slides/slide19.xml",
+      "member_sha256": "90c983c4ef144eca9db8600cf65332b39694d0e8ef0aaa6a097543ae3688b598",
+      "text": "为什么需要轨迹数据预处理\n背景：\n由于信号干扰等原因，\n GPS\n设备采集到的轨迹点位置与车辆的真实位置之间存在较大差异。\n影响：\n漂移点会被误识别为转向轨迹点，对后续路口识别、地图构建等任务产生不利影响。\n数据分析：\n漂移点的方向与其前序、后序轨迹点的方向都存在较大差异。\nGPS\n信号漂移\n漂移点"
+    },
+    {
+      "physical_slide_one_based": 20,
+      "member": "ppt/slides/slide20.xml",
+      "member_sha256": "67b69fd6cd94cd39d1074d76faa5dce2f8ff2439ead1bcd7e4341e3df5cbdc95",
+      "text": "为什么需要轨迹数据预处理\n漂移点\n解决方法：轨迹去噪\nStep1:\n \n计算每个轨迹点的方向：当前轨迹点与后序轨迹点连成线段的方向\nStep2:\n \n定位方向与其前后序轨迹点方向都存在较大差异的漂移轨迹点，删除该点并连接其前后序轨迹点\nInput\n：单条轨迹数据 \ntr\n=\n{\n(\n𝑝\n0\n, \n𝑡\n0\n),\n(\n𝑝\n1\n, \n𝑡\n1\n),\n…,\n(\n𝑝\n𝑛\n, \n𝑡\n𝑛\n)\n}\n \n𝑝\n2\n的\n方向\n与\n𝑝\n1\n、\n𝑝\n3\n的\n方向\n差异\n均\n大于\n一定\n阈值\n，\n删除\n𝑝\n2\n \nOutput\n：\ntr\n=\n{\n(\n𝑝\n0\n, \n𝑡\n0\n),\n(\n𝑝\n1\n, \n𝑡\n1\n),\n(\n𝑝\n3\n, \n𝑡\n3\n),…,\n(\n𝑝\n𝑛\n, \n𝑡\n𝑛\n)\n}\n \n𝑝\n0\n \n𝑝\n1\n \n𝑝\n2\n \n𝑝\n3\n \n𝑝\n4\n \n𝑝\n5\n \n𝑝\n6\n \n𝑝\n3\n的\n方向\n为\n线段\n𝑝\n3\n→\n𝑝\n4\n的\n方向\n \n并\n连接\n𝑝\n1\n、\n𝑝\n3\n "
+    },
+    {
+      "physical_slide_one_based": 21,
+      "member": "ppt/slides/slide21.xml",
+      "member_sha256": "7e2eab751487dc0845988d7291b05fdd41cf9c1c7d3ea738dc1ffe227e0a0de9",
+      "text": "为什么需要轨迹数据预处理\n背景：\n全国网与车在每小时都会产生大量的轨迹点数据，同时由于交通拥堵，同一车辆在局部区域会产生大量轨迹点。\n影响：\n基于轨迹数据的相关任务效率低下，且精度降低。\n解决思路：\n若删除当前轨迹点对整条轨迹的形态会产生较大影响，则将当前轨迹点视为关键点予以保留。\n轨迹点数量过多且存在冗余\n局部区域内一周时间收集了接近\n10\n万个轨迹点"
+    },
+    {
+      "physical_slide_one_based": 22,
+      "member": "ppt/slides/slide22.xml",
+      "member_sha256": "ff5f84aeacaf4a3b6e81a68e7f2450fc55dd6e8edafb0adc0328221bce70d038",
+      "text": "为什么需要轨迹数据预处理\n解决方法：轨迹压缩\nStep1:\n找到轨迹中离起终点连成线段最远的轨迹点，计算该点到起终点连成线段的距离\nStep2:\n \n若该距离大于一定阈值，则说明该点是轨迹\ntr\n中的形态关键点，应当保留，将轨迹按该点分割为两条子轨迹，反之则仅保留两个端点，删除其他轨迹点。\nInput\n：单条轨迹数据 \ntr\n=\n{\n(\n𝑝\n0\n, \n𝑡\n0\n),\n(\n𝑝\n1\n, \n𝑡\n1\n),\n…,\n(\n𝑝\n5\n, \n𝑡\n5\n)\n}\n \nOutput\n：\ntr\n=\n{\n(\n𝑝\n0\n, \n𝑡\n0\n),\n(\n𝑝\n2\n, \n𝑡\n2\n),\n(\n𝑝\n3\n, \n𝑡\n3\n)\n,\n(\n𝑝\n5\n, \n𝑡\n5\n)\n}\n \n计算\n𝑝\n3\n到\n线段\n𝑝\n0\n→\n𝑝\n5\n的\n距离\n \n道格拉斯普克算法示意图\n𝑝\n0\n \n𝑝\n1\n \n𝑝\n2\n \n𝑝\n3\n \n𝑝\n4\n \n𝑝\n5\n \n𝑝\n0\n \n𝑝\n2\n \n𝑝\n3\n \n𝑝\n5\n \nStep3:\n \n重复执行上述步骤直到无法继续压缩。"
+    },
+    {
+      "physical_slide_one_based": 24,
+      "member": "ppt/slides/slide24.xml",
+      "member_sha256": "82cd909eb7288407bb99d91874b3d9753ea2eb67a7e073ed72e49a1d31ad36c3",
+      "text": "轨迹预处理效果评估\n分段距离阈值选择\n分段处理：将相邻轨迹点中距离超过阈值的点视为噪声点，在噪声点处将轨迹分段。\n通过轨迹保存率及先验最大距离计算公式确定分段阈值：\n最大距离计算公式：\n其中平均采样时间计算为\n1\n2\ns左右，骑行速度上界为2\n5\nkm\n/\nh，计算得到最大行驶距离约为8\n3\nm左右，结合图像及实际情况（超速），取分段阈值设置为9\n5\nm。"
+    },
+    {
+      "physical_slide_one_based": 25,
+      "member": "ppt/slides/slide25.xml",
+      "member_sha256": "8f3f6862b31019296924fe35e1bd725aeaa5ecabbd593fd8c693531dba8da729",
+      "text": "轨迹预处理效果评估\n分段距离阈值选择\n保留比例\n(%)\n（分段后轨迹点数量除以分段前轨迹点数量）"
+    },
+    {
+      "physical_slide_one_based": 26,
+      "member": "ppt/slides/slide26.xml",
+      "member_sha256": "dee4d9cd6edb08f7309c7011be788669d7fb4e0a340f5a87f046c422b520f2cd",
+      "text": "作业细则\n轨迹数据预处理\n（\n必做\n）\n：\n完成\nTrajectory_preprocessing.ipynb\n的空缺部分与实验报告。\n设计评价轨迹数据预处理效果的评估指标，需给出设计逻辑以及结果分析。\n基于LLM辅助的轨迹数据质量提升智能体系统（选\n做\n）\n：\n基于助教开发的\n系统。\n思考与讨论（选做）\n作业提交：\n在\n10\n月\n5\n日\n前将\n.\nipynb\n文件与实验报告压缩至\n.zip\n文件格式发送至\n52285903012@stu.ecnu.ed\nu.cn\n,\n 作业命名为 学号\n_\n姓名\n_\n实验一\n.zip/.\nipynb\n/.docx/.pdf"
+    },
+    {
+      "physical_slide_one_based": 28,
+      "member": "ppt/slides/slide28.xml",
+      "member_sha256": "fc2d203b6d7aec99c8487002c07fd03d8a4bfaf0e034ae14da628e02306d875b",
+      "text": "任务三 · 方法与实现\n基于 LLM 的轨迹数据清洗评估\n让 LLM 选评估工具、提参数建议，再用定量指标核验建议\n四步做法 · 15 个工具 · 四层记忆 · 留出集消融"
+    },
+    {
+      "physical_slide_one_based": 30,
+      "member": "ppt/slides/slide30.xml",
+      "member_sha256": "d29db2cdbb2cf924c0c5d24f75a659c6e85d0a50c887f3bce775993e7edb0178",
+      "text": "方法总览\n整体做法：四步\n第一步\n把数据变成\n\nLLM 能读的输入\n\n诊断卡 + 句柄\n第二步\n让 LLM 决定\n\n用什么工具、提什么参数\n\n函数调用\n第三步\n参数不靠猜\n\n物理先验定区间\n\n确定性代码给边界\n第四步\n核验它的建议\n\n跟确定性搜索最优比\n\nregret 判分\nLLM 只出现在第二步。第一步用确定性统计替代它的语感，第三、四步用确定性搜索替代人的判断。\n这样做的结果：LLM 的建议好坏变成一个数字，而不是一段需要人读的解释。\n同时因为第三、四步是确定性的，它们不消耗 API 调用，成本是可控的。\n3"
+    },
+    {
+      "physical_slide_one_based": 32,
+      "member": "ppt/slides/slide32.xml",
+      "member_sha256": "6e4ea45ee468cb8fec86d3b21c53709df6e6b2f83dfdfc368151e3f51f0c20e2",
+      "text": "关键前提\n为什么要先分类型\n63%\n静止轨迹\n17%\n混合\n20%\n行驶轨迹\n200 条抽样的轨迹类型分布\n静止与行驶是两个完全不同的群体。\n静止轨迹：位移中位 42 米，重复点可占 90%，中位速度 0.1 m/s。\n行驶轨迹：位移数公里至 20 公里，重复点通常低于 10%。\n对这两类用同一套阈值，不是效果差一点，而是对其中一半数据完全失效。\n所以诊断卡把类型放在最前面，LLM 一眼就能看到该换参数。\n占比来自 200 条抽样的实测统计\n5"
+    },
+    {
+      "physical_slide_one_based": 33,
+      "member": "ppt/slides/slide33.xml",
+      "member_sha256": "b36a5c0aaab35405ed686b699183ac436a9bc9a9fe2656d8ff2debca93da9fa8",
+      "text": "做法\n第二步：给 LLM 的工具箱\n类别\n工具\n作用\n查数据\nprofile · detect_anomalies · evaluate · compare_handles\n返回标量统计，不含坐标\n改数据\nsplit · clean · simplify · apply_road_constraint\n产生新句柄\n做实验\nrun_search · find_knee · suggest_param_range\n扫描参数、取拐点\n查经验\nquery_memory · query_playbook\n相似案例 + 人类笔记\n出图\nrender\n叠加图 / 异常分布 / 热力图\n刻意不给\nwrite_memory · write_playbook\nLLM 无权写记忆\n为什么故意不给写记忆的工具：如果 LLM 能直接写，一次幻觉就会被后续检索不断放大，而且很难发现。记忆的写入权只交给核验通过的确定性代码。\n所有工具都是确定性函数，没有随机性、不联网、不调用 LLM\n6"
+    },
+    {
+      "physical_slide_one_based": 34,
+      "member": "ppt/slides/slide34.xml",
+      "member_sha256": "5ad73e43ddf0ba02fa935c3b91b24a395be76b5d1e08dbaec2645bc849e31452",
+      "text": "做法\n第三步：参数怎么定\n① 物理先验定区间\n9 个参数各有合法区间\n由数据分布或物理量反推\n确定性代码\n② LLM 提起点与方向\n给出参数值 + 预期效果\n强制结构化输出\nLLM\n③ 有界搜索精调\n坐标下降 + 拐点\n产出 ground truth\n确定性代码\n关键：LLM 不是优化器，它只给起点和方向。\ndp_tolerance 区间 [0.5, 30] 米，上限约等于 GPS 定位精度。\ndt_threshold 区间 [15, 180] 秒，下界保住正常的 20 秒采样。\ndist_threshold 由 Δt × 限速 × 安全系数推导，不由位移分布推导。\n「预期效果」这一栏是白送的评分抓手。LLM 必须预测每个参数的升降方向，核验时只需比对符号，就能零成本算出方向准确率。\n7"
+    },
+    {
+      "physical_slide_one_based": 35,
+      "member": "ppt/slides/slide35.xml",
+      "member_sha256": "cad27f6f0f39adc0dc6cbdc1ad38e68e0695a7e32b03e06dbd4ac47f4af92994",
+      "text": "核心\n第四步：怎么判断 LLM 提得对不对\nregret = 搜索最优分 − LLM 提议分\n它需要 ground truth。所以在同一预算内跑一次确定性搜索作为标尺。\n实测一条：提议 0.6008、基线 0.6330、最优 0.6366，得 regret 0.0358。\n另外两个零成本判据：\n方向准确率：预测的升降符号与实测是否一致\n约束满足率：提议是否落在物理先验区间内\n口径\n触发条件\n怎么读\n归一化\n最优与基线差距充足\n丢掉了多少比例的可得收益\n绝对\n最优与基线差距过小\n分母趋零会放大微小差距\n不适用\n轨迹过短（< 200 米）\n压缩率在该尺度无物理含义\n三种口径必须显式标注。混用会让结论完全反过来：headroom 只有 0.021 时，一个与基线持平的提议会被算成 regret 1.0。\n这就是「用定量指标核验建议」的具体落地\n8"
+    },
+    {
+      "physical_slide_one_based": 36,
+      "member": "ppt/slides/slide36.xml",
+      "member_sha256": "eb627e1b9b898c123192f3fe3736db65325479c19be52a84fc8b0ff348275c45",
+      "text": "做法\n记忆怎么用：让流程越跑越省\n层\n存什么\n谁写\n怎么用\n工作记忆\n当前轨迹的诊断卡与已试参数\nagent\n单条轨迹内\n情景记忆\n全量（诊断 → 参数 → 实测指标）\n核验器\n积累原始经验\n程序记忆\n诊断签名 → 参数区间\n核验器\n12 维特征 kNN 检索\n人类知识\n结论 + 证据 + 反例\n人\n只读，给 LLM 因果解释\n机器算出来的参数区间（程序记忆）和人写的因果解释（人类知识）不重复：前者给数字锚点，后者给物理直觉。\n成本含义：跑少数轨迹积累经验，其余轨迹直接查区间清洗，零 LLM 调用。这是 11386 条能落地的关键。\n安全边界：agent 对人类知识库只有读权限。它的任何 bug 都不可能损坏知识库。\n9"
+    },
+    {
+      "physical_slide_one_based": 37,
+      "member": "ppt/slides/slide37.xml",
+      "member_sha256": "45bfd5aa53e3eff0009f4d0f201be3c2425acfba2011582550753effd784f597",
+      "text": "验证方法\n消融实验：怎么证明这套流程有效\n四种模式必须结构性不同\nllm-only：只有 LLM，没有实测依据\nsearch-only：只有确定性搜索，不含任何 LLM 调用\nllm+search：加上实测依据\nllm+memory+search：再加上历史经验\n两个必须避开的陷阱\n信息泄漏：在评测轨迹上边跑边攒记忆，agent 会把这条轨迹自己的上次结果检索回来。等于考试时把答案摆桌上。\n标签造假：search-only 若仍调用 LLM，与含 LLM 的模式就不可比。所以它必须真的不调用，并有测试断言轮次为 0。\n做法：先在示范集上积累记忆，再在完全不重叠的留出集上评测。评测阶段只读不写。\n10"
+    },
+    {
+      "physical_slide_one_based": 38,
+      "member": "ppt/slides/slide38.xml",
+      "member_sha256": "ad0f958eec4cb47e630ebcd3145175a58b1d9e847e7e0c23464f9c577aaabd89",
+      "text": "结果\n实测结果：记忆层没有带来可测增益\n50%\nllm-only\n25%\nsearch-only\n41.7%\nllm+search\n41.7%\nllm+\nmemory\n+search\n超基线率（提议显著优于基线的比例）\n三种含 LLM 模式的提议分逐位相同。\n根因已定位到具体层面：\n示范集准入的 5 条里，4 条是静止、1 条混合。\n行驶类轨迹在记忆里一条已验证案例都没有。\n所以 4 条行驶类留出样本检索到的可用区间数是 0。\n结论：这是示范集太小造成的数据饥饿，不是方法失败。\n11"
+    },
+    {
+      "physical_slide_one_based": 42,
+      "member": "ppt/slides/slide42.xml",
+      "member_sha256": "604d9f69dbe360ce76774fc2bbd87a59613f9726828bbd2314b93fa8d408abbe",
+      "text": "思考与讨论\n轨迹分段、轨迹去噪、轨迹简化三个步骤可不可以调换顺序？"
+    }
+  ]
+}

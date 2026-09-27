@@ -1,0 +1,88 @@
+{
+  "at": "2026-09-27T16:41:26.887811+00:00",
+  "runs": [
+    {
+      "name": "repository_basic",
+      "exec_session_id": 69264,
+      "observed_exit_code": 143,
+      "status": "INTERRUPTED_NOT_FULL",
+      "completed_cell_count": 10,
+      "log": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/repository_basic_interrupted_output.txt",
+      "kernel_final_message": "Parent appears to have exited, shutting down.",
+      "python_exception_in_log": false,
+      "reason": "SIGTERM observed; initiating source unknown. No mathematical failure established.",
+      "execution_receipt_exists": false,
+      "partial_artifacts": [
+        {
+          "path": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/notebooks/repository_basic/partial_artifacts/parameters/figures/figure_manifest.json",
+          "sha256": "c164ab71c54cae4b82027be07ee8a9bee0b903836551fc16089b94724327d811"
+        },
+        {
+          "path": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/notebooks/repository_basic/partial_artifacts/parameters/figures/plot_data.json",
+          "sha256": "5c4af348429fe64e2e6bceea20008541af32d9da6806bd7e5eba4410bc5e9320"
+        },
+        {
+          "path": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/notebooks/repository_basic/partial_artifacts/parameters/figures/recomputed_orders.pdf",
+          "sha256": "1c23c49b388c0e7bc786a554b1df0dfa57edc9ef139b88ea59f901d855bc9f94"
+        },
+        {
+          "path": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/notebooks/repository_basic/partial_artifacts/parameters/figures/recomputed_orders.png",
+          "sha256": "65b814b05db26790f99ac0e4cd50fe953a70fa149b706056a43da5fa5e7b4b17"
+        },
+        {
+          "path": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/notebooks/repository_basic/partial_artifacts/parameters/figures/recomputed_orders.svg",
+          "sha256": "7ec38a1b904c442e18aa4a3dbb06a7d6810bd697c2008f5bf91e0ef0158758ba"
+        },
+        {
+          "path": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/notebooks/repository_basic/partial_artifacts/parameters/figures/recomputed_parameters.pdf",
+          "sha256": "358ef74465ee43ea0977907eed506ddbbecf46aea5a037bdb38fa781fc7dc37a"
+        },
+        {
+          "path": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/notebooks/repository_basic/partial_artifacts/parameters/figures/recomputed_parameters.png",
+          "sha256": "16b414628dc028add1e1a28266a58b8c94ff1bea041f89c4f64617258e1b33ee"
+        },
+        {
+          "path": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/notebooks/repository_basic/partial_artifacts/parameters/figures/recomputed_parameters.svg",
+          "sha256": "a8b7161d74737f017539a7e9c135412b7c3e3f059c5a3fc44cb68746aa19c5a5"
+        },
+        {
+          "path": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/notebooks/repository_basic/partial_artifacts/parameters/recompute_receipt.json",
+          "sha256": "3365d31a318d3c693de50f5ab833e1382f9e6860c87f057db972a124b90cde2e"
+        },
+        {
+          "path": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/notebooks/repository_basic/partial_artifacts/parameters_progress.txt",
+          "sha256": "4011313c8c66524d6430551a4a4ffc649d5468f36427ec553a1b432ae873c631"
+        },
+        {
+          "path": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/notebooks/repository_basic/partial_artifacts/pilot_steps.png",
+          "sha256": "771182bb86dfe91c04a1611d871cba39acbb8356d9a642a1e451c39ac83ad6f2"
+        },
+        {
+          "path": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/notebooks/repository_basic/partial_artifacts/pilot_steps.svg",
+          "sha256": "97d934738494a37d31957087d4ae1cc5017cb3a6288388542a25088422f6d1ad"
+        },
+        {
+          "path": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/notebooks/repository_basic/partial_artifacts/production/manifest.json",
+          "sha256": "249e0c560a369217b6b12d64757802ea17f37d21ae9601cacd4ca7b077b2485e"
+        }
+      ],
+      "retry": "same Notebook/runtime bytes, fresh work/evidence directories and a fresh kernel; persistent supervisor records exit status"
+    },
+    {
+      "name": "isolated_system",
+      "exec_session_id": 51250,
+      "observed_exit_code": 143,
+      "status": "INTERRUPTED_NOT_FULL",
+      "completed_cell_count": 2,
+      "log": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/isolated_system_interrupted_output.txt",
+      "kernel_final_message": "Parent appears to have exited, shutting down.",
+      "python_exception_in_log": false,
+      "reason": "SIGTERM observed; initiating source unknown. No mathematical failure established.",
+      "execution_receipt_exists": false,
+      "partial_artifacts": [],
+      "retry": "same Notebook/runtime bytes, fresh work/evidence directories and a fresh kernel; persistent supervisor records exit status"
+    }
+  ],
+  "counted_as_full_success": false,
+  "numerical_code_or_input_changed": false
+}

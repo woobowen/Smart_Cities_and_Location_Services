@@ -1,0 +1,17 @@
+{
+  "at": "2026-09-27T17:44:19.605916+00:00",
+  "record_type": "ROOT_OBSERVATION_OF_ACTUAL_TOOL_FAILURE_AND_REPAIR",
+  "command": ".venv/bin/python -m task1.evidence.goal3.closeout.SC-LAB1-G3-CLOSEOUT-001.prepare_remaining_reviews notebooks",
+  "first_attempt": "KeyError: source_path before Journal.submit",
+  "cause": "Package member schema provides source_path only for renamed source members; ordinary members use path. The one-time review submission helper incorrectly assumed the alias field was mandatory.",
+  "patch": "Read row.get(source_path, row[path]); require actual source bytes equal existing source_sha256. No validator weakened.",
+  "retry_actual_result": {
+    "task": "notebooks",
+    "targets": 83,
+    "sources": 116,
+    "status": "REVIEW_PENDING"
+  },
+  "affected": "One-time review submission only; no Notebook, payload, algorithm, input, PDF or ZIP changed.",
+  "status": "REPAIRED_AND_ACTUAL_SUBMISSION_SUCCEEDED",
+  "independent_followup": "C informed to inspect helper and actual task targets; C receipt is separate."
+}

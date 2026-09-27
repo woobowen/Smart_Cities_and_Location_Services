@@ -1,0 +1,105 @@
+{
+  "role": "A_SOURCE_DIAGNOSIS",
+  "task_id": "SC-LAB1-G3-CLOSEOUT-001",
+  "primary_read_tool": "web.run open/find; exact URLs and scope above",
+  "byte_capture_command": "python check_citations.py",
+  "accesses": [
+    {
+      "source_id": "S10",
+      "url": "https://www.jmlr.org/papers/volume11/cawley10a/cawley10a.pdf",
+      "attempted_at_utc": "2026-09-27T16:20:59.393591+00:00",
+      "body_saved": false,
+      "status": 200,
+      "content_type": "application/pdf",
+      "bytes": 759286,
+      "sha256": "db01ac8fabef3064a0297bfcf64fb9791bf35c4d03be7a51f5862260adfca206",
+      "title": "On Over-fitting in Model Selection and Subsequent Selection Bias in Performance Evaluation",
+      "authors": [
+        "Gavin C. Cawley",
+        "Nicola L. C. Talbot"
+      ],
+      "publication": "Journal of Machine Learning Research 11 (2010), 2079–2107",
+      "web_primary_source_read_status": "SUCCESS",
+      "document_pages": 29,
+      "actually_read": [
+        {
+          "section": "§1 introduction",
+          "physical_pages_one_based": [
+            1,
+            2
+          ],
+          "printed_pages": [
+            2079,
+            2080
+          ],
+          "paragraph": "selection-criterion variance and optimistic evaluation bias"
+        },
+        {
+          "section": "§4.4 and §5–5.1",
+          "physical_pages_one_based": [
+            16,
+            17
+          ],
+          "printed_pages": [
+            2094,
+            2095
+          ],
+          "paragraph": "finite-sample optimization risk; treating selection as part of fitting; internal evaluation protocol"
+        },
+        {
+          "section": "§5.3",
+          "physical_pages_one_based": [
+            24
+          ],
+          "printed_pages": [
+            2102
+          ],
+          "paragraph": "selection on all data followed by repartitioning contaminates held-out evaluation"
+        },
+        {
+          "section": "§6 conclusions",
+          "physical_pages_one_based": [
+            25
+          ],
+          "printed_pages": [
+            2103
+          ],
+          "paragraph": "selection and fitting should be jointly included in evaluation"
+        }
+      ],
+      "reading_level": "FULL_TEXT_SPECIFIED_SECTIONS_ONLY",
+      "not_read_or_reproduced": "No full-paper line-by-line audit, independent derivation, figure/table value verification or author experiment reproduction.",
+      "supported_claim": "有限样本上的反复方法选择可能利用该样本的偶然特征；已参与选择的数据随后改称测试集会产生选择偏差风险。",
+      "task_inference": "本项目把开发、候选选择和冻结后最终确认分开，是对一般风险的边界性借鉴；论文不规定600条样本、S0参数或提供本项目统计无偏保证。",
+      "history_boundary": "本轮定点全文核查仅修补当前引用证据，不追溯升级历史阅读层级，不证明过去设计由这次阅读引发。"
+    },
+    {
+      "source_id": "REF-PROJ-CART",
+      "url": "https://proj.org/en/stable/operations/conversions/cart.html",
+      "attempted_at_utc": "2026-09-27T16:21:01.424989+00:00",
+      "body_saved": false,
+      "status": "BYTE_FETCH_FAILED",
+      "error": "HTTP Error 403: Forbidden",
+      "sha256": null,
+      "web_primary_source_read_status": "SUCCESS",
+      "actually_read": "Operation definition, axis semantics, +ellps parameter. Page currently labeled PROJ 9.9.0; not a statement about installed software.",
+      "supported_claim": "经纬度与椭球高转换为地心直角坐标；具体椭球需显式给定。"
+    },
+    {
+      "source_id": "REF-PROJ-TOPO",
+      "url": "https://proj.org/en/stable/operations/conversions/topocentric.html",
+      "attempted_at_utc": "2026-09-27T16:21:02.389154+00:00",
+      "body_saved": false,
+      "status": "BYTE_FETCH_FAILED",
+      "error": "HTTP Error 403: Forbidden",
+      "sha256": null,
+      "web_primary_source_read_status": "SUCCESS",
+      "actually_read": "Definition, fixed topocentric origin, cart-to-topocentric pipeline requirement and units. Page currently labeled PROJ 9.9.0.",
+      "supported_claim": "ECEF至固定原点ENU变换；地理坐标先经cart转换，East/North为指定原点的切平面方向。"
+    }
+  ],
+  "new_research_experiments": 0,
+  "new_record_model_calls": 0,
+  "source_crs_effect": "none; formulas do not certify input datum",
+  "copyright_scope": "No full paper is stored in this evidence directory or supplied to the teacher ZIP."
+}

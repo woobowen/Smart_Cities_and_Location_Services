@@ -1,0 +1,145 @@
+{
+  "role_context": "/root/c_independent",
+  "status": "PASS",
+  "checked_at_utc": "2026-09-27T16:47:05.034041+00:00",
+  "targets": {
+    "task1/evidence/goal3/runs/g3-final-confirm-01/manifest.json": "2696e9db3a77e94d4e8feea9f316ce170e2abc93f2f99256b5c1f0f8279553d0",
+    "task1/evidence/goal3/runs/g3-final-confirm-01/analysis/summary.json": "d508eaefd79d269b6123b7d64d9f8ad128f41a4643a69aa37b1bac2c294a979d",
+    "task1/evidence/goal3/runs/g3-final-confirm-01/paired_summary.json": "5ee09c3c960333dc8021b75b244aa0c2461b1e1604b7ba60814ff297be1d5266",
+    "task1/reports/experiment1/confirmation_generated.tex": "aa897d1cd9fbb5830bebef10b56b1ffbdb6221f0ff2bc156761ac85643cd5b09",
+    "task1/evidence/goal3/runs/g3-full-production-01/manifest.json": "e5b2334580ebbc27aa19b0e7400c940f47f91c8f1e39f867eb756eea8fe8e409",
+    "task1/evidence/goal3/runs/g3-full-production-01/analysis/summary.json": "319cc7891b328510796fbc1b3468a07957f0bdbf782ca18cf8a4bd74698e60b2",
+    "task1/evidence/goal3/runs/g3-full-production-01/paired_summary.json": "61c670e60128c3a8f4e31e8290f4fb8535981dfca8ae1212f2cba79b610135f4",
+    "task1/reports/experiment1/production_generated.tex": "a2c223ad0037817ddb075f87622b53f915a01954292b19606cf5fdb3a81a82bc",
+    "task1/evidence/goal3/runs/g3-full-production-01/traces-0000.jsonl.gz": "9383487edc3bd845bc0f21abf5b0f160ed235bf3e98434f727cdcb1cde5764b9"
+  },
+  "table_checks": [
+    {
+      "partition": "FINAL_CONFIRM",
+      "source_run": "g3-final-confirm-01",
+      "numbers": {
+        "n_records": [
+          600,
+          600
+        ],
+        "n_input": [
+          62284,
+          62284
+        ],
+        "n_filtered": [
+          26416,
+          64
+        ],
+        "n_direction_removed": [
+          1845,
+          2148
+        ],
+        "n_dp_removed": [
+          23032,
+          47958
+        ],
+        "n_final": [
+          10991,
+          12114
+        ],
+        "common_covered_points": [
+          35868,
+          62220
+        ],
+        "raw_windows_covered": [
+          825,
+          1336
+        ],
+        "n_no_output_records": [
+          255,
+          0
+        ],
+        "raw_break_crossings": [
+          0,
+          0
+        ]
+      },
+      "strict_gain_records": 349,
+      "scope": "Current report table against bound frozen manifest and actual saved analysis; not a new experiment"
+    },
+    {
+      "partition": "FULL_PRODUCTION",
+      "source_run": "g3-full-production-01",
+      "numbers": {
+        "n_records": [
+          11386,
+          11386
+        ],
+        "n_input": [
+          1173410,
+          1173410
+        ],
+        "n_filtered": [
+          501511,
+          1199
+        ],
+        "n_direction_removed": [
+          36056,
+          39732
+        ],
+        "n_dp_removed": [
+          435373,
+          911330
+        ],
+        "n_final": [
+          200470,
+          221149
+        ],
+        "common_covered_points": [
+          671899,
+          1172211
+        ],
+        "raw_windows_covered": [
+          15205,
+          24764
+        ],
+        "n_no_output_records": [
+          4859,
+          0
+        ],
+        "raw_break_crossings": [
+          0,
+          0
+        ]
+      },
+      "strict_gain_records": 6522,
+      "scope": "Current report table against bound frozen manifest and actual saved analysis; not a new experiment"
+    }
+  ],
+  "boundary_check": {
+    "record_id": "352",
+    "index": 105,
+    "reference_reason": [
+      "TOO_FEW_POINTS"
+    ],
+    "final_action": "denoised",
+    "D_input_indices": [
+      104,
+      105,
+      106,
+      107
+    ],
+    "P_input_indices": [
+      104,
+      106,
+      107
+    ],
+    "P_output_indices": [
+      104,
+      106,
+      107
+    ],
+    "independent_decimal_distance_from_saved_work_coordinates": "266.01675442514171438839384675917320683616366329544",
+    "coordinate_fact_boundary": "Saved conditional work coordinates; this arithmetic is not source datum verification.",
+    "record_P_max_error": 4.344985593528114
+  },
+  "scope_limit": "Major current generated tables and one reported boundary arithmetic/trace check. Full mathematical production audit is inherited via unchanged frozen sources and separately checked FULL receipts.",
+  "new_research_experiments": 0,
+  "new_record_model_calls": 0,
+  "source_sha256": "d19d6d550aae0fa850f96bc983031cb31a0e4ffafaf5c0c7c0ba553994190c35"
+}

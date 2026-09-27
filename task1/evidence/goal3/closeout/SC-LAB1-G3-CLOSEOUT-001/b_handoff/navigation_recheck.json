@@ -1,0 +1,100 @@
+{
+  "role_context": "/root/b_review_guide",
+  "checked_at_utc": "2026-09-27T16:48:46.252094+00:00",
+  "status": "LOCAL_STATIC_CHECKS_PASSED",
+  "scope": "Current Markdown links, stable cell IDs, function/class names and JSON parsing; no PDF visual/Notebook execution/package acceptance",
+  "files": [
+    {
+      "path": "task1/docs/goal3/REVIEW_GUIDE.md",
+      "sha256": "85d5bbbf5b869a28a383bbd6d3f7ae53447b2636f938949c7c5c1f42b6b3a38c"
+    },
+    {
+      "path": "task1/docs/goal3/TECHNICAL_HANDOFF.md",
+      "sha256": "b8b5275423cb2dc0888f78abe2f196bd5065048bb1d6866adbfb22021fe6b1f0"
+    },
+    {
+      "path": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/b_handoff/evidence_inventory.md",
+      "sha256": "14e10df4c5ca323566c21c17e4216ea17b29e5fe098c974dcfda4571caeece48"
+    },
+    {
+      "path": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/b_handoff/HANDOFF_UPDATE_SNIPPETS.md",
+      "sha256": "6807e48f3e59a047a8161969018d18953520404ef7a1dfdb36bac3f04144a58b"
+    }
+  ],
+  "existing_link_count": 150,
+  "missing_links": [],
+  "expected_parent_bindings_pending": [],
+  "notebook_stable_ids_checked": [
+    "lab1-16c26970dd41618a",
+    "lab1-20337038d9968da1",
+    "lab1-5edb2858a06036d2",
+    "lab1-62885400114d7d2b",
+    "lab1-70227bc1defb860d",
+    "lab1-95890264cce459cd",
+    "lab1-9d637e0bfc2f7ff6",
+    "lab1-bd932b47abf15ad3",
+    "lab1-c8644f76db1f9bfe",
+    "lab1-f7fe7424c6193f77"
+  ],
+  "missing_notebook_ids": [],
+  "function_names_checked": {
+    "task1/workflow/coordinates.py": [
+      "working_xy",
+      "conditional_adapter"
+    ],
+    "task1/workflow/geometry.py": [
+      "split_trajectory",
+      "filter_segments",
+      "direction_candidates",
+      "denoise_trajectory",
+      "point_segment_distance",
+      "douglas_peucker_indices"
+    ],
+    "task1/workflow/g2_metrics.py": [
+      "common_reference_metrics",
+      "record_metrics",
+      "review_record"
+    ],
+    "task1/goal3/selection.py": [
+      "paired",
+      "aggregate_pairs",
+      "choose"
+    ],
+    "task1/workflow/g2_pipeline.py": [
+      "run_record"
+    ],
+    "task1/workflow/g2_modes.py": [
+      "run_batch_episode"
+    ],
+    "task1/goal3/reproduce.py": [
+      "recompute_historical"
+    ],
+    "task1/workflow/g2_memory.py": [
+      "build_snapshot",
+      "FrozenMemory",
+      "consumption"
+    ],
+    "task1/goal3/control.py": [
+      "Journal"
+    ],
+    "task1/goal3/freezes.py": [
+      "verified_run",
+      "selection_decision",
+      "release_decision"
+    ]
+  },
+  "missing_function_names": [],
+  "whitespace_issues": [],
+  "inventory_json_parsed": true,
+  "current_full_state_source": "task1/docs/goal3/TECHNICAL_HANDOFF.md §8; parent must update to actual final receipts before publication",
+  "handoff_edit_scope": [
+    "current closeout identity and scope",
+    "historical versus current roles",
+    "current report and evidence/navigation entries",
+    "historical four FULL and ZIP labels",
+    "current as-of execution table with interruptions kept",
+    "numeric/document/package/publication version separation"
+  ],
+  "experiments_executed_by_this_role": 0,
+  "new_dependencies": []
+}

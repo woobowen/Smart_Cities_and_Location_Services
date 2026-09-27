@@ -1,0 +1,47 @@
+{
+  "role_context": "/root/c_independent",
+  "status": "PASS",
+  "executions": [
+    {
+      "execution": "isolated_system",
+      "execution_receipt": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/notebooks/isolated_system_retry/execution_receipt.json",
+      "actual_attempt_directory": "isolated_system_retry",
+      "execution_receipt_sha256": "e4cdbbe13b38e57d714e9f5c7d64f9acd44cca4d0968aaadb374dc3e739138f9",
+      "current_notebook_sha256": "5e79f525fc194110282f974070bce087a09c14bc5aaa11c276abf08e87694277",
+      "executed_notebook_sha256": "24d77031cd0593cd42fc53274c308bfbf9f7dc12d7a4d446258d1cd99fc70217",
+      "notebook_receipt_sha256": "4c8b7eacc3f1b9fb4831f39b794ef658046c671d25b2bc509be53e6443fafa8c",
+      "executed_code_cells": 8,
+      "elapsed_seconds": 628.0417845960001,
+      "kernel_cwd": "/tmp/sc-lab1-closeout-package",
+      "first_cell_at": "2026-09-27T16:41:42.763760+00:00",
+      "last_cell_at": "2026-09-27T16:52:30.413846+00:00",
+      "new_record_model_calls": 0,
+      "scope": {
+        "historical_record_candidate_recomputations": 6001,
+        "recomputed_original_record_episode_selections": 384
+      },
+      "status": "PASS",
+      "historical_registry_and_new_plot_scope": {
+        "topic": "modes",
+        "record_candidate_recomputations": 6001,
+        "registry_tasks": 4821,
+        "record_episode_selections": 384,
+        "new_figures": 1,
+        "elapsed_seconds_actual_execution": 623.7411276800001
+      },
+      "actual_full_production_shards_and_point_fates": null,
+      "synthetic_and_pilot": null,
+      "review_helpers": {
+        "path": "task1/evidence/goal3/independent_c/review_full_notebook.py",
+        "sha256": "24f91a3d6bd03886aecf6b19a544b938e7990d3339dfd6d2958484240243e12d",
+        "functions": [
+          "historical_check",
+          "figure_check"
+        ],
+        "old_top_level_audit_or_identity_assertion_executed": false
+      }
+    }
+  ],
+  "claim": "C independently reads each listed real fresh-kernel execution receipt, every code-cell event/source/output, all artifact hashes, every registered historical task/episode and newly plotted values. For each basic run C reads all285 actual new /tmp production shards, compares their actual hashes with canonical frozen trace hashes, reduces every original point fate and11386 IDs/1173410 points/22772 processing observations, and checks9720 parameter/order scope. System FULL is complete registered historical modes/memory scope. C launches no numerical processing or model calls.",
+  "package_equivalence": "Final ZIP source/dependency/input equivalence is separately checked; a report-only repack is inherited equivalent execution evidence, not a new execution."
+}

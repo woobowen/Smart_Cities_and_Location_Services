@@ -1,0 +1,38 @@
+{
+  "role_context": "/root/c_independent",
+  "issue_id": "CL-C02",
+  "status": "VERIFIED",
+  "targets": [
+    {
+      "path": "task1/reports/build_final_sources.py",
+      "sha256": "b40dc6913352384af6a0ded61d2a76e8216f501ace6958b27311cbd66cd579e0"
+    },
+    {
+      "path": "task1/reports/experiment1/production_generated.tex",
+      "sha256": "a2c223ad0037817ddb075f87622b53f915a01954292b19606cf5fdb3a81a82bc"
+    },
+    {
+      "path": "task1/reports/experiment1/experiment1.pdf",
+      "sha256": "5a7f01b64be6a9bc424b1e8cc90ccae9306e21a9959ff674363fcc4c046d7606"
+    },
+    {
+      "path": "task1/evidence/goal3/report_build/render200/experiment1/page-20.png",
+      "sha256": "270223c847d9e69f0b403e82dab41106dd8c950538f0f050954e2e81b3e8957b"
+    },
+    {
+      "path": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/report_revision/table_spacing_build_output.txt",
+      "sha256": "a96ccbc99015f83fc5821fc30bd495d58df8ec4d6b65012b88251688cc5a62dd"
+    }
+  ],
+  "checked_components": [
+    "actual report generator column specification",
+    "generated production table values unchanged",
+    "XeLaTeX actual exit0 and no unresolved log diagnostics",
+    "final physicalpage20 opened with view_image(detail=original),200dpi",
+    "current PDF/page hash binding",
+    "final page21 reference precision and unchanged29 page content binding"
+  ],
+  "independent_evidence": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/c_review/visual_content_receipt.json",
+  "independent_evidence_sha256": "d6f6c5aef7dc00288f172ae886918339593830afc057b6d6fce02d755019dda7",
+  "scope": "Table14 spacing repaired without numeric/method change; all34 current report pages visually covered in independent C context. Does not close external Process Evidence or final user/GPT acceptance."
+}

@@ -1,0 +1,233 @@
+{
+  "task_id": "SC-LAB1-G3-CLOSEOUT-001",
+  "as_of": "2026-09-27T18:00:53.228231+00:00",
+  "status_kind": "CURRENT_ACTUAL_SCOPE_NOT_USER_ACCEPTANCE",
+  "checks": [
+    {
+      "id": "CL01",
+      "object": "工作区与冻结边界",
+      "status": "PASS",
+      "actual_scope": "main承接1a5e26b；原件/旧run/用户ZIP保护；32数值源未改",
+      "action": "ls -la、git状态/远端核对；C check_frozen_and_identity.py",
+      "result": "7启动保护文件、32数值源、132合同绑定一致",
+      "evidence": [
+        "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/startup.json",
+        "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/c_review/frozen_identity_receipt.json"
+      ],
+      "remaining": "无；启动7项保护文件与原有用户ZIP当前仍一致"
+    },
+    {
+      "id": "CL02",
+      "object": "身份完整同步",
+      "status": "PASS",
+      "actual_scope": "唯一assignment.json → metadata/两报告PDF/Notebook/ZIP；学号字符串",
+      "action": "两次REPORT_BUILD；重复metadata生成；pytest identity/package回归",
+      "result": "吴博闻/10245102410一致；12测试+10子测试；历史身份缺项未倒写",
+      "evidence": [
+        "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/identity_package_retest.xml",
+        "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/c_review/frozen_identity_receipt.json",
+        "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/PACKAGE_VALIDATION.json"
+      ],
+      "remaining": "无身份外部缺项"
+    },
+    {
+      "id": "CL03",
+      "object": "教师T1/T2覆盖",
+      "status": "PASS",
+      "actual_scope": "13项T1与8项T2实际入口、来源、数值与边界",
+      "action": "C check_review_snapshot.py、check_review_maps.py及实际全项内容核读",
+      "result": "65项含全部13T1/8T2与44U，C逐项读来源/做法/状态/限制并核教师PPT指定原页；311函数、386cells、676当前PDF页锚点与2073链接核验通过。",
+      "evidence": [
+        "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/c_review/requirements_literature_receipt.json",
+        "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/c_review/review_input_snapshot_receipt.json"
+      ],
+      "remaining": "用户/网页GPT随后深入审核；T1-12正式互动外部缺项保留"
+    },
+    {
+      "id": "CL04",
+      "object": "用户U01—U44对账",
+      "status": "PASS",
+      "actual_scope": "44项归并索引，不伪称逐字聊天；授权演变/剩余限制分开",
+      "action": "C check_review_snapshot.py、check_review_maps.py及实际全项内容核读",
+      "result": "U01—U44全部核对来源类型、授权演变、可证明与不能证明内容；真实送审快照和20条历史验收原样性通过C。",
+      "evidence": [
+        "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/c_review/requirements_literature_receipt.json",
+        "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/c_review/review_input_snapshot_receipt.json"
+      ],
+      "remaining": "用户/网页GPT随后深入审核；T1-12正式互动外部缺项保留"
+    },
+    {
+      "id": "CL05",
+      "object": "教学差异和文献使用",
+      "status": "PASS",
+      "actual_scope": "7类教学差异，28源阅读/采用/试验/事后对应",
+      "action": "C check_review_snapshot.py、check_review_maps.py及实际全项内容核读",
+      "result": "7项教学差异逐项核对；26归档源题录/访问层级加2官方转换文档，不倒推论文影响，不补造regret或28篇全文阅读。",
+      "evidence": [
+        "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/c_review/requirements_literature_receipt.json",
+        "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/c_review/review_input_snapshot_receipt.json"
+      ],
+      "remaining": "用户/网页GPT随后深入审核；T1-12正式互动外部缺项保留"
+    },
+    {
+      "id": "CL06",
+      "object": "科学表述",
+      "status": "PASS",
+      "actual_scope": "冻结S0/D2/ENU、分母、共同覆盖/P输入保证、负结果和record352边界",
+      "action": "C check_report_numbers.py；与1a5e26b result_summary深比较",
+      "result": "10组表数字对原件；50位Decimal重算266.016754425…；summary仅/at变化",
+      "evidence": [
+        "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/c_review/report_numbers_receipt.json",
+        "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/c_review/result_summary_equivalence.json"
+      ],
+      "remaining": "无研究变更；来源CRS仍UNVERIFIED"
+    },
+    {
+      "id": "CL07",
+      "object": "Experiment Report",
+      "status": "PASS",
+      "actual_scope": "22页当前正文、引用、教学差异、图表及正式身份",
+      "action": "XeLaTeX编译；当前C全文和逐页目视；表14间距修复重建",
+      "result": "无未解决编译诊断；正文数字和限制通过限定范围核验",
+      "evidence": [
+        "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/c_review/visual_content_receipt.json",
+        "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/c_review/CL-C02_closure.json"
+      ],
+      "remaining": "新网页GPT最终文档验收PENDING"
+    },
+    {
+      "id": "CL08",
+      "object": "Process真实性与权限",
+      "status": "BLOCKED",
+      "actual_scope": "12页技术事实送审稿已精修；Part I/II保留；身份已同步",
+      "action": "授权工作区原件/spec/Lock盘点；C全文逐页检查",
+      "result": "可做工程通过；真实完整互动原件、批准spec和Evidence/Block Lock未齐",
+      "evidence": [
+        "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/b_handoff/evidence_inventory.json",
+        "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/c_review/visual_content_receipt.json"
+      ],
+      "remaining": "Evidence Master提供对应真实原件/批准呈现spec并按协议审核Lock；不自行补造"
+    },
+    {
+      "id": "CL09",
+      "object": "PDF实际视觉验收",
+      "status": "PASS",
+      "actual_scope": "当前22+12全部34页200dpi；变动2页重看，共36次页视",
+      "action": "C tools.view_image(detail=original)，逐页实际检查；哈希绑定当前PDF/文本/页图",
+      "result": "无缺字、裁切或表14数字连读；源截图分辨率未伪装提高",
+      "evidence": [
+        "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/c_review/visual_content_receipt.json"
+      ],
+      "remaining": "页面内容再变更则重新审受影响页"
+    },
+    {
+      "id": "CL10",
+      "object": "Notebook与复现",
+      "status": "PASS",
+      "actual_scope": "仓库与同一实际解压包各basic/system新内核FULL；默认0模型调用",
+      "action": "execute_notebook 仓库/同一解压目录各两本；C查实际cell输出、注册表和新分片；Journal.accept notebooks",
+      "result": "4次新内核FULL：12/8/12/8代码单元；2次各285生产分片和全部原始点独立核对；记录级Provider尝试0。",
+      "evidence": [
+        "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/c_review/notebook_runs_receipt.json",
+        "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/c_review/notebooks_task_receipt.json",
+        "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/c_review/package_execution_equivalence.json"
+      ],
+      "remaining": "无；报告修订包继承同字节运行闭包证据，未冒称再次执行"
+    },
+    {
+      "id": "CL11",
+      "object": "提交包",
+      "status": "PASS",
+      "actual_scope": "当前116成员；安全路径/CRC/身份/PDF/完整依赖已核",
+      "action": "C成员/CRC/路径/身份/当前PDF/完整闭包及新内核FULL；Journal.accept package",
+      "result": "当前116成员、15,776,719bytes，新ZIP真实构建/静态解压/两本隔离FULL和113非PDFpayload等价证据齐全；工程已C接受。",
+      "evidence": [
+        "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/PACKAGE_VALIDATION.json",
+        "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/c_review/package_task_receipt.json",
+        "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/c_review/package_execution_equivalence.json"
+      ],
+      "remaining": "包保持REVIEW_ONLY/NOT_READY；正式互动Evidence和最终用户/网页审核未闭合"
+    },
+    {
+      "id": "CL12",
+      "object": "复盘指南与Handoff",
+      "status": "PASS",
+      "actual_scope": "4块/13理解问题、两份Handoff、当前Notebook/PDF/图源定位",
+      "action": "C check_handoffs_task.py及真实全文阅读；Journal.accept handoffs",
+      "result": "21targets/134sources，22TD当前cell/PDF定位、34页text/render绑定通过；四块13理解问题不预设用户通过。",
+      "evidence": [
+        "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/c_review/handoffs_task_receipt.json",
+        "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/c_review/guide_interaction_receipt.json"
+      ],
+      "remaining": "后续用户与网页GPT实际深入讲解/审核"
+    },
+    {
+      "id": "CL13",
+      "object": "持续内部修复",
+      "status": "PASS",
+      "actual_scope": "普通包状态、引用、链接、措辞、表格已修；两次中断的同源新内核重试已独立闭合并恢复父任务",
+      "action": "真实issue→修复/同源重试→回归/重建→独立C→Journal.close_issue",
+      "result": "CL-C01/02/03均独立闭合并恢复父任务；辅助送审schema错误最小修复后真实提交成功且C核实。",
+      "evidence": [
+        "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/c_review/CL-C01_closure.json",
+        "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/c_review/CL-C02_closure.json",
+        "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/c_review/CL-C03_closure.json",
+        "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/controller_submission_repair.json",
+        "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/c_review/notebooks_task_receipt.json"
+      ],
+      "remaining": "无普通工程阻碍；SIGTERM发起原因unknown保留，不假称数学修复"
+    },
+    {
+      "id": "CL14",
+      "object": "当前版本一致",
+      "status": "PASS",
+      "actual_scope": "源码/报告/图/文本/包/导航分开绑定；数值CODE_SHA不改",
+      "action": "当前六项叶任务的C回执与Journal.current检查；不可变治理快照及包内容等价绑定",
+      "result": "源码/冻结结果/报告/34页图/两Notebook/116成员包/TD导航均绑定当前有效内容；旧回执与新执行范围分开。",
+      "evidence": [
+        "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/c_review/handoffs_task_receipt.json",
+        "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/c_review/notebooks_task_receipt.json",
+        "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/c_review/package_task_receipt.json",
+        "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/c_review/review_input_snapshot_receipt.json"
+      ],
+      "remaining": "最终实际发布SHA由CL16单列；不预造文件自身SHA"
+    },
+    {
+      "id": "CL15",
+      "object": "安全与范围",
+      "status": "PASS",
+      "actual_scope": "无新调参、外部数据、LIVE；不发教师、不分发字体/论文全文",
+      "action": "完整当前task1变更预检、C包安全路径/成员核验、11-file --check、当前导航检查、diff空白分类",
+      "result": "294个变更/新增文件无凭据/大文件/越界；2396本地链接通过；未打包字体/私密材料，未发教师，未改变source_crs及标准。",
+      "evidence": [
+        "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/PREFLIGHT.json",
+        "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/CURRENT_LINKS.json",
+        "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/WHITESPACE_CHECK.json",
+        "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/c_review/package_receipt.json",
+        "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/c_review/upload_bundle_receipt.json"
+      ],
+      "remaining": "仅正式Evidence与用户/网页审核；无新增安装或持久环境配置"
+    },
+    {
+      "id": "CL16",
+      "object": "发布",
+      "status": "NOT_RUN",
+      "actual_scope": "内部实际范围验收后发布准确PARTIAL_BLOCKED待审点",
+      "action": "预检main实际远端仍1a5e26b；尚未push",
+      "result": "没有提前签远程一致或最终PASS",
+      "evidence": [],
+      "remaining": "内部验收后push main并固定SHA回读"
+    }
+  ],
+  "independent_states": {
+    "Identity": "VERIFIED",
+    "Closeout Engineering": "PARTIAL_BLOCKED; INTERNAL_EXECUTABLE_SCOPE_VERIFIED; PUBLICATION_PENDING",
+    "Process Evidence": "BLOCKED_EXTERNAL_ORIGINALS_SPEC_LOCK",
+    "Deliverable": "FINAL_REVIEW",
+    "Understanding": "LEARNING",
+    "Submission": "NOT_READY",
+    "New GPT_SECOND_REVIEW": "PENDING"
+  },
+  "new_record_model_calls": 0,
+  "new_installs": []
+}

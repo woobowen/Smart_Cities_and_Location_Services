@@ -1,0 +1,140 @@
+{
+  "at": "2026-09-27T18:00:57.956720+00:00",
+  "status": "PASS",
+  "scope": "All current tracked changes since the handover anchor plus nonignored new task1 files; ZIP member security is checked independently by C.",
+  "checked_file_count": 297,
+  "findings": [],
+  "protected_files_equal_startup": {
+    "SC-LAB1-G1-COMPLETE-001_HANDOFF.zip": true,
+    "SC-LAB1-G1-REPAIR-001_HANDOFF.zip": true,
+    "SC-LAB1-G1-CLOSURE-002_HANDOFF.zip": true,
+    "task1/作业/作业/traj_dict.json": true,
+    "task1/实验课1.pptx": true,
+    "task1/config/goal3/contract.json": true,
+    "task1/evidence/goal3/current_runs.json": true
+  },
+  "personal_absolute_paths": [
+    {
+      "path": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/c_review/notebook_run_repository_basic.json",
+      "classification": "RECORDED_EXECUTION_PROVENANCE"
+    },
+    {
+      "path": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/c_review/notebook_run_repository_system.json",
+      "classification": "RECORDED_EXECUTION_PROVENANCE"
+    },
+    {
+      "path": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/c_review/notebook_runs_receipt.json",
+      "classification": "RECORDED_EXECUTION_PROVENANCE"
+    },
+    {
+      "path": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/isolated_system_retry_supervisor.json",
+      "classification": "RECORDED_EXECUTION_PROVENANCE"
+    },
+    {
+      "path": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/notebooks/isolated_basic/execution_receipt.json",
+      "classification": "RECORDED_EXECUTION_PROVENANCE"
+    },
+    {
+      "path": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/notebooks/isolated_system_retry/execution_receipt.json",
+      "classification": "RECORDED_EXECUTION_PROVENANCE"
+    },
+    {
+      "path": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/notebooks/repository_basic_retry/execution_receipt.json",
+      "classification": "RECORDED_EXECUTION_PROVENANCE"
+    },
+    {
+      "path": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/notebooks/repository_system/execution_receipt.json",
+      "classification": "RECORDED_EXECUTION_PROVENANCE"
+    },
+    {
+      "path": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/repository_basic_retry_supervisor.json",
+      "classification": "RECORDED_EXECUTION_PROVENANCE"
+    },
+    {
+      "path": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/review_input_snapshot/goal_state.json",
+      "classification": "RECORDED_EXECUTION_PROVENANCE"
+    },
+    {
+      "path": "task1/evidence/goal3/goal_state.json",
+      "classification": "RECORDED_EXECUTION_PROVENANCE"
+    },
+    {
+      "path": "task1/evidence/goal3/report_build/experiment1_compile_output.txt",
+      "classification": "RECORDED_EXECUTION_PROVENANCE"
+    }
+  ],
+  "absolute_path_boundary": "Recorded local interpreter/cwd/work provenance remains in internal execution evidence. Final runtime Notebook/dependencies and ZIP are separately checked for portability.",
+  "largest_files": [
+    {
+      "path": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/candidate/REVIEW_ONLY_identity_candidate.zip",
+      "bytes": 15777807
+    },
+    {
+      "path": "task1/submission/REVIEW_ONLY_10245102410_吴博闻_实验一.zip",
+      "bytes": 15776719
+    },
+    {
+      "path": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/executed_package/REVIEW_ONLY_10245102410_吴博闻_实验一.zip",
+      "bytes": 15776671
+    },
+    {
+      "path": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/notebooks/isolated_basic/artifacts/production/figures/plot_data.json",
+      "bytes": 9216134
+    },
+    {
+      "path": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/notebooks/repository_basic_retry/artifacts/production/figures/plot_data.json",
+      "bytes": 9216134
+    },
+    {
+      "path": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/notebooks/isolated_system_retry/artifacts/modes/figures/plot_data.json",
+      "bytes": 5744037
+    },
+    {
+      "path": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/notebooks/repository_system/artifacts/modes/figures/plot_data.json",
+      "bytes": 5744037
+    },
+    {
+      "path": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/notebooks/repository_basic_retry/作业1轨迹数据预处理_完成版.ipynb",
+      "bytes": 5475124
+    },
+    {
+      "path": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/notebooks/isolated_basic/作业1轨迹数据预处理_完成版.ipynb",
+      "bytes": 5475116
+    },
+    {
+      "path": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/notebooks/isolated_system_retry/任务3_LLM辅助评估清洗_完成版.ipynb",
+      "bytes": 2785774
+    },
+    {
+      "path": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/notebooks/repository_system/任务3_LLM辅助评估清洗_完成版.ipynb",
+      "bytes": 2785766
+    },
+    {
+      "path": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/a_diagnosis/MASTER_REQUIREMENTS_REVIEW.json",
+      "bytes": 1603458
+    }
+  ],
+  "final_notebook_output_policy": [
+    {
+      "path": "task1/notebooks/final/任务3_LLM辅助评估清洗_完成版.ipynb",
+      "clean_generated_source": true,
+      "code_cells": 8,
+      "executed_copies_location": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/notebooks"
+    },
+    {
+      "path": "task1/notebooks/final/作业1轨迹数据预处理_完成版.ipynb",
+      "clean_generated_source": true,
+      "code_cells": 12,
+      "executed_copies_location": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/notebooks"
+    }
+  ],
+  "unrelated_original_untracked_preserved": [
+    "SC-LAB1-G1-CLOSURE-002_HANDOFF.zip",
+    "SC-LAB1-G1-COMPLETE-001_HANDOFF.zip"
+  ],
+  "outside_task_changes": [],
+  "new_installs": [],
+  "persistent_environment_changes": [],
+  "new_record_model_calls": 0,
+  "teacher_submission_performed": false
+}

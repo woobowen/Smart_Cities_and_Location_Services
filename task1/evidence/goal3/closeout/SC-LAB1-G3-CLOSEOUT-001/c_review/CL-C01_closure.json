@@ -1,0 +1,32 @@
+{
+  "role_context": "/root/c_independent",
+  "issue_id": "CL-C01",
+  "status": "VERIFIED",
+  "checked_at_utc": "2026-09-27T16:27:00.846564+00:00",
+  "targets": [
+    {
+      "path": "task1/goal3/package.py",
+      "sha256": "b2ab4a866f698796ea63b28f653356dd389115003c5449d4d9c1190b69102bf9"
+    },
+    {
+      "path": "task1/goal3/__main__.py",
+      "sha256": "7a4ae23c7d55012c54e059d84ea576762275dba29858f0053094a0b499aacbd0"
+    },
+    {
+      "path": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/identity_package_retest.xml",
+      "sha256": "238557ecaf4ed424fc9e21e50fff8cdfb92f07d2307e6a64c6c43fddfd167996"
+    }
+  ],
+  "checked_components": [
+    "Read repaired package closure/build and REPORT_BUILD final return source directly",
+    "Actual real closure top-level and trusted assignment nested Submission both NOT_READY; sent_to_teacher=False",
+    "Actual temporary synthetic ZIP builder return and embedded manifest assert NOT_READY and sent_to_teacher=False; synthetic archive removed",
+    "Read real B regression XML: 22 passed, 0 failures/errors/skips"
+  ],
+  "not_checked": [
+    "This issue receipt is not the final production ZIP or report visual acceptance; those remain separate."
+  ],
+  "new_record_model_calls": 0,
+  "repairer": "B:root",
+  "independence": "C did not edit these implementation files"
+}

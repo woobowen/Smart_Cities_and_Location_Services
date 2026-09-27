@@ -1,0 +1,28 @@
+{
+  "role": "A_SELF_CHECK_NOT_INDEPENDENT_C",
+  "status": "LOCATOR_CHECKS_PASS",
+  "checks": [
+    {
+      "id": "immutable_review_input_manifest_and_two_snapshots",
+      "ok": true
+    },
+    {
+      "id": "65_stable_ids",
+      "ok": true
+    }
+  ],
+  "counts": {
+    "markdown_local_links": 1999,
+    "unique_source_bindings": 137,
+    "entry_notebook_cell_locators": 386,
+    "entry_pdf_text_locators": 263,
+    "immutable_governance_snapshots": 2
+  },
+  "issues": [],
+  "scope": "Current exact local links, bound source bytes, two real immutable governance-input snapshots and their manifest, all 65 IDs, all mapped stable cells and actual text-page anchors. Active governance is navigation only; no later-state equality, visual/experiment/teacher acceptance claim.",
+  "inputs": {
+    "MASTER_REQUIREMENTS_REVIEW.json": "9ed2b59807a14c6b84e6674c0dbd5059767e6c7897c353786b386cea9a2c8e2b",
+    "literature_use_map.json": "99072dec663fd5634688aeda33256ece2c4eb8ca134d8a5e67fc5284d290f9ee",
+    "TEACHING_DIFFERENCES.md": "5b3f5d5f94af8f9b532005d632054ac1ba203bc3afcbe75e0241d7210c7af6bc"
+  }
+}

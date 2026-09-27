@@ -477,3 +477,9 @@
 - [production_freeze.json](../../evidence/goal3/production_freeze.json)
 - [manifest.json](../../evidence/goal3/runs/g3-full-production-01/manifest.json)
 - [new_coverage_boundary_receipt.json](../../evidence/goal3/independent_c/new_coverage_boundary_receipt.json)
+
+## 2026-09-28 收尾状态补充
+
+当前用户直接提供姓名吴博闻、学号字符串10245102410，并授权先完成工程收尾、再按四板块深入讲解与审核。来源是 [本次授权节选](../../evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/AUTHORIZATION.md)，不是历史聊天恢复或Evidence Lock。上述历史候选事实与原话边界保持。
+
+当前真实来源/spec/LOCK盘点见 [聚焦依赖清单](../../evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/b_handoff/evidence_inventory.md)。身份已关闭；剩余依赖是完整原始聊天/截图与消息范围、Evidence Master批准入选及annotation spec、对应检查与Lock。候选索引不决定Tier、裁切、高亮、关系或报告顺序。Understanding=LEARNING，新网页GPT二审=PENDING，Submission=NOT_READY。

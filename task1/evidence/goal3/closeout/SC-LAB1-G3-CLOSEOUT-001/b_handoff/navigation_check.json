@@ -1,0 +1,97 @@
+{
+  "role_context": "/root/b_review_guide",
+  "status": "LOCAL_STATIC_CHECKS_WITH_EXPECTED_PARENT_FINAL_BINDINGS_PENDING",
+  "scope": "Markdown links, referenced stable Notebook cell IDs, Python function/class names and JSON parsing only; no experiment, FULL run or visual acceptance",
+  "markdown_files": [
+    {
+      "path": "task1/docs/goal3/REVIEW_GUIDE.md",
+      "sha256": "85d5bbbf5b869a28a383bbd6d3f7ae53447b2636f938949c7c5c1f42b6b3a38c"
+    },
+    {
+      "path": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/b_handoff/evidence_inventory.md",
+      "sha256": "14e10df4c5ca323566c21c17e4216ea17b29e5fe098c974dcfda4571caeece48"
+    },
+    {
+      "path": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/b_handoff/HANDOFF_UPDATE_SNIPPETS.md",
+      "sha256": "3e7412e13e11992c30dcadd01a6bd638a744577264bf6adb930a539a24ebb55c"
+    }
+  ],
+  "existing_link_count": 85,
+  "unexpected_missing_links": [],
+  "expected_parent_bindings_pending": [
+    {
+      "from": "task1/docs/goal3/REVIEW_GUIDE.md",
+      "target": "../../evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/a_diagnosis/MASTER_REQUIREMENTS_REVIEW.md"
+    },
+    {
+      "from": "task1/docs/goal3/REVIEW_GUIDE.md",
+      "target": "../../evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/a_diagnosis/literature_use_map.md"
+    }
+  ],
+  "notebook_stable_ids_checked": [
+    "lab1-16c26970dd41618a",
+    "lab1-20337038d9968da1",
+    "lab1-5edb2858a06036d2",
+    "lab1-62885400114d7d2b",
+    "lab1-70227bc1defb860d",
+    "lab1-95890264cce459cd",
+    "lab1-9d637e0bfc2f7ff6",
+    "lab1-bd932b47abf15ad3",
+    "lab1-c8644f76db1f9bfe",
+    "lab1-f7fe7424c6193f77"
+  ],
+  "missing_notebook_ids": [],
+  "function_names_checked": {
+    "task1/workflow/coordinates.py": [
+      "working_xy",
+      "conditional_adapter"
+    ],
+    "task1/workflow/geometry.py": [
+      "split_trajectory",
+      "filter_segments",
+      "direction_candidates",
+      "denoise_trajectory",
+      "point_segment_distance",
+      "douglas_peucker_indices"
+    ],
+    "task1/workflow/g2_metrics.py": [
+      "common_reference_metrics",
+      "record_metrics",
+      "review_record"
+    ],
+    "task1/goal3/selection.py": [
+      "paired",
+      "aggregate_pairs",
+      "choose"
+    ],
+    "task1/workflow/g2_pipeline.py": [
+      "run_record"
+    ],
+    "task1/workflow/g2_modes.py": [
+      "run_batch_episode"
+    ],
+    "task1/goal3/reproduce.py": [
+      "recompute_historical"
+    ],
+    "task1/workflow/g2_memory.py": [
+      "build_snapshot",
+      "FrozenMemory",
+      "consumption"
+    ],
+    "task1/goal3/control.py": [
+      "Journal"
+    ],
+    "task1/goal3/freezes.py": [
+      "verified_run",
+      "selection_decision",
+      "release_decision"
+    ]
+  },
+  "missing_function_names": [],
+  "inventory_json_parsed": true,
+  "experiment_runs": 0,
+  "record_level_model_calls": 0,
+  "new_dependencies": [],
+  "checked_at_utc": "2026-09-27T16:27:31.962425+00:00",
+  "whitespace_issues": []
+}

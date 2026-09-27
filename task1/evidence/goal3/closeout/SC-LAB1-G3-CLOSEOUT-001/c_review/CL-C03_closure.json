@@ -1,0 +1,86 @@
+{
+  "role_context": "/root/c_independent",
+  "issue_id": "CL-C03",
+  "status": "VERIFIED",
+  "checked_at": "2026-09-27T17:40:20.993744+00:00",
+  "targets": [
+    {
+      "path": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/run_notebook_supervised.py",
+      "sha256": "a76ce25d919eae8c9ee990f30c38157c88f20eb727d0135a0c8140c68495de1f"
+    },
+    {
+      "path": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/notebook_interruptions.json",
+      "sha256": "4d6d9e20886962db575b60e59ea5c31d77d5414a058e2e6720236fd26b8aca8b"
+    },
+    {
+      "path": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/repository_basic_retry_supervisor.json",
+      "sha256": "f9291e7a0f44052f81fa376be46579dd0a0283d4fe1481dfb3f2bf5ee4bd66db"
+    },
+    {
+      "path": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/repository_basic_retry_output.txt",
+      "sha256": "7b7cf35179c808feb9ab7db18027b19f116de4a5ccb1c6b10a1f20b07500a3ec"
+    },
+    {
+      "path": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/notebooks/repository_basic_retry/execution_receipt.json",
+      "sha256": "32bbd3471f30358c722ff9f099b5c42ee2ab84010b8a232ad38e1de1e3a6ee65"
+    },
+    {
+      "path": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/isolated_system_retry_supervisor.json",
+      "sha256": "e3b55c595e60521bd908b59cc8f37ace0267c1706c4f011c38ffdd63e32464c0"
+    },
+    {
+      "path": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/isolated_system_retry_output.txt",
+      "sha256": "6dc2d15713e998e41720c656a23983ca590d46ece06955efce30bcd96a4d92ee"
+    },
+    {
+      "path": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/notebooks/isolated_system_retry/execution_receipt.json",
+      "sha256": "e4cdbbe13b38e57d714e9f5c7d64f9acd44cca4d0968aaadb374dc3e739138f9"
+    }
+  ],
+  "checked_components": [
+    "Actual interrupted143 logs and preserved partial cell/artifact history; no false FULL status.",
+    "Persistent launcher fixed allowlist, same authorized execute_notebook entrypoint and same current Notebook/runtime/input bytes; separate work/evidence dirs and new kernels.",
+    "Both real retry supervisor exit0/time boundaries crosschecked against every cell event and full execution receipt; success not inferred merely from exit0.",
+    "Four independent C per-execution scopes aggregated; basic each285 actual shards/11386 IDs/1173410 points/22772 evaluations/9720 historical parameter scope; system each6001 candidate computations and384 retained episode choices.",
+    "Current final ZIP113 nonPDF payload bytes match the actually executed archive; no fifth algorithm run or new model call."
+  ],
+  "interrupted_attempts": [
+    {
+      "attempt": "repository_basic",
+      "completed_code_cells": 10,
+      "status": "INTERRUPTED_NOT_FULL",
+      "log_sha256": "e39c2a4940d440cc34312fc4120cd52f1881f95094427772571130ba0bce5fdc",
+      "full_receipt_exists": false
+    },
+    {
+      "attempt": "isolated_system",
+      "completed_code_cells": 2,
+      "status": "INTERRUPTED_NOT_FULL",
+      "log_sha256": "e44aec89efbf066e13675cf23a9ba657e432433514a4fdadf841e3033885fe49",
+      "full_receipt_exists": false
+    }
+  ],
+  "successful_retries": [
+    {
+      "attempt": "repository_basic_retry",
+      "independent_C_execution_review": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/notebooks/repository_basic_retry/execution_receipt.json",
+      "real_code_cells": 12,
+      "actual_elapsed_seconds": 3260.129684322,
+      "status": "FULL_VERIFIED",
+      "new_record_model_calls": 0
+    },
+    {
+      "attempt": "isolated_system_retry",
+      "independent_C_execution_review": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/notebooks/isolated_system_retry/execution_receipt.json",
+      "real_code_cells": 8,
+      "actual_elapsed_seconds": 628.0417845960001,
+      "status": "FULL_VERIFIED",
+      "new_record_model_calls": 0
+    }
+  ],
+  "independent_full_receipt": {
+    "path": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/c_review/notebook_runs_receipt.json",
+    "sha256": "06231dcbaac77fae70494996caca35f537fbc033607cdf8cccfe3c3795eeb65b"
+  },
+  "cause_boundary": "SIGTERM initiating source remains unknown. The verified resolution is successful same-source fresh-kernel recovery with preserved failure evidence, not a claim that an identified mathematical bug was fixed or all future process interruption prevented."
+}

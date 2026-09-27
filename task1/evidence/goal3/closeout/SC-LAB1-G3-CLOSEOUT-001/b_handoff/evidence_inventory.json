@@ -1,0 +1,2532 @@
+{
+  "task_id": "SC-LAB1-G3-CLOSEOUT-001",
+  "parent_goal": "SC-LAB1-G3-FINAL-001",
+  "role_context": "/root/b_review_guide",
+  "checked_at_utc": "2026-09-27T16:23:00.057800+00:00",
+  "scope": "Authorized repository only; no personal account logs, other projects, browser histories or other ChatGPT conversations accessed.",
+  "status": "PARTIAL_TEXT_SOURCES_AVAILABLE_FORMAL_INTERACTION_EVIDENCE_BLOCKED",
+  "inspection_limits": [
+    "Filename/extension discovery including ignored workspace files, bounded source-text/spec-field checks, and ZIP member-name inspection. No claim to have visually reviewed every discovered figure or rendered page.",
+    "An absence finding is restricted to this workspace snapshot, not to user-owned material elsewhere.",
+    "No formal Evidence/Block Lock was created or inferred.",
+    "No archive member was extracted or executed; old archives were not modified."
+  ],
+  "commands": [
+    "ls -la",
+    "git status --short",
+    "rg --files --hidden --no-ignore -g '!.git/**' -g '!.venv/**' -g '!.pytest_cache/**' .",
+    "rg -n --glob '*.md' --glob '*.json' --glob '*.tex' --glob '!governance_tool_events.json' 'RAW_CAPTURED|\"raw_screenshot\"|\"annotation_spec\"|\"evidence_lock\"|\"block_lock\"|^# EVIDENCE LOCK|^# ORIGINAL TRANSCRIPT PACKET|Status: LOCKED|Status: \\*\\*LOCKED' evidence/process-report task1/evidence task1/docs",
+    "Python standard-library json/zipfile/hashlib: exact spec fields, archive member names and byte hashes only"
+  ],
+  "current_identity_input": {
+    "status": "AVAILABLE_DIRECT_USER_AUTHORIZATION",
+    "source": "task1/config/assignment.json",
+    "student_id_type": "str",
+    "checked_equal_to_current_authorization": true,
+    "external_dependency": false,
+    "report_and_package_verification": "Owned by parent closeout build; this inventory checked config fields only"
+  },
+  "available_sources": [
+    {
+      "path": "evidence/process-report/workflow-construction/WORKFLOW_EVIDENCE_PLAN.md",
+      "sha256": "3b5ee984399eedc60e0641ea2a733da933d6b04458be19767f9dfaddb358ba5f",
+      "kind": "ACTIVE_SCHEMA_NO_REGISTERED_RECORDS",
+      "actual_read_scope": "Status and Records; no original raw files or approved annotation spec registered"
+    },
+    {
+      "path": "docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md",
+      "sha256": "fa640db61ce7b1e1487083a1d6f663c75eb11ff6ee6b7b01b21f48dbcdc7b06a",
+      "kind": "ACTIVE_PROTOCOL",
+      "actual_read_scope": "Full text read; §§3–5,12,24,29–35 define original/spec/lock boundary"
+    },
+    {
+      "path": "docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md",
+      "sha256": "10cd5024641f4877fa0e7d569c507c4246bc3d0574901658e490ab0f5ff70d6c",
+      "kind": "ACTIVE_VISUAL_SYSTEM",
+      "actual_read_scope": "Full text read; §§1,5–8,14,18 define report/evidence identity"
+    },
+    {
+      "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/AUTHORIZATION_SUPPLEMENT.md",
+      "sha256": "2bce4b21939de5843678bdda1de18c64e9703c3e924fd63ff3d7988f69fe5248",
+      "kind": "ARCHIVED_USER_AUTHORIZATION",
+      "actual_read_scope": "D2 and conditional coordinate authorization; no earlier complete web conversation supplied"
+    },
+    {
+      "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/USER_DECISIONS.json",
+      "sha256": "2b68e39573ab9256a353484842438a118445bb62ddbaca1c42fbd4eee9fe4f0e",
+      "kind": "ARCHIVED_USER_REPLY_TEXT",
+      "actual_read_scope": "D1/D2 replies, not a full Original Transcript Packet"
+    },
+    {
+      "path": "task1/evidence/goal2/USER_PROMPT.md",
+      "sha256": "f4b4246e4287e7f521c0fafbca4bed68c5d91e39f6818be64d25b10d34968603",
+      "kind": "ARCHIVED_USER_AUTHORIZATION",
+      "actual_read_scope": "Existing task-specific user text; provenance receipt reviewed"
+    },
+    {
+      "path": "task1/evidence/goal2/prompt_source.json",
+      "sha256": "0684e5fdf52410fc308324c36e03325d7f96b05eb7b8e9adaa3e4fce32a97253",
+      "kind": "PROMPT_PROVENANCE_RECEIPT",
+      "actual_read_scope": "Current authorized session source, user timestamp and digest; no other history read"
+    },
+    {
+      "path": "task1/evidence/goal3/USER_PROMPT.md",
+      "sha256": "e5fd60e707b3b5e4c62e8c522bbc58cbd17d89fe67ec29abaf2c3d037de723ec",
+      "kind": "ARCHIVED_USER_AUTHORIZATION",
+      "actual_read_scope": "Prior G3 task text, not current closeout prompt or old web GPT review log"
+    },
+    {
+      "path": "task1/evidence/goal3/interaction_candidates.json",
+      "sha256": "aeed5ae913f55059aefd4daa7c647a04edbc7bed7622a6ac81b038cae4f44bef",
+      "kind": "DERIVED_FACT_CANDIDATE_INDEX",
+      "actual_read_scope": "19 candidates inspected for actual spec/selection/order/lock fields; all unassigned"
+    },
+    {
+      "path": "task1/docs/goal3/INTERACTION_HANDOFF.md",
+      "sha256": "d9917b94494af7f21aa8c8fb3b74ecbb968f26f48d0da2d9dc8b1435498afe53",
+      "kind": "DERIVED_FACT_CANDIDATE_INDEX",
+      "actual_read_scope": "Historical facts with source pointers; no formal Evidence selection/annotation/lock authority"
+    },
+    {
+      "path": "task1/docs/goal3/TECHNICAL_HANDOFF.md",
+      "sha256": "8378a2391c54d24134400e8138d00a033a1181fd1749ab1479db2016dbcecbcd",
+      "kind": "PRE_CLOSEOUT_TECHNICAL_HANDOFF",
+      "actual_read_scope": "Read as inherited technical record; current source/identity/package fields require parent refresh"
+    },
+    {
+      "path": "task1/docs/goal3/DEFENSE_NOTES.md",
+      "sha256": "08c89a28a65b5d09bf1546a7926c4b75b52cf412a80a1c5e130a8dd59cd471d7",
+      "kind": "PRE_CLOSEOUT_DEFENSE_NOTES",
+      "actual_read_scope": "Read for explanation reuse; historical identity-pending sentence requires parent refresh"
+    },
+    {
+      "path": "task1/evidence/goal3/DELIVERY_INPUT_INVENTORY.md",
+      "sha256": "5ce83d10f1bf7b017411d8d546bd45456833a3fdc79faed9c11d00db0ad289bb",
+      "kind": "HISTORICAL_INPUT_INVENTORY",
+      "actual_read_scope": "Prior absence of identity is an as-of historical fact, not a current dependency"
+    },
+    {
+      "path": "task1/evidence/goal3/governance_tool_events.json",
+      "sha256": "19841374ae474ad8be55ea5cd1700d6739749762ac710bcb16232e970c2f845e",
+      "kind": "ACTUAL_TOOL_METADATA_NOT_TRANSCRIPT",
+      "actual_read_scope": "Header and limits inspected; 256 tool-event records, encrypted payload hashes are not readable message text"
+    },
+    {
+      "path": "templates/latex/process-report/README.md",
+      "sha256": "999d165c43b122a6c83a389af4b4082bd1366253f2a2f1ec5cb99a147ab31760",
+      "kind": "TEMPLATE_PROVENANCE",
+      "actual_read_scope": "Synthetic-demo declarations read at lines 330–346 and 442–444"
+    },
+    {
+      "path": "templates/latex/process-report/process_report_template.tex",
+      "sha256": "faa2b492b43d370756168c83a6a05d3d7661a6b211ec3a8178d83da3bdfb0bf9",
+      "kind": "TEMPLATE_PROVENANCE",
+      "actual_read_scope": "SYNTHETIC / TEMPLATE ONLY declarations found beside interaction/demo images"
+    },
+    {
+      "path": "task1/config/assignment.json",
+      "sha256": "77c4cc88cbf305561d19a3db874dc746bca5efb14d2091d664d097394a91edcf",
+      "kind": "CURRENT_DIRECT_USER_IDENTITY_CONFIG",
+      "actual_read_scope": "Actual current fields inspected: 吴博闻, student_id string 10245102410; identity is not an external gap"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-development-modes-02/modes/DEVELOPMENT-llm+memory+search-e1-b2/round1_call/attempt01/response.json",
+      "sha256": "6207cfd3ccfe3cee4b0cf7f12c807cf63a8f0175c9c77bcf3b1dc22c7059ce66",
+      "kind": "HISTORICAL_LIVE_EXPERIMENT_RESPONSE",
+      "actual_read_scope": "Directly parsed records 10232 and 7764 with proposal parameters/predictions/reasons; not user/GPT web dialogue"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-development-modes-02/modes/DEVELOPMENT-llm+memory+search-e1-b2/round1_call/attempt01/receipt.json",
+      "sha256": "c78baa29d9375fe02bde39a07fefb2be59827c4e7af3453eded039c1a719fb67",
+      "kind": "HISTORICAL_LIVE_RESPONSE_RECEIPT",
+      "actual_read_scope": "Directly parsed request_id, purpose, status and response_sha256; VERIFIED_STRUCTURE_ONLY is not quality acceptance"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-development-modes-02/modes/DEVELOPMENT-llm+memory+search-e1-b2/round2_call/attempt01/response.json",
+      "sha256": "fe36cab28325d549ba8118e21e59d53363b7147f4da77b45346d36404e58db98",
+      "kind": "HISTORICAL_LIVE_EXPERIMENT_RESPONSE",
+      "actual_read_scope": "Directly parsed records 10232 and 7764 with proposal parameters/predictions/reasons; not user/GPT web dialogue"
+    },
+    {
+      "path": "task1/evidence/goal2/runs/g2-development-modes-02/modes/DEVELOPMENT-llm+memory+search-e1-b2/round2_call/attempt01/receipt.json",
+      "sha256": "bdee1adfe206c1de03ef229621b2611265cbb5428ddffc0a5058e5e424246cc6",
+      "kind": "HISTORICAL_LIVE_RESPONSE_RECEIPT",
+      "actual_read_scope": "Directly parsed request_id, purpose, status and response_sha256; VERIFIED_STRUCTURE_ONLY is not quality acceptance"
+    }
+  ],
+  "discovery": {
+    "regular_files_visible": 5882,
+    "raster_image_count": 322,
+    "image_directory_counts": {
+      "evidence/infrastructure/CODEX-INFRA-REPAIR-001/experiment": 1,
+      "evidence/infrastructure/CODEX-INFRA-REPAIR-001/process": 1,
+      "evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/micro-trace-200dpi.png": 1,
+      "evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/pages-01-06.jpg": 1,
+      "evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/pages-07-12.jpg": 1,
+      "task1/evidence/goal1/revisions": 14,
+      "task1/evidence/goal2/c_contract": 20,
+      "task1/evidence/goal2/presentation_checks": 65,
+      "task1/evidence/goal3/independent_c": 6,
+      "task1/evidence/goal3/independent_documents": 6,
+      "task1/evidence/goal3/notebook_verification": 12,
+      "task1/evidence/goal3/report_build": 43,
+      "task1/figures/goal1/goal1_loop.png": 1,
+      "task1/figures/goal1/pilot_diagnostics.png": 1,
+      "task1/figures/goal2/direction_threshold_and_neighborhood.png": 1,
+      "task1/figures/goal2/dp_error_compression.png": 1,
+      "task1/figures/goal2/four_mode_failures_and_cost.png": 1,
+      "task1/figures/goal2/four_mode_paired_results.png": 1,
+      "task1/figures/goal2/goal2_actual_architecture.png": 1,
+      "task1/figures/goal2/memory_coverage_and_consumption.png": 1,
+      "task1/figures/goal2/order_protection_and_neighborhoods.png": 1,
+      "task1/figures/goal2/pdf-render-200dpi": 11,
+      "task1/figures/goal2/real_trajectory_cases.png": 1,
+      "task1/figures/goal2/segmentation_filter_grids.png": 1,
+      "task1/figures/goal2/segmentation_filter_response.png": 1,
+      "task1/figures/goal2/synthetic_metric_counterexamples.png": 1,
+      "task1/figures/goal3/development_candidates.png": 1,
+      "task1/figures/goal3/final_confirmation_pairs.png": 1,
+      "task1/figures/goal3/goal3_actual_workflow.png": 1,
+      "task1/figures/goal3/incumbent_decision_path.png": 1,
+      "task1/figures/goal3/pdf-render-200dpi": 7,
+      "task1/figures/goal3/point_fates_and_coverage.png": 1,
+      "task1/figures/goal3/production_trajectory_cases.png": 1,
+      "task1/figures/goal3/selection_tradeoffs.png": 1,
+      "task1/reports/build/draft_render": 27,
+      "task1/reports/build/offline_smoke_01": 5,
+      "task1/reports/build/offline_smoke_02": 10,
+      "task1/reports/experiment1/build": 21,
+      "task1/reports/process1/build": 12,
+      "task1/作业/作业/build_ppt": 7,
+      "task1/作业/作业/build_ppt_agent": 6,
+      "task1/作业/作业/figures": 8,
+      "templates/latex/process-report/build": 12,
+      "templates/latex/process-report/demo-assets": 5
+    },
+    "interaction_name_image_matches": [
+      "templates/latex/process-report/demo-assets/interaction_part1.png",
+      "templates/latex/process-report/demo-assets/interaction_part2.png",
+      "templates/latex/process-report/demo-assets/interaction_part3.png"
+    ],
+    "source_text_name_matches": [
+      "evidence/process-report/workflow-construction/WORKFLOW_EVIDENCE_PLAN.md",
+      "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/AUTHORIZATION_SUPPLEMENT.md",
+      "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/USER_DECISIONS.json",
+      "task1/evidence/goal2/USER_PROMPT.md",
+      "task1/evidence/goal3/USER_PROMPT.md"
+    ],
+    "archives_inspected": [
+      {
+        "path": "SC-LAB1-G1-CLOSURE-002_HANDOFF.zip",
+        "sha256": "43db2c0316f7773bb568cc335ba563b29c013f41a4bf82ba74b1c36e90add4fe",
+        "member_count": 14,
+        "inspection": "MEMBER_NAMES_ONLY_NOT_EXTRACTED",
+        "image_members": [],
+        "evidence_name_matches": []
+      },
+      {
+        "path": "SC-LAB1-G1-COMPLETE-001_HANDOFF.zip",
+        "sha256": "95d467b764b0c358e5248ed5392c4d8704a3767f6a907f56a76527d0c50a8c68",
+        "member_count": 8,
+        "inspection": "MEMBER_NAMES_ONLY_NOT_EXTRACTED",
+        "image_members": [],
+        "evidence_name_matches": []
+      },
+      {
+        "path": "SC-LAB1-G1-REPAIR-001_HANDOFF.zip",
+        "sha256": "e79ea04a803d2b49bed4699e1609412f8d615b209d529a9b816991188cb09fea",
+        "member_count": 23,
+        "inspection": "MEMBER_NAMES_ONLY_NOT_EXTRACTED",
+        "image_members": [
+          "figures/goal1_loop.png"
+        ],
+        "evidence_name_matches": []
+      },
+      {
+        "path": "releases/chatgpt-project-sources/publication-plots.zip",
+        "sha256": "b3d20aec75a8450e62effcb51399115c952fa6c3787c254fa09305e44a9c3041",
+        "member_count": 20,
+        "inspection": "MEMBER_NAMES_ONLY_NOT_EXTRACTED",
+        "image_members": [],
+        "evidence_name_matches": []
+      },
+      {
+        "path": "releases/chatgpt-project-sources/作业.zip",
+        "sha256": "818d483cf719aeb1145ea97b551b2648913559ed1fca0be220ed41eff8ba42cc",
+        "member_count": 132,
+        "inspection": "MEMBER_NAMES_ONLY_NOT_EXTRACTED",
+        "image_members": [
+          "作业/figures/demo_clean_overlay.png",
+          "作业/figures/demo_anomaly_scatter.png",
+          "作业/figures/report_clean_overlay.png",
+          "作业/figures/report_anomaly_scatter.png",
+          "作业/figures/report_heatmap.png",
+          "作业/figures/report_quality_compression.png",
+          "作业/figures/report_sensitivity.png",
+          "作业/figures/report_ablation.png",
+          "作业/build_ppt/assets/chart_regime.png",
+          "作业/build_ppt/assets/chart_dp_curve.png",
+          "作业/build_ppt/assets/chart_dup.png",
+          "作业/build_ppt/assets/chart_overlay.png",
+          "作业/build_ppt/assets/chart_anomaly.png",
+          "作业/build_ppt/assets/chart_heatmap.png",
+          "作业/build_ppt/assets/chart_sens.png",
+          "作业/build_ppt_agent/assets/arch_layers.png",
+          "作业/build_ppt_agent/assets/arch_loop.png",
+          "作业/build_ppt_agent/assets/regret_bases.png",
+          "作业/build_ppt_agent/assets/memory_tiers.png",
+          "作业/build_ppt_agent/assets/param_three_stage.png",
+          "作业/build_ppt_agent/assets/ablation_real.png"
+        ],
+        "evidence_name_matches": []
+      },
+      {
+        "path": "releases/design-system/smart_cities_design_system_v2.1.zip",
+        "sha256": "4712d5e02de5f6290d0957cff6d6ff2c9d9299459b221ead64a8aacd80ee04d5",
+        "member_count": 36,
+        "inspection": "MEMBER_NAMES_ONLY_NOT_EXTRACTED",
+        "image_members": [
+          "templates/latex/process-report/demo-assets/interaction_part1.png",
+          "templates/latex/process-report/demo-assets/interaction_part2.png",
+          "templates/latex/process-report/demo-assets/contact_sheet.png",
+          "templates/latex/process-report/demo-assets/interaction_part3.png"
+        ],
+        "evidence_name_matches": [
+          "templates/latex/process-report/demo-assets/interaction_part1.png",
+          "templates/latex/process-report/demo-assets/interaction_part2.png",
+          "templates/latex/process-report/demo-assets/interaction_part3.png"
+        ]
+      },
+      {
+        "path": "releases/skills/publication-plots.zip",
+        "sha256": "2648e19b1854e120421e52eef14a31900fd7fb6d1cce7f549744e530f9e60325",
+        "member_count": 10,
+        "inspection": "MEMBER_NAMES_ONLY_NOT_EXTRACTED",
+        "image_members": [],
+        "evidence_name_matches": []
+      },
+      {
+        "path": "task1/submission/REVIEW_ONLY_实验一.zip",
+        "sha256": "97d5dbe2d7a5c87d09bcb21ae5798fa0b76374fabdd03f25447fb87c4f27c447",
+        "member_count": 113,
+        "inspection": "MEMBER_NAMES_ONLY_NOT_EXTRACTED",
+        "image_members": [
+          "task1/figures/goal2/direction_threshold_and_neighborhood.png",
+          "task1/figures/goal2/dp_error_compression.png",
+          "task1/figures/goal2/four_mode_failures_and_cost.png",
+          "task1/figures/goal2/four_mode_paired_results.png",
+          "task1/figures/goal2/goal2_actual_architecture.png",
+          "task1/figures/goal2/memory_coverage_and_consumption.png",
+          "task1/figures/goal2/order_protection_and_neighborhoods.png",
+          "task1/figures/goal2/segmentation_filter_grids.png",
+          "task1/figures/goal2/synthetic_metric_counterexamples.png",
+          "task1/figures/goal3/development_candidates.png",
+          "task1/figures/goal3/final_confirmation_pairs.png",
+          "task1/figures/goal3/goal3_actual_workflow.png",
+          "task1/figures/goal3/incumbent_decision_path.png",
+          "task1/figures/goal3/point_fates_and_coverage.png",
+          "task1/figures/goal3/production_trajectory_cases.png",
+          "task1/figures/goal3/selection_tradeoffs.png"
+        ],
+        "evidence_name_matches": []
+      },
+      {
+        "path": "task1/作业.zip",
+        "sha256": "818d483cf719aeb1145ea97b551b2648913559ed1fca0be220ed41eff8ba42cc",
+        "member_count": 132,
+        "inspection": "MEMBER_NAMES_ONLY_NOT_EXTRACTED",
+        "image_members": [
+          "作业/figures/demo_clean_overlay.png",
+          "作业/figures/demo_anomaly_scatter.png",
+          "作业/figures/report_clean_overlay.png",
+          "作业/figures/report_anomaly_scatter.png",
+          "作业/figures/report_heatmap.png",
+          "作业/figures/report_quality_compression.png",
+          "作业/figures/report_sensitivity.png",
+          "作业/figures/report_ablation.png",
+          "作业/build_ppt/assets/chart_regime.png",
+          "作业/build_ppt/assets/chart_dp_curve.png",
+          "作业/build_ppt/assets/chart_dup.png",
+          "作业/build_ppt/assets/chart_overlay.png",
+          "作业/build_ppt/assets/chart_anomaly.png",
+          "作业/build_ppt/assets/chart_heatmap.png",
+          "作业/build_ppt/assets/chart_sens.png",
+          "作业/build_ppt_agent/assets/arch_layers.png",
+          "作业/build_ppt_agent/assets/arch_loop.png",
+          "作业/build_ppt_agent/assets/regret_bases.png",
+          "作业/build_ppt_agent/assets/memory_tiers.png",
+          "作业/build_ppt_agent/assets/param_three_stage.png",
+          "作业/build_ppt_agent/assets/ablation_real.png"
+        ],
+        "evidence_name_matches": []
+      }
+    ],
+    "raster_image_manifest": [
+      {
+        "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/experiment/montage.jpg",
+        "sha256": "ef9f14f1ba84e629fb1540a9d0eefcd0048fbdea2d1cd2eef1d7914b1169d91a",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "evidence/infrastructure/CODEX-INFRA-REPAIR-001/process/montage.jpg",
+        "sha256": "9e106f5eb13741789f48448f5fc7bf60f94b3aad6d4dccbcc6b8531524082a70",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/micro-trace-200dpi.png",
+        "sha256": "47f36ce0feca429cae7cbaca015febbdfec65bd7f2d29da3d0c69688f65612ac",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/pages-01-06.jpg",
+        "sha256": "009347d3055960bda1ba5d87f75cd7c7029605ccb7a0e14a3187b63930572b18",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/pages-07-12.jpg",
+        "sha256": "a1a1b1d683a92d30a7f5f57209dda5d33119eebfb57332b28868b2842c9f786b",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/conditional_pilot_trajectories.png",
+        "sha256": "a492bb7e7dc2dafff2db442a79938c7cd3999f3a65501b75fe2069ffd0987bf8",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/conditional_pilot_trajectories_pdf_render.png",
+        "sha256": "e1c98cbe62c1582a5263afeec6b3c94460e94cb289f74e88e652488cc999c575",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/goal1_execution_structure.png",
+        "sha256": "62461a336585bfdd5405709c57b5ce45ec5ef2af15056b982724b2684ff80aea",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/goal1_execution_structure_pdf_render.png",
+        "sha256": "6c4ad390b7141bb3a11f51d0ecaa5b7073cc1243bda691175652c6f56f6b8cb6",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/inspection/conditional_pilot_trajectories_grayscale.png",
+        "sha256": "5d5270c31f4acfd9b744df5c4c6c6fc2836fbd6b6766b1f7ee6808f2a4573a51",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/inspection/goal1_execution_structure_grayscale.png",
+        "sha256": "501a5d5da146e7dcb6500d90a761e64722f4ed6673bbd7b7d92021462db37585",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/inspection/point_terminal_counts_grayscale.png",
+        "sha256": "fcb5d48fb864114fcff5aa58668b7ea438da4f4d2ec4a664298cb4cd8ac375f3",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/point_terminal_counts.png",
+        "sha256": "fe53c546648e125e01fcdb76b904a76c7c836e58d1f41fef5df113a4ece4532f",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/figures/point_terminal_counts_pdf_render.png",
+        "sha256": "f61d1420956943413f8f4d550b45e3fb792b9ec8a2126f9fd2a2cba64bda3c19",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-REPAIR-001/figures/inspection/pilot_diagnostics_200dpi.png",
+        "sha256": "a3a0b7694ff1ed3f010c3b28cf35346e0bcce1cc656e1bd6a2bd12164d3c31cc",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-REPAIR-001/figures/inspection/repair_loop_200dpi.png",
+        "sha256": "928fb596baa1f125181a0d36a24b89ccf36d9eff913f1ba56285e47d1b2754a5",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-REPAIR-001/figures/pilot_diagnostics.png",
+        "sha256": "09b3fa72243d9bc8cdb2e186d75570de57bafdb589c0fa13de4e34dada04840a",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-REPAIR-001/figures/repair_loop.png",
+        "sha256": "80d9b912b15bad213605086daee002092aac967b934c97936c4638826aca9942",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-REPAIR-001/handoff/figures/goal1_loop.png",
+        "sha256": "26e8c3e731de4b569499f93183e61720579f604341550dd9d4f937ed58040e82",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/c_contract/candidate_figure_pdf_renders/goal2_actual_architecture.png",
+        "sha256": "8b3f9916d5b163d9027dc29ff770a3a453461e3213d975dadc9eefc44ba6dad1",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/c_contract/candidate_figure_pdf_renders/real_trajectory_cases.png",
+        "sha256": "8b1ab3697983c0c3dc04909eeb8352a48cd62d96b41ca5ead76ed6ea156da7ff",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/c_contract/candidate_figure_pdf_renders/synthetic_metric_counterexamples.png",
+        "sha256": "1eaf5761e6b3990055d42bc71acdbe0a112afdcc1600058cd665644d30d3e340",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/c_contract/case_label_pdf_render_200dpi.png",
+        "sha256": "392bd79dfa039ce8c1dd9d9815f8cc653771ebe1730185b1c7fd02a9c7e40480",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/c_contract/final_figure_pdf_renders/direction_threshold_and_neighborhood.png",
+        "sha256": "7fca5f51506590b7e6d0aa17b9e6b6cd2113302a9258f28e16cfd2043d1ba66f",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/c_contract/final_figure_pdf_renders/dp_error_compression.png",
+        "sha256": "16722d876ecca02da8e8df9d6f113cdb0d1bed9782a7f14466a4946fdda99e87",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/c_contract/final_figure_pdf_renders/four_mode_failures_and_cost.png",
+        "sha256": "1d2578adfe3008e18fe452bd1f984deabdc2edaaf1fd5783446f17279169b84c",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/c_contract/final_figure_pdf_renders/four_mode_paired_results.png",
+        "sha256": "fa3bffc77bac144694495c1890cd1cf2f75a4688b02cd9565bce1f6bffd9cf19",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/c_contract/final_figure_pdf_renders/goal2_actual_architecture.png",
+        "sha256": "8b3f9916d5b163d9027dc29ff770a3a453461e3213d975dadc9eefc44ba6dad1",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/c_contract/final_figure_pdf_renders/memory_coverage_and_consumption.png",
+        "sha256": "a6723e827a0e2bbe3c64b0014b51a00f8a57c37bb91bf70bd0b1e6ee3d1f6bb1",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/c_contract/final_figure_pdf_renders/order_protection_and_neighborhoods.png",
+        "sha256": "aabf5bf39f2a3d1a32ffa957619a5b89c8376173f9fc1c86c8cde611aa00c659",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/c_contract/final_figure_pdf_renders/real_trajectory_cases.png",
+        "sha256": "392bd79dfa039ce8c1dd9d9815f8cc653771ebe1730185b1c7fd02a9c7e40480",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/c_contract/final_figure_pdf_renders/segmentation_filter_grids.png",
+        "sha256": "062e474d1f9886436beab1b1c250be5fcdc2c52ecb4b1a8ddd4a743664cc4ecf",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/c_contract/final_figure_pdf_renders/segmentation_filter_response.png",
+        "sha256": "79f24a5ac347773ba6fd00e64b0b34b5962c73478ea4e076c8c82059bac54720",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/c_contract/final_figure_pdf_renders/synthetic_metric_counterexamples.png",
+        "sha256": "1eaf5761e6b3990055d42bc71acdbe0a112afdcc1600058cd665644d30d3e340",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/c_contract/parameter_figure_pdf_renders/direction_threshold_and_neighborhood.png",
+        "sha256": "7fca5f51506590b7e6d0aa17b9e6b6cd2113302a9258f28e16cfd2043d1ba66f",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/c_contract/parameter_figure_pdf_renders/dp_error_compression.png",
+        "sha256": "16722d876ecca02da8e8df9d6f113cdb0d1bed9782a7f14466a4946fdda99e87",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/c_contract/parameter_figure_pdf_renders/order_protection_and_neighborhoods.png",
+        "sha256": "aabf5bf39f2a3d1a32ffa957619a5b89c8376173f9fc1c86c8cde611aa00c659",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/c_contract/parameter_figure_pdf_renders/segmentation_filter_grids.png",
+        "sha256": "062e474d1f9886436beab1b1c250be5fcdc2c52ecb4b1a8ddd4a743664cc4ecf",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/c_contract/parameter_figure_pdf_renders/segmentation_filter_response.png",
+        "sha256": "79f24a5ac347773ba6fd00e64b0b34b5962c73478ea4e076c8c82059bac54720",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/presentation_checks/candidate_preview_02/after/goal2_actual_architecture.png",
+        "sha256": "06e5deea0f1022fec93f969fca7aee6819b0b2ea1909aafa4332742cd70ff3c9",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/presentation_checks/candidate_preview_02/after/pdf-render-200dpi/goal2_actual_architecture.png",
+        "sha256": "8b3f9916d5b163d9027dc29ff770a3a453461e3213d975dadc9eefc44ba6dad1",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/presentation_checks/candidate_preview_02/after/pdf-render-200dpi/real_trajectory_cases.png",
+        "sha256": "8b1ab3697983c0c3dc04909eeb8352a48cd62d96b41ca5ead76ed6ea156da7ff",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/presentation_checks/candidate_preview_02/after/pdf-render-200dpi/synthetic_metric_counterexamples.png",
+        "sha256": "1eaf5761e6b3990055d42bc71acdbe0a112afdcc1600058cd665644d30d3e340",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/presentation_checks/candidate_preview_02/after/real_trajectory_cases.png",
+        "sha256": "286f9e456b414164fd639ec5357ed8d30bfef0aef3fc82aae3aa19d68ac7f82f",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/presentation_checks/candidate_preview_02/after/synthetic_metric_counterexamples.png",
+        "sha256": "048388c4fe88c104ca9a8830fc3e3cad923bb7c97121303a1a849f9abf6e29cc",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/presentation_checks/candidate_preview_02/before/goal2_actual_architecture.png",
+        "sha256": "06e5deea0f1022fec93f969fca7aee6819b0b2ea1909aafa4332742cd70ff3c9",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/presentation_checks/candidate_preview_02/before/pdf-render-200dpi/goal2_actual_architecture.png",
+        "sha256": "8b3f9916d5b163d9027dc29ff770a3a453461e3213d975dadc9eefc44ba6dad1",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/presentation_checks/candidate_preview_02/before/pdf-render-200dpi/real_trajectory_cases.png",
+        "sha256": "9cc1207f6e429947ed72c1e0ab9c542ddbfb0a8f4dbeba129392b9d6c650e6f6",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/presentation_checks/candidate_preview_02/before/pdf-render-200dpi/synthetic_metric_counterexamples.png",
+        "sha256": "d9e2546d333a042d42b330da5909f402da83b65d6b65adfc36d0297a7911cbb2",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/presentation_checks/candidate_preview_02/before/real_trajectory_cases.png",
+        "sha256": "905036d61c046f8f935b1a5e93cc2b8a567666102b011df0adee31b1f88b1f67",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/presentation_checks/candidate_preview_02/before/synthetic_metric_counterexamples.png",
+        "sha256": "3fe03110fc2239c1d3bf90bb7723e32adf43b2691530a4bd5ce5fe4147bf8dd3",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/presentation_checks/candidate_preview_02/intermediate/synthetic_metric_counterexamples_pdf_200dpi.png",
+        "sha256": "e96e7d165561e96b38eb5b6d29411947d0b42b9056e8e8b67fb98ccf8a4836b1",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/presentation_checks/case_configuration_labels/after/goal2_actual_architecture.png",
+        "sha256": "06e5deea0f1022fec93f969fca7aee6819b0b2ea1909aafa4332742cd70ff3c9",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/presentation_checks/case_configuration_labels/after/pdf-render-200dpi/goal2_actual_architecture.png",
+        "sha256": "8b3f9916d5b163d9027dc29ff770a3a453461e3213d975dadc9eefc44ba6dad1",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/presentation_checks/case_configuration_labels/after/pdf-render-200dpi/real_trajectory_cases.png",
+        "sha256": "392bd79dfa039ce8c1dd9d9815f8cc653771ebe1730185b1c7fd02a9c7e40480",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/presentation_checks/case_configuration_labels/after/pdf-render-200dpi/synthetic_metric_counterexamples.png",
+        "sha256": "1eaf5761e6b3990055d42bc71acdbe0a112afdcc1600058cd665644d30d3e340",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/presentation_checks/case_configuration_labels/after/real_trajectory_cases.png",
+        "sha256": "2a033e931f5a62f87400209818ee58d20f57c2daa49de5096d9932f0d1050f45",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/presentation_checks/case_configuration_labels/after/synthetic_metric_counterexamples.png",
+        "sha256": "048388c4fe88c104ca9a8830fc3e3cad923bb7c97121303a1a849f9abf6e29cc",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/presentation_checks/case_configuration_labels/before/goal2_actual_architecture.png",
+        "sha256": "06e5deea0f1022fec93f969fca7aee6819b0b2ea1909aafa4332742cd70ff3c9",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/presentation_checks/case_configuration_labels/before/pdf-render-200dpi/goal2_actual_architecture.png",
+        "sha256": "8b3f9916d5b163d9027dc29ff770a3a453461e3213d975dadc9eefc44ba6dad1",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/presentation_checks/case_configuration_labels/before/pdf-render-200dpi/real_trajectory_cases.png",
+        "sha256": "8b1ab3697983c0c3dc04909eeb8352a48cd62d96b41ca5ead76ed6ea156da7ff",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/presentation_checks/case_configuration_labels/before/pdf-render-200dpi/synthetic_metric_counterexamples.png",
+        "sha256": "1eaf5761e6b3990055d42bc71acdbe0a112afdcc1600058cd665644d30d3e340",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/presentation_checks/case_configuration_labels/before/real_trajectory_cases.png",
+        "sha256": "286f9e456b414164fd639ec5357ed8d30bfef0aef3fc82aae3aa19d68ac7f82f",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/presentation_checks/case_configuration_labels/before/synthetic_metric_counterexamples.png",
+        "sha256": "048388c4fe88c104ca9a8830fc3e3cad923bb7c97121303a1a849f9abf6e29cc",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/presentation_checks/formal_mode_layout/after/four_mode_failures_and_cost.png",
+        "sha256": "8c3a0cca4a96c3f6a531a758e0285980d28fefec3e89f82a480dd12c086dd048",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/presentation_checks/formal_mode_layout/after/four_mode_paired_results.png",
+        "sha256": "ec7a87bbc8dd53a188a19815e26ff32f8ca2b66c46b0f227aab6e78cac0d5593",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/presentation_checks/formal_mode_layout/after/memory_coverage_and_consumption.png",
+        "sha256": "a968f524e803479c9e7c12a05550451e877726b84093d2aab968d1986f15a683",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/presentation_checks/formal_mode_layout/after/pdf-render-200dpi/four_mode_failures_and_cost.png",
+        "sha256": "1d2578adfe3008e18fe452bd1f984deabdc2edaaf1fd5783446f17279169b84c",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/presentation_checks/formal_mode_layout/after/pdf-render-200dpi/four_mode_paired_results.png",
+        "sha256": "fa3bffc77bac144694495c1890cd1cf2f75a4688b02cd9565bce1f6bffd9cf19",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/presentation_checks/formal_mode_layout/after/pdf-render-200dpi/memory_coverage_and_consumption.png",
+        "sha256": "a6723e827a0e2bbe3c64b0014b51a00f8a57c37bb91bf70bd0b1e6ee3d1f6bb1",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/presentation_checks/formal_mode_layout/before/direction_threshold_and_neighborhood.png",
+        "sha256": "e6b2c495beb5d63eec10acbc13ee2809797c0e7115b2e9c78f5c26a0c9073422",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/presentation_checks/formal_mode_layout/before/dp_error_compression.png",
+        "sha256": "f7d51745cf774f8f5d6e890e9ec6fc9a9b6e29642ffcbc90cad2c3c88602ef6f",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/presentation_checks/formal_mode_layout/before/four_mode_failures_and_cost.png",
+        "sha256": "4bce605cb05a23df459acf86be40cdca5418e20452e58398e90e9d1fe2e4845a",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/presentation_checks/formal_mode_layout/before/four_mode_paired_results.png",
+        "sha256": "ab5fe150cbd04f2e16b56bd6e73a4c359e7ffb6e877f7c8c2f78241cac542ec2",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/presentation_checks/formal_mode_layout/before/goal2_actual_architecture.png",
+        "sha256": "06e5deea0f1022fec93f969fca7aee6819b0b2ea1909aafa4332742cd70ff3c9",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/presentation_checks/formal_mode_layout/before/memory_coverage_and_consumption.png",
+        "sha256": "75cfe572da1a0f615343d2dd20a768281b3891e2c54b7ee8d204ecddf4192418",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/presentation_checks/formal_mode_layout/before/order_protection_and_neighborhoods.png",
+        "sha256": "8b150a234295b081982c9c2b83140a3928e9f558053f62e0d89c33a08737a730",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/presentation_checks/formal_mode_layout/before/pdf-render-200dpi/direction_threshold_and_neighborhood.png",
+        "sha256": "7fca5f51506590b7e6d0aa17b9e6b6cd2113302a9258f28e16cfd2043d1ba66f",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/presentation_checks/formal_mode_layout/before/pdf-render-200dpi/dp_error_compression.png",
+        "sha256": "16722d876ecca02da8e8df9d6f113cdb0d1bed9782a7f14466a4946fdda99e87",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/presentation_checks/formal_mode_layout/before/pdf-render-200dpi/four_mode_failures_and_cost.png",
+        "sha256": "83ab1972152136d27893f47c62dddd85fc23101259a8ab3f937e2700bbd7a676",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/presentation_checks/formal_mode_layout/before/pdf-render-200dpi/four_mode_paired_results.png",
+        "sha256": "ec46728a7f99e618cecc8884f3cc0b84349f400b9ae7c8d2cb9e9d87b5edf133",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/presentation_checks/formal_mode_layout/before/pdf-render-200dpi/goal2_actual_architecture.png",
+        "sha256": "8b3f9916d5b163d9027dc29ff770a3a453461e3213d975dadc9eefc44ba6dad1",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/presentation_checks/formal_mode_layout/before/pdf-render-200dpi/memory_coverage_and_consumption.png",
+        "sha256": "2bf5a75df3dc02a53e9e355cc0a4813a446980cc18c48e7bf914f03d8accc35e",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/presentation_checks/formal_mode_layout/before/pdf-render-200dpi/order_protection_and_neighborhoods.png",
+        "sha256": "aabf5bf39f2a3d1a32ffa957619a5b89c8376173f9fc1c86c8cde611aa00c659",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/presentation_checks/formal_mode_layout/before/pdf-render-200dpi/real_trajectory_cases.png",
+        "sha256": "392bd79dfa039ce8c1dd9d9815f8cc653771ebe1730185b1c7fd02a9c7e40480",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/presentation_checks/formal_mode_layout/before/pdf-render-200dpi/segmentation_filter_grids.png",
+        "sha256": "062e474d1f9886436beab1b1c250be5fcdc2c52ecb4b1a8ddd4a743664cc4ecf",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/presentation_checks/formal_mode_layout/before/pdf-render-200dpi/segmentation_filter_response.png",
+        "sha256": "79f24a5ac347773ba6fd00e64b0b34b5962c73478ea4e076c8c82059bac54720",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/presentation_checks/formal_mode_layout/before/pdf-render-200dpi/synthetic_metric_counterexamples.png",
+        "sha256": "1eaf5761e6b3990055d42bc71acdbe0a112afdcc1600058cd665644d30d3e340",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/presentation_checks/formal_mode_layout/before/real_trajectory_cases.png",
+        "sha256": "2a033e931f5a62f87400209818ee58d20f57c2daa49de5096d9932f0d1050f45",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/presentation_checks/formal_mode_layout/before/segmentation_filter_grids.png",
+        "sha256": "114fd20087ae92606d5ce2a4103fd406defda6ae121f01eebdf1e669a2ba958e",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/presentation_checks/formal_mode_layout/before/segmentation_filter_response.png",
+        "sha256": "e0a58ccbb1a3d3754f130b74c1842ae9989597cfde5acb602ecda3cb25052327",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/presentation_checks/formal_mode_layout/before/synthetic_metric_counterexamples.png",
+        "sha256": "048388c4fe88c104ca9a8830fc3e3cad923bb7c97121303a1a849f9abf6e29cc",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/presentation_checks/parameter_preview_01/initial/direction_threshold_and_neighborhood.png",
+        "sha256": "393fec49e844c2f73b529379c553049ac4dc353b7594f5b3b913a18ba0e9f552",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/presentation_checks/parameter_preview_01/initial/direction_threshold_and_neighborhood_pdf_render_200dpi.png",
+        "sha256": "8e6979ac7eaec3f8ff27a8526739ad21797a33e9024a27596c509930cb7ea392",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/presentation_checks/parameter_preview_01/initial/order_protection_and_neighborhoods.png",
+        "sha256": "d8f753be6a41f802fe2070a52c12f9898012805a949d437d63701156276c86d4",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/presentation_checks/parameter_preview_01/initial/order_protection_and_neighborhoods_pdf_render_200dpi.png",
+        "sha256": "50445f83a7514f3123c93568797aca0724dcf133103266609fcac10adf83a821",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/presentation_checks/parameter_preview_01/initial/segmentation_filter_grids.png",
+        "sha256": "7c098cc8431e982a4a7a491d11031bd8aa6686098a216df00184b241e9ee5c4c",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/presentation_checks/parameter_preview_01/initial/segmentation_filter_grids_pdf_render_200dpi.png",
+        "sha256": "d3a8afb0e68a0348934bc33082c1a10f7eb05417acd38a21d5a64cbeeef2bc4d",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/presentation_checks/parameter_preview_01/repaired/direction_threshold_and_neighborhood.png",
+        "sha256": "e6b2c495beb5d63eec10acbc13ee2809797c0e7115b2e9c78f5c26a0c9073422",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/presentation_checks/parameter_preview_01/repaired/direction_threshold_and_neighborhood_pdf_render_200dpi.png",
+        "sha256": "7fca5f51506590b7e6d0aa17b9e6b6cd2113302a9258f28e16cfd2043d1ba66f",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/presentation_checks/parameter_preview_01/repaired/order_protection_and_neighborhoods.png",
+        "sha256": "8b150a234295b081982c9c2b83140a3928e9f558053f62e0d89c33a08737a730",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/presentation_checks/parameter_preview_01/repaired/order_protection_and_neighborhoods_pdf_render_200dpi.png",
+        "sha256": "aabf5bf39f2a3d1a32ffa957619a5b89c8376173f9fc1c86c8cde611aa00c659",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/presentation_checks/parameter_preview_01/repaired/segmentation_filter_grids.png",
+        "sha256": "114fd20087ae92606d5ce2a4103fd406defda6ae121f01eebdf1e669a2ba958e",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal2/presentation_checks/parameter_preview_01/repaired/segmentation_filter_grids_pdf_render_200dpi.png",
+        "sha256": "062e474d1f9886436beab1b1c250be5fcdc2c52ecb4b1a8ddd4a743664cc4ecf",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal3/independent_c/NB01_smoke_attempt2/pilot_steps.png",
+        "sha256": "771182bb86dfe91c04a1611d871cba39acbb8356d9a642a1e451c39ac83ad6f2",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal3/independent_c/NB01_smoke_attempt2/shared_offline_plots_smoke/modes/figures/recomputed_modes.png",
+        "sha256": "8962fca5903d84fe9551710af720e57c0af7da94e783702b55e80da803f3adc8",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal3/independent_c/NB01_smoke_attempt2/shared_offline_plots_smoke/parameters/figures/recomputed_orders.png",
+        "sha256": "83f6f0775bfd78096dd56a35352b9b2170a1f0d0e250b3dd21bfd0fdb7fa39d6",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal3/independent_c/NB01_smoke_attempt2/shared_offline_plots_smoke/parameters/figures/recomputed_parameters.png",
+        "sha256": "d703114450e3cf566683d5410acbfa2d641d0caae34c7ed9670c8e472e5c467a",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal3/independent_c/NB01_smoke_attempt2/shared_offline_plots_smoke/production_path_smoke/figures/recomputed_point_fates.png",
+        "sha256": "0b1c81c988786118e6cf7fc1e220ad99ee5ad4502157ddd9b3eab7637d3593d9",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal3/independent_c/NB01_smoke_attempt2/shared_offline_plots_smoke/production_path_smoke/figures/recomputed_trajectory_case.png",
+        "sha256": "3c0da3f8d7511999d64f98adde8902183e79a1f7a2e1b5e92b4614bff823c24b",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal3/independent_documents/experiment1_repair_page_06.png",
+        "sha256": "d8854823bd7000dd4a9268f2021558a66c73a68e6a10a9427bb7b146c75f54ee",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal3/independent_documents/experiment1_repair_page_07.png",
+        "sha256": "27f0daa5d9374b890f78dde458f75d7158e2b160de0ec3874fddd50b38e12ceb",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal3/independent_documents/goal3_actual_workflow_before_presentation_repair.png",
+        "sha256": "95042ea3ab4f984af84d7cf1882d9925d32c7529df3408ea7abb95f501b26b26",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal3/independent_documents/process1_repair_page_03.png",
+        "sha256": "9ce0fbb4a0050f46a250bce49104161c313802806b17f22d602cc7ca06b06b57",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal3/independent_documents/process1_repair_page_07.png",
+        "sha256": "8eb597ee1cc99d1fc2824404bd66927d49dc5f412087a93edb5cf89a7edcc2df",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal3/independent_documents/production_trajectory_cases_before_presentation_repair.png",
+        "sha256": "5aa701c5ecffbeb5212d7a28d786f6b2ce24470342573b111b01d1d8b7369927",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal3/notebook_verification/isolated_basic_full_01/artifacts/parameters/figures/recomputed_orders.png",
+        "sha256": "65b814b05db26790f99ac0e4cd50fe953a70fa149b706056a43da5fa5e7b4b17",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal3/notebook_verification/isolated_basic_full_01/artifacts/parameters/figures/recomputed_parameters.png",
+        "sha256": "16b414628dc028add1e1a28266a58b8c94ff1bea041f89c4f64617258e1b33ee",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal3/notebook_verification/isolated_basic_full_01/artifacts/pilot_steps.png",
+        "sha256": "771182bb86dfe91c04a1611d871cba39acbb8356d9a642a1e451c39ac83ad6f2",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal3/notebook_verification/isolated_basic_full_01/artifacts/production/figures/recomputed_point_fates.png",
+        "sha256": "b749efb2ce0b88d24a7b8019982aca1f0a0139d007eaf54f69ed2970ec56bd00",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal3/notebook_verification/isolated_basic_full_01/artifacts/production/figures/recomputed_trajectory_case.png",
+        "sha256": "1e8a8ea332b302d38a884830a9f300d5bb4ebf596c844f0e485586aa16d737db",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal3/notebook_verification/isolated_system_full_01/artifacts/modes/figures/recomputed_modes.png",
+        "sha256": "a0a6f3e96f19ab44940876dd7b1bb0fec6f397d0a96bded95a06b7940298c3b4",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal3/notebook_verification/repository_basic_full_02/artifacts/parameters/figures/recomputed_orders.png",
+        "sha256": "65b814b05db26790f99ac0e4cd50fe953a70fa149b706056a43da5fa5e7b4b17",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal3/notebook_verification/repository_basic_full_02/artifacts/parameters/figures/recomputed_parameters.png",
+        "sha256": "16b414628dc028add1e1a28266a58b8c94ff1bea041f89c4f64617258e1b33ee",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal3/notebook_verification/repository_basic_full_02/artifacts/pilot_steps.png",
+        "sha256": "771182bb86dfe91c04a1611d871cba39acbb8356d9a642a1e451c39ac83ad6f2",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal3/notebook_verification/repository_basic_full_02/artifacts/production/figures/recomputed_point_fates.png",
+        "sha256": "b749efb2ce0b88d24a7b8019982aca1f0a0139d007eaf54f69ed2970ec56bd00",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal3/notebook_verification/repository_basic_full_02/artifacts/production/figures/recomputed_trajectory_case.png",
+        "sha256": "1e8a8ea332b302d38a884830a9f300d5bb4ebf596c844f0e485586aa16d737db",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal3/notebook_verification/repository_system_full_02/artifacts/modes/figures/recomputed_modes.png",
+        "sha256": "a0a6f3e96f19ab44940876dd7b1bb0fec6f397d0a96bded95a06b7940298c3b4",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal3/report_build/offline_plot_smoke/modes/figures/recomputed_modes.png",
+        "sha256": "8962fca5903d84fe9551710af720e57c0af7da94e783702b55e80da803f3adc8",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal3/report_build/offline_plot_smoke/parameters/figures/recomputed_orders.png",
+        "sha256": "83f6f0775bfd78096dd56a35352b9b2170a1f0d0e250b3dd21bfd0fdb7fa39d6",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal3/report_build/offline_plot_smoke/parameters/figures/recomputed_parameters.png",
+        "sha256": "d703114450e3cf566683d5410acbfa2d641d0caae34c7ed9670c8e472e5c467a",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal3/report_build/offline_plot_smoke/production_path_smoke/figures/recomputed_point_fates.png",
+        "sha256": "0b1c81c988786118e6cf7fc1e220ad99ee5ad4502157ddd9b3eab7637d3593d9",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal3/report_build/offline_plot_smoke/production_path_smoke/figures/recomputed_trajectory_case.png",
+        "sha256": "3c0da3f8d7511999d64f98adde8902183e79a1f7a2e1b5e92b4614bff823c24b",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal3/report_build/offline_plot_smoke/render200/recomputed_modes.png",
+        "sha256": "e183bf79bd80f164e2eefb67a5e5f364fe3230edb3fa1f6e8008f4d87cb86c8c",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal3/report_build/offline_plot_smoke/render200/recomputed_orders.png",
+        "sha256": "7c042b422184d705182faa6802ed961272fbc80e68d42c02571e7fc2d8710ea4",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal3/report_build/offline_plot_smoke/render200/recomputed_parameters.png",
+        "sha256": "50f93d15f4f3817dddb5fee7a8f753c038c92c75d67089958f0b69c5af3b8d67",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal3/report_build/offline_plot_smoke/render200/recomputed_point_fates.png",
+        "sha256": "fbfc00fdbc4dd689a513c09929f78c0baf8e91911c8744c68a78e161a39d7e8d",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal3/report_build/offline_plot_smoke/render200/recomputed_trajectory_case.png",
+        "sha256": "bfd24cd447f43d32376e69ef840d0091b22e5a91d59597d277cb221eb6d757db",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal3/report_build/render200/experiment1/page-01.png",
+        "sha256": "5e2a89417fa40d8d4a51265c0c58337e6a738d2a46d8a747b65e035f7c924460",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal3/report_build/render200/experiment1/page-02.png",
+        "sha256": "7a798ee9da965cec013dfef5c1b73a849fde4a1fa05e854579922098bb4f1a7e",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal3/report_build/render200/experiment1/page-03.png",
+        "sha256": "78363a2f7ecff21db9988530754adff92049d39d05ef2c83d3ab2e13ebc4f6ac",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal3/report_build/render200/experiment1/page-04.png",
+        "sha256": "ad75ce8cba7d59af0868c854960d61b73ccdfe9fda654006dc6caf1b9e2e1548",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal3/report_build/render200/experiment1/page-05.png",
+        "sha256": "a5c276b4ef88c5b6e9996cbadfef1e8f33880065a67cfd55f739f461b04eefda",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal3/report_build/render200/experiment1/page-06.png",
+        "sha256": "d8854823bd7000dd4a9268f2021558a66c73a68e6a10a9427bb7b146c75f54ee",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal3/report_build/render200/experiment1/page-07.png",
+        "sha256": "27f0daa5d9374b890f78dde458f75d7158e2b160de0ec3874fddd50b38e12ceb",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal3/report_build/render200/experiment1/page-08.png",
+        "sha256": "dc27bc01ef88b0534900bc3ea4d25f202a75739e667e25e70b0995c5f4c46733",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal3/report_build/render200/experiment1/page-09.png",
+        "sha256": "556bb1dfd701b2b7c7327902b7e565d40cecb73f724d07af967c6042ad63bc8e",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal3/report_build/render200/experiment1/page-10.png",
+        "sha256": "3f80dbfff102f86f4216295d276cbbea03ee131a863f85639d5b9943d867cd43",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal3/report_build/render200/experiment1/page-11.png",
+        "sha256": "3efffae3f99e4821093bc550a0418d4ec50ad57756e2ec87d6a6f867a302b0a8",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal3/report_build/render200/experiment1/page-12.png",
+        "sha256": "27b5c697b4a214adc2c236f7e47e85498b164794e996fe2e3407e8d5005986a3",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal3/report_build/render200/experiment1/page-13.png",
+        "sha256": "f26660029e84a137cb3c9382c3c77086c28bd3ac095f7669d10ba4e947aac03a",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal3/report_build/render200/experiment1/page-14.png",
+        "sha256": "68bd49898ba060c9d45cb9627db342c6d7610a75b6ea4e0be74c1e4eba1ca47b",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal3/report_build/render200/experiment1/page-15.png",
+        "sha256": "d900dddabc0b8451ed2381962939141a69010d4b36733267d1bda0ce16a3b85f",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal3/report_build/render200/experiment1/page-16.png",
+        "sha256": "0a1181a189b8976d914678e3dc108558599ed77d6768ec2bfd3a650014e72682",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal3/report_build/render200/experiment1/page-17.png",
+        "sha256": "f496c8ae53d01fcb6c3f822aa12cc33731f5945fca2192c7607dcb72ac8a838a",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal3/report_build/render200/experiment1/page-18.png",
+        "sha256": "9e1bcd9f2fa31e659141e68017cc6089154904793aebd29b4ec204801939c737",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal3/report_build/render200/experiment1/page-19.png",
+        "sha256": "ce80a88d0985e97ade6ff7160b48fdaaf27c1d0a887296710f5a90c7f570fb50",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal3/report_build/render200/experiment1/page-20.png",
+        "sha256": "6f321206c784666c02ed0c787993bd248116fdc8a15d1bfa504fb7649e57ddcf",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal3/report_build/render200/experiment1/page-21.png",
+        "sha256": "4ae134c36ed0216f19fd4955bd4d61e1da48a24ee85c7528890a682e2e9f3410",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal3/report_build/render200/process1/page-01.png",
+        "sha256": "77e5998faf440c55c42af6af8705861909c2ebf9f06238141a38b7743c36fcb0",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal3/report_build/render200/process1/page-02.png",
+        "sha256": "b468ccec3e84f3fcc4a396bb94bc3ec095ee859512700c2658bf870b59c53104",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal3/report_build/render200/process1/page-03.png",
+        "sha256": "60dc96a24b57a33f5ac54238a738e18d1209e2ad5c735a12e776dbec6aa639a4",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal3/report_build/render200/process1/page-04.png",
+        "sha256": "df547d66c08ec3c0aa854e1ce2289d5a9b3fbce1affd693e8027b12675a5654f",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal3/report_build/render200/process1/page-05.png",
+        "sha256": "e124b2329c6825799db9e3e7746f038d96150b9210fff40fc700a70a06eacbd6",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal3/report_build/render200/process1/page-06.png",
+        "sha256": "96d8ca1e884c4f52d273596df2af174370543663a19e1f422c6024c64e9fcd8d",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal3/report_build/render200/process1/page-07.png",
+        "sha256": "50ca3e6775ca7fd531efae23f962c315cb42a6312f4a6b43e7d5c9b6896aab4e",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal3/report_build/render200/process1/page-08.png",
+        "sha256": "9cae6f6d93cb627d09c70f46775e2a035c4f899921deeeb745f62120bc3ac9c9",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal3/report_build/render200/process1/page-09.png",
+        "sha256": "bcc44c5e5ea4fc1921c045ce54a5a259e4b991d972387da09a8cc985d5a781a3",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal3/report_build/render200/process1/page-10.png",
+        "sha256": "1aa5ddccbe50fb5bcf71601141eeda8d782cdf50c1002753009fa0f1ad1a51e9",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal3/report_build/render200/process1/page-11.png",
+        "sha256": "0f4c6705a54a8a171cc5136ca42f2a2f56ef078e15b2cb97b6b02438164bd28c",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/evidence/goal3/report_build/render200/process1/page-12.png",
+        "sha256": "5659abb23f9dce0be9f8c4827b9f1819c4211adf8e7477e0bb243a3919bd9a3b",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/figures/goal1/goal1_loop.png",
+        "sha256": "58dcbdc02646bf6b9ad51ec46b77bbc831c080dfc3ddb95d02ab334394a7151f",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/figures/goal1/pilot_diagnostics.png",
+        "sha256": "bc55d26de16337f72784b85caa54dad69dfcb183b09226a46fce44f2aa5ced3d",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/figures/goal2/direction_threshold_and_neighborhood.png",
+        "sha256": "e6b2c495beb5d63eec10acbc13ee2809797c0e7115b2e9c78f5c26a0c9073422",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/figures/goal2/dp_error_compression.png",
+        "sha256": "f7d51745cf774f8f5d6e890e9ec6fc9a9b6e29642ffcbc90cad2c3c88602ef6f",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/figures/goal2/four_mode_failures_and_cost.png",
+        "sha256": "8c3a0cca4a96c3f6a531a758e0285980d28fefec3e89f82a480dd12c086dd048",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/figures/goal2/four_mode_paired_results.png",
+        "sha256": "ec7a87bbc8dd53a188a19815e26ff32f8ca2b66c46b0f227aab6e78cac0d5593",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/figures/goal2/goal2_actual_architecture.png",
+        "sha256": "06e5deea0f1022fec93f969fca7aee6819b0b2ea1909aafa4332742cd70ff3c9",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/figures/goal2/memory_coverage_and_consumption.png",
+        "sha256": "a968f524e803479c9e7c12a05550451e877726b84093d2aab968d1986f15a683",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/figures/goal2/order_protection_and_neighborhoods.png",
+        "sha256": "8b150a234295b081982c9c2b83140a3928e9f558053f62e0d89c33a08737a730",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/figures/goal2/pdf-render-200dpi/direction_threshold_and_neighborhood.png",
+        "sha256": "7fca5f51506590b7e6d0aa17b9e6b6cd2113302a9258f28e16cfd2043d1ba66f",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/figures/goal2/pdf-render-200dpi/dp_error_compression.png",
+        "sha256": "16722d876ecca02da8e8df9d6f113cdb0d1bed9782a7f14466a4946fdda99e87",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/figures/goal2/pdf-render-200dpi/four_mode_failures_and_cost.png",
+        "sha256": "1d2578adfe3008e18fe452bd1f984deabdc2edaaf1fd5783446f17279169b84c",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/figures/goal2/pdf-render-200dpi/four_mode_paired_results.png",
+        "sha256": "fa3bffc77bac144694495c1890cd1cf2f75a4688b02cd9565bce1f6bffd9cf19",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/figures/goal2/pdf-render-200dpi/goal2_actual_architecture.png",
+        "sha256": "8b3f9916d5b163d9027dc29ff770a3a453461e3213d975dadc9eefc44ba6dad1",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/figures/goal2/pdf-render-200dpi/memory_coverage_and_consumption.png",
+        "sha256": "a6723e827a0e2bbe3c64b0014b51a00f8a57c37bb91bf70bd0b1e6ee3d1f6bb1",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/figures/goal2/pdf-render-200dpi/order_protection_and_neighborhoods.png",
+        "sha256": "aabf5bf39f2a3d1a32ffa957619a5b89c8376173f9fc1c86c8cde611aa00c659",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/figures/goal2/pdf-render-200dpi/real_trajectory_cases.png",
+        "sha256": "392bd79dfa039ce8c1dd9d9815f8cc653771ebe1730185b1c7fd02a9c7e40480",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/figures/goal2/pdf-render-200dpi/segmentation_filter_grids.png",
+        "sha256": "062e474d1f9886436beab1b1c250be5fcdc2c52ecb4b1a8ddd4a743664cc4ecf",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/figures/goal2/pdf-render-200dpi/segmentation_filter_response.png",
+        "sha256": "79f24a5ac347773ba6fd00e64b0b34b5962c73478ea4e076c8c82059bac54720",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/figures/goal2/pdf-render-200dpi/synthetic_metric_counterexamples.png",
+        "sha256": "1eaf5761e6b3990055d42bc71acdbe0a112afdcc1600058cd665644d30d3e340",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/figures/goal2/real_trajectory_cases.png",
+        "sha256": "2a033e931f5a62f87400209818ee58d20f57c2daa49de5096d9932f0d1050f45",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/figures/goal2/segmentation_filter_grids.png",
+        "sha256": "114fd20087ae92606d5ce2a4103fd406defda6ae121f01eebdf1e669a2ba958e",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/figures/goal2/segmentation_filter_response.png",
+        "sha256": "e0a58ccbb1a3d3754f130b74c1842ae9989597cfde5acb602ecda3cb25052327",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/figures/goal2/synthetic_metric_counterexamples.png",
+        "sha256": "048388c4fe88c104ca9a8830fc3e3cad923bb7c97121303a1a849f9abf6e29cc",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/figures/goal3/development_candidates.png",
+        "sha256": "423d38ac93bb682eda812c55c8cafcf0a64dd2b1cf562bbee1923443fda7fd5f",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/figures/goal3/final_confirmation_pairs.png",
+        "sha256": "89012c89353561d32136882665712b1119c416bf946b39718b66eb6380eb51d3",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/figures/goal3/goal3_actual_workflow.png",
+        "sha256": "b5f105c03a3be8bcd8748c0a4156e89c7f9912e2eeb891cdc200095c1d5549d5",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/figures/goal3/incumbent_decision_path.png",
+        "sha256": "efc59522cc73f9bc6a4eec65873ca5a1321511a4dc6bc0901b688b182ce52c32",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/figures/goal3/pdf-render-200dpi/development_candidates.png",
+        "sha256": "08cbc3909df43c3fd1d99f6cf7b2ce7fa9fdde7657ef6c6650ece735c9b46cbc",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/figures/goal3/pdf-render-200dpi/final_confirmation_pairs.png",
+        "sha256": "9e036ef7795cce3e629ede1adb3ab2aecde010bf284477faa2dc94d60b87eb0f",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/figures/goal3/pdf-render-200dpi/goal3_actual_workflow.png",
+        "sha256": "8a7ca06deeafb891ec30bf79ba90167acfa0c0fcaf0e2ed5818a9069cd5d60ce",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/figures/goal3/pdf-render-200dpi/incumbent_decision_path.png",
+        "sha256": "2e9d071f42fc0d3e058e7f4924ed21cdcd3af855d5cdf908df615c5aa73d2a9e",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/figures/goal3/pdf-render-200dpi/point_fates_and_coverage.png",
+        "sha256": "5ecb85fa965dfcd6546b52758bf94ea2470c1f546d76db93a1963192fc35c0b9",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/figures/goal3/pdf-render-200dpi/production_trajectory_cases.png",
+        "sha256": "310a0a06545b778fb49b7a880d6e3bdcdd65b3b0881c9d3ba1186f38e9e63e51",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/figures/goal3/pdf-render-200dpi/selection_tradeoffs.png",
+        "sha256": "19d1624708cad37cec99dec689e28914f3f222dc17a0effa7c45746acec56865",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/figures/goal3/point_fates_and_coverage.png",
+        "sha256": "d42508d4d9478d056e0ecd535c9a20812a602677bdcddb94ff02ef0a2c4fa5f8",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/figures/goal3/production_trajectory_cases.png",
+        "sha256": "8211b20a0d67d74285338f8050855baa40cd75f3d5569e43697b799716a274f2",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/figures/goal3/selection_tradeoffs.png",
+        "sha256": "f735caa082e6eb4a97b39f7a4a232f187b065d25071c4df1cb26b1c0077523d8",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/build/draft_render/experiment-contact-1.jpg",
+        "sha256": "d413250869c2feecb0e37601118ed5e3d9bd5a74309d1fbb8b94a31ece826f8b",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/build/draft_render/experiment-contact-2.jpg",
+        "sha256": "2fb8bcc3f95fafc98691aa608767ac6852de307c42f1e4146ef3aeea6090ff7a",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/build/draft_render/experiment-contact-3.jpg",
+        "sha256": "ca3d2147c24280a17f969389ad44f674a53e3e6681d28b04bc9bef17936b60da",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/build/draft_render/experiment-contact-4.jpg",
+        "sha256": "c666744c2557408ba76708fd6a7e0d70dad427a60b13801a56d8f2a6ef862ec2",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/build/draft_render/experiment/page-01.png",
+        "sha256": "493aebbeb6b1837433fc176340828ea8565c10f59dd4810b2d74465dbd381aac",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/build/draft_render/experiment/page-02.png",
+        "sha256": "377494543b734b2e51d93e106a895d76b50378adbbef7bd5c6ddc34b70ff58b6",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/build/draft_render/experiment/page-03.png",
+        "sha256": "387698acb995bcd6bb01958e060fe8c738aca8b8da8ab92be5adc84ee97aedd5",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/build/draft_render/experiment/page-04.png",
+        "sha256": "6e5b4d0788af935cf927aea9370269bbfaa0e3fcb7aeca78a2ccb7ecd5e680f4",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/build/draft_render/experiment/page-05.png",
+        "sha256": "41b7839e85c6771c180505e73546a4627d702ddb61859d2b2161defcc0d5f94b",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/build/draft_render/experiment/page-06.png",
+        "sha256": "0fdd5a730b211cc2c964928ab9bc8839e56c71b509499220ddf2e74c8b7ff588",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/build/draft_render/experiment/page-07.png",
+        "sha256": "439f6d60c1e7b91ee9523735e8be1739c25dd1783e656cdb58c1513d76cab9e1",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/build/draft_render/experiment/page-08.png",
+        "sha256": "e200016de643d4166622d7d1f9b4a7660ffbe01cc8d7b68dd0f2c78251af2ff4",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/build/draft_render/experiment/page-09.png",
+        "sha256": "5732176a5157782d56e533635fa665cd5efda5155c05cd57e9c61edcf367e929",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/build/draft_render/experiment/page-10.png",
+        "sha256": "e4e41edb8ffa2fcd3a0172ca432c657d1a926e6f809b50d0a050a919a668dea3",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/build/draft_render/experiment/page-11.png",
+        "sha256": "3eaae497bcc3140aac40d0f20dc07e5300e39be1c53f34f21d06893fe82161d4",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/build/draft_render/experiment/page-12.png",
+        "sha256": "74897fb89c24b1363c6607901c5e120156d7299ab6b5268bf1876f8432dfffdf",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/build/draft_render/experiment/page-13.png",
+        "sha256": "0e8bd488aaeb43338d645186a49546942aa5241e0490a5dc56981c51fc3f48c2",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/build/draft_render/process-contact-1.jpg",
+        "sha256": "9c5bea1e07a87c8b89adaae043c10da135c1c6e4b55915cd2d89206abfcf9824",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/build/draft_render/process-contact-2.jpg",
+        "sha256": "22e791ad58d09bad15d5cf56f4ab7055c2c187ab1836f4b98e1613f47fb43512",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/build/draft_render/process/page-1.png",
+        "sha256": "77e5998faf440c55c42af6af8705861909c2ebf9f06238141a38b7743c36fcb0",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/build/draft_render/process/page-2.png",
+        "sha256": "32f94120c24e06c447cfa44f981b78a26b7f78a698de68fc396e8242c7edbe81",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/build/draft_render/process/page-3.png",
+        "sha256": "10bf020593fd4c676f083995759d13469ae21e34b82da6dcf5c0aed56f97a362",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/build/draft_render/process/page-4.png",
+        "sha256": "4630db3ffbd23394723df3f5d90be1bfcfdb7ae562ab19ba351c2eadecf491dd",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/build/draft_render/process/page-5.png",
+        "sha256": "b297dd99ad26666786de5dddb1295462ed7d9d094622aaf09cf4c7c98c6778a9",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/build/draft_render/process/page-6.png",
+        "sha256": "0897e9499b080d60e99c7799b8f68f6f6b631563ddc7cc482ce9a2e7c6fcdbc6",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/build/draft_render/process/page-7.png",
+        "sha256": "bd78495a25676026d3f074682784dc17486e6addfd19354be33d5438b029930f",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/build/draft_render/process/page-8.png",
+        "sha256": "0ef93d53e3f2e0dbfd50e01012bbb2d0bf48f942bf40e216817f12199ffce13c",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/build/offline_smoke_01/modes/figures/recomputed_modes.png",
+        "sha256": "8b314bbba4c4d9a477b7690d9d57109dbdeff00861ef9fcc1e50ca5580dfcdc9",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/build/offline_smoke_01/parameters/figures/recomputed_orders.png",
+        "sha256": "e3786273b10217823f40ca746f586eb3210f9ab25d45efdabdfe5c4018263115",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/build/offline_smoke_01/parameters/figures/recomputed_parameters.png",
+        "sha256": "d703114450e3cf566683d5410acbfa2d641d0caae34c7ed9670c8e472e5c467a",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/build/offline_smoke_01/production_path_smoke/figures/recomputed_point_fates.png",
+        "sha256": "0b1c81c988786118e6cf7fc1e220ad99ee5ad4502157ddd9b3eab7637d3593d9",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/build/offline_smoke_01/production_path_smoke/figures/recomputed_trajectory_case.png",
+        "sha256": "3c0da3f8d7511999d64f98adde8902183e79a1f7a2e1b5e92b4614bff823c24b",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/build/offline_smoke_02/modes/figures/recomputed_modes.png",
+        "sha256": "8962fca5903d84fe9551710af720e57c0af7da94e783702b55e80da803f3adc8",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/build/offline_smoke_02/parameters/figures/recomputed_orders.png",
+        "sha256": "83f6f0775bfd78096dd56a35352b9b2170a1f0d0e250b3dd21bfd0fdb7fa39d6",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/build/offline_smoke_02/parameters/figures/recomputed_parameters.png",
+        "sha256": "d703114450e3cf566683d5410acbfa2d641d0caae34c7ed9670c8e472e5c467a",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/build/offline_smoke_02/production_path_smoke/figures/recomputed_point_fates.png",
+        "sha256": "0b1c81c988786118e6cf7fc1e220ad99ee5ad4502157ddd9b3eab7637d3593d9",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/build/offline_smoke_02/production_path_smoke/figures/recomputed_trajectory_case.png",
+        "sha256": "3c0da3f8d7511999d64f98adde8902183e79a1f7a2e1b5e92b4614bff823c24b",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/build/offline_smoke_02/render200/recomputed_modes.png",
+        "sha256": "e183bf79bd80f164e2eefb67a5e5f364fe3230edb3fa1f6e8008f4d87cb86c8c",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/build/offline_smoke_02/render200/recomputed_orders.png",
+        "sha256": "7c042b422184d705182faa6802ed961272fbc80e68d42c02571e7fc2d8710ea4",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/build/offline_smoke_02/render200/recomputed_parameters.png",
+        "sha256": "50f93d15f4f3817dddb5fee7a8f753c038c92c75d67089958f0b69c5af3b8d67",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/build/offline_smoke_02/render200/recomputed_point_fates.png",
+        "sha256": "fbfc00fdbc4dd689a513c09929f78c0baf8e91911c8744c68a78e161a39d7e8d",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/build/offline_smoke_02/render200/recomputed_trajectory_case.png",
+        "sha256": "bfd24cd447f43d32376e69ef840d0091b22e5a91d59597d277cb221eb6d757db",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/experiment1/build/render200/page-01.png",
+        "sha256": "5e2a89417fa40d8d4a51265c0c58337e6a738d2a46d8a747b65e035f7c924460",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/experiment1/build/render200/page-02.png",
+        "sha256": "7a798ee9da965cec013dfef5c1b73a849fde4a1fa05e854579922098bb4f1a7e",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/experiment1/build/render200/page-03.png",
+        "sha256": "78363a2f7ecff21db9988530754adff92049d39d05ef2c83d3ab2e13ebc4f6ac",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/experiment1/build/render200/page-04.png",
+        "sha256": "ad75ce8cba7d59af0868c854960d61b73ccdfe9fda654006dc6caf1b9e2e1548",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/experiment1/build/render200/page-05.png",
+        "sha256": "a5c276b4ef88c5b6e9996cbadfef1e8f33880065a67cfd55f739f461b04eefda",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/experiment1/build/render200/page-06.png",
+        "sha256": "d8854823bd7000dd4a9268f2021558a66c73a68e6a10a9427bb7b146c75f54ee",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/experiment1/build/render200/page-07.png",
+        "sha256": "27f0daa5d9374b890f78dde458f75d7158e2b160de0ec3874fddd50b38e12ceb",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/experiment1/build/render200/page-08.png",
+        "sha256": "dc27bc01ef88b0534900bc3ea4d25f202a75739e667e25e70b0995c5f4c46733",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/experiment1/build/render200/page-09.png",
+        "sha256": "556bb1dfd701b2b7c7327902b7e565d40cecb73f724d07af967c6042ad63bc8e",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/experiment1/build/render200/page-10.png",
+        "sha256": "3f80dbfff102f86f4216295d276cbbea03ee131a863f85639d5b9943d867cd43",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/experiment1/build/render200/page-11.png",
+        "sha256": "3efffae3f99e4821093bc550a0418d4ec50ad57756e2ec87d6a6f867a302b0a8",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/experiment1/build/render200/page-12.png",
+        "sha256": "27b5c697b4a214adc2c236f7e47e85498b164794e996fe2e3407e8d5005986a3",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/experiment1/build/render200/page-13.png",
+        "sha256": "f26660029e84a137cb3c9382c3c77086c28bd3ac095f7669d10ba4e947aac03a",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/experiment1/build/render200/page-14.png",
+        "sha256": "68bd49898ba060c9d45cb9627db342c6d7610a75b6ea4e0be74c1e4eba1ca47b",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/experiment1/build/render200/page-15.png",
+        "sha256": "d900dddabc0b8451ed2381962939141a69010d4b36733267d1bda0ce16a3b85f",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/experiment1/build/render200/page-16.png",
+        "sha256": "0a1181a189b8976d914678e3dc108558599ed77d6768ec2bfd3a650014e72682",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/experiment1/build/render200/page-17.png",
+        "sha256": "f496c8ae53d01fcb6c3f822aa12cc33731f5945fca2192c7607dcb72ac8a838a",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/experiment1/build/render200/page-18.png",
+        "sha256": "9e1bcd9f2fa31e659141e68017cc6089154904793aebd29b4ec204801939c737",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/experiment1/build/render200/page-19.png",
+        "sha256": "ce80a88d0985e97ade6ff7160b48fdaaf27c1d0a887296710f5a90c7f570fb50",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/experiment1/build/render200/page-20.png",
+        "sha256": "6f321206c784666c02ed0c787993bd248116fdc8a15d1bfa504fb7649e57ddcf",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/experiment1/build/render200/page-21.png",
+        "sha256": "4ae134c36ed0216f19fd4955bd4d61e1da48a24ee85c7528890a682e2e9f3410",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/process1/build/render200/page-01.png",
+        "sha256": "77e5998faf440c55c42af6af8705861909c2ebf9f06238141a38b7743c36fcb0",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/process1/build/render200/page-02.png",
+        "sha256": "b468ccec3e84f3fcc4a396bb94bc3ec095ee859512700c2658bf870b59c53104",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/process1/build/render200/page-03.png",
+        "sha256": "60dc96a24b57a33f5ac54238a738e18d1209e2ad5c735a12e776dbec6aa639a4",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/process1/build/render200/page-04.png",
+        "sha256": "df547d66c08ec3c0aa854e1ce2289d5a9b3fbce1affd693e8027b12675a5654f",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/process1/build/render200/page-05.png",
+        "sha256": "e124b2329c6825799db9e3e7746f038d96150b9210fff40fc700a70a06eacbd6",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/process1/build/render200/page-06.png",
+        "sha256": "96d8ca1e884c4f52d273596df2af174370543663a19e1f422c6024c64e9fcd8d",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/process1/build/render200/page-07.png",
+        "sha256": "50ca3e6775ca7fd531efae23f962c315cb42a6312f4a6b43e7d5c9b6896aab4e",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/process1/build/render200/page-08.png",
+        "sha256": "9cae6f6d93cb627d09c70f46775e2a035c4f899921deeeb745f62120bc3ac9c9",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/process1/build/render200/page-09.png",
+        "sha256": "bcc44c5e5ea4fc1921c045ce54a5a259e4b991d972387da09a8cc985d5a781a3",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/process1/build/render200/page-10.png",
+        "sha256": "1aa5ddccbe50fb5bcf71601141eeda8d782cdf50c1002753009fa0f1ad1a51e9",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/process1/build/render200/page-11.png",
+        "sha256": "0f4c6705a54a8a171cc5136ca42f2a2f56ef078e15b2cb97b6b02438164bd28c",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/reports/process1/build/render200/page-12.png",
+        "sha256": "5659abb23f9dce0be9f8c4827b9f1819c4211adf8e7477e0bb243a3919bd9a3b",
+        "directory_based_classification": "GENERATED_FIGURE_OR_REPORT_INSPECTION",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/作业/作业/build_ppt/assets/chart_anomaly.png",
+        "sha256": "475bc2ceae728336c278dd680367f82ad62445b3e84bbe72268bf800107a24bb",
+        "directory_based_classification": "TEACHER_STARTER_HISTORICAL",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/作业/作业/build_ppt/assets/chart_dp_curve.png",
+        "sha256": "752a274667a35079b9ac1b7b707e8d3af20a6d15ba92cc30a7826e322eb04c8e",
+        "directory_based_classification": "TEACHER_STARTER_HISTORICAL",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/作业/作业/build_ppt/assets/chart_dup.png",
+        "sha256": "ba74cce14a28dd11b6da1f3ad0a30eb7dc98cdcd58e5bb54de2600ee0b1731c5",
+        "directory_based_classification": "TEACHER_STARTER_HISTORICAL",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/作业/作业/build_ppt/assets/chart_heatmap.png",
+        "sha256": "10d6cd6ac4cb05dae084ffc2cc515e2b58046058c29334cd5cd13ee9467aa9a4",
+        "directory_based_classification": "TEACHER_STARTER_HISTORICAL",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/作业/作业/build_ppt/assets/chart_overlay.png",
+        "sha256": "c07b40009739db09acede3e3c5484ec8d99279d9d3966da548639369e4c58003",
+        "directory_based_classification": "TEACHER_STARTER_HISTORICAL",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/作业/作业/build_ppt/assets/chart_regime.png",
+        "sha256": "6ea04d49d64bcfee4ed81d6eb78a84630ff5ef0f818eaced7a8ff7f98fd09ec1",
+        "directory_based_classification": "TEACHER_STARTER_HISTORICAL",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/作业/作业/build_ppt/assets/chart_sens.png",
+        "sha256": "6aae7501a14ba4e5ff8c9d9c472e43bceba77d82393e37e285656f5728b2fdb2",
+        "directory_based_classification": "TEACHER_STARTER_HISTORICAL",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/作业/作业/build_ppt_agent/assets/ablation_real.png",
+        "sha256": "e139c125fb29aea49291d1bca95cd80263a9f9ad8c098e9f50da515879b48ed3",
+        "directory_based_classification": "TEACHER_STARTER_HISTORICAL",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/作业/作业/build_ppt_agent/assets/arch_layers.png",
+        "sha256": "62fadab9992d3dfccea4a4863d5f331a8ce717ec9098e7bfcc0189e9ad48010c",
+        "directory_based_classification": "TEACHER_STARTER_HISTORICAL",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/作业/作业/build_ppt_agent/assets/arch_loop.png",
+        "sha256": "fbf6213086601fdecb3a813c7b53cec94e3b3f9fdef65bee67e0554ec6b6e071",
+        "directory_based_classification": "TEACHER_STARTER_HISTORICAL",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/作业/作业/build_ppt_agent/assets/memory_tiers.png",
+        "sha256": "ed9ca0d26a843e6a9a3af5c7866bcf37bf5613178477afbab842f3d6f02d3969",
+        "directory_based_classification": "TEACHER_STARTER_HISTORICAL",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/作业/作业/build_ppt_agent/assets/param_three_stage.png",
+        "sha256": "5cbde85ee6f1a7c4a665d3a5c19491d768f1d5d0b99d073c8e221224aef7c71b",
+        "directory_based_classification": "TEACHER_STARTER_HISTORICAL",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/作业/作业/build_ppt_agent/assets/regret_bases.png",
+        "sha256": "cd66fab0824a3934e4408c9291db06adfdd82965c026d14da6f58e847553e861",
+        "directory_based_classification": "TEACHER_STARTER_HISTORICAL",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/作业/作业/figures/demo_anomaly_scatter.png",
+        "sha256": "d4e6572e36a4964eef36651cd7b27aa91a45524625e293cc09280ca43817a783",
+        "directory_based_classification": "TEACHER_STARTER_HISTORICAL",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/作业/作业/figures/demo_clean_overlay.png",
+        "sha256": "211cdcfe3f1cfc1e2ff5dfd15d38295497b5304610fda16a94acc4b21eeb6397",
+        "directory_based_classification": "TEACHER_STARTER_HISTORICAL",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/作业/作业/figures/report_ablation.png",
+        "sha256": "7379e09b558a0fe868d0adcad54b5c05355d7e1f31bc34524a63fccc819706e3",
+        "directory_based_classification": "TEACHER_STARTER_HISTORICAL",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/作业/作业/figures/report_anomaly_scatter.png",
+        "sha256": "d4e6572e36a4964eef36651cd7b27aa91a45524625e293cc09280ca43817a783",
+        "directory_based_classification": "TEACHER_STARTER_HISTORICAL",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/作业/作业/figures/report_clean_overlay.png",
+        "sha256": "6b0470f4faf3bbb042bf36500c6911d88f5cf99e8db8d0a6a0ac1a051b28fc5f",
+        "directory_based_classification": "TEACHER_STARTER_HISTORICAL",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/作业/作业/figures/report_heatmap.png",
+        "sha256": "676833aa042f17f52aaed5601c2fcc41191427d3a0ece296b6e9cc1ca391b435",
+        "directory_based_classification": "TEACHER_STARTER_HISTORICAL",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/作业/作业/figures/report_quality_compression.png",
+        "sha256": "e96d549876b34eba43fa8a3e6d05631686fb01a1ed10022244e9af39ff992fbe",
+        "directory_based_classification": "TEACHER_STARTER_HISTORICAL",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "task1/作业/作业/figures/report_sensitivity.png",
+        "sha256": "2e61addf85d025899c3e4eedeb4d37afce821f67cf07efbff9d925db743a26f5",
+        "directory_based_classification": "TEACHER_STARTER_HISTORICAL",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "templates/latex/process-report/build/render/page-01.png",
+        "sha256": "e9fd6ca0ccba84ee4f0e55c42289deba79c08a29781cc908fa4c6482101a9213",
+        "directory_based_classification": "TEMPLATE_SYNTHETIC",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "templates/latex/process-report/build/render/page-02.png",
+        "sha256": "a3d8ee72e634e3f38e646851c16d71257c7bdad45873be03f2038740990daaf4",
+        "directory_based_classification": "TEMPLATE_SYNTHETIC",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "templates/latex/process-report/build/render/page-03.png",
+        "sha256": "93423dd88c0a97995fc5ab90305fe3368cacad6756a552d38623889ff5ac507d",
+        "directory_based_classification": "TEMPLATE_SYNTHETIC",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "templates/latex/process-report/build/render/page-04.png",
+        "sha256": "387c6b47e9ce2091333ee170b9e2c9cdb324711bc73b9d2ceaa00f1c47cd8096",
+        "directory_based_classification": "TEMPLATE_SYNTHETIC",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "templates/latex/process-report/build/render/page-05.png",
+        "sha256": "47f36ce0feca429cae7cbaca015febbdfec65bd7f2d29da3d0c69688f65612ac",
+        "directory_based_classification": "TEMPLATE_SYNTHETIC",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "templates/latex/process-report/build/render/page-06.png",
+        "sha256": "7d36d20b8ac4f1c3ae7cc229aac93459a1e64ccd26dfaaa0cfb516565157b839",
+        "directory_based_classification": "TEMPLATE_SYNTHETIC",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "templates/latex/process-report/build/render/page-07.png",
+        "sha256": "c22d25763286e400551213f3f0e29ea9aacdfee745ca2608d99a397834d34b88",
+        "directory_based_classification": "TEMPLATE_SYNTHETIC",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "templates/latex/process-report/build/render/page-08.png",
+        "sha256": "d969cae8a628df4f1eaaf2f4f164163ec6cb32a9740f46e08e1e7980f948aaf7",
+        "directory_based_classification": "TEMPLATE_SYNTHETIC",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "templates/latex/process-report/build/render/page-09.png",
+        "sha256": "c9d85009f36649e0312d1f0038d967b97ca0cc6fecb0efd49db8e91996f8bf49",
+        "directory_based_classification": "TEMPLATE_SYNTHETIC",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "templates/latex/process-report/build/render/page-10.png",
+        "sha256": "d0bf286766052fea6f41c2ca44ebfbbd23bb094fd256b96d28fb349d0653892e",
+        "directory_based_classification": "TEMPLATE_SYNTHETIC",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "templates/latex/process-report/build/render/page-11.png",
+        "sha256": "640fd6c407056febef8414a267c8f190c7f743f2f2d18f00295f80254bed9980",
+        "directory_based_classification": "TEMPLATE_SYNTHETIC",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "templates/latex/process-report/build/render/page-12.png",
+        "sha256": "9df6baba1088c6cd60b1b38f4eabe16141de959b99bf0c4ab1e559d76314522e",
+        "directory_based_classification": "TEMPLATE_SYNTHETIC",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "templates/latex/process-report/demo-assets/contact_sheet.png",
+        "sha256": "2d0af0f954a00b6c71a0130fe26949e028ee6ef5244bd49525fda4f9e33676f9",
+        "directory_based_classification": "TEMPLATE_SYNTHETIC",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "templates/latex/process-report/demo-assets/interaction_part1.png",
+        "sha256": "1d6c3e2ed9bde522ca16bb81ec939cbaf9bce2f68de08af7ed063211c7d47f34",
+        "directory_based_classification": "TEMPLATE_SYNTHETIC",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "templates/latex/process-report/demo-assets/interaction_part2.png",
+        "sha256": "d35a18ccf7e31ddfc91ebd3c994a619f2da0f32d73c9711566adab085ac9a292",
+        "directory_based_classification": "TEMPLATE_SYNTHETIC",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "templates/latex/process-report/demo-assets/interaction_part3.png",
+        "sha256": "968471b6f483df8d5ea67c1cce0e8400acc6028c620daf259eb5c43429d3d556",
+        "directory_based_classification": "TEMPLATE_SYNTHETIC",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      },
+      {
+        "path": "templates/latex/process-report/demo-assets/micro_trace_specimen.png",
+        "sha256": "849c1bc4ae19bc01cc8fc7a263f2a27904bbe1058eb0c37b845622c64c5feb5b",
+        "directory_based_classification": "TEMPLATE_SYNTHETIC",
+        "visual_review_in_this_inventory": "NOT_PERFORMED"
+      }
+    ]
+  },
+  "candidate_spec_snapshot": [
+    {
+      "candidate_id": "IH-AUTH-D2",
+      "formal_evidence_selection": "NOT_ASSIGNED_BY_THIS_HANDOFF",
+      "Tier": null,
+      "screenshot_spec": null,
+      "annotation_spec": null,
+      "report_order": null,
+      "Evidence_Lock": "NOT_ASSIGNED_BY_THIS_HANDOFF"
+    },
+    {
+      "candidate_id": "IH-AUTH-CRS",
+      "formal_evidence_selection": "NOT_ASSIGNED_BY_THIS_HANDOFF",
+      "Tier": null,
+      "screenshot_spec": null,
+      "annotation_spec": null,
+      "report_order": null,
+      "Evidence_Lock": "NOT_ASSIGNED_BY_THIS_HANDOFF"
+    },
+    {
+      "candidate_id": "IH-G2-CALIBRATION",
+      "formal_evidence_selection": "NOT_ASSIGNED_BY_THIS_HANDOFF",
+      "Tier": null,
+      "screenshot_spec": null,
+      "annotation_spec": null,
+      "report_order": null,
+      "Evidence_Lock": "NOT_ASSIGNED_BY_THIS_HANDOFF"
+    },
+    {
+      "candidate_id": "IH-G2-TRADEOFF",
+      "formal_evidence_selection": "NOT_ASSIGNED_BY_THIS_HANDOFF",
+      "Tier": null,
+      "screenshot_spec": null,
+      "annotation_spec": null,
+      "report_order": null,
+      "Evidence_Lock": "NOT_ASSIGNED_BY_THIS_HANDOFF"
+    },
+    {
+      "candidate_id": "IH-G2-MEMORY",
+      "formal_evidence_selection": "NOT_ASSIGNED_BY_THIS_HANDOFF",
+      "Tier": null,
+      "screenshot_spec": null,
+      "annotation_spec": null,
+      "report_order": null,
+      "Evidence_Lock": "NOT_ASSIGNED_BY_THIS_HANDOFF"
+    },
+    {
+      "candidate_id": "IH-G3-STAGE-RELAY",
+      "formal_evidence_selection": "NOT_ASSIGNED_BY_THIS_HANDOFF",
+      "Tier": null,
+      "screenshot_spec": null,
+      "annotation_spec": null,
+      "report_order": null,
+      "Evidence_Lock": "NOT_ASSIGNED_BY_THIS_HANDOFF"
+    },
+    {
+      "candidate_id": "IH-G3-AUTONOMY",
+      "formal_evidence_selection": "NOT_ASSIGNED_BY_THIS_HANDOFF",
+      "Tier": null,
+      "screenshot_spec": null,
+      "annotation_spec": null,
+      "report_order": null,
+      "Evidence_Lock": "NOT_ASSIGNED_BY_THIS_HANDOFF"
+    },
+    {
+      "candidate_id": "IH-G3-CANDIDATES",
+      "formal_evidence_selection": "NOT_ASSIGNED_BY_THIS_HANDOFF",
+      "Tier": null,
+      "screenshot_spec": null,
+      "annotation_spec": null,
+      "report_order": null,
+      "Evidence_Lock": "NOT_ASSIGNED_BY_THIS_HANDOFF"
+    },
+    {
+      "candidate_id": "IH-G3-A1-EPOCH01",
+      "formal_evidence_selection": "NOT_ASSIGNED_BY_THIS_HANDOFF",
+      "Tier": null,
+      "screenshot_spec": null,
+      "annotation_spec": null,
+      "report_order": null,
+      "Evidence_Lock": "NOT_ASSIGNED_BY_THIS_HANDOFF"
+    },
+    {
+      "candidate_id": "IH-G3-C06",
+      "formal_evidence_selection": "NOT_ASSIGNED_BY_THIS_HANDOFF",
+      "Tier": null,
+      "screenshot_spec": null,
+      "annotation_spec": null,
+      "report_order": null,
+      "Evidence_Lock": "NOT_ASSIGNED_BY_THIS_HANDOFF"
+    },
+    {
+      "candidate_id": "IH-G3-EVIDENCE-BOUNDARY",
+      "formal_evidence_selection": "NOT_ASSIGNED_BY_THIS_HANDOFF",
+      "Tier": null,
+      "screenshot_spec": null,
+      "annotation_spec": null,
+      "report_order": null,
+      "Evidence_Lock": "NOT_ASSIGNED_BY_THIS_HANDOFF"
+    },
+    {
+      "candidate_id": "IH-G3-C07",
+      "formal_evidence_selection": "NOT_ASSIGNED_BY_THIS_HANDOFF",
+      "Tier": null,
+      "screenshot_spec": null,
+      "annotation_spec": null,
+      "report_order": null,
+      "Evidence_Lock": "NOT_ASSIGNED_BY_THIS_HANDOFF"
+    },
+    {
+      "candidate_id": "IH-G3-A1-RECOMPUTE03",
+      "formal_evidence_selection": "NOT_ASSIGNED_BY_THIS_HANDOFF",
+      "Tier": null,
+      "screenshot_spec": null,
+      "annotation_spec": null,
+      "report_order": null,
+      "Evidence_Lock": "NOT_ASSIGNED_BY_THIS_HANDOFF"
+    },
+    {
+      "candidate_id": "IH-G3-A2",
+      "formal_evidence_selection": "NOT_ASSIGNED_BY_THIS_HANDOFF",
+      "Tier": null,
+      "screenshot_spec": null,
+      "annotation_spec": null,
+      "report_order": null,
+      "Evidence_Lock": "NOT_ASSIGNED_BY_THIS_HANDOFF"
+    },
+    {
+      "candidate_id": "IH-G3-A3",
+      "formal_evidence_selection": "NOT_ASSIGNED_BY_THIS_HANDOFF",
+      "Tier": null,
+      "screenshot_spec": null,
+      "annotation_spec": null,
+      "report_order": null,
+      "Evidence_Lock": "NOT_ASSIGNED_BY_THIS_HANDOFF"
+    },
+    {
+      "candidate_id": "IH-G3-C08",
+      "formal_evidence_selection": "NOT_ASSIGNED_BY_THIS_HANDOFF",
+      "Tier": null,
+      "screenshot_spec": null,
+      "annotation_spec": null,
+      "report_order": null,
+      "Evidence_Lock": "NOT_ASSIGNED_BY_THIS_HANDOFF"
+    },
+    {
+      "candidate_id": "IH-G3-SELECTION",
+      "formal_evidence_selection": "NOT_ASSIGNED_BY_THIS_HANDOFF",
+      "Tier": null,
+      "screenshot_spec": null,
+      "annotation_spec": null,
+      "report_order": null,
+      "Evidence_Lock": "NOT_ASSIGNED_BY_THIS_HANDOFF"
+    },
+    {
+      "candidate_id": "IH-G3-FINAL-CONFIRM",
+      "formal_evidence_selection": "NOT_ASSIGNED_BY_THIS_HANDOFF",
+      "Tier": null,
+      "screenshot_spec": null,
+      "annotation_spec": null,
+      "report_order": null,
+      "Evidence_Lock": "NOT_ASSIGNED_BY_THIS_HANDOFF"
+    },
+    {
+      "candidate_id": "IH-G3-FULL-BOUNDARY",
+      "formal_evidence_selection": "NOT_ASSIGNED_BY_THIS_HANDOFF",
+      "Tier": null,
+      "screenshot_spec": null,
+      "annotation_spec": null,
+      "report_order": null,
+      "Evidence_Lock": "NOT_ASSIGNED_BY_THIS_HANDOFF"
+    }
+  ],
+  "source_availability": {
+    "archived_authorization_text": "AVAILABLE_PARTIAL",
+    "historical_experiment_model_responses": "AVAILABLE_JSON_NOT_HUMAN_CHAT",
+    "governance_tool_events": "METADATA_WITH_LIMITS_NOT_FULL_DIALOGUE",
+    "complete_original_transcript_packets": "NOT_FOUND_IN_SCANNED_SCOPE",
+    "native_human_ai_chat_screenshots": "NOT_FOUND_IN_SCANNED_SCOPE",
+    "approved_selection_annotation_caption_report_order_spec": "NOT_FOUND_IN_SCANNED_SCOPE",
+    "evidence_lock": "NOT_FOUND_IN_SCANNED_SCOPE",
+    "block_lock": "NOT_FOUND_IN_SCANNED_SCOPE"
+  },
+  "remaining_dependencies": [
+    {
+      "id": "ORIGINAL_INTERACTION_MATERIAL",
+      "status": "BLOCKED_EXTERNAL",
+      "needed": "For Evidence Master-selected decisions, native unmodified screenshots and/or complete original user/GPT text with relevant neighbouring turns and actual source range. Existing archived authorization need not be retyped; missing surrounding context is the gap.",
+      "affects": [
+        "Formal interaction pages in Process Report Part I",
+        "Formal interaction pages in Process Report Part II"
+      ],
+      "does_not_block": [
+        "Technical fact editing",
+        "Review guide and source inventory",
+        "Notebook/report/package engineering"
+      ]
+    },
+    {
+      "id": "APPROVED_PRESENTATION_SPEC",
+      "status": "BLOCKED_EXTERNAL",
+      "needed": "Evidence Master approval bound to actual originals: selection/Decision Unit, allowed editing, Historical/Report Order, page/crop instructions, exact anchors/relations if used, caption and side notes.",
+      "affects": [
+        "Formal screenshot integration and any Micro Trace annotation"
+      ],
+      "sequencing": "Only after corresponding originals are available; no arbitrary phrase or relation selected here"
+    },
+    {
+      "id": "EVIDENCE_AND_BLOCK_REVIEW",
+      "status": "PENDING_EVIDENCE_MASTER",
+      "needed": "Evidence Master reviews actual produced assets/version and issues Evidence Lock; required principal Evidence then supports Block/Section Lock.",
+      "affects": [
+        "Formal Process Report completion",
+        "Global historical evolution figure"
+      ],
+      "sequencing": "Not an input that can truthfully be fabricated before original/spec-bound production and review"
+    }
+  ],
+  "actions_in_this_subtask": {
+    "new_experiment_record_model_calls": 0,
+    "experiments_executed": 0,
+    "screenshots_created": 0,
+    "annotations_or_phrase_relations_selected": 0,
+    "new_evidence_or_block_locks": 0,
+    "packages_installed": 0,
+    "persistent_config_changes": 0,
+    "existing_handoffs_modified": false
+  },
+  "required_current_state_refreshes_for_parent": [
+    "Remove identity from current Interaction Handoff/index external gaps after actual generated-output regression.",
+    "Preserve historical authorization, source-not-available fields and historical as-of input inventory.",
+    "Bind final guide navigation to current teacher mapping/build receipt; do not treat this inventory as visual or FULL execution acceptance."
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "role_context": "/root/c_independent",
+  "at": "2026-09-27T16:40:35.108395+00:00",
+  "status": "VERIFIED_IN_SCOPE",
+  "issues": [
+    {
+      "id": "C-01",
+      "journal_id": "CL-C01",
+      "status": "CLOSED",
+      "evidence": "CL-C01_closure.json; independently read package.py and __main__.py again, both top-level NOT_READY/sent_to_teacher=False. Actual ZIP manifest checked."
+    },
+    {
+      "id": "C-02",
+      "status": "CLOSED_CONTENT_SOURCE",
+      "evidence": "Experiment source paragraph cites Sections4.4/5.3; conclusion now explicitly says previous report abstract-only (not all historical research); BibTeX official full text specified sections. Matches A citation_access_receipt and historical audit distinction. Final changed PDF page awaits visual delta."
+    },
+    {
+      "id": "C-03",
+      "status": "CLOSED",
+      "evidence": "Independently resolve all 12 local TEACHING_DIFFERENCES markdown links to real files, shown below."
+    },
+    {
+      "id": "C-04",
+      "status": "CLOSED",
+      "evidence": "Process source line148 now says 未取得的完整历史聊天; actual Process physicalpage3 already viewed at200dpi original and matches."
+    }
+  ],
+  "bindings": {
+    "task1/goal3/package.py": "b2ab4a866f698796ea63b28f653356dd389115003c5449d4d9c1190b69102bf9",
+    "task1/goal3/__main__.py": "7a4ae23c7d55012c54e059d84ea576762275dba29858f0053094a0b499aacbd0",
+    "task1/reports/experiment1/experiment1.tex": "5da3f3d34ee64770ccd36aeded6b095f8bc62e39d17e5772e02ed30d7d2d5c51",
+    "task1/reports/experiment1/references.bib": "a17a66c8baaaa82ed28c6bf9ff9da97ac0ea6415659b6e5aa52119bd4b097007",
+    "task1/reports/process1/process1.tex": "0ccb0cb01932fb9aa16436a0b2847ea19d51d7389002a027293c82f437d9eec5",
+    "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/a_diagnosis/TEACHING_DIFFERENCES.md": "5b3f5d5f94af8f9b532005d632054ac1ba203bc3afcbe75e0241d7210c7af6bc"
+  },
+  "teaching_links": [
+    {
+      "link": "../../../../goal1/materials/pptx_05_text_and_notes.md#slide-24-pptslidesslide24xml",
+      "resolved": "task1/evidence/goal1/materials/pptx_05_text_and_notes.md",
+      "sha256": "d9b8cccff58ae0bbb7f62a0d8144eaa8a363709601759a3c3a90261afab70ed3"
+    },
+    {
+      "link": "../../../../../docs/goal2/CONTRACT.md",
+      "resolved": "task1/docs/goal2/CONTRACT.md",
+      "sha256": "10bffe4971813437798826fb958a4d45609bc9fb9a9bf3664049f98105507010"
+    },
+    {
+      "link": "../../../../goal1/revisions/SC-LAB1-G1-COMPLETE-001/USER_DECISIONS.json",
+      "resolved": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/USER_DECISIONS.json",
+      "sha256": "2b68e39573ab9256a353484842438a118445bb62ddbaca1c42fbd4eee9fe4f0e"
+    },
+    {
+      "link": "../../../../../docs/goal2/CONTRACT.md",
+      "resolved": "task1/docs/goal2/CONTRACT.md",
+      "sha256": "10bffe4971813437798826fb958a4d45609bc9fb9a9bf3664049f98105507010"
+    },
+    {
+      "link": "../../../../goal2/USER_PROMPT.md",
+      "resolved": "task1/evidence/goal2/USER_PROMPT.md",
+      "sha256": "f4b4246e4287e7f521c0fafbca4bed68c5d91e39f6818be64d25b10d34968603"
+    },
+    {
+      "link": "../../../../../docs/goal2/CONTRACT.md",
+      "resolved": "task1/docs/goal2/CONTRACT.md",
+      "sha256": "10bffe4971813437798826fb958a4d45609bc9fb9a9bf3664049f98105507010"
+    },
+    {
+      "link": "../../../../../docs/goal2/CONTRACT.md",
+      "resolved": "task1/docs/goal2/CONTRACT.md",
+      "sha256": "10bffe4971813437798826fb958a4d45609bc9fb9a9bf3664049f98105507010"
+    },
+    {
+      "link": "../../../../../workflow/g2_modes.py",
+      "resolved": "task1/workflow/g2_modes.py",
+      "sha256": "31e936448918b943dca3cfdc8e4590eb64da2c48b262899040862d7b1533704e"
+    },
+    {
+      "link": "../../../../../workflow/g2_memory.py",
+      "resolved": "task1/workflow/g2_memory.py",
+      "sha256": "e0784e6178cf4da3277c7fc8c1e16efce73b56b91b02b41acd3e8870d43a8c56"
+    },
+    {
+      "link": "../../../../../docs/goal2/CONTRACT.md",
+      "resolved": "task1/docs/goal2/CONTRACT.md",
+      "sha256": "10bffe4971813437798826fb958a4d45609bc9fb9a9bf3664049f98105507010"
+    },
+    {
+      "link": "../../../USER_PROMPT.md",
+      "resolved": "task1/evidence/goal3/USER_PROMPT.md",
+      "sha256": "e5fd60e707b3b5e4c62e8c522bbc58cbd17d89fe67ec29abaf2c3d037de723ec"
+    },
+    {
+      "link": "../../../../goal1/materials/pptx_05_text_and_notes.md#slide-8-pptslidesslide8xml",
+      "resolved": "task1/evidence/goal1/materials/pptx_05_text_and_notes.md",
+      "sha256": "d9b8cccff58ae0bbb7f62a0d8144eaa8a363709601759a3c3a90261afab70ed3"
+    }
+  ],
+  "c05": "OPEN: parent/B fixing table14 spacing; no premature visual closure"
+}

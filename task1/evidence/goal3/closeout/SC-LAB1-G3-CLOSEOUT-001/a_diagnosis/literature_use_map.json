@@ -1,0 +1,1276 @@
+{
+  "task_id": "SC-LAB1-G3-CLOSEOUT-001",
+  "role": "A_SOURCE_DIAGNOSIS",
+  "generated_at_utc": "2026-09-27T17:47:18.473386+00:00",
+  "historical_audit_unchanged": true,
+  "source_binding": {
+    "path": "task1/docs/research/Task1_Source_Audit_2025_2026_Merged.json",
+    "sha256": "fc6d597ddaa413c000a689737b23840a639b93cf626464f57841a8ef0cc966f7",
+    "locator": "",
+    "source_kind": "ARTIFACT",
+    "exists": true
+  },
+  "count_archived_sources": 26,
+  "count_current_extra_report_documents": 2,
+  "no_algorithm_minimum": true,
+  "no_new_literature_algorithm_experiments": true,
+  "no_broad_new_search": true,
+  "entries": [
+    {
+      "id": "S01",
+      "title": "T-Assess: An Efficient Data Quality Assessment System Tailored for Trajectory Data",
+      "authors": [
+        "Junhao Zhu",
+        "Tao Wang",
+        "Danlei Hu",
+        "Ziquan Fang",
+        "Lu Chen",
+        "Yunjun Gao",
+        "Tianyi Li",
+        "Christian S. Jensen"
+      ],
+      "year": 2024,
+      "venue_or_institution": "Proceedings of the VLDB Endowment 18(3), 666–674",
+      "conference_year": 2025,
+      "publication_status": "按归档Source Audit所核正式题录；作者稿与正式版阅读差别见reading/access",
+      "urls": [
+        "https://www.vldb.org/pvldb/vol18/p666-chen.pdf",
+        "https://vbn.aau.dk/en/publications/t-assess-an-efficient-data-quality-assessment-system-tailored-for/"
+      ],
+      "historical_reading_level": "全文指定章节核读（继承Source Audit，非全篇逐式验收）",
+      "historical_actual_reading": "检查摘要、数据模型、§4.1 与 Table 1；目视核对印刷第669页。不是逐项复现实验。",
+      "historical_access": "正式PDF可读；已经解决最初错误PDF文件名导致的访问失败",
+      "original_location": "§2.1；§4.1；Table 1（669页）",
+      "supported_proposition": "将轨迹质量检查组织为 validity、completeness、consistency、fairness 四维；Table 1 的时间约束允许相等时间戳，缺点判据依赖采样间隔。",
+      "task_relevance": "对应板块①⑥⑦。我们的诊断不应只有“异常率”；应分开记录结构有效性、时间可计算性、几何可疑性和覆盖情况。",
+      "actual_use": "已有合并研究卡的迁移建议保持候选身份；当前未找到把该具体论文算法准入并运行的记录。",
+      "historical_causation_boundary": "不能从当前代码/报告与论文相似倒推历史灵感；不编因果。",
+      "status": [
+        "已检索",
+        "全文指定章节核读（继承Source Audit，非全篇逐式验收）",
+        "未采用",
+        "仅事后对应（如与当前实现相似）"
+      ],
+      "implementation_or_trial": "No author algorithm implementation/reproduction claimed.",
+      "risk_or_nonproof": "2024是出版年，VLDB2025是会议展示年份。其轨迹稀有性、路网和密度相关检查依赖任务假设；不能直接当成本实验的错误标签或总评分。Spark/Kafka与抽样优化不纳入当前实现范围。",
+      "source_audit": {
+        "path": "task1/docs/research/Task1_Source_Audit_2025_2026_Merged.json",
+        "sha256": "fc6d597ddaa413c000a689737b23840a639b93cf626464f57841a8ef0cc966f7",
+        "locator": "sources[id=S01]",
+        "source_kind": "HISTORICAL_SOURCE_AUDIT",
+        "exists": true
+      },
+      "historical_evidence": [],
+      "current_formal_report_citation": null
+    },
+    {
+      "id": "S02",
+      "title": "Trajectory Simplification: An Experimental Study and Quality Analysis",
+      "authors": [
+        "Dongxiang Zhang",
+        "Mengting Ding",
+        "Dingyu Yang",
+        "Yi Liu",
+        "Ju Fan",
+        "Heng Tao Shen"
+      ],
+      "year": 2018,
+      "venue_or_institution": "Proceedings of the VLDB Endowment 11(9), 934–946",
+      "conference_year": null,
+      "publication_status": "按归档Source Audit所核正式题录；作者稿与正式版阅读差别见reading/access",
+      "urls": [
+        "https://www.vldb.org/pvldb/vol11/p934-zhang.pdf"
+      ],
+      "historical_reading_level": "全文指定章节核读（继承Source Audit，非全篇逐式验收）",
+      "historical_actual_reading": "检查方法与评价定义、误差及查询质量的区别；目视核对936页公式和Figure 1。",
+      "historical_access": "正式PDF可读",
+      "original_location": "§2.1–2.3，尤其§2.2的Definitions 2–4（936页）",
+      "supported_proposition": "区分误差型与查询型简化评价；定义PED、SED、DAD。印刷936页的PED公式为点到无限直线距离，SED按原时间插值对照。",
+      "task_relevance": "对应板块④⑤⑥⑧。它为本实验设计压缩—误差曲线、区分几何与时间保真提供基础，也为MLSimp等新方法提供对照背景。",
+      "actual_use": "已有合并研究卡的迁移建议保持候选身份；当前未找到把该具体论文算法准入并运行的记录。",
+      "historical_causation_boundary": "不能从当前代码/报告与论文相似倒推历史灵感；不编因果。",
+      "status": [
+        "已检索",
+        "全文指定章节核读（继承Source Audit，非全篇逐式验收）",
+        "未采用",
+        "仅事后对应（如与当前实现相似）"
+      ],
+      "implementation_or_trial": "No author algorithm implementation/reproduction claimed.",
+      "risk_or_nonproof": "PED公式与本实验教师要求的有限线段距离不能无条件混用；SED包含压缩重建约定，不证明缺测期间真实运动为匀速直线。无需复现全部25个算法或增加下游查询任务。",
+      "source_audit": {
+        "path": "task1/docs/research/Task1_Source_Audit_2025_2026_Merged.json",
+        "sha256": "fc6d597ddaa413c000a689737b23840a639b93cf626464f57841a8ef0cc966f7",
+        "locator": "sources[id=S02]",
+        "source_kind": "HISTORICAL_SOURCE_AUDIT",
+        "exists": true
+      },
+      "historical_evidence": [],
+      "current_formal_report_citation": null
+    },
+    {
+      "id": "S03",
+      "title": "Stream Data Cleaning under Speed and Acceleration Constraints",
+      "authors": [
+        "Shaoxu Song",
+        "Fei Gao",
+        "Aoqian Zhang",
+        "Jianmin Wang",
+        "Philip S. Yu"
+      ],
+      "year": 2021,
+      "venue_or_institution": "ACM Transactions on Database Systems 46(3), Article 10, 1–44",
+      "conference_year": null,
+      "publication_status": "按归档Source Audit所核正式题录；作者稿与正式版阅读差别见reading/access",
+      "urls": [
+        "https://sxsong.github.io/doc/21tods.pdf"
+      ],
+      "historical_reading_level": "全文指定章节核读（继承Source Audit，非全篇逐式验收）",
+      "historical_actual_reading": "检查方法目标、§3.3.2、§4 Limitations、§5.1实验设置。",
+      "historical_access": "作者PDF可读",
+      "original_location": "§3.3.2；§4；§5.1（10:24–10:26）",
+      "supported_proposition": "约束清洗考虑修改成本；作者明确指出错误约束、约束内的脏点与连续错误可能造成失效或过修复，并区分注入错误与人工标注GPS实验。",
+      "task_relevance": "对应板块①③⑦⑧⑨。直接支持“规则合法不等于真实正确”，需要把异常残留、正常点误伤和修改代价分开评价。",
+      "actual_use": "已有合并研究卡的迁移建议保持候选身份；当前未找到把该具体论文算法准入并运行的记录。",
+      "historical_causation_boundary": "不能从当前代码/报告与论文相似倒推历史灵感；不编因果。",
+      "status": [
+        "已检索",
+        "全文指定章节核读（继承Source Audit，非全篇逐式验收）",
+        "未采用",
+        "仅事后对应（如与当前实现相似）",
+        "仅风险提醒/范围边界"
+      ],
+      "implementation_or_trial": "No author algorithm implementation/reproduction claimed.",
+      "risk_or_nonproof": "不能直接移植论文速度、加速度或窗口数值；这里的值修复不等于教师的删除式去噪。对本数据有效性须实验验证。",
+      "source_audit": {
+        "path": "task1/docs/research/Task1_Source_Audit_2025_2026_Merged.json",
+        "sha256": "fc6d597ddaa413c000a689737b23840a639b93cf626464f57841a8ef0cc966f7",
+        "locator": "sources[id=S03]",
+        "source_kind": "HISTORICAL_SOURCE_AUDIT",
+        "exists": true
+      },
+      "historical_evidence": [],
+      "current_formal_report_citation": null
+    },
+    {
+      "id": "S04",
+      "title": "Multivariate Time Series Cleaning under Speed Constraints",
+      "authors": [
+        "Aoqian Zhang",
+        "Zexue Wu",
+        "Yifeng Gong",
+        "Ye Yuan",
+        "Guoren Wang"
+      ],
+      "year": 2024,
+      "venue_or_institution": "Proceedings of the ACM on Management of Data 2(6), Article 245, 1–26",
+      "conference_year": 2025,
+      "publication_status": "按归档Source Audit所核正式题录；作者稿与正式版阅读差别见reading/access",
+      "urls": [
+        "https://doi.org/10.1145/3698821",
+        "https://arxiv.org/html/2411.01214v1"
+      ],
+      "historical_reading_level": "全文指定章节核读（继承Source Audit，非全篇逐式验收）",
+      "historical_actual_reading": "出版社索引题录核对发表信息；正文读取作者HTML的§1–2、§5相关实验与分析。",
+      "historical_access": "出版社全文受限；作者HTML全文可读；正式发表元数据与作者稿区分记录",
+      "original_location": "作者稿§1–2；§5.1、§5.4",
+      "supported_proposition": "联合处理多维数值，并区分最少修改点数与最小修改幅度；问题定义保持时间戳不变。",
+      "task_relevance": "对应板块①③⑦⑧⑨。经纬度应作为一个位置向量检查，不能各自清洗后再无条件拼接；也要核对“速度”的数学单位。",
+      "actual_use": "已有合并研究卡的迁移建议保持候选身份；当前未找到把该具体论文算法准入并运行的记录。",
+      "historical_causation_boundary": "不能从当前代码/报告与论文相似倒推历史灵感；不编因果。",
+      "status": [
+        "已检索",
+        "全文指定章节核读（继承Source Audit，非全篇逐式验收）",
+        "未采用",
+        "仅事后对应（如与当前实现相似）"
+      ],
+      "implementation_or_trial": "No author algorithm implementation/reproduction claimed.",
+      "risk_or_nonproof": "出版社全文直接访问未成功，正文依据为作者v1稿；其中ACM模板残留的2018/Woodstock并非真实发表信息。计数最优不等于恢复真值最优；不自动批准坐标修复或完整MTCSC复现。",
+      "source_audit": {
+        "path": "task1/docs/research/Task1_Source_Audit_2025_2026_Merged.json",
+        "sha256": "fc6d597ddaa413c000a689737b23840a639b93cf626464f57841a8ef0cc966f7",
+        "locator": "sources[id=S04]",
+        "source_kind": "HISTORICAL_SOURCE_AUDIT",
+        "exists": true
+      },
+      "historical_evidence": [],
+      "current_formal_report_citation": null
+    },
+    {
+      "id": "S05",
+      "title": "Cleaning timestamps with temporal constraints",
+      "authors": [
+        "Shaoxu Song",
+        "Ruihong Huang",
+        "Yue Cao",
+        "Jianmin Wang"
+      ],
+      "year": 2021,
+      "venue_or_institution": "The VLDB Journal 30, 425–446",
+      "conference_year": null,
+      "publication_status": "按归档Source Audit所核正式题录；作者稿与正式版阅读差别见reading/access",
+      "urls": [
+        "https://sxsong.github.io/doc/21vldbj.pdf"
+      ],
+      "historical_reading_level": "全文指定章节核读（继承Source Audit，非全篇逐式验收）",
+      "historical_actual_reading": "重点检查§2问题定义、§2.2修复模型及其限制。",
+      "historical_access": "作者PDF可读",
+      "original_location": "§2.2，428–429页",
+      "supported_proposition": "时间戳修复依赖给定时间约束，最小化绝对修改成本；原文明确可行的最小修改解不一定是真实时间。",
+      "task_relevance": "对应板块①③⑦。对零时间差、突发时间戳和异常速度，首先判断时间证据是否足够，而不能直接修改位置。",
+      "actual_use": "已有合并研究卡的迁移建议保持候选身份；当前未找到把该具体论文算法准入并运行的记录。",
+      "historical_causation_boundary": "不能从当前代码/报告与论文相似倒推历史灵感；不编因果。",
+      "status": [
+        "已检索",
+        "全文指定章节核读（继承Source Audit，非全篇逐式验收）",
+        "未采用",
+        "仅事后对应（如与当前实现相似）",
+        "仅风险提醒/范围边界"
+      ],
+      "implementation_or_trial": "No author algorithm implementation/reproduction claimed.",
+      "risk_or_nonproof": "不能据此给未知采样机制的数据统一改写时间间隔；不与2016年同名会议论文混淆。",
+      "source_audit": {
+        "path": "task1/docs/research/Task1_Source_Audit_2025_2026_Merged.json",
+        "sha256": "fc6d597ddaa413c000a689737b23840a639b93cf626464f57841a8ef0cc966f7",
+        "locator": "sources[id=S05]",
+        "source_kind": "HISTORICAL_SOURCE_AUDIT",
+        "exists": true
+      },
+      "historical_evidence": [],
+      "current_formal_report_citation": null
+    },
+    {
+      "id": "S06",
+      "title": "A comparative analysis of trajectory similarity measures",
+      "authors": [
+        "Yaguang Tao",
+        "Alan Both",
+        "Rodrigo I. Silveira",
+        "Kevin Buchin",
+        "Stef Sijben",
+        "Ross S. Purves",
+        "Patrick Laube",
+        "Dongliang Peng",
+        "Kevin Toohey",
+        "Matt Duckham"
+      ],
+      "year": 2021,
+      "venue_or_institution": "GIScience & Remote Sensing 58(5), 643–669",
+      "conference_year": null,
+      "publication_status": "按归档Source Audit所核正式题录；作者稿与正式版阅读差别见reading/access",
+      "urls": [
+        "https://www.tandfonline.com/doi/full/10.1080/15481603.2021.1908927",
+        "https://digitalcollection.zhaw.ch/items/3dfdd4c0-3beb-4a59-8bdf-da70ef5b80dc",
+        "https://digitalcollection.zhaw.ch/bitstreams/6297498d-e4f4-4bb1-8fd6-ee49cd56d886/download"
+      ],
+      "historical_reading_level": "全文指定章节核读（继承Source Audit，非全篇逐式验收）",
+      "historical_actual_reading": "检查离散/连续、绝对/相对时间、Fréchet定义及概念分析；不是复现论文全部基准。",
+      "historical_access": "出版社直接访问403；已通过ZHAW机构仓储获得PDF",
+      "original_location": "Relative versus absolute measures；§4相关定义；Discussion of conceptual and theoretical analysis（653–654页）",
+      "supported_proposition": "相似度须区分轨迹表示及时间对齐语义；只对离散观测对齐与对完整折线对齐具有不同性质。",
+      "task_relevance": "对应板块④⑥⑦。用于判断Hausdorff、Fréchet等是否适合本实验声明的“形状”“顺序”或“时间”保真。",
+      "actual_use": "已有合并研究卡的迁移建议保持候选身份；当前未找到把该具体论文算法准入并运行的记录。",
+      "historical_causation_boundary": "不能从当前代码/报告与论文相似倒推历史灵感；不编因果。",
+      "status": [
+        "已检索",
+        "全文指定章节核读（继承Source Audit，非全篇逐式验收）",
+        "未采用",
+        "仅事后对应（如与当前实现相似）"
+      ],
+      "implementation_or_trial": "No author algorithm implementation/reproduction claimed.",
+      "risk_or_nonproof": "作为领域补充，不笼统声称与TODS/PVLDB属同一评分类别。允许顺序对齐不等于约束绝对时间；连续折线的内部也不是自动获得的真实路径。",
+      "source_audit": {
+        "path": "task1/docs/research/Task1_Source_Audit_2025_2026_Merged.json",
+        "sha256": "fc6d597ddaa413c000a689737b23840a639b93cf626464f57841a8ef0cc966f7",
+        "locator": "sources[id=S06]",
+        "source_kind": "HISTORICAL_SOURCE_AUDIT",
+        "exists": true
+      },
+      "historical_evidence": [],
+      "current_formal_report_citation": null
+    },
+    {
+      "id": "S07",
+      "title": "Trajectory Clustering: A Partition-and-Group Framework",
+      "authors": [
+        "Jae-Gil Lee",
+        "Jiawei Han",
+        "Kyu-Young Whang"
+      ],
+      "year": 2007,
+      "venue_or_institution": "ACM SIGMOD 2007, 593–604",
+      "conference_year": null,
+      "publication_status": "按归档Source Audit所核正式题录；作者稿与正式版阅读差别见reading/access",
+      "urls": [
+        "https://pure.kaist.ac.kr/en/publications/trajectory-clustering-a-partition-and-group-framework/"
+      ],
+      "historical_reading_level": "仅题录/摘要或作者说明，未全文核读",
+      "historical_actual_reading": "核实题录与摘要；未做全文算法复核。",
+      "historical_access": "机构摘要可读；不声称全文已读",
+      "original_location": "机构页面Abstract",
+      "supported_proposition": "TRACLUS研究先分段再聚类，以发现共同子轨迹；采用MDL分割与密度聚类。",
+      "task_relevance": "对应板块②⑤的检索边界：它说明“trajectory segmentation”不一定就是老师要求的观测连续性中断切分。",
+      "actual_use": "已有合并研究卡的迁移建议保持候选身份；当前未找到把该具体论文算法准入并运行的记录。",
+      "historical_causation_boundary": "不能从当前代码/报告与论文相似倒推历史灵感；不编因果。",
+      "status": [
+        "已检索",
+        "仅题录/摘要或作者说明，未全文核读",
+        "未采用",
+        "仅事后对应（如与当前实现相似）",
+        "仅风险提醒/范围边界"
+      ],
+      "implementation_or_trial": "No author algorithm implementation/reproduction claimed.",
+      "risk_or_nonproof": "用途是聚类，不是本实验的观测连续性中断分段。记录为检索排除/边界参考，不纳入实现候选。",
+      "source_audit": {
+        "path": "task1/docs/research/Task1_Source_Audit_2025_2026_Merged.json",
+        "sha256": "fc6d597ddaa413c000a689737b23840a639b93cf626464f57841a8ef0cc966f7",
+        "locator": "sources[id=S07]",
+        "source_kind": "HISTORICAL_SOURCE_AUDIT",
+        "exists": true
+      },
+      "historical_evidence": [],
+      "current_formal_report_citation": null
+    },
+    {
+      "id": "S08",
+      "title": "Algorithms for the Reduction of the Number of Points Required to Represent a Digitized Line or Its Caricature",
+      "authors": [
+        "David H. Douglas",
+        "Thomas K. Peucker"
+      ],
+      "year": 1973,
+      "venue_or_institution": "The Canadian Cartographer 10(2), 112–122",
+      "conference_year": null,
+      "publication_status": "按归档Source Audit所核正式题录；作者稿与正式版阅读差别见reading/access",
+      "urls": [
+        "https://doi.org/10.3138/FM57-6770-U75U-7727"
+      ],
+      "historical_reading_level": "仅题录/摘要或作者说明，未全文核读",
+      "historical_actual_reading": "核实原始发表信息；未取得并精读原始全文。",
+      "historical_access": "题录/摘要可读，原始全文未核读",
+      "original_location": "出版社题录与摘要",
+      "supported_proposition": "Douglas–Peucker方法原始论文的作者、题名与1973年出处。",
+      "task_relevance": "对应板块④，老师指定DP的出处。",
+      "actual_use": "原始DP出处与定义边界；实际算法来自教师指定和获批数学合同，不称原论文复现。",
+      "historical_causation_boundary": "G3 A_CANDIDATE_RATIONALE及a_candidate_plan明确列入已读条目；这只证明审计稿阅读/思想边界，不证明原全文阅读或算法采用。",
+      "status": [
+        "已检索",
+        "仅题录/摘要或作者说明，未全文核读",
+        "思想借鉴/定义边界有候选前记录",
+        "教师指定DP已实现并试验；原论文算法未独立复现"
+      ],
+      "implementation_or_trial": "No author algorithm reproduction identified; DP required by teacher is separately implemented/tested.",
+      "risk_or_nonproof": "只用作方法出处，不依此宣称已验证实现或误差定理；不把经典原始论文包装为新的顶会工作。",
+      "source_audit": {
+        "path": "task1/docs/research/Task1_Source_Audit_2025_2026_Merged.json",
+        "sha256": "fc6d597ddaa413c000a689737b23840a639b93cf626464f57841a8ef0cc966f7",
+        "locator": "sources[id=S08]",
+        "source_kind": "HISTORICAL_SOURCE_AUDIT",
+        "exists": true
+      },
+      "historical_evidence": [
+        {
+          "path": "task1/evidence/goal3/A_CANDIDATE_RATIONALE.md",
+          "sha256": "eac8547a7b7316542922073684e7b242cebd552e0d48f6200f7f44c1140b4ffb",
+          "locator": "文献边界",
+          "source_kind": "PRE_CANDIDATE_READING_RECORD",
+          "exists": true
+        }
+      ],
+      "current_formal_report_citation": null
+    },
+    {
+      "id": "S09",
+      "title": "Algorithms for geodesics",
+      "authors": [
+        "Charles F. F. Karney"
+      ],
+      "year": 2013,
+      "venue_or_institution": "Journal of Geodesy 87, 43–55",
+      "conference_year": null,
+      "publication_status": "按归档Source Audit所核正式题录；作者稿与正式版阅读差别见reading/access",
+      "urls": [
+        "https://link.springer.com/article/10.1007/s00190-012-0578-z",
+        "https://link.springer.com/content/pdf/10.1007/s00190-012-0578-z.pdf"
+      ],
+      "historical_reading_level": "全文指定章节核读（继承Source Audit，非全篇逐式验收）",
+      "historical_actual_reading": "核实发表信息并检查测地线正反解的研究目标；全文可读，未审查全部推导。",
+      "historical_access": "出版社页面和PDF可读",
+      "original_location": "Abstract与Introduction",
+      "supported_proposition": "提供椭球测地线正、反问题的数值算法。",
+      "task_relevance": "对应板块①④⑥。距离误差会传递到速度、分段阈值和DP容差，因此不能把距离计算当作无关实现细节。",
+      "actual_use": "已有合并研究卡的迁移建议保持候选身份；当前未找到把该具体论文算法准入并运行的记录。",
+      "historical_causation_boundary": "不能从当前代码/报告与论文相似倒推历史灵感；不编因果。",
+      "status": [
+        "已检索",
+        "全文指定章节核读（继承Source Audit，非全篇逐式验收）",
+        "未采用",
+        "仅事后对应（如与当前实现相似）"
+      ],
+      "implementation_or_trial": "No author algorithm implementation/reproduction claimed.",
+      "risk_or_nonproof": "数值距离算法不能证明数据采用哪个坐标基准，也不能自动把GCJ02当作WGS84。期刊年份2013；在线发表2012。",
+      "source_audit": {
+        "path": "task1/docs/research/Task1_Source_Audit_2025_2026_Merged.json",
+        "sha256": "fc6d597ddaa413c000a689737b23840a639b93cf626464f57841a8ef0cc966f7",
+        "locator": "sources[id=S09]",
+        "source_kind": "HISTORICAL_SOURCE_AUDIT",
+        "exists": true
+      },
+      "historical_evidence": [],
+      "current_formal_report_citation": null
+    },
+    {
+      "id": "S10",
+      "title": "On Over-fitting in Model Selection and Subsequent Selection Bias in Performance Evaluation",
+      "authors": [
+        "Gavin C. Cawley",
+        "Nicola L. C. Talbot"
+      ],
+      "year": 2010,
+      "venue_or_institution": "Journal of Machine Learning Research 11(70), 2079–2107",
+      "conference_year": null,
+      "publication_status": "按归档Source Audit所核正式题录；作者稿与正式版阅读差别见reading/access",
+      "urls": [
+        "https://www.jmlr.org/papers/v11/cawley10a.html",
+        "https://www.jmlr.org/papers/volume11/cawley10a/cawley10a.pdf"
+      ],
+      "historical_reading_level": "全文指定章节核读（继承Source Audit，非全篇逐式验收）",
+      "historical_actual_reading": "检查摘要、引言与模型选择/性能评价分离的论证；未复现其机器学习实验。",
+      "historical_access": "期刊网页与PDF可读",
+      "original_location": "Abstract；Introduction；关于性能评价协议的讨论",
+      "supported_proposition": "有限样本上的模型选择标准本身可能过拟合，进而造成性能评价乐观偏差。",
+      "task_relevance": "对应板块⑦⑧⑨。多轮Agent选择顺序、规则与参数，也是依据有限反馈选择候选，需要把探索反馈与最终确认区分。",
+      "actual_use": "选择与最终确认分开的一般风险提醒；G3 A明确读过历史审计条目。",
+      "historical_causation_boundary": "G3 A_CANDIDATE_RATIONALE及a_candidate_plan明确列入已读条目；这只证明审计稿阅读/思想边界，不证明原全文阅读或算法采用。",
+      "status": [
+        "已检索",
+        "全文指定章节核读（继承Source Audit，非全篇逐式验收）",
+        "思想借鉴/定义边界有候选前记录"
+      ],
+      "implementation_or_trial": "No author algorithm implementation/reproduction claimed.",
+      "risk_or_nonproof": "支持选择/确认分离的原则，不决定本实验固定划分比例，也不要求对确定性轨迹工具强制套用完整嵌套交叉验证。",
+      "source_audit": {
+        "path": "task1/docs/research/Task1_Source_Audit_2025_2026_Merged.json",
+        "sha256": "fc6d597ddaa413c000a689737b23840a639b93cf626464f57841a8ef0cc966f7",
+        "locator": "sources[id=S10]",
+        "source_kind": "HISTORICAL_SOURCE_AUDIT",
+        "exists": true
+      },
+      "historical_evidence": [
+        {
+          "path": "task1/evidence/goal3/A_CANDIDATE_RATIONALE.md",
+          "sha256": "eac8547a7b7316542922073684e7b242cebd552e0d48f6200f7f44c1140b4ffb",
+          "locator": "文献边界",
+          "source_kind": "PRE_CANDIDATE_READING_RECORD",
+          "exists": true
+        }
+      ],
+      "current_formal_report_citation": "cawley2010",
+      "historical_reading_distinction": "2026-09-24合并Source Audit记载摘要、引言和选择/评估分离论证阅读；G3候选A只明确核读审计稿；收尾前正式报告的直接引文核验仅登记官方摘要/元数据。这是三个不同主体/用途的访问范围，不能互相覆盖。",
+      "current_closeout_reading": {
+        "level": "全文指定段核读（本轮新增访问，不倒改历史）",
+        "location": "§1；§4.4、§5–5.1，印刷2094–2095/物理16–17；§5.3印刷2102/物理24；§6印刷2103/物理25",
+        "receipt": {
+          "path": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/a_diagnosis/citation_access_receipt.json",
+          "sha256": "e5ff4cc466b47668d4fea1fe0c10908c46e5d78825c3205f4fece8959f510ad0",
+          "locator": "",
+          "source_kind": "ARTIFACT",
+          "exists": true
+        },
+        "effect": "只加强当前引用的文本依据，不改变选择合同、样本或结论。"
+      }
+    },
+    {
+      "id": "S11",
+      "title": "Random Search for Hyper-Parameter Optimization",
+      "authors": [
+        "James Bergstra",
+        "Yoshua Bengio"
+      ],
+      "year": 2012,
+      "venue_or_institution": "Journal of Machine Learning Research 13(10), 281–305",
+      "conference_year": null,
+      "publication_status": "按归档Source Audit所核正式题录；作者稿与正式版阅读差别见reading/access",
+      "urls": [
+        "https://www.jmlr.org/papers/v13/bergstra12a.html",
+        "https://www.jmlr.org/papers/volume13/bergstra12a/bergstra12a.pdf"
+      ],
+      "historical_reading_level": "全文指定章节核读（继承Source Audit，非全篇逐式验收）",
+      "historical_actual_reading": "检查摘要、研究条件及高维模型选择部分；未复现其搜索实验。",
+      "historical_access": "期刊网页与PDF可读",
+      "original_location": "Abstract；神经网络与DBN模型选择实验和讨论",
+      "supported_proposition": "在论文研究的神经网络调参条件下，随机搜索是有价值的基准，参数有效维度影响搜索效率。",
+      "task_relevance": "对应板块⑧⑨。判断复杂推荐或自适应搜索的收益时，需要一个合理、同预算的简单参照。",
+      "actual_use": "已有合并研究卡的迁移建议保持候选身份；当前未找到把该具体论文算法准入并运行的记录。",
+      "historical_causation_boundary": "不能从当前代码/报告与论文相似倒推历史灵感；不编因果。",
+      "status": [
+        "已检索",
+        "全文指定章节核读（继承Source Audit，非全篇逐式验收）",
+        "未采用",
+        "仅事后对应（如与当前实现相似）"
+      ],
+      "implementation_or_trial": "No author algorithm implementation/reproduction claimed.",
+      "risk_or_nonproof": "不能推导出本实验少量可解释阈值一定应随机搜索；参数敏感性分析也不等于只寻找最高分。",
+      "source_audit": {
+        "path": "task1/docs/research/Task1_Source_Audit_2025_2026_Merged.json",
+        "sha256": "fc6d597ddaa413c000a689737b23840a639b93cf626464f57841a8ef0cc966f7",
+        "locator": "sources[id=S11]",
+        "source_kind": "HISTORICAL_SOURCE_AUDIT",
+        "exists": true
+      },
+      "historical_evidence": [],
+      "current_formal_report_citation": null
+    },
+    {
+      "id": "S12",
+      "title": "Visual Interactive Map Matching",
+      "authors": [
+        "Robert Krüger",
+        "Georgi Simeonov",
+        "Fabian Beck",
+        "Thomas Ertl"
+      ],
+      "year": 2018,
+      "venue_or_institution": "IEEE Transactions on Visualization and Computer Graphics 24(6), 1881–1892",
+      "conference_year": null,
+      "publication_status": "按归档Source Audit所核正式题录；作者稿与正式版阅读差别见reading/access",
+      "urls": [
+        "https://doi.org/10.1109/TVCG.2018.2816219",
+        "https://pacificvis.org/pvis2018/"
+      ],
+      "historical_reading_level": "仅题录/摘要或作者说明，未全文核读",
+      "historical_actual_reading": "读取PacificVis2018官网对应摘要；出版社全文直达未成功，不声称已审读图表或完整方法。",
+      "historical_access": "正式摘要可读；全文未完成核读",
+      "original_location": "PacificVis2018官网“Visual Interactive Map Matching”摘要",
+      "supported_proposition": "以地图和性能图提供反馈，支持预处理与匹配参数调整。",
+      "task_relevance": "对应板块⑩。单独一张原始/处理后图不易定位为什么某个参数导致误删，联动时间或指标剖面更适合诊断。",
+      "actual_use": "已有合并研究卡的迁移建议保持候选身份；当前未找到把该具体论文算法准入并运行的记录。",
+      "historical_causation_boundary": "不能从当前代码/报告与论文相似倒推历史灵感；不编因果。",
+      "status": [
+        "已检索",
+        "仅题录/摘要或作者说明，未全文核读",
+        "未采用",
+        "仅事后对应（如与当前实现相似）",
+        "仅风险提醒/范围边界"
+      ],
+      "implementation_or_trial": "No author algorithm implementation/reproduction claimed.",
+      "risk_or_nonproof": "只借鉴空间现象与量化反馈联动，不将道路匹配、路网编辑或交互平台实现加入本实验。",
+      "source_audit": {
+        "path": "task1/docs/research/Task1_Source_Audit_2025_2026_Merged.json",
+        "sha256": "fc6d597ddaa413c000a689737b23840a639b93cf626464f57841a8ef0cc966f7",
+        "locator": "sources[id=S12]",
+        "source_kind": "HISTORICAL_SOURCE_AUDIT",
+        "exists": true
+      },
+      "historical_evidence": [],
+      "current_formal_report_citation": null
+    },
+    {
+      "id": "D01",
+      "title": "NIST/SEMATECH e-Handbook: Three-level full factorial designs",
+      "authors": [
+        "NIST/SEMATECH"
+      ],
+      "year": null,
+      "venue_or_institution": "e-Handbook of Statistical Methods, §5.3.3.9",
+      "conference_year": null,
+      "publication_status": "官方文档",
+      "urls": [
+        "https://www.itl.nist.gov/div898/handbook/pri/section3/pri339.htm"
+      ],
+      "historical_reading_level": "官方文档核读（继承2026-09-24 Source Audit范围）",
+      "historical_actual_reading": "读取该节页面。",
+      "historical_access": "官方网页可读；版本日期未在本次取文中确认",
+      "original_location": "§5.3.3.9",
+      "supported_proposition": "多水平因子设计可研究非线性响应与交互；全部组合的数量随因素数快速增长。",
+      "task_relevance": "辅助核对实验一的指标、单位、算法API或实验设计。",
+      "actual_use": "已有合并研究卡的迁移建议保持候选身份；当前未找到把该具体论文算法准入并运行的记录。",
+      "historical_causation_boundary": "不能从当前代码/报告与论文相似倒推历史灵感；不编因果。",
+      "status": [
+        "已检索",
+        "官方文档核读（继承2026-09-24 Source Audit范围）",
+        "未采用",
+        "仅事后对应（如与当前实现相似）"
+      ],
+      "implementation_or_trial": "No author algorithm implementation/reproduction claimed.",
+      "risk_or_nonproof": "是官方方法补充，不是顶刊论文；不据此强制进行大型全因子扫描。",
+      "source_audit": {
+        "path": "task1/docs/research/Task1_Source_Audit_2025_2026_Merged.json",
+        "sha256": "fc6d597ddaa413c000a689737b23840a639b93cf626464f57841a8ef0cc966f7",
+        "locator": "sources[id=D01]",
+        "source_kind": "HISTORICAL_SOURCE_AUDIT",
+        "exists": true
+      },
+      "historical_evidence": [],
+      "current_formal_report_citation": null
+    },
+    {
+      "id": "D02",
+      "title": "PROJ documentation: Web Mercator / Pseudo Mercator",
+      "authors": [
+        "PROJ contributors"
+      ],
+      "year": null,
+      "venue_or_institution": "Official PROJ documentation",
+      "conference_year": null,
+      "publication_status": "官方文档",
+      "urls": [
+        "https://proj.org/en/stable/operations/projections/webmerc.html"
+      ],
+      "historical_reading_level": "官方文档核读（继承2026-09-24 Source Audit范围）",
+      "historical_actual_reading": "检查方法说明及正向投影公式。",
+      "historical_access": "官方网页可读",
+      "original_location": "Web Mercator / Pseudo Mercator；Mathematical definition",
+      "supported_proposition": "Web Mercator采用基于球面的Mercator计算；页面给出投影定义及公式。",
+      "task_relevance": "辅助核对实验一的指标、单位、算法API或实验设计。",
+      "actual_use": "已有合并研究卡的迁移建议保持候选身份；当前未找到把该具体论文算法准入并运行的记录。",
+      "historical_causation_boundary": "不能从当前代码/报告与论文相似倒推历史灵感；不编因果。",
+      "status": [
+        "已检索",
+        "官方文档核读（继承2026-09-24 Source Audit范围）",
+        "未采用",
+        "仅事后对应（如与当前实现相似）",
+        "仅风险提醒/范围边界"
+      ],
+      "implementation_or_trial": "No author algorithm implementation/reproduction claimed.",
+      "risk_or_nonproof": "历史审计提示Web Mercator尺度失真、显示用途和分析距离不可混同。当前条件化ENU已冻结，未采用Web Mercator；本条仅保留排除/风险参照。",
+      "source_audit": {
+        "path": "task1/docs/research/Task1_Source_Audit_2025_2026_Merged.json",
+        "sha256": "fc6d597ddaa413c000a689737b23840a639b93cf626464f57841a8ef0cc966f7",
+        "locator": "sources[id=D02]",
+        "source_kind": "HISTORICAL_SOURCE_AUDIT",
+        "exists": true
+      },
+      "historical_evidence": [],
+      "current_formal_report_citation": null,
+      "current_scope_clarification": "历史Source Audit的投影待定描述仅属于2026-09-24研究阶段；当前固定条件化ENU已冻结，未采用Web Mercator，不再存在本轮投影选择待办。"
+    },
+    {
+      "id": "D03",
+      "title": "GEOS documentation: DouglasPeuckerSimplifier",
+      "authors": [
+        "GEOS contributors"
+      ],
+      "year": null,
+      "venue_or_institution": "Official GEOS API documentation",
+      "conference_year": null,
+      "publication_status": "官方文档",
+      "urls": [
+        "https://libgeos.org/doxygen/classgeos_1_1simplify_1_1DouglasPeuckerSimplifier.html"
+      ],
+      "historical_reading_level": "官方文档核读（继承2026-09-24 Source Audit范围）",
+      "historical_actual_reading": "检查类说明与拓扑限制。",
+      "historical_access": "官方网页可读",
+      "original_location": "Detailed Description",
+      "supported_proposition": "文档明确该DP简化器不保证保持拓扑。",
+      "task_relevance": "辅助核对实验一的指标、单位、算法API或实验设计。",
+      "actual_use": "有限线段/现代实现资料的定义边界；不以GEOS API调用替代当前独立实现。",
+      "historical_causation_boundary": "G3 A_CANDIDATE_RATIONALE及a_candidate_plan明确列入已读条目；这只证明审计稿阅读/思想边界，不证明原全文阅读或算法采用。",
+      "status": [
+        "已检索",
+        "官方文档核读（继承2026-09-24 Source Audit范围）",
+        "思想借鉴/定义边界有候选前记录"
+      ],
+      "implementation_or_trial": "No author algorithm implementation/reproduction claimed.",
+      "risk_or_nonproof": "只是实现边界资料，不代表本实验必须使用GEOS，也不替代教师算法定义或正式测试。",
+      "source_audit": {
+        "path": "task1/docs/research/Task1_Source_Audit_2025_2026_Merged.json",
+        "sha256": "fc6d597ddaa413c000a689737b23840a639b93cf626464f57841a8ef0cc966f7",
+        "locator": "sources[id=D03]",
+        "source_kind": "HISTORICAL_SOURCE_AUDIT",
+        "exists": true
+      },
+      "historical_evidence": [
+        {
+          "path": "task1/evidence/goal3/A_CANDIDATE_RATIONALE.md",
+          "sha256": "eac8547a7b7316542922073684e7b242cebd552e0d48f6200f7f44c1140b4ffb",
+          "locator": "文献边界",
+          "source_kind": "PRE_CANDIDATE_READING_RECORD",
+          "exists": true
+        }
+      ],
+      "current_formal_report_citation": null
+    },
+    {
+      "id": "S13",
+      "title": "SHoTClean: Bridging Soft and Hard Constraints for Multivariate Time Series Cleaning",
+      "authors": [
+        "Ziquan Fang",
+        "Wei Shao",
+        "Zheqi Lu",
+        "Lu Chen",
+        "Yunjun Gao"
+      ],
+      "year": 2026,
+      "venue_or_institution": "Proceedings of the ACM on Management of Data 4(1), Article 84, 27 pages",
+      "conference_year": 2026,
+      "publication_status": "按归档Source Audit所核正式题录；作者稿与正式版阅读差别见reading/access",
+      "urls": [
+        "https://doi.org/10.1145/3786698",
+        "https://2026.sigmod.org/sigmod_papers.shtml",
+        "https://github.com/ZJU-DAILY/SHoTClean",
+        "https://dblp.org/rec/journals/pacmmod/FangSLCG26"
+      ],
+      "historical_reading_level": "仅题录/可见摘要/作者资料，正式全文未核读",
+      "historical_actual_reading": "正式收录、元数据和作者README核读；已定位作者PDF，但未成功读取其完整正文。算法最优性与收益百分比不作独立确认。",
+      "historical_access": "官方收录及作者README可读；出版社403，作者PDF未成功解析。",
+      "original_location": "作者README的Overview、Datasets、Experiments；SIGMOD2026 Round3；DBLP仅补充卷期元数据。",
+      "supported_proposition": "作者框架将硬约束与软约束结合，提供离线批处理、在线流式及多变量依赖等不同变体。作者资料中的B/S/P/C分别面向不同计算场景，不能把它们理解成四个独立清洗Agent。",
+      "task_relevance": "实验一只用速度上限或方向阈值可能遗漏小幅但持续的漂移。反之，统计上少见的正常转弯又不能仅因“不常见”被删。该文对应如何利用多种证据而不把它们混成同一强度的规则。",
+      "actual_use": "已有合并研究卡的迁移建议保持候选身份；当前未找到把该具体论文算法准入并运行的记录。",
+      "historical_causation_boundary": "不能从当前代码/报告与论文相似倒推历史灵感；不编因果。",
+      "status": [
+        "已检索",
+        "仅题录/可见摘要/作者资料，正式全文未核读",
+        "未采用",
+        "仅事后对应（如与当前实现相似）",
+        "仅风险提醒/范围边界"
+      ],
+      "implementation_or_trial": "No author algorithm implementation/reproduction claimed.",
+      "risk_or_nonproof": "统计模式偏离不等于真实错误。我们不复制其Porto采样、物理限值或训练配置，不把论文内部目标的最优解当成真实轨迹最优。当前阅读限制意味着具体数学目标、复杂度和训练细节尚未复核。",
+      "source_audit": {
+        "path": "task1/docs/research/Task1_Source_Audit_2025_2026_Merged.json",
+        "sha256": "fc6d597ddaa413c000a689737b23840a639b93cf626464f57841a8ef0cc966f7",
+        "locator": "sources[id=S13]",
+        "source_kind": "HISTORICAL_SOURCE_AUDIT",
+        "exists": true
+      },
+      "historical_evidence": [],
+      "current_formal_report_citation": null
+    },
+    {
+      "id": "S14",
+      "title": "The Best of Both Worlds: On Repairing Timestamps and Attribute Values for Multivariate Time Series",
+      "authors": [
+        "Jingyu Zhu",
+        "Weiwei Deng",
+        "Yu Sun",
+        "Shaoxu Song",
+        "Haiwei Zhang",
+        "Xiaojie Yuan"
+      ],
+      "year": 2025,
+      "venue_or_institution": "Proceedings of the ACM on Management of Data 3(3), Article 230, 27 pages",
+      "conference_year": 2025,
+      "publication_status": "按归档Source Audit所核正式题录；作者稿与正式版阅读差别见reading/access",
+      "urls": [
+        "https://doi.org/10.1145/3725367",
+        "https://github.com/erssss/TAVhub",
+        "https://cc.nankai.edu.cn/2021/0323/c13620a572936/page.htm"
+      ],
+      "historical_reading_level": "仅题录/可见摘要/作者资料，正式全文未核读",
+      "historical_actual_reading": "发表信息、可见原文摘要/开头、作者仓库README核读；作者full.pdf完整正文与证明未成功读取。",
+      "historical_access": "作者元数据与README可读；完整正式正文访问受限。",
+      "original_location": "原文题名/摘要与第一页出版格式；作者README Dataset和Instruction；作者大学页面。",
+      "supported_proposition": "研究时间戳与属性值同时出错时的联合修复，而不是先假定一方干净再修另一方。作者实现分别设置属性修复成本alpha、时间修复成本beta，以及时间噪声率和属性噪声率。",
+      "task_relevance": "对当前实验，高速度可以来自位置差，也可以来自错误时间差。若先机械改时间使速度下降，再用速度评价位置，就可能循环论证。它与旧S05形成单独修时间和联合问题的衔接。",
+      "actual_use": "已有合并研究卡的迁移建议保持候选身份；当前未找到把该具体论文算法准入并运行的记录。",
+      "historical_causation_boundary": "不能从当前代码/报告与论文相似倒推历史灵感；不编因果。",
+      "status": [
+        "已检索",
+        "仅题录/可见摘要/作者资料，正式全文未核读",
+        "未采用",
+        "仅事后对应（如与当前实现相似）",
+        "仅风险提醒/范围边界"
+      ],
+      "implementation_or_trial": "No author algorithm implementation/reproduction claimed.",
+      "risk_or_nonproof": "联合可行解仍不等于可识别的真实解。没有采样和外部参考，不能因为框架能修改两类值就同时任意改它们；不能直接沿用alpha、beta、速度和窗口默认值。",
+      "source_audit": {
+        "path": "task1/docs/research/Task1_Source_Audit_2025_2026_Merged.json",
+        "sha256": "fc6d597ddaa413c000a689737b23840a639b93cf626464f57841a8ef0cc966f7",
+        "locator": "sources[id=S14]",
+        "source_kind": "HISTORICAL_SOURCE_AUDIT",
+        "exists": true
+      },
+      "historical_evidence": [],
+      "current_formal_report_citation": null
+    },
+    {
+      "id": "S15",
+      "title": "Minimum Change ≠ Best Cleaning: Parallel and Incremental Error Detection under Integrity Constraints",
+      "authors": [
+        "Jiahui Chen",
+        "Yu Sun",
+        "Shaoxu Song",
+        "Haiwei Zhang",
+        "Xiaojie Yuan"
+      ],
+      "year": 2025,
+      "venue_or_institution": "Proceedings of the ACM on Management of Data 3(4), 26 pages",
+      "conference_year": 2026,
+      "publication_status": "按归档Source Audit所核正式题录；作者稿与正式版阅读差别见reading/access",
+      "urls": [
+        "https://doi.org/10.1145/3749174",
+        "https://github.com/twinklelittlestars/PED",
+        "https://2026.sigmod.org/sigmod_papers.shtml",
+        "https://cc.nankai.edu.cn/2021/0323/c13620a572936/page.htm"
+      ],
+      "historical_reading_level": "仅题录/可见摘要/作者资料，正式全文未核读",
+      "historical_actual_reading": "正式收录/卷期、作者仓库、数据与评测说明核读；作者PDF和附录未完成读取。",
+      "historical_access": "收录和作者README可读；完整正文未核读。",
+      "original_location": "SIGMOD2026 Round1对应PACMMOD2025/3/4；作者README Data和tune_thresholds说明。",
+      "supported_proposition": "研究关系数据的完整性约束冲突，不单以最少改变消除冲突；作者材料包含基于贝叶斯分析的单元格错误概率，以及PED和增量IPED。",
+      "task_relevance": "旧S03/S04中的最小修改原则是避免过度干预的重要约束，但不能代替真实正确性。多个相邻点同时漂移时，“改最少就合法”可能留下大段错误。",
+      "actual_use": "已有合并研究卡的迁移建议保持候选身份；当前未找到把该具体论文算法准入并运行的记录。",
+      "historical_causation_boundary": "不能从当前代码/报告与论文相似倒推历史灵感；不编因果。",
+      "status": [
+        "已检索",
+        "仅题录/可见摘要/作者资料，正式全文未核读",
+        "未采用",
+        "仅事后对应（如与当前实现相似）",
+        "仅风险提醒/范围边界"
+      ],
+      "implementation_or_trial": "No author algorithm implementation/reproduction claimed.",
+      "risk_or_nonproof": "该文不是GPS逐点清洗算法。表格FD/DD规则不能原样套到经纬度；也不能宣称它推翻了MTCSC在其形式化问题上的定理。只是两类研究揭示的目标不可混同。",
+      "source_audit": {
+        "path": "task1/docs/research/Task1_Source_Audit_2025_2026_Merged.json",
+        "sha256": "fc6d597ddaa413c000a689737b23840a639b93cf626464f57841a8ef0cc966f7",
+        "locator": "sources[id=S15]",
+        "source_kind": "HISTORICAL_SOURCE_AUDIT",
+        "exists": true
+      },
+      "historical_evidence": [],
+      "current_formal_report_citation": null
+    },
+    {
+      "id": "S16",
+      "title": "From Suspicious Errors to Valid Data: On Repairing Spatio-Temporal Data via Spatial and Temporal Dependencies",
+      "authors": [
+        "Weiwei Deng",
+        "Yu Sun",
+        "Shaoxu Song",
+        "Xiaojie Yuan"
+      ],
+      "year": 2025,
+      "venue_or_institution": "Proceedings of the ACM on Management of Data 3(6), 27 pages",
+      "conference_year": 2026,
+      "publication_status": "按归档Source Audit所核正式题录；作者稿与正式版阅读差别见reading/access",
+      "urls": [
+        "https://doi.org/10.1145/3769794",
+        "https://github.com/cookiesvivi/STRhub",
+        "https://2026.sigmod.org/sigmod_papers.shtml",
+        "https://cc.nankai.edu.cn/2021/0323/c13620a572936/page.htm"
+      ],
+      "historical_reading_level": "仅题录/可见摘要/作者资料，正式全文未核读",
+      "historical_actual_reading": "官方收录、作者实验资料与可核实题录；完整方法正文未成功取得，不独立确认理论和性能。",
+      "historical_access": "作者README和收录可读；正式全文受限。",
+      "original_location": "SIGMOD2026 Round2对应PACMMOD2025/3/6；作者README Dataset/Parameters。",
+      "supported_proposition": "题目与作者资料明确研究空间和时间依赖联合支持的时空数据修复。仓库包括空气质量、GPS、交通和传感器数据，并将加噪时间比例与位置/传感器比例分开设置。",
+      "task_relevance": "实验一需要区分真正的数据错误和正常但少见的变化；多个维度或邻域证据可以辅助这一判断，但必须说明它们为何可比较。",
+      "actual_use": "已有合并研究卡的迁移建议保持候选身份；当前未找到把该具体论文算法准入并运行的记录。",
+      "historical_causation_boundary": "不能从当前代码/报告与论文相似倒推历史灵感；不编因果。",
+      "status": [
+        "已检索",
+        "仅题录/可见摘要/作者资料，正式全文未核读",
+        "未采用",
+        "仅事后对应（如与当前实现相似）",
+        "仅风险提醒/范围边界"
+      ],
+      "implementation_or_trial": "No author algorithm implementation/reproduction claimed.",
+      "risk_or_nonproof": "不同车辆不是对同一物理量的重复传感器，不能用“其他车没有走这里”判定轨迹错误。道路、外部传感器和额外数据未批准，因此本轮只纳入思路，不直接复现修复系统。",
+      "source_audit": {
+        "path": "task1/docs/research/Task1_Source_Audit_2025_2026_Merged.json",
+        "sha256": "fc6d597ddaa413c000a689737b23840a639b93cf626464f57841a8ef0cc966f7",
+        "locator": "sources[id=S16]",
+        "source_kind": "HISTORICAL_SOURCE_AUDIT",
+        "exists": true
+      },
+      "historical_evidence": [],
+      "current_formal_report_citation": null
+    },
+    {
+      "id": "S17",
+      "title": "PILOT-C: Physics-Informed Low-Distortion Optimal Trajectory Compression",
+      "authors": [
+        "Kefei Wu",
+        "Baihua Zheng",
+        "Weiwei Sun"
+      ],
+      "year": 2025,
+      "venue_or_institution": "Proceedings of the VLDB Endowment 19(4), 536–548",
+      "conference_year": 2026,
+      "publication_status": "按归档Source Audit所核正式题录；作者稿与正式版阅读差别见reading/access",
+      "urls": [
+        "https://www.vldb.org/pvldb/vol19/p536-wu.pdf",
+        "https://github.com/wukefei1/PILOT-C",
+        "https://vldb.org/2026/program.html"
+      ],
+      "historical_reading_level": "全文指定章节核读（继承Source Audit，非全篇逐式验收）",
+      "historical_actual_reading": "正文方法§3、非均匀采样§3.6、限制§3.7和实验设置§4.1已核读；§3.6页面截图成功，实验表截图访问失败，不引用表中未目视核对的数值。",
+      "historical_access": "官方PDF正文可读；部分截图失败；未运行作者代码。",
+      "original_location": "PVLDB首页；§3.3后验验证、§3.6–3.7；§4.1–4.2。",
+      "supported_proposition": "将分维运动序列进行DCT频域压缩与编码，再通过重建后的逐点检验和纠正信息满足误差界。非均匀输入先分段、线性重采样，再处理原始时间对应的重建误差。",
+      "task_relevance": "直接对应简化/压缩、分段前提、时间质量与评价。它说明“方法推导有误差界”之外仍要在真实输出上做后验检查，也揭示压缩所需的重采样前提。",
+      "actual_use": "后验检查与误差参照边界的思想借鉴；没有实现PILOT-C编码、重采样或纠正算法。",
+      "historical_causation_boundary": "G3 A_CANDIDATE_RATIONALE及a_candidate_plan明确列入已读条目；这只证明审计稿阅读/思想边界，不证明原全文阅读或算法采用。",
+      "status": [
+        "已检索",
+        "全文指定章节核读（继承Source Audit，非全篇逐式验收）",
+        "思想借鉴/定义边界有候选前记录"
+      ],
+      "implementation_or_trial": "No author algorithm implementation/reproduction claimed.",
+      "risk_or_nonproof": "它是编码重建方案，不只是原始点子序列抽稀；不可直接替换老师DP。高频分量不自动是噪声；插值和同时间戳删除都须获准。其compressed/original字节比与DimWeaver的倒数定义不同。",
+      "source_audit": {
+        "path": "task1/docs/research/Task1_Source_Audit_2025_2026_Merged.json",
+        "sha256": "fc6d597ddaa413c000a689737b23840a639b93cf626464f57841a8ef0cc966f7",
+        "locator": "sources[id=S17]",
+        "source_kind": "HISTORICAL_SOURCE_AUDIT",
+        "exists": true
+      },
+      "historical_evidence": [
+        {
+          "path": "task1/evidence/goal3/A_CANDIDATE_RATIONALE.md",
+          "sha256": "eac8547a7b7316542922073684e7b242cebd552e0d48f6200f7f44c1140b4ffb",
+          "locator": "文献边界",
+          "source_kind": "PRE_CANDIDATE_READING_RECORD",
+          "exists": true
+        }
+      ],
+      "current_formal_report_citation": null
+    },
+    {
+      "id": "S18",
+      "title": "DimWeaver: Dimensional Weaved Trajectory Compression",
+      "authors": [
+        "Xenophon Kitsios",
+        "Panagiotis Liakos",
+        "Katia Papakonstantinopoulou",
+        "Nikos Giatrakos",
+        "Yannis Kotidis"
+      ],
+      "year": 2026,
+      "venue_or_institution": "Proceedings of the ACM on Management of Data 4(3), Article 163, 26 pages",
+      "conference_year": 2026,
+      "publication_status": "按归档Source Audit所核正式题录；作者稿与正式版阅读差别见reading/access",
+      "urls": [
+        "https://xkitsios.github.io/assets/pdf/dimweaver-sigmod26.pdf",
+        "https://doi.org/10.1145/3802040",
+        "https://2026.sigmod.org/sigmod_papers.shtml"
+      ],
+      "historical_reading_level": "全文指定章节核读（继承Source Audit，非全篇逐式验收）",
+      "historical_actual_reading": "作者正式版PDF方法与§5实验文字可读；表图截图多次失败，未依图表点值作数值比较。",
+      "historical_access": "作者正式PDF全文文字可读；部分图表无法截图；未复现实验。",
+      "original_location": "首页正式引用；§4组成；§5.1.3、§5.2、§5.5、§5.7。",
+      "supported_proposition": "把轨迹解耦成各维的一维运动，进行误差预算的维间复用，并将近似速度相同的一维片段分组编码。目标是误差受限的紧凑表示，不是异常点识别。",
+      "task_relevance": "对应DP容差、保真—压缩权衡及改进审核。对我们最直接的价值，是区分“相同误差上限比较压缩”与“相同压缩规模比较误差”。",
+      "actual_use": "已有合并研究卡的迁移建议保持候选身份；当前未找到把该具体论文算法准入并运行的记录。",
+      "historical_causation_boundary": "不能从当前代码/报告与论文相似倒推历史灵感；不编因果。",
+      "status": [
+        "已检索",
+        "全文指定章节核读（继承Source Audit，非全篇逐式验收）",
+        "未采用",
+        "仅事后对应（如与当前实现相似）"
+      ],
+      "implementation_or_trial": "No author algorithm implementation/reproduction claimed.",
+      "risk_or_nonproof": "其表示与简单删除原始点不同，字节比不能冒充点数减少。不能拿原始经纬度直接套统一米制误差，也不根据其压缩结果断言去噪成功。对MLSimp的比较属于其特定指标，不能外推全面优越。",
+      "source_audit": {
+        "path": "task1/docs/research/Task1_Source_Audit_2025_2026_Merged.json",
+        "sha256": "fc6d597ddaa413c000a689737b23840a639b93cf626464f57841a8ef0cc966f7",
+        "locator": "sources[id=S18]",
+        "source_kind": "HISTORICAL_SOURCE_AUDIT",
+        "exists": true
+      },
+      "historical_evidence": [],
+      "current_formal_report_citation": null
+    },
+    {
+      "id": "S19",
+      "title": "Quantifying Point Contributions: A Lightweight Framework for Efficient and Effective Query-Driven Trajectory Simplification",
+      "authors": [
+        "Yumeng Song",
+        "Yu Gu",
+        "Tianyi Li",
+        "Yushuai Li",
+        "Christian S. Jensen",
+        "Ge Yu"
+      ],
+      "year": 2024,
+      "venue_or_institution": "Proceedings of the VLDB Endowment 18(2), 453–465",
+      "conference_year": 2025,
+      "publication_status": "按归档Source Audit所核正式题录；作者稿与正式版阅读差别见reading/access",
+      "urls": [
+        "https://arxiv.org/html/2503.02047",
+        "https://doi.org/10.14778/3705829.3705858",
+        "https://github.com/yumengs-exp/MLSimp"
+      ],
+      "historical_reading_level": "全文指定章节核读（继承Source Audit，非全篇逐式验收）",
+      "historical_actual_reading": "作者HTML正文§4及§5.1.3–5.1.4、§5.8已核读；不是复现作者训练。正式出版2024，arXiv上传2025，不能重复计为新2025论文。",
+      "historical_access": "作者全文HTML可读，正式元数据确认；未运行模型。",
+      "original_location": "作者HTML§4；§5.1.3–5.1.4；§5.8；首页PVLDB格式。",
+      "supported_proposition": "MLSimp结合GNN-TS与Diff-TS相互学习，按点对全局轨迹的关联和相对邻域的独特性估计重要性，进行查询驱动保留。它不是依靠固定几何误差界单独选点。",
+      "task_relevance": "说明同样点数预算下，保留哪些点可能影响轨迹的后续可用性；可连接旧S02关于误差指标与任务质量的区分。",
+      "actual_use": "已有合并研究卡的迁移建议保持候选身份；当前未找到把该具体论文算法准入并运行的记录。",
+      "historical_causation_boundary": "不能从当前代码/报告与论文相似倒推历史灵感；不编因果。",
+      "status": [
+        "已检索",
+        "全文指定章节核读（继承Source Audit，非全篇逐式验收）",
+        "未采用",
+        "仅事后对应（如与当前实现相似）",
+        "仅风险提醒/范围边界"
+      ],
+      "implementation_or_trial": "No author algorithm implementation/reproduction claimed.",
+      "risk_or_nonproof": "不自动训练GNN或扩散模型，不新增整套数据库查询基准。Diff-TS是作者训练机制，不能当成允许生成缺失GPS真值的依据；查询效用提高不证明最大误差受控。",
+      "source_audit": {
+        "path": "task1/docs/research/Task1_Source_Audit_2025_2026_Merged.json",
+        "sha256": "fc6d597ddaa413c000a689737b23840a639b93cf626464f57841a8ef0cc966f7",
+        "locator": "sources[id=S19]",
+        "source_kind": "HISTORICAL_SOURCE_AUDIT",
+        "exists": true
+      },
+      "historical_evidence": [],
+      "current_formal_report_citation": null
+    },
+    {
+      "id": "S20",
+      "title": "Stress-Testing ML Pipelines with Adversarial Data Corruption",
+      "authors": [
+        "Jiongli Zhu",
+        "Geyang Xu",
+        "Felipe Lorenzi",
+        "Boris Glavic",
+        "Babak Salimi"
+      ],
+      "year": 2025,
+      "venue_or_institution": "Proceedings of the VLDB Endowment 18(11), 4668–4681",
+      "conference_year": null,
+      "publication_status": "按归档Source Audit所核正式题录；作者稿与正式版阅读差别见reading/access",
+      "urls": [
+        "https://www.vldb.org/pvldb/vol18/p4668-zhu.pdf",
+        "https://github.com/lodino/savage"
+      ],
+      "historical_reading_level": "全文指定章节核读（继承Source Audit，非全篇逐式验收）",
+      "historical_actual_reading": "官方PDF方法、依赖图、§4及实验设计核读；第2页框架与表已截图检查。未复现原文实验。",
+      "historical_access": "官方全文及框架截图可读；未运行代码。",
+      "original_location": "Figure2与其说明；§3–4；§5实验设置。",
+      "supported_proposition": "SAVAGE用错误依赖图和扰动模板表示现实中有结构的数据损坏；在合理性约束内寻找使完整ML流水线效用下降的场景，组合候选结构搜索与扰动程度调节。",
+      "task_relevance": "实验一的规则如果只用单点尖峰验证，可能无法应对连续漂移、时间/坐标同时错、某类片段集中缺失等情况。",
+      "actual_use": "已有合并研究卡的迁移建议保持候选身份；当前未找到把该具体论文算法准入并运行的记录。",
+      "historical_causation_boundary": "不能从当前代码/报告与论文相似倒推历史灵感；不编因果。",
+      "status": [
+        "已检索",
+        "全文指定章节核读（继承Source Audit，非全篇逐式验收）",
+        "未采用",
+        "仅事后对应（如与当前实现相似）",
+        "仅风险提醒/范围边界"
+      ],
+      "implementation_or_trial": "No author algorithm implementation/reproduction claimed.",
+      "risk_or_nonproof": "压力测试不是总体错误率估计，不能因难例上改善就宣称全量准确率提高；不生成任意极端不现实噪声，也不立即实现整套双层优化器。",
+      "source_audit": {
+        "path": "task1/docs/research/Task1_Source_Audit_2025_2026_Merged.json",
+        "sha256": "fc6d597ddaa413c000a689737b23840a639b93cf626464f57841a8ef0cc966f7",
+        "locator": "sources[id=S20]",
+        "source_kind": "HISTORICAL_SOURCE_AUDIT",
+        "exists": true
+      },
+      "historical_evidence": [],
+      "current_formal_report_citation": null
+    },
+    {
+      "id": "S21",
+      "title": "PipeLens: Identifying Interventions for Resolving Malfunctioning Data Science Pipelines",
+      "authors": [
+        "Jahid Hasan",
+        "Stanley Jiang",
+        "Tejendra Singh",
+        "Sainyam Galhotra",
+        "Romila Pradhan",
+        "Divesh Srivastava"
+      ],
+      "year": 2026,
+      "venue_or_institution": "Proceedings of the VLDB Endowment 19(11), 3188–3201",
+      "conference_year": null,
+      "publication_status": "按归档Source Audit所核正式题录；作者稿与正式版阅读差别见reading/access",
+      "urls": [
+        "https://www.vldb.org/pvldb/vol19/p3188-hasan.pdf",
+        "https://github.com/jahid674/PipeLens"
+      ],
+      "historical_reading_level": "全文指定章节核读（继承Source Audit，非全篇逐式验收）",
+      "historical_actual_reading": "官方PDF摘要、问题定义、实际干预和代理引导方法、实验范围核读；第2页框架与问题解释已截图。",
+      "historical_access": "官方正文和框架截图可读；未运行作者系统。",
+      "original_location": "首页；§1 solution sketch；§4、Algorithm1；实验范围。",
+      "supported_proposition": "以有向无环图表示处理流程，结合历史成功/失败运行，对参数或模块结构作真实干预并观察效用变化；代理函数用于优先选择干预，而非用预测结果代替实际效果。",
+      "task_relevance": "当实验一保留量下降或误差变大，需要区分分段阈值、短片段过滤、去噪、顺序和特征重算各自的作用。它直接帮助下一轮优化定位，而不是通用多角色聊天框架。",
+      "actual_use": "单一主要改动与依赖重建的思想借鉴；没有实现PipeLens代理/搜索系统。",
+      "historical_causation_boundary": "G3 A_CANDIDATE_RATIONALE及a_candidate_plan明确列入已读条目；这只证明审计稿阅读/思想边界，不证明原全文阅读或算法采用。",
+      "status": [
+        "已检索",
+        "全文指定章节核读（继承Source Audit，非全篇逐式验收）",
+        "思想借鉴/定义边界有候选前记录"
+      ],
+      "implementation_or_trial": "No author algorithm implementation/reproduction claimed.",
+      "risk_or_nonproof": "其“因果干预”是对计算流程的干预，不是对真实城市行为因果的证明。原文并非GPS基准；没有足够历史运行时不必先训练代理模型。",
+      "source_audit": {
+        "path": "task1/docs/research/Task1_Source_Audit_2025_2026_Merged.json",
+        "sha256": "fc6d597ddaa413c000a689737b23840a639b93cf626464f57841a8ef0cc966f7",
+        "locator": "sources[id=S21]",
+        "source_kind": "HISTORICAL_SOURCE_AUDIT",
+        "exists": true
+      },
+      "historical_evidence": [
+        {
+          "path": "task1/evidence/goal3/A_CANDIDATE_RATIONALE.md",
+          "sha256": "eac8547a7b7316542922073684e7b242cebd552e0d48f6200f7f44c1140b4ffb",
+          "locator": "文献边界",
+          "source_kind": "PRE_CANDIDATE_READING_RECORD",
+          "exists": true
+        }
+      ],
+      "current_formal_report_citation": null
+    },
+    {
+      "id": "S22",
+      "title": "Largest Triangle Sampling for Visualizing Time Series in Database",
+      "authors": [
+        "Lei Rui",
+        "Xiangdong Huang",
+        "Shaoxu Song",
+        "Chen Wang",
+        "Jianmin Wang",
+        "Zhao Cao"
+      ],
+      "year": 2025,
+      "venue_or_institution": "Proceedings of the ACM on Management of Data 3(1), Article 49, 26 pages",
+      "conference_year": 2025,
+      "publication_status": "按归档Source Audit所核正式题录；作者稿与正式版阅读差别见reading/access",
+      "urls": [
+        "https://sxsong.github.io/doc/25SIGMOD-Visual.pdf",
+        "https://doi.org/10.1145/3709699",
+        "https://sxsong.github.io/"
+      ],
+      "historical_reading_level": "全文指定章节核读（继承Source Audit，非全篇逐式验收）",
+      "historical_actual_reading": "作者正式PDF摘要、ILTS机制和§6.1评价定义核读；不依据未目视复核的曲线点值评价效果。",
+      "historical_access": "作者正式PDF可读；未复现实验。",
+      "original_location": "首页；§3–4方法；§6.1.4视觉指标及§6.4采样条件。",
+      "supported_proposition": "研究为时间序列折线图选择少量保留视觉结构的点。ILTS迭代调整最大三角形采样，并利用凸包加速；目标是显示保真与查询效率。",
+      "task_relevance": "实验一的速度、方向、采样间隔剖面需要显示尖峰和局部异常，不能因图形过密而用均匀抽样或平滑把问题藏起来。",
+      "actual_use": "已有合并研究卡的迁移建议保持候选身份；当前未找到把该具体论文算法准入并运行的记录。",
+      "historical_causation_boundary": "不能从当前代码/报告与论文相似倒推历史灵感；不编因果。",
+      "status": [
+        "已检索",
+        "全文指定章节核读（继承Source Audit，非全篇逐式验收）",
+        "未采用",
+        "仅事后对应（如与当前实现相似）",
+        "仅风险提醒/范围边界"
+      ],
+      "implementation_or_trial": "No author algorithm implementation/reproduction claimed.",
+      "risk_or_nonproof": "它不是轨迹去噪器。SSIM高只能说明图像相似，不说明真实运动恢复更准；本实验没有必要先建设数据库查询引擎或复现整套ILTS。",
+      "source_audit": {
+        "path": "task1/docs/research/Task1_Source_Audit_2025_2026_Merged.json",
+        "sha256": "fc6d597ddaa413c000a689737b23840a639b93cf626464f57841a8ef0cc966f7",
+        "locator": "sources[id=S22]",
+        "source_kind": "HISTORICAL_SOURCE_AUDIT",
+        "exists": true
+      },
+      "historical_evidence": [],
+      "current_formal_report_citation": null
+    },
+    {
+      "id": "D04",
+      "title": "Shapely documentation: shapely.simplify",
+      "authors": [
+        "Shapely contributors"
+      ],
+      "year": null,
+      "venue_or_institution": "Official Shapely API documentation",
+      "conference_year": null,
+      "publication_status": "官方文档",
+      "urls": [
+        "https://shapely.readthedocs.io/en/stable/reference/shapely.simplify.html"
+      ],
+      "historical_reading_level": "官方文档核读（继承2026-09-24 Source Audit范围）",
+      "historical_actual_reading": "本轮官方API页面已读取。",
+      "historical_access": "官方网页可读",
+      "original_location": "函数签名、Parameters、Notes",
+      "supported_proposition": "API默认preserve_topology=True，具有额外的拓扑保持行为；该参数不应在不同候选比较中被隐藏。",
+      "task_relevance": "基础DP与库默认模式可能并非完全相同操作；直接调用simplify而不记录参数，会让算法比较失去清晰定义。",
+      "actual_use": "已有合并研究卡的迁移建议保持候选身份；当前未找到把该具体论文算法准入并运行的记录。",
+      "historical_causation_boundary": "不能从当前代码/报告与论文相似倒推历史灵感；不编因果。",
+      "status": [
+        "已检索",
+        "官方文档核读（继承2026-09-24 Source Audit范围）",
+        "未采用",
+        "仅事后对应（如与当前实现相似）",
+        "仅风险提醒/范围边界"
+      ],
+      "implementation_or_trial": "No author algorithm implementation/reproduction claimed.",
+      "risk_or_nonproof": "这是2026-09-24访问的文档，不是新发表论文，也不证明用户环境版本。tolerance单位随坐标而定，不能默认米。",
+      "source_audit": {
+        "path": "task1/docs/research/Task1_Source_Audit_2025_2026_Merged.json",
+        "sha256": "fc6d597ddaa413c000a689737b23840a639b93cf626464f57841a8ef0cc966f7",
+        "locator": "sources[id=D04]",
+        "source_kind": "HISTORICAL_SOURCE_AUDIT",
+        "exists": true
+      },
+      "historical_evidence": [],
+      "current_formal_report_citation": null
+    },
+    {
+      "id": "REF-PROJ-CART",
+      "title": "Geodetic to cartesian conversion",
+      "authors": [
+        "PROJ contributors"
+      ],
+      "year": null,
+      "venue_or_institution": "PROJ official documentation",
+      "publication_status": "滚动官方文档，本轮网页标PROJ9.9.0；不代表本机版本",
+      "urls": [
+        "https://proj.org/en/stable/operations/conversions/cart.html"
+      ],
+      "status": [
+        "官方文档核读",
+        "实现并试验：转换语义交叉核对"
+      ],
+      "historical_reading_level": "已有报告2026-09-27访问说明",
+      "current_closeout_reading": {
+        "level": "本轮官方操作说明定点核读",
+        "receipt": {
+          "path": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/a_diagnosis/citation_access_receipt.json",
+          "sha256": "e5ff4cc466b47668d4fea1fe0c10908c46e5d78825c3205f4fece8959f510ad0",
+          "locator": "",
+          "source_kind": "ARTIFACT",
+          "exists": true
+        }
+      },
+      "supported_proposition": "geodetic→ECEF数学语义，显式椭球",
+      "actual_use": "Experiment §1.1转换公式与独立PROJ数值核算；task1/workflow/coordinates.py、coordinate_review.py；G3 coordinates.py。",
+      "historical_causation_boundary": "当前再次核读是引用复核，不声称本轮才发明历史工作坐标合同。",
+      "risk_or_nonproof": "公式一致不证明原始datum/CRS，不设置EPSG补充来源事实。",
+      "implementation_or_trial": "数学工作坐标及独立核验已运行；不是论文算法复现。",
+      "current_formal_report_citation": "proj-cart"
+    },
+    {
+      "id": "REF-PROJ-TOPO",
+      "title": "Geocentric to topocentric conversion",
+      "authors": [
+        "PROJ contributors"
+      ],
+      "year": null,
+      "venue_or_institution": "PROJ official documentation",
+      "publication_status": "滚动官方文档，本轮网页标PROJ9.9.0；不代表本机版本",
+      "urls": [
+        "https://proj.org/en/stable/operations/conversions/topocentric.html"
+      ],
+      "status": [
+        "官方文档核读",
+        "实现并试验：转换语义交叉核对"
+      ],
+      "historical_reading_level": "已有报告2026-09-27访问说明",
+      "current_closeout_reading": {
+        "level": "本轮官方操作说明定点核读",
+        "receipt": {
+          "path": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/a_diagnosis/citation_access_receipt.json",
+          "sha256": "e5ff4cc466b47668d4fea1fe0c10908c46e5d78825c3205f4fece8959f510ad0",
+          "locator": "",
+          "source_kind": "ARTIFACT",
+          "exists": true
+        }
+      },
+      "supported_proposition": "ECEF→固定原点ENU数学语义，原点与参数单位",
+      "actual_use": "Experiment §1.1转换公式与独立PROJ数值核算；task1/workflow/coordinates.py、coordinate_review.py；G3 coordinates.py。",
+      "historical_causation_boundary": "当前再次核读是引用复核，不声称本轮才发明历史工作坐标合同。",
+      "risk_or_nonproof": "公式一致不证明原始datum/CRS，不设置EPSG补充来源事实。",
+      "implementation_or_trial": "数学工作坐标及独立核验已运行；不是论文算法复现。",
+      "current_formal_report_citation": "proj-topocentric"
+    }
+  ],
+  "interpretation": "研究过、思想借鉴、实现和实际试验分别登记；未找到因果记录即不作历史灵感主张。正式报告仅保留直接支持具体命题的引用。"
+}

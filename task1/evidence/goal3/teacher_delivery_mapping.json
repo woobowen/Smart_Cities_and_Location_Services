@@ -2,7 +2,7 @@
   "goal_id": "SC-LAB1-G3-FINAL-001",
   "created_at_utc": "2026-09-27T07:41:36.201141+00:00",
   "classification": "B_READABLE_TEACHER_DELIVERY_NAVIGATION_NOT_INDEPENDENT_ACCEPTANCE",
-  "status": "SOURCE_CELLS_AND_ACTUAL_PDF_TEXT_LOCATED_PENDING_INDEPENDENT_MAPPING_REVIEW",
+  "status": "CURRENT_CONTENT_LOCATED_NOT_ACCEPTANCE",
   "scope": "实验一；G1/G2/G3为工程阶段，系统starter文件名任务3不表示课程实验三。",
   "conventions": {
     "notebook_indices": "zero-based physical cell indexes plus stable cell IDs; not execution_count",
@@ -32,6 +32,10 @@
     "current_prompt": {
       "path": "task1/evidence/goal3/USER_PROMPT.md",
       "sha256": "e5fd60e707b3b5e4c62e8c522bbc58cbd17d89fe67ec29abaf2c3d037de723ec"
+    },
+    "closeout_authorization_excerpt": {
+      "path": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/AUTHORIZATION.md",
+      "sha256": "fa41a7fc225e64dea703c0253447425c1d08917a0bdfe1e4a3ea809936e7810b"
     }
   },
   "notebooks": {
@@ -39,111 +43,115 @@
       "path": "task1/notebooks/final/作业1轨迹数据预处理_完成版.ipynb",
       "title": "实验一 · 轨迹数据预处理完成版",
       "cell_count": 25,
-      "source_cells_sha256": "c5abb581bbe534d379cd7031159607226425491bf559bc7da2652f956d52c47c",
+      "source_cells_sha256": "bf5ceab92dfd5acd13e6159f371abfbe0d0b69d6c054d5592b671bcf1e295236",
       "source_hash_definition": "SHA256 of UTF-8 compact sorted-key JSON list of index_zero_based/id/cell_type/source; outputs and execution_count excluded",
-      "full_execution_status": "NOT_ASSERTED_BY_THIS_NAVIGATION; see notebook_verification and independent receipts"
+      "full_execution_status": "NOT_ASSERTED_BY_THIS_NAVIGATION; see notebook_verification and independent receipts",
+      "file_sha256": "e64513b662c954b7097f429e93d67106916d7a246b093ce74ac9721153ec2df1"
     },
     "L": {
       "path": "task1/notebooks/final/任务3_LLM辅助评估清洗_完成版.ipynb",
       "title": "实验一 · LLM辅助评估清洗完成版",
       "cell_count": 17,
-      "source_cells_sha256": "5077fd0ff810c3c630d9ba09941b3530797a6a89a422a087c8088e4690f7d32c",
+      "source_cells_sha256": "43293584e705c027d505d2d9f8744db0fba3d80d483210356e9ddc00644bc236",
       "source_hash_definition": "SHA256 of UTF-8 compact sorted-key JSON list of index_zero_based/id/cell_type/source; outputs and execution_count excluded",
-      "full_execution_status": "NOT_ASSERTED_BY_THIS_NAVIGATION; see notebook_verification and independent receipts"
+      "full_execution_status": "NOT_ASSERTED_BY_THIS_NAVIGATION; see notebook_verification and independent receipts",
+      "file_sha256": "5e79f525fc194110282f974070bce087a09c14bc5aaa11c276abf08e87694277"
     }
   },
   "reports": {
     "E": {
       "path": "task1/reports/experiment1/experiment1.pdf",
-      "pages": 21,
-      "pdf_sha256_at_navigation": "46e1b101ee3cfebc0beb6ff8a465c6801df74b777bf1631cf3cf9ba42dd29f54",
+      "pages": 22,
+      "pdf_sha256_at_navigation": "5a7f01b64be6a9bc424b1e8cc90ccae9306e21a9959ff674363fcc4c046d7606",
       "text_path": "task1/evidence/goal3/report_build/experiment1_text.txt",
-      "text_sha256": "39edd92116fedfed4a968d682a575e7e3dd0fdcb9b0e36c54a484f784322d0b7",
+      "text_sha256": "bb48c0fd1569234d0294bcc056bb5e2eceb755764c93ca20e33cc076778adf0c",
       "page_text_sha256": {
-        "1": "6a84494ed4621ad05acc9f65ec32fdda2aecd39ccdb610d01695357e57af6fd2",
-        "2": "02ce0d53f23ae169e7b7da55e4a2e495073bb0f920aa4362761f95423782b8ad",
+        "1": "36b6eed6b70cca9adc985962b7674650dc56ef55d439a6f09545a8a151bcba72",
+        "2": "0e6f4912ed2a69dedea07f1fa654bd3bebb66ee47dd21eb1b03cc92d57e92fc2",
         "3": "9a9627c785fd43a9e3665b04d586bb90a91b4e49d17b613c57339be48d9e77cf",
-        "4": "a8d84375ac820b20da9234b5a34cf5873be42722e588e518e995ef79d1c1c2d7",
-        "5": "f5d11cd1505961fd4ecf660eba8c11793d2c473a0e6071d9f4526046c10c09f0",
-        "6": "c313f6dca0bfba331e4c05ab3cf6e2097443b2f14251931a0816f6f18587a549",
-        "7": "dbe549fabd2d260bfdf5af56f77d85534adbabdcbf3a677e355cfc5257414993",
-        "8": "04605784287d032dc56a183285ad1258d9eb1d3563286c6b6f7d31df923aa81c",
-        "9": "d389fc47d1fee1fa6083f7b80959f0963838cf4d231bd6da45c291159d5c1cf5",
-        "10": "507259be76d714ab76795a1ee63e69b1065dab728e06a7d7d9cff3558e8f8104",
-        "11": "fd378336f3a7f223f0365e52e3463172dab0f94c9209f10aa66b54fb1442da46",
-        "12": "f20d1735cf65801ab21694ac7c03015b6df3f1c49de54b9e03f45c7af60f43bf",
-        "13": "399776200776ed200d9a92a471fef689d377a79966e940081bc6cad55eadca58",
-        "14": "0d5a72a695d7413507ae072ab3b1f94fccd118db619e1c4de2be184c8b30f3a6",
-        "15": "b180c49f6ca720bdf3c252b4cf8255640866eb1b3acd4d6b548ea67af8252084",
-        "16": "aab081f147356ac5c74f358107b4f24f166f7088c687155622920940f46af85e",
-        "17": "25261741569d25cb14ad1df4850faebe0ff5f8ec2703f4fd2f8ef0af31e5a561",
-        "18": "64e2c0d9d0c8c8615892f442bbb0c1418de0121017bd386ff09ed9affd698ec3",
-        "19": "8f4440fdebade07395b9f75d7582f388c3df15288c6d5b0082ccae6edf6869ea",
-        "20": "e68b5b6760f15d7f7c0a08097cc6fc4c5474d93b329fe9b5f718ab4fd6d0c8a7",
-        "21": "4d60c3a9ed6fc7daf8f6ff2ce72ef5be34985b123e37a340b1e38ba5a9e697e9"
-      },
-      "page_render_sha256_at_B_visual_review": {
-        "1": "5e2a89417fa40d8d4a51265c0c58337e6a738d2a46d8a747b65e035f7c924460",
-        "2": "7a798ee9da965cec013dfef5c1b73a849fde4a1fa05e854579922098bb4f1a7e",
-        "3": "78363a2f7ecff21db9988530754adff92049d39d05ef2c83d3ab2e13ebc4f6ac",
-        "4": "ad75ce8cba7d59af0868c854960d61b73ccdfe9fda654006dc6caf1b9e2e1548",
-        "5": "a5c276b4ef88c5b6e9996cbadfef1e8f33880065a67cfd55f739f461b04eefda",
-        "6": "d8854823bd7000dd4a9268f2021558a66c73a68e6a10a9427bb7b146c75f54ee",
-        "7": "27f0daa5d9374b890f78dde458f75d7158e2b160de0ec3874fddd50b38e12ceb",
-        "8": "dc27bc01ef88b0534900bc3ea4d25f202a75739e667e25e70b0995c5f4c46733",
-        "9": "556bb1dfd701b2b7c7327902b7e565d40cecb73f724d07af967c6042ad63bc8e",
-        "10": "3f80dbfff102f86f4216295d276cbbea03ee131a863f85639d5b9943d867cd43",
-        "11": "3efffae3f99e4821093bc550a0418d4ec50ad57756e2ec87d6a6f867a302b0a8",
-        "12": "27b5c697b4a214adc2c236f7e47e85498b164794e996fe2e3407e8d5005986a3",
-        "13": "f26660029e84a137cb3c9382c3c77086c28bd3ac095f7669d10ba4e947aac03a",
-        "14": "68bd49898ba060c9d45cb9627db342c6d7610a75b6ea4e0be74c1e4eba1ca47b",
-        "15": "d900dddabc0b8451ed2381962939141a69010d4b36733267d1bda0ce16a3b85f",
-        "16": "0a1181a189b8976d914678e3dc108558599ed77d6768ec2bfd3a650014e72682",
-        "17": "f496c8ae53d01fcb6c3f822aa12cc33731f5945fca2192c7607dcb72ac8a838a",
-        "18": "9e1bcd9f2fa31e659141e68017cc6089154904793aebd29b4ec204801939c737",
-        "19": "ce80a88d0985e97ade6ff7160b48fdaaf27c1d0a887296710f5a90c7f570fb50",
-        "20": "6f321206c784666c02ed0c787993bd248116fdc8a15d1bfa504fb7649e57ddcf",
-        "21": "4ae134c36ed0216f19fd4955bd4d61e1da48a24ee85c7528890a682e2e9f3410"
+        "4": "e5d342525ffd112c448ed58249f2ac27f8813168bc988666d0e2ca4d853a7671",
+        "5": "4e63079207a626f798fc525c81fe958f772265552388c0c6a6c09ec05fb19e92",
+        "6": "79f8e185123de3610964f459d14a10bd4404a58e1edc7ac44a7343ecffdb667e",
+        "7": "50db4dabdb4ca063beadf4b51669dc64619353c0e4cc26f73245894a61675d14",
+        "8": "c81573839d26754bad83dbe8474acac3cf0d7dac8a5717b3a26b48b7bb03f3c3",
+        "9": "a88f76de1d6677abfe9dc8e8a2c5b74edd97290a16ed09b6f4f17eb76da12e23",
+        "10": "0911e7062af0791fb66f020e52217f4c2ddcaed53fff3100d3e8c601b82266f8",
+        "11": "4de822d9e29e62d4e65f5980b7d175f1e9d6536ef1288bca1a5355384ca75215",
+        "12": "66ce861b79b17aab4ed771e469664e950d6ed53c4275d315ac5d887066abfb88",
+        "13": "c5f9cd916ce1ec6d8c262a2ea073899dabf7036737aa03af0b6a8ee336a41c5f",
+        "14": "532fe9d5541ef8741d43dac097c387dc4ee61af1cfb78ba8c6c3d960feda6765",
+        "15": "4af74188de7e99616882db6233a06f28433bcfc971987a6b67c47289e98f4bf6",
+        "16": "be1196071fda7ac8c52a6aeef69a5dce19eb359c2f8c6e738209d25105126fd7",
+        "17": "f10a6dd3d2e19de9ef78fcd6615a38a69bbf52e86f060e7883c8677cd2e4d3a1",
+        "18": "ce1917b6c987130aba55fba1e9f03016987ca0e727f4331cf433fa58936d69e4",
+        "19": "b02326ed76d3c83b52e82a6d397a4acfe44ac228ccb42e3edb5a0433fdc04268",
+        "20": "3265e410eef5bfa4d452e7066b886cf3f057debceea0763778d1e33d64c0a6c5",
+        "21": "40f7ac7761ddc7187b61f0eb38fe60d8bba7986e39e403b88b10a83aeb3f5d32",
+        "22": "a4efb0edfd8d27fb51489ae4f2bf3247dcb088f3e31482f50ad85c476e4b8499"
       },
       "render_dpi": 200,
-      "binding_boundary": "PDF byte hash is an observed build identity, not the sole navigation binding. Any later metadata-only rebuild must preserve text and all page pixels and receive explicit source rebinding."
+      "binding_boundary": "Navigation only. Current full visual/content review is separately bound in closeout C receipt.",
+      "page_render_sha256": {
+        "1": "c867f2004dea8ef6f10a8d27c1303f6b57c8196108973167538b0d3196edd97e",
+        "2": "02f8d658c111b023680b214abf3c0fe23a5d41dd4e5d9daf8bf3955e9b79f811",
+        "3": "78363a2f7ecff21db9988530754adff92049d39d05ef2c83d3ab2e13ebc4f6ac",
+        "4": "ca714e88bb7e9742663079ab7dc9e773fbefdb24ea1f7c56b2b1ca165d700372",
+        "5": "2f97a56672a2681b641ab90a3cc86cdf9992f70c6a1643fc10edf57b691ed95d",
+        "6": "92968602af56aa3fa58ff44294c8aa8f58e34ab143beba91fbdb96d1ccfe4d9d",
+        "7": "d0382e96232bc8d29c409a4185676db6b7bcfac4f777df99b46ab2ff8e411b7a",
+        "8": "26fb08c72ed75bc95db9ba89ec62666455d6d7877232b474104a6d5ec747be12",
+        "9": "578e85ee090409a988f875af506ea0c7deaf328137d9df71f4ab349213235ca2",
+        "10": "3658895828f2ed8afb27c434ceec093dbaadf20f33c2d24993fb068c1693fa70",
+        "11": "2ab9c07bb4381f3b2271b65a21e152325d2a9603efa77c0d7b9af69b5711e0ec",
+        "12": "a3759cceb83bd006f5a4f7da5c4c6b1bc861fb70b0eebb8d82ab8fd578151100",
+        "13": "dc182c04576403ef3fa1ccebc3c91f5d4062c5e4926496389a1b41ab609b91f2",
+        "14": "544072e601e11685f9a0857fe20f3adcd395209c6f314bb51b535f3cf484407e",
+        "15": "43acbd9597e6bea487a1968f335a2ce9894fa9114dcc6d148b27fb15a830d079",
+        "16": "cf62b3f84cc6430d48fb8ad51a2f9323276304764d780273e4f23b7822baf646",
+        "17": "8e928adb58cec76f2d9c5462171eae3b4137d30945a209a64c2a0201ce676ed1",
+        "18": "f843e6ae374d0eba876770eaa6fc982002204c616155c8d89b1af02a79a653da",
+        "19": "d044ae92a0f7c4d695152f696570b626861e28c84e865a970ffc87c85002c957",
+        "20": "270223c847d9e69f0b403e82dab41106dd8c950538f0f050954e2e81b3e8957b",
+        "21": "d9884f714655fa37cd736a66eab36a9c0c6552e80da5661b52a51c62dd6b62e7",
+        "22": "55b1d4dc6606e8c6bba08ebf23930a9c7a5067b794c9b372df4b80bb3beaecad"
+      }
     },
     "P": {
       "path": "task1/reports/process1/process1.pdf",
       "pages": 12,
-      "pdf_sha256_at_navigation": "eed1e8ef8f690018c66a157c794d477d5901a426029ae638bce54fdd24a9fcf0",
+      "pdf_sha256_at_navigation": "9ff0fc21b2c843156b3d2bb648441dd19f51569dc451975d531a029971a34a88",
       "text_path": "task1/evidence/goal3/report_build/process1_text.txt",
-      "text_sha256": "50256f438dc7d07652e970eff30480b4729ceecf570028f2396a6017d63ac46d",
+      "text_sha256": "df789b01d0766f6b13d44a8aa8d012e7e555e3da7ba959546fdaf3ad26205727",
       "page_text_sha256": {
-        "1": "6282462eeef8411f7184f87bf388da91840aaa127651a5c4cd9a3ff9de7ce2d7",
-        "2": "01c642f89dd1776c8afec3e5fa6111a6d6bfce8fd2c150526408d32c4622f30c",
-        "3": "69a6ee956826edb2608810d3d45410f1a31f5f186fd78b59cabea122f6c6cc85",
+        "1": "46c502827e60c89e855253ee91216096c01f8d8d94d129a6b3bad77a88170233",
+        "2": "bd6f163b58f8c8e0dda4ff85459be4edf005b5d9af7bd3e8cb30be217ce7fb21",
+        "3": "e65813f8af9cff9c118d8c4378cb4377a881194d684d7f1e9e2cd6e5d51dfade",
         "4": "39969691705b87505d2e8ad249d990b01f99247bc5e784926287b7b78b62538a",
-        "5": "2306aadeeda88086c5c1527f74de492388e38b1ca22d642771fb23d4246f3865",
-        "6": "08081306de327aef6be634f783e8cb009c015ea411aad876feab77301a85b583",
+        "5": "849e4bd62f04247a2ad239e8cdbb0cd386834866c9d8c9f25169e0f72d67ed89",
+        "6": "f077a67c6eb51f89a48e7b32c8eedb191407045b09226acbf6bd96a6aa86fb1b",
         "7": "7020fb7d9c697764a48440d041f2a0f78723aa3af3ead378f1694de0c4156986",
         "8": "3309a09ff467c6138fd0634e193f38ed4a41228f07ea04ee6e0e4e01dd7b9a0c",
         "9": "a42babfc11ee41151ea0f6cf049b85745bcf46d4c82467f9d62c145a0355d4fd",
         "10": "8529f85542127019b319afe9502217cf57ee9033e053d640165af5bd6e8e0041",
-        "11": "d35cecb9814c40fdd287c0089850d522077f85df524c029e06d3fcdbef60d659",
+        "11": "acc5e9dfbfc1ab0a3950a23b170346f646694e6d50630cb45046fc099d707829",
         "12": "20d8b6e3579aefbe61e775c00e109f8ae34970ae2ac94aa3febfff3d4ae427a6"
       },
-      "page_render_sha256_at_B_visual_review": {
-        "1": "77e5998faf440c55c42af6af8705861909c2ebf9f06238141a38b7743c36fcb0",
-        "2": "b468ccec3e84f3fcc4a396bb94bc3ec095ee859512700c2658bf870b59c53104",
-        "3": "60dc96a24b57a33f5ac54238a738e18d1209e2ad5c735a12e776dbec6aa639a4",
+      "render_dpi": 200,
+      "binding_boundary": "Navigation only. Current full visual/content review is separately bound in closeout C receipt.",
+      "page_render_sha256": {
+        "1": "0f3828d2c4ace56c6d1d1e0266cb62ae00826b4aab6a62457b5f73134aa10d39",
+        "2": "e251e47da5559369c3494ce0a1675b34c1e77b524503ac04a5c0c4ff4ac163ca",
+        "3": "56c42dd792f6514f75cdac8cdaf93c3c762e8a91e0414da3b8f2ddca10d75546",
         "4": "df547d66c08ec3c0aa854e1ce2289d5a9b3fbce1affd693e8027b12675a5654f",
-        "5": "e124b2329c6825799db9e3e7746f038d96150b9210fff40fc700a70a06eacbd6",
-        "6": "96d8ca1e884c4f52d273596df2af174370543663a19e1f422c6024c64e9fcd8d",
+        "5": "437ae4f1314182579ae4a0f08b44cdf266f884bbbd1bd273fc34f2101a2758bb",
+        "6": "66a2d7d0750a1f13db6d634f086fe04fb161cdae8617be5418548203ee8057a3",
         "7": "50ca3e6775ca7fd531efae23f962c315cb42a6312f4a6b43e7d5c9b6896aab4e",
         "8": "9cae6f6d93cb627d09c70f46775e2a035c4f899921deeeb745f62120bc3ac9c9",
         "9": "bcc44c5e5ea4fc1921c045ce54a5a259e4b991d972387da09a8cc985d5a781a3",
         "10": "1aa5ddccbe50fb5bcf71601141eeda8d782cdf50c1002753009fa0f1ad1a51e9",
-        "11": "0f4c6705a54a8a171cc5136ca42f2a2f56ef078e15b2cb97b6b02438164bd28c",
+        "11": "a5c298738c92bcef061c2bec60dee6c2545a78111dd9daec2122b99fc6829e25",
         "12": "5659abb23f9dce0be9f8c4827b9f1819c4211adf8e7477e0bb243a3919bd9a3b"
-      },
-      "render_dpi": 200,
-      "binding_boundary": "PDF byte hash is an observed build identity, not the sole navigation binding. Any later metadata-only rebuild must preserve text and all page pixels and receive explicit source rebinding."
+      }
     }
   },
   "requirement_coverage": {
@@ -251,10 +259,10 @@
           "report": "E",
           "path": "task1/reports/experiment1/experiment1.pdf",
           "pdf_pages_one_based": [
-            17
+            18
           ],
           "printed_page_labels": [
-            "16"
+            "17"
           ],
           "section_or_figure": "§7.8 扩大核验及抽查范围",
           "verified_text_anchor": "扩大范围的工作坐标核验与限制"
@@ -360,12 +368,12 @@
           "report": "E",
           "path": "task1/reports/experiment1/experiment1.pdf",
           "pdf_pages_one_based": [
-            16,
-            17
+            17,
+            18
           ],
           "printed_page_labels": [
-            "15",
-            "16"
+            "16",
+            "17"
           ],
           "section_or_figure": "§7.6—7.7 过滤终态及恢复覆盖边界",
           "verified_text_anchor": "仅长度不足"
@@ -671,12 +679,12 @@
           "report": "E",
           "path": "task1/reports/experiment1/experiment1.pdf",
           "pdf_pages_one_based": [
-            16,
-            18
+            17,
+            19
           ],
           "printed_page_labels": [
-            "15",
-            "17"
+            "16",
+            "18"
           ],
           "section_or_figure": "§7.6与图9 全量点去向/覆盖",
           "verified_text_anchor": "全量实际尝试"
@@ -761,12 +769,14 @@
           "pdf_pages_one_based": [
             5,
             6,
-            7
+            7,
+            8
           ],
           "printed_page_labels": [
             "4",
             "5",
-            "6"
+            "6",
+            "7"
           ],
           "section_or_figure": "§4.1、图1—3 三组参数与取值",
           "verified_text_anchor": "三组参数实验"
@@ -844,10 +854,12 @@
           "report": "E",
           "path": "task1/reports/experiment1/experiment1.pdf",
           "pdf_pages_one_based": [
-            8
+            8,
+            9
           ],
           "printed_page_labels": [
-            "7"
+            "7",
+            "8"
           ],
           "section_or_figure": "§4.3、表3 六种顺序",
           "verified_text_anchor": "六种顺序"
@@ -1069,11 +1081,13 @@
           "path": "task1/reports/experiment1/experiment1.pdf",
           "pdf_pages_one_based": [
             8,
-            9
+            9,
+            10
           ],
           "printed_page_labels": [
             "7",
-            "8"
+            "8",
+            "9"
           ],
           "section_or_figure": "§5.1 四模式、共同预算与历史结果",
           "verified_text_anchor": "四种结构与相同预算"
@@ -1149,12 +1163,12 @@
           "report": "E",
           "path": "task1/reports/experiment1/experiment1.pdf",
           "pdf_pages_one_based": [
-            9,
-            10
+            10,
+            11
           ],
           "printed_page_labels": [
-            "8",
-            "9"
+            "9",
+            "10"
           ],
           "section_or_figure": "§5.2 送达/引用/动作与分母",
           "verified_text_anchor": "记忆被使用，不等于产生因果收益"
@@ -1248,12 +1262,12 @@
           "report": "E",
           "path": "task1/reports/experiment1/experiment1.pdf",
           "pdf_pages_one_based": [
-            10,
-            11
+            11,
+            12
           ],
           "printed_page_labels": [
-            "9",
-            "10"
+            "10",
+            "11"
           ],
           "section_or_figure": "§6.1—6.2、表5、图5 原样建议/构造",
           "verified_text_anchor": "AI 建议的技术批判与可复验反例"
@@ -1307,10 +1321,10 @@
           "cells": [
             {
               "index_zero_based": 0,
-              "cell_id": "lab1-6c079b1a91e47ac1",
+              "cell_id": "lab1-db981efe8f4a6334",
               "cell_type": "markdown",
               "title_or_preceding_markdown_title": "实验一 · 轨迹数据预处理完成版",
-              "source_sha256": "40331def98ef908839bdabfe826acf1ced3d48a307bb3cbaaaebba57ef44456d",
+              "source_sha256": "0a63b8e7b9fc155075b9bc8822738a0ce711ba980db34aee2cd1531fc1cc5b24",
               "source_first_line": "# 实验一 · 轨迹数据预处理完成版"
             },
             {
@@ -1337,10 +1351,10 @@
           "cells": [
             {
               "index_zero_based": 0,
-              "cell_id": "lab1-df543b0c5cd952e8",
+              "cell_id": "lab1-9aa8376b7bf25e5d",
               "cell_type": "markdown",
               "title_or_preceding_markdown_title": "实验一 · LLM辅助评估清洗完成版",
-              "source_sha256": "0318e9ade0f8affae67a2ab4a25c851545b00e6698186350aa51935b817ab9d7",
+              "source_sha256": "b21855c8c58fb11a70e47206e9f7c5a3ae97dca101f54933070d9eecd268c2c5",
               "source_first_line": "# 实验一 · LLM辅助评估清洗完成版"
             },
             {
@@ -1368,11 +1382,11 @@
           "path": "task1/reports/experiment1/experiment1.pdf",
           "pdf_pages_one_based": [
             1,
-            20
+            21
           ],
           "printed_page_labels": [
-            "cover (unnumbered)",
-            "19"
+            "",
+            "20"
           ],
           "section_or_figure": "Experiment封面与§8.2复算入口",
           "verified_text_anchor": "Experiment Report"
@@ -1386,7 +1400,7 @@
             11
           ],
           "printed_page_labels": [
-            "cover (unnumbered)",
+            "",
             "2",
             "10"
           ],
@@ -1550,11 +1564,9 @@
           "report": "E",
           "path": "task1/reports/experiment1/experiment1.pdf",
           "pdf_pages_one_based": [
-            7,
             8
           ],
           "printed_page_labels": [
-            "6",
             "7"
           ],
           "section_or_figure": "§4.2 历史C-S/C-D/C-P",
@@ -1564,12 +1576,12 @@
           "report": "E",
           "path": "task1/reports/experiment1/experiment1.pdf",
           "pdf_pages_one_based": [
-            12,
-            13
+            13,
+            14
           ],
           "printed_page_labels": [
-            "11",
-            "12"
+            "12",
+            "13"
           ],
           "section_or_figure": "§7.1—7.3 本轮父项、组合与移除",
           "verified_text_anchor": "单项先行，再检查组合与移除"
@@ -1654,12 +1666,12 @@
           "report": "E",
           "path": "task1/reports/experiment1/experiment1.pdf",
           "pdf_pages_one_based": [
-            13,
-            14
+            14,
+            15
           ],
           "printed_page_labels": [
-            "12",
-            "13"
+            "13",
+            "14"
           ],
           "section_or_figure": "§7.4、表9—10、图7 选择阶段三失败",
           "verified_text_anchor": "选择集上的保护失败使开发组合退出"
@@ -1668,10 +1680,10 @@
           "report": "E",
           "path": "task1/reports/experiment1/experiment1.pdf",
           "pdf_pages_one_based": [
-            15
+            16
           ],
           "printed_page_labels": [
-            "14"
+            "15"
           ],
           "section_or_figure": "§7.5 开始处 分区/冻结边界",
           "verified_text_anchor": "数据划分先于本轮方法比较保存"
@@ -1753,12 +1765,12 @@
           "report": "E",
           "path": "task1/reports/experiment1/experiment1.pdf",
           "pdf_pages_one_based": [
-            15,
-            16
+            16,
+            17
           ],
           "printed_page_labels": [
-            "14",
-            "15"
+            "15",
+            "16"
           ],
           "section_or_figure": "§7.5、表11—12、图8 最终确认",
           "verified_text_anchor": "先冻结，再执行一次性最终确认"
@@ -1856,16 +1868,16 @@
           "report": "E",
           "path": "task1/reports/experiment1/experiment1.pdf",
           "pdf_pages_one_based": [
-            16,
             17,
             18,
-            19
+            19,
+            20
           ],
           "printed_page_labels": [
-            "15",
             "16",
             "17",
-            "18"
+            "18",
+            "19"
           ],
           "section_or_figure": "§7.6—7.9、图9—10 全量/归因/最差案例",
           "verified_text_anchor": "冻结策略下的全部原始记录生产"
@@ -2009,26 +2021,26 @@
           "report": "E",
           "path": "task1/reports/experiment1/experiment1.pdf",
           "pdf_pages_one_based": [
-            6,
             7,
-            9,
-            11,
-            13,
+            8,
+            10,
+            12,
             14,
-            16,
-            18,
-            19
+            15,
+            17,
+            19,
+            20
           ],
           "printed_page_labels": [
-            "5",
             "6",
-            "8",
-            "10",
-            "12",
+            "7",
+            "9",
+            "11",
             "13",
-            "15",
-            "17",
-            "18"
+            "14",
+            "16",
+            "18",
+            "19"
           ],
           "section_or_figure": "历史与G3正式图及真实断段案例",
           "verified_text_anchor": "图 10"
@@ -2210,10 +2222,10 @@
             1
           ],
           "printed_page_labels": [
-            "cover (unnumbered)"
+            ""
           ],
-          "section_or_figure": "封面正式身份待补",
-          "verified_text_anchor": "待补姓名"
+          "section_or_figure": "封面正式身份已同步",
+          "verified_text_anchor": "吴博闻"
         },
         {
           "report": "P",
@@ -2223,14 +2235,14 @@
             11
           ],
           "printed_page_labels": [
-            "cover (unnumbered)",
+            "",
             "10"
           ],
           "section_or_figure": "封面、§9、表4 外部缺项",
           "verified_text_anchor": "互动证据仍需哪些真实输入"
         }
       ],
-      "what_to_read": "真实姓名/学号、raw截图/完整消息范围、Evidence Master批准呈现spec与Lock缺失；Process保持送审稿，不生成假图、不猜身份、不代Evidence Lock或用户Understanding。",
+      "what_to_read": "身份已由本轮用户直接提供并同步；真实互动原图、完整消息范围、批准spec与Lock仍待外部输入。身份闭合不代表Process或最终提交闭合。",
       "additional_source_paths": [
         "task1/evidence/goal3/DELIVERY_INPUT_INVENTORY.md",
         "task1/docs/goal3/INTERACTION_HANDOFF.md"
@@ -2329,10 +2341,10 @@
           "cells": [
             {
               "index_zero_based": 0,
-              "cell_id": "lab1-6c079b1a91e47ac1",
+              "cell_id": "lab1-db981efe8f4a6334",
               "cell_type": "markdown",
               "title_or_preceding_markdown_title": "实验一 · 轨迹数据预处理完成版",
-              "source_sha256": "40331def98ef908839bdabfe826acf1ced3d48a307bb3cbaaaebba57ef44456d",
+              "source_sha256": "0a63b8e7b9fc155075b9bc8822738a0ce711ba980db34aee2cd1531fc1cc5b24",
               "source_first_line": "# 实验一 · 轨迹数据预处理完成版"
             },
             {
@@ -2381,10 +2393,10 @@
           "report": "E",
           "path": "task1/reports/experiment1/experiment1.pdf",
           "pdf_pages_one_based": [
-            20
+            21
           ],
           "printed_page_labels": [
-            "19"
+            "20"
           ],
           "section_or_figure": "§8.2 离线复算身份与入口",
           "verified_text_anchor": "如何复算与核对"
@@ -2399,10 +2411,10 @@
             "10"
           ],
           "section_or_figure": "§9—10 REVIEW_ONLY和不代提交",
-          "verified_text_anchor": "REVIEW_ONLY"
+          "verified_text_anchor": "NOT_READY"
         }
       ],
-      "what_to_read": "教师第26页：10月5日前将.ipynb与实验报告压缩zip，命名学号_姓名_实验一，邮箱52285903012@stu.ecnu.edu.cn；未给具体截止时刻。当前只准备待审包，不发送。正式身份/互动证据缺项时REVIEW_ONLY，ZIP是否生成与独立解压结果由真实package回执给出。",
+      "what_to_read": "教师第26页：10月5日前将.ipynb与实验报告压缩zip，命名学号_姓名_实验一，邮箱52285903012@stu.ecnu.edu.cn；未给具体截止时刻。当前只准备待审包，不发送。身份已同步；互动证据与最终审核缺项时REVIEW_ONLY，ZIP是否生成与独立解压结果由真实package回执给出。",
       "additional_source_paths": [
         "task1/goal3/package.py",
         "task1/goal3/PACKAGE_README.md",
@@ -2419,5 +2431,8 @@
   "execution_acceptance_entry": "task1/evidence/goal3/notebook_verification/ plus independent C receipts; this mapping does not execute or reclassify notebooks",
   "new_model_calls": 0,
   "new_method_runs": 0,
-  "files_modified_outside_this_navigation": false
+  "files_modified_outside_this_navigation": false,
+  "updated_at_utc": "2026-09-27T16:42:59.145105+00:00",
+  "closeout_task": "SC-LAB1-G3-CLOSEOUT-001",
+  "prior_navigation_git_anchor": "1a5e26b43189aef64a46f8986b3cc442fa50d2c5"
 }

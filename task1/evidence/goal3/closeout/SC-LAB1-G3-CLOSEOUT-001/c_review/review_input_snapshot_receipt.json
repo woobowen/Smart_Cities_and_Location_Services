@@ -1,0 +1,35 @@
+{
+  "role_context": "/root/c_independent",
+  "status": "PASS_IN_STATED_SCOPE",
+  "checked_at": "2026-09-27T17:47:54.068339+00:00",
+  "snapshot_observed_at": "2026-09-27T17:47:18.410070+00:00",
+  "manifest": {
+    "path": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/review_input_snapshot/SNAPSHOT_MANIFEST.json",
+    "sha256": "d9920c901abf20e500fd27dbf8fa07b66768ba2e27c16590c43727448a66aa02"
+  },
+  "immutable_sources": [
+    {
+      "active_path": "task1/evidence/goal3/requirements.json",
+      "snapshot_path": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/review_input_snapshot/requirements.json",
+      "sha256": "ef8d9bfc8a510f947d401a525715ab005753916d8b7408bf5371ac3f43738d1a"
+    },
+    {
+      "active_path": "task1/evidence/goal3/goal_state.json",
+      "snapshot_path": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/review_input_snapshot/goal_state.json",
+      "sha256": "23748e12cacb8dc7e358cbfa0f60cea6a86b60e5ae39b5f07e98448e1ac18b31"
+    }
+  ],
+  "snapshot_events_verified": 143,
+  "snapshot_event_tip": "b7ae093ea21d88119357d75161f9a4e237a7dfe33c46ee8962833960b86b4ae3",
+  "active_events_observed": 144,
+  "active_event_tip_observed": "44e3ce946cc423c27545a199fd863d62facd804ca45e226f253212bdfa655513",
+  "later_active_events_count": 1,
+  "active_observation_not_source_binding": {
+    "path": "task1/evidence/goal3/goal_state.json",
+    "observed_sha256": "6be42c58ab7eedc5387bc938dc5a4d879f8fec82193d8081154540c1697a24a3"
+  },
+  "historical_requirements_preserved_exactly": 20,
+  "historical_anchor": "1a5e26b43189aef64a46f8986b3cc442fa50d2c5",
+  "scope": "Both actual snapshot bytes, explicit non-active semantics, complete Journal hash chains, observed snapshot event prefix and true timestamp boundary, leaf acceptance before copy, all20 unchanged historical previous_acceptance objects, and separate current user/evidence/submission states.",
+  "limit": "A snapshot freezes a real prior observation, not the final active state or future publication. New later events are allowed only as verifiable appended events. Final active paths remain authoritative."
+}

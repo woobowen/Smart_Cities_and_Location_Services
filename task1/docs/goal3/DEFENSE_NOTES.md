@@ -54,4 +54,6 @@ DP 参数 2 在相同上游输入下保留更多点，未证明压缩收益；�
 
 源 datum 仍未证实，`source_crs=UNVERIFIED`。固定椭球、h=0 和 ENU 工作坐标用于条件化数学分析；PROJ 核对与替代投影敏感性检查不能证明真实地理定位精度。数据没有真实噪声标签；增加覆盖不说明新增点干净，记录键也没有被证明是独立用户或完整行程。
 
-两份报告身份分开：Experiment Report 说明技术结果；Process Report 说明真实工作流与实验决策。缺失的姓名、学号以及 Evidence Master 原图、呈现规格和 LOCK 必须保留待补标记。待审包不能由系统代替用户提交；用户 Understanding 状态由用户实际理解决定。
+两份报告身份分开：Experiment Report 说明技术结果；Process Report 说明真实工作流与实验决策。姓名吴博闻、学号字符串10245102410已由用户直接提供并同步。Evidence Master 原图、呈现规格和 LOCK 仍保留待补标记。待审包不能由系统代替用户提交；用户 Understanding 状态由用户实际理解决定。
+
+本次后续讲解按 [REVIEW_GUIDE](REVIEW_GUIDE.md) 的四个板块进行；本文件不给用户预设理解通过。身份与收尾状态见 [当前审核入口](../../evidence/goal3/REVIEW_PACKET.md)。

@@ -1,0 +1,47 @@
+{
+  "role_context": "/root/c_independent",
+  "status": "PASS",
+  "executions": [
+    {
+      "execution": "repository_system",
+      "execution_receipt": "task1/evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/notebooks/repository_system/execution_receipt.json",
+      "actual_attempt_directory": "repository_system",
+      "execution_receipt_sha256": "1696fc7dc9eca6a05aea3963e810885dcba7f35fc9b9b3708a8b32f87ca195bc",
+      "current_notebook_sha256": "5e79f525fc194110282f974070bce087a09c14bc5aaa11c276abf08e87694277",
+      "executed_notebook_sha256": "9f2af2b4f1462229e1139cbe4dc85a64adfbee60f8c1bb94557e1deacc987c10",
+      "notebook_receipt_sha256": "d2b0ea38a071ac0a93391ff336947387998eeb70a4c2cfa03779ba4243ff9856",
+      "executed_code_cells": 8,
+      "elapsed_seconds": 712.2607979210001,
+      "kernel_cwd": "/home/addaswsw/lab/Smart_Cities_and_Location_Services",
+      "first_cell_at": "2026-09-27T16:20:33.606299+00:00",
+      "last_cell_at": "2026-09-27T16:32:39.668232+00:00",
+      "new_record_model_calls": 0,
+      "scope": {
+        "historical_record_candidate_recomputations": 6001,
+        "recomputed_original_record_episode_selections": 384
+      },
+      "status": "PASS",
+      "historical_registry_and_new_plot_scope": {
+        "topic": "modes",
+        "record_candidate_recomputations": 6001,
+        "registry_tasks": 4821,
+        "record_episode_selections": 384,
+        "new_figures": 1,
+        "elapsed_seconds_actual_execution": 707.661905785
+      },
+      "actual_full_production_shards_and_point_fates": null,
+      "synthetic_and_pilot": null,
+      "review_helpers": {
+        "path": "task1/evidence/goal3/independent_c/review_full_notebook.py",
+        "sha256": "24f91a3d6bd03886aecf6b19a544b938e7990d3339dfd6d2958484240243e12d",
+        "functions": [
+          "historical_check",
+          "figure_check"
+        ],
+        "old_top_level_audit_or_identity_assertion_executed": false
+      }
+    }
+  ],
+  "claim": "C independently reads each listed real fresh-kernel execution receipt, every code-cell event/source/output, all artifact hashes, every registered historical task/episode and newly plotted values. For each basic run C reads all285 actual new /tmp production shards, compares their actual hashes with canonical frozen trace hashes, reduces every original point fate and11386 IDs/1173410 points/22772 processing observations, and checks9720 parameter/order scope. System FULL is complete registered historical modes/memory scope. C launches no numerical processing or model calls.",
+  "package_equivalence": "Final ZIP source/dependency/input equivalence is separately checked; a report-only repack is inherited equivalent execution evidence, not a new execution."
+}

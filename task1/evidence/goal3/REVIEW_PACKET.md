@@ -1,17 +1,20 @@
-# 实验一 Goal 3 审阅入口
+# 实验一 Goal 3 当前审阅入口
 
-Goal：`SC-LAB1-G3-FINAL-001`。本轮是实验一的第三个工程阶段，不是课程实验三。
+本次任务：`SC-LAB1-G3-CLOSEOUT-001`，承接 `SC-LAB1-G3-FINAL-001`。这是实验一 Goal 3 的交付收尾，未新增 Goal 4 或重新搜索研究方案。旧交付锚点为 `1a5e26b43189aef64a46f8986b3cc442fa50d2c5`；其历史回执只沿用原核验范围。
 
-当前数值研究、一次性最终确认、全量生产、仓库与同一解压 ZIP 共四次 FULL Notebook、七张正式图和两报告可用工程已通过独立内部审核。Handoff 与包工程父任务也已独立闭合；[总验收](independent_c/internal_acceptance_receipt.json) 已核验全部 15 个前置任务、1,131 个目标和 222 个来源，获准发布 PARTIAL_BLOCKED 审查检查点。产物已实际推送 main，Local/Remote 均核对为 ARTIFACT `fd559e451291b9d424682853ef0909aa5eb94b32`，8 个固定 SHA 文件回读与提交字节一致。此入口不代表实验一最终 PASS。可信姓名/学号、真实互动原图及 Evidence Master 批准呈现与 LOCK 仍属外部缺项。`GPT_SECOND_REVIEW=PENDING`，`Submission=NOT_READY`，没有代发邮件或提交平台。
+身份 **吴博闻 / 字符串 10245102410** 已写入唯一元数据源、生成器、两份报告、Notebook 及新待审包，并通过重建回归，`IDENTITY_PENDING` 已关闭。2026-09-28 是报告修订日期，原实验与冻结时间不变。当前两报告为 **22 + 12 页**，C 已对当前全部 34 页真实逐页查看；关键数值与旧产物一致。当前两个Notebook在仓库和同一ZIP解压目录各一次新内核FULL均已完成并由C核验（12/8/12/8代码单元），新增记录级模型调用0；旧四次FULL仍仅作历史。
 
-## 1. 建议阅读顺序
+**当前可自主内容已通过独立C合并验收，正在执行实际发布。** [CL01—CL16状态](closeout/SC-LAB1-G3-CLOSEOUT-001/ACCEPTANCE_MATRIX.md)、[完整回复](closeout/SC-LAB1-G3-CLOSEOUT-001/FINAL_RESPONSE.md)和实际发布记录统一从本次收尾目录读取。真实互动原件、Evidence Master 批准的呈现规格与 Lock 仍未齐备；本轮不将技术事实送审稿称为完整正式 Process Evidence，也不替用户签理解验收或发送教师。
 
-1. [实验一总入口](../../README.md)：教师任务对应、完成版 Notebook、报告和离线运行命令。
-   [教师任务定位](teacher_delivery_mapping.md) 列出 90 个具体单元引用及 45 处实际报告页码。
-2. [Technical Handoff](../../docs/goal3/TECHNICAL_HANDOFF.md)：完整方法、共同指标、选择、确认、全量读数、版本和限制。
-3. [Interaction Handoff](../../docs/goal3/INTERACTION_HANDOFF.md)：真实事实候选索引，不代 Evidence Master 选择、注释或 LOCK。
-4. [唯一要求登记](requirements.json)、[实际任务/修复状态](goal_state.json)：逐项动作、证据和未完成项。
-5. [Experiment Report PDF](../../reports/experiment1/experiment1.pdf) / [LaTeX](../../reports/experiment1/experiment1.tex)；[Process Report PDF](../../reports/process1/process1.pdf) / [LaTeX](../../reports/process1/process1.tex)。Process 仍为明确待补送审稿。
+## 1. 深入讲解与审核入口
+
+1. [四块 REVIEW_GUIDE](../../docs/goal3/REVIEW_GUIDE.md)：任务与要求 → 数据处理与评价 → 系统、实验与循环 → 正式成果与收尾；其中问题供随后讲解，用户尚未逐项验收。
+2. [唯一父要求登记](requirements.json) → [65 项要求与质量证据对账](closeout/SC-LAB1-G3-CLOSEOUT-001/a_diagnosis/MASTER_REQUIREMENTS_REVIEW.md) / [JSON](closeout/SC-LAB1-G3-CLOSEOUT-001/a_diagnosis/MASTER_REQUIREMENTS_REVIEW.json)。总账是 G1/G2/G3/TD 的交叉索引，不是另一套最终 PASS 表。
+3. [教学差异](closeout/SC-LAB1-G3-CLOSEOUT-001/a_diagnosis/TEACHING_DIFFERENCES.md)与[文献实际使用](closeout/SC-LAB1-G3-CLOSEOUT-001/a_diagnosis/literature_use_map.md)：教师示例、获批调整、已读/采用/试验/事后对应分别注明。
+4. [教师交付定位](teacher_delivery_mapping.md)：当前 stable cell ID、source hash、PDF 物理页码和 anchor；[Technical Handoff](../../docs/goal3/TECHNICAL_HANDOFF.md) / [Interaction Handoff](../../docs/goal3/INTERACTION_HANDOFF.md)分别交接技术事实与真实互动来源。
+5. [Experiment PDF](../../reports/experiment1/experiment1.pdf) / [XeLaTeX](../../reports/experiment1/experiment1.tex)；[Process PDF](../../reports/process1/process1.pdf) / [XeLaTeX](../../reports/process1/process1.tex)。过程报告保持明确待补的送审身份。
+6. [当前报告构建清单](report_build/build_receipt.json)绑定两 PDF、源文件、分页文本与全部 200dpi 页图；[Experiment 分页文本](report_build/experiment1_pages.txt)、[Process 分页文本](report_build/process1_pages.txt)、[Experiment 页图](report_build/render200/experiment1/)、[Process 页图](report_build/render200/process1/)，可直接逐页检查；[C 当前全文与视觉回执](closeout/SC-LAB1-G3-CLOSEOUT-001/c_review/visual_content_receipt.json)限定实际已查范围。
+7. [新待审 ZIP](../../submission/REVIEW_ONLY_10245102410_吴博闻_实验一.zip)与[包验证/字节等价证据](closeout/SC-LAB1-G3-CLOSEOUT-001/PACKAGE_VALIDATION.json)。包为 REVIEW_ONLY / NOT_READY；只在后续用户确认后才考虑教师候选名 `10245102410_吴博闻_实验一.zip`。
 
 ## 2. 当前有效实验与结果
 
@@ -26,7 +29,7 @@ Goal：`SC-LAB1-G3-FINAL-001`。本轮是实验一的第三个工程阶段，不
 
 最终策略为统一确定性 **S-D-P：30 / 400 / 2 / 0 / 35 / 5**，参数顺序为 `dt / distance / min_points / min_length / direction / dp`。R0 的 `min_points/min_length=5/65`，其余相同。最终记录级处理新增模型调用为 0；治理 A/B/C 的实际调用另计，隐藏后端请求与费用保持 unknown。
 
-选择、确认与生产数值 CODE_SHA：`e12f8a27944210adb452730be92a0674dfc6b84b`。后续报告、图和 Notebook 兼容性修复没有改写这些数值运行的代码身份。ARTIFACT_SHA 为 `fd559e451291b9d424682853ef0909aa5eb94b32`，已实际发布；[发布记录](PUBLICATION_RECORD.json) 保存已经发生的 SHA 核对与回读。最终记录提交的 HEAD 在聊天中给出，避免自身 SHA 循环。
+选择、确认与生产数值 CODE_SHA：`e12f8a27944210adb452730be92a0674dfc6b84b`。后续报告、图和 Notebook 兼容性修复没有改写这些数值运行的代码身份。历史数值 ARTIFACT_SHA 为 `fd559e451291b9d424682853ef0909aa5eb94b32`；[历史发布记录](PUBLICATION_RECORD.json) 保留当时核对。本次文档构建代码为 `3912f4da2a21ea9da26f75acb6434d889e480462`，包内容身份见本次 [PACKAGE_VALIDATION.json](closeout/SC-LAB1-G3-CLOSEOUT-001/PACKAGE_VALIDATION.json)。本次最终发布记录另存于收尾目录，不用文档 HEAD 改写数值 CODE_SHA。
 
 ## 3. 不能省略的限制与负结果
 
@@ -36,12 +39,14 @@ Goal：`SC-LAB1-G3-FINAL-001`。本轮是实验一的第三个工程阶段，不
 - D60、P2/P10、条件方向组合的失败及不采用原因均保留。[收敛复盘](CONVERGENCE_REVIEW.md) 解释有限预算下停止；没有预定最复杂方案或 S0 必胜。
 - 全量 22,772 份实际轨迹通过外部 raw oracle；独立 Decimal/PROJ 重算为随机/类别合并 50 条记录、100 份轨迹。独立阶段坐标敏感性覆盖 56 条、112 份，不冒称全部记录的第二次数学实现重算。
 
-## 4. 工程与外部边界
+## 4. 本次收尾、复现与外部边界
 
-[本轮原始授权](USER_PROMPT.md) 保留用户实际文字；G1/G2 的网页审核承接为 `USER_RELAYED_GPT_STAGE_ACCEPTANCE`，没有补造工具日志。[治理工具事件](governance_tool_events.json) 仅导出本次会话可得的真实事件元数据；加密载荷只留哈希，不冒称逐字消息。
+[当前授权摘录及边界](closeout/SC-LAB1-G3-CLOSEOUT-001/AUTHORIZATION.md)明确是本次用户授权与归并索引，并非补造完整历史聊天。[原 Goal 3 Prompt](USER_PROMPT.md)、[旧最终回复](FINAL_RESPONSE.md)和[旧发布记录](PUBLICATION_RECORD.json)保留当时事实；旧“身份未提供”、旧 21/12 页与旧 ZIP 只属于当时版本。
 
-失败、补丁、独立复验和恢复保存在 `repairs/`、`independent_c/`、`independent_documents/`、`notebook_verification/`。旧失效开发 run、原有教师/starter、原始数据与用户既有 ZIP 均保留。
+本次 A 为 `/root/a_requirements`，B 文档协作为 `/root/b_review_guide`，主线程实际编辑、构建、复现与修复；C 为只读检查主体的 `/root/c_independent`。 [goal_state.json](goal_state.json)记录真实问题—修复—复验—父任务恢复。当前包状态、引用访问层级、导航链接、过程报告措辞与执行成本表均已实际修正；C 逐项回执在 [c_review](closeout/SC-LAB1-G3-CLOSEOUT-001/c_review/)。
 
-仓库两份 Notebook 新内核 FULL 和独立复验已完成：[基础本回执](independent_c/repository_basic_full_02_receipt.json)、[系统本回执](independent_c/repository_system_full_02_current_receipt.json)。两报告全部 33 页已实际目视；统一 REPORT_BUILD 后独立重渲染与已看版本逐页字节一致，[当前重建复核](independent_documents/report_entry_delta_receipt.json) 按新产物绑定，未把旧 hash 说成当前 hash。
+本轮新增实验记录级模型调用为 0；没有重跑历史 84 次模型调用。Notebook 使用历史真实提议做 FULL 离线复算，实际结果在[本次 Notebook 记录](closeout/SC-LAB1-G3-CLOSEOUT-001/notebooks/)。两次进程中断的部分输出明确保存在[中断记录](closeout/SC-LAB1-G3-CLOSEOUT-001/notebook_interruptions.json)，不计入 FULL 成功；新内核重试另用新目录。最终报告排版修订只改变包内 Experiment PDF 和 manifest，**113 个非 PDF payload 成员完全相同，Process PDF 也未变**；通过此关系继承对应实际解压执行证据，不能称为又一次新执行。
 
-[实际 REVIEW_ONLY ZIP](../../submission/REVIEW_ONLY_实验一.zip) 已构建并真实解压，113 个成员（含 manifest）、21,418,989 字节，SHA256 `97d5dbe2d7a5c87d09bcb21ae5798fa0b76374fabdd03f25447fb87c4f27c447`。包内两个 FULL 均已独立通过：[基础本](independent_c/isolated_package_basic_full_receipt.json)、[系统本](independent_c/isolated_package_system_full_receipt.json)。两者均从包内 raw/源码执行，新分片与正式结果一致，Provider attempts=0；静态依赖检查不替代这些全量运行。[内部总验收](independent_c/internal_acceptance_receipt.json) 与真实 ARTIFACT 远程核对均已完成，详见[最终回复](FINAL_RESPONSE.md)及[发布记录](PUBLICATION_RECORD.json)。Report/Package 的外部缺项仍保持 BLOCKED，不宣称 SUBMITTED。
+[Evidence 盘点](closeout/SC-LAB1-G3-CLOSEOUT-001/b_handoff/evidence_inventory.md)检查了授权工作区现有原件与候选。可用授权文字和历史模型/工程事实已索引；未找到完整原生互动截图/上下文及其获批入选、annotation、Report Order、Evidence/Block Lock。缺项只阻断相关正式互动呈现，姓名不再是依赖。PDF 页图是报告检查产物，不是原生聊天截图。
+
+Deliverable 保持 `FINAL_REVIEW`，Understanding 保持 `LEARNING`，Submission 保持 `NOT_READY`，新 `GPT_SECOND_REVIEW=PENDING`。老师材料第26页规定“10月5日前”、学号_姓名_实验一命名和邮箱；本轮没有代发邮件、上传教学平台、代签或设为 SUBMITTED。

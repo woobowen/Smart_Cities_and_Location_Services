@@ -1,11 +1,13 @@
 # 实验一：轨迹预处理与可核验的 AI 工作流
 
-先看 [当前审核入口](evidence/goal3/REVIEW_PACKET.md) 和 [完整本轮回复](evidence/goal3/FINAL_RESPONSE.md)。它们分别登记 Technical、Research、Reports、Package、Publication 状态。内部核验不替代网页 GPT 二重审核；提交状态不代表已发送邮件。
+先看 [当前审核入口](evidence/goal3/REVIEW_PACKET.md) 和 [本次收尾回复](evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/FINAL_RESPONSE.md)。它们分别登记 Technical、Research、Reports、Package、Publication 状态。内部核验不替代网页 GPT 二重审核；提交状态不代表已发送邮件。
 
 ## 作业与报告
 
 | 内容 | 入口 |
 |---|---|
+| 四板块复盘入口 | [REVIEW_GUIDE](docs/goal3/REVIEW_GUIDE.md)；用户理解审核尚未完成 |
+| 完整要求与质量证据 | [MASTER_REQUIREMENTS_REVIEW](evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/a_diagnosis/MASTER_REQUIREMENTS_REVIEW.md) |
 | 教师要求逐项定位 | [Notebook 单元与报告页码导航](evidence/goal3/teacher_delivery_mapping.md) |
 | 教师基础任务完成版 | [作业1轨迹数据预处理_完成版.ipynb](notebooks/final/作业1轨迹数据预处理_完成版.ipynb) |
 | 教师 LLM 系统任务完成版 | [任务3_LLM辅助评估清洗_完成版.ipynb](notebooks/final/任务3_LLM辅助评估清洗_完成版.ipynb) |
@@ -37,7 +39,7 @@
 .venv/bin/python -m task1.goal3 REPORT_BUILD --output /tmp/REVIEW_ONLY_实验一_重建.zip
 ```
 
-此入口先核验已由独立 C 关闭的生产任务、四阶段实际分片及其来源，再生成数值摘要、正式图、两份 XeLaTeX 报告和实际 ZIP，并执行隔离目录依赖检查。输出文件必须不存在；省略 `--output` 时使用 `task1/submission/REVIEW_ONLY_实验一.zip`。重建会使旧的报告、图和包审核失效，仍需对新版本做全部 200 dpi 页面检查及 ZIP 解压后的 FULL 复算。`--probe` 的依赖检查不等于全量复算。当前编译环境与新增依赖记录见 [环境记录](evidence/goal3/environment_record.json)。
+此入口先核验已由独立 C 关闭的生产任务、四阶段实际分片及其来源，再生成数值摘要、正式图、两份 XeLaTeX 报告和实际 ZIP，并执行隔离目录依赖检查。输出文件必须不存在；省略 `--output` 时使用身份源指定的 `task1/submission/REVIEW_ONLY_10245102410_吴博闻_实验一.zip`（已有包会拒绝覆盖）。重建会使旧的报告、图和包审核失效，仍需对新版本做全部 200 dpi 页面检查及 ZIP 解压后的 FULL 复算。`--probe` 的依赖检查不等于全量复算。当前编译环境与新增依赖记录见 [环境记录](evidence/goal3/environment_record.json)。
 
 LIVE 是另一次真实模型实验，仅在完整 Git 工程和原有合法认证下显式开启：
 
@@ -59,4 +61,4 @@ S 完成时间/距离切分和短段过滤；D 按已批准规则一次标记、
 - [G2](evidence/goal2/REVIEW_PACKET.md)：三组参数、六种顺序、四模式、记忆及可复验反例。
 - [G3](evidence/goal3/REVIEW_PACKET.md)：有限候选、组合/移除、选择、确认、全量生产、复现与交付。
 
-教师要求 `.ipynb` 与实验报告压缩为 ZIP，10 月 5 日前发送至教师材料指定邮箱；材料未规定具体截止时刻。本轮只准备待审包，未发送或提交。姓名、学号、互动证据规格或最终审核未闭合时，包保持 `REVIEW_ONLY` / `NOT_READY`。报告 LaTeX、全部真实结果、失败日志及技术图源继续在 GitHub 保存。
+教师要求 `.ipynb` 与实验报告压缩为 ZIP，10 月 5 日前发送至教师材料指定邮箱；材料未规定具体截止时刻。本轮只准备待审包，未发送或提交。身份已核实为吴博闻 / 10245102410；互动证据规格或最终审核未闭合时，包保持 `REVIEW_ONLY` / `NOT_READY`。报告 LaTeX、全部真实结果、失败日志及技术图源继续在 GitHub 保存。
