@@ -3,9 +3,9 @@ from collections import Counter, defaultdict
 from pathlib import Path
 import re
 
-import matplotlib
-matplotlib.use('Agg')
-import matplotlib.pyplot as plt
+from matplotlib import rc_context
+from matplotlib.figure import Figure
+from matplotlib.backends.backend_agg import FigureCanvasAgg
 import numpy as np
 
 from task1.workflow.io import ROOT, digest, read_json, write_json
@@ -43,6 +43,14 @@ def theme(colors):
             'svg.hashsalt': 'sc-lab1-offline-recompute-v1'}
 
 
+def subplots(nrows, ncols, *, figsize, squeeze=True, layout='constrained'):
+    # Direct canvas works in both notebooks and command-line recomputation,
+    # without depending on version-specific IPython/pyplot REPL hooks.
+    figure = Figure(figsize=figsize, layout=layout)
+    FigureCanvasAgg(figure)
+    return figure, figure.subplots(nrows, ncols, squeeze=squeeze)
+
+
 def save_figure(figure, directory, name, caption):
     files = {}
     for suffix in ('svg', 'pdf', 'png'):
@@ -50,7 +58,6 @@ def save_figure(figure, directory, name, caption):
         metadata = {'Date': None} if suffix == 'svg' else {'CreationDate': None, 'ModDate': None} if suffix == 'pdf' else None
         figure.savefig(path, dpi=300, bbox_inches='tight', metadata=metadata)
         files[suffix] = {'path': path.name, 'sha256': digest(path), 'bytes': path.stat().st_size}
-    plt.close(figure)
     return {'name': name, 'caption': caption, 'files': files}
 
 
@@ -78,7 +85,7 @@ def parameter_figure(tasks, colors):
     phases = sorted({row['partition'] for row in tasks if 'parameters' in row['source_run_id']})
     if not phases:
         raise ValueError('NEW_PARAMETER_READINGS_REQUIRED')
-    fig, axes = plt.subplots(len(phases), 3, figsize=(11.4, 3.35*len(phases)), squeeze=False, layout='constrained')
+    fig, axes = subplots(len(phases), 3, figsize=(11.4, 3.35*len(phases)), squeeze=False, layout='constrained')
     for i, phase in enumerate(phases):
         rows = [r for r in tasks if r['partition'] == phase and 'parameters' in r['source_run_id']]
         reference = [r for r in rows if r['parameters'] == REFERENCE]
@@ -129,7 +136,7 @@ def order_figure(tasks, colors):
     phases = sorted({r['partition'] for r in rows})
     if not phases:
         raise ValueError('NEW_ORDER_READINGS_REQUIRED')
-    fig, axes = plt.subplots(len(phases), 2, figsize=(10.6, 3.5*len(phases)), squeeze=False, layout='constrained')
+    fig, axes = subplots(len(phases), 2, figsize=(10.6, 3.5*len(phases)), squeeze=False, layout='constrained')
     for i, phase in enumerate(phases):
         group = [r for r in rows if r['partition'] == phase]
         names = [r['order'] for r in group]
@@ -156,7 +163,7 @@ def mode_figure(episodes, colors):
     if not phases:
         raise ValueError('NEW_SELECTED_EPISODE_READINGS_REQUIRED')
     pooled = []
-    fig, axes = plt.subplots(len(phases), 3, figsize=(12.0, 3.6*len(phases)), squeeze=False, layout='constrained')
+    fig, axes = subplots(len(phases), 3, figsize=(12.0, 3.6*len(phases)), squeeze=False, layout='constrained')
     for i, phase in enumerate(phases):
         modes = [m for m in MODES if (phase, m) in groups]
         totals = []
@@ -190,7 +197,7 @@ def historical_plots(output, topic, tasks, episodes, provenance):
     data = {'classification': 'ENGINEERING_PLOT_SMOKE_REAL_EXPOSED_INPUTS' if provenance.get('engineering_smoke') else 'HISTORICAL_G2_RAW_RECOMPUTE_NOT_NEW_LIVE',
             'provenance': provenance, 'tasks_from_new_results': tasks, 'episodes_from_new_results': episodes,
             'unavailable': 'null remains unavailable; never interpreted as zero geometry error'}
-    with plt.rc_context(theme(colors)):
+    with rc_context(theme(colors)):
         def scope_label(figure):
             if provenance.get('engineering_smoke'):
                 figure.suptitle('Engineering smoke · '+figure._suptitle.get_text(), fontsize=10)
@@ -253,8 +260,8 @@ def production_plots(output):
             'case': {'record_id': chosen['record_id'], 'coverage_delta': best[0],
                      'R0': chosen['traces'][chosen['strategy_configs']['R0']],
                      'deployed_id': final, 'deployed': chosen['traces'][chosen['strategy_configs'][final]]}}
-    with plt.rc_context(theme(colors)):
-        fig, axes = plt.subplots(1, 2, figsize=(11.2, 4.2), layout='constrained')
+    with rc_context(theme(colors)):
+        fig, axes = subplots(1, 2, figsize=(11.2, 4.2), layout='constrained')
         raw_points = totals['R0']['n_input']; bottom = np.zeros(len(names))
         for field, label, color in [('n_filtered', 'S filtered', 'C3'), ('n_direction_removed', 'D removed', 'C4'),
                                      ('n_dp_removed', 'P simplified', 'C2'), ('n_final', 'Stored output', 'C1')]:
@@ -274,7 +281,7 @@ def production_plots(output):
         fig.suptitle(f'{scope_label} · {totals["R0"]["n_records"]:,} records / {raw_points:,} raw points')
         figures.append(save_figure(fig, directory, 'recomputed_point_fates',
             'Terminal counts are independently reduced from newly written point actions; coverage is distinct from explicit stored output.'))
-        fig, axes = plt.subplots(1, 3, figsize=(11.3, 4.35), layout='constrained')
+        fig, axes = subplots(1, 3, figsize=(11.3, 4.35), layout='constrained')
         r, f = data['case']['R0'], data['case']['deployed']; xy = np.array(r['source_record']['xy'])
         origin = xy[0]; local = xy-origin
         bounds = [0]+[b['to_index'] for b in r['metrics']['raw_boundaries']]+[len(xy)]

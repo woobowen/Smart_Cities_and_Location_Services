@@ -237,11 +237,15 @@ show([{k:example['metrics'][k] for k in ['n_input','n_filtered','n_direction_rem
       'common_covered_points','common_max_error','dp_max_error','raw_break_crossings']}])
 show(example['point_actions'][:12],['original_index','action','reasons'])
 
-import matplotlib.pyplot as plt
+from matplotlib.figure import Figure
+from matplotlib.backends.backend_agg import FigureCanvasAgg
 palette_text=(ROOT/'templates/latex/common/p2_cloud_sorbet_colors.tex').read_text()
 palette={name:'#'+value for name,value in re.findall(r'\\definecolor\{([^}]+)\}\{HTML\}\{([0-9A-Fa-f]{6})\}',palette_text)}
 raw_windows=split_trajectory(pilot,30,400,time_reliable=True)['segments']
-fig,axes=plt.subplots(1,3,figsize=(13,4),constrained_layout=True)
+# 原生 Figure/Canvas 文件输出不依赖 IPython 的 pyplot REPL 接口。
+fig=Figure(figsize=(13,4),constrained_layout=True)
+FigureCanvasAgg(fig)
+axes=fig.subplots(1,3)
 for ax,title,parts,color in zip(axes,['Raw fixed windows','After S-D','After S-D-P'],
         [raw_windows,example['stages'][1]['output'],example['final_segments']],[palette['Muted'],palette['C2'],palette['C1']]):
     for part in parts:
@@ -250,7 +254,9 @@ for ax,title,parts,color in zip(axes,['Raw fixed windows','After S-D','After S-D
     ax.set_title(title);ax.set_xlabel('East / working m');ax.set_ylabel('North / working m')
     ax.set_aspect('equal',adjustable='datalim');ax.grid(alpha=.2)
 fig.suptitle('Known-exposed pilot 246; conditional coordinates; no basemap')
-fig.savefig(WORK/'pilot_steps.svg');plt.show()
+fig.savefig(WORK/'pilot_steps.svg')
+fig.savefig(WORK/'pilot_steps.png',dpi=200)
+display(Image(filename=str(WORK/'pilot_steps.png'),width=1000))
 '''),
         md('''## 4. 评价逻辑
 
