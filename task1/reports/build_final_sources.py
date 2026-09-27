@@ -327,7 +327,7 @@ __STRATA_TABLE__
         production += figure('production_trajectory_cases','同案例的原始、R0 与发布策略。前两行分别选取最大覆盖增益和最大原始几何误差的完整记录；第三行为新增覆盖最差点所在的四点局部窗口，图中显示点数不是整条记录的存储总数。粉红叉号表示 S 过滤，紫色加号表示 D 删除；蓝色与橙色折线分别表示 R0 与 S0 的存储输出。同一行原点与尺度一致，断段不重连，无道路底图。')
         cost_rows = [r'\begin{table}[H]\centering\small',
                      r'\caption{当前有效运行的计算账本。观察数可以复用相同配置或已经存在的真实产物，不等于实际重新处理次数。}',
-                     r'\begin{tabularx}{\linewidth}{@{}Yrrrrr@{}}\toprule 运行范围 & 实际处理 & 缓存复核 & 同配置复用 & 策略观察 & 秒 \\ \midrule']
+                     r'\begin{tabularx}{\linewidth}{@{}Yrrrr@{\hspace{1.4em}}r@{}}\toprule 运行范围 & 实际处理 & 缓存复核 & 同配置复用 & 策略观察 & 秒 \\ \midrule']
         for scope, title in [('development','最终开发对照'),('selection','选择'),('confirmation','最终确认'),('production','全量生产')]:
             cost = summary['run_costs'][scope]
             if (cost['new_record_model_calls'] != 0 or cost['processing_evaluations']+cost['cached_trace_rechecks']
