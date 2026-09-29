@@ -1,0 +1,25 @@
+{
+  "render_dpi": 200,
+  "approved_inspected_pages": [
+    1,
+    2,
+    16,
+    31
+  ],
+  "rebuilt_inspected_pages": [
+    1,
+    16,
+    28,
+    31
+  ],
+  "approved_representative_structure": "PASS",
+  "first_page_note": "Page 1 has only title, introductory prose and footer with substantial whitespace; its Evidence continues on page 2, as explicitly documented in the supplied README. No entirely blank page was found by per-page text extraction.",
+  "approved_findings": "Titles/body/screenshots are visible on the inspected pages, no corrupt rendering observed. Preserve user-approved layout.",
+  "rebuild_status": "PARTIAL",
+  "rebuild_findings": [
+    "Page 16 broad boxes differ from narrower boxes in approved PDF; revised first-person prose also differs.",
+    "Page 28 visibly has missing arrow glyph boxes, consistent with nine missing U+2192 warnings across block11.",
+    "Page 31 title and body differ from the accepted revised PDF."
+  ],
+  "evidence_lock": "NOT PERFORMED; representative structural inspection is not full phrase/box/arrow approval or source PPI recertification."
+}

@@ -1,4 +1,4 @@
-"""Maintain the exact 11-file ChatGPT upload bundle; metadata stays internal."""
+"""Maintain the exact 13-file ChatGPT upload bundle; metadata stays internal."""
 from pathlib import Path, PurePosixPath
 from datetime import datetime
 from zoneinfo import ZoneInfo
@@ -20,6 +20,8 @@ SOURCES = (
     ('Engineering governance', 'AGENTS.md', 'AGENTS.md', 'Not declared uploaded at baseline'),
     ('Process reference PDF', 'Process_Report_P2_Locked_v1.pdf', 'templates/latex/process-report/preview/Process_Report_P2_Locked_v1.pdf', 'Process_Report_P2_Locked_v1(3).pdf'),
     ('Experiment reference PDF', 'Experiment_Report_P2_Exact.pdf', 'templates/latex/experiment-report/preview/Experiment_Report_P2_Exact.pdf', 'Experiment_Report_P2_Exact(4).pdf'),
+    ('Workflow Construction Pre-Task1 Accepted Reference', 'WF_WorkflowConstruction_PreTask1_REVISED.pdf', 'reports/process-report/pre-task1/WF_WorkflowConstruction_PreTask1_REVISED.pdf', 'WF_WorkflowConstruction_PreTask1_REVISED.pdf'),
+    ('Workflow Construction Pre-Task1 LaTeX Source Archive', 'WF_WorkflowConstruction_PreTask1_31p_LaTeX_Source.zip', 'reports/process-report/pre-task1/WF_WorkflowConstruction_PreTask1_31p_LaTeX_Source.zip', 'WF_WorkflowConstruction_PreTask1_31p_LaTeX_Source.zip'),
     ('Teacher slides', '实验课1.pptx', 'task1/实验课1.pptx', '实验课1(1).pptx'),
     ('Teacher assignment archive', '作业.zip', 'task1/作业.zip', '作业(1).zip'),
     ('LLM starter notebook', '任务3_LLM辅助评估清洗.ipynb', 'task1/作业/作业/任务3_LLM辅助评估清洗.ipynb', '任务3_LLM辅助评估清洗.ipynb'),
@@ -63,7 +65,7 @@ def verify_skill(root):
 
 
 def source_rows(root):
-    require(len(ALLOWLIST) == len(SOURCES) == 11, 'Invalid upload allowlist')
+    require(len(ALLOWLIST) == len(SOURCES) == 13, 'Invalid upload allowlist')
     verify_skill(root)
     rows = []
     for logical, name, source, previous in SOURCES:
@@ -79,7 +81,7 @@ def verify_bundle(root):
     rows = source_rows(root)
     bundle = root / BUNDLE_PATH
     entries = list(bundle.iterdir())
-    require({p.name for p in entries} == ALLOWLIST, 'UPLOAD_BUNDLE_INVALID: directory must contain exactly the 11 allowlisted names')
+    require({p.name for p in entries} == ALLOWLIST, 'UPLOAD_BUNDLE_INVALID: directory must contain exactly the 13 allowlisted names')
     require(all(p.is_file() and not p.is_symlink() for p in entries), 'UPLOAD_BUNDLE_INVALID: only ordinary files allowed')
     for row in rows:
         src, dst = root / row['source'], root / row['bundle']
@@ -91,7 +93,7 @@ def verify_bundle(root):
 def manifest_text(rows, date):
     text = '''# Upload Bundle Manifest
 
-The upload-ready directory is `releases/chatgpt-project-sources/`. Every one of its exactly 11 ordinary files is intended for upload, including AGENTS. All roles are PROJECT_SOURCE. This manifest describes the repository upload bundle, not the current ChatGPT UI state; Previous ChatGPT Display Filename is historical mapping only.
+The upload-ready directory is `releases/chatgpt-project-sources/`. Every one of its exactly 13 ordinary files is intended for upload, including AGENTS. All roles are PROJECT_SOURCE. This manifest describes the repository upload bundle, not the current ChatGPT UI state; Previous ChatGPT Display Filename is historical mapping only.
 
 Active sources remain authoritative. Update active sources first, then synchronize distribution bytes. Project Settings stays in ChatGPT UI. This manifest, upload instructions, sync tools, logs and WORKFLOW_EVIDENCE_PLAN remain outside the upload bundle. Versions are managed by Git commits, not duplicate directory/file names.
 
@@ -105,7 +107,9 @@ Active sources remain authoritative. Update active sources first, then synchroni
     text += '''
 The publication-plots source intentionally names the retained original distribution in the bundle. Its independent verification is the fixed approved SHA256 plus byte comparison of all effective archive members against `tools/skills/publication-plots/`; self-comparison alone is insufficient. Runtime source remains the installed Skill. No archive is repackaged.
 
-The two PDFs are canonical template/reference previews, not current-run experiment results. Teacher PPTX/ZIP and both notebooks are copied as bytes; no notebook is re-saved or executed. No Project Sources upload or Project Settings edit is performed by the sync tool.
+The Experiment and Process template PDFs remain Visual / Layout Template References. The accepted 31-page Workflow Construction PDF is a separate real-content / first-person writing / Interaction Evidence implementation reference, accompanied by its reproducible source archive. It replaces neither template nor preview, is not an Experiment Report, and does not establish completion of Task 1 Experiment Decision Process. Its approved PDF and ZIP bytes are preserved; rebuild verification never overwrites them. Teacher PPTX/ZIP and both notebooks are copied as bytes; no notebook is re-saved or executed. No Project Sources upload or Project Settings edit is performed by the sync tool.
+
+The supplied source archive has [PARTIAL reproduction verification](../SMART-CITIES-GOVERNANCE-PROCESS-REFERENCE-SYNC-002/source-archive-check.md): 31 pages build, but the revised prose and annotation geometry are not fully reproduced. The approved PDF remains the accepted reading reference.
 
 See [upload instructions](UPLOAD_INSTRUCTIONS.md) and [engineering verification](README.md). The manifest is internal and does not hash itself.
 '''
@@ -116,7 +120,7 @@ def verify_manifest(root, rows):
     text = (root / INTERNAL_PATH / 'SOURCE_MANIFEST.md').read_text()
     import re
     dates = re.findall(r'\| YES \| (\d{4}-\d{2}-\d{2}) \|', text)
-    require(len(dates) == 11 and len(set(dates)) == 1, 'Manifest requires 11 dated, verified rows')
+    require(len(dates) == 13 and len(set(dates)) == 1, 'Manifest requires 13 dated, verified rows')
     require(text == manifest_text(rows, dates[0]), 'Manifest content/roles/hashes are stale')
 
 
@@ -145,7 +149,7 @@ def sync(root=ROOT):
     date = datetime.now(ZoneInfo('Asia/Shanghai')).date().isoformat()
     (internal / 'SOURCE_MANIFEST.md').write_text(manifest_text(rows, date))
     verify_manifest(root, rows)
-    return {'status': 'UPLOAD BUNDLE READY', 'file_count': 11, 'updated': updated,
+    return {'status': 'UPLOAD BUNDLE READY', 'file_count': 13, 'updated': updated,
             'removed': sorted(removed), 'hashes': {r['filename']: r['sha256'] for r in rows}}
 
 
@@ -156,7 +160,7 @@ def main():
     if args.check:
         rows = verify_bundle(ROOT)
         verify_manifest(ROOT, rows)
-        print('UPLOAD_BUNDLE_CONTENT: PASS; EXACTLY 11; internal manifest verified')
+        print('UPLOAD_BUNDLE_CONTENT: PASS; EXACTLY 13; internal manifest verified')
     else:
         print(json.dumps(sync(), ensure_ascii=False, indent=2))
 

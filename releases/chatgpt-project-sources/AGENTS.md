@@ -269,6 +269,8 @@ Notebook能运行不等于实验完成；必须同时满足方法、指标、证
 
 使用当前 installed sources，不用旧 distribution ZIP 替代。Experiment Report 回答最终做了什么、为什么、结果说明什么；Process Report 保留 Workflow Construction 与 Experiment Decision Process 两层。两份报告的身份、Brainstorm、正式内容纳入标准、图型、色彩与排版由 Visual System 统一定义，不另设工程版规则。
 
+Process Report 正文默认执行 Visual System / Evidence Protocol 中的第一人称研究复盘口吻：用户自己的研究动作写“我”，真实共同完成的动作才写“我们”，需要时直接称 GPT / Codex。Codex 不得把已批准的“我”统一改成“用户”，也不得把内部 `Block xx / Evidence ID` 机械写成正式章节。正式章节按批准的 Narrative Section 聚合。
+
 编译后检查日志、文本和 PDF；Process Evidence 按第 13 节执行 >=200-dpi render 与 visual inspection。模板变更更新唯一 active preview；具体任务复制模板，不覆盖 reference template。
 
 ---
@@ -281,17 +283,19 @@ Process Evidence 任务必须先读取：
 2. [Visual System](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md)；
 3. 当前 Evidence Master 批准的 Evidence Plan / annotation specification。
 
-**Evidence Master 决定关系，Codex 精确实现。** Codex 不得自行决定哪句话 highlight/圈选、哪个 User phrase 是 anchor、GPT before/after、两句之间的箭头关系、turn 调序、哪条 Evidence 进入报告、用户文本如何润色。缺少批准 spec 时停止受影响真实页面；不按时间相邻推断关系。
+**Evidence Master 决定关系，Codex 精确实现。** Codex 不得自行决定哪句话 highlight/圈选、圈选范围多大、哪个 User phrase 是 anchor、GPT before/after、两句之间的箭头关系、turn 调序、哪条 Evidence 进入报告、用户文本如何润色。缺少批准 spec 时停止受影响真实页面；不按时间相邻推断关系。
 
-Codex 负责 lossless crop、PNG direct embed、TikZ vector、arrow routing、side note placement、LaTeX compile、PPI calculation、PDF render、visual inspection。几何实现不得改变批准的 phrase、语义关系或文案。
+每一个 box / highlight 必须严格对应批准的 Evidence Claim，并采用 **minimum sufficient scope**：只覆盖证明该Claim所需的最小必要phrase，不为绘图方便把无关行、整段消息或整个bubble一起框入。只有批准spec明确整个段落/bubble本身就是Evidence对象时，才允许大框。
+
+Codex 负责 lossless crop、PNG direct embed、TikZ vector、arrow routing、side note placement、LaTeX compile、PPI calculation、PDF render、visual inspection。几何实现不得改变批准的 phrase、框选范围、语义关系或文案。长箭头端点必须落在批准phrase边界附近或明确指向该phrase，不得只落在bubble边缘或大框任意位置。
 
 raw 不得覆盖。明确保存 raw/、crop/（或可重现 LaTeX trim）、annotated/ 或 LaTeX source/PDF overlay。Original Evidence First、干预等级与重构条件只按 Evidence Protocol 执行，Simulation 不是默认路径。
 
 记录 raw pixel size、crop pixel size/bounds、final display size、effective PPI（显示区域像素数 / 英寸，取横纵最小值）。原则 >=180，preferred >=200；不足时先按批准版式减小显示尺寸/拆页，仍不足则 **RECAPTURE_REQUIRED**。禁止 AI upscale、generative redraw、fake sharpening 或低清栅格化批注放大。
 
-逐条检查 PHRASE MATCH、ARROW RELATION、ARROW ENDPOINT、SOURCE RESOLUTION，记录结果与依据；失败不得 LOCK。按 Evidence Master spec 对照检查 phrase、端点、遮挡、歧义与来源。Codex 工程自检不能替代 Evidence Master 的审核和 Evidence Lock。
+逐条检查 PHRASE MATCH、BOX RANGE、ARROW RELATION、ARROW ENDPOINT、SOURCE RESOLUTION，记录结果与依据；失败不得 LOCK。必须以最终PDF render为准再次核对box是否多框/漏框、箭头端点是否确实指向批准phrase、是否遮挡正文或造成歧义。Codex 工程自检不能替代 Evidence Master 的审核和 Evidence Lock。
 
-生产链：raw screenshot → Evidence Master annotation spec → lossless crop → direct LaTeX embed → TikZ Micro Trace → XeLaTeX → 200-dpi render inspection → Phrase/Arrow Audit → Evidence Master Lock。全局演变图只能在主要 Workflow Evidence LOCK 后制作。
+生产链：raw screenshot → Evidence Master annotation spec → lossless crop → direct LaTeX embed → TikZ Micro Trace → XeLaTeX → 200-dpi render inspection → Phrase/Box/Arrow Audit → Evidence Master Lock。全局演变图只能在主要 Workflow Evidence LOCK 后制作。
 
 ---
 
@@ -345,6 +349,15 @@ Process Report只能依据真实：
 - 简洁；
 - 具体；
 - 像学生真实完成实验后的认真整理。
+
+Process Report 正文还必须：
+
+- 以第一人称“我”作为默认研究叙事主体；
+- 只有真实共同完成的动作才写“我们”；
+- 需要时直接写 GPT / Codex；
+- 关键Human Judgment尽量保留用户原本的自然表达；
+- 技术术语保持准确，但不得把后来由GPT formalize的术语倒写成用户更早就会说；
+- 相关Decision聚合成自然研究板块，不写成内部规则清单或 `Block 01 / Block 02 / ...`。
 
 避免：
 
@@ -456,14 +469,14 @@ GitHub与老师最终提交包职责不同：
 
 ### ChatGPT Project Sources Upload Bundle
 
-`releases/chatgpt-project-sources/` 是可直接全量上传到 ChatGPT Project Sources 的 **Upload-Ready Bundle**。目录内容必须严格等于批准的 11-file upload set：用户可以删除 UI 中旧项目源后，打开该目录并全选上传。AGENTS.md 本身也是正式 PROJECT_SOURCE。
+`releases/chatgpt-project-sources/` 是可直接全量上传到 ChatGPT Project Sources 的 **Upload-Ready Bundle**。目录内容必须严格等于批准的 13-file upload set：用户可以删除 UI 中旧项目源后，打开该目录并全选上传。AGENTS.md 本身也是正式 PROJECT_SOURCE。
 
-- 目录只包含应上传的 11 个普通文件；不放 README、manifest、Evidence Plan、脚本、日志、备份、临时文件、子目录或带重复上传后缀的文件。
+- 目录只包含应上传的 13 个普通文件；不放 README、manifest、Evidence Plan、脚本、日志、备份、临时文件、子目录或带重复上传后缀的文件。
 - Project Settings 是最高层规则的例外，仅由用户在 ChatGPT UI 配置，不创建文件副本；内部 WORKFLOW_EVIDENCE_PLAN 不上传。
 - **Active source first → Upload bundle second**。bundle 仅为精确 distribution copy，不直接修改其中治理文档；每次 active Project Source 变化后必须同步。
 - 使用既有 [sync_sources.py](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/sync_sources.py) 的固定 allowlist 同步并清理目录中的非 allowlist 普通文件，再执行 `--check`。遇到子目录或符号链接先报告，不递归删除。
-- 必须核验 canonical names、EXACTLY 11、active bytes == bundle bytes 与 SHA256；二进制文件按字节比较。publication-plots.zip 保留已批准原始 distribution，核验固定 hash 与 installed Skill 的 effective members，不擅自重新打包。
-- [Internal manifest](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/evidence/infrastructure/chatgpt-project-source-sync/SOURCE_MANIFEST.md) 与 [Upload instructions](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/evidence/infrastructure/chatgpt-project-source-sync/UPLOAD_INSTRUCTIONS.md) 均保存在上传目录之外；manifest 的 11 项 Role 统一为 PROJECT_SOURCE，不代表 UI 当前状态。
+- 必须核验 canonical names、EXACTLY 13、active bytes == bundle bytes 与 SHA256；二进制文件按字节比较。publication-plots.zip 保留已批准原始 distribution，核验固定 hash 与 installed Skill 的 effective members，不擅自重新打包。
+- [Internal manifest](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/evidence/infrastructure/chatgpt-project-source-sync/SOURCE_MANIFEST.md) 与 [Upload instructions](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/evidence/infrastructure/chatgpt-project-source-sync/UPLOAD_INSTRUCTIONS.md) 均保存在上传目录之外；manifest 的 13 项 Role 统一为 PROJECT_SOURCE，不代表 UI 当前状态。
 - 稳定目录与 canonical 文件名不添加 bundle_v2/final/new 后缀，版本由 Git commit 管理。
 - Codex 只能报告 **UPLOAD BUNDLE READY**，不得声称已完成 ChatGPT UI 上传。用户上传后由 GPT Evidence Master 做最终一致性审核。
 

@@ -6,7 +6,7 @@ of the Smart Cities & Location Services project.
 
 The template follows:
 
-**Smart Cities Visual / LaTeX Design System v2.2**
+**Smart Cities Visual / LaTeX Design System v2.3**
 
 It shares the same P2 · Cloud Sorbet visual identity as the Experiment Report,
 but the two reports have different information responsibilities.
@@ -374,6 +374,16 @@ not the normal runtime source.
 
 ## 10. Creating a Task-Specific Report
 
+### Template and accepted real-content reference
+
+- Visual / Layout Template Reference: [Process_Report_P2_Locked_v1.pdf](preview/Process_Report_P2_Locked_v1.pdf), at `templates/latex/process-report/preview/Process_Report_P2_Locked_v1.pdf`.
+- Real-content Workflow Construction / first-person writing / Interaction Evidence implementation reference: [WF_WorkflowConstruction_PreTask1_REVISED.pdf](../../../reports/process-report/pre-task1/WF_WorkflowConstruction_PreTask1_REVISED.pdf).
+- Reproducible source archive for that accepted reference: [WF_WorkflowConstruction_PreTask1_31p_LaTeX_Source.zip](../../../reports/process-report/pre-task1/WF_WorkflowConstruction_PreTask1_31p_LaTeX_Source.zip).
+
+The accepted reference complements the template and its preview; it replaces neither. It is not an Experiment Report and does not establish that Task 1 Experiment Decision Process is complete. Task-specific formal reports still start from a copy of the active template, not by copying the 31-page real-content report as an assignment template.
+
+The supplied archive builds 31 pages but has [PARTIAL reproduction verification](../../../evidence/infrastructure/SMART-CITIES-GOVERNANCE-PROCESS-REFERENCE-SYNC-002/source-archive-check.md): revised prose/annotation geometry differs from the approved PDF, and the verification build has missing arrow glyphs. Preserve both approved inputs unchanged; use the approved PDF as the accepted reading reference.
+
 Do not overwrite the locked reference template for a specific assignment.
 
 For each formal task:
@@ -407,13 +417,13 @@ latexmk -xelatex \
 
 ## 12. Phrase-level Interaction Evidence authoring
 
-Required reads: [Evidence Protocol v2.3](../../../docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md), [Visual System v2.2](../../../docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md), [AGENTS](../../../AGENTS.md), and the current Evidence Master-approved annotation specification. Research governance lives in [Research Protocol](../../../docs/research/SMART_CITIES_RESEARCH_PROTOCOL.md).
+Required reads: [Evidence Protocol v2.4](../../../docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md), [Visual System v2.3](../../../docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md), [AGENTS](../../../AGENTS.md), and the current Evidence Master-approved annotation specification. Research governance lives in [Research Protocol](../../../docs/research/SMART_CITIES_RESEARCH_PROTOCOL.md).
 
 Production chain:
 
-raw screenshot → Evidence Master annotation spec → lossless crop → direct LaTeX embed → TikZ Micro Trace → XeLaTeX → 200-dpi render inspection → Phrase/Arrow Audit → Evidence Lock.
+raw screenshot → Evidence Master annotation spec → lossless crop → direct LaTeX embed → TikZ Micro Trace → XeLaTeX → 200-dpi render inspection → Phrase/Box/Arrow Audit → Evidence Lock.
 
-Evidence Master selects phrases, relations, order and captions. Codex implements approved geometry and wording. Keep raw files unchanged, preserve crop parameters and annotated LaTeX/PDF. Review the Interaction Window; temporal adjacency alone never supports a relation.
+Evidence Master selects phrases, minimum sufficient box ranges, relations, order and captions. Codex implements approved geometry and wording. Keep raw files unchanged, preserve crop parameters and annotated LaTeX/PDF. Review the Interaction Window; temporal adjacency alone never supports a relation.
 
 `components/interaction_evidence.tex` uses the existing shared P2 palette. The parent loads TikZ with `arrows.meta,calc` and the common palette before loading this component. It contains no screenshot-specific coordinates.
 
@@ -435,7 +445,7 @@ Styles: `ie before` = Light Blue; `ie user` = Apricot; `ie user rose` = Soft Ros
 
 Effective PPI = displayed-region pixels / physical display inches, taking the smaller horizontal/vertical value. Require >=180, prefer >=200; preserve readability as well. If resizing/splitting cannot satisfy both, report `RECAPTURE_REQUIRED`; never AI-upscale or redraw UI. Record raw/crop pixel dimensions, crop bounds, display dimensions and PPI in the [internal Evidence Plan](../../../evidence/process-report/workflow-construction/WORKFLOW_EVIDENCE_PLAN.md).
 
-Check PHRASE MATCH, ARROW RELATION, ARROW ENDPOINT and SOURCE RESOLUTION individually. Failures block LOCK. Evidence Master performs final review/lock; successful compilation is not evidence approval. Contact Sheets do not require Micro Trace. Core evidence can span any necessary number of pages. Global Workflow Evolution Map is produced only after main workflow evidence is locked.
+Check PHRASE MATCH, BOX RANGE, ARROW RELATION, ARROW ENDPOINT and SOURCE RESOLUTION individually against the final PDF render. Boxes must cover only the approved minimum sufficient phrase; arrow endpoints must point to the approved phrases after cropping and scaling. Failures block LOCK. Evidence Master performs final review/lock; successful compilation is not evidence approval. Contact Sheets do not require Micro Trace. Core evidence can span any necessary number of pages. Global Workflow Evolution Map is produced only after main workflow evidence is locked.
 
 ## 13. Synthetic fixture and canonical preview
 

@@ -1,0 +1,67 @@
+Staged scope; this summary excluded from stat to avoid self-reference:
+ AGENTS.md                                          |    29 +-
+ docs/design-system/README.md                       |    10 +-
+ docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md   |    74 +-
+ .../WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md      |   141 +-
+ .../README.md                                      |    44 +
+ .../approved-input-mechanical-changes.diff         |    26 +
+ .../approved-input-sha256.txt                      |     5 +
+ .../approved-pdf-text.txt                          |  1059 ++
+ .../approved-pdfinfo.txt                           |    14 +
+ .../archive_embedded-pdf-text.txt                  |  1054 ++
+ .../archive_embedded-pdfinfo.txt                   |    14 +
+ .../bundle-sha256.txt                              |    13 +
+ .../cross-document-audit.md                        |    29 +
+ .../directory-listing.txt                          |    13 +
+ .../environment-changes.json                       |    72 +
+ .../files-changed.txt                              |    65 +
+ .../governance-version-check.txt                   |    24 +
+ .../legacy-eleven-classification.txt               |     7 +
+ .../legacy-reference-search.txt                    |    42 +
+ .../preflight.json                                 |  5809 +++++++
+ .../publication-check.json                         |    89 +
+ .../publication-precheck-01.json                   |     5 +
+ .../rebuilt-pdf-text.txt                           |  1054 ++
+ .../rebuilt-pdfinfo.txt                            |    14 +
+ .../render-commands.json                           |   138 +
+ .../render/approved-page-01-200dpi.png             |   Bin 0 -> 121637 bytes
+ .../render/approved-page-02-200dpi.png             |   Bin 0 -> 690257 bytes
+ .../render/approved-page-16-200dpi.png             |   Bin 0 -> 381022 bytes
+ .../render/approved-page-31-200dpi.png             |   Bin 0 -> 461217 bytes
+ .../render/rebuilt-page-01-200dpi.png              |   Bin 0 -> 105810 bytes
+ .../render/rebuilt-page-16-200dpi.png              |   Bin 0 -> 379811 bytes
+ .../render/rebuilt-page-28-200dpi.png              |   Bin 0 -> 375312 bytes
+ .../render/rebuilt-page-31-200dpi.png              |   Bin 0 -> 441439 bytes
+ .../source-archive-build-instructions.txt          |    42 +
+ .../source-archive-check.md                        |    40 +
+ .../source-archive-inventory.json                  |   407 +
+ .../source-build-console-01.txt                    |     7 +
+ .../source-build-console-02.txt                    |     9 +
+ .../source-build-console-03.txt                    |    58 +
+ .../source-build-failure-01.txt                    |   195 +
+ .../source-build-failure-02.txt                    |   760 +
+ .../source-build-latex-log.txt                     | 15218 +++++++++++++++++++
+ .../source-build-result.json                       |    22 +
+ .../source-reference-validation.json               |   696 +
+ .../staged-review.json                             |    19 +
+ .../sync-check.txt                                 |     1 +
+ .../sync-result.json                               |    23 +
+ .../tex-dependency-install.txt                     |     4 +
+ .../validation-before-whitespace-fix.json          |   216 +
+ .../validation.json                                |   216 +
+ .../visual-inspection.json                         |    25 +
+ .../README.md                                      |     2 +-
+ .../sync_sources.py                                |    20 +-
+ .../validate_sync.py                               |    80 +-
+ .../chatgpt-project-source-sync/README.md          |    16 +-
+ .../chatgpt-project-source-sync/SOURCE_MANIFEST.md |    30 +-
+ .../UPLOAD_INSTRUCTIONS.md                         |     4 +-
+ releases/chatgpt-project-sources/AGENTS.md         |    29 +-
+ .../SMART_CITIES_VISUAL_SYSTEM.md                  |    74 +-
+ ...kflowConstruction_PreTask1_31p_LaTeX_Source.zip |   Bin 0 -> 12466039 bytes
+ .../WF_WorkflowConstruction_PreTask1_REVISED.pdf   |   Bin 0 -> 6090274 bytes
+ .../WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md      |   141 +-
+ ...kflowConstruction_PreTask1_31p_LaTeX_Source.zip |   Bin 0 -> 12466039 bytes
+ .../WF_WorkflowConstruction_PreTask1_REVISED.pdf   |   Bin 0 -> 6090274 bytes
+ templates/latex/process-report/README.md           |    20 +-
+ 65 files changed, 28134 insertions(+), 84 deletions(-)

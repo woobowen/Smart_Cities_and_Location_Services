@@ -1,6 +1,6 @@
 # Workflow governance and evidence synchronization
 
-**Historical run 001 record.** Upload packaging is now governed by [Upload Bundle 002](../chatgpt-project-source-sync/README.md). The existing `sync_sources.py` and `validate_sync.py` have been upgraded in place; current metadata goes to [the internal manifest](../chatgpt-project-source-sync/SOURCE_MANIFEST.md). Historical JSON/TXT hashes, roles and paths below describe run 001 and are not current upload instructions. The upload directory now contains exactly eleven files, all PROJECT_SOURCE, with no manifest inside.
+**Historical run 001 record.** Current upload packaging is governed by the [upload bundle instructions](../chatgpt-project-source-sync/README.md). The existing `sync_sources.py` and `validate_sync.py` have been upgraded in place; current metadata goes to [the internal manifest](../chatgpt-project-source-sync/SOURCE_MANIFEST.md). Historical JSON/TXT hashes, roles and paths below describe run 001 and are not current upload instructions. The upload directory now contains exactly thirteen files, all PROJECT_SOURCE, with no manifest inside. Current verification is recorded in [Governance / Process Reference Sync 002](../SMART-CITIES-GOVERNANCE-PROCESS-REFERENCE-SYNC-002/).
 
 Run: SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001\
 Scope: one-time governance, reusable Process template and Project Sources synchronization. No Experiment 1 implementation, notebook execution, parameter search or formal result production.

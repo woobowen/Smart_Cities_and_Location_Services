@@ -1,4 +1,4 @@
-# Smart Cities & Location Services — Visual / LaTeX Design System v2.2
+# Smart Cities & Location Services — Visual / LaTeX Design System v2.3
 
 Status: **LOCKED for Experiment Report and Process Report**
 
@@ -141,9 +141,51 @@ Its purpose is not merely to show that AI was used.
 
 It explains:
 
-> **How did the user and AI progressively construct a reliable research workflow, and how did specific experimental decisions emerge from real interaction and evidence?**
+> **How did I use AI, evidence and experiments to progressively construct a reliable research workflow and make specific experimental decisions?**
 
 The Process Report therefore contains two complementary layers.
+
+### 4.1 Narrative voice
+
+The formal Process Report body uses a **first-person research-retrospective voice** by default.
+
+Use:
+
+- **“我”** for the user's own observation, judgment, challenge, modification, selection and confirmation;
+- **“我们”** only when an action was genuinely completed jointly by the user and GPT;
+- **GPT** and **Codex** directly when naming the AI research assistant and engineering executor.
+
+Do not make the default body voice sound like a third-party audit by repeatedly writing:
+
+- “用户提出……”;
+- “本项目形成……”;
+- “系统建立……”.
+
+`User / Human Judgment / Evidence Master` remain valid in diagrams, labels, protocol definitions and generic methodological descriptions, but they are not the default narrative subject of the formal report.
+
+The preferred writing mix is:
+
+- natural first-person research narrative for the main body;
+- the user's natural wording for important Human Judgment;
+- concise technical language for definitions, states and formal terms.
+
+Professional terminology must respect historical ownership. If GPT later formalized a user's natural-language idea as `UNRESOLVED`, `Source Audit`, or another term, the report may explain that transition, but must not rewrite the earlier user as if the term had originally been theirs.
+
+### 4.2 Section aggregation
+
+Internal production units are not formal report sections.
+
+`Block 01 / Block 02 / Evidence E-xx` may be used internally, but the formal Process Report should aggregate related Decision Units into larger narrative sections such as:
+
+- task understanding and requirement confirmation;
+- Human–AI workflow construction;
+- research and review mechanisms;
+- Multi-Agent system construction;
+- Experiment Decision Process;
+- document / evidence / visualization system;
+- overall workflow reflection.
+
+The exact section structure adapts to the real task. Do not mechanically map one rule, one Decision Unit, or one Evidence ID to one formal section.
 
 ---
 
@@ -384,7 +426,11 @@ Preserve **raw / crop / annotated**. Use direct high-resolution PNG embedding pl
 
 An **Interaction Trace** represents one decision interaction. A **Micro Trace** is one phrase correspondence. Make the **USER anchor** the visual center among GPT before / User / GPT after phrases. Use exact phrase highlight, short rounded outline, underline or numbered anchors; avoid whole-bubble boxes unless the whole bubble is the evidence object.
 
-Long-arrow correspondence must connect exact phrases approved by Evidence Master, using whitespace and margins without covering text. True one-to-one, one-to-many and many-to-one relations are allowed; symmetry does not justify adding an arrow. Semantic support, Interaction Window review and Phrase / Arrow Audit follow the Evidence Protocol.
+Every highlight / outline / box must correspond to a clear **Evidence Claim** and use the **minimum sufficient phrase range** needed to support that claim. Do not include unrelated lines merely because they are visually convenient. A box may cover a whole paragraph or bubble only when the whole paragraph or bubble is genuinely the evidence object.
+
+Long-arrow correspondence must connect exact phrases approved by Evidence Master, using whitespace and margins without covering text. Arrow endpoints must visually terminate at or immediately beside the approved phrase, not merely at the enclosing message bubble or an arbitrary side of a large box. True one-to-one, one-to-many and many-to-one relations are allowed; symmetry does not justify adding an arrow. Semantic support, Interaction Window review and Phrase / Box / Arrow Audit follow the Evidence Protocol.
+
+After XeLaTeX/PDF rendering, verify box boundaries and arrow endpoints again at the actual final layout. Source coordinates alone are not sufficient because crop, scaling and line wrapping can change visual alignment.
 
 | Interaction role | P2 encoding |
 |---|---|
@@ -712,11 +758,21 @@ Use:
 - natural Chinese writing;
 - English technical terminology where appropriate.
 
+For **Process Report** prose specifically:
+
+- default to first-person **“我”** when describing the user's own research process;
+- use **“我们”** only for genuinely joint work;
+- name **GPT** and **Codex** directly when needed;
+- preserve the user's natural judgment style at key turning points;
+- introduce formal terminology after the real problem appears, rather than writing the whole history as if the terminology existed from the start;
+- aggregate related decisions into a coherent research story instead of presenting a stack of internal rules or Blocks.
+
 Avoid:
 
 - redundant prose;
 - excessive defensive wording;
 - repeated explanation of information already obvious in figures;
+- third-person audit-style Process Report narration such as repeated “用户提出 / 本项目形成 / 系统建立”;
 - internal project-management vocabulary in final technical prose unless genuinely relevant to the Process Report Workflow Construction section.
 
 Figures, tables and text should complement rather than mechanically duplicate one another.
@@ -734,6 +790,15 @@ Current installed sources:
 - `templates/latex/process-report/process_report_template.tex`
 - `templates/latex/process-report/preview/Process_Report_P2_Locked_v1.pdf`
 - `tools/skills/publication-plots/SKILL.md`
+
+Accepted pre-Task-1 Workflow Construction references:
+
+- `reports/process-report/pre-task1/WF_WorkflowConstruction_PreTask1_REVISED.pdf` — Real-content / first-person writing / Interaction Evidence implementation reference.
+- `reports/process-report/pre-task1/WF_WorkflowConstruction_PreTask1_31p_LaTeX_Source.zip` — Reproducible source archive for the accepted pre-Task-1 Workflow Construction reference.
+
+These references do not replace `Process_Report_P2_Locked_v1.pdf` as the Visual / Layout Template Reference or the active Process Report template. They are not Experiment Report material and do not establish that Task 1 Experiment Decision Process is complete. Create task-specific reports from copies of the active template; do not use the 31-page real-content report as an assignment template.
+
+The supplied source archive has [PARTIAL reproduction verification](../../evidence/infrastructure/SMART-CITIES-GOVERNANCE-PROCESS-REFERENCE-SYNC-002/source-archive-check.md): it builds 31 pages, but does not fully reproduce the accepted revised prose and annotations. Preserve the approved PDF and archive unchanged; the PDF remains the accepted reading reference.
 
 Template assets under:
 
@@ -763,6 +828,9 @@ The following are stable unless the teacher or user explicitly changes them:
 - Original Evidence First
 - raw/crop/annotated
 - phrase-level Micro Trace and exact phrase correspondence
+- minimum-sufficient box / highlight scope
+- render-level Phrase / Box / Arrow Audit
+- first-person Process Report narrative
 - long-arrow annotation
 - direct high-resolution PNG embedding
 - TikZ/PDF vector annotation

@@ -2,7 +2,7 @@
 
 1. Delete all current ChatGPT Project Source files.
 2. Open `releases/chatgpt-project-sources/`.
-3. Upload all 11 files listed below; every file in that directory should be uploaded.
+3. Upload all 13 files listed below; every file in that directory should be uploaded.
 4. Do not upload Project Settings as a file.
 5. Project Settings remains configured in ChatGPT UI.
 6. After upload, ask GPT Evidence Master to perform the final consistency audit.
@@ -14,6 +14,8 @@ Process_Report_P2_Locked_v1.pdf
 SMART_CITIES_RESEARCH_PROTOCOL.md
 SMART_CITIES_VISUAL_SYSTEM.md
 WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md
+WF_WorkflowConstruction_PreTask1_REVISED.pdf
+WF_WorkflowConstruction_PreTask1_31p_LaTeX_Source.zip
 publication-plots.zip
 任务3_LLM辅助评估清洗.ipynb
 作业.zip

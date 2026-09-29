@@ -1,0 +1,26 @@
+--- approved-input/AGENTS.md
++++ AGENTS.md
+@@ -472,3 +472,3 @@
+-`releases/chatgpt-project-sources/` 是可直接全量上传到 ChatGPT Project Sources 的 **Upload-Ready Bundle**。目录内容必须严格等于批准的 11-file upload set：用户可以删除 UI 中旧项目源后，打开该目录并全选上传。AGENTS.md 本身也是正式 PROJECT_SOURCE。
+-
+-- 目录只包含应上传的 11 个普通文件；不放 README、manifest、Evidence Plan、脚本、日志、备份、临时文件、子目录或带重复上传后缀的文件。
++`releases/chatgpt-project-sources/` 是可直接全量上传到 ChatGPT Project Sources 的 **Upload-Ready Bundle**。目录内容必须严格等于批准的 13-file upload set：用户可以删除 UI 中旧项目源后，打开该目录并全选上传。AGENTS.md 本身也是正式 PROJECT_SOURCE。
++
++- 目录只包含应上传的 13 个普通文件；不放 README、manifest、Evidence Plan、脚本、日志、备份、临时文件、子目录或带重复上传后缀的文件。
+@@ -478,2 +478,2 @@
+-- 必须核验 canonical names、EXACTLY 11、active bytes == bundle bytes 与 SHA256；二进制文件按字节比较。publication-plots.zip 保留已批准原始 distribution，核验固定 hash 与 installed Skill 的 effective members，不擅自重新打包。
+-- [Internal manifest](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/evidence/infrastructure/chatgpt-project-source-sync/SOURCE_MANIFEST.md) 与 [Upload instructions](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/evidence/infrastructure/chatgpt-project-source-sync/UPLOAD_INSTRUCTIONS.md) 均保存在上传目录之外；manifest 的 11 项 Role 统一为 PROJECT_SOURCE，不代表 UI 当前状态。
++- 必须核验 canonical names、EXACTLY 13、active bytes == bundle bytes 与 SHA256；二进制文件按字节比较。publication-plots.zip 保留已批准原始 distribution，核验固定 hash 与 installed Skill 的 effective members，不擅自重新打包。
++- [Internal manifest](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/evidence/infrastructure/chatgpt-project-source-sync/SOURCE_MANIFEST.md) 与 [Upload instructions](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/evidence/infrastructure/chatgpt-project-source-sync/UPLOAD_INSTRUCTIONS.md) 均保存在上传目录之外；manifest 的 13 项 Role 统一为 PROJECT_SOURCE，不代表 UI 当前状态。
+--- approved-input/SMART_CITIES_VISUAL_SYSTEM.md
++++ docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md
+@@ -792,0 +793,9 @@
++
++Accepted pre-Task-1 Workflow Construction references:
++
++- `reports/process-report/pre-task1/WF_WorkflowConstruction_PreTask1_REVISED.pdf` — Real-content / first-person writing / Interaction Evidence implementation reference.
++- `reports/process-report/pre-task1/WF_WorkflowConstruction_PreTask1_31p_LaTeX_Source.zip` — Reproducible source archive for the accepted pre-Task-1 Workflow Construction reference.
++
++These references do not replace `Process_Report_P2_Locked_v1.pdf` as the Visual / Layout Template Reference or the active Process Report template. They are not Experiment Report material and do not establish that Task 1 Experiment Decision Process is complete. Create task-specific reports from copies of the active template; do not use the 31-page real-content report as an assignment template.
++
++The supplied source archive has [PARTIAL reproduction verification](../../evidence/infrastructure/SMART-CITIES-GOVERNANCE-PROCESS-REFERENCE-SYNC-002/source-archive-check.md): it builds 31 pages, but does not fully reproduce the accepted revised prose and annotations. Preserve the approved PDF and archive unchanged; the PDF remains the accepted reading reference.

@@ -1,0 +1,72 @@
+{
+  "system_packages_installed": [],
+  "language_packages_installed": [],
+  "persistent_font_or_toolchain_installations": [],
+  "persistent_configuration_changes": [],
+  "temporary_dependency": {
+    "package": "fonts-noto-core",
+    "version": "20201225-2",
+    "source": "http://archive.ubuntu.com/ubuntu noble/main",
+    "download_command": [
+      "apt-get",
+      "download",
+      "fonts-noto-core"
+    ],
+    "package_sha256": "4fee136cb12fc197703a340e010478f780a41044339fcefbd78ed9aa96c8b617",
+    "extract_command": [
+      "dpkg-deb",
+      "-x",
+      "/tmp/smart-cities-reference-sync-002-wjfc7o0i/font-package/fonts-noto-core_20201225-2_all.deb",
+      "/tmp/smart-cities-reference-sync-002-wjfc7o0i/font-package/extracted"
+    ],
+    "fonts": [
+      {
+        "path": "/tmp/smart-cities-reference-sync-002-wjfc7o0i/tex-fonts/NotoSans-Regular.ttf",
+        "sha256": "89c3c497f618fdaa0b2d1e98fef93582f28c71debd2c4a8cdf41f190ced2909d"
+      },
+      {
+        "path": "/tmp/smart-cities-reference-sync-002-wjfc7o0i/tex-fonts/NotoSans-Bold.ttf",
+        "sha256": "e83493c945848ecd4a9ad0f6d19164541a0d3e23a9c952304a00a46e00272ac5"
+      },
+      {
+        "path": "/tmp/smart-cities-reference-sync-002-wjfc7o0i/tex-fonts/NotoSans-Italic.ttf",
+        "sha256": "5d7618dda819443fd07301c84adcee9fe8960c873ea5e5e1f0f59db384b78082"
+      },
+      {
+        "path": "/tmp/smart-cities-reference-sync-002-wjfc7o0i/tex-fonts/NotoSans-BoldItalic.ttf",
+        "sha256": "4315b26e5afb62f70f5ffe0edaa3363e57765ff2af2beda12b6fef197e3e5f5a"
+      }
+    ],
+    "fontconfig_file": "/tmp/smart-cities-reference-sync-002-wjfc7o0i/fontconfig.xml",
+    "scope": "FONTCONFIG_FILE supplied only to verification subprocesses",
+    "fc_match": "Noto Sans\n/tmp/smart-cities-reference-sync-002-wjfc7o0i/tex-fonts/NotoSans-Regular.ttf\n"
+  },
+  "first_attempt_failure": "Noto Sans missing; unchanged README build stopped at block01.tex",
+  "installation_authorization": "User environment/dependency rule grants necessary installation. sudo -n true reported password required; no privileged installation performed. Dependencies were provided under /tmp only.",
+  "temporary_tex_dependency": {
+    "name": "ragged2e",
+    "version": "3.6",
+    "user_tree": "/tmp/smart-cities-reference-sync-002-wjfc7o0i/texmf",
+    "sha256": "bbaa95d82bff14cd13fdead40edcdd31d7bd1e84127fe85f6b20dccff474cf4d",
+    "commands": [
+      [
+        "tlmgr",
+        "--usertree",
+        "/tmp/smart-cities-reference-sync-002-wjfc7o0i/texmf",
+        "init-usertree"
+      ],
+      [
+        "tlmgr",
+        "--usermode",
+        "--usertree",
+        "/tmp/smart-cities-reference-sync-002-wjfc7o0i/texmf",
+        "--repository",
+        "https://jp.mirrors.cicku.me/ctan/systems/texlive/tlnet",
+        "install",
+        "ragged2e"
+      ]
+    ],
+    "scope": "TEXINPUTS supplied only to verification subprocesses",
+    "install_log": "tex-dependency-install.txt"
+  }
+}

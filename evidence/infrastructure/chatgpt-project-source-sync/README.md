@@ -1,13 +1,15 @@
 # ChatGPT Project Sources Upload-Ready Bundle
 
-Run: SMART-CITIES-CHATGPT-PROJECT-SOURCES-UPLOAD-BUNDLE-002.
+Current synchronization: [SMART-CITIES-GOVERNANCE-PROCESS-REFERENCE-SYNC-002](../SMART-CITIES-GOVERNANCE-PROCESS-REFERENCE-SYNC-002/).
 
-The [upload directory](../../../releases/chatgpt-project-sources/) contains exactly eleven ordinary files. Every file is intended for upload, including AGENTS. The user can select all files; internal metadata is stored here instead. This is repository preparation only, not an assertion that ChatGPT UI files have been uploaded.
+Historical migration record below: SMART-CITIES-CHATGPT-PROJECT-SOURCES-UPLOAD-BUNDLE-002.
 
-- [Upload Bundle Manifest](SOURCE_MANIFEST.md): eleven PROJECT_SOURCE rows, canonical filenames, active paths, bundle paths, hashes, byte equality and verification date. Previous display names are historical mapping only.
+The [upload directory](../../../releases/chatgpt-project-sources/) contains exactly thirteen ordinary files. Every file is intended for upload, including AGENTS and the accepted pre-Task-1 Workflow Construction PDF/source archive. The user can select all files; internal metadata is stored here instead. This is repository preparation only, not an assertion that ChatGPT UI files have been uploaded.
+
+- [Upload Bundle Manifest](SOURCE_MANIFEST.md): thirteen PROJECT_SOURCE rows, canonical filenames, active paths, bundle paths, hashes, byte equality and verification date. Previous display names are historical mapping only.
 - [Upload instructions](UPLOAD_INSTRUCTIONS.md): user refresh procedure and exact upload list.
 - [Existing sync tool](../SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/sync_sources.py): upgraded in place; no second sync implementation.
-- [Existing validation tool](../SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/validate_sync.py): current bundle checks, without rebuilding PDFs or altering historical run 001 results.
+- [Existing validation tool](../SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/validate_sync.py): current bundle checks; results default to the current synchronization evidence directory above, without altering historical JSON. Use `--evidence-dir` with a new run's preflight record for future runs.
 
 ## Operation
 
@@ -18,7 +20,7 @@ python3 evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SY
 python3 evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/sync_sources.py --check
 python3 evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/validate_sync.py
 find releases/chatgpt-project-sources -maxdepth 1 -type f -printf '%f\n' | sort
-test "$(find releases/chatgpt-project-sources -maxdepth 1 -type f | wc -l)" -eq 11
+test "$(find releases/chatgpt-project-sources -maxdepth 1 -type f | wc -l)" -eq 13
 sha256sum releases/chatgpt-project-sources/*
 git diff --check
 ```
@@ -27,7 +29,7 @@ Before commit, stage the intended files and use `validate_sync.py --index` to co
 
 The sync tool validates every source and the approved original Skill archive before copying or cleaning. It copies bytes, deletes only direct ordinary files outside the exact allowlist, and writes the internal manifest. It does not modify active sources. Unexpected subdirectories/symlinks cause a failure before mutation; it does not recursively delete them. The original Skill ZIP must already exist and match the approved hash and installed effective members; it is never regenerated or silently replaced by the metadata-sanitized archive.
 
-## This migration
+## Historical migration: SMART-CITIES-CHATGPT-PROJECT-SOURCES-UPLOAD-BUNDLE-002
 
 Pre-flight: main, clean tree, local/remote baseline `eb9daccfd149ed00dfc2d83d41a5f4845aada54f`. Initial upload directory had twelve files: the approved eleven plus an internal manifest. That manifest was moved here and rewritten for upload-bundle semantics. No other real upload file needed removal. AGENTS and the design-system README were updated, then AGENTS was copied from its active source. Research/Evidence/Visual protocol content, P2, templates, canonical previews, teacher materials, notebooks, task1 code and installed Skill content are protected by baseline hash comparisons.
 
@@ -35,7 +37,7 @@ No active-like duplicate Markdown documents were found outside the canonical sou
 
 Historical run 001 JSON/TXT records preserve the filenames, roles and hashes measured then. Those historical references are not current manifest links and are not rewritten to fabricate a different past result. Its README now routes current operations here. Earlier release-packaging scripts remain historical, not supported upload-sync entrypoints. Git retains prior versions; no parallel active governance files or versioned bundle directories are introduced.
 
-## Verification records
+## Historical verification records (unchanged)
 
 - `preflight.json`: initial directory/hash inventory and protected original-file hashes.
 - `sync-result.json`: actual sync output and final eleven hashes.

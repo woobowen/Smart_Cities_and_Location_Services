@@ -1,0 +1,1059 @@
+WORKFLOW CONSTRUCTION ・01
+
+从既有协作经验开始，而不是从零设计
+这套工作流不是我在智慧城市实验开始时从零设计出来的。我借用了之前《软件系统优化》课程里已经比较顺手的协作方式：先让
+GPT 帮我理解任务、设计工作和检查结果，再把已经明确的工程任务交给 Codex 实际实现；同时我自己要真正看懂代码和实验原
+理，而不是只拿到一个“完成”的结果。
+
+
+
+
+PROCESS REPORT ・WORKFLOW CONSTRUCTION                        1
+
+                                                MICRO TRACE 01
+                                        1
+                                                “谁来做”先被拆成执行与验收
+                                            2
+                                                我一开始的想法很直接：环境和代码实现交给 Codex；GPT 先帮我
+                                                把任务讲清楚、写好 Codex 指令，再回来和我一起检查真实结果。
+                                            3
+                                                GPT 后来把这套做法整理成了“Codex 负责执行，GPT 负责理解任
+                                                务、设计工作和独立检查”。
+
+
+
+                                                MICRO TRACE 02
+                                                “我需要理解”被保留下来
+                                                我还特别要求 GPT 不能只告诉我“做完了”
+                                                                     ，而要把实验和代码讲到
+                                                我能自己解释。这个要求后来保留下来，变成了单独的理解/答辩准
+                                                备，而不是工程完成后的附属说明。
+
+
+
+                                                WHY THIS MATTERS
+                                                这是工作流的种子，不是最终形态
+                                                这时我其实只解决了三个问题：谁来真正做工程、谁来检查、我自
+                                                己怎么把代码和实验弄懂。至于方案谁来判断、AI 的建议怎么验证，
+                                                当时还没有想得这么完整，后面进入智慧城市任务后才继续补上。
+
+
+
+
+Original Evidence. 截图来自此前《软件系统优化》项目。消息顺序保持不变；图片只做无损裁切，荧光、编号和长箭头全部在 LaTeX/TikZ 矢量层绘制，没有改写聊天文
+字。
+
+
+
+
+PROCESS REPORT ・WORKFLOW CONSTRUCTION                                                     2
+
+WORKFLOW CONSTRUCTION ・02
+
+迁移不是复制：先把旧工作流放到新任务里验证
+进入《智慧城市与位置服务》后，我没有直接复制之前那套流程，而是先把它当作起点。我让 GPT 帮我判断哪些做法还能继续用，
+哪些必须按新课程重新设计；随后又拿第一次真实任务来检验这些规则到底合不合适。
+
+                                            MICRO TRACE 03
+                                            先“借用”，但不直接复制
+                                            我明确说可以借用之前的工作方式，但不能整套照搬。GPT 因此先做规则盘点
+                                        1
+                                            和迁移设计，而不是立刻把旧项目设置复制过来。
+
+
+
+                                            MICRO TRACE 04
+                                            让第一次真实任务来检验迁移
+                                            GPT 先提醒我“迁移不是复制”。我随后把第一次正式任务发给它，要求按真实
+                                            任务继续检查。这样，哪些规则保留、哪些要改，不再靠我们事先想象，而是由
+                                            课程任务本身来检验。
+
+
+
+                                            MICRO TRACE 05
+                                            没有确认，就不进入实际操作
+                                            我当时还明确加了一句：先把我的要求理解清楚，等我确认以后再实际操作。所
+                                            以这一轮只讨论规则和方案，不改设置、不做实验，也不写代码。
+
+
+
+                                            DECISION
+                                            规则形成方式发生变化
+                                            从这里开始，我把“以前用过”只当作参考。真正能不能迁移，要看新课程材料
+                                            和真实任务是否支持。
+
+
+
+
+                                        2
+
+                                        3
+
+
+
+
+Original Evidence. 两组截图均来自智慧城市项目早期真实聊天。第一页记录迁移请求与 GPT 初步回应；第二页记录我用第一次正式任务继续检验迁移规则。
+
+
+
+
+PROCESS REPORT ・WORKFLOW CONSTRUCTION                                                3
+
+WORKFLOW CONSTRUCTION ・03
+
+第一次真实任务让我发现：光有工程协作还不够
+真正打开第一次任务后，我很快发现原来的三步分工还不够。这里不仅要把代码做出来，还要判断数据是否可信、参数为什么这样
+设、评价指标是否合理、AI 建议有没有问题，以及任务包里哪些内容到底属于本次作业。
+
+                                                MICRO TRACE 06
+                                               “先看真实任务”直接提高了规则强度
+                                                我让 GPT 按第一次任务重新检查之前的规则。它随后把时空数据真实性、参数
+                                         1      依据、评价设计和 AI 批判这些新问题补进了工作流。
+                                         2
+
+                                                MICRO TRACE 07
+                                                实际操作仍由我确认后启动
+                                                我仍然保留“确认后再动手”的边界：先把问题和方案说清楚，再进入代码和实
+                                                验阶段。
+
+
+
+                                                MICRO TRACE 08
+                                               “文件存在”不再等于“老师要求”
+                                                任务包里虽然已经放了 LLM Agent、验证器和一些历史输出，但我不希望看到
+                                                什么就默认都要做。后来我们把这件事明确下来：文件存在只是材料，真正的任
+                                                务范围还是要回到老师的正式要求。
+
+
+
+                                                TRANSITION
+                                                下一步自然转向“依据什么做决定”
+                                                到这里，我关心的问题已经从“谁来做工程”变成了“我们凭什么做出研究判
+                                                断”。接下来就需要把任务范围、资料来源和查证方式一起理清。
+
+
+
+
+Original Evidence. 本页只使用第一次任务相关原始聊天。CRS、参数、评价指标等技术问题不会在 Workflow Construction 中提前展开，而会在后续 Experiment Decision
+Process 中使用真实实验互动继续呈现。
+
+
+
+
+PROCESS REPORT ・WORKFLOW CONSTRUCTION                                                                       4
+
+WORKFLOW CONSTRUCTION ・04
+
+先把“做什么”分清：老师要求、选做内容和额外扩展
+开始整理智慧城市任务时，我先把两个很容易混在一起的问题分开：老师明确给出的选做/拓展内容，我希望尽量都完成；但 GPT
+自己想到的扩展不能自动加进作业，必须先说明价值，再由我判断要不要做。
+
+              1
+                                           MICRO TRACE 09
+                                          “老师的选做也做”先变成明确的任务层级
+                                           我当时说得很直接：老师列出来的选做内容也尽量完成。GPT 后来把这个想法
+                                           整理成 T1/T2：老师明确必做的是 T1，老师给出的选做、拓展和思考题放到
+                                           T2。
+
+
+
+                                           WHY THIS MATTERS
+                                          “多做一点”不再等于无限加任务
+                                           这样既不会把老师的拓展内容漏掉，也不会因为“多做一点”把项目越做越大。
+                                           后面再遇到新想法，我可以先判断它属于老师要求，还是我们自己额外想加的
+                                           内容。
+
+
+
+                                           SCOPE RULE
+                                           文件与能力不能替代任务定义
+                                           任务层级的意义不是给文件贴标签，而是把范围决定权重新锚定到老师要求和
+                                           我的确认。starter、压缩包或已有 Agent 只能作为材料，不能自己扩张正式
+                                           scope。
+
+Original Evidence. 上方是我当时提出要求的局部高清截图；下方为同一轮 GPT 对任务层级的真实整理。图片仅做无损裁切，highlight、编号和长箭头均为 LaTeX/TikZ
+矢量层。
+
+
+
+
+PROCESS REPORT ・WORKFLOW CONSTRUCTION                                                           1
+
+WORKFLOW CONSTRUCTION ・05
+
+老师的选做我会做，但 AI 额外想到的不能自动加进来
+我同时补了一条边界：GPT 当然可以继续提出有价值的新想法，但不能因为“看起来有用”就自动变成正式任务。它可以先告诉我
+为什么值得做，我看过以后再决定要不要加入。后面为了方便记录，我们把这类内容记成 Candidate Enhancement。
+
+                               2              MICRO TRACE 10
+                                            “可以提，但由我们决定要不要做”
+                                              我并没有禁止 GPT 提新想法，而是把“可以建议”和“可以开做”分开。GPT
+                                              后来把这种额外扩展记成 T3 Candidate Enhancement：先提出理由，再等我
+                                              确认。
+
+
+
+                                              OBSERVABLE REVISION
+                                              额外任务不能再“顺手做了再说”
+                                              GPT 后来把这条边界写得很清楚：额外任务不能因为“看起来有用”就直接加
+                                              入，先说明为什么值得做，我确认后才进入实现。
+
+
+
+                                              EFFICIENCY
+                                              我确认的是范围，不是每一个细小操作
+                                              这里的人机协作重点是把任务范围定清楚，而不是增加聊天轮数。我决定“什
+                                              么可以成为正式任务”，批准范围内的普通工程动作仍然可以自动执行。
+
+
+
+
+Original Evidence. 本页沿用同一条我的原话，但只高亮其中“额外想法由我们决定是否完成”的部分；下方对应 GPT 后续形成的 T3 与 Candidate Enhancement 规则。
+
+
+
+
+PROCESS REPORT ・WORKFLOW CONSTRUCTION                                                               2
+
+WORKFLOW CONSTRUCTION ・06
+
+再确定“凭什么做”：网络研究进入正式 Source Audit
+任务边界理清以后，我又发现“GPT 说过”本身不能算依据。需要用到外部知识时，应该主动查资料，而且不能只看搜索结果，要
+继续确认来源是否可靠、是否真的支持当前结论。
+
+                                             MICRO TRACE 11
+                     3                      “先查资料”进一步变成 Source Audit
+                               4
+                                             我要求有需要时先查网络资料。GPT 后来又把“查到什么”继续细化成
+                                             Source Audit：记录资料是谁发布的、什么时候发布、链接是什么，以及它到
+                                             底支持了哪条结论。
+
+
+                                             MICRO TRACE 12
+                                             来源本身也要分优先级
+                                             同一个问题继续讨论后，我们把来源顺序也理清了：老师材料优先，关键结
+                                             论尽量回到官方或原始来源。网络资料负责帮助我判断，不负责重新定义老
+                                             师的任务。
+
+
+                                             MICRO TRACE 13
+                                            “链接真实”不只是能打开
+                                             我还特别要求链接必须真实可访问，关键内容不能只靠搜索摘要。后来这条
+                                             规则被写成一句很实用的话：搜索结果可以当线索，但真正写进报告的依据
+                                             要继续追到原始来源。
+
+
+                                             TRANSITION
+                                             有了可靠来源，仍可能存在多个合理答案
+                                             到这里，“做什么”和“凭什么做”已经比较清楚了。接下来更麻烦的是：如
+                                             果资料都查过了，还是有两个方案都说得通，那就不能继续靠讨论把一个答
+                                             案“聊出来”。
+
+
+
+
+Original Evidence. 我的原话与 GPT Source Audit 均来自同一阶段的真实聊天。正式页只选取与“网络研究与证据来源”直接相关的局部，不把后面的 CONFIRMED /
+CANDIDATE / UNRESOLVED 提前混入本板块。
+
+
+
+
+PROCESS REPORT ・WORKFLOW CONSTRUCTION                                                            3
+
+WORKFLOW CONSTRUCTION ・07
+
+从“不确定”到候选集：AI 不能替人拍板
+当 GPT 对一个研究问题并不确定时，我不希望它为了给答案而强行选一个。我的要求是：先把 2–3 个最合理的候选列出来，我
+们一起看依据和问题；如果讨论后仍然判断不了，再交给实验。后来为了方便记录，我们把这两种情况分别记成 CANDIDATE 和
+UNRESOLVED。
+
+                                               MICRO TRACE 14
+
+                                        1     “不是 100% 确定，就先列 2–3 种”
+                                               我把不确定性处理从“AI 继续猜”改成了“先显式给候选”
+                                                                          。GPT 随后
+                                               把这一要求整理为 CANDIDATE：当多个解释都合理且会影响方法、参
+                                               数或结论时，先给出候选、依据、优缺点和风险，再由我来判断。
+
+
+
+                                               HUMAN DECISION
+                                               我参与的是研究判断，而不是每个操作步骤
+                                               这并不意味着每个小步骤都来问我。只有会改变方法、参数原则、指
+                                               标或结论的问题才需要我参与；普通实现细节仍然可以自动执行。
+
+
+
+
+Original Evidence. 我的原句来自真实历史截图；GPT 截图来自后续整理出的不确定性处理方式。高亮与长箭头仅连接语义上直接对应的 phrase。
+
+
+
+
+PROCESS REPORT ・WORKFLOW CONSTRUCTION                                                1
+
+WORKFLOW CONSTRUCTION ・08
+
+讨论仍无法决定时，让实验而不是口才裁决
+我的原始要求还有后半句：如果讨论以后仍不能确认，就把不同假设并行做实验，再根据实验结果选择。这里第一次形成了后来
+UNRESOLVED → 公平实验 → 数据裁决的工作流。
+
+                                               MICRO TRACE 15
+                                              “讨论后仍无法确认 → 并行实验”
+                                               GPT 后来把这种情况记成 UNRESOLVED：讨论已经不能继续提供新
+                                        2
+                                               的判断依据时，就固定其他条件，用相同数据和指标做并行或消融实
+                                               验。
+
+
+
+                                               DECISION RULE
+                                               方法不是由 AI“硬猜”出来
+                                               这条规则把研究 Decision 的终点说清楚了：GPT 可以提出候选，我负
+                                               责判断哪些值得验证；如果仅靠讨论仍然不够，最后就让真实实验结
+                                               果说话。
+
+
+
+
+Original Evidence. 本页只使用原始要求中“讨论后仍无法确认、并行实验、根据结果选择”的部分，并连接到后续 UNRESOLVED / 实验裁决规则。
+
+
+
+
+PROCESS REPORT ・WORKFLOW CONSTRUCTION                                                   2
+
+WORKFLOW CONSTRUCTION ・09
+
+AI 不是最终裁决者：我需要真正参与关键判断
+老师明确要求体现人的参与以后，我不希望自己的角色只剩下最后一句“确认”。关键假设、方案和结论如果有问题，我应该能够质
+疑、修改、否决或重新要求验证。
+
+                                1             MICRO TRACE 16
+                                             “老师希望看到我真正参与”
+                                              我要求关键方案不能由 AI/Codex 直接做完后再让我签字确认。GPT 随后
+                                              把这层分工整理成 Human-in-the-loop：我负责质疑、修改、否决和选择，
+                                              并保留最终解释权。
+
+
+
+                                              BOUNDARY
+                                              我参与的是研究含义，不是每个函数调用
+                                              同时我也不想为了“体现人参与”而不停插入确认。真正需要我介入的是会
+                                              改变研究含义的 Decision；已经确认范围内的工程执行仍然交给 Codex。
+
+
+
+
+Original Evidence. 我的原始截图来自真实历史要求；GPT 截图来自同一阶段对角色分工的整理。箭头只连接“真实参与/关键判断”与 Human-in-the-loop 角色定义。
+
+
+
+
+PROCESS REPORT ・WORKFLOW CONSTRUCTION                                                              1
+
+WORKFLOW CONSTRUCTION ・10
+
+质疑不能停在感觉：AI 建议必须经过反例、数据或实验
+“我不同意 AI”本身也不够。第一次任务要求我继续说明：它错在哪里、隐含了什么假设、能不能找反例，以及修改前后的指标有没
+ 有真正变好。
+
+                                          OBSERVABLE RULE
+                                          AI 建议 → 检查 → 反例/指标 → 接受、修改或拒绝
+                                          GPT 后来把这套做法整理成一条清楚的链：先看 AI 建议有没有事实或计算
+                                          错误，再检查依据和反例，最后用数据或实验比较，并说明我为什么接受、
+                                          修改或拒绝。
+
+
+
+                                          EVIDENCE RULE
+                                          AI 不能作为凭证源
+                                          例如“LLM 建议 100m，所以就用 100m”不能成为理由。AI 可以提出候
+                                          选，但真正支撑决定的必须是数据、物理规律、可靠资料或实验。
+
+
+
+                                          TRANSITION
+                                          真正的参与需要被记录，而不是事后声称
+                                          当“质疑—验证—决定”真正进入工作流后，下一个问题就变成：这些关键
+                                          互动怎么留在 Process Report 里，既能证明过程，又不会变成几十页聊天
+                                          流水账。
+
+
+
+
+Original Evidence. 本页使用第一次任务讨论中逐步整理出的“AI 批判”要求。没有把后来的示例性错误冒充为实际发生过的我的判断。
+
+
+
+
+PROCESS REPORT ・WORKFLOW CONSTRUCTION                                                 2
+
+WORKFLOW CONSTRUCTION ・11
+
+两份正式报告回答不同问题，而不是详版/简版
+随着讨论越来越多，我发现只交一份“最后结果”会把最有价值的判断过程全部丢掉。所以我要求除了最终实验报告，还要单独记录
+我们是怎样一步步形成方案的。后来这两类内容被拆成 Process Report 和 Experiment Report。
+
+                                               MICRO TRACE 17
+                                        1
+                                             “过程”和“结果”被拆成两份正式文档
+                                               我的要求很简单：一份文档讲“我们怎么走到这个方案”，另一份文档
+                                               讲“最后做了什么、为什么这样做、结果说明什么”。GPT 后来分别用
+                                               Process Report 和 Experiment Report 来承接这两个问题。
+
+
+
+                                               DOCUMENT ROLE
+                                               两份报告不是重复内容
+                                               所以 Process Report 重点保留决策怎么发生、我和 GPT 怎么讨论、什
+                                               么证据改变了判断；Experiment Report 则集中写最终方法、数据、参
+                                               数、指标、实验和结论。两边不能简单复制同一段 Brainstorm 或截图。
+
+
+
+
+Original Evidence. 上方为我提出“过程汇报/交互证据”需求的真实聊天；下方为 GPT 随后形成的两份正式报告职责。
+
+
+
+
+PROCESS REPORT ・WORKFLOW CONSTRUCTION                                                         1
+
+WORKFLOW CONSTRUCTION ・12
+
+截图只是证据载体：过程报告必须按“决策事件”组织
+如果把长聊天从头到尾全部截图，老师只能看到“聊了很多”，却看不出哪个判断真正改变了方案。所以我希望按一个个关键
+Decision 来组织：问题是什么、GPT 先怎么建议、我怎么判断、后来怎么验证、最后定了什么。
+
+                                            STRUCTURE
+                                            Interaction Episode 替代“聊天流水账”
+                                            高价值互动被整理成问题背景 → GPT 提出方案/假设 → 我的质疑/修改
+                                            → GPT 重分析 → 数据或实验 → 我的最终判断 → Decision。截图只负责
+                                            证明这段真实互动。
+
+
+
+                                            SCREENSHOT RULE
+                                            长截图不是越多越真实
+                                            Evidence 首先要能读。一个 Decision 如果需要多页就多页，但正式页面
+                                            只突出和这个 Decision 直接相关的上下文，以及我真正改变了什么，不把
+                                            几十屏聊天原样堆进去。
+
+
+
+
+Original Evidence. 该规则来自真实“过程汇报应如何呈现”的讨论；页面保留原始聊天内容，不把后来的 Evidence 生产协议冒充早期历史。
+
+
+
+
+PROCESS REPORT ・WORKFLOW CONSTRUCTION                                                     2
+
+WORKFLOW CONSTRUCTION ・13
+
+老师要看到的不是“我参与了”，而是我具体做了什么判断
+老师希望看到人的参与，但如果截图里只是我不停说“好的”“继续”，那并不能说明我真的做了判断。所以后面我更关注这些动作：
+我发现了什么问题、为什么觉得有问题、提出了什么修改、要求了什么验证，最后怎么取舍。
+
+                                                           DECISION TRACE
+                                                          “人参与”不是出现次数，而是可识别的判断动作
+                                                           后续 Process Report 会优先保留真正能看出我参与的内容：质疑、比较、
+                                                           提出约束、发现问题、否决、修改、要求实验、解释结果和最后取舍。
+
+
+
+                                                           INTERACTION CHECKPOINT
+                                                           必要时短确认，不为截图增加对话轮数
+                                                           如果一个 Decision 很重要，可以在自然讨论结束时用 2–4 条消息做一次简
+                                                           短确认，方便后面回溯；但不能为了截图好看而额外制造确认轮次。
+
+
+
+                                                           OUTPUT ARCHITECTURE
+                                                           最后把几类交付物各自负责什么分清楚
+                                                           到这里，几类交付物的分工也比较清楚了：Process Report 讲过程，
+                                                           Experiment Report 讲结果，Code/Notebook 负责复现，GitHub 保留完
+                                                           整工程。它们互相补充，而不是互相替代。
+
+
+
+
+Original Evidence. 本页来自后续对“Decision Log / Human Contribution / Interaction Checkpoint / 四层交付物”的真实讨论。
+
+
+
+
+PROCESS REPORT ・WORKFLOW CONSTRUCTION                                                                            3
+
+WORKFLOW CONSTRUCTION ・14
+
+可视化从“装饰”升级为研究表达与证据
+我确实希望智慧城市作业里的图更丰富，但不是“多画几张高级图”就结束。我的要求是：图必须和真实数据、方法或结论对应，能
+够帮助我解释异常、参数、方法比较或最终结果。
+
+                                              MICRO TRACE 18
+                                        1
+                                             “多一些可视化，但必须与真实数据对应”
+                                              我要求增加可视化，同时明确技术图不能靠生成式图片代替。GPT 后来
+                                              把这件事整理成 visual-first：正式结果优先由真实数据、GIS 和绘图库
+                                              生成。
+
+
+
+                                              THREE-LAYER SYSTEM
+                                              Publication quality + 时空表达 + 解释层
+                                              普通科研图负责把数值说清楚；地图、轨迹、OD 和时空结构负责体现
+                                              智慧城市数据的特点；annotation 和 caption 则负责告诉老师这张图
+                                              到底回答什么问题。
+
+
+
+
+Original Evidence. 上方是我当时对智慧城市可视化提出的真实要求；下方为 GPT 随后整理出的可视化定位和三层表达方式。
+
+
+
+
+PROCESS REPORT ・WORKFLOW CONSTRUCTION                                                     1
+
+WORKFLOW CONSTRUCTION ・15
+
+Visual Design System：高级不是“复杂”，而是语义统一
+图一多，我发现如果每次都临时选字体、颜色和布局，最后整份报告会很散。所以我们开始把字体层级、颜色含义、地图底图、
+annotation 和跨图一致性统一起来。
+
+                                                SYSTEM RULE
+                                                图不再是单张作品，而是同一视觉系统中的证据
+                                                GPT 把我对“专业、统一、可读”的要求整理成一套视觉规则：字号层级
+                                                尽量固定，颜色有明确含义，地图底图保持克制，annotation 只标真正重
+                                                要的信息。
+
+
+
+                                                READABILITY
+                                                禁止为了高级感牺牲可读性
+                                                我后来也把一个原则定得很明确：不要为了“高级感”使用彩虹色、无意义
+                                                3D 或复杂图型堆叠。图看起来丰富没有问题，但必须让老师一眼能看懂。
+
+
+
+
+Original Evidence. 该页来自真实 Visual System 形成过程；没有把后来锁定的 P2 配色倒写成我一开始就已经提出的要求。
+
+
+
+
+PROCESS REPORT ・WORKFLOW CONSTRUCTION                                                    2
+
+WORKFLOW CONSTRUCTION ・16
+
+Signature Visualization：每个主要任务至少有一张“解释这
+个任务”的图
+最后我没有规定每个任务必须画多少张“高级图”，而是换成一个更实用的要求：每个主要任务至少设计一张最能解释这个任务的
+Signature Visualization，而且可读性优先。
+
+                                                       SIGNATURE RULE
+                                                       图型围绕研究问题选择，而不是围绕“高级”选择
+                                                       OD flow、Pareto、bivariate map、交互式轨迹图都可以作为候选，但只
+                                                       有真的适合当前问题时才使用。
+
+
+
+                                                       QUALITY GATE
+                                                      “看起来丰富，但读起来非常清楚”
+                                                       多维关系可以用 Parallel Coordinates 或 coordinated views；但如果图
+                                                       很“高级”却让老师看不懂，我宁可换回更清楚的表达。
+
+
+
+                                                       REPORT DIFFERENCE
+                                                       Experiment 与 Process 的视觉职责也被区分
+                                                       Experiment Report 主要让老师看数据、方法和结果；Process Report 则
+                                                       更强调真实互动、decision timeline/tree 和 workflow。两份文档可以长
+                                                       得像同一套设计，但不能用同一套信息结构。
+
+
+
+
+Original Evidence. 该页使用真实讨论中“Signature Visualization、可读性、Experiment/Process 视觉分工”的连续内容。
+
+
+
+
+PROCESS REPORT ・WORKFLOW CONSTRUCTION                                                                          3
+
+WORKFLOW CONSTRUCTION ・17
+
+从“Codex 说完成”到可复现工程：GitHub 成为验收依据
+早期我已经把 Codex 定位成工程执行者。到了智慧城市项目，我又加了一层要求：重要阶段做完以后先 push 到 GitHub，再让 GPT
+直接读真实远程代码、结果和报告审核，不能只听 Codex 说“完成了”。
+
+                                                 MICRO TRACE 19
+                                1               “给我 Codex Prompt，并由你检查返回结果”
+                                                 我最初只要求 GPT 帮我分析任务、写 Codex Prompt 并检查返回结果。
+                                                 后来为了让检查有真实依据，我把“检查结果”进一步改成了直接检查
+                                                 GitHub 远程仓库。
+
+
+
+                                                 ENGINEERING LOOP
+                                                 实现/运行 → push → GPT remote audit → 修复
+                                                 这样 GitHub 就不只是最后存代码的地方，而是整个过程中用来验收的
+                                                 真实依据。Codex 自报 PASS 之后，GPT 仍然要看真实代码、结果、图
+                                                 表和报告。
+
+
+
+
+Original Evidence. 这条要求来自我早期的真实协作需求；GPT 截图来自智慧城市项目中后来整理出的 GitHub 协作流程。
+
+
+
+
+PROCESS REPORT ・WORKFLOW CONSTRUCTION                                                      1
+
+WORKFLOW CONSTRUCTION ・18
+
+完整工程镜像与老师提交包必须分开
+这里我还特意把两件事分开：GitHub 尽量保留完整工程，方便复现和审核；最后交给老师的 Submission Package 再按要求精简。
+不能因为老师最后不交某个文件，就提前把它从工程里删掉。
+
+                                                        FULL MIRROR
+                                                        GitHub 保存完整项目工程
+                                                        代码、Notebook、实验结果、报告、图表、evidence 和必要历史成果
+                                                        都可以保留在 GitHub 里。这样后面无论是我、GPT 还是老师，都能追
+                                                        到结果是怎么产生的。
+
+
+
+                                                        SUBMISSION PACKAGE
+                                                        老师提交包只做最后一层整理
+                                                        最终 ZIP 不需要把整个仓库原样复制一遍，只放老师明确要求和必要的
+                                                        复现文件。内部 Prompt、日志、requirement matrix 等可以留在工程
+                                                        里，不必都交给老师。
+
+
+
+                                                        WHY THIS MATTERS
+                                                       “完整”与“提交简洁”不再互相冲突
+                                                        这样“工程要完整”和“提交包要干净”就不冲突了：GitHub 负责真实
+                                                        性和复现，Submission Package 负责最后提交。
+
+
+
+
+Original Evidence. 本页使用真实讨论中“GitHub 完整工程 vs Teacher Submission Package”的连续规则，不展示后期内部 Upload Bundle 整理过程。
+
+
+
+
+PROCESS REPORT ・WORKFLOW CONSTRUCTION                                                                      2
+
+WORKFLOW CONSTRUCTION ・19
+
+“做完”不等于“会讲”：工程验收与理解验收被拆成独立状态
+在之前的项目里我遇到过一个很实际的问题：Codex 已经把工程做完了，但我还没有真正理解代码、实验原理和结果。如果把这两
+件事看成同一个进度，就很容易出现“代码 PASS 了，所以我也算学会了”的假完成。
+
+                                            MICRO TRACE 20
+                                            “工程验收时间和理解验收时间可能不同”
+                                            我直接指出这两个进度可能不同步。GPT 随后把它拆成两条轨：一条看
+                                            工程有没有做对，另一条看我能不能把原理、代码和结果讲清楚。
+
+
+
+                                            SMART-CITIES ADAPTATION
+                                            状态从 Engineering 改成 Deliverable，但“理解独
+                                            立”保留下来
+                                            迁移到智慧城市后，我把工程轨改叫 Deliverable，而 Understanding
+                                        1   继续单独保留。这样“作业做完”和“我已经理解”不会混成一个状态。
+
+
+
+                                            WHY THIS MATTERS
+                                            状态拆开不是为了管理好看，而是防止“假完成”
+                                            Codex 自报 PASS 只能说明工程进度向前走了；我是否真的理解、能不
+                                            能向老师解释，还要单独检查。后来连 Submission 也被单独记录，避
+                                            免把“已经交了”误当成“已经做好了”。
+
+
+
+
+Original Evidence. 上方保留旧项目中我对“工程完成与理解不同步”的真实纠正；下方展示该思想迁移到智慧城市时对状态命名的调整。
+
+
+
+
+PROCESS REPORT ・WORKFLOW CONSTRUCTION                                                      1
+
+WORKFLOW CONSTRUCTION ・20
+
+核心 Evidence 不按固定页数压缩：证据决定版式
+设计 Process Report 时，我很快发现一个问题：有些关键对话天然就比较长，如果为了“控制在两页”而硬裁，反而会把上下文和
+判断过程裁掉。所以我的要求是先保证 Evidence 完整，再决定需要几页。
+
+                                                   MICRO TRACE 26
+                                                  “一次重要交互需要多少页，就使用多少页”
+                             1                     我明确反对给核心 Interaction Evidence 预设 1–2 页上限。GPT 随后也
+                                                   把原则改成：一个 Decision 需要几页就用几页，只要上下文连续、每页
+                                                   都有作用。
+
+
+
+                                                   LAYOUT PRINCIPLE
+                                                   Evidence first, layout second
+                                                   所以页数、截图数量和分页都不能先定死。版式应该帮助老师读懂证据，
+                                                   而不是为了版式漂亮去删证据。
+
+
+
+
+Original Evidence. 我的原句与 GPT 后续分页规则来自同一轮真实 Process Report 设计讨论；没有改写我的原话。
+
+
+
+
+PROCESS REPORT ・WORKFLOW CONSTRUCTION                                                                 1
+
+WORKFLOW CONSTRUCTION ・21
+
+Annotated Evidence Layout：批注位置服从内容，不固定在
+右栏
+接着我又发现，如果所有页面都固定成“左边截图、右边批注”，不同长度的对话还是会被同一模板卡住。所以批注位置后来不再固
+定，可以根据内容放在上、侧或下方。
+
+                                                      MICRO TRACE 27
+                                                    “一般过程也要截图，但不能变成截图流水账”
+                             1
+                                                      我还补充了一点：一般过程也应该有真实截图，只是没有必要像核心
+                                                      Decision 那样每段都展开。GPT 因此把核心交互和普通过程分开，普通过
+                                                      程可以用 Contact Sheet 或简短注释汇总。
+
+
+
+                                                      ANNOTATION GRAMMAR
+                                                      批注是解释层，不是固定模板
+                                                      annotation 可以根据内容放在上方交代背景、侧边解释变化、下方说明结
+                                                      果。重点是把当前 Decision 讲清楚，而不是让每页长成完全一样。
+
+
+
+
+Original Evidence. 本页对应我对“一般过程也需要 Evidence”的补充，以及 GPT 随后形成的灵活 Annotated Evidence Layout。
+
+
+
+
+PROCESS REPORT ・WORKFLOW CONSTRUCTION                                                           2
+
+WORKFLOW CONSTRUCTION ・22
+
+从“截图”到证据链：Raw、Annotated、Contact Sheet 与
+Final Confirmation
+截图越来越多以后，我又把“原始证据”和“正式呈现”分开：raw 截图完整保存，正式版可以加 highlight 和箭头；一般过程汇成
+Contact Sheet；核心 Decision 还必须保留最后到底确认了什么。
+
+                                                                       DECISION LOCK
+
+                             1
+                                                                       讨论必须有“最终到底确认了什么”
+                                                                       核心 Decision 不能只截“讨论得很激烈”的部
+                                                                       分，最后确认也要保留。这样老师才能看到方
+                                                                       案是怎样真正收敛下来的。
+
+
+
+                                                                       ASSET LAYERS
+                                                                       Raw 负责真实性，Annotated 负责
+                                                                       可读性
+                                                                       raw 截图不覆盖、不重画；正式版只在上面叠
+                                                                       加 highlight、箭头、编号和短注释。一般过程
+                                                                       则通过 Contact Sheet 节省篇幅。
+
+
+
+                                                                       ARCHIVE
+                                                                       正文讲清 Decision，Evidence
+                                                                       Archive 保留完整追溯
+                                                                       正文不需要把所有原图都塞进去，但关键结论
+                                                                       必须能回到对应的完整 Evidence。
+
+
+
+
+Original Evidence. 本页来自“最终确认也必须截图、raw 与 annotated 分离、一般过程 Contact Sheet 化”的连续真实讨论。
+
+
+
+
+PROCESS REPORT ・WORKFLOW CONSTRUCTION                                                               3
+
+WORKFLOW CONSTRUCTION ・23
+
+LaTeX 不只是换一种文件格式，而是统一正式文档
+我提出“正式文档统一用 LaTeX”时，真正想解决的并不是把 Word 换成.tex，而是让 Experiment、Process、图表、Evidence 和
+引用都基于同一套稳定的排版规则。
+
+                                        MICRO TRACE 29
+                                        统一 LaTeX，但两份报告不用完全相同的版式
+                       1                我一边要求所有正式文档都用 LaTeX，一边又强调 Experiment 和 Process 回答的是不
+                                        同问题。GPT 因此保留共同的 Design System，但没有把两份报告强行做成同一套页面。
+
+
+
+
+                                        SHARED IDENTITY
+                       2
+                                        共享字体、色彩、caption、figure/table、引用和封面语言
+                                        Experiment 和 Process 共用字体、色彩、caption、figure/table 和基本工程结构，但
+                                        正文分别围绕“结果”和“决策过程”组织。
+
+
+
+
+Original Evidence. 上方两条我的原句来自同一轮 LaTeX 系统讨论；下方为 GPT 随后形成的统一视觉身份 + 双报告结构。
+
+
+
+
+PROCESS REPORT ・WORKFLOW CONSTRUCTION                                                                 1
+
+WORKFLOW CONSTRUCTION ・24
+
+统一视觉身份也必须克制：模板不能变成“彩色卡片墙”
+看完第一轮模板和 Process 页面后，我最不满意的是“颜色太多、框太多”。如果每块内容都铺一个彩色底，整页会更像 UI 而不是
+课程报告。所以后面我要求正文尽量保持中性，只把颜色留给真正需要强调的地方。
+
+                                          MICRO TRACE 30
+                                          我把“好看”改成了“克制，而且每种颜色都有用”
+                                          我的反馈不是“换一套更漂亮的颜色”，而是减少大面积色块和卡片感，让正文保持
+                                1         白/米白与深灰，只在关键 highlight、判断或 Decision 上使用 P2 色。
+
+
+
+                                          STYLE RULE
+                                          颜色只承担语义，不承担装饰
+                                          最后颜色只承担语义：GPT 建议、我的判断、Evidence 和 Final Decision 可以用不同
+                                          淡色提示，但正文和大面积背景保持中性。
+
+
+
+
+Original Evidence. 本页来自我对 Process 页面真实原型的视觉批评，以及 GPT 随后对 P2 使用层级、核心交互页和 annotation 的修订。
+
+
+
+
+PROCESS REPORT ・WORKFLOW CONSTRUCTION                                                             2
+
+WORKFLOW CONSTRUCTION ・25
+
+模板不能只做一次：Interaction Evidence 也要变成可复用的
+LaTeX 组件
+最后我不希望模板只是几张“示例页”        ，而是要真正能继续复用。因此我们把稳定的东西抽出来：截图怎么放、Figure/Analysis 怎么
+组织、Process Evidence 怎么呈现，以及哪些结构可以随任务变化。
+
+                                                             REUSABLE SYSTEM
+                                                             固定 Design System，适配任务 Layout
+                                                             固定的是字体、P2、caption、标题层级、Evidence 语法和质量
+                                                             检查；具体 section、图密度、横版页面和 Interaction Evidence
+                                                             数量可以跟着任务变化。
+
+
+
+                                                             PROCESS-SPECIFIC COMPONENT
+                                                             Process Report 需要专门的 Evidence 组件
+                                                             聊天截图不能只用 includegraphics 一塞了事。Process
+                                                             Report 需要专门的 Evidence 组件，在不改原图的前提下叠加
+                                                             背景、我的判断、Evidence 和 Final Decision。
+
+
+
+                                                             LONG-TERM SYNC
+                                                             模板选择也会反向更新长期规则
+                                                             这套设计确认以后，Project Settings、AGENTS 和后续报告都
+                                                             引用同一套规则，避免每次做新任务又从头设计。
+
+
+
+
+Original Evidence. 该页整理了真实讨论中“Experiment 图页、Process Interaction Evidence、固定/可适配规则与长期同步”的连续设计决策。
+
+
+
+
+PROCESS REPORT ・WORKFLOW CONSTRUCTION                                                                       3
+
+WORKFLOW CONSTRUCTION ・26
+
+流程图不是越多越好：先淘汰不适合研究叙事的视觉语言
+我们先试了多种 Process Diagram。我没有因为“看起来高级”就全都保留：Metro/Storyline 和 Phase Ribbon 直接淘汰，Swimlane
+我觉得太乱，Decision Tree 则要求改成更适合 A4 横向阅读。
+
+                                             MICRO TRACE 32
+                                            “1 和 5 淘汰，2 太乱，3 横向，4 要突出我的贡献”
+                              1              我把五类图逐个看了一遍：哪些淘汰、哪些保留、哪些必须改。GPT 随后也不再追求一个
+                                             万能流程图，而是让不同图型各自回答不同问题。
+
+
+
+                                             SELECTION RULE
+                                             图型由问题选择，不由复杂度选择
+                                             我后来判断流程图好不好，先看它到底回答什么：总体阶段、职责分工、候选淘汰、
+                                             Evidence 链还是收敛过程，而不是看它有多复杂。
+
+
+
+
+Original Evidence. 我的原句与后续筛选结果来自同一轮 Process Diagram Style Study 复盘。
+
+
+
+
+PROCESS REPORT ・WORKFLOW CONSTRUCTION                                                    1
+
+WORKFLOW CONSTRUCTION ・27
+
+Human Reasoning 必须成为流程图中心，而不是被 Evidence
+抽象掉
+我对 Evidence–Decision Graph 最不满意的一点是：只画“证据 → 决策”，老师看不到我到底发现了什么、为什么觉得有问题、又
+提出了什么建议。这个反馈后来直接改变了最核心的 Human-in-the-loop 图。
+
+                                            MICRO TRACE 33
+                                          “要明确展示我发现、判断与建议”
+                                            我不是想在图上简单加一个“User”标签，而是要把 Human reasoning 真正展开：我发
+                              1
+                                            现了什么 → 为什么觉得有问题 → 我提出什么建议 → 后面怎么验证。
+
+
+
+                                            CORE GRAMMAR
+                                            GPT Proposal → Human Reasoning → Evidence / Experiment
+                                            → Final Decision
+                                            这条链后来成为 Process Report 里最能看出我真正参与判断的一种图，也和 Interaction
+                                            Evidence 的 phrase-level 标注保持一致。
+
+
+
+
+Original Evidence. 该页使用我对方案 4 的真实批评及 GPT 随后形成的 Human Reasoning–Evidence–Decision 结构。
+
+
+
+
+PROCESS REPORT ・WORKFLOW CONSTRUCTION                                                                2
+
+WORKFLOW CONSTRUCTION ・28
+
+最终收敛为三类 Process Diagram Language，而不是一个万
+能流程图
+几轮比较以后，我明确选了 2 和 4 作为主力，3 保留给多候选场景，1 降级，5 淘汰。GPT 随后把这次选择整理成三类稳定的 Diagram
+Grammar。
+
+                                           MICRO TRACE 34
+                                           最终选择由我明确给出
+                                           最后的选择是我自己给出的：2 和 4 作为核心，3 用于多候选场景，1 降级，5 淘汰。GPT
+                                           负责把这个选择整理成后续可以稳定复用的图示语言。
+                          1
+
+
+                                           TYPE A
+                                           Editorial Decision Board
+                                           一般过程、阶段性结论、单页“背景—决策—结果”。
+
+
+                                           TYPE B
+                                           Human Reasoning → Evidence → Decision
+                                           核心 Human-in-the-loop、AI 批判、参数纠正与实验验证。
+
+
+                                           TYPE C
+                                           Horizontal Candidate Decision Tree
+                                           多候选、筛选、淘汰、对照实验和最终选择。
+
+
+
+
+Original Evidence. 上方为我的最终选择；下方为 GPT 随后冻结的 Process Diagram Language vFinal。
+
+
+
+
+PROCESS REPORT ・WORKFLOW CONSTRUCTION                                                        3
+
+WORKFLOW CONSTRUCTION ・29
+
+Local Diagram 解决局部 Decision，Global Map 只做研究故
+事总览
+流程图类型越来越多以后，我没有继续把所有内容硬塞进一张“大演变图”。方法选择、参数决策、AI 批判各自用最适合的局部图；
+等这些 Decision 基本稳定后，再用 Global Map 把主要研究故事串起来。
+
+                                        LOCAL DIAGRAMS
+                                        每个 Decision 选择最合适的表达语言
+                                        任务理解、方法形成、参数裁决和 AI 批判不需要画成同一种图。局部图先把当前问题说明白，再
+                                        考虑整份报告是否统一。
+
+
+
+                                        GLOBAL OVERVIEW
+                                        全局图是导航，不是替代
+                                        Global Decision Evolution Map 只保留阶段、核心 Decision 和方向，把局部图里的关键节点串
+                                        起来。内容复杂时宁可“总览 + 详细页”，也不把所有细节塞在一张图里。
+
+
+
+                                        NATIVE AUTHORING
+                                        正式流程图保留可编辑原生源
+                                        正式流程图继续用 draw.io、Figma、Graphviz 或 TikZ 等可编辑工具制作，不让生成式图片替
+                                        代真实研究结构。
+
+
+
+
+Original Evidence. 该页来自对“多张流程图如何组织、全局演变图如何定位、流程图用什么工具制作”的真实讨论。
+
+
+
+
+PROCESS REPORT ・WORKFLOW CONSTRUCTION                                                                     1
+
+WORKFLOW CONSTRUCTION ・30
+
+Task 1 开始前，我把 Process Report 的基本做法先定下来
+在真正进入 Task 1 之前，我已经把过程文档怎么做基本定清楚了：什么算一个 Decision、Evidence 怎么保存、最终确认怎么记录、
+流程图怎么选、LaTeX 怎么排版。接下来新增的内容不再靠“设计”，而要来自真实 Task 1 研究过程。
+
+                                                            FROZEN STRUCTURE
+                                                            框架先定住，具体内容跟着真实任务变化
+                                                            Brainstorm / Decision、Interaction Evidence、Technical
+                                                            Evidence、Final Confirmation、Global Evolution 和 Human–
+                                                            AI reflection 各自有位置，但具体页数不预先限定。
+
+
+
+                                                            TRACEABILITY
+                                                            正文负责讲清过程，Evidence 负责让我能回到原
+                                                            始记录
+                                                            老师在正式页里先看到最关键的判断；需要追溯时，还能回到原
+                                                            始截图、Technical Evidence 和最终确认。
+
+
+
+                                                            HANDOFF TO TASK 1
+                                                            下一阶段不再“设计证据”，而是在 Task 1 里自
+                                                            然产生证据
+                                                            从这里开始，Experiment Decision Process 只能来自 Task 1
+                                   1
+                                                            里真实发生的方法讨论、参数选择、实验和我的判断，再交回
+                                                            Evidence Master 整理。
+
+
+
+
+Original Evidence. 本页使用真实“Process Report 结构已成熟”的总结和我的最终确认。它标志 Workflow Construction 的预实验阶段完成，而不是 Task 1 研究结果。
+
+
+
+
+PROCESS REPORT ・WORKFLOW CONSTRUCTION                                                                               2

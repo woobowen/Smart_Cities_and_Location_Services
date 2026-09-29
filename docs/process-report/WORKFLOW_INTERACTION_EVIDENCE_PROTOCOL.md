@@ -1,6 +1,6 @@
 # 《智慧城市与位置服务》Workflow Interaction Evidence Protocol
 
-Version: **v2.3**\
+Version: **v2.4**\
 Status: **ACTIVE / LONG-TERM RULE**\
 Purpose: **Process Report · Workflow Construction · Experiment Decision Process · Human–AI Interaction Evidence**
 
@@ -700,6 +700,74 @@ Framework / Block只能用于编辑组织，不是历史来源。
 
 ---
 
+## 16.1 Process Report正式叙事语言
+
+正式 Process Report 的正文默认采用：
+
+> **第一人称研究复盘口吻。**
+
+目标是让老师读到：
+
+> **“我是怎样和AI一步一步讨论、判断、修改、验证并完成研究的。”**
+
+而不是第三方审计式描述。
+
+默认写法：
+
+- 用户自己的动作、发现、判断、质疑、修改、选择和确认，用 **“我”**；
+- 只有确实由用户与 GPT 共同完成的动作，才使用 **“我们”**；
+- AI角色直接写 **GPT**；
+- 工程执行角色直接写 **Codex**；
+- 不把正式正文写成“用户提出……”“本项目形成……”“系统建立……”的第三方项目说明书；
+- `User / Human Judgment / Evidence Master` 等角色名可以用于图示、标签、协议定义和必要的方法说明，但不作为正文默认叙事视角；
+- 技术术语应在真实问题出现后再引入。例如用户先用自然语言表达“讨论后还是不能确定就都跑一下”，正文可随后说明“GPT后来把这种情况整理为 UNRESOLVED”，不得反写成用户当时已经使用该专业术语。
+
+正式文字采用：
+
+- **A — 自然研究叙事**作为主体；
+- **C — 真实轻口语**用于关键 Human Judgment、转折与用户原本就很自然的判断；
+- **B — 简洁技术定义**用于术语、方法、状态和必要规则。
+
+即：
+
+> **正文自然叙事，关键判断保留人的语气，技术定义保持准确。**
+
+允许整理真实历史形成连贯叙事，但不得改变：
+
+- 谁提出了观点；
+- 谁做出判断；
+- 判断发生的先后关系；
+- 原始不确定程度；
+- 最终Decision的因果关系。
+
+### 16.2 Formal Section Aggregation
+
+内部 Evidence Unit / Block / Evidence ID 不等于正式报告章节。
+
+正式 Process Report 应按自然研究故事聚合内容，例如：
+
+- 任务理解与要求确认；
+- Human–AI工作流构建；
+- 研究与审核机制；
+- Multi-Agent体系构建；
+- Experiment Decision Process；
+- 文档、Evidence与可视化系统；
+- 整体工作流回顾。
+
+具体章节随真实任务调整，不机械固定。
+
+禁止把正式正文组织成：
+
+> `Block 01 / Block 02 / Block 03 / ...`
+
+或：
+
+> “一条规则 = 一节 / 一页”。
+
+多个相关 Decision Unit 应在不改变真实顺序和因果的前提下合并为一个自然叙事板块。
+
+---
+
 ## 17. 后台完整、前台代表性
 
 内部历史恢复应尽量完整。
@@ -945,15 +1013,65 @@ Trace Relation 可记录 RESPONDS_TO、CHALLENGES、CORRECTS、REJECTS、SELECTS
 
 优先 phrase-level highlight、short rounded outline、underline、local translucent fill、small numbered anchor，不默认把整条 message bubble 画成大框。用户原句保持视觉中心。
 
+每一个框 / highlight 在制作前都必须对应一个明确的 **Evidence Claim**：
+
+- 这段原文具体证明什么；
+- 为什么需要框这一句或这些词；
+- 框内是否混入与该Claim无关的文字。
+
+框选采用 **minimum sufficient scope**：
+
+> **刚好覆盖能够证明该Claim的最小必要原文范围，同时不切断字形、标点或必要语义。**
+
+禁止为了绘制方便：
+
+- 把整段消息默认框住；
+- 把前后无关行一起框入；
+- 用大色块代替精确phrase；
+- 因为框的位置方便接箭头而扩大Evidence范围。
+
+只有当整个 message bubble / paragraph 本身确实都是 Evidence 对象时，才允许整段框选。
+
 每根长箭头起终点对准具体 phrase，有文本支持，优先沿留白/边缘，避免遮挡和大量交叉，太密就拆页。禁止笼统“大框 → 短箭头 → 大框”，除非整个 bubble 确实就是 Evidence 对象。
+
+箭头端点必须落在目标 phrase 的边界附近或明确指向该 phrase，不得只落到：
+
+- 整个 message bubble 边缘；
+- 大框任意位置；
+- 与目标文本无关的留白区域。
 
 Side Note 只回答用户做了什么、GPT 后面发生了什么、必要时这一步后来为何重要；不复述截图、不重写正文，一般约 40–80 个汉字，核心页可适当更长。
 
 正式报告推荐 raw/crop PNG 直接嵌入，配 TikZ / PDF vector highlight、anchor、number、long arrow、side note、provenance label。不得把 annotation 栅格化进低清图片后再放大。颜色与页面密度以 Visual System 第 8 节为准。
 
-### 24.4 Decision Authority
+### 24.4 Render-Level Box / Arrow Verification
 
-Evidence Master 决定 highlight、圈选、User anchor、GPT before/after、phrase 关系、turn 调序、Evidence 入选与用户文本编辑。Codex 只能根据批准的 Evidence Plan / annotation specification 精确实现，不自行推断或补造关系；缺少 specification 时停止受影响真实页面。模板 synthetic demo 不构成真实 Evidence 或批准关系。
+annotation specification 通过后仍不能直接视为正确。
+
+必须在实际 XeLaTeX / PDF render 后逐页重新核对：
+
+- box 是否真正覆盖批准的 exact phrase；
+- box 是否多包含了无关文字；
+- box 是否漏掉必要词、标点或换行后的句尾；
+- line wrapping / crop / scaling 后框的位置是否仍准确；
+- long arrow 起点是否来自批准的 source phrase；
+- long arrow 终点是否明确落到批准的 target phrase；
+- 箭头是否遮挡正文；
+- 视觉上是否存在“看起来像指向另一句话”的歧义。
+
+内部至少记录：
+
+- `PHRASE MATCH: PASS / REVISE`
+- `BOX RANGE: PASS / REVISE`
+- `ARROW RELATION: PASS / REVISE`
+- `ARROW ENDPOINT: PASS / REVISE`
+- `SOURCE RESOLUTION: PASS / RECAPTURE`
+
+`BOX RANGE` 任一 `REVISE` 与其他关系项失败一样，均不得 Evidence Lock。
+
+### 24.5 Decision Authority
+
+Evidence Master 决定 highlight、圈选范围、User anchor、GPT before/after、phrase 关系、turn 调序、Evidence 入选与用户文本编辑。Codex 只能根据批准的 Evidence Plan / annotation specification 精确实现，不自行推断、扩大框选或补造关系；缺少 specification 时停止受影响真实页面。模板 synthetic demo 不构成真实 Evidence 或批准关系。
 
 ---
 
@@ -1175,11 +1293,12 @@ GPT回复是否符合真实角色和Decision。
 Screenshot Audit 必须新增逐条结果：
 
 - `PHRASE MATCH: PASS / REVISE`
+- `BOX RANGE: PASS / REVISE`
 - `ARROW RELATION: PASS / REVISE`
 - `ARROW ENDPOINT: PASS / REVISE`
 - `SOURCE RESOLUTION: PASS / RECAPTURE`
 
-检查 User highlight 准确、GPT before 确为被回应原句、GPT after 确为采纳/修改后原句、箭头不是仅因时间相邻、端点准确、无正文遮挡、无歧义、PPI 足够。`RECAPTURE` 阻止总审核通过；前三项任一 REVISE 同样不得 LOCK。未设计箭头的 Contact Sheet 记录“无箭头，检查不适用”的依据，不虚构关系；仍需来源及可读性检查。
+检查 User highlight 准确、box只覆盖批准的minimum sufficient phrase、GPT before 确为被回应原句、GPT after 确为采纳/修改后原句、箭头不是仅因时间相邻、端点准确、无正文遮挡、无歧义、PPI 足够。`RECAPTURE` 阻止总审核通过；前四项任一 REVISE 同样不得 LOCK。未设计箭头的 Contact Sheet 记录“无箭头，检查不适用”的依据，不虚构关系；仍需来源、box范围及可读性检查。
 
 ---
 
@@ -1223,7 +1342,7 @@ Screenshot Audit 必须新增逐条结果：
 - GPT Before Phrase(s)
 - GPT After Phrase(s)
 - Trace Relation(s)
-- Phrase/Arrow Audit Result
+- Phrase/Box/Arrow Audit Result
 - Raw Screenshot Pixel Size
 - Final Display Size
 - Effective PPI
@@ -1368,6 +1487,14 @@ Evidence Master负责逻辑维护；需要正式写入仓库时交由Codex或用
 
 > **先让LaTeX版式适应真实Evidence，再考虑进一步精简Evidence。**
 
+同步时同时检查：
+
+- 正式正文是否使用第一人称研究复盘口吻；
+- 是否把内部 Block / Evidence ID 误当成正式章节；
+- 多个相关Decision是否已经聚合为自然Narrative Section；
+- 每个highlight / box是否仍是minimum sufficient scope；
+- 每根箭头在最终render中是否准确指向批准phrase。
+
 ---
 
 ## 36. 图片与流程图时机
@@ -1501,3 +1628,7 @@ Part II：
 28. **Global Workflow Evolution Map最后制作。**
 29. **视觉问题优先用视觉设计解决，不用篡改对话解决。**
 30. **Process Report呈现真实决策演化，不制造一个更漂亮但不真实的历史。**
+31. **Process Report正文默认使用“我”的第一人称研究复盘口吻，不写成第三方项目审计。**
+32. **内部Evidence Unit / Block用于生产管理，正式章节按自然研究故事聚合。**
+33. **每一个框都必须对应明确Evidence Claim，并采用minimum sufficient scope。**
+34. **每根长箭头必须在最终render中准确连接批准的source phrase与target phrase。**
