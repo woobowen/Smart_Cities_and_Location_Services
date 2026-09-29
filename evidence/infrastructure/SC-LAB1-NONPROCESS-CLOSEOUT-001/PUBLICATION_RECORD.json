@@ -1,0 +1,87 @@
+{
+  "task_id": "SC-LAB1-NONPROCESS-CLOSEOUT-001",
+  "recorded_at_utc": "2026-09-29T14:35:44.648472+00:00",
+  "repository": "https://github.com/woobowen/Smart_Cities_and_Location_Services.git",
+  "branch": "main",
+  "reviewed_prior_commit": "89371f6597f92f7dac9abf61f6f6b18e29ed76cc",
+  "prior_artifact_commit": "87fc7db1ced9fd394d0cdda2113c5608205dce03",
+  "numerical_code_sha": "e12f8a27944210adb452730be92a0674dfc6b84b",
+  "closeout_artifact_commit": "b192a7e1b12c6b88fdd3f07a0b36df9695c9d5e0",
+  "artifact_commit_message": "Close non-Process handoff and sync approved governance",
+  "publication": {
+    "repository": "https://github.com/woobowen/Smart_Cities_and_Location_Services",
+    "branch": "main",
+    "commit": "b192a7e1b12c6b88fdd3f07a0b36df9695c9d5e0",
+    "baseline": "89371f6597f92f7dac9abf61f6f6b18e29ed76cc",
+    "started_at_utc": "2026-09-29T14:32:44.739498+00:00",
+    "method": "Actual HTTPS fixed-commit response bytes compared with git blob SHA256; no TLS/credential changes",
+    "actual_remote_before": "b192a7e1b12c6b88fdd3f07a0b36df9695c9d5e0",
+    "remote_before_attempts": [
+      {
+        "exit_code": 0,
+        "stdout": "b192a7e1b12c6b88fdd3f07a0b36df9695c9d5e0\trefs/heads/main\n",
+        "stderr": ""
+      }
+    ],
+    "verified_files": 86,
+    "source_set_count": 16,
+    "raw_hashes_all_match": true,
+    "pass_all": true,
+    "actual_remote_after": "b192a7e1b12c6b88fdd3f07a0b36df9695c9d5e0",
+    "remote_after_attempts": [
+      {
+        "exit_code": 0,
+        "stdout": "b192a7e1b12c6b88fdd3f07a0b36df9695c9d5e0\trefs/heads/main\n",
+        "stderr": ""
+      }
+    ],
+    "local_head": "b192a7e1b12c6b88fdd3f07a0b36df9695c9d5e0",
+    "origin_main": "b192a7e1b12c6b88fdd3f07a0b36df9695c9d5e0",
+    "completed_at_utc": "2026-09-29T14:34:29.309586+00:00"
+  },
+  "verification_command": {
+    "argv": [
+      ".venv/bin/python",
+      "evidence/infrastructure/SC-LAB1-NONPROCESS-CLOSEOUT-001/verify_remote.py",
+      "--commit",
+      "b192a7e1b12c6b88fdd3f07a0b36df9695c9d5e0",
+      "--output",
+      "evidence/infrastructure/SC-LAB1-NONPROCESS-CLOSEOUT-001/publication-verification.json"
+    ],
+    "cwd": "/home/addaswsw/lab/Smart_Cities_and_Location_Services",
+    "exit_code": 0,
+    "scope": "Actual fixed-commit HTTPS response bytes for all approved source members and all closeout changes"
+  },
+  "push_evidence": "artifact-push.json",
+  "remote_byte_evidence": "publication-verification.json",
+  "prepublication_audit": "publication-audit.json",
+  "network_note": "Pre-push ls-remote failed 3 times; one command-local HTTP/1.1 query and raw HTTPS probe also failed. Failures preserved. Default normal push then succeeded on its first attempt and fixed-commit byte verification passed; no TLS/proxy/authentication configuration changed.",
+  "record_commit_policy": "This record contains only already observed artifact publication facts. Its own later commit cannot contain its own final SHA; the final chat reports the actual last HEAD and remote verification.",
+  "states": {
+    "SYNC003_GPT_REVIEW": "PASS_WITHIN_REVIEWED_SCOPE",
+    "SYNC003_REVIEW_SOURCE": "USER_RELAYED_PRIOR_REVIEW",
+    "SYNC003_ORIGINAL_ATTACHMENTS": "NOT_IMPORTED",
+    "NON_PROCESS_CLOSEOUT_ENGINEERING": "VERIFIED",
+    "CURRENT_CHANGE_GPT_REVIEW": "PENDING",
+    "PROCESS_REPORT": "DELEGATED_NOT_COMPLETED",
+    "overall_deliverable": "FINAL_REVIEW",
+    "submission": "NOT_READY",
+    "understanding": "LEARNING unchanged",
+    "UI": "USER_MANAGED / USER_CONFIRMATION_REQUIRED"
+  },
+  "new_experiment_model_calls": 0,
+  "new_numerical_runs": 0,
+  "new_report_builds": 0,
+  "new_archives_built": 0,
+  "dependency_changes": [],
+  "retained_dependencies": [
+    "placeins 2.2",
+    "needspace 1.3e",
+    ".venv/texmf"
+  ],
+  "preserved_untracked_user_files": [
+    "Experiment_Report_完整重构_源文件.zip",
+    "SC-LAB1-G1-CLOSURE-002_HANDOFF.zip",
+    "SC-LAB1-G1-COMPLETE-001_HANDOFF.zip"
+  ]
+}

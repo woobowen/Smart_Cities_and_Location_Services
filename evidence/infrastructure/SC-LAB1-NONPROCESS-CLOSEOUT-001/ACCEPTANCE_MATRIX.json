@@ -95,8 +95,12 @@
     "objects": "发布与实际远程内容",
     "action_or_command": "内部完成后commit/push与固定SHA raw字节核验",
     "expected": "本地/跟踪/实际remote一致；bundle全成员实际hash相同",
-    "actual": "内部作者检查与独立C已通过，继续实际commit/push及固定远程字节核验",
-    "status": "PENDING_PUBLICATION",
-    "evidence": []
+    "actual": "工程提交b192a7e1b12c6b88fdd3f07a0b36df9695c9d5e0已正常push；固定远程86文件（含完整16项bundle及active）实际HTTPS字节hash全部相同；HEAD/origin/main/实际remote一致",
+    "status": "VERIFIED",
+    "evidence": [
+      "artifact-push.json",
+      "publication-verification.json",
+      "PUBLICATION_RECORD.json"
+    ]
   }
 ]

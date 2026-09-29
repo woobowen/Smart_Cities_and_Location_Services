@@ -2,7 +2,7 @@
 
 ## A. 范围与状态
 
-本次只收尾非Process治理、旧二审承接、当前技术导航及发布。作者专项验证与真实独立C已通过NC01—NC07，NC08实际发布继续在[REVIEW_PACKET](REVIEW_PACKET.md)闭合；完成后可单独关闭本次非Process工程，不把Process或整体提交改成全部完成。
+本次只收尾非Process治理、旧二审承接、当前技术导航及发布。作者专项验证、真实独立C及发布远程核验均已完成，NC01—NC08在[REVIEW_PACKET](REVIEW_PACKET.md)闭合；`NON_PROCESS_CLOSEOUT_ENGINEERING=VERIFIED`，本次非Process工程可以单独关闭、待网页GPT核查。Process及整体提交仍未完成。
 
 ## B. 五份输入与分发
 
@@ -30,7 +30,7 @@ Process由用户指定的另一对话接续，`DELEGATED_NOT_COMPLETED`；现有
 
 ## E. 验证与保护
 
-本轮实际运行现有同步专项19项测试，全部通过；真实plan/write/check/第二次sync检查通过。作者核验6679个起始对象：6663项不变、11项授权变化、5项OS元数据迁移，未发现越界；345条当前链接有效。全部命令、cwd、退出码与范围见[原始命令记录](tests/command-log.json)。
+本轮实际运行现有同步专项19项测试，全部通过；真实plan/write/check/第二次sync检查通过。作者核验6679个起始对象：6663项不变、11项授权变化、5项OS元数据迁移，未发现越界；初次345条当前链接有效；交付记录补齐后，发布前再次核对352条导航链接和18条额外交付链接，均有效。命令、cwd、退出码与范围见[原始命令记录](tests/command-log.json)和[发布前复核](prepublication-checks.json)。
 
 独立C为真实`/root/nonprocess_c`上下文，已完成4组隔离成功/反例、16次CLI执行并核对输入、分发、保护和链接，[结论](c_review/C_REVIEW.md)为NC01—NC07通过、作者未关闭Issue为0。C自身两次检查脚本断言错误已修正复验并留存，未触发作者实现修改。元数据首次按UTF-8显示失败后，按实际ZoneTransfer/GB18030兼容字节确认类型，原件未转码或损坏。没有为展示闭环制造问题。新增实验模型调用与研究数值运行均为0，没有重跑报告17项测试或历史469项工程测试来充数。
 
@@ -44,10 +44,12 @@ placeins 2.2、needspace 1.3e及现有`.venv/texmf`依照用户要求保留；�
 
 Repository：`https://github.com/woobowen/Smart_Cities_and_Location_Services.git`；Branch：`main`。起始HEAD、origin/main、实际远程均为89371f6597f92f7dac9abf61f6f6b18e29ed76cc；数值CODE_SHA仍为e12f8a27944210adb452730be92a0674dfc6b84b，SYNC-003工程ARTIFACT仍为87fc7db1ced9fd394d0cdda2113c5608205dce03。
 
-本轮文档ARTIFACT、实际发布/远程回读事实在完成后追加；不预填尚不存在的提交SHA。最终聊天给实际最后HEAD、Remote及固定REVIEW_PACKET链接，后续记录提交只记录已经发生的事实。原有3个用户未跟踪ZIP保留，不纳入本轮提交。
+本轮文档ARTIFACT=`b192a7e1b12c6b88fdd3f07a0b36df9695c9d5e0`已正常push。实际回读86个固定版本文件，包含全部16项bundle、对应active、唯一清单/生成metadata、技术入口、二审承接与本轮验收文件，全部SHA256与Git blob相同；当时Local HEAD、origin/main和实际remote均为该提交。详见[发布记录](PUBLICATION_RECORD.json)及[原始字节核验](publication-verification.json)。
+
+发布前曾发生TLS握手中断，失败记录保留；随后默认git push首试成功，未关闭TLS校验、改代理或迁移认证。本文件与发布回执属于其后只追加真实事实的记录提交，最终聊天给实际最后HEAD、Remote及固定REVIEW_PACKET链接，不预填包含自身的未来SHA。原有3个用户未跟踪ZIP保留，不纳入本轮提交。
 
 ## H. 后续责任
 
-本轮工程闭合后仅待当前新提交网页GPT核查、用户UI同步事实确认，以及指定另一对话的Process制作/最终完整包整合。UI为`USER_MANAGED / USER_CONFIRMATION_REQUIRED`：若已使用本次文件，无须重复上传；否则按[真实差异](UI_HANDOFF.md)确认替换，不另造Settings长稿。
+本轮工程已闭合，仅待当前新提交网页GPT核查、用户UI同步事实确认，以及指定另一对话的Process制作/最终完整包整合。UI为`USER_MANAGED / USER_CONFIRMATION_REQUIRED`：若已使用本次文件，无须重复上传；否则按[真实差异](UI_HANDOFF.md)确认替换，不另造Settings长稿。
 
 整体Deliverable=`FINAL_REVIEW`，Submission=`NOT_READY`；Understanding保留原`LEARNING`，不新增VIVA或用户理解通过。未代操作UI、完成新Evidence Lock或向教师提交，不追加无依据算法任务。

@@ -1,0 +1,40 @@
+{
+  "at_utc": "2026-09-29T14:32:33.428385+00:00",
+  "purpose": "Read-only DNS/proxy routing diagnosis after bounded GitHub TLS failures; no secrets/headers read or changes made",
+  "dns": {
+    "github.com": [
+      "20.205.243.166"
+    ],
+    "raw.githubusercontent.com": [
+      "185.199.108.133",
+      "185.199.109.133",
+      "185.199.110.133",
+      "185.199.111.133",
+      "2606:50c0:8000::154",
+      "2606:50c0:8001::154",
+      "2606:50c0:8002::154",
+      "2606:50c0:8003::154"
+    ]
+  },
+  "proxy_hosts": {
+    "https": {
+      "scheme": "http",
+      "hostname": "127.0.0.1",
+      "port": 17890,
+      "credentials_recorded": false
+    },
+    "http": {
+      "scheme": "http",
+      "hostname": "127.0.0.1",
+      "port": 17890,
+      "credentials_recorded": false
+    },
+    "all": {
+      "scheme": "socks5h",
+      "hostname": "127.0.0.1",
+      "port": 17890,
+      "credentials_recorded": false
+    }
+  },
+  "git_http_proxy": "not explicitly configured"
+}

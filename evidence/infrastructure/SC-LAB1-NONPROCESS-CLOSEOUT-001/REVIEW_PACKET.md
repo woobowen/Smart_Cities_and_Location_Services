@@ -31,4 +31,4 @@ Process由用户指定的另一对话接续，状态为`DELEGATED_NOT_COMPLETED`
 
 作者实际运行19项既有同步专项测试与真实plan/write/check/第二次sync；[命令记录](tests/command-log.json)、[同步结果](tests/real-sync-results.json)及[保护核验](protection-check.json)保存实际范围。C另做4组隔离成功/反例、16次CLI运行，并独立核对16项分发、34目标只读性、6679项保护及345条链接目标。C自身两次检查脚本断言修正已保留，均不属于作者实现Issue。
 
-[验收矩阵](ACCEPTANCE_MATRIX.json)中NC08仍待本轮实际发布与固定远程回读完成；本节不预先宣告发布通过。新增实验模型调用=0、研究数值运行=0；不能把旧18项测试或旧报告编译计为本轮新运行。[完整交付说明](FINAL_RESPONSE.md)记录本轮范围、保护与后续责任。
+[验收矩阵](ACCEPTANCE_MATRIX.json)的NC01—NC08已按本轮范围通过，`NON_PROCESS_CLOSEOUT_ENGINEERING=VERIFIED`，非Process收尾工程可关闭、待网页GPT核查。工程提交`b192a7e1b12c6b88fdd3f07a0b36df9695c9d5e0`已正常push，固定远程86个文件（含完整16项分发及active）的实际字节均匹配，HEAD、origin/main和实际remote一致；详见[发布记录](PUBLICATION_RECORD.json)与[远程字节回执](publication-verification.json)。本记录追加提交的最终SHA由最终聊天按实际结果给出，不预填自身SHA。新增实验模型调用=0、研究数值运行=0；不能把旧18项测试或旧报告编译计为本轮新运行。[完整交付说明](FINAL_RESPONSE.md)记录本轮范围、保护与后续责任。
