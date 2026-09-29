@@ -6,10 +6,12 @@ of the Smart Cities & Location Services project.
 
 The template follows:
 
-**Smart Cities Visual / LaTeX Design System v2.3**
+**Smart Cities Visual / LaTeX Design System v2.5**
 
 It shares the same P2 · Cloud Sorbet visual identity as the Experiment Report,
 but the two reports have different information responsibilities.
+
+The [Report Writing Guide v1.1](../../../docs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md) defines project-wide formal dual-report scope and later-task Process continuity. Later tasks introduce or cite the real shared foundation as needed for independent reading, then focus on their actual additions, corrections, rejected directions and Experiment Decision Process. Preserve source scope and Lock state; do not copy the entire earlier report or create new disputes to imply iteration. Evidence Master is explicitly appointed by the user under [Evidence Protocol §4.1](../../../docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md#41-evidence-master--master-planning-conversation).
 
 ---
 
@@ -212,6 +214,8 @@ Do not:
 
 Three diagram grammars are locked.
 
+Formal workflow/architecture diagrams retain real editable `.drawio` nodes, connectors and labels plus SVG/PDF exports under [Visual System §13](../../../docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md#13-native-and-reproducible-production). This delivery rule does not turn screenshot annotations or statistical/GIS/mathematical figures into draw.io tasks, and does not require redrawing accepted reference pages.
+
 ### 1. Editorial Decision Board
 
 Use for:
@@ -378,7 +382,7 @@ not the normal runtime source.
 
 - Visual / Layout Template Reference: [Process_Report_P2_Locked_v1.pdf](preview/Process_Report_P2_Locked_v1.pdf), at `templates/latex/process-report/preview/Process_Report_P2_Locked_v1.pdf`.
 - Real-content Workflow Construction / first-person writing / Interaction Evidence implementation reference: [WF_WorkflowConstruction_PreTask1_REVISED.pdf](../../../reports/process-report/pre-task1/WF_WorkflowConstruction_PreTask1_REVISED.pdf).
-- Reproducible source archive for that accepted reference: [WF_WorkflowConstruction_PreTask1_31p_LaTeX_Source.zip](../../../reports/process-report/pre-task1/WF_WorkflowConstruction_PreTask1_31p_LaTeX_Source.zip).
+- Supplied source archive with the PARTIAL reproduction limit below: [WF_WorkflowConstruction_PreTask1_31p_LaTeX_Source.zip](../../../reports/process-report/pre-task1/WF_WorkflowConstruction_PreTask1_31p_LaTeX_Source.zip).
 
 The accepted reference complements the template and its preview; it replaces neither. It is not an Experiment Report and does not establish that Task 1 Experiment Decision Process is complete. Task-specific formal reports still start from a copy of the active template, not by copying the 31-page real-content report as an assignment template.
 
@@ -417,7 +421,7 @@ latexmk -xelatex \
 
 ## 12. Phrase-level Interaction Evidence authoring
 
-Required reads: [Evidence Protocol v2.4](../../../docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md), [Visual System v2.3](../../../docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md), [AGENTS](../../../AGENTS.md), and the current Evidence Master-approved annotation specification. Research governance lives in [Research Protocol](../../../docs/research/SMART_CITIES_RESEARCH_PROTOCOL.md).
+Required reads: [Evidence Protocol v2.6](../../../docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md), [Visual System v2.5](../../../docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md), [Report Writing Guide v1.1](../../../docs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md), [AGENTS](../../../AGENTS.md), and the user-designated Evidence Master's approved annotation specification. Research governance lives in [Research Protocol](../../../docs/research/SMART_CITIES_RESEARCH_PROTOCOL.md).
 
 Production chain:
 

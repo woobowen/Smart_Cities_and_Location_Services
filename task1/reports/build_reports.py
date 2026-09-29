@@ -1,82 +1,181 @@
-"""Compile the two honest review reports from local, verified inputs."""
+"""Rebuild the accepted Experiment report; Process sources remain untouched."""
 from pathlib import Path
 import argparse
+from datetime import datetime, timezone
 import hashlib
 import json
+import os
 import re
 import shutil
 import subprocess
-import sys
-from datetime import datetime, timezone
+import tempfile
+import zipfile
 
 ROOT = Path(__file__).resolve().parents[2]
-sys.path.insert(0, str(ROOT))
-from task1.goal3.identity import write_report_metadata
-REPORTS = ROOT/'task1/reports'
-EVIDENCE = ROOT/'task1/evidence/goal3/report_build'
+REPORT = ROOT / 'task1/reports/experiment1'
+DEFAULT_EVIDENCE = ROOT / 'task1/evidence/goal3/report_build/accepted'
+
 
 def sha(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
-def main():
-    parser=argparse.ArgumentParser()
-    parser.add_argument('--render', action='store_true', help='Render every PDF page at 200 dpi into the report evidence directory.')
-    args=parser.parse_args()
-    EVIDENCE.mkdir(parents=True,exist_ok=True)
-    write_report_metadata(ROOT)
-    subprocess.run([sys.executable,str(REPORTS/'build_history_sources.py')],cwd=ROOT,check=True)
-    subprocess.run([sys.executable,str(REPORTS/'build_goal3_sources.py')],cwd=ROOT,check=True)
-    subprocess.run([sys.executable,str(REPORTS/'build_selection_sources.py')],cwd=ROOT,check=True)
-    subprocess.run([sys.executable,str(REPORTS/'build_final_sources.py')],cwd=ROOT,check=True)
-    receipt={'started_at':datetime.now(timezone.utc).isoformat(),'classification':'REPORT_BUILD_NOT_METHOD_EXECUTION','new_model_calls':0,'new_method_runs':0,'reports':[],'installed_dependencies':[],'visual_inspection':'NOT_PERFORMED_BY_THIS_SCRIPT'}
-    for folder,stem in [('experiment1','experiment1'),('process1','process1')]:
-        cwd=REPORTS/folder
-        cmd=['latexmk','-xelatex','-interaction=nonstopmode','-file-line-error','-halt-on-error','-outdir=build',stem+'.tex']
-        result=subprocess.run(cmd,cwd=cwd,text=True,capture_output=True)
-        (EVIDENCE/(stem+'_compile_output.txt')).write_text(result.stdout+result.stderr)
-        if result.returncode: raise RuntimeError(f'{stem}: latexmk exit {result.returncode}')
-        log=(cwd/'build'/f'{stem}.log').read_text(errors='replace')
-        forbidden=[x for x in log.splitlines() if re.search(r'^!|Missing character|undefined|Overfull|LaTeX Font Warning|There were undefined',x)]
-        if forbidden: raise RuntimeError(f'{stem}: unresolved report diagnostics: {forbidden}')
-        pdf=cwd/'build'/f'{stem}.pdf'
-        shutil.copyfile(pdf,cwd/f'{stem}.pdf')
-        subprocess.run(['pdftotext','-layout',str(pdf),str(EVIDENCE/(stem+'_text.txt'))],check=True)
-        info=subprocess.run(['pdfinfo',str(pdf)],capture_output=True,text=True,check=True).stdout
-        pages=int(re.search(r'^Pages:\s+(\d+)',info,re.M).group(1))
-        (EVIDENCE/(stem+'_pdfinfo.txt')).write_text(info, encoding='utf8')
-        extracted=EVIDENCE/(stem+'_text.txt')
-        page_text=extracted.read_text(encoding='utf8').split('\f')
-        if page_text and not page_text[-1].strip(): page_text.pop()
-        if len(page_text)!=pages: raise RuntimeError(f'{stem}: text page mismatch')
-        from task1.goal3.identity import read_identity
-        identity=read_identity(ROOT)
-        for field in ('student_name','student_id'):
-            if identity[field] not in page_text[0] or identity[field] not in info:
-                raise RuntimeError(f'{stem}: missing cover/PDF metadata identity {field}')
-        if any(token in page_text[0] for token in ('待补姓名','待补学号','正式身份待补')):
-            raise RuntimeError(f'{stem}: stale identity placeholder')
-        paginated=EVIDENCE/(stem+'_pages.txt')
-        paginated.write_text('\n'.join(f'===== PDF物理页 {i} =====\n{text}' for i,text in enumerate(page_text,1)),encoding='utf8')
-        record={'report':folder,'pdf':str((cwd/f'{stem}.pdf').relative_to(ROOT)),'sha256':sha(pdf),'pages':pages,'command':cmd,'compile_exit_code':result.returncode,'unresolved_diagnostics':forbidden,'source_sha256':{str(p.relative_to(ROOT)):sha(p) for p in sorted(cwd.rglob('*')) if p.is_file() and 'build' not in p.parts and p.suffix in {'.tex','.bib'}},'render':None}
-        record['text']={'path':str(extracted.relative_to(ROOT)),'sha256':sha(extracted),
-            'paginated_path':str(paginated.relative_to(ROOT)),'paginated_sha256':sha(paginated),
-            'command':['pdftotext','-layout',str((cwd/f'{stem}.pdf').relative_to(ROOT)),str(extracted.relative_to(ROOT))],
-            'page_text_sha256':{str(i):hashlib.sha256(t.encode('utf8')).hexdigest() for i,t in enumerate(page_text,1)}}
-        record['identity_check']='VERIFIED_COVER_AND_PDF_METADATA'
-        if args.render:
-            render=EVIDENCE/'render200'/folder
-            render.mkdir(parents=True,exist_ok=True)
-            for old in render.glob('page-*.png'): old.unlink()
-            subprocess.run(['pdftoppm','-r','200','-png',str(pdf),str(render/'page')],check=True)
-            images=sorted(render.glob('page-*.png'))
-            if len(images)!=pages: raise RuntimeError(f'{stem}: render page mismatch')
-            record['render']={'dpi':200,'pages':len(images),'page_sha256':{str(p.relative_to(ROOT)):sha(p) for p in images}}
-            record['render']['command']=['pdftoppm','-r','200','-png',record['pdf'],str((render/'page').relative_to(ROOT))]
-            record['render']['visual_review_status']='NOT_VISUALLY_REVIEWED_BY_BUILD_SCRIPT'
-        receipt['reports'].append(record)
-    receipt['shared_source_sha256']={str(p.relative_to(ROOT)):sha(p) for p in [REPORTS/'metadata.tex',REPORTS/'history_values.tex',ROOT/'templates/latex/common/p2_cloud_sorbet_colors.tex']}
-    receipt['finished_at']=datetime.now(timezone.utc).isoformat()
-    (EVIDENCE/'build_receipt.json').write_text(json.dumps(receipt,ensure_ascii=False,indent=2)+'\n')
-    print(json.dumps({'status':'COMPILED_REVIEW_REPORTS','reports':[(r['report'],r['pages']) for r in receipt['reports']],'render200':args.render,'new_model_calls':0},ensure_ascii=False))
 
-if __name__=='__main__': main()
+def snapshot(directory):
+    return {str(p.relative_to(ROOT)): sha(p) for p in sorted(directory.rglob('*'))
+            if p.is_file() and 'build' not in p.parts and '__pycache__' not in p.parts}
+
+
+def pdf_details(pdf):
+    info = subprocess.check_output(['pdfinfo', str(pdf)], text=True)
+    text = subprocess.check_output(['pdftotext', '-layout', str(pdf), '-'], text=True)
+    return info, text, int(re.search(r'^Pages:\s+(\d+)', info, re.M).group(1))
+
+
+def compare_content(approved, rebuilt, expected_pages):
+    original, actual = pdf_details(approved), pdf_details(rebuilt)
+    if original[2] != expected_pages or actual[2] != expected_pages:
+        raise ValueError('ACCEPTED_REPORT_PAGE_COUNT_CHANGED')
+    if original[1] != actual[1]:
+        raise ValueError('ACCEPTED_REPORT_TEXT_CHANGED; preserve approved content')
+    for identity in ('吴博闻', '10245102410'):
+        if identity not in actual[0] or identity not in actual[1].split('\f')[0]:
+            raise ValueError('REPORT_COVER_OR_METADATA_IDENTITY_MISSING')
+    return actual
+
+
+def build(evidence, render=False):
+    evidence = Path(evidence).resolve()
+    evidence.mkdir(parents=True, exist_ok=True)
+    config = json.loads((REPORT / 'accepted-source.json').read_text())
+    approved, archive = (ROOT / config[k] for k in ('canonical_pdf', 'canonical_zip'))
+    if sha(approved) != config['pdf_sha256'] or sha(archive) != config['zip_sha256']:
+        raise ValueError('ACCEPTED_REFERENCE_PAIR_HASH_MISMATCH')
+    process_before = snapshot(ROOT / 'task1/reports/process1')
+    sources = [REPORT / config['entry'], REPORT / 'build.sh']
+    for sub in ('chapters', 'figures', 'source'):
+        sources.extend(p for p in sorted((REPORT / sub).rglob('*')) if p.is_file())
+    palette = ROOT / config['palette_authority']
+    source_hashes = {str(p.relative_to(ROOT)): sha(p) for p in sources + [palette]}
+    with zipfile.ZipFile(archive) as supplied:
+        for path in sources:
+            relative = path.relative_to(REPORT).as_posix()
+            if relative == 'source/p2_cloud_sorbet_colors.tex':
+                continue  # The sole source adaptation routes to the shared palette.
+            if path.read_bytes() != supplied.read('Experiment_Report_source/' + relative):
+                raise ValueError('ACCEPTED_EDITABLE_SOURCE_CHANGED: ' + relative)
+        colors = lambda s: dict(re.findall(r'\\definecolor\{([^}]+)\}\{HTML\}\{([A-Fa-f0-9]+)\}', s))
+        if colors(palette.read_text()) != colors(supplied.read(
+                'Experiment_Report_source/source/p2_cloud_sorbet_colors.tex').decode()):
+            raise ValueError('PUBLIC_P2_PALETTE_DIFFERS_FROM_ACCEPTED_REPORT')
+    env = os.environ.copy()
+    isolated_tex = ROOT / '.venv/texmf'
+    if isolated_tex.is_dir() and 'TEXMFHOME' not in env:
+        env['TEXMFHOME'] = str(isolated_tex)
+    receipt = {'classification': 'ACCEPTED_EXPERIMENT_REPORT_BUILD_NOT_METHOD_EXECUTION',
+               'started_at': datetime.now(timezone.utc).isoformat(),
+               'new_model_calls': 0, 'new_method_runs': 0,
+               'source_sha256': source_hashes, 'canonical_pdf_sha256': sha(approved),
+               'canonical_zip_sha256': sha(archive), 'render_dpi': 200 if render else None,
+               'visual_inspection': 'NOT_PERFORMED_BY_BUILD_SCRIPT',
+               'process_report_action': 'READ_ONLY_PROTECTION_CHECK',
+               'texmfhome': '.venv/texmf' if env.get('TEXMFHOME') == str(isolated_tex) else 'caller-provided/default',
+               'reports': []}
+    with tempfile.TemporaryDirectory(prefix='accepted-experiment-report-') as work:
+        work = Path(work)
+        for source in sources + [palette]:
+            if source.is_symlink():
+                raise ValueError('REPORT_SOURCE_SYMLINK_REJECTED')
+            target = work / source.relative_to(ROOT)
+            target.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copyfile(source, target)
+        cwd = work / REPORT.relative_to(ROOT)
+        rebuilt = cwd / 'Experiment_Report.pdf'
+        assert not rebuilt.exists() and not (cwd / 'build').exists()
+        result = subprocess.run(['bash', 'build.sh'], cwd=cwd, env=env,
+                                text=True, capture_output=True)
+        (evidence / 'compile-output.txt').write_text(result.stdout + result.stderr)
+        for log in (cwd / 'build').glob('*.log'):
+            shutil.copyfile(log, evidence / (log.stem + '-log.txt'))
+        receipt.update(command=['bash', 'build.sh'], compile_exit_code=result.returncode,
+                       prebuilt_report_pdf_in_clean_directory=False)
+        if result.returncode:
+            (evidence / 'failed-build.json').write_text(json.dumps(receipt, ensure_ascii=False, indent=2) + '\n')
+            raise RuntimeError('ACCEPTED_SOURCE_COMPILE_FAILED; inspect compile-output.txt')
+        log = (cwd / 'build/Experiment_Report.log').read_text(errors='replace')
+        diagnostics = [line for line in log.splitlines() if re.search(
+            r'^!|Missing character|undefined references|undefined citations|Overfull|LaTeX Font Warning|Rerun to', line)]
+        if diagnostics:
+            raise RuntimeError('UNRESOLVED_REPORT_DIAGNOSTICS: ' + repr(diagnostics))
+        info, text, pages = compare_content(approved, rebuilt, config['expected_pages'])
+        shutil.copyfile(rebuilt, evidence / 'rebuilt.pdf')
+        (evidence / 'pdfinfo.txt').write_text(info)
+        (evidence / 'experiment1_text.txt').write_text(text)
+        texts = text.split('\f')
+        if texts and not texts[-1].strip():
+            texts.pop()
+        (evidence / 'experiment1_pages.txt').write_text('\n'.join(
+            f'===== PDF物理页 {n} =====\n{t}' for n, t in enumerate(texts, 1)))
+        record = {'report': 'experiment1', 'pages': pages, 'newly_compiled_pdf': 'rebuilt.pdf',
+                  'rebuilt_sha256': sha(rebuilt), 'current_reading_pdf': config['current_reading_copy'],
+                  'reading_pdf_sha256': sha(approved), 'text_exact_match': True,
+                  'unresolved_diagnostics': diagnostics,
+                  'page_text_sha256': {str(n): hashlib.sha256(t.encode()).hexdigest()
+                                       for n, t in enumerate(texts, 1)}}
+        if render:
+            from PIL import Image, ImageChops, ImageStat
+            for name, pdf in (('approved', approved), ('rebuilt', rebuilt)):
+                target = work / name
+                target.mkdir()
+                subprocess.run(['pdftoppm', '-r', '200', '-png', str(pdf), str(target / 'page')], check=True)
+            rendered = sorted((work / 'rebuilt').glob('page-*.png'))
+            if len(rendered) != pages:
+                raise ValueError('RENDERED_PAGE_COUNT_MISMATCH')
+            differences = []
+            for page in rendered:
+                with Image.open(page) as actual, Image.open(work / 'approved' / page.name) as expected:
+                    if actual.size != expected.size:
+                        raise ValueError('ACCEPTED_REPORT_PAGE_DIMENSIONS_CHANGED')
+                    delta = ImageChops.difference(actual, expected)
+                    differences.append({'page': page.name, 'pixels_equal': delta.getbbox() is None,
+                        'mean_absolute_rgb_difference_0_255': sum(ImageStat.Stat(delta).mean) / 3})
+            destination = evidence / 'render200'
+            destination.mkdir(exist_ok=True)
+            for page in rendered:
+                shutil.copyfile(page, destination / page.name)
+            record['render'] = {'dpi': 200, 'pages': pages,
+                                'all_page_pixels_equal_approved': all(d['pixels_equal'] for d in differences),
+                                'page_pixel_comparison': differences,
+                                'page_sha256': {p.name: sha(p) for p in rendered},
+                                'visual_review_status': 'REQUIRES_ACTUAL_REVIEW'}
+        current = ROOT / config['current_reading_copy']
+        if not current.exists() or sha(current) != sha(approved):
+            temporary = current.with_suffix('.pdf.tmp')
+            if temporary.exists():
+                raise FileExistsError('CURRENT_REPORT_TEMP_EXISTS')
+            shutil.copyfile(approved, temporary)
+            os.replace(temporary, current)
+        receipt['reports'].append(record)
+    if snapshot(ROOT / 'task1/reports/process1') != process_before:
+        raise ValueError('PROCESS_REPORT_CHANGED_DURING_EXPERIMENT_BUILD')
+    if any(sha(ROOT / p) != h for p, h in source_hashes.items()):
+        raise ValueError('REPORT_SOURCE_CHANGED_DURING_BUILD')
+    if sha(approved) != config['pdf_sha256'] or sha(archive) != config['zip_sha256']:
+        raise ValueError('ACCEPTED_REFERENCE_CHANGED_DURING_BUILD')
+    receipt.update(status='VERIFIED', process_report_unchanged=True,
+                   finished_at=datetime.now(timezone.utc).isoformat())
+    (evidence / 'build_receipt.json').write_text(json.dumps(receipt, ensure_ascii=False, indent=2) + '\n')
+    return receipt
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--render', action='store_true', help='Compare and preserve every page at 200 dpi.')
+    parser.add_argument('--evidence-output', type=Path, default=DEFAULT_EVIDENCE)
+    args = parser.parse_args()
+    receipt = build(args.evidence_output, args.render)
+    print(json.dumps({'status': receipt['status'], 'pages': receipt['reports'][0]['pages'],
+                      'process_report_unchanged': True, 'new_model_calls': 0}, ensure_ascii=False))
+
+
+if __name__ == '__main__':
+    main()

@@ -1,0 +1,41 @@
+{
+  "rows": [
+    {
+      "command": [
+        "git",
+        "diff",
+        "--cached",
+        "--check"
+      ],
+      "exit_code": 2,
+      "stderr": "",
+      "stdout_sha256": "d941c79388e80be5e0b30dadbc37ac2dabfcd1cd44c6c5fadb9c98c91a7623cb",
+      "stdout_lines": 23817,
+      "stdout_excerpt": "AGENTS.md:5: trailing whitespace.\n+Revision: **2026-09-29 · Project-wide P1–P4 scope / manifest-driven source distribution**  \ndocs/design-system/SMART_CITIES_VISUAL_SYSTEM.md:3: trailing whitespace.\n+Status: **LOCKED for Experiment Report and Process Report**  \ndocs/design-system/SMART_CITIES_VISUAL_SYSTEM.md:4: trailing whitespace.\n+Revision: **2026-09-29 · Project-wide formal diagrams / report scope**  \ndocs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md:5: trailing whitespace.\n+Purpose: **Process Report · Workflow Construction · Experiment Decision Process · Human–AI Interaction Evidence**  \ndocs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md:6: trailing whitespace.\n+Revision: **2026-09-29 · Project-wide live evidence / explicit Evidence Master appointment**  \ndocs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md:3: trailing whitespace.\n+Version: **v1.1**  \ndocs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md:4: trailing whitespace.\n+Status: **ACTIVE / LONG-TERM RULE**  \ndocs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md:5: trailing whitespace.\n+Revision: **2026-09-29 · Project-wide dual reports / inherited Process foundation**  \ndocs/research/SMART_CITIES_RESEARCH_PROTOCOL.md:5: trailing whitespace.\n+Purpose: **Smart Cities Research Governance / Source / Uncertainty / Spatiotemporal Correctness / Experiment Evidence / AI Critique**  \ndocs/research/SMART_CITIES_RESEARCH_PROTOCOL.md:6: trailing whitespace.\n+Revision: **2026-09-29 · Project-wide workflow scope / conditional-analysis boundary**  ",
+      "stdout_is_excerpt": true,
+      "diagnostic_types": [
+        "new blank line at EOF.",
+        "trailing whitespace."
+      ]
+    },
+    {
+      "command": [
+        "git",
+        "-c",
+        "core.whitespace=-blank-at-eol,-blank-at-eof",
+        "diff",
+        "--cached",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_lines": 0,
+      "stdout_excerpt": "",
+      "stdout_is_excerpt": false,
+      "diagnostic_types": []
+    }
+  ],
+  "scope": "Default scan retains exact supplied sources, original logs and Markdown hard breaks; command-local whitespace adjustment makes no persistent config changes.",
+  "result": "Only retained source/log end-of-line and end-of-file whitespace; no errors under command-local policy. No original bytes normalized."
+}

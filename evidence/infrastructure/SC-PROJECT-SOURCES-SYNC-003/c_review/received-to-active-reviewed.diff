@@ -1,0 +1,246 @@
+--- received/SMART_CITIES_RESEARCH_PROTOCOL.md
++++ docs/research/SMART_CITIES_RESEARCH_PROTOCOL.md
+@@ -1,9 +1,9 @@
+ # Smart Cities Research Protocol
+ 
+-Version: **v1.1**\
++Version: **v1.2**\
+ Status: **ACTIVE / LONG-TERM RULE**\
+ Purpose: **Smart Cities Research Governance / Source / Uncertainty / Spatiotemporal Correctness / Experiment Evidence / AI Critique**  
+-Revision: **2026-09-29 · Report evidence / approved autonomy routing**  
++Revision: **2026-09-29 · Project-wide workflow scope / conditional-analysis boundary**  
+ Canonical repository path: `docs/research/SMART_CITIES_RESEARCH_PROTOCOL.md`
+ 
+ 优先级：**老师最新正式要求 / 用户最新明确要求 > 当前批准 Prompt > Project Settings > SMART_CITIES_RESEARCH_PROTOCOL > 历史旧规则。**
+@@ -11,6 +11,8 @@
+ 本协议维护研究方法与治理；工程执行、证据生产、视觉表达分别路由到文末的对应文件。Project Settings 由用户在 ChatGPT UI 维护，不在仓库复制。发现 active documents 冲突时，明确文件及条款；当前批准 Prompt 明确覆盖的按新规则修正，其余停止受影响部分并报告，不自行择一执行。
+ 
+ ## A. Research Scope / Task Governance
++
++本协议适用于整个《智慧城市与位置服务》项目。后续正式实验、课程设计及批准的报告任务继承共同研究治理；各任务仍按老师材料和当轮批准方案确定方法、数据、评价与交付。既有任务的算法、阈值、样本量、Goal及报告结构仅为该任务实例，不成为未来任务的输入或永久标准。
+ 
+ | 层级 | 定义与执行条件 |
+ |---|---|
+@@ -30,6 +32,10 @@
+ ## C. Standard Research Workflow
+ 
+ 老师材料 → 完整读题与范围确认 → T1/T2 / Deliverables / grading / submission → 必要网络研究 → Source Audit → starter/data 检查 → requirement checklist → spatiotemporal correctness → GPT 候选 → User review / challenge / modify / reject / select → CONFIRMED / CANDIDATE / UNRESOLVED → 必要公平实验 → 方案冻结 → Codex implementation → real execution → results → GPT audit → human interpretation → formal conclusion。
++
++实质工作流、Multi-Agent及持续闭环是项目通用工作方式。正式任务按问题和规模设置真实的研究、执行、独立核验、反馈、优化、修复与恢复职责，并保留与实际职责相匹配的证据；不能退化为模型只提建议、普通函数改名或事后补画架构图。角色数量、工具和信息合同由当轮任务设计，不永久固定实验一的A/B/C实现。
++
++四模式、记忆、特定消融和调用预算不自动成为未来每项任务的必做实验，其采用及评价由老师材料和当轮批准方案决定。经实测选定的最终记录级方法可以是确定性程序；研究/执行层的实质多角色工作流不要求每条数据都调用LLM。
+ 
+ GPT 提供研究候选与审核，用户审阅、质疑、修改、否决或选择；Codex执行批准方案或用户明确批准的实验裁决规则。用户确认候选范围、指标、保护、选择/回退与停止规则后，普通授权内比较和裁决自动进行，不为每个参数重复确认；结果与正式解释仍需真实证据及范围明确的最终审核。
+ 
+@@ -87,6 +93,8 @@
+ 原始值不变，产物明确标为真实数据上的条件化分析。工程正确、条件化结果有效和真实地理
+ 语义确认分别验收；不放宽共同审核标准，也不以未知事实阻断授权内的全部处理。
+ 
++本节是条件性通用规则。既有实验的条件化分析授权不自动证明新数据的CRS，也不自动授权其他任务的未知datum分析。
++
+ ## H. Parameter Rationale
+ 
+ 参数依据优先级：**物理 / 业务意义 > 数据分布 > 敏感性实验 > 原始文献 / 官方经验 > starter default > 主观经验。**
+--- received/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md
++++ docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md
+@@ -1,9 +1,9 @@
+ # 《智慧城市与位置服务》Workflow Interaction Evidence Protocol
+ 
+-Version: **v2.5**\
++Version: **v2.6**\
+ Status: **ACTIVE / LONG-TERM RULE**\
+ Purpose: **Process Report · Workflow Construction · Experiment Decision Process · Human–AI Interaction Evidence**  
+-Revision: **2026-09-29 · Report narrative / evidence boundary sync**  
++Revision: **2026-09-29 · Project-wide live evidence / explicit Evidence Master appointment**  
+ Canonical repository path: `docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md`
+ 
+ 本协议专门约束：真实历史恢复、原始聊天取证、Narrative规划、Evidence设计、最小必要编辑、对话精修/重构、Simulation执行、原始研究对话证据采集、截图、审核、Evidence Lock、Block/Section级LaTeX同步与最终综合图制作。
+@@ -15,6 +15,8 @@
+ ---
+ 
+ 本协议负责 Evidence authenticity / production 及 Process Report 叙事的真实归属；研究治理见 [Research Protocol](../research/SMART_CITIES_RESEARCH_PROTOCOL.md)，一般报告组织、论证与编辑见 [Report Writing Guide](../report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md)，视觉语法见 [Visual System](../design-system/SMART_CITIES_VISUAL_SYSTEM.md)，工程实现见 [AGENTS](../../AGENTS.md)。Process 第一人称与历史处理继续以本协议 §16.1—16.2 为准。Project Settings 由用户在 UI 维护。
++
++本协议适用于项目每项正式研究的真实互动证据。后续Process继承共同基础并记录当前任务新增演化，按Report Writing Guide §12组织；继承不得扩大原证据的来源、适用范围或Lock状态。
+ 
+ ## 1. 核心目标
+ 
+@@ -149,11 +151,11 @@
+ 
+ ## 4. 三角色对话体系
+ 
+-本项目采用三个明确分工的对话角色。
++本协议区分以下三个Evidence生产职责角色；这不是对每项研究/执行Multi-Agent角色数量的固定要求，具体任务的实质工作流按Research Protocol §C设计。
+ 
+ ### 4.1 Evidence Master / Master Planning Conversation
+ 
+-**当前长期规划对话**是唯一的Evidence构建“大脑”，长期负责：
++**由用户明确指定的Evidence Master / Master Planning Conversation**是Evidence构建的负责入口，在指定范围内长期负责：
+ 
+ - Historical Question Inventory；
+ - Historical Retrieval Card；
+@@ -182,7 +184,7 @@
+ - Part I / Part II Evidence整合；
+ - 内部Evidence Plan逻辑维护。
+ 
+-即使后续Experiment 1、Experiment 2或其他正式任务完成，**Evidence构建大脑仍由该Master Planning Conversation承担**，除非用户明确迁移职责。
++该职责在用户指定的范围内持续，由用户明确决定是否迁移。新对话仅仅读到“当前长期规划对话”不构成自动任命，也不能据此接管Evidence Master或宣布新的Lock。
+ 
+ ### 4.2 Research Conversation
+ 
+@@ -330,7 +332,7 @@
+ 
+ 只要原始聊天本身可用，就不应模拟重写。
+ 
+-尤其从Experiment 1正式开始以后，应尽量：
++每项正式研究都应尽量：
+ 
+ > **实时保存Original Evidence，而不是事后重构。**
+ 
+@@ -1213,7 +1215,7 @@
+ 
+ ## 28. 正式Research Conversation实时证据机制
+ 
+-从Experiment 1正式研究开始，优先实时保存Original Evidence。
++每项正式研究从开始时即优先实时保存Original Evidence；既有任务的历史起点不限制后续任务的适用范围。
+ 
+ 推荐：
+ 
+--- received/SMART_CITIES_REPORT_WRITING_GUIDE.md
++++ docs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md
+@@ -1,8 +1,8 @@
+ # 《智慧城市与位置服务》正式报告写作与论证指南
+ 
+-Version: **v1.0**  
++Version: **v1.1**  
+ Status: **ACTIVE / LONG-TERM RULE**  
+-Revision: **2026-09-29**  
++Revision: **2026-09-29 · Project-wide dual reports / inherited Process foundation**  
+ Canonical repository path: `docs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md`
+ 
+ 本指南承接已确认的 Experiment Report 重构与报告制作方式，负责正式报告的读者定位、内容组织、论证、中文表达、图文关系和编辑审核。它不是本次实验的结果文件，也不要求未来任务照搬实验一的目录、参数、数据或图型。
+@@ -22,6 +22,8 @@
+ Project Settings只保留高层原则和上述入口。文档间按职责互相引用，不各自维护不同版本的长篇写作规则。Process Report 的叙事主体与历史处理以 Evidence Protocol §16.1—16.2 为准；本指南不授权修改原始互动或代替 Evidence Master。
+ 
+ ## 1. 两份报告的读者与任务
++
++独立的Experiment Report与Process Report是项目级正式交付规则，适用于本项目正式实验、课程设计及当轮安排的正式报告任务，后续实验同样适用。教师最新明确格式要求仍按既定优先级处理；日常概念问答、临时解释或未授权任务不因此自动生成两份报告。
+ 
+ 两份报告都交给课程教师阅读，应当像认真完成实验后的学生报告，而不是纯工程审计、仓库说明书、操作日志或泛化AI长回答。
+ 
+@@ -76,7 +78,7 @@
+ | AI批判真实 | 对应真实建议或明确假设的反例、前后指标与理由 | 虚构模型错误与用户争论 |
+ | 可追溯与复现 | 必要设置、来源及可用运行入口 | 主体堆满哈希/日志 |
+ 
+-上述要求适用于相应已授权实验，不因为本指南列出某机制就新增研究任务。方法没有收益可以是有效结论；方法未运行不能写成无收益。
++项目级实质工作流/Multi-Agent要求按Research Protocol §C执行；表中的记忆、特定消融等机制只适用于当轮已授权实验，不因为列出某机制就新增研究任务。方法没有收益可以是有效结论；方法未运行不能写成无收益。
+ 
+ ## 4. 正确执行、评价可信与效果支持分开
+ 
+@@ -234,6 +236,8 @@
+ 
+ ## 12. Process Report写作衔接：不覆盖最新第一人称规则
+ 
++后续任务继承已经真实形成的项目工作流作为共同基础，根据报告独立可读性作必要介绍或引用，重点记录本次新增、修正、否定及本次Experiment Decision Process。不从零重写相同历史，不机械复制31页前期材料，也不制造争论来表现迭代。继承须保留来源、实际适用范围和原有Lock状态，不能将局部参考扩大为整份报告已完成；Evidence Master的指定与职责见Evidence Protocol §4.1。
++
+ Process正文按Evidence Protocol §16.1—16.2执行：自己的观察、质疑、判断与选择写“我”，真正共同完成的动作才写“我们”，GPT/Codex按真实职责直接称呼。主体为自然研究叙事，关键判断保留人的自然语气，技术定义保持简洁准确。
+ 
+ 报告可整理真实事实形成连贯文字，但不能改变提出者、时序、确定程度和证据出现顺序。后来由GPT形式化的术语，不倒写成用户最初已经熟悉。内部Block和Evidence ID不机械成为正式章节。
+--- received/SMART_CITIES_VISUAL_SYSTEM.md
++++ docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md
+@@ -1,7 +1,7 @@
+-# Smart Cities & Location Services — Visual / LaTeX Design System v2.4
++# Smart Cities & Location Services — Visual / LaTeX Design System v2.5
+ 
+ Status: **LOCKED for Experiment Report and Process Report**  
+-Revision: **2026-09-29 · Approved report writing / reference integration**  
++Revision: **2026-09-29 · Project-wide formal diagrams / report scope**  
+ Canonical repository path: `docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md`
+ 
+ This document defines the long-term visual identity, LaTeX baseline, report identities, evidence presentation language and technical-visualization rules for the 《智慧城市与位置服务》 project. Detailed prose and argumentation rules are maintained in the Report Writing Guide, not duplicated in Project Settings.
+@@ -15,6 +15,8 @@
+ ## 1. Shared Identity
+ 
+ The Experiment Report and Process Report are two independent formal documents.
++
++Their project-wide formal-delivery scope and ordinary-question exclusions are defined in [Report Writing Guide §1](../report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md#1-两份报告的读者与任务); they are not limited to Experiment 1.
+ 
+ They share one visual identity but serve different information purposes:
+ 
+@@ -695,6 +697,10 @@
+ 
+ ### Workflow / architecture / algorithm diagrams
+ 
++Formal workflow and system-architecture diagrams throughout this project use **draw.io / diagrams.net as the primary editable delivery**. Preserve a real `.drawio` file with editable nodes, connectors and labels, together with corresponding SVG/PDF exports. Embedding a whole-diagram bitmap in draw.io does not meet this requirement.
++
++Statistics, GIS and mathematical/geometric figures use the appropriate reproducible native tools; they do not all require `.drawio`. The tools below may support suitable algorithm or mathematical figures and refinement, but do not replace the primary `.drawio` delivery for formal workflow/system-architecture diagrams. This scope rule adds no unrelated drawing task and does not require redrawing accepted report pages.
++
+ - draw.io / diagrams.net
+ - Figma
+ - Graphviz
+@@ -877,7 +883,7 @@
+ 
+ Formal exemplar PDFs and their matching source ZIPs may be included in Project Sources when explicitly approved, with roles distinct from normative Markdown and synthetic templates. Key rules remain readable Markdown, not hidden solely in a ZIP. Broad source archives must not include font binaries, secrets or unrelated personal files.
+ 
+-The upload set is an approved explicit file list, not permanently `EXACTLY 11`. Membership checks, stable names and byte equality remain mandatory; detailed distribution/migration rules are in AGENTS §18. Do not remove an existing teacher file or valid reference merely to restore the old count, and do not claim UI upload from local file generation.
++The upload set and its count come from the current approved [structured manifest](../../evidence/infrastructure/chatgpt-project-source-sync/sources.json), with no permanent file-count constant. Membership checks, stable names and byte equality remain mandatory; detailed distribution/migration rules are in AGENTS §18. Do not remove an existing teacher file or valid reference merely to restore an old count, and do not claim UI upload from local file generation.
+ 
+ ---
+ 
+--- received/AGENTS.md
++++ AGENTS.md
+@@ -2,7 +2,7 @@
+ 
+ 本文件规定 Codex 在《智慧城市与位置服务》仓库中的长期工程行为。
+ 
+-Revision: **2026-09-29 · Report production / accepted-source integration**  
++Revision: **2026-09-29 · Project-wide P1–P4 scope / manifest-driven source distribution**  
+ Canonical repository path: `AGENTS.md`
+ 
+ Repository: https://github.com/woobowen/Smart_Cities_and_Location_Services.git\
+@@ -70,6 +70,17 @@
+ ## 2. Scope
+ 
+ 研究范围与 T1/T2/T3/T4 的唯一定义见 [Research Protocol §A](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/docs/research/SMART_CITIES_RESEARCH_PROTOCOL.md#a-research-scope--task-governance)。Codex 只执行当前批准范围；文件存在、starter 接口与历史结果不构成范围授权。老师 optional 全部完成不允许自行扩展任务。
++
++P1—P4是整个项目的通用要求，后续正式任务按其问题与规模落实，不是实验一特例。细则分别只有一个负责入口：
++
++| 项目要求 | 主负责规则 |
++|---|---|
++| P1：正式实验、课程设计及当轮正式报告任务采用独立双报告 | [Report Writing Guide §1](docs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md#1-两份报告的读者与任务) |
++| P2：实质多角色工作流、核验、反馈与持续修复/恢复 | [Research Protocol §C](docs/research/SMART_CITIES_RESEARCH_PROTOCOL.md#c-standard-research-workflow)；工程执行见本文件§3 |
++| P3：Process继承真实共同基础，重点记录当前新增演化 | [Report Writing Guide §12](docs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md#12-process-report写作衔接不覆盖最新第一人称规则)；Evidence Master由用户指定，见Evidence Protocol §4.1 |
++| P4：正式工作流/体系架构图交付可编辑draw.io及SVG/PDF | [Visual System §13](docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md#13-native-and-reproducible-production) |
++
++受托任务须有真实职责及对应证据，不以普通函数改名充当Agent。具体角色数量、工具和信息合同随任务确定；实验一算法、阈值、样本量、三个Goal、特定模式/记忆/预算及报告页数不成为未来任务永久要求。日常问答不自动生成双报告，最终确定性程序也不要求逐条LLM调用；未知坐标的条件化授权不得跨任务自动继承。
+ 
+ ---
+ 
+@@ -490,19 +501,21 @@
+ 
+ ### ChatGPT Project Sources Upload Bundle
+ 
+-`releases/chatgpt-project-sources/` 是按**当前批准的显式文件清单**生成的Upload-Ready Bundle。AGENTS.md本身是PROJECT_SOURCE。成员集合必须精确，数量由清单计算，不再将历史11-file set或 `EXACTLY 11` 作为永久约束。
++`releases/chatgpt-project-sources/` 是按**当前批准的显式文件清单**生成的Upload-Ready Bundle。AGENTS.md本身是PROJECT_SOURCE。唯一结构化清单是 [sources.json](evidence/infrastructure/chatgpt-project-source-sync/sources.json)；成员集合必须精确，数量由清单计算，不固化历史或本轮数量。
+ 
+ - 五个长期Markdown入口是Research Protocol、Report Writing Guide、Visual System、Interaction Evidence Protocol和AGENTS。老师材料、starter、Skill distribution、模板preview及已批准真实PDF/源包，按当前清单分别纳入；不能因新增写作指南就删除原有必要资料。
+ - 文件的project-source成员身份与语义角色分开：规则、教师材料、starter、合成模板、已验收实验成品、局部过程参考、可复现源包等不能混称。
+ - 目录仅包含批准上传的普通文件，不放README、内部manifest、Evidence Plan、同步脚本、日志、临时文件、备份、子目录、符号链接或重复上传后缀版本。Project Settings在UI维护，transfer文本不作为active Project Source。
+-- **Active source first → approved manifest/allowlist → upload bundle**。分发副本不是第二套编辑源；每次active规则或参考成品变化，先更新对应源，再同步精确副本。
+-- 使用既有 [sync_sources.py](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/sync_sources.py) 时，先检查实际脚本是否仍硬编码11项，并按当前批准清单迁移。不能在未迁移状态运行旧清理逻辑而误删新指南、已批准PDF/源包或有效老师文件。
+-- 清单变更必须是明确范围内的增删替换；本规则取消的是写死的数量，不是审核白名单。若当前完整清单尚未形成，先输出差异并保持分发 `NOT_READY`，不能自行猜测成13或其他数量，也不能把本次交付的若干更新文件当作完整项目源集合。
+-- 核验规范文件名、set(actual)==set(approved)、数量一致、active bytes==bundle bytes、SHA256及引用。二进制按实际字节比较。报告PDF/源包另核对配对与批准范围，不能只看同名。常规同步禁止递归删除目录或任意用户文件；遇到目录/符号链接先报告。
++- **Active source first → approved manifest → upload bundle**。分发副本不是第二套编辑源；每次active规则或参考成品变化，先更新对应源，再同步精确副本。用户明确授权从release导入时，先保存完整清单与不可变输入快照，完成一次受控导入后恢复正常单向分发。
++- 使用既有 [sync_sources.py](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/sync_sources.py) 和上述清单。`--plan`展示新增、变化、缺失、意外及不安全项；`--check`只读核验，不创建或修改manifest、正文、hash、日期及mtime。旧版本若仍硬编码数量或自动清理未知文件，必须先迁移，不能直接写入真实release。
++- 写同步必须先验证所有来源、hash、规范路径及目标安全性，再原子或受控更新；无变更重复执行保持幂等。缺输入、错误hash或失败更新不得丢失原文件或半更新后输出READY；保存可恢复记录。未知extra默认报错并保持，目录/符号链接/越界路径拒绝并报告，不自动unlink或递归清理。确需删除时须有具体授权列表和备份。
++- 清单变更必须是明确范围内的增删替换；取消写死数量不取消成员审核。若当前完整清单尚未形成，先输出差异并保持分发 `NOT_READY`，不猜测数量，也不把若干更新文件当作完整项目源集合。
++- 核验规范文件名、set(actual)==set(approved)、数量一致、active bytes==bundle bytes、SHA256及引用。二进制按实际字节比较。报告PDF/源包另核对配对与批准范围，不能只看同名。来源角色、适用范围和历史身份分别记录，不通过覆盖用户输入强行使比较通过。
+ - `publication-plots.zip` 保留已批准原始distribution，核验固定hash与installed Skill的effective members，不为本轮规则同步擅自重打包。
+-- 既有 [SOURCE_MANIFEST.md](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/evidence/infrastructure/chatgpt-project-source-sync/SOURCE_MANIFEST.md) 与 [UPLOAD_INSTRUCTIONS.md](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/evidence/infrastructure/chatgpt-project-source-sync/UPLOAD_INSTRUCTIONS.md) 保存在上传目录外，维护实际路径、语义角色、版本/批准范围、hash、替代关系与配对标识。清单不自动证明UI内容。
++- 既有 [SOURCE_MANIFEST.md](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/evidence/infrastructure/chatgpt-project-source-sync/SOURCE_MANIFEST.md) 与 [UPLOAD_INSTRUCTIONS.md](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/evidence/infrastructure/chatgpt-project-source-sync/UPLOAD_INSTRUCTIONS.md) 由同一结构化定义生成，保存在上传目录外，登记canonical名称、active路径、语义角色、适用范围、版本、hash、批准/历史范围、替代关系与配对标识。清单不自动证明UI内容。
++- UI按实际差异更新：替换内容变化的文件，保留未变有效资料，不要求先删除全部Project Sources。输入基准已上传不代表后来修订已上传；必要设置补丁仅为任务handoff中的TRANSFER_COPY / USER_UI_ACTION_REQUIRED，不成为第二份active Settings。
+ - 稳定canonical文件名不使用`final/new/bundle_v2`等临时后缀；版本由文档版本、真实来源与Git记录管理。历史存档不继续充当冲突的active规则。
+-- 只能依据真实动作报告FILES_GENERATED、REPOSITORY_SYNCED、UPLOAD_BUNDLE_READY或用户确认的UI_UPLOADED；未操作UI不得声称已上传。用户上传后按可访问的实际源再次核对，不以对话附件或仓库存在替代UI完成证据。
++- 生成文件、本地同步、远程验证、bundle就绪和用户实际UI上传是五种不同状态，只能依据真实动作报告。未操作UI不得声称已上传。用户上传后按可访问的实际源再次核对，不以对话附件或仓库存在替代UI完成证据。
+ 
+ 规则文本更新不自动完成脚本、模板、manifest或UI的同步。每次迁移都须按授权任务实际执行，并留下对应检查结果。
+ 

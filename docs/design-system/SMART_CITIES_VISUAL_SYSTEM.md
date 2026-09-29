@@ -1,18 +1,22 @@
-# Smart Cities & Location Services — Visual / LaTeX Design System v2.3
+# Smart Cities & Location Services — Visual / LaTeX Design System v2.5
 
-Status: **LOCKED for Experiment Report and Process Report**
+Status: **LOCKED for Experiment Report and Process Report**  
+Revision: **2026-09-29 · Project-wide formal diagrams / report scope**  
+Canonical repository path: `docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md`
 
-This document defines the long-term visual identity, LaTeX baseline, evidence presentation language and technical-visualization rules for the 《智慧城市与位置服务》 project.
+This document defines the long-term visual identity, LaTeX baseline, report identities, evidence presentation language and technical-visualization rules for the 《智慧城市与位置服务》 project. Detailed prose and argumentation rules are maintained in the Report Writing Guide, not duplicated in Project Settings.
 
 The visual system is stable. Task-specific section names, figures and page structures may adapt to the teacher's requirements, but the locked visual identity and evidence principles must not be silently redesigned.
 
 ---
 
-Document routing: [Research Protocol](../../docs/research/SMART_CITIES_RESEARCH_PROTOCOL.md) owns research governance; [Interaction Evidence Protocol](../../docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md) owns authenticity, historical recovery, audit and lock; [AGENTS](../../AGENTS.md) owns engineering. This file owns visual grammar. Project Settings remains user-maintained in ChatGPT UI.
+Document routing: [Research Protocol](../research/SMART_CITIES_RESEARCH_PROTOCOL.md) owns research governance; [Report Writing Guide](../report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md) owns detailed report organization, argumentation and prose; [Interaction Evidence Protocol](../process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md) owns authenticity, historical recovery, Process narrative ownership, audit and lock; [AGENTS](../../AGENTS.md) owns production, integration and engineering. This file owns visual identity and grammar. Project Settings remains user-maintained in ChatGPT UI. A supplied settings text is a transfer copy, not a second active repository setting.
 
 ## 1. Shared Identity
 
 The Experiment Report and Process Report are two independent formal documents.
+
+Their project-wide formal-delivery scope and ordinary-question exclusions are defined in [Report Writing Guide §1](../report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md#1-两份报告的读者与任务); they are not limited to Experiment 1.
 
 They share one visual identity but serve different information purposes:
 
@@ -64,7 +68,7 @@ If a real task exposes a genuine readability problem, revise the design system e
 
 ## 3. Experiment Report Identity
 
-The Experiment Report is the formal technical and experimental document.
+The Experiment Report is a **teacher-facing course experiment report** with precise technical methods and evidence. It is not a pure engineering audit, project-management record or repository manual.
 
 It answers:
 
@@ -109,7 +113,7 @@ The Experiment Report may include:
 - conclusions;
 - teacher-required AI/LLM technical critique.
 
-The report must not reproduce the complete Human–AI conversation process.
+The report must not reproduce the complete Human–AI conversation process. It should still explain the actual technical workflow, verification conditions, comparative experiments and evidence-based choices when these are part of the task. Moving chat history out of the report must not remove the system method or the basis for accepting a result.
 
 ### 3.3 Brainstorm / method-design rule
 
@@ -130,6 +134,22 @@ They must not simply copy:
 - chat screenshots;
 - v1/v2/v3 reasoning history;
 - Human–AI decision-process diagrams.
+
+### 3.4 Problem-led writing, with a direct opening
+
+Use a concise, direct overview, conventional section titles and clear essential definitions. In the main body, connect real problems to methods, verification, fair comparison, observed results and technical choices. This is a reasoning structure, not a mandatory sequence of repeated cards or question-mark headings.
+
+Detailed requirements, including the 22 editing categories, are in the [Report Writing Guide](../report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md). Preserve scientifically relevant assumptions, units, uncertainty and negative results while moving hashes, execution permissions, internal status codes and submission operations out of the main narrative unless the teacher specifically requires them.
+
+The writing may explain a final design logically; it must not invent the historical origin of that design. A problem-driven explanation is not permission to retrofit earlier human observations or claim a paper caused a decision without evidence.
+
+### 3.5 Technical verification / workflow diagrams
+
+An Experiment Report diagram may show shared raw input, reference and candidate branches, tools, independent evaluation, acceptance conditions, feedback and stopping. Make data flow, control flow and decision conditions distinguishable and label the relationships that matter.
+
+Do not reduce a major verification figure to unexplained `proposal → check → accept`, but do not add nodes merely for complexity. Show only implemented or explicitly labeled candidate capabilities; distinguish experiment governance, evaluated per-request modes and final deployed processing.
+
+A human observation/challenge node is allowed only when it actually occurred and is supported. The Process-specific Human Reasoning grammar in section 9 is not a template to be imposed on every automated technical check. Local algorithm validity, whole-pipeline effect and final adoption remain different judgments. Dashed feedback or fallback edges must identify their actual applicable modes and whether they were exercised in the illustrated run.
 
 ---
 
@@ -284,7 +304,7 @@ A strong process sequence should make clear:
 7. how the evidence changed the plan;
 8. what the final decision was.
 
-The human contribution should be visible as actual reasoning, not merely a final “agree” message.
+The human contribution should be visible as actual reasoning, not merely a final “agree” message. This does not require fabricating a human action in every technical or automated episode: decisions made autonomously within previously approved rules must be identified as such. Policy approval and later per-record choices are different historical facts.
 
 ---
 
@@ -454,7 +474,7 @@ Prohibited: generated ChatGPT UI, redrawn interaction screenshots, AI upscale ma
 
 ## 9. Process Diagram Language
 
-Three formal diagram grammars are locked.
+Three formal diagram grammars are locked for **Process Report historical/decision evidence**. Their use must follow actual human reasoning and approved evidence. Experiment Report technical architecture and verification diagrams follow section 3.5; they must not invent human turns to resemble these historical grammars.
 
 ### 9.1 Editorial Decision Board
 
@@ -622,13 +642,35 @@ Possible forms include:
 
 The visualization type must follow the analytical problem.
 
-Do not use advanced graphics simply because they appear more sophisticated.
+Do not use advanced graphics simply because they appear more sophisticated. No task is required to repeat a particular approved report's chart types, number of figures or three-dimensional effect.
+
+### 12.1 Analytical eligibility of advanced charts
+
+| Form | Required meaning and checks |
+|---|---|
+| **3D space–time trajectory** | The third axis is an actual time or other measured variable, labeled with units; it is not implied altitude. Keep original breaks and equal-time observations. Use comparable views/ranges across methods, and provide a planar projection or sufficient static context when occlusion matters. Display scaling does not alter the processing distance definition. |
+| **Parameter response grid / surface** | Display actual tested combinations. Mark untested cells as missing; a mesh joining measured points is a visual aid, not new measurement. Smoothing, interpolation or contours must be explicit and cannot create evidence of an untested optimum or stable region. Keep precise parameter values available. |
+| **Sankey / alluvial / state flow** | Flow widths come from real counts or stated weights over consistent identities and populations. Verify conservation and mutually exclusive partitions. Overlapping quantities such as represented coverage and explicit retained points must not be placed beside one another as exclusive terminal states. |
+| **Histogram / ECDF / raincloud** | State the statistical unit and denominator. Preserve zeros, missingness, repeated episodes and group dependence. Do not use density smoothing to hide atoms or imply observed values between discrete measurements; record bins/bandwidth when relevant. |
+| **Paired change / candidate matrix** | Compare the same records and compatible references. Distinguish development, selection and final confirmation, absent runs, constraint rejection and trade-offs. Normalization must not silently become a new composite score. |
+| **Map / density / network** | Use a supported spatial reference and actual underlying data. No invented basemap alignment, road connectivity or population meaning from sample point density. Match spatial scale and disclose aggregation. |
+| **Verification / framework figure** | Show real inputs, candidate/reference relations, actual checks and applicable decision/feedback branches. Arrow meaning cannot be inferred merely from layout; implementation and historical human evidence remain separate. |
+
+These conditions guide re-expression of approved evidence, not authorization to add new experiments, classifiers, geographic conversions or methods. If a chart requires a new derived table, preserve its generating code, scope and relationship to the underlying valid runs.
+
+### 12.2 Figure selection and page integration
+
+Choose a small complementary set according to the questions, not one different chart per available library function. A readable histogram may be preferable to a smoothed violin; a paired plot may be better than an unnecessary 3D view. Conversely, a genuine temporal axis or state-flow mapping should be used when it materially clarifies the problem.
+
+Captions identify the object, sample, units, conditions and encoding, then give at most the main supported finding and needed limitation. The prose explains mechanism or choice rather than reading every plotted value. Use representative, adverse and boundary cases under a recorded selection basis; do not illustrate only favorable examples.
+
+Interactive HTML is supplementary unless explicitly required. Essential evidence must remain understandable in the static formal PDF. Check labels, units, view angle, contrast and legends at the actual final size; vector output alone does not guarantee legibility.
 
 ---
 
 ## 13. Native and Reproducible Production
 
-Technical visuals must be editable and reproducible.
+Technical visuals must be editable and reproducible. When current tools and real inputs permit, GPT may directly author plots, diagrams, LaTeX and complete reports under the user's authorization. Codex may produce them under an approved design or integrate user-accepted GPT artifacts. Tool availability is verified in the actual environment, not assumed from this preferred list.
 
 Preferred tools include:
 
@@ -654,6 +696,10 @@ Preferred tools include:
 - Gephi / Cytoscape when appropriate
 
 ### Workflow / architecture / algorithm diagrams
+
+Formal workflow and system-architecture diagrams throughout this project use **draw.io / diagrams.net as the primary editable delivery**. Preserve a real `.drawio` file with editable nodes, connectors and labels, together with corresponding SVG/PDF exports. Embedding a whole-diagram bitmap in draw.io does not meet this requirement.
+
+Statistics, GIS and mathematical/geometric figures use the appropriate reproducible native tools; they do not all require `.drawio`. The tools below may support suitable algorithm or mathematical figures and refinement, but do not replace the primary `.drawio` delivery for formal workflow/system-architecture diagrams. This scope rule adds no unrelated drawing task and does not require redrawing accepted report pages.
 
 - draw.io / diagrams.net
 - Figma
@@ -706,6 +752,14 @@ Preserve valuable editable sources such as:
 - `.html`
 
 where relevant.
+
+### 13.1 Approved-source handoff and review
+
+Preserve an accepted report/figure together with its editable source and real figure inputs or resolvable input identifiers. Integrate the source into the actual generator, rather than only replacing a PDF that a subsequent build will overwrite. Do not silently downgrade an accepted composition or replace approved prose with old template boilerplate.
+
+The author verifies source/data correspondence and renders the actual PDF; independent verification names its real scope and reviewer. GPT's self-review of GPT-authored work is author review, not independent review. User acceptance of a document, research validity, repository integration, evidence lock and submission are separate statuses.
+
+Pure wording/layout changes require content, figure, render and build checks over their impact, not automatic re-execution of every experiment. Changes to algorithms, metrics, data or feedback invalidate affected results and return to research/engineering governance.
 
 ---
 
@@ -777,13 +831,22 @@ Avoid:
 
 Figures, tables and text should complement rather than mechanically duplicate one another.
 
+Detailed Experiment Report prose, content allocation, the 22 editing categories and cross-report writing boundaries are defined once in the [Report Writing Guide](../report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md). For Process Report, the first-person and historical ownership rules in Evidence Protocol §16.1—16.2 remain authoritative.
+
+A concise overview and necessary definitions may be direct; the Experiment body normally introduces an actual problem before a method, then shows verification, comparison and evidence-based choice. Reader-facing language replaces internal status vocabulary, not the underlying assumptions or limits. Do not infer a lexical ban from a few disliked phrases; inspect the whole paragraph's meaning and relevance.
+
+Formal review must inspect the actual PDF page by page at a readable scale. At least 200-dpi rendering is the engineering inspection baseline, not proof of source image resolution. Text extraction, contact sheets and compile logs support but do not replace page inspection. Record unperformed checks honestly.
+
 ---
 
 ## 16. Reference Files
 
-Current installed sources:
+### 16.1 Rules and reusable templates
+
+Canonical repository locations:
 
 - `docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md`
+- `docs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md`
 - `templates/latex/common/p2_cloud_sorbet_colors.tex`
 - `templates/latex/experiment-report/experiment_report_template.tex`
 - `templates/latex/experiment-report/preview/Experiment_Report_P2_Exact.pdf`
@@ -791,29 +854,36 @@ Current installed sources:
 - `templates/latex/process-report/preview/Process_Report_P2_Locked_v1.pdf`
 - `tools/skills/publication-plots/SKILL.md`
 
-Accepted pre-Task-1 Workflow Construction references:
+These are routing locations. Listing a path is not proof of installation or synchronization; integration status must be established by actual files and checks.
 
-- `reports/process-report/pre-task1/WF_WorkflowConstruction_PreTask1_REVISED.pdf` — Real-content / first-person writing / Interaction Evidence implementation reference.
-- `reports/process-report/pre-task1/WF_WorkflowConstruction_PreTask1_31p_LaTeX_Source.zip` — Reproducible source archive for the accepted pre-Task-1 Workflow Construction reference.
+Template assets under `templates/latex/*/demo-assets/` remain **synthetic/template assets**. They must not be presented as current results, real ChatGPT evidence, user decisions or measurements. Task reports are authored in their own sources using approved shared components, not by overwriting the reference template.
 
-These references do not replace `Process_Report_P2_Locked_v1.pdf` as the Visual / Layout Template Reference or the active Process Report template. They are not Experiment Report material and do not establish that Task 1 Experiment Decision Process is complete. Create task-specific reports from copies of the active template; do not use the 31-page real-content report as an assignment template.
+### 16.2 Approved / supplied report references
 
-The supplied source archive has [PARTIAL reproduction verification](../../evidence/infrastructure/SMART-CITIES-GOVERNANCE-PROCESS-REFERENCE-SYNC-002/source-archive-check.md): it builds 31 pages, but does not fully reproduce the accepted revised prose and annotations. Preserve the approved PDF and archive unchanged; the PDF remains the accepted reading reference.
+Use the following canonical attachment names to locate the corresponding reference; maintain actual repository paths and verified hashes in the internal Source Manifest rather than inventing a path here.
 
-Template assets under:
+| Reference files | Role and allowed use | Scope boundary |
+|---|---|---|
+| `Experiment_Report_吴博闻_10245102410.pdf` + `Experiment_Report_完整重构_源文件.zip` | **User-accepted Experiment Report exemplar**: teacher-facing problem-led writing, integrated method/verification/comparison, figure composition and editable production | Actual Experiment 1 work, not synthetic; its data, parameters, history and conclusions cannot be reused as a new task's results. User document acceptance does not prove repository integration, teacher grading or submission. |
+| `WF_WorkflowConstruction_PreTask1_REVISED.pdf` + `WF_WorkflowConstruction_PreTask1_31p_LaTeX_Source.zip` | **Supplied Process Report / pre-Task-1 Workflow Construction reference** for narrative and evidence presentation within its actual scope | Does not establish completion of Experiment Decision Process or full Process Report; individual/section locks require their actual records. A filename or source ZIP alone is not lock evidence. |
+| `Experiment_Report_P2_Exact.pdf` | **Synthetic visual/template preview**, P2 and reusable page-language reference | Not experiment evidence or a competing version of the accepted real report. |
+| `Process_Report_P2_Locked_v1.pdf` | **Process template preview** with its recorded scope | The template name does not lock real interactions or prove all new pages accepted. |
 
-`templates/latex/*/demo-assets/`
+Read the exemplar PDF to understand the result and its paired source to reuse production choices. The approved exemplar is the concrete writing/layout reference where old boilerplate is less specific, but cannot silently override current teacher instructions, research validity, P2 identity or Evidence authenticity.
 
-are synthetic/template assets only.
+### 16.3 Pair integrity, reference scope and changes
 
-They must never be presented as:
+Record each pair's canonical filenames, real source locations, file hashes, approval source/scope and superseded versions in the existing internal source/reference manifest. Keep missing files or unverified pairings explicit. Do not assert that a ZIP can reproduce a PDF unless that build or a precisely stated narrower check actually occurred.
 
-- current experiment results;
-- real ChatGPT evidence;
-- real user decisions;
-- real measurements.
+A changed PDF/source requires renewed pairing and impact review. Store older versions as history; only one specifically identified current task report or reference version may serve as the active exemplar. A renamed file is not automatically newer.
 
-Task-specific reports should be created from copies of the locked templates rather than overwriting the reference templates.
+Stable identity/components may be generalized into templates after approval; do not put the exemplar's real measurements or conclusions into synthetic placeholders. The exemplar's page count, chapter count and chart count remain task-specific.
+
+### 16.4 Project Sources distribution
+
+Formal exemplar PDFs and their matching source ZIPs may be included in Project Sources when explicitly approved, with roles distinct from normative Markdown and synthetic templates. Key rules remain readable Markdown, not hidden solely in a ZIP. Broad source archives must not include font binaries, secrets or unrelated personal files.
+
+The upload set and its count come from the current approved [structured manifest](../../evidence/infrastructure/chatgpt-project-source-sync/sources.json), with no permanent file-count constant. Membership checks, stable names and byte equality remain mandatory; detailed distribution/migration rules are in AGENTS §18. Do not remove an existing teacher file or valid reference merely to restore an old count, and do not claim UI upload from local file generation.
 
 ---
 
@@ -831,6 +901,8 @@ The following are stable unless the teacher or user explicitly changes them:
 - minimum-sufficient box / highlight scope
 - render-level Phrase / Box / Arrow Audit
 - first-person Process Report narrative
+- Report Writing Guide as the detailed prose/argumentation entry
+- author review, independent verification and user acceptance distinguished
 - long-arrow annotation
 - direct high-resolution PNG embedding
 - TikZ/PDF vector annotation
@@ -839,6 +911,8 @@ The following are stable unless the teacher or user explicitly changes them:
 - Experiment Report:
   - A-style Modern Academic Minimal cover
   - B-style Visual Research body
+  - teacher-facing, problem-led technical argumentation with a direct overview
+  - actual methods, checks, comparisons and result-driven choices rather than management slogans
 - Process Report:
   - same P2 identity
   - Workflow Construction
@@ -861,7 +935,9 @@ The following are stable unless the teacher or user explicitly changes them:
 
 The following adapt to the teacher's actual task:
 
-- report section names;
+- report section names and problem groupings;
+- task page, figure and table counts;
+- which advanced chart types materially help the current task;
 - number of sections;
 - title metadata;
 - specific charts and maps;

@@ -1,40 +1,29 @@
 # 实验一报告工程
 
-两份报告复制自锁定的 P2 XeLaTeX 模板，分别回答最终技术结果和真实过程。模板及公共配色保持原件，不使用模板的合成数据或聊天素材。
+当前 Experiment 为用户已验收的25页重构版。权威章节源在 [experiment1/chapters](experiment1/chapters/)，主入口 [Experiment_Report.tex](experiment1/Experiment_Report.tex)，兼容入口 [experiment1.tex](experiment1/experiment1.tex) 仅引用该主文件。不可变批准 PDF/ZIP 在 [canonical参考目录](../../reports/experiment-report/experiment1-reconstructed/)；[当前PDF](experiment1/experiment1.pdf) 保持批准PDF原字节。
 
-- `experiment1/experiment1.tex`：技术报告；`references.bib` 为实际核读的 3 个主来源。
-- `process1/process1.tex`：Workflow Construction 与 Experiment Decision Process 两层过程报告；真实互动截图/spec/LOCK 缺失时明确为送审稿。
-- `metadata.tex`：由唯一身份源 `../config/assignment.json` 经 `task1.goal3.identity` 生成；REPORT_BUILD 每次重建，学号保持字符串；封面和 PDF author 同步验证。
-- `experiment1/generated.tex`、`process1/generated.tex`：G3 已核验结果与真实过程接入点，不从最终集反向选择报告结论。
-- `build_history_sources.py`：从已保存 G1/G2 JSON 重建历史数值和表，既不执行新实验，也不调用模型。
-- `build_goal3_sources.py`：先验证独立 C 对当前开发 A1/A2/A3、收敛与实际产物的哈希绑定，再生成两份报告的开发正文；不读取选择或 FINAL_CONFIRM 效果。数值出处保存为 `goal3_development_bindings.json`。
-- `build_selection_sources.py`：从已闭合的选择裁决、完整运行与三个失败的独立数学检查生成选择正文；未读取最终确认效果。数值出处保存为 `goal3_selection_bindings.json`。
-- `build_final_sources.py`：核对确认闭合回执与冻结时序，从真实确认分片重新汇总分层/缺失几何读数；生成 native 事件元数据的真实边界说明。全量分支只有在 `result_summary.json`、当前生产 C 与全部 7 张正式图绑定齐备时才执行，缺少结果不填零；数值与来源保存为 `goal3_final_bindings.json`。
+[Process PDF](process1/process1.pdf)仍为12页技术事实送审稿，真实互动原件/spec/Lock另有未完成状态。[前期Process参考](../../reports/process-report/pre-task1/)与它分开；前期源包复现仍为[既有PARTIAL](../../evidence/infrastructure/SMART-CITIES-GOVERNANCE-PROCESS-REFERENCE-SYNC-002/source-archive-check.md)。当前Experiment构建不生成Process，也不修改其正文、图或metadata。
 
-从项目根目录重新生成历史表与当前已核验的 G3 正文：
-
-```bash
-.venv/bin/python task1/reports/build_history_sources.py
-.venv/bin/python task1/reports/build_goal3_sources.py
-.venv/bin/python task1/reports/build_selection_sources.py
-.venv/bin/python task1/reports/build_final_sources.py --scope full
-```
-
-统一构建并检查日志、导出正文、200 dpi 渲染：
+在仓库根目录使用现有环境：
 
 ```bash
 .venv/bin/python task1/reports/build_reports.py --render
+.venv/bin/python -m task1.goal3 REPORT_BUILD --output /tmp/REVIEW_ONLY_实验一_新报告构建.zip
 ```
 
-也可在各报告目录分别执行：
+构建器逐次将当前真实源码复制到没有预置报告PDF/辅助文件的临时目录，运行源包原 `bash build.sh`（两次XeLaTeX）；核对章节/图源与批准ZIP、公共P2颜色值、姓名/学号、25页和全文。`--render`生成200dpi全页图并记录与批准版的像素差，实际目视结论另记。输出的 `rebuilt.pdf` 为本次真实编译产物；当前阅读/打包PDF维持批准原件字节，不宣称两者SHA相同。默认构建记录在 `task1/evidence/goal3/report_build/accepted/`，可用 `--evidence-output`指定本轮新目录。
+
+REPORT_BUILD只读包中冻结依赖并执行隔离无Git依赖probe，然后生成新REVIEW_ONLY ZIP；它不执行参数/模式/全量清洗，不生成数值摘要和旧图，不调用模型。输出ZIP已存在时拒绝覆盖。旧22页生成器与旧全文/目视记录属于提交 `4483f520eabb5358d1f35cf5c33a81d3b01e47e0` 的历史；本目录遗留 `*_generated.tex` 和旧 `build_*_sources.py` 为历史素材，不是当前章节源，正常入口不再调用。
+
+编译依赖：XeLaTeX、ctex/fontspec及源包声明的LaTeX宏包（含placeins、needspace、pdflscape等），DejaVu Serif/Sans、Noto Serif/Sans/Mono CJK SC；PDF检查需Poppler，渲染比较使用现有Python Pillow。源包含图PDF，正常编译不需Python绘图依赖、网络或模型凭据。公共颜色只从 `templates/latex/common/p2_cloud_sorbet_colors.tex` 读取；源ZIP中的颜色是受控便携副本。
+
+本轮缺少placeins/needspace，已仅安装至隔离TeX树并放入 `.venv/texmf`，构建器在调用者未指定TEXMFHOME时自动使用它。复现该隔离依赖补齐步骤（只在缺包且现有TeX为用户TeX Live时执行，仓库镜像须与TeX版本匹配）：
 
 ```bash
-latexmk -xelatex -interaction=nonstopmode -file-line-error -halt-on-error -outdir=build experiment1.tex
-latexmk -xelatex -interaction=nonstopmode -file-line-error -halt-on-error -outdir=build process1.tex
+tlmgr --usermode --usertree "$PWD/.venv/texmf" init-usertree
+tlmgr --usermode --usertree "$PWD/.venv/texmf" install placeins needspace
 ```
 
-使用现有 TeX Live、Noto CJK/DejaVu/Fandol 字体和 BibTeX；不需要 shell escape、模型凭据或新增字体包。报告依赖公共配色 `templates/latex/common/p2_cloud_sorbet_colors.tex`、历史 G2 图 `task1/figures/goal2/`、当前 G3 图 `task1/figures/goal3/` 及各代数值与绑定输入。源码构建结果与 200 dpi 检查回执保存在 `task1/evidence/goal3/report_build/`。当前完整构建必须使用已闭合生产与 7 图的真实输入；`--scope confirmation` 仅供先前阶段的明确预览，不作为最终报告构建入口。
+直接在本目录的experiment1子目录运行源包build.sh时，用进程局部 `TEXMFHOME`指向上述树；统一Python入口已处理该路径。没有安装字体或修改全局TeX/TLS/认证配置。具体来源、版本、SHA和本轮命令在[环境变更记录](../../evidence/infrastructure/SC-PROJECT-SOURCES-SYNC-003/report/environment-changes.json)。
 
-PDF 可编译不代表整体完成。当前正文已接入真实开发、选择、最终确认、全量生产及图表；姓名学号已按用户直接提供内容同步；真实互动 Evidence、独立全文审核和用户理解仍有各自状态，不可把待补送审稿称为正式可提交完稿。
-
-当前200dpi逐页图复用 `report_build/render200/`，新增 `experiment1_pages.txt` / `process1_pages.txt` 以“PDF物理页 n”分隔UTF-8全文。`build_receipt.json`绑定PDF/text/page图/命令/DPI，构建器不冒称目视；实际目视结论在本次closeout的C回执。
+两幅结构图在 [figures/](experiment1/figures/)中保留真实可编辑.drawio及SVG/PDF；绘图代码和冻结输入位于source/data。此次核验了归档成员、XML节点/边和编译嵌图，未重新生成十幅图，也未重跑全部实验。25页、七章、10图/17表均是这份实验一成品的事实，不是未来任务配额。项目正式写作遵循[Writing Guide](../../docs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md)与[Visual System](../../docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md)。

@@ -1,0 +1,58 @@
+--- received/AGENTS.md
++++ AGENTS.md
+@@ -2,7 +2,7 @@
+ 
+ 本文件规定 Codex 在《智慧城市与位置服务》仓库中的长期工程行为。
+ 
+-Revision: **2026-09-29 · Report production / accepted-source integration**  
++Revision: **2026-09-29 · Project-wide P1–P4 scope / manifest-driven source distribution**  
+ Canonical repository path: `AGENTS.md`
+ 
+ Repository: https://github.com/woobowen/Smart_Cities_and_Location_Services.git\
+@@ -70,6 +70,17 @@
+ ## 2. Scope
+ 
+ 研究范围与 T1/T2/T3/T4 的唯一定义见 [Research Protocol §A](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/docs/research/SMART_CITIES_RESEARCH_PROTOCOL.md#a-research-scope--task-governance)。Codex 只执行当前批准范围；文件存在、starter 接口与历史结果不构成范围授权。老师 optional 全部完成不允许自行扩展任务。
++
++P1—P4是整个项目的通用要求，后续正式任务按其问题与规模落实，不是实验一特例。细则分别只有一个负责入口：
++
++| 项目要求 | 主负责规则 |
++|---|---|
++| P1：正式实验、课程设计及当轮正式报告任务采用独立双报告 | [Report Writing Guide §1](docs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md#1-两份报告的读者与任务) |
++| P2：实质多角色工作流、核验、反馈与持续修复/恢复 | [Research Protocol §C](docs/research/SMART_CITIES_RESEARCH_PROTOCOL.md#c-standard-research-workflow)；工程执行见本文件§3 |
++| P3：Process继承真实共同基础，重点记录当前新增演化 | [Report Writing Guide §12](docs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md#12-process-report写作衔接不覆盖最新第一人称规则)；Evidence Master由用户指定，见Evidence Protocol §4.1 |
++| P4：正式工作流/体系架构图交付可编辑draw.io及SVG/PDF | [Visual System §13](docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md#13-native-and-reproducible-production) |
++
++受托任务须有真实职责及对应证据，不以普通函数改名充当Agent。具体角色数量、工具和信息合同随任务确定；实验一算法、阈值、样本量、三个Goal、特定模式/记忆/预算及报告页数不成为未来任务永久要求。日常问答不自动生成双报告，最终确定性程序也不要求逐条LLM调用；未知坐标的条件化授权不得跨任务自动继承。
+ 
+ ---
+ 
+@@ -490,19 +501,21 @@
+ 
+ ### ChatGPT Project Sources Upload Bundle
+ 
+-`releases/chatgpt-project-sources/` 是按**当前批准的显式文件清单**生成的Upload-Ready Bundle。AGENTS.md本身是PROJECT_SOURCE。成员集合必须精确，数量由清单计算，不再将历史11-file set或 `EXACTLY 11` 作为永久约束。
++`releases/chatgpt-project-sources/` 是按**当前批准的显式文件清单**生成的Upload-Ready Bundle。AGENTS.md本身是PROJECT_SOURCE。唯一结构化清单是 [sources.json](evidence/infrastructure/chatgpt-project-source-sync/sources.json)；成员集合必须精确，数量由清单计算，不固化历史或本轮数量。
+ 
+ - 五个长期Markdown入口是Research Protocol、Report Writing Guide、Visual System、Interaction Evidence Protocol和AGENTS。老师材料、starter、Skill distribution、模板preview及已批准真实PDF/源包，按当前清单分别纳入；不能因新增写作指南就删除原有必要资料。
+ - 文件的project-source成员身份与语义角色分开：规则、教师材料、starter、合成模板、已验收实验成品、局部过程参考、可复现源包等不能混称。
+ - 目录仅包含批准上传的普通文件，不放README、内部manifest、Evidence Plan、同步脚本、日志、临时文件、备份、子目录、符号链接或重复上传后缀版本。Project Settings在UI维护，transfer文本不作为active Project Source。
+-- **Active source first → approved manifest/allowlist → upload bundle**。分发副本不是第二套编辑源；每次active规则或参考成品变化，先更新对应源，再同步精确副本。
+-- 使用既有 [sync_sources.py](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/sync_sources.py) 时，先检查实际脚本是否仍硬编码11项，并按当前批准清单迁移。不能在未迁移状态运行旧清理逻辑而误删新指南、已批准PDF/源包或有效老师文件。
+-- 清单变更必须是明确范围内的增删替换；本规则取消的是写死的数量，不是审核白名单。若当前完整清单尚未形成，先输出差异并保持分发 `NOT_READY`，不能自行猜测成13或其他数量，也不能把本次交付的若干更新文件当作完整项目源集合。
+-- 核验规范文件名、set(actual)==set(approved)、数量一致、active bytes==bundle bytes、SHA256及引用。二进制按实际字节比较。报告PDF/源包另核对配对与批准范围，不能只看同名。常规同步禁止递归删除目录或任意用户文件；遇到目录/符号链接先报告。
++- **Active source first → approved manifest → upload bundle**。分发副本不是第二套编辑源；每次active规则或参考成品变化，先更新对应源，再同步精确副本。用户明确授权从release导入时，先保存完整清单与不可变输入快照，完成一次受控导入后恢复正常单向分发。
++- 使用既有 [sync_sources.py](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/sync_sources.py) 和上述清单。`--plan`展示新增、变化、缺失、意外及不安全项；`--check`只读核验，不创建或修改manifest、正文、hash、日期及mtime。旧版本若仍硬编码数量或自动清理未知文件，必须先迁移，不能直接写入真实release。
++- 写同步必须先验证所有来源、hash、规范路径及目标安全性，再原子或受控更新；无变更重复执行保持幂等。缺输入、错误hash或失败更新不得丢失原文件或半更新后输出READY；保存可恢复记录。未知extra默认报错并保持，目录/符号链接/越界路径拒绝并报告，不自动unlink或递归清理。确需删除时须有具体授权列表和备份。
++- 清单变更必须是明确范围内的增删替换；取消写死数量不取消成员审核。若当前完整清单尚未形成，先输出差异并保持分发 `NOT_READY`，不猜测数量，也不把若干更新文件当作完整项目源集合。
++- 核验规范文件名、set(actual)==set(approved)、数量一致、active bytes==bundle bytes、SHA256及引用。二进制按实际字节比较。报告PDF/源包另核对配对与批准范围，不能只看同名。来源角色、适用范围和历史身份分别记录，不通过覆盖用户输入强行使比较通过。
+ - `publication-plots.zip` 保留已批准原始distribution，核验固定hash与installed Skill的effective members，不为本轮规则同步擅自重打包。
+-- 既有 [SOURCE_MANIFEST.md](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/evidence/infrastructure/chatgpt-project-source-sync/SOURCE_MANIFEST.md) 与 [UPLOAD_INSTRUCTIONS.md](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/evidence/infrastructure/chatgpt-project-source-sync/UPLOAD_INSTRUCTIONS.md) 保存在上传目录外，维护实际路径、语义角色、版本/批准范围、hash、替代关系与配对标识。清单不自动证明UI内容。
++- 既有 [SOURCE_MANIFEST.md](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/evidence/infrastructure/chatgpt-project-source-sync/SOURCE_MANIFEST.md) 与 [UPLOAD_INSTRUCTIONS.md](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/evidence/infrastructure/chatgpt-project-source-sync/UPLOAD_INSTRUCTIONS.md) 由同一结构化定义生成，保存在上传目录外，登记canonical名称、active路径、语义角色、适用范围、版本、hash、批准/历史范围、替代关系与配对标识。清单不自动证明UI内容。
++- UI按实际差异更新：替换内容变化的文件，保留未变有效资料，不要求先删除全部Project Sources。输入基准已上传不代表后来修订已上传；必要设置补丁仅为任务handoff中的TRANSFER_COPY / USER_UI_ACTION_REQUIRED，不成为第二份active Settings。
+ - 稳定canonical文件名不使用`final/new/bundle_v2`等临时后缀；版本由文档版本、真实来源与Git记录管理。历史存档不继续充当冲突的active规则。
+-- 只能依据真实动作报告FILES_GENERATED、REPOSITORY_SYNCED、UPLOAD_BUNDLE_READY或用户确认的UI_UPLOADED；未操作UI不得声称已上传。用户上传后按可访问的实际源再次核对，不以对话附件或仓库存在替代UI完成证据。
++- 生成文件、本地同步、远程验证、bundle就绪和用户实际UI上传是五种不同状态，只能依据真实动作报告。未操作UI不得声称已上传。用户上传后按可访问的实际源再次核对，不以对话附件或仓库存在替代UI完成证据。
+ 
+ 规则文本更新不自动完成脚本、模板、manifest或UI的同步。每次迁移都须按授权任务实际执行，并留下对应检查结果。
+ 

@@ -1,0 +1,45 @@
+{
+  "reviewer": "independent C",
+  "classification": "REPORT_REBUILD_NOT_EXPERIMENT",
+  "new_model_calls": 0,
+  "command": [
+    "bash",
+    "build.sh"
+  ],
+  "cwd": "evidence/infrastructure/SC-PROJECT-SOURCES-SYNC-003/c_review/build/clean_archive_source",
+  "portable_source_members_extracted": 71,
+  "prebuilt_output_pdf_excluded": true,
+  "environment": {
+    "TEXINPUTS": ".venv/texmf/tex/latex//:",
+    "new_installations_by_C": []
+  },
+  "provenance": {
+    "xelatex --version": {
+      "exit": 0,
+      "output": "XeTeX 3.141592653-2.6-0.999998 (TeX Live 2026)\nkpathsea version 6.4.2\nCopyright 2026 SIL International, Jonathan Kew and Khaled Hosny.\nThere is NO warranty.  Redistribution of this software is\ncovered by the terms of both the XeTeX copyright and\nthe Lesser GNU General Public License.\nFor more information about these matters, see the file\nnamed COPYING and the XeTeX source.\nPrimary author of XeTeX: Jonathan Kew.\nCompiled with ICU version 78.2; using 78.2\nCompiled with zlib version 1.3.2; using 1.3.2\nCompiled with FreeType2 version 2.14.1; using 2.14.1\nCompiled with Graphite2 version 1.3.14; using 1.3.14\nCompiled with HarfBuzz version 12.3.2; using 12.3.2\nCompiled with libpng version 1.6.55; using 1.6.55\nCompiled with pplib version v2.2\nCompiled with fontconfig version 2.13.1; using 2.15.0\n"
+    },
+    "kpsewhich -var-value=TEXMFROOT": {
+      "exit": 0,
+      "output": "/home/addaswsw/.local/texlive/2026\n"
+    },
+    "kpsewhich placeins.sty": {
+      "exit": 0,
+      "output": "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/texmf/tex/latex/placeins/placeins.sty\n"
+    },
+    "kpsewhich needspace.sty": {
+      "exit": 0,
+      "output": "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/texmf/tex/latex/needspace/needspace.sty\n"
+    }
+  },
+  "build_exit_code": 0,
+  "rebuilt_sha256": "1a9d19adb725cd7ddd8cf2557b0a8f37404fe70ee1f36aa853c4b35e3c4b8ad4",
+  "approved_sha256": "2a940be556262725acbe666bbe5b5f8a6b20e08d6838770f0b681bb17bf5cdd0",
+  "pages": 25,
+  "exact_extracted_text_equal": true,
+  "whitespace_normalized_text_equal": true,
+  "identity_in_text": true,
+  "diagnostics": [
+    "Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)"
+  ],
+  "visual_review": "PENDING_SEPARATE_SAMPLE_INSPECTION"
+}

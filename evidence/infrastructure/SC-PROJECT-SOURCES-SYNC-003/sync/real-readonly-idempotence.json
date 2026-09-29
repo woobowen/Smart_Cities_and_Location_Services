@@ -1,0 +1,147 @@
+{
+  "all_source_bundle_metadata_bytes_and_mtimes_unchanged": true,
+  "file_paths": [
+    "releases/chatgpt-project-sources/Process_Report_P2_Locked_v1.pdf",
+    "releases/chatgpt-project-sources/作业.zip",
+    "releases/chatgpt-project-sources/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md",
+    "releases/chatgpt-project-sources/WF_WorkflowConstruction_PreTask1_31p_LaTeX_Source.zip",
+    "releases/chatgpt-project-sources/作业1轨迹数据预处理.ipynb",
+    "releases/chatgpt-project-sources/SMART_CITIES_RESEARCH_PROTOCOL.md",
+    "releases/chatgpt-project-sources/Experiment_Report_吴博闻_10245102410.pdf",
+    "releases/chatgpt-project-sources/WF_WorkflowConstruction_PreTask1_REVISED.pdf",
+    "releases/chatgpt-project-sources/SMART_CITIES_VISUAL_SYSTEM.md",
+    "releases/chatgpt-project-sources/任务3_LLM辅助评估清洗.ipynb",
+    "releases/chatgpt-project-sources/实验课1.pptx",
+    "releases/chatgpt-project-sources/Experiment_Report_完整重构_源文件.zip",
+    "releases/chatgpt-project-sources/Experiment_Report_P2_Exact.pdf",
+    "releases/chatgpt-project-sources/publication-plots.zip",
+    "releases/chatgpt-project-sources/SMART_CITIES_REPORT_WRITING_GUIDE.md",
+    "releases/chatgpt-project-sources/AGENTS.md",
+    "evidence/infrastructure/chatgpt-project-source-sync/sources.json",
+    "evidence/infrastructure/chatgpt-project-source-sync/SOURCE_MANIFEST.md",
+    "evidence/infrastructure/chatgpt-project-source-sync/UPLOAD_INSTRUCTIONS.md"
+  ],
+  "commands": [
+    {
+      "command": [
+        ".venv/bin/python",
+        "-B",
+        "evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/sync_sources.py",
+        "--plan"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"add\": [],\n  \"change\": [],\n  \"missing\": [],\n  \"unexpected\": [],\n  \"unsafe\": [],\n  \"errors\": [],\n  \"metadata_change\": [],\n  \"file_count\": 16,\n  \"safe_to_sync\": true\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "-B",
+        "evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/sync_sources.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"UPLOAD BUNDLE READY\",\n  \"file_count\": 16,\n  \"readonly\": true\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "-B",
+        "evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/sync_sources.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"UPLOAD BUNDLE READY\",\n  \"file_count\": 16,\n  \"updated\": [],\n  \"removed\": []\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "-B",
+        "evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/sync_sources.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"UPLOAD BUNDLE READY\",\n  \"file_count\": 16,\n  \"readonly\": true\n}\n",
+      "stderr": ""
+    }
+  ],
+  "before_after": {
+    "releases/chatgpt-project-sources/Process_Report_P2_Locked_v1.pdf": {
+      "sha256": "3903042ef7935a722d32871a9f55ba973b1262ee0fe290363b0a6c3bda09dcfa",
+      "mtime_ns": 1790046837779991178
+    },
+    "releases/chatgpt-project-sources/作业.zip": {
+      "sha256": "818d483cf719aeb1145ea97b551b2648913559ed1fca0be220ed41eff8ba42cc",
+      "mtime_ns": 1790046837825657006
+    },
+    "releases/chatgpt-project-sources/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md": {
+      "sha256": "c3113ff2f8b6a02c95e6e1cfc9db749773fd080d212b8331eb8177557d2f8912",
+      "mtime_ns": 1790667316670284572
+    },
+    "releases/chatgpt-project-sources/WF_WorkflowConstruction_PreTask1_31p_LaTeX_Source.zip": {
+      "sha256": "e85942c5137e678e4043b02e7231788ccd241261c1483a39657edc6ae648e633",
+      "mtime_ns": 1790395819989259800
+    },
+    "releases/chatgpt-project-sources/作业1轨迹数据预处理.ipynb": {
+      "sha256": "8601d1dfecaef062fef553992cc9774d3a0eb551751c70536f5b52f1343b158a",
+      "mtime_ns": 1790046837857485871
+    },
+    "releases/chatgpt-project-sources/SMART_CITIES_RESEARCH_PROTOCOL.md": {
+      "sha256": "19f9bb4670bc3a485b064854f3d035d2a50a192386be53396851443ee5654a3f",
+      "mtime_ns": 1790667316669904700
+    },
+    "releases/chatgpt-project-sources/Experiment_Report_吴博闻_10245102410.pdf": {
+      "sha256": "2a940be556262725acbe666bbe5b5f8a6b20e08d6838770f0b681bb17bf5cdd0",
+      "mtime_ns": 1790646462600980200
+    },
+    "releases/chatgpt-project-sources/WF_WorkflowConstruction_PreTask1_REVISED.pdf": {
+      "sha256": "0247a7755558169d3bd3397a93028c72a93f09e318c75f623f5813b96c1ed0f0",
+      "mtime_ns": 1790398678817922000
+    },
+    "releases/chatgpt-project-sources/SMART_CITIES_VISUAL_SYSTEM.md": {
+      "sha256": "9fbbd62543da77c7cecc31f4e07a95c2570c245693a9817d17652286340d291f",
+      "mtime_ns": 1790667316670987137
+    },
+    "releases/chatgpt-project-sources/任务3_LLM辅助评估清洗.ipynb": {
+      "sha256": "4ecffe64024e002c0cffe7830e18b5f6ded04cd5aa9dd645d6798fc9b0715add",
+      "mtime_ns": 1790046837856510290
+    },
+    "releases/chatgpt-project-sources/实验课1.pptx": {
+      "sha256": "cf5fdbdd0e116818f4bf195e8761dd55c4733443d7c360c986cf1cdfddfda075",
+      "mtime_ns": 1790046837793657038
+    },
+    "releases/chatgpt-project-sources/Experiment_Report_完整重构_源文件.zip": {
+      "sha256": "6c0d2cc5e3b65bccb0279e1dd7ad5e776b5a8fc098b159f34bfd5301242e4dcd",
+      "mtime_ns": 1790650928913019800
+    },
+    "releases/chatgpt-project-sources/Experiment_Report_P2_Exact.pdf": {
+      "sha256": "6fd543f5123ba4d67985193d5658802ae820c6585dc3f509071b8b2d39b323dd",
+      "mtime_ns": 1790046837787057358
+    },
+    "releases/chatgpt-project-sources/publication-plots.zip": {
+      "sha256": "b3d20aec75a8450e62effcb51399115c952fa6c3787c254fa09305e44a9c3041",
+      "mtime_ns": 1789286064101492100
+    },
+    "releases/chatgpt-project-sources/SMART_CITIES_REPORT_WRITING_GUIDE.md": {
+      "sha256": "49cb8ac101420a3262734b9ac246451fbb61b9716e8263db2dd8802bd78f5d55",
+      "mtime_ns": 1790667316670678523
+    },
+    "releases/chatgpt-project-sources/AGENTS.md": {
+      "sha256": "94f3d6d342efaa3d04945b4090e233fa1772e36cce43813ef2dfc9810ac2a4fd",
+      "mtime_ns": 1790667316671369041
+    },
+    "evidence/infrastructure/chatgpt-project-source-sync/sources.json": {
+      "sha256": "20677f6e5a6fef741265245dace52db4b7c7053e42035743e143e9d92a61a242",
+      "mtime_ns": 1790667421725341397
+    },
+    "evidence/infrastructure/chatgpt-project-source-sync/SOURCE_MANIFEST.md": {
+      "sha256": "e181ee2e5c6a7ef2afbf1d36bcce24143344c3d8c116b927dce42703911e3b4c",
+      "mtime_ns": 1790667421858763039
+    },
+    "evidence/infrastructure/chatgpt-project-source-sync/UPLOAD_INSTRUCTIONS.md": {
+      "sha256": "c00a2c74fcd03f27f7a6710eb3d3f6a79a9e4bfd4aea24a914383fd53f7abc7a",
+      "mtime_ns": 1790667316671900482
+    }
+  }
+}

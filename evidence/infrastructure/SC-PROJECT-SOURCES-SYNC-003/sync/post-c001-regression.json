@@ -1,0 +1,29 @@
+{
+  "purpose": "C-001 metadata consistency fix regression plus final governance navigation availability",
+  "commands": [
+    {
+      "command": [
+        ".venv/bin/python",
+        "-B",
+        "-m",
+        "pytest",
+        "evidence/infrastructure/chatgpt-project-source-sync/test_sync_sources.py",
+        "-q"
+      ],
+      "exit_code": 0,
+      "stdout": "...................                                                      [100%]\n19 passed in 0.32s\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "-B",
+        "evidence/infrastructure/SC-PROJECT-SOURCES-SYNC-003/governance/validate_governance.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"status\": \"PASS\", \"documents\": 5, \"links\": 105, \"protected_files\": 54, \"errors\": []}\n",
+      "stderr": ""
+    }
+  ],
+  "all_pass": true
+}

@@ -60,8 +60,13 @@ def live(run_id, enabled):
             'requests_and_cost': 'actual provider receipts; hidden backend requests and billing unknown'}
 
 
-def report_build(output):
-    """Rebuild the reviewed-data deliverables and create a new review archive."""
+def report_build(output, evidence_output=None):
+    """Compile the accepted Experiment source and package existing frozen inputs.
+
+    Report integration does not reopen numerical production or regenerate the
+    independently scoped Process draft. The package's read-only dependency
+    probe still checks exact frozen inputs before publishing a new archive.
+    """
     from .identity import read_identity
     target = output or ROOT/'task1/submission'/read_identity(ROOT)['review_package_name']
     if target.exists() or target.with_suffix('.zip.tmp').exists():
@@ -70,31 +75,24 @@ def report_build(output):
         raise ValueError('REPORT_BUILD_REQUIRES_REVIEW_ONLY_ZIP_FILENAME')
     if not (ROOT/'.git').exists() or not (ROOT/'task1/reports/build_reports.py').is_file():
         raise ValueError('REPORT_BUILD_REQUIRES_COMPLETE_REPOSITORY_AND_REPORT_SOURCES')
-    from .control import Journal
-    from .freezes import verified_task, verified_run
-    from .summarize import build as build_summary
-    from .figures import build as build_figures
-    current = read_json(EV/'current_runs.json')
-    Journal().invalidate_changed()
-    verified_task('production')
-    for topic in ('development', 'selection', 'confirmation', 'production'):
-        verified_run(current[topic])
-    build_summary()
-    build_figures(ROOT/'task1/figures/goal3')
-    subprocess.run([sys.executable, str(ROOT/'task1/reports/build_reports.py'), '--render'],
+    evidence = evidence_output or ROOT/'task1/evidence/goal3/report_build/accepted'
+    subprocess.run([sys.executable, str(ROOT/'task1/reports/build_reports.py'), '--render',
+                    '--evidence-output', str(evidence)],
                    cwd=ROOT, check=True)
-    subprocess.run([sys.executable, '-m', 'task1.goal3.package', '--build', str(target), '--probe'],
+    subprocess.run([sys.executable, '-m', 'task1.goal3.package', '--build', str(target), '--probe',
+                    '--receipt', str(evidence/'package/source_closure.json')],
                    cwd=ROOT, check=True)
-    Journal().invalidate_changed()
     return {'status': 'REVIEW_ONLY_REBUILT', 'package_sha256': digest(target),
-            'new_model_calls': 0, 'submission_status': 'NOT_READY', 'sent_to_teacher': False,
-            'independent_visual_and_isolated_full_package_review': 'REQUIRED_FOR_THIS_NEW_BUILD'}
+            'new_model_calls': 0, 'new_numerical_runs': 0, 'process_report_regenerated': False,
+            'submission_status': 'NOT_READY', 'sent_to_teacher': False,
+            'independent_review': 'REQUIRED; unchanged execution inputs may inherit specifically bound FULL evidence'}
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('mode', choices=['FULL_RECOMPUTE', 'REPORT_BUILD', 'LIVE'])
     parser.add_argument('--output', type=Path, help='new recompute directory, or new REVIEW_ONLY_*.zip for REPORT_BUILD')
+    parser.add_argument('--evidence-output', type=Path, help='REPORT_BUILD compile/render/package evidence directory')
     parser.add_argument('--run-id')
     parser.add_argument('--enable-live', action='store_true')
     args = parser.parse_args()
@@ -104,7 +102,7 @@ def main():
         result = full_recompute(args.output)
         print({'status': result['status'], 'new_model_calls': result['new_model_calls']})
     elif args.mode == 'REPORT_BUILD':
-        print(report_build(args.output))
+        print(report_build(args.output, args.evidence_output))
     else:
         print(live(args.run_id, args.enable_live))
 

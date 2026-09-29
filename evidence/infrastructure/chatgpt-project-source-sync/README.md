@@ -1,33 +1,25 @@
-# ChatGPT Project Sources Upload-Ready Bundle
+# ChatGPT Project Sources distribution
 
-Current synchronization: [SMART-CITIES-GOVERNANCE-PROCESS-REFERENCE-SYNC-002](../SMART-CITIES-GOVERNANCE-PROCESS-REFERENCE-SYNC-002/).
+当前同步记录：[SC-PROJECT-SOURCES-SYNC-003](../SC-PROJECT-SOURCES-SYNC-003/REVIEW_PACKET.md)。
+唯一结构化批准清单：[sources.json](sources.json)。程序按清单推导数量，角色、适用范围、版本、配对、批准范围与hash汇总在生成的 [SOURCE_MANIFEST.md](SOURCE_MANIFEST.md)。
 
-Historical migration record below: SMART-CITIES-CHATGPT-PROJECT-SOURCES-UPLOAD-BUNDLE-002.
-
-The [upload directory](../../../releases/chatgpt-project-sources/) contains exactly thirteen ordinary files. Every file is intended for upload, including AGENTS and the accepted pre-Task-1 Workflow Construction PDF/source archive. The user can select all files; internal metadata is stored here instead. This is repository preparation only, not an assertion that ChatGPT UI files have been uploaded.
-
-- [Upload Bundle Manifest](SOURCE_MANIFEST.md): thirteen PROJECT_SOURCE rows, canonical filenames, active paths, bundle paths, hashes, byte equality and verification date. Previous display names are historical mapping only.
-- [Upload instructions](UPLOAD_INSTRUCTIONS.md): user refresh procedure and exact upload list.
-- [Existing sync tool](../SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/sync_sources.py): upgraded in place; no second sync implementation.
-- [Existing validation tool](../SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/validate_sync.py): current bundle checks; results default to the current synchronization evidence directory above, without altering historical JSON. Use `--evidence-dir` with a new run's preflight record for future runs.
-
-## Operation
-
-Update the active repo sources first, then run from repository root:
+权威源 → 清单 → bundle。用户本轮在release提供的文件已先保存在本次received，仅本次受控导入允许反向迁移。Project Settings仅在UI维护。
 
 ```bash
-python3 evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/sync_sources.py
-python3 evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/sync_sources.py --check
-python3 evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/validate_sync.py
-find releases/chatgpt-project-sources -maxdepth 1 -type f -printf '%f\n' | sort
-test "$(find releases/chatgpt-project-sources -maxdepth 1 -type f | wc -l)" -eq 13
-sha256sum releases/chatgpt-project-sources/*
-git diff --check
+.venv/bin/python -B evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/sync_sources.py --plan
+.venv/bin/python -B evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/sync_sources.py
+.venv/bin/python -B evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/sync_sources.py --check
+.venv/bin/python -B -m pytest evidence/infrastructure/chatgpt-project-source-sync/test_sync_sources.py -q
+.venv/bin/python -B evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/validate_sync.py --index
 ```
 
-Before commit, stage the intended files and use `validate_sync.py --index` to compare staged source and bundle bytes as well. All tool output/metadata remains outside the upload directory.
+`--plan`和`--check`只读；`--check`不创建或刷新manifest。经批准的active修改须同步更新sources.json对应版本/hash。写同步先校验全部来源、路径和hash，再暂存并受控替换bundle和生成metadata；失败保留恢复记录并回滚已替换文件。未知extra一律拒绝，不默认删除。重复运行无内容变化则不修改mtime或日期。`--index`用于暂存后核验Git索引。
 
-The sync tool validates every source and the approved original Skill archive before copying or cleaning. It copies bytes, deletes only direct ordinary files outside the exact allowlist, and writes the internal manifest. It does not modify active sources. Unexpected subdirectories/symlinks cause a failure before mutation; it does not recursively delete them. The original Skill ZIP must already exist and match the approved hash and installed effective members; it is never regenerated or silently replaced by the metadata-sanitized archive.
+publication-plots保留原archive例外，固定hash和installed effective members双重验证；其他文件均从canonical active路径分发。不执行Notebook或实验、不修改Process原件、不重新打包Skill。
+
+UI按[差异更新说明](UPLOAD_INSTRUCTIONS.md)操作，仅替换实际变化文档，保留未变有效资料。bundle就绪不代表UI已更新。
+
+以下仅是历史迁移记录，数量、当时清理行为和测试结果均不描述当前工具。
 
 ## Historical migration: SMART-CITIES-CHATGPT-PROJECT-SOURCES-UPLOAD-BUNDLE-002
 

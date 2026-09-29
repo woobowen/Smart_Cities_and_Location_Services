@@ -1,0 +1,64 @@
+--- received/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md
++++ docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md
+@@ -1,9 +1,9 @@
+ # 《智慧城市与位置服务》Workflow Interaction Evidence Protocol
+ 
+-Version: **v2.5**\
++Version: **v2.6**\
+ Status: **ACTIVE / LONG-TERM RULE**\
+ Purpose: **Process Report · Workflow Construction · Experiment Decision Process · Human–AI Interaction Evidence**  
+-Revision: **2026-09-29 · Report narrative / evidence boundary sync**  
++Revision: **2026-09-29 · Project-wide live evidence / explicit Evidence Master appointment**  
+ Canonical repository path: `docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md`
+ 
+ 本协议专门约束：真实历史恢复、原始聊天取证、Narrative规划、Evidence设计、最小必要编辑、对话精修/重构、Simulation执行、原始研究对话证据采集、截图、审核、Evidence Lock、Block/Section级LaTeX同步与最终综合图制作。
+@@ -15,6 +15,8 @@
+ ---
+ 
+ 本协议负责 Evidence authenticity / production 及 Process Report 叙事的真实归属；研究治理见 [Research Protocol](../research/SMART_CITIES_RESEARCH_PROTOCOL.md)，一般报告组织、论证与编辑见 [Report Writing Guide](../report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md)，视觉语法见 [Visual System](../design-system/SMART_CITIES_VISUAL_SYSTEM.md)，工程实现见 [AGENTS](../../AGENTS.md)。Process 第一人称与历史处理继续以本协议 §16.1—16.2 为准。Project Settings 由用户在 UI 维护。
++
++本协议适用于项目每项正式研究的真实互动证据。后续Process继承共同基础并记录当前任务新增演化，按Report Writing Guide §12组织；继承不得扩大原证据的来源、适用范围或Lock状态。
+ 
+ ## 1. 核心目标
+ 
+@@ -149,11 +151,11 @@
+ 
+ ## 4. 三角色对话体系
+ 
+-本项目采用三个明确分工的对话角色。
++本协议区分以下三个Evidence生产职责角色；这不是对每项研究/执行Multi-Agent角色数量的固定要求，具体任务的实质工作流按Research Protocol §C设计。
+ 
+ ### 4.1 Evidence Master / Master Planning Conversation
+ 
+-**当前长期规划对话**是唯一的Evidence构建“大脑”，长期负责：
++**由用户明确指定的Evidence Master / Master Planning Conversation**是Evidence构建的负责入口，在指定范围内长期负责：
+ 
+ - Historical Question Inventory；
+ - Historical Retrieval Card；
+@@ -182,7 +184,7 @@
+ - Part I / Part II Evidence整合；
+ - 内部Evidence Plan逻辑维护。
+ 
+-即使后续Experiment 1、Experiment 2或其他正式任务完成，**Evidence构建大脑仍由该Master Planning Conversation承担**，除非用户明确迁移职责。
++该职责在用户指定的范围内持续，由用户明确决定是否迁移。新对话仅仅读到“当前长期规划对话”不构成自动任命，也不能据此接管Evidence Master或宣布新的Lock。
+ 
+ ### 4.2 Research Conversation
+ 
+@@ -330,7 +332,7 @@
+ 
+ 只要原始聊天本身可用，就不应模拟重写。
+ 
+-尤其从Experiment 1正式开始以后，应尽量：
++每项正式研究都应尽量：
+ 
+ > **实时保存Original Evidence，而不是事后重构。**
+ 
+@@ -1213,7 +1215,7 @@
+ 
+ ## 28. 正式Research Conversation实时证据机制
+ 
+-从Experiment 1正式研究开始，优先实时保存Original Evidence。
++每项正式研究从开始时即优先实时保存Original Evidence；既有任务的历史起点不限制后续任务的适用范围。
+ 
+ 推荐：
+ 

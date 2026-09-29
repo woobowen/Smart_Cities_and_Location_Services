@@ -1,0 +1,62 @@
+{
+  "initial_failure": {
+    "command": [
+      "bash",
+      "build.sh"
+    ],
+    "exit_code": 1,
+    "cause": "placeins.sty missing",
+    "kpsewhich_exit_code": 1
+  },
+  "installed_dependencies": [
+    {
+      "name": "placeins",
+      "kind": "TeX Live package",
+      "scope": "temporary TeX user tree, copied to project-isolated .venv/texmf",
+      "global_install": false,
+      "version": "2.2",
+      "texlive_revision": "77682",
+      "sty_path": ".venv/texmf/tex/latex/placeins/placeins.sty",
+      "sty_sha256": "e6c6c01e0c057e360c07238cd765117e5d415c26c2ea1cdf141b7ddfaf151b0c",
+      "package_metadata_sha256": "ad31c7071d9eb673a8a3243520139910e699290d25c5d0eb3dbd2aa0745523d1",
+      "upstream_container_sha512": "d1118e03582a9ed993ad610e16084e6b6ab85e95182eb01894edd823be9ef10d0bcd5786a85f1f6ab920da61dc85a068a7286c2f669df5e34f65218d0704118a",
+      "metadata_copy": "dependency-provenance/placeins.tlpobj.txt",
+      "actual_kpsewhich_command": [
+        "kpsewhich",
+        "placeins.sty"
+      ],
+      "actual_kpsewhich_exit_code": 0,
+      "actual_kpsewhich_result": "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/texmf/tex/latex/placeins/placeins.sty"
+    },
+    {
+      "name": "needspace",
+      "kind": "TeX Live package",
+      "scope": "temporary TeX user tree, copied to project-isolated .venv/texmf",
+      "global_install": false,
+      "version": "1.3e",
+      "texlive_revision": "77682",
+      "sty_path": ".venv/texmf/tex/latex/needspace/needspace.sty",
+      "sty_sha256": "7ba1b3fbfa0c29b103f531acdbd8d1e73cf50d543d48c0b3fcc99beb59ba20f9",
+      "package_metadata_sha256": "ed09a213c1a5cdd1cfc8c11c27a5434291c0742c8cb21af721c6ef6e02459d3c",
+      "upstream_container_sha512": "e77a8261444cde90394b4de0e53702f09420ea869c68b30c12f27db2f5ed2aaa1a9b5e8e0bd94bb1592b567d3176f5a37a5e60516c837433277f224e5510f0f6",
+      "metadata_copy": "dependency-provenance/needspace.tlpobj.txt",
+      "actual_kpsewhich_command": [
+        "kpsewhich",
+        "needspace.sty"
+      ],
+      "actual_kpsewhich_exit_code": 0,
+      "actual_kpsewhich_result": "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/texmf/tex/latex/needspace/needspace.sty"
+    }
+  ],
+  "global_environment_modified": false,
+  "command": [
+    "tlmgr --usermode --usertree <temporary>/texmf init-usertree",
+    "tlmgr --usermode --usertree <temporary>/texmf --repository https://jp.mirrors.cicku.me/ctan/systems/texlive/tlnet install placeins needspace"
+  ],
+  "fonts_added": [],
+  "python_packages_added": [],
+  "system_packages_added": [],
+  "configuration_files_modified": [],
+  "installation_stdout_capture": "Original installation stdout was not separately saved in a repository log; do not reconstruct it. Executing report agent recorded the install command and success in its tool interaction. Package metadata and fresh kpsewhich/installed-file hashes are independently captured here.",
+  "installation_scope": "Two TeX package runtime trees copied from the temporary user tree into existing project .venv/texmf; no pip/apt/font installation or persistent shell/font/TLS configuration."
+}

@@ -12,7 +12,7 @@
 
 输出目录必须是新目录。这个入口从原始 JSON 和保存的真实历史提议重新执行处理、审核和画图；历史提议重放不算新的模型实验，默认新增记录级模型调用为 0。两份完成版 Notebook 也可以分别 Restart Kernel → Run All。基础 Notebook 重算参数、顺序、构造反例和全量生产；系统 Notebook 重算历史四模式候选及其选择。分别运行入口与 Notebook 会发生明确记录的重复复算。
 
-`LIVE` 需要显式开关、独立的新 run ID 和原有授权认证，不是默认路径。`REPORT_BUILD` 从核验结果重建摘要、图、报告和实际待审 ZIP，拒绝覆盖已有 ZIP；新产物仍需独立验收。完整命令见 [实验一 README](../../README.md)，实际执行证据见 [当前审阅入口](../../evidence/goal3/REVIEW_PACKET.md)。
+`LIVE` 需要显式开关、独立的新 run ID 和原有授权认证，不是默认路径。`REPORT_BUILD` 从已验收章节源重建Experiment并生成新REVIEW_ONLY ZIP；保持冻结数值、历史图与Process不变，拒绝覆盖已有 ZIP；新产物仍需独立验收。完整命令见 [实验一 README](../../README.md)，实际执行证据见 [当前审阅入口](../../evidence/goal3/REVIEW_PACKET.md)。
 
 ## 最终方法是什么
 

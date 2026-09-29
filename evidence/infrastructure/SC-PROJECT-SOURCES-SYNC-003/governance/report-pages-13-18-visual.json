@@ -1,0 +1,316 @@
+{
+  "task": "SC-PROJECT-SOURCES-SYNC-003",
+  "reviewer_context": "/root/governance",
+  "role": "A/B governance implementer assisting the report visual comparison; this file is not the independent C task review",
+  "performed_at": "2026-09-29T15:43:19.867919+08:00",
+  "method": "真实调用view_image以detail=original逐张打开approved与clean-rebuilt第13–18页，共12张完整200dpi图；逐页比较文字/表图/几何/截断/缺字。",
+  "supplemental_check": "完成目视后仅补核PNG尺寸；ImageChops.difference在六对图均非空，故不声明逐像素相同。差异像素不能替代目视或被用于伪造目视PASS。",
+  "pages": [
+    {
+      "pdf_page": 13,
+      "printed_page": "11",
+      "content": "§4.2 四种运行方式分别能看到什么；表8决策条件、表9四模式结果与实际计算量。",
+      "observations": [
+        "两版表8的四模式/可见信息/动作三列及换行对应，右列最长文本未越界。",
+        "表9开发与阶段评估两组各四行均完整；47/72、1,080、954等读数和脚注位置对应。",
+        "段落、页眉、页码及表9下方84次派发说明完整，无缺字框或页面底部截断。"
+      ],
+      "views": [
+        {
+          "variant": "approved",
+          "path": "report/render200/approved/page-13.png",
+          "sha256": "2f93972e43289652db2d1294a0291889ea226679e1123a9751ce20bbeadaabbd",
+          "pixel_size": [
+            1654,
+            2339
+          ],
+          "png_dpi": [
+            199.9996,
+            199.9996
+          ],
+          "actually_opened": true,
+          "tool": "view_image",
+          "detail": "original",
+          "view_scope": "完整单页；不是联系表或缩略图"
+        },
+        {
+          "variant": "clean-rebuilt",
+          "path": "report/render200/clean-rebuilt/page-13.png",
+          "sha256": "3aef552e2b59e3a7f66946dea087622ca8ffa22e04bee6c7df5fbbdde5294b2f",
+          "pixel_size": [
+            1654,
+            2339
+          ],
+          "png_dpi": [
+            199.9996,
+            199.9996
+          ],
+          "actually_opened": true,
+          "tool": "view_image",
+          "detail": "original",
+          "view_scope": "完整单页；不是联系表或缩略图"
+        }
+      ],
+      "comparison": "目视未发现内容、分页或构图的实质变化；不声明逐像素或PDF字节相等。",
+      "visible_missing_glyphs": false,
+      "visible_clipping_or_overlap": false,
+      "status": "VISUAL_MATCH_WITHIN_INSPECTED_SCOPE"
+    },
+    {
+      "pdf_page": 14,
+      "printed_page": "12",
+      "content": "§4.3 示范记忆是否影响建议与结果；表10；§4.4 局部检查合格，为什么仍未采用。",
+      "observations": [
+        "表10的96/96、60/241、49/241三项及对应文字均可读；第一列“条目”换行在两版一致。",
+        "log(1+x)式、记录7764的参数与40.215/69.145/4.826描述、下段42.546和记录10232示例对应。",
+        "两级小节、加粗判断、图6引用及末段均完整，无新增断页或截断。"
+      ],
+      "views": [
+        {
+          "variant": "approved",
+          "path": "report/render200/approved/page-14.png",
+          "sha256": "08d05dda8d7e8b42b1102ccf5a3c10ba7de5f9d82b1299efb12e07895d69d03e",
+          "pixel_size": [
+            1654,
+            2339
+          ],
+          "png_dpi": [
+            199.9996,
+            199.9996
+          ],
+          "actually_opened": true,
+          "tool": "view_image",
+          "detail": "original",
+          "view_scope": "完整单页；不是联系表或缩略图"
+        },
+        {
+          "variant": "clean-rebuilt",
+          "path": "report/render200/clean-rebuilt/page-14.png",
+          "sha256": "68b8be3a4c79506ee0cdef3ef33497fd4e345c2a480431015d695fffa2e2bdee",
+          "pixel_size": [
+            1654,
+            2339
+          ],
+          "png_dpi": [
+            199.9996,
+            199.9996
+          ],
+          "actually_opened": true,
+          "tool": "view_image",
+          "detail": "original",
+          "view_scope": "完整单页；不是联系表或缩略图"
+        }
+      ],
+      "comparison": "目视未发现内容、分页或构图的实质变化；不声明逐像素或PDF字节相等。",
+      "visible_missing_glyphs": false,
+      "visible_clipping_or_overlap": false,
+      "status": "VISUAL_MATCH_WITHIN_INSPECTED_SCOPE"
+    },
+    {
+      "pdf_page": 15,
+      "printed_page": null,
+      "content": "横向图6：参数能执行，为什么仍不采用？记录7764建议核验结构图。",
+      "observations": [
+        "两版均为2339×1654横页，图题、原始记录/参考方案/LLM参数提议/候选方案节点位置对应。",
+        "顶部独立原始参考箭头、蓝色输入分支、核验面板、判断菱形和“不采用该候选”分支清楚且未遮盖标签。",
+        "4.826≤5、122/122、40.215→69.145及下方28.931工作米可读；虚线反馈机制说明和底部图6两行图注完整。",
+        "两版均无普通纵页的居中页脚编号；未发现重建新引入的页面元素缺失或图边界裁切。"
+      ],
+      "views": [
+        {
+          "variant": "approved",
+          "path": "report/render200/approved/page-15.png",
+          "sha256": "f7c147d02164d0001777acdc065f51429daf5f184d6b19cfab5f90907f40c724",
+          "pixel_size": [
+            2339,
+            1654
+          ],
+          "png_dpi": [
+            199.9996,
+            199.9996
+          ],
+          "actually_opened": true,
+          "tool": "view_image",
+          "detail": "original",
+          "view_scope": "完整单页；不是联系表或缩略图"
+        },
+        {
+          "variant": "clean-rebuilt",
+          "path": "report/render200/clean-rebuilt/page-15.png",
+          "sha256": "3c229a9abeaf41d6288b9d2821c0e09931dfa42b50bbc1e0ef8d8cae44e34976",
+          "pixel_size": [
+            2339,
+            1654
+          ],
+          "png_dpi": [
+            199.9996,
+            199.9996
+          ],
+          "actually_opened": true,
+          "tool": "view_image",
+          "detail": "original",
+          "view_scope": "完整单页；不是联系表或缩略图"
+        }
+      ],
+      "comparison": "目视未发现内容、分页或构图的实质变化；不声明逐像素或PDF字节相等。",
+      "visible_missing_glyphs": false,
+      "visible_clipping_or_overlap": false,
+      "status": "VISUAL_MATCH_WITHIN_INSPECTED_SCOPE"
+    },
+    {
+      "pdf_page": 16,
+      "printed_page": "14",
+      "content": "§4.5 反例揭示了哪些隐含假设；表11已知答案反例与对应认识。",
+      "observations": [
+        "表11七项检查问题均显示，三列文字换行对应；零值/缺失、隐藏断点、不同clean自证等末行未遗漏。",
+        "有限线段行的√2、4/5与100%、0.447214等数学与数字可读，无替代方块或破损符号。",
+        "表下关于无依据插值、AI批判引用[1]及下一节衔接段落完整；留白和页码位置相同。"
+      ],
+      "views": [
+        {
+          "variant": "approved",
+          "path": "report/render200/approved/page-16.png",
+          "sha256": "0b061641f0b71823b024a7a0831c122f9792eff85ac2c4648143b24933639092",
+          "pixel_size": [
+            1654,
+            2339
+          ],
+          "png_dpi": [
+            199.9996,
+            199.9996
+          ],
+          "actually_opened": true,
+          "tool": "view_image",
+          "detail": "original",
+          "view_scope": "完整单页；不是联系表或缩略图"
+        },
+        {
+          "variant": "clean-rebuilt",
+          "path": "report/render200/clean-rebuilt/page-16.png",
+          "sha256": "4c0bf64bcd1560a32302243998590d64c8355a8268ed7a1a0f7a1431e6f9ce92",
+          "pixel_size": [
+            1654,
+            2339
+          ],
+          "png_dpi": [
+            199.9996,
+            199.9996
+          ],
+          "actually_opened": true,
+          "tool": "view_image",
+          "detail": "original",
+          "view_scope": "完整单页；不是联系表或缩略图"
+        }
+      ],
+      "comparison": "目视未发现内容、分页或构图的实质变化；不声明逐像素或PDF字节相等。",
+      "visible_missing_glyphs": false,
+      "visible_clipping_or_overlap": false,
+      "status": "VISUAL_MATCH_WITHIN_INSPECTED_SCOPE"
+    },
+    {
+      "pdf_page": 17,
+      "printed_page": "15",
+      "content": "第5章 从单项到组合：改进方案的选择；§5.1及表12。",
+      "observations": [
+        "蓝色章号5、章标题和§5.1的位置及分级保持；240条记录/23,950原始点说明与表12引用完整。",
+        "表12的十一方案行、六列和末行过滤+DP10均完整，数值列对齐；表下注释未与数值重叠。",
+        "表后关于6,704覆盖点、107条改善与65至0的段落，以及短片段局限段落均可读，无底部截断。"
+      ],
+      "views": [
+        {
+          "variant": "approved",
+          "path": "report/render200/approved/page-17.png",
+          "sha256": "54c929c803d83897570ded9acc7d288c2068253902a188561a4c377924176cc1",
+          "pixel_size": [
+            1654,
+            2339
+          ],
+          "png_dpi": [
+            199.9996,
+            199.9996
+          ],
+          "actually_opened": true,
+          "tool": "view_image",
+          "detail": "original",
+          "view_scope": "完整单页；不是联系表或缩略图"
+        },
+        {
+          "variant": "clean-rebuilt",
+          "path": "report/render200/clean-rebuilt/page-17.png",
+          "sha256": "0c8abd751427d4d6873375512e4bafb071a59a1d78b956ba4c6ec0a8ae22fefd",
+          "pixel_size": [
+            1654,
+            2339
+          ],
+          "png_dpi": [
+            199.9996,
+            199.9996
+          ],
+          "actually_opened": true,
+          "tool": "view_image",
+          "detail": "original",
+          "view_scope": "完整单页；不是联系表或缩略图"
+        }
+      ],
+      "comparison": "目视未发现内容、分页或构图的实质变化；不声明逐像素或PDF字节相等。",
+      "visible_missing_glyphs": false,
+      "visible_clipping_or_overlap": false,
+      "status": "VISUAL_MATCH_WITHIN_INSPECTED_SCOPE"
+    },
+    {
+      "pdf_page": 18,
+      "printed_page": "16",
+      "content": "§5.2方向条件规则；§5.3 DP组合；表13相同P输入上的容差调整。",
+      "observations": [
+        "0<Δt≤30秒条件式及35/60度规则在两版清晰；§5.2末尾加粗的开发支持限制保留。",
+        "表13四行均完整，+1,946/−1,480/+2,010/−1,501及0/173/0/178列清楚，负号未缺字。",
+        "§5.3标题、完全相同上游/容差为5的加粗条件及表后两段文字对应，无新增换页、图表裁切或页脚碰撞。"
+      ],
+      "views": [
+        {
+          "variant": "approved",
+          "path": "report/render200/approved/page-18.png",
+          "sha256": "bd7a058d6ee78da1a41d46d731ee4743fab4916699d0d5e2eeeae8498139d3a3",
+          "pixel_size": [
+            1654,
+            2339
+          ],
+          "png_dpi": [
+            199.9996,
+            199.9996
+          ],
+          "actually_opened": true,
+          "tool": "view_image",
+          "detail": "original",
+          "view_scope": "完整单页；不是联系表或缩略图"
+        },
+        {
+          "variant": "clean-rebuilt",
+          "path": "report/render200/clean-rebuilt/page-18.png",
+          "sha256": "9aa1b56af5fc12edad6772a946b053520ea7e90cfa20e73b0ab511b18660f182",
+          "pixel_size": [
+            1654,
+            2339
+          ],
+          "png_dpi": [
+            199.9996,
+            199.9996
+          ],
+          "actually_opened": true,
+          "tool": "view_image",
+          "detail": "original",
+          "view_scope": "完整单页；不是联系表或缩略图"
+        }
+      ],
+      "comparison": "目视未发现内容、分页或构图的实质变化；不声明逐像素或PDF字节相等。",
+      "visible_missing_glyphs": false,
+      "visible_clipping_or_overlap": false,
+      "status": "VISUAL_MATCH_WITHIN_INSPECTED_SCOPE"
+    }
+  ],
+  "overall": "六对页均未见重建引入的内容、换页或构图实质变化；没有修改报告或已验收参考。",
+  "limits": [
+    "本记录只覆盖PDF物理页13–18，不覆盖其他页。",
+    "这是成品重建视觉对照，不重新验算历史实验、不赋予Evidence Lock或最终报告验收。"
+  ]
+}

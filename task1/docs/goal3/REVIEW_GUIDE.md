@@ -31,11 +31,11 @@ Task：`SC-LAB1-G3-CLOSEOUT-001`；Parent Goal：`SC-LAB1-G3-FINAL-001`。本指
 
 | 要点 | 代码 / 单元 | 结果与报告入口 |
 |---|---|---|
-| 输入、时间与坐标 | [coordinates.py](../../workflow/coordinates.py)：`working_xy`、`conditional_adapter`；B 2–3，代码 cell `lab1-f7fe7424c6193f77` | [冻结合同](../../config/goal3/contract.json)；Experiment“数据、任务与结论边界”；TD-01 |
-| S：异常边切分，再按点数/长度过滤 | [geometry.py](../../workflow/geometry.py)：`split_trajectory`、`filter_segments`；B 5，`lab1-70227bc1defb860d` | Experiment“ S：分段与短段过滤”；[全量过滤原因](../../evidence/goal3/full_filter_attribution.json)；TD-02 |
-| D：一次完整标记、同时删除 | 同文件 `direction_candidates`、`denoise_trajectory`；B 7，`lab1-9d637e0bfc2f7ff6` | 首尾、必要方向不可算窗口保留并标记；不迭代至收敛；下游重算特征。Experiment“D：方向异常候选的单次同时删除”；TD-03 |
-| P：有限线段 Douglas–Peucker | 同文件 `point_segment_distance`、`douglas_peucker_indices`；B 9，`lab1-5edb2858a06036d2` | Experiment“P：有限线段的 DP 简化”；P 的 5 工作米约束仅覆盖它的实际输入；TD-04 |
-| 共同评价与点去向 | [g2_metrics.py](../../workflow/g2_metrics.py)：`common_reference_metrics`、`record_metrics`；[selection.py](../../goal3/selection.py)：`paired`；B 12、21–22，生产 cell `lab1-bd932b47abf15ad3` | Experiment“评价：共同参考先于候选”；[点去向与覆盖图](../../figures/goal3/point_fates_and_coverage.pdf)；[原生数据](../../figures/goal3/figure_data.json)；TD-05、TD-17 |
+| 输入、时间与坐标 | [coordinates.py](../../workflow/coordinates.py)：`working_xy`、`conditional_adapter`；B 2–3，代码 cell `lab1-f7fe7424c6193f77` | [冻结合同](../../config/goal3/contract.json)；Experiment §1（物理页3–4）及附录A.1（25）；TD-01 |
+| S：异常边切分，再按点数/长度过滤 | [geometry.py](../../workflow/geometry.py)：`split_trajectory`、`filter_segments`；B 5，`lab1-70227bc1defb860d` | Experiment §2.1（物理页5）；[全量过滤原因](../../evidence/goal3/full_filter_attribution.json)；TD-02 |
+| D：一次完整标记、同时删除 | 同文件 `direction_candidates`、`denoise_trajectory`；B 7，`lab1-9d637e0bfc2f7ff6` | 首尾、必要方向不可算窗口保留并标记；不迭代至收敛；下游重算特征。Experiment §2.2（物理页5）；TD-03 |
+| P：有限线段 Douglas–Peucker | 同文件 `point_segment_distance`、`douglas_peucker_indices`；B 9，`lab1-5edb2858a06036d2` | Experiment §2.3（物理页6）；P 的 5 工作米约束仅覆盖它的实际输入；TD-04 |
+| 共同评价与点去向 | [g2_metrics.py](../../workflow/g2_metrics.py)：`common_reference_metrics`、`record_metrics`；[selection.py](../../goal3/selection.py)：`paired`；B 12、21–22，生产 cell `lab1-bd932b47abf15ad3` | Experiment §2.4（物理页6–7）；[点去向与覆盖图](../../figures/goal3/point_fates_and_coverage.pdf)；[原生数据](../../figures/goal3/figure_data.json)；TD-05、TD-17 |
 
 共同参考在原始输入上固定 30 秒/400 工作米窗口，不先按候选过滤。点必须被同一身份点或同一固定窗口内、原索引包围它的输出边表示；不借别处最近折线或跨窗口外推。**共同覆盖点、显式保留点、P 省去点与真实噪声准确率是不同量**。共同误差只在可覆盖点上有定义；空分母保留 `null` 与原因，不填零。P 专项比较还要求完整 P 输入相同，不能将 S/D 的覆盖变化写成 P 压缩收益。
 
@@ -51,9 +51,9 @@ A 提出有边界的计划并消费真实比较，B 实际运行与修复，C �
 
 | 要点 | 可执行实现与 Notebook 定位 | 实验 / 审核证据 |
 |---|---|---|
-| 参数与六种顺序 | [g2_experiments.py](../../workflow/g2_experiments.py)；[g2_pipeline.py](../../workflow/g2_pipeline.py)：`run_record`；B 13–18，执行 cell `lab1-62885400114d7d2b`、顺序 cell `lab1-20337038d9968da1` | [G2 阶段分析](../goal2/STAGE_ANALYSIS.md)；Experiment“历史 G2 实验：参数、顺序与单项候选”；TD-06、TD-07 |
+| 参数与六种顺序 | [g2_experiments.py](../../workflow/g2_experiments.py)；[g2_pipeline.py](../../workflow/g2_pipeline.py)：`run_record`；B 13–18，执行 cell `lab1-62885400114d7d2b`、顺序 cell `lab1-20337038d9968da1` | [G2 阶段分析](../goal2/STAGE_ANALYSIS.md)；Experiment §3（物理页8–11）；TD-06、TD-07 |
 | 四模式与模型调用 | [g2_modes.py](../../workflow/g2_modes.py)：`run_batch_episode`；[reproduce.py](../../goal3/reproduce.py)：`recompute_historical`；L 4–6，执行 cell `lab1-c8644f76db1f9bfe` | `search-only / llm-only / llm+search / llm+memory+search`；[G2 current_runs](../../evidence/goal2/current_runs.json) 和 [四模式图](../../figures/goal2/four_mode_paired_results.pdf)；TD-09 |
-| 示范记忆与只读留出 | [g2_memory.py](../../workflow/g2_memory.py)：`build_snapshot`、`FrozenMemory`、`consumption`；L 9–10，cell `lab1-95890264cce459cd` | [消费表](../../evidence/goal2/tables/memory_consumption.csv)、[独立模式比较](../../evidence/goal2/tables/memory_independent_mode_comparison.csv)；Experiment“记忆被使用，不等于产生因果收益”；TD-10 |
+| 示范记忆与只读留出 | [g2_memory.py](../../workflow/g2_memory.py)：`build_snapshot`、`FrozenMemory`、`consumption`；L 9–10，cell `lab1-95890264cce459cd` | [消费表](../../evidence/goal2/tables/memory_consumption.csv)、[独立模式比较](../../evidence/goal2/tables/memory_independent_mode_comparison.csv)；Experiment §4.3（物理页14）；TD-10 |
 | 真正拒绝错误与修复恢复 | [g2_metrics.py](../../workflow/g2_metrics.py)：`review_record`；[control.py](../../goal3/control.py)：`Journal`；[freezes.py](../../goal3/freezes.py)：`verified_run`；L 2–3、13–14 | [C08 失败](../../evidence/goal3/independent_c/G3-C08_failure.json) → [修复影响](../../evidence/goal3/repairs/C08_impact.json) → [独立关闭](../../evidence/goal3/independent_c/G3-C08_closure.json)；[实际工作流及 draw.io 源](../../figures/goal3/goal3_actual_workflow.drawio)；Process“真实缺陷如何进入修复与恢复”；TD-13 |
 | 单项、组合、选择与最终确认 | [selection.py](../../goal3/selection.py)：`paired`、`aggregate_pairs`、`choose`；[freezes.py](../../goal3/freezes.py)：`selection_decision`、`release_decision`；L 14，cell `lab1-16c26970dd41618a` | [A3 决定](../../evidence/goal3/A3_DECISION.json)、[选择决定](../../evidence/goal3/selection_decision.json)、[最终冻结](../../evidence/goal3/final_freeze.json)、[发布策略决定](../../evidence/goal3/release_decision.json)；[裁决路径图](../../figures/goal3/incumbent_decision_path.pdf)；TD-14—TD-16 |
 
@@ -68,21 +68,23 @@ A 提出有边界的计划并消费真实比较，B 实际运行与修复，C �
 
 ## IV. 正式成果与收尾
 
-两份报告职责独立：Experiment Report 解释最终方法、实验与限制；Process Report 保留 Part I Workflow Construction 和 Part II Experiment Decision Process，已有技术事实送审内容与正式互动呈现的完成状态分开。姓名“吴博闻”、学号字符串“10245102410”由本轮直接授权提供，当前元数据源为 [assignment.json](../../config/assignment.json)。2026-09-28 是报告修订日期，不改变旧实验/冻结时间。
+两份报告职责独立：Experiment Report 解释最终方法、实验与限制；Process Report 保留 Part I Workflow Construction 和 Part II Experiment Decision Process，已有技术事实送审内容与正式互动呈现的完成状态分开。姓名“吴博闻”、学号字符串“10245102410”由本轮直接授权提供，当前元数据源为 [assignment.json](../../config/assignment.json)。当前Experiment修订日期为2026-09-29；Process沿用2026-09-28版本，不改变旧实验/冻结时间。
 
 | 成果 / 检查对象 | 当前入口 | 需要核查的内容 |
 |---|---|---|
-| 两份正式文档送审版本 | [Experiment PDF](../../reports/experiment1/experiment1.pdf) / [XeLaTeX](../../reports/experiment1/experiment1.tex)；[Process PDF](../../reports/process1/process1.pdf) / [XeLaTeX](../../reports/process1/process1.tex) | 封面、目录、正文、公式、图表、引用与负结果；Process 的互动证据缺项不能靠删除标识解决。 |
-| 最终 PDF 页面与文本 | [Experiment 分页文本](../../evidence/goal3/report_build/experiment1_pages.txt)；[Process 分页文本](../../evidence/goal3/report_build/process1_pages.txt)；[build_receipt](../../evidence/goal3/report_build/build_receipt.json) | 按 manifest 打开对应报告每个 200 dpi 页面；图像 hash 或缩略图不代替逐页目视。导航物理页码以当前教师映射为准。 |
-| Notebook 和实际复算 | B / L；[运行说明](../../README.md)；[reproduce.py](../../goal3/reproduce.py)；本次 [收尾记录目录](../../evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/) | 逐一查看仓库与同一最终 ZIP 解压目录的新内核 FULL 回执；源码、输入和完整依赖的 hash 必须绑定有效内容。REPORT_BUILD、静态依赖 probe 和历史回执不替代新运行。 |
-| 图的原始数据与可编辑源 | [figure_data.json](../../figures/goal3/figure_data.json)、[figure_manifest.json](../../figures/goal3/figure_manifest.json)、[figures.py](../../goal3/figures.py)、[draw.io](../../figures/goal3/goal3_actual_workflow.drawio) | 图中数据、caption 和原生数据一致；保持 P2 / XeLaTeX；技术图不是原生聊天 Evidence。 |
+| 两份正式文档送审版本 | [Experiment PDF](../../reports/experiment1/experiment1.pdf) / [当前章节源](../../reports/experiment1/Experiment_Report.tex)（25页已验收重构版）；[Process PDF](../../reports/process1/process1.pdf) / [XeLaTeX](../../reports/process1/process1.tex) | 封面、目录、正文、公式、图表、引用与负结果；Process 的互动证据缺项不能靠删除标识解决。 |
+| 最终 PDF 页面与文本 | [Experiment 分页文本](../../../evidence/infrastructure/SC-PROJECT-SOURCES-SYNC-003/report/normal-build-2/experiment1_pages.txt)；[Process 分页文本](../../evidence/goal3/report_build/process1_pages.txt)；[Experiment构建记录](../../../evidence/infrastructure/SC-PROJECT-SOURCES-SYNC-003/report/normal-build-2/build_receipt.json)；[Process历史构建记录](../../evidence/goal3/report_build/build_receipt.json) | 按 manifest 打开对应报告每个 200 dpi 页面；图像 hash 或缩略图不代替逐页目视。导航物理页码以当前教师映射为准。 |
+| Notebook 和实际复算 | B / L；[运行说明](../../README.md)；[reproduce.py](../../goal3/reproduce.py)；本次 [收尾记录目录](../../evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/) | 历史仓库/解压目录FULL保留原真实执行身份；本轮按具体未变成员hash继承，命令路由的变化另作隔离回归。REPORT_BUILD和静态probe不是本轮FULL。 |
+| 历史G3图的原始数据与可编辑源 | [figure_data.json](../../figures/goal3/figure_data.json)、[figure_manifest.json](../../figures/goal3/figure_manifest.json)、[figures.py](../../goal3/figures.py)、[draw.io](../../figures/goal3/goal3_actual_workflow.drawio) | 图中数据、caption 和原生数据一致；保持 P2 / XeLaTeX；技术图不是原生聊天 Evidence。 |
 | 互动来源和工程交接 | [Technical Handoff](TECHNICAL_HANDOFF.md)；[Interaction Handoff](INTERACTION_HANDOFF.md)；[本次 Evidence 盘点](../../evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/b_handoff/evidence_inventory.md) | 原生截图/完整上下文、已批准 spec、Evidence/Block Lock 分别核实；现有模型 JSON、授权文本与工程回执不自动补齐这些条件。 |
-| 新待审包与当前版本 | [submission 目录](../../submission/)；[当前审阅入口](../../evidence/goal3/REVIEW_PACKET.md) 的本次包与发布记录 | 本轮目标包 `REVIEW_ONLY_10245102410_吴博闻_实验一.zip`；核查成员、CRC/哈希、当前 PDF 与 Notebook 字节、真实解压 FULL 和 0 新实验模型调用。正式目标名仅在后续确认后才使用。 |
+| 新待审包与当前版本 | [submission 目录](../../submission/)；[当前审阅入口](../../evidence/goal3/REVIEW_PACKET.md) 的本次包与发布记录 | 当前包 `REVIEW_ONLY_10245102410_吴博闻_实验一_25页报告同步.zip`；核查成员、CRC/哈希与当前PDF。原始输入、数值模块、Notebook与旧实际FULL逐成员绑定；改动的REPORT_BUILD入口单列隔离回归，本轮没有重跑FULL或实验模型。正式目标名仅在后续确认后才使用。 |
 
 理解核查问题：
 
 1. **拿到 ZIP 后，什么证据能证明 Notebook 实际独立运行，而不只是能导入或加载旧 CSV？** 打开本次两个解压 FULL 回执，指出原始输入、真实处理规模、新内核、隔离路径、源码身份与 Provider 调用观察；若采用字节等价继承，明确其证据范围。
 2. **过程报告还缺什么，谁有权决定正式呈现？** 查本次 Evidence 盘点和 [Workflow Evidence Plan](../../../evidence/process-report/workflow-construction/WORKFLOW_EVIDENCE_PLAN.md)：已有原文可继续索引，缺原件需补原件；没有批准 spec 不自行选 anchor、画箭头、调序或 LOCK。身份已提供，不再列为外部缺项。
 3. **为什么“内部工程可审”不等于“用户理解通过”或“作业已提交”？** 对照当前审阅入口的独立状态：Deliverable 待最终审核，Understanding=LEARNING，Submission=NOT_READY，新 GPT_SECOND_REVIEW=PENDING。教师材料第 26 页写“10 月 5 日前”和规定命名，未给具体截止时刻；本轮没有代发邮件或教学平台提交。
+
+当前Experiment图对应源包的 [figures](../../reports/experiment1/figures/)、[source](../../reports/experiment1/source/) 与 [data](../../reports/experiment1/data/)，含两幅真实可编辑draw.io；本轮只验证源包/编译/页面，未重画十幅图。旧22页报告的全文与目视检查仍限定于旧版本，详见 [本次集成审阅入口](../../../evidence/infrastructure/SC-PROJECT-SOURCES-SYNC-003/REVIEW_PACKET.md)。
 
 完成四块讲解后，由用户与网页 GPT 检查实际远程文件并决定后续动作。需要的新 Evidence Master 输入只解锁相关正式互动页面；本指南本身不赋予 Evidence Lock、最终 Deliverable PASS 或 Submission 权限。

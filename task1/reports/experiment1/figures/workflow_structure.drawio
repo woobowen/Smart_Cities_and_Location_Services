@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" type="device">
+  <diagram id="workflow-structure" name="实验组织与处理工具">
+    <mxGraphModel dx="1240" dy="730" grid="1" gridSize="10" page="1" pageScale="1" pageWidth="1240" pageHeight="730">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="t1" value="候选由结果推进，轨迹由确定性工具处理" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;fontFamily=Noto Sans CJK SC;fontSize=27;fontColor=#2D3238;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="18" width="502" height="47.15" />
+        </mxCell>
+        <mxCell id="t2" value="上层组织实验；下层执行同一套处理与核验规则" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;fontFamily=Noto Sans CJK SC;fontSize=20;fontColor=#70757A;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="64" width="436" height="37.0" />
+        </mxCell>
+        <mxCell id="A" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFDFC;strokeColor=#5B9FBE;strokeWidth=1.8;dashed=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="142" width="320" height="144" />
+        </mxCell>
+        <mxCell id="t3" value="A  规划与诊断" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;fontFamily=Noto Sans CJK SC;fontSize=24;fontColor=#2D3238;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="60" y="156" width="208" height="42.8" />
+        </mxCell>
+        <mxCell id="t4" value="提出可比较的单项或组合&lt;br&gt;说明假设与下一步依据" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;fontFamily=Noto Sans CJK SC;fontSize=21;fontColor=#2D3238;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="60" y="198" width="247" height="68.9" />
+        </mxCell>
+        <mxCell id="B" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFDFC;strokeColor=#5B9FBE;strokeWidth=1.8;dashed=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="460" y="142" width="320" height="144" />
+        </mxCell>
+        <mxCell id="t5" value="B  执行与整理" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;fontFamily=Noto Sans CJK SC;fontSize=24;fontColor=#2D3238;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="480" y="156" width="208" height="42.8" />
+        </mxCell>
+        <mxCell id="t6" value="调用处理、搜索与评价工具&lt;br&gt;保存真实结果及点去向" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;fontFamily=Noto Sans CJK SC;fontSize=21;fontColor=#2D3238;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="480" y="198" width="268" height="68.9" />
+        </mxCell>
+        <mxCell id="C" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFDFC;strokeColor=#8177A8;strokeWidth=1.8;dashed=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="880" y="142" width="320" height="144" />
+        </mxCell>
+        <mxCell id="t7" value="C  独立核验" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;fontFamily=Noto Sans CJK SC;fontSize=24;fontColor=#2D3238;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="900" y="156" width="184" height="42.8" />
+        </mxCell>
+        <mxCell id="t8" value="核对原始参考与实际产物&lt;br&gt;判断可比性和采用条件" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;fontFamily=Noto Sans CJK SC;fontSize=21;fontColor=#2D3238;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="900" y="198" width="247" height="68.9" />
+        </mxCell>
+        <mxCell id="task" value="" style="edgeStyle=none;html=1;rounded=0;strokeColor=#5B9FBE;strokeWidth=2.5;dashed=0;endArrow=block;" edge="1" parent="1" source="A" target="B">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="360" y="214" />
+            <mxPoint as="targetPoint" x="460" y="214" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t9" value="任务" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;fontFamily=Noto Sans CJK SC;fontSize=19;fontColor=#5B9FBE;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="382.0" y="179" width="54" height="35.55" />
+        </mxCell>
+        <mxCell id="outputs" value="" style="edgeStyle=none;html=1;rounded=0;strokeColor=#5B9FBE;strokeWidth=2.5;dashed=0;endArrow=block;" edge="1" parent="1" source="B" target="C">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="780" y="214" />
+            <mxPoint as="targetPoint" x="880" y="214" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t10" value="结果" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;fontFamily=Noto Sans CJK SC;fontSize=19;fontColor=#5B9FBE;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="803.0" y="179" width="54" height="35.55" />
+        </mxCell>
+        <mxCell id="tools" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFDFC;strokeColor=#5B9FBE;strokeWidth=1.8;dashed=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="410" y="361" width="440" height="132" />
+        </mxCell>
+        <mxCell id="t11" value="分段与过滤 → 方向删除 → DP" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;fontFamily=Noto Sans CJK SC;fontSize=23;fontColor=#2D3238;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="426.5" y="377" width="407" height="41.35" />
+        </mxCell>
+        <mxCell id="t12" value="计算实际轨迹、指标与参数对照" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;fontFamily=Noto Sans CJK SC;fontSize=21;fontColor=#2D3238;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="475.0" y="424" width="310" height="38.45" />
+        </mxCell>
+        <mxCell id="invoke" value="" style="edgeStyle=none;html=1;rounded=0;strokeColor=#5B9FBE;strokeWidth=2.5;dashed=0;endArrow=block;" edge="1" parent="1" source="B" target="tools">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="620" y="286" />
+            <mxPoint as="targetPoint" x="620" y="361" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t13" value="执行" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;fontFamily=Noto Sans CJK SC;fontSize=19;fontColor=#5B9FBE;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="639" y="312" width="54" height="35.55" />
+        </mxCell>
+        <mxCell id="raw" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFDFC;strokeColor=#70757A;strokeWidth=1.8;dashed=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="361" width="285" height="132" />
+        </mxCell>
+        <mxCell id="t14" value="原始输入与比较规则" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;fontFamily=Noto Sans CJK SC;fontSize=22;fontColor=#2D3238;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="62" y="377" width="214" height="39.9" />
+        </mxCell>
+        <mxCell id="t15" value="同一数据、窗口与指标&lt;br&gt;候选不能自行改写参考" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;fontFamily=Noto Sans CJK SC;fontSize=20;fontColor=#2D3238;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="62" y="419" width="216" height="66.0" />
+        </mxCell>
+        <mxCell id="rawtools" value="" style="edgeStyle=none;html=1;rounded=0;strokeColor=#70757A;strokeWidth=2.5;dashed=0;endArrow=block;" edge="1" parent="1" source="raw" target="tools">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="325" y="428" />
+            <mxPoint as="targetPoint" x="410" y="428" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rawC" value="" style="edgeStyle=none;html=1;rounded=0;strokeColor=#8177A8;strokeWidth=2.5;dashed=0;endArrow=block;" edge="1" parent="1" source="raw" target="C">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="175" y="493" />
+            <mxPoint as="targetPoint" x="1038" y="286" />
+            <Array as="points">
+              <mxPoint x="175" y="533" />
+              <mxPoint x="1038" y="533" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rlab" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FCFAF7;strokeColor=#FCFAF7;strokeWidth=0;dashed=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="535" y="515" width="284" height="32" />
+        </mxCell>
+        <mxCell id="t16" value="独立取得同一原始参考" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;fontFamily=Noto Sans CJK SC;fontSize=19;fontColor=#8177A8;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="550" y="520" width="206" height="35.55" />
+        </mxCell>
+        <mxCell id="review" value="" style="edgeStyle=none;html=1;rounded=0;strokeColor=#8177A8;strokeWidth=2.5;dashed=0;endArrow=block;" edge="1" parent="1" source="C" target="A">
+          <mxGeometry as="geometry" relative="1">
+            <mxPoint as="sourcePoint" x="1040" y="142" />
+            <mxPoint as="targetPoint" x="200" y="142" />
+            <Array as="points">
+              <mxPoint x="1040" y="113" />
+              <mxPoint x="200" y="113" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="flab" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FCFAF7;strokeColor=#FCFAF7;strokeWidth=0;dashed=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="475" y="99" width="300" height="32" />
+        </mxCell>
+        <mxCell id="t17" value="实测差异与下一步问题" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;fontFamily=Noto Sans CJK SC;fontSize=19;fontColor=#8177A8;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="490" y="103" width="206" height="35.55" />
+        </mxCell>
+        <mxCell id="next" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFDFC;strokeColor=#DDE3E7;strokeWidth=1.8;dashed=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="585" width="1160" height="100" />
+        </mxCell>
+        <mxCell id="t18" value="两类结果分别处理" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;fontFamily=Noto Sans CJK SC;fontSize=22;fontColor=#2D3238;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="62" y="600" width="192" height="39.9" />
+        </mxCell>
+        <mxCell id="t19" value="方法无收益或退化：保留负结果，不替换原方案" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;fontFamily=Noto Sans CJK SC;fontSize=20;fontColor=#2D3238;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="315" y="602" width="436" height="37.0" />
+        </mxCell>
+        <mxCell id="t20" value="实现错误：修正、重算并复验，再恢复未完成实验" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;fontFamily=Noto Sans CJK SC;fontSize=20;fontColor=#2D3238;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="315" y="640" width="456" height="37.0" />
+        </mxCell>
+        <mxCell id="t21" value="最终全量阶段使用选定的固定参数，不对每条记录重新调用模型或搜索。" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;fontFamily=Noto Sans CJK SC;fontSize=19;fontColor=#70757A;fontStyle=0;" vertex="1" parent="1">
+          <mxGeometry as="geometry" x="40" y="701" width="624" height="35.55" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

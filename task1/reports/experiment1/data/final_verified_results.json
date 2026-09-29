@@ -1,0 +1,322 @@
+{
+  "repo_sha": "1a5e26b43189aef64a46f8986b3cc442fa50d2c5",
+  "data_sha256": "c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3",
+  "raw_gitblob": "212f2bd50f9aec81b65192ce42a494919717a9ae",
+  "original_records": 11386,
+  "original_points": 1173410,
+  "independent_record_groups": 11386,
+  "final_ids_match_source_algorithm": true,
+  "method": "separately implemented ENU/direction/DP/coverage, no repository processing imports",
+  "source_crs": "UNVERIFIED",
+  "full": {
+    "R0": {
+      "n_input": 1173410,
+      "n_final": 200470,
+      "n_filtered": 501511,
+      "n_direction_removed": 36056,
+      "n_dp_removed": 435373,
+      "n_dp_input": 635843,
+      "n_dp_output": 200470,
+      "n_s_segments": 25963,
+      "no_output": 4859,
+      "common_covered_points": 671899,
+      "raw_break_crossings": 0,
+      "n_records": 11386,
+      "dp_saving": 0.6847177683799303,
+      "dp_max_error": 4.999963549117563,
+      "common_max_error": 368.70706026838764
+    },
+    "S0": {
+      "n_input": 1173410,
+      "n_final": 221149,
+      "n_filtered": 1199,
+      "n_direction_removed": 39732,
+      "n_dp_removed": 911330,
+      "n_dp_input": 1132479,
+      "n_dp_output": 221149,
+      "n_s_segments": 25963,
+      "no_output": 0,
+      "common_covered_points": 1172211,
+      "raw_break_crossings": 0,
+      "n_records": 11386,
+      "dp_saving": 0.8047213237508157,
+      "dp_max_error": 4.999963549117563,
+      "common_max_error": 368.70706026838764
+    }
+  },
+  "full_pairs": {
+    "records": 11386,
+    "protected": 11386,
+    "strict_gain": 6522,
+    "failures": [],
+    "coverage_delta": 500312,
+    "new_coverage_max": 266.01675442514176
+  },
+  "worst_added": {
+    "error": 266.01675442514176,
+    "record_id": "352",
+    "index": 105
+  },
+  "DEVELOPMENT": {
+    "R0": {
+      "n_input": 23950,
+      "n_final": 5349,
+      "n_filtered": 6737,
+      "n_direction_removed": 1427,
+      "n_dp_removed": 10437,
+      "n_dp_input": 15786,
+      "n_dp_output": 5349,
+      "n_s_segments": 645,
+      "no_output": 65,
+      "common_covered_points": 17213,
+      "raw_break_crossings": 0,
+      "n_records": 240,
+      "dp_saving": 0.661155454199924,
+      "dp_max_error": 4.9960113231523335,
+      "common_max_error": 187.6375419804648
+    },
+    "S0": {
+      "n_input": 23950,
+      "n_final": 5751,
+      "n_filtered": 33,
+      "n_direction_removed": 1540,
+      "n_dp_removed": 16626,
+      "n_dp_input": 22377,
+      "n_dp_output": 5751,
+      "n_s_segments": 645,
+      "no_output": 0,
+      "common_covered_points": 23917,
+      "raw_break_crossings": 0,
+      "n_records": 240,
+      "dp_saving": 0.7429950395495375,
+      "dp_max_error": 4.9960113231523335,
+      "common_max_error": 187.6375419804648
+    },
+    "pair": {
+      "records": 240,
+      "protected": 240,
+      "strict_gain": 107,
+      "failures": [],
+      "coverage_delta": 6704,
+      "new_coverage_max": 6.685988483195381
+    },
+    "G0_vs_R0": {
+      "records": 240,
+      "protected": 240,
+      "strict_gain": 41,
+      "failures": [],
+      "coverage_delta": 0,
+      "new_coverage_max": null
+    },
+    "S0_G0_vs_S0": {
+      "records": 240,
+      "protected": 240,
+      "strict_gain": 41,
+      "failures": [],
+      "coverage_delta": 0,
+      "new_coverage_max": null
+    }
+  },
+  "SELECTION": {
+    "R0": {
+      "n_input": 24677,
+      "n_final": 5321,
+      "n_filtered": 6661,
+      "n_direction_removed": 1480,
+      "n_dp_removed": 11215,
+      "n_dp_input": 16536,
+      "n_dp_output": 5321,
+      "n_s_segments": 734,
+      "no_output": 61,
+      "common_covered_points": 18016,
+      "raw_break_crossings": 0,
+      "n_records": 240,
+      "dp_saving": 0.6782172230285437,
+      "dp_max_error": 4.996336549712856,
+      "common_max_error": 193.54015537884914
+    },
+    "S0": {
+      "n_input": 24677,
+      "n_final": 5784,
+      "n_filtered": 36,
+      "n_direction_removed": 1524,
+      "n_dp_removed": 17333,
+      "n_dp_input": 23117,
+      "n_dp_output": 5784,
+      "n_s_segments": 734,
+      "no_output": 0,
+      "common_covered_points": 24641,
+      "raw_break_crossings": 0,
+      "n_records": 240,
+      "dp_saving": 0.7497945235108362,
+      "dp_max_error": 4.996336549712856,
+      "common_max_error": 193.54015537884914
+    },
+    "pair": {
+      "records": 240,
+      "protected": 240,
+      "strict_gain": 103,
+      "failures": [],
+      "coverage_delta": 6625,
+      "new_coverage_max": 4.326821436521503
+    },
+    "G0_vs_R0": {
+      "records": 240,
+      "protected": 237,
+      "strict_gain": 39,
+      "failures": [
+        {
+          "record_id": "3017",
+          "feasible": false,
+          "strict_gain": false,
+          "reasons": [
+            "geom_degrade"
+          ],
+          "coverage_delta": 0,
+          "base_error": 4.7855056335291115,
+          "candidate_error_on_base": 4.957120870448935,
+          "new_point_max": null
+        },
+        {
+          "record_id": "9311",
+          "feasible": false,
+          "strict_gain": false,
+          "reasons": [
+            "geom_degrade"
+          ],
+          "coverage_delta": 0,
+          "base_error": 3.953415192031144,
+          "candidate_error_on_base": 4.276001980607149,
+          "new_point_max": null
+        },
+        {
+          "record_id": "9534",
+          "feasible": false,
+          "strict_gain": false,
+          "reasons": [
+            "geom_degrade"
+          ],
+          "coverage_delta": 0,
+          "base_error": 3.718470037541277,
+          "candidate_error_on_base": 4.464256068024215,
+          "new_point_max": null
+        }
+      ],
+      "coverage_delta": 0,
+      "new_coverage_max": null
+    },
+    "S0_G0_vs_S0": {
+      "records": 240,
+      "protected": 237,
+      "strict_gain": 39,
+      "failures": [
+        {
+          "record_id": "3017",
+          "feasible": false,
+          "strict_gain": false,
+          "reasons": [
+            "geom_degrade"
+          ],
+          "coverage_delta": 0,
+          "base_error": 4.7855056335291115,
+          "candidate_error_on_base": 4.957120870448935,
+          "new_point_max": null
+        },
+        {
+          "record_id": "9311",
+          "feasible": false,
+          "strict_gain": false,
+          "reasons": [
+            "geom_degrade"
+          ],
+          "coverage_delta": 0,
+          "base_error": 3.953415192031144,
+          "candidate_error_on_base": 4.276001980607149,
+          "new_point_max": null
+        },
+        {
+          "record_id": "9534",
+          "feasible": false,
+          "strict_gain": false,
+          "reasons": [
+            "geom_degrade"
+          ],
+          "coverage_delta": 0,
+          "base_error": 3.718470037541277,
+          "candidate_error_on_base": 4.464256068024215,
+          "new_point_max": null
+        }
+      ],
+      "coverage_delta": 0,
+      "new_coverage_max": null
+    }
+  },
+  "FINAL_CONFIRM": {
+    "R0": {
+      "n_input": 62284,
+      "n_final": 10991,
+      "n_filtered": 26416,
+      "n_direction_removed": 1845,
+      "n_dp_removed": 23032,
+      "n_dp_input": 34023,
+      "n_dp_output": 10991,
+      "n_s_segments": 1400,
+      "no_output": 255,
+      "common_covered_points": 35868,
+      "raw_break_crossings": 0,
+      "n_records": 600,
+      "dp_saving": 0.6769538253534374,
+      "dp_max_error": 4.9971311138733405,
+      "common_max_error": 280.69670439064976
+    },
+    "S0": {
+      "n_input": 62284,
+      "n_final": 12114,
+      "n_filtered": 64,
+      "n_direction_removed": 2148,
+      "n_dp_removed": 47958,
+      "n_dp_input": 60072,
+      "n_dp_output": 12114,
+      "n_s_segments": 1400,
+      "no_output": 0,
+      "common_covered_points": 62220,
+      "raw_break_crossings": 0,
+      "n_records": 600,
+      "dp_saving": 0.798341989612465,
+      "dp_max_error": 4.9971311138733405,
+      "common_max_error": 280.69670439064976
+    },
+    "pair": {
+      "records": 600,
+      "protected": 600,
+      "strict_gain": 349,
+      "failures": [],
+      "coverage_delta": 26352,
+      "new_coverage_max": 6.087101997252068
+    }
+  },
+  "boundary_352": {
+    "raw_window": [
+      104,
+      105,
+      106,
+      107
+    ],
+    "raw_window_length": 809.4436290839163,
+    "direction_removed": [
+      105
+    ],
+    "clean_indices": [
+      104,
+      106,
+      107
+    ],
+    "final_indices": [
+      104,
+      106,
+      107
+    ],
+    "target_error": 266.01675442514176
+  },
+  "elapsed_seconds": 14.88238374599996
+}

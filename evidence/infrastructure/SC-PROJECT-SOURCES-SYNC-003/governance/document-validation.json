@@ -1,0 +1,1110 @@
+{
+  "review_type": "B_AUTHOR_VALIDATION; independent C is recorded separately",
+  "command": ".venv/bin/python evidence/infrastructure/SC-PROJECT-SOURCES-SYNC-003/governance/validate_governance.py",
+  "status": "PASS",
+  "documents": [
+    {
+      "canonical_name": "SMART_CITIES_RESEARCH_PROTOCOL.md",
+      "active_path": "docs/research/SMART_CITIES_RESEARCH_PROTOCOL.md",
+      "version": "v1.2",
+      "received_sha256": "332741175630b1329387a0d69acf0061c6278c82bb27596f1d4629c2aa13a378",
+      "active_sha256": "19f9bb4670bc3a485b064854f3d035d2a50a192386be53396851443ee5654a3f",
+      "received_size": 11981,
+      "active_size": 13264,
+      "section_count_including_preamble": 14,
+      "unchanged_sections": [
+        "B. Source Priority",
+        "D. Source Audit",
+        "E. Uncertainty Governance",
+        "F. Fair Comparison",
+        "H. Parameter Rationale",
+        "I. Data Authenticity / Provenance",
+        "J. Experiment Evaluation and Evidence Chain",
+        "K. AI / LLM Critique",
+        "L. Stop / Escalate",
+        "M. Cross-document References"
+      ],
+      "changed_sections": [
+        "__preamble__",
+        "A. Research Scope / Task Governance",
+        "C. Standard Research Workflow",
+        "G. Spatiotemporal Correctness"
+      ],
+      "unexpected_changed_sections": [],
+      "diff": "governance/input-to-active/SMART_CITIES_RESEARCH_PROTOCOL.md.diff"
+    },
+    {
+      "canonical_name": "SMART_CITIES_REPORT_WRITING_GUIDE.md",
+      "active_path": "docs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md",
+      "version": "v1.1",
+      "received_sha256": "abc729c5f7f764021ae1417dc6e8fcb1997eb3632747e46c8d0d53166642ff37",
+      "active_sha256": "49cb8ac101420a3262734b9ac246451fbb61b9716e8263db2dd8802bd78f5d55",
+      "received_size": 24040,
+      "active_size": 25025,
+      "section_count_including_preamble": 18,
+      "unchanged_sections": [
+        "0. 文档路由与职责",
+        "2. Experiment Report 的主叙事",
+        "4. 正确执行、评价可信与效果支持分开",
+        "5. 参数、组合与迭代的写法",
+        "6. 中文表达与技术详略",
+        "7. 公式、实验设置与复现信息",
+        "8. 信息应该放在哪里",
+        "9. AI、Workflow与Multi-Agent的表达",
+        "10. 图表与文字共同承担证据",
+        "11. 22类全文编辑检查",
+        "13. 制作、接管与改稿顺序",
+        "14. 正式文稿审核",
+        "15. 已验收参考成品与长期复用",
+        "16. 更新原则"
+      ],
+      "changed_sections": [
+        "__preamble__",
+        "1. 两份报告的读者与任务",
+        "3. 把研究要求融入实际方法与实验",
+        "12. Process Report写作衔接：不覆盖最新第一人称规则"
+      ],
+      "unexpected_changed_sections": [],
+      "diff": "governance/input-to-active/SMART_CITIES_REPORT_WRITING_GUIDE.md.diff"
+    },
+    {
+      "canonical_name": "SMART_CITIES_VISUAL_SYSTEM.md",
+      "active_path": "docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md",
+      "version": "v2.5",
+      "received_sha256": "fbba109a796cff5ffe09848986a75b749248e5d609860c54eb2004b839fd9cbc",
+      "active_sha256": "9fbbd62543da77c7cecc31f4e07a95c2570c245693a9817d17652286340d291f",
+      "received_size": 42569,
+      "active_size": 43680,
+      "section_count_including_preamble": 19,
+      "unchanged_sections": [
+        "2. Exact P2 · Cloud Sorbet Palette",
+        "3. Experiment Report Identity",
+        "4. Process Report Identity",
+        "5. Process Report Layer A — Workflow Construction",
+        "6. Process Report Layer B — Experiment Decision Process",
+        "7. Brainstorm Responsibilities",
+        "8. Interaction Evidence",
+        "9. Process Diagram Language",
+        "10. Color Use in Process Report",
+        "11. Figure Palette and Scientific Plotting",
+        "12. Signature Visualization",
+        "14. Generative-Image Boundary",
+        "15. Writing and Layout Principles",
+        "17. Lock State",
+        "18. Process Report Inclusion Test"
+      ],
+      "changed_sections": [
+        "__preamble__",
+        "1. Shared Identity",
+        "13. Native and Reproducible Production",
+        "16. Reference Files"
+      ],
+      "unexpected_changed_sections": [],
+      "diff": "governance/input-to-active/SMART_CITIES_VISUAL_SYSTEM.md.diff"
+    },
+    {
+      "canonical_name": "WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md",
+      "active_path": "docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md",
+      "version": "v2.6",
+      "received_sha256": "2385583504caa7c4a7708cd12602c2f692dfd6bb217e1b6ffdd3558b25a22fbd",
+      "active_sha256": "c3113ff2f8b6a02c95e6e1cfc9db749773fd080d212b8331eb8177557d2f8912",
+      "received_size": 44284,
+      "active_size": 44829,
+      "section_count_including_preamble": 41,
+      "unchanged_sections": [
+        "1. 核心目标",
+        "2. 原始聊天的两个主要编辑问题",
+        "3. 最高真实性原则",
+        "5. 用户与Evidence Master的截图职责",
+        "7. Minimal Intervention Principle",
+        "8. 最低干预等级 L0–L5",
+        "9. Terminology Ownership / 术语所有权",
+        "10. Verbatim-First Policy",
+        "11. Historical Retrieval Card",
+        "12. Original Transcript Packet",
+        "13. Turn Classification",
+        "14. Decision Unit",
+        "15. 后补内容的三类处理",
+        "16. Question-Led Principle",
+        "16.1 Process Report正式叙事语言",
+        "17. 后台完整、前台代表性",
+        "18. Part I / Part II 边界",
+        "19. A/B/C/D 的新定位",
+        "20. GPT回复精修规则",
+        "21. 多页优先原则",
+        "22. 上下文依赖处理",
+        "23. 一段聊天包含多个Decision时",
+        "24. 用户贡献被长GPT回复淹没时",
+        "25. Transcript Diff Audit",
+        "26. 双边脚本预审核",
+        "27. Simulation Conversation执行规则",
+        "29. Experiment Interaction Handoff",
+        "30. Screenshot Audit",
+        "31. Evidence Lock",
+        "32. Evidence状态机",
+        "33. Evidence Tier / 证据预算",
+        "34. 内部任务文档",
+        "35. LaTeX同步策略",
+        "36. 图片与流程图时机",
+        "37. Housekeeping Boundary",
+        "38. 正式阶段顺序",
+        "39. 最高执行原则"
+      ],
+      "changed_sections": [
+        "__preamble__",
+        "4. 三角色对话体系",
+        "6. Original Evidence 优先原则",
+        "28. 正式Research Conversation实时证据机制"
+      ],
+      "unexpected_changed_sections": [],
+      "diff": "governance/input-to-active/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md.diff"
+    },
+    {
+      "canonical_name": "AGENTS.md",
+      "active_path": "AGENTS.md",
+      "version": "2026-09-29 · Project-wide P1–P4 scope / manifest-driven source distribution",
+      "received_sha256": "aec7864126d07644ab2d8a724aad7357d146b9adf000ff3e8a3a70b2b644d171",
+      "active_sha256": "94f3d6d342efaa3d04945b4090e233fa1772e36cce43813ef2dfc9810ac2a4fd",
+      "received_size": 33593,
+      "active_size": 36185,
+      "section_count_including_preamble": 22,
+      "unchanged_sections": [
+        "0. Active document routing",
+        "1. Role boundary",
+        "3. Execution order",
+        "4. Engineering style",
+        "5. Starter policy",
+        "6. Spatiotemporal correctness",
+        "7. Data handling and provenance",
+        "8. Experiment authenticity",
+        "9. Fair comparison and UNRESOLVED",
+        "10. Notebook and reproducibility",
+        "11. Performance boundary",
+        "12. LaTeX and Visual Design System",
+        "13. Interaction Evidence engineering",
+        "14. Visualization production",
+        "15. Generative-image boundary",
+        "16. Report authenticity and writing",
+        "17. Files and evidence",
+        "19. Stop-and-escalate",
+        "20. Final response contract"
+      ],
+      "changed_sections": [
+        "__preamble__",
+        "2. Scope",
+        "18. Git and GitHub"
+      ],
+      "unexpected_changed_sections": [],
+      "diff": "governance/input-to-active/AGENTS.md.diff"
+    }
+  ],
+  "w01_w22_identical": true,
+  "p2_values_match_common_source": true,
+  "p2_role_count": 13,
+  "protected_template_and_process_files": [
+    {
+      "path": "reports/process-report/pre-task1/WF_WorkflowConstruction_PreTask1_31p_LaTeX_Source.zip",
+      "sha256": "e85942c5137e678e4043b02e7231788ccd241261c1483a39657edc6ae648e633",
+      "unchanged": true
+    },
+    {
+      "path": "reports/process-report/pre-task1/WF_WorkflowConstruction_PreTask1_REVISED.pdf",
+      "sha256": "0247a7755558169d3bd3397a93028c72a93f09e318c75f623f5813b96c1ed0f0",
+      "unchanged": true
+    },
+    {
+      "path": "templates/latex/common/p2_cloud_sorbet_colors.tex",
+      "sha256": "2aa820c3f68ba6c14cf1b52082b12336071d77bb5466db2b05b2fab6890aa243",
+      "unchanged": true
+    },
+    {
+      "path": "templates/latex/experiment-report/experiment_report_template.tex",
+      "sha256": "bd8e6165ef5b43195ad21637bdb88ea60dab4f0b3fdcd911472f48858a4a475d",
+      "unchanged": true
+    },
+    {
+      "path": "templates/latex/experiment-report/demo-assets/distribution.pdf",
+      "sha256": "cd75f5305108de05524508e69f21d231a34095697ba21197526296122ec0b122",
+      "unchanged": true
+    },
+    {
+      "path": "templates/latex/experiment-report/demo-assets/heatmap.pdf",
+      "sha256": "0d90fe30ddf6be113e3a503d2692cc182ca43c0f1db12aba5e817b18d09baa77",
+      "unchanged": true
+    },
+    {
+      "path": "templates/latex/experiment-report/demo-assets/parallel.pdf",
+      "sha256": "47b73847b04db7c85db257062e62258e4c23a3326ae056bb6b2652882b2bac6a",
+      "unchanged": true
+    },
+    {
+      "path": "templates/latex/experiment-report/demo-assets/pareto.pdf",
+      "sha256": "560c429318928b4afd0aa7236665a7745b653659668e0ff983c47b455b10366c",
+      "unchanged": true
+    },
+    {
+      "path": "templates/latex/experiment-report/demo-assets/sensitivity.pdf",
+      "sha256": "170c7735b8178da95df4be337ebc4143677b10a07460a539de7aa4e3bdff210a",
+      "unchanged": true
+    },
+    {
+      "path": "templates/latex/experiment-report/demo-assets/signature_map.pdf",
+      "sha256": "6fab917f5288ae2b401efb7046fa2186ca2a731c5f58da0d451d6cd2ca9fa75f",
+      "unchanged": true
+    },
+    {
+      "path": "templates/latex/experiment-report/preview/Experiment_Report_P2_Exact.pdf",
+      "sha256": "6fd543f5123ba4d67985193d5658802ae820c6585dc3f509071b8b2d39b323dd",
+      "unchanged": true
+    },
+    {
+      "path": "templates/latex/process-report/process_report_template.tex",
+      "sha256": "faa2b492b43d370756168c83a6a05d3d7661a6b211ec3a8178d83da3bdfb0bf9",
+      "unchanged": true
+    },
+    {
+      "path": "templates/latex/process-report/build/process_report_template.aux",
+      "sha256": "aa95f093ec3de59a26ad6c5a7474a18ae8bebdfc76ca32e8dfecd31bded51a9d",
+      "unchanged": true
+    },
+    {
+      "path": "templates/latex/process-report/build/process_report_template.fdb_latexmk",
+      "sha256": "fef5f0b05e773ab8b05e30c37112deb6c9865a02b10adc1e037804c09605f14b",
+      "unchanged": true
+    },
+    {
+      "path": "templates/latex/process-report/build/process_report_template.fls",
+      "sha256": "8b0b47fd360f7ff63cd534c982777adf7f1ad93186d306019072ab263d2bdbd0",
+      "unchanged": true
+    },
+    {
+      "path": "templates/latex/process-report/build/process_report_template.log",
+      "sha256": "6e4a775d3acb7f69c88624f09d7eb55943585958b93bd8dfc0a2de2411cec85d",
+      "unchanged": true
+    },
+    {
+      "path": "templates/latex/process-report/build/process_report_template.out",
+      "sha256": "447a875fa9de4514769b83940d6c9c9bb30f3f5b902c543d18e6c6e85145202f",
+      "unchanged": true
+    },
+    {
+      "path": "templates/latex/process-report/build/process_report_template.pdf",
+      "sha256": "3903042ef7935a722d32871a9f55ba973b1262ee0fe290363b0a6c3bda09dcfa",
+      "unchanged": true
+    },
+    {
+      "path": "templates/latex/process-report/build/process_report_template.toc",
+      "sha256": "cd36909c19d5d061741b46e32deac67e4da0a557f761eebe7f7465cf7a1c6c53",
+      "unchanged": true
+    },
+    {
+      "path": "templates/latex/process-report/build/process_report_template.xdv",
+      "sha256": "32c66711c5b1370339131461e21e5664f3af398b000b56105e23f5627821b26a",
+      "unchanged": true
+    },
+    {
+      "path": "templates/latex/process-report/build/render/micro-trace.svg",
+      "sha256": "e83a35bb3cc5d3efba48bfa24c3a0bc699be3ef9c70909a3b2bd91bcf7fb8d14",
+      "unchanged": true
+    },
+    {
+      "path": "templates/latex/process-report/build/render/page-01.png",
+      "sha256": "e9fd6ca0ccba84ee4f0e55c42289deba79c08a29781cc908fa4c6482101a9213",
+      "unchanged": true
+    },
+    {
+      "path": "templates/latex/process-report/build/render/page-02.png",
+      "sha256": "a3d8ee72e634e3f38e646851c16d71257c7bdad45873be03f2038740990daaf4",
+      "unchanged": true
+    },
+    {
+      "path": "templates/latex/process-report/build/render/page-03.png",
+      "sha256": "93423dd88c0a97995fc5ab90305fe3368cacad6756a552d38623889ff5ac507d",
+      "unchanged": true
+    },
+    {
+      "path": "templates/latex/process-report/build/render/page-04.png",
+      "sha256": "387c6b47e9ce2091333ee170b9e2c9cdb324711bc73b9d2ceaa00f1c47cd8096",
+      "unchanged": true
+    },
+    {
+      "path": "templates/latex/process-report/build/render/page-05.png",
+      "sha256": "47f36ce0feca429cae7cbaca015febbdfec65bd7f2d29da3d0c69688f65612ac",
+      "unchanged": true
+    },
+    {
+      "path": "templates/latex/process-report/build/render/page-06.png",
+      "sha256": "7d36d20b8ac4f1c3ae7cc229aac93459a1e64ccd26dfaaa0cfb516565157b839",
+      "unchanged": true
+    },
+    {
+      "path": "templates/latex/process-report/build/render/page-07.png",
+      "sha256": "c22d25763286e400551213f3f0e29ea9aacdfee745ca2608d99a397834d34b88",
+      "unchanged": true
+    },
+    {
+      "path": "templates/latex/process-report/build/render/page-08.png",
+      "sha256": "d969cae8a628df4f1eaaf2f4f164163ec6cb32a9740f46e08e1e7980f948aaf7",
+      "unchanged": true
+    },
+    {
+      "path": "templates/latex/process-report/build/render/page-09.png",
+      "sha256": "c9d85009f36649e0312d1f0038d967b97ca0cc6fecb0efd49db8e91996f8bf49",
+      "unchanged": true
+    },
+    {
+      "path": "templates/latex/process-report/build/render/page-10.png",
+      "sha256": "d0bf286766052fea6f41c2ca44ebfbbd23bb094fd256b96d28fb349d0653892e",
+      "unchanged": true
+    },
+    {
+      "path": "templates/latex/process-report/build/render/page-11.png",
+      "sha256": "640fd6c407056febef8414a267c8f190c7f743f2f2d18f00295f80254bed9980",
+      "unchanged": true
+    },
+    {
+      "path": "templates/latex/process-report/build/render/page-12.png",
+      "sha256": "9df6baba1088c6cd60b1b38f4eabe16141de959b99bf0c4ab1e559d76314522e",
+      "unchanged": true
+    },
+    {
+      "path": "templates/latex/process-report/components/interaction_evidence.tex",
+      "sha256": "41828c96c51c21cf3cb9489cd72664e049be1d2d9d28144c265ba9caf0222dae",
+      "unchanged": true
+    },
+    {
+      "path": "templates/latex/process-report/demo-assets/candidate_tree.pdf",
+      "sha256": "f3801b2f67747d4aff3c5ebcb61229e606dd483aa5d9b057469bc7157fb94020",
+      "unchanged": true
+    },
+    {
+      "path": "templates/latex/process-report/demo-assets/candidate_tree.svg",
+      "sha256": "65f0b08be495dff5edfa87923cbe7c5f0a679bd9d3997f01b21b972f62c8c328",
+      "unchanged": true
+    },
+    {
+      "path": "templates/latex/process-report/demo-assets/contact_sheet.png",
+      "sha256": "2d0af0f954a00b6c71a0130fe26949e028ee6ef5244bd49525fda4f9e33676f9",
+      "unchanged": true
+    },
+    {
+      "path": "templates/latex/process-report/demo-assets/editorial_board.pdf",
+      "sha256": "ae2f42ae42e992ad4c02e26013796f639a1a60ba133990532f02289cfb335657",
+      "unchanged": true
+    },
+    {
+      "path": "templates/latex/process-report/demo-assets/editorial_board.svg",
+      "sha256": "f6b7c7d77beea0ef5219640f12e20bfe8bb0bfb76c33ee8831dbbda95996c678",
+      "unchanged": true
+    },
+    {
+      "path": "templates/latex/process-report/demo-assets/human_reasoning.pdf",
+      "sha256": "c65c5177ed5b0e379e4047d699277088d395bbf03b453410a60d6f1275e8145a",
+      "unchanged": true
+    },
+    {
+      "path": "templates/latex/process-report/demo-assets/human_reasoning.svg",
+      "sha256": "d3625496cf552e37c2ed87c501946f5e349bdf3e5e15e8852687ffae955b024a",
+      "unchanged": true
+    },
+    {
+      "path": "templates/latex/process-report/demo-assets/interaction_part1.png",
+      "sha256": "1d6c3e2ed9bde522ca16bb81ec939cbaf9bce2f68de08af7ed063211c7d47f34",
+      "unchanged": true
+    },
+    {
+      "path": "templates/latex/process-report/demo-assets/interaction_part2.png",
+      "sha256": "d35a18ccf7e31ddfc91ebd3c994a619f2da0f32d73c9711566adab085ac9a292",
+      "unchanged": true
+    },
+    {
+      "path": "templates/latex/process-report/demo-assets/interaction_part3.png",
+      "sha256": "968471b6f483df8d5ea67c1cce0e8400acc6028c620daf259eb5c43429d3d556",
+      "unchanged": true
+    },
+    {
+      "path": "templates/latex/process-report/demo-assets/micro_trace_specimen.png",
+      "sha256": "849c1bc4ae19bc01cc8fc7a263f2a27904bbe1058eb0c37b845622c64c5feb5b",
+      "unchanged": true
+    },
+    {
+      "path": "templates/latex/process-report/demo-assets/micro_trace_specimen.tex",
+      "sha256": "eb6be6acc68de8a64541603c84e2756fe1ddcb1516b3dad3b37635b783ea3299",
+      "unchanged": true
+    },
+    {
+      "path": "templates/latex/process-report/demo-assets/build/micro_trace_specimen.aux",
+      "sha256": "fbabe80c887f95a1ede6847f22dd91b380bda9d17ae8bfaa72e1741b16aa41e9",
+      "unchanged": true
+    },
+    {
+      "path": "templates/latex/process-report/demo-assets/build/micro_trace_specimen.fdb_latexmk",
+      "sha256": "9ee872f6b85f87c22ee4d7aaf106f7e6dbfbbe22a4c2ed9793139303ff6bc9ca",
+      "unchanged": true
+    },
+    {
+      "path": "templates/latex/process-report/demo-assets/build/micro_trace_specimen.fls",
+      "sha256": "31aa0f43656ebba74a58836869c369db344c0c132f62fa2cc987b6f77717c8e6",
+      "unchanged": true
+    },
+    {
+      "path": "templates/latex/process-report/demo-assets/build/micro_trace_specimen.log",
+      "sha256": "8fd9df4dd44c282a372e17b38f2f831e80831bb3c1617cecc91ade9087586472",
+      "unchanged": true
+    },
+    {
+      "path": "templates/latex/process-report/demo-assets/build/micro_trace_specimen.pdf",
+      "sha256": "2f41b36b5f934cf74b95205c6cb0fd1e97c8e8455b7119ff3cc4c6dd5b0399d1",
+      "unchanged": true
+    },
+    {
+      "path": "templates/latex/process-report/demo-assets/build/micro_trace_specimen.xdv",
+      "sha256": "fa2117b874648a290de14df629a22e9891daee1468a3f14e365266a8b5a7249f",
+      "unchanged": true
+    },
+    {
+      "path": "templates/latex/process-report/demo-assets/build/specimen-console.txt",
+      "sha256": "65332759a244d9fb2fefe4624e303dd8e34f761dc43f036e7b4616dccd92fac4",
+      "unchanged": true
+    },
+    {
+      "path": "templates/latex/process-report/preview/Process_Report_P2_Locked_v1.pdf",
+      "sha256": "3903042ef7935a722d32871a9f55ba973b1262ee0fe290363b0a6c3bda09dcfa",
+      "unchanged": true
+    }
+  ],
+  "local_links": [
+    {
+      "source": "docs/research/SMART_CITIES_RESEARCH_PROTOCOL.md",
+      "target": "../../AGENTS.md",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "docs/research/SMART_CITIES_RESEARCH_PROTOCOL.md",
+      "target": "../../docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "docs/research/SMART_CITIES_RESEARCH_PROTOCOL.md",
+      "target": "../../docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "docs/research/SMART_CITIES_RESEARCH_PROTOCOL.md",
+      "target": "../report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "docs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md",
+      "target": "../research/SMART_CITIES_RESEARCH_PROTOCOL.md",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "docs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md",
+      "target": "../design-system/SMART_CITIES_VISUAL_SYSTEM.md",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "docs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md",
+      "target": "../process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "docs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md",
+      "target": "../../AGENTS.md",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md",
+      "target": "../research/SMART_CITIES_RESEARCH_PROTOCOL.md",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md",
+      "target": "../report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md",
+      "target": "../process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md",
+      "target": "../../AGENTS.md",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md",
+      "target": "../report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md#1-两份报告的读者与任务",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md",
+      "target": "../report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md",
+      "target": "../report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md",
+      "target": "../../evidence/infrastructure/chatgpt-project-source-sync/sources.json",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md",
+      "target": "../research/SMART_CITIES_RESEARCH_PROTOCOL.md",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md",
+      "target": "../report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md",
+      "target": "../design-system/SMART_CITIES_VISUAL_SYSTEM.md",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md",
+      "target": "../../AGENTS.md",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md",
+      "target": "../../evidence/process-report/workflow-construction/WORKFLOW_EVIDENCE_PLAN.md",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "AGENTS.md",
+      "target": "https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/docs/research/SMART_CITIES_RESEARCH_PROTOCOL.md",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "AGENTS.md",
+      "target": "https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "AGENTS.md",
+      "target": "https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "AGENTS.md",
+      "target": "docs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "AGENTS.md",
+      "target": "https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/docs/research/SMART_CITIES_RESEARCH_PROTOCOL.md#a-research-scope--task-governance",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "AGENTS.md",
+      "target": "docs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md#1-两份报告的读者与任务",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "AGENTS.md",
+      "target": "docs/research/SMART_CITIES_RESEARCH_PROTOCOL.md#c-standard-research-workflow",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "AGENTS.md",
+      "target": "docs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md#12-process-report写作衔接不覆盖最新第一人称规则",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "AGENTS.md",
+      "target": "docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md#13-native-and-reproducible-production",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "AGENTS.md",
+      "target": "https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/docs/research/SMART_CITIES_RESEARCH_PROTOCOL.md#g-spatiotemporal-correctness",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "AGENTS.md",
+      "target": "https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/docs/research/SMART_CITIES_RESEARCH_PROTOCOL.md#f-fair-comparison",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "AGENTS.md",
+      "target": "docs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "AGENTS.md",
+      "target": "docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "AGENTS.md",
+      "target": "https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "AGENTS.md",
+      "target": "https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "AGENTS.md",
+      "target": "https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md#11-figure-palette-and-scientific-plotting",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "AGENTS.md",
+      "target": "https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/tools/skills/publication-plots/SKILL.md",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "AGENTS.md",
+      "target": "https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md#14-generative-image-boundary",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "AGENTS.md",
+      "target": "evidence/infrastructure/chatgpt-project-source-sync/sources.json",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "AGENTS.md",
+      "target": "https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/sync_sources.py",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "AGENTS.md",
+      "target": "https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/evidence/infrastructure/chatgpt-project-source-sync/SOURCE_MANIFEST.md",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "AGENTS.md",
+      "target": "https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/evidence/infrastructure/chatgpt-project-source-sync/UPLOAD_INSTRUCTIONS.md",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "README.md",
+      "target": "task1/README.md",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "README.md",
+      "target": "task1/evidence/goal3/REVIEW_PACKET.md",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "README.md",
+      "target": "task1/evidence/goal1/REVIEW_PACKET.md",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "README.md",
+      "target": "task1/evidence/goal2/REVIEW_PACKET.md",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/research/SMART_CITIES_RESEARCH_PROTOCOL.md",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "README.md",
+      "target": "docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "README.md",
+      "target": "AGENTS.md",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "README.md",
+      "target": "reports/experiment-report/experiment1-reconstructed/Experiment_Report_吴博闻_10245102410.pdf",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "README.md",
+      "target": "reports/experiment-report/experiment1-reconstructed/Experiment_Report_完整重构_源文件.zip",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "README.md",
+      "target": "task1/reports/README.md",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "README.md",
+      "target": "reports/process-report/pre-task1/WF_WorkflowConstruction_PreTask1_REVISED.pdf",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "README.md",
+      "target": "reports/process-report/pre-task1/WF_WorkflowConstruction_PreTask1_31p_LaTeX_Source.zip",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "README.md",
+      "target": "evidence/infrastructure/SMART-CITIES-GOVERNANCE-PROCESS-REFERENCE-SYNC-002/source-archive-check.md",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "README.md",
+      "target": "evidence/infrastructure/SC-PROJECT-SOURCES-SYNC-003/REVIEW_PACKET.md",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "README.md",
+      "target": "evidence/infrastructure/chatgpt-project-source-sync/sources.json",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "README.md",
+      "target": "evidence/infrastructure/chatgpt-project-source-sync/UPLOAD_INSTRUCTIONS.md",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "docs/design-system/README.md",
+      "target": "SMART_CITIES_VISUAL_SYSTEM.md",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "docs/design-system/README.md",
+      "target": "../report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "docs/design-system/README.md",
+      "target": "../../templates/latex/common/p2_cloud_sorbet_colors.tex",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "docs/design-system/README.md",
+      "target": "../../templates/latex/experiment-report/README.md",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "docs/design-system/README.md",
+      "target": "../../templates/latex/process-report/README.md",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "docs/design-system/README.md",
+      "target": "../../tools/skills/publication-plots/SKILL.md",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "docs/design-system/README.md",
+      "target": "../../releases/design-system/smart_cities_design_system_v2.1.zip",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "docs/design-system/README.md",
+      "target": "../../releases/skills/publication-plots.zip",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "docs/design-system/README.md",
+      "target": "../../releases/chatgpt-project-sources/",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "docs/design-system/README.md",
+      "target": "../../evidence/infrastructure/chatgpt-project-source-sync/sources.json",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "docs/design-system/README.md",
+      "target": "../../evidence/infrastructure/chatgpt-project-source-sync/SOURCE_MANIFEST.md",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "docs/design-system/README.md",
+      "target": "../../evidence/infrastructure/chatgpt-project-source-sync/UPLOAD_INSTRUCTIONS.md",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "docs/design-system/README.md",
+      "target": "../../evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/sync_sources.py",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "docs/design-system/README.md",
+      "target": "../research/SMART_CITIES_RESEARCH_PROTOCOL.md",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "docs/design-system/README.md",
+      "target": "../process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "docs/design-system/README.md",
+      "target": "../../AGENTS.md",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "docs/design-system/README.md",
+      "target": "../../reports/process-report/pre-task1/WF_WorkflowConstruction_PreTask1_REVISED.pdf",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "docs/design-system/README.md",
+      "target": "../../reports/process-report/pre-task1/WF_WorkflowConstruction_PreTask1_31p_LaTeX_Source.zip",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "docs/design-system/README.md",
+      "target": "../../evidence/infrastructure/SMART-CITIES-GOVERNANCE-PROCESS-REFERENCE-SYNC-002/source-archive-check.md",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "docs/design-system/README.md",
+      "target": "../../reports/experiment-report/experiment1-reconstructed/Experiment_Report_吴博闻_10245102410.pdf",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "docs/design-system/README.md",
+      "target": "../../reports/experiment-report/experiment1-reconstructed/Experiment_Report_完整重构_源文件.zip",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "docs/design-system/README.md",
+      "target": "../../templates/latex/experiment-report/preview/Experiment_Report_P2_Exact.pdf",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "docs/design-system/README.md",
+      "target": "../../task1/reports/README.md",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "docs/design-system/README.md",
+      "target": "../../evidence/infrastructure/PROJECT-BASELINE-PUBLISH-001/README.md",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "docs/design-system/README.md",
+      "target": "../../evidence/infrastructure/PROJECT-REPOSITORY-FULL-SYNC-001/README.md",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "templates/latex/experiment-report/README.md",
+      "target": "../../../docs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md#1-两份报告的读者与任务",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "templates/latex/experiment-report/README.md",
+      "target": "../../../reports/experiment-report/experiment1-reconstructed/Experiment_Report_吴博闻_10245102410.pdf",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "templates/latex/experiment-report/README.md",
+      "target": "../../../reports/experiment-report/experiment1-reconstructed/Experiment_Report_完整重构_源文件.zip",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "templates/latex/experiment-report/README.md",
+      "target": "../../../task1/reports/README.md",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "templates/latex/experiment-report/README.md",
+      "target": "../../../docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md#13-native-and-reproducible-production",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "templates/latex/process-report/README.md",
+      "target": "../../../docs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "templates/latex/process-report/README.md",
+      "target": "../../../docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md#41-evidence-master--master-planning-conversation",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "templates/latex/process-report/README.md",
+      "target": "../../../docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md#13-native-and-reproducible-production",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "templates/latex/process-report/README.md",
+      "target": "preview/Process_Report_P2_Locked_v1.pdf",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "templates/latex/process-report/README.md",
+      "target": "../../../reports/process-report/pre-task1/WF_WorkflowConstruction_PreTask1_REVISED.pdf",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "templates/latex/process-report/README.md",
+      "target": "../../../reports/process-report/pre-task1/WF_WorkflowConstruction_PreTask1_31p_LaTeX_Source.zip",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "templates/latex/process-report/README.md",
+      "target": "../../../evidence/infrastructure/SMART-CITIES-GOVERNANCE-PROCESS-REFERENCE-SYNC-002/source-archive-check.md",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "templates/latex/process-report/README.md",
+      "target": "../../../docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "templates/latex/process-report/README.md",
+      "target": "../../../docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "templates/latex/process-report/README.md",
+      "target": "../../../docs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "templates/latex/process-report/README.md",
+      "target": "../../../AGENTS.md",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "templates/latex/process-report/README.md",
+      "target": "../../../docs/research/SMART_CITIES_RESEARCH_PROTOCOL.md",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "templates/latex/process-report/README.md",
+      "target": "../../../evidence/process-report/workflow-construction/WORKFLOW_EVIDENCE_PLAN.md",
+      "exists": true,
+      "anchor_valid": true
+    },
+    {
+      "source": "templates/latex/process-report/README.md",
+      "target": "preview/Process_Report_P2_Locked_v1.pdf",
+      "exists": true,
+      "anchor_valid": true
+    }
+  ],
+  "errors": [],
+  "scope_limit": "Byte/section/route validation supplements the explicit semantic review; it does not confer Evidence Lock or GPT second-review acceptance."
+}

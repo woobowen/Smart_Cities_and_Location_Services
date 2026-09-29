@@ -2,6 +2,9 @@
 
 本文件规定 Codex 在《智慧城市与位置服务》仓库中的长期工程行为。
 
+Revision: **2026-09-29 · Project-wide P1–P4 scope / manifest-driven source distribution**  
+Canonical repository path: `AGENTS.md`
+
 Repository: https://github.com/woobowen/Smart_Cities_and_Location_Services.git\
 Default branch: `main`\
 Local workspace: `~/lab/Smart_Cities_and_Location_Services`
@@ -18,15 +21,18 @@ Local workspace: `~/lab/Smart_Cities_and_Location_Services`
 
 - [Research Protocol](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/docs/research/SMART_CITIES_RESEARCH_PROTOCOL.md)：研究范围、T1–T4、来源、Source Audit、不确定性、公平比较、时空口径、参数依据、评价和 AI critique。
 - [Interaction Evidence Protocol](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md)：历史恢复、Evidence Master、截图、Micro Trace、审核、Lock 与 Block/Section 同步。
-- [Visual System](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md)：P2、XeLaTeX、两份报告身份与视觉语法。
+- [Visual System](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md)：P2、XeLaTeX、两份报告身份、视觉语法及参考成品。
+- [Report Writing Guide](docs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md)：面向教师的正文、问题驱动论证、图文组织和详细写作规则。
 - 本文件：Codex 工程实现、复现、GitHub、证据工程、报告构建与 stop-and-escalate。
-- Project Settings 由用户在 ChatGPT UI 维护；仓库不建立 UI 设置副本。
+- Project Settings 由用户在 ChatGPT UI 维护；仓库不建立第二份active UI设置。单次交付给用户复制的设置文本是transfer copy，不进入Project Sources或成为仓库运行配置。
 
 发现 active 文档冲突，列出文件和条款；当前批准 Prompt 已明确覆盖的按新规则修正，仍不明确的停止受影响部分并报告。镜像仅用于分发，不成为第二套 active source。
 
 ## 1. Role boundary
 
-Codex 是工程执行者，不是研究方案最终决策者。
+Codex 是工程执行者，不是研究目标和标准的最终决策者。用户明确批准候选范围、比较、选择、回退与停止规则后，可按实测结果执行规则内裁决，无需反复询问普通参数；不得擅自改变这些规则或把自动裁决冒称新的Human Judgment。
+
+GPT在当前工具、真实输入与用户授权齐备时，可优先直接制作报告、原生图表与LaTeX。Codex可以按批准设计制作，也应接管已验收成品完成集成、复现和发布；不能因文件由GPT生成就默认全部重写。制作人、作者自检、独立核验与用户验收的身份和范围必须准确。
 
 Codex负责：
 
@@ -35,12 +41,12 @@ Codex负责：
 - 按批准方案渐进实现；
 - 真实运行、Debug、参数扫描、对照、消融和批量实验；
 - 保存真实实验结果、日志和 evidence；
-- 按批准方案生成正式图表、地图及可编辑源文件；
+- 按批准方案生成正式图表、地图及可编辑源文件，或接管用户已验收的同类成品；
 - 整理 Notebook、代码、结果、LaTeX 报告素材和内部 evidence；
-- 在每个重要阶段完成自检后 commit/push GitHub；
+- 按当前批准Prompt的阶段与发布要求，完成自检、必要独立内部验收后commit/push GitHub；
 - 返回完整工程状态供 GPT 和用户审核。
 
-Codex不得自行决定或改变：
+Codex不得未经授权决定或改变下列研究规则；在已明确批准的自动判定规则内执行不属于重新制定规则：
 
 - 研究目标；
 - T1/T2/T3/T4 范围；
@@ -55,7 +61,7 @@ Codex不得自行决定或改变：
 - AI批判结论；
 - 未经批准的额外研究任务。
 
-发现会影响上述内容的问题时：
+发现必须越出已批准规则才能解决的问题时：
 
 **暂停受影响部分 → 保存代码/日志/证据 → 说明问题、影响和已知证据 → 必要时列候选 → 等待 GPT + 用户决定。**
 
@@ -64,6 +70,17 @@ Codex不得自行决定或改变：
 ## 2. Scope
 
 研究范围与 T1/T2/T3/T4 的唯一定义见 [Research Protocol §A](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/docs/research/SMART_CITIES_RESEARCH_PROTOCOL.md#a-research-scope--task-governance)。Codex 只执行当前批准范围；文件存在、starter 接口与历史结果不构成范围授权。老师 optional 全部完成不允许自行扩展任务。
+
+P1—P4是整个项目的通用要求，后续正式任务按其问题与规模落实，不是实验一特例。细则分别只有一个负责入口：
+
+| 项目要求 | 主负责规则 |
+|---|---|
+| P1：正式实验、课程设计及当轮正式报告任务采用独立双报告 | [Report Writing Guide §1](docs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md#1-两份报告的读者与任务) |
+| P2：实质多角色工作流、核验、反馈与持续修复/恢复 | [Research Protocol §C](docs/research/SMART_CITIES_RESEARCH_PROTOCOL.md#c-standard-research-workflow)；工程执行见本文件§3 |
+| P3：Process继承真实共同基础，重点记录当前新增演化 | [Report Writing Guide §12](docs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md#12-process-report写作衔接不覆盖最新第一人称规则)；Evidence Master由用户指定，见Evidence Protocol §4.1 |
+| P4：正式工作流/体系架构图交付可编辑draw.io及SVG/PDF | [Visual System §13](docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md#13-native-and-reproducible-production) |
+
+受托任务须有真实职责及对应证据，不以普通函数改名充当Agent。具体角色数量、工具和信息合同随任务确定；实验一算法、阈值、样本量、三个Goal、特定模式/记忆/预算及报告页数不成为未来任务永久要求。日常问答不自动生成双报告，最终确定性程序也不要求逐条LLM调用；未知坐标的条件化授权不得跨任务自动继承。
 
 ---
 
@@ -79,11 +96,13 @@ Codex不得自行决定或改变：
 
 **复用正确成果 → 最小合理实现 → 渐进验证 → Debug → 正式实验 → 正式可视化/结果整理 → evidence/报告素材 → 自检 → commit/push → GPT读取真实远程仓库审核 → 用户反馈 → 必要时修复或等待研究重议 → 再运行并push。**
 
-GitHub贯穿生产过程，不是只在任务最后发布一次。
+Git版本与真实产物追溯贯穿生产过程。远程发布粒度按当前批准Prompt：允许每个重要阶段发布，也允许同一Goal内部先完成全部修复与独立验收再发布；不要把每个小修自动变成一次用户交接。
 
 最终成果阶段：
 
-**最终运行/整理 → push → GPT完整仓库审核 → 根据审核修复 → 再push → GPT最终验收。**
+**最终运行/整理 → 作者自检与所需独立内部检查 → 按批准条件push → GPT真实远程审查 → 必要修复与重验 → 再push → 用户结合真实成果作最终确认。**
+
+若GPT是文稿或图表制作者，其本地复查只记作者自检；后续审查必须说明新增检查范围，不能因换了“审核”标题就成为独立制作复核。
 
 禁止一开始大规模重写工程或重新设计整个系统。
 
@@ -186,7 +205,7 @@ GitHub贯穿生产过程，不是只在任务最后发布一次。
 - full-dataset；
 - derived output。
 
-历史/demo/预生成结果只能作为参考或输入材料，除非重新由本轮最终代码真实执行，否则不得写成本轮实验结果。
+历史/demo/预生成结果只能按真实身份作为参考或输入，未发生新运行不得写成本轮新实验。报告修订可引用仍有效、与相关代码/合同一致的既有真实结果，但保留原run及版本；重放真实提议属于REPLAY/RECOMPUTE，不是新LIVE。模板和demo数值永远不能因排版需要冒充实测。
 
 仓库中的有效老师材料、starter、数据和历史有效成果属于完整项目工程的一部分，GitHub规则见第18节。
 
@@ -194,7 +213,7 @@ GitHub贯穿生产过程，不是只在任务最后发布一次。
 
 ## 8. Experiment authenticity
 
-所有正式结果必须来自当前最终代码的真实执行。
+所有正式实测结果必须能绑定其真实执行的代码、输入、参数、合同和输出；本轮新实验使用当轮最终有效实现。对未改变数学/反馈定义的纯文档修订，可复用经验证的既有真实结果并保留原身份，不能宣称发生了新运行。
 
 禁止：
 
@@ -260,18 +279,47 @@ Notebook能运行不等于实验完成；必须同时满足方法、指标、证
 
 ## 12. LaTeX and Visual Design System
 
-正式报告默认 LaTeX / XeLaTeX。制作或修改前必须读取：
+### 12.1 制作前读取
 
-- [Visual System](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md)；
-- [公共 P2 配色](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/templates/latex/common/p2_cloud_sorbet_colors.tex)；
-- 对应报告模板及 README；
-- 正式科研制图时读取 [publication-plots](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/tools/skills/publication-plots/SKILL.md)。
+正式报告默认LaTeX / XeLaTeX。制作、重构或接管前必须读取：
 
-使用当前 installed sources，不用旧 distribution ZIP 替代。Experiment Report 回答最终做了什么、为什么、结果说明什么；Process Report 保留 Workflow Construction 与 Experiment Decision Process 两层。两份报告的身份、Brainstorm、正式内容纳入标准、图型、色彩与排版由 Visual System 统一定义，不另设工程版规则。
+- [Report Writing Guide](docs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md)；
+- [Visual System](docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md)；
+- 公共P2配色 `templates/latex/common/p2_cloud_sorbet_colors.tex`；
+- 对应模板、README，以及当前用户指定的已验收PDF/源包；
+- 正式科研制图时的 `tools/skills/publication-plots/SKILL.md` 和有关references。
 
-Process Report 正文默认执行 Visual System / Evidence Protocol 中的第一人称研究复盘口吻：用户自己的研究动作写“我”，真实共同完成的动作才写“我们”，需要时直接称 GPT / Codex。Codex 不得把已批准的“我”统一改成“用户”，也不得把内部 `Block xx / Evidence ID` 机械写成正式章节。正式章节按批准的 Narrative Section 聚合。
+使用当前installed sources，不用旧distribution ZIP替代。长期写作不在本文件重新维护一套；Experiment解释问题、方法、核验、比较和结果，Process保留Workflow Construction与Experiment Decision Process。
 
-编译后检查日志、文本和 PDF；Process Evidence 按第 13 节执行 >=200-dpi render 与 visual inspection。模板变更更新唯一 active preview；具体任务复制模板，不覆盖 reference template。
+Process Report正文默认执行Visual System / Evidence Protocol中的第一人称研究复盘口吻：用户自己的研究动作写“我”，真实共同完成的动作才写“我们”，需要时直接称GPT / Codex。Codex不得把已批准的“我”统一改成“用户”，也不得把内部 `Block xx / Evidence ID` 机械写成正式章节。正式章节按批准的Narrative Section聚合。
+
+### 12.2 接管已验收文稿与图表
+
+先确认确切PDF、可编辑源、图表输入、构建入口和用户批准范围，登记来源版本。文件名相似、旧审核摘要或一张缩略图不能替代待接管成品本身。
+
+保留原批准文件或不可变版本，改动任务工作副本。不通过复制最终PDF掩盖生成链仍会产出旧稿的问题；应修正真正的章节源、数值宏、图脚本、元数据与生成器调用关系。重建后不得恢复旧工程口吻、旧图或身份占位。
+
+已批准源包可被最小适配到仓库目录和公共P2组件；数值、文章含义、图形关系、用户批准构图和Evidence规格不得静默改变。样稿和全稿的批准范围分别记录，不把局部验收推广到全部文件。
+
+GPT直接生成的是实际成品时，不得重新自由创作文稿来“复现”。如因依赖或生成器适配确需改动，说明具体差异并核对新PDF；影响已批准表达时返回相应审核，而非重开无关研究。
+
+### 12.3 构建、图表和影响回归
+
+编译后检查日志、全文、数值、引用、页码、图注和PDF；对当前正式PDF至少200-dpi渲染并逐页实际查看。缩略联系表、提取文本和文件哈希只是辅助，不替代视觉检查。未实际查看的范围明示，不用自动脚本伪造目视结论。
+
+纯身份、文字和排版修改：核对当前生成器、图表数据/含义、交叉引用、PDF与包。绘图汇总改变：核对真实输入、口径及图中数值。算法、数据、指标或模型反馈改变：使受影响结果失效并按批准定义重跑。不能每次改报告都重跑所有模型，也不能用“只是改稿”绕过实际数值变化。
+
+独立包默认使用相对路径及明确依赖，不依赖临时sandbox、个人绝对路径或未打包缓存。报告可编译、图可重画、实验可复算是三项不同检查，分别报告。纯PDF元数据变化可说明文字/渲染等价，不伪称二进制相等。
+
+跨环境独立包可包含从公共颜色源生成的受控副本，并记录来源/版本和一致性；仓库仍以公共P2文件为唯一可编辑色值源。禁止形成两份独立手改颜色定义。
+
+### 12.4 模板、参考与正式提交
+
+模板变更更新对应唯一active preview；任务报告使用任务源，不覆盖reference template。合成preview、已验收真实报告和新的任务稿角色不同，按照Visual System §16登记。
+
+对已验收PDF与源包核对配对关系；保存真实构建/检查范围，包内不得分发字体二进制或秘密。成品制作、仓库集成、远程发布和UI上传分别确认，不能互相代替。
+
+Process Evidence仍按第13节进行来源、phrase/box/arrow/PPI审核及Evidence Master Lock；报告作者或工程执行者不能因编译通过代做Lock。缺少真实外部输入只阻断对应页面，其他可完成工作继续。
 
 ---
 
@@ -303,7 +351,13 @@ raw 不得覆盖。明确保存 raw/、crop/（或可重现 LaTeX trim）、anno
 
 正式可视化按 [Visual System §§11–13](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md#11-figure-palette-and-scientific-plotting) 与实际读取的 [publication-plots Skill](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/tools/skills/publication-plots/SKILL.md) 执行；需要时读对应 references。不得声称读取未实际读取的 Skill。
 
-依据研究问题考虑具有解释价值的 Signature Visualization。优先原生、可编辑、可复现工具，保存代码与 SVG/PDF/其他有价值源文件。精修只改变视觉表达，不改变数据关系。不要把 Excel、Notebook、IDE、浏览器截图拼接成正式科研图；真实 Interaction Evidence 按专属协议处理。
+依据研究问题考虑具有解释价值的Signature Visualization。优先原生、可编辑、可复现工具，保存代码、真实图表输入及SVG/PDF/其他有价值源文件。GPT或Codex均可在授权与真实能力范围制作；不声称使用未实际打开的Skill或工具。
+
+三维图须有真实第三维；参数曲面说明实测网格与插值区别；流向图核对互斥状态和数量守恒；分布图保留零值、分母和统计单位；技术框架图显示真实数据/控制/判断关系。细则按Visual System §12.1，不用复杂图型替代缺失证据，也不固定每个任务的图型配额。
+
+精修只改变视觉表达，不改变数据、几何、统计关系或结论。不要把Excel、Notebook、IDE、浏览器截图拼接成正式科研图；真实Interaction Evidence按专属协议处理。技术核验图不自动添加人类质疑和历史箭头；最终部署与研究组织层须分开标示。
+
+统一图、表、正文的名称、参考、单位和小数精度；核对最终显示尺寸而不只检查文件存在。新增描述性汇总须保留脚本和来源，不能变成未批准的新实验。
 
 ---
 
@@ -325,11 +379,11 @@ Experiment Report只能依据：
 - 真实指标；
 - 真实实验；
 - 正式图表；
-- GPT/用户确认后的解释
+- 有真实证据并处于当前批准解释/裁决规则范围内的说明
 
-整理。
+整理；正式研究结论仍按实际GPT/用户审核范围确认。
 
-Codex不得看到结果后自行创造研究结论。
+Codex不得看到结果后无依据创造结论、改写标准或把权衡称为全面胜出。可以按预先批准规则形成带范围的实测结果和解释送审，不能以“只有用户能写结论”为理由停止已授权的报告工程。
 
 Process Report只能依据真实：
 
@@ -342,39 +396,17 @@ Process Report只能依据真实：
 - 实验反馈；
 - 最终确认。
 
-正式文档要求：
+正式文档目标是自然、直接、简洁、具体，像学生真实完成实验后的认真整理。详细组织、问题驱动论证、22类编辑检查及正文/附录/工程资料分流，统一按Report Writing Guide执行。
 
-- 自然；
-- 直接；
-- 简洁；
-- 具体；
-- 像学生真实完成实验后的认真整理。
+Experiment Report开篇与必要定义直接说明，主体围绕真实问题、方法、核验、比较和取舍。不用Goal/run名称切断同一研究问题；也不把完整要求清单、提交权限和哈希塞入正文。每步验证、单项/组合、量化改善与回退要有具体证据，不仅是口号。
 
-Process Report 正文还必须：
+Process Report正文继续使用第一人称“我”；只有真实共同完成才写“我们”；GPT/Codex按真实职责称呼。关键Human Judgment保留自然表达，后来的专业术语不得倒写成用户最初原话。相关Decision聚合为自然研究板块，不机械按Block或Evidence ID分节。
 
-- 以第一人称“我”作为默认研究叙事主体；
-- 只有真实共同完成的动作才写“我们”；
-- 需要时直接写 GPT / Codex；
-- 关键Human Judgment尽量保留用户原本的自然表达；
-- 技术术语保持准确，但不得把后来由GPT formalize的术语倒写成用户更早就会说；
-- 相关Decision聚合成自然研究板块，不写成内部规则清单或 `Block 01 / Block 02 / ...`。
+不要机械禁用某几个词来代替文稿审核；应检查整段是否有内容、是否面向教师、是否准确。减少“本实验旨在”等空泛套话和内部审核口吻，但保留科学上必要的假设、时空未知、无真值、负结果和AI使用披露。图、表、正文互补，不逐格重述所有数字。
 
-避免：
+纯报告润色不授权改写证据截图的原话、制作不存在的用户质疑或改变历史因果。实验技术图与历史互动图区分，缺Evidence规格按第13节处理；不能把Experiment移出的普通工程日志全部倒入Process。
 
-- “本实验旨在……”
-- “通过本实验……”
-- “综上所述……”
-- Prompt；
-- Reviewer Notes；
-- audit；
-- source of truth；
-- requirement matrix
-
-等不适合正式学生报告的内部工程表达，除非它们本身是课程要求或必要术语。
-
-图表、表格和正文不机械重复。
-
-最终正式文档由 GPT 独立全文审核；Codex自报 PASS 不构成最终结论。
+用户验收过的正文/图表/源文件是接管依据。Codex内部自报PASS不构成最终结论；GPT参与全文与真实成品审核，但其自己制作后的复查只记作者自检。独立审核需要真实不同的审查上下文/执行者与明确范围，最终文稿由用户确认。
 
 ---
 
@@ -418,7 +450,7 @@ Process Report 正文还必须：
 
 LaTeX reference template 不直接覆盖。每个具体任务从锁定模板复制自己的正式 `.tex`。
 
-`demo-assets/` 均为模板/合成素材，禁止冒充实验结果。
+`demo-assets/` 均为模板/合成素材，禁止冒充实验结果。用户已验收的真实报告与源包独立登记为reference/exemplar，不挪入demo-assets或据此给未来实验预填结果。文件是否进入Project Sources与是否属于历史/当前实验是两个分类。
 
 ---
 
@@ -469,16 +501,23 @@ GitHub与老师最终提交包职责不同：
 
 ### ChatGPT Project Sources Upload Bundle
 
-`releases/chatgpt-project-sources/` 是可直接全量上传到 ChatGPT Project Sources 的 **Upload-Ready Bundle**。目录内容必须严格等于批准的 13-file upload set：用户可以删除 UI 中旧项目源后，打开该目录并全选上传。AGENTS.md 本身也是正式 PROJECT_SOURCE。
+`releases/chatgpt-project-sources/` 是按**当前批准的显式文件清单**生成的Upload-Ready Bundle。AGENTS.md本身是PROJECT_SOURCE。唯一结构化清单是 [sources.json](evidence/infrastructure/chatgpt-project-source-sync/sources.json)；成员集合必须精确，数量由清单计算，不固化历史或本轮数量。
 
-- 目录只包含应上传的 13 个普通文件；不放 README、manifest、Evidence Plan、脚本、日志、备份、临时文件、子目录或带重复上传后缀的文件。
-- Project Settings 是最高层规则的例外，仅由用户在 ChatGPT UI 配置，不创建文件副本；内部 WORKFLOW_EVIDENCE_PLAN 不上传。
-- **Active source first → Upload bundle second**。bundle 仅为精确 distribution copy，不直接修改其中治理文档；每次 active Project Source 变化后必须同步。
-- 使用既有 [sync_sources.py](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/sync_sources.py) 的固定 allowlist 同步并清理目录中的非 allowlist 普通文件，再执行 `--check`。遇到子目录或符号链接先报告，不递归删除。
-- 必须核验 canonical names、EXACTLY 13、active bytes == bundle bytes 与 SHA256；二进制文件按字节比较。publication-plots.zip 保留已批准原始 distribution，核验固定 hash 与 installed Skill 的 effective members，不擅自重新打包。
-- [Internal manifest](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/evidence/infrastructure/chatgpt-project-source-sync/SOURCE_MANIFEST.md) 与 [Upload instructions](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/evidence/infrastructure/chatgpt-project-source-sync/UPLOAD_INSTRUCTIONS.md) 均保存在上传目录之外；manifest 的 13 项 Role 统一为 PROJECT_SOURCE，不代表 UI 当前状态。
-- 稳定目录与 canonical 文件名不添加 bundle_v2/final/new 后缀，版本由 Git commit 管理。
-- Codex 只能报告 **UPLOAD BUNDLE READY**，不得声称已完成 ChatGPT UI 上传。用户上传后由 GPT Evidence Master 做最终一致性审核。
+- 五个长期Markdown入口是Research Protocol、Report Writing Guide、Visual System、Interaction Evidence Protocol和AGENTS。老师材料、starter、Skill distribution、模板preview及已批准真实PDF/源包，按当前清单分别纳入；不能因新增写作指南就删除原有必要资料。
+- 文件的project-source成员身份与语义角色分开：规则、教师材料、starter、合成模板、已验收实验成品、局部过程参考、可复现源包等不能混称。
+- 目录仅包含批准上传的普通文件，不放README、内部manifest、Evidence Plan、同步脚本、日志、临时文件、备份、子目录、符号链接或重复上传后缀版本。Project Settings在UI维护，transfer文本不作为active Project Source。
+- **Active source first → approved manifest → upload bundle**。分发副本不是第二套编辑源；每次active规则或参考成品变化，先更新对应源，再同步精确副本。用户明确授权从release导入时，先保存完整清单与不可变输入快照，完成一次受控导入后恢复正常单向分发。
+- 使用既有 [sync_sources.py](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/sync_sources.py) 和上述清单。`--plan`展示新增、变化、缺失、意外及不安全项；`--check`只读核验，不创建或修改manifest、正文、hash、日期及mtime。旧版本若仍硬编码数量或自动清理未知文件，必须先迁移，不能直接写入真实release。
+- 写同步必须先验证所有来源、hash、规范路径及目标安全性，再原子或受控更新；无变更重复执行保持幂等。缺输入、错误hash或失败更新不得丢失原文件或半更新后输出READY；保存可恢复记录。未知extra默认报错并保持，目录/符号链接/越界路径拒绝并报告，不自动unlink或递归清理。确需删除时须有具体授权列表和备份。
+- 清单变更必须是明确范围内的增删替换；取消写死数量不取消成员审核。若当前完整清单尚未形成，先输出差异并保持分发 `NOT_READY`，不猜测数量，也不把若干更新文件当作完整项目源集合。
+- 核验规范文件名、set(actual)==set(approved)、数量一致、active bytes==bundle bytes、SHA256及引用。二进制按实际字节比较。报告PDF/源包另核对配对与批准范围，不能只看同名。来源角色、适用范围和历史身份分别记录，不通过覆盖用户输入强行使比较通过。
+- `publication-plots.zip` 保留已批准原始distribution，核验固定hash与installed Skill的effective members，不为本轮规则同步擅自重打包。
+- 既有 [SOURCE_MANIFEST.md](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/evidence/infrastructure/chatgpt-project-source-sync/SOURCE_MANIFEST.md) 与 [UPLOAD_INSTRUCTIONS.md](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/evidence/infrastructure/chatgpt-project-source-sync/UPLOAD_INSTRUCTIONS.md) 由同一结构化定义生成，保存在上传目录外，登记canonical名称、active路径、语义角色、适用范围、版本、hash、批准/历史范围、替代关系与配对标识。清单不自动证明UI内容。
+- UI按实际差异更新：替换内容变化的文件，保留未变有效资料，不要求先删除全部Project Sources。输入基准已上传不代表后来修订已上传；必要设置补丁仅为任务handoff中的TRANSFER_COPY / USER_UI_ACTION_REQUIRED，不成为第二份active Settings。
+- 稳定canonical文件名不使用`final/new/bundle_v2`等临时后缀；版本由文档版本、真实来源与Git记录管理。历史存档不继续充当冲突的active规则。
+- 生成文件、本地同步、远程验证、bundle就绪和用户实际UI上传是五种不同状态，只能依据真实动作报告。未操作UI不得声称已上传。用户上传后按可访问的实际源再次核对，不以对话附件或仓库存在替代UI完成证据。
+
+规则文本更新不自动完成脚本、模板、manifest或UI的同步。每次迁移都须按授权任务实际执行，并留下对应检查结果。
 
 ### Git操作
 
@@ -506,7 +545,7 @@ Commit前：
 
 每个重要阶段：
 
-**实现/运行 → 自检 → commit/push → GPT读取真实远程成果 → 用户反馈 → 必要时修复/重议 → 再push。**
+**实现/运行 → 自检与批准范围内独立内部核验 → 必要修复闭合 → 按当前Prompt的发布粒度commit/push → GPT读取真实远程成果 → 用户反馈 → 必要时修复/重议并再push。**
 
 Push后必须确认：
 
@@ -536,6 +575,8 @@ Codex自报“PASS”不能替代 GPT 的真实仓库审核。
 - 必须改变已批准方案才能继续；
 - GitHub存在大文件/授权/安全问题；
 - 结果无法真实复现。
+
+已明确获授权的条件化分析、规则内自动选择和普通工程修复按相应条款继续，不重复索取同一批准。外部Evidence/身份缺项先检查当前可访问任务材料；不能因局部缺项停止所有独立工作，也不能编造缺少的事实。
 
 返回：
 
@@ -569,7 +610,10 @@ Codex每轮不能只返回“完成”。
 - 未完成事项；
 - 方案级问题；
 - Out-of-scope确认；
-- Git状态。
+- Git状态；
+- 文稿/图表作者、作者自检、独立审查和用户验收的实际范围；
+- 已验收成品接管、生成器/源文件/PDF/包一致性及未完成同步；
+- 新运行、旧结果引用、REPLAY/RECOMPUTE与内容等价继承的区别。
 
 已经发布时必须增加：
 
@@ -581,4 +625,4 @@ Codex每轮不能只返回“完成”。
 
 任何状态都必须与真实执行一致。
 
-Codex的自检结论不等于项目最终 PASS；最终 Deliverable 验收由 GPT读取真实 GitHub 成果并结合用户确认完成。
+Codex的自检结论不等于项目最终PASS。最终Deliverable依据GPT对真实GitHub成果的范围明确审查及用户确认；GPT自己制作的成品必须如实区分作者检查与独立复核。Evidence Lock、Understanding和Submission不随工程或文稿验收自动通过。

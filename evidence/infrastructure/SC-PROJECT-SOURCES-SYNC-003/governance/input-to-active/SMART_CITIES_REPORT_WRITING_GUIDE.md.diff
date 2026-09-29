@@ -1,0 +1,40 @@
+--- received/SMART_CITIES_REPORT_WRITING_GUIDE.md
++++ docs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md
+@@ -1,8 +1,8 @@
+ # 《智慧城市与位置服务》正式报告写作与论证指南
+ 
+-Version: **v1.0**  
++Version: **v1.1**  
+ Status: **ACTIVE / LONG-TERM RULE**  
+-Revision: **2026-09-29**  
++Revision: **2026-09-29 · Project-wide dual reports / inherited Process foundation**  
+ Canonical repository path: `docs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md`
+ 
+ 本指南承接已确认的 Experiment Report 重构与报告制作方式，负责正式报告的读者定位、内容组织、论证、中文表达、图文关系和编辑审核。它不是本次实验的结果文件，也不要求未来任务照搬实验一的目录、参数、数据或图型。
+@@ -22,6 +22,8 @@
+ Project Settings只保留高层原则和上述入口。文档间按职责互相引用，不各自维护不同版本的长篇写作规则。Process Report 的叙事主体与历史处理以 Evidence Protocol §16.1—16.2 为准；本指南不授权修改原始互动或代替 Evidence Master。
+ 
+ ## 1. 两份报告的读者与任务
++
++独立的Experiment Report与Process Report是项目级正式交付规则，适用于本项目正式实验、课程设计及当轮安排的正式报告任务，后续实验同样适用。教师最新明确格式要求仍按既定优先级处理；日常概念问答、临时解释或未授权任务不因此自动生成两份报告。
+ 
+ 两份报告都交给课程教师阅读，应当像认真完成实验后的学生报告，而不是纯工程审计、仓库说明书、操作日志或泛化AI长回答。
+ 
+@@ -76,7 +78,7 @@
+ | AI批判真实 | 对应真实建议或明确假设的反例、前后指标与理由 | 虚构模型错误与用户争论 |
+ | 可追溯与复现 | 必要设置、来源及可用运行入口 | 主体堆满哈希/日志 |
+ 
+-上述要求适用于相应已授权实验，不因为本指南列出某机制就新增研究任务。方法没有收益可以是有效结论；方法未运行不能写成无收益。
++项目级实质工作流/Multi-Agent要求按Research Protocol §C执行；表中的记忆、特定消融等机制只适用于当轮已授权实验，不因为列出某机制就新增研究任务。方法没有收益可以是有效结论；方法未运行不能写成无收益。
+ 
+ ## 4. 正确执行、评价可信与效果支持分开
+ 
+@@ -234,6 +236,8 @@
+ 
+ ## 12. Process Report写作衔接：不覆盖最新第一人称规则
+ 
++后续任务继承已经真实形成的项目工作流作为共同基础，根据报告独立可读性作必要介绍或引用，重点记录本次新增、修正、否定及本次Experiment Decision Process。不从零重写相同历史，不机械复制31页前期材料，也不制造争论来表现迭代。继承须保留来源、实际适用范围和原有Lock状态，不能将局部参考扩大为整份报告已完成；Evidence Master的指定与职责见Evidence Protocol §4.1。
++
+ Process正文按Evidence Protocol §16.1—16.2执行：自己的观察、质疑、判断与选择写“我”，真正共同完成的动作才写“我们”，GPT/Codex按真实职责直接称呼。主体为自然研究叙事，关键判断保留人的自然语气，技术定义保持简洁准确。
+ 
+ 报告可整理真实事实形成连贯文字，但不能改变提出者、时序、确定程度和证据出现顺序。后来由GPT形式化的术语，不倒写成用户最初已经熟悉。内部Block和Evidence ID不机械成为正式章节。

@@ -1,0 +1,43 @@
+--- received/SMART_CITIES_RESEARCH_PROTOCOL.md
++++ docs/research/SMART_CITIES_RESEARCH_PROTOCOL.md
+@@ -1,9 +1,9 @@
+ # Smart Cities Research Protocol
+ 
+-Version: **v1.1**\
++Version: **v1.2**\
+ Status: **ACTIVE / LONG-TERM RULE**\
+ Purpose: **Smart Cities Research Governance / Source / Uncertainty / Spatiotemporal Correctness / Experiment Evidence / AI Critique**  
+-Revision: **2026-09-29 · Report evidence / approved autonomy routing**  
++Revision: **2026-09-29 · Project-wide workflow scope / conditional-analysis boundary**  
+ Canonical repository path: `docs/research/SMART_CITIES_RESEARCH_PROTOCOL.md`
+ 
+ 优先级：**老师最新正式要求 / 用户最新明确要求 > 当前批准 Prompt > Project Settings > SMART_CITIES_RESEARCH_PROTOCOL > 历史旧规则。**
+@@ -11,6 +11,8 @@
+ 本协议维护研究方法与治理；工程执行、证据生产、视觉表达分别路由到文末的对应文件。Project Settings 由用户在 ChatGPT UI 维护，不在仓库复制。发现 active documents 冲突时，明确文件及条款；当前批准 Prompt 明确覆盖的按新规则修正，其余停止受影响部分并报告，不自行择一执行。
+ 
+ ## A. Research Scope / Task Governance
++
++本协议适用于整个《智慧城市与位置服务》项目。后续正式实验、课程设计及批准的报告任务继承共同研究治理；各任务仍按老师材料和当轮批准方案确定方法、数据、评价与交付。既有任务的算法、阈值、样本量、Goal及报告结构仅为该任务实例，不成为未来任务的输入或永久标准。
+ 
+ | 层级 | 定义与执行条件 |
+ |---|---|
+@@ -30,6 +32,10 @@
+ ## C. Standard Research Workflow
+ 
+ 老师材料 → 完整读题与范围确认 → T1/T2 / Deliverables / grading / submission → 必要网络研究 → Source Audit → starter/data 检查 → requirement checklist → spatiotemporal correctness → GPT 候选 → User review / challenge / modify / reject / select → CONFIRMED / CANDIDATE / UNRESOLVED → 必要公平实验 → 方案冻结 → Codex implementation → real execution → results → GPT audit → human interpretation → formal conclusion。
++
++实质工作流、Multi-Agent及持续闭环是项目通用工作方式。正式任务按问题和规模设置真实的研究、执行、独立核验、反馈、优化、修复与恢复职责，并保留与实际职责相匹配的证据；不能退化为模型只提建议、普通函数改名或事后补画架构图。角色数量、工具和信息合同由当轮任务设计，不永久固定实验一的A/B/C实现。
++
++四模式、记忆、特定消融和调用预算不自动成为未来每项任务的必做实验，其采用及评价由老师材料和当轮批准方案决定。经实测选定的最终记录级方法可以是确定性程序；研究/执行层的实质多角色工作流不要求每条数据都调用LLM。
+ 
+ GPT 提供研究候选与审核，用户审阅、质疑、修改、否决或选择；Codex执行批准方案或用户明确批准的实验裁决规则。用户确认候选范围、指标、保护、选择/回退与停止规则后，普通授权内比较和裁决自动进行，不为每个参数重复确认；结果与正式解释仍需真实证据及范围明确的最终审核。
+ 
+@@ -87,6 +93,8 @@
+ 原始值不变，产物明确标为真实数据上的条件化分析。工程正确、条件化结果有效和真实地理
+ 语义确认分别验收；不放宽共同审核标准，也不以未知事实阻断授权内的全部处理。
+ 
++本节是条件性通用规则。既有实验的条件化分析授权不自动证明新数据的CRS，也不自动授权其他任务的未知datum分析。
++
+ ## H. Parameter Rationale
+ 
+ 参数依据优先级：**物理 / 业务意义 > 数据分布 > 敏感性实验 > 原始文献 / 官方经验 > starter default > 主观经验。**

@@ -1,5 +1,8 @@
 # Experiment 1 Technical Handoff
 
+**当前报告/包导航（SC-PROJECT-SOURCES-SYNC-003，2026-09-29）：** Experiment已切换为用户验收25页重构版，当前[章节源](../../reports/experiment1/Experiment_Report.tex)和[构建说明](../../reports/README.md)已接管正常REPORT_BUILD。当前包为 [25页报告同步REVIEW_ONLY包](../../submission/REVIEW_ONLY_10245102410_吴博闻_实验一_25页报告同步.zip)，校验和精确FULL继承边界见[本次审阅入口](../../../evidence/infrastructure/SC-PROJECT-SOURCES-SYNC-003/REVIEW_PACKET.md)。Process仍为原12页送审稿；前期31页参考复现仍PARTIAL。以下研究事实继续沿用原run身份；原收尾的22页/34页视觉、旧包与四次FULL检查只是历史事实，不冒称本轮新报告检查。REPORT_BUILD不再写数值摘要/图/Process；本轮新增实验模型和数值运行均为0。运行所需placeins/needspace仅装在隔离TeX树，详见报告说明。
+
+
 Parent Goal：`SC-LAB1-G3-FINAL-001`；本次收尾 Task：`SC-LAB1-G3-CLOSEOUT-001`，仍属实验一，不新增 Goal 4。当前审阅入口为 [REVIEW_PACKET.md](../../evidence/goal3/REVIEW_PACKET.md)，原要求登记保留在 [requirements.json](../../evidence/goal3/requirements.json)。本次 [MASTER_REQUIREMENTS_REVIEW](../../evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/a_diagnosis/MASTER_REQUIREMENTS_REVIEW.md) 将教师 T1/T2、用户 U01—U44 与原 G1/G2/G3、TD 项交叉定位，不创建第二套研究通过结论。完整实验一入口为 [task1/README.md](../../README.md)，随后讲解入口为 [REVIEW_GUIDE.md](REVIEW_GUIDE.md)。
 
 姓名“吴博闻”、学号字符串“10245102410”来自本次用户直接授权，唯一任务身份源为 [assignment.json](../../config/assignment.json)。Identity 已为 `VERIFIED`；报告修订日期为 2026-09-28，旧实验与冻结时间不改。Process 正式互动证据仍有外部依赖，用户理解验收与新网页文档/包验收尚未完成。本文 §3–7 记录冻结的研究事实；本次文档、复现与包的工程状态见 §8–9。
@@ -110,7 +113,7 @@ P2 及 S0_P2 在同上游下分别多保留 1,946/2,010 个点，无压缩收益
 
 坐标程序已实际检查全部 1,173,410 点、1,162,024 条原始相邻边和 22,772 份实际 trace。PROJ 坐标最大残差 `8.148098e-10` 工作米；最远 ENU 半径约 111,906.20 工作米，位于批准域内；实际相邻工作距离与同椭球测地距离最大差约 0.452041 工作米。对实际 S 距离/长度、D 窗口及固定 P 输入的 AEQD 检查未报告阈值/保留集合差异。[独立坐标审核](../../evidence/goal3/independent_c/g3-full-production-01_coordinates_receipt.json) 核了全部点、原始邻边与实际阶段计数，并对随机、类别、极值合并的 56 条记录、112 份轨迹独立重算阶段敏感性和全部已报告阶段极值见证。未对其余每条记录再独立重算 AEQD 敏感性；该检查不等于换坐标后重跑整条链，也不能认证源 datum。
 
-## 8. 可复现交付与状态边界
+## 8. 历史SC-LAB1-G3-CLOSEOUT-001： 可复现交付与状态边界
 
 - [基础完成版 Notebook](../../notebooks/final/作业1轨迹数据预处理_完成版.ipynb) 对应基础 starter：参数、六种顺序、评价、真实 AI 批判、构造例和全量生产。
 - [系统完成版 Notebook](../../notebooks/final/任务3_LLM辅助评估清洗_完成版.ipynb) 对应 LLM starter：真实工作流、四模式、记忆边界与保存提议的离线重算。
@@ -147,7 +150,7 @@ P2 及 S0_P2 在同上游下分别多保留 1,946/2,010 个点，无压缩收益
 
 当前状态分别保持：Identity=`VERIFIED`；Process Evidence=`BLOCKED_EXTERNAL_ORIGINALS_SPEC_LOCK`；Deliverable=`FINAL_REVIEW`；Understanding=`LEARNING`；Submission=`NOT_READY`；新的 GPT_SECOND_REVIEW=`PENDING`。工程验收与发布进度由本次收尾回执登记，不由本 Handoff 自立“全部 PASS”。没有发送邮件或上传教学平台；本次截至该编辑节点未新增系统包、语言包、工具链、字体或持久环境配置。
 
-## 9. 审核版本入口
+## 9. 历史SC-LAB1-G3-CLOSEOUT-001： 审核版本入口
 
 `NUMERIC_CODE_SHA=e12f8a27944210adb452730be92a0674dfc6b84b` 仍指原选择、确认及生产的真实代码；冻结继续绑定原件、合同、分区、源码和只读记忆。本次 C 对冻结来源的检查和数值摘要等价核对分别保存在 [冻结/身份回执](../../evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/c_review/frozen_identity_receipt.json) 与 [摘要等价回执](../../evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/c_review/result_summary_equivalence.json)，不把文档提交 HEAD 改称原数值代码。
 

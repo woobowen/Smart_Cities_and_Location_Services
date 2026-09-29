@@ -1,8 +1,10 @@
 # 《智慧城市与位置服务》Workflow Interaction Evidence Protocol
 
-Version: **v2.4**\
+Version: **v2.6**\
 Status: **ACTIVE / LONG-TERM RULE**\
-Purpose: **Process Report · Workflow Construction · Experiment Decision Process · Human–AI Interaction Evidence**
+Purpose: **Process Report · Workflow Construction · Experiment Decision Process · Human–AI Interaction Evidence**  
+Revision: **2026-09-29 · Project-wide live evidence / explicit Evidence Master appointment**  
+Canonical repository path: `docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md`
 
 本协议专门约束：真实历史恢复、原始聊天取证、Narrative规划、Evidence设计、最小必要编辑、对话精修/重构、Simulation执行、原始研究对话证据采集、截图、审核、Evidence Lock、Block/Section级LaTeX同步与最终综合图制作。
 
@@ -12,7 +14,9 @@ Purpose: **Process Report · Workflow Construction · Experiment Decision Proces
 
 ---
 
-本协议负责 Evidence authenticity / production；研究治理见 [Research Protocol](../../docs/research/SMART_CITIES_RESEARCH_PROTOCOL.md)，视觉语法见 [Visual System](../../docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md)，工程实现见 [AGENTS](../../AGENTS.md)。Project Settings 由用户在 UI 维护。
+本协议负责 Evidence authenticity / production 及 Process Report 叙事的真实归属；研究治理见 [Research Protocol](../research/SMART_CITIES_RESEARCH_PROTOCOL.md)，一般报告组织、论证与编辑见 [Report Writing Guide](../report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md)，视觉语法见 [Visual System](../design-system/SMART_CITIES_VISUAL_SYSTEM.md)，工程实现见 [AGENTS](../../AGENTS.md)。Process 第一人称与历史处理继续以本协议 §16.1—16.2 为准。Project Settings 由用户在 UI 维护。
+
+本协议适用于项目每项正式研究的真实互动证据。后续Process继承共同基础并记录当前任务新增演化，按Report Writing Guide §12组织；继承不得扩大原证据的来源、适用范围或Lock状态。
 
 ## 1. 核心目标
 
@@ -147,11 +151,11 @@ Purpose: **Process Report · Workflow Construction · Experiment Decision Proces
 
 ## 4. 三角色对话体系
 
-本项目采用三个明确分工的对话角色。
+本协议区分以下三个Evidence生产职责角色；这不是对每项研究/执行Multi-Agent角色数量的固定要求，具体任务的实质工作流按Research Protocol §C设计。
 
 ### 4.1 Evidence Master / Master Planning Conversation
 
-**当前长期规划对话**是唯一的Evidence构建“大脑”，长期负责：
+**由用户明确指定的Evidence Master / Master Planning Conversation**是Evidence构建的负责入口，在指定范围内长期负责：
 
 - Historical Question Inventory；
 - Historical Retrieval Card；
@@ -180,7 +184,7 @@ Purpose: **Process Report · Workflow Construction · Experiment Decision Proces
 - Part I / Part II Evidence整合；
 - 内部Evidence Plan逻辑维护。
 
-即使后续Experiment 1、Experiment 2或其他正式任务完成，**Evidence构建大脑仍由该Master Planning Conversation承担**，除非用户明确迁移职责。
+该职责在用户指定的范围内持续，由用户明确决定是否迁移。新对话仅仅读到“当前长期规划对话”不构成自动任命，也不能据此接管Evidence Master或宣布新的Lock。
 
 ### 4.2 Research Conversation
 
@@ -328,7 +332,7 @@ Evidence优先级：
 
 只要原始聊天本身可用，就不应模拟重写。
 
-尤其从Experiment 1正式开始以后，应尽量：
+每项正式研究都应尽量：
 
 > **实时保存Original Evidence，而不是事后重构。**
 
@@ -766,6 +770,16 @@ Framework / Block只能用于编辑组织，不是历史来源。
 
 多个相关 Decision Unit 应在不改变真实顺序和因果的前提下合并为一个自然叙事板块。
 
+### 16.3 报告改写与证据原文的边界
+
+已批准的报告文风调整，可以组织真实事实、减少冗余、改进章节衔接；不能因此修改原始聊天、重写截图内的用户原话、添加过去不存在的质疑或升级历史确定程度。
+
+正式叙述里的“我/我们”仍必须对应真实行为。用户事先批准比较、回退和停止规则后，系统按规则执行的具体选择，应准确写为授权内的系统裁决；不能补写成用户逐条判断，也不能用“人必须参与每一步”的图式制造缺失回合。
+
+技术实验报告可以用共同输入、参考/候选、检查、实测与判断解释最终方法。它不因此成为历史Interaction Evidence，也不自动使用本协议的User anchor或术语所有权结论。报告作者自检不替代Evidence Master的来源核查与Lock。
+
+具体正文组织和图文衔接参考Report Writing Guide；原话摘录、裁切、编辑干预和真实历史仍按本协议执行。
+
 ---
 
 ## 17. 后台完整、前台代表性
@@ -853,6 +867,12 @@ Framework / Block只能用于编辑组织，不是历史来源。
 不是：
 
 > **我们后来怎样加工这些截图。**
+
+### 18.4 两份报告的技术重叠不等于叙事复制
+
+同一个技术事实可以进入两份报告，但作用不同：Experiment Report说明方法、比较和结果为何支持取舍；Process Report说明这些问题怎样在真实互动中被发现、判断和验证。
+
+不得为了避免重复，把Experiment Report的实际Workflow/验证方法全部删除；也不得把其移出的哈希、提交管理和普通Debug全部倒入Process Report。历史素材决定过程报告叙事，最终方法结构不能反向生成历史。
 
 ---
 
@@ -1073,6 +1093,14 @@ annotation specification 通过后仍不能直接视为正确。
 
 Evidence Master 决定 highlight、圈选范围、User anchor、GPT before/after、phrase 关系、turn 调序、Evidence 入选与用户文本编辑。Codex 只能根据批准的 Evidence Plan / annotation specification 精确实现，不自行推断、扩大框选或补造关系；缺少 specification 时停止受影响真实页面。模板 synthetic demo 不构成真实 Evidence 或批准关系。
 
+### 24.6 技术核验图与Human–AI Evidence图区分
+
+技术图可以展示真实原始输入、参考方案、候选方案、独立评价、判断条件、适用模式下的反馈与回退。这类图以代码、数据和方法关系为依据，不需要凭空添加User Observation或Human Challenge。
+
+只有实际历史及Interaction Window支持相应人类行为时，才使用Human Reasoning → Evidence → Decision表达该段互动。箭头表达方法上的数据/控制依赖，不自动证明历史上谁回应或改变了谁。
+
+GPT直接制作报告、图表或LaTeX不自动迁移Evidence Master职责。角色迁移须由用户明确指定；作者自检、工程检查、用户文稿认可与Evidence Lock分别记录。
+
 ---
 
 ## 25. Transcript Diff Audit
@@ -1187,7 +1215,7 @@ Simulation GPT逐字输出Approved GPT Response。
 
 ## 28. 正式Research Conversation实时证据机制
 
-从Experiment 1正式研究开始，优先实时保存Original Evidence。
+每项正式研究从开始时即优先实时保存Original Evidence；既有任务的历史起点不限制后续任务的适用范围。
 
 推荐：
 
@@ -1459,7 +1487,7 @@ Evidence Master负责逻辑维护；需要正式写入仓库时交由Codex或用
 
 ---
 
-本轮字段补充以 [WORKFLOW_EVIDENCE_PLAN](../../evidence/process-report/workflow-construction/WORKFLOW_EVIDENCE_PLAN.md) 的 schema 为准；未取得原图与 Evidence Master 批准前保持空记录，不制造 Evidence ID、phrase 或 LOCK。
+实际字段以 [WORKFLOW_EVIDENCE_PLAN](../../evidence/process-report/workflow-construction/WORKFLOW_EVIDENCE_PLAN.md) 的有效schema为准。新候选尚未取得原图或Evidence Master批准时，对应缺失字段保持未定，不制造Evidence ID、phrase或LOCK；不能因此清空已有真实有效记录。Project Sources中的参考PDF和源包也不自动构成内部Evidence Plan或逐项Lock。
 
 ## 35. LaTeX同步策略
 
@@ -1494,6 +1522,10 @@ Evidence Master负责逻辑维护；需要正式写入仓库时交由Codex或用
 - 多个相关Decision是否已经聚合为自然Narrative Section；
 - 每个highlight / box是否仍是minimum sufficient scope；
 - 每根箭头在最终render中是否准确指向批准phrase。
+
+接管已验收的局部/完整文稿时，保护对应源码、原图、批准规格与PDF版本；不得让旧模板或生成器把第一人称改回“用户”，或重新按Block机械拆章。影响已锁短语、框选、关系或呈现的变更需重新审核相应范围；纯外围文字调整也应核查是否改变分页与引用，不自动重开无关实验。
+
+已提供的前期Process PDF/源包可作为相应阶段参考，不能凭文件名推定每条Evidence已Lock，更不能覆盖后期尚未完成的Experiment Decision Process。已有真实材料先查找再列缺项，不因另一个工程环境没有副本就声称全部原件不存在。
 
 ---
 

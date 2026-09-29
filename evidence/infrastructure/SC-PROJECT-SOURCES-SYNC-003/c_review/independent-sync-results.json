@@ -1,0 +1,84 @@
+{
+  "reviewer": "independent C",
+  "script_sha256": "150cf6647a9e50cf4a29fd144645d2bae22c4c0c4f48105b9d0028c57ec55fd9",
+  "real_bundle_write_calls": 0,
+  "probes": [
+    {
+      "name": "CLI ['--plan']",
+      "exit_code": 0,
+      "entire_fixture_bytes_mtimes_unchanged": true,
+      "stdout": "{\n  \"add\": [],\n  \"change\": [],\n  \"missing\": [],\n  \"unexpected\": [],\n  \"unsafe\": [],\n  \"errors\": [],\n  \"metadata_change\": [],\n  \"file_count\": 3,\n  \"safe_to_sync\": true\n}\n"
+    },
+    {
+      "name": "CLI ['--check']",
+      "exit_code": 0,
+      "entire_fixture_bytes_mtimes_unchanged": true,
+      "stdout": "{\n  \"status\": \"UPLOAD BUNDLE READY\",\n  \"file_count\": 3,\n  \"readonly\": true\n}\n"
+    },
+    {
+      "name": "CLI no-change sync",
+      "exit_code": 0,
+      "entire_fixture_bytes_mtimes_unchanged": true,
+      "stdout": "{\n  \"status\": \"UPLOAD BUNDLE READY\",\n  \"file_count\": 3,\n  \"updated\": [],\n  \"removed\": []\n}\n"
+    },
+    {
+      "name": "explicit future dummy member",
+      "file_count": 4,
+      "hardcoded_count_absent": true
+    },
+    {
+      "name": "hash_mismatch_before_any_write",
+      "rejected": true,
+      "target_bytes_mtimes_and_symlinks_unchanged": true,
+      "error": "Active source SHA256 mismatch: blob.bin"
+    },
+    {
+      "name": "missing_later_source_before_any_write",
+      "rejected": true,
+      "target_bytes_mtimes_and_symlinks_unchanged": true,
+      "error": "Missing source: inputs/blob.bin"
+    },
+    {
+      "name": "unknown_regular_file",
+      "rejected": true,
+      "target_bytes_mtimes_and_symlinks_unchanged": true,
+      "error": "Refusing mutation: extra=['keep-user.txt'], unsafe=[]"
+    },
+    {
+      "name": "dangling_target_symlink",
+      "rejected": true,
+      "target_bytes_mtimes_and_symlinks_unchanged": true,
+      "error": "Refusing mutation: extra=['dangling'], unsafe=['dangling']"
+    },
+    {
+      "name": "unexpected_directory",
+      "rejected": true,
+      "target_bytes_mtimes_and_symlinks_unchanged": true,
+      "error": "Refusing mutation: extra=['personal'], unsafe=['personal']"
+    },
+    {
+      "name": "duplicate_canonical_name",
+      "rejected": true,
+      "target_bytes_mtimes_and_symlinks_unchanged": true,
+      "error": "Duplicate canonical name: plain.md"
+    },
+    {
+      "name": "active_path_traversal",
+      "rejected": true,
+      "target_bytes_mtimes_and_symlinks_unchanged": true,
+      "error": "Unsafe path: inputs/../outside"
+    },
+    {
+      "name": "source_parent_symlink",
+      "rejected": true,
+      "target_bytes_mtimes_and_symlinks_unchanged": true,
+      "error": "Symlink path: inputs/plain.md"
+    },
+    {
+      "name": "failure after both bundle swaps, before metadata",
+      "entire_bundle_and_manifest_bytes_mtimes_restored": true,
+      "recovery_state": "ROLLED_BACK"
+    }
+  ],
+  "all_passed": true
+}

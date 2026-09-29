@@ -1,0 +1,198 @@
+[
+  {
+    "id": "SYNC-01",
+    "objects": "起始workspace/remote、23-entry release、7核心输入",
+    "action_or_command": "ls -la；capture_received.py；git ls-remote",
+    "expected": "实际HEAD匹配、不覆盖输入、7个size/hash匹配",
+    "actual": "4483f520与实际remote相等；7/7匹配，received保留",
+    "scope": "输入接收与溯源",
+    "status": "VERIFIED",
+    "evidence": [
+      "starting-workspace.json",
+      "received-release-inventory.json",
+      "received-input-checks.json"
+    ]
+  },
+  {
+    "id": "SYNC-02",
+    "objects": "P1–P4、条件授权与实验一实例",
+    "action_or_command": "A范围读取 + C独立语义审查",
+    "expected": "通用规则不带实验一固定方法/数值",
+    "actual": "P1 Writing§1；P2 Research§C；P3 Writing§12/Evidence§4.1；P4 Visual§13",
+    "scope": "五规范",
+    "status": "VERIFIED",
+    "evidence": [
+      "governance/SCOPE_REVIEW.md",
+      "c_review/CONTENT_SCOPE_REVIEW.md"
+    ]
+  },
+  {
+    "id": "SYNC-03",
+    "objects": "5份active规范、版本与引用",
+    "action_or_command": "validate_governance.py；input-to-active diff",
+    "expected": "完整底稿保留、最小修订、链接有效",
+    "actual": "5文档、105链接、54保护文件PASS；W01–W22未改",
+    "scope": "规则导入",
+    "status": "VERIFIED",
+    "evidence": [
+      "governance/document-validation.json",
+      "governance/DOCUMENT_CHANGES.md",
+      "governance/input-to-active/"
+    ]
+  },
+  {
+    "id": "SYNC-04",
+    "objects": "UI transfer patch与16项UI差异",
+    "action_or_command": "按received清单与final sources.json逐项对比",
+    "expected": "只提供最小handoff副本、不写UI、不入release",
+    "actual": "5 Markdown替换，11文件不重传；3个Settings位置短补丁",
+    "scope": "仓库交付；UI用户后续动作",
+    "status": "VERIFIED",
+    "evidence": [
+      "handoff/UI_SOURCE_DIFF.md",
+      "handoff/PROJECT_SETTINGS_SCOPE_PATCH.md"
+    ]
+  },
+  {
+    "id": "SYNC-05",
+    "objects": "已验收Experiment PDF/ZIP canonical pair",
+    "action_or_command": "ZIP CRC/path/security + source hash comparison",
+    "expected": "原PDF/ZIP保持提示词hash，嵌入PDF一致",
+    "actual": "72成员、CRC正常、无不安全路径/font/secret；原件hash不变",
+    "scope": "批准报告原件",
+    "status": "VERIFIED",
+    "evidence": [
+      "report/source-archive-check.json",
+      "c_review/initial-independent-results.json"
+    ]
+  },
+  {
+    "id": "SYNC-06",
+    "objects": "真实editable source、build_reports、REPORT_BUILD",
+    "action_or_command": "干净build.sh + 连续正常入口重建 + 200dpi逐页查看",
+    "expected": "25页相同正文/构图、无预带PDF假编译、不恢复旧稿",
+    "actual": "干净源包 + 两次正常 REPORT_BUILD 均25页、文字相同；作者实际查看50张两版200dpi全页，C独立编译并抽查6页两版。批准参考pair不变；导入已验收25页后，两次构建均保持current reading bytes不变。",
+    "scope": "报告源码与生成链",
+    "status": "VERIFIED",
+    "evidence": [
+      "report/clean-build-result.json",
+      "report/normal-build-1/build_receipt.json",
+      "c_review/visual-coverage-independent-check.json",
+      "report/normal-build-2/build_receipt.json",
+      "report/normal-build-2-command.txt",
+      "report/root-pages-19-25-visual.json",
+      "governance/report-pages-13-18-visual.json",
+      "report/visual-pages-01-12.md",
+      "c_review/normal-builds-independent-check.json"
+    ]
+  },
+  {
+    "id": "SYNC-07",
+    "objects": "Process参考/任务稿/template",
+    "action_or_command": "starting inventory逐字节比对 + PARTIAL旧记录读取",
+    "expected": "保持原件、已知PARTIAL与待审身份、不重Lock",
+    "actual": "C独立保护核验通过；无Process/模板重生成",
+    "scope": "Process保护",
+    "status": "VERIFIED",
+    "evidence": [
+      "c_review/full-starting-inventory-audit.json",
+      "../SMART-CITIES-GOVERNANCE-PROCESS-REFERENCE-SYNC-002/source-archive-check.md"
+    ]
+  },
+  {
+    "id": "SYNC-08",
+    "objects": "sources.json与完整bundle",
+    "action_or_command": "sync_sources.py；--check",
+    "expected": "set相等、普通文件、active/bundle/hash相等",
+    "actual": "清单推导16项，全通过；7 OS sidecars保留后移出",
+    "scope": "分发集合",
+    "status": "VERIFIED",
+    "evidence": [
+      "sync/forward-sync.json",
+      "metadata-relocation.json",
+      "../chatgpt-project-source-sync/SOURCE_MANIFEST.md"
+    ]
+  },
+  {
+    "id": "SYNC-09",
+    "objects": "安全同步实现与故障回滚",
+    "action_or_command": "pytest test_sync_sources.py；独立C临时fixture/probe",
+    "expected": "正反例、check只读、幂等、dummy扩展、拒绝异常",
+    "actual": "19专项测试与13独立probes通过；真实19个bundle/metadata目标的bytes/mtime稳定",
+    "scope": "同步接口",
+    "status": "VERIFIED",
+    "evidence": [
+      "sync/tests.xml",
+      "sync/real-readonly-idempotence.json",
+      "c_review/independent-sync-results.json"
+    ]
+  },
+  {
+    "id": "SYNC-10",
+    "objects": "manifest、模板/当前报告导航",
+    "action_or_command": "文档引用验证；旧current入口标历史",
+    "expected": "新当前入口准确；旧检查不绑定新PDF",
+    "actual": "当前导航指向25页和新ZIP；旧22/34页检查已标历史；24个当前Markdown的422个路径/anchor有效。",
+    "scope": "当前读者导航",
+    "status": "VERIFIED",
+    "evidence": [
+      "governance/document-validation.json",
+      "current-navigation-links.json",
+      "c_review/navigation-independent-checks.json"
+    ]
+  },
+  {
+    "id": "SYNC-11",
+    "objects": "新REVIEW_ONLY包及旧FULL具体继承",
+    "action_or_command": "新包逐成员hash/CRC/依赖probe与隔离CLI回归",
+    "expected": "Experiment原件一致、Process不动、依赖无遗漏",
+    "actual": "最终具名ZIP 116成员、CRC/hash正确，4项变化/112项相同；C实际做7个隔离CLI/门禁检查、32源hash验证，未重跑FULL/记录模型。",
+    "scope": "审阅包；不新跑FULL",
+    "status": "VERIFIED",
+    "evidence": [
+      "report/normal-build-1/package/package_build_receipt.json",
+      "report/normal-build-2/package/package_build_receipt.json",
+      "c_review/independent-package-review.json",
+      "report/targeted-tests.txt"
+    ]
+  },
+  {
+    "id": "SYNC-12",
+    "objects": "raw、数值/memory、Skill、用户ZIP",
+    "action_or_command": "check_protection.py + C对5982原文件独立扫描",
+    "expected": "除批准目标和OS元数据可逆迁移外全部不变",
+    "actual": "5982起始文件扫描：5943不变、32授权治理/报告/导航变化、7OS元数据原字节迁移，无范围外改动。",
+    "scope": "原工程全保护",
+    "status": "VERIFIED",
+    "evidence": [
+      "protection-check.json",
+      "c_review/full-starting-inventory-audit.json",
+      "protection-navigation-resolution.md"
+    ]
+  },
+  {
+    "id": "SYNC-13",
+    "objects": "真实独立C及Issue闭合",
+    "action_or_command": "独立子上下文实际读文件/编译/fixture/包检查",
+    "expected": "作者自检与C区分、普通bug同任务闭合",
+    "actual": "真实独立C完成SYNC-01—13审核，C-001已关闭，未关闭工程Issue为0；104个工程实物与14份C证据已绑定。",
+    "scope": "内部验收",
+    "status": "VERIFIED",
+    "evidence": [
+      "c_review/ISSUES.md",
+      "c_review/independent-build-result.json",
+      "c_review/C_REVIEW.md",
+      "c_review/C_FINAL_RESULT.json"
+    ]
+  },
+  {
+    "id": "SYNC-14",
+    "objects": "artifact与最终GitHub固定提交",
+    "action_or_command": "git commit/push；verify_remote.py实际HTTPS raw byte回读",
+    "expected": "本地/实际remote相等；所有bundle/关键active/新工程实际hash相等",
+    "actual": "内部验收后执行发布；当前未发布",
+    "scope": "真实发布",
+    "status": "PENDING_PUBLICATION",
+    "evidence": []
+  }
+]

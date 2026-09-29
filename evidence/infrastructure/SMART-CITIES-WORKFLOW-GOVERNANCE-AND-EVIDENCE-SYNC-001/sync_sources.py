@@ -1,34 +1,20 @@
-"""Maintain the exact 13-file ChatGPT upload bundle; metadata stays internal."""
+"""Distribute the approved sources.json set; unknown files are never deleted."""
 from pathlib import Path, PurePosixPath
-from datetime import datetime
-from zoneinfo import ZoneInfo
 import argparse
 import hashlib
 import json
+import os
+import re
 import shutil
+import stat
+import tempfile
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[3]
 BUNDLE_PATH = Path('releases/chatgpt-project-sources')
 INTERNAL_PATH = Path('evidence/infrastructure/chatgpt-project-source-sync')
+DECLARATION_PATH = INTERNAL_PATH / 'sources.json'
 SKILL_SHA256 = 'b3d20aec75a8450e62effcb51399115c952fa6c3787c254fa09305e44a9c3041'
-# Logical source, canonical filename, active path, historical UI name (not UI state).
-SOURCES = (
-    ('Research Protocol', 'SMART_CITIES_RESEARCH_PROTOCOL.md', 'docs/research/SMART_CITIES_RESEARCH_PROTOCOL.md', 'Not declared uploaded at baseline'),
-    ('Interaction Evidence Protocol', 'WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md', 'docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md', 'WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL_v2_2(1).md'),
-    ('Visual System', 'SMART_CITIES_VISUAL_SYSTEM.md', 'docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md', 'SMART_CITIES_VISUAL_SYSTEM(3).md'),
-    ('Engineering governance', 'AGENTS.md', 'AGENTS.md', 'Not declared uploaded at baseline'),
-    ('Process reference PDF', 'Process_Report_P2_Locked_v1.pdf', 'templates/latex/process-report/preview/Process_Report_P2_Locked_v1.pdf', 'Process_Report_P2_Locked_v1(3).pdf'),
-    ('Experiment reference PDF', 'Experiment_Report_P2_Exact.pdf', 'templates/latex/experiment-report/preview/Experiment_Report_P2_Exact.pdf', 'Experiment_Report_P2_Exact(4).pdf'),
-    ('Workflow Construction Pre-Task1 Accepted Reference', 'WF_WorkflowConstruction_PreTask1_REVISED.pdf', 'reports/process-report/pre-task1/WF_WorkflowConstruction_PreTask1_REVISED.pdf', 'WF_WorkflowConstruction_PreTask1_REVISED.pdf'),
-    ('Workflow Construction Pre-Task1 LaTeX Source Archive', 'WF_WorkflowConstruction_PreTask1_31p_LaTeX_Source.zip', 'reports/process-report/pre-task1/WF_WorkflowConstruction_PreTask1_31p_LaTeX_Source.zip', 'WF_WorkflowConstruction_PreTask1_31p_LaTeX_Source.zip'),
-    ('Teacher slides', '实验课1.pptx', 'task1/实验课1.pptx', '实验课1(1).pptx'),
-    ('Teacher assignment archive', '作业.zip', 'task1/作业.zip', '作业(1).zip'),
-    ('LLM starter notebook', '任务3_LLM辅助评估清洗.ipynb', 'task1/作业/作业/任务3_LLM辅助评估清洗.ipynb', '任务3_LLM辅助评估清洗.ipynb'),
-    ('Trajectory starter notebook', '作业1轨迹数据预处理.ipynb', 'task1/作业/作业/作业1轨迹数据预处理.ipynb', '作业1轨迹数据预处理.ipynb'),
-    ('Publication plotting distribution', 'publication-plots.zip', 'releases/chatgpt-project-sources/publication-plots.zip', 'publication-plots.zip'),
-)
-ALLOWLIST = frozenset(row[1] for row in SOURCES)
 
 
 def sha(data):
@@ -40,20 +26,65 @@ def require(condition, message):
         raise ValueError(message)
 
 
+def safe_path(root, relative, *, allow_missing=False, directory=False):
+    """Reject traversal and symlinks in every component, including parent paths."""
+    require(isinstance(relative, (str, Path)), 'Path must be a relative string')
+    raw = str(relative)
+    path = PurePosixPath(raw)
+    require(raw and '\\' not in raw and not path.is_absolute() and
+            all(p not in ('', '.', '..') for p in raw.split('/')), f'Unsafe path: {raw}')
+    current = root
+    for part in path.parts:
+        current = current / part
+        require(not current.is_symlink(), f'Symlink path: {raw}')
+    if current.exists():
+        require(current.is_dir() if directory else current.is_file(), f'Wrong file type: {raw}')
+    else:
+        require(allow_missing, f'Missing source: {raw}')
+    return current
+
+
+def declaration(root):
+    data = json.loads(safe_path(root, DECLARATION_PATH).read_text())
+    require(data.get('schema_version') == 1, 'Unsupported source declaration')
+    rows = data.get('sources')
+    require(isinstance(rows, list) and bool(rows), 'Empty or invalid source declaration')
+    names = set()
+    paths = set()
+    fields = {'canonical_name', 'active_path', 'project_source', 'semantic_role', 'scope',
+              'version', 'sha256', 'pair_id', 'approval_scope', 'supersedes'}
+    for row in rows:
+        require(isinstance(row, dict) and fields <= row.keys(), 'Incomplete source metadata')
+        name = row['canonical_name']
+        require(isinstance(name, str) and name not in ('', '.', '..') and
+                '/' not in name and '\\' not in name and not re.search(r'\(\d+\)(?=\.|$)', name),
+                f'Noncanonical upload name: {name}')
+        require(name not in names, f'Duplicate canonical name: {name}')
+        require(row['active_path'] not in paths, f'Duplicate active source: {row["active_path"]}')
+        require(row['project_source'] is True, f'Not an approved Project Source: {name}')
+        require(re.fullmatch('[0-9a-f]{64}', row['sha256']) is not None, f'Invalid SHA256: {name}')
+        names.add(name)
+        paths.add(row['active_path'])
+    return data
+
+
 def verify_skill(root):
-    archive = root / BUNDLE_PATH / 'publication-plots.zip'
-    require(archive.is_file() and not archive.is_symlink(), 'Missing/invalid original Skill archive')
+    archive = safe_path(root, BUNDLE_PATH / 'publication-plots.zip')
     require(sha(archive.read_bytes()) == SKILL_SHA256, 'Original Skill archive SHA256 mismatch; do not repackage')
-    installed = root / 'tools/skills/publication-plots'
-    expected = {p.relative_to(installed).as_posix(): p.read_bytes()
-                for p in installed.rglob('*') if p.is_file()
-                and '__pycache__' not in p.parts and p.name != '.DS_Store'
-                and not p.name.endswith(':Zone.Identifier')}
+    installed = safe_path(root, 'tools/skills/publication-plots', directory=True)
+    expected = {}
+    for p in installed.rglob('*'):
+        require(not p.is_symlink(), f'Installed Skill symlink: {p.name}')
+        if p.is_file() and '__pycache__' not in p.parts and p.name != '.DS_Store' and not p.name.endswith(':Zone.Identifier'):
+            expected[p.relative_to(installed).as_posix()] = p.read_bytes()
     payload = {}
     with zipfile.ZipFile(archive) as z:
+        require(z.testzip() is None, 'Skill archive CRC failure')
         for item in z.infolist():
             name = PurePosixPath(item.filename)
-            require(not name.is_absolute() and '..' not in name.parts, 'Unsafe archive member')
+            require(not name.is_absolute() and '..' not in name.parts and '\\' not in item.filename,
+                    'Unsafe archive member')
+            require(not stat.S_ISLNK(item.external_attr >> 16), 'Skill archive symlink')
             if item.is_dir() or '__MACOSX' in name.parts or name.name == '.DS_Store':
                 continue
             require(name.parts[0] == 'publication-plots', 'Unexpected Skill archive root')
@@ -65,104 +96,196 @@ def verify_skill(root):
 
 
 def source_rows(root):
-    require(len(ALLOWLIST) == len(SOURCES) == 13, 'Invalid upload allowlist')
-    verify_skill(root)
     rows = []
-    for logical, name, source, previous in SOURCES:
-        src = root / source
-        require(src.is_file() and not src.is_symlink(), f'Missing/invalid active source: {source}')
-        rows.append(dict(logical=logical, filename=name, source=source,
-                         bundle=(BUNDLE_PATH / name).as_posix(), role='PROJECT_SOURCE',
-                         sha256=sha(src.read_bytes()), previous=previous))
+    for entry in declaration(root)['sources']:
+        source = safe_path(root, entry['active_path'])
+        require(sha(source.read_bytes()) == entry['sha256'], f'Active source SHA256 mismatch: {entry["canonical_name"]}')
+        rows.append(dict(entry, filename=entry['canonical_name'], source=entry['active_path'],
+                         bundle=(BUNDLE_PATH / entry['canonical_name']).as_posix()))
+    verify_skill(root)
     return rows
+
+
+def inspect_bundle(root, names):
+    bundle = safe_path(root, BUNDLE_PATH, directory=True)
+    entries = list(bundle.iterdir())
+    extra = sorted(p.name for p in entries if p.name not in names)
+    unsafe = sorted(p.name for p in entries if p.is_symlink() or not p.is_file())
+    return entries, extra, unsafe
+
+
+def manifest_text(rows, data):
+    lines = [
+        '# Upload Bundle Manifest', '',
+        f'批准清单：[sources.json](sources.json)；批准记录 `{data["approval"]}`；修订日期 {data["revision_date"]}。',
+        f'本次清单计算得到 **{len(rows)}** 个普通文件。数量由清单推导，未来变更须先批准并更新清单。',
+        'PROJECT_SOURCE 是上传身份；下表单独记录语义角色、适用范围、版本、配对和替代关系。此表不声明当前 UI 状态。', '',
+        '| Canonical name | Active source | Identity / semantic role | Scope | Version | SHA256 | Pair | Approval / supersedes |',
+        '|---|---|---|---|---|---|---|---|',
+    ]
+    for r in rows:
+        lines.append(f'| `{r["filename"]}` | [{r["source"]}](../../../{r["source"]}) | PROJECT_SOURCE / {r["semantic_role"]} | '
+                     f'{r["scope"]} | {r["version"]} | `{r["sha256"]}` | {r["pair_id"] or "—"} | '
+                     f'{r["approval_scope"]} / {r["supersedes"] or "—"} |')
+    lines += ['',
+        '权威源先更新，再分发到 `releases/chatgpt-project-sources/`。`--check` 验证集合、每项来源和目标字节及本表；仅本表存在不代表 bundle 已通过检查。',
+        'publication-plots.zip 是原件例外：原件留在 bundle，以固定批准 SHA256 加 installed Skill 全部有效成员独立验证；绝不以自身比较作为唯一依据，不重打包。',
+        '两个 P2 preview 是合成模板。25 页 Experiment PDF/ZIP 是实验一已验收成品及源归档，只作对应实例参考。',
+        '前期 Process 只覆盖 PreTask1，其源码重建保留 [PARTIAL 限制](../SMART-CITIES-GOVERNANCE-PROCESS-REFERENCE-SYNC-002/source-archive-check.md)，不证明完整实验一 Process 或新的 Evidence Lock。',
+        '教师材料与 starter 原字节保留；同步不执行 Notebook、实验模型或数值实验。',
+        'Project Settings 仅在 UI 维护；metadata、脚本、日志和 UI 补丁不进入 upload bundle。',
+        '上传采取[差异更新](UPLOAD_INSTRUCTIONS.md)，不要求删除全部现有 Project Sources。', '']
+    return '\n'.join(lines)
+
+
+def instructions_text(rows, data):
+    return '\n'.join([
+        '# Project Sources 差异更新说明', '',
+        f'当前批准集合由 [sources.json](sources.json) 定义，共 {len(rows)} 项；完整来源、角色和 SHA256 见 [manifest](SOURCE_MANIFEST.md)。',
+        '1. 修改权威文件后，经批准更新清单的版本和 SHA256，再运行同步工具 `--plan` 查看差异。',
+        '2. 运行写同步及 `--check`；所有来源完整、安全且 hash 正确才写入。未知 extra、目录、符号链接不会被删除。',
+        '3. 发布并实际回读固定远程版本后，按 [本次 UI 差异表](../SC-PROJECT-SOURCES-SYNC-003/handoff/UI_SOURCE_DIFF.md) 逐项更新 UI。',
+        '4. 内容变化的同名文档逐个替换；保留未变有效资料。不删除全部当前 Project Sources，不重复上传未变 PDF/ZIP。',
+        '5. 后续任务应重新核对当次 UI 基准；本次差异表只对应 SC-PROJECT-SOURCES-SYNC-003 输入。', '',
+        '生成文件、本地同步、远程核验、UPLOAD_BUNDLE READY、用户实际 UI 上传是五种不同状态。工具只负责前述仓库步骤。',
+        'Project Settings 最小补丁是 [TRANSFER_COPY / USER_UI_ACTION_REQUIRED](../SC-PROJECT-SOURCES-SYNC-003/handoff/PROJECT_SETTINGS_SCOPE_PATCH.md)，不是第二份 active Settings。', '',
+        '| Canonical upload filename | Semantic role |', '|---|---|',
+        *[f'| `{r["filename"]}` | {r["semantic_role"]} |' for r in rows], ''])
+
+
+def metadata_bytes(root, rows):
+    data = declaration(root)
+    return {INTERNAL_PATH / 'SOURCE_MANIFEST.md': manifest_text(rows, data).encode(),
+            INTERNAL_PATH / 'UPLOAD_INSTRUCTIONS.md': instructions_text(rows, data).encode()}
 
 
 def verify_bundle(root):
     rows = source_rows(root)
-    bundle = root / BUNDLE_PATH
-    entries = list(bundle.iterdir())
-    require({p.name for p in entries} == ALLOWLIST, 'UPLOAD_BUNDLE_INVALID: directory must contain exactly the 13 allowlisted names')
-    require(all(p.is_file() and not p.is_symlink() for p in entries), 'UPLOAD_BUNDLE_INVALID: only ordinary files allowed')
+    entries, extra, unsafe = inspect_bundle(root, {r['filename'] for r in rows})
+    require(not unsafe and not extra, f'Unsafe or unexpected bundle entries: unsafe={unsafe}, extra={extra}')
+    require({p.name for p in entries} == {r['filename'] for r in rows}, 'Bundle members missing')
     for row in rows:
-        src, dst = root / row['source'], root / row['bundle']
-        require(src.read_bytes() == dst.read_bytes(), f'Active != Bundle: {row["filename"]}')
-        require(sha(dst.read_bytes()) == row['sha256'], f'Bundle hash mismatch: {row["filename"]}')
+        require((root / row['source']).read_bytes() == (root / row['bundle']).read_bytes(),
+                f'Active != Bundle: {row["filename"]}')
     return rows
 
 
-def manifest_text(rows, date):
-    text = '''# Upload Bundle Manifest
-
-The upload-ready directory is `releases/chatgpt-project-sources/`. Every one of its exactly 13 ordinary files is intended for upload, including AGENTS. All roles are PROJECT_SOURCE. This manifest describes the repository upload bundle, not the current ChatGPT UI state; Previous ChatGPT Display Filename is historical mapping only.
-
-Active sources remain authoritative. Update active sources first, then synchronize distribution bytes. Project Settings stays in ChatGPT UI. This manifest, upload instructions, sync tools, logs and WORKFLOW_EVIDENCE_PLAN remain outside the upload bundle. Versions are managed by Git commits, not duplicate directory/file names.
-
-| Logical Source | Canonical Upload Filename | Active Repo Source | Upload Bundle Path | Role | SHA256 | Active == Bundle | Last Verified Date | Previous ChatGPT Display Filename |
-|---|---|---|---|---|---|---|---|---|
-'''
-    for r in rows:
-        text += (f'| {r["logical"]} | `{r["filename"]}` | [{r["source"]}](../../../{r["source"]}) '
-                 f'| [{r["bundle"]}](../../../{r["bundle"]}) | PROJECT_SOURCE | `{r["sha256"]}` '
-                 f'| YES | {date} | {r["previous"]} |\n')
-    text += '''
-The publication-plots source intentionally names the retained original distribution in the bundle. Its independent verification is the fixed approved SHA256 plus byte comparison of all effective archive members against `tools/skills/publication-plots/`; self-comparison alone is insufficient. Runtime source remains the installed Skill. No archive is repackaged.
-
-The Experiment and Process template PDFs remain Visual / Layout Template References. The accepted 31-page Workflow Construction PDF is a separate real-content / first-person writing / Interaction Evidence implementation reference, accompanied by its reproducible source archive. It replaces neither template nor preview, is not an Experiment Report, and does not establish completion of Task 1 Experiment Decision Process. Its approved PDF and ZIP bytes are preserved; rebuild verification never overwrites them. Teacher PPTX/ZIP and both notebooks are copied as bytes; no notebook is re-saved or executed. No Project Sources upload or Project Settings edit is performed by the sync tool.
-
-The supplied source archive has [PARTIAL reproduction verification](../SMART-CITIES-GOVERNANCE-PROCESS-REFERENCE-SYNC-002/source-archive-check.md): 31 pages build, but the revised prose and annotation geometry are not fully reproduced. The approved PDF remains the accepted reading reference.
-
-See [upload instructions](UPLOAD_INSTRUCTIONS.md) and [engineering verification](README.md). The manifest is internal and does not hash itself.
-'''
-    return text
-
-
 def verify_manifest(root, rows):
-    text = (root / INTERNAL_PATH / 'SOURCE_MANIFEST.md').read_text()
-    import re
-    dates = re.findall(r'\| YES \| (\d{4}-\d{2}-\d{2}) \|', text)
-    require(len(dates) == 13 and len(set(dates)) == 1, 'Manifest requires 13 dated, verified rows')
-    require(text == manifest_text(rows, dates[0]), 'Manifest content/roles/hashes are stale')
+    for path, content in metadata_bytes(root, rows).items():
+        require(safe_path(root, path).read_bytes() == content, f'Metadata stale: {path}')
+
+
+def difference_plan(root):
+    result = dict(add=[], change=[], missing=[], unexpected=[], unsafe=[], errors=[], metadata_change=[])
+    data = declaration(root)
+    names = {r['canonical_name'] for r in data['sources']}
+    try:
+        entries, result['unexpected'], result['unsafe'] = inspect_bundle(root, names)
+    except ValueError as exc:
+        result['errors'].append(str(exc))
+    for r in data['sources']:
+        try:
+            src = safe_path(root, r['active_path'])
+            content = src.read_bytes()
+            require(sha(content) == r['sha256'], f'Active source SHA256 mismatch: {r["canonical_name"]}')
+            dst = safe_path(root, BUNDLE_PATH / r['canonical_name'], allow_missing=True)
+            if not dst.exists():
+                result['add'].append(r['canonical_name'])
+            elif dst.read_bytes() != content:
+                result['change'].append(r['canonical_name'])
+        except ValueError as exc:
+            result['errors'].append(str(exc))
+            if not (root / r['active_path']).exists():
+                result['missing'].append(r['active_path'])
+    if not result['errors']:
+        try:
+            rows = source_rows(root)
+            for path, value in metadata_bytes(root, rows).items():
+                p = safe_path(root, path, allow_missing=True)
+                if not p.exists() or p.read_bytes() != value:
+                    result['metadata_change'].append(path.as_posix())
+        except ValueError as exc:
+            result['errors'].append(str(exc))
+    result['file_count'] = len(data['sources'])
+    result['safe_to_sync'] = not (result['errors'] or result['unsafe'] or result['unexpected'])
+    return result
 
 
 def sync(root=ROOT):
-    # Verify all inputs before changing any destination or removing any extra file.
+    root = Path(root)
     rows = source_rows(root)
-    bundle = root / BUNDLE_PATH
-    require(bundle.is_dir() and not bundle.is_symlink(), 'Invalid bundle directory')
-    entries = list(bundle.iterdir())
-    require(all(p.is_file() and not p.is_symlink() for p in entries),
-            'UPLOAD_BUNDLE_INVALID: unexpected directory/symlink; inspect before cleanup')
-    updated = []
-    for row in rows:
-        src, dst = root / row['source'], root / row['bundle']
-        if src != dst and (not dst.exists() or src.read_bytes() != dst.read_bytes()):
-            shutil.copyfile(src, dst)
-            updated.append(row['filename'])
-    removed = []
-    for p in entries:
-        if p.name not in ALLOWLIST:
-            p.unlink()  # Only direct ordinary files inside the authorized upload directory.
-            removed.append(p.name)
-    rows = verify_bundle(root)
-    internal = root / INTERNAL_PATH
-    internal.mkdir(parents=True, exist_ok=True)
-    date = datetime.now(ZoneInfo('Asia/Shanghai')).date().isoformat()
-    (internal / 'SOURCE_MANIFEST.md').write_text(manifest_text(rows, date))
-    verify_manifest(root, rows)
-    return {'status': 'UPLOAD BUNDLE READY', 'file_count': 13, 'updated': updated,
-            'removed': sorted(removed), 'hashes': {r['filename']: r['sha256'] for r in rows}}
+    _, extra, unsafe = inspect_bundle(root, {r['filename'] for r in rows})
+    require(not extra and not unsafe, f'Refusing mutation: extra={extra}, unsafe={unsafe}')
+    targets = {Path(r['bundle']): (root / r['source']).read_bytes() for r in rows}
+    targets.update(metadata_bytes(root, rows))
+    changed = {}
+    for path, content in targets.items():
+        dst = safe_path(root, path, allow_missing=True)
+        if not dst.exists() or dst.read_bytes() != content:
+            changed[path] = content
+    if not changed:
+        verify_bundle(root)
+        verify_manifest(root, rows)
+        return dict(status='UPLOAD BUNDLE READY', file_count=len(rows), updated=[], removed=[])
+    # Stage every replacement before mutation; keep recoverable backups until verification.
+    stage = Path(tempfile.mkdtemp(prefix='.sync-transaction-', dir=root / INTERNAL_PATH))
+    originals = {}
+    applied = []
+    try:
+        for i, (path, content) in enumerate(changed.items()):
+            dst = root / path
+            backup = stage / f'{i}.before'
+            if dst.exists():
+                shutil.copy2(dst, backup)
+                originals[path] = backup
+            else:
+                originals[path] = None
+            (stage / f'{i}.new').write_bytes(content)
+        (stage / 'recovery.json').write_text(json.dumps({'state': 'STAGED', 'paths': [str(p) for p in changed]}, indent=2))
+        for i, path in enumerate(changed):
+            os.replace(stage / f'{i}.new', root / path)
+            applied.append(path)
+        verify_bundle(root)
+        verify_manifest(root, rows)
+    except BaseException as exc:
+        failures = []
+        for path in reversed(applied):
+            try:
+                backup = originals[path]
+                if backup is None:
+                    (root / path).unlink()  # Only remove a new file created by this transaction.
+                else:
+                    os.replace(backup, root / path)
+            except OSError as rollback_error:
+                failures.append(f'{path}: {rollback_error}')
+        (stage / 'recovery.json').write_text(json.dumps({'state': 'ROLLBACK_REQUIRED' if failures else 'ROLLED_BACK',
+            'error': str(exc), 'paths': [str(p) for p in changed], 'rollback_errors': failures}, indent=2))
+        raise RuntimeError(f'Sync failed; recovery information: {stage / "recovery.json"}') from exc
+    shutil.rmtree(stage)  # This exact tool-owned temporary directory only; never a bundle entry.
+    return dict(status='UPLOAD BUNDLE READY', file_count=len(rows),
+                updated=[p.as_posix() for p in changed], removed=[])
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--check', action='store_true', help='Verify exact set, active bytes, archive and internal manifest without writing')
+    group = parser.add_mutually_exclusive_group()
+    group.add_argument('--check', action='store_true', help='Read-only set, bytes, hashes, Skill and metadata verification')
+    group.add_argument('--plan', action='store_true', help='Read-only additions, changes, missing, unexpected and unsafe inputs')
     args = parser.parse_args()
-    if args.check:
-        rows = verify_bundle(ROOT)
-        verify_manifest(ROOT, rows)
-        print('UPLOAD_BUNDLE_CONTENT: PASS; EXACTLY 13; internal manifest verified')
-    else:
-        print(json.dumps(sync(), ensure_ascii=False, indent=2))
+    try:
+        if args.check:
+            rows = verify_bundle(ROOT)
+            verify_manifest(ROOT, rows)
+            result = dict(status='UPLOAD BUNDLE READY', file_count=len(rows), readonly=True)
+        elif args.plan:
+            result = difference_plan(ROOT)
+        else:
+            result = sync()
+        print(json.dumps(result, ensure_ascii=False, indent=2))
+        if args.plan and not result['safe_to_sync']:
+            raise SystemExit(1)
+    except (ValueError, OSError, RuntimeError) as exc:
+        parser.exit(1, f'{exc}\n')
 
 
 if __name__ == '__main__':

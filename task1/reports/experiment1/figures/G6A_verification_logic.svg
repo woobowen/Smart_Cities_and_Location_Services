@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="980" viewBox="0 0 1680 980">
+<rect width="1680" height="980" fill="#FCFAF7"/>
+<defs><marker id="arrow_blue" markerWidth="10" markerHeight="10" refX="8.5" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L9,5 L0,10 Z" fill="#5B9FBE"/></marker><marker id="arrow_rose" markerWidth="10" markerHeight="10" refX="8.5" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L9,5 L0,10 Z" fill="#B97589"/></marker><marker id="arrow_muted" markerWidth="10" markerHeight="10" refX="8.5" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L9,5 L0,10 Z" fill="#70757A"/></marker><marker id="arrow_violet" markerWidth="10" markerHeight="10" refX="8.5" refY="5" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L9,5 L0,10 Z" fill="#8177A8"/></marker></defs>
+<text x="56" y="55" font-family="Noto Sans CJK SC, sans-serif" font-size="35" font-weight="700" fill="#2D3238" text-anchor="start"><tspan x="56" dy="0">参数能执行，为什么仍不采用？</tspan></text>
+<text x="56" y="93" font-family="Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#70757A" text-anchor="start"><tspan x="56" dy="0">记录 7764：把建议和参考方案放回同一原始轨迹中比较</tspan></text>
+<path d="M 56,115 L 1622,115" fill="none" stroke="#70757A" stroke-width="0.8" stroke-linejoin="round" />
+<rect x="56" y="184" width="270" height="132" rx="10" fill="#FFFDFC" stroke="#5B9FBE" stroke-width="1.8" />
+<text x="80" y="222" font-family="Noto Sans CJK SC, sans-serif" font-size="26" font-weight="700" fill="#2D3238" text-anchor="start"><tspan x="80" dy="0">原始记录 7764</tspan></text>
+<text x="80" y="265" font-family="Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#2D3238" text-anchor="start"><tspan x="80" dy="0">坐标、时间与原始索引</tspan><tspan x="80" dy="31.9">保持同一输入范围</tspan></text>
+<rect x="56" y="420" width="270" height="144" rx="10" fill="#FFFDFC" stroke="#5B9FBE" stroke-width="1.8" />
+<text x="80" y="460" font-family="Noto Sans CJK SC, sans-serif" font-size="26" font-weight="700" fill="#2D3238" text-anchor="start"><tspan x="80" dy="0">LLM 参数提议</tspan></text>
+<text x="80" y="500" font-family="Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#2D3238" text-anchor="start"><tspan x="80" dy="0">只提出候选设置</tspan><tspan x="80" dy="31.9">效果交由工具实测</tspan></text>
+<rect x="405" y="184" width="310" height="145" rx="10" fill="#FFFDFC" stroke="#70757A" stroke-width="1.8" />
+<text x="430" y="222" font-family="Noto Sans CJK SC, sans-serif" font-size="26" font-weight="700" fill="#2D3238" text-anchor="start"><tspan x="430" dy="0">参考方案</tspan></text>
+<text x="430" y="260" font-family="Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#2D3238" text-anchor="start"><tspan x="430" dy="0">分段 → 方向删除 → DP</tspan></text>
+<text x="430" y="299" font-family="Noto Sans CJK SC, sans-serif" font-size="20" font-weight="400" fill="#70757A" text-anchor="start"><tspan x="430" dy="0">(30, 400, 5, 65, 35, 5)</tspan></text>
+<rect x="405" y="420" width="310" height="145" rx="10" fill="#FFFDFC" stroke="#5B9FBE" stroke-width="1.8" />
+<text x="430" y="459" font-family="Noto Sans CJK SC, sans-serif" font-size="26" font-weight="700" fill="#2D3238" text-anchor="start"><tspan x="430" dy="0">候选方案</tspan></text>
+<text x="430" y="497" font-family="Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#2D3238" text-anchor="start"><tspan x="430" dy="0">同一套处理工具</tspan></text>
+<text x="430" y="536" font-family="Noto Sans CJK SC, sans-serif" font-size="20" font-weight="400" fill="#70757A" text-anchor="start"><tspan x="430" dy="0">(30, 200, 2, 0, 60, 5)</tspan></text>
+<rect x="800" y="184" width="824" height="406" rx="10" fill="#FFFDFC" stroke="#8177A8" stroke-width="1.8" />
+<text x="828" y="224" font-family="Noto Sans CJK SC, sans-serif" font-size="26" font-weight="700" fill="#2D3238" text-anchor="start"><tspan x="828" dy="0">结果核验：局部检查与共同参考分开</tspan></text>
+<path d="M 828,245 L 1595,245" fill="none" stroke="#70757A" stroke-width="0.8" stroke-linejoin="round" />
+<text x="828" y="290" font-family="Noto Sans CJK SC, sans-serif" font-size="23" font-weight="700" fill="#2D3238" text-anchor="start"><tspan x="828" dy="0">参数能否执行</tspan></text>
+<text x="1125" y="290" font-family="Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#2D3238" text-anchor="start"><tspan x="1125" dy="0">六项取值均在允许范围</tspan></text>
+<text x="1574" y="290" font-family="Noto Sans CJK SC, sans-serif" font-size="22" font-weight="700" fill="#5B9FBE" text-anchor="middle"><tspan x="1574" dy="0">通过</tspan></text>
+<path d="M 828,315 L 1595,315" fill="none" stroke="#70757A" stroke-width="0.6" stroke-linejoin="round" />
+<text x="828" y="359" font-family="Noto Sans CJK SC, sans-serif" font-size="23" font-weight="700" fill="#2D3238" text-anchor="start"><tspan x="828" dy="0">DP 即时误差</tspan></text>
+<text x="1125" y="359" font-family="Noto Sans CJK SC, sans-serif" font-size="23" font-weight="400" fill="#2D3238" text-anchor="start"><tspan x="1125" dy="0">4.826 ≤ 5 工作米</tspan></text>
+<text x="1574" y="359" font-family="Noto Sans CJK SC, sans-serif" font-size="22" font-weight="700" fill="#5B9FBE" text-anchor="middle"><tspan x="1574" dy="0">通过</tspan></text>
+<text x="828" y="393" font-family="Noto Sans CJK SC, sans-serif" font-size="20" font-weight="400" fill="#70757A" text-anchor="start"><tspan x="828" dy="0">仅核对进入 DP 的完整输入</tspan></text>
+<path d="M 828,413 L 1595,413" fill="none" stroke="#70757A" stroke-width="0.6" stroke-linejoin="round" />
+<text x="828" y="459" font-family="Noto Sans CJK SC, sans-serif" font-size="23" font-weight="700" fill="#2D3238" text-anchor="start"><tspan x="828" dy="0">共同原始参考</tspan></text>
+<text x="1125" y="459" font-family="Noto Sans CJK SC, sans-serif" font-size="23" font-weight="400" fill="#2D3238" text-anchor="start"><tspan x="1125" dy="0">原有覆盖 122 / 122</tspan></text>
+<text x="1574" y="459" font-family="Noto Sans CJK SC, sans-serif" font-size="22" font-weight="700" fill="#5B9FBE" text-anchor="middle"><tspan x="1574" dy="0">保留</tspan></text>
+<text x="828" y="513" font-family="Noto Sans CJK SC, sans-serif" font-size="21" font-weight="400" fill="#2D3238" text-anchor="start"><tspan x="828" dy="0">同一覆盖集合的</tspan><tspan x="828" dy="30.45">最大几何偏差</tspan></text>
+<text x="1125" y="519" font-family="Noto Sans CJK SC, sans-serif" font-size="29" font-weight="700" fill="#B97589" text-anchor="start"><tspan x="1125" dy="0">40.215 → 69.145</tspan></text>
+<text x="1125" y="556" font-family="Noto Sans CJK SC, sans-serif" font-size="21" font-weight="400" fill="#B97589" text-anchor="start"><tspan x="1125" dy="0">增加 28.931 工作米</tspan></text>
+<text x="1574" y="516" font-family="Noto Sans CJK SC, sans-serif" font-size="22" font-weight="700" fill="#B97589" text-anchor="middle"><tspan x="1574" dy="0">退化</tspan></text>
+<path d="M 326,248 L 405,248" fill="none" stroke="#5B9FBE" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#arrow_blue)"/>
+<path d="M 282,316 L 282,371 L 558,371 L 558,420" fill="none" stroke="#5B9FBE" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#arrow_blue)"/>
+<text x="405" y="362" font-family="Noto Sans CJK SC, sans-serif" font-size="20" font-weight="400" fill="#70757A" text-anchor="start"><tspan x="405" dy="0">同一原始记录</tspan></text>
+<path d="M 326,492 L 405,492" fill="none" stroke="#5B9FBE" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#arrow_blue)"/>
+<path d="M 715,260 L 800,260" fill="none" stroke="#5B9FBE" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#arrow_blue)"/>
+<path d="M 715,492 L 758,492 L 758,550 L 800,550" fill="none" stroke="#5B9FBE" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#arrow_blue)"/>
+<path d="M 190,184 L 190,145 L 1220,145 L 1220,184" fill="none" stroke="#8177A8" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#arrow_violet)"/>
+<rect x="685" y="127" width="414" height="34" rx="0" fill="#FCFAF7" stroke="#FCFAF7" stroke-width="0" />
+<text x="697" y="152" font-family="Noto Sans CJK SC, sans-serif" font-size="20" font-weight="400" fill="#8177A8" text-anchor="start"><tspan x="697" dy="0">原始参考独立提供，不由候选生成</tspan></text>
+<polygon points="1210,635 1310,703 1210,771 1110,703" fill="#FFFDFC" stroke="#8177A8" stroke-width="2"/>
+<text x="1210" y="691" font-family="Noto Sans CJK SC, sans-serif" font-size="23" font-weight="700" fill="#2D3238" text-anchor="middle"><tspan x="1210" dy="0">全部条件</tspan></text>
+<text x="1210" y="724" font-family="Noto Sans CJK SC, sans-serif" font-size="23" font-weight="700" fill="#2D3238" text-anchor="middle"><tspan x="1210" dy="0">同时成立？</tspan></text>
+<path d="M 1210,590 L 1210,635" fill="none" stroke="#8177A8" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#arrow_violet)"/>
+<rect x="1410" y="653" width="214" height="100" rx="10" fill="#E8C7D3" stroke="#B97589" stroke-width="1.8" />
+<text x="1517" y="694" font-family="Noto Sans CJK SC, sans-serif" font-size="24" font-weight="700" fill="#2D3238" text-anchor="middle"><tspan x="1517" dy="0">不采用该候选</tspan></text>
+<text x="1517" y="731" font-family="Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#2D3238" text-anchor="middle"><tspan x="1517" dy="0">保留当前方案</tspan></text>
+<path d="M 1310,703 L 1410,703" fill="none" stroke="#B97589" stroke-width="3" stroke-linejoin="round" marker-end="url(#arrow_rose)"/>
+<text x="1356" y="687" font-family="Noto Sans CJK SC, sans-serif" font-size="21" font-weight="700" fill="#B97589" text-anchor="middle"><tspan x="1356" dy="0">否</tspan></text>
+<rect x="801" y="653" width="218" height="100" rx="10" fill="#FFFDFC" stroke="#70757A" stroke-width="1.8" stroke-dasharray="8 6"/>
+<text x="910" y="693" font-family="Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#70757A" text-anchor="middle"><tspan x="910" dy="0">再比较是否有改善</tspan></text>
+<text x="910" y="730" font-family="Noto Sans CJK SC, sans-serif" font-size="21" font-weight="400" fill="#70757A" text-anchor="middle"><tspan x="910" dy="0">才考虑替换方案</tspan></text>
+<path d="M 1110,703 L 1019,703" fill="none" stroke="#70757A" stroke-width="2.5" stroke-linejoin="round" stroke-dasharray="9 7" marker-end="url(#arrow_muted)"/>
+<text x="1063" y="687" font-family="Noto Sans CJK SC, sans-serif" font-size="21" font-weight="400" fill="#70757A" text-anchor="middle"><tspan x="1063" dy="0">是</tspan></text>
+<text x="56" y="653" font-family="Noto Sans CJK SC, sans-serif" font-size="24" font-weight="700" fill="#2D3238" text-anchor="start"><tspan x="56" dy="0">本例揭示的问题</tspan></text>
+<text x="56" y="696" font-family="Noto Sans CJK SC, sans-serif" font-size="27" font-weight="700" fill="#2D3238" text-anchor="start"><tspan x="56" dy="0">简化步骤合格，不代表</tspan><tspan x="56" dy="39.15">完整处理结果优于参考。</tspan></text>
+<text x="56" y="778" font-family="Noto Sans CJK SC, sans-serif" font-size="18" font-weight="400" fill="#70757A" text-anchor="start"><tspan x="56" dy="0">参数顺序：时间、距离、最少点数、最短长度、方向、DP 容差。</tspan></text>
+<path d="M 1517,753 L 1517,855 L 26,855 L 26,492 L 56,492" fill="none" stroke="#8177A8" stroke-width="2.5" stroke-linejoin="round" stroke-dasharray="9 7" marker-end="url(#arrow_violet)"/>
+<rect x="435" y="827" width="933" height="49" rx="0" fill="#FCFAF7" stroke="#FCFAF7" stroke-width="0" />
+<text x="454" y="857" font-family="Noto Sans CJK SC, sans-serif" font-size="22" font-weight="400" fill="#8177A8" text-anchor="start"><tspan x="454" dy="0">有反馈模式：返回实测差异与拒绝原因，在剩余预算内提出下一候选</tspan></text>
+<path d="M 56,901 L 1624,901" fill="none" stroke="#70757A" stroke-width="0.8" stroke-linejoin="round" />
+<text x="56" y="938" font-family="Noto Sans CJK SC, sans-serif" font-size="19" font-weight="400" fill="#70757A" text-anchor="start"><tspan x="56" dy="0">实线与数值：本次提议的已记录结果。虚线：条件支路或反馈机制，不代表补画了未记录的下一轮。</tspan></text>
+</svg>

@@ -1,0 +1,41 @@
+--- received/SMART_CITIES_VISUAL_SYSTEM.md
++++ docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md
+@@ -1,7 +1,7 @@
+-# Smart Cities & Location Services — Visual / LaTeX Design System v2.4
++# Smart Cities & Location Services — Visual / LaTeX Design System v2.5
+ 
+ Status: **LOCKED for Experiment Report and Process Report**  
+-Revision: **2026-09-29 · Approved report writing / reference integration**  
++Revision: **2026-09-29 · Project-wide formal diagrams / report scope**  
+ Canonical repository path: `docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md`
+ 
+ This document defines the long-term visual identity, LaTeX baseline, report identities, evidence presentation language and technical-visualization rules for the 《智慧城市与位置服务》 project. Detailed prose and argumentation rules are maintained in the Report Writing Guide, not duplicated in Project Settings.
+@@ -15,6 +15,8 @@
+ ## 1. Shared Identity
+ 
+ The Experiment Report and Process Report are two independent formal documents.
++
++Their project-wide formal-delivery scope and ordinary-question exclusions are defined in [Report Writing Guide §1](../report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md#1-两份报告的读者与任务); they are not limited to Experiment 1.
+ 
+ They share one visual identity but serve different information purposes:
+ 
+@@ -695,6 +697,10 @@
+ 
+ ### Workflow / architecture / algorithm diagrams
+ 
++Formal workflow and system-architecture diagrams throughout this project use **draw.io / diagrams.net as the primary editable delivery**. Preserve a real `.drawio` file with editable nodes, connectors and labels, together with corresponding SVG/PDF exports. Embedding a whole-diagram bitmap in draw.io does not meet this requirement.
++
++Statistics, GIS and mathematical/geometric figures use the appropriate reproducible native tools; they do not all require `.drawio`. The tools below may support suitable algorithm or mathematical figures and refinement, but do not replace the primary `.drawio` delivery for formal workflow/system-architecture diagrams. This scope rule adds no unrelated drawing task and does not require redrawing accepted report pages.
++
+ - draw.io / diagrams.net
+ - Figma
+ - Graphviz
+@@ -877,7 +883,7 @@
+ 
+ Formal exemplar PDFs and their matching source ZIPs may be included in Project Sources when explicitly approved, with roles distinct from normative Markdown and synthetic templates. Key rules remain readable Markdown, not hidden solely in a ZIP. Broad source archives must not include font binaries, secrets or unrelated personal files.
+ 
+-The upload set is an approved explicit file list, not permanently `EXACTLY 11`. Membership checks, stable names and byte equality remain mandatory; detailed distribution/migration rules are in AGENTS §18. Do not remove an existing teacher file or valid reference merely to restore the old count, and do not claim UI upload from local file generation.
++The upload set and its count come from the current approved [structured manifest](../../evidence/infrastructure/chatgpt-project-source-sync/sources.json), with no permanent file-count constant. Membership checks, stable names and byte equality remain mandatory; detailed distribution/migration rules are in AGENTS §18. Do not remove an existing teacher file or valid reference merely to restore an old count, and do not claim UI upload from local file generation.
+ 
+ ---
+ 

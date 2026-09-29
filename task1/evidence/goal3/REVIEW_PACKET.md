@@ -1,4 +1,20 @@
-# 实验一 Goal 3 当前审阅入口
+# 实验一 Goal 3 当前成果入口
+
+当前 Experiment 为用户已验收的 **25页重构版**，Process 仍为原 **12页待审稿**。本轮规则、生成链、真实重建、逐页视觉对照和新审阅包的唯一核验入口是 [SC-PROJECT-SOURCES-SYNC-003 REVIEW_PACKET](../../../evidence/infrastructure/SC-PROJECT-SOURCES-SYNC-003/REVIEW_PACKET.md)。
+
+- [当前 Experiment PDF](../../reports/experiment1/experiment1.pdf) · [权威章节源](../../reports/experiment1/Experiment_Report.tex) · [报告构建与新审阅包说明](../../reports/README.md)。
+- [当前 Process PDF](../../reports/process1/process1.pdf) 及源保持原字节和待审身份；前期参考的 PARTIAL 复现限制不变。
+- [教师交付定位](teacher_delivery_mapping.md)已按新的25页报告物理页定位；Notebook和原数值运行身份未改。
+
+本次未新跑FULL或模型实验。旧FULL的可继承范围、新旧包具体成员hash和改动入口的专项回归见本轮核验入口；下方旧“113个非PDF payload未变”等数字只属于原收尾版本，不用于证明本轮包全部未变。网页GPT二审仍待完成；Evidence Lock、Understanding及Submission不随这次集成自动通过。
+
+---
+
+## 历史：SC-LAB1-G3-CLOSEOUT-001 收尾审阅记录
+
+以下正文原样保留，文中的“本次/当前”均指当时22+12页、旧具名ZIP和旧发布提交；其中的构建/目视/FULL检查不冒称针对后来导入的25页报告。旧PDF版本可由Git基线 `4483f520eabb5358d1f35cf5c33a81d3b01e47e0` 回读。原导航包含可变工作路径时，以此版本限定其历史事实。
+
+# 历史收尾记录正文
 
 本次任务：`SC-LAB1-G3-CLOSEOUT-001`，承接 `SC-LAB1-G3-FINAL-001`。这是实验一 Goal 3 的交付收尾，未新增 Goal 4 或重新搜索研究方案。旧交付锚点为 `1a5e26b43189aef64a46f8986b3cc442fa50d2c5`；其历史回执只沿用原核验范围。
 

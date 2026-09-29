@@ -1,0 +1,96 @@
+{
+  "scope": "Frozen-input and figure-source checks only; no model call or new full processing",
+  "checks": [
+    {
+      "check": "原始记录、点与边的数量关系",
+      "passed": true
+    },
+    {
+      "check": "59项唯一参数配置，均为完整120条开发记录",
+      "passed": true
+    },
+    {
+      "check": "全部开发配置点终态相加等于输入",
+      "passed": true
+    },
+    {
+      "check": "三维参数网格恰为5乘5实测设置",
+      "passed": true
+    },
+    {
+      "check": "网格覆盖率与冻结配置逐项一致",
+      "passed": true
+    },
+    {
+      "check": "流向矩阵非负，全部点只计入一次",
+      "passed": true
+    },
+    {
+      "check": "参考状态边际计数一致",
+      "passed": true
+    },
+    {
+      "check": "最终状态边际计数一致",
+      "passed": true
+    },
+    {
+      "check": "确认600个唯一记录，原始点数一致",
+      "passed": true
+    },
+    {
+      "check": "确认覆盖总数与严格改善计数",
+      "passed": true
+    },
+    {
+      "check": "确认直方图差值是覆盖率百分点",
+      "passed": true
+    },
+    {
+      "check": "模式表实际派发总数84且search-only为0",
+      "passed": true
+    },
+    {
+      "check": "模式观察数区分24与24乘3",
+      "passed": true
+    },
+    {
+      "check": "完整结果冻结来源与原始数量一致",
+      "passed": true
+    },
+    {
+      "check": "R0全量点账本与流向图一致",
+      "passed": true
+    },
+    {
+      "check": "R0DP省点率由其自身完整输入计算",
+      "passed": true
+    },
+    {
+      "check": "S0全量点账本与流向图一致",
+      "passed": true
+    },
+    {
+      "check": "S0DP省点率由其自身完整输入计算",
+      "passed": true
+    },
+    {
+      "check": "边界例105仅按104—106有限线段计算",
+      "passed": true
+    },
+    {
+      "check": "最终新增覆盖来源三类总数",
+      "passed": true
+    },
+    {
+      "check": "G6A_verification_logic.drawio可解析且连线端点引用有效",
+      "passed": true
+    },
+    {
+      "check": "workflow_structure.drawio可解析且连线端点引用有效",
+      "passed": true
+    }
+  ],
+  "passed": 22,
+  "total": 22,
+  "boundary_error_work_m": 266.01675442514176
+}

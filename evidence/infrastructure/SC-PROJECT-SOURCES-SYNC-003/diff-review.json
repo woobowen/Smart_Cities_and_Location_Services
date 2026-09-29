@@ -1,0 +1,28 @@
+{
+  "checks": [
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 2,
+      "stdout": "AGENTS.md:5: trailing whitespace.\n+Revision: **2026-09-29 · Project-wide P1–P4 scope / manifest-driven source distribution**  \ndocs/design-system/SMART_CITIES_VISUAL_SYSTEM.md:3: trailing whitespace.\n+Status: **LOCKED for Experiment Report and Process Report**  \ndocs/design-system/SMART_CITIES_VISUAL_SYSTEM.md:4: trailing whitespace.\n+Revision: **2026-09-29 · Project-wide formal diagrams / report scope**  \ndocs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md:5: trailing whitespace.\n+Purpose: **Process Report · Workflow Construction · Experiment Decision Process · Human–AI Interaction Evidence**  \ndocs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md:6: trailing whitespace.\n+Revision: **2026-09-29 · Project-wide live evidence / explicit Evidence Master appointment**  \ndocs/research/SMART_CITIES_RESEARCH_PROTOCOL.md:5: trailing whitespace.\n+Purpose: **Smart Cities Research Governance / Source / Uncertainty / Spatiotemporal Correctness / Experiment Evidence / AI Critique**  \ndocs/research/SMART_CITIES_RESEARCH_PROTOCOL.md:6: trailing whitespace.\n+Revision: **2026-09-29 · Project-wide workflow scope / conditional-analysis boundary**  \nreleases/chatgpt-project-sources/AGENTS.md:5: trailing whitespace.\n+Revision: **2026-09-29 · Project-wide P1–P4 scope / manifest-driven source distribution**  \nreleases/chatgpt-project-sources/SMART_CITIES_RESEARCH_PROTOCOL.md:5: trailing whitespace.\n+Purpose: **Smart Cities Research Governance / Source / Uncertainty / Spatiotemporal Correctness / Experiment Evidence / AI Critique**  \nreleases/chatgpt-project-sources/SMART_CITIES_RESEARCH_PROTOCOL.md:6: trailing whitespace.\n+Revision: **2026-09-29 · Project-wide workflow scope / conditional-analysis boundary**  \nreleases/chatgpt-project-sources/SMART_CITIES_VISUAL_SYSTEM.md:3: trailing whitespace.\n+Status: **LOCKED for Experiment Report and Process Report**  \nreleases/chatgpt-project-sources/SMART_CITIES_VISUAL_SYSTEM.md:4: trailing whitespace.\n+Revision: **2026-09-29 · Project-wide formal diagrams / report scope**  \nreleases/chatgpt-project-sources/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md:5: trailing whitespace.\n+Purpose: **Process Report · Workflow Construction · Experiment Decision Process · Human–AI Interaction Evidence**  \nreleases/chatgpt-project-sources/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md:6: trailing whitespace.\n+Revision: **2026-09-29 · Project-wide live evidence / explicit Evidence Master appointment**  \n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "-c",
+        "core.whitespace=-blank-at-eol",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "interpretation": "Default check flags two-space Markdown hard breaks in imported/new header metadata. These are intentional Markdown syntax preserved from the authorized draft. The command-local whitespace override does not modify Git configuration or files; other whitespace checks pass. Immutable received bytes and authentic logs are not normalized.",
+  "status": "REVIEWED_EXPECTED_MARKDOWN_HARD_BREAKS"
+}
