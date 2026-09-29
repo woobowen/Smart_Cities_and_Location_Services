@@ -190,9 +190,15 @@
     "objects": "artifact与最终GitHub固定提交",
     "action_or_command": "git commit/push；verify_remote.py实际HTTPS raw byte回读",
     "expected": "本地/实际remote相等；所有bundle/关键active/新工程实际hash相等",
-    "actual": "内部验收后执行发布；当前未发布",
+    "actual": "工程提交87fc7db1ced9fd394d0cdda2113c5608205dce03已正常push；Local HEAD、origin/main与回读前后实际remote一致；固定SHA实际HTTPS回读380个文件，全部SHA256匹配。发布记录提交只记录已有事实，最终HEAD在聊天给出。",
     "scope": "真实发布",
-    "status": "PENDING_PUBLICATION",
-    "evidence": []
+    "status": "VERIFIED",
+    "evidence": [
+      "PUBLICATION_RECORD.json",
+      "publication-verification.json",
+      "artifact-push.txt",
+      "artifact-remote-command.txt",
+      "remote-retry-note.json"
+    ]
   }
 ]

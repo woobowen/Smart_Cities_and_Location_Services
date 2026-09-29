@@ -1,6 +1,6 @@
 # SC-PROJECT-SOURCES-SYNC-003 · 唯一审阅入口
 
-本轮只执行项目治理、已验收报告接管、分发及发布核验；新增记录级实验模型调用为0，不重跑参数/组合/四模式/确认/全量清洗。数值结果保留真实历史run与CODE_SHA。报告/包和SYNC-01—13已完成内部工程验证；GitHub发布回读在本入口继续闭合。
+本轮只执行项目治理、已验收报告接管、分发及发布核验；新增记录级实验模型调用为0，不重跑参数/组合/四模式/确认/全量清洗。数值结果保留真实历史run与CODE_SHA。报告/包及SYNC-01—13已完成内部工程验证；SYNC-14工程提交发布和380项固定SHA远程字节回读均通过。
 
 ## 输入、范围与分发
 
@@ -30,7 +30,7 @@ Process前期PDF/ZIP保持原件，保留[既有PARTIAL复现限制](../SMART-CI
 
 ## 报告、包和验收矩阵
 
-- [逐项验收矩阵 SYNC-01—14](ACCEPTANCE_MATRIX.json)：对象、实际动作、期望、结果、范围和证据逐项记录，发布前SYNC-14明确待执行。
+- [逐项验收矩阵 SYNC-01—14](ACCEPTANCE_MATRIX.json)：对象、实际动作、期望、结果、范围和证据逐项记录，SYNC-14已记录实际发布与回读；独立C记录中的PENDING_PUBLICATION保留其发布前时间范围。
 - [正常入口第一次构建](report/normal-build-1/build_receipt.json)、[第二次构建](report/normal-build-2/build_receipt.json)及[第二次命令输出](report/normal-build-2-command.txt)均确认25页且Process不变。
 - 作者逐页目视：[1—12页](report/visual-pages-01-12.md)、[13—18页](governance/report-pages-13-18-visual.json)、[19—25页](report/root-pages-19-25-visual.json)；[C独立抽查与观测绑定](c_review/visual-coverage-independent-check.json)。批准PDF与重建PDF不宣称字节/像素完全一致；文本逐字相同、布局已经实际查看。
 - [当前具名REVIEW_ONLY包](../../../task1/submission/REVIEW_ONLY_10245102410_吴博闻_实验一_25页报告同步.zip)，SHA256 `231ce92475fdfe7ed12fa1c7e3304c22d6fd56ce39a0b53b43fee87103334a63`；[包回执](report/normal-build-2/package/package_build_receipt.json)及[C逐成员/隔离入口验证](c_review/independent-package-review.json)。116成员中，对旧当前包/旧实际FULL执行包均有112项完全相同；变化为manifest、README、REPORT_BUILD所在CLI文件、Experiment PDF。数值函数AST与32源身份独立核验，不能笼统声称所有运行文件字节未变。本轮未新增FULL复算。
@@ -39,3 +39,12 @@ Process前期PDF/ZIP保持原件，保留[既有PARTIAL复现限制](../SMART-CI
 正常报告编译不重画十幅图。两幅.drawio及SVG/PDF、绘图代码和冻结输入保留在[当前Experiment源](../../../task1/reports/experiment1/)；仅实际验证源包/可编辑结构/嵌图和编译，不声称完成全部绘图或全实验复算。新依赖仅隔离TeX包placeins 2.2、needspace 1.3e；无系统包、Python包、字体或全局配置新增。原安装stdout未独立落盘的限制明确记录，已补包元信息、sty hash与实际kpsewhich核验。
 
 新包manifest的`metadata`完整继承旧实际FULL包，包含冻结`task1/config/assignment.json`的所有原字段及既有`evidence_master_spec_and_lock=NOT_AVAILABLE`。其中`report_revision_date=2026-09-28`与默认`review_package_name`是历史身份来源记录，不是当前Experiment修订日期或实际新ZIP名称；当前封面/章节源为2026-09-29，实际归档名称与hash以上述当前包及构建回执为准。冻结配置和Process原件保持不变。
+
+## 实际发布
+
+- 工程/产物提交：`87fc7db1ced9fd394d0cdda2113c5608205dce03`，Repository `woobowen/Smart_Cities_and_Location_Services`，Branch `main`。Local HEAD、origin/main和实际remote在回读时一致。
+- [发布记录](PUBLICATION_RECORD.json)、[380个文件实际HTTPS raw字节/hash](publication-verification.json)、[push原输出](artifact-push.txt)、[回读原输出](artifact-remote-command.txt)。覆盖全部16项bundle、权威源、报告PDF/ZIP、实际源码、同步器、manifest、检查记录与当前导航，全部匹配。
+- [TLS中断及有界重试](remote-retry-note.json)如实保留；成功回读后的冗余HEAD查询三次失败后已停止，未把失败说成成功，也未改变TLS、认证或全局配置。
+- 承载本段的后续提交只整理交付记录，不改已验收工程、报告、bundle或包。为避免自引用，最终发布记录提交与实际远程SHA由最后聊天给出；本文件只引用已存在的工程提交与回读事实。
+
+REPOSITORY_SYNC=VERIFIED；UPLOAD_BUNDLE=READY；EXPERIMENT_REPORT_INTEGRATION=VERIFIED。Process复现仍为PARTIAL，用户UI与网页GPT二审仍待后续动作，Submission仍为NOT_READY。

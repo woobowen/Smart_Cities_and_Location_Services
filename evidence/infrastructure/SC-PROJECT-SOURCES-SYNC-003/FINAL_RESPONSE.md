@@ -4,11 +4,11 @@
 
 ## A. 状态与已完成范围
 
-SYNC-01—13 已完成真实实现、测试和独立 C 审核，未关闭工程 Issue 为 0。五份治理文件、已验收25页 Experiment 的原件/源码/生成器、动态分发清单、当前导航与具名审阅包已同步。SYNC-14 在此初始记录时尚待实际发布回读，不能用本地审核代替。
+SYNC-01—13 已完成真实实现、测试和独立 C 审核，未关闭工程 Issue 为 0。五份治理文件、已验收25页 Experiment 的原件/源码/生成器、动态分发清单、当前导航与具名审阅包已同步。SYNC-14 已通过实际push和固定提交380项HTTPS raw回读；没有用本地审核代替。
 
 | 状态 | 当前结论 |
 |---|---|
-| REPOSITORY_SYNC | PENDING_PUBLICATION |
+| REPOSITORY_SYNC | VERIFIED |
 | UPLOAD_BUNDLE | READY，批准清单推导16个普通文件 |
 | EXPERIMENT_REPORT_INTEGRATION | VERIFIED，本轮报告编译与实际验证范围 |
 | PROCESS_REFERENCE_REPRODUCTION | PARTIAL，沿用既有复现限制 |
@@ -75,7 +75,9 @@ SYNC-01—13 已完成真实实现、测试和独立 C 审核，未关闭工程 
 
 ## G. Git与发布
 
-Repository：`https://github.com/woobowen/Smart_Cities_and_Location_Services.git`；Branch：`main`。起始本地HEAD、origin/main与实际远程均为 `4483f520eabb5358d1f35cf5c33a81d3b01e47e0`。此记录写入时尚待artifact commit、push和固定提交HTTPS字节回读；发布后在本节与独立发布记录补充真实结果，不预先宣称。
+Repository：`https://github.com/woobowen/Smart_Cities_and_Location_Services.git`；Branch：`main`。起始本地HEAD、origin/main与实际远程均为 `4483f520eabb5358d1f35cf5c33a81d3b01e47e0`。工程/产物提交ARTIFACT为 `87fc7db1ced9fd394d0cdda2113c5608205dce03`，正常push后Local HEAD、origin/main、实际remote在完整回读时一致。固定SHA实际HTTPS取回380个文件，全部SHA256与本地相同，覆盖16项bundle、关键active及全部本轮工程/证据。Git TLS间歇性握手中断保留在[重试说明](remote-retry-note.json)；后来的冗余查询三次失败后停止，没有改变安全配置。详见[发布记录](PUBLICATION_RECORD.json)及[逐文件回读](publication-verification.json)。
+
+本交付说明所在后续提交仅更新发布回执/状态；该提交的最终HEAD与实际Remote SHA由最后聊天给出，避免文件内自引用。固定工程审阅入口为 [REVIEW_PACKET@87fc7db1](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/87fc7db1ced9fd394d0cdda2113c5608205dce03/evidence/infrastructure/SC-PROJECT-SOURCES-SYNC-003/REVIEW_PACKET.md)，其中发布前状态须结合本次发布记录读取；最终聊天另给含本回执的固定入口。
 
 根目录原有3个用户ZIP保持原字节、原未跟踪身份：`Experiment_Report_完整重构_源文件.zip`、`SC-LAB1-G1-CLOSURE-002_HANDOFF.zip`、`SC-LAB1-G1-COMPLETE-001_HANDOFF.zip`。本次只提交授权工程与证据，不覆盖用户输入。
 

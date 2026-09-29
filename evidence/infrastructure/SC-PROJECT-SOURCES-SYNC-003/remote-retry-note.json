@@ -1,0 +1,22 @@
+{
+  "first_attempt": {
+    "command": [
+      ".venv/bin/python",
+      "evidence/infrastructure/SC-PROJECT-SOURCES-SYNC-003/verify_remote.py",
+      "--commit",
+      "87fc7db1ced9fd394d0cdda2113c5608205dce03",
+      "--output",
+      "evidence/infrastructure/SC-PROJECT-SOURCES-SYNC-003/publication-verification.json"
+    ],
+    "exit_code": 1,
+    "observed_error": "git ls-remote exited 128: gnutls_handshake() failed: The TLS connection was non-properly terminated.",
+    "scope": "Failure before any raw byte fetch; exact full traceback remains in tool interaction, this is a factual summary."
+  },
+  "diagnosis": "Transient Git HTTPS transport interruption after successful push; no authentication or content error observed.",
+  "action": "Retry same HTTPS command without changing TLS, proxy or global configuration.",
+  "post_verification_additional_check": {
+    "initial_observed_error": "Extra git ls-remote after successful 380-file verification exited 128 with the same TLS handshake termination, before any delivery-document writes.",
+    "subsequent_two_attempts": "post-verification-remote-attempts.json",
+    "result": "Three total failures for this redundant check; stopped retries. Completed actual before/after checks in publication-verification.json remain the evidence cited for the artifact. Final publication is checked separately."
+  }
+}
