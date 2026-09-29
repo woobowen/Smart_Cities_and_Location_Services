@@ -1,7 +1,18 @@
 # Experiment 1 Technical Handoff
 
-**当前报告/包导航（SC-PROJECT-SOURCES-SYNC-003，2026-09-29）：** Experiment已切换为用户验收25页重构版，当前[章节源](../../reports/experiment1/Experiment_Report.tex)和[构建说明](../../reports/README.md)已接管正常REPORT_BUILD。当前包为 [25页报告同步REVIEW_ONLY包](../../submission/REVIEW_ONLY_10245102410_吴博闻_实验一_25页报告同步.zip)，校验和精确FULL继承边界见[本次审阅入口](../../../evidence/infrastructure/SC-PROJECT-SOURCES-SYNC-003/REVIEW_PACKET.md)。Process仍为原12页送审稿；前期31页参考复现仍PARTIAL。以下研究事实继续沿用原run身份；原收尾的22页/34页视觉、旧包与四次FULL检查只是历史事实，不冒称本轮新报告检查。REPORT_BUILD不再写数值摘要/图/Process；本轮新增实验模型和数值运行均为0。运行所需placeins/needspace仅装在隔离TeX树，详见报告说明。
+## 当前技术基点与指定交接
 
+本次`SC-LAB1-NONPROCESS-CLOSEOUT-001`是非Process范围收尾；[当前验收入口](../../../evidence/infrastructure/SC-LAB1-NONPROCESS-CLOSEOUT-001/REVIEW_PACKET.md)登记NC结果。技术处理、规定实验、有限候选比较、最终确认与全量结果维持此前范围验收，不新开研究或宣称全局最优。
+
+- 原数值CODE_SHA：`e12f8a27944210adb452730be92a0674dfc6b84b`。冻结[方法/坐标合同](../../config/goal3/contract.json)、[分区](../../evidence/goal3/split_manifest.json)、[当前运行索引](../../evidence/goal3/current_runs.json)与[结果摘要](../../evidence/goal3/result_summary.json)保持；原始数据、指标、记忆、失败记录、teacher/starter和完成版Notebook不改。§3—7保留具体历史研究事实。
+- 用户已确认本对话复盘及25页Experiment。当前[PDF](../../reports/experiment1/experiment1.pdf)、[章节源](../../reports/experiment1/Experiment_Report.tex)及[批准PDF/ZIP](../../../reports/experiment-report/experiment1-reconstructed/)保持原字节；[构建说明](../../reports/README.md)继续接管正常REPORT_BUILD。已验收工程ARTIFACT=`87fc7db1ced9fd394d0cdda2113c5608205dce03`；[网页GPT二审承接](../../../evidence/infrastructure/SC-PROJECT-SOURCES-SYNC-003/external_review/REVIEW_RECEIPT.md)只对应被审`89371f6597f92f7dac9abf61f6f6b18e29ed76cc`，当前按用户转交记录，原审核附件尚未入库。本轮新提交仍待网页GPT核查。
+- 已有构建/复算命令在[task1 README](../../README.md)中，分别为`REPORT_BUILD --output <新ZIP>`与`FULL_RECOMPUTE --output <新目录>`；本轮不执行，继承具体旧run/源hash/报告构建和包核验范围。placeins、needspace保留于`.venv/texmf`，不安装或清理依赖。
+- Process由用户指定的另一对话接续，`PROCESS_REPORT=DELEGATED_NOT_COMPLETED`。现有[Interaction Handoff](INTERACTION_HANDOFF.md)及[原件/spec/Lock盘点](../../evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/b_handoff/evidence_inventory.md)只作已有事实入口，原话、条目、截图、框选、caption和Evidence Plan均未修改。[前期31页源复现PARTIAL](../../../evidence/infrastructure/SMART-CITIES-GOVERNANCE-PROCESS-REFERENCE-SYNC-002/source-archive-check.md)是已交接限制，不改为PASS。
+- 非Process任务可在本轮NC通过后单独关闭；完整[当前审阅ZIP](../../submission/REVIEW_ONLY_10245102410_吴博闻_实验一_25页报告同步.zip)保持`REVIEW_ONLY` / `NOT_READY`。Process完成后再合并、核验并取得用户提交确认，本轮不制新包。整体Deliverable=`FINAL_REVIEW`；Understanding保留原`LEARNING`，不新增Understanding/VIVA通过。
+
+原始CRS/源datum仍未知，无噪声真值，共同覆盖不等于清洗准确率；Process完成不会消除这些技术限制。本轮实验模型调用和研究数值运行均为0。以下旧文保留当时版本身份，其中“本次”、22页/旧包/四次FULL和旧PENDING不代表当前新执行或新的未审声明。
+
+## 历史正文：SC-LAB1-G3-CLOSEOUT-001及冻结研究事实
 
 Parent Goal：`SC-LAB1-G3-FINAL-001`；本次收尾 Task：`SC-LAB1-G3-CLOSEOUT-001`，仍属实验一，不新增 Goal 4。当前审阅入口为 [REVIEW_PACKET.md](../../evidence/goal3/REVIEW_PACKET.md)，原要求登记保留在 [requirements.json](../../evidence/goal3/requirements.json)。本次 [MASTER_REQUIREMENTS_REVIEW](../../evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/a_diagnosis/MASTER_REQUIREMENTS_REVIEW.md) 将教师 T1/T2、用户 U01—U44 与原 G1/G2/G3、TD 项交叉定位，不创建第二套研究通过结论。完整实验一入口为 [task1/README.md](../../README.md)，随后讲解入口为 [REVIEW_GUIDE.md](REVIEW_GUIDE.md)。
 

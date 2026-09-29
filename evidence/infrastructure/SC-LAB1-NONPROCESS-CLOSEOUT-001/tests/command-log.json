@@ -1,0 +1,89 @@
+[
+  {
+    "command": [
+      ".venv/bin/python",
+      "evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/sync_sources.py",
+      "--plan"
+    ],
+    "cwd": "/home/addaswsw/lab/Smart_Cities_and_Location_Services",
+    "scope": "Real read-only synchronization plan",
+    "exit_code": 0,
+    "stdout": "{\n  \"add\": [],\n  \"change\": [],\n  \"missing\": [],\n  \"unexpected\": [],\n  \"unsafe\": [],\n  \"errors\": [],\n  \"metadata_change\": [\n    \"evidence/infrastructure/chatgpt-project-source-sync/SOURCE_MANIFEST.md\",\n    \"evidence/infrastructure/chatgpt-project-source-sync/UPLOAD_INSTRUCTIONS.md\"\n  ],\n  \"file_count\": 16,\n  \"safe_to_sync\": true\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      ".venv/bin/python",
+      "evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/sync_sources.py"
+    ],
+    "cwd": "/home/addaswsw/lab/Smart_Cities_and_Location_Services",
+    "scope": "Real positive active-to-bundle sync",
+    "exit_code": 0,
+    "stdout": "{\n  \"status\": \"UPLOAD BUNDLE READY\",\n  \"file_count\": 16,\n  \"updated\": [\n    \"evidence/infrastructure/chatgpt-project-source-sync/SOURCE_MANIFEST.md\",\n    \"evidence/infrastructure/chatgpt-project-source-sync/UPLOAD_INSTRUCTIONS.md\"\n  ],\n  \"removed\": []\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      ".venv/bin/python",
+      "evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/sync_sources.py",
+      "--check"
+    ],
+    "cwd": "/home/addaswsw/lab/Smart_Cities_and_Location_Services",
+    "scope": "Real read-only check after sync",
+    "exit_code": 0,
+    "stdout": "{\n  \"status\": \"UPLOAD BUNDLE READY\",\n  \"file_count\": 16,\n  \"readonly\": true\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      ".venv/bin/python",
+      "evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/sync_sources.py"
+    ],
+    "cwd": "/home/addaswsw/lab/Smart_Cities_and_Location_Services",
+    "scope": "Second real no-change sync",
+    "exit_code": 0,
+    "stdout": "{\n  \"status\": \"UPLOAD BUNDLE READY\",\n  \"file_count\": 16,\n  \"updated\": [],\n  \"removed\": []\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      ".venv/bin/python",
+      "evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/sync_sources.py",
+      "--check"
+    ],
+    "cwd": "/home/addaswsw/lab/Smart_Cities_and_Location_Services",
+    "scope": "Final read-only source and generated-metadata check",
+    "exit_code": 0,
+    "stdout": "{\n  \"status\": \"UPLOAD BUNDLE READY\",\n  \"file_count\": 16,\n  \"readonly\": true\n}\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      ".venv/bin/python",
+      "-m",
+      "pytest",
+      "-q",
+      "evidence/infrastructure/chatgpt-project-source-sync/test_sync_sources.py",
+      "--basetemp",
+      "/tmp/sc-nc001-sync-tests-r1bonorw/pytest",
+      "--junitxml",
+      "/home/addaswsw/lab/Smart_Cities_and_Location_Services/evidence/infrastructure/SC-LAB1-NONPROCESS-CLOSEOUT-001/tests/sync-pytest.xml"
+    ],
+    "cwd": "/home/addaswsw/lab/Smart_Cities_and_Location_Services",
+    "scope": "Existing synchronization suite in unique private fixtures; no report or numerical tests",
+    "exit_code": 0,
+    "stdout": "...................                                                      [100%]\n19 passed in 0.19s\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      ".venv/bin/python",
+      "evidence/infrastructure/SC-LAB1-NONPROCESS-CLOSEOUT-001/validate_closeout.py"
+    ],
+    "cwd": "/home/addaswsw/lab/Smart_Cities_and_Location_Services",
+    "scope": "Author full protection, input/declaration/hash, history and active-link validation",
+    "exit_code": 0,
+    "stdout": "{\"pass_all\": true, \"protected_files\": 6679, \"unchanged\": 6663, \"authorized_changes\": 11, \"relocated\": 5, \"input_count\": 5, \"bundle_count\": 16, \"links_checked\": 345, \"broken_links\": [], \"protection_failures\": []}\n",
+    "stderr": ""
+  }
+]

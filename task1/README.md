@@ -1,18 +1,20 @@
 # 实验一：轨迹预处理与可核验的 AI 工作流
 
-先看 [本次项目源同步入口](../evidence/infrastructure/SC-PROJECT-SOURCES-SYNC-003/REVIEW_PACKET.md) 和 [实验一审核索引](evidence/goal3/REVIEW_PACKET.md)。历史实验收尾仍见 [原收尾回复](evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/FINAL_RESPONSE.md)。它们分别登记 Technical、Research、Reports、Package、Publication 状态。内部核验不替代网页 GPT 二重审核；提交状态不代表已发送邮件。
+先看 [本轮非Process收尾入口](../evidence/infrastructure/SC-LAB1-NONPROCESS-CLOSEOUT-001/REVIEW_PACKET.md) 和 [实验一审核索引](evidence/goal3/REVIEW_PACKET.md)。[SYNC-003网页GPT二审承接](../evidence/infrastructure/SC-PROJECT-SOURCES-SYNC-003/external_review/REVIEW_RECEIPT.md)只对应被审89371f6；本轮新提交仍待网页GPT核查。历史实验收尾见 [原收尾回复](evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/FINAL_RESPONSE.md)，其当时状态原样保留。
+
+技术处理、规定实验、有限候选比较、最终确认及全量结果维持此前范围验收，不重新评为全局最优。用户已确认本对话复盘与25页Experiment；非Process工程可按本轮NC验收单独关闭。Process交给用户指定的另一对话，仍是必需交付，当前为`DELEGATED_NOT_COMPLETED`。整体Deliverable=`FINAL_REVIEW`，现有包=`REVIEW_ONLY`，Submission=`NOT_READY`；最终Process到位后再合并和核验完整包。Understanding保留原`LEARNING`，本轮不新增Understanding/VIVA通过，也未发送教师。
 
 ## 作业与报告
 
 | 内容 | 入口 |
 |---|---|
-| 四板块复盘入口 | [REVIEW_GUIDE](docs/goal3/REVIEW_GUIDE.md)；用户理解审核尚未完成 |
+| 四板块复盘入口 | [REVIEW_GUIDE](docs/goal3/REVIEW_GUIDE.md)；用户已确认本对话复盘，本轮不新增Understanding/VIVA签署 |
 | 完整要求与质量证据 | [MASTER_REQUIREMENTS_REVIEW](evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/a_diagnosis/MASTER_REQUIREMENTS_REVIEW.md) |
 | 教师要求逐项定位 | [Notebook 单元与报告页码导航](evidence/goal3/teacher_delivery_mapping.md) |
 | 教师基础任务完成版 | [作业1轨迹数据预处理_完成版.ipynb](notebooks/final/作业1轨迹数据预处理_完成版.ipynb) |
 | 教师 LLM 系统任务完成版 | [任务3_LLM辅助评估清洗_完成版.ipynb](notebooks/final/任务3_LLM辅助评估清洗_完成版.ipynb) |
 | Experiment Report | [PDF](reports/experiment1/experiment1.pdf) · [当前章节源](reports/experiment1/Experiment_Report.tex)（用户已验收25页） |
-| Process Report | [PDF](reports/process1/process1.pdf) · [XeLaTeX 源](reports/process1/process1.tex) |
+| Process Report | [PDF](reports/process1/process1.pdf) · [XeLaTeX 源](reports/process1/process1.tex)；原稿保持，指定另一对话接续 |
 | 技术交接 | [Technical Handoff](docs/goal3/TECHNICAL_HANDOFF.md) |
 | 互动候选索引 | [Interaction Handoff](docs/goal3/INTERACTION_HANDOFF.md)；不代替 Evidence Master 选取或 LOCK |
 | 答辩说明 | [技术说明](docs/goal3/DEFENSE_NOTES.md) |
@@ -20,6 +22,8 @@
 | 当前报告图与可编辑源 | [报告图源](reports/experiment1/figures/) · [绘图程序](reports/experiment1/source/)；[历史G3图](figures/goal3/)保留原身份 |
 
 教师 PPT 和两份 starter 保持原件。历史 G2 数字、G3 开发/选择、一次最终确认、全部记录生产各保留实验身份。原始输入包含 11,386 条记录、1,173,410 点；记录键不能视为独立用户或完整行程。
+
+本轮只作治理/交接和必要同步验证；以下构建、复算、LIVE命令为已有能力入口，本轮均不执行。既有报告、包、数值和隔离TeX依赖保持。
 
 ## 默认离线复算
 

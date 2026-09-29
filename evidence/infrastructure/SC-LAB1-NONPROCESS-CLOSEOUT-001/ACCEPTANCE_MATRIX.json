@@ -1,0 +1,102 @@
+[
+  {
+    "id": "NC01",
+    "objects": "工作区/release输入",
+    "action_or_command": "ls -la、pwd、git status/log/ls-remote；全文件保护与5输入hash",
+    "expected": "输入/工作树被保护，来源明确",
+    "actual": "5/5 size/hash正确；21项release含5个已保存元数据，6679对象起始保护",
+    "status": "VERIFIED",
+    "evidence": [
+      "starting-workspace.json",
+      "received-input-checks.json",
+      "received-release-inventory.json",
+      "starting-protection-inventory.json"
+    ]
+  },
+  {
+    "id": "NC02",
+    "objects": "五份active治理",
+    "action_or_command": "原字节受控导入与三方hash核验",
+    "expected": "保持完整底稿，不重写四份相同规范",
+    "actual": "仅AGENTS导入；received/active/bundle五份全部相同，四规范字节mtime保持",
+    "status": "VERIFIED",
+    "evidence": [
+      "active-import.json",
+      "author-verification.json"
+    ]
+  },
+  {
+    "id": "NC03",
+    "objects": "唯一清单/分发与生成metadata",
+    "action_or_command": "实际plan/write/check/再次write/check及19测试",
+    "expected": "集合/字节一致，check只读，重复同步幂等",
+    "actual": "16成员与基线集合相同；15个其他row对象不变；34目标稳定，第二次updated/removed为空",
+    "status": "VERIFIED",
+    "evidence": [
+      "tests/real-sync-results.json",
+      "tests/command-log.json",
+      "tests/sync-pytest.xml"
+    ]
+  },
+  {
+    "id": "NC04",
+    "objects": "上次GPT二审",
+    "action_or_command": "授权仓库内查找；按Prompt§5归档用户转交",
+    "expected": "身份/版本/范围明确，不伪造原件",
+    "actual": "结论承接完成，原审核附件尚未入库；被审89371f6；当前新提交待二审",
+    "status": "VERIFIED_USER_RELAYED",
+    "evidence": [
+      "../SC-PROJECT-SOURCES-SYNC-003/external_review/REVIEW_RECEIPT.md",
+      "../SC-PROJECT-SOURCES-SYNC-003/external_review/RECEPTION_HISTORY.json"
+    ]
+  },
+  {
+    "id": "NC05",
+    "objects": "当前技术导航与责任交接",
+    "action_or_command": "5份当前导航最小编辑，历史正文比对",
+    "expected": "可关闭非Process；Process必需且移交；整体仍未提交",
+    "actual": "用户复盘/25页已确认；Process DELEGATED_NOT_COMPLETED；整体FINAL_REVIEW/NOT_READY；历史正文保留",
+    "status": "VERIFIED",
+    "evidence": [
+      "MODIFICATIONS.md",
+      "author-verification.json",
+      "REVIEW_PACKET.md"
+    ]
+  },
+  {
+    "id": "NC06",
+    "objects": "报告/数值/Process/用户文件/依赖",
+    "action_or_command": "全量起始hash/mtime比对；批准PDF/ZIP/现有包hash",
+    "expected": "无批准外变更，不执行报告或研究",
+    "actual": "6663起始对象不变、11授权变化、5元数据保留迁移；没有报告/包/数值重跑或依赖清理",
+    "status": "VERIFIED",
+    "evidence": [
+      "protection-check.json",
+      "author-verification.json"
+    ]
+  },
+  {
+    "id": "NC07",
+    "objects": "真实独立C及安全反例",
+    "action_or_command": "独立上下文实读及隔离探针",
+    "expected": "独立核验通过，普通Issue闭合",
+    "actual": "独立C通过NC01—NC07；4组隔离成功/反例、16次CLI；57项工程文件hash固定；作者未关闭Issue为0；C两次自身断言修正已复验留存",
+    "status": "VERIFIED",
+    "evidence": [
+      "c_review/C_REVIEW.md",
+      "c_review/C_FINAL_RESULT.json",
+      "c_review/independent-probes.json",
+      "c_review/independent-verification.json",
+      "tests/command-log.json"
+    ]
+  },
+  {
+    "id": "NC08",
+    "objects": "发布与实际远程内容",
+    "action_or_command": "内部完成后commit/push与固定SHA raw字节核验",
+    "expected": "本地/跟踪/实际remote一致；bundle全成员实际hash相同",
+    "actual": "内部作者检查与独立C已通过，继续实际commit/push及固定远程字节核验",
+    "status": "PENDING_PUBLICATION",
+    "evidence": []
+  }
+]

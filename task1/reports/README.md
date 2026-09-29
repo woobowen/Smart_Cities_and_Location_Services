@@ -1,5 +1,7 @@
 # 实验一报告工程
 
+当前[非Process收尾](../../evidence/infrastructure/SC-LAB1-NONPROCESS-CLOSEOUT-001/REVIEW_PACKET.md)仅承接治理、验收和技术交接；[89371f6网页GPT二审](../../evidence/infrastructure/SC-PROJECT-SOURCES-SYNC-003/external_review/REVIEW_RECEIPT.md)按真实来源登记。本轮不重新编译报告、重画图或生成ZIP，下面的构建及隔离依赖说明沿用SYNC-003已验收工程。Process由用户指定的另一对话继续，原稿与既有PARTIAL限制保持。
+
 当前 Experiment 为用户已验收的25页重构版。权威章节源在 [experiment1/chapters](experiment1/chapters/)，主入口 [Experiment_Report.tex](experiment1/Experiment_Report.tex)，兼容入口 [experiment1.tex](experiment1/experiment1.tex) 仅引用该主文件。不可变批准 PDF/ZIP 在 [canonical参考目录](../../reports/experiment-report/experiment1-reconstructed/)；[当前PDF](experiment1/experiment1.pdf) 保持批准PDF原字节。
 
 [Process PDF](process1/process1.pdf)仍为12页技术事实送审稿，真实互动原件/spec/Lock另有未完成状态。[前期Process参考](../../reports/process-report/pre-task1/)与它分开；前期源包复现仍为[既有PARTIAL](../../evidence/infrastructure/SMART-CITIES-GOVERNANCE-PROCESS-REFERENCE-SYNC-002/source-archive-check.md)。当前Experiment构建不生成Process，也不修改其正文、图或metadata。
@@ -17,7 +19,7 @@ REPORT_BUILD只读包中冻结依赖并执行隔离无Git依赖probe，然后生
 
 编译依赖：XeLaTeX、ctex/fontspec及源包声明的LaTeX宏包（含placeins、needspace、pdflscape等），DejaVu Serif/Sans、Noto Serif/Sans/Mono CJK SC；PDF检查需Poppler，渲染比较使用现有Python Pillow。源包含图PDF，正常编译不需Python绘图依赖、网络或模型凭据。公共颜色只从 `templates/latex/common/p2_cloud_sorbet_colors.tex` 读取；源ZIP中的颜色是受控便携副本。
 
-本轮缺少placeins/needspace，已仅安装至隔离TeX树并放入 `.venv/texmf`，构建器在调用者未指定TEXMFHOME时自动使用它。复现该隔离依赖补齐步骤（只在缺包且现有TeX为用户TeX Live时执行，仓库镜像须与TeX版本匹配）：
+SYNC-003集成时缺少placeins/needspace，已仅安装至隔离TeX树并放入 `.venv/texmf`，构建器在调用者未指定TEXMFHOME时自动使用它。复现该隔离依赖补齐步骤（只在缺包且现有TeX为用户TeX Live时执行，仓库镜像须与TeX版本匹配）：
 
 ```bash
 tlmgr --usermode --usertree "$PWD/.venv/texmf" init-usertree

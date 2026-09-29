@@ -1,0 +1,296 @@
+{
+  "role": "Independent C / nonprocess_c",
+  "temp_root": "/tmp/sc-lab1-nonprocess-independent-c-7bygwgy_",
+  "source_script": "evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/sync_sources.py",
+  "source_script_sha256": "c3e2f0e8b292465bd394a65b5fadffc9d5a25e35be30b8e2be73091b1fe0d929",
+  "fixture_scope": "3 explicitly declared members; current real 16-member bundle checked separately",
+  "results": [
+    {
+      "case": "success_plan_write_check_second_write",
+      "status": "PASS",
+      "root": "/tmp/sc-lab1-nonprocess-independent-c-7bygwgy_/success",
+      "file_count": 3,
+      "first_updated": [
+        "releases/chatgpt-project-sources/alpha.md",
+        "releases/chatgpt-project-sources/beta.md",
+        "evidence/infrastructure/chatgpt-project-source-sync/SOURCE_MANIFEST.md",
+        "evidence/infrastructure/chatgpt-project-source-sync/UPLOAD_INSTRUCTIONS.md"
+      ],
+      "check_and_second_write_preserved_all_file_hashes_and_mtimes": true
+    },
+    {
+      "case": "missing_source",
+      "status": "PASS",
+      "root": "/tmp/sc-lab1-nonprocess-independent-c-7bygwgy_/missing_source",
+      "older_target_with_new_source_preserved": true,
+      "checks": [
+        {
+          "mode": "--plan",
+          "exit_code": 1,
+          "entire_fixture_hash_mtime_and_member_set_preserved": true
+        },
+        {
+          "mode": "write",
+          "exit_code": 1,
+          "entire_fixture_hash_mtime_and_member_set_preserved": true
+        },
+        {
+          "mode": "--check",
+          "exit_code": 1,
+          "entire_fixture_hash_mtime_and_member_set_preserved": true
+        }
+      ]
+    },
+    {
+      "case": "wrong_hash",
+      "status": "PASS",
+      "root": "/tmp/sc-lab1-nonprocess-independent-c-7bygwgy_/wrong_hash",
+      "older_target_with_new_source_preserved": true,
+      "checks": [
+        {
+          "mode": "--plan",
+          "exit_code": 1,
+          "entire_fixture_hash_mtime_and_member_set_preserved": true
+        },
+        {
+          "mode": "write",
+          "exit_code": 1,
+          "entire_fixture_hash_mtime_and_member_set_preserved": true
+        },
+        {
+          "mode": "--check",
+          "exit_code": 1,
+          "entire_fixture_hash_mtime_and_member_set_preserved": true
+        }
+      ]
+    },
+    {
+      "case": "unknown_extra",
+      "status": "PASS",
+      "root": "/tmp/sc-lab1-nonprocess-independent-c-7bygwgy_/unknown_extra",
+      "older_target_with_new_source_preserved": true,
+      "checks": [
+        {
+          "mode": "--plan",
+          "exit_code": 1,
+          "entire_fixture_hash_mtime_and_member_set_preserved": true
+        },
+        {
+          "mode": "write",
+          "exit_code": 1,
+          "entire_fixture_hash_mtime_and_member_set_preserved": true
+        },
+        {
+          "mode": "--check",
+          "exit_code": 1,
+          "entire_fixture_hash_mtime_and_member_set_preserved": true
+        }
+      ]
+    }
+  ],
+  "commands": [
+    {
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-I",
+        "-B",
+        "/tmp/sc-lab1-nonprocess-independent-c-7bygwgy_/success/evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/sync_sources.py",
+        "--plan"
+      ],
+      "cwd": "/tmp/sc-lab1-nonprocess-independent-c-7bygwgy_/success",
+      "exit_code": 0,
+      "stdout": "{\n  \"add\": [\n    \"alpha.md\",\n    \"beta.md\"\n  ],\n  \"change\": [],\n  \"missing\": [],\n  \"unexpected\": [],\n  \"unsafe\": [],\n  \"errors\": [],\n  \"metadata_change\": [\n    \"evidence/infrastructure/chatgpt-project-source-sync/SOURCE_MANIFEST.md\",\n    \"evidence/infrastructure/chatgpt-project-source-sync/UPLOAD_INSTRUCTIONS.md\"\n  ],\n  \"file_count\": 3,\n  \"safe_to_sync\": true\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-I",
+        "-B",
+        "/tmp/sc-lab1-nonprocess-independent-c-7bygwgy_/success/evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/sync_sources.py"
+      ],
+      "cwd": "/tmp/sc-lab1-nonprocess-independent-c-7bygwgy_/success",
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"UPLOAD BUNDLE READY\",\n  \"file_count\": 3,\n  \"updated\": [\n    \"releases/chatgpt-project-sources/alpha.md\",\n    \"releases/chatgpt-project-sources/beta.md\",\n    \"evidence/infrastructure/chatgpt-project-source-sync/SOURCE_MANIFEST.md\",\n    \"evidence/infrastructure/chatgpt-project-source-sync/UPLOAD_INSTRUCTIONS.md\"\n  ],\n  \"removed\": []\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-I",
+        "-B",
+        "/tmp/sc-lab1-nonprocess-independent-c-7bygwgy_/success/evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/sync_sources.py",
+        "--check"
+      ],
+      "cwd": "/tmp/sc-lab1-nonprocess-independent-c-7bygwgy_/success",
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"UPLOAD BUNDLE READY\",\n  \"file_count\": 3,\n  \"readonly\": true\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-I",
+        "-B",
+        "/tmp/sc-lab1-nonprocess-independent-c-7bygwgy_/success/evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/sync_sources.py"
+      ],
+      "cwd": "/tmp/sc-lab1-nonprocess-independent-c-7bygwgy_/success",
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"UPLOAD BUNDLE READY\",\n  \"file_count\": 3,\n  \"updated\": [],\n  \"removed\": []\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-I",
+        "-B",
+        "/tmp/sc-lab1-nonprocess-independent-c-7bygwgy_/missing_source/evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/sync_sources.py"
+      ],
+      "cwd": "/tmp/sc-lab1-nonprocess-independent-c-7bygwgy_/missing_source",
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"UPLOAD BUNDLE READY\",\n  \"file_count\": 3,\n  \"updated\": [\n    \"releases/chatgpt-project-sources/alpha.md\",\n    \"releases/chatgpt-project-sources/beta.md\",\n    \"evidence/infrastructure/chatgpt-project-source-sync/SOURCE_MANIFEST.md\",\n    \"evidence/infrastructure/chatgpt-project-source-sync/UPLOAD_INSTRUCTIONS.md\"\n  ],\n  \"removed\": []\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-I",
+        "-B",
+        "/tmp/sc-lab1-nonprocess-independent-c-7bygwgy_/missing_source/evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/sync_sources.py",
+        "--plan"
+      ],
+      "cwd": "/tmp/sc-lab1-nonprocess-independent-c-7bygwgy_/missing_source",
+      "exit_code": 1,
+      "stdout": "{\n  \"add\": [],\n  \"change\": [\n    \"alpha.md\"\n  ],\n  \"missing\": [\n    \"active/beta.md\"\n  ],\n  \"unexpected\": [],\n  \"unsafe\": [],\n  \"errors\": [\n    \"Missing source: active/beta.md\"\n  ],\n  \"metadata_change\": [],\n  \"file_count\": 3,\n  \"safe_to_sync\": false\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-I",
+        "-B",
+        "/tmp/sc-lab1-nonprocess-independent-c-7bygwgy_/missing_source/evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/sync_sources.py"
+      ],
+      "cwd": "/tmp/sc-lab1-nonprocess-independent-c-7bygwgy_/missing_source",
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "Missing source: active/beta.md\n"
+    },
+    {
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-I",
+        "-B",
+        "/tmp/sc-lab1-nonprocess-independent-c-7bygwgy_/missing_source/evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/sync_sources.py",
+        "--check"
+      ],
+      "cwd": "/tmp/sc-lab1-nonprocess-independent-c-7bygwgy_/missing_source",
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "Missing source: active/beta.md\n"
+    },
+    {
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-I",
+        "-B",
+        "/tmp/sc-lab1-nonprocess-independent-c-7bygwgy_/wrong_hash/evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/sync_sources.py"
+      ],
+      "cwd": "/tmp/sc-lab1-nonprocess-independent-c-7bygwgy_/wrong_hash",
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"UPLOAD BUNDLE READY\",\n  \"file_count\": 3,\n  \"updated\": [\n    \"releases/chatgpt-project-sources/alpha.md\",\n    \"releases/chatgpt-project-sources/beta.md\",\n    \"evidence/infrastructure/chatgpt-project-source-sync/SOURCE_MANIFEST.md\",\n    \"evidence/infrastructure/chatgpt-project-source-sync/UPLOAD_INSTRUCTIONS.md\"\n  ],\n  \"removed\": []\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-I",
+        "-B",
+        "/tmp/sc-lab1-nonprocess-independent-c-7bygwgy_/wrong_hash/evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/sync_sources.py",
+        "--plan"
+      ],
+      "cwd": "/tmp/sc-lab1-nonprocess-independent-c-7bygwgy_/wrong_hash",
+      "exit_code": 1,
+      "stdout": "{\n  \"add\": [],\n  \"change\": [\n    \"alpha.md\"\n  ],\n  \"missing\": [],\n  \"unexpected\": [],\n  \"unsafe\": [],\n  \"errors\": [\n    \"Active source SHA256 mismatch: beta.md\"\n  ],\n  \"metadata_change\": [],\n  \"file_count\": 3,\n  \"safe_to_sync\": false\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-I",
+        "-B",
+        "/tmp/sc-lab1-nonprocess-independent-c-7bygwgy_/wrong_hash/evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/sync_sources.py"
+      ],
+      "cwd": "/tmp/sc-lab1-nonprocess-independent-c-7bygwgy_/wrong_hash",
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "Active source SHA256 mismatch: beta.md\n"
+    },
+    {
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-I",
+        "-B",
+        "/tmp/sc-lab1-nonprocess-independent-c-7bygwgy_/wrong_hash/evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/sync_sources.py",
+        "--check"
+      ],
+      "cwd": "/tmp/sc-lab1-nonprocess-independent-c-7bygwgy_/wrong_hash",
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "Active source SHA256 mismatch: beta.md\n"
+    },
+    {
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-I",
+        "-B",
+        "/tmp/sc-lab1-nonprocess-independent-c-7bygwgy_/unknown_extra/evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/sync_sources.py"
+      ],
+      "cwd": "/tmp/sc-lab1-nonprocess-independent-c-7bygwgy_/unknown_extra",
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"UPLOAD BUNDLE READY\",\n  \"file_count\": 3,\n  \"updated\": [\n    \"releases/chatgpt-project-sources/alpha.md\",\n    \"releases/chatgpt-project-sources/beta.md\",\n    \"evidence/infrastructure/chatgpt-project-source-sync/SOURCE_MANIFEST.md\",\n    \"evidence/infrastructure/chatgpt-project-source-sync/UPLOAD_INSTRUCTIONS.md\"\n  ],\n  \"removed\": []\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-I",
+        "-B",
+        "/tmp/sc-lab1-nonprocess-independent-c-7bygwgy_/unknown_extra/evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/sync_sources.py",
+        "--plan"
+      ],
+      "cwd": "/tmp/sc-lab1-nonprocess-independent-c-7bygwgy_/unknown_extra",
+      "exit_code": 1,
+      "stdout": "{\n  \"add\": [],\n  \"change\": [\n    \"alpha.md\"\n  ],\n  \"missing\": [],\n  \"unexpected\": [\n    \"unapproved-extra.txt\"\n  ],\n  \"unsafe\": [],\n  \"errors\": [],\n  \"metadata_change\": [\n    \"evidence/infrastructure/chatgpt-project-source-sync/SOURCE_MANIFEST.md\"\n  ],\n  \"file_count\": 3,\n  \"safe_to_sync\": false\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-I",
+        "-B",
+        "/tmp/sc-lab1-nonprocess-independent-c-7bygwgy_/unknown_extra/evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/sync_sources.py"
+      ],
+      "cwd": "/tmp/sc-lab1-nonprocess-independent-c-7bygwgy_/unknown_extra",
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "Refusing mutation: extra=['unapproved-extra.txt'], unsafe=[]\n"
+    },
+    {
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-I",
+        "-B",
+        "/tmp/sc-lab1-nonprocess-independent-c-7bygwgy_/unknown_extra/evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/sync_sources.py",
+        "--check"
+      ],
+      "cwd": "/tmp/sc-lab1-nonprocess-independent-c-7bygwgy_/unknown_extra",
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "Unsafe or unexpected bundle entries: unsafe=[], extra=['unapproved-extra.txt']\n"
+    }
+  ],
+  "issues": [],
+  "cleanup": "Preserved own uniquely created fixtures for inspection",
+  "overall": "PASS"
+}

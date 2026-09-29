@@ -1,12 +1,17 @@
 # 实验一 Goal 3 当前成果入口
 
-当前 Experiment 为用户已验收的 **25页重构版**，Process 仍为原 **12页待审稿**。本轮规则、生成链、真实重建、逐页视觉对照和新审阅包的唯一核验入口是 [SC-PROJECT-SOURCES-SYNC-003 REVIEW_PACKET](../../../evidence/infrastructure/SC-PROJECT-SOURCES-SYNC-003/REVIEW_PACKET.md)。
+## 当前状态：非Process范围收尾
 
-- [当前 Experiment PDF](../../reports/experiment1/experiment1.pdf) · [权威章节源](../../reports/experiment1/Experiment_Report.tex) · [报告构建与新审阅包说明](../../reports/README.md)。
-- [当前 Process PDF](../../reports/process1/process1.pdf) 及源保持原字节和待审身份；前期参考的 PARTIAL 复现限制不变。
-- [教师交付定位](teacher_delivery_mapping.md)已按新的25页报告物理页定位；Notebook和原数值运行身份未改。
+当前Experiment为用户已验收的**25页重构版**。用户已确认本对话复盘与该文稿；[SYNC-003网页GPT二审接收记录](../../../evidence/infrastructure/SC-PROJECT-SOURCES-SYNC-003/external_review/REVIEW_RECEIPT.md)承接被审`89371f6597f92f7dac9abf61f6f6b18e29ed76cc`的范围通过，当前来源为用户转交，原审核附件尚未入库。原18项测试/16项依赖恢复/报告编译是历史检查，不是本轮新运行。
 
-本次未新跑FULL或模型实验。旧FULL的可继承范围、新旧包具体成员hash和改动入口的专项回归见本轮核验入口；下方旧“113个非PDF payload未变”等数字只属于原收尾版本，不用于证明本轮包全部未变。网页GPT二审仍待完成；Evidence Lock、Understanding及Submission不随这次集成自动通过。
+本轮[SC-LAB1-NONPROCESS-CLOSEOUT-001](../../../evidence/infrastructure/SC-LAB1-NONPROCESS-CLOSEOUT-001/REVIEW_PACKET.md)只做治理同步、范围收尾与技术交接。NC验收后非Process任务可以独立关闭；本轮新提交仍为`CURRENT_CHANGE_GPT_REVIEW=PENDING`。技术处理、规定实验、有限候选比较、最终确认及全量结果保留原验收范围，不重新评为全局最优。
+
+- [当前Experiment PDF](../../reports/experiment1/experiment1.pdf) · [权威章节源](../../reports/experiment1/Experiment_Report.tex) · [构建说明](../../reports/README.md)。批准原PDF/源ZIP及生成器保持，本轮不重编、不重画。
+- Process交由用户指定的另一对话，状态`DELEGATED_NOT_COMPLETED`；[原12页待审稿](../../reports/process1/process1.pdf)、源及[Interaction Handoff](../../docs/goal3/INTERACTION_HANDOFF.md)不改。前期31页源复现保持PARTIAL，Evidence规格和Lock由指定责任方处理。
+- [当前完整审阅包](../../submission/REVIEW_ONLY_10245102410_吴博闻_实验一_25页报告同步.zip)仍为`REVIEW_ONLY` / `NOT_READY`。待最终Process到位，再合并、核验和取得用户提交确认；本轮不重打包。
+- [技术交接](../../docs/goal3/TECHNICAL_HANDOFF.md)提供冻结合同、数值CODE_SHA、现有构建/复算命令和历史证据。原始CRS未知、无噪声真值等限制保留；[教师定位](teacher_delivery_mapping.md)及两个Notebook未变。
+
+整体Deliverable=`FINAL_REVIEW`；Understanding保留原`LEARNING`，不由本轮同步自动转为PASS。没有新增Evidence Lock、VIVA签署或教师提交。本轮实验模型调用/研究数值运行均为0；下面历史正文及其当时PENDING按原字节保留，不与当前范围状态混写。
 
 ---
 

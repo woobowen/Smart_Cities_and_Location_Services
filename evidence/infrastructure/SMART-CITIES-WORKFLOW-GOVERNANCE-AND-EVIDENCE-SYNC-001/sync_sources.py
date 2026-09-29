@@ -139,16 +139,18 @@ def manifest_text(rows, data):
 
 
 def instructions_text(rows, data):
+    handoff = data.get('current_ui_handoff', '../SC-PROJECT-SOURCES-SYNC-003/handoff/UI_SOURCE_DIFF.md')
     return '\n'.join([
         '# Project Sources 差异更新说明', '',
         f'当前批准集合由 [sources.json](sources.json) 定义，共 {len(rows)} 项；完整来源、角色和 SHA256 见 [manifest](SOURCE_MANIFEST.md)。',
         '1. 修改权威文件后，经批准更新清单的版本和 SHA256，再运行同步工具 `--plan` 查看差异。',
         '2. 运行写同步及 `--check`；所有来源完整、安全且 hash 正确才写入。未知 extra、目录、符号链接不会被删除。',
-        '3. 发布并实际回读固定远程版本后，按 [本次 UI 差异表](../SC-PROJECT-SOURCES-SYNC-003/handoff/UI_SOURCE_DIFF.md) 逐项更新 UI。',
+        f'3. 发布并实际回读固定远程版本后，按 [当前 UI 交接说明]({handoff}) 核对用户实际 UI 版本，再逐项更新。',
         '4. 内容变化的同名文档逐个替换；保留未变有效资料。不删除全部当前 Project Sources，不重复上传未变 PDF/ZIP。',
-        '5. 后续任务应重新核对当次 UI 基准；本次差异表只对应 SC-PROJECT-SOURCES-SYNC-003 输入。', '',
+        '5. UI版本未知时记录 USER_CONFIRMATION_REQUIRED；若已使用当前文件，不要求重复上传。', '',
         '生成文件、本地同步、远程核验、UPLOAD_BUNDLE READY、用户实际 UI 上传是五种不同状态。工具只负责前述仓库步骤。',
-        'Project Settings 最小补丁是 [TRANSFER_COPY / USER_UI_ACTION_REQUIRED](../SC-PROJECT-SOURCES-SYNC-003/handoff/PROJECT_SETTINGS_SCOPE_PATCH.md)，不是第二份 active Settings。', '',
+        '历史 [SYNC-003 UI差异表](../SC-PROJECT-SOURCES-SYNC-003/handoff/UI_SOURCE_DIFF.md) 及 [Settings transfer补丁](../SC-PROJECT-SOURCES-SYNC-003/handoff/PROJECT_SETTINGS_SCOPE_PATCH.md) 仅说明当时输入与交付，不代表当前UI状态或本轮需要重复套用。',
+        'Project Settings由用户在UI维护；当前交接不生成第二份active设置或新的长稿。', '',
         '| Canonical upload filename | Semantic role |', '|---|---|',
         *[f'| `{r["filename"]}` | {r["semantic_role"]} |' for r in rows], ''])
 
