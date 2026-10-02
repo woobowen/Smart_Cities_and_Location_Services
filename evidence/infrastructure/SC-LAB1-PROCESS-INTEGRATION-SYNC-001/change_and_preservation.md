@@ -12,6 +12,8 @@
 
 初始release有16个上传文件和4个Windows元数据；授权移出三个确切旧参考副本，权威历史件和私密快照仍在。四个元数据已先逐个保护再移出release。除此无未知extra。旧releases/skills/publication-plots.zip与批准归档hash不同，保留不改；批准原始字节复制为publication-plots-approved-original.zip，解除bundle自引用。
 
-结束差异、保护文件逐hash核对见 [独立保护核验](independent_review/final_byte_protection_audit.json)，公开安全见 [发布扫描](publication_safety_check.json)，Git对象核对见 [暂存区核验](staged_input_checks.json)及发布回执。
+结束差异、保护文件逐hash核对见 [独立保护核验](independent_review/final_byte_protection_audit.json)，公开安全见 [最终暂存区发布扫描](publication_safety_check_final.json)，Git对象核对见 [暂存区核验](staged_input_checks.json)及发布回执。
 
 旧稿TeX/组件也保留在原路径供历史审核链接读取，字节仍同开始版本，未重新进入构建。新REVIEW_ONLY完整双报告ZIP属于本轮工程验证产物，旧包保持。根目录初始未跟踪Experiment源ZIP与两份G1 HANDOFF归档经过安全检查后按项目历史原件纳入Git，不删除或混作新运行。
+
+正式工程内容已发布为 `e1fb621aa40acc167f4ed84c0c7992a5ff0a4abe`，内容推送后工作区无未提交/未跟踪实质文件，Local HEAD、origin/main与真实远程main一致；[独立对象回读](PUBLICATION_RECEIPT.json)核对全部15项批准输入和30个权威/分发路径。后续回执提交仅新增PUBLICATION_RECEIPT.json并更新本文件、REVIEW_PACKET.md、FINAL_RESPONSE.md，不改变报告、科学内容、源清单或release。被忽略的现有.venv、缓存和release之外的OS元数据仍保留。

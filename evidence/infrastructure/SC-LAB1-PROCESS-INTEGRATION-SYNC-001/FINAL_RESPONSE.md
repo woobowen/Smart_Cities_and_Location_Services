@@ -4,13 +4,13 @@
 
 ## A. 总体结论
 
-工程接管、输入保护、两条报告构建路线、完整项目源同步和独立内部核验已通过。发布状态在发布回执追加前保持 PENDING；不提前宣称远程已核实。用户对完整Process文稿的验收按本轮Prompt承接；网页GPT工程二审继续PENDING，逐条Evidence Lock、理解验收和教师提交不升级。
+**Engineering PASS。** 工程接管、输入保护、两条报告构建路线、完整项目源同步、独立内部核验、正常main推送和真实远程对象回读全部通过。用户对完整Process文稿的验收按本轮Prompt承接；网页GPT工程二审继续PENDING，逐条Evidence Lock、理解验收和教师提交不升级。
 
 ## B. Git版本与远程
 
 Repository：https://github.com/woobowen/Smart_Cities_and_Location_Services.git ，Branch：`main`。
 
-开始SHA：`6527945ad8e526fa606b2c09835f2e51291fa4d0`。工程内容提交与远程对象回读后，在本文件追加被审内容SHA及发布回执；包含回执的最终HEAD由对话最终回报精确给出，避免提交SHA自引用。未执行force push、reset、clean，也没有回退用户新增文件。
+开始SHA：`6527945ad8e526fa606b2c09835f2e51291fa4d0`。被审内容SHA：`e1fb621aa40acc167f4ed84c0c7992a5ff0a4abe`。内容推送后的Local HEAD、origin/main和直接查询的refs/heads/main均为该SHA；从全新、无local alternates的Git对象库经GitHub重新取得15项项目源及15个权威路径实例，全部SHA256匹配独立输入基准，manifest对象与成员集合通过。[真实远程回执](PUBLICATION_RECEIPT.json)绑定该内容提交。包含回执的最终HEAD由对话最终回报精确给出，避免提交SHA自引用；追加提交仅改变四个本轮交接/回执文件。未执行force push、reset、clean，也没有回退用户新增文件。
 
 ## C. 规范
 
@@ -37,7 +37,7 @@ A/B新PDF都为 `971f9739e43b9d13a3e6e4b3154e47968d8d40a2fd63b9cae87950cb72226c2
 
 134个常规裁片复算PPI为73.69–146.82，按用户本轮明确APPROVED_NATIVE_WIDTH承接，不宣称达180；结尾额外裁片不冒充纳入该134项计算。整体文稿验收不等于逐条Evidence Lock。
 
-[构建与视觉记录](build_and_visual_checks.md)含实际命令、环境、失败与修复、最终PDF和六个差异页。最终统一适配层再次真实执行 `--report process --regenerate --render`，新PDF及77张PNG与已查看B版本相同。统一 `task1.goal3 REPORT_BUILD` 也真实成功，生成[新REVIEW_ONLY验证包](../../../task1/submission/REVIEW_ONLY_10245102410_吴博闻_实验一_完整双报告.zip)，116成员，只做冻结依赖probe，未执行FULL实验。
+[构建与视觉记录](build_and_visual_checks.md)含实际命令、环境、失败与修复、最终PDF和六个差异页。最终统一适配层再次真实执行 `--report process --regenerate --render`，新PDF及77张PNG与已查看B版本相同。统一 `task1.goal3 REPORT_BUILD` 也真实成功，生成[新REVIEW_ONLY验证包](../../../task1/submission/REVIEW_ONLY_10245102410_吴博闻_实验一_完整双报告.zip)，116成员，只做冻结依赖probe，未执行FULL实验。验证包SHA256为 `67421e39ca147d5ac09952c5f031f7ca0ab817518c6dac907d9abcede2e0c20c`。
 
 ## E. Experiment与科学成果保护
 
@@ -85,7 +85,7 @@ A/B新PDF都为 `971f9739e43b9d13a3e6e4b3154e47968d8d40a2fd63b9cae87950cb72226c2
 
 ## I. 审核入口
 
-[REVIEW_PACKET](REVIEW_PACKET.md)、[构建与视觉核验](build_and_visual_checks.md)、[来源映射](transfer_map.json)、[同步核验](source_sync_checks.md)、[独立审查记录](independent_review/REVIEW_NOTES.md)、[当前双报告导航](../../../task1/reports/README.md)。正式推送后会追加固定内容SHA的远程回读回执，最终对话提供固定提交链接。
+[REVIEW_PACKET](REVIEW_PACKET.md)、[构建与视觉核验](build_and_visual_checks.md)、[来源映射](transfer_map.json)、[同步核验](source_sync_checks.md)、[独立审查记录](independent_review/REVIEW_NOTES.md)、[当前双报告导航](../../../task1/reports/README.md)。固定[内容提交](https://github.com/woobowen/Smart_Cities_and_Location_Services/commit/e1fb621aa40acc167f4ed84c0c7992a5ff0a4abe)、[批准Process PDF](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/e1fb621aa40acc167f4ed84c0c7992a5ff0a4abe/reports/process-report/experiment1-revised/Process_Report_Revised.pdf)、[批准Process ZIP](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/e1fb621aa40acc167f4ed84c0c7992a5ff0a4abe/reports/process-report/experiment1-revised/Process_Report_Revised_LaTeX_Source.zip)、[完整清单](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/e1fb621aa40acc167f4ed84c0c7992a5ff0a4abe/evidence/infrastructure/chatgpt-project-source-sync/sources.json)已真实发布。当前文件与REVIEW_PACKET的固定最终提交链接见对话最终回报。[发布回执](PUBLICATION_RECEIPT.json)记录独立远程对象获取、Git OID和逐项SHA256。
 
 ## J. 下一步状态
 
