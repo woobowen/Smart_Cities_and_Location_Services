@@ -10,7 +10,7 @@
 
 Repository：https://github.com/woobowen/Smart_Cities_and_Location_Services.git ，Branch：`main`。
 
-开始SHA：`6527945ad8e526fa606b2c09835f2e51291fa4d0`。被审内容SHA：`e1fb621aa40acc167f4ed84c0c7992a5ff0a4abe`。内容推送后的Local HEAD、origin/main和直接查询的refs/heads/main均为该SHA；从全新、无local alternates的Git对象库经GitHub重新取得15项项目源及15个权威路径实例，全部SHA256匹配独立输入基准，manifest对象与成员集合通过。[真实远程回执](PUBLICATION_RECEIPT.json)绑定该内容提交。包含回执的最终HEAD由对话最终回报精确给出，避免提交SHA自引用；追加提交仅改变四个本轮交接/回执文件。未执行force push、reset、clean，也没有回退用户新增文件。
+开始SHA：`6527945ad8e526fa606b2c09835f2e51291fa4d0`。被审内容SHA：`e1fb621aa40acc167f4ed84c0c7992a5ff0a4abe`。内容推送后的Local HEAD、origin/main和直接查询的refs/heads/main均为该SHA；从全新、无local alternates的Git对象库经GitHub重新取得15项项目源及15个权威路径实例，全部SHA256匹配独立输入基准，manifest对象与成员集合通过。[真实远程回执](PUBLICATION_RECEIPT.json)绑定该内容提交。包含回执的最终HEAD由对话最终回报精确给出，避免提交SHA自引用；回执提交 `4c3ff72229eca0f451384f494514310b082dc388` 仅改变四个本轮交接/回执文件。随后发现复用浅克隆时本地ref更新被拒绝，将本任务验证辅助脚本改为直接核对FETCH_HEAD；[实际修复与复验](REMOTE_CHECK_HELPER_FIX.json)记录30个路径实例再次通过，报告、同步生产代码和release无改。最终HEAD还包含这一辅助修复及相应审核记录。未执行force push、reset、clean，也没有回退用户新增文件。
 
 ## C. 规范
 
@@ -79,7 +79,7 @@ A/B新PDF都为 `971f9739e43b9d13a3e6e4b3154e47968d8d40a2fd63b9cae87950cb72226c2
 
 实施者：root、process_build、source_sync；独立审查上下文：independent_review，仅审阅工程与产物，不冒签报告作者或Evidence Master。最终范围与结论见[INTERNAL_REVIEW.md](INTERNAL_REVIEW.md)；独立程序复验包括输入/暂存区、归档、保护边界、全页重新渲染、嵌图、134裁片PPI、同步故障测试和导航/包检查。其实际视觉范围为40–77页、1/9页抽查、六个差异页及相关模板页；实施者查看1–39页和全12页模板，合计覆盖整份Process。
 
-修复了缺ragged2e、Noto Sans和字体权重选择，均局部环境适配；修复同步源自引用/历史成员识别及模板残留高亮、节点重叠/标题分离，并回归。当前无材料、权限或研究定义阻碍。网页GPT二审仍未执行。
+修复了缺ragged2e、Noto Sans和字体权重选择，均局部环境适配；修复同步源自引用/历史成员识别及模板残留高亮、节点重叠/标题分离，并回归。发布后远程验证辅助脚本的浅克隆本地分支更新问题也已修复并实际复验，见[追加独立审核](REMOTE_CHECK_HELPER_REVIEW.md)。当前无材料、权限或研究定义阻碍。网页GPT二审仍未执行。
 
 新增依赖：报告局部目录 `.venv/process-report-build-deps` 中的CairoSVG2.8.2、PyMuPDF1.26.7、Pillow12.3.0、numpy2.3.5及7项传递依赖；现有 `.venv/texmf` 增加ragged2e3.6；用户字体目录增加官方Noto Sans五款。无apt安装、无全局TeX/TLS/认证或shell配置修改，无字体二进制分发。科学环境numpy1.26.4/Pillow10.2未升级。完整版本、来源和hash在[构建记录](build_and_visual_checks.md)。这些仍为报告复现依赖，当前保留；清理前需确认替代环境或不再需要重建。
 

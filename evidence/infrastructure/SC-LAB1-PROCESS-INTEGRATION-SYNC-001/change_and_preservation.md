@@ -16,4 +16,6 @@
 
 旧稿TeX/组件也保留在原路径供历史审核链接读取，字节仍同开始版本，未重新进入构建。新REVIEW_ONLY完整双报告ZIP属于本轮工程验证产物，旧包保持。根目录初始未跟踪Experiment源ZIP与两份G1 HANDOFF归档经过安全检查后按项目历史原件纳入Git，不删除或混作新运行。
 
-正式工程内容已发布为 `e1fb621aa40acc167f4ed84c0c7992a5ff0a4abe`，内容推送后工作区无未提交/未跟踪实质文件，Local HEAD、origin/main与真实远程main一致；[独立对象回读](PUBLICATION_RECEIPT.json)核对全部15项批准输入和30个权威/分发路径。后续回执提交仅新增PUBLICATION_RECEIPT.json并更新本文件、REVIEW_PACKET.md、FINAL_RESPONSE.md，不改变报告、科学内容、源清单或release。被忽略的现有.venv、缓存和release之外的OS元数据仍保留。
+正式工程内容已发布为 `e1fb621aa40acc167f4ed84c0c7992a5ff0a4abe`，内容推送后工作区无未提交/未跟踪实质文件，Local HEAD、origin/main与真实远程main一致；[独立对象回读](PUBLICATION_RECEIPT.json)核对全部15项批准输入和30个权威/分发路径。回执提交4c3ff72229eca0f451384f494514310b082dc388仅新增PUBLICATION_RECEIPT.json并更新本文件、REVIEW_PACKET.md、FINAL_RESPONSE.md，不改变报告、科学内容、源清单或release。被忽略的现有.venv、缓存和release之外的OS元数据仍保留。
+
+回执发布后，复用浅克隆的辅助验证命令实际遇到本地main ref的non-fast-forward拒绝；远程main已正确发布。仅修复本任务verify_remote.py读取FETCH_HEAD的方式，保存实际失败/成功复验并追加独立核验记录，当前报告、同步生产代码、清单和release均不受影响。最终提交不再被描述为纯文档提交，具体范围见[辅助修复记录](REMOTE_CHECK_HELPER_FIX.json)。

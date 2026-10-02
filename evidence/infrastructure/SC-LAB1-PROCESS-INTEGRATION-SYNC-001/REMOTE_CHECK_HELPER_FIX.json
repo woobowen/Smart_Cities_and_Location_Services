@@ -1,0 +1,573 @@
+{
+  "scope": "remote-verification evidence helper only; production reports, scientific code, sync implementation, manifest and release unchanged",
+  "failure": {
+    "command": [
+      "git",
+      "fetch",
+      "--depth=1",
+      "--filter=blob:none",
+      "origin",
+      "refs/heads/main:refs/heads/main"
+    ],
+    "exit_code": 1,
+    "observed_stderr": "From https://github.com/woobowen/Smart_Cities_and_Location_Services\n ! [rejected]        main       -> main  (non-fast-forward)\n",
+    "cause": "Depth-one fetch cut ancestry needed for ordinary local main ref update; remote publication was already successful."
+  },
+  "fix": "Fetch refs/heads/main without a destination branch and verify FETCH_HEAD; no force flag and all expected-SHA/member/hash checks preserved.",
+  "helper_sha256": "4beec09ec05d31c8ec529b0f9813579f7457962801bad7034f301c3f0e2d679e",
+  "actual_fixed_cli_verification": {
+    "status": "PASS",
+    "verified_at": "2026-10-02T16:11:32.596878+00:00",
+    "repository": "https://github.com/woobowen/Smart_Cities_and_Location_Services.git",
+    "branch": "main",
+    "fetched_commit": "4c3ff72229eca0f451384f494514310b082dc388",
+    "direct_remote_before": "4c3ff72229eca0f451384f494514310b082dc388",
+    "direct_remote_after": "4c3ff72229eca0f451384f494514310b082dc388",
+    "network_store_created_fresh": false,
+    "local_object_alternates": false,
+    "object_store": "/home/addaswsw/.local/state/codex-task-work/SC-LAB1-PROCESS-INTEGRATION-SYNC-001/remote-verification.git",
+    "baseline_origin": "User Prompt independent SHA256 appendix, not generated manifest",
+    "baseline_sha256": "762e0e8973d55f6cf27076d8bb4d06db14934d3ed582e4bd582b62775fb8153f",
+    "manifest_git_oid": "71dba5e408bb563384c46b06c762c899deb86bcc",
+    "manifest_sha256": "165d1b4f1920a0499fe5095f0aa97e55f365bba87f03840f5c56ecb4328741da",
+    "project_source_count": 15,
+    "verified_active_and_release_instances": 30,
+    "checks": [
+      {
+        "canonical_name": "SMART_CITIES_RESEARCH_PROTOCOL.md",
+        "role": "active",
+        "path": "docs/research/SMART_CITIES_RESEARCH_PROTOCOL.md",
+        "mode": "100644",
+        "kind": "blob",
+        "git_oid": "5744f5a17e385eddca4fcd3048b6039042eacf0a",
+        "size": 13264,
+        "sha256": "19f9bb4670bc3a485b064854f3d035d2a50a192386be53396851443ee5654a3f",
+        "matches_input": true
+      },
+      {
+        "canonical_name": "SMART_CITIES_RESEARCH_PROTOCOL.md",
+        "role": "release",
+        "path": "releases/chatgpt-project-sources/SMART_CITIES_RESEARCH_PROTOCOL.md",
+        "mode": "100644",
+        "kind": "blob",
+        "git_oid": "5744f5a17e385eddca4fcd3048b6039042eacf0a",
+        "size": 13264,
+        "sha256": "19f9bb4670bc3a485b064854f3d035d2a50a192386be53396851443ee5654a3f",
+        "matches_input": true
+      },
+      {
+        "canonical_name": "WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md",
+        "role": "active",
+        "path": "docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md",
+        "mode": "100644",
+        "kind": "blob",
+        "git_oid": "103156a6399c96a8dce63ab2b2367a87e38932ad",
+        "size": 51263,
+        "sha256": "681ce8af7ead9b0d4abe0575ff546bc143064de42952bb5110bc350a420e4aa8",
+        "matches_input": true
+      },
+      {
+        "canonical_name": "WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md",
+        "role": "release",
+        "path": "releases/chatgpt-project-sources/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md",
+        "mode": "100644",
+        "kind": "blob",
+        "git_oid": "103156a6399c96a8dce63ab2b2367a87e38932ad",
+        "size": 51263,
+        "sha256": "681ce8af7ead9b0d4abe0575ff546bc143064de42952bb5110bc350a420e4aa8",
+        "matches_input": true
+      },
+      {
+        "canonical_name": "SMART_CITIES_REPORT_WRITING_GUIDE.md",
+        "role": "active",
+        "path": "docs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md",
+        "mode": "100644",
+        "kind": "blob",
+        "git_oid": "fe16596b72c6b3278b41553877f92b07cf669a6d",
+        "size": 28663,
+        "sha256": "d513867e76da9d5683a2b76325fa71bce8bb4387af6c2d148acb2e70fa6a5d0c",
+        "matches_input": true
+      },
+      {
+        "canonical_name": "SMART_CITIES_REPORT_WRITING_GUIDE.md",
+        "role": "release",
+        "path": "releases/chatgpt-project-sources/SMART_CITIES_REPORT_WRITING_GUIDE.md",
+        "mode": "100644",
+        "kind": "blob",
+        "git_oid": "fe16596b72c6b3278b41553877f92b07cf669a6d",
+        "size": 28663,
+        "sha256": "d513867e76da9d5683a2b76325fa71bce8bb4387af6c2d148acb2e70fa6a5d0c",
+        "matches_input": true
+      },
+      {
+        "canonical_name": "SMART_CITIES_VISUAL_SYSTEM.md",
+        "role": "active",
+        "path": "docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md",
+        "mode": "100644",
+        "kind": "blob",
+        "git_oid": "ea02a42f5c5776d1206b2c45fe5a048607636b2e",
+        "size": 48822,
+        "sha256": "31501be77664a4d7f35ebb8d11118bdf58a18db7ce0090a125b4d87e95590b59",
+        "matches_input": true
+      },
+      {
+        "canonical_name": "SMART_CITIES_VISUAL_SYSTEM.md",
+        "role": "release",
+        "path": "releases/chatgpt-project-sources/SMART_CITIES_VISUAL_SYSTEM.md",
+        "mode": "100644",
+        "kind": "blob",
+        "git_oid": "ea02a42f5c5776d1206b2c45fe5a048607636b2e",
+        "size": 48822,
+        "sha256": "31501be77664a4d7f35ebb8d11118bdf58a18db7ce0090a125b4d87e95590b59",
+        "matches_input": true
+      },
+      {
+        "canonical_name": "AGENTS.md",
+        "role": "active",
+        "path": "AGENTS.md",
+        "mode": "100644",
+        "kind": "blob",
+        "git_oid": "f8c7d67fd09919b9cae98d894bf9032662b8f517",
+        "size": 39135,
+        "sha256": "e1797cf00af4b55c1885d8e8753d93b0f4feadc6b1295670676e2636827a3a62",
+        "matches_input": true
+      },
+      {
+        "canonical_name": "AGENTS.md",
+        "role": "release",
+        "path": "releases/chatgpt-project-sources/AGENTS.md",
+        "mode": "100644",
+        "kind": "blob",
+        "git_oid": "f8c7d67fd09919b9cae98d894bf9032662b8f517",
+        "size": 39135,
+        "sha256": "e1797cf00af4b55c1885d8e8753d93b0f4feadc6b1295670676e2636827a3a62",
+        "matches_input": true
+      },
+      {
+        "canonical_name": "Experiment_Report_P2_Exact.pdf",
+        "role": "active",
+        "path": "templates/latex/experiment-report/preview/Experiment_Report_P2_Exact.pdf",
+        "mode": "100644",
+        "kind": "blob",
+        "git_oid": "69129c159c3a3a74a649a46c7e1f039026c3c485",
+        "size": 278863,
+        "sha256": "6fd543f5123ba4d67985193d5658802ae820c6585dc3f509071b8b2d39b323dd",
+        "matches_input": true
+      },
+      {
+        "canonical_name": "Experiment_Report_P2_Exact.pdf",
+        "role": "release",
+        "path": "releases/chatgpt-project-sources/Experiment_Report_P2_Exact.pdf",
+        "mode": "100644",
+        "kind": "blob",
+        "git_oid": "69129c159c3a3a74a649a46c7e1f039026c3c485",
+        "size": 278863,
+        "sha256": "6fd543f5123ba4d67985193d5658802ae820c6585dc3f509071b8b2d39b323dd",
+        "matches_input": true
+      },
+      {
+        "canonical_name": "实验课1.pptx",
+        "role": "active",
+        "path": "task1/实验课1.pptx",
+        "mode": "100644",
+        "kind": "blob",
+        "git_oid": "73d98c314d062ce1d917c15f41804fb0dcee493c",
+        "size": 11442326,
+        "sha256": "cf5fdbdd0e116818f4bf195e8761dd55c4733443d7c360c986cf1cdfddfda075",
+        "matches_input": true
+      },
+      {
+        "canonical_name": "实验课1.pptx",
+        "role": "release",
+        "path": "releases/chatgpt-project-sources/实验课1.pptx",
+        "mode": "100644",
+        "kind": "blob",
+        "git_oid": "73d98c314d062ce1d917c15f41804fb0dcee493c",
+        "size": 11442326,
+        "sha256": "cf5fdbdd0e116818f4bf195e8761dd55c4733443d7c360c986cf1cdfddfda075",
+        "matches_input": true
+      },
+      {
+        "canonical_name": "作业.zip",
+        "role": "active",
+        "path": "task1/作业.zip",
+        "mode": "100644",
+        "kind": "blob",
+        "git_oid": "3e41b61874176f6cc02d47c989620c7ea1147307",
+        "size": 15376559,
+        "sha256": "818d483cf719aeb1145ea97b551b2648913559ed1fca0be220ed41eff8ba42cc",
+        "matches_input": true
+      },
+      {
+        "canonical_name": "作业.zip",
+        "role": "release",
+        "path": "releases/chatgpt-project-sources/作业.zip",
+        "mode": "100644",
+        "kind": "blob",
+        "git_oid": "3e41b61874176f6cc02d47c989620c7ea1147307",
+        "size": 15376559,
+        "sha256": "818d483cf719aeb1145ea97b551b2648913559ed1fca0be220ed41eff8ba42cc",
+        "matches_input": true
+      },
+      {
+        "canonical_name": "任务3_LLM辅助评估清洗.ipynb",
+        "role": "active",
+        "path": "task1/作业/作业/任务3_LLM辅助评估清洗.ipynb",
+        "mode": "100644",
+        "kind": "blob",
+        "git_oid": "1107126898a97bee75ebe15fa05163810c5d9344",
+        "size": 20208,
+        "sha256": "4ecffe64024e002c0cffe7830e18b5f6ded04cd5aa9dd645d6798fc9b0715add",
+        "matches_input": true
+      },
+      {
+        "canonical_name": "任务3_LLM辅助评估清洗.ipynb",
+        "role": "release",
+        "path": "releases/chatgpt-project-sources/任务3_LLM辅助评估清洗.ipynb",
+        "mode": "100644",
+        "kind": "blob",
+        "git_oid": "1107126898a97bee75ebe15fa05163810c5d9344",
+        "size": 20208,
+        "sha256": "4ecffe64024e002c0cffe7830e18b5f6ded04cd5aa9dd645d6798fc9b0715add",
+        "matches_input": true
+      },
+      {
+        "canonical_name": "作业1轨迹数据预处理.ipynb",
+        "role": "active",
+        "path": "task1/作业/作业/作业1轨迹数据预处理.ipynb",
+        "mode": "100644",
+        "kind": "blob",
+        "git_oid": "a17e239ed5bc540762f18210e1ddbbf067e0819b",
+        "size": 77455,
+        "sha256": "8601d1dfecaef062fef553992cc9774d3a0eb551751c70536f5b52f1343b158a",
+        "matches_input": true
+      },
+      {
+        "canonical_name": "作业1轨迹数据预处理.ipynb",
+        "role": "release",
+        "path": "releases/chatgpt-project-sources/作业1轨迹数据预处理.ipynb",
+        "mode": "100644",
+        "kind": "blob",
+        "git_oid": "a17e239ed5bc540762f18210e1ddbbf067e0819b",
+        "size": 77455,
+        "sha256": "8601d1dfecaef062fef553992cc9774d3a0eb551751c70536f5b52f1343b158a",
+        "matches_input": true
+      },
+      {
+        "canonical_name": "publication-plots.zip",
+        "role": "active",
+        "path": "releases/skills/publication-plots-approved-original.zip",
+        "mode": "100644",
+        "kind": "blob",
+        "git_oid": "aa5a4abee50860086ab1e6d9323ea1e61582d466",
+        "size": 13105,
+        "sha256": "b3d20aec75a8450e62effcb51399115c952fa6c3787c254fa09305e44a9c3041",
+        "matches_input": true
+      },
+      {
+        "canonical_name": "publication-plots.zip",
+        "role": "release",
+        "path": "releases/chatgpt-project-sources/publication-plots.zip",
+        "mode": "100644",
+        "kind": "blob",
+        "git_oid": "aa5a4abee50860086ab1e6d9323ea1e61582d466",
+        "size": 13105,
+        "sha256": "b3d20aec75a8450e62effcb51399115c952fa6c3787c254fa09305e44a9c3041",
+        "matches_input": true
+      },
+      {
+        "canonical_name": "Experiment_Report_吴博闻_10245102410.pdf",
+        "role": "active",
+        "path": "reports/experiment-report/experiment1-reconstructed/Experiment_Report_吴博闻_10245102410.pdf",
+        "mode": "100644",
+        "kind": "blob",
+        "git_oid": "700d4d2df2f7c74aa0bb6f4a7aed79d0b6ac1ad5",
+        "size": 907540,
+        "sha256": "2a940be556262725acbe666bbe5b5f8a6b20e08d6838770f0b681bb17bf5cdd0",
+        "matches_input": true
+      },
+      {
+        "canonical_name": "Experiment_Report_吴博闻_10245102410.pdf",
+        "role": "release",
+        "path": "releases/chatgpt-project-sources/Experiment_Report_吴博闻_10245102410.pdf",
+        "mode": "100644",
+        "kind": "blob",
+        "git_oid": "700d4d2df2f7c74aa0bb6f4a7aed79d0b6ac1ad5",
+        "size": 907540,
+        "sha256": "2a940be556262725acbe666bbe5b5f8a6b20e08d6838770f0b681bb17bf5cdd0",
+        "matches_input": true
+      },
+      {
+        "canonical_name": "Experiment_Report_完整重构_源文件.zip",
+        "role": "active",
+        "path": "reports/experiment-report/experiment1-reconstructed/Experiment_Report_完整重构_源文件.zip",
+        "mode": "100644",
+        "kind": "blob",
+        "git_oid": "ba5b10d04956136ad59722e4a20c453f32e7ce00",
+        "size": 3515637,
+        "sha256": "6c0d2cc5e3b65bccb0279e1dd7ad5e776b5a8fc098b159f34bfd5301242e4dcd",
+        "matches_input": true
+      },
+      {
+        "canonical_name": "Experiment_Report_完整重构_源文件.zip",
+        "role": "release",
+        "path": "releases/chatgpt-project-sources/Experiment_Report_完整重构_源文件.zip",
+        "mode": "100644",
+        "kind": "blob",
+        "git_oid": "ba5b10d04956136ad59722e4a20c453f32e7ce00",
+        "size": 3515637,
+        "sha256": "6c0d2cc5e3b65bccb0279e1dd7ad5e776b5a8fc098b159f34bfd5301242e4dcd",
+        "matches_input": true
+      },
+      {
+        "canonical_name": "Process_Report_Revised.pdf",
+        "role": "active",
+        "path": "reports/process-report/experiment1-revised/Process_Report_Revised.pdf",
+        "mode": "100644",
+        "kind": "blob",
+        "git_oid": "78cd6d550c9126257baa619ae3e44f9d18da84e5",
+        "size": 8154621,
+        "sha256": "45f3b86f47c1b5cc7cf759ff713f5df3d4036e7ea9b4fff5eb3a40b6123aba83",
+        "matches_input": true
+      },
+      {
+        "canonical_name": "Process_Report_Revised.pdf",
+        "role": "release",
+        "path": "releases/chatgpt-project-sources/Process_Report_Revised.pdf",
+        "mode": "100644",
+        "kind": "blob",
+        "git_oid": "78cd6d550c9126257baa619ae3e44f9d18da84e5",
+        "size": 8154621,
+        "sha256": "45f3b86f47c1b5cc7cf759ff713f5df3d4036e7ea9b4fff5eb3a40b6123aba83",
+        "matches_input": true
+      },
+      {
+        "canonical_name": "Process_Report_Revised_LaTeX_Source.zip",
+        "role": "active",
+        "path": "reports/process-report/experiment1-revised/Process_Report_Revised_LaTeX_Source.zip",
+        "mode": "100644",
+        "kind": "blob",
+        "git_oid": "1706b14902c007b5dec89b92cc01e0aa2382a270",
+        "size": 56366745,
+        "sha256": "00cb7b641b37b2a71a552fc5bef47fc551a16ea7ce88bcf139f2e68a5f1451da",
+        "matches_input": true
+      },
+      {
+        "canonical_name": "Process_Report_Revised_LaTeX_Source.zip",
+        "role": "release",
+        "path": "releases/chatgpt-project-sources/Process_Report_Revised_LaTeX_Source.zip",
+        "mode": "100644",
+        "kind": "blob",
+        "git_oid": "1706b14902c007b5dec89b92cc01e0aa2382a270",
+        "size": 56366745,
+        "sha256": "00cb7b641b37b2a71a552fc5bef47fc551a16ea7ce88bcf139f2e68a5f1451da",
+        "matches_input": true
+      }
+    ],
+    "commands": [
+      {
+        "command": [
+          "git",
+          "ls-remote",
+          "https://github.com/woobowen/Smart_Cities_and_Location_Services.git",
+          "refs/heads/main"
+        ],
+        "exit_code": 0
+      },
+      {
+        "command": [
+          "git",
+          "remote",
+          "get-url",
+          "origin"
+        ],
+        "exit_code": 0
+      },
+      {
+        "command": [
+          "git",
+          "fetch",
+          "--depth=1",
+          "--filter=blob:none",
+          "origin",
+          "refs/heads/main"
+        ],
+        "exit_code": 0
+      },
+      {
+        "command": [
+          "git",
+          "rev-parse",
+          "FETCH_HEAD"
+        ],
+        "exit_code": 0
+      },
+      {
+        "command": [
+          "git",
+          "ls-tree",
+          "-r",
+          "-z",
+          "4c3ff72229eca0f451384f494514310b082dc388"
+        ],
+        "exit_code": 0
+      },
+      {
+        "command": [
+          "git",
+          "cat-file",
+          "blob",
+          "71dba5e408bb563384c46b06c762c899deb86bcc"
+        ],
+        "exit_code": 0
+      },
+      {
+        "command": [
+          "git",
+          "cat-file",
+          "blob",
+          "5744f5a17e385eddca4fcd3048b6039042eacf0a"
+        ],
+        "exit_code": 0
+      },
+      {
+        "command": [
+          "git",
+          "cat-file",
+          "blob",
+          "103156a6399c96a8dce63ab2b2367a87e38932ad"
+        ],
+        "exit_code": 0
+      },
+      {
+        "command": [
+          "git",
+          "cat-file",
+          "blob",
+          "fe16596b72c6b3278b41553877f92b07cf669a6d"
+        ],
+        "exit_code": 0
+      },
+      {
+        "command": [
+          "git",
+          "cat-file",
+          "blob",
+          "ea02a42f5c5776d1206b2c45fe5a048607636b2e"
+        ],
+        "exit_code": 0
+      },
+      {
+        "command": [
+          "git",
+          "cat-file",
+          "blob",
+          "f8c7d67fd09919b9cae98d894bf9032662b8f517"
+        ],
+        "exit_code": 0
+      },
+      {
+        "command": [
+          "git",
+          "cat-file",
+          "blob",
+          "69129c159c3a3a74a649a46c7e1f039026c3c485"
+        ],
+        "exit_code": 0
+      },
+      {
+        "command": [
+          "git",
+          "cat-file",
+          "blob",
+          "73d98c314d062ce1d917c15f41804fb0dcee493c"
+        ],
+        "exit_code": 0
+      },
+      {
+        "command": [
+          "git",
+          "cat-file",
+          "blob",
+          "3e41b61874176f6cc02d47c989620c7ea1147307"
+        ],
+        "exit_code": 0
+      },
+      {
+        "command": [
+          "git",
+          "cat-file",
+          "blob",
+          "1107126898a97bee75ebe15fa05163810c5d9344"
+        ],
+        "exit_code": 0
+      },
+      {
+        "command": [
+          "git",
+          "cat-file",
+          "blob",
+          "a17e239ed5bc540762f18210e1ddbbf067e0819b"
+        ],
+        "exit_code": 0
+      },
+      {
+        "command": [
+          "git",
+          "cat-file",
+          "blob",
+          "aa5a4abee50860086ab1e6d9323ea1e61582d466"
+        ],
+        "exit_code": 0
+      },
+      {
+        "command": [
+          "git",
+          "cat-file",
+          "blob",
+          "700d4d2df2f7c74aa0bb6f4a7aed79d0b6ac1ad5"
+        ],
+        "exit_code": 0
+      },
+      {
+        "command": [
+          "git",
+          "cat-file",
+          "blob",
+          "ba5b10d04956136ad59722e4a20c453f32e7ce00"
+        ],
+        "exit_code": 0
+      },
+      {
+        "command": [
+          "git",
+          "cat-file",
+          "blob",
+          "78cd6d550c9126257baa619ae3e44f9d18da84e5"
+        ],
+        "exit_code": 0
+      },
+      {
+        "command": [
+          "git",
+          "cat-file",
+          "blob",
+          "1706b14902c007b5dec89b92cc01e0aa2382a270"
+        ],
+        "exit_code": 0
+      },
+      {
+        "command": [
+          "git",
+          "ls-remote",
+          "https://github.com/woobowen/Smart_Cities_and_Location_Services.git",
+          "refs/heads/main"
+        ],
+        "exit_code": 0
+      }
+    ],
+    "web_gpt_review": "PENDING",
+    "teacher_submission": "NOT_PERFORMED"
+  },
+  "first_receipt_commit": "4c3ff72229eca0f451384f494514310b082dc388"
+}

@@ -38,14 +38,18 @@ def main():
         args.object_dir.parent.mkdir(parents=True, exist_ok=True)
         run(['git', 'clone', '--bare', '--filter=blob:none', '--depth=1', '--single-branch',
              '--branch', 'main', REPOSITORY, str(args.object_dir)])
+        fetched_ref = 'refs/heads/main'
     else:
         if run(['git', 'remote', 'get-url', 'origin'], args.object_dir).decode().strip() != REPOSITORY:
             raise SystemExit('Incorrect object-store origin')
+        # A depth-one fetch can hide the ancestry needed to update a local branch.
+        # Verify this network fetch directly, without changing a local branch ref.
         run(['git', 'fetch', '--depth=1', '--filter=blob:none', 'origin',
-             'refs/heads/main:refs/heads/main'], args.object_dir)
+             'refs/heads/main'], args.object_dir)
+        fetched_ref = 'FETCH_HEAD'
     if (args.object_dir / 'objects/info/alternates').exists():
         raise SystemExit('Local object alternates are forbidden for this verification')
-    observed = run(['git', 'rev-parse', 'refs/heads/main'], args.object_dir).decode().strip()
+    observed = run(['git', 'rev-parse', fetched_ref], args.object_dir).decode().strip()
     if observed != args.expected_sha:
         raise SystemExit('Fetched commit does not match requested remote main')
     tree = {}
