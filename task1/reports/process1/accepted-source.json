@@ -1,0 +1,28 @@
+{
+  "classification": "USER_ACCEPTED_COMPLETE_PROCESS_REPORT",
+  "user_acceptance": "USER_ACCEPTED_BY_CURRENT_TASK_PROMPT",
+  "approval_scope": "77-page complete report and source pair; this does not manufacture item-level Evidence Locks",
+  "canonical_pdf": "reports/process-report/experiment1-revised/Process_Report_Revised.pdf",
+  "canonical_zip": "reports/process-report/experiment1-revised/Process_Report_Revised_LaTeX_Source.zip",
+  "pdf_sha256": "45f3b86f47c1b5cc7cf759ff713f5df3d4036e7ea9b4fff5eb3a40b6123aba83",
+  "zip_sha256": "00cb7b641b37b2a71a552fc5bef47fc551a16ea7ce88bcf139f2e68a5f1451da",
+  "archive_root": "Process_Report_Revised_Source",
+  "source_directory": "source",
+  "entry": "source/main.tex",
+  "expected_pages": 77,
+  "current_reading_copy": "task1/reports/process1/process1.pdf",
+  "palette_authority": "templates/latex/common/p2_cloud_sorbet_colors.tex",
+  "palette_mode": "APPROVED_PORTABLE_COPY",
+  "palette_aliases": {
+    "Paper": "Paper",
+    "Ink": "Ink",
+    "Muted": "Muted",
+    "Blue": "C1",
+    "Rose": "C3",
+    "Violet": "C4",
+    "Orange": "C2",
+    "Rule": "Rule"
+  },
+  "report_dependencies": ".venv/process-report-build-deps",
+  "source_policy": "Every delivered member remains byte-identical to the accepted ZIP; regenerate only in an isolated copy."
+}

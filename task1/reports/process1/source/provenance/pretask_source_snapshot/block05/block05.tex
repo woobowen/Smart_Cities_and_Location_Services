@@ -1,0 +1,127 @@
+
+\documentclass[10pt,a4paper]{article}
+\usepackage[top=12mm,bottom=12mm,left=14mm,right=14mm,headsep=2mm,footskip=7mm]{geometry}
+\usepackage{fontspec}
+\usepackage{xeCJK}
+\setmainfont{Noto Sans}
+\setsansfont{Noto Sans}
+\setCJKmainfont{Noto Sans CJK SC}
+\setCJKsansfont{Noto Sans CJK SC}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{calc,arrows.meta,positioning}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{ragged2e}
+\usepackage{microtype}
+\definecolor{P2Paper}{HTML}{FCFAF7}
+\definecolor{P2Ink}{HTML}{2D3238}
+\definecolor{P2Muted}{HTML}{70757A}
+\definecolor{P2BlueLight}{HTML}{D3EAF5}
+\definecolor{P2Apricot}{HTML}{F5D9B8}
+\definecolor{P2Rose}{HTML}{E8C7D3}
+\definecolor{P2Violet}{HTML}{D7D3EA}
+\definecolor{P2Blue}{HTML}{5B9FBE}
+\definecolor{P2ApricotAccent}{HTML}{D49757}
+\definecolor{P2RoseAccent}{HTML}{B97589}
+\definecolor{P2VioletAccent}{HTML}{8177A8}
+\definecolor{P2Rule}{HTML}{DDE3E7}
+\definecolor{P2Panel}{HTML}{FFFDFC}
+\pagecolor{P2Paper}
+\color{P2Ink}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3.5pt}
+\linespread{1.04}
+\hypersetup{hidelinks}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[L]{\fontsize{6.6}{8}\selectfont\color{P2Muted}PROCESS REPORT · WORKFLOW CONSTRUCTION}
+\fancyfoot[R]{\fontsize{6.6}{8}\selectfont\color{P2Muted}\thepage}
+\newcommand{\eyebrow}[1]{{\fontsize{7.8}{9.4}\selectfont\bfseries\color{P2RoseAccent}#1}\par\vspace{1pt}}
+\newcommand{\pagetitle}[1]{{\fontsize{18.5}{21.5}\selectfont\bfseries\color{P2Ink}#1}\par\vspace{3pt}}
+\newcommand{\deck}[1]{{\fontsize{9.0}{13.0}\selectfont\color{P2Ink}\RaggedRight #1}\par\vspace{4pt}}
+\newcommand{\tracehead}[2]{{\fontsize{7.1}{8.4}\selectfont\bfseries\color{#1}#2}\par}
+\newcommand{\tracetitle}[1]{{\fontsize{10.2}{12.2}\selectfont\bfseries\color{P2Ink}#1}\par\vspace{1.5pt}}
+\newcommand{\tracebody}[1]{{\fontsize{8.0}{11.2}\selectfont\color{P2Ink}\RaggedRight #1}\par}
+\newcommand{\provenance}[1]{\vspace{2pt}{\color{P2Rule}\hrule height .35pt}\vspace{2.5pt}{\fontsize{6.9}{9.2}\selectfont\color{P2Muted}\RaggedRight\textbf{Original Evidence.} #1}\par}
+\tikzset{
+ userA/.style={rounded corners=1mm,draw=P2ApricotAccent,line width=.55pt,fill=P2Apricot,fill opacity=.34},
+ userR/.style={rounded corners=1mm,draw=P2RoseAccent,line width=.55pt,fill=P2Rose,fill opacity=.34},
+ gptB/.style={rounded corners=1mm,draw=P2Blue,line width=.55pt,fill=P2BlueLight,fill opacity=.27},
+ gptV/.style={rounded corners=1mm,draw=P2VioletAccent,line width=.55pt,fill=P2Violet,fill opacity=.27},
+ arrA/.style={-{Stealth[length=2.0mm,width=1.45mm]},draw=P2RoseAccent,line width=.72pt},
+ arrB/.style={-{Stealth[length=2.0mm,width=1.45mm]},draw=P2Blue,line width=.72pt},
+ arrV/.style={-{Stealth[length=2.0mm,width=1.45mm]},draw=P2VioletAccent,line width=.72pt},
+ tagA/.style={circle,minimum size=4.8mm,inner sep=0pt,draw=P2ApricotAccent,line width=.6pt,fill=P2Paper,font=\fontsize{6.7}{7}\selectfont\bfseries},
+ tagR/.style={circle,minimum size=4.8mm,inner sep=0pt,draw=P2RoseAccent,line width=.6pt,fill=P2Paper,font=\fontsize{6.7}{7}\selectfont\bfseries},
+ tagB/.style={circle,minimum size=4.8mm,inner sep=0pt,draw=P2Blue,line width=.6pt,fill=P2Paper,font=\fontsize{6.7}{7}\selectfont\bfseries}
+}
+\begin{document}
+
+\eyebrow{WORKFLOW CONSTRUCTION · 11}
+\pagetitle{两份正式报告回答不同问题，而不是详版/简版}
+\deck{随着讨论越来越多，我发现只交一份“最后结果”会把最有价值的判断过程全部丢掉。所以我要求除了最终实验报告，还要单独记录我们是怎样一步步形成方案的。后来这两类内容被拆成 Process Report 和 Experiment Report。}
+\begin{tikzpicture}[x=1mm,y=1mm]
+  \node[anchor=north west,inner sep=0] (u) at (0,0) {\includegraphics[width=62mm]{assets/user_reports.png}};
+  \node[anchor=north west,inner sep=0] (g) at (0,-50) {\includegraphics[width=70mm]{assets/gpt_reports.png}};
+  \begin{scope}[shift={(u.south west)},x={($(u.south east)-(u.south west)$)},y={($(u.north west)-(u.south west)$)}]
+    \path[userA] (0.43,0.85) rectangle (0.99,0.95); \coordinate (urep) at (0.99,0.90);
+  \end{scope}
+  \begin{scope}[shift={(g.south west)},x={($(g.south east)-(g.south west)$)},y={($(g.north west)-(g.south west)$)}]
+    \path[gptB] (0.18,0.75) rectangle (0.85,0.85); \coordinate (gproc) at (0.85,0.80);
+    \path[gptV] (0.18,0.41) rectangle (0.82,0.50); \coordinate (gexp) at (0.82,0.455);
+  \end{scope}
+  \draw[arrA] (urep) .. controls (78,-4) and (78,-70) .. (gproc);
+  \draw[arrB] (urep) .. controls (83,-7) and (83,-98) .. (gexp);
+  \node[tagA] at ($(urep)+(3.8mm,0)$) {1};
+  \node[anchor=north west,text width=88mm,align=left] at (91,-2) {
+    \tracehead{P2ApricotAccent}{MICRO TRACE 17}\tracetitle{“过程”和“结果”被拆成两份正式文档}\tracebody{我的要求很简单：一份文档讲“我们怎么走到这个方案”，另一份文档讲“最后做了什么、为什么这样做、结果说明什么”。GPT 后来分别用 Process Report 和 Experiment Report 来承接这两个问题。}
+    \vspace{7mm}
+    \tracehead{P2Blue}{DOCUMENT ROLE}\tracetitle{两份报告不是重复内容}\tracebody{所以 Process Report 重点保留决策怎么发生、我和GPT怎么讨论、什么证据改变了判断；Experiment Report 则集中写最终方法、数据、参数、指标、实验和结论。两边不能简单复制同一段Brainstorm或截图。}
+  };
+\end{tikzpicture}
+\provenance{上方为我提出“过程汇报/交互证据”需求的真实聊天；下方为GPT随后形成的两份正式报告职责。}
+\newpage
+\eyebrow{WORKFLOW CONSTRUCTION · 12}
+\pagetitle{截图只是证据载体：过程报告必须按“决策事件”组织}
+\deck{如果把长聊天从头到尾全部截图，老师只能看到“聊了很多”，却看不出哪个判断真正改变了方案。所以我希望按一个个关键Decision来组织：问题是什么、GPT先怎么建议、我怎么判断、后来怎么验证、最后定了什么。}
+\begin{tikzpicture}[x=1mm,y=1mm]
+  \node[anchor=north west,inner sep=0] (g) at (0,0) {\includegraphics[width=78mm]{assets/gpt_interaction_episode.png}};
+  \begin{scope}[shift={(g.south west)},x={($(g.south east)-(g.south west)$)},y={($(g.north west)-(g.south west)$)}]
+    \path[gptB] (0.18,0.15) rectangle (0.98,0.49); \coordinate (gepi) at (0.98,0.32);
+    \path[gptV] (0.18,0.02) rectangle (0.90,0.15); \coordinate (gcap) at (0.90,0.085);
+  \end{scope}
+  \node[anchor=north west,text width=91mm,align=left] at (86,-2) {
+    \tracehead{P2Blue}{STRUCTURE}\tracetitle{Interaction Episode替代“聊天流水账”}\tracebody{高价值互动被整理成问题背景 $\rightarrow$ GPT提出方案/假设 $\rightarrow$ 我的质疑/修改 $\rightarrow$ GPT重分析 $\rightarrow$ 数据或实验 $\rightarrow$ 我的最终判断 $\rightarrow$ Decision。截图只负责证明这段真实互动。}
+    \vspace{8mm}
+    \tracehead{P2VioletAccent}{SCREENSHOT RULE}\tracetitle{长截图不是越多越真实}\tracebody{Evidence首先要能读。一个Decision如果需要多页就多页，但正式页面只突出和这个Decision直接相关的上下文，以及我真正改变了什么，不把几十屏聊天原样堆进去。}
+  };
+\end{tikzpicture}
+\provenance{该规则来自真实“过程汇报应如何呈现”的讨论；页面保留原始聊天内容，不把后来的Evidence生产协议冒充早期历史。}
+\newpage
+\eyebrow{WORKFLOW CONSTRUCTION · 13}
+\pagetitle{老师要看到的不是“我参与了”，而是我具体做了什么判断}
+\deck{老师希望看到人的参与，但如果截图里只是我不停说“好的”“继续”，那并不能说明我真的做了判断。所以后面我更关注这些动作：我发现了什么问题、为什么觉得有问题、提出了什么修改、要求了什么验证，最后怎么取舍。}
+\begin{tikzpicture}[x=1mm,y=1mm]
+  \node[anchor=north west,inner sep=0] (g1) at (0,0) {\includegraphics[width=76mm]{assets/gpt_decision_human.png}};
+  \node[anchor=north west,inner sep=0] (g2) at (0,-86) {\includegraphics[width=76mm]{assets/gpt_checkpoint_deliverables.png}};
+  \begin{scope}[shift={(g1.south west)},x={($(g1.south east)-(g1.south west)$)},y={($(g1.north west)-(g1.south west)$)}]
+    \path[gptB] (0.17,0.61) rectangle (0.95,0.70); \coordinate (gdec) at (0.95,0.655);
+    \path[gptV] (0.17,0.10) rectangle (0.95,0.20); \coordinate (ghuman) at (0.95,0.15);
+  \end{scope}
+  \begin{scope}[shift={(g2.south west)},x={($(g2.south east)-(g2.south west)$)},y={($(g2.north west)-(g2.south west)$)}]
+    \path[gptV] (0.17,0.33) rectangle (0.96,0.67); \coordinate (gcheck) at (0.96,0.50);
+    \path[gptB] (0.17,0.05) rectangle (0.96,0.25);
+  \end{scope}
+  \node[anchor=north west,text width=92mm,align=left] at (84,-2) {
+    \tracehead{P2Blue}{DECISION TRACE}\tracetitle{“人参与”不是出现次数，而是可识别的判断动作}\tracebody{后续 Process Report 会优先保留真正能看出我参与的内容：质疑、比较、提出约束、发现问题、否决、修改、要求实验、解释结果和最后取舍。}
+    \vspace{8mm}
+    \tracehead{P2VioletAccent}{INTERACTION CHECKPOINT}\tracetitle{必要时短确认，不为截图增加对话轮数}\tracebody{如果一个Decision很重要，可以在自然讨论结束时用2--4条消息做一次简短确认，方便后面回溯；但不能为了截图好看而额外制造确认轮次。}
+    \vspace{8mm}
+    \tracehead{P2RoseAccent}{OUTPUT ARCHITECTURE}\tracetitle{最后把几类交付物各自负责什么分清楚}\tracebody{到这里，几类交付物的分工也比较清楚了：Process Report讲过程，Experiment Report讲结果，Code/Notebook负责复现，GitHub保留完整工程。它们互相补充，而不是互相替代。}
+  };
+\end{tikzpicture}
+\provenance{本页来自后续对“Decision Log / Human Contribution / Interaction Checkpoint / 四层交付物”的真实讨论。}
+\end{document}

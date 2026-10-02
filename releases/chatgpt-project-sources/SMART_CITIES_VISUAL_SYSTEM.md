@@ -1,7 +1,7 @@
-# Smart Cities & Location Services — Visual / LaTeX Design System v2.5
+# Smart Cities & Location Services — Visual / LaTeX Design System v2.6
 
 Status: **LOCKED for Experiment Report and Process Report**  
-Revision: **2026-09-29 · Project-wide formal diagrams / report scope**  
+Revision: **2026-10-02 · Screenshot-dominant Process pages / arrow-only annotation / accepted exemplars**  
 Canonical repository path: `docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md`
 
 This document defines the long-term visual identity, LaTeX baseline, report identities, evidence presentation language and technical-visualization rules for the 《智慧城市与位置服务》 project. Detailed prose and argumentation rules are maintained in the Report Writing Guide, not duplicated in Project Settings.
@@ -207,6 +207,15 @@ Internal production units are not formal report sections.
 
 The exact section structure adapts to the real task. Do not mechanically map one rule, one Decision Unit, or one Evidence ID to one formal section.
 
+### 4.3 Opening and evidence-led pagination
+
+The opening identifies both the user's collaboration with GPT in evolving the workflow and the progress of the actual experiment/task. Keep it concise; place detailed Part/section introductions after the contents, following Report Writing Guide §12. Include the factual screenshot-acquisition note once near the beginning, as specified in Evidence Protocol §5.7.
+
+A Process narrative section or interaction block does not receive a title-only separator page. Place its heading, brief introduction and first relevant screenshot/content together. When space is insufficient, move the heading and its first evidence together rather than leaving an isolated heading or shrinking the screenshot. This rule does not remove the normal cover or contents pages.
+
+Each new interaction block opens with a visible real user message in the ChatGPT UI, as defined in Evidence Protocol §5.6. Continuation pages may carry the same interaction forward without repeating that user message. Summary diagrams and contents are not replacement UI evidence. Use the screenshot-dominant layout in §8.7; avoid treating side commentary as the main page content.
+
+
 ---
 
 ## 5. Process Report Layer A — Workflow Construction
@@ -384,7 +393,7 @@ Annotations may be positioned:
 - above;
 - beside;
 - below;
-- or locally over the screenshot when readability permits.
+- in the screenshot-side whitespace for precisely targeted vector arrows, without covering chat text.
 
 ### 8.2 General process
 
@@ -408,7 +417,7 @@ There is no fixed 1–2 page limit.
 
 Prefer page breaks at natural message boundaries and avoid cutting a single important message through the middle when possible.
 
-Important decisions should include the real final confirmation.
+Important decisions should include the real final confirmation. At the start of each new interaction block, preserve the corresponding real user UI message; response-only excerpts may continue that established block but must not become an unanchored new block. Necessary earlier GPT context may appear in its true order alongside the user message.
 
 ### 8.4 Interaction Checkpoint
 
@@ -434,41 +443,42 @@ Do not:
 - rewrite user statements and present them as screenshots;
 - invent historical decision sequences;
 - treat template interactions as real evidence;
+- substitute a screenshot/rasterization of an old LaTeX or PDF report page for the original chat UI;
 - present a retrospective summary as the original conversation.
 
 ---
 
 ### 8.7 Interaction Evidence Visual Grammar
 
-**Original Evidence First.** Retrieval Screenshot may be a long scroll for context recovery; Formal Evidence Screenshot uses normal readable browser scale, sufficiently wide native high-resolution PNGs, with one Interaction Window per image as needed. Prefer multiple images/pages to unreadable shrinking.
+**Original Evidence First.** Work from the user's real ChatGPT Web screenshots, including user-supplied native long captures and their split images. A long capture may be cropped and paginated into formal evidence when the relevant conversation is intact and readable. Preserve **raw / crop / annotated** with direct image embedding and editable TikZ/PDF vector arrows; do not substitute an old report page or redraw the UI. Acquisition, source mapping, effective PPI and explicitly approved native-width use are governed by Evidence Protocol §§5.3—5.7.
 
-Preserve **raw / crop / annotated**. Use direct high-resolution PNG embedding plus TikZ/PDF vector annotation; lossless crop or LaTeX trim keeps the screenshot pixels intact. Record raw pixel size, crop bounds/pixel size, final physical display size and effective PPI. Calculate PPI from the displayed image region; require >=180 ppi, prefer >=200 ppi. Reduce display size, split pages or recapture when insufficient; page readability is also required.
+**Screenshot-dominant composition.** For a side-by-side interaction page, devote approximately **70%–80% of the usable image-and-note area to the screenshot pane**, with about **20% for right-side commentary** and the remaining space for a narrow gutter/arrow routing. These proportions describe layout allocation, not a requirement to distort or manufacture screenshot pixels. Keep the visible screenshot substantial within that pane; do not satisfy the ratio using a wide empty frame around a tiny image. Reduce commentary or split long evidence before reducing chat readability.
 
-An **Interaction Trace** represents one decision interaction. A **Micro Trace** is one phrase correspondence. Make the **USER anchor** the visual center among GPT before / User / GPT after phrases. Use exact phrase highlight, short rounded outline, underline or numbered anchors; avoid whole-bubble boxes unless the whole bubble is the evidence object.
+Preserve the aspect ratio and actual available width of approved source images. There is no universal minimum pixel width. When the user has explicitly accepted the existing native-width material and an actual sample/final layout, use it within that approved scope under Evidence Protocol §5.4; do not repeatedly demand wider recaptures merely to match a template. A new layout that makes a crucial phrase unreadable still needs adjustment. Long images are divided vertically at message/paragraph boundaries, with continuation made clear.
 
-Every highlight / outline / box must correspond to a clear **Evidence Claim** and use the **minimum sufficient phrase range** needed to support that claim. Do not include unrelated lines merely because they are visually convenient. A box may cover a whole paragraph or bubble only when the whole paragraph or bubble is genuinely the evidence object.
+An **Interaction Trace** represents one decision interaction. A **Micro Trace** is one phrase correspondence. The **USER anchor** remains the visual and semantic center among relevant GPT-before / User / GPT-after phrases; the start of each new block visibly includes the real user UI, not only a text paraphrase. Necessary prior context stays in its true order.
 
-Long-arrow correspondence must connect exact phrases approved by Evidence Master, using whitespace and margins without covering text. Arrow endpoints must visually terminate at or immediately beside the approved phrase, not merely at the enclosing message bubble or an arbitrary side of a large box. True one-to-one, one-to-many and many-to-one relations are allowed; symmetry does not justify adding an arrow. Semantic support, Interaction Window review and Phrase / Box / Arrow Audit follow the Evidence Protocol.
+**Arrow-only annotation on conversation screenshots.** Use precise vector arrows; do not add fluorescent circles, colored outlines/boxes, translucent fills, underlines or circled-number overlays to mark chat text. Remove the former box/highlight requirement from current page components. Native UI features inside the original screenshot remain untouched. The prohibition concerns chat-image annotation, not legitimate nodes/borders in separately drawn technical diagrams or statistical figures.
 
-After XeLaTeX/PDF rendering, verify box boundaries and arrow endpoints again at the actual final layout. Source coordinates alone are not sufficient because crop, scaling and line wrapping can change visual alignment.
+Each arrow expresses an Evidence-Master-approved relationship between exact phrases, or explicitly points from a concise side note to the phrase it explains. Identify the arrow's meaning and direction; do not make a note-pointer look like a historical causal link. Endpoints terminate at or immediately beside the intended phrase, not at an arbitrary bubble edge. Use whitespace and margins, minimize crossings and never obscure text. Real one-to-one, one-to-many and many-to-one relations are allowed; symmetry and time adjacency are not sufficient evidence. Split a dense set of relationships across pages rather than adding more decoration.
 
-| Interaction role | P2 encoding |
+| Interaction role | P2 encoding outside chat text |
 |---|---|
-| USER anchor / judgment | Apricot or Soft Rose light highlight |
-| GPT before / proposal / context | Light Blue |
-| GPT after / adoption / revision | Mist Violet or restrained Blue |
-| Connector | Ink or Blue accent |
+| USER anchor / judgment | Apricot accent or Rose accent for its arrow or brief side label |
+| GPT before / proposal / context | Blue accent for its arrow or brief side label |
+| GPT after / adoption / revision | Violet accent or restrained Blue accent |
+| Neutral connector | Ink or Blue accent |
 | Body / page | Paper / Panel / Ink |
 
-These interaction-specific roles take precedence over the general color suggestions in section 10. Labels and anchor numbers reinforce color semantics.
+These roles apply to arrows and concise adjacent labels, not screenshot fills. Preserve the source UI colors. Relation wording or a side-note label reinforces meaning so that color alone does not determine the interpretation.
 
-Side Notes briefly state the human action, the following GPT change and, if necessary, later significance; normally about 40–80 Chinese characters. They do not repeat screenshots or rewrite the main text.
+Side Notes briefly explain the user's action, the following GPT change and, when useful, its later significance. Normally about 40–80 Chinese characters is enough; this is guidance, not a word quota. Use the first-person voice where describing the user's judgment. Do not repeat long chat passages, crowd the page with Micro Trace headings or shrink the screenshot to fit commentary.
 
-A core page generally uses one principal Interaction Trace, optionally one supporting trace, or about 2–4 User phrase anchors. This is guidance, not a hard cap. Split a dense web of arrows across pages; preserve real final confirmation and use as many core-evidence pages as needed.
+A core page normally shows one principal Interaction Trace, optionally a supporting trace, with only the phrase relations needed for its claim. There is no fixed arrow or page quota. A Contact Sheet supports context and lower-tier evidence; it cannot replace a readable core interaction or the required user UI at a new block's start. Arrows are optional when there is no relationship to annotate.
 
-A Contact Sheet supports process, context and lower-tier evidence. It needs real screenshots, stage labels and short explanations; Micro Trace is not mandatory.
+After final XeLaTeX/PDF rendering, inspect the actual page for the user UI entry, screenshot/aside balance, phrase visibility, arrow direction/endpoints, cropping and text occlusion. Follow Evidence Protocol §30.H for the audit fields and source-resolution decision. Preserve approved narrow-source exceptions honestly rather than labeling them as higher-resolution originals. PDF rendering at 200 dpi is an inspection step, not an increase in source resolution.
 
-Prohibited: generated ChatGPT UI, redrawn interaction screenshots, AI upscale masquerading as original, fake sharpening, low-resolution enlargement, repeated resampling then enlargement, rasterized low-resolution annotations enlarged for print, arbitrary arrow connections. Rendering the PDF at 200 dpi is for inspection and does not increase source screenshot resolution.
+Prohibited: generated or redrawn chat UI; painting out/editing original words; artificial pixel upscaling or fake sharpening presented as original detail; rasterizing a whole report page and reusing it as chat evidence; arbitrary arrow connections; restoring circles/boxes under another annotation name.
 
 ---
 
@@ -551,7 +561,7 @@ Do not introduce a new decorative diagram language simply to create visual varie
 
 Normal body text uses **Ink**.
 
-P2 colors primarily serve as semantic highlights.
+P2 colors primarily serve as semantic accents. Conversation screenshots follow the arrow-only rule in §8.7; the general fill/border guidance below applies to separate diagrams and page elements, not overlays on chat text.
 
 Recommended semantic roles:
 
@@ -572,7 +582,7 @@ Exceptional key pages may use up to 3 when necessary.
 
 Additional P2 colors may appear in:
 
-- translucent highlights;
+- translucent highlights in separate technical/summary diagrams only, never over conversation screenshots;
 - small labels;
 - borders;
 - arrows;
@@ -831,7 +841,7 @@ Avoid:
 
 Figures, tables and text should complement rather than mechanically duplicate one another.
 
-Detailed Experiment Report prose, content allocation, the 22 editing categories and cross-report writing boundaries are defined once in the [Report Writing Guide](../report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md). For Process Report, the first-person and historical ownership rules in Evidence Protocol §16.1—16.2 remain authoritative.
+Detailed Experiment Report prose, content allocation, the 22 editing categories and cross-report writing boundaries are defined once in the [Report Writing Guide](../report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md). For Process Report, the first-person and historical ownership rules in Evidence Protocol §16.1—16.2 remain authoritative. Process opening, closing and the relocation of repetitive production/submission disclaimers follow Report Writing Guide §12. Preserve substantive limits at the relevant point; put build/check records in the source package rather than repeating defensive statements across formal pages.
 
 A concise overview and necessary definitions may be direct; the Experiment body normally introduces an actual problem before a method, then shows verification, comparison and evidence-based choice. Reader-facing language replaces internal status vocabulary, not the underlying assumptions or limits. Do not infer a lexical ban from a few disliked phrases; inspect the whole paragraph's meaning and relevance.
 
@@ -865,11 +875,12 @@ Use the following canonical attachment names to locate the corresponding referen
 | Reference files | Role and allowed use | Scope boundary |
 |---|---|---|
 | `Experiment_Report_吴博闻_10245102410.pdf` + `Experiment_Report_完整重构_源文件.zip` | **User-accepted Experiment Report exemplar**: teacher-facing problem-led writing, integrated method/verification/comparison, figure composition and editable production | Actual Experiment 1 work, not synthetic; its data, parameters, history and conclusions cannot be reused as a new task's results. User document acceptance does not prove repository integration, teacher grading or submission. |
-| `WF_WorkflowConstruction_PreTask1_REVISED.pdf` + `WF_WorkflowConstruction_PreTask1_31p_LaTeX_Source.zip` | **Supplied Process Report / pre-Task-1 Workflow Construction reference** for narrative and evidence presentation within its actual scope | Does not establish completion of Experiment Decision Process or full Process Report; individual/section locks require their actual records. A filename or source ZIP alone is not lock evidence. |
+| `Process_Report_Revised.pdf` + `Process_Report_Revised_LaTeX_Source.zip` | **User-accepted full Process Report exemplar**: integrated Workflow Construction and Experiment Decision Process; first-person retrospective, real user UI at each interaction opening, screenshot-dominant pages, arrow-only correspondence and editable production | Use its real narrative and construction choices as a reference, not as new-task history. Preserve the accepted pair; record actual source hashes, build checks and per-evidence approval scope in the internal manifest/ledger. |
+| `WF_WorkflowConstruction_PreTask1_REVISED.pdf` + `WF_WorkflowConstruction_PreTask1_31p_LaTeX_Source.zip` | **Historical pre-Task-1 Process foundation**: retained for the provenance of earlier Workflow Construction | Superseded by the accepted full Process pair as the current writing/layout exemplar. Keep historical originals and approval records in the repository; old boxes, narrow-image layouts and title-only pages are not the current production standard. |
 | `Experiment_Report_P2_Exact.pdf` | **Synthetic visual/template preview**, P2 and reusable page-language reference | Not experiment evidence or a competing version of the accepted real report. |
 | `Process_Report_P2_Locked_v1.pdf` | **Process template preview** with its recorded scope | The template name does not lock real interactions or prove all new pages accepted. |
 
-Read the exemplar PDF to understand the result and its paired source to reuse production choices. The approved exemplar is the concrete writing/layout reference where old boilerplate is less specific, but cannot silently override current teacher instructions, research validity, P2 identity or Evidence authenticity.
+Read the exemplar PDF to understand the result and its paired source to reuse production choices. The approved exemplar is the concrete writing/layout reference where old boilerplate is less specific, but cannot silently override current teacher instructions, research validity, P2 identity or Evidence authenticity. For Project Sources, the current full Process PDF/source pair replaces the earlier PreTask pair as the active presentation reference through the approved manifest; the earlier files remain historical repository materials. This reference registration does not itself move or delete files. Existing synthetic previews retain their template role; future rebuilds use the current visual rules.
 
 ### 16.3 Pair integrity, reference scope and changes
 
@@ -898,12 +909,14 @@ The following are stable unless the teacher or user explicitly changes them:
 - Original Evidence First
 - raw/crop/annotated
 - phrase-level Micro Trace and exact phrase correspondence
-- minimum-sufficient box / highlight scope
-- render-level Phrase / Box / Arrow Audit
+- arrow-only phrase annotation on conversation screenshots; no fluorescent circles, boxes or fills
+- real user UI at each new interaction block opening
+- screenshot-dominant evidence pages with concise side notes and headings attached to content
+- render-level User UI / Phrase / Arrow / Readability Audit
 - first-person Process Report narrative
 - Report Writing Guide as the detailed prose/argumentation entry
 - author review, independent verification and user acceptance distinguished
-- long-arrow annotation
+- precisely routed vector arrows, using only the length required by the real relationship
 - direct high-resolution PNG embedding
 - TikZ/PDF vector annotation
 - multi-page evidence

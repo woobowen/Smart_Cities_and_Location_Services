@@ -1,0 +1,106 @@
+
+\documentclass[10pt,a4paper]{article}
+\usepackage[top=12mm,bottom=12mm,left=14mm,right=14mm,headsep=2mm,footskip=7mm]{geometry}
+\usepackage{fontspec}
+\usepackage{xeCJK}
+\setmainfont{Noto Sans}
+\setsansfont{Noto Sans}
+\setCJKmainfont{Noto Sans CJK SC}
+\setCJKsansfont{Noto Sans CJK SC}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{calc,arrows.meta,positioning}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{ragged2e}
+\usepackage{microtype}
+\definecolor{P2Paper}{HTML}{FCFAF7}
+\definecolor{P2Ink}{HTML}{2D3238}
+\definecolor{P2Muted}{HTML}{70757A}
+\definecolor{P2BlueLight}{HTML}{D3EAF5}
+\definecolor{P2Apricot}{HTML}{F5D9B8}
+\definecolor{P2Rose}{HTML}{E8C7D3}
+\definecolor{P2Violet}{HTML}{D7D3EA}
+\definecolor{P2Blue}{HTML}{5B9FBE}
+\definecolor{P2ApricotAccent}{HTML}{D49757}
+\definecolor{P2RoseAccent}{HTML}{B97589}
+\definecolor{P2VioletAccent}{HTML}{8177A8}
+\definecolor{P2Rule}{HTML}{DDE3E7}
+\definecolor{P2Panel}{HTML}{FFFDFC}
+\pagecolor{P2Paper}
+\color{P2Ink}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3.5pt}
+\linespread{1.04}
+\hypersetup{hidelinks}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[L]{\fontsize{6.6}{8}\selectfont\color{P2Muted}PROCESS REPORT · WORKFLOW CONSTRUCTION}
+\fancyfoot[R]{\fontsize{6.6}{8}\selectfont\color{P2Muted}\thepage}
+\newcommand{\eyebrow}[1]{{\fontsize{7.8}{9.4}\selectfont\bfseries\color{P2RoseAccent}#1}\par\vspace{1pt}}
+\newcommand{\pagetitle}[1]{{\fontsize{18.5}{21.5}\selectfont\bfseries\color{P2Ink}#1}\par\vspace{3pt}}
+\newcommand{\deck}[1]{{\fontsize{9.0}{13.0}\selectfont\color{P2Ink}\RaggedRight #1}\par\vspace{4pt}}
+\newcommand{\tracehead}[2]{{\fontsize{7.1}{8.4}\selectfont\bfseries\color{#1}#2}\par}
+\newcommand{\tracetitle}[1]{{\fontsize{10.2}{12.2}\selectfont\bfseries\color{P2Ink}#1}\par\vspace{1.5pt}}
+\newcommand{\tracebody}[1]{{\fontsize{8.0}{11.2}\selectfont\color{P2Ink}\RaggedRight #1}\par}
+\newcommand{\provenance}[1]{\vspace{2pt}{\color{P2Rule}\hrule height .35pt}\vspace{2.5pt}{\fontsize{6.9}{9.2}\selectfont\color{P2Muted}\RaggedRight\textbf{Original Evidence.} #1}\par}
+\tikzset{
+ userA/.style={rounded corners=1mm,draw=P2ApricotAccent,line width=.55pt,fill=P2Apricot,fill opacity=.34},
+ userR/.style={rounded corners=1mm,draw=P2RoseAccent,line width=.55pt,fill=P2Rose,fill opacity=.34},
+ gptB/.style={rounded corners=1mm,draw=P2Blue,line width=.55pt,fill=P2BlueLight,fill opacity=.27},
+ gptV/.style={rounded corners=1mm,draw=P2VioletAccent,line width=.55pt,fill=P2Violet,fill opacity=.27},
+ arrA/.style={-{Stealth[length=2.0mm,width=1.45mm]},draw=P2RoseAccent,line width=.72pt},
+ arrB/.style={-{Stealth[length=2.0mm,width=1.45mm]},draw=P2Blue,line width=.72pt},
+ arrV/.style={-{Stealth[length=2.0mm,width=1.45mm]},draw=P2VioletAccent,line width=.72pt},
+ tagA/.style={circle,minimum size=4.8mm,inner sep=0pt,draw=P2ApricotAccent,line width=.6pt,fill=P2Paper,font=\fontsize{6.7}{7}\selectfont\bfseries},
+ tagR/.style={circle,minimum size=4.8mm,inner sep=0pt,draw=P2RoseAccent,line width=.6pt,fill=P2Paper,font=\fontsize{6.7}{7}\selectfont\bfseries},
+ tagB/.style={circle,minimum size=4.8mm,inner sep=0pt,draw=P2Blue,line width=.6pt,fill=P2Paper,font=\fontsize{6.7}{7}\selectfont\bfseries}
+}
+\begin{document}
+
+\eyebrow{WORKFLOW CONSTRUCTION · 09}
+\pagetitle{AI不是最终裁决者：我需要真正参与关键判断}
+\deck{老师明确要求体现人的参与以后，我不希望自己的角色只剩下最后一句“确认”。关键假设、方案和结论如果有问题，我应该能够质疑、修改、否决或重新要求验证。}
+\begin{tikzpicture}[x=1mm,y=1mm]
+  \node[anchor=north west,inner sep=0] (u) at (0,0) {\includegraphics[width=45mm]{assets/user_human.png}};
+  \node[anchor=north west,inner sep=0] (g) at (0,-48) {\includegraphics[width=68mm]{assets/gpt_human_role.png}};
+  \begin{scope}[shift={(u.south west)},x={($(u.south east)-(u.south west)$)},y={($(u.north west)-(u.south west)$)}]
+    \path[userA] (0.03,0.85) rectangle (0.98,0.995); \coordinate (uh) at (0.98,0.92);
+  \end{scope}
+  \begin{scope}[shift={(g.south west)},x={($(g.south east)-(g.south west)$)},y={($(g.north west)-(g.south west)$)}]
+    \path[gptB] (0.18,0.47) rectangle (0.73,0.52); \coordinate (grole) at (0.73,0.495);
+    \path[gptV] (0.18,0.34) rectangle (0.74,0.41); \coordinate (ghitl) at (0.74,0.375);
+  \end{scope}
+  \draw[arrA] (uh) .. controls (77,-4) and (77,-67) .. (grole);
+  \draw[arrB] (uh) .. controls (82,-8) and (82,-92) .. (ghitl);
+  \node[tagA] at ($(uh)+(3.8mm,0)$) {1};
+  \node[anchor=north west,text width=91mm,align=left] at (86,-2) {
+    \tracehead{P2ApricotAccent}{MICRO TRACE 16}\tracetitle{“老师希望看到我真正参与”}\tracebody{我要求关键方案不能由 AI/Codex 直接做完后再让我签字确认。GPT 随后把这层分工整理成 Human-in-the-loop：我负责质疑、修改、否决和选择，并保留最终解释权。}
+    \vspace{7mm}
+    \tracehead{P2Blue}{BOUNDARY}\tracetitle{我参与的是研究含义，不是每个函数调用}\tracebody{同时我也不想为了“体现人参与”而不停插入确认。真正需要我介入的是会改变研究含义的Decision；已经确认范围内的工程执行仍然交给 Codex。}
+  };
+\end{tikzpicture}
+\provenance{我的原始截图来自真实历史要求；GPT截图来自同一阶段对角色分工的整理。箭头只连接“真实参与/关键判断”与 Human-in-the-loop 角色定义。}
+\newpage
+\eyebrow{WORKFLOW CONSTRUCTION · 10}
+\pagetitle{质疑不能停在感觉：AI建议必须经过反例、数据或实验}
+\deck{“我不同意AI”本身也不够。第一次任务要求我继续说明：它错在哪里、隐含了什么假设、能不能找反例，以及修改前后的指标有没有真正变好。}
+\begin{tikzpicture}[x=1mm,y=1mm]
+  \node[anchor=north west,inner sep=0] (g) at (0,0) {\includegraphics[width=78mm]{assets/gpt_ai_critique.png}};
+  \begin{scope}[shift={(g.south west)},x={($(g.south east)-(g.south west)$)},y={($(g.north west)-(g.south west)$)}]
+    \path[gptB] (0.18,0.47) rectangle (0.70,0.68); \coordinate (gcrit) at (0.70,0.575);
+    \path[gptV] (0.18,0.36) rectangle (0.66,0.43); \coordinate (gsrc) at (0.66,0.395);
+    \path[gptV] (0.18,0.13) rectangle (0.72,0.17);
+  \end{scope}
+  \node[anchor=north west,text width=92mm,align=left] at (86,-2) {
+    \tracehead{P2Blue}{OBSERVABLE RULE}\tracetitle{AI建议 $\rightarrow$ 检查 $\rightarrow$ 反例/指标 $\rightarrow$ 接受、修改或拒绝}\tracebody{GPT 后来把这套做法整理成一条清楚的链：先看AI建议有没有事实或计算错误，再检查依据和反例，最后用数据或实验比较，并说明我为什么接受、修改或拒绝。}
+    \vspace{8mm}
+    \tracehead{P2VioletAccent}{EVIDENCE RULE}\tracetitle{AI不能作为凭证源}\tracebody{例如“LLM建议100m，所以就用100m”不能成为理由。AI可以提出候选，但真正支撑决定的必须是数据、物理规律、可靠资料或实验。}
+    \vspace{8mm}
+    \tracehead{P2RoseAccent}{TRANSITION}\tracetitle{真正的参与需要被记录，而不是事后声称}\tracebody{当“质疑—验证—决定”真正进入工作流后，下一个问题就变成：这些关键互动怎么留在 Process Report 里，既能证明过程，又不会变成几十页聊天流水账。}
+  };
+\end{tikzpicture}
+\provenance{本页使用第一次任务讨论中逐步整理出的“AI批判”要求。没有把后来的示例性错误冒充为实际发生过的我的判断。}
+\end{document}

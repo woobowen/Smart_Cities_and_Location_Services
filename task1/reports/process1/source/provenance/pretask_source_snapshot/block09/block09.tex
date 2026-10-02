@@ -1,0 +1,69 @@
+\input{../common_preamble_9_12.tex}
+\begin{document}
+
+\eyebrow{WORKFLOW CONSTRUCTION · 20}
+\pagetitle{核心 Evidence 不按固定页数压缩：证据决定版式}
+\deck{设计 Process Report 时，我很快发现一个问题：有些关键对话天然就比较长，如果为了“控制在两页”而硬裁，反而会把上下文和判断过程裁掉。所以我的要求是先保证Evidence完整，再决定需要几页。}
+\begin{tikzpicture}[x=1mm,y=1mm]
+  \node[anchor=north west,inner sep=0] (u) at (0,0) {\includegraphics[width=42mm]{assets/user_page_limit_phrase.png}};
+  \node[anchor=north west,inner sep=0] (g) at (0,-42) {\includegraphics[width=68mm]{assets/gpt_paging_rule.png}};
+  \coordinate (ua) at ($(u.south east)+(-2mm,6mm)$);
+  \coordinate (ga) at ($(g.north east)+(-4mm,-14mm)$);
+  \draw[arrA] (ua) .. controls (76,-5) and (78,-38) .. (ga);
+  \node[tagA] at ($(ua)+(3.5mm,0)$) {1};
+  \node[anchor=north west,text width=89mm,align=left] at (88,-2) {
+    \tracehead{P2ApricotAccent}{MICRO TRACE 26}\tracetitle{“一次重要交互需要多少页，就使用多少页”}
+    \tracebody{我明确反对给核心 Interaction Evidence 预设1--2页上限。GPT随后也把原则改成：一个Decision需要几页就用几页，只要上下文连续、每页都有作用。}
+    \vspace{8mm}
+    \tracehead{P2Blue}{LAYOUT PRINCIPLE}\tracetitle{Evidence first, layout second}
+    \tracebody{所以页数、截图数量和分页都不能先定死。版式应该帮助老师读懂证据，而不是为了版式漂亮去删证据。}
+  };
+\end{tikzpicture}
+\provenance{我的原句与GPT后续分页规则来自同一轮真实Process Report设计讨论；没有改写我的原话。}
+\newpage
+
+\eyebrow{WORKFLOW CONSTRUCTION · 21}
+\pagetitle{Annotated Evidence Layout：批注位置服从内容，不固定在右栏}
+\deck{接着我又发现，如果所有页面都固定成“左边截图、右边批注”，不同长度的对话还是会被同一模板卡住。所以批注位置后来不再固定，可以根据内容放在上、侧或下方。}
+\begin{tikzpicture}[x=1mm,y=1mm]
+  \node[anchor=north west,inner sep=0] (u) at (0,0) {\includegraphics[width=42mm]{assets/user_general_evidence_phrase.png}};
+  \node[anchor=north west,inner sep=0] (g) at (0,-31) {\includegraphics[width=68mm]{assets/gpt_annotation_layout.png}};
+  \coordinate (ua) at ($(u.south east)+(-2mm,4mm)$);
+  \coordinate (ga) at ($(g.north east)+(-3mm,-20mm)$);
+  \draw[arrA] (ua) .. controls (75,-6) and (78,-32) .. (ga);
+  \node[tagA] at ($(ua)+(3.5mm,0)$) {1};
+  \node[anchor=north west,text width=91mm,align=left] at (86,-2) {
+    \tracehead{P2ApricotAccent}{MICRO TRACE 27}\tracetitle{“一般过程也要截图，但不能变成截图流水账”}
+    \tracebody{我还补充了一点：一般过程也应该有真实截图，只是没有必要像核心Decision那样每段都展开。GPT因此把核心交互和普通过程分开，普通过程可以用Contact Sheet或简短注释汇总。}
+    \vspace{8mm}
+    \tracehead{P2VioletAccent}{ANNOTATION GRAMMAR}\tracetitle{批注是解释层，不是固定模板}
+    \tracebody{annotation可以根据内容放在上方交代背景、侧边解释变化、下方说明结果。重点是把当前Decision讲清楚，而不是让每页长成完全一样。}
+  };
+\end{tikzpicture}
+\provenance{本页对应我对“一般过程也需要Evidence”的补充，以及GPT随后形成的灵活Annotated Evidence Layout。}
+\newpage
+
+\eyebrow{WORKFLOW CONSTRUCTION · 22}
+\pagetitle{从“截图”到证据链：Raw、Annotated、Contact Sheet与Final Confirmation}
+\deck{截图越来越多以后，我又把“原始证据”和“正式呈现”分开：raw截图完整保存，正式版可以加highlight和箭头；一般过程汇成Contact Sheet；核心Decision还必须保留最后到底确认了什么。}
+\begin{tikzpicture}[x=1mm,y=1mm]
+  \node[anchor=north west,inner sep=0] (u) at (0,0) {\includegraphics[width=42mm]{assets/user_final_confirm_phrase.png}};
+  \node[anchor=north west,inner sep=0] (g1) at (0,-28) {\includegraphics[width=62mm]{assets/gpt_evidence_archive.png}};
+  \node[anchor=north west,inner sep=0] (g2) at (66,-28) {\includegraphics[width=54mm]{assets/gpt_contact_sheet.png}};
+  \coordinate (ua) at ($(u.south east)+(-2mm,4mm)$);
+  \coordinate (ga) at ($(g1.north east)+(-3mm,-17mm)$);
+  \draw[arrA] (ua) .. controls (66,-6) and (68,-22) .. (ga);
+  \node[tagA] at ($(ua)+(3.5mm,0)$) {1};
+  \node[anchor=north west,text width=58mm,align=left] at (119,-2) {
+    \tracehead{P2RoseAccent}{DECISION LOCK}\tracetitle{讨论必须有“最终到底确认了什么”}
+    \tracebody{核心Decision不能只截“讨论得很激烈”的部分，最后确认也要保留。这样老师才能看到方案是怎样真正收敛下来的。}
+    \vspace{7mm}
+    \tracehead{P2Blue}{ASSET LAYERS}\tracetitle{Raw负责真实性，Annotated负责可读性}
+    \tracebody{raw截图不覆盖、不重画；正式版只在上面叠加highlight、箭头、编号和短注释。一般过程则通过Contact Sheet节省篇幅。}
+    \vspace{7mm}
+    \tracehead{P2VioletAccent}{ARCHIVE}\tracetitle{正文讲清Decision，Evidence Archive保留完整追溯}
+    \tracebody{正文不需要把所有原图都塞进去，但关键结论必须能回到对应的完整Evidence。}
+  };
+\end{tikzpicture}
+\provenance{本页来自“最终确认也必须截图、raw与annotated分离、一般过程Contact Sheet化”的连续真实讨论。}
+\end{document}

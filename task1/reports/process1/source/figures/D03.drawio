@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net">
+  <diagram name="共同评价与专项核验怎样配合" id="D03">
+    <mxGraphModel dx="1000" dy="655" grid="1" gridSize="10" page="1" pageScale="1" pageWidth="1000" pageHeight="655">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="e0" value="" edge="1" parent="1" source="shared" target="s" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=0;strokeColor=#70757A;fontFamily=Noto Sans CJK SC;fontSize=16;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="" edge="1" parent="1" source="shared" target="d" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=0;strokeColor=#70757A;fontFamily=Noto Sans CJK SC;fontSize=16;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" value="" edge="1" parent="1" source="shared" target="p" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=0;strokeColor=#70757A;fontFamily=Noto Sans CJK SC;fontSize=16;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" value="" edge="1" parent="1" source="s" target="q" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=0;strokeColor=#70757A;fontFamily=Noto Sans CJK SC;fontSize=16;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" value="" edge="1" parent="1" source="d" target="q" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=0;strokeColor=#70757A;fontFamily=Noto Sans CJK SC;fontSize=16;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" value="" edge="1" parent="1" source="p" target="q" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=0;strokeColor=#70757A;fontFamily=Noto Sans CJK SC;fontSize=16;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" value="" edge="1" parent="1" source="q" target="res" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=0;strokeColor=#70757A;fontFamily=Noto Sans CJK SC;fontSize=16;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="shared" value="共同入口&#10;同一数据范围、独立原始参考、明确统计单位&#10;固定主要指标、保护条件、预算和各数据分区用途" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFFDFC;strokeColor=#B97589;fontColor=#2D3238;fontFamily=Noto Sans CJK SC;fontSize=17;spacing=10;">
+          <mxGeometry x="70" y="18" width="860" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="s" value="分段S专项核验&#10;断点条件、等号与边界归属&#10;片段索引、过滤原因&#10;断边不计入段内长度" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFFDFC;strokeColor=#5B9FBE;fontColor=#2D3238;fontFamily=Noto Sans CJK SC;fontSize=17;spacing=10;">
+          <mxGeometry x="22" y="186" width="302" height="112" as="geometry" />
+        </mxCell>
+        <mxCell id="d" value="方向规则D专项核验&#10;方向定义、环形角差&#10;不可计算窗口、同步删除&#10;完整输入与原始点身份" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFFDFC;strokeColor=#5B9FBE;fontColor=#2D3238;fontFamily=Noto Sans CJK SC;fontSize=17;spacing=10;">
+          <mxGeometry x="349" y="186" width="302" height="112" as="geometry" />
+        </mxCell>
+        <mxCell id="p" value="简化P专项核验&#10;有限线段距离、端点&#10;原始索引、退化情况&#10;DP即时输入的误差检查" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFFDFC;strokeColor=#5B9FBE;fontColor=#2D3238;fontFamily=Noto Sans CJK SC;fontSize=17;spacing=10;">
+          <mxGeometry x="676" y="186" width="302" height="112" as="geometry" />
+        </mxCell>
+        <mxCell id="q" value="共同质量判断&#10;覆盖与保真放在同一原始参考下比较&#10;再检查保护条件、收益与代价" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFFDFC;strokeColor=#8177A8;fontColor=#2D3238;fontFamily=Noto Sans CJK SC;fontSize=17;spacing=10;">
+          <mxGeometry x="95" y="383" width="810" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="res" value="分别判断实现、效果与交付&#10;正确性核验 → 共同效果比较 → 完整交付检查" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFFDFC;strokeColor=#8177A8;fontColor=#2D3238;fontFamily=Noto Sans CJK SC;fontSize=17;spacing=10;">
+          <mxGeometry x="185" y="552" width="630" height="70" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

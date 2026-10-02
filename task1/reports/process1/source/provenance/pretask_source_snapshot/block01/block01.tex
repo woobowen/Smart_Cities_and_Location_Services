@@ -1,0 +1,230 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[top=12mm,bottom=12mm,left=14mm,right=14mm,headsep=2mm,footskip=7mm]{geometry}
+\usepackage{fontspec}
+\usepackage{xeCJK}
+\setmainfont{Noto Sans}
+\setsansfont{Noto Sans}
+\setCJKmainfont{Noto Sans CJK SC}
+\setCJKsansfont{Noto Sans CJK SC}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{calc,arrows.meta,positioning}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{ragged2e}
+\usepackage{microtype}
+
+% P2 · Cloud Sorbet Exact
+\definecolor{P2Paper}{HTML}{FCFAF7}
+\definecolor{P2Ink}{HTML}{2D3238}
+\definecolor{P2Muted}{HTML}{70757A}
+\definecolor{P2BlueLight}{HTML}{D3EAF5}
+\definecolor{P2Apricot}{HTML}{F5D9B8}
+\definecolor{P2Rose}{HTML}{E8C7D3}
+\definecolor{P2Violet}{HTML}{D7D3EA}
+\definecolor{P2Blue}{HTML}{5B9FBE}
+\definecolor{P2ApricotAccent}{HTML}{D49757}
+\definecolor{P2RoseAccent}{HTML}{B97589}
+\definecolor{P2VioletAccent}{HTML}{8177A8}
+\definecolor{P2Rule}{HTML}{DDE3E7}
+\definecolor{P2Panel}{HTML}{FFFDFC}
+
+\pagecolor{P2Paper}
+\color{P2Ink}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3.5pt}
+\linespread{1.04}
+\hypersetup{hidelinks}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[L]{\fontsize{6.6}{8}\selectfont\color{P2Muted}PROCESS REPORT · WORKFLOW CONSTRUCTION}
+\fancyfoot[R]{\fontsize{6.6}{8}\selectfont\color{P2Muted}\thepage}
+
+\newcommand{\eyebrow}[1]{{\fontsize{7.8}{9.4}\selectfont\bfseries\color{P2RoseAccent}#1}\par\vspace{1pt}}
+\newcommand{\pagetitle}[1]{{\fontsize{19}{22}\selectfont\bfseries\color{P2Ink}#1}\par\vspace{3pt}}
+\newcommand{\deck}[1]{{\fontsize{9.1}{13.2}\selectfont\color{P2Ink}\RaggedRight #1}\par\vspace{4pt}}
+\newcommand{\tracehead}[2]{{\fontsize{7.1}{8.4}\selectfont\bfseries\color{#1}#2}\par}
+\newcommand{\tracetitle}[1]{{\fontsize{10.4}{12.4}\selectfont\bfseries\color{P2Ink}#1}\par\vspace{1.5pt}}
+\newcommand{\tracebody}[1]{{\fontsize{8.0}{11.3}\selectfont\color{P2Ink}\RaggedRight #1}\par}
+\newcommand{\provenance}[1]{\vspace{2pt}{\color{P2Rule}\hrule height .35pt}\vspace{2.5pt}{\fontsize{6.9}{9.2}\selectfont\color{P2Muted}\RaggedRight\textbf{Original Evidence.} #1}\par}
+
+\tikzset{
+  userA/.style={rounded corners=1mm,draw=P2ApricotAccent,line width=.55pt,fill=P2Apricot,fill opacity=.34},
+  userR/.style={rounded corners=1mm,draw=P2RoseAccent,line width=.55pt,fill=P2Rose,fill opacity=.34},
+  gptB/.style={rounded corners=1mm,draw=P2Blue,line width=.55pt,fill=P2BlueLight,fill opacity=.27},
+  gptV/.style={rounded corners=1mm,draw=P2VioletAccent,line width=.55pt,fill=P2Violet,fill opacity=.27},
+  arrA/.style={-{Stealth[length=2.0mm,width=1.45mm]},draw=P2RoseAccent,line width=.72pt},
+  arrB/.style={-{Stealth[length=2.0mm,width=1.45mm]},draw=P2Blue,line width=.72pt},
+  arrV/.style={-{Stealth[length=2.0mm,width=1.45mm]},draw=P2VioletAccent,line width=.72pt},
+  tagA/.style={circle,minimum size=4.8mm,inner sep=0pt,draw=P2ApricotAccent,line width=.6pt,fill=P2Paper,font=\fontsize{6.7}{7}\selectfont\bfseries},
+  tagR/.style={circle,minimum size=4.8mm,inner sep=0pt,draw=P2RoseAccent,line width=.6pt,fill=P2Paper,font=\fontsize{6.7}{7}\selectfont\bfseries},
+  tagB/.style={circle,minimum size=4.8mm,inner sep=0pt,draw=P2Blue,line width=.6pt,fill=P2Paper,font=\fontsize{6.7}{7}\selectfont\bfseries}
+}
+
+\begin{document}
+
+% ==========================================================
+% PAGE 1
+% ==========================================================
+\eyebrow{WORKFLOW CONSTRUCTION · 01}
+\pagetitle{从既有协作经验开始，而不是从零设计}
+\deck{这套工作流不是我在智慧城市实验开始时从零设计出来的。我借用了之前《软件系统优化》课程里已经比较顺手的协作方式：先让 GPT 帮我理解任务、设计工作和检查结果，再把已经明确的工程任务交给 Codex 实际实现；同时我自己要真正看懂代码和实验原理，而不是只拿到一个“完成”的结果。}
+
+% Continuation page retained so the assembled source reproduces the historical 31-page review pagination.
+\newpage
+\begin{tikzpicture}[x=1mm,y=1mm]
+  % Direct original PNGs: lossless crop only, no resampling.
+  \node[anchor=north west,inner sep=0] (a) at (0,0) {\includegraphics[width=79mm]{assets/p1_seed_top.png}};
+  \node[anchor=north west,inner sep=0] (b) at (0,-92) {\includegraphics[width=79mm]{assets/p1_seed_roles.png}};
+
+  % Phrase-level highlights in exact page-mm coordinates, derived from original pixels.
+  % Top image W=675,H=740,w=79mm,h=86.607mm.
+  \path[userA] (27.51,-4.10) rectangle (72.56,-7.96);       % U1: concrete implementation -> Codex
+  \coordinate (u1) at (72.56,-6.03);
+  \path[userA] (27.51,-8.19) rectangle (74.90,-14.62);      % U2: prompt/task/acceptance
+  \coordinate (u2) at (74.90,-11.40);
+  \path[userR] (27.51,-16.39) rectangle (74.90,-22.82);     % U3: explain for teacher acceptance
+  \coordinate (u3) at (74.90,-19.60);
+  \path[gptB] (4.10,-49.73) rectangle (77.27,-56.99);       % G1: execution + design + review + teach
+  \coordinate (g1a) at (77.27,-52.00);
+  \coordinate (g1b) at (77.27,-55.20);
+
+  % Lower image W=675,H=780,w=79mm,h=91.333mm; top at y=-92mm.
+  \path[gptV] (4.10,-149.95) rectangle (72.56,-153.35);     % Task Designer
+  \coordinate (g2d) at (72.56,-151.65);
+  \path[gptV] (4.10,-153.12) rectangle (72.56,-156.17);     % Reviewer
+  \coordinate (g2r) at (72.56,-154.65);
+  \path[gptV] (4.10,-155.82) rectangle (76.07,-158.98);     % Tutor/Viva Coach
+  \coordinate (g2t) at (76.07,-157.40);
+  \path[gptV] (4.10,-159.30) rectangle (73.73,-162.47);     % Codex Executor
+  \coordinate (g2e) at (73.73,-160.90);
+
+  % Long correspondence arrows routed through the gutter.
+  \draw[arrA] (u1) .. controls (87,-6) and (87,-50) .. (g1a);
+  \draw[arrB] (u2) .. controls (90,-11) and (90,-54) .. (g1b);
+  \draw[arrB] (u2) .. controls (92,-25) and (92,-148) .. (g2d);
+  \draw[arrA] (u3) .. controls (95,-30) and (95,-156) .. (g2t);
+
+  \node[tagA] at (78.8,-6.0) {1};
+  \node[tagB] at (81.0,-11.4) {2};
+  \node[tagR] at (81.0,-19.6) {3};
+
+  % Notes
+  \node[anchor=north west,text width=84mm,align=left] at (95,-2) {
+    \tracehead{P2RoseAccent}{MICRO TRACE 01}\tracetitle{“谁来做”先被拆成执行与验收}\tracebody{我一开始的想法很直接：环境和代码实现交给 Codex；GPT 先帮我把任务讲清楚、写好 Codex 指令，再回来和我一起检查真实结果。GPT 后来把这套做法整理成了“Codex 负责执行，GPT 负责理解任务、设计工作和独立检查”。}
+    \vspace{7mm}
+    \tracehead{P2Blue}{MICRO TRACE 02}\tracetitle{“我需要理解”被保留下来}\tracebody{我还特别要求 GPT 不能只告诉我“做完了”，而要把实验和代码讲到我能自己解释。这个要求后来保留下来，变成了单独的理解/答辩准备，而不是工程完成后的附属说明。}
+    \vspace{7mm}
+    \tracehead{P2VioletAccent}{WHY THIS MATTERS}\tracetitle{这是工作流的种子，不是最终形态}\tracebody{这时我其实只解决了三个问题：谁来真正做工程、谁来检查、我自己怎么把代码和实验弄懂。至于方案谁来判断、AI 的建议怎么验证，当时还没有想得这么完整，后面进入智慧城市任务后才继续补上。}
+  };
+\end{tikzpicture}
+\provenance{截图来自此前《软件系统优化》项目。消息顺序保持不变；图片只做无损裁切，荧光、编号和长箭头全部在 LaTeX/TikZ 矢量层绘制，没有改写聊天文字。}
+
+\newpage
+
+% ==========================================================
+% PAGE 2
+% ==========================================================
+\eyebrow{WORKFLOW CONSTRUCTION · 02}
+\pagetitle{迁移不是复制：先把旧工作流放到新任务里验证}
+\deck{进入《智慧城市与位置服务》后，我没有直接复制之前那套流程，而是先把它当作起点。我让 GPT 帮我判断哪些做法还能继续用，哪些必须按新课程重新设计；随后又拿第一次真实任务来检验这些规则到底合不合适。}
+
+\begin{tikzpicture}[x=1mm,y=1mm]
+  \begin{scope}[scale=0.985]
+  \node[anchor=north west,inner sep=0] (a) at (0,0) {\includegraphics[width=68mm]{assets/p2a_migrate_request.png}};
+  \node[anchor=north west,inner sep=0] (b) at (0,-53) {\includegraphics[width=68mm]{assets/p2b_migrate_validation.png}};
+
+  % p2a W=480,H=330,w=68,h=46.75
+  \path[userA] (17.0,-7.8) rectangle (66.6,-23.4);          % borrow old workflow, adapt new course
+  \coordinate (u1) at (66.6,-15.6);
+  \path[gptB] (2.8,-29.0) rectangle (63.8,-39.7);           % rules inventory + migration design / not copy
+  \coordinate (g1) at (63.8,-34.4);
+
+  % p2b W=485,H=680,w=68,h=95.34; top y=-53
+  \path[gptB] (2.8,-66.3) rectangle (63.8,-71.2);           % migration must be verified, not mechanical
+  \coordinate (gbefore) at (63.8,-68.8);
+  \path[userR] (23.1,-110.5) rectangle (67.3,-116.8);       % according to first task actual requirements
+  \coordinate (u2) at (67.3,-113.7);
+  \path[userA] (23.1,-116.8) rectangle (67.3,-123.1);       % confirm before actual operation
+  \coordinate (u3) at (67.3,-120.0);
+  \path[gptV] (2.8,-130.8) rectangle (65.9,-140.6);         % cannot directly copy after seeing task
+  \coordinate (gafter) at (65.9,-135.7);
+  \path[gptV] (2.8,-141.3) rectangle (65.9,-147.6);         % this round only rules/plan, no execution
+  \coordinate (gfinal) at (65.9,-144.5);
+
+  \draw[arrA] (u1) .. controls (77,-15.6) and (77,-34.4) .. (g1);
+  \draw[arrB] (u2) .. controls (79,-104) and (79,-76) .. (gbefore);
+  \draw[arrV] (u2) .. controls (80,-117) and (80,-133) .. (gafter);
+  \draw[arrA] (u3) .. controls (83,-121) and (83,-143) .. (gfinal);
+
+  \node[tagA] at (72.0,-15.6) {1};
+  \node[tagR] at (72.5,-113.7) {2};
+  \node[tagA] at (72.5,-120.0) {3};
+  \end{scope}
+
+  \node[anchor=north west,text width=98mm,align=left] at (80,-2) {
+    \tracehead{P2ApricotAccent}{MICRO TRACE 03}\tracetitle{先“借用”，但不直接复制}\tracebody{我明确说可以借用之前的工作方式，但不能整套照搬。GPT 因此先做规则盘点和迁移设计，而不是立刻把旧项目设置复制过来。}
+    \vspace{7mm}
+    \tracehead{P2RoseAccent}{MICRO TRACE 04}\tracetitle{让第一次真实任务来检验迁移}\tracebody{GPT 先提醒我“迁移不是复制”。我随后把第一次正式任务发给它，要求按真实任务继续检查。这样，哪些规则保留、哪些要改，不再靠我们事先想象，而是由课程任务本身来检验。}
+    \vspace{7mm}
+    \tracehead{P2Blue}{MICRO TRACE 05}\tracetitle{没有确认，就不进入实际操作}\tracebody{我当时还明确加了一句：先把我的要求理解清楚，等我确认以后再实际操作。所以这一轮只讨论规则和方案，不改设置、不做实验，也不写代码。}
+    \vspace{7mm}
+    \tracehead{P2VioletAccent}{DECISION}\tracetitle{规则形成方式发生变化}\tracebody{从这里开始，我把“以前用过”只当作参考。真正能不能迁移，要看新课程材料和真实任务是否支持。}
+  };
+\end{tikzpicture}
+\provenance{两组截图均来自智慧城市项目早期真实聊天。第一页记录迁移请求与GPT初步回应；第二页记录我用第一次正式任务继续检验迁移规则。}
+
+\newpage
+
+% ==========================================================
+% PAGE 3
+% ==========================================================
+\eyebrow{WORKFLOW CONSTRUCTION · 03}
+\pagetitle{第一次真实任务让我发现：光有工程协作还不够}
+\deck{真正打开第一次任务后，我很快发现原来的三步分工还不够。这里不仅要把代码做出来，还要判断数据是否可信、参数为什么这样设、评价指标是否合理、AI 建议有没有问题，以及任务包里哪些内容到底属于本次作业。}
+
+\begin{tikzpicture}[x=1mm,y=1mm]
+  \begin{scope}[scale=0.985]
+  \node[anchor=north west,inner sep=0] (a) at (0,0) {\includegraphics[width=68mm]{assets/p3a_task_pressure.png}};
+  \node[anchor=north west,inner sep=0] (b) at (0,-99) {\includegraphics[width=68mm]{assets/p3b_evidence_rules_short.png}};
+
+  % p3a W=477,H=650,w=68,h=92.66
+  \path[userR] (22.1,-13.5) rectangle (65.6,-20.7);         % according to actual first task
+  \coordinate (u1) at (65.6,-17.1);
+  \path[userA] (22.1,-20.7) rectangle (65.6,-25.7);         % confirm before operation
+  \coordinate (u2) at (65.6,-23.2);
+  \path[gptV] (2.9,-32.1) rectangle (65.6,-45.4);           % key conclusion: cannot directly copy + new research requirements
+  \coordinate (g1) at (65.6,-38.7);
+  \path[gptB] (2.9,-45.4) rectangle (64.9,-49.9);           % only rules/plan, no execution
+  \coordinate (g2) at (64.9,-47.7);
+
+  % p3b W=477,H=650,w=68,h=92.66; top y=-99
+  \path[gptV] (2.9,-107.6) rectangle (62.7,-112.5);         % heading: file exists != teacher requires
+  \coordinate (g3h) at (62.7,-110.0);
+  \path[gptV] (2.9,-168.1) rectangle (64.9,-175.2);         % long-term rule: package complexity cannot infer scope
+  \coordinate (g3) at (64.9,-171.7);
+
+  \draw[arrA] (u1) .. controls (79,-18) and (79,-38) .. (g1);
+  \draw[arrB] (u2) .. controls (80,-24) and (80,-47) .. (g2);
+  \draw[arrV] (u1) .. controls (85,-38) and (85,-169) .. (g3);
+
+  \node[tagR] at (71.0,-17.1) {1};
+  \node[tagA] at (71.0,-23.2) {2};
+  \end{scope}
+
+  \node[anchor=north west,text width=98mm,align=left] at (80,-2) {
+    \tracehead{P2RoseAccent}{MICRO TRACE 06}\tracetitle{“先看真实任务”直接提高了规则强度}\tracebody{我让 GPT 按第一次任务重新检查之前的规则。它随后把时空数据真实性、参数依据、评价设计和 AI 批判这些新问题补进了工作流。}
+    \vspace{7mm}
+    \tracehead{P2Blue}{MICRO TRACE 07}\tracetitle{实际操作仍由我确认后启动}\tracebody{我仍然保留“确认后再动手”的边界：先把问题和方案说清楚，再进入代码和实验阶段。}
+    \vspace{7mm}
+    \tracehead{P2VioletAccent}{MICRO TRACE 08}\tracetitle{“文件存在”不再等于“老师要求”}\tracebody{任务包里虽然已经放了 LLM Agent、验证器和一些历史输出，但我不希望看到什么就默认都要做。后来我们把这件事明确下来：文件存在只是材料，真正的任务范围还是要回到老师的正式要求。}
+    \vspace{7mm}
+    \tracehead{P2ApricotAccent}{TRANSITION}\tracetitle{下一步自然转向“依据什么做决定”}\tracebody{到这里，我关心的问题已经从“谁来做工程”变成了“我们凭什么做出研究判断”。接下来就需要把任务范围、资料来源和查证方式一起理清。}
+  };
+\end{tikzpicture}
+\provenance{本页只使用第一次任务相关原始聊天。CRS、参数、评价指标等技术问题不会在 Workflow Construction 中提前展开，而会在后续 Experiment Decision Process 中使用真实实验互动继续呈现。}
+
+\end{document}

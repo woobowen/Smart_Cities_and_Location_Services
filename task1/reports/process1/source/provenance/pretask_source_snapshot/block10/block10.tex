@@ -1,0 +1,69 @@
+\input{../common_preamble_9_12.tex}
+\begin{document}
+
+\eyebrow{WORKFLOW CONSTRUCTION · 23}
+\pagetitle{LaTeX不只是换一种文件格式，而是统一正式文档}
+\deck{我提出“正式文档统一用LaTeX”时，真正想解决的并不是把Word换成.tex，而是让Experiment、Process、图表、Evidence和引用都基于同一套稳定的排版规则。}
+\begin{tikzpicture}[x=1mm,y=1mm]
+  \node[anchor=north west,inner sep=0] (u1) at (0,0) {\includegraphics[width=34mm]{assets/user_all_latex_phrase.png}};
+  \node[anchor=north west,inner sep=0] (u2) at (0,-23) {\includegraphics[width=34mm]{assets/user_two_reports_phrase.png}};
+  \node[anchor=north west,inner sep=0] (g) at (0,-50) {\includegraphics[width=54mm]{assets/gpt_latex_architecture.png}};
+  \coordinate (a1) at ($(u1.south east)+(-2mm,3mm)$);
+  \coordinate (a2) at ($(u2.south east)+(-2mm,3mm)$);
+  \coordinate (g1) at ($(g.north east)+(-4mm,-20mm)$);
+  \coordinate (g2) at ($(g.north east)+(-4mm,-54mm)$);
+  \draw[arrA] (a1) .. controls (73,-3) and (77,-55) .. (g1);
+  \draw[arrB] (a2) .. controls (78,-27) and (80,-82) .. (g2);
+  \node[tagA] at ($(a1)+(3.3mm,0)$) {1};
+  \node[tagB] at ($(a2)+(3.3mm,0)$) {2};
+  \node[anchor=north west,text width=108mm,align=left] at (70,-2) {
+    \tracehead{P2ApricotAccent}{MICRO TRACE 29}\tracetitle{统一LaTeX，但两份报告不用完全相同的版式}
+    \tracebody{我一边要求所有正式文档都用LaTeX，一边又强调Experiment和Process回答的是不同问题。GPT因此保留共同的Design System，但没有把两份报告强行做成同一套页面。}
+    \vspace{8mm}
+    \tracehead{P2Blue}{SHARED IDENTITY}\tracetitle{共享字体、色彩、caption、figure/table、引用和封面语言}
+    \tracebody{Experiment和Process共用字体、色彩、caption、figure/table和基本工程结构，但正文分别围绕“结果”和“决策过程”组织。}
+  };
+\end{tikzpicture}
+\provenance{上方两条我的原句来自同一轮LaTeX系统讨论；下方为GPT随后形成的统一视觉身份 + 双报告结构。}
+\newpage
+
+\eyebrow{WORKFLOW CONSTRUCTION · 24}
+\pagetitle{统一视觉身份也必须克制：模板不能变成“彩色卡片墙”}
+\deck{看完第一轮模板和Process页面后，我最不满意的是“颜色太多、框太多”。如果每块内容都铺一个彩色底，整页会更像UI而不是课程报告。所以后面我要求正文尽量保持中性，只把颜色留给真正需要强调的地方。}
+\begin{tikzpicture}[x=1mm,y=1mm]
+  \node[anchor=north west,inner sep=0] (u) at (0,0) {\includegraphics[width=46mm]{assets/user_reduce_colors_phrase.png}};
+  \node[anchor=north west,inner sep=0] (g) at (0,-34) {\includegraphics[width=55mm]{assets/gpt_restrained_style.png}};
+  \coordinate (ua) at ($(u.south east)+(-2mm,3mm)$);
+  \coordinate (ga) at ($(g.north east)+(-4mm,-28mm)$);
+  \draw[arrA] (ua) .. controls (78,-4) and (82,-40) .. (ga);
+  \node[tagA] at ($(ua)+(3.5mm,0)$) {1};
+  \node[anchor=north west,text width=106mm,align=left] at (72,-2) {
+    \tracehead{P2ApricotAccent}{MICRO TRACE 30}\tracetitle{我把“好看”改成了“克制，而且每种颜色都有用”}
+    \tracebody{我的反馈不是“换一套更漂亮的颜色”，而是减少大面积色块和卡片感，让正文保持白/米白与深灰，只在关键highlight、判断或Decision上使用P2色。}
+    \vspace{8mm}
+    \tracehead{P2VioletAccent}{STYLE RULE}\tracetitle{颜色只承担语义，不承担装饰}
+    \tracebody{最后颜色只承担语义：GPT建议、我的判断、Evidence和Final Decision可以用不同淡色提示，但正文和大面积背景保持中性。}
+  };
+\end{tikzpicture}
+\provenance{本页来自我对Process页面真实原型的视觉批评，以及GPT随后对P2使用层级、核心交互页和annotation的修订。}
+\newpage
+
+\eyebrow{WORKFLOW CONSTRUCTION · 25}
+\pagetitle{模板不能只做一次：Interaction Evidence也要变成可复用的LaTeX组件}
+\deck{最后我不希望模板只是几张“示例页”，而是要真正能继续复用。因此我们把稳定的东西抽出来：截图怎么放、Figure/Analysis怎么组织、Process Evidence怎么呈现，以及哪些结构可以随任务变化。}
+\begin{tikzpicture}[x=1mm,y=1mm]
+  \node[anchor=north west,inner sep=0] (g1) at (0,0) {\includegraphics[width=52mm]{assets/gpt_process_component.png}};
+  \node[anchor=north west,inner sep=0] (g2) at (55,0) {\includegraphics[width=42mm]{assets/gpt_template_candidates.png}};
+  \node[anchor=north west,text width=78mm,align=left] at (101,-2) {
+    \tracehead{P2Blue}{REUSABLE SYSTEM}\tracetitle{固定Design System，适配任务Layout}
+    \tracebody{固定的是字体、P2、caption、标题层级、Evidence语法和质量检查；具体section、图密度、横版页面和Interaction Evidence数量可以跟着任务变化。}
+    \vspace{8mm}
+    \tracehead{P2VioletAccent}{PROCESS-SPECIFIC COMPONENT}\tracetitle{Process Report需要专门的Evidence组件}
+    \tracebody{聊天截图不能只用\texttt{includegraphics}一塞了事。Process Report需要专门的Evidence组件，在不改原图的前提下叠加背景、我的判断、Evidence和Final Decision。}
+    \vspace{8mm}
+    \tracehead{P2RoseAccent}{LONG-TERM SYNC}\tracetitle{模板选择也会反向更新长期规则}
+    \tracebody{这套设计确认以后，Project Settings、AGENTS和后续报告都引用同一套规则，避免每次做新任务又从头设计。}
+  };
+\end{tikzpicture}
+\provenance{该页整理了真实讨论中“Experiment图页、Process Interaction Evidence、固定/可适配规则与长期同步”的连续设计决策。}
+\end{document}

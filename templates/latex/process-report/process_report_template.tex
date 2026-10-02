@@ -22,6 +22,7 @@
 
 \input{../common/p2_cloud_sorbet_colors.tex}
 \input{components/interaction_evidence.tex}
+\input{demo-assets/multipage_specimens.tex}
 
 \pagecolor{Paper}
 \color{Ink}
@@ -160,7 +161,7 @@ Editorial Board / Human Reasoning / Horizontal Candidate Tree
 
 状态
 &
-Design System v2.2（正式任务中必须替换为真实交互、真实证据和真实决定）
+Design System v2.6（正式任务中必须替换为真实交互、真实证据和真实决定）
 \end{tabular}
 
 \vfill
@@ -263,24 +264,27 @@ Design System v2.2（正式任务中必须替换为真实交互、真实证据�
   fill=white,
   rounded corners=2.5pt,
   minimum width=3.2cm,
+  text width=3.2cm,
   minimum height=.82cm
 ] (w1) at (-6.0,-1.0)
-{角色与治理\\GPT / 用户 / Codex};
+{角色与治理\\GPT / 用户 /\\Codex};
 
 \node[
   draw=Ink!22,
   fill=white,
   rounded corners=2.5pt,
   minimum width=3.2cm,
+  text width=3.2cm,
   minimum height=.82cm
 ] (w2) at (-2.0,-1.0)
-{证据与复现\\Audit / GitHub / Evidence};
+{证据与复现\\Audit / GitHub /\\Evidence};
 
 \node[
   draw=Ink!22,
   fill=white,
   rounded corners=2.5pt,
   minimum width=3.2cm,
+  text width=3.2cm,
   minimum height=.82cm
 ] (e1) at (2.0,-1.0)
 {方法与参数\\候选 / 假设 / 指标};
@@ -290,6 +294,7 @@ Design System v2.2（正式任务中必须替换为真实交互、真实证据�
   fill=white,
   rounded corners=2.5pt,
   minimum width=3.2cm,
+  text width=3.2cm,
   minimum height=.82cm
 ] (e2) at (6.0,-1.0)
 {验证与裁决\\资料 / 数据 / 实验};
@@ -315,20 +320,22 @@ Design System v2.2（正式任务中必须替换为真实交互、真实证据�
   fill=white,
   rounded corners=3pt,
   minimum width=4.8cm,
+  text width=4.8cm,
   minimum height=.9cm,
   line width=1pt
 ] (u) at (-3.0,-2.7)
-{用户真实判断\\发现 / 质疑 / 修改 / 否决 / 选择};
+{用户真实判断\\发现 / 质疑 / 修改\\否决 / 选择};
 
 \node[
   draw=C4!75,
   fill=white,
   rounded corners=3pt,
   minimum width=4.8cm,
+  text width=4.8cm,
   minimum height=.9cm,
   line width=1pt
 ] (d) at (3.0,-2.7)
-{证据驱动收敛\\Evidence → Decision → Confirmation};
+{证据驱动收敛\\Evidence → Decision\\→ Confirmation};
 
 \draw[
   -{Latex[length=2mm]},
@@ -421,35 +428,30 @@ SYNTHETIC / TEMPLATE ONLY：一般过程汇总的版式示例。
 \begin{contextbox}
 \textbf{SYNTHETIC / TEMPLATE ONLY}
 本页使用非聊天 UI 的合成文字样张，仅验证高清 PNG 直接嵌入、
-phrase highlight、User anchor、长箭头与侧注的工程能力。
+User anchor、精确箭头与简短侧注的工程能力。
 示例句及关系不代表真实用户观点、历史互动或 Evidence Lock。
 正式页面必须采用 Evidence Master 批准的原图与 annotation specification。
 \end{contextbox}
 
 \vspace{3mm}
 \noindent
-\begin{interactionevidence}[trim={0 0 0 0},clip]{demo-assets/micro_trace_specimen.png}{110mm}
-  \IEHighlight[ie before]{.079,.658}{.535,.704}
-  \IEHighlight[ie user]{.079,.418}{.490,.464}
-  \IEOutline[ie user]{.079,.418}{.490,.464}
-  \IEHighlight[ie after]{.079,.178}{.540,.224}
+\begin{interactionevidence}[trim={0 0 0 0},clip]{demo-assets/micro_trace_specimen.png}{130mm}
   \IEAnchor{before-phrase}{.535,.68}
   \IEAnchor{user-phrase}{.490,.44}
   \IEAnchor{after-phrase}{.540,.20}
-  \IEMarker{.045,.44}{1}
   \IECurvedArrow{user-phrase}{before-phrase}
   \IERoutedArrow{(user-phrase) -- (.86,.44) -- (.86,.20) -- (after-phrase)}
-  \IESideNote{1.07,.74}{\textbf{① 示例动作与后续变化}\par
+  \IESideNote{1.04,.74}{\textbf{示例动作与后续变化}\par
     合成样例中的用户要求保留短语可读性；后续示例将单页安排改为跨页。
     两条箭头只演示明确短语之间的对应，不构成真实历史证据。}
-  \IEProvenance[text width=40mm]{1.07,.30}{SYNTHETIC / TEMPLATE ONLY\\
+  \IEProvenance[text width=34mm]{1.04,.30}{SYNTHETIC / TEMPLATE ONLY\\
     Vector overlay: TikZ\\No Evidence Lock}
   \IEAssetLabel{0,-.04}{synthetic PNG + vector annotation}
 \end{interactionevidence}
 
 \vspace{5mm}
 \noindent\small
-样张以 300 dpi 原生栅格化，在 110 mm 宽度直接显示，约 300 effective PPI。
+样张以 300 dpi 原生栅格化，1300 像素宽在 130 mm 显示，约 254 effective PPI。
 正式截图须分别记录 raw/crop 像素与最终尺寸；PDF 的 200-dpi 检查渲染不能提升原图清晰度。
 \normalsize
 
@@ -468,53 +470,53 @@ phrase highlight、User anchor、长箭头与侧注的工程能力。
 页数由内容完整性和可读性决定，
 必要时可连续三页、四页或更多。
 
-正式版使用用户保存的原始网页截图，
-并保留 raw / crop / annotated 三层资产。
+新互动板块以对应的真实用户 UI 为入口；
+标题、简短导语与首组截图同页，续页自然承接。
+保留 raw / crop / annotated 三层资产。
 
 该机制同时适用于工作流关键决策和实验关键决策。
 \end{contextbox}
 
 \noindent
-\begin{minipage}[t]{.68\linewidth}
+\begin{minipage}[t]{.76\linewidth}
 \vspace{0pt}
 
-\includegraphics[
-  width=\linewidth
-]{demo-assets/interaction_part1.png}
+\MultiPageSpecimenOne
 
 \end{minipage}
 \hfill
-\begin{minipage}[t]{.28\linewidth}
+\begin{minipage}[t]{.20\linewidth}
 \vspace{0pt}
+\raggedright
 
 \vspace{4mm}
 
-\semantic{P2}{① 用户判断}
+\semantic{P2}{用户入口}
 
 \par
 \vspace{2mm}
 
-用户指出原有方案隐含了一个未经验证的统一假设。
+放置提出问题的真实用户消息，保留必要前文。
 
 \par
 \vspace{6mm}
 
-\semantic{P3}{② 被质疑假设}
+\semantic{P3}{有关回应}
 
 \par
 \vspace{2mm}
 
-需要把 AI 建议中的隐含前提单独拿出来验证。
+说明这一轮回应改变了什么，不复述长截图。
 
 \par
 \vspace{6mm}
 
-\semantic{P4}{③ 后续动作}
+\semantic{P4}{续页承接}
 
 \par
 \vspace{2mm}
 
-如果讨论仍不能决定，就转为公平并行实验。
+按原始消息边界继续，避免缩小到无法阅读。
 
 \end{minipage}
 
@@ -522,7 +524,7 @@ phrase highlight、User anchor、长箭头与侧注的工程能力。
 
 \clearpage
 
-\section*{核心交互：连续多页证据（2/3)}
+\section*{核心交互：连续多页证据（2/3）}
 \addcontentsline{toc}{section}{核心交互：连续多页证据（2/3）}
 
 \begin{contextbox}
@@ -532,8 +534,8 @@ phrase highlight、User anchor、长箭头与侧注的工程能力。
 可根据原始截图比例使用宽幅截图，
 并在上方、侧边或下方加入必要说明；
 
-highlight、编号和箭头使用 P2 语义色，
-但正文保持深灰。
+对话截图只叠加精确矢量箭头，
+不使用荧光圈、彩框、填充或圈号覆盖原话。
 
 批注解释证据价值，不重新编造聊天内容。
 \end{contextbox}
@@ -541,31 +543,31 @@ highlight、编号和箭头使用 P2 语义色，
 \begin{figure}[H]
 \centering
 
-\includegraphics[
-  width=.86\linewidth
-]{demo-assets/interaction_part2.png}
+\begin{minipage}{.86\linewidth}
+\MultiPageSpecimenTwo
+\end{minipage}
 
 \caption{
-连续证据页示意。
+SYNTHETIC / NOT CHAT UI：连续证据页的放置说明。
 正式版按消息边界裁切，
 不从一条重要消息中间强行分页。
 }
 \end{figure}
 
 \noindent
-\semantic{P2}{用户建议}
+\semantic{P2}{原句保留}
 \quad
-把“统一参数”与“分类参数”都保留为候选，
-而不是直接冻结一个方案。
+正式页面保留与当前判断有关的原句，
+不使用人工排字替代真实消息。
 
 \par
 \vspace{4mm}
 
 \noindent
-\semantic{P4}{GPT修正}
+\semantic{P4}{关系说明}
 \quad
-将原先单一路径改成公平对照实验设计，
-并等待真实证据裁决。
+只在已批准的短语关系需要说明时使用箭头，
+不为装饰补造关系。
 
 % ------------------------------------------------------------
 
@@ -577,9 +579,9 @@ highlight、编号和箭头使用 P2 语义色，
 \begin{figure}[H]
 \centering
 
-\includegraphics[
-  width=.80\linewidth
-]{demo-assets/interaction_part3.png}
+\begin{minipage}{.80\linewidth}
+\MultiPageSpecimenThree
+\end{minipage}
 
 \caption{
 SYNTHETIC / TEMPLATE ONLY：核心交互收尾页示意。
@@ -747,6 +749,7 @@ Idea
 % 7. Usage boundary
 % ============================================================
 
+\clearpage
 \section{使用边界}
 
 本模板锁定的是视觉语言和证据组织方式，

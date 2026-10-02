@@ -124,6 +124,23 @@ def closure(root=ROOT):
     def load(path):
         return read_json(root, path) if (root/path).is_file() else None
 
+    # A stale compatibility PDF must never silently enter a new review package.
+    accepted_reports = []
+    for report in ('experiment1', 'process1'):
+        config_path = f'task1/reports/{report}/accepted-source.json'
+        config = read_json(root, config_path)
+        current = config['current_reading_copy']
+        add(current, 'accepted current report', config['pdf_sha256'])
+        canonical = root / relative_path(config['canonical_pdf'])
+        if canonical.is_symlink() or any(p.is_symlink() for p in canonical.parents if p != root.parent):
+            raise ValueError('SYMLINK_ACCEPTED_REPORT_REJECTED')
+        if sha(canonical.read_bytes()) != config['pdf_sha256'] or sha((root/current).read_bytes()) != config['pdf_sha256']:
+            raise ValueError('ACCEPTED_REPORT_HASH_MISMATCH:' + report)
+        accepted_reports.append({'report': report, 'pdf_sha256': config['pdf_sha256'],
+                                 'expected_pages': config['expected_pages'],
+                                 'document_acceptance': 'USER_ACCEPTED',
+                                 'evidence_lock': 'NOT_UPGRADED_BY_PACKAGE_BUILD'})
+
     static = NOTEBOOKS + REPORTS + [
         'task1/config/assignment.json', 'task1/reports/metadata.tex',
         'task1/作业/作业/traj_dict.json', 'task1/config/conditional_planar.json',
@@ -254,7 +271,9 @@ def closure(root=ROOT):
               'runtime_scope': 'offline FULL_RECOMPUTE and two completed Notebooks; no LIVE or REPORT_BUILD dependency claim',
               'isolated_full_recompute': 'NOT_RUN_BY_BUILDER', 'new_model_calls': 0,
               'metadata': {**read_identity(root),
-                           'evidence_master_spec_and_lock': 'NOT_AVAILABLE'}}
+                           'accepted_reports': accepted_reports,
+                           'process_source_spec': 'AVAILABLE_IN_ACCEPTED_SOURCE_ARCHIVE',
+                           'evidence_master_lock': 'NO_NEW_PER_EVIDENCE_LOCK_CLAIM'}}
     return result, payload
 
 

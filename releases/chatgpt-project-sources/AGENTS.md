@@ -2,7 +2,7 @@
 
 本文件规定 Codex 在《智慧城市与位置服务》仓库中的长期工程行为。
 
-Revision: **2026-09-29 · Project-wide P1–P4 / scoped closeout and review handoff**  
+Revision: **2026-10-02 · Accepted Process-source handoff / real user-UI and arrow-only production**  
 Canonical repository path: `AGENTS.md`
 
 Repository: https://github.com/woobowen/Smart_Cities_and_Location_Services.git\
@@ -309,7 +309,7 @@ Process Report正文默认执行Visual System / Evidence Protocol中的第一人
 
 先确认确切PDF、可编辑源、图表输入、构建入口和用户批准范围，登记来源版本。文件名相似、旧审核摘要或一张缩略图不能替代待接管成品本身。
 
-保留原批准文件或不可变版本，改动任务工作副本。不通过复制最终PDF掩盖生成链仍会产出旧稿的问题；应修正真正的章节源、数值宏、图脚本、元数据与生成器调用关系。重建后不得恢复旧工程口吻、旧图或身份占位。
+保留原批准文件或不可变版本，改动任务工作副本。不通过复制最终PDF掩盖生成链仍会产出旧稿的问题；应修正真正的章节源、数值宏、图脚本、元数据与生成器调用关系。重建后不得恢复旧工程口吻、旧图或身份占位，也不得恢复已被替换的圈框标注、过窄截图和仅有标题的分隔页。
 
 已批准源包可被最小适配到仓库目录和公共P2组件；数值、文章含义、图形关系、用户批准构图和Evidence规格不得静默改变。样稿和全稿的批准范围分别记录，不把局部验收推广到全部文件。
 
@@ -327,11 +327,11 @@ GPT直接生成的是实际成品时，不得重新自由创作文稿来“复�
 
 ### 12.4 模板、参考与正式提交
 
-模板变更更新对应唯一active preview；任务报告使用任务源，不覆盖reference template。合成preview、已验收真实报告和新的任务稿角色不同，按照Visual System §16登记。
+模板变更更新对应唯一active preview；任务报告使用任务源，不覆盖reference template。合成preview、已验收真实报告和新的任务稿角色不同，按照Visual System §16登记。当前批准任务涉及Process版式迁移时，仅适配受影响的模板组件、默认选项和检查脚本，使其遵循用户UI入口与纯箭头规格；不改写历史截图或已验收报告，不把组件适配扩展为无关模板重构。
 
 对已验收PDF与源包核对配对关系；保存真实构建/检查范围，包内不得分发字体二进制或秘密。成品制作、仓库集成、远程发布和UI上传分别确认，不能互相代替。
 
-Process Evidence仍按第13节进行来源、phrase/box/arrow/PPI审核及Evidence Master Lock；报告作者或工程执行者不能因编译通过代做Lock。缺少真实外部输入只阻断对应页面，其他可完成工作继续。
+Process Evidence仍按第13节进行真实用户UI、来源、phrase/arrow、可读性与PPI审核及Evidence Master Lock；报告作者或工程执行者不能因编译通过代做Lock。缺少真实外部输入只阻断对应页面，其他可完成工作继续。
 
 ---
 
@@ -343,19 +343,21 @@ Process Evidence 任务必须先读取：
 2. [Visual System](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md)；
 3. 当前 Evidence Master 批准的 Evidence Plan / annotation specification。
 
-**Evidence Master 决定关系，Codex 精确实现。** Codex 不得自行决定哪句话 highlight/圈选、圈选范围多大、哪个 User phrase 是 anchor、GPT before/after、两句之间的箭头关系、turn 调序、哪条 Evidence 进入报告、用户文本如何润色。缺少批准 spec 时停止受影响真实页面；不按时间相邻推断关系。
+**Evidence Master决定关系，Codex精确实现。**Codex不得自行选择用户UI入口、User anchor、GPT before/after、箭头语义关系、turn调序、入选Evidence或改写用户原话。按当前批准的Evidence Plan / annotation specification实现；缺少规格只暂停受影响真实页面，不按时间相邻推断关系。
 
-每一个 box / highlight 必须严格对应批准的 Evidence Claim，并采用 **minimum sufficient scope**：只覆盖证明该Claim所需的最小必要phrase，不为绘图方便把无关行、整段消息或整个bubble一起框入。只有批准spec明确整个段落/bubble本身就是Evidence对象时，才允许大框。
+新互动板块起始部分必须嵌入对应的真实ChatGPT用户UI；同一互动的续页按批准顺序承接。从用户原生截图、长截图或分割件制作，不拿旧LaTeX/PDF页面渲染图当原始聊天素材。截图主体、简短右侧说明、标题与首图同页，以及无固定最低像素宽度的版式规则，执行Visual System §§4.3、8.7与Evidence Protocol §5。
 
-Codex 负责 lossless crop、PNG direct embed、TikZ vector、arrow routing、side note placement、LaTeX compile、PPI calculation、PDF render、visual inspection。几何实现不得改变批准的 phrase、框选范围、语义关系或文案。长箭头端点必须落在批准phrase边界附近或明确指向该phrase，不得只落在bubble边缘或大框任意位置。
+对话截图只叠加精确矢量箭头，不恢复荧光圈、彩色框、填充、下划线或圈号覆盖原话。可编辑的技术结构图仍按其原生制图规范处理。箭头必须指向批准的确切短语或紧邻位置，区分原句关系与侧注阅读提示，避免压字和歧义。
 
-raw 不得覆盖。明确保存 raw/、crop/（或可重现 LaTeX trim）、annotated/ 或 LaTeX source/PDF overlay。Original Evidence First、干预等级与重构条件只按 Evidence Protocol 执行，Simulation 不是默认路径。
+Codex负责lossless crop、image direct embed、TikZ/PDF vector arrows、arrow routing、side note placement、LaTeX compile、实际尺寸/PPI记录、PDF render和visual inspection。几何实现不得改变批准的短语、语义关系与文案；裁切、缩放或分页变化后重新核对端点，不只检查源文件中的坐标值。
 
-记录 raw pixel size、crop pixel size/bounds、final display size、effective PPI（显示区域像素数 / 英寸，取横纵最小值）。原则 >=180，preferred >=200；不足时先按批准版式减小显示尺寸/拆页，仍不足则 **RECAPTURE_REQUIRED**。禁止 AI upscale、generative redraw、fake sharpening 或低清栅格化批注放大。
+raw不得覆盖。保留用户提供的原图/分割件、可用长图与映射、crop（或可重现LaTeX trim）、annotated或LaTeX/PDF overlay。没有收到的上游整张长图如实标明缺失，不伪造原件。Original Evidence First、干预等级与重构条件只按Evidence Protocol执行，Simulation不是默认路径。
 
-逐条检查 PHRASE MATCH、BOX RANGE、ARROW RELATION、ARROW ENDPOINT、SOURCE RESOLUTION，记录结果与依据；失败不得 LOCK。必须以最终PDF render为准再次核对box是否多框/漏框、箭头端点是否确实指向批准phrase、是否遮挡正文或造成歧义。Codex 工程自检不能替代 Evidence Master 的审核和 Evidence Lock。
+清晰度、有效PPI公式和用户明确批准现有原宽的处理统一执行Evidence Protocol §5.4。记录真实像素、裁切边界、显示尺寸与适用批准；不得在本文件另设强制加宽门槛，也不得把已通过真实样页审核的同一素材反复退回重截。禁止AI upscale、generative redraw、fake sharpening或将低清栅格标注放大当作原始细节。
 
-生产链：raw screenshot → Evidence Master annotation spec → lossless crop → direct LaTeX embed → TikZ Micro Trace → XeLaTeX → 200-dpi render inspection → Phrase/Box/Arrow Audit → Evidence Master Lock。全局演变图只能在主要 Workflow Evidence LOCK 后制作。
+逐项执行Evidence Protocol §30.H的USER UI ENTRY、ANNOTATION MODE、PHRASE MATCH、ARROW RELATION、ARROW ENDPOINT、PAGE READABILITY、SOURCE RESOLUTION检查。原宽例外按实际批准记录，旧BOX RANGE测试退出当前纯箭头页的门槛；历史测试和旧Lock记录保留原身份。Codex工程自检不能替代Evidence Master审核与Lock。
+
+生产链：真实截图/分割原件 → Evidence Master批准规格 → 无损裁切与来源映射 → 直接LaTeX嵌入 → 矢量箭头 → XeLaTeX → 至少200-dpi实际页面检查 → User UI / Phrase / Arrow / Readability Audit → Evidence Master Lock。全局演变图仍在主要Workflow Evidence Lock后制作。
 
 ---
 

@@ -1,0 +1,18 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[top=12mm,bottom=12mm,left=14mm,right=14mm]{geometry}
+\usepackage{fontspec,xeCJK,xcolor,graphicx,tikz,hyperref,ragged2e}
+\usetikzlibrary{calc,arrows.meta}
+\setmainfont{Noto Sans}\setsansfont{Noto Sans}
+\setCJKmainfont{Noto Sans CJK SC}\setCJKsansfont{Noto Sans CJK SC}
+\definecolor{Paper}{HTML}{FCFAF7}\definecolor{Ink}{HTML}{2D3238}
+\definecolor{Muted}{HTML}{70757A}\definecolor{Blue}{HTML}{5B9FBE}
+\definecolor{Rose}{HTML}{B97589}\definecolor{Violet}{HTML}{8177A8}
+\definecolor{Orange}{HTML}{D49757}\definecolor{Rule}{HTML}{DDE3E7}
+\pagecolor{Paper}\color{Ink}\pagestyle{empty}
+\setlength{\parindent}{0pt}\setlength{\parskip}{0pt}
+\hypersetup{hidelinks,pdftitle={实验一过程报告：我与GPT的持续交互——改进工作流，完成实验一},pdfauthor={吴博闻},pdfsubject={真实Human–AI研究过程},bookmarksopen=true}
+\newcommand{\PageStart}{\null\begin{tikzpicture}[remember picture,overlay]\begin{scope}[shift={(current page.north west)},x=1mm,y=-1mm]}
+\newcommand{\PageEnd}{\end{scope}\end{tikzpicture}\clearpage}
+\begin{document}
+\input{chapters/pages.tex}
+\end{document}

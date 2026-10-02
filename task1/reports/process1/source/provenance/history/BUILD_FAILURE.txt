@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "/mnt/data/Process_Report_Final_Source/tools/finish_and_check.py", line 29, in <module>
+    p=run([sys.executable,'tools/audit_report.py']);assert p.returncode==0,p.stdout[-3000:]
+                                                           ^^^^^^^^^^^^^^^
+AssertionError: Traceback (most recent call last):
+  File "/mnt/data/Process_Report_Final_Source/tools/audit_report.py", line 49, in <module>
+    (R/'provenance/artifact_audit.json').write_text(json.dumps(result,ensure_ascii=False,indent=2))
+                                                    ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+          ~~~~~~^^^^^
+  File "/usr/lib/python3.13/json/encoder.py", line 200, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3.13/json/encoder.py", line 261, in iterencode
+    return _iterencode(o, 0)
+  File "/usr/lib/python3.13/json/encoder.py", line 180, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+                    f'is not JSON serializable')
+TypeError: Object of type bool is not JSON serializable
+

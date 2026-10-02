@@ -1,8 +1,8 @@
 # 实验一：轨迹预处理与可核验的 AI 工作流
 
-先看 [本轮非Process收尾入口](../evidence/infrastructure/SC-LAB1-NONPROCESS-CLOSEOUT-001/REVIEW_PACKET.md) 和 [实验一审核索引](evidence/goal3/REVIEW_PACKET.md)。[SYNC-003网页GPT二审承接](../evidence/infrastructure/SC-PROJECT-SOURCES-SYNC-003/external_review/REVIEW_RECEIPT.md)只对应被审89371f6；本轮新提交仍待网页GPT核查。历史实验收尾见 [原收尾回复](evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/FINAL_RESPONSE.md)，其当时状态原样保留。
+先看 [本轮 Process 接管审核入口](../evidence/infrastructure/SC-LAB1-PROCESS-INTEGRATION-SYNC-001/REVIEW_PACKET.md) 和 [实验一审核索引](evidence/goal3/REVIEW_PACKET.md)。[非 Process 收尾](../evidence/infrastructure/SC-LAB1-NONPROCESS-CLOSEOUT-001/REVIEW_PACKET.md)、[SYNC-003 网页 GPT 二审](../evidence/infrastructure/SC-PROJECT-SOURCES-SYNC-003/external_review/REVIEW_RECEIPT.md)与[原实验收尾](evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/FINAL_RESPONSE.md)保留各自被审版本和范围。
 
-技术处理、规定实验、有限候选比较、最终确认及全量结果维持此前范围验收，不重新评为全局最优。用户已确认本对话复盘与25页Experiment；非Process工程可按本轮NC验收单独关闭。Process交给用户指定的另一对话，仍是必需交付，当前为`DELEGATED_NOT_COMPLETED`。整体Deliverable=`FINAL_REVIEW`，现有包=`REVIEW_ONLY`，Submission=`NOT_READY`；最终Process到位后再合并和核验完整包。Understanding保留原`LEARNING`，本轮不新增Understanding/VIVA通过，也未发送教师。
+技术处理、规定实验、有限候选比较、最终确认及全量结果维持此前验收，不重新评为全局最优。用户已验收25页 Experiment 和77页完整 Process；当前报告源均已接入，工程检查见本轮记录。完整 Process 接管不升级逐条 Evidence Lock、Understanding 或 Submission；网页 GPT 本轮二审=`PENDING`，教师提交=`NOT_READY`，未发送教师。旧“委派未完成”和12页状态仅描述历史版本。
 
 ## 作业与报告
 
@@ -14,7 +14,7 @@
 | 教师基础任务完成版 | [作业1轨迹数据预处理_完成版.ipynb](notebooks/final/作业1轨迹数据预处理_完成版.ipynb) |
 | 教师 LLM 系统任务完成版 | [任务3_LLM辅助评估清洗_完成版.ipynb](notebooks/final/任务3_LLM辅助评估清洗_完成版.ipynb) |
 | Experiment Report | [PDF](reports/experiment1/experiment1.pdf) · [当前章节源](reports/experiment1/Experiment_Report.tex)（用户已验收25页） |
-| Process Report | [PDF](reports/process1/process1.pdf) · [XeLaTeX 源](reports/process1/process1.tex)；原稿保持，指定另一对话接续 |
+| Process Report | [PDF](reports/process1/process1.pdf) · [唯一主源](reports/process1/source/main.tex) · [接管说明](reports/process1/README.md)（用户已验收77页） |
 | 技术交接 | [Technical Handoff](docs/goal3/TECHNICAL_HANDOFF.md) |
 | 互动候选索引 | [Interaction Handoff](docs/goal3/INTERACTION_HANDOFF.md)；不代替 Evidence Master 选取或 LOCK |
 | 答辩说明 | [技术说明](docs/goal3/DEFENSE_NOTES.md) |
@@ -23,7 +23,7 @@
 
 教师 PPT 和两份 starter 保持原件。历史 G2 数字、G3 开发/选择、一次最终确认、全部记录生产各保留实验身份。原始输入包含 11,386 条记录、1,173,410 点；记录键不能视为独立用户或完整行程。
 
-本轮只作治理/交接和必要同步验证；以下构建、复算、LIVE命令为已有能力入口，本轮均不执行。既有报告、包、数值和隔离TeX依赖保持。
+本轮只执行报告重建、集成与同步验证，不运行以下 FULL_RECOMPUTE 或 LIVE。已验收数值与历史运行保留原身份。
 
 ## 默认离线复算
 
@@ -43,9 +43,9 @@
 .venv/bin/python -m task1.goal3 REPORT_BUILD --output /tmp/REVIEW_ONLY_实验一_重建.zip
 ```
 
-此入口真实编译用户已验收的Experiment章节源，核对25页/身份/全文与200dpi页面，并将批准PDF原字节放入新REVIEW_ONLY包。Process保持12页技术事实送审稿；不会重生成数值摘要、历史图、Process或执行数值实验。包构建的隔离依赖probe验证冻结输入，输出ZIP须不存在；建议显式使用新具名路径。编译所需隔离依赖、路径与真实构建产物见 [报告工程README](reports/README.md)。
+此入口从两份已验收工作源实际编译 Experiment / Process，并核对全文与200dpi页面，再将批准PDF原字节放入新的 REVIEW_ONLY 包。它不重跑数值实验，不调用模型；输出ZIP须不存在。两条 Process 构建路线、依赖、真实输出和差异见 [报告工程README](reports/README.md)。
 
-本次当前包为 [REVIEW_ONLY_10245102410_吴博闻_实验一_25页报告同步.zip](submission/REVIEW_ONLY_10245102410_吴博闻_实验一_25页报告同步.zip)。数值实现、输入及Notebook按具体成员SHA继承旧实际FULL证据；报告命令入口变更另做隔离回归，不称本轮又执行FULL。历史旧ZIP保留。
+此前 [25页报告同步包](submission/REVIEW_ONLY_10245102410_吴博闻_实验一_25页报告同步.zip)保留历史身份，含旧12页Process，不能作为当前完整双报告包。新的工程验证包为 [完整双报告 REVIEW_ONLY ZIP](submission/REVIEW_ONLY_10245102410_吴博闻_实验一_完整双报告.zip)；教师正式包待网页GPT二审后另行确认。科学执行能力继承对应旧实际证据，本轮不宣称新执行FULL。
 
 LIVE 是另一次真实模型实验，仅在完整 Git 工程和原有合法认证下显式开启：
 

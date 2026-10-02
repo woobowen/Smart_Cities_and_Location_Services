@@ -1,0 +1,53 @@
+{
+  "files": [
+    {
+      "path": "templates/latex/process-report/preview/Process_Report_P2_Locked_v1.pdf",
+      "sha256": "b53d70a8945f10d5911a1f2ea43278172d1df9987f504a97d2b4b392c3688fc0",
+      "matches_initial_git_file": false,
+      "role": "CURRENT_TEMPLATE"
+    },
+    {
+      "path": "templates/latex/process-report/preview/history/Process_Report_P2_Locked_v1_20260929.pdf",
+      "sha256": "3903042ef7935a722d32871a9f55ba973b1262ee0fe290363b0a6c3bda09dcfa",
+      "matches_initial_git_file": true,
+      "role": "PRESERVED_HISTORY_OR_SHARED_PALETTE"
+    },
+    {
+      "path": "templates/latex/common/p2_cloud_sorbet_colors.tex",
+      "sha256": "2aa820c3f68ba6c14cf1b52082b12336071d77bb5466db2b05b2fab6890aa243",
+      "matches_initial_git_file": true,
+      "role": "PRESERVED_HISTORY_OR_SHARED_PALETTE"
+    },
+    {
+      "path": "templates/latex/process-report/demo-assets/interaction_part1.png",
+      "sha256": "1d6c3e2ed9bde522ca16bb81ec939cbaf9bce2f68de08af7ed063211c7d47f34",
+      "matches_initial_git_file": true,
+      "role": "PRESERVED_HISTORY_OR_SHARED_PALETTE"
+    },
+    {
+      "path": "templates/latex/process-report/demo-assets/interaction_part2.png",
+      "sha256": "d35a18ccf7e31ddfc91ebd3c994a619f2da0f32d73c9711566adab085ac9a292",
+      "matches_initial_git_file": true,
+      "role": "PRESERVED_HISTORY_OR_SHARED_PALETTE"
+    },
+    {
+      "path": "templates/latex/process-report/demo-assets/interaction_part3.png",
+      "sha256": "968471b6f483df8d5ea67c1cce0e8400acc6028c620daf259eb5c43429d3d556",
+      "matches_initial_git_file": true,
+      "role": "PRESERVED_HISTORY_OR_SHARED_PALETTE"
+    }
+  ],
+  "actual_200dpi_visual_scope": [
+    3,
+    5,
+    6,
+    7,
+    8
+  ],
+  "initial_issue": "old baked screenshot highlight in live preview pages6-8",
+  "final_findings": "Fixed: plain LaTeX NOT CHAT UI specimen; p5 arrow endpoints clear; p3 structure nodes no collision; p6-8 naturally continued, no old highlighted screenshot assets",
+  "api_source_check": "Read component and template; rg retired3macro and oldasset names returned no references; routed/curved arrow APIs retained",
+  "final_fls_check": "rg oldasset names against actual final .fls returned no references",
+  "lock": "NOT_CREATED",
+  "web_gpt_review": "PENDING"
+}

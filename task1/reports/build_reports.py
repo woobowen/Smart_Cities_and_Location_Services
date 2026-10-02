@@ -1,4 +1,4 @@
-"""Rebuild the accepted Experiment report; Process sources remain untouched."""
+"""Rebuild accepted Experiment and Process reports without executing experiments."""
 from pathlib import Path
 import argparse
 from datetime import datetime, timezone
@@ -169,13 +169,38 @@ def build(evidence, render=False):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--render', action='store_true', help='Compare and preserve every page at 200 dpi.')
+    parser.add_argument('--report', choices=('experiment', 'process', 'all'), default='all',
+                        help='Select accepted report sources; default builds both.')
+    parser.add_argument('--regenerate', action='store_true',
+                        help='Regenerate the accepted Process diagrams/pages before compiling.')
+    parser.add_argument('--render', action='store_true', help='Compare every page at 200 dpi.')
     parser.add_argument('--evidence-output', type=Path, default=DEFAULT_EVIDENCE)
     args = parser.parse_args()
-    receipt = build(args.evidence_output, args.render)
-    print(json.dumps({'status': receipt['status'], 'pages': receipt['reports'][0]['pages'],
-                      'process_report_unchanged': True, 'new_model_calls': 0}, ensure_ascii=False))
+    if args.regenerate and args.report == 'experiment':
+        parser.error('--regenerate applies to the Process source only')
+    selected = ('experiment', 'process') if args.report == 'all' else (args.report,)
+    receipts = {}
+    for name in selected:
+        destination = args.evidence_output / name if len(selected) > 1 else args.evidence_output
+        if name == 'experiment':
+            receipts[name] = build(destination, args.render)
+        else:
+            from task1.reports.build_process import build as build_process
+            receipts[name] = build_process(destination, render=args.render,
+                                           regenerate=args.regenerate)
+    summary = {'status': 'VERIFIED', 'selected_reports': list(selected),
+               'new_model_calls': 0, 'new_method_runs': 0,
+               'receipt_paths': {name: str((args.evidence_output / name if len(selected) > 1
+                                          else args.evidence_output) / 'build_receipt.json')
+                                 for name in selected}}
+    if len(selected) > 1:
+        (args.evidence_output / 'build_receipt.json').write_text(
+            json.dumps(summary, ensure_ascii=False, indent=2) + '\n')
+    print(json.dumps(summary, ensure_ascii=False))
 
 
 if __name__ == '__main__':
+    # Direct file invocation and python -m use the same package imports.
+    import sys
+    sys.path.insert(0, str(ROOT))
     main()

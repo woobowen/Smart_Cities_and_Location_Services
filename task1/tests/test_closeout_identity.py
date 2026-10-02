@@ -19,6 +19,7 @@ def test_identity_survives_regeneration(tmp_path):
     assert write_report_metadata(tmp_path).read_bytes() == expected
     assert b'10245102410' in expected
     assert '吴博闻' in expected.decode('utf8')
+    assert '全文已验收；具体 Evidence Lock 按原记录' in expected.decode('utf8')
 
 
 @pytest.mark.parametrize('invalid', [10245102410, 10245102410.0, '1.024510241e10'])

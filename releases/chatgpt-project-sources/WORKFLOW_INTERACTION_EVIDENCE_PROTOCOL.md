@@ -1,9 +1,9 @@
 # 《智慧城市与位置服务》Workflow Interaction Evidence Protocol
 
-Version: **v2.6**\
+Version: **v2.7**\
 Status: **ACTIVE / LONG-TERM RULE**\
 Purpose: **Process Report · Workflow Construction · Experiment Decision Process · Human–AI Interaction Evidence**  
-Revision: **2026-09-29 · Project-wide live evidence / explicit Evidence Master appointment**  
+Revision: **2026-10-02 · Real user-UI openings / native captures / arrow-only evidence audit**  
 Canonical repository path: `docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md`
 
 本协议专门约束：真实历史恢复、原始聊天取证、Narrative规划、Evidence设计、最小必要编辑、对话精修/重构、Simulation执行、原始研究对话证据采集、截图、审核、Evidence Lock、Block/Section级LaTeX同步与最终综合图制作。
@@ -255,7 +255,7 @@ Canonical repository path: `docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PR
 
 ### 5.1 用户职责
 
-用户只负责：
+用户负责原生取证：
 
 > **保存原生、完整、真实的ChatGPT Web截图。**
 
@@ -274,6 +274,9 @@ Canonical repository path: `docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PR
 - 关键Evidence附近保留必要上下文；
 - 保存原始文件；
 - 不覆盖raw截图。
+
+用户可以自愿使用ShareX等工具进行长截图与图片分割；“不要求用户自行裁切”不是禁止提交已经分割的原生图片。收到长图和分割图时，保存两者及其对应关系；仅收到分割图时，如实记录当前可用原件，不伪造缺失的整张长图。正式取舍、裁切规格、排版与标注仍由Evidence Master负责。
+
 
 ### 5.2 Evidence Master职责
 
@@ -297,15 +300,19 @@ Evidence Master负责：
 
 ### 5.3 Retrieval Screenshot / Formal Evidence Screenshot
 
-Retrieval Screenshot 可以长滚动，用于历史检索、恢复上下文与寻找 Decision Unit，不默认直接进入正式报告。
+Retrieval Screenshot 可以长滚动，用于历史检索、恢复上下文与寻找 Decision Unit。原生长截图及用户提供的分割图，只要保留真实UI、必要上下文且最终可读，可经无损裁切与分页用于正式Evidence；不因其属于长截图就要求重新模拟或另截一遍。
 
-Formal Evidence Screenshot 使用正常可读浏览比例、高清原生截图、足够宽度；一张只需覆盖当前 Interaction Window，宁可多张，不压缩成一张，PNG preferred，raw 必须保留。用户只保存原生 raw；Evidence Master 负责 selection、crop、pagination、annotation、caption、LaTeX placement、audit、lock。
+Formal Evidence Screenshot 以真实、可读的ChatGPT Web UI为基础；一张覆盖当前Interaction Window或其连续片段，宁可多张，不将长聊天压缩到一页。PNG preferred，保留原图宽高比和像素，不规定跨任务统一的最低宽度。按Visual System §8.7安排截图主导的版面；Evidence Master负责selection、crop、pagination、annotation、caption、LaTeX placement、audit、lock。
 
 ### 5.4 Resolution / Image Integrity
 
 正式清晰度来自 raw 本身。记录 raw pixel size、final display size、effective PPI；裁切时同时记录 crop pixel size 与 crop bounds。有效 PPI = 实际显示区域的像素数 / 最终物理尺寸（英寸），横纵分别计算，取较小值；不能用整张 raw 的像素数除以局部 crop 的尺寸。
 
-原则为 **>= 180 ppi，preferred >= 200 ppi**。不足时减小显示尺寸、拆页或重新截图；仍不足则 `RECAPTURE_REQUIRED`，不得 LOCK。
+常规目标为 **>= 180 ppi，preferred >= 200 ppi**，同时检查最终页面中的实际可读性。新素材优先通过合理显示尺寸、无损裁切和拆页改善；未获明确原宽批准且仍无法达到适用清晰度条件时，记录 `RECAPTURE_REQUIRED`，暂停该证据的Lock并说明需要补取的具体范围。
+
+**已批准原宽素材。**用户明确允许使用现有截图宽度，并已审核真实样页或成品效果时，可以在该素材与版式范围内记录 `APPROVED_NATIVE_WIDTH` 后继续制作。保留实际PPI、原件/裁片标识、批准来源及对应样页，不将其写成达到了更高PPI，也不反复要求用户加宽重截。后续无需因同一原宽再次请求批准；版式发生影响可读性的变化时检查受影响页面。
+
+该批准只解决现有真实素材的显示宽度/分辨率取舍，不免除来源、原话、上下文和箭头关系的检查。关键文字确实无法辨认时先调整裁切、分页与侧注，仍无法恢复则登记具体缺项；不得猜写原句或用另一条消息替代。页面按200 dpi渲染仅用于检查，不增加截图原始细节。
 
 禁止 low-res screenshot upscale、AI super-resolution 替代原图、generative redraw of ChatGPT UI、反复重采样后放大、fake sharpening、为塞进一页缩小到不可读。
 
@@ -316,6 +323,27 @@ Formal Evidence Screenshot 使用正常可读浏览比例、高清原生截图�
 推荐：**raw PNG → lossless crop / LaTeX trim → direct embed → vector annotation**。LaTeX trim 可保留 raw 文件并以可追溯的裁切参数表达 crop 层。
 
 禁止：raw → downsample → raster annotation → enlarge。
+
+原始取证图、用户分割图、正式裁片与叠加层分别标识。裁片对应来源文件、顺序、像素边界和必要重叠；跨页保留连续关系。不得把旧LaTeX/PDF报告页面渲染成图后当作原始对话截图，也不得把不连续的裁片拼成一条未经标明编辑的“完整原消息”。正文整理或L2—L5的文本处理不授权改写原始UI像素；回顾/重构材料保持其明确身份。
+
+### 5.6 每个新互动板块的真实用户UI入口
+
+每个新的互动部分/板块，起始部分必须包含对应的真实用户消息UI截图；不能只有GPT回答，也不能用正文、引语框、人工排字或技术图来代替用户UI。标题和简短导语之后直接接这组证据，避免标题单占一页。
+
+此要求作用于新的互动板块，而不是要求每一张续页重新贴一次用户消息。一个Decision Unit跨多页时，第一页展示用户原话及必要回应，后续页按连续关系承接。若用户消息依赖上一条GPT内容，允许在起始截图中按真实顺序一并保留前文；“用户可见”不等于把用户消息移到真实发生顺序之前。
+
+缺少对应用户原件时，先检索已有素材、同组长图、分割图及相邻上下文；仍缺失则登记该板块缺项，不能用不相关的用户话语、报告截图或补写聊天凑齐。封面、目录及单纯综合图页不作为独立互动板块，亦不代替该板块的用户UI入口。
+
+### 5.7 开篇的真实截图采集说明
+
+Process Report开篇用一句话如实说明本次截图由谁采集、实际使用的工具/分割方式，以及AI在本次协作中的取证能力与制作职责。说明出现一次即可；详细来源映射保留源包，个别证据有不同来源或复盘性质时另行标明。
+
+本次已验收Process成品的用户确认原句为：
+
+> 文档中的所有对话截图，都是我在 ChatGPT 网页中通过sharex软件利用长截图一张一张手动截取然后再利用图片分割器功能一张张切割并提供的；在本次协作中，GPT 没有直接截取我的网页对话界面的功能。
+
+这句保留为该成品的采集说明。未来任务按真实工具与能力填写，不强制使用ShareX，不把“本次协作中”的工具能力限定扩展为永久事实。采集说明与前言衔接按Report Writing Guide §12执行，不扩写为反复出现的制作免责声明。
+
 
 ---
 
@@ -768,7 +796,7 @@ Framework / Block只能用于编辑组织，不是历史来源。
 
 > “一条规则 = 一节 / 一页”。
 
-多个相关 Decision Unit 应在不改变真实顺序和因果的前提下合并为一个自然叙事板块。
+多个相关 Decision Unit 应在不改变真实顺序和因果的前提下合并为一个自然叙事板块。新互动板块的用户UI入口按§5.6执行，标题与截图同页、侧注比例和箭头排版按Visual System执行。
 
 ### 16.3 报告改写与证据原文的边界
 
@@ -868,6 +896,8 @@ Framework / Block只能用于编辑组织，不是历史来源。
 
 > **我们后来怎样加工这些截图。**
 
+开篇依§5.7保留一句真实采集说明即可；它不要求把具体截图加工日志写成独立研究章节。
+
 ### 18.4 两份报告的技术重叠不等于叙事复制
 
 同一个技术事实可以进入两份报告，但作用不同：Experiment Report说明方法、比较和结果为何支持取舍；Process Report说明这些问题怎样在真实互动中被发现、判断和验证。
@@ -959,7 +989,7 @@ GPT原回复默认：
 - 避免截断关键句；
 - 保留最终确认。
 
-版式系统应适应真实Evidence，而不是强迫真实Evidence适应单页。
+版式系统应适应真实Evidence，而不是强迫真实Evidence适应单页。新互动板块首先落实§5.6的用户UI入口；续页明确承接，不机械重复用户气泡。截图主体与简短侧注的配比、标题随首图排布及箭头留白按Visual System §8.7执行。
 
 ---
 
@@ -998,12 +1028,12 @@ GPT原回复默认：
 
 优先通过视觉表达解决：
 
-- highlight用户关键句；
-- annotation；
-- Human Reasoning → Evidence → Decision；
-- 页面节奏；
--截图分段；
-- caption。
+- 保留真实用户UI入口，让用户关键句充分可见；
+- 以精确箭头指出有依据的对应关系；
+- 必要的Human Reasoning → Evidence → Decision局部图；
+- 截图主导的页面节奏；
+- 截图分段；
+- 简短caption。
 
 不得通过删掉重要GPT内容来人为制造“用户贡献”。
 
@@ -1029,69 +1059,37 @@ Trace Relation 可记录 RESPONDS_TO、CHALLENGES、CORRECTS、REJECTS、SELECTS
 
 允许真实 one-to-one、one-to-many、many-to-one；每根箭头都必须有原文语义依据，时间相邻本身不构成关系。不得为了对称强行给每个 User phrase 配上下两条箭头。
 
-### 24.3 Exact Phrase Highlight / Long Arrow / Side Note
+### 24.3 Exact Phrase / Arrow Only / Side Note
 
-优先 phrase-level highlight、short rounded outline、underline、local translucent fill、small numbered anchor，不默认把整条 message bubble 画成大框。用户原句保持视觉中心。
+对真实对话截图采用 **ARROW_ONLY**：只用精确矢量箭头表示对应关系，不加荧光圈、彩色框、半透明填充、下划线或圈号覆盖聊天。原生UI自带的元素保持原样；独立技术图正常使用的节点与边框不受此截图标注规则限制。
 
-每一个框 / highlight 在制作前都必须对应一个明确的 **Evidence Claim**：
+每根箭头制作前明确：它支持什么Evidence Claim、对应哪一处真实原句、关系是什么、箭头从哪里指向哪里。区分“原句之间的真实回应/修正关系”和“侧注指向原句的阅读提示”，后者不能伪装成历史因果。
 
-- 这段原文具体证明什么；
-- 为什么需要框这一句或这些词；
-- 框内是否混入与该Claim无关的文字。
+仍采用最小充分的**语义范围**：只指向证明该Claim所需的原句位置，而非重新画一个最小框。箭头端点落在目标短语紧邻的留白或明确指向该短语；不能只停在消息外框、页面边缘或不相干空白。起点、终点与方向均须可解释。
 
-框选采用 **minimum sufficient scope**：
+箭头优先沿截图外侧、栏间和局部留白走线，不压字，避免大量交叉、任意分叉和装饰性绕线。关系过密时拆页或减少无新增信息的标注，不删去关键原话来腾空间。不为凑数量给每个用户短语强配两根箭头。
 
-> **刚好覆盖能够证明该Claim的最小必要原文范围，同时不切断字形、标点或必要语义。**
+Side Note简短说明我的要求或判断、GPT的回应变化及必要后续意义；不长篇复述截图，不抢占截图的主要版面。约40—80汉字为通常参考，不是每页固定字数。具体截图/侧注比例、P2箭头颜色和页面密度统一按Visual System §8.7执行。
 
-禁止为了绘制方便：
+采用raw/crop图片直接嵌入及可编辑TikZ/PDF矢量箭头。截图、裁切规格、箭头层和正文分开维护，不能将整页报告栅格化后复用为新的Evidence原件。
 
-- 把整段消息默认框住；
-- 把前后无关行一起框入；
-- 用大色块代替精确phrase；
-- 因为框的位置方便接箭头而扩大Evidence范围。
+### 24.4 Render-Level User UI / Phrase / Arrow Verification
 
-只有当整个 message bubble / paragraph 本身确实都是 Evidence 对象时，才允许整段框选。
+annotation specification通过后，必须在实际XeLaTeX/PDF render中检查最终效果：
 
-每根长箭头起终点对准具体 phrase，有文本支持，优先沿留白/边缘，避免遮挡和大量交叉，太密就拆页。禁止笼统“大框 → 短箭头 → 大框”，除非整个 bubble 确实就是 Evidence 对象。
+- 新互动板块的起始部分是否真正出现对应用户UI，续页是否明确承接；
+- 原句及必要上下文是否可读，有无截断字形、缺失句尾或编辑性拼接歧义；
+- 截图是否为视觉主体，侧注是否过多，标题是否与首组证据衔接；
+- 是否仍存在荧光圈、框、填充或其他覆盖原话的旧标注；
+- crop / scaling / placement变化后，箭头起终点是否仍对准批准短语；
+- 箭头方向与关系是否准确，是否压字、交叉混乱或看似指向另一句话；
+- 原图、裁片、最终显示尺寸和实际PPI是否对应，原宽例外是否有明确批准。
 
-箭头端点必须落在目标 phrase 的边界附近或明确指向该 phrase，不得只落到：
-
-- 整个 message bubble 边缘；
-- 大框任意位置；
-- 与目标文本无关的留白区域。
-
-Side Note 只回答用户做了什么、GPT 后面发生了什么、必要时这一步后来为何重要；不复述截图、不重写正文，一般约 40–80 个汉字，核心页可适当更长。
-
-正式报告推荐 raw/crop PNG 直接嵌入，配 TikZ / PDF vector highlight、anchor、number、long arrow、side note、provenance label。不得把 annotation 栅格化进低清图片后再放大。颜色与页面密度以 Visual System 第 8 节为准。
-
-### 24.4 Render-Level Box / Arrow Verification
-
-annotation specification 通过后仍不能直接视为正确。
-
-必须在实际 XeLaTeX / PDF render 后逐页重新核对：
-
-- box 是否真正覆盖批准的 exact phrase；
-- box 是否多包含了无关文字；
-- box 是否漏掉必要词、标点或换行后的句尾；
-- line wrapping / crop / scaling 后框的位置是否仍准确；
-- long arrow 起点是否来自批准的 source phrase；
-- long arrow 终点是否明确落到批准的 target phrase；
-- 箭头是否遮挡正文；
-- 视觉上是否存在“看起来像指向另一句话”的歧义。
-
-内部至少记录：
-
-- `PHRASE MATCH: PASS / REVISE`
-- `BOX RANGE: PASS / REVISE`
-- `ARROW RELATION: PASS / REVISE`
-- `ARROW ENDPOINT: PASS / REVISE`
-- `SOURCE RESOLUTION: PASS / RECAPTURE`
-
-`BOX RANGE` 任一 `REVISE` 与其他关系项失败一样，均不得 Evidence Lock。
+审核字段和结果取值由§30.H统一定义，不维护另一套Box检查表。旧版本的BOX RANGE记录按历史保留；当前箭头页不要求重新制作圈框来通过旧测试。无法支持的关系或无法辨认的关键原句，应修订或补证后再Lock。
 
 ### 24.5 Decision Authority
 
-Evidence Master 决定 highlight、圈选范围、User anchor、GPT before/after、phrase 关系、turn 调序、Evidence 入选与用户文本编辑。Codex 只能根据批准的 Evidence Plan / annotation specification 精确实现，不自行推断、扩大框选或补造关系；缺少 specification 时停止受影响真实页面。模板 synthetic demo 不构成真实 Evidence 或批准关系。
+Evidence Master决定用户UI入口、User anchor、GPT before/after、phrase关系、箭头语义与对应位置、turn调序、Evidence入选与原文整理规格。Codex只能按批准的Evidence Plan / annotation specification实现裁切、走线与排版，不自行推断、补造关系或恢复圈框。缺少specification时暂停受影响的真实页面；模板synthetic demo不构成真实Evidence或批准关系。
 
 ### 24.6 技术核验图与Human–AI Evidence图区分
 
@@ -1281,7 +1279,7 @@ Research Conversation可以轻量记录：
 是否改变真实历史。
 
 ### B. User Authenticity
-是否像用户本人。
+是否来自对应的真实用户UI、是否保持本人原话与语气；新互动板块的起始部分是否满足§5.6，而非只出现文字复述。
 
 ### C. GPT Fidelity
 GPT回复是否符合真实角色和Decision。
@@ -1290,7 +1288,7 @@ GPT回复是否符合真实角色和Decision。
 是否证明有价值Decision。
 
 ### E. Visual Usability
-长度、重点、裁切和阅读体验。
+长度、重点、裁切与续页是否清楚；按Visual System检查截图主体、简短侧注、标题衔接、箭头准确和实际阅读体验。
 
 ### F. Provenance
 标记：
@@ -1316,17 +1314,23 @@ GPT回复是否符合真实角色和Decision。
 
 ---
 
-### H. Phrase / Arrow Audit
+### H. User UI / Phrase / Arrow / Readability Audit
 
-Screenshot Audit 必须新增逐条结果：
+Screenshot Audit按实际对象逐项记录，取值统一为：
 
+- `USER UI ENTRY: PASS / REVISE / CONTINUATION`
+- `ANNOTATION MODE: ARROW_ONLY / NONE`
 - `PHRASE MATCH: PASS / REVISE`
-- `BOX RANGE: PASS / REVISE`
-- `ARROW RELATION: PASS / REVISE`
-- `ARROW ENDPOINT: PASS / REVISE`
-- `SOURCE RESOLUTION: PASS / RECAPTURE`
+- `ARROW RELATION: PASS / REVISE / NOT_APPLICABLE`
+- `ARROW ENDPOINT: PASS / REVISE / NOT_APPLICABLE`
+- `PAGE READABILITY: PASS / REVISE`
+- `SOURCE RESOLUTION: PASS / APPROVED_NATIVE_WIDTH / RECAPTURE_REQUIRED`
 
-检查 User highlight 准确、box只覆盖批准的minimum sufficient phrase、GPT before 确为被回应原句、GPT after 确为采纳/修改后原句、箭头不是仅因时间相邻、端点准确、无正文遮挡、无歧义、PPI 足够。`RECAPTURE` 阻止总审核通过；前四项任一 REVISE 同样不得 LOCK。未设计箭头的 Contact Sheet 记录“无箭头，检查不适用”的依据，不虚构关系；仍需来源、box范围及可读性检查。
+检查对应用户原话确在起始UI截图中；GPT before/after确为有关原句；箭头具有语义依据且端点、方向准确；没有圈框、压字和错误裁切；实际页面的截图、侧注、标题和续页可读。`CONTINUATION`只用于承接已建立用户入口的续页，并记录其起始页；不能用于没有用户UI的新板块。
+
+没有设计箭头的Contact Sheet或未标注裁片，记录`ANNOTATION MODE: NONE`及不适用依据，不虚构关系或通过记录；若出现旧圈框/高亮则页面检查为`REVISE`。`APPROVED_NATIVE_WIDTH`须满足§5.4的明确批准、实际尺寸/PPI和可读性检查，不能作为来源或原话真实性的豁免。
+
+任一适用项`REVISE`或`RECAPTURE_REQUIRED`均阻止该Evidence的总审核通过与Lock。符合条件的原宽批准可与其他检查一起进入Evidence Master审核，不再机械要求补截更宽原图。旧BOX RANGE/高亮检查只作为历史记录保留，当前新审查不再以圈框范围为门槛。
 
 ---
 
@@ -1359,6 +1363,9 @@ Screenshot Audit 必须新增逐条结果：
 - Evidence / Verification
 - Final Decision
 - Raw Screenshot
+- User UI Entry Screenshot / Opening Page
+- Capture Method / Supplied Split Images / Available Parent Capture
+- Crop / Split Source Mapping
 - Cropped Screenshot
 - Annotated Screenshot
 - Suggested Caption
@@ -1370,11 +1377,13 @@ Screenshot Audit 必须新增逐条结果：
 - GPT Before Phrase(s)
 - GPT After Phrase(s)
 - Trace Relation(s)
-- Phrase/Box/Arrow Audit Result
+- User UI / Phrase / Arrow / Readability Audit Result
 - Raw Screenshot Pixel Size
+- Crop Pixel Size / Bounds
 - Final Display Size
 - Effective PPI
-- Annotation Medium
+- Native-Width Approval / Applicable Sample or Page（若适用）
+- Annotation Medium / Mode
 - Status: LOCKED
 
 ---
@@ -1520,12 +1529,14 @@ Evidence Master负责逻辑维护；需要正式写入仓库时交由Codex或用
 - 正式正文是否使用第一人称研究复盘口吻；
 - 是否把内部 Block / Evidence ID 误当成正式章节；
 - 多个相关Decision是否已经聚合为自然Narrative Section；
-- 每个highlight / box是否仍是minimum sufficient scope；
-- 每根箭头在最终render中是否准确指向批准phrase。
+- 新互动板块是否有真实用户UI入口，标题是否接首组证据；
+- 截图主体和侧注是否符合批准版式，是否已移除旧圈框/高亮；
+- 每根箭头在最终render中是否准确指向批准phrase；
+- 原宽批准、实际可读性和源图/裁片映射是否仍适用。
 
-接管已验收的局部/完整文稿时，保护对应源码、原图、批准规格与PDF版本；不得让旧模板或生成器把第一人称改回“用户”，或重新按Block机械拆章。影响已锁短语、框选、关系或呈现的变更需重新审核相应范围；纯外围文字调整也应核查是否改变分页与引用，不自动重开无关实验。
+接管已验收的局部/完整文稿时，保护对应源码、原图、批准规格与PDF版本；不得让旧模板或生成器把第一人称改回“用户”、恢复旧圈框、缩窄截图或重新按Block机械拆章。影响已锁短语、用户UI入口、箭头关系或呈现的变更需重新审核相应范围；纯外围文字调整也应核查是否改变分页与引用，不自动重开无关实验。
 
-已提供的前期Process PDF/源包可作为相应阶段参考，不能凭文件名推定每条Evidence已Lock，更不能覆盖后期尚未完成的Experiment Decision Process。已有真实材料先查找再列缺项，不因另一个工程环境没有副本就声称全部原件不存在。
+已验收的完整Process PDF/源包与较早的局部前期参考，按Visual System §16分别登记当前成品和历史身份；复用正文与制作方式时保留原证据来源及实际Lock范围。较早文件不覆盖新版已验收的呈现方式，也不能凭文件名推定逐项Lock。已有真实材料先查找再列缺项，不因另一个工程环境没有副本就声称全部原件不存在。
 
 ---
 
@@ -1634,7 +1645,7 @@ Part II：
 2. **Raw Original优先于任何精修版本。**
 3. **能裁切不改写，能多页不压缩。**
 4. **长是版式问题；乱是Narrative问题，两者分开处理。**
-5. **用户只负责保存原生截图，裁切、排版、annotation和LaTeX由Evidence Master负责。**
+5. **用户负责保存真实原生截图，可自愿提供长图分割件；正式裁切规格、排版、annotation和LaTeX呈现由Evidence Master负责。**
 6. **Research Conversation负责产生真实Evidence。**
 7. **Evidence Master负责筛选、整理、裁切、审核和Lock。**
 8. **Simulation Conversation只执行必要的Approved Retrospective Script。**
@@ -1662,5 +1673,5 @@ Part II：
 30. **Process Report呈现真实决策演化，不制造一个更漂亮但不真实的历史。**
 31. **Process Report正文默认使用“我”的第一人称研究复盘口吻，不写成第三方项目审计。**
 32. **内部Evidence Unit / Block用于生产管理，正式章节按自然研究故事聚合。**
-33. **每一个框都必须对应明确Evidence Claim，并采用minimum sufficient scope。**
-34. **每根长箭头必须在最终render中准确连接批准的source phrase与target phrase。**
+33. **每个新互动板块以真实用户UI为入口；截图标注采用纯箭头，每条对应关系均有明确Evidence Claim和最小充分原句依据。**
+34. **每根箭头必须在最终render中准确指向批准原句；原句之间的真实关系与侧注阅读提示分别标明。**

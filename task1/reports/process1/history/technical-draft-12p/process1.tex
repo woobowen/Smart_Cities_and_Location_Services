@@ -1,0 +1,277 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[UTF8,fontset=none]{ctex}
+\usepackage{fontspec}
+\setmainfont{DejaVu Serif}
+\setsansfont{DejaVu Sans}
+\setCJKmainfont{Noto Serif CJK SC}
+\setCJKsansfont{Noto Sans CJK SC}
+\setCJKmonofont[Extension=.otf]{FandolFang-Regular}
+\usepackage[a4paper,top=18mm,bottom=19mm,left=18mm,right=18mm]{geometry}
+\usepackage{graphicx,booktabs,tabularx,array}
+\usepackage{amsmath,amssymb}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{caption}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage[most]{tcolorbox}
+\usepackage{microtype}
+\usepackage{tikz}
+\usetikzlibrary{positioning,arrows.meta,calc,fit}
+
+\input{../../../templates/latex/common/p2_cloud_sorbet_colors.tex}
+\input{components/interaction_evidence.tex}
+
+\pagecolor{Paper}
+\color{Ink}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=C1,
+  urlcolor=C1,
+  citecolor=C4
+}
+
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.24em}
+\linespread{1.17}
+
+\titleformat{\section}[hang]
+  {\sffamily\bfseries}
+  {\fontsize{26}{26}\selectfont\color{C1}\thesection}
+  {0.68em}
+  {\Large}
+
+\titleformat{\subsection}
+  {\sffamily\large\bfseries\color{Ink}}
+  {\thesubsection}
+  {0.55em}
+  {}
+
+\titlespacing*{\section}{0pt}{1.85em}{0.75em}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\sffamily\small\color{Muted}SMART CITIES \& LOCATION SERVICES}
+\fancyhead[R]{\sffamily\small\color{Muted}Process Report}
+\fancyfoot[C]{\sffamily\small\color{Muted}\thepage}
+\renewcommand{\headrulewidth}{0pt}
+
+\captionsetup{
+  font=small,
+  labelfont={bf,sf,color=Ink},
+  textfont={color=Ink},
+  skip=5pt
+}
+
+\newtcolorbox{contextbox}{
+  enhanced,
+  boxrule=.45pt,
+  colframe=Rule,
+  colback=Panel,
+  left=4mm,
+  right=4mm,
+  top=2.4mm,
+  bottom=2.4mm,
+  arc=1mm
+}
+
+\newtcolorbox{decisionbox}[1][C4]{
+  enhanced,
+  boxrule=.45pt,
+  colframe=Rule,
+  colback=Panel,
+  borderline west={2.6pt}{0pt}{#1},
+  left=4mm,
+  right=4mm,
+  top=2.4mm,
+  bottom=2.4mm,
+  arc=1mm
+}
+
+\newcommand{\semantic}[2]{%
+  \tikz[baseline=-.6ex]
+  \node[
+    rounded corners=1.4pt,
+    inner xsep=4pt,
+    inner ysep=1.4pt,
+    fill=#1!68!white,
+    text=Ink,
+    font=\sffamily\scriptsize\bfseries
+  ]{#2};%
+}
+
+\usepackage{url,etoolbox}
+% Flexible vertical space lets TeX choose a break without testing stale page totals.
+\newcommand{\reportsectionroom}{\par\begingroup\dimen0=6\baselineskip\relax\vskip0pt plus\dimen0\penalty-100\vskip0pt plus-\dimen0\vskip\dimen0\penalty9999\vskip-\dimen0\vskip0pt\endgroup}
+\pretocmd{\section}{\reportsectionroom}{}{}
+\clubpenalty=10000\widowpenalty=10000
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\setlength{\emergencystretch}{2em}
+\input{../metadata.tex}
+\hypersetup{pdftitle={实验一：Human–AI 工作流与实验决策},pdfauthor={\StudentName{} / \StudentID{}},pdfsubject={Process Report；互动证据待补送审稿}}
+\input{../history_values.tex}
+\begin{document}
+\hypersetup{pageanchor=false}
+\begin{titlepage}\thispagestyle{empty}\vspace*{25mm}
+{\sffamily\small\color{C1}\bfseries SMART CITIES \& LOCATION SERVICES}\par
+\vspace{5mm}{\sffamily\fontsize{27}{32}\selectfont\bfseries Process Report}\par
+\vspace{3mm}{\Large 实验一：Human--AI 工作流与实验决策过程}\par
+\vspace{12mm}\noindent\color{Rule}\rule{\linewidth}{.8pt}\color{Ink}\vspace{10mm}
+\begin{tabular}{@{}>{\sffamily\color{Muted}}p{29mm}p{113mm}@{}}
+姓名 / 学号 & \StudentName{} / \StudentID{} \\
+课程 & 智慧城市与位置服务 \\
+内容结构 & Workflow Construction + Experiment Decision Process \\
+事实来源 & 原始授权文本、真实角色与工具记录、真实处理结果 \\
+版本状态 & \ProcessStatus{} \\
+修订日期 & \ReportDate{}
+\end{tabular}
+\vfill\noindent\color{P1}\rule{.30\linewidth}{3.2pt}\color{P2}\rule{.22\linewidth}{3.2pt}\color{P3}\rule{.24\linewidth}{3.2pt}\color{P4}\rule{.12\linewidth}{3.2pt}\par
+\vspace{5mm}{\small\color{Muted}当前文档交付可核实的过程正文。真实聊天截图、Evidence Master 批准呈现方案及 Evidence Lock 尚缺，相关页面明确待补；没有重建聊天界面、假冒用户逐项判断或把内部审核作为用户批准。}
+\end{titlepage}\hypersetup{pageanchor=true}
+\begingroup\small\linespread{1.02}\selectfont\tableofcontents\endgroup\clearpage
+
+\section{如何阅读这份过程记录}
+\begin{contextbox}
+\textbf{两层内容承担不同问题。} Workflow Construction 说明输入、权限、实验执行、审核和恢复怎样组织；Experiment Decision Process 说明具体参数、顺序、候选和运行方式为什么继续、拒绝或保留。技术报告给出完整数学方法与结果，本报告解释这些决定所依据的真实过程。
+\end{contextbox}
+
+实验不是从一组参数直接走到最终结论。早期需要明确未知坐标来源和方向删除调度，随后完成固定参考实现、参数实验、顺序实验、四模式与示范记忆。G3 再依据历史证据补证、组合、选择、确认并全量处理。G1、G2、G3 是同一次实验一的工程阶段，不是三个课程实验。
+
+本报告区分三类事实。用户原话与明确授权只能从保存的消息文本中提取；模型建议来自实际响应与其处理回执；自治决定来自用户预先批准规则下的系统裁决。三者不能互换。当前用户转交了 G1/G2 已获网页 GPT 阶段验收的事实，因此登记为转交的阶段接受记录；仓库没有对应网页工具日志或截图，不补造附件。
+
+\begin{table}[H]\centering\small\caption{目前可用的过程材料及其边界。}\begin{tabularx}{\linewidth}{@{}p{30mm}Y Y@{}}\toprule 材料 & 可以支持 & 不能支持 \\ \midrule
+G1 授权补充与两条答复 & 条件化工作坐标、D2 一次标记同时删除的真实授权 & 每条历史参数都由用户逐项选择 \\
+G2 与 G3 用户原始任务文本 & 当前阶段范围、指标边界、授权内自动裁决 & 历史逐字聊天、没有保存的 Human Judgment \\
+真实角色与工具记录 & A/B/C 子任务、实际调用、问题、修复、产物与恢复 & 用户曾读懂某算法、用户已批准某截图裁切 \\
+G2 Provider response 与 trace & 该历史实验实际保存的原话、参数、执行与评价 & 不能替代未取得的完整历史聊天或真实噪声标签 \\
+模板中的聊天样式素材 & 版式参考 & 真实互动证据 \\
+\bottomrule\end{tabularx}\end{table}
+
+\part*{第一层：Workflow Construction}
+\addcontentsline{toc}{part}{第一层：Workflow Construction}
+
+\section{把不确定的输入变成明确的执行边界}
+\subsection{未知事实与执行授权分别保存}
+来源事实没有证据时仍保留未知。用户可以批准在明确假设和限定结论下继续分析，但执行许可不能被当成事实证明。工作流因此分别保存“已经知道什么”“批准在什么条件下计算”和“仍不能声称什么”，不通过重复运行或看起来更好的结果填补来源信息。具体技术条件和原始授权见第~\ref{sec:technical-authorization}~节。
+
+\subsection{会影响结果的处理语义先固定}
+对会改变结果的计算语义，先保存完整批准文本与可执行合同，再开展正式处理。执行阶段不能按输出效果倒选定义，也不能把内部复验记作新的用户批准。这个原则对后续参数实验和工程修复共同适用；本实验中的具体语义、授权和历史执行结果统一放在第二层。
+
+\subsection{当前授权支持规则内自动决定}
+G3 用户明确授权在已研究参数域、固定保护与有限候选预算内自主补证、比较、回退、简化和冻结。普通实现缺陷由主线程修复并独立复验；改变目标、指标定义、坐标基准或新增研究方向仍超出授权。内部 C 检查机器合同是否与授权一致，不被登记为新用户批准。
+
+\section{治理角色、处理工具与控制器怎样分工}
+\begin{table}[H]\centering\small\caption{实际工作流的责任边界。角色不是一条模型回答中的模拟三方对话。}\begin{tabularx}{\linewidth}{@{}p{22mm}Y Y@{}}\toprule 角色 & 实际工作 & 不能代替的职责 \\ \midrule
+A 诊断与候选 & 读可访问开发证据，提出有来源、父方案、单一主要变更和裁决条件的 TaskPlan；判断后续机会或停止理由。 & 不看隔离最终反馈调参，不改原始数据或指标定义。 \\
+B 执行与修复 & 固定代码和配置下运行，保存处理、评价、图与报告；故障时复现、定位、修复并重建受影响产物。 & 运行时不热改合同；修复者不自己宣布争议问题独立关闭。 \\
+C 独立核验 & 从可信原始范围和合同核对身份、参数、阶段、数学、指标、产物与复现；给出具体对象与范围。 & 不改候选、不降低门槛；内部工程验收不代替用户判断。 \\
+确定性控制器 & 管理任务、依赖、权限、预算、哈希、审核目标、修复状态与恢复检查点。 & 不是第四个 LLM；不能靠任务数或文件数宣布研究成功。 \\
+主线程 & 消费 C 问题，分派并收回修复证据，恢复父任务，推进完整交付。 & 不能只生成下一份提示词，把本轮普通缺陷留给另一会话。 \\
+\bottomrule\end{tabularx}\end{table}
+
+治理使用 LLM 与记录级处理是否需要 LLM 是两个问题。G2 Search only 的记录决策模型调用为零，外部 A/B/C 的治理成本另记；最终若选择统一确定性配置，也不抹去工作流在研究、核验和修复中的实际参与。反过来，治理出现模型不能被解释为 Search only 得到了模型提示收益。
+
+\section{真实缺陷如何进入修复与恢复}
+以下挑选的工程事实用于解释可靠性如何形成；它们不是虚构的用户争论，也不是为了“展示修复能力”制造的数据错误。测试中人为篡改用于验证拒绝能力，与生产中自然暴露的问题分开登记。
+
+\subsection{模型输入绑定错误导致受影响运行失效}
+G2 独立 C 发现 13 个记录的 \texttt{round.context\_hash} 与实际保存的第 2、3 轮上下文不一致，根因是既往提议列表的可变引用。被查批次中的实际输入、响应与数值日程仍匹配，但哈希不能可靠绑定，影响可追踪性。
+
+主线程中断受影响运行，保留 15 次实际请求回执，其中 14 次完成、1 次中断。修复后固定新源码版本 \texttt{c1c627260671}，独立 C 复验，再重新执行依赖任务。59$\times$120 参数、6$\times$120 顺序和 20$\times$60 示范搜索合计 9,000 个记录--候选配对的新旧数学结果完全一致；重建是恢复依赖，不是 9,000 次新的独立实验。之后的真实四模式使用新运行身份，旧调用不改名为新 LIVE。
+
+\begin{decisionbox}
+\textbf{这次修复的作用。} 它使“模型看到什么、提出什么、用哪份代码执行、哪份审核关闭问题”能够精确对应。数学结果没变并不意味着可以保留错误绑定；同时，修复通过也不能画成数据质量提升。
+\end{decisionbox}
+
+\subsection{审核对象不匹配时不直接关闭父任务}
+G2 参数评估提交了 manifest、执行记录与自检记录，但第一份 C 回执没有绑定全部提交日志。控制器实际拒绝目标不匹配。主线程保留原目标，C 补查命令、日志、时间、源码和资源，并验证旧回执被拒绝、新回执可接收，然后恢复参数与顺序父任务。处理数值没有被改动；问题属于审核覆盖范围。
+
+这件事使“有一份 PASS 文件”与“当前全部待审对象已经被核验”明确分开。C 回执需要包含实际对象哈希、可信参考、已检查/未检查内容和关闭条件，不能由 B 的总结替代。
+
+\subsection{空值叙述、Notebook 和图形修复}
+真实 AI 批判的早稿把丢失参考覆盖后的不可计算误差与“误差恶化”并列。C 指出这个表述可能让人把 null 当成数值。B 只改解释，补充丢失的 11 个覆盖身份与不可计算原因；原话、参数、实验数值和机器拒绝标记不变。C 核查 148 条开发提议和 6 条引文后独立关闭问题。
+
+Notebook 的完整复算与图形核查进一步验证了报告是否可由实际程序重现。具体环境故障和排版修复留在工程记录；正文只保留影响解释的修正，例如 24 条记录各 3 次重复属于 72 个记录观察，不能当成 72 个独立样本。可靠复现和准确呈现不等于方法质量提升。
+
+\subsection{中断与费用记录不填空白数字}
+G2 一次主动中断被误分类为认证或付费阻碍。根因是分类器在无关哈希中匹配 401 或 403。独立复算将其识别为真实中断检查点，保留原记录，没有编造服务认证失败。有效实验 \ValidModelCalls{} 次、历史中断/失效 \HistoricModelCalls{} 次和工程资格 1 次分别计账；底层请求与费用不可见时记为未知，不填 0。
+
+\input{workflow_generated.tex}
+
+\clearpage
+\part*{第二层：Experiment Decision Process}
+\addcontentsline{toc}{part}{第二层：Experiment Decision Process}
+
+\section{先固定坐标假设与方向调度}\label{sec:technical-authorization}
+\subsection{坐标来源缺失没有被假标签补齐}
+早期检查无法从文件绑定材料确认源 datum。G1 保存的 D1 用户答复为：
+\begin{quote}“目前没有文件绑定的坐标说明”\end{quote}
+这条答复说明缺少来源证明，不是确认某个 EPSG。随后保存的授权补充允许在明确固定的数学工作坐标下继续条件化处理，保留 \texttt{source\_crs=UNVERIFIED}，记录假设、单位和独立核验。后续没有把底图重合、算法一致或得分较高作为 datum 证据。
+
+这改变了可开展工作的边界：分段、方向、DP 和相对几何保护可以在固定模型内比较；绝对定位精度和真实地理准确率仍不能得出。G3 沿用这项授权扩大核验范围，没有把同一缺项重新变成重复弹窗。
+
+\subsection{方向规则的计算顺序先确认，再执行}
+课件说明了方向差条件，但连续删除时的邻域更新次序会影响结果。保存的 D2 用户答复为：
+\begin{quote}“批准采用上述一次标记、同时删除规则”\end{quote}
+其对应的完整授权明确：先计算并完整标记、同时删除；首尾及必要方向不可计算窗口保留并标记；不迭代至收敛；下游重算特征。这是可执行语义，不是根据哪个结果更好再选调度。G1 pilot 的 7 条记录、783 点完成这一条件化处理：过滤 309 点、方向删除 13 点、DP 删除 273 点，最终保留 188 点。这里仅说明该历史执行，不把 pilot 当成最终独立测试。
+
+\section{从基础答案到可比较的问题}
+基础处理回答“如何实现 S、D、P”，后续决策回答“哪个变化在共同范围内保留了什么、损失了什么”。因此比较不使用各候选自己的 clean 作为整体真值，而先在原始数据上固定时间/距离窗口，再核对共同覆盖身份、原始断点与几何偏差。没有真实噪声标签时，禁止把几何保护改写为噪声准确率。
+
+G2 的三组参数、六种顺序和四模式属于实际规定实验。每个负结果继续保留：方向和 DP 没有获得统一新赢家；四种危险顺序被拒绝；S--P--D 虽未发生相同安全失败，仍有权衡。既有结果缩小下一阶段的有依据候选范围，没有把“只剩 C-S”当作跳过所有交互核查的理由。
+
+\begin{table}[H]\centering\small\caption{历史决策链的事实摘要。研究判断均在当时已批准规则内形成。}\begin{tabularx}{\linewidth}{@{}p{26mm}Y Y@{}}\toprule 问题 & 真实证据 & 实际决定与解释边界 \\ \midrule
+短段是否损失覆盖 & G2 评估 120 条，C-S 对 R0 全部满足保护，\CSStrictRecords{} 条严格改善；共同覆盖 \RZeroCovered{}$\to$\CSCovered{}。 & 保留 C-S 作为 G3 的 S0 候选，不预先指定最终赢家；新增覆盖不等于新增干净点。 \\
+方向、DP 是否统一更好 & 已测方向/DP 单项没有唯一可比新收益。 & C-D、C-P 保持 R0，不把相同配置命名成两个新组件。 \\
+顺序是否可换 & 四种顺序出现跨断点或断点信息损失；S--P--D 有真实权衡。 & 危险顺序拒绝；P 后再删点必须核对最终产物，不沿用即时保证。 \\
+记忆是否值得采用 & 已记录送达、引用和动作一致；评估带/不带记忆搜索均 47/72 支持输出。 & 不宣称因果质量收益；完整保留成本、分母和负结果。 \\
+复杂组合是否必需 & G2 没有充分依据固定简单分组阈值或删除保护。 & 当时不为了增加组件硬造策略；G3 仅按新增授权与开发证据有限补证。 \\
+\bottomrule\end{tabularx}\end{table}
+
+\section{一次真实 AI 建议怎样变成负结果}
+G2 开发记录 7764 的带记忆模式提出更强空间分段并放宽过滤，原文明确说覆盖与保真仍需评价。该建议参数合法且实际执行，但在同一 122 个原始点覆盖集合上，共同最大误差从 40.215 增至 69.145 工作米；自身 P 最大误差仍为 4.826 工作米。结果触发登记的几何非退化规则，系统没有采用它作为锁定输出。
+
+后续更强分段又丢失 11 个基线已覆盖身份；回到参考分段并收紧 DP 后，P 局部误差降低而共同误差仍增大。这些实际反馈否定的是具体候选的约束表现，不是模型“提出试验”本身不合法。模型没有承诺真实准确率，也没有出现可冒称的非法参数；Process Report 不制造更戏剧化的失败。
+
+对应的构造反例显示，正常折返与人为尖峰可以触发相似方向规则，两种不同上游输入又都可能有零 P 自身误差。它们帮助解释为什么共同原始参考必须保留，不能把已知合成标签当成真实噪声标注。具体原话、参数、数值和反例见 Experiment Report 及已保存的真实引文记录。
+
+这一次裁决是“在用户预先批准规则内的系统决定”。没有可用用户逐条判断原话，因此不写成“用户认为 200 m 不好并改选 400 m”，也不把当前总授权倒写成该历史提议的逐次批准。
+
+\section{G3 的实际推进与最终决定}
+\input{generated.tex}
+
+\section{互动证据仍需哪些真实输入}
+\begin{contextbox}
+\textbf{本节是明确的待补说明，不是证据替代页。} 当前 Workflow Evidence Plan 的实际状态是“SCHEMA READY / NO EVIDENCE REGISTERED”。未找到真实 raw 聊天截图、批准的裁切/标注/图注规格或 Evidence Lock。可以继续完成有来源的事实正文、技术报告与复现工程；相应真实互动页面和完整 Process Report 闭合受这些外部输入影响。
+\end{contextbox}
+
+现有原始授权与模型响应可以组成有来源的候选索引，记录主题、触发、原话来源、建议、可得的人类判断、引用实验与实际决定。但由哪一句作为 anchor、哪些语句高亮、箭头表达什么关系、如何安排截图顺序、采用哪个层级，仍由 Evidence Master 决定。本文不提前赋予这些选择，不把工程事实段落标成已 LOCK 的互动单元。
+
+\begin{table}[H]\centering\small\caption{影响报告闭合的外部输入。技术计算可继续，不以空白证据补成完成状态。}\begin{tabularx}{\linewidth}{@{}p{31mm}Y Y@{}}\toprule 待补对象 & 当前事实 & 影响与后续工程 \\ \midrule
+真实原始截图或逐字材料 & 有授权文本和真实模型响应；缺完整聊天原图与消息范围。 & 不从当前 Prompt 重建历史对话，不生成 ChatGPT 截图。 \\
+Evidence Plan 与 annotation spec & 现有文件只有 schema，未登记获批呈现关系。 & 先保留候选索引；不自选高亮、裁切或因果箭头。 \\
+Evidence Master 最终检查与 Lock & 无可用 LOCK 记录。 & 真实页面实现后仍需本人检查，内部编译/视觉检查不能替代。 \\
+\bottomrule\end{tabularx}\end{table}
+
+取得真实原图和批准规格后，工程按原始像素无损裁切、PNG 直接嵌入、矢量批注和 XeLaTeX 生成 PDF，保存裁切范围、显示尺寸和有效 PPI。原则上至少 180 PPI，优先达到 200 PPI；不通过 AI 放大或伪锐化制造证据清晰度。每页核对原话、箭头语义与端点、遮挡和分辨率，再交 Evidence Master。未获主要 Workflow Evidence Lock 前，不制作声称历史全局因果的演变图。
+
+\section{交接与复现怎样帮助后续理解}
+Technical Handoff 面向复算：最终范围、角色与接口、方法参数、坐标限制、指标、历史及本轮比较、最终确认、全量终态、失败与回退、图源、报告和版本。Interaction Handoff 面向 Evidence Master：保存有来源的候选事实与原话位置，把实际 Human Judgment 和 NOT\_AVAILABLE 分开；它不负责 Tier、裁切或 Lock。
+
+用户是否理解由用户真实回答与操作决定。工程测试通过、报告可编译或内部 C 审核通过，都不设置 Understanding 为 PASS。网页 GPT 二重审核在实际远程检查前保持 PENDING；教师提交在用户最终审核前仍为 NOT\_READY。本轮不发送教师邮件，不把生成 ZIP 写成已经提交。
+
+本次收尾中，用户直接提供了封面身份，并将顺序明确调整为“先完成工程收尾，再深入讲解与审核”。这关闭了身份缺项，没有关闭互动证据或用户理解验收。后续按任务与要求、数据处理与评价、系统与实验循环、正式成果与收尾四个板块核查；指南只提供当前文件和证据入口，不记录尚未发生的回答、分数或理解通过。
+
+\appendix
+\section{过程事实的主要原始入口}
+\begin{table}[H]\centering\small\begin{tabularx}{\linewidth}{@{}p{27mm}Y@{}}\toprule 材料 & 相对 task1 的来源 \\ \midrule
+G1 直接授权 & \path{evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/AUTHORIZATION_SUPPLEMENT.md} 与同目录 \path{USER_DECISIONS.json} \\
+G2 用户任务 & \path{evidence/goal2/USER_PROMPT.md} 与 \path{prompt_source.json} \\
+G2 真实修复与恢复 & \path{evidence/goal2/PROCESS_RECORD.md}、\path{goal_state.json} 与各独立闭合回执 \\
+G2 真实模型建议 & \path{evidence/goal2/a_epoch02/actual_ai_critique/actual_ai_critique.json}，绑定原始响应、处理轨迹与哈希 \\
+G3 当前授权与交接 & \path{evidence/goal3/USER_PROMPT.md}、当前 \path{REVIEW_PACKET.md}、两份 Handoff \\
+输入盘点 & \path{evidence/goal3/DELIVERY_INPUT_INVENTORY.md} 与 \path{teacher_mapping.json} \\
+\bottomrule\end{tabularx}\end{table}
+\end{document}

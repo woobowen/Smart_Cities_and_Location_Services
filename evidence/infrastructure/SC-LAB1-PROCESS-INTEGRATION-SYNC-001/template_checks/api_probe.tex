@@ -1,0 +1,16 @@
+% Compile from an isolated process-report copy. This is a component API probe.
+\documentclass{article}
+\usepackage{graphicx,tikz}
+\usetikzlibrary{arrows.meta,calc}
+\input{../common/p2_cloud_sorbet_colors.tex}
+\input{components/interaction_evidence.tex}
+\ifdefined\IEHighlight\errmessage{Retired IEHighlight remains defined}\fi
+\ifdefined\IEOutline\errmessage{Retired IEOutline remains defined}\fi
+\ifdefined\IEMarker\errmessage{Retired IEMarker remains defined}\fi
+\ifdefined\IEAnchor\else\errmessage{IEAnchor missing}\fi
+\ifdefined\IECurvedArrow\else\errmessage{IECurvedArrow missing}\fi
+\ifdefined\IERoutedArrow\else\errmessage{IERoutedArrow missing}\fi
+\ifdefined\IESideNote\else\errmessage{IESideNote missing}\fi
+\begin{document}
+Arrow-only component API probe: legacy overlays absent; supported APIs present.
+\end{document}

@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net">
+  <diagram name="单项、组合、选择与回退的真实路径" id="D04">
+    <mxGraphModel dx="1000" dy="755" grid="1" gridSize="10" page="1" pageScale="1" pageWidth="1000" pageHeight="755">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="e0" value="" edge="1" parent="1" source="r0" target="sp" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=0;strokeColor=#70757A;fontFamily=Noto Sans CJK SC;fontSize=16;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="" edge="1" parent="1" source="r0" target="sl" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=0;strokeColor=#70757A;fontFamily=Noto Sans CJK SC;fontSize=16;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" value="" edge="1" parent="1" source="r0" target="g" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=0;strokeColor=#70757A;fontFamily=Noto Sans CJK SC;fontSize=16;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" value="" edge="1" parent="1" source="sp" target="s0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=0;strokeColor=#70757A;fontFamily=Noto Sans CJK SC;fontSize=16;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" value="" edge="1" parent="1" source="sl" target="s0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=0;strokeColor=#70757A;fontFamily=Noto Sans CJK SC;fontSize=16;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" value="" edge="1" parent="1" source="s0" target="comb" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=0;strokeColor=#70757A;fontFamily=Noto Sans CJK SC;fontSize=16;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" value="" edge="1" parent="1" source="g" target="comb" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=0;strokeColor=#70757A;fontFamily=Noto Sans CJK SC;fontSize=16;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" value="" edge="1" parent="1" source="comb" target="sel" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=0;strokeColor=#70757A;fontFamily=Noto Sans CJK SC;fontSize=16;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" value="退化后回退" edge="1" parent="1" source="sel" target="final" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=0;strokeColor=#70757A;fontFamily=Noto Sans CJK SC;fontSize=16;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" value="" edge="1" parent="1" source="s0" target="final" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=0;strokeColor=#70757A;fontFamily=Noto Sans CJK SC;fontSize=16;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r0" value="R0｜原始参考策略" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFFDFC;strokeColor=#5B9FBE;fontColor=#2D3238;fontFamily=Noto Sans CJK SC;fontSize=17;spacing=10;">
+          <mxGeometry x="325" y="10" width="350" height="66" as="geometry" />
+        </mxCell>
+        <mxCell id="sp" value="点数门槛 5→2&#10;单独检查点数过滤的作用" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFFDFC;strokeColor=#5B9FBE;fontColor=#2D3238;fontFamily=Noto Sans CJK SC;fontSize=17;spacing=10;">
+          <mxGeometry x="20" y="135" width="260" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="sl" value="长度下限 65→0&#10;单独检查长度过滤的作用" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFFDFC;strokeColor=#5B9FBE;fontColor=#2D3238;fontFamily=Noto Sans CJK SC;fontSize=17;spacing=10;">
+          <mxGeometry x="365" y="135" width="270" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="g" value="G0｜方向条件规则&#10;在可计算的规定条件下使用" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFFDFC;strokeColor=#5B9FBE;fontColor=#2D3238;fontFamily=Noto Sans CJK SC;fontSize=17;spacing=10;">
+          <mxGeometry x="720" y="135" width="260" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="s0" value="S0｜两项过滤调整&#10;保留其独立作用与比较依据" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFFDFC;strokeColor=#5B9FBE;fontColor=#2D3238;fontFamily=Noto Sans CJK SC;fontSize=17;spacing=10;">
+          <mxGeometry x="180" y="311" width="305" height="76" as="geometry" />
+        </mxCell>
+        <mxCell id="comb" value="S0 + G0｜有依据地组合&#10;开发阶段曾获得支持" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFFDFC;strokeColor=#8177A8;fontColor=#2D3238;fontFamily=Noto Sans CJK SC;fontSize=17;spacing=10;">
+          <mxGeometry x="585" y="311" width="345" height="76" as="geometry" />
+        </mxCell>
+        <mxCell id="sel" value="选择记录：3017 / 9311 / 9534&#10;共同几何偏差退化&#10;触发既定的保护与退出规则" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFFDFC;strokeColor=#B97589;fontColor=#2D3238;fontFamily=Noto Sans CJK SC;fontSize=17;spacing=10;">
+          <mxGeometry x="570" y="455" width="360" height="94" as="geometry" />
+        </mxCell>
+        <mxCell id="final" value="回到S0，固定方法&#10;600条保留记录确认&#10;再完成全量处理" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFFDFC;strokeColor=#8177A8;fontColor=#2D3238;fontFamily=Noto Sans CJK SC;fontSize=17;spacing=10;">
+          <mxGeometry x="80" y="601" width="430" height="91" as="geometry" />
+        </mxCell>
+        <mxCell id="p" value="其他尝试也留下结果&#10;P2未增益；P10越共同预算&#10;据此保留已获支持的简单方案" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFFDFC;strokeColor=#8177A8;fontColor=#2D3238;fontFamily=Noto Sans CJK SC;fontSize=17;spacing=10;">
+          <mxGeometry x="600" y="608" width="360" height="84" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

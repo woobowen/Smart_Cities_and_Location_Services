@@ -1,0 +1,14 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "pytest",
+    "-q",
+    "task1/tests/test_accepted_report_integration.py",
+    "task1/tests/test_closeout_identity.py",
+    "task1/tests/test_process_report_build.py"
+  ],
+  "exit_code": 0,
+  "tests": 19,
+  "scope": "report routing, preserved numerical entry AST, identity/status, stale package PDF guard, immutable Process inputs/generation guard; no numerical experiments"
+}

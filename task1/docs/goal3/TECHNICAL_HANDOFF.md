@@ -1,5 +1,15 @@
 # Experiment 1 Technical Handoff
 
+## 2026-10-02 当前 Process 接管
+
+用户已验收77页完整Process；本轮接入真实工作源、两条报告构建及当前PDF/打包路径。新增工程核验与范围见 [SC-LAB1-PROCESS-INTEGRATION-SYNC-001](../../../evidence/infrastructure/SC-LAB1-PROCESS-INTEGRATION-SYNC-001/REVIEW_PACKET.md)。网页GPT本轮二审=PENDING，Submission=NOT_READY；不升级逐条Evidence Lock或Understanding。Experiment成品及科学结果保持此前验收范围。
+
+当前 [Process PDF](../../reports/process1/process1.pdf) / [唯一工作源](../../reports/process1/source/main.tex)；[旧12页稿](../../reports/process1/history/technical-draft-12p/process1.pdf)及PreTask均保留历史身份。新的审阅包以本轮REVIEW_PACKET列出的具名文件为准，旧包不覆盖。
+
+以下为原版本交接全文，保留其当时的“当前”、委派状态和旧路径；历史路径应结合对应固定提交读取，不代表本轮检查或未完成项。
+
+---
+
 ## 当前技术基点与指定交接
 
 本次`SC-LAB1-NONPROCESS-CLOSEOUT-001`是非Process范围收尾；[当前验收入口](../../../evidence/infrastructure/SC-LAB1-NONPROCESS-CLOSEOUT-001/REVIEW_PACKET.md)登记NC结果。技术处理、规定实验、有限候选比较、最终确认与全量结果维持此前范围验收，不新开研究或宣称全局最优。

@@ -1,0 +1,57 @@
+% Plain native layout specimens, not chat UI or historical conversations.
+% These placeholders must be replaced with real screenshots in a task report.
+\newenvironment{multipagespecimen}{%
+  \begin{minipage}[t][140mm][s]{\linewidth}
+  \vspace{0pt}\sffamily\small\raggedright
+  \textbf{SYNTHETIC / NOT CHAT UI}\par
+  \smallskip
+  \textcolor{Muted}{原生 LaTeX 排版占位；不是截图或历史对话。}\par
+}{%
+  \vfill
+  \textcolor{Muted}{正式任务替换为可追溯的真实原图或无损裁片。}
+  \end{minipage}%
+}
+
+\newcommand{\MultiPageSpecimenOne}{%
+  \begin{multipagespecimen}
+  \vfill
+  \textbf{起始片段：真实用户 UI 入口}\par
+  此处放置本互动对应的真实用户消息。保留必要前文、原始顺序和消息边界；
+  不以人工排字替代原话。
+  \vfill
+  \textbf{同一互动：有关 GPT 回应}\par
+  沿原始顺序继续呈现与当前判断有关的回应。
+  标题、简短导语和首组内容保持在同一页。
+  \vfill
+  \textbf{后续片段：自然转入续页}\par
+  原图过长时按消息或段落边界拆页，并让读者看出承接关系。
+  \end{multipagespecimen}%
+}
+
+\newcommand{\MultiPageSpecimenTwo}{%
+  \begin{multipagespecimen}
+  \vfill
+  \textbf{续页：承接前页已经建立的用户入口}\par
+  此处继续放置同一互动的原始截图片段，无需机械重复已经展示的用户消息。
+  \vfill
+  \textbf{原句与上下文}\par
+  保留理解回应所需的真实上下文。裁切不能截断关键语句，也不改变消息顺序。
+  \vfill
+  \textbf{批注与原文分离}\par
+  仅对批准的短语关系使用矢量箭头，沿留白走线，不覆盖原话。
+  \end{multipagespecimen}%
+}
+
+\newcommand{\MultiPageSpecimenThree}{%
+  \begin{multipagespecimen}
+  \vfill
+  \textbf{收尾片段：承接同一互动}\par
+  此处放置最后一组真实截图；保留后续回应与确认的原始先后关系。
+  \vfill
+  \textbf{真实最终确认}\par
+  关键判断的最终确认必须来自真实材料，不能用概括文字或模板占位补造。
+  \vfill
+  \textbf{简短说明}\par
+  结合截图说明最终决定、依据和下一步。实际原图与裁片保持可追溯。
+  \end{multipagespecimen}%
+}

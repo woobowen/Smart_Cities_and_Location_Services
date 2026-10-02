@@ -1,0 +1,45 @@
+\input{../common_preamble_9_12.tex}
+\begin{document}
+
+\eyebrow{WORKFLOW CONSTRUCTION · 29}
+\pagetitle{Local Diagram解决局部Decision，Global Map只做研究故事总览}
+\deck{流程图类型越来越多以后，我没有继续把所有内容硬塞进一张“大演变图”。方法选择、参数决策、AI批判各自用最适合的局部图；等这些Decision基本稳定后，再用Global Map把主要研究故事串起来。}
+\begin{tikzpicture}[x=1mm,y=1mm]
+  \node[anchor=north west,inner sep=0] (g) at (0,0) {\includegraphics[width=52mm]{assets/gpt_local_global.png}};
+  \node[anchor=north west,text width=118mm,align=left] at (59,-2) {
+    \tracehead{P2Blue}{LOCAL DIAGRAMS}\tracetitle{每个Decision选择最合适的表达语言}
+    \tracebody{任务理解、方法形成、参数裁决和AI批判不需要画成同一种图。局部图先把当前问题说明白，再考虑整份报告是否统一。}
+    \vspace{8mm}
+    \tracehead{P2VioletAccent}{GLOBAL OVERVIEW}\tracetitle{全局图是导航，不是替代}
+    \tracebody{Global Decision Evolution Map只保留阶段、核心Decision和方向，把局部图里的关键节点串起来。内容复杂时宁可“总览 + 详细页”，也不把所有细节塞在一张图里。}
+    \vspace{8mm}
+    \tracehead{P2RoseAccent}{NATIVE AUTHORING}\tracetitle{正式流程图保留可编辑原生源}
+    \tracebody{正式流程图继续用draw.io、Figma、Graphviz或TikZ等可编辑工具制作，不让生成式图片替代真实研究结构。}
+  };
+\end{tikzpicture}
+\provenance{该页来自对“多张流程图如何组织、全局演变图如何定位、流程图用什么工具制作”的真实讨论。}
+\newpage
+
+\eyebrow{WORKFLOW CONSTRUCTION · 30}
+\pagetitle{Task 1开始前，我把Process Report的基本做法先定下来}
+\deck{在真正进入Task 1之前，我已经把过程文档怎么做基本定清楚了：什么算一个Decision、Evidence怎么保存、最终确认怎么记录、流程图怎么选、LaTeX怎么排版。接下来新增的内容不再靠“设计”，而要来自真实Task 1研究过程。}
+\begin{tikzpicture}[x=1mm,y=1mm]
+  \node[anchor=north west,inner sep=0] (g) at (0,0) {\includegraphics[width=50mm]{assets/gpt_final_structure.png}};
+  \node[anchor=north west,inner sep=0] (u) at (55,-76) {\includegraphics[width=38mm]{assets/user_final_confirm.png}};
+  \coordinate (ga) at ($(g.south east)+(-6mm,14mm)$);
+  \coordinate (ua) at ($(u.north west)+(2mm,-4mm)$);
+  \draw[arrV] (ga) .. controls (72,-70) and (80,-75) .. (ua);
+  \node[tagB] at ($(ua)+(-4mm,0)$) {1};
+  \node[anchor=north west,text width=79mm,align=left] at (100,-2) {
+    \tracehead{P2Blue}{FROZEN STRUCTURE}\tracetitle{框架先定住，具体内容跟着真实任务变化}
+    \tracebody{Brainstorm / Decision、Interaction Evidence、Technical Evidence、Final Confirmation、Global Evolution和Human--AI reflection各自有位置，但具体页数不预先限定。}
+    \vspace{7mm}
+    \tracehead{P2VioletAccent}{TRACEABILITY}\tracetitle{正文负责讲清过程，Evidence负责让我能回到原始记录}
+    \tracebody{老师在正式页里先看到最关键的判断；需要追溯时，还能回到原始截图、Technical Evidence和最终确认。}
+    \vspace{7mm}
+    \tracehead{P2RoseAccent}{HANDOFF TO TASK 1}\tracetitle{下一阶段不再“设计证据”，而是在Task 1里自然产生证据}
+    \tracebody{从这里开始，Experiment Decision Process只能来自Task 1里真实发生的方法讨论、参数选择、实验和我的判断，再交回Evidence Master整理。}
+  };
+\end{tikzpicture}
+\provenance{本页使用真实“Process Report结构已成熟”的总结和我的最终确认。它标志Workflow Construction的预实验阶段完成，而不是Task 1研究结果。}
+\end{document}

@@ -1,0 +1,71 @@
+\input{../common_preamble_9_12.tex}
+\begin{document}
+
+\eyebrow{WORKFLOW CONSTRUCTION · 26}
+\pagetitle{流程图不是越多越好：先淘汰不适合研究叙事的视觉语言}
+\deck{我们先试了多种Process Diagram。我没有因为“看起来高级”就全都保留：Metro/Storyline和Phase Ribbon直接淘汰，Swimlane我觉得太乱，Decision Tree则要求改成更适合A4横向阅读。}
+\begin{tikzpicture}[x=1mm,y=1mm]
+  \node[anchor=north west,inner sep=0] (u) at (0,0) {\includegraphics[width=43mm]{assets/user_reject_diagrams_phrase.png}};
+  \node[anchor=north west,inner sep=0] (g) at (0,-31) {\includegraphics[width=52mm]{assets/gpt_diagram_filter.png}};
+  \coordinate (ua) at ($(u.south east)+(-2mm,4mm)$);
+  \coordinate (ga) at ($(g.north east)+(-4mm,-22mm)$);
+  \draw[arrA] (ua) .. controls (80,-4) and (83,-42) .. (ga);
+  \node[tagA] at ($(ua)+(3.5mm,0)$) {1};
+  \node[anchor=north west,text width=109mm,align=left] at (69,-2) {
+    \tracehead{P2ApricotAccent}{MICRO TRACE 32}\tracetitle{“1和5淘汰，2太乱，3横向，4要突出我的贡献”}
+    \tracebody{我把五类图逐个看了一遍：哪些淘汰、哪些保留、哪些必须改。GPT随后也不再追求一个万能流程图，而是让不同图型各自回答不同问题。}
+    \vspace{8mm}
+    \tracehead{P2Blue}{SELECTION RULE}\tracetitle{图型由问题选择，不由复杂度选择}
+    \tracebody{我后来判断流程图好不好，先看它到底回答什么：总体阶段、职责分工、候选淘汰、Evidence链还是收敛过程，而不是看它有多复杂。}
+  };
+\end{tikzpicture}
+\provenance{我的原句与后续筛选结果来自同一轮Process Diagram Style Study复盘。}
+\newpage
+
+\eyebrow{WORKFLOW CONSTRUCTION · 27}
+\pagetitle{Human Reasoning 必须成为流程图中心，而不是被 Evidence 抽象掉}
+\deck{我对Evidence--Decision Graph最不满意的一点是：只画“证据 $\rightarrow$ 决策”，老师看不到我到底发现了什么、为什么觉得有问题、又提出了什么建议。这个反馈后来直接改变了最核心的Human-in-the-loop图。}
+\begin{tikzpicture}[x=1mm,y=1mm]
+  \node[anchor=north west,inner sep=0] (u) at (0,0) {\includegraphics[width=43mm]{assets/user_human_reasoning_phrase.png}};
+  \node[anchor=north west,inner sep=0] (g) at (0,-33) {\includegraphics[width=50mm]{assets/gpt_human_reasoning.png}};
+  \coordinate (ua) at ($(u.south east)+(-2mm,4mm)$);
+  \coordinate (ga) at ($(g.north east)+(-4mm,-40mm)$);
+  \draw[arrA] (ua) .. controls (80,-5) and (83,-60) .. (ga);
+  \node[tagA] at ($(ua)+(3.5mm,0)$) {1};
+  \node[anchor=north west,text width=111mm,align=left] at (67,-2) {
+    \tracehead{P2ApricotAccent}{MICRO TRACE 33}\tracetitle{“要明确展示我发现、判断与建议”}
+    \tracebody{我不是想在图上简单加一个“User”标签，而是要把Human reasoning真正展开：我发现了什么 $\rightarrow$ 为什么觉得有问题 $\rightarrow$ 我提出什么建议 $\rightarrow$ 后面怎么验证。}
+    \vspace{8mm}
+    \tracehead{P2VioletAccent}{CORE GRAMMAR}\tracetitle{GPT Proposal $\rightarrow$ Human Reasoning $\rightarrow$ Evidence / Experiment $\rightarrow$ Final Decision}
+    \tracebody{这条链后来成为Process Report里最能看出我真正参与判断的一种图，也和Interaction Evidence的phrase-level标注保持一致。}
+  };
+\end{tikzpicture}
+\provenance{该页使用我对方案4的真实批评及GPT随后形成的Human Reasoning--Evidence--Decision结构。}
+\newpage
+
+\eyebrow{WORKFLOW CONSTRUCTION · 28}
+\pagetitle{最终收敛为三类 Process Diagram Language，而不是一个万能流程图}
+\deck{几轮比较以后，我明确选了2和4作为主力，3保留给多候选场景，1降级，5淘汰。GPT随后把这次选择整理成三类稳定的Diagram Grammar。}
+\begin{tikzpicture}[x=1mm,y=1mm]
+  \node[anchor=north west,inner sep=0] (u) at (0,0) {\includegraphics[width=38mm]{assets/user_diagram_selection.png}};
+  \node[anchor=north west,inner sep=0] (g) at (0,-23) {\includegraphics[width=48mm]{assets/gpt_final_diagram_language.png}};
+  \coordinate (ua) at ($(u.south east)+(-2mm,3mm)$);
+  \coordinate (ga) at ($(g.north east)+(-4mm,-26mm)$);
+  \draw[arrA] (ua) .. controls (75,-3) and (80,-33) .. (ga);
+  \node[tagA] at ($(ua)+(3.5mm,0)$) {1};
+  \node[anchor=north west,text width=112mm,align=left] at (65,-2) {
+    \tracehead{P2ApricotAccent}{MICRO TRACE 34}\tracetitle{最终选择由我明确给出}
+    \tracebody{最后的选择是我自己给出的：2和4作为核心，3用于多候选场景，1降级，5淘汰。GPT负责把这个选择整理成后续可以稳定复用的图示语言。}
+    \vspace{7mm}
+    \tracehead{P2Blue}{TYPE A}\tracetitle{Editorial Decision Board}
+    \tracebody{一般过程、阶段性结论、单页“背景—决策—结果”。}
+    \vspace{5mm}
+    \tracehead{P2VioletAccent}{TYPE B}\tracetitle{Human Reasoning $\rightarrow$ Evidence $\rightarrow$ Decision}
+    \tracebody{核心Human-in-the-loop、AI批判、参数纠正与实验验证。}
+    \vspace{5mm}
+    \tracehead{P2RoseAccent}{TYPE C}\tracetitle{Horizontal Candidate Decision Tree}
+    \tracebody{多候选、筛选、淘汰、对照实验和最终选择。}
+  };
+\end{tikzpicture}
+\provenance{上方为我的最终选择；下方为GPT随后冻结的Process Diagram Language vFinal。}
+\end{document}

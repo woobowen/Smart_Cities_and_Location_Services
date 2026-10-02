@@ -1,0 +1,223 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[top=12mm,bottom=12mm,left=14mm,right=14mm,headsep=2mm,footskip=7mm]{geometry}
+\usepackage{fontspec}
+\usepackage{xeCJK}
+\setmainfont{Noto Sans}
+\setsansfont{Noto Sans}
+\setCJKmainfont{Noto Sans CJK SC}
+\setCJKsansfont{Noto Sans CJK SC}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{calc,arrows.meta,positioning}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{ragged2e}
+\usepackage{microtype}
+
+% P2 · Cloud Sorbet Exact
+\definecolor{P2Paper}{HTML}{FCFAF7}
+\definecolor{P2Ink}{HTML}{2D3238}
+\definecolor{P2Muted}{HTML}{70757A}
+\definecolor{P2BlueLight}{HTML}{D3EAF5}
+\definecolor{P2Apricot}{HTML}{F5D9B8}
+\definecolor{P2Rose}{HTML}{E8C7D3}
+\definecolor{P2Violet}{HTML}{D7D3EA}
+\definecolor{P2Blue}{HTML}{5B9FBE}
+\definecolor{P2ApricotAccent}{HTML}{D49757}
+\definecolor{P2RoseAccent}{HTML}{B97589}
+\definecolor{P2VioletAccent}{HTML}{8177A8}
+\definecolor{P2Rule}{HTML}{DDE3E7}
+\definecolor{P2Panel}{HTML}{FFFDFC}
+
+\pagecolor{P2Paper}
+\color{P2Ink}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3.5pt}
+\linespread{1.04}
+\hypersetup{hidelinks}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[L]{\fontsize{6.6}{8}\selectfont\color{P2Muted}PROCESS REPORT · WORKFLOW CONSTRUCTION}
+\fancyfoot[R]{\fontsize{6.6}{8}\selectfont\color{P2Muted}\thepage}
+
+\newcommand{\eyebrow}[1]{{\fontsize{7.8}{9.4}\selectfont\bfseries\color{P2RoseAccent}#1}\par\vspace{1pt}}
+\newcommand{\pagetitle}[1]{{\fontsize{19}{22}\selectfont\bfseries\color{P2Ink}#1}\par\vspace{3pt}}
+\newcommand{\deck}[1]{{\fontsize{9.1}{13.2}\selectfont\color{P2Ink}\RaggedRight #1}\par\vspace{4pt}}
+\newcommand{\tracehead}[2]{{\fontsize{7.1}{8.4}\selectfont\bfseries\color{#1}#2}\par}
+\newcommand{\tracetitle}[1]{{\fontsize{10.4}{12.4}\selectfont\bfseries\color{P2Ink}#1}\par\vspace{1.5pt}}
+\newcommand{\tracebody}[1]{{\fontsize{8.0}{11.3}\selectfont\color{P2Ink}\RaggedRight #1}\par}
+\newcommand{\provenance}[1]{\vspace{2pt}{\color{P2Rule}\hrule height .35pt}\vspace{2.5pt}{\fontsize{6.9}{9.2}\selectfont\color{P2Muted}\RaggedRight\textbf{Original Evidence.} #1}\par}
+
+\tikzset{
+  userA/.style={rounded corners=1mm,draw=P2ApricotAccent,line width=.55pt,fill=P2Apricot,fill opacity=.34},
+  userR/.style={rounded corners=1mm,draw=P2RoseAccent,line width=.55pt,fill=P2Rose,fill opacity=.34},
+  gptB/.style={rounded corners=1mm,draw=P2Blue,line width=.55pt,fill=P2BlueLight,fill opacity=.27},
+  gptV/.style={rounded corners=1mm,draw=P2VioletAccent,line width=.55pt,fill=P2Violet,fill opacity=.27},
+  arrA/.style={-{Stealth[length=2.0mm,width=1.45mm]},draw=P2RoseAccent,line width=.72pt},
+  arrB/.style={-{Stealth[length=2.0mm,width=1.45mm]},draw=P2Blue,line width=.72pt},
+  arrV/.style={-{Stealth[length=2.0mm,width=1.45mm]},draw=P2VioletAccent,line width=.72pt},
+  tagA/.style={circle,minimum size=4.8mm,inner sep=0pt,draw=P2ApricotAccent,line width=.6pt,fill=P2Paper,font=\fontsize{6.7}{7}\selectfont\bfseries},
+  tagR/.style={circle,minimum size=4.8mm,inner sep=0pt,draw=P2RoseAccent,line width=.6pt,fill=P2Paper,font=\fontsize{6.7}{7}\selectfont\bfseries},
+  tagB/.style={circle,minimum size=4.8mm,inner sep=0pt,draw=P2Blue,line width=.6pt,fill=P2Paper,font=\fontsize{6.7}{7}\selectfont\bfseries}
+}
+
+\begin{document}
+
+% ==========================================================
+% PAGE 1
+% ==========================================================
+\eyebrow{WORKFLOW CONSTRUCTION · 04}
+\pagetitle{先把“做什么”分清：老师要求、选做内容和额外扩展}
+\deck{开始整理智慧城市任务时，我先把两个很容易混在一起的问题分开：老师明确给出的选做/拓展内容，我希望尽量都完成；但 GPT 自己想到的扩展不能自动加进作业，必须先说明价值，再由我判断要不要做。}
+
+\begin{tikzpicture}[x=1mm,y=1mm]
+  \node[anchor=north west,inner sep=0] (u) at (0,0) {\includegraphics[width=42mm]{assets/b2_user_extra_anchor.png}};
+  \node[anchor=north west,inner sep=0] (g) at (0,-18) {\includegraphics[width=62mm]{assets/b2_gpt_tiers.png}};
+
+  % USER crop: 300x55 px. Phrase 1 = teacher optional tasks must be done.
+  \begin{scope}[shift={(u.south west)},x={($(u.south east)-(u.south west)$)},y={($(u.north west)-(u.south west)$)}]
+    \path[userA] (0.00,{1-18/55}) rectangle (0.44,{1-2/55});
+    \coordinate (uopt) at (0.44,{1-10/55});
+  \end{scope}
+
+  % GPT tiers crop: 445x448 px.
+  \begin{scope}[shift={(g.south west)},x={($(g.south east)-(g.south west)$)},y={($(g.north west)-(g.south west)$)}]
+    % "老师所有选做任务，我们也必须做"
+    \path[gptB] (0.015,{1-322/448}) rectangle (0.46,{1-299/448});
+    \coordinate (gopt) at (0.46,{1-310/448});
+    % T1
+    \path[gptV] (0.035,{1-401/448}) rectangle (0.41,{1-365/448});
+    \coordinate (gt1) at (0.41,{1-383/448});
+    % T2
+    \path[gptV] (0.035,{1-447/448}) rectangle (0.50,{1-408/448});
+    \coordinate (gt2) at (0.50,{1-427/448});
+  \end{scope}
+
+  \draw[arrA] (uopt) .. controls (70,-2) and (70,-58) .. (gopt);
+  \draw[arrB] (uopt) .. controls (74,-4) and (74,-69) .. (gt1);
+  \draw[arrV] (uopt) .. controls (78,-6) and (78,-77) .. (gt2);
+  \node[tagA] at ($(uopt)+(3.8mm,0)$) {1};
+
+  \node[anchor=north west,text width=97mm,align=left] at (81,-2) {
+    \tracehead{P2ApricotAccent}{MICRO TRACE 09}\tracetitle{“老师的选做也做”先变成明确的任务层级}\tracebody{我当时说得很直接：老师列出来的选做内容也尽量完成。GPT 后来把这个想法整理成 T1/T2：老师明确必做的是 T1，老师给出的选做、拓展和思考题放到 T2。}
+    \vspace{7mm}
+    \tracehead{P2Blue}{WHY THIS MATTERS}\tracetitle{“多做一点”不再等于无限加任务}\tracebody{这样既不会把老师的拓展内容漏掉，也不会因为“多做一点”把项目越做越大。后面再遇到新想法，我可以先判断它属于老师要求，还是我们自己额外想加的内容。}
+    \vspace{7mm}
+    \tracehead{P2VioletAccent}{SCOPE RULE}\tracetitle{文件与能力不能替代任务定义}\tracebody{任务层级的意义不是给文件贴标签，而是把范围决定权重新锚定到老师要求和我的确认。starter、压缩包或已有 Agent 只能作为材料，不能自己扩张正式 scope。}
+  };
+\end{tikzpicture}
+\provenance{上方是我当时提出要求的局部高清截图；下方为同一轮 GPT 对任务层级的真实整理。图片仅做无损裁切，highlight、编号和长箭头均为 LaTeX/TikZ 矢量层。}
+
+\newpage
+
+% ==========================================================
+% PAGE 2
+% ==========================================================
+\eyebrow{WORKFLOW CONSTRUCTION · 05}
+\pagetitle{老师的选做我会做，但AI额外想到的不能自动加进来}
+\deck{我同时补了一条边界：GPT当然可以继续提出有价值的新想法，但不能因为“看起来有用”就自动变成正式任务。它可以先告诉我为什么值得做，我看过以后再决定要不要加入。后面为了方便记录，我们把这类内容记成 Candidate Enhancement。}
+
+\begin{tikzpicture}[x=1mm,y=1mm]
+  \node[anchor=north west,inner sep=0] (u) at (0,0) {\includegraphics[width=42mm]{assets/b2_user_extra_anchor.png}};
+  \node[anchor=north west,inner sep=0] (g) at (0,-18) {\includegraphics[width=62mm]{assets/b2_gpt_extra_760.png}};
+
+  \begin{scope}[shift={(u.south west)},x={($(u.south east)-(u.south west)$)},y={($(u.north west)-(u.south west)$)}]
+    % extra ideas + "we decide whether to do it"
+    \path[userR] (0.31,{1-54/55}) rectangle (0.995,{1-2/55});
+    \coordinate (uextra) at (0.995,{1-29/55});
+  \end{scope}
+
+  \begin{scope}[shift={(g.south west)},x={($(g.south east)-(g.south west)$)},y={($(g.north west)-(g.south west)$)}]
+    % T3 candidate enhancement
+    \path[gptB] (0.035,{1-52/760}) rectangle (0.46,{1-12/760});
+    \coordinate (gt3) at (0.46,{1-32/760});
+    % Section heading "额外任务不能直接擅自加入"
+    \path[gptV] (0.00,{1-424/760}) rectangle (0.50,{1-390/760});
+    \coordinate (ghead) at (0.50,{1-407/760});
+    % Candidate enhancement pill
+    \path[gptV] (0.03,{1-638/760}) rectangle (0.38,{1-600/760});
+    \coordinate (gcand) at (0.38,{1-619/760});
+  \end{scope}
+
+  \draw[arrA] (uextra) .. controls (70,-3) and (70,-22) .. (gt3);
+  \draw[arrV] (uextra) .. controls (75,-10) and (75,-72) .. (ghead);
+  \draw[arrB] (uextra) .. controls (80,-16) and (80,-101) .. (gcand);
+  \node[tagR] at ($(uextra)+(3.8mm,0)$) {2};
+
+  \node[anchor=north west,text width=96.5mm,align=left] at (82,-2) {
+    \tracehead{P2RoseAccent}{MICRO TRACE 10}\tracetitle{“可以提，但由我们决定要不要做”}\tracebody{我并没有禁止 GPT 提新想法，而是把“可以建议”和“可以开做”分开。GPT 后来把这种额外扩展记成 T3 Candidate Enhancement：先提出理由，再等我确认。}
+    \vspace{7mm}
+    \tracehead{P2VioletAccent}{OBSERVABLE REVISION}\tracetitle{额外任务不能再“顺手做了再说”}\tracebody{GPT 后来把这条边界写得很清楚：额外任务不能因为“看起来有用”就直接加入，先说明为什么值得做，我确认后才进入实现。}
+    \vspace{7mm}
+    \tracehead{P2Blue}{EFFICIENCY}\tracetitle{我确认的是范围，不是每一个细小操作}\tracebody{这里的人机协作重点是把任务范围定清楚，而不是增加聊天轮数。我决定“什么可以成为正式任务”，批准范围内的普通工程动作仍然可以自动执行。}
+  };
+\end{tikzpicture}
+\provenance{本页沿用同一条我的原话，但只高亮其中“额外想法由我们决定是否完成”的部分；下方对应 GPT 后续形成的 T3 与 Candidate Enhancement 规则。}
+
+\newpage
+
+% ==========================================================
+% PAGE 3
+% ==========================================================
+\eyebrow{WORKFLOW CONSTRUCTION · 06}
+\pagetitle{再确定“凭什么做”：网络研究进入正式 Source Audit}
+\deck{任务边界理清以后，我又发现“GPT说过”本身不能算依据。需要用到外部知识时，应该主动查资料，而且不能只看搜索结果，要继续确认来源是否可靠、是否真的支持当前结论。}
+
+\begin{tikzpicture}[x=1mm,y=1mm]
+  \node[anchor=north west,inner sep=0] (u) at (0,0) {\includegraphics[width=42mm]{assets/b2_user_source_anchor.png}};
+  \node[anchor=north west,inner sep=0] (g) at (0,-25) {\includegraphics[width=62mm]{assets/b2_gpt_source_audit.png}};
+
+  \begin{scope}[shift={(u.south west)},x={($(u.south east)-(u.south west)$)},y={($(u.north west)-(u.south west)$)}]
+    % "搜索网络上的资料"
+    \path[userA] (0.02,{1-70/120}) rectangle (0.66,{1-43/120});
+    \coordinate (usearch) at (0.66,{1-56/120});
+    % "资料必须经过审核，所有链接必须真实可访问"
+    \path[userR] (0.00,{1-94/120}) rectangle (0.995,{1-66/120});
+    \coordinate (uaudit) at (0.995,{1-80/120});
+  \end{scope}
+
+  \begin{scope}[shift={(g.south west)},x={($(g.south east)-(g.south west)$)},y={($(g.north west)-(g.south west)$)}]
+    % Source Audit heading
+    \path[gptB] (0.00,{1-165/1020}) rectangle (0.40,{1-135/1020});
+    \coordinate (gaudit) at (0.40,{1-150/1020});
+    % record fields
+    \path[gptB] (0.02,{1-205/1020}) rectangle (0.45,{1-174/1020});
+    \coordinate (gfields) at (0.45,{1-189/1020});
+    % source priority
+    \path[gptV] (0.00,{1-355/1020}) rectangle (0.25,{1-330/1020});
+    \coordinate (gpriority) at (0.25,{1-342/1020});
+    % original source principle
+    \path[gptV] (0.00,{1-585/1020}) rectangle (0.47,{1-560/1020});
+    \coordinate (gorig) at (0.47,{1-573/1020});
+    % link truth standard heading
+    \path[gptV] (0.00,{1-775/1020}) rectangle (0.54,{1-744/1020});
+    \coordinate (glink) at (0.54,{1-760/1020});
+    % search results are clues, not evidence
+    \path[gptV] (0.00,{1-955/1020}) rectangle (0.50,{1-925/1020});
+    \coordinate (gclue) at (0.50,{1-940/1020});
+  \end{scope}
+
+  \draw[arrA] (usearch) .. controls (70,-5) and (70,-44) .. (gaudit);
+  \draw[arrB] (usearch) .. controls (74,-8) and (74,-70) .. (gpriority);
+  \draw[arrV] (usearch) .. controls (78,-12) and (78,-97) .. (gorig);
+  \draw[arrA] (uaudit) .. controls (82,-18) and (82,-127) .. (glink);
+  \draw[arrV] (uaudit) .. controls (86,-20) and (86,-151) .. (gclue);
+  \node[tagA] at ($(usearch)+(3.8mm,0)$) {3};
+  \node[tagR] at ($(uaudit)+(3.8mm,0)$) {4};
+
+  \node[anchor=north west,text width=94.5mm,align=left] at (84,-2) {
+    \tracehead{P2ApricotAccent}{MICRO TRACE 11}\tracetitle{“先查资料”进一步变成 Source Audit}\tracebody{我要求有需要时先查网络资料。GPT 后来又把“查到什么”继续细化成 Source Audit：记录资料是谁发布的、什么时候发布、链接是什么，以及它到底支持了哪条结论。}
+    \vspace{6mm}
+    \tracehead{P2Blue}{MICRO TRACE 12}\tracetitle{来源本身也要分优先级}\tracebody{同一个问题继续讨论后，我们把来源顺序也理清了：老师材料优先，关键结论尽量回到官方或原始来源。网络资料负责帮助我判断，不负责重新定义老师的任务。}
+    \vspace{6mm}
+    \tracehead{P2RoseAccent}{MICRO TRACE 13}\tracetitle{“链接真实”不只是能打开}\tracebody{我还特别要求链接必须真实可访问，关键内容不能只靠搜索摘要。后来这条规则被写成一句很实用的话：搜索结果可以当线索，但真正写进报告的依据要继续追到原始来源。}
+    \vspace{6mm}
+    \tracehead{P2VioletAccent}{TRANSITION}\tracetitle{有了可靠来源，仍可能存在多个合理答案}\tracebody{到这里，“做什么”和“凭什么做”已经比较清楚了。接下来更麻烦的是：如果资料都查过了，还是有两个方案都说得通，那就不能继续靠讨论把一个答案“聊出来”。}
+  };
+\end{tikzpicture}
+\provenance{我的原话与 GPT Source Audit 均来自同一阶段的真实聊天。正式页只选取与“网络研究与证据来源”直接相关的局部，不把后面的 CONFIRMED / CANDIDATE / UNRESOLVED 提前混入本板块。}
+
+\end{document}

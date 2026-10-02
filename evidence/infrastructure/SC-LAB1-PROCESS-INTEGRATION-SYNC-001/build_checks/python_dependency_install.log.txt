@@ -1,0 +1,43 @@
+Collecting Pillow==12.3.0 (from -r task1/reports/process1/source/requirements-build.txt (line 1))
+  Using cached pillow-12.3.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.1 kB)
+Collecting numpy==2.3.5 (from -r task1/reports/process1/source/requirements-build.txt (line 2))
+  Downloading numpy-2.3.5-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 134.9 kB/s eta 0:00:00
+Collecting PyMuPDF==1.26.7 (from -r task1/reports/process1/source/requirements-build.txt (line 3))
+  Downloading pymupdf-1.26.7-cp310-abi3-manylinux_2_28_x86_64.whl.metadata (3.4 kB)
+Collecting CairoSVG==2.8.2 (from -r task1/reports/process1/source/requirements-build.txt (line 4))
+  Downloading cairosvg-2.8.2-py3-none-any.whl.metadata (2.7 kB)
+Collecting cairocffi (from CairoSVG==2.8.2->-r task1/reports/process1/source/requirements-build.txt (line 4))
+  Downloading cairocffi-1.7.1-py3-none-any.whl.metadata (3.3 kB)
+Collecting cssselect2 (from CairoSVG==2.8.2->-r task1/reports/process1/source/requirements-build.txt (line 4))
+  Downloading cssselect2-0.10.1-py3-none-any.whl.metadata (2.9 kB)
+Collecting defusedxml (from CairoSVG==2.8.2->-r task1/reports/process1/source/requirements-build.txt (line 4))
+  Using cached defusedxml-0.7.1-py2.py3-none-any.whl.metadata (32 kB)
+Collecting tinycss2 (from CairoSVG==2.8.2->-r task1/reports/process1/source/requirements-build.txt (line 4))
+  Using cached tinycss2-1.5.1-py3-none-any.whl.metadata (3.0 kB)
+Collecting cffi>=1.1.0 (from cairocffi->CairoSVG==2.8.2->-r task1/reports/process1/source/requirements-build.txt (line 4))
+  Downloading cffi-2.1.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.5 kB)
+Collecting webencodings (from cssselect2->CairoSVG==2.8.2->-r task1/reports/process1/source/requirements-build.txt (line 4))
+  Downloading webencodings-0.6.1-py3-none-any.whl.metadata (3.4 kB)
+Collecting pycparser (from cffi>=1.1.0->cairocffi->CairoSVG==2.8.2->-r task1/reports/process1/source/requirements-build.txt (line 4))
+  Using cached pycparser-3.0-py3-none-any.whl.metadata (8.2 kB)
+Using cached pillow-12.3.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (6.9 MB)
+Downloading numpy-2.3.5-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.6/16.6 MB 1.1 MB/s eta 0:00:00
+Downloading pymupdf-1.26.7-cp310-abi3-manylinux_2_28_x86_64.whl (24.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 24.1/24.1 MB 1.1 MB/s eta 0:00:00
+Downloading cairosvg-2.8.2-py3-none-any.whl (45 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.8/45.8 kB 2.7 MB/s eta 0:00:00
+Downloading cairocffi-1.7.1-py3-none-any.whl (75 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 75.6/75.6 kB 372.0 kB/s eta 0:00:00
+Downloading cssselect2-0.10.1-py3-none-any.whl (15 kB)
+Using cached defusedxml-0.7.1-py2.py3-none-any.whl (25 kB)
+Using cached tinycss2-1.5.1-py3-none-any.whl (28 kB)
+Downloading cffi-2.1.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (221 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 221.8/221.8 kB 225.4 kB/s eta 0:00:00
+Downloading webencodings-0.6.1-py3-none-any.whl (8.7 kB)
+Using cached pycparser-3.0-py3-none-any.whl (48 kB)
+Installing collected packages: webencodings, PyMuPDF, pycparser, Pillow, numpy, defusedxml, tinycss2, cffi, cssselect2, cairocffi, CairoSVG
+ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
+scipy 1.11.4 requires numpy<1.28.0,>=1.21.6, but you have numpy 2.3.5 which is incompatible.
+Successfully installed CairoSVG-2.8.2 Pillow-12.3.0 PyMuPDF-1.26.7 cairocffi-1.7.1 cffi-2.1.1 cssselect2-0.10.1 defusedxml-0.7.1 numpy-2.3.5 pycparser-3.0 tinycss2-1.5.1 webencodings-0.6.1

@@ -6,12 +6,12 @@ of the Smart Cities & Location Services project.
 
 The template follows:
 
-**Smart Cities Visual / LaTeX Design System v2.5**
+**Smart Cities Visual / LaTeX Design System v2.6**
 
 It shares the same P2 · Cloud Sorbet visual identity as the Experiment Report,
 but the two reports have different information responsibilities.
 
-The [Report Writing Guide v1.1](../../../docs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md) defines project-wide formal dual-report scope and later-task Process continuity. Later tasks introduce or cite the real shared foundation as needed for independent reading, then focus on their actual additions, corrections, rejected directions and Experiment Decision Process. Preserve source scope and Lock state; do not copy the entire earlier report or create new disputes to imply iteration. Evidence Master is explicitly appointed by the user under [Evidence Protocol §4.1](../../../docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md#41-evidence-master--master-planning-conversation).
+The [Report Writing Guide v1.2](../../../docs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md) defines project-wide formal dual-report scope and later-task Process continuity. Later tasks introduce or cite the real shared foundation as needed for independent reading, then focus on their actual additions, corrections, rejected directions and Experiment Decision Process. Preserve source scope and Lock state; do not copy the entire earlier report or create new disputes to imply iteration. Evidence Master is explicitly appointed by the user under [Evidence Protocol §4.1](../../../docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md#41-evidence-master--master-planning-conversation).
 
 ---
 
@@ -163,7 +163,7 @@ Annotations may appear:
 - above the screenshot;
 - beside it;
 - below it;
-- locally over it when readability permits.
+- in adjacent whitespace as precise arrows without covering chat text.
 
 ### General interactions
 
@@ -306,7 +306,7 @@ Normal body text uses dark Ink.
 
 P2 colors are primarily used for:
 
-- translucent highlights;
+- translucent highlights in separate technical diagrams/page elements only, never over conversation screenshots;
 - small semantic labels;
 - arrows;
 - side rules;
@@ -332,6 +332,12 @@ Avoid:
 ## 8. Demo Assets
 
 `demo-assets/` contains template-only synthetic assets.
+
+The current multi-page layout uses the plain LaTeX specimens in
+`demo-assets/multipage_specimens.tex`. They are explicitly **NOT CHAT UI** and
+contain placement instructions, not invented conversation. The older
+`interaction_part1.png`, `interaction_part2.png` and `interaction_part3.png`
+are preserved historical demo assets and are not used by the current template.
 
 They exist only to demonstrate:
 
@@ -381,12 +387,11 @@ not the normal runtime source.
 ### Template and accepted real-content reference
 
 - Visual / Layout Template Reference: [Process_Report_P2_Locked_v1.pdf](preview/Process_Report_P2_Locked_v1.pdf), at `templates/latex/process-report/preview/Process_Report_P2_Locked_v1.pdf`.
-- Real-content Workflow Construction / first-person writing / Interaction Evidence implementation reference: [WF_WorkflowConstruction_PreTask1_REVISED.pdf](../../../reports/process-report/pre-task1/WF_WorkflowConstruction_PreTask1_REVISED.pdf).
-- Supplied source archive with the PARTIAL reproduction limit below: [WF_WorkflowConstruction_PreTask1_31p_LaTeX_Source.zip](../../../reports/process-report/pre-task1/WF_WorkflowConstruction_PreTask1_31p_LaTeX_Source.zip).
+- Historical preview before the arrow-only migration: [2026-09-29 snapshot](preview/history/Process_Report_P2_Locked_v1_20260929.pdf). It is retained for provenance and is not a competing active preview.
+- Current user-accepted complete reference: [Process_Report_Revised.pdf](../../../reports/process-report/experiment1-revised/Process_Report_Revised.pdf) and [paired source](../../../reports/process-report/experiment1-revised/Process_Report_Revised_LaTeX_Source.zip).
+- Historical PreTask foundation: [PDF](../../../reports/process-report/pre-task1/WF_WorkflowConstruction_PreTask1_REVISED.pdf) / [source](../../../reports/process-report/pre-task1/WF_WorkflowConstruction_PreTask1_31p_LaTeX_Source.zip). Its [historical PARTIAL reproduction](../../../evidence/infrastructure/SMART-CITIES-GOVERNANCE-PROCESS-REFERENCE-SYNC-002/source-archive-check.md) remains unchanged; it is no longer the active layout exemplar.
 
-The accepted reference complements the template and its preview; it replaces neither. It is not an Experiment Report and does not establish that Task 1 Experiment Decision Process is complete. Task-specific formal reports still start from a copy of the active template, not by copying the 31-page real-content report as an assignment template.
-
-The supplied archive builds 31 pages but has [PARTIAL reproduction verification](../../../evidence/infrastructure/SMART-CITIES-GOVERNANCE-PROCESS-REFERENCE-SYNC-002/source-archive-check.md): revised prose/annotation geometry differs from the approved PDF, and the verification build has missing arrow glyphs. Preserve both approved inputs unchanged; use the approved PDF as the accepted reading reference.
+The complete accepted reference shows real user-UI openings, screenshot-dominant composition and arrow-only annotation. Preserve its task-specific evidence and actual approval scope. Neither the synthetic template preview nor whole-document acceptance grants new per-evidence Lock. The current template preview remains synthetic and is not a Project Source in this task.
 
 Do not overwrite the locked reference template for a specific assignment.
 
@@ -421,13 +426,13 @@ latexmk -xelatex \
 
 ## 12. Phrase-level Interaction Evidence authoring
 
-Required reads: [Evidence Protocol v2.6](../../../docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md), [Visual System v2.5](../../../docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md), [Report Writing Guide v1.1](../../../docs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md), [AGENTS](../../../AGENTS.md), and the user-designated Evidence Master's approved annotation specification. Research governance lives in [Research Protocol](../../../docs/research/SMART_CITIES_RESEARCH_PROTOCOL.md).
+Required reads: [Evidence Protocol v2.7](../../../docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md), [Visual System v2.6](../../../docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md), [Report Writing Guide v1.2](../../../docs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md), [AGENTS](../../../AGENTS.md), and the user-designated Evidence Master's approved annotation specification. Research governance lives in [Research Protocol](../../../docs/research/SMART_CITIES_RESEARCH_PROTOCOL.md).
 
 Production chain:
 
-raw screenshot → Evidence Master annotation spec → lossless crop → direct LaTeX embed → TikZ Micro Trace → XeLaTeX → 200-dpi render inspection → Phrase/Box/Arrow Audit → Evidence Lock.
+raw screenshot → Evidence Master annotation spec → lossless crop → direct LaTeX embed → TikZ Micro Trace → XeLaTeX → 200-dpi render inspection → User UI / Phrase / Arrow / Readability Audit → Evidence Lock.
 
-Evidence Master selects phrases, minimum sufficient box ranges, relations, order and captions. Codex implements approved geometry and wording. Keep raw files unchanged, preserve crop parameters and annotated LaTeX/PDF. Review the Interaction Window; temporal adjacency alone never supports a relation.
+Evidence Master selects the real user-UI entry, exact phrases, relations, order and captions. Codex implements approved geometry and wording. Keep raw files unchanged, preserve crop parameters and annotated LaTeX/PDF. Review the Interaction Window; temporal adjacency alone never supports a relation.
 
 `components/interaction_evidence.tex` uses the existing shared P2 palette. The parent loads TikZ with `arrows.meta,calc` and the common palette before loading this component. It contains no screenshot-specific coordinates.
 
@@ -435,21 +440,20 @@ Evidence Master selects phrases, minimum sufficient box ranges, relations, order
 |---|---|
 | `\IEScreenshot[graphicx options]{path}{width}` | Direct PNG include; `trim={left bottom right top},clip` supported. |
 | `interactionevidence[graphicx options]{path}{width}` | Image with normalized coordinates: (0,0) bottom left, (1,1) top right of displayed crop. |
-| `\IEHighlight[role]{x1,y1}{x2,y2}` | Translucent phrase rectangle; default `ie user`. |
-| `\IEOutline[role]{x1,y1}{x2,y2}` | Rounded phrase outline, no fill. |
 | `\IEAnchor{name}{x,y}` | Named approved phrase endpoint. |
-| `\IEMarker[role]{x,y}{number}` | Small numbered marker. |
 | `\IECurvedArrow[style]{from}{to}` | Curved phrase-to-phrase connector. |
 | `\IERoutedArrow[style]{TikZ path}` | Explicit route through whitespace. |
-| `\IESideNote[style]{x,y}{text}` | Physical-size text beside image; default 40 mm width. |
+| `\IESideNote[style]{x,y}{text}` | Physical-size text beside image; default 34 mm width. |
 | `\IEProvenance[style]{x,y}{label}` | Provenance label. |
 | `\IEAssetLabel{x,y}{raw/crop/annotated}` | Asset-layer label. |
 
 Styles: `ie before` = Light Blue; `ie user` = Apricot; `ie user rose` = Soft Rose; `ie after` = Mist Violet; connector = Blue accent; body = Ink. Arrow semantics come from the spec. Keep evidence coordinates in each task page, not the reusable component. Cropping changes the coordinate basis; recalculate endpoints against the displayed crop.
 
-Effective PPI = displayed-region pixels / physical display inches, taking the smaller horizontal/vertical value. Require >=180, prefer >=200; preserve readability as well. If resizing/splitting cannot satisfy both, report `RECAPTURE_REQUIRED`; never AI-upscale or redraw UI. Record raw/crop pixel dimensions, crop bounds, display dimensions and PPI in the [internal Evidence Plan](../../../evidence/process-report/workflow-construction/WORKFLOW_EVIDENCE_PLAN.md).
+Use approximately 70%–80% of the image-and-note width for the visible screenshot and about 20% for concise commentary. Each new interaction opens with the corresponding real user UI; continuation pages carry that same interaction forward. Place the heading, brief introduction and first screenshot together. The template uses plain synthetic specimens to demonstrate geometry, never fabricated ChatGPT UI.
 
-Check PHRASE MATCH, BOX RANGE, ARROW RELATION, ARROW ENDPOINT and SOURCE RESOLUTION individually against the final PDF render. Boxes must cover only the approved minimum sufficient phrase; arrow endpoints must point to the approved phrases after cropping and scaling. Failures block LOCK. Evidence Master performs final review/lock; successful compilation is not evidence approval. Contact Sheets do not require Micro Trace. Core evidence can span any necessary number of pages. Global Workflow Evolution Map is produced only after main workflow evidence is locked.
+Effective PPI = displayed-region pixels / physical display inches, taking the smaller horizontal/vertical value. Normally target >=180, preferably >=200. An explicitly accepted source and layout may retain `APPROVED_NATIVE_WIDTH` with its actual dimensions/PPI and approval scope. Do not demand a repeat recapture of the same accepted material. Rendering at 200 dpi does not improve source detail. Never AI-upscale or redraw UI.
+
+Check USER UI ENTRY, ANNOTATION MODE, PHRASE MATCH, ARROW RELATION, ARROW ENDPOINT, PAGE READABILITY and SOURCE RESOLUTION against the final PDF render. Conversation overlays are arrow-only, without circles, boxes, fills, underlines or numbered overlays. The retired box/marker APIs deliberately are not provided by the current component. Technical diagram node borders remain legitimate. Evidence Master performs the actual final review/Lock; engineering checks do not grant it. Historical box checks remain historical. Global Workflow Evolution Map production follows the actual Evidence Lock prerequisite.
 
 ## 13. Synthetic fixture and canonical preview
 

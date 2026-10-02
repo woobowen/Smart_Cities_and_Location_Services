@@ -60,16 +60,24 @@ def declaration(root):
                 '/' not in name and '\\' not in name and not re.search(r'\(\d+\)(?=\.|$)', name),
                 f'Noncanonical upload name: {name}')
         require(name not in names, f'Duplicate canonical name: {name}')
-        require(row['active_path'] not in paths, f'Duplicate active source: {row["active_path"]}')
-        require(row['project_source'] is True, f'Not an approved Project Source: {name}')
+        active = row['active_path']
+        require(isinstance(active, str), f'Invalid active source path: {name}')
+        require(active not in paths, f'Duplicate active source: {active}')
+        require(not PurePosixPath(active).is_relative_to(BUNDLE_PATH),
+                f'Bundle cannot be an active source: {name}')
+        require(isinstance(row['project_source'], bool), f'Invalid Project Source identity: {name}')
         require(re.fullmatch('[0-9a-f]{64}', row['sha256']) is not None, f'Invalid SHA256: {name}')
         names.add(name)
         paths.add(row['active_path'])
+    require(any(row['project_source'] for row in rows), 'No approved Project Sources')
     return data
 
 
-def verify_skill(root):
-    archive = safe_path(root, BUNDLE_PATH / 'publication-plots.zip')
+def verify_skill(root, data):
+    sources = [r for r in data['sources'] if r['canonical_name'] == 'publication-plots.zip'
+               and r['project_source']]
+    require(len(sources) == 1, 'Required original Skill archive is not an approved source')
+    archive = safe_path(root, sources[0]['active_path'])
     require(sha(archive.read_bytes()) == SKILL_SHA256, 'Original Skill archive SHA256 mismatch; do not repackage')
     installed = safe_path(root, 'tools/skills/publication-plots', directory=True)
     expected = {}
@@ -97,12 +105,15 @@ def verify_skill(root):
 
 def source_rows(root):
     rows = []
-    for entry in declaration(root)['sources']:
+    data = declaration(root)
+    for entry in data['sources']:
         source = safe_path(root, entry['active_path'])
         require(sha(source.read_bytes()) == entry['sha256'], f'Active source SHA256 mismatch: {entry["canonical_name"]}')
+        if not entry['project_source']:
+            continue
         rows.append(dict(entry, filename=entry['canonical_name'], source=entry['active_path'],
                          bundle=(BUNDLE_PATH / entry['canonical_name']).as_posix()))
-    verify_skill(root)
+    verify_skill(root, data)
     return rows
 
 
@@ -129,12 +140,20 @@ def manifest_text(rows, data):
                      f'{r["approval_scope"]} / {r["supersedes"] or "—"} |')
     lines += ['',
         '权威源先更新，再分发到 `releases/chatgpt-project-sources/`。`--check` 验证集合、每项来源和目标字节及本表；仅本表存在不代表 bundle 已通过检查。',
-        'publication-plots.zip 是原件例外：原件留在 bundle，以固定批准 SHA256 加 installed Skill 全部有效成员独立验证；绝不以自身比较作为唯一依据，不重打包。',
-        '两个 P2 preview 是合成模板。25 页 Experiment PDF/ZIP 是实验一已验收成品及源归档，只作对应实例参考。',
-        '前期 Process 只覆盖 PreTask1，其源码重建保留 [PARTIAL 限制](../SMART-CITIES-GOVERNANCE-PROCESS-REFERENCE-SYNC-002/source-archive-check.md)，不证明完整实验一 Process 或新的 Evidence Lock。',
+        'publication-plots.zip 从表中独立 active source 分发，以固定批准 SHA256 加 installed Skill 全部有效成员独立验证；保留原始字节，不重打包。',
+        '合成模板、已验收成品和历史局部材料的身份以每项 semantic role / scope 为准；报告与源包按 pair_id 配对，批准范围不自动推广到新实验、Evidence Lock 或教师提交。',
         '教师材料与 starter 原字节保留；同步不执行 Notebook、实验模型或数值实验。',
         'Project Settings 仅在 UI 维护；metadata、脚本、日志和 UI 补丁不进入 upload bundle。',
         '上传采取[差异更新](UPLOAD_INSTRUCTIONS.md)，不要求删除全部现有 Project Sources。', '']
+    historical = [r for r in data['sources'] if not r['project_source']]
+    if historical:
+        lines += ['## 非上传的保留来源', '',
+                  '| Canonical name | Preserved source | Semantic role / scope | SHA256 |',
+                  '|---|---|---|---|']
+        for r in historical:
+            lines.append(f'| `{r["canonical_name"]}` | [{r["active_path"]}](../../../{r["active_path"]}) | '
+                         f'{r["semantic_role"]} / {r["scope"]} | `{r["sha256"]}` |')
+        lines.append('')
     return '\n'.join(lines)
 
 
@@ -147,7 +166,7 @@ def instructions_text(rows, data):
         '2. 运行写同步及 `--check`；所有来源完整、安全且 hash 正确才写入。未知 extra、目录、符号链接不会被删除。',
         f'3. 发布并实际回读固定远程版本后，按 [当前 UI 交接说明]({handoff}) 核对用户实际 UI 版本，再逐项更新。',
         '4. 内容变化的同名文档逐个替换；保留未变有效资料。不删除全部当前 Project Sources，不重复上传未变 PDF/ZIP。',
-        '5. UI版本未知时记录 USER_CONFIRMATION_REQUIRED；若已使用当前文件，不要求重复上传。', '',
+        '5. UI版本未知时记录 USER_CONFIRMATION_REQUIRED；用户报告已更新时记录 USER_REPORTED_UPDATED，逐项比对其批准输入与最终分发字节。无内容差异时不要求重复上传。', '',
         '生成文件、本地同步、远程核验、UPLOAD_BUNDLE READY、用户实际 UI 上传是五种不同状态。工具只负责前述仓库步骤。',
         '历史 [SYNC-003 UI差异表](../SC-PROJECT-SOURCES-SYNC-003/handoff/UI_SOURCE_DIFF.md) 及 [Settings transfer补丁](../SC-PROJECT-SOURCES-SYNC-003/handoff/PROJECT_SETTINGS_SCOPE_PATCH.md) 仅说明当时输入与交付，不代表当前UI状态或本轮需要重复套用。',
         'Project Settings由用户在UI维护；当前交接不生成第二份active设置或新的长稿。', '',
@@ -180,7 +199,7 @@ def verify_manifest(root, rows):
 def difference_plan(root):
     result = dict(add=[], change=[], missing=[], unexpected=[], unsafe=[], errors=[], metadata_change=[])
     data = declaration(root)
-    names = {r['canonical_name'] for r in data['sources']}
+    names = {r['canonical_name'] for r in data['sources'] if r['project_source']}
     try:
         entries, result['unexpected'], result['unsafe'] = inspect_bundle(root, names)
     except ValueError as exc:
@@ -190,6 +209,8 @@ def difference_plan(root):
             src = safe_path(root, r['active_path'])
             content = src.read_bytes()
             require(sha(content) == r['sha256'], f'Active source SHA256 mismatch: {r["canonical_name"]}')
+            if not r['project_source']:
+                continue
             dst = safe_path(root, BUNDLE_PATH / r['canonical_name'], allow_missing=True)
             if not dst.exists():
                 result['add'].append(r['canonical_name'])
@@ -208,7 +229,7 @@ def difference_plan(root):
                     result['metadata_change'].append(path.as_posix())
         except ValueError as exc:
             result['errors'].append(str(exc))
-    result['file_count'] = len(data['sources'])
+    result['file_count'] = len(names)
     result['safe_to_sync'] = not (result['errors'] or result['unsafe'] or result['unexpected'])
     return result
 

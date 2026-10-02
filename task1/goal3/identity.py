@@ -24,7 +24,9 @@ def write_report_metadata(root=ROOT):
     fields = {'StudentName': value['student_name'], 'StudentID': value['student_id'],
               'ReportDate': f'{day.year} 年 {day.month} 月 {day.day} 日',
               'ExperimentStatus': '技术送审稿；待最终审核',
-              'ProcessStatus': '送审稿；原始互动证据与批准呈现方案待补'}
+              'ProcessStatus': ('全文已验收；具体 Evidence Lock 按原记录'
+                                if value.get('process_report_status') == 'USER_ACCEPTED_FULL_REPORT'
+                                else '送审稿；原始互动证据与批准呈现方案待补')}
     text = '% Generated from task1/config/assignment.json; date is the report revision date.\n'
     text += ''.join('\\newcommand{\\'+key+'}{'+content+'}\n' for key, content in fields.items())
     target = Path(root)/'task1/reports/metadata.tex'

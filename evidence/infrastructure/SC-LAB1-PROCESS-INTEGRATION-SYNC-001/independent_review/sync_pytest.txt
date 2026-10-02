@@ -1,0 +1,45 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.1.1, pluggy-1.6.0 -- /home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python
+rootdir: /home/addaswsw/lab/Smart_Cities_and_Location_Services
+collecting ... collected 37 items
+
+evidence/infrastructure/chatgpt-project-source-sync/test_sync_sources.py::test_positive_readonly_and_idempotent PASSED [  2%]
+evidence/infrastructure/chatgpt-project-source-sync/test_sync_sources.py::test_nonupload_history_is_preserved_without_increasing_bundle_count PASSED [  5%]
+evidence/infrastructure/chatgpt-project-source-sync/test_sync_sources.py::test_skill_target_is_restored_from_independent_original[missing] PASSED [  8%]
+evidence/infrastructure/chatgpt-project-source-sync/test_sync_sources.py::test_skill_target_is_restored_from_independent_original[corrupt] PASSED [ 10%]
+evidence/infrastructure/chatgpt-project-source-sync/test_sync_sources.py::test_declared_dummy_member_uses_dynamic_count PASSED [ 13%]
+evidence/infrastructure/chatgpt-project-source-sync/test_sync_sources.py::test_invalid_inputs_never_partially_change_targets[duplicate] PASSED [ 16%]
+evidence/infrastructure/chatgpt-project-source-sync/test_sync_sources.py::test_invalid_inputs_never_partially_change_targets[missing] PASSED [ 18%]
+evidence/infrastructure/chatgpt-project-source-sync/test_sync_sources.py::test_invalid_inputs_never_partially_change_targets[hash] PASSED [ 21%]
+evidence/infrastructure/chatgpt-project-source-sync/test_sync_sources.py::test_invalid_inputs_never_partially_change_targets[extra] PASSED [ 24%]
+evidence/infrastructure/chatgpt-project-source-sync/test_sync_sources.py::test_invalid_inputs_never_partially_change_targets[directory] PASSED [ 27%]
+evidence/infrastructure/chatgpt-project-source-sync/test_sync_sources.py::test_invalid_inputs_never_partially_change_targets[symlink] PASSED [ 29%]
+evidence/infrastructure/chatgpt-project-source-sync/test_sync_sources.py::test_invalid_inputs_never_partially_change_targets[parent_symlink] PASSED [ 32%]
+evidence/infrastructure/chatgpt-project-source-sync/test_sync_sources.py::test_invalid_inputs_never_partially_change_targets[target_parent_symlink] PASSED [ 35%]
+evidence/infrastructure/chatgpt-project-source-sync/test_sync_sources.py::test_invalid_inputs_never_partially_change_targets[traversal] PASSED [ 37%]
+evidence/infrastructure/chatgpt-project-source-sync/test_sync_sources.py::test_invalid_inputs_never_partially_change_targets[absolute] PASSED [ 40%]
+evidence/infrastructure/chatgpt-project-source-sync/test_sync_sources.py::test_invalid_inputs_never_partially_change_targets[canonical_traversal] PASSED [ 43%]
+evidence/infrastructure/chatgpt-project-source-sync/test_sync_sources.py::test_invalid_inputs_never_partially_change_targets[suffix] PASSED [ 45%]
+evidence/infrastructure/chatgpt-project-source-sync/test_sync_sources.py::test_invalid_inputs_never_partially_change_targets[wrong_skill] PASSED [ 48%]
+evidence/infrastructure/chatgpt-project-source-sync/test_sync_sources.py::test_invalid_inputs_never_partially_change_targets[metadata_symlink] PASSED [ 51%]
+evidence/infrastructure/chatgpt-project-source-sync/test_sync_sources.py::test_invalid_inputs_never_partially_change_targets[source_symlink] PASSED [ 54%]
+evidence/infrastructure/chatgpt-project-source-sync/test_sync_sources.py::test_invalid_inputs_never_partially_change_targets[source_directory] PASSED [ 56%]
+evidence/infrastructure/chatgpt-project-source-sync/test_sync_sources.py::test_invalid_inputs_never_partially_change_targets[self_source] PASSED [ 59%]
+evidence/infrastructure/chatgpt-project-source-sync/test_sync_sources.py::test_invalid_inputs_never_partially_change_targets[wrong_members] PASSED [ 62%]
+evidence/infrastructure/chatgpt-project-source-sync/test_sync_sources.py::test_invalid_inputs_never_partially_change_targets[skill_members] PASSED [ 64%]
+evidence/infrastructure/chatgpt-project-source-sync/test_sync_sources.py::test_invalid_inputs_never_partially_change_targets[declaration_symlink] PASSED [ 67%]
+evidence/infrastructure/chatgpt-project-source-sync/test_sync_sources.py::test_failure_during_update_rolls_back_bytes_and_mtimes PASSED [ 70%]
+evidence/infrastructure/chatgpt-project-source-sync/test_sync_sources.py::test_plan_reports_missing_extra_and_unsafe_without_writes PASSED [ 72%]
+evidence/infrastructure/chatgpt-project-source-sync/test_sync_sources.py::test_stale_metadata_check_is_readonly PASSED [ 75%]
+evidence/infrastructure/chatgpt-project-source-sync/test_sync_sources.py::test_actual_readonly_cli_preserves_contents_and_mtimes[ready---plan] PASSED [ 78%]
+evidence/infrastructure/chatgpt-project-source-sync/test_sync_sources.py::test_actual_readonly_cli_preserves_contents_and_mtimes[ready---check] PASSED [ 81%]
+evidence/infrastructure/chatgpt-project-source-sync/test_sync_sources.py::test_actual_readonly_cli_preserves_contents_and_mtimes[wrong_members---plan] PASSED [ 83%]
+evidence/infrastructure/chatgpt-project-source-sync/test_sync_sources.py::test_actual_readonly_cli_preserves_contents_and_mtimes[wrong_members---check] PASSED [ 86%]
+evidence/infrastructure/chatgpt-project-source-sync/test_sync_sources.py::test_actual_readonly_cli_preserves_contents_and_mtimes[missing_source---plan] PASSED [ 89%]
+evidence/infrastructure/chatgpt-project-source-sync/test_sync_sources.py::test_actual_readonly_cli_preserves_contents_and_mtimes[missing_source---check] PASSED [ 91%]
+evidence/infrastructure/chatgpt-project-source-sync/test_sync_sources.py::test_actual_readonly_cli_preserves_contents_and_mtimes[stale_metadata---plan] PASSED [ 94%]
+evidence/infrastructure/chatgpt-project-source-sync/test_sync_sources.py::test_actual_readonly_cli_preserves_contents_and_mtimes[stale_metadata---check] PASSED [ 97%]
+evidence/infrastructure/chatgpt-project-source-sync/test_sync_sources.py::test_failure_during_update_removes_only_new_transaction_files PASSED [100%]
+
+- generated xml file: /home/addaswsw/lab/Smart_Cities_and_Location_Services/evidence/infrastructure/SC-LAB1-PROCESS-INTEGRATION-SYNC-001/independent_review/sync_pytest.xml -
+============================== 37 passed in 0.68s ==============================

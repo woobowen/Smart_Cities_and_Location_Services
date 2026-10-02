@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net">
+  <diagram name="任务、判断职责与确定性工具" id="D01">
+    <mxGraphModel dx="1000" dy="650" grid="1" gridSize="10" page="1" pageScale="1" pageWidth="1000" pageHeight="650">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="e0" value="" edge="1" parent="1" source="h" target="a" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=0;strokeColor=#70757A;fontFamily=Noto Sans CJK SC;fontSize=16;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="" edge="1" parent="1" source="h" target="b" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=0;strokeColor=#70757A;fontFamily=Noto Sans CJK SC;fontSize=16;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" value="" edge="1" parent="1" source="h" target="c" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=0;strokeColor=#70757A;fontFamily=Noto Sans CJK SC;fontSize=16;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" value="任务&#10;计划" edge="1" parent="1" source="a" target="b" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=0;strokeColor=#70757A;fontFamily=Noto Sans CJK SC;fontSize=14;align=center;verticalAlign=middle;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="0" y="-28" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" value="真实&#10;产物" edge="1" parent="1" source="b" target="c" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=0;strokeColor=#70757A;fontFamily=Noto Sans CJK SC;fontSize=14;align=center;verticalAlign=middle;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="0" y="-28" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5" value="" edge="1" parent="1" source="ctl" target="tools" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=0;strokeColor=#70757A;fontFamily=Noto Sans CJK SC;fontSize=16;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" value="" edge="1" parent="1" source="ctl" target="state" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=0;strokeColor=#70757A;fontFamily=Noto Sans CJK SC;fontSize=16;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" value="" edge="1" parent="1" source="a" target="ctl" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=0;strokeColor=#70757A;fontFamily=Noto Sans CJK SC;fontSize=16;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" value="" edge="1" parent="1" source="b" target="ctl" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=0;strokeColor=#70757A;fontFamily=Noto Sans CJK SC;fontSize=16;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" value="" edge="1" parent="1" source="c" target="ctl" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=0;strokeColor=#70757A;fontFamily=Noto Sans CJK SC;fontSize=16;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="h" value="我与GPT：解释依据、审核重要原则&#10;确定研究范围、指标与允许的动作" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFFDFC;strokeColor=#B97589;fontColor=#2D3238;fontFamily=Noto Sans CJK SC;fontSize=17;spacing=10;">
+          <mxGeometry x="250" y="20" width="500" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="a" value="A｜研究诊断与改进&#10;读诊断与已有结果&#10;提出有依据的下一步" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFFDFC;strokeColor=#5B9FBE;fontColor=#2D3238;fontFamily=Noto Sans CJK SC;fontSize=17;spacing=10;">
+          <mxGeometry x="25" y="170" width="295" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="b" value="B｜处理、实验与工程执行&#10;调用工具，保存输出&#10;需要修复时进入B-Repair" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFFDFC;strokeColor=#5B9FBE;fontColor=#2D3238;fontFamily=Noto Sans CJK SC;fontSize=17;spacing=10;">
+          <mxGeometry x="353" y="170" width="295" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="c" value="C｜质量核查与反例&#10;使用独立参考检查产物&#10;接受、拒绝或提出补证" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFFDFC;strokeColor=#8177A8;fontColor=#2D3238;fontFamily=Noto Sans CJK SC;fontSize=17;spacing=10;">
+          <mxGeometry x="680" y="170" width="295" height="95" as="geometry" />
+        </mxCell>
+        <mxCell id="ctl" value="确定性控制器&#10;任务依赖／权限与预算／产物登记／回退与恢复" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFFDFC;strokeColor=#8177A8;fontColor=#2D3238;fontFamily=Noto Sans CJK SC;fontSize=17;spacing=10;">
+          <mxGeometry x="170" y="341" width="660" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="tools" value="确定性工具&#10;分段S、方向规则D、DP简化P&#10;评价、搜索、版本与文件生成" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFFDFC;strokeColor=#5B9FBE;fontColor=#2D3238;fontFamily=Noto Sans CJK SC;fontSize=17;spacing=10;">
+          <mxGeometry x="50" y="488" width="425" height="92" as="geometry" />
+        </mxCell>
+        <mxCell id="state" value="共享状态与来源&#10;既定方法、原始输入与产物身份&#10;候选、核验、失败原因和可复用经验" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFFDFC;strokeColor=#5B9FBE;fontColor=#2D3238;fontFamily=Noto Sans CJK SC;fontSize=17;spacing=10;">
+          <mxGeometry x="525" y="488" width="425" height="92" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

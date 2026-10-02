@@ -3,6 +3,8 @@ import importlib.util
 import json
 from pathlib import Path
 import shutil
+import subprocess
+import sys
 
 import pytest
 
@@ -25,13 +27,15 @@ def root(tmp_path):
     (tmp_path / 'active').mkdir()
     (tmp_path / 'active/A.md').write_bytes(b'approved A\n')
     (tmp_path / 'active/B.bin').write_bytes(b'\x00\x01\xffapproved B')
-    archive = sync.ROOT / sync.BUNDLE_PATH / 'publication-plots.zip'
-    shutil.copy2(archive, tmp_path / sync.BUNDLE_PATH / archive.name)
+    real_declaration = json.loads((sync.ROOT / sync.DECLARATION_PATH).read_text())
+    skill = next(r for r in real_declaration['sources'] if r['canonical_name'] == 'publication-plots.zip')
+    archive = sync.ROOT / skill['active_path']
+    shutil.copy2(archive, tmp_path / 'active/publication-plots.zip')
     shutil.copytree(sync.ROOT / 'tools/skills/publication-plots', tmp_path / 'tools/skills/publication-plots',
                     ignore=shutil.ignore_patterns('__pycache__'))
     rows = [row('A.md', 'active/A.md', b'approved A\n'),
             row('B.bin', 'active/B.bin', b'\x00\x01\xffapproved B'),
-            row(archive.name, str(sync.BUNDLE_PATH / archive.name), archive.read_bytes())]
+            row('publication-plots.zip', 'active/publication-plots.zip', archive.read_bytes())]
     (tmp_path / sync.DECLARATION_PATH).write_text(json.dumps(dict(schema_version=1, approval='TEST',
                                                                revision_date='2026-09-29', sources=rows)))
     return tmp_path
@@ -50,8 +54,10 @@ def edit_declaration(root, update):
 
 
 def test_positive_readonly_and_idempotent(root):
+    before_plan = snapshot(root)
     plan = sync.difference_plan(root)
-    assert plan['safe_to_sync'] and set(plan['add']) == {'A.md', 'B.bin'}
+    assert plan['safe_to_sync'] and set(plan['add']) == {'A.md', 'B.bin', 'publication-plots.zip'}
+    assert snapshot(root) == before_plan
     result = sync.sync(root)
     assert result['file_count'] == len(sync.declaration(root)['sources'])
     before = snapshot(root)
@@ -60,6 +66,34 @@ def test_positive_readonly_and_idempotent(root):
     assert sync.sync(root)['updated'] == []
     assert snapshot(root) == before
     assert sync.difference_plan(root)['change'] == []
+    assert snapshot(root) == before
+
+
+def test_nonupload_history_is_preserved_without_increasing_bundle_count(root):
+    (root / 'active/history.txt').write_bytes(b'historical input')
+    history = row('history.txt', 'active/history.txt', b'historical input')
+    history['project_source'] = False
+    edit_declaration(root, lambda d: d['sources'].append(history))
+    result = sync.sync(root)
+    assert result['file_count'] == 3
+    assert {p.name for p in (root / sync.BUNDLE_PATH).iterdir()} == {'A.md', 'B.bin', 'publication-plots.zip'}
+    assert (root / 'active/history.txt').read_bytes() == b'historical input'
+    assert '非上传的保留来源' in (root / sync.INTERNAL_PATH / 'SOURCE_MANIFEST.md').read_text()
+    assert sync.difference_plan(root)['file_count'] == 3
+    sync.verify_manifest(root, sync.verify_bundle(root))
+
+
+@pytest.mark.parametrize('target_state', ['missing', 'corrupt'])
+def test_skill_target_is_restored_from_independent_original(root, target_state):
+    sync.sync(root)
+    target = root / sync.BUNDLE_PATH / 'publication-plots.zip'
+    if target_state == 'missing':
+        target.unlink()
+    else:
+        target.write_bytes(b'corrupt distribution target')
+    sync.sync(root)
+    assert sync.sha(target.read_bytes()) == sync.SKILL_SHA256
+    assert target.read_bytes() == (root / 'active/publication-plots.zip').read_bytes()
 
 
 def test_declared_dummy_member_uses_dynamic_count(root):
@@ -74,7 +108,9 @@ def test_declared_dummy_member_uses_dynamic_count(root):
 
 @pytest.mark.parametrize('case', ['duplicate', 'missing', 'hash', 'extra', 'directory', 'symlink',
                                  'parent_symlink', 'target_parent_symlink', 'traversal', 'absolute',
-                                 'canonical_traversal', 'suffix', 'wrong_skill', 'metadata_symlink'])
+                                 'canonical_traversal', 'suffix', 'wrong_skill', 'metadata_symlink',
+                                 'source_symlink', 'source_directory', 'self_source', 'wrong_members',
+                                 'skill_members', 'declaration_symlink'])
 def test_invalid_inputs_never_partially_change_targets(root, case):
     sync.sync(root)
     bundle = root / sync.BUNDLE_PATH
@@ -106,15 +142,33 @@ def test_invalid_inputs_never_partially_change_targets(root, case):
     elif case == 'suffix':
         edit_declaration(root, lambda d: d['sources'][0].update(canonical_name='A(3).md'))
     elif case == 'wrong_skill':
-        (bundle / 'publication-plots.zip').write_bytes(b'wrong archive')
+        (root / 'active/publication-plots.zip').write_bytes(b'wrong archive')
+        edit_declaration(root, lambda d: d['sources'][2].update(sha256=sync.sha(b'wrong archive')))
     elif case == 'metadata_symlink':
         target = root / sync.INTERNAL_PATH / 'SOURCE_MANIFEST.md'
         target.unlink()
         target.symlink_to(root / 'active/A.md')
-    before = snapshot(bundle)
+    elif case == 'source_symlink':
+        (root / 'active/A.md').unlink()
+        (root / 'active/A.md').symlink_to(bundle / 'A.md')
+    elif case == 'source_directory':
+        (root / 'active/A.md').unlink()
+        (root / 'active/A.md').mkdir()
+    elif case == 'self_source':
+        edit_declaration(root, lambda d: d['sources'][0].update(active_path=str(sync.BUNDLE_PATH / 'A.md')))
+    elif case == 'wrong_members':
+        (bundle / 'A.md').rename(bundle / 'other.md')
+        assert len(list(bundle.iterdir())) == len(sync.declaration(root)['sources'])
+    elif case == 'skill_members':
+        (root / 'tools/skills/publication-plots/SKILL.md').write_bytes(b'unapproved installed Skill')
+    elif case == 'declaration_symlink':
+        manifest = root / sync.DECLARATION_PATH
+        manifest.rename(root / 'real-manifest.json')
+        manifest.symlink_to(root / 'real-manifest.json')
+    before = snapshot(root)
     with pytest.raises((ValueError, RuntimeError)):
         sync.sync(root)
-    assert snapshot(bundle) == before
+    assert snapshot(root) == before
 
 
 def test_failure_during_update_rolls_back_bytes_and_mtimes(root, monkeypatch):
@@ -159,3 +213,46 @@ def test_stale_metadata_check_is_readonly(root):
     with pytest.raises(ValueError, match='Metadata stale'):
         sync.verify_manifest(root, sync.verify_bundle(root))
     assert snapshot(root) == before
+
+
+@pytest.mark.parametrize('flag', ['--plan', '--check'])
+@pytest.mark.parametrize('state', ['ready', 'wrong_members', 'missing_source', 'stale_metadata'])
+def test_actual_readonly_cli_preserves_contents_and_mtimes(root, flag, state):
+    sync.sync(root)
+    if state == 'wrong_members':
+        bundle = root / sync.BUNDLE_PATH
+        (bundle / 'A.md').rename(bundle / 'other.md')
+    elif state == 'missing_source':
+        (root / 'active/A.md').unlink()
+    elif state == 'stale_metadata':
+        (root / sync.INTERNAL_PATH / 'SOURCE_MANIFEST.md').write_text('stale')
+    script = root / SCRIPT.relative_to(sync.ROOT)
+    script.parent.mkdir(parents=True)
+    shutil.copy2(SCRIPT, script)
+    before = snapshot(root)
+    result = subprocess.run([sys.executable, str(script), flag], capture_output=True, text=True)
+    assert snapshot(root) == before
+    expected_success = state == 'ready' or (flag == '--plan' and state == 'stale_metadata')
+    assert (result.returncode == 0) == expected_success, result.stderr
+    if not expected_success:
+        assert 'READY' not in result.stdout
+
+
+def test_failure_during_update_removes_only_new_transaction_files(root, monkeypatch):
+    before_bundle = snapshot(root / sync.BUNDLE_PATH)
+    original_replace = sync.os.replace
+    calls = 0
+
+    def fail_second(src, dst):
+        nonlocal calls
+        calls += 1
+        if calls == 2:
+            raise OSError('injected update failure after creating a new bundle file')
+        original_replace(src, dst)
+
+    monkeypatch.setattr(sync.os, 'replace', fail_second)
+    with pytest.raises(RuntimeError, match='recovery information'):
+        sync.sync(root)
+    assert snapshot(root / sync.BUNDLE_PATH) == before_bundle
+    records = list((root / sync.INTERNAL_PATH).glob('.sync-transaction-*/recovery.json'))
+    assert len(records) == 1 and json.loads(records[0].read_text())['state'] == 'ROLLED_BACK'

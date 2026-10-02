@@ -1,0 +1,54 @@
+{
+  "commands": [
+    {
+      "command": [
+        "python",
+        "tools/make_diagrams.py"
+      ],
+      "exit_code": 0,
+      "started_at": "2026-10-02T15:19:50.864002+00:00",
+      "seconds": 0.9072577953338623
+    },
+    {
+      "command": [
+        "python",
+        "tools/build_report.py"
+      ],
+      "exit_code": 0,
+      "started_at": "2026-10-02T15:19:51.771292+00:00",
+      "seconds": 6.581459045410156
+    },
+    {
+      "command": [
+        "bash",
+        "compile.sh"
+      ],
+      "exit_code": 0,
+      "started_at": "2026-10-02T15:19:58.352782+00:00",
+      "seconds": 9.831131935119629
+    },
+    {
+      "command": [
+        "python",
+        "tools/render_review.py"
+      ],
+      "exit_code": 0,
+      "started_at": "2026-10-02T15:20:08.183959+00:00",
+      "seconds": 4.2176055908203125
+    },
+    {
+      "command": [
+        "python",
+        "tools/audit_report.py"
+      ],
+      "exit_code": 0,
+      "started_at": "2026-10-02T15:20:12.401597+00:00",
+      "seconds": 6.296283006668091
+    }
+  ],
+  "cwd": "/home/addaswsw/.local/state/codex-task-work/SC-LAB1-PROCESS-INTEGRATION-SYNC-001/route-B-font-fixed",
+  "FONTCONFIG_FILE": "task1/reports/process1/fontconfig.conf",
+  "TEXMFHOME": ".venv/texmf",
+  "PYTHONPATH": ".venv/process-report-build-deps",
+  "sha256": "9c1580357157fefbe866e2e0e180958946ce2852bfb8d327a28ed806f8af397f"
+}

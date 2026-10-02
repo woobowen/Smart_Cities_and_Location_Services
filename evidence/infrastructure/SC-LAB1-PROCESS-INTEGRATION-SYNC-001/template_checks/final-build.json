@@ -1,0 +1,37 @@
+{
+  "commands": [
+    {
+      "label": "final",
+      "command": [
+        "latexmk",
+        "-xelatex",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-halt-on-error",
+        "-outdir=build",
+        "process_report_template.tex"
+      ],
+      "exit_code": 0,
+      "workdir": "/home/addaswsw/.local/state/codex-task-work/SC-LAB1-PROCESS-INTEGRATION-SYNC-001/template/process-report",
+      "start_utc": "2026-10-02T15:21:42.014541+00:00",
+      "end_utc": "2026-10-02T15:21:44.242871+00:00"
+    },
+    {
+      "label": "api",
+      "command": [
+        "xelatex",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-halt-on-error",
+        "-output-directory=api-build",
+        "api_probe.tex"
+      ],
+      "exit_code": 0,
+      "workdir": "/home/addaswsw/.local/state/codex-task-work/SC-LAB1-PROCESS-INTEGRATION-SYNC-001/template/process-report",
+      "start_utc": "2026-10-02T15:21:44.242885+00:00",
+      "end_utc": "2026-10-02T15:21:44.566440+00:00"
+    }
+  ],
+  "TEXMFHOME": ".venv/texmf",
+  "classification": "SYNTHETIC_TEMPLATE_NOT_EVIDENCE"
+}

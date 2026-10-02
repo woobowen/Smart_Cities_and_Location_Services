@@ -1,0 +1,83 @@
+{
+  "commands": [
+    {
+      "label": "01_plan_before_authorized_removal",
+      "command": [
+        ".venv/bin/python",
+        "evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/sync_sources.py",
+        "--plan"
+      ],
+      "exit_code": 1,
+      "state_unchanged": true,
+      "readonly_required": true
+    },
+    {
+      "label": "02_plan",
+      "command": [
+        ".venv/bin/python",
+        "evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/sync_sources.py",
+        "--plan"
+      ],
+      "exit_code": 0,
+      "state_unchanged": true,
+      "readonly_required": true
+    },
+    {
+      "label": "03_check_before_write",
+      "command": [
+        ".venv/bin/python",
+        "evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/sync_sources.py",
+        "--check"
+      ],
+      "exit_code": 1,
+      "state_unchanged": true,
+      "readonly_required": true
+    },
+    {
+      "label": "04_sync",
+      "command": [
+        ".venv/bin/python",
+        "evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/sync_sources.py"
+      ],
+      "exit_code": 0,
+      "state_unchanged": false,
+      "readonly_required": false
+    },
+    {
+      "label": "05_check",
+      "command": [
+        ".venv/bin/python",
+        "evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/sync_sources.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "state_unchanged": true,
+      "readonly_required": true
+    },
+    {
+      "label": "06_second_sync",
+      "command": [
+        ".venv/bin/python",
+        "evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/sync_sources.py"
+      ],
+      "exit_code": 0,
+      "state_unchanged": true,
+      "readonly_required": false
+    },
+    {
+      "label": "07_plan_after",
+      "command": [
+        ".venv/bin/python",
+        "evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/sync_sources.py",
+        "--plan"
+      ],
+      "exit_code": 0,
+      "state_unchanged": true,
+      "readonly_required": true
+    }
+  ],
+  "baseline_exact_set_and_hash_match": true,
+  "member_count": 15,
+  "ui_status": "USER_REPORTED_UPDATED",
+  "ui_file_differences": []
+}

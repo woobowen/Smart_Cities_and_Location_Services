@@ -62,6 +62,8 @@ def test_report_route_only_compiles_and_packages(tmp_path, monkeypatch):
     assert len(calls) == 2
     assert calls[0][1].endswith('/task1/reports/build_reports.py')
     assert '--render' in calls[0] and '--evidence-output' in calls[0]
+    assert calls[0][calls[0].index('--report') + 1] == 'all'
+    assert result['process_report_compiled'] is True
     assert calls[1][1:3] == ['-m', 'task1.goal3.package']
     assert '--probe' in calls[1]
     assert result['new_numerical_runs'] == 0
@@ -85,3 +87,23 @@ def test_numerical_entry_functions_match_actually_executed_package():
     functions = lambda text: {n.name: ast.dump(n, include_attributes=False) for n in ast.parse(text).body if isinstance(n, ast.FunctionDef)}
     for name in ('full_recompute', 'live'):
         assert functions(old)[name] == functions(new)[name]
+
+
+@pytest.mark.parametrize('damaged', ['current_reading_copy', 'canonical_pdf'])
+def test_package_rejects_stale_process_before_runtime_reads(tmp_path, damaged):
+    import hashlib
+    from task1.goal3.package import closure
+    for name in ('experiment1', 'process1'):
+        directory = tmp_path / 'task1/reports' / name
+        directory.mkdir(parents=True)
+        content = ('accepted ' + name).encode()
+        config = {'current_reading_copy': f'task1/reports/{name}/current.pdf',
+                  'canonical_pdf': f'task1/reports/{name}/approved.pdf',
+                  'pdf_sha256': hashlib.sha256(content).hexdigest(), 'expected_pages': 1}
+        for field in ('current_reading_copy', 'canonical_pdf'):
+            (tmp_path / config[field]).write_bytes(content)
+        (directory / 'accepted-source.json').write_text(json.dumps(config))
+    (tmp_path / config[damaged]).write_bytes(b'old Process draft')
+    # No numerical inputs exist in this fixture; the report guard must fail first.
+    with pytest.raises(ValueError, match='ACCEPTED_REPORT_HASH_MISMATCH:process1'):
+        closure(tmp_path)

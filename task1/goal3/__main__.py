@@ -61,10 +61,10 @@ def live(run_id, enabled):
 
 
 def report_build(output, evidence_output=None):
-    """Compile the accepted Experiment source and package existing frozen inputs.
+    """Compile both accepted report sources and package existing frozen inputs.
 
-    Report integration does not reopen numerical production or regenerate the
-    independently scoped Process draft. The package's read-only dependency
+    Report integration does not reopen numerical production. Both reports use
+    their accepted editable sources. The package's read-only dependency
     probe still checks exact frozen inputs before publishing a new archive.
     """
     from .identity import read_identity
@@ -76,14 +76,15 @@ def report_build(output, evidence_output=None):
     if not (ROOT/'.git').exists() or not (ROOT/'task1/reports/build_reports.py').is_file():
         raise ValueError('REPORT_BUILD_REQUIRES_COMPLETE_REPOSITORY_AND_REPORT_SOURCES')
     evidence = evidence_output or ROOT/'task1/evidence/goal3/report_build/accepted'
-    subprocess.run([sys.executable, str(ROOT/'task1/reports/build_reports.py'), '--render',
+    subprocess.run([sys.executable, str(ROOT/'task1/reports/build_reports.py'), '--report', 'all', '--render',
                     '--evidence-output', str(evidence)],
                    cwd=ROOT, check=True)
     subprocess.run([sys.executable, '-m', 'task1.goal3.package', '--build', str(target), '--probe',
                     '--receipt', str(evidence/'package/source_closure.json')],
                    cwd=ROOT, check=True)
     return {'status': 'REVIEW_ONLY_REBUILT', 'package_sha256': digest(target),
-            'new_model_calls': 0, 'new_numerical_runs': 0, 'process_report_regenerated': False,
+            'new_model_calls': 0, 'new_numerical_runs': 0, 'process_report_compiled': True,
+            'process_report_regenerated': False,
             'submission_status': 'NOT_READY', 'sent_to_teacher': False,
             'independent_review': 'REQUIRED; unchanged execution inputs may inherit specifically bound FULL evidence'}
 

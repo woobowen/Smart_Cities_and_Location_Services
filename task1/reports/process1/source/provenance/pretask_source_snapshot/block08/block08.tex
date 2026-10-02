@@ -1,0 +1,90 @@
+
+\documentclass[10pt,a4paper]{article}
+\usepackage[top=12mm,bottom=12mm,left=14mm,right=14mm,headsep=2mm,footskip=7mm]{geometry}
+\usepackage{fontspec}
+\usepackage{xeCJK}
+\setmainfont{Noto Sans}
+\setsansfont{Noto Sans}
+\setCJKmainfont{Noto Sans CJK SC}
+\setCJKsansfont{Noto Sans CJK SC}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{calc,arrows.meta,positioning}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{ragged2e}
+\usepackage{microtype}
+\definecolor{P2Paper}{HTML}{FCFAF7}
+\definecolor{P2Ink}{HTML}{2D3238}
+\definecolor{P2Muted}{HTML}{70757A}
+\definecolor{P2BlueLight}{HTML}{D3EAF5}
+\definecolor{P2Apricot}{HTML}{F5D9B8}
+\definecolor{P2Rose}{HTML}{E8C7D3}
+\definecolor{P2Violet}{HTML}{D7D3EA}
+\definecolor{P2Blue}{HTML}{5B9FBE}
+\definecolor{P2ApricotAccent}{HTML}{D49757}
+\definecolor{P2RoseAccent}{HTML}{B97589}
+\definecolor{P2VioletAccent}{HTML}{8177A8}
+\definecolor{P2Rule}{HTML}{DDE3E7}
+\definecolor{P2Panel}{HTML}{FFFDFC}
+\pagecolor{P2Paper}
+\color{P2Ink}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3.5pt}
+\linespread{1.04}
+\hypersetup{hidelinks}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[L]{\fontsize{6.6}{8}\selectfont\color{P2Muted}PROCESS REPORT · WORKFLOW CONSTRUCTION}
+\fancyfoot[R]{\fontsize{6.6}{8}\selectfont\color{P2Muted}\thepage}
+\newcommand{\eyebrow}[1]{{\fontsize{7.8}{9.4}\selectfont\bfseries\color{P2RoseAccent}#1}\par\vspace{1pt}}
+\newcommand{\pagetitle}[1]{{\fontsize{18.5}{21.5}\selectfont\bfseries\color{P2Ink}#1}\par\vspace{3pt}}
+\newcommand{\deck}[1]{{\fontsize{9.0}{13.0}\selectfont\color{P2Ink}\RaggedRight #1}\par\vspace{4pt}}
+\newcommand{\tracehead}[2]{{\fontsize{7.1}{8.4}\selectfont\bfseries\color{#1}#2}\par}
+\newcommand{\tracetitle}[1]{{\fontsize{10.2}{12.2}\selectfont\bfseries\color{P2Ink}#1}\par\vspace{1.5pt}}
+\newcommand{\tracebody}[1]{{\fontsize{8.0}{11.2}\selectfont\color{P2Ink}\RaggedRight #1}\par}
+\newcommand{\provenance}[1]{\vspace{2pt}{\color{P2Rule}\hrule height .35pt}\vspace{2.5pt}{\fontsize{6.9}{9.2}\selectfont\color{P2Muted}\RaggedRight\textbf{Original Evidence.} #1}\par}
+\tikzset{
+ userA/.style={rounded corners=1mm,draw=P2ApricotAccent,line width=.55pt,fill=P2Apricot,fill opacity=.34},
+ userR/.style={rounded corners=1mm,draw=P2RoseAccent,line width=.55pt,fill=P2Rose,fill opacity=.34},
+ gptB/.style={rounded corners=1mm,draw=P2Blue,line width=.55pt,fill=P2BlueLight,fill opacity=.27},
+ gptV/.style={rounded corners=1mm,draw=P2VioletAccent,line width=.55pt,fill=P2Violet,fill opacity=.27},
+ arrA/.style={-{Stealth[length=2.0mm,width=1.45mm]},draw=P2RoseAccent,line width=.72pt},
+ arrB/.style={-{Stealth[length=2.0mm,width=1.45mm]},draw=P2Blue,line width=.72pt},
+ arrV/.style={-{Stealth[length=2.0mm,width=1.45mm]},draw=P2VioletAccent,line width=.72pt},
+ tagA/.style={circle,minimum size=4.8mm,inner sep=0pt,draw=P2ApricotAccent,line width=.6pt,fill=P2Paper,font=\fontsize{6.7}{7}\selectfont\bfseries},
+ tagR/.style={circle,minimum size=4.8mm,inner sep=0pt,draw=P2RoseAccent,line width=.6pt,fill=P2Paper,font=\fontsize{6.7}{7}\selectfont\bfseries},
+ tagB/.style={circle,minimum size=4.8mm,inner sep=0pt,draw=P2Blue,line width=.6pt,fill=P2Paper,font=\fontsize{6.7}{7}\selectfont\bfseries}
+}
+\begin{document}
+
+\eyebrow{WORKFLOW CONSTRUCTION · 19}
+\pagetitle{“做完”不等于“会讲”：工程验收与理解验收被拆成独立状态}
+\deck{在之前的项目里我遇到过一个很实际的问题：Codex已经把工程做完了，但我还没有真正理解代码、实验原理和结果。如果把这两件事看成同一个进度，就很容易出现“代码PASS了，所以我也算学会了”的假完成。}
+\begin{tikzpicture}[x=1mm,y=1mm]
+  \node[anchor=north west,inner sep=0] (s1) at (0,0) {\includegraphics[width=76mm]{assets/status_seed.png}};
+  \node[anchor=north west,inner sep=0] (s2) at (0,-88) {\includegraphics[width=70mm]{assets/status_adapt.png}};
+  \begin{scope}[shift={(s1.south west)},x={($(s1.south east)-(s1.south west)$)},y={($(s1.north west)-(s1.south west)$)}]
+    \path[userA] (0.43,0.41) rectangle (0.99,0.50); \coordinate (ucorr) at (0.99,0.455);
+    \path[gptB] (0.18,0.19) rectangle (0.72,0.27); \coordinate (gdual) at (0.72,0.23);
+  \end{scope}
+  \begin{scope}[shift={(s2.south west)},x={($(s2.south east)-(s2.south west)$)},y={($(s2.north west)-(s2.south west)$)}]
+    \path[gptV] (0.18,0.19) rectangle (0.97,0.68); \coordinate (gad) at (0.97,0.435);
+  \end{scope}
+  \draw[arrA] (ucorr) .. controls (88,-72) and (88,-86) .. (gdual);
+  \node[tagA] at ($(ucorr)+(3.8mm,0)$) {1};
+  \node[anchor=north west,text width=88mm,align=left] at (86,-2) {
+    \tracehead{P2ApricotAccent}{MICRO TRACE 20}\tracetitle{“工程验收时间和理解验收时间可能不同”}
+    \tracebody{我直接指出这两个进度可能不同步。GPT随后把它拆成两条轨：一条看工程有没有做对，另一条看我能不能把原理、代码和结果讲清楚。}
+    \vspace{8mm}
+    \tracehead{P2VioletAccent}{SMART-CITIES ADAPTATION}\tracetitle{状态从Engineering改成Deliverable，但“理解独立”保留下来}
+    \tracebody{迁移到智慧城市后，我把工程轨改叫Deliverable，而Understanding继续单独保留。这样“作业做完”和“我已经理解”不会混成一个状态。}
+    \vspace{8mm}
+    \tracehead{P2Blue}{WHY THIS MATTERS}\tracetitle{状态拆开不是为了管理好看，而是防止“假完成”}
+    \tracebody{Codex自报PASS只能说明工程进度向前走了；我是否真的理解、能不能向老师解释，还要单独检查。后来连Submission也被单独记录，避免把“已经交了”误当成“已经做好了”。}
+  };
+\end{tikzpicture}
+\provenance{上方保留旧项目中我对“工程完成与理解不同步”的真实纠正；下方展示该思想迁移到智慧城市时对状态命名的调整。}
+\end{document}

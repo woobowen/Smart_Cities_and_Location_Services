@@ -1,0 +1,82 @@
+[
+  {
+    "command": [
+      "xelatex",
+      "--version"
+    ],
+    "exit_code": 0,
+    "stdout": "XeTeX 3.141592653-2.6-0.999998 (TeX Live 2026)\nkpathsea version 6.4.2\nCopyright 2026 SIL International, Jonathan Kew and Khaled Hosny.\nThere is NO warranty.  Redistribution of this software is\ncovered by the terms of both the XeTeX copyright and\nthe Lesser GNU General Public License.\nFor more information about these matters, see the file\nnamed COPYING and the XeTeX source.\nPrimary author of XeTeX: Jonathan Kew.\nCompiled with ICU version 78.2; using 78.2\nCompiled with zlib version 1.3.2; using 1.3.2\nCompiled with FreeType2 version 2.14.1; using 2.14.1\nCompiled with Graphite2 version 1.3.14; using 1.3.14\nCompiled with HarfBuzz version 12.3.2; using 12.3.2\nCompiled with libpng version 1.6.55; using 1.6.55\nCompiled with pplib version v2.2\nCompiled with fontconfig version 2.13.1; using 2.15.0\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "kpsewhich",
+      "-var-value=TEXMFROOT"
+    ],
+    "exit_code": 0,
+    "stdout": "/home/addaswsw/.local/texlive/2026\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "kpsewhich",
+      "ragged2e.sty"
+    ],
+    "exit_code": 0,
+    "stdout": "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/texmf/tex/latex/ragged2e/ragged2e.sty\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "fc-match",
+      "-f",
+      "%{file}\n%{postscriptname}\n",
+      "Noto Sans"
+    ],
+    "exit_code": 0,
+    "stdout": "/home/addaswsw/.local/share/fonts/sc-process-noto-sans/NotoSans-Regular.ttf\nNotoSans-Regular\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "fc-match",
+      "-f",
+      "%{file}\n%{postscriptname}\n",
+      "Noto Sans:weight=200"
+    ],
+    "exit_code": 0,
+    "stdout": "/home/addaswsw/.local/share/fonts/sc-process-noto-sans/NotoSans-ExtraBold.ttf\nNotoSans-ExtraBold\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "fc-match",
+      "-f",
+      "%{file}\n%{postscriptname}\n",
+      "Noto Sans CJK SC"
+    ],
+    "exit_code": 0,
+    "stdout": "/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc\nNotoSansCJKsc-Regular\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "fc-match",
+      "-f",
+      "%{file}\n%{postscriptname}\n",
+      "Noto Sans CJK SC:weight=200"
+    ],
+    "exit_code": 0,
+    "stdout": "/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc\nNotoSansCJKsc-Bold\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "pdftoppm",
+      "-v"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "pdftoppm version 24.02.0\nCopyright 2005-2024 The Poppler Developers - http://poppler.freedesktop.org\nCopyright 1996-2011, 2022 Glyph & Cog, LLC\n"
+  }
+]

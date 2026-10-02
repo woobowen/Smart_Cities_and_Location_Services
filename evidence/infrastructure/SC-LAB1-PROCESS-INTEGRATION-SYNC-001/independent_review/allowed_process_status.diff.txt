@@ -1,0 +1,39 @@
+diff --git a/task1/config/assignment.json b/task1/config/assignment.json
+index 7e42bcc..5deb514 100644
+--- a/task1/config/assignment.json
++++ b/task1/config/assignment.json
+@@ -13,5 +13,8 @@
+   "understanding_status": "LEARNING",
+   "submission_status": "NOT_READY",
+   "new_gpt_second_review": "PENDING",
+-  "process_evidence_status": "BLOCKED_EXTERNAL_ORIGINALS_SPEC_LOCK"
++  "process_evidence_status": "ORIGINALS_AND_SPEC_AVAILABLE_LOCK_NOT_UPGRADED",
++  "process_report_status": "USER_ACCEPTED_FULL_REPORT",
++  "current_report_integration_task": "SC-LAB1-PROCESS-INTEGRATION-SYNC-001",
++  "process_approved_pdf_sha256": "45f3b86f47c1b5cc7cf759ff713f5df3d4036e7ea9b4fff5eb3a40b6123aba83"
+ }
+diff --git a/task1/goal3/identity.py b/task1/goal3/identity.py
+index 049aea1..2e62e6c 100644
+--- a/task1/goal3/identity.py
++++ b/task1/goal3/identity.py
+@@ -24,7 +24,9 @@ def write_report_metadata(root=ROOT):
+     fields = {'StudentName': value['student_name'], 'StudentID': value['student_id'],
+               'ReportDate': f'{day.year} 年 {day.month} 月 {day.day} 日',
+               'ExperimentStatus': '技术送审稿；待最终审核',
+-              'ProcessStatus': '送审稿；原始互动证据与批准呈现方案待补'}
++              'ProcessStatus': ('全文已验收；具体 Evidence Lock 按原记录'
++                                if value.get('process_report_status') == 'USER_ACCEPTED_FULL_REPORT'
++                                else '送审稿；原始互动证据与批准呈现方案待补')}
+     text = '% Generated from task1/config/assignment.json; date is the report revision date.\n'
+     text += ''.join('\\newcommand{\\'+key+'}{'+content+'}\n' for key, content in fields.items())
+     target = Path(root)/'task1/reports/metadata.tex'
+diff --git a/task1/reports/metadata.tex b/task1/reports/metadata.tex
+index f56107f..7c39a6b 100644
+--- a/task1/reports/metadata.tex
++++ b/task1/reports/metadata.tex
+@@ -3,4 +3,4 @@
+ \newcommand{\StudentID}{10245102410}
+ \newcommand{\ReportDate}{2026 年 9 月 28 日}
+ \newcommand{\ExperimentStatus}{技术送审稿；待最终审核}
+-\newcommand{\ProcessStatus}{送审稿；原始互动证据与批准呈现方案待补}
++\newcommand{\ProcessStatus}{全文已验收；具体 Evidence Lock 按原记录}

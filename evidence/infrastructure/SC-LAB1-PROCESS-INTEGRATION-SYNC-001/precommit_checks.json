@@ -1,0 +1,52 @@
+{
+  "staging_scope": "explicit reviewed whitelist; no git add -A",
+  "staging_helper_fix": "Repeat staging initially failed on a deletion already absent from index. Filtered already-staged deletions while preserving their entries; rerun succeeded. No file content was restored or removed by the fix.",
+  "whitespace_scope": "Approved Markdown hard-break trailing spaces and original source/log blank EOF lines preserved. Default diff check findings not autoformatted. Command-local whitespace exclusions only; no Git configuration file changed.",
+  "commands": [
+    {
+      "command": [
+        "git",
+        "-c",
+        "core.whitespace=-blank-at-eol,-blank-at-eof",
+        "diff",
+        "--cached",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "py_compile",
+        "evidence/infrastructure/SC-LAB1-PROCESS-INTEGRATION-SYNC-001/verify_remote.py",
+        "evidence/infrastructure/SC-LAB1-PROCESS-INTEGRATION-SYNC-001/stage_for_review.py"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "git",
+        "check-attr",
+        "-a",
+        "--",
+        "AGENTS.md",
+        "releases/chatgpt-project-sources/AGENTS.md",
+        "reports/process-report/experiment1-revised/Process_Report_Revised.pdf",
+        "reports/process-report/experiment1-revised/Process_Report_Revised_LaTeX_Source.zip"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "tests_summary": {
+    "sync_unique_tests": 37,
+    "report_unique_tests": 19,
+    "source": "independent_review/sync_pytest.txt and independent_review/final_report_pytest.txt; intermediate subsets not counted again"
+  }
+}
