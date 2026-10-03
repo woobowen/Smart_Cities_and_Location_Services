@@ -74,3 +74,15 @@
 脚本每次depth=1 fetch后解析FETCH_HEAD，并以FETCH_HEAD实际读取tree/blob，避免旧浅克隆本地分支未快进的问题；`ls-tree -z`按NUL分隔并UTF-8解码，保留中文路径。Local HEAD、origin/main、直接远程main、独立FETCH_HEAD与显式expected SHA必须全部相等。项目源集合从清单true成员计算，工作源集合来自字节绑定的输入ZIP台账，教师文件夹集合来自实际远程ZIP的manifest；当前15/397/116只是被审冻结版本的实数，不是未来硬编码规则。正式ZIP本身被实际读取并要求与本地已审ZIP同字节，其CRC与全部文件夹blob/ZIP成员逐字节核对。
 
 初版缺少实际no-alternates约束却在回执宣称无alternates，已由审核者指出并由主线程最小补齐：所有Git子进程显式清除6个对象/工作目录环境覆盖变量；fetch前验证bare和准确origin URL，拒绝非空alternates/http-alternates，fetch后再次检查；回执记录对象目录起始存在状态及实际隔离检查。追加仅影响本轮包外远程核验脚本，正式教师ZIP、报告成品及科学代码未变。本文件继续将真正发布/网络回读与未来网页最终二审留给各自后续真实记录。
+
+## 7. 已发布内容的独立实际对象回读
+
+工程内容提交 **`543e2c5deec7dc9d75598c7e1096b334a11a6fab`** 正常发布后，主线程完成从网络向仓库外新bare目录取得对象，并提供真实命令回执。审核者新增执行自己的只读检查，**实际从该对象库FETCH_HEAD读出551个blob**，没有只看主线程PASS摘要；550个对应主线程全部已读产物，另1个是已冻结审核的远程辅助脚本。完整结果、各blob的Git对象OID/字节数/SHA256见 [independent_remote_publication_check.json](independent_remote_publication_check.json)。本项结论PASS，范围绑定上述工程内容SHA。
+
+审核者实际验证bare、准确origin URL、alternates/http-alternates均不存在，所有自己的Git子进程也显式清除6个对象/工作目录环境覆盖变量；独立直接执行`git ls-remote`，Local HEAD、origin/main、直接remote main及该对象库FETCH_HEAD均等于上述SHA。网络fetch由主线程真实执行，新增审核者执行范围是实际对象/远程HEAD读取及精确产物复核，未冒称自己又执行一次网络fetch。
+
+具体blob读取采用`git cat-file --batch`，按返回二进制长度读取并逐对象重新计算Git blob SHA1与SHA256；tree读取采用`ls-tree -r -z`，按NUL解析中文路径及普通blob模式。实际读取新Process权威PDF/ZIP、根目录原件、sources.json、全部15项active/release副本，两件Process严格匹配指定新hash和大小，其他13项hash及metadata继续与固定基线一致，release精确集合无extra。
+
+从**实际远程Process源ZIP**核对CRC及397个普通成员，并将FETCH_HEAD中唯一工作源的完整集合及每成员字节逐一与该ZIP比较，全部精确相同；两份当前阅读PDF的远程blob严格为25页Experiment批准hash及77页Process新批准hash。正式教师ZIP另从远程对象读取并存入审核者仓库外专用目录，23599893 bytes、SHA256仍为c1d0b80313f81e81a6bcd4cc02d06002c442201379ea871c4c338386bde2eb66，实际CRC通过。115个声明成员加manifest=116个ZIP普通文件；远程教师文件夹tree精确集合及全部116个blob与该ZIP成员逐文件字节/大小/hash一致，manifest总字节正确，sent_to_teacher=false。
+
+上述全部550个主线程产物记录又与审核者自己的实际读取结果逐一相等；远程辅助脚本也匹配发布前已审hash d9b4bc0831526b9d6a7037171bd787397e7b3301f28a6f647dc16d125efbc802。工程成品与代码冻结，此后仅允许本任务发布/审核回执追加；后续最终HEAD及其相对内容提交的差异范围另行核对，当前不填造尚未知最终SHA。网页最终二审继续PENDING，教师未发送。
