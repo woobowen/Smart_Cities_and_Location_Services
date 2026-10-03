@@ -1,0 +1,136 @@
+{
+  "task": "SC-LAB1-FINAL-SUBMISSION-CLOSEOUT-001",
+  "reviewer_context": "/root/independent_review",
+  "checked_at": "2026-10-03T02:04:00.447127+00:00",
+  "status": "PASS",
+  "archive": "task1/submission/teacher-delivery/10245102410_吴博闻_实验一.zip",
+  "archive_bytes": 23599839,
+  "archive_sha256": "f588c3867b376a055304e54fb2741fd8d1a1712041c8b8469023403ebe1337db",
+  "zip_crc": true,
+  "exact_set": true,
+  "member_hashes": true,
+  "zip_members_including_manifest": 116,
+  "declared_members_excluding_manifest": 115,
+  "manifest_total_uncompressed_bytes_excluding_manifest": 93836467,
+  "folder_exact_set_and_bytes": true,
+  "folder_contains_own_zip": false,
+  "all_sources_sha256_match": true,
+  "explicit_transformed_members": [
+    {
+      "path": "task1/evidence/goal2/result_summary.json",
+      "source_path": "task1/evidence/goal2/result_summary.json",
+      "source_sha256": "4fbd16b754f25253b0803a27898e4758bc4eaf6debda03607454c374bba758a7",
+      "archive_sha256": "2492a670c1c9c8e796b0a70b0468898cd8ee97c961a28369f5b78284cfdfd19c",
+      "transformations": [
+        {
+          "field": "actual_command[0]",
+          "operation": "replace workspace-specific prefix with project-relative path",
+          "original_value_sha256": "19e5c591041eae6812048a4322037dae0940145a33eaac2644aa84d75311a4a2",
+          "new_value": "task1/scripts/build_goal2_analysis.py"
+        }
+      ]
+    }
+  ],
+  "fresh_root": "/tmp/SC-LAB1-FINAL-SUBMISSION-CLOSEOUT-001-independent/teacher-fresh-evzhk5ip",
+  "fresh_git_present": false,
+  "actual_cli_verify_directory": {
+    "command": [
+      "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+      "-B",
+      "-m",
+      "task1.goal3.package",
+      "--verify-dir",
+      "."
+    ],
+    "cwd": "/tmp/SC-LAB1-FINAL-SUBMISSION-CLOSEOUT-001-independent/teacher-fresh-evzhk5ip",
+    "exit_code": 0,
+    "result": {
+      "status": "VERIFIED",
+      "verified_members": 115,
+      "scope": "declared original package files; new recomputation outputs may coexist",
+      "full_recompute": "NOT_EXECUTED_BY_THIS_CHECK"
+    }
+  },
+  "actual_static_probe": {
+    "command": [
+      "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+      "-I",
+      "-B",
+      "-c",
+      "<recorded no-trajectory package probe>",
+      "/tmp/SC-LAB1-FINAL-SUBMISSION-CLOSEOUT-001-independent/teacher-fresh-evzhk5ip"
+    ],
+    "cwd": "/tmp/SC-LAB1-FINAL-SUBMISSION-CLOSEOUT-001-independent/teacher-fresh-evzhk5ip",
+    "exit_code": 0,
+    "result": {
+      "outer_ROOT": "/tmp/SC-LAB1-FINAL-SUBMISSION-CLOSEOUT-001-independent/teacher-fresh-evzhk5ip",
+      "ROOT_is_fresh": true,
+      "git_present": false,
+      "probe": {
+        "status": "VERIFIED",
+        "root_is_isolated": true,
+        "git_present": false,
+        "new_model_calls": 0,
+        "historical_binding_check": "VERIFIED",
+        "contract_and_A_plan_check": "VERIFIED",
+        "production_gate": "VERIFIED",
+        "trajectory_runs": 0,
+        "registered_strategy_count": 11
+      }
+    }
+  },
+  "notebooks": [
+    {
+      "path": "task1/notebooks/final/作业1轨迹数据预处理_完成版.ipynb",
+      "sha256": "e64513b662c954b7097f429e93d67106916d7a246b093ce74ac9721153ec2df1",
+      "cell_count": 25,
+      "code_cells": 12,
+      "execution_counts": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "saved_output_cells": 0,
+      "error_output_cells": [],
+      "byte_identical_to_prior_completed_notebook": true,
+      "current_run_all": "NOT_EXECUTED_STATIC_READ_ONLY_SCOPE"
+    },
+    {
+      "path": "task1/notebooks/final/任务3_LLM辅助评估清洗_完成版.ipynb",
+      "sha256": "5e79f525fc194110282f974070bce087a09c14bc5aaa11c276abf08e87694277",
+      "cell_count": 17,
+      "code_cells": 8,
+      "execution_counts": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "saved_output_cells": 0,
+      "error_output_cells": [],
+      "byte_identical_to_prior_completed_notebook": true,
+      "current_run_all": "NOT_EXECUTED_STATIC_READ_ONLY_SCOPE"
+    }
+  ],
+  "fresh_files_unchanged_by_checks": true,
+  "protected_before_after_file_count": 5527,
+  "protected_before_after_bytes_unchanged": true,
+  "protected_initial_bytes_unchanged": true,
+  "new_model_calls": 0,
+  "trajectory_runs": 0,
+  "teacher_sent": false,
+  "webpage_second_review": "PENDING"
+}

@@ -1,0 +1,113 @@
+{
+  "scope": "Current repaired source, actual clean builds; author self-check",
+  "role": "AUTHOR_SELF_CHECK",
+  "reference_pdf_sha256": "dc1bb8e8e2262379b7e234550901f645ef0d6f549d6d2aef5e3985a433a1fa23",
+  "new_model_calls": 0,
+  "new_trajectory_runs": 0,
+  "routes": [
+    {
+      "route": "A",
+      "prebuilt_main_pdf_present_before_commands": false,
+      "commands": [
+        {
+          "route": "A",
+          "stage": 1,
+          "command": [
+            "bash",
+            "compile.sh"
+          ],
+          "exit_code": 0,
+          "duration_seconds": 9.848234483000056,
+          "recorded_at": "2026-10-03T01:24:42.765589+00:00"
+        }
+      ],
+      "pdf_sha256": "dc1bb8e8e2262379b7e234550901f645ef0d6f549d6d2aef5e3985a433a1fa23",
+      "byte_identical_to_reference": true,
+      "changed_production_members": []
+    },
+    {
+      "route": "B",
+      "prebuilt_main_pdf_present_before_commands": false,
+      "commands": [
+        {
+          "route": "B",
+          "stage": 1,
+          "command": [
+            "/opt/pyvenv/bin/python",
+            "tools/make_diagrams.py"
+          ],
+          "exit_code": 0,
+          "duration_seconds": 0.9233538409999937,
+          "recorded_at": "2026-10-03T01:24:44.292886+00:00"
+        },
+        {
+          "route": "B",
+          "stage": 2,
+          "command": [
+            "/opt/pyvenv/bin/python",
+            "tools/build_report.py"
+          ],
+          "exit_code": 0,
+          "duration_seconds": 6.6807903149999674,
+          "recorded_at": "2026-10-03T01:24:51.556289+00:00"
+        },
+        {
+          "route": "B",
+          "stage": 3,
+          "command": [
+            "bash",
+            "compile.sh"
+          ],
+          "exit_code": 0,
+          "duration_seconds": 9.594292170000017,
+          "recorded_at": "2026-10-03T01:25:01.714080+00:00"
+        },
+        {
+          "route": "B",
+          "stage": 4,
+          "command": [
+            "/opt/pyvenv/bin/python",
+            "tools/render_review.py"
+          ],
+          "exit_code": 0,
+          "duration_seconds": 4.838693102000093,
+          "recorded_at": "2026-10-03T01:25:17.610221+00:00"
+        },
+        {
+          "route": "B",
+          "stage": 5,
+          "command": [
+            "/opt/pyvenv/bin/python",
+            "tools/audit_report.py"
+          ],
+          "exit_code": 0,
+          "duration_seconds": 6.856035892000023,
+          "recorded_at": "2026-10-03T01:25:37.374904+00:00"
+        },
+        {
+          "route": "B",
+          "stage": 6,
+          "command": [
+            "/opt/pyvenv/bin/python",
+            "tools/check_p76_closeout.py"
+          ],
+          "exit_code": 0,
+          "duration_seconds": 1.913679287999912,
+          "recorded_at": "2026-10-03T01:25:39.834822+00:00"
+        }
+      ],
+      "pdf_sha256": "dc1bb8e8e2262379b7e234550901f645ef0d6f549d6d2aef5e3985a433a1fa23",
+      "byte_identical_to_reference": true,
+      "changed_production_members": [
+        "figures/D01.pdf",
+        "figures/D03.pdf",
+        "figures/D06.pdf",
+        "figures/D04.pdf",
+        "figures/D02.pdf",
+        "figures/D05.pdf"
+      ]
+    }
+  ],
+  "recorded_at": "2026-10-03T01:27:57.689034+00:00",
+  "all_checks_pass": false
+}

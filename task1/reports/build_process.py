@@ -134,10 +134,12 @@ def build(evidence, render=False, regenerate=False):
                 generated_changes = [p for p, h in source_hashes.items()
                     if p.startswith(('assets/crops/', 'chapters/', 'content/'))
                     or p in ('main.tex', 'provenance/page_map.json', 'provenance/crop_map.json',
-                             'provenance/arrow_map.json', 'provenance/input_images.json')]
+                             'provenance/arrow_map.json', 'provenance/input_images.json',
+                             'provenance/closing_crop_map.json')]
                 if any(sha(cwd / p) != source_hashes[p] for p in generated_changes):
                     raise ValueError('PROCESS_GENERATION_CHANGED_APPROVED_PAGES_OR_EVIDENCE')
                 receipt['generated_content_and_evidence_exact_match'] = True
+                shutil.copytree(cwd / 'figures', evidence / 'regenerated_figures')
             try:
                 run(['bash', 'compile.sh'])
             finally:
@@ -180,6 +182,8 @@ def build(evidence, render=False, regenerate=False):
                     raise ValueError('PROCESS_ARTIFACT_CHECK_FAILED')
                 shutil.copyfile(cwd / 'provenance/artifact_audit.json', evidence / 'upstream_author_check_replayed.json')
                 receipt['upstream_check_role'] = 'REPLAYED_AUTHOR_CHECK_NOT_INDEPENDENT_REVIEW'
+                run(['python', 'tools/check_p76_closeout.py', '--output',
+                     str(evidence / 'p76_current_artifact_check.json')])
             if render:
                 # Explicit report-only dependency path; no scientific modules run here.
                 sys.path.insert(0, str(deps))

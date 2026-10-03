@@ -1,0 +1,723 @@
+{
+  "artifact_type": "REAL_GOVERNANCE_A_TASKPLAN",
+  "goal_id": "SC-LAB1-G3-FINAL-001",
+  "created_at_utc": "2026-09-27T03:43:36.803823+00:00",
+  "author_role": "A candidate diagnosis, independent from B implementation/C acceptance",
+  "status": "PROPOSED_PENDING_C_CONTRACT_SCOPE_CHECK",
+  "input_exposure": "DEVELOPMENT and previously exposed G2_EVAL only; no G3_RESERVED method effects or FINAL_CONFIRM data/results read",
+  "authority": "task1/evidence/goal3/USER_PROMPT.md",
+  "historical_stage_identity": "G2 evidence remains G2; counts here are read-only recomputed table summaries, not new G3 processing",
+  "evidence_sha256": {
+    "task1/evidence/goal3/USER_PROMPT.md": "e5fd60e707b3b5e4c62e8c522bbc58cbd17d89fe67ec29abaf2c3d037de723ec",
+    "task1/config/goal2/contract.json": "db758c097509139596fbc52b4c3f65e921eb1f12d9fb4c239e308abdb57f31f8",
+    "task1/evidence/goal2/candidate_lock.json": "a5ed67a3e28a6591063be28df3fb70b0698915b212b010acee7fa580e1aadef8",
+    "task1/evidence/goal2/current_runs.json": "cd241536bbff6b84dc66dd9b757e813af3b13bd43bb9ff92ae2f55cc5adbced0",
+    "task1/evidence/goal2/tables/parameter_record_pairs.csv": "e051dfc6871b1413ce59be0a31fbf361f68e5ff20e6824792d0a0085bd45af9f",
+    "task1/evidence/goal2/tables/parameter_configurations.csv": "7afd17503849b48cba887875e1208dd6021084ed7abd255583960fe03ea659df",
+    "task1/evidence/goal2/tables/candidate_evaluation.csv": "8df135a37c7906f0a289fb07f387dc70f2a2675dc6b9b19d7823964afeda18ab",
+    "task1/evidence/goal2/tables/mode_record_results.csv": "e8dac7e26d1aaefa692fbf6836581eb4f038dfdbbe79fd49268d9ac6eb0bb02f",
+    "task1/docs/goal2/STAGE_ANALYSIS.md": "1779953946507b0bd022403095e6488021e0ac49d1f3d05fec1d4d5e96ae5fba",
+    "task1/workflow/g2_selection.py": "590a7e9c427801fd65a6ec563fdbbff0d35b0e7bae6a155f28e43ab64bb8f3af",
+    "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/AUTHORIZATION_SUPPLEMENT.md": "2bce4b21939de5843678bdda1de18c64e9703c3e924fd63ff3d7988f69fe5248",
+    "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/a_scope/local_model_contract.json": "ae3ab78de2a7ab6159631c0340e11e344ed4401276a59bfa04c4e9689b700453",
+    "task1/docs/research/Task1_Source_Audit_2025_2026_Merged.json": "fc6d597ddaa413c000a689737b23840a639b93cf626464f57841a8ef0cc966f7"
+  },
+  "historical_direction_diagnosis": [
+    {
+      "partition": "DEVELOPMENT",
+      "direction": 45,
+      "n_records": 120,
+      "statuses": {
+        "NO_DEMONSTRATED_GAIN": 90,
+        "SUPPORTED_WITHIN_SCOPE": 29,
+        "TRADEOFF": 1
+      },
+      "time_regular": {
+        "n_records": 60,
+        "strict_gain_records": 11,
+        "failure_records": []
+      },
+      "failures": [
+        {
+          "record_id": "8246",
+          "stratum": "HIGH_T1_D0",
+          "baseline_common_max": "97.29633328192381",
+          "candidate_max_on_baseline_covered": "108.11458261000072",
+          "protection_failures": "[\"COMMON_GEOMETRIC_PROTECTION_DEGRADED\"]"
+        }
+      ]
+    },
+    {
+      "partition": "DEVELOPMENT",
+      "direction": 60,
+      "n_records": 120,
+      "statuses": {
+        "NO_DEMONSTRATED_GAIN": 74,
+        "SUPPORTED_WITHIN_SCOPE": 45,
+        "TRADEOFF": 1
+      },
+      "time_regular": {
+        "n_records": 60,
+        "strict_gain_records": 20,
+        "failure_records": []
+      },
+      "failures": [
+        {
+          "record_id": "8246",
+          "stratum": "HIGH_T1_D0",
+          "baseline_common_max": "97.29633328192381",
+          "candidate_max_on_baseline_covered": "108.11458261000072",
+          "protection_failures": "[\"COMMON_GEOMETRIC_PROTECTION_DEGRADED\"]"
+        }
+      ]
+    },
+    {
+      "partition": "G2_EVAL",
+      "direction": 60,
+      "n_records": 120,
+      "statuses": {
+        "SUPPORTED_WITHIN_SCOPE": 52,
+        "NO_DEMONSTRATED_GAIN": 66,
+        "TRADEOFF": 2
+      },
+      "time_regular": {
+        "n_records": 60,
+        "strict_gain_records": 21,
+        "failure_records": []
+      },
+      "failures": [
+        {
+          "record_id": "7511",
+          "stratum": "MID_T1_D0",
+          "baseline_common_max": "21.083667566757534",
+          "candidate_max_on_baseline_covered": "22.45085572038056",
+          "protection_failures": "[\"COMMON_GEOMETRIC_PROTECTION_DEGRADED\"]"
+        },
+        {
+          "record_id": "57",
+          "stratum": "MID_T1_D0",
+          "baseline_common_max": "2.7094103116485777",
+          "candidate_max_on_baseline_covered": "2.8407552657210395",
+          "protection_failures": "[\"COMMON_GEOMETRIC_PROTECTION_DEGRADED\"]"
+        }
+      ]
+    }
+  ],
+  "common_guards": [
+    "candidate common-covered original identity set contains each trusted comparator set",
+    "max candidate raw error on each comparator-covered set <= comparator maximum plus frozen G2 numerical allowance; null is not improvement",
+    "comparator nonempty records and each covered raw window preserved",
+    "raw-breakpoint crossings == 0",
+    "engineering identity/value/ledger/source checks pass",
+    "each final P immediate actual max error <= 5 work metres plus frozen allowance for publishable candidates"
+  ],
+  "numeric_margin": "unchanged G2 64*binary64_epsilon*max(1,extent,abs_coordinate,tolerance); angular margin64*eps*360; not algorithm threshold slack",
+  "candidate_definitions": [
+    {
+      "candidate_id": "R0",
+      "parent_ids": [],
+      "parameters": {
+        "dt": 30,
+        "distance": 400,
+        "min_points": 5,
+        "min_length": 65,
+        "direction": 35,
+        "dp": 5
+      },
+      "conditional_rule": null,
+      "unique_main_change": "none; fixed teaching reference",
+      "kind": "REQUIRED_REFERENCE_RECOMPUTE",
+      "evidence_ref": [
+        "task1/config/goal2/contract.json",
+        "task1/docs/goal2/STAGE_ANALYSIS.md"
+      ],
+      "hypothesis": "Reproduce reference with current frozen G3 wrapper; no optimality presumption.",
+      "status": "DEVELOPMENT_ONLY_PENDING_C_SCOPE_REVIEW",
+      "new_single_definition_count": 0,
+      "new_combination_definition_count": 0,
+      "order": "S-D-P",
+      "scope": "G3_DEVELOPMENT = documented exposed DEVELOPMENT + G2_EVAL, 240 original records",
+      "protected_items": [
+        "candidate common-covered original identity set contains each trusted comparator set",
+        "max candidate raw error on each comparator-covered set <= comparator maximum plus frozen G2 numerical allowance; null is not improvement",
+        "comparator nonempty records and each covered raw window preserved",
+        "raw-breakpoint crossings == 0",
+        "engineering identity/value/ledger/source checks pass",
+        "each final P immediate actual max error <= 5 work metres plus frozen allowance for publishable candidates"
+      ],
+      "extra_online_model_calls": 0,
+      "point_truth_claim": false
+    },
+    {
+      "candidate_id": "S0",
+      "parent_ids": [
+        "R0"
+      ],
+      "parameters": {
+        "dt": 30,
+        "distance": 400,
+        "min_points": 2,
+        "min_length": 0,
+        "direction": 35,
+        "dp": 5
+      },
+      "conditional_rule": null,
+      "unique_main_change": "existing C-S filtering policy (min_points2,min_length0)",
+      "kind": "REQUIRED_HISTORICAL_SINGLE_RECOMPUTE",
+      "evidence_ref": [
+        "task1/evidence/goal2/candidate_lock.json",
+        "task1/evidence/goal2/tables/candidate_evaluation.csv"
+      ],
+      "hypothesis": "Existing coverage improvement persists without losing comparator coverage or geometry; it remains unselected until actual G3 checks.",
+      "status": "DEVELOPMENT_ONLY_PENDING_C_SCOPE_REVIEW",
+      "new_single_definition_count": 0,
+      "new_combination_definition_count": 0,
+      "order": "S-D-P",
+      "scope": "G3_DEVELOPMENT = documented exposed DEVELOPMENT + G2_EVAL, 240 original records",
+      "protected_items": [
+        "candidate common-covered original identity set contains each trusted comparator set",
+        "max candidate raw error on each comparator-covered set <= comparator maximum plus frozen G2 numerical allowance; null is not improvement",
+        "comparator nonempty records and each covered raw window preserved",
+        "raw-breakpoint crossings == 0",
+        "engineering identity/value/ledger/source checks pass",
+        "each final P immediate actual max error <= 5 work metres plus frozen allowance for publishable candidates"
+      ],
+      "extra_online_model_calls": 0,
+      "point_truth_claim": false
+    },
+    {
+      "candidate_id": "S_POINTS2",
+      "parent_ids": [
+        "R0"
+      ],
+      "parameters": {
+        "dt": 30,
+        "distance": 400,
+        "min_points": 2,
+        "min_length": 65,
+        "direction": 35,
+        "dp": 5
+      },
+      "conditional_rule": null,
+      "unique_main_change": "min_points 5 to 2 only",
+      "kind": "HISTORICAL_PARENT_ABLATION_RECOMPUTE",
+      "evidence_ref": [
+        "task1/evidence/goal2/tables/parameter_configurations.csv"
+      ],
+      "hypothesis": "Isolate additional coverage from point-count relaxation; G2 DEVELOPMENT coverage8408 to8508,18 strict records.",
+      "status": "DEVELOPMENT_ONLY_PENDING_C_SCOPE_REVIEW",
+      "new_single_definition_count": 0,
+      "new_combination_definition_count": 0,
+      "order": "S-D-P",
+      "scope": "G3_DEVELOPMENT = documented exposed DEVELOPMENT + G2_EVAL, 240 original records",
+      "protected_items": [
+        "candidate common-covered original identity set contains each trusted comparator set",
+        "max candidate raw error on each comparator-covered set <= comparator maximum plus frozen G2 numerical allowance; null is not improvement",
+        "comparator nonempty records and each covered raw window preserved",
+        "raw-breakpoint crossings == 0",
+        "engineering identity/value/ledger/source checks pass",
+        "each final P immediate actual max error <= 5 work metres plus frozen allowance for publishable candidates"
+      ],
+      "extra_online_model_calls": 0,
+      "point_truth_claim": false
+    },
+    {
+      "candidate_id": "S_LENGTH0",
+      "parent_ids": [
+        "R0"
+      ],
+      "parameters": {
+        "dt": 30,
+        "distance": 400,
+        "min_points": 5,
+        "min_length": 0,
+        "direction": 35,
+        "dp": 5
+      },
+      "conditional_rule": null,
+      "unique_main_change": "min_length65 to0 only",
+      "kind": "HISTORICAL_PARENT_ABLATION_RECOMPUTE",
+      "evidence_ref": [
+        "task1/evidence/goal2/tables/parameter_configurations.csv"
+      ],
+      "hypothesis": "Isolate additional coverage from removing positive length cutoff; G2 DEVELOPMENT coverage8408 to11634,35 strict records.",
+      "status": "DEVELOPMENT_ONLY_PENDING_C_SCOPE_REVIEW",
+      "new_single_definition_count": 0,
+      "new_combination_definition_count": 0,
+      "order": "S-D-P",
+      "scope": "G3_DEVELOPMENT = documented exposed DEVELOPMENT + G2_EVAL, 240 original records",
+      "protected_items": [
+        "candidate common-covered original identity set contains each trusted comparator set",
+        "max candidate raw error on each comparator-covered set <= comparator maximum plus frozen G2 numerical allowance; null is not improvement",
+        "comparator nonempty records and each covered raw window preserved",
+        "raw-breakpoint crossings == 0",
+        "engineering identity/value/ledger/source checks pass",
+        "each final P immediate actual max error <= 5 work metres plus frozen allowance for publishable candidates"
+      ],
+      "extra_online_model_calls": 0,
+      "point_truth_claim": false
+    },
+    {
+      "candidate_id": "D60",
+      "parent_ids": [
+        "R0"
+      ],
+      "parameters": {
+        "dt": 30,
+        "distance": 400,
+        "min_points": 5,
+        "min_length": 65,
+        "direction": 60,
+        "dp": 5
+      },
+      "conditional_rule": null,
+      "unique_main_change": "direction35 to60 only",
+      "kind": "HISTORICAL_SINGLE_RECOMPUTE",
+      "evidence_ref": [
+        "task1/evidence/goal2/tables/parameter_record_pairs.csv"
+      ],
+      "hypothesis": "Many local geometric gains coexist with actual regressions; reproduce independent effect and restrict any subsequent rule. Unconditional D60 is not an admitted deployment candidate.",
+      "status": "DEVELOPMENT_ONLY_PENDING_C_SCOPE_REVIEW",
+      "new_single_definition_count": 0,
+      "new_combination_definition_count": 0,
+      "order": "S-D-P",
+      "scope": "G3_DEVELOPMENT = documented exposed DEVELOPMENT + G2_EVAL, 240 original records",
+      "protected_items": [
+        "candidate common-covered original identity set contains each trusted comparator set",
+        "max candidate raw error on each comparator-covered set <= comparator maximum plus frozen G2 numerical allowance; null is not improvement",
+        "comparator nonempty records and each covered raw window preserved",
+        "raw-breakpoint crossings == 0",
+        "engineering identity/value/ledger/source checks pass",
+        "each final P immediate actual max error <= 5 work metres plus frozen allowance for publishable candidates"
+      ],
+      "extra_online_model_calls": 0,
+      "point_truth_claim": false
+    },
+    {
+      "candidate_id": "P2",
+      "parent_ids": [
+        "R0"
+      ],
+      "parameters": {
+        "dt": 30,
+        "distance": 400,
+        "min_points": 5,
+        "min_length": 65,
+        "direction": 35,
+        "dp": 2
+      },
+      "conditional_rule": null,
+      "unique_main_change": "dp5 to2 only",
+      "kind": "HISTORICAL_P_DIAGNOSTIC_RECOMPUTE",
+      "evidence_ref": [
+        "task1/evidence/goal2/tables/parameter_configurations.csv"
+      ],
+      "hypothesis": "More detailed P output can alter raw geometry, but cannot be declared compression gain against identical-input dp5.",
+      "status": "DEVELOPMENT_ONLY_PENDING_C_SCOPE_REVIEW",
+      "new_single_definition_count": 0,
+      "new_combination_definition_count": 0,
+      "order": "S-D-P",
+      "scope": "G3_DEVELOPMENT = documented exposed DEVELOPMENT + G2_EVAL, 240 original records",
+      "protected_items": [
+        "candidate common-covered original identity set contains each trusted comparator set",
+        "max candidate raw error on each comparator-covered set <= comparator maximum plus frozen G2 numerical allowance; null is not improvement",
+        "comparator nonempty records and each covered raw window preserved",
+        "raw-breakpoint crossings == 0",
+        "engineering identity/value/ledger/source checks pass",
+        "each final P immediate actual max error <= 5 work metres plus frozen allowance for publishable candidates"
+      ],
+      "extra_online_model_calls": 0,
+      "point_truth_claim": false
+    },
+    {
+      "candidate_id": "P10",
+      "parent_ids": [
+        "R0"
+      ],
+      "parameters": {
+        "dt": 30,
+        "distance": 400,
+        "min_points": 5,
+        "min_length": 65,
+        "direction": 35,
+        "dp": 10
+      },
+      "conditional_rule": null,
+      "unique_main_change": "dp5 to10 only",
+      "kind": "HISTORICAL_P_DIAGNOSTIC_RECOMPUTE",
+      "evidence_ref": [
+        "task1/evidence/goal2/tables/parameter_configurations.csv"
+      ],
+      "hypothesis": "Lower output count conflicts with fixed5 work-metre budget; actual max9.966395 in G2 DEVELOPMENT already rejects global deployment.",
+      "status": "DEVELOPMENT_ONLY_PENDING_C_SCOPE_REVIEW",
+      "new_single_definition_count": 0,
+      "new_combination_definition_count": 0,
+      "order": "S-D-P",
+      "scope": "G3_DEVELOPMENT = documented exposed DEVELOPMENT + G2_EVAL, 240 original records",
+      "protected_items": [
+        "candidate common-covered original identity set contains each trusted comparator set",
+        "max candidate raw error on each comparator-covered set <= comparator maximum plus frozen G2 numerical allowance; null is not improvement",
+        "comparator nonempty records and each covered raw window preserved",
+        "raw-breakpoint crossings == 0",
+        "engineering identity/value/ledger/source checks pass",
+        "each final P immediate actual max error <= 5 work metres plus frozen allowance for publishable candidates"
+      ],
+      "extra_online_model_calls": 0,
+      "point_truth_claim": false
+    },
+    {
+      "candidate_id": "G0",
+      "parent_ids": [
+        "R0",
+        "D60"
+      ],
+      "parameters": {
+        "dt": 30,
+        "distance": 400,
+        "min_points": 5,
+        "min_length": 65,
+        "direction": 35,
+        "dp": 5
+      },
+      "conditional_rule": {
+        "rule_id": "TIME_REGULAR_DIRECTION60_V1",
+        "diagnostic_input": "immutable full original timestamps of the current record only",
+        "groups": [
+          {
+            "group_id": "TIME_REGULAR",
+            "predicate": "all adjacent differences satisfy 0 < dt <= 30 source seconds",
+            "direction": 60
+          },
+          {
+            "group_id": "TIME_FLAGGED_OR_UNAVAILABLE",
+            "predicate": "any dt <= 0 or dt > 30, or missing/nonfinite/invalid diagnostic",
+            "direction": 35
+          }
+        ],
+        "empty_or_singleton": "fallback group; never vacuous assignment to direction60",
+        "known_raw_rule_source": "G2 descriptive TIME_FLAG definition; no new fitted threshold",
+        "group_count": 2,
+        "unknown_group_fallback": "R0 parameters in standalone G0; S0 parameters in S0_G0 only if S0 is independently accepted as incumbent",
+        "raw_record_id_in_predicate": false,
+        "method_result_or_final_feedback_in_predicate": false
+      },
+      "unique_main_change": "one two-group raw temporal-diagnostic direction rule",
+      "kind": "NEW_SINGLE_STRUCTURAL_RULE",
+      "evidence_ref": [
+        "task1/evidence/goal2/tables/parameter_record_pairs.csv"
+      ],
+      "hypothesis": "At runtime-time-regular records, less aggressive direction deletion may improve protected geometry; flagged/unavailable records retain R0. Historical T0 groups show20 and21 strict gains out of60 each with0 failures, but this is exposed development evidence, not independent confirmation.",
+      "status": "DEVELOPMENT_ONLY_PENDING_C_SCOPE_REVIEW",
+      "new_single_definition_count": 1,
+      "new_combination_definition_count": 0,
+      "order": "S-D-P",
+      "scope": "G3_DEVELOPMENT = documented exposed DEVELOPMENT + G2_EVAL, 240 original records",
+      "protected_items": [
+        "candidate common-covered original identity set contains each trusted comparator set",
+        "max candidate raw error on each comparator-covered set <= comparator maximum plus frozen G2 numerical allowance; null is not improvement",
+        "comparator nonempty records and each covered raw window preserved",
+        "raw-breakpoint crossings == 0",
+        "engineering identity/value/ledger/source checks pass",
+        "each final P immediate actual max error <= 5 work metres plus frozen allowance for publishable candidates"
+      ],
+      "extra_online_model_calls": 0,
+      "point_truth_claim": false
+    },
+    {
+      "candidate_id": "S0_G0",
+      "parent_ids": [
+        "S0",
+        "G0"
+      ],
+      "parameters": {
+        "dt": 30,
+        "distance": 400,
+        "min_points": 2,
+        "min_length": 0,
+        "direction": 35,
+        "dp": 5
+      },
+      "conditional_rule": {
+        "rule_id": "TIME_REGULAR_DIRECTION60_V1",
+        "diagnostic_input": "immutable full original timestamps of the current record only",
+        "groups": [
+          {
+            "group_id": "TIME_REGULAR",
+            "predicate": "all adjacent differences satisfy 0 < dt <= 30 source seconds",
+            "direction": 60
+          },
+          {
+            "group_id": "TIME_FLAGGED_OR_UNAVAILABLE",
+            "predicate": "any dt <= 0 or dt > 30, or missing/nonfinite/invalid diagnostic",
+            "direction": 35
+          }
+        ],
+        "empty_or_singleton": "fallback group; never vacuous assignment to direction60",
+        "known_raw_rule_source": "G2 descriptive TIME_FLAG definition; no new fitted threshold",
+        "group_count": 2,
+        "unknown_group_fallback": "R0 parameters in standalone G0; S0 parameters in S0_G0 only if S0 is independently accepted as incumbent",
+        "raw_record_id_in_predicate": false,
+        "method_result_or_final_feedback_in_predicate": false
+      },
+      "unique_main_change": "add the registered temporal direction rule to S0",
+      "kind": "NEW_COMBINATION",
+      "evidence_ref": [
+        "task1/evidence/goal2/tables/parameter_record_pairs.csv",
+        "task1/evidence/goal2/tables/candidate_evaluation.csv"
+      ],
+      "hypothesis": "Relaxed S recovers short windows while conditional D affects direction-marked windows; interactions in newly admitted windows may fail and must be checked against both parents and incumbent.",
+      "status": "DEVELOPMENT_ONLY_PENDING_C_SCOPE_REVIEW",
+      "new_single_definition_count": 0,
+      "new_combination_definition_count": 1,
+      "order": "S-D-P",
+      "scope": "G3_DEVELOPMENT = documented exposed DEVELOPMENT + G2_EVAL, 240 original records",
+      "protected_items": [
+        "candidate common-covered original identity set contains each trusted comparator set",
+        "max candidate raw error on each comparator-covered set <= comparator maximum plus frozen G2 numerical allowance; null is not improvement",
+        "comparator nonempty records and each covered raw window preserved",
+        "raw-breakpoint crossings == 0",
+        "engineering identity/value/ledger/source checks pass",
+        "each final P immediate actual max error <= 5 work metres plus frozen allowance for publishable candidates"
+      ],
+      "extra_online_model_calls": 0,
+      "point_truth_claim": false
+    },
+    {
+      "candidate_id": "S0_P2",
+      "parent_ids": [
+        "S0",
+        "P2"
+      ],
+      "parameters": {
+        "dt": 30,
+        "distance": 400,
+        "min_points": 2,
+        "min_length": 0,
+        "direction": 35,
+        "dp": 2
+      },
+      "conditional_rule": null,
+      "unique_main_change": "add dp2 to S0",
+      "kind": "NEW_COMBINATION_DIAGNOSTIC",
+      "evidence_ref": [
+        "task1/evidence/goal2/tables/parameter_configurations.csv",
+        "task1/evidence/goal2/tables/candidate_evaluation.csv"
+      ],
+      "hypothesis": "Test whether S added segments change P tradeoffs; compare against identical S0 upstream dp5 and both parents. No admission if no independent P compression contribution.",
+      "status": "DEVELOPMENT_ONLY_PENDING_C_SCOPE_REVIEW",
+      "new_single_definition_count": 0,
+      "new_combination_definition_count": 1,
+      "order": "S-D-P",
+      "scope": "G3_DEVELOPMENT = documented exposed DEVELOPMENT + G2_EVAL, 240 original records",
+      "protected_items": [
+        "candidate common-covered original identity set contains each trusted comparator set",
+        "max candidate raw error on each comparator-covered set <= comparator maximum plus frozen G2 numerical allowance; null is not improvement",
+        "comparator nonempty records and each covered raw window preserved",
+        "raw-breakpoint crossings == 0",
+        "engineering identity/value/ledger/source checks pass",
+        "each final P immediate actual max error <= 5 work metres plus frozen allowance for publishable candidates"
+      ],
+      "extra_online_model_calls": 0,
+      "point_truth_claim": false
+    },
+    {
+      "candidate_id": "S0_P10",
+      "parent_ids": [
+        "S0",
+        "P10"
+      ],
+      "parameters": {
+        "dt": 30,
+        "distance": 400,
+        "min_points": 2,
+        "min_length": 0,
+        "direction": 35,
+        "dp": 10
+      },
+      "conditional_rule": null,
+      "unique_main_change": "add dp10 to S0",
+      "kind": "NEW_COMBINATION_DIAGNOSTIC",
+      "evidence_ref": [
+        "task1/evidence/goal2/tables/parameter_configurations.csv",
+        "task1/evidence/goal2/tables/candidate_evaluation.csv"
+      ],
+      "hypothesis": "Check actual P budget on newly admitted inputs; old surviving-window failures are expected to persist. This one diagnostic cannot resurrect unsafe P10 for deployment.",
+      "status": "DEVELOPMENT_ONLY_PENDING_C_SCOPE_REVIEW",
+      "new_single_definition_count": 0,
+      "new_combination_definition_count": 1,
+      "order": "S-D-P",
+      "scope": "G3_DEVELOPMENT = documented exposed DEVELOPMENT + G2_EVAL, 240 original records",
+      "protected_items": [
+        "candidate common-covered original identity set contains each trusted comparator set",
+        "max candidate raw error on each comparator-covered set <= comparator maximum plus frozen G2 numerical allowance; null is not improvement",
+        "comparator nonempty records and each covered raw window preserved",
+        "raw-breakpoint crossings == 0",
+        "engineering identity/value/ledger/source checks pass",
+        "each final P immediate actual max error <= 5 work metres plus frozen allowance for publishable candidates"
+      ],
+      "extra_online_model_calls": 0,
+      "point_truth_claim": false
+    }
+  ],
+  "new_definition_budget": {
+    "registered_new_singles": 1,
+    "single_limit": 8,
+    "registered_new_combinations": 3,
+    "combination_limit": 12,
+    "maximum_enhancement_depth": 3,
+    "historical_recomputations_excluded_from_new_counts": true
+  },
+  "task_sequence": [
+    {
+      "task_id": "A1_PARENT_RECOMPUTE",
+      "candidate_ids": [
+        "R0",
+        "S0",
+        "S_POINTS2",
+        "S_LENGTH0",
+        "D60",
+        "P2",
+        "P10"
+      ],
+      "purpose": "mandatory reference replication, S2x2 attribution, D/P independent effects before new combinations",
+      "budget": {
+        "records": 240,
+        "unique_strategy_record_evaluations": 1680,
+        "model_calls": 0
+      },
+      "adjudication": "C independently verifies current artifacts; adopt no candidate before all-record guards; unsafe D/P remains negative evidence."
+    },
+    {
+      "task_id": "A2_CONDITIONAL_SINGLE",
+      "depends_on": [
+        "A1_PARENT_RECOMPUTE"
+      ],
+      "candidate_ids": [
+        "G0"
+      ],
+      "purpose": "only admitted lightweight structural policy; raw temporal groups fixed before processing",
+      "budget": {
+        "records": 240,
+        "unique_strategy_record_evaluations": 240,
+        "model_calls": 0
+      },
+      "adjudication": "Require all guards vs R0 and at least one registered strict gain; otherwise reject and do not run S0_G0 unless one specific new interaction mechanism is documented."
+    },
+    {
+      "task_id": "A3_FACTORIAL_INTERACTION",
+      "depends_on": [
+        "A1_PARENT_RECOMPUTE",
+        "A2_CONDITIONAL_SINGLE"
+      ],
+      "candidate_ids": [
+        "S0_G0",
+        "S0_P2",
+        "S0_P10"
+      ],
+      "required_control_sets": [
+        [
+          "R0",
+          "S0",
+          "G0",
+          "S0_G0"
+        ],
+        [
+          "R0",
+          "S0",
+          "P2",
+          "S0_P2"
+        ],
+        [
+          "R0",
+          "S0",
+          "P10",
+          "S0_P10"
+        ]
+      ],
+      "purpose": "Complete shared-parent comparisons; P2/P10 are finite diagnostics even if P10 is already constraint-rejected, not deployment revival",
+      "budget": {
+        "records": 240,
+        "maximum_new_unique_strategy_record_evaluations": 720,
+        "model_calls": 0
+      },
+      "adjudication": "Compare each combination to both parents, fixedR0 and current incumbent; P variants additionally to exact upstream dp5. Keep simpler parent if removal does not damage accepted properties. Incomparable candidates do not replace incumbent."
+    },
+    {
+      "task_id": "A4_REMAINING_OPPORTUNITY_REVIEW",
+      "depends_on": [
+        "A3_FACTORIAL_INTERACTION"
+      ],
+      "candidate_ids": [],
+      "purpose": "A consumes actual results once; C checks required comparisons, candidate budget and absence of credible untested opportunities; stop without forced empty iterations",
+      "adjudication": "Freeze at most4 complete strategies before G3_SELECTION. Prospective shortlist drawn from R0,S0,G0,S0_G0 if they are safe; not predetermined winners. Exclude P variants lacking own compression contribution. No FINAL_CONFIRM access."
+    }
+  ],
+  "record_processing_budget_upper_bound": 2640,
+  "iteration_adoption_rule": "Initial incumbentR0. First accept S0 only if all guards pass and strict gain. Then each legal full strategy must satisfy R0 and incumbent guards; among mutually incomparable protected candidates retain current incumbent and save Pareto/pairs. Equivalence tie: fewer modules, no online model, lower measured cost, stable canonicalID. No weighted quality score.",
+  "compatibility": [
+    {
+      "pair": [
+        "S_POINTS2",
+        "S_LENGTH0"
+      ],
+      "relation": "existing S0 is exact factorial intersection; needed removal controls, no new method count"
+    },
+    {
+      "pair": [
+        "S0",
+        "G0"
+      ],
+      "relation": "independent stage changes but newly admitted windows can alter direction/DP; empirical all-record gate required"
+    },
+    {
+      "pair": [
+        "S0",
+        "D60"
+      ],
+      "relation": "NOT_ADMITTED_UNCONDITIONAL: S relaxations do not alter R0-surviving windows, so observed D60 geometry regressions cannot be repaired by merely adding disjoint S windows"
+    },
+    {
+      "pair": [
+        "S0",
+        "P2"
+      ],
+      "relation": "DIAGNOSTIC_ONLY unless equal-upstream P5 comparison demonstrates independent compression contribution, which nested DP normally precludes"
+    },
+    {
+      "pair": [
+        "S0",
+        "P10"
+      ],
+      "relation": "DIAGNOSTIC_ONLY; no deployment if any actual immediate P error exceeds5"
+    }
+  ],
+  "not_admitted": [
+    {
+      "candidate_class": "second lightweight conservative deletion guard",
+      "status": "NOT_ADMITTED_WITH_REASON",
+      "reason": "No grounded displacement-reliability cutoff or noise labels. Invented low-displacement/physical-speed guard would assume unknown truth. A guard that tests final protected scores and rolls back is a separate deployable verifier strategy needing extra runtime scope; unnecessary before bounded raw-time rule has been tested."
+    },
+    {
+      "candidate_class": "new stage order",
+      "status": "NOT_ADMITTED_WITH_REASON",
+      "reason": "Four unsafe orders already have real rejection evidence; S-P-D is known geometry tradeoff with no new mechanism that restores final guarantees. Do not repeat six-order search."
+    },
+    {
+      "candidate_class": "new LLM/memory processing mode",
+      "status": "NOT_ADMITTED_WITH_REASON",
+      "reason": "Existing84 valid G2 dispatches establish real four-mode evidence but no causal memory-quality gain. No current evidence justifies new online dependence or another mode matrix; deterministic fixed/conditional policy is correctly named."
+    }
+  ],
+  "literature_boundary": {
+    "actually_read_this_turn": "existing merged Source Audit selected S08,S10,S17,S21,D03 entries and matching merged-review sections; no new full-paper reading claimed",
+    "use": "S10 supports separation of selection and final confirmation in historical audit; S17/S21 offer posterior checking/single-intervention ideas only; no published parameter or algorithm-optimality claim is used to set this plan",
+    "unread_originals_not_claimed_verified": true
+  },
+  "unchecked": [
+    "actual G3 outputs and C contract approval",
+    "G3_SELECTION effects",
+    "FINAL_CONFIRM input/effects",
+    "full production effects",
+    "paper full texts in this turn"
+  ]
+}

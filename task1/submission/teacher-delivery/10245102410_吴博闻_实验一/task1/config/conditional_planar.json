@@ -1,0 +1,92 @@
+{
+  "contract_id": "G1_CONDITIONAL_ENU_V1",
+  "contract_version": "BASELINE_CONTRACT_V2",
+  "approval": "CONDITIONAL_ANALYSIS",
+  "approval_source": {
+    "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/USER_DECISIONS.json",
+    "sha256": "2b68e39573ab9256a353484842438a118445bb62ddbaca1c42fbd4eee9fe4f0e"
+  },
+  "raw_sha256": "c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3",
+  "record_ids": [
+    "0",
+    "1",
+    "2",
+    "246",
+    "256",
+    "306",
+    "352"
+  ],
+  "method": "single_pass_simultaneous_keep_undefined",
+  "order": [
+    "split",
+    "filter",
+    "denoise",
+    "simplify"
+  ],
+  "units": {
+    "xy": "metre",
+    "time": "second",
+    "direction": "degrees"
+  },
+  "adapter_version": "conditional_ellipsoid_enu:v1",
+  "parameters": {
+    "dt": 30,
+    "distance": 400,
+    "min_points": 5,
+    "min_length": 65,
+    "direction": 35,
+    "dp": 5,
+    "time_reliable": true
+  },
+  "parameter_role": "STARTER_REFERENCE; no parameter search",
+  "source_crs": "UNVERIFIED",
+  "classification": "CURRENT_RUN_CONDITIONAL_ANALYSIS",
+  "analysis_model": {
+    "name": "ellipsoid_surface_ECEF_to_local_ENU",
+    "semi_major_m": 6378137.0,
+    "inverse_flattening": 298.257223563,
+    "assumed_height_m": 0.0,
+    "origin_lon_degrees": 121.343555,
+    "origin_lat_degrees": 31.3561015,
+    "origin_basis": "midpoint of fixed pilot raw bounding box; chosen from extent, before processing",
+    "domain_max_radius_m": 40000.0,
+    "source_epsg": null,
+    "datum_conversion": null,
+    "coordinate_order": "longitude,latitude",
+    "angular_unit": "degree"
+  },
+  "validation": {
+    "coordinate_crosscheck": "independent PROJ cart+topocentric",
+    "coordinate_absolute_tolerance_m": 1e-06,
+    "distance_reference": "ellipsoidal Geod inverse under the same mathematical model",
+    "max_observed_relative_distance_difference": 5e-05,
+    "threshold_checks": [
+      "all raw edges against 400m",
+      "actual segment lengths against 65m",
+      "direction predicates against 35deg",
+      "actual clean index intervals against 5m in independent AEQD coordinates"
+    ],
+    "dp_numeric_rule": "64 * binary64_epsilon * max(1, coordinate_extent, absolute_coordinate, tolerance)"
+  },
+  "limitations": [
+    "unknown source datum and offset history",
+    "zero height is an analysis assumption, not measured elevation",
+    "no absolute positioning, map matching or ground truth recovery claims",
+    "model agreement cannot prove source datum"
+  ],
+  "sources": [
+    {
+      "url": "https://proj.org/en/stable/operations/conversions/cart.html",
+      "supports": "geodetic angles to ellipsoid Cartesian formula interpretation"
+    },
+    {
+      "url": "https://proj.org/en/stable/operations/conversions/topocentric.html",
+      "supports": "local E/N tangent plane and cart then topocentric sequence"
+    },
+    {
+      "url": "https://proj.org/en/stable/geodesic.html",
+      "supports": "ellipsoid inverse distance/azimuth independent numeric check"
+    }
+  ],
+  "frozen_before_processing_at": "2026-09-26T16:33:00.069753+00:00"
+}

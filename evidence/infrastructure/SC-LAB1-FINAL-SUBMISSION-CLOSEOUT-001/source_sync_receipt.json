@@ -1,0 +1,206 @@
+{
+  "status": "PASS",
+  "approved_member_count": 15,
+  "unchanged_other_members": 13,
+  "commands": [
+    {
+      "command": [
+        "python3",
+        "evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/sync_sources.py"
+      ],
+      "exit_code": 0,
+      "result": {
+        "status": "UPLOAD BUNDLE READY",
+        "file_count": 15,
+        "updated": [
+          "evidence/infrastructure/chatgpt-project-source-sync/SOURCE_MANIFEST.md",
+          "evidence/infrastructure/chatgpt-project-source-sync/UPLOAD_INSTRUCTIONS.md"
+        ],
+        "removed": []
+      },
+      "bundle_bytes_mtimes_unchanged": true
+    },
+    {
+      "command": [
+        "python3",
+        "evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/sync_sources.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "result": {
+        "status": "UPLOAD BUNDLE READY",
+        "file_count": 15,
+        "readonly": true
+      },
+      "bundle_bytes_mtimes_unchanged": true
+    },
+    {
+      "command": [
+        "python3",
+        "evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/sync_sources.py"
+      ],
+      "exit_code": 0,
+      "result": {
+        "status": "UPLOAD BUNDLE READY",
+        "file_count": 15,
+        "updated": [],
+        "removed": []
+      },
+      "bundle_bytes_mtimes_unchanged": true
+    },
+    {
+      "command": [
+        "python3",
+        "evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/sync_sources.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "result": {
+        "status": "UPLOAD BUNDLE READY",
+        "file_count": 15,
+        "readonly": true
+      },
+      "bundle_bytes_mtimes_unchanged": true
+    }
+  ],
+  "members": [
+    {
+      "name": "SMART_CITIES_RESEARCH_PROTOCOL.md",
+      "active_path": "docs/research/SMART_CITIES_RESEARCH_PROTOCOL.md",
+      "bytes": 13264,
+      "sha256": "19f9bb4670bc3a485b064854f3d035d2a50a192386be53396851443ee5654a3f",
+      "changed_this_task": false,
+      "active_bundle_equal": true,
+      "unchanged_from_baseline": true
+    },
+    {
+      "name": "WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md",
+      "active_path": "docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md",
+      "bytes": 51263,
+      "sha256": "681ce8af7ead9b0d4abe0575ff546bc143064de42952bb5110bc350a420e4aa8",
+      "changed_this_task": false,
+      "active_bundle_equal": true,
+      "unchanged_from_baseline": true
+    },
+    {
+      "name": "SMART_CITIES_REPORT_WRITING_GUIDE.md",
+      "active_path": "docs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md",
+      "bytes": 28663,
+      "sha256": "d513867e76da9d5683a2b76325fa71bce8bb4387af6c2d148acb2e70fa6a5d0c",
+      "changed_this_task": false,
+      "active_bundle_equal": true,
+      "unchanged_from_baseline": true
+    },
+    {
+      "name": "SMART_CITIES_VISUAL_SYSTEM.md",
+      "active_path": "docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md",
+      "bytes": 48822,
+      "sha256": "31501be77664a4d7f35ebb8d11118bdf58a18db7ce0090a125b4d87e95590b59",
+      "changed_this_task": false,
+      "active_bundle_equal": true,
+      "unchanged_from_baseline": true
+    },
+    {
+      "name": "AGENTS.md",
+      "active_path": "AGENTS.md",
+      "bytes": 39135,
+      "sha256": "e1797cf00af4b55c1885d8e8753d93b0f4feadc6b1295670676e2636827a3a62",
+      "changed_this_task": false,
+      "active_bundle_equal": true,
+      "unchanged_from_baseline": true
+    },
+    {
+      "name": "Experiment_Report_P2_Exact.pdf",
+      "active_path": "templates/latex/experiment-report/preview/Experiment_Report_P2_Exact.pdf",
+      "bytes": 278863,
+      "sha256": "6fd543f5123ba4d67985193d5658802ae820c6585dc3f509071b8b2d39b323dd",
+      "changed_this_task": false,
+      "active_bundle_equal": true,
+      "unchanged_from_baseline": true
+    },
+    {
+      "name": "实验课1.pptx",
+      "active_path": "task1/实验课1.pptx",
+      "bytes": 11442326,
+      "sha256": "cf5fdbdd0e116818f4bf195e8761dd55c4733443d7c360c986cf1cdfddfda075",
+      "changed_this_task": false,
+      "active_bundle_equal": true,
+      "unchanged_from_baseline": true
+    },
+    {
+      "name": "作业.zip",
+      "active_path": "task1/作业.zip",
+      "bytes": 15376559,
+      "sha256": "818d483cf719aeb1145ea97b551b2648913559ed1fca0be220ed41eff8ba42cc",
+      "changed_this_task": false,
+      "active_bundle_equal": true,
+      "unchanged_from_baseline": true
+    },
+    {
+      "name": "任务3_LLM辅助评估清洗.ipynb",
+      "active_path": "task1/作业/作业/任务3_LLM辅助评估清洗.ipynb",
+      "bytes": 20208,
+      "sha256": "4ecffe64024e002c0cffe7830e18b5f6ded04cd5aa9dd645d6798fc9b0715add",
+      "changed_this_task": false,
+      "active_bundle_equal": true,
+      "unchanged_from_baseline": true
+    },
+    {
+      "name": "作业1轨迹数据预处理.ipynb",
+      "active_path": "task1/作业/作业/作业1轨迹数据预处理.ipynb",
+      "bytes": 77455,
+      "sha256": "8601d1dfecaef062fef553992cc9774d3a0eb551751c70536f5b52f1343b158a",
+      "changed_this_task": false,
+      "active_bundle_equal": true,
+      "unchanged_from_baseline": true
+    },
+    {
+      "name": "publication-plots.zip",
+      "active_path": "releases/skills/publication-plots-approved-original.zip",
+      "bytes": 13105,
+      "sha256": "b3d20aec75a8450e62effcb51399115c952fa6c3787c254fa09305e44a9c3041",
+      "changed_this_task": false,
+      "active_bundle_equal": true,
+      "unchanged_from_baseline": true
+    },
+    {
+      "name": "Experiment_Report_吴博闻_10245102410.pdf",
+      "active_path": "reports/experiment-report/experiment1-reconstructed/Experiment_Report_吴博闻_10245102410.pdf",
+      "bytes": 907540,
+      "sha256": "2a940be556262725acbe666bbe5b5f8a6b20e08d6838770f0b681bb17bf5cdd0",
+      "changed_this_task": false,
+      "active_bundle_equal": true,
+      "unchanged_from_baseline": true
+    },
+    {
+      "name": "Experiment_Report_完整重构_源文件.zip",
+      "active_path": "reports/experiment-report/experiment1-reconstructed/Experiment_Report_完整重构_源文件.zip",
+      "bytes": 3515637,
+      "sha256": "6c0d2cc5e3b65bccb0279e1dd7ad5e776b5a8fc098b159f34bfd5301242e4dcd",
+      "changed_this_task": false,
+      "active_bundle_equal": true,
+      "unchanged_from_baseline": true
+    },
+    {
+      "name": "Process_Report_Revised.pdf",
+      "active_path": "reports/process-report/experiment1-revised/Process_Report_Revised.pdf",
+      "bytes": 8143247,
+      "sha256": "dc1bb8e8e2262379b7e234550901f645ef0d6f549d6d2aef5e3985a433a1fa23",
+      "changed_this_task": true,
+      "active_bundle_equal": true,
+      "unchanged_from_baseline": false
+    },
+    {
+      "name": "Process_Report_Revised_LaTeX_Source.zip",
+      "active_path": "reports/process-report/experiment1-revised/Process_Report_Revised_LaTeX_Source.zip",
+      "bytes": 56878339,
+      "sha256": "831d61baa7de160796827b60f29e1ada9f1b3809c2a87aa4acd6b98703e352ef",
+      "changed_this_task": true,
+      "active_bundle_equal": true,
+      "unchanged_from_baseline": false
+    }
+  ],
+  "ui_status": "USER_CONFIRMATION_REQUIRED",
+  "ui_prior_report_scope": "old Process pair only",
+  "settings_changed": false
+}

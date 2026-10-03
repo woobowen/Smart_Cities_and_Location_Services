@@ -1,0 +1,35 @@
+{
+  "reviewer_context": "/root/independent_review",
+  "reviewed_at": "2026-10-03T02:28:09.337349+00:00",
+  "scope": "READ_ONLY_REMOTE_HELPER_CODE_REVIEW_ONLY",
+  "status": "PASS",
+  "helper_path": "evidence/infrastructure/SC-LAB1-FINAL-SUBMISSION-CLOSEOUT-001/verify_remote.py",
+  "helper_bytes": 7988,
+  "helper_sha256": "d9b4bc0831526b9d6a7037171bd787397e7b3301f28a6f647dc16d125efbc802",
+  "syntax": "PASS",
+  "correctly_implemented": [
+    "FETCH_HEAD is resolved after each depth=1 fetch and used for all tree/blob reads",
+    "NUL-delimited ls-tree with UTF-8 decoding preserves Chinese filenames",
+    "Direct remote main, independent FETCH_HEAD, local HEAD, origin/main, expected SHA must all match",
+    "Approved Project Source set is derived from project_source:true and release has exact set",
+    "Every active/release blob and declared SHA is actually read and compared",
+    "397 work-source member set and bytes/hashes match preserved supplied ZIP ledger",
+    "Formal teacher ZIP remote blob is retrieved, CRC checked and compared with local audited bytes",
+    "All 116 remote teacher-folder blobs are compared with actual ZIP members and declared hashes",
+    "Git subprocesses all receive an explicit environment clearing 6 Git object/work-directory overrides",
+    "Bare repository and exact origin URL are asserted before fetch",
+    "Nonempty objects/info/alternates and http-alternates are rejected before fetch and rechecked after fetch",
+    "Receipt records initial object directory existence, cleared variables, actual alternates and bare/origin validation"
+  ],
+  "initial_review_finding": {
+    "reason": "Existing object-dir and inherited Git object environment may contain alternates but the receipt claims no alternates without checking",
+    "requested_minimal_fix": "Check bare/origin URL and absent/empty objects/info/alternates; strip inherited Git object/alternate location environment variables for git subprocesses; record actual isolation checks",
+    "initial_helper_sha256": "7c0286d292eab9762d6ea41d930e48a9fd0f51b08fb2d6f1af78351b3bc87614",
+    "resolved": "Minimal isolation assertions and explicit environment now implemented; reviewed final code"
+  },
+  "counts_basis": "Project Source count from approved true rows; source members from byte-bound input ZIP ledger; teacher members from the actual remote ZIP manifest. Current frozen values are 15/397/116, without hardcoded future counts.",
+  "real_zip_vs_fixture": "Reads actual formal teacher ZIP blob and checks its member bytes; synthetic fixtures are not used.",
+  "remote_readback_execution": "NOT_EXECUTED_BY_THIS_CODE_REVIEW; separate post-publication real execution evidence required",
+  "new_model_calls": 0,
+  "trajectory_runs": 0
+}

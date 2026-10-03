@@ -1,0 +1,1196 @@
+{
+  "goal_id": "SC-LAB1-G2-EXPERIMENTS-001",
+  "contract_id": "G2_CONDITIONAL_ENU_V1",
+  "contract_version": "G2_EXECUTION_CONTRACT_V1",
+  "status": "A_PREPARED_FOR_INDEPENDENT_C_REVIEW",
+  "created_at_utc": "2026-09-26T18:50:21.466170+00:00",
+  "authority": {
+    "type": "CURRENT_DIRECT_USER_PROMPT",
+    "path": "task1/evidence/goal2/USER_PROMPT.md",
+    "sha256": "f4b4246e4287e7f521c0fafbca4bed68c5d91e39f6818be64d25b10d34968603",
+    "internal_A_C_is_human_approval": false
+  },
+  "freeze_rule": "root records hashes of this contract, matrix, split and code only after independent C definition review; all candidate-selection runs depend on that receipt",
+  "raw_path": "task1/作业/作业/traj_dict.json",
+  "raw_sha256": "c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3",
+  "expected_raw_records": 11386,
+  "expected_raw_points": 1173410,
+  "source_crs": "UNVERIFIED",
+  "classification": "CURRENT_RUN_CONDITIONAL_ANALYSIS",
+  "g1_handoff": {
+    "artifact_sha": "a45d89f49f2041477b16485f535adc508c32f8ea",
+    "code_sha": "f229d9a4113bcc0dd763e1b410f1f5fb73903a62",
+    "acceptance_source": "USER_RELAYED_GPT_STAGE_ACCEPTANCE",
+    "external_review_attachment_provided": false,
+    "regression_record_ids": [
+      "0",
+      "1",
+      "2",
+      "246",
+      "256",
+      "306",
+      "352"
+    ],
+    "reference_counts": {
+      "raw_points": 783,
+      "segments": 30,
+      "filtered": 309,
+      "direction_removed": 13,
+      "dp_removed": 273,
+      "retained": 188,
+      "dp_input": 461,
+      "max_dp_error_m": 4.938319812632411
+    },
+    "old_originals_read_only": true
+  },
+  "model": {
+    "adapter_version": "g2_conditional_ellipsoid_enu:v1",
+    "formula": "same ECEF_to_ENU as G1; independent domain guard only",
+    "semi_major_m": 6378137.0,
+    "inverse_flattening": 298.257223563,
+    "assumed_height_m": 0.0,
+    "origin_lon_degrees": 121.343555,
+    "origin_lat_degrees": 31.3561015,
+    "domain_max_radius_m": 200000.0,
+    "guard_is_accuracy_guarantee": false,
+    "source_epsg": null,
+    "datum_conversion": null,
+    "coordinate_order": "longitude,latitude",
+    "angular_unit": "degree",
+    "coordinate_crosscheck_absolute_tolerance_m": 1e-06,
+    "near_model_checks": [
+      "PROJ cart+topocentric on all selected points",
+      "Geod inverse raw/current edges and stage lengths",
+      "independent AEQD direction and DP decisions for all registered grid thresholds and actual stage indices"
+    ],
+    "sensitivity_difference_action": "retain record and differences; mark conditional dependence; no coordinate/model selection by cleaning score",
+    "outside_guard_action": "BLOCK_AFFECTED_RECORD_RETAIN_IN_DENOMINATOR_DO_NOT_REPLACE"
+  },
+  "units": {
+    "xy": "working_metre",
+    "time": "second",
+    "direction": "degree"
+  },
+  "time_reliable": true,
+  "reference_parameters": {
+    "dt": 30,
+    "distance": 400,
+    "min_points": 5,
+    "min_length": 65,
+    "direction": 35,
+    "dp": 5
+  },
+  "parameter_grids": {
+    "dt": [
+      15,
+      20,
+      30,
+      45,
+      60
+    ],
+    "distance": [
+      95,
+      200,
+      400,
+      600,
+      800
+    ],
+    "min_points": [
+      2,
+      3,
+      5,
+      7,
+      10
+    ],
+    "min_length": [
+      0,
+      32.5,
+      65,
+      97.5,
+      130
+    ],
+    "direction": [
+      15,
+      25,
+      35,
+      45,
+      60
+    ],
+    "dp": [
+      0,
+      0.5,
+      1,
+      2,
+      5,
+      10,
+      20
+    ]
+  },
+  "direction_method": "single_pass_simultaneous_keep_undefined",
+  "orders": [
+    "S-D-P",
+    "S-P-D",
+    "D-S-P",
+    "D-P-S",
+    "P-S-D",
+    "P-D-S"
+  ],
+  "reference_order": "S-D-P",
+  "stage_rules": {
+    "S": "current-index strict dt>threshold OR dt<0 OR distance>threshold; right boundary point belongs only to right segment; immediately filter current segment min_points/min_length",
+    "D": "teacher both circular neighbor direction differences strictly greater than threshold; mark once and remove simultaneously; endpoints and undefined/zero-displacement windows preserved",
+    "P": "finite-segment DP, preserve endpoints, equality does not recurse, degenerate endpoint distance, zero tolerance keeps all",
+    "before_S": "raw record boundaries only; no implicit time/distance segmentation",
+    "after_each_stage": "recompute current adjacency features",
+    "after_P": "later D/S removals distinct from DP immediate output"
+  },
+  "numeric_audit": {
+    "linear_rule": "64 * binary64_epsilon * max(1,coordinate_extent,absolute_coordinate,tolerance)",
+    "direction_rule_degrees": "64 * binary64_epsilon * 360",
+    "does_not_change_algorithm_threshold": true,
+    "integer_gain_minimum": 1,
+    "dimensionless_ratio_comparison_epsilon": 1e-12
+  },
+  "split": {
+    "seed": 42,
+    "unit": "raw record; exact complete timestamp+coordinate duplicates are atomic groups",
+    "exact_group_hash": "SHA256 canonical JSON complete [timestamps,coordinates]",
+    "partition_sizes": {
+      "PILOT_REGRESSION": 7,
+      "DEMO_MEMORY": 60,
+      "DEVELOPMENT": 120,
+      "G2_EVAL": 120,
+      "G3_RESERVED": "all remainder"
+    },
+    "llm_subset_size_each": 24,
+    "allocation_order": [
+      "DEMO_MEMORY",
+      "DEVELOPMENT",
+      "G2_EVAL"
+    ],
+    "stratum": "span LOW/MID/HIGH x TIME_FLAG x DUP_FLAG; INVALID separate if any",
+    "span": "hypot(max_ENU_x-min_ENU_x,max_ENU_y-min_ENU_y)",
+    "quantiles": {
+      "levels": [
+        0.3333333333333333,
+        0.6666666666666666
+      ],
+      "method": "linear",
+      "scope": "all raw valid records; no candidate outputs",
+      "boundaries": "LOW<=q1; q1<MID<=q2; HIGH>q2"
+    },
+    "time_flag": "any raw dt<=0 or raw dt>30",
+    "duplicate_flag": "any adjacent raw coordinate pair exactly equal",
+    "allocation": "equal quotas among nonempty strata; remainder lexicographic stratum order; shortage take available then cycle sorted nonempty residual strata one record at a time; do not split atomic groups",
+    "sort": "SHA256 stable seed42 + partition salt + group/id; record exact algorithm and salt in split manifest",
+    "exposure": "pilot and demonstrably previously processed IDs KNOWN_EXPOSED; others NO_DOCUMENTED_METHOD_EXPOSURE; whole-raw inventory is disclosed",
+    "g3_allowed": [
+      "read_only_raw_inventory"
+    ],
+    "g3_forbidden": [
+      "candidate_selection",
+      "mode_evaluation",
+      "final_cleaning"
+    ]
+  },
+  "common_reference": {
+    "id": "RAW_WINDOWS_DT30_DISTANCE400_V1",
+    "source": "trusted immutable complete raw records transformed by frozen G2 model",
+    "window_break": "dt>30 or dt<0 or adjacent distance>400",
+    "short_segment_filter": false,
+    "candidate_dependent": false,
+    "point_error": "retained raw point 0; otherwise finite segment distance only to bracketing same-final-segment consecutive indices within same fixed raw window; no cross-window interpolation",
+    "uncovered_value": null,
+    "uncovered_reason": "UNCOVERED_OR_NO_BRACKETING_EDGE",
+    "coverage_identity_set_required": true,
+    "crossing_rule": "any final same-segment edge a<b with original break index j satisfying a<j<=b",
+    "crossing_limit": 0
+  },
+  "metrics": [
+    {
+      "metric_id": "raw_point_retention",
+      "definition": "N_final/N_raw",
+      "reference": "complete raw record scope",
+      "unit": "ratio",
+      "denominator": "all raw points",
+      "direction": "DESCRIPTIVE",
+      "null_reason": "EMPTY_RAW"
+    },
+    {
+      "metric_id": "record_coverage",
+      "definition": "N_records_with_nonempty_final/N_input_records",
+      "reference": "complete input record set",
+      "unit": "ratio",
+      "denominator": "all input records including all-filtered",
+      "direction": "PROTECT_NONDECREASE",
+      "null_reason": "EMPTY_SCOPE"
+    },
+    {
+      "metric_id": "all_filtered_record_ratio",
+      "definition": "N_records_whose_all_raw_points_are_filtered_by_S/N_input_records",
+      "reference": "complete input record set",
+      "unit": "ratio",
+      "denominator": "all input records",
+      "direction": "DESCRIPTIVE",
+      "null_reason": "EMPTY_SCOPE"
+    },
+    {
+      "metric_id": "record_no_output_ratio",
+      "definition": "N_records_with_zero_final_points/N_input_records, regardless of prior D/P removals",
+      "reference": "complete input record set",
+      "unit": "ratio",
+      "denominator": "all input records including those removed by multiple stages",
+      "direction": "DESCRIPTIVE",
+      "null_reason": "EMPTY_SCOPE"
+    },
+    {
+      "metric_id": "stage_fates",
+      "definition": "per-record/per-stage input/output/removed counts, filter reasons and unique terminal ledger",
+      "reference": "all original point identities",
+      "unit": "count",
+      "denominator": "all raw points, all records, all S-created segments",
+      "direction": "CONSERVATION_AND_DESCRIPTION",
+      "null_reason": null
+    },
+    {
+      "metric_id": "dp_saving",
+      "definition": "1-N_P_immediate_output/N_P_complete_input",
+      "reference": "complete immediate P input, same upstream for comparisons",
+      "unit": "ratio",
+      "denominator": "all P input points",
+      "direction": "HIGHER_COMPRESSION_ONLY",
+      "null_reason": "EMPTY_DP_REFERENCE"
+    },
+    {
+      "metric_id": "dp_interval_error",
+      "definition": "finite-segment distance for every full P input point to its original-index bracketing immediate P output edge; max/mean/q50/q90/q95/q99/exceedances",
+      "reference": "complete P input for this actual order",
+      "unit": "working_metre",
+      "denominator": "all P input points",
+      "direction": "LOWER_GEOMETRIC_ERROR",
+      "null_reason": "EMPTY_DP_REFERENCE"
+    },
+    {
+      "metric_id": "common_raw_coverage",
+      "definition": "covered original point identity set and count divided by all raw points; retained point or bracketing final edge within fixed raw window",
+      "reference": "fixed raw 30/400 windows without filter",
+      "unit": "count_and_ratio",
+      "denominator": "all raw points",
+      "direction": "HIGHER_CONDITIONAL_COVERAGE",
+      "null_reason": "EMPTY_RAW"
+    },
+    {
+      "metric_id": "common_raw_error",
+      "definition": "finite segment error per covered raw point; uncovered null; full observed mask retained",
+      "reference": "fixed raw 30/400 windows without filter",
+      "unit": "working_metre",
+      "denominator": "all raw points with valid/invalid counts reported",
+      "direction": "LOWER_CONDITIONAL_GEOMETRIC_ERROR",
+      "null_reason": "UNCOVERED_OR_NO_BRACKETING_EDGE"
+    },
+    {
+      "metric_id": "common_error_on_baseline_covered",
+      "definition": "candidate and reference max error restricted to the same frozen reference covered original-index set",
+      "reference": "common raw plus reference covered identity set",
+      "unit": "working_metre",
+      "denominator": "reference covered point identities; set must be subset of candidate coverage",
+      "direction": "LOWER_OR_EQUAL_GUARD",
+      "null_reason": "EMPTY_BASELINE_COVERAGE"
+    },
+    {
+      "metric_id": "raw_breakpoint_crossings",
+      "definition": "final same-segment edges a<b spanning any fixed raw break j with a<j<=b; count edges and unique breaks separately",
+      "reference": "raw strict dt>30 or dt<0 or distance>400",
+      "unit": "count",
+      "denominator": "all fixed raw breaks and all candidate final edges",
+      "direction": "ZERO_HARD_CONSTRAINT",
+      "null_reason": null
+    },
+    {
+      "metric_id": "raw_breakpoint_trigger_retention",
+      "definition": "which original break adjacent indices remain after each stage; distinguish omission/no output from crossing",
+      "reference": "raw break index pairs",
+      "unit": "count_and_index_sets",
+      "denominator": "all raw breakpoint pairs",
+      "direction": "DESCRIPTIVE",
+      "null_reason": "NO_RAW_BREAKPOINTS"
+    },
+    {
+      "metric_id": "stage_length_change",
+      "definition": "sum of within-current-segment distances; delta and relative delta from stage input",
+      "reference": "each complete stage input",
+      "unit": "working_metre_and_ratio",
+      "denominator": "stage input length",
+      "direction": "DESCRIPTIVE_NOT_TRUTH",
+      "null_reason": "ZERO_REFERENCE_LENGTH"
+    },
+    {
+      "metric_id": "computability",
+      "definition": "speed/direction computable current edges and reasons for all others",
+      "reference": "current stage adjacency",
+      "unit": "count_and_ratio",
+      "denominator": "all current stage edges",
+      "direction": "DESCRIPTIVE",
+      "null_reason": "NO_EDGES"
+    },
+    {
+      "metric_id": "proposal_legal_rate",
+      "definition": "legal raw proposals / all raw proposals before any fallback; missing/malformed/rejected included",
+      "reference": "frozen full grid domain",
+      "unit": "ratio",
+      "denominator": "all attempted proposal slots with response/failure categories",
+      "direction": "HIGHER_LEGALITY_NOT_QUALITY",
+      "null_reason": "NO_PROPOSALS"
+    },
+    {
+      "metric_id": "proposal_execution_rate",
+      "definition": "valid raw proposals actually executed / all raw proposals; cache separately flagged",
+      "reference": "locked original proposals",
+      "unit": "ratio",
+      "denominator": "all raw proposals",
+      "direction": "DESCRIPTIVE",
+      "null_reason": "NO_PROPOSALS"
+    },
+    {
+      "metric_id": "predicted_direction_agreement",
+      "definition": "predicted metric sign vs actual paired delta bound before execution; evaluate only declared comparable metric with nonnearzero delta",
+      "reference": "explicit predecision reference handle",
+      "unit": "ratio",
+      "denominator": "declared and evaluable nonnearzero predictions; undeclared/unavailable/nearzero separately",
+      "direction": "HIGHER_CALIBRATION_NOT_QUALITY",
+      "null_reason": "NO_EVALUABLE_PREDICTIONS"
+    },
+    {
+      "metric_id": "memory_consumption",
+      "definition": "retrieved/eligible/delivered/cited/action-consistent counts and IDs, with same-pair proposal differences",
+      "reference": "frozen verified DEMO snapshot",
+      "unit": "count_and_ratio",
+      "denominator": "memory episodes/cards with separate eligible/cited denominators",
+      "direction": "DESCRIPTIVE_NOT_CAUSAL_GAIN",
+      "null_reason": "NO_ELIGIBLE_MEMORY"
+    },
+    {
+      "metric_id": "resources",
+      "definition": "separate actual governance dispatches, experiment dispatches, tools, candidate evaluations, cache/replay reads, visible wall/tokens/request IDs",
+      "reference": "actual receipts and controller ledger",
+      "unit": "count_seconds_tokens",
+      "denominator": "all attempted operations including failed attempts",
+      "direction": "COST_ONLY",
+      "null_reason": "UNKNOWN_OR_UNAVAILABLE"
+    }
+  ],
+  "selection": {
+    "engineering_first": true,
+    "research_statuses": [
+      "SUPPORTED_WITHIN_SCOPE",
+      "NO_DEMONSTRATED_GAIN",
+      "TRADEOFF",
+      "REJECTED_BY_CONSTRAINT",
+      "INSUFFICIENT_EVIDENCE"
+    ],
+    "allow_quality_accepted": false,
+    "all_feasible_and_pareto_saved": true,
+    "CS_CD": {
+      "primary": [
+        "strict increase in common covered raw point count",
+        "strict reduction in max common raw error evaluated on the same baseline-covered set"
+      ],
+      "per_record_guards": [
+        "baseline_covered_index_set subset_of candidate_covered_index_set",
+        "candidate_max_error_on_baseline_covered <= baseline_max_error + fixed_numeric_epsilon",
+        "raw_breakpoint_crossings == 0",
+        "baseline nonempty record/window coverage not lost"
+      ],
+      "new_coverage": "newly covered points/error reported separately; increased coverage may be conditional gain but never true-quality accuracy",
+      "null_comparison": "empty baseline coverage cannot claim geometric improvement; null never zero",
+      "tie_rule": "retain reference on incomparable/multiple tied non-dominated improvements; preserve full frontier",
+      "point_removal_is_quality_gain": false
+    },
+    "CP": {
+      "upstream_must_equal_reference": true,
+      "common_dp_error_budget_m": 5.0,
+      "primary": "minimum total immediate P output point count at identical P input and shared 5m budget",
+      "guards": [
+        "each nonempty record immediate P max error <= 5 + fixed numeric epsilon",
+        "coverage identity set nondecreasing",
+        "original segment endpoints preserved",
+        "raw_breakpoint_crossings == 0"
+      ],
+      "length": "descriptive delta only; not quality/truth constraint",
+      "minimum_gain_points": 1,
+      "tie_rule": "min output count; then lower actual max P error; retain reference if tied, otherwise lower dp then canonical ID; preserve complete tied/frontier set"
+    },
+    "mode_rule": "CS_CD coverage/common-reference dominance unless same upstream then CP shared5m compression selection; multiple incomparable best -> reference fallback; preserve proposal and candidate frontier",
+    "regret": {
+      "scalar_objective": null,
+      "bounded_search_scalar_gap": null,
+      "normalized_regret": null,
+      "reason": "NO_PREAPPROVED_COMPARABLE_SCALAR_QUALITY_OBJECTIVE",
+      "report": "signed per-metric paired differences only"
+    }
+  },
+  "required_single_candidates": {
+    "C-S": {
+      "varies": [
+        "dt",
+        "distance",
+        "min_points",
+        "min_length"
+      ],
+      "development_domain": "union of time-distance 5x5 and min_points-min_length 5x5; no full4-factor product",
+      "fixed": [
+        "direction=35",
+        "dp=5",
+        "order=S-D-P"
+      ],
+      "selection_rule": "CS_CD"
+    },
+    "C-D": {
+      "varies": [
+        "direction"
+      ],
+      "development_domain": "direction grid",
+      "fixed": [
+        "S=reference",
+        "dp=5",
+        "order=S-D-P"
+      ],
+      "selection_rule": "CS_CD"
+    },
+    "C-P": {
+      "varies": [
+        "dp"
+      ],
+      "development_domain": "dp grid",
+      "fixed": [
+        "S=reference",
+        "direction=35",
+        "order=S-D-P"
+      ],
+      "selection_rule": "CP"
+    }
+  },
+  "structural_candidates": [
+    {
+      "id": "C-STRATIFIED",
+      "status": "NOT_ADMITTED_WITH_REASON",
+      "reason": "No independently justified conditional parameter policy beyond the required controlled parameter experiments; optional scope not filled by invented motion labels."
+    },
+    {
+      "id": "C-DIRECTION-GUARD",
+      "status": "NOT_ADMITTED_WITH_REASON",
+      "reason": "No independently justified displacement reliability threshold frozen; no arbitrary low-displacement cutoff introduced."
+    }
+  ],
+  "search": {
+    "candidate_budget_including_reference": 20,
+    "sequence": [
+      {
+        "sequence_index": 0,
+        "parameters": {
+          "dt": 30,
+          "distance": 400,
+          "min_points": 5,
+          "min_length": 65,
+          "direction": 35,
+          "dp": 5
+        },
+        "order": "S-D-P"
+      },
+      {
+        "sequence_index": 1,
+        "parameters": {
+          "dt": 30,
+          "distance": 400,
+          "min_points": 5,
+          "min_length": 65,
+          "direction": 35,
+          "dp": 0
+        },
+        "order": "S-D-P"
+      },
+      {
+        "sequence_index": 2,
+        "parameters": {
+          "dt": 30,
+          "distance": 400,
+          "min_points": 5,
+          "min_length": 65,
+          "direction": 35,
+          "dp": 1
+        },
+        "order": "S-D-P"
+      },
+      {
+        "sequence_index": 3,
+        "parameters": {
+          "dt": 30,
+          "distance": 400,
+          "min_points": 5,
+          "min_length": 65,
+          "direction": 35,
+          "dp": 2
+        },
+        "order": "S-D-P"
+      },
+      {
+        "sequence_index": 4,
+        "parameters": {
+          "dt": 30,
+          "distance": 400,
+          "min_points": 5,
+          "min_length": 65,
+          "direction": 35,
+          "dp": 10
+        },
+        "order": "S-D-P"
+      },
+      {
+        "sequence_index": 5,
+        "parameters": {
+          "dt": 30,
+          "distance": 400,
+          "min_points": 5,
+          "min_length": 65,
+          "direction": 35,
+          "dp": 20
+        },
+        "order": "S-D-P"
+      },
+      {
+        "sequence_index": 6,
+        "parameters": {
+          "dt": 30,
+          "distance": 400,
+          "min_points": 5,
+          "min_length": 65,
+          "direction": 15,
+          "dp": 5
+        },
+        "order": "S-D-P"
+      },
+      {
+        "sequence_index": 7,
+        "parameters": {
+          "dt": 30,
+          "distance": 400,
+          "min_points": 5,
+          "min_length": 65,
+          "direction": 25,
+          "dp": 5
+        },
+        "order": "S-D-P"
+      },
+      {
+        "sequence_index": 8,
+        "parameters": {
+          "dt": 30,
+          "distance": 400,
+          "min_points": 5,
+          "min_length": 65,
+          "direction": 45,
+          "dp": 5
+        },
+        "order": "S-D-P"
+      },
+      {
+        "sequence_index": 9,
+        "parameters": {
+          "dt": 30,
+          "distance": 400,
+          "min_points": 5,
+          "min_length": 65,
+          "direction": 60,
+          "dp": 5
+        },
+        "order": "S-D-P"
+      },
+      {
+        "sequence_index": 10,
+        "parameters": {
+          "dt": 15,
+          "distance": 400,
+          "min_points": 5,
+          "min_length": 65,
+          "direction": 35,
+          "dp": 5
+        },
+        "order": "S-D-P"
+      },
+      {
+        "sequence_index": 11,
+        "parameters": {
+          "dt": 60,
+          "distance": 400,
+          "min_points": 5,
+          "min_length": 65,
+          "direction": 35,
+          "dp": 5
+        },
+        "order": "S-D-P"
+      },
+      {
+        "sequence_index": 12,
+        "parameters": {
+          "dt": 30,
+          "distance": 95,
+          "min_points": 5,
+          "min_length": 65,
+          "direction": 35,
+          "dp": 5
+        },
+        "order": "S-D-P"
+      },
+      {
+        "sequence_index": 13,
+        "parameters": {
+          "dt": 30,
+          "distance": 800,
+          "min_points": 5,
+          "min_length": 65,
+          "direction": 35,
+          "dp": 5
+        },
+        "order": "S-D-P"
+      },
+      {
+        "sequence_index": 14,
+        "parameters": {
+          "dt": 30,
+          "distance": 400,
+          "min_points": 2,
+          "min_length": 65,
+          "direction": 35,
+          "dp": 5
+        },
+        "order": "S-D-P"
+      },
+      {
+        "sequence_index": 15,
+        "parameters": {
+          "dt": 30,
+          "distance": 400,
+          "min_points": 3,
+          "min_length": 65,
+          "direction": 35,
+          "dp": 5
+        },
+        "order": "S-D-P"
+      },
+      {
+        "sequence_index": 16,
+        "parameters": {
+          "dt": 30,
+          "distance": 400,
+          "min_points": 7,
+          "min_length": 65,
+          "direction": 35,
+          "dp": 5
+        },
+        "order": "S-D-P"
+      },
+      {
+        "sequence_index": 17,
+        "parameters": {
+          "dt": 30,
+          "distance": 400,
+          "min_points": 5,
+          "min_length": 0,
+          "direction": 35,
+          "dp": 5
+        },
+        "order": "S-D-P"
+      },
+      {
+        "sequence_index": 18,
+        "parameters": {
+          "dt": 30,
+          "distance": 400,
+          "min_points": 5,
+          "min_length": 32.5,
+          "direction": 35,
+          "dp": 5
+        },
+        "order": "S-D-P"
+      },
+      {
+        "sequence_index": 19,
+        "parameters": {
+          "dt": 30,
+          "distance": 400,
+          "min_points": 5,
+          "min_length": 130,
+          "direction": 35,
+          "dp": 5
+        },
+        "order": "S-D-P"
+      }
+    ],
+    "llm_allowed_domain": "any complete six-parameter vector with every exact value from its registered grid; no implicit clamp or new algorithm",
+    "invalid_action": "preserve raw proposal then reject, count rejection; never clamp before legality statistics",
+    "duplicate_action": "one actual evaluation per identical per-episode config; record cache read and provenance, not independent evidence",
+    "scalar_best_claim": false
+  },
+  "modes": {
+    "names": [
+      "llm-only",
+      "search-only",
+      "llm+search",
+      "llm+memory+search"
+    ],
+    "common_model": {
+      "model": "gpt-6-astra",
+      "reasoning_effort": "medium",
+      "seed": "unavailable",
+      "timeout_seconds": 180,
+      "capability_receipt_required": true
+    },
+    "batch_size_max": 8,
+    "development_records": 24,
+    "development_episodes": 1,
+    "evaluation_records": 24,
+    "evaluation_episodes": 3,
+    "search_round_cumulative_budgets": [
+      8,
+      14,
+      20
+    ],
+    "max_decision_rounds": 3,
+    "proposal_limit_per_round": [
+      1,
+      2,
+      2
+    ],
+    "llm_only": {
+      "max_locked_proposals": 1,
+      "feedback": false,
+      "search": false,
+      "memory": false,
+      "reference_evaluation": "separate shared comparator, no decision feedback",
+      "fallback": "separate from raw proposal; original failure retained"
+    },
+    "search_only": {
+      "experiment_model_dispatches": 0,
+      "callable_provider_instantiated": false,
+      "sentinel_required": true,
+      "governance_live_parameter_hints": false
+    },
+    "search_llm_feedback": "same record and same episode only; feed actual candidate results before next real decision; stop permitted within budget",
+    "memory_mode_difference": "only frozen eligible memory context and explicit consumption schema; same main prompt and all budgets",
+    "prediction": {
+      "fields": [
+        "metric_id",
+        "reference_handle",
+        "predicted_sign"
+      ],
+      "signs": [
+        "increase",
+        "decrease",
+        "unchanged"
+      ],
+      "bind_before_execute": true,
+      "exclude_from_evaluable": [
+        "undeclared",
+        "unavailable_metric",
+        "nearzero_delta"
+      ],
+      "all_denominators_reported": true,
+      "runtime_metric_mapping": {
+        "n_final": "stage_fates final count",
+        "common_covered_points": "common_raw_coverage covered count",
+        "common_max_error": "common_raw_error max only when exact coverage masks equal",
+        "dp_saving": "dp_saving only when complete P input reference identical",
+        "raw_break_crossings": "raw_breakpoint_crossings edge count",
+        "n_direction_removed": "stage_fates D removed count"
+      },
+      "no_prediction_sign": "not_predicted"
+    },
+    "transport": {
+      "max_retries_same_request": 2,
+      "retry_after_respected": true,
+      "do_not_retry": [
+        "authentication",
+        "permission",
+        "billing"
+      ],
+      "check_inflight_after_timeout": true
+    },
+    "final_scoring_feedback_to_episode": false,
+    "episode_state_reset": true
+  },
+  "memory": {
+    "source_partition": "DEMO_MEMORY",
+    "source_records": 60,
+    "build_candidates_per_record_max": 20,
+    "write_admission": "deterministic verified raw-to-output artifact and metrics only; no-gain cases explicitly labelled",
+    "snapshot_frozen_before_eval": true,
+    "eval_read_only": true,
+    "work_memory_reset_each_episode": true,
+    "human_knowledge": "actual teacher/user source links only; empty if no applicable content; no agent-authored human facts",
+    "retrieval": {
+      "k_max": 3,
+      "gate": "same fixed descriptive stratum",
+      "features": [
+        "log1p(point_count)",
+        "log1p(raw_bbox_span)",
+        "log1p(median_positive_dt)",
+        "zero_dt_fraction",
+        "adjacent_duplicate_fraction",
+        "raw_break_fraction"
+      ],
+      "normalization": "DEMO minmax only; constant dimension zero",
+      "distance": "unweighted Euclidean normalized descriptor distance",
+      "tie": "stable memory ID",
+      "reject": [
+        "same parent record or exact duplicate group",
+        "non-DEMO source",
+        "wrong raw/contract/snapshot version",
+        "not independently verified",
+        "inapplicable stratum"
+      ],
+      "on_empty": "return empty, no manufactured similar case"
+    },
+    "consumption_levels": [
+      "retrieved",
+      "eligible",
+      "delivered",
+      "model_cited",
+      "action_consistent"
+    ],
+    "model_fields": [
+      "memory_ids_used",
+      "rationale_linking_actual_verified_case"
+    ],
+    "consumption_not_causal_gain": true,
+    "tests": [
+      "before_after_hash_equal",
+      "write_denied",
+      "same_source_excluded",
+      "cross_episode_isolated"
+    ]
+  },
+  "representative_eval_rule": "for each OAT parameter use minimum/reference/maximum grid value with other reference parameters; deduplicate; add three frozen single candidates and feasible orders; no eval-based reselection",
+  "case_selection": {
+    "registered_before_figures": true,
+    "representative": "per raw span stratum closest to within-stratum median span, stable ID tie",
+    "worst_coverage": "largest common raw coverage loss versus reference, stable ID tie",
+    "worst_error": "largest comparable common raw error, stable ID tie",
+    "near_boundary": "smallest positive absolute distance between actual P residual and its registered threshold, stable ID tie",
+    "direction_case": "at least one actual changed D neighborhood if present",
+    "include": [
+      "favorable",
+      "degradation",
+      "uncertainty"
+    ],
+    "on_missing": "explicit no available case, no hidden substitution"
+  },
+  "counterexample_families": [
+    "normal sharp turn versus spike",
+    "zero displacement / same time different position / undefined direction",
+    "time-space break and P removes trigger",
+    "near threshold finite segment versus infinite line",
+    "all-delete cannot earn good score",
+    "own-clean small error cannot prove cross-method gain"
+  ],
+  "workflow": {
+    "controller": "reuse GoalJournal with target/hash/source binding",
+    "states": [
+      "PENDING",
+      "READY",
+      "RUNNING",
+      "REVIEW_PENDING",
+      "VERIFIED",
+      "ISSUE_OPEN",
+      "REPAIRING",
+      "REGRESSION_PENDING",
+      "REBUILT",
+      "BLOCKED_EXTERNAL",
+      "BLOCKED_RESEARCH",
+      "INTERRUPTED_CHECKPOINT"
+    ],
+    "issue_fields": [
+      "issue_id",
+      "parent_task",
+      "error_fact",
+      "violated_clause",
+      "affected_artifacts",
+      "repairer",
+      "reviewer",
+      "closing_evidence"
+    ],
+    "repair": "new code version and run, dependent old artifacts STALE/SUPERSEDED; no hotpatch",
+    "feedback_changed": "invalidate subsequent dependent live proposals and episodes, rebuild actual decisions",
+    "final_review": "independent C context with A01-A17 actual evidence; cannot be core implementation author"
+  },
+  "run_required_fields": [
+    "goal_id",
+    "experiment_id",
+    "run_id",
+    "episode_id_when_applicable",
+    "raw_sha256",
+    "partition",
+    "record_ids",
+    "parent_handles",
+    "code_sha_or_source_tree_hash",
+    "contract_hash",
+    "config_hash",
+    "method",
+    "order",
+    "parameters",
+    "adapter_version",
+    "model_config",
+    "memory_hash_when_applicable",
+    "started_at",
+    "ended_at",
+    "actual_command",
+    "tool_calls",
+    "model_dispatches",
+    "status",
+    "artifact_paths_hashes",
+    "metrics",
+    "raw_proposals",
+    "review_receipts",
+    "limitations"
+  ],
+  "resource_counters": [
+    "governance_role_dispatches",
+    "experiment_model_dispatches",
+    "deterministic_tool_calls",
+    "candidate_evaluations",
+    "replay_or_cache_reads",
+    "visible_elapsed_seconds",
+    "visible_tokens",
+    "provider_request_ids"
+  ],
+  "unobservable_counter_value": "unknown/unavailable",
+  "notebooks": {
+    "default": "RECOMPUTE_FROM_RAW_AND_FROZEN_REAL_PROPOSALS",
+    "default_new_model_dispatches": 0,
+    "live_requires_explicit_switch": true,
+    "new_kernel_required": true,
+    "teacher_mapping": {
+      "cell4": "S implementation and parameter notebook",
+      "cell6": "D implementation and parameter notebook",
+      "cell8": "P implementation and parameter notebook",
+      "cells12-17": "three parameter experiment groups",
+      "PPT42": "six-order results",
+      "LLM_cells20-25": "real four modes and frozen memory"
+    }
+  },
+  "publication": {
+    "internal_all_required_verified_first": true,
+    "normal_push_before_internal_acceptance": false,
+    "branch": "main",
+    "force_push": false,
+    "actual_remote_and_fixed_sha_readback": true,
+    "review_entry": "task1/evidence/goal2/REVIEW_PACKET.md"
+  },
+  "forbidden": [
+    "raw_value_changes",
+    "interpolation",
+    "smoothing",
+    "timestamp_rewrite",
+    "duplicate_removal",
+    "dwell_folding",
+    "map_matching",
+    "unapproved_paid_api",
+    "new_algorithm_family",
+    "joint_CS_CD_CP_enhancement",
+    "G3_final_full_cleaning",
+    "final_report_freeze",
+    "Evidence_Lock_without_master",
+    "submission_email"
+  ],
+  "source_snapshot": [
+    {
+      "path": "AGENTS.md",
+      "sha256": "6950ca3d95e1c599626b172eaba2c6f15f72bddcf641077e7f53415360204334",
+      "read_scope": "active engineering rules"
+    },
+    {
+      "path": "docs/research/SMART_CITIES_RESEARCH_PROTOCOL.md",
+      "sha256": "102c03b2107040345d15d631fa56bb8425de2ec79e0f8997d6b67d01be6e92cd",
+      "read_scope": "active research rules, especially A/F/G/J/K"
+    },
+    {
+      "path": "docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md",
+      "sha256": "fa640db61ce7b1e1487083a1d6f663c75eb11ff6ee6b7b01b21f48dbcdc7b06a",
+      "read_scope": "authenticity, role boundaries, no fabricated human approval or Evidence Lock"
+    },
+    {
+      "path": "docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md",
+      "sha256": "10cd5024641f4877fa0e7d569c507c4246bc3d0574901658e490ab0f5ff70d6c",
+      "read_scope": "P2, conditional work-plane plots, native technical art and report scope"
+    },
+    {
+      "path": "task1/实验课1.pptx",
+      "sha256": "cf5fdbdd0e116818f4bf195e8761dd55c4733443d7c360c986cf1cdfddfda075",
+      "read_scope": "original XML checked pp4,5,6,8,18,20,22,24,26,28-40,42 including Office Math; existing hash-matched extraction for task mapping"
+    },
+    {
+      "path": "task1/作业.zip",
+      "sha256": "818d483cf719aeb1145ea97b551b2648913559ed1fca0be220ed41eff8ba42cc",
+      "read_scope": "original archive SHA256; original contents read from actual extracted starter"
+    },
+    {
+      "path": "task1/作业/作业/作业1轨迹数据预处理.ipynb",
+      "sha256": "8601d1dfecaef062fef553992cc9774d3a0eb551751c70536f5b52f1343b158a",
+      "read_scope": "hash-matched full source extraction, cells1/4/6/8/10/12/14/16/18"
+    },
+    {
+      "path": "task1/作业/作业/任务3_LLM辅助评估清洗.ipynb",
+      "sha256": "4ecffe64024e002c0cffe7830e18b5f6ded04cd5aa9dd645d6798fc9b0715add",
+      "read_scope": "hash-matched full 33-cell source extraction, saved outputs historical"
+    },
+    {
+      "path": "task1/作业/作业/traj_dict.json",
+      "sha256": "c59be4c079d2ffd8ae0127c8a361c77ba277252abb2c7202efb9ee4e8e6084d3",
+      "read_scope": "read-only current SHA256; whole-raw structure/extent independently checked by root/C"
+    },
+    {
+      "path": "task1/evidence/goal1/REVIEW_PACKET.md",
+      "sha256": "c899abe098e6c3a80ee20781b0beef03b314035f34a22f2506ca58dd7f293ceb",
+      "read_scope": "handoff and current run routing"
+    },
+    {
+      "path": "task1/evidence/goal1/requirements.json",
+      "sha256": "3d656f196f9aa30df4b80b5434b505a5fc5c553f93df9eaccc42a29673db7dd0",
+      "read_scope": "all 16 requirement IDs/current scopes, G2 correspondence"
+    },
+    {
+      "path": "task1/evidence/goal1/acceptance.json",
+      "sha256": "fc76f6503473d70e6e9bac8d8f464394bd91e6f6a7fa2d464a28ab1b0fbc020a",
+      "read_scope": "current acceptance keys/status/scope and pending project boundaries"
+    },
+    {
+      "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/AUTHORIZATION_SUPPLEMENT.md",
+      "sha256": "2bce4b21939de5843678bdda1de18c64e9703c3e924fd63ff3d7988f69fe5248",
+      "read_scope": "full approved conditional analysis and direction schedule"
+    },
+    {
+      "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/FINAL_RESPONSE.md",
+      "sha256": "a0a1ae60fc3e09e1ba9bb0cdced9133273befa5542b41bba76aeb1e15edae1a4",
+      "read_scope": "full historical stage delivery; no new-run attribution"
+    },
+    {
+      "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/result_summary.json",
+      "sha256": "9c6d34865004019e76cee2e7760d2b3e0c1646dfcae16ae885efa4a66f6b4693",
+      "read_scope": "complete seven-record numbers and geometric limits"
+    },
+    {
+      "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/runs/g1-complete-pilot-03/manifest.json",
+      "sha256": "7554dc9d4e22408ac0fe00292c037af61eb7aa970c97bb369ea1631504f0a6a5",
+      "read_scope": "effective run provenance/artifact/version fields"
+    },
+    {
+      "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/c_acceptance/review_receipt.json",
+      "sha256": "78adae31869e79202cf3d39b141d189c2ec077b9ee25b5fab5572e558d5859e2",
+      "read_scope": "independent review identity/status and binding fields"
+    },
+    {
+      "path": "task1/evidence/goal1/revisions/SC-LAB1-G1-COMPLETE-001/resources.json",
+      "sha256": "a84ea8c3d6e0f64464d21d7f21172e02a0e1473d7dc985b20d46958a4748ee8a",
+      "read_scope": "historical actual roles/dispatches/dependency accounting"
+    },
+    {
+      "path": "task1/docs/goal1/CONTRACTS.md",
+      "sha256": "1a476f3290a2edd7224b8c41fde5e0a0c6f6eaf1f12e7f06909f9a52870c756b",
+      "read_scope": "full existing data/method/evaluation/permission contract"
+    },
+    {
+      "path": "task1/docs/goal1/ARCHITECTURE.md",
+      "sha256": "5fd62ae3134264970a3f0b7d17fc7fc9cd3e9e839c074c42759c74e2ffef1e7e",
+      "read_scope": "full role and deterministic journal design"
+    },
+    {
+      "path": "task1/docs/goal1/README.md",
+      "sha256": "85ee7ea1501ad983086aab24b545bd612ff0b63a906522ff419bd4d4e9bdc658",
+      "read_scope": "full recompute and environment entry"
+    },
+    {
+      "path": "task1/config/goal1.json",
+      "sha256": "5418632734964fda81fe653e4996d1519b9de3a6cf51ed191556c243770542da",
+      "read_scope": "full frozen G1 policy, preserved unchanged"
+    },
+    {
+      "path": "task1/config/conditional_planar.json",
+      "sha256": "5b1ab7dbf25797a51405a2cddd93a8d2ea3e3b69530369366d0e05be7abb8169",
+      "read_scope": "full G1 model/40km guard/numeric rules, preserved unchanged"
+    },
+    {
+      "path": "task1/workflow/geometry.py",
+      "sha256": "2ad3ca3b49e98e997684e3f5af948771be80dfb03b31b2ae4cc4483856e93d74",
+      "read_scope": "primitive validation, features, stage interfaces"
+    },
+    {
+      "path": "task1/workflow/pipeline.py",
+      "sha256": "160bedcc0d8dffce71d833dffc4de28928bc7007077ae8d03c57c96d827548c7",
+      "read_scope": "independent input and allowlisted G1 provenance contract"
+    },
+    {
+      "path": "task1/docs/research/Task1_Stage01_Readonly_Audit.md",
+      "sha256": "ffe30283c71250dabf4cf90c55d673f0e56c639f32324c7415048ee3a298e15f",
+      "read_scope": "full historical material/data/starter audit"
+    },
+    {
+      "path": "task1/docs/research/Task1_Literature_Review_2025_2026_Merged.md",
+      "sha256": "83e50286c71fde18f26595d4c042e4ae5a36aee6f5bec69750a85ce31df31c26",
+      "read_scope": "introduction/catalogue, S02/S10 cards, synthesis and limitations; no new paper fulltext review claimed"
+    },
+    {
+      "path": "task1/docs/research/Task1_Source_Audit_2025_2026_Merged.json",
+      "sha256": "fc6d597ddaa413c000a689737b23840a639b93cf626464f57841a8ef0cc966f7",
+      "read_scope": "structured S02/S10/S20/S21 records and existing review/access limitations"
+    },
+    {
+      "path": "task1/evidence/goal2/USER_PROMPT.md",
+      "sha256": "f4b4246e4287e7f521c0fafbca4bed68c5d91e39f6818be64d25b10d34968603",
+      "read_scope": "current direct user authorization archived by root"
+    }
+  ],
+  "source_conflicts": {
+    "teacher_mandatory_conflicts": [],
+    "starter_examples_not_active": [
+      "LLM notebook mock and old regret",
+      "LLM notebook old 352 temporal claim",
+      "old 15 threshold explanation",
+      "95m example not established real speed limit"
+    ],
+    "literature_usage": "Existing local S02/S10 cards inform conditional error separation and selection/evaluation separation; no algorithm adoption or newly claimed fulltext review",
+    "teacher_explanatory_assumptions_not_mandatory": [
+      {
+        "page": 8,
+        "fact": "native coding-harness avoidance phrased as suggestion; current direct user explicitly authorizes existing native Codex roles",
+        "handling": "follow current approved user workflow; do not claim teacher mandated Codex"
+      },
+      {
+        "page": 34,
+        "fact": "15-second lower threshold described as preserving normal20-second interval; bounded search described as ground truth",
+        "handling": "strict dt>threshold means15 cuts20; finite budget comparison is not truth/global optimum as current user expressly requires"
+      },
+      {
+        "page": 35,
+        "fact": "teaching regret example uses scalar scores and headroom rules",
+        "handling": "no valid scalar frozen in current task; per-metric signed gaps and normalized regret N/A under current user section8"
+      },
+      {
+        "page": 40,
+        "fact": "offline provider fixed suggestions and real LLM ablation not yet validated in teaching demonstration",
+        "handling": "this-round real requests required; old demonstration is historical"
+      }
+    ]
+  },
+  "order_feasibility": {
+    "engineering_gate": "actual P immediate complete-input guarantee at its registered tolerance; all chain/identity/accounting requirements",
+    "safety_guards_per_record": [
+      "raw_breakpoint_crossings == 0",
+      "reference_covered_original_index_set subset_of candidate_covered_original_index_set",
+      "reference nonempty record/window coverage not lost"
+    ],
+    "violation_status": "REJECTED_BY_CONSTRAINT",
+    "violation_action": "save actual failure record, indices and complete recomputable witness; not an improvement candidate",
+    "geometry_only_degradation": "TRADEOFF, retain for description if safety guards hold; P immediate guarantee is not final-output guarantee",
+    "development_scope_for_admission": "all120 DEVELOPMENT records pass safety guards; unsafe groups may stop after actual witnessed failure",
+    "eval_gate": "freeze feasible order list before any G2_EVAL then evaluate each on all120 shared records"
+  }
+}

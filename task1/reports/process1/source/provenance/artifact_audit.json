@@ -1,7 +1,7 @@
 {
   "role": "AUTHOR_SELF_CHECK",
   "independent_review": "NOT_CLAIMED",
-  "user_acceptance": "PENDING_FOR_THIS_LANGUAGE_REVISION",
+  "user_acceptance": "PRIOR_FULL_REPORT_ACCEPTED_P76_FIX_AUTHORIZED_NEW_PDF_FOR_REVIEW",
   "page_count": 77,
   "evidence_units": 40,
   "crop_count": 134,
@@ -35,7 +35,12 @@
     {
       "check": "Every formal screenshot is a lossless original-pixel crop",
       "passed": true,
-      "detail": "134 crops"
+      "detail": "134 regular crops + 1 closing crop"
+    },
+    {
+      "check": "Closing crop preserves full user bubble and excludes partial reply",
+      "passed": true,
+      "detail": ""
     },
     {
       "check": "Each independent unit opens with real user UI / clearly identified forwarded reply",
@@ -386,5 +391,9 @@
       "pass_ui": true
     }
   ],
-  "source_resolution": "Native pixels retained; current user explicitly accepted source width."
+  "source_resolution": "Native pixels retained; current user explicitly accepted source width.",
+  "pdf_sha256": "dc1bb8e8e2262379b7e234550901f645ef0d6f549d6d2aef5e3985a433a1fa23",
+  "closing_crop_count": 1,
+  "total_screenshot_crops": 135,
+  "historical_evidence_lock": "UNCHANGED_NOT_INFERRED_FROM_THIS_CHECK"
 }

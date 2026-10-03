@@ -1,0 +1,23 @@
+--- before/tools/build_report.py
++++ after/tools/build_report.py
+@@ -281,7 +281,19 @@
+ # Retrospective closing with the original user excerpt and the complete evolution diagram.
+ code=tx(14,11,182,'整体工作流回顾',8,11,'Rose',True)+tx(14,25,182,'回到我最初要求的“真实完成与持续改进”',18,24,'Ink',True)
+ code+=tx(14,45,182,'回看这次实验，我最关心的几件事始终连在一起：依据是否清楚，任务有没有实际执行，结果怎样核验，以及发现问题后能否继续推进。下面回引我当时的要求，再看它怎样逐步落实。',9.6,15)
+-f=ROOT/'assets/raw/o3dlGVJPTa1.png';im=Image.open(f);box=(int(im.width*.365),80,im.width-5,333);im.crop(box).save(ROOT/'assets/crops/closing_user.png')
++# The closing screenshot has its own explicit, audited lossless-crop contract.
++# It contains the complete user bubble, not a horizontally truncated GPT reply.
++closing=json.loads((ROOT/'content/closing_evidence.json').read_text(encoding='utf8'))
++f=ROOT/closing['source'];im=Image.open(f);box=tuple(closing['box'])
++assert list(im.size)==closing['raw_pixels'], 'Closing source dimensions changed'
++assert hashlib.sha256(f.read_bytes()).hexdigest()==closing['source_sha256'], 'Closing raw source changed'
++assert 0<=box[0]<box[2]<=im.width and 0<=box[1]<box[3]<=im.height
++im.crop(box).save(ROOT/closing['image'])
++closing_record=dict(closing,crop_pixels=[box[2]-box[0],box[3]-box[1]],
++                    crop_sha256=hashlib.sha256((ROOT/closing['image']).read_bytes()).hexdigest())
++closing_record['display_mm']=[136.5,136.5*(box[3]-box[1])/(box[2]-box[0])]
++closing_record['effective_ppi']=(box[2]-box[0])/(136.5/25.4)
++(ROOT/'provenance/closing_crop_map.json').write_text(json.dumps(closing_record,ensure_ascii=False,indent=2)+'\n',encoding='utf8')
+ code+='\\node[anchor=north west,inner sep=0] at (14,74) {\\includegraphics[width=136.5mm]{assets/crops/closing_user.png}};\n'
+ code+=tx(159.6,78,36.4,'让反馈引出下一步',9.5,13,'Blue',True)+tx(159.6,96,36.4,'我要求体系完成任务后继续检查结果、寻找改进。后续讨论又明确了候选依据、有限预算和停止条件。',8.8,13)
+ code+=tx(14,207,182,'我在这次任务中不断补充和修正要求：把Multi-Agent拉回真实轨迹任务，要求先验证单项、共用评价，让普通修复留在当前Goal，并继续检查方法解释与报告表达。GPT负责研究、解释、候选和结果核查，Codex负责实现与运行；我的质疑和选择也持续影响着后续工作。',10,15.5)

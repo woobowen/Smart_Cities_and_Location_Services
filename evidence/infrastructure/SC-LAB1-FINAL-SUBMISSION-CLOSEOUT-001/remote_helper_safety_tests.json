@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "test_kind": "isolated negative fixtures, not remote readback",
+  "case_count": 3,
+  "cases": [
+    {
+      "case": "wrong-origin",
+      "exit_code": 1,
+      "rejected_before_network_fetch": true,
+      "last_stderr_line": "AssertionError",
+      "inherited_object_variables_cleared": true
+    },
+    {
+      "case": "local-alternates",
+      "exit_code": 1,
+      "rejected_before_network_fetch": true,
+      "last_stderr_line": "AssertionError: External object alternates are forbidden: alternates",
+      "inherited_object_variables_cleared": true
+    },
+    {
+      "case": "http-alternates",
+      "exit_code": 1,
+      "rejected_before_network_fetch": true,
+      "last_stderr_line": "AssertionError: External object alternates are forbidden: http-alternates",
+      "inherited_object_variables_cleared": true
+    }
+  ],
+  "fixture_location": "/home/addaswsw/lab/.codex-closeout-snapshots/SC-LAB1-FINAL-SUBMISSION-CLOSEOUT-001/20261003T015052Z/remote-helper-safety-9tboonqw"
+}

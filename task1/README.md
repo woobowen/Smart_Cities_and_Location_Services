@@ -1,8 +1,8 @@
 # 实验一：轨迹预处理与可核验的 AI 工作流
 
-先看 [本轮 Process 接管审核入口](../evidence/infrastructure/SC-LAB1-PROCESS-INTEGRATION-SYNC-001/REVIEW_PACKET.md) 和 [实验一审核索引](evidence/goal3/REVIEW_PACKET.md)。[非 Process 收尾](../evidence/infrastructure/SC-LAB1-NONPROCESS-CLOSEOUT-001/REVIEW_PACKET.md)、[SYNC-003 网页 GPT 二审](../evidence/infrastructure/SC-PROJECT-SOURCES-SYNC-003/external_review/REVIEW_RECEIPT.md)与[原实验收尾](evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/FINAL_RESPONSE.md)保留各自被审版本和范围。
+先看 [本轮最终收尾入口](../evidence/infrastructure/SC-LAB1-FINAL-SUBMISSION-CLOSEOUT-001/REVIEW_PACKET.md) 和 [实验一审核索引](evidence/goal3/REVIEW_PACKET.md)。[上轮工程二审原件](../evidence/infrastructure/SC-LAB1-FINAL-SUBMISSION-CLOSEOUT-001/prior_review/SC-LAB1-PROCESS-INTEGRATION-SYNC-001_GPT_SECOND_REVIEW.md)、[非 Process 收尾](../evidence/infrastructure/SC-LAB1-NONPROCESS-CLOSEOUT-001/REVIEW_PACKET.md)、[SYNC-003 网页 GPT 二审](../evidence/infrastructure/SC-PROJECT-SOURCES-SYNC-003/external_review/REVIEW_RECEIPT.md)与[原实验收尾](evidence/goal3/closeout/SC-LAB1-G3-CLOSEOUT-001/FINAL_RESPONSE.md)保留各自版本和范围。
 
-技术处理、规定实验、有限候选比较、最终确认及全量结果维持此前验收，不重新评为全局最优。用户已验收25页 Experiment 和77页完整 Process；当前报告源均已接入，工程检查见本轮记录。完整 Process 接管不升级逐条 Evidence Lock、Understanding 或 Submission；网页 GPT 本轮二审=`PENDING`，教师提交=`NOT_READY`，未发送教师。旧“委派未完成”和12页状态仅描述历史版本。
+技术处理、规定实验、有限候选比较、最终确认及全量结果维持此前验收，不重新评为全局最优。Experiment保持已验收25页原件，Process为77页第76页授权局部修正版，承接此前全文认可，本次新PDF逐页用户复核另记。当前报告源均已接入；上轮工程二审已PASS，本轮网页最终二审=`PENDING`。Evidence Lock、Understanding不随工程升级，教师提交=`NOT_READY`，尚未发送。
 
 ## 作业与报告
 
@@ -14,7 +14,7 @@
 | 教师基础任务完成版 | [作业1轨迹数据预处理_完成版.ipynb](notebooks/final/作业1轨迹数据预处理_完成版.ipynb) |
 | 教师 LLM 系统任务完成版 | [任务3_LLM辅助评估清洗_完成版.ipynb](notebooks/final/任务3_LLM辅助评估清洗_完成版.ipynb) |
 | Experiment Report | [PDF](reports/experiment1/experiment1.pdf) · [当前章节源](reports/experiment1/Experiment_Report.tex)（用户已验收25页） |
-| Process Report | [PDF](reports/process1/process1.pdf) · [唯一主源](reports/process1/source/main.tex) · [接管说明](reports/process1/README.md)（用户已验收77页） |
+| Process Report | [PDF](reports/process1/process1.pdf) · [唯一主源](reports/process1/source/main.tex) · [接管说明](reports/process1/README.md)（77页，第76页授权修正版） |
 | 技术交接 | [Technical Handoff](docs/goal3/TECHNICAL_HANDOFF.md) |
 | 互动候选索引 | [Interaction Handoff](docs/goal3/INTERACTION_HANDOFF.md)；不代替 Evidence Master 选取或 LOCK |
 | 答辩说明 | [技术说明](docs/goal3/DEFENSE_NOTES.md) |
@@ -23,7 +23,7 @@
 
 教师 PPT 和两份 starter 保持原件。历史 G2 数字、G3 开发/选择、一次最终确认、全部记录生产各保留实验身份。原始输入包含 11,386 条记录、1,173,410 点；记录键不能视为独立用户或完整行程。
 
-本轮只执行报告重建、集成与同步验证，不运行以下 FULL_RECOMPUTE 或 LIVE。已验收数值与历史运行保留原身份。
+本轮执行局部报告接管、隔离构建、同步、正式教师包终检与发布，不运行以下FULL_RECOMPUTE或LIVE。两个完成版Notebook保留原字节，执行计数null、保存输出0；已绑定的真实FULL执行记录沿用原身份。
 
 ## 默认离线复算
 
@@ -67,4 +67,4 @@ S 完成时间/距离切分和短段过滤；D 按已批准规则一次标记、
 - [G2](evidence/goal2/REVIEW_PACKET.md)：三组参数、六种顺序、四模式、记忆及可复验反例。
 - [G3](evidence/goal3/REVIEW_PACKET.md)：有限候选、组合/移除、选择、确认、全量生产、复现与交付。
 
-教师要求 `.ipynb` 与实验报告压缩为 ZIP，10 月 5 日前发送至教师材料指定邮箱；材料未规定具体截止时刻。本轮只准备待审包，未发送或提交。身份已核实为吴博闻 / 10245102410；互动证据规格或最终审核未闭合时，包保持 `REVIEW_ONLY` / `NOT_READY`。报告 LaTeX、全部真实结果、失败日志及技术图源继续在 GitHub 保存。
+教师要求 `.ipynb` 与实验报告压缩为ZIP，10月5日前发送至 `52285903012@stu.ecnu.edu.cn`；课件未规定具体截止时刻。当前[材料文件夹](submission/teacher-delivery/10245102410_吴博闻_实验一/)和[正式命名候选ZIP](submission/teacher-delivery/10245102410_吴博闻_实验一.zip)已按独立教师入口生成并终检，manifest为 `TEACHER_SUBMISSION_CANDIDATE` / `sent_to_teacher:false`。网页最终二审与用户确认后由用户发送，Submission仍为NOT_READY；历史REVIEW_ONLY包保持原身份。报告LaTeX、真实结果、失败日志及原生图源继续在GitHub保存。

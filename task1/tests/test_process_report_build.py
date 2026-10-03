@@ -17,6 +17,9 @@ def process_fixture(tmp_path, monkeypatch):
         'main.tex': r'\definecolor{Ink}{HTML}{2D3238}',
         'chapters/pages.tex': 'Accepted complete report pages',
         'content/evidence_units.json': '{"approved": true}',
+        'content/closing_evidence.json': '{"box": [186, 68, 510, 263]}',
+        'provenance/closing_crop_map.json': '{"image": "assets/crops/closing_user.png"}',
+        'assets/crops/closing_user.png': 'closing native crop fixture',
         'assets/crops/example.png': 'accepted lossless crop bytes',
         'tools/make_diagrams.py': 'print("fixture diagram generator")\n',
         'tools/build_report.py': 'from pathlib import Path\nPath("chapters/pages.tex").write_text("obsolete draft")\n',
@@ -56,7 +59,9 @@ def process_fixture(tmp_path, monkeypatch):
     return tmp_path, report, config
 
 
-@pytest.mark.parametrize('damage', ['reference_hash', 'specification', 'crop', 'missing', 'extra', 'symlink', 'directory_symlink'])
+@pytest.mark.parametrize('damage', ['reference_hash', 'specification', 'crop', 'missing',
+                                  'closing_crop_missing', 'closing_map_changed', 'closing_spec_changed',
+                                  'extra', 'symlink', 'directory_symlink'])
 def test_damaged_input_stops_before_any_build_command(process_fixture, monkeypatch, damage):
     root, report, config = process_fixture
     source = report / 'source'
@@ -68,6 +73,12 @@ def test_damaged_input_stops_before_any_build_command(process_fixture, monkeypat
         (source / 'assets/crops/example.png').write_bytes(b'replaced crop')
     elif damage == 'missing':
         (source / 'chapters/pages.tex').unlink()
+    elif damage == 'closing_crop_missing':
+        (source / 'assets/crops/closing_user.png').unlink()
+    elif damage == 'closing_map_changed':
+        (source / 'provenance/closing_crop_map.json').write_text('{"old_crop": true}')
+    elif damage == 'closing_spec_changed':
+        (source / 'content/closing_evidence.json').write_text('{"box": [186, 80, 506, 333]}')
     elif damage == 'extra':
         (source / 'old_main.tex').write_text('unapproved old entry')
     elif damage == 'symlink':

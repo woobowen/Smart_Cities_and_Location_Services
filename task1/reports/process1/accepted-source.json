@@ -1,11 +1,11 @@
 {
-  "classification": "USER_ACCEPTED_COMPLETE_PROCESS_REPORT",
-  "user_acceptance": "USER_ACCEPTED_BY_CURRENT_TASK_PROMPT",
-  "approval_scope": "77-page complete report and source pair; this does not manufacture item-level Evidence Locks",
+  "classification": "PRIOR_USER_ACCEPTED_COMPLETE_PROCESS_REPORT_WITH_AUTHORIZED_P76_REVISION",
+  "user_acceptance": "PRIOR_FULL_MANUSCRIPT_ACCEPTANCE_INHERITED; P76_REVISION_USER_AUTHORIZED; CURRENT_PDF_PAGEWISE_USER_REVIEW_NOT_RECORDED",
+  "approval_scope": "Prior full manuscript/native-width acceptance inherited; current user authorized only p76 crop repair and closeout. Supplied author checks, engineering and independent review are separate; no new per-evidence Lock.",
   "canonical_pdf": "reports/process-report/experiment1-revised/Process_Report_Revised.pdf",
   "canonical_zip": "reports/process-report/experiment1-revised/Process_Report_Revised_LaTeX_Source.zip",
-  "pdf_sha256": "45f3b86f47c1b5cc7cf759ff713f5df3d4036e7ea9b4fff5eb3a40b6123aba83",
-  "zip_sha256": "00cb7b641b37b2a71a552fc5bef47fc551a16ea7ce88bcf139f2e68a5f1451da",
+  "pdf_sha256": "dc1bb8e8e2262379b7e234550901f645ef0d6f549d6d2aef5e3985a433a1fa23",
+  "zip_sha256": "831d61baa7de160796827b60f29e1ada9f1b3809c2a87aa4acd6b98703e352ef",
   "archive_root": "Process_Report_Revised_Source",
   "source_directory": "source",
   "entry": "source/main.tex",
@@ -24,5 +24,15 @@
     "Rule": "Rule"
   },
   "report_dependencies": ".venv/process-report-build-deps",
-  "source_policy": "Every delivered member remains byte-identical to the accepted ZIP; regenerate only in an isolated copy."
+  "source_policy": "Every delivered member remains byte-identical to the accepted ZIP; regenerate only in an isolated copy.",
+  "source_version": "2026-10-03 p76 local revision; 397 supplied ordinary files",
+  "authorization_task": "SC-LAB1-FINAL-SUBMISSION-CLOSEOUT-001",
+  "document_acceptance": "PRIOR_MANUSCRIPT_ACCEPTANCE_INHERITED_P76_USER_AUTHORIZED",
+  "current_pdf_user_pagewise_review": "NOT_RECORDED",
+  "current_review_packet": "evidence/infrastructure/SC-LAB1-FINAL-SUBMISSION-CLOSEOUT-001/REVIEW_PACKET.md",
+  "previous_pair": {
+    "pdf_sha256": "45f3b86f47c1b5cc7cf759ff713f5df3d4036e7ea9b4fff5eb3a40b6123aba83",
+    "zip_sha256": "00cb7b641b37b2a71a552fc5bef47fc551a16ea7ce88bcf139f2e68a5f1451da",
+    "history_directory": "reports/process-report/experiment1-revised/history/accepted-20261002"
+  }
 }

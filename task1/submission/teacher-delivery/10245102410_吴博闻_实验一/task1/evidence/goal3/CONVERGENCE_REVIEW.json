@@ -1,0 +1,284 @@
+{
+  "artifact_type": "A_REMAINING_OPPORTUNITY_AND_STOP_DECISION",
+  "at_utc": "2026-09-27T04:58:57.952042+00:00",
+  "role_context": "/root/a_candidates",
+  "status": "CONVERGED_WITHIN_REGISTERED_SCOPE",
+  "a3_decision_ref": {
+    "path": "task1/evidence/goal3/A3_DECISION.json",
+    "sha256": "01fea6c07ac49ff6f3207c0e8f85dac010f84c3fb42fd81f7149f47776980633"
+  },
+  "completed_tasks": [
+    "A1_CURRENT_EPOCH_PARENTS",
+    "A2_FIXED_RAW_TIME_RULE",
+    "A3_PARENT_COMBINATION_AND_REGISTERED_ABLATIONS"
+  ],
+  "previous_incumbent_sequence": [
+    "R0",
+    "S0",
+    "S0",
+    "S0_G0"
+  ],
+  "stop_rule_trigger": "All predeclared necessary contrasts completed andC-verified; useful supported S/G combination survives parent-removal checks; Pdiagnosticsclose without deployable P gain; remaining untested opportunities lack new evidence. No forcedthreeemptyrounds orbudgetexhaustion.",
+  "remaining_opportunities": [
+    {
+      "opportunity": "R0/S0 and independent S components",
+      "evidence": [
+        "A1_RECOMPUTE03_DECISION.json",
+        "runs/g3-development-interactions-01/analysis/record_pairs.csv"
+      ],
+      "disposition": "COMPLETE; both independent S relaxations have actual coverage contribution; S0 retained, no equivalent simpler registered parent"
+    },
+    {
+      "opportunity": "Unconditional direction60 and fixed raw-time routing",
+      "evidence": [
+        "A2_DECISION.json",
+        "A3_DECISION.json"
+      ],
+      "disposition": "COMPLETE; unconditional3 geometric failures retained; G0 rule independently supported vsR0, incomparablewithS0; S0_G0 supportedvs both parents"
+    },
+    {
+      "opportunity": "S and P threshold interaction",
+      "evidence": [
+        "runs/g3-development-interactions-01/analysis/P_record_pairs.csv",
+        "A3_DECISION.json"
+      ],
+      "disposition": "COMPLETE_DIAGNOSTIC_ONLY; dp2+2010 Poutput andwholechain9 failuresvsS0; dp10 fails5budget in178; no newPvariantadmitted"
+    },
+    {
+      "opportunity": "Second lightweight conservative deletion guard",
+      "evidence": [
+        "a_candidate_plan.json#not_admitted"
+      ],
+      "disposition": "NOT_ADMITTED; no grounded physical speed/displacement truth cutoff; no evidencewarrants extra verifier/routingpolicy"
+    },
+    {
+      "opportunity": "Dangerous orders and S-P-D",
+      "evidence": [
+        "a_candidate_plan.json#not_admitted",
+        "../goal2/result_summary.json"
+      ],
+      "disposition": "NOT_ADMITTED; historical failures/final-error caveat remain; no new mechanismrestoresfinalprotection"
+    },
+    {
+      "opportunity": "New record-level LLM or memory mode",
+      "evidence": [
+        "a_candidate_plan.json#not_admitted",
+        "../../docs/goal2/STAGE_ANALYSIS.md"
+      ],
+      "disposition": "NOT_ADMITTED; existing fourmode/84dispatch andmemory evidence preserved; no establishedcausalbenefit warrants new online modeldependence"
+    },
+    {
+      "opportunity": "More thresholds/groups/ID-routed or posthoc best policies",
+      "evidence": [
+        "a_candidate_plan.json",
+        "A_DECISION_INTERFACE.md"
+      ],
+      "disposition": "NOT_PROPOSED; no new grounded hypothesis andno winner-hunting; fixed2 rawtimegroups only; noID routing orfinalfeedback"
+    }
+  ],
+  "new_candidate_definitions": {
+    "single": 1,
+    "combination": 3,
+    "limits": {
+      "single": 8,
+      "combination": 12
+    },
+    "maximum_enhancement_depth": 3
+  },
+  "shortlist_order": [
+    "R0",
+    "S0",
+    "G0",
+    "S0_G0"
+  ],
+  "shortlist": [
+    {
+      "canonical_id": "R0",
+      "order": "S-D-P",
+      "parameters": {
+        "dt": 30,
+        "distance": 400,
+        "min_points": 5,
+        "min_length": 65,
+        "direction": 35,
+        "dp": 5
+      },
+      "conditional_rule": null,
+      "enhancement_modules": 0,
+      "online_model_dependency": false,
+      "measured_seconds": null,
+      "measured_seconds_status": "UNKNOWN_NO_COMPARABLE_PER_STRATEGY_TIMER",
+      "equal_cost_sort_treatment": "all unknowns equal; canonical ID next after earlier tie keys",
+      "development_readings": {
+        "n_input": 23950,
+        "n_final": 5349,
+        "n_filtered": 6737,
+        "n_direction_removed": 1427,
+        "n_dp_removed": 10437,
+        "n_dp_input": 15786,
+        "n_dp_output": 5349,
+        "common_covered_points": 17213,
+        "common_uncovered_points": 6737,
+        "raw_windows_covered": 432,
+        "n_no_output_records": 65,
+        "common_max_error": 187.6375419804648,
+        "dp_max_error": 4.9960113231523335,
+        "raw_break_crossings": 0
+      }
+    },
+    {
+      "canonical_id": "S0",
+      "order": "S-D-P",
+      "parameters": {
+        "dt": 30,
+        "distance": 400,
+        "min_points": 2,
+        "min_length": 0,
+        "direction": 35,
+        "dp": 5
+      },
+      "conditional_rule": null,
+      "enhancement_modules": 2,
+      "online_model_dependency": false,
+      "measured_seconds": null,
+      "measured_seconds_status": "UNKNOWN_NO_COMPARABLE_PER_STRATEGY_TIMER",
+      "equal_cost_sort_treatment": "all unknowns equal; canonical ID next after earlier tie keys",
+      "development_readings": {
+        "n_input": 23950,
+        "n_final": 5751,
+        "n_filtered": 33,
+        "n_direction_removed": 1540,
+        "n_dp_removed": 16626,
+        "n_dp_input": 22377,
+        "n_dp_output": 5751,
+        "common_covered_points": 23917,
+        "common_uncovered_points": 33,
+        "raw_windows_covered": 612,
+        "n_no_output_records": 0,
+        "common_max_error": 187.6375419804648,
+        "dp_max_error": 4.9960113231523335,
+        "raw_break_crossings": 0
+      }
+    },
+    {
+      "canonical_id": "G0",
+      "order": "S-D-P",
+      "parameters": {
+        "dt": 30,
+        "distance": 400,
+        "min_points": 5,
+        "min_length": 65,
+        "direction": 35,
+        "dp": 5
+      },
+      "conditional_rule": {
+        "rule_id": "TIME_REGULAR_DIRECTION60_V1",
+        "diagnostic_input": "immutable full original timestamps of the current record only",
+        "groups": [
+          {
+            "group_id": "TIME_REGULAR",
+            "predicate": "all adjacent differences satisfy 0 < dt <= 30 source seconds",
+            "direction": 60
+          },
+          {
+            "group_id": "TIME_FLAGGED_OR_UNAVAILABLE",
+            "predicate": "any dt <= 0 or dt > 30, or missing/nonfinite/invalid diagnostic",
+            "direction": 35
+          }
+        ],
+        "empty_or_singleton": "fallback group; never vacuous assignment to direction60",
+        "known_raw_rule_source": "G2 descriptive TIME_FLAG definition; no new fitted threshold",
+        "group_count": 2,
+        "unknown_group_fallback": "R0 parameters in standalone G0; S0 parameters in S0_G0 only if S0 is independently accepted as incumbent",
+        "raw_record_id_in_predicate": false,
+        "method_result_or_final_feedback_in_predicate": false
+      },
+      "enhancement_modules": 1,
+      "online_model_dependency": false,
+      "measured_seconds": null,
+      "measured_seconds_status": "UNKNOWN_NO_COMPARABLE_PER_STRATEGY_TIMER",
+      "equal_cost_sort_treatment": "all unknowns equal; canonical ID next after earlier tie keys",
+      "development_readings": {
+        "n_input": 23950,
+        "n_final": 5434,
+        "n_filtered": 6737,
+        "n_direction_removed": 992,
+        "n_dp_removed": 10787,
+        "n_dp_input": 16221,
+        "n_dp_output": 5434,
+        "common_covered_points": 17213,
+        "common_uncovered_points": 6737,
+        "raw_windows_covered": 432,
+        "n_no_output_records": 65,
+        "common_max_error": 187.6375419804648,
+        "dp_max_error": 4.9960113231523335,
+        "raw_break_crossings": 0
+      }
+    },
+    {
+      "canonical_id": "S0_G0",
+      "order": "S-D-P",
+      "parameters": {
+        "dt": 30,
+        "distance": 400,
+        "min_points": 2,
+        "min_length": 0,
+        "direction": 35,
+        "dp": 5
+      },
+      "conditional_rule": {
+        "rule_id": "TIME_REGULAR_DIRECTION60_V1",
+        "diagnostic_input": "immutable full original timestamps of the current record only",
+        "groups": [
+          {
+            "group_id": "TIME_REGULAR",
+            "predicate": "all adjacent differences satisfy 0 < dt <= 30 source seconds",
+            "direction": 60
+          },
+          {
+            "group_id": "TIME_FLAGGED_OR_UNAVAILABLE",
+            "predicate": "any dt <= 0 or dt > 30, or missing/nonfinite/invalid diagnostic",
+            "direction": 35
+          }
+        ],
+        "empty_or_singleton": "fallback group; never vacuous assignment to direction60",
+        "known_raw_rule_source": "G2 descriptive TIME_FLAG definition; no new fitted threshold",
+        "group_count": 2,
+        "unknown_group_fallback": "R0 parameters in standalone G0; S0 parameters in S0_G0 only if S0 is independently accepted as incumbent",
+        "raw_record_id_in_predicate": false,
+        "method_result_or_final_feedback_in_predicate": false
+      },
+      "enhancement_modules": 3,
+      "online_model_dependency": false,
+      "measured_seconds": null,
+      "measured_seconds_status": "UNKNOWN_NO_COMPARABLE_PER_STRATEGY_TIMER",
+      "equal_cost_sort_treatment": "all unknowns equal; canonical ID next after earlier tie keys",
+      "development_readings": {
+        "n_input": 23950,
+        "n_final": 5836,
+        "n_filtered": 33,
+        "n_direction_removed": 1058,
+        "n_dp_removed": 17023,
+        "n_dp_input": 22859,
+        "n_dp_output": 5836,
+        "common_covered_points": 23917,
+        "common_uncovered_points": 33,
+        "raw_windows_covered": 612,
+        "n_no_output_records": 0,
+        "common_max_error": 187.6375419804648,
+        "dp_max_error": 4.9960113231523335,
+        "raw_break_crossings": 0
+      }
+    }
+  ],
+  "selection_initial_incumbent": "R0",
+  "selection_cost_tie_value": null,
+  "selection_cost_tie_status": "UNKNOWN for all; no batchwalltime used as perstrategylatency",
+  "selection_results_read": false,
+  "FINAL_CONFIRM_results_read": false,
+  "research_scope_limitation": "Exposed development only, not independent confirmation orglobaloptimum; rawrecordkeys not independentusers/trips.",
+  "next_action": "Parent freezes max4complete strategies with unchanged rules/sourcebindings; independentC consistencygate; then actualG3_SELECTION.",
+  "not_goal_complete": true,
+  "engineering_issues_in_this_decision": [],
+  "C_decision_review_status": "PENDING"
+}

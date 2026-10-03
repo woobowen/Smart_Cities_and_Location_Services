@@ -1,0 +1,92 @@
+{
+  "scope": "SYNTHETIC_VERIFIER_FIXTURES_ONLY; not actual package verification or experiment execution",
+  "tests": [
+    {
+      "test": "valid declared files and actual PDF parsing",
+      "passed": true,
+      "expected_valid": true,
+      "observed_valid": true,
+      "rejection": null
+    },
+    {
+      "test": "wrong Process PDF hash",
+      "passed": true,
+      "expected_valid": false,
+      "observed_valid": false,
+      "rejection": "ValueError:WRONG_PROCESS_REPORT"
+    },
+    {
+      "test": "undeclared extra member",
+      "passed": true,
+      "expected_valid": false,
+      "observed_valid": false,
+      "rejection": "ValueError:EXACT_MEMBER_SET_MISMATCH"
+    },
+    {
+      "test": "manifest hash mismatch",
+      "passed": true,
+      "expected_valid": false,
+      "observed_valid": false,
+      "rejection": "ValueError:MANIFEST_SIZE_OR_HASH_MISMATCH:task1/reports/experiment1/experiment1.pdf"
+    },
+    {
+      "test": "missing required README",
+      "passed": true,
+      "expected_valid": false,
+      "observed_valid": false,
+      "rejection": "ValueError:README_OR_REQUIREMENTS_MISSING"
+    },
+    {
+      "test": "path traversal",
+      "passed": true,
+      "expected_valid": false,
+      "observed_valid": false,
+      "rejection": "ValueError:UNSAFE_PATH_COMPONENT"
+    },
+    {
+      "test": "font binary name",
+      "passed": true,
+      "expected_valid": false,
+      "observed_valid": false,
+      "rejection": "ValueError:FORBIDDEN_FONT_CACHE_KEY_OR_NESTED_ZIP"
+    },
+    {
+      "test": "nested ZIP",
+      "passed": true,
+      "expected_valid": false,
+      "observed_valid": false,
+      "rejection": "ValueError:FORBIDDEN_FONT_CACHE_KEY_OR_NESTED_ZIP"
+    },
+    {
+      "test": "Windows case collision",
+      "passed": true,
+      "expected_valid": false,
+      "observed_valid": false,
+      "rejection": "ValueError:DUPLICATE_OR_WINDOWS_COLLIDING_NAME"
+    },
+    {
+      "test": "incorrect declared count",
+      "passed": true,
+      "expected_valid": false,
+      "observed_valid": false,
+      "rejection": "ValueError:MANIFEST_COUNT_MISMATCH"
+    },
+    {
+      "test": "misleading submitted flag",
+      "passed": true,
+      "expected_valid": false,
+      "observed_valid": false,
+      "rejection": "ValueError:PACKAGE_MUST_NOT_CLAIM_SENT"
+    },
+    {
+      "test": "old REVIEW_ONLY classification",
+      "passed": true,
+      "expected_valid": false,
+      "observed_valid": false,
+      "rejection": "ValueError:NOT_A_FINAL_TEACHER_CANDIDATE"
+    }
+  ],
+  "passed": 12,
+  "failed": 0,
+  "optional_real_static_probe_branch": "NOT_RUN_WITH_SYNTHETIC_FIXTURES; must run on actual package in Codex environment"
+}

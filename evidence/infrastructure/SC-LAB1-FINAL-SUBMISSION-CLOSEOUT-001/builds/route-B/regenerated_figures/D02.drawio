@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net">
+  <diagram name="研究优化与工程修复分别怎样继续" id="D02">
+    <mxGraphModel dx="1000" dy="780" grid="1" gridSize="10" page="1" pageScale="1" pageWidth="1000" pageHeight="780">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="e0" value="" edge="1" parent="1" source="issue" target="l1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=0;strokeColor=#70757A;fontFamily=Noto Sans CJK SC;fontSize=16;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="" edge="1" parent="1" source="issue" target="r1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=0;strokeColor=#70757A;fontFamily=Noto Sans CJK SC;fontSize=16;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" value="" edge="1" parent="1" source="l1" target="l2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=0;strokeColor=#70757A;fontFamily=Noto Sans CJK SC;fontSize=16;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" value="" edge="1" parent="1" source="l2" target="l3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=0;strokeColor=#70757A;fontFamily=Noto Sans CJK SC;fontSize=16;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" value="" edge="1" parent="1" source="l3" target="l4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=0;strokeColor=#70757A;fontFamily=Noto Sans CJK SC;fontSize=16;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" value="" edge="1" parent="1" source="r1" target="r2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=0;strokeColor=#70757A;fontFamily=Noto Sans CJK SC;fontSize=16;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" value="" edge="1" parent="1" source="r2" target="r3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=0;strokeColor=#70757A;fontFamily=Noto Sans CJK SC;fontSize=16;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" value="" edge="1" parent="1" source="r3" target="r4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=0;endArrow=block;endFill=0;strokeColor=#70757A;fontFamily=Noto Sans CJK SC;fontSize=16;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="issue" value="检查当前结果：下一步处理什么？&#10;先区分实现错误与有效但无收益的候选" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFFDFC;strokeColor=#B97589;fontColor=#2D3238;fontFamily=Noto Sans CJK SC;fontSize=17;spacing=10;">
+          <mxGeometry x="260" y="12" width="480" height="78" as="geometry" />
+        </mxCell>
+        <mxCell id="l1" value="工程修复&#10;错误输入、范围错配、工具失败&#10;修正实现与证据入口" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFFDFC;strokeColor=#5B9FBE;fontColor=#2D3238;fontFamily=Noto Sans CJK SC;fontSize=17;spacing=10;">
+          <mxGeometry x="30" y="156" width="435" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="r1" value="研究优化&#10;执行与比较有效&#10;但收益不足、存在权衡或退化" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFFDFC;strokeColor=#8177A8;fontColor=#2D3238;fontFamily=Noto Sans CJK SC;fontSize=17;spacing=10;">
+          <mxGeometry x="535" y="156" width="435" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="l2" value="定位与最小修复&#10;保留失败案例，修正代码或证据入口" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFFDFC;strokeColor=#5B9FBE;fontColor=#2D3238;fontFamily=Noto Sans CJK SC;fontSize=17;spacing=10;">
+          <mxGeometry x="30" y="310" width="435" height="86" as="geometry" />
+        </mxCell>
+        <mxCell id="r2" value="提出有依据的下一候选&#10;维持共同评价，先单项再组合" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFFDFC;strokeColor=#8177A8;fontColor=#2D3238;fontFamily=Noto Sans CJK SC;fontSize=17;spacing=10;">
+          <mxGeometry x="535" y="310" width="435" height="86" as="geometry" />
+        </mxCell>
+        <mxCell id="l3" value="回归、重建与独立复验&#10;重建受影响的结果与报告" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFFDFC;strokeColor=#5B9FBE;fontColor=#2D3238;fontFamily=Noto Sans CJK SC;fontSize=17;spacing=10;">
+          <mxGeometry x="30" y="456" width="435" height="88" as="geometry" />
+        </mxCell>
+        <mxCell id="r3" value="实测与裁决&#10;保留／条件保留／拒绝／回退／补证" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFFDFC;strokeColor=#8177A8;fontColor=#2D3238;fontFamily=Noto Sans CJK SC;fontSize=17;spacing=10;">
+          <mxGeometry x="535" y="456" width="435" height="88" as="geometry" />
+        </mxCell>
+        <mxCell id="l4" value="恢复当前Goal&#10;检查尚未完成的任务并继续执行" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFFDFC;strokeColor=#5B9FBE;fontColor=#2D3238;fontFamily=Noto Sans CJK SC;fontSize=17;spacing=10;">
+          <mxGeometry x="30" y="620" width="435" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="r4" value="更新可用版本与经验&#10;依据后续价值决定继续或停止" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFFDFC;strokeColor=#8177A8;fontColor=#2D3238;fontFamily=Noto Sans CJK SC;fontSize=17;spacing=10;">
+          <mxGeometry x="535" y="620" width="435" height="74" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

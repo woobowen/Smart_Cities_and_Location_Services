@@ -16,7 +16,12 @@ ck('Screenshot frame stays in approved 70–80 percent range',all(127.3<=p.get('
 px=[]
 for c in crops:
  raw=Image.open(R/c['source']).convert('RGB');cut=Image.open(R/c['image']).convert('RGB');px.append(np.array_equal(np.array(raw.crop(tuple(c['box']))),np.array(cut)))
-ck('Every formal screenshot is a lossless original-pixel crop',all(px),f'{len(px)} crops')
+# Include the closing screenshot, which was outside the original regular map.
+closing=json.loads((R/'provenance/closing_crop_map.json').read_text())
+with Image.open(R/closing['source']) as raw,Image.open(R/closing['image']) as cut:
+ px.append(np.array_equal(np.array(raw.crop(tuple(closing['box'])).convert('RGB')),np.array(cut.convert('RGB'))))
+ck('Every formal screenshot is a lossless original-pixel crop',all(px),f'{len(crops)} regular crops + 1 closing crop')
+ck('Closing crop preserves full user bubble and excludes partial reply',closing['box']==[186,68,510,263])
 openers=[]
 for p in pages:
  if p['type']=='evidence' and not p['continued']:
@@ -45,7 +50,8 @@ for n,p in enumerate(doc):
   if b[6]!=0:continue
   if b[0]<20 or b[2]>577 or b[1]<0 or b[3]>837:strays.append([n+1,b[:4],b[4][:80]])
 ck('Native report text remains within page',not strays,str(strays[:20]))
-result=dict(role='AUTHOR_SELF_CHECK',independent_review='NOT_CLAIMED',user_acceptance='PENDING_FOR_THIS_LANGUAGE_REVISION',page_count=len(doc),evidence_units=40,crop_count=len(crops),arrow_count=len(arrows),checks=checks,all_checks_pass=all(c['passed'] for c in checks),openers=openers,source_resolution='Native pixels retained; current user explicitly accepted source width.')
+result=dict(role='AUTHOR_SELF_CHECK',independent_review='NOT_CLAIMED',user_acceptance='PRIOR_FULL_REPORT_ACCEPTED_P76_FIX_AUTHORIZED_NEW_PDF_FOR_REVIEW',page_count=len(doc),evidence_units=40,crop_count=len(crops),arrow_count=len(arrows),checks=checks,all_checks_pass=all(c['passed'] for c in checks),openers=openers,source_resolution='Native pixels retained; current user explicitly accepted source width.')
+result.update(pdf_sha256=hashlib.sha256((R/'build/main.pdf').read_bytes()).hexdigest(),closing_crop_count=1,total_screenshot_crops=len(crops)+1,historical_evidence_lock='UNCHANGED_NOT_INFERRED_FROM_THIS_CHECK')
 (R/'provenance/artifact_audit.json').write_text(json.dumps(result,ensure_ascii=False,indent=2))
 # Fixed-size review packs make every rendered page and every arrow available for visual inspection.
 f=ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf',18)

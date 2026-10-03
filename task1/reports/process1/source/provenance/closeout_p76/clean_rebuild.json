@@ -1,0 +1,167 @@
+{
+  "scope": "Current repaired source, actual clean builds; author self-check",
+  "role": "AUTHOR_SELF_CHECK",
+  "reference_pdf_sha256": "dc1bb8e8e2262379b7e234550901f645ef0d6f549d6d2aef5e3985a433a1fa23",
+  "new_model_calls": 0,
+  "new_trajectory_runs": 0,
+  "routes": [
+    {
+      "route": "A",
+      "prebuilt_main_pdf_present_before_commands": false,
+      "commands": [
+        {
+          "route": "A",
+          "stage": 1,
+          "command": [
+            "bash",
+            "compile.sh"
+          ],
+          "exit_code": 0,
+          "duration_seconds": 9.848234483000056,
+          "recorded_at": "2026-10-03T01:24:42.765589+00:00"
+        }
+      ],
+      "pdf_sha256": "dc1bb8e8e2262379b7e234550901f645ef0d6f549d6d2aef5e3985a433a1fa23",
+      "byte_identical_to_reference": true,
+      "changed_production_members": [],
+      "regenerated_figure_pdf_checks": [],
+      "unexplained_changes": []
+    },
+    {
+      "route": "B",
+      "prebuilt_main_pdf_present_before_commands": false,
+      "commands": [
+        {
+          "route": "B",
+          "stage": 1,
+          "command": [
+            "/opt/pyvenv/bin/python",
+            "tools/make_diagrams.py"
+          ],
+          "exit_code": 0,
+          "duration_seconds": 0.9233538409999937,
+          "recorded_at": "2026-10-03T01:24:44.292886+00:00"
+        },
+        {
+          "route": "B",
+          "stage": 2,
+          "command": [
+            "/opt/pyvenv/bin/python",
+            "tools/build_report.py"
+          ],
+          "exit_code": 0,
+          "duration_seconds": 6.6807903149999674,
+          "recorded_at": "2026-10-03T01:24:51.556289+00:00"
+        },
+        {
+          "route": "B",
+          "stage": 3,
+          "command": [
+            "bash",
+            "compile.sh"
+          ],
+          "exit_code": 0,
+          "duration_seconds": 9.594292170000017,
+          "recorded_at": "2026-10-03T01:25:01.714080+00:00"
+        },
+        {
+          "route": "B",
+          "stage": 4,
+          "command": [
+            "/opt/pyvenv/bin/python",
+            "tools/render_review.py"
+          ],
+          "exit_code": 0,
+          "duration_seconds": 4.838693102000093,
+          "recorded_at": "2026-10-03T01:25:17.610221+00:00"
+        },
+        {
+          "route": "B",
+          "stage": 5,
+          "command": [
+            "/opt/pyvenv/bin/python",
+            "tools/audit_report.py"
+          ],
+          "exit_code": 0,
+          "duration_seconds": 6.856035892000023,
+          "recorded_at": "2026-10-03T01:25:37.374904+00:00"
+        },
+        {
+          "route": "B",
+          "stage": 6,
+          "command": [
+            "/opt/pyvenv/bin/python",
+            "tools/check_p76_closeout.py"
+          ],
+          "exit_code": 0,
+          "duration_seconds": 1.913679287999912,
+          "recorded_at": "2026-10-03T01:25:39.834822+00:00"
+        }
+      ],
+      "pdf_sha256": "dc1bb8e8e2262379b7e234550901f645ef0d6f549d6d2aef5e3985a433a1fa23",
+      "byte_identical_to_reference": true,
+      "changed_production_members": [
+        "figures/D01.pdf",
+        "figures/D03.pdf",
+        "figures/D06.pdf",
+        "figures/D04.pdf",
+        "figures/D02.pdf",
+        "figures/D05.pdf"
+      ],
+      "regenerated_figure_pdf_checks": [
+        {
+          "file": "figures/D01.pdf",
+          "unchanged_geometry_text_and_pixels": true,
+          "source_sha256": "087509811b9944fa5d906e5c93a6e9b5b83ccf02373ae3fbe3cde1911621e279",
+          "regenerated_sha256": "ba38cce79c38f57e2a6ec06a16377c70cdf72ceaab2c94f7d69ccad121f5c6f3",
+          "source_producer": "cairo 1.18.4 (https://cairographics.org)",
+          "regenerated_producer": "cairo 1.18.4 (https://cairographics.org)"
+        },
+        {
+          "file": "figures/D03.pdf",
+          "unchanged_geometry_text_and_pixels": true,
+          "source_sha256": "543c8ece7546e9acfec18c4c9ce15bc6a72c8bc517064f3d54914eee34c5fbae",
+          "regenerated_sha256": "3b4a33af61dff24855d7e0a1e305df9d077589d25ecb7371174a546c7dc3cbb8",
+          "source_producer": "cairo 1.18.4 (https://cairographics.org)",
+          "regenerated_producer": "cairo 1.18.4 (https://cairographics.org)"
+        },
+        {
+          "file": "figures/D06.pdf",
+          "unchanged_geometry_text_and_pixels": true,
+          "source_sha256": "804ffec38932bead0f481897b7a6c25f8d6121779173beb97af7a006b1b867a2",
+          "regenerated_sha256": "9e3a91f8b13644124172f9b2e6cceb8892deebaa3ab3eb2b0a3392fc7a7ff842",
+          "source_producer": "cairo 1.18.4 (https://cairographics.org)",
+          "regenerated_producer": "cairo 1.18.4 (https://cairographics.org)"
+        },
+        {
+          "file": "figures/D04.pdf",
+          "unchanged_geometry_text_and_pixels": true,
+          "source_sha256": "7b1fc4dd67d84fdb28f4b30e6768c14b316dd6e362c0b56ef8f9c8cbbb76e0b2",
+          "regenerated_sha256": "34d56d6385cce57b2355ed683f3e2d0a3cc23df783e22b998e3498b8c2340436",
+          "source_producer": "cairo 1.18.4 (https://cairographics.org)",
+          "regenerated_producer": "cairo 1.18.4 (https://cairographics.org)"
+        },
+        {
+          "file": "figures/D02.pdf",
+          "unchanged_geometry_text_and_pixels": true,
+          "source_sha256": "7af0ad2204d34ff1134c6d43bf8ba9a90efe38f4bf4f913bbbe1ff5faeea3be8",
+          "regenerated_sha256": "f57a5b310a855bd4d8f376a530f923dd24a62212250577f94be3a7128c2c7052",
+          "source_producer": "cairo 1.18.4 (https://cairographics.org)",
+          "regenerated_producer": "cairo 1.18.4 (https://cairographics.org)"
+        },
+        {
+          "file": "figures/D05.pdf",
+          "unchanged_geometry_text_and_pixels": true,
+          "source_sha256": "717d7ca75c59045f44022f3d900e8689f39c3b6c4b6aad144e6a255b232b6d1c",
+          "regenerated_sha256": "eb8ed3d74ef169c409edc9a5b7284468320522d76555dc879c30c9cf96433762",
+          "source_producer": "cairo 1.18.4 (https://cairographics.org)",
+          "regenerated_producer": "cairo 1.18.4 (https://cairographics.org)"
+        }
+      ],
+      "unexplained_changes": []
+    }
+  ],
+  "recorded_at": "2026-10-03T01:27:57.689034+00:00",
+  "all_checks_pass": true,
+  "scope_note": "Six regenerated figure PDF containers differ while their SVG/drawio, all standalone 200-dpi pixels/text/geometry, and the entire final report PDF are identical. Approved figure containers remain in the delivered source; no new diagram design."
+}
