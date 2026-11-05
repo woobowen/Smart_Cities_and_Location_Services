@@ -1,0 +1,38 @@
+{
+  "figure": "evolution_hourly_fronts",
+  "claim_scope": "Each hour is its own training-inner resampled batchseed2024, same 40/80 counts, K6/radius3km. Seed0 illustrates geometry; five algorithm seeds per hour are available. Shared physical axes; this is not observed taxi demand or a claim that batch instances are identical across hours.",
+  "author": "/root/evolution",
+  "input_sha256": {
+    "task2/public_results/evolution/km/inner_hour13_batchseed2024_M2.json": "94dded70a15f8d26fb0aff477a1ccae65118428f9fdc05321d9cc3c0b8024dc4",
+    "task2/public_results/evolution/km/inner_hour18_batchseed2024_M2.json": "a802ed84ca2a8ba8036588931da1734e875e301e911578d34aa51fdcaadf407e",
+    "task2/public_results/evolution/km/inner_hour23_batchseed2024_M2.json": "d0d338b14924f1287968baad7a16c9dfea5d99619b620f4647a71b25779e0daa",
+    "task2/public_results/evolution/km/inner_hour8_batchseed2024_M2.json": "003063c632444e8feb747983d82ed8b23864a708f0a1c027567450a53f16f1ab",
+    "task2/public_results/evolution/metrics.json": "94427397ba871758473d698d641369ab28286858df66c393e6338e9c9a460d76",
+    "task2/public_results/evolution/runs/baseline_inner_hour13_batchseed2024_nsga2_M2_N100_G300_s0.json": "03121dc8e15ee13aad774d6786b923082f0241bfeef1d4d58e68a1ded32ebb12",
+    "task2/public_results/evolution/runs/baseline_inner_hour13_batchseed2024_nsga3_M2_N100_G300_s0.json": "90d409c663c1d614559146b4beaaab07fd4451dee21e475ba25e8e904b3a02b9",
+    "task2/public_results/evolution/runs/baseline_inner_hour18_batchseed2024_nsga2_M2_N100_G300_s0.json": "0a5c413df56730df4ede912a765140479374bda70d8cc3c46fb99f31dda23e67",
+    "task2/public_results/evolution/runs/baseline_inner_hour18_batchseed2024_nsga3_M2_N100_G300_s0.json": "b1b79ceb36078de5750115fc40cc8635adc6569f8f2b24122ab8b777c7b66d09",
+    "task2/public_results/evolution/runs/baseline_inner_hour23_batchseed2024_nsga2_M2_N100_G300_s0.json": "2a8ee63963786c2e2b371bc672fb64fa1b5c8618e96e4cc5aa84ab06f2cb599d",
+    "task2/public_results/evolution/runs/baseline_inner_hour23_batchseed2024_nsga3_M2_N100_G300_s0.json": "335bed390ccf859c2382537bd170bd175d31d7af5c3923104d65420f37985335",
+    "task2/public_results/evolution/runs/baseline_inner_hour8_batchseed2024_nsga2_M2_N100_G300_s0.json": "b00a2e584d63c39aaee9387adc4bdd5cf6efe551e26caa3608c001b1ede9437e",
+    "task2/public_results/evolution/runs/baseline_inner_hour8_batchseed2024_nsga3_M2_N100_G300_s0.json": "5714a84fb9f15211dcbae6e661859294d8afa301db003814b7ea5a99ad48ae5d"
+  },
+  "script_sha256": "c80616c8d460303bbb69776647628563024aa52779642811e8bba345aabbe5d1",
+  "shared_theme_sha256": "e228d1abc1ef307c88629961b7402ee48b03314bc2dd24e0cc1e719540c404ed",
+  "palette_sha256": "2aa820c3f68ba6c14cf1b52082b12336071d77bb5466db2b05b2fab6890aa243",
+  "raster_dpi": 300,
+  "native": "Matplotlib data-native PDF/SVG and 300dpi PNG; all marks are actual points",
+  "metadata_inheritance": {
+    "identity": "METADATA_ONLY_INHERITANCE_NO_FIGURE_REBUILD",
+    "reason": "Only canonical runtime_scope labels and evaluator source binding changed; all numeric leaves are exactly preserved.",
+    "original_sidecar_sha256": "128270cbc12b410115d30c589fa58b5b9d0b804a3dec9d3f373f068227e139d6",
+    "original_input_sha256": {
+      "task2/public_results/evolution/metrics.json": "a2230ba264f247806592daf923a0a2be0177e825fc49fae568eec753d90c47dc"
+    },
+    "current_input_sha256": {
+      "task2/public_results/evolution/metrics.json": "94427397ba871758473d698d641369ab28286858df66c393e6338e9c9a460d76"
+    },
+    "original_sidecar_snapshot": "task2/evidence/evolution/km_runtime_scope_fix/before/task2/figures/formal/evolution_hourly_fronts.json",
+    "verification": "task2/evidence/evolution/km_runtime_scope_fix/result.json"
+  }
+}

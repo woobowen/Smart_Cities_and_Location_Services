@@ -1,5 +1,7 @@
 # 智慧城市与位置服务
 
+本次任务分配实验：[完整工程](task2/README.md) · [GPT 二审入口](task2/review/REVIEW_INDEX.md) · [Experiment Report](task2/reports/experiment/Experiment_Report.pdf) · [Process 正文与技术素材交接稿](task2/reports/process/Process_Report.pdf)。公开数据边界与作者来源的精确输入重建见[复现指南](task2/docs/REPRODUCIBILITY_GUIDE.md)；本次交付不改变实验一既有验收范围。
+
 实验一的统一入口是 [task1/README.md](task1/README.md)。本仓库保存教师原件、原始数据、可复现代码、真实实验及失败记录、图源、报告源和待审提交包；教师提交包与完整工程分别维护。
 
 - [本轮最终收尾与二审入口](evidence/infrastructure/SC-LAB1-FINAL-SUBMISSION-CLOSEOUT-001/REVIEW_PACKET.md)；[上轮已通过的工程二审原件](evidence/infrastructure/SC-LAB1-FINAL-SUBMISSION-CLOSEOUT-001/prior_review/SC-LAB1-PROCESS-INTEGRATION-SYNC-001_GPT_SECOND_REVIEW.md)；[实验一审核索引](task1/evidence/goal3/REVIEW_PACKET.md)

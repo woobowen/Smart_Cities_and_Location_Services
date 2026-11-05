@@ -1,0 +1,42 @@
+def to_xy(lat, lon):
+    """经纬度 -> 平面坐标 (km)"""
+    return (lon - LON_MIN) * KM_PER_LON, (lat - LAT_MIN) * KM_PER_LAT
+
+
+def load_checkins(path=DATA_PATH):
+    df = pd.read_csv(path, encoding="latin-1")
+    utc = pd.to_datetime(df["utcTimestamp"], format="%a %b %d %H:%M:%S +0000 %Y")
+    df["local"] = utc + pd.to_timedelta(df["timezoneOffset"], unit="m")
+    inside = df.latitude.between(LAT_MIN, LAT_MAX) & df.longitude.between(LON_MIN, LON_MAX)
+    df = df[inside].copy()
+    df["x"], df["y"] = to_xy(df.latitude.values, df.longitude.values)
+    df["minute"] = df["local"].dt.hour * 60 + df["local"].dt.minute
+    return df.sort_values(["userId", "local"]).reset_index(drop=True)
+
+
+def build_trips(ck, min_gap=10, max_gap=180, min_km=1.0):
+    """相邻两次签到 -> 一次出行"""
+    prev = ck.groupby("userId")[["x", "y", "local", "minute"]].shift()
+    gap = (ck["local"] - prev["local"]).dt.total_seconds() / 60
+    km = (ck["x"] - prev["x"]).abs() + (ck["y"] - prev["y"]).abs()
+    ok = (ck["local"].dt.date == prev["local"].dt.date) & gap.between(min_gap, max_gap) & (km >= min_km)
+    trips = pd.DataFrame({
+        "date": prev.loc[ok, "local"].dt.date.values,
+        "minute": prev.loc[ok, "minute"].values.astype(int),
+        "ox": prev.loc[ok, "x"].values, "oy": prev.loc[ok, "y"].values,
+        "dx": ck.loc[ok, "x"].values, "dy": ck.loc[ok, "y"].values,
+    })
+    trips["trip_km"] = (trips.ox - trips.dx).abs() + (trips.oy - trips.dy).abs()
+    trips["fare"] = BASE_FARE + PER_KM * trips["trip_km"]   # 收入 ∝ 送客距离
+    return trips.reset_index(drop=True)
+
+
+ck = load_checkins()
+trips = build_trips(ck)
+dates = np.sort(trips["date"].unique())
+split_date = dates[int(len(dates) * 0.7)]
+trips_train = trips[trips.date < split_date].reset_index(drop=True)
+trips_test = trips[trips.date >= split_date].reset_index(drop=True)
+print(f"签到 {len(ck)} 条，构造订单 {len(trips)} 个，覆盖 {len(dates)} 天")
+print(f"训练集 {len(trips_train)} 单（{dates[0]} ~ {split_date}），测试集 {len(trips_test)} 单")
+print(trips[["trip_km", "fare"]].describe().round(2))

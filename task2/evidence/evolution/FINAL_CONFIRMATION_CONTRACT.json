@@ -1,0 +1,30 @@
+{
+  "frozen_utc": "2026-11-05T10:57:28.981389+00:00",
+  "selection_input": "training-inner development results only",
+  "algorithms": [
+    "NSGA-II teacher100x300",
+    "NSGA-II100x300 with up to10KM genes"
+  ],
+  "future_batch_seeds": [
+    9010,
+    9011,
+    9012,
+    9013,
+    9014
+  ],
+  "algorithm_seeds": [
+    10,
+    11,
+    12,
+    13,
+    14
+  ],
+  "driver_prior": "training first70pct dates only, no future hotspots",
+  "hour": 18,
+  "candidates": "K6/radius3km shared per input",
+  "metrics": "uniform10decimal canonical front; input-derived bounds before optimization; ref1.1",
+  "tuning_after_test": "prohibited",
+  "reason": "confirm isolated initialization at teacher computational budget, larger-population combination is separate quality/cost extension",
+  "source_evolution_sha256": "4706d277a520d44ac719be0bded4f2d02d10e73bb829a032bd0b5315ea7df79d",
+  "decisions_sha256": "eb8db82e78973c76c3c695d968e3c46a0bc0f6bfaa02eba579fcb09cf3cb29c8"
+}

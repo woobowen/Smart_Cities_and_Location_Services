@@ -1,0 +1,12 @@
+fig, ax = plt.subplots(figsize=(7.5, 5))
+for hour, color in [(8, "#4c78a8"), (13, "#54a24b"), (18, "#9F3A3D"), (23, "#b279a2")]:
+    p = DispatchProblem(make_batch(trips_train, hour=hour, seed=SEED))
+    _, F, _ = run_nsga(p, "nsga2", pop_size=100, n_gen=300, seed=SEED, log_every=1000)
+    F = F[np.argsort(F[:, 1])]
+    ax.plot(F[:, 1], -F[:, 0], "o-", ms=3, color=color, label=f"{hour}:00（可行订单 {(p.n_cand > 0).sum()}）")
+ax.set(xlabel="总接驾距离 / km", ylabel="平台总收入 / 元", title="不同时段批次的帕累托前沿（NSGA-II）")
+ax.grid(alpha=0.3)
+ax.legend()
+plt.tight_layout()
+plt.savefig(f"{FIG_DIR}/pareto_by_hour.png", dpi=200)
+plt.show()

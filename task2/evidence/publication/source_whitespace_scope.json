@@ -1,0 +1,7 @@
+{
+  "status": "PASS_SOURCE_SCOPE",
+  "command": "git -c core.whitespace=cr-at-eol diff --cached --check -- .gitignore README.md task2/src task2/scripts task2/tests task2/docs task2/review task2/reports :(exclude)**/*.pdf",
+  "findings": 0,
+  "limit": "Preserved teacher/Prompt/CSV/log original bytes are not whitespace-normalized. Previous broad diff--check flagged preserved CRLF and progress spaces, not a numerical/test defect.",
+  "ordinary_fix": "One whitespace-only blank line in resume_rl_rngfix.py removed by its author; source hash follow-up recorded separately. Actual check returned0 after staging current code."
+}

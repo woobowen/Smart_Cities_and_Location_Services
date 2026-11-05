@@ -1,0 +1,85 @@
+{
+  "reviewer": "/root/reinforcement, independent ofdata-fetch/metadataauthor",
+  "source_sha256": "4cf4733fad6f0bec02eb569af77312d909f48a61fb5bd0420aaa26dabcbba058",
+  "fetcher_sha256": "74e68664bd78cc75464969bace41b092c35775a9a0e6ab4030bd893aa44705f1",
+  "cached_author_archive_sha256": "cbe3fdab373d24b09b5fc53509c8958c77ff72b6c1a68589ce337d4f9a80235b",
+  "network_redownload_by_this_reviewer": false,
+  "scope": "Actualconversionfromverifiedcachedpublicarchive; bothcityexactbytes,8dataframes, provenance/entryguards. Freshnetworkdownloadclaimedonlybyauthorsseparatelivefetchreceipt, notthisreview.",
+  "checks": [
+    {
+      "case": "actual_converter_byte_identity_and_provider",
+      "city": "NYC",
+      "csv_sha256": "60a235386a5324f55c9f24fb1b06e55a38a0d53c0242435d754b38c0cc0b514a",
+      "provider": "AUTHOR_RECONSTRUCTED_EXACT_BYTES",
+      "rowcount": 227428
+    },
+    {
+      "case": "actual_converter_byte_identity_and_provider",
+      "city": "TKY",
+      "csv_sha256": "849365e52e970c85819b3cc1559bb00bedbe2e37f8e274d77241d62e89ac85f2",
+      "provider": "AUTHOR_RECONSTRUCTED_EXACT_BYTES",
+      "rowcount": 573703
+    },
+    {
+      "case": "exact_dataframe_replay_no_teacher_files",
+      "frames": {
+        "checkins": {
+          "rows": 185654,
+          "exact": true
+        },
+        "trips": {
+          "rows": 25550,
+          "exact": true
+        },
+        "trips_train_inner": {
+          "rows": 19617,
+          "exact": true
+        },
+        "trips_validation": {
+          "rows": 1972,
+          "exact": true
+        },
+        "trips_train": {
+          "rows": 21589,
+          "exact": true
+        },
+        "trips_test": {
+          "rows": 3961,
+          "exact": true
+        },
+        "checkins_train_inner": {
+          "rows": 132234,
+          "exact": true
+        },
+        "checkins_train": {
+          "rows": 150357,
+          "exact": true
+        }
+      },
+      "provider": "AUTHOR_RECONSTRUCTED_EXACT_BYTES"
+    },
+    {
+      "case": "missing_receipt_in_author_directory",
+      "provider": "TEACHER_EQUIVALENT_BYTES_PROVIDER_UNVERIFIED"
+    },
+    {
+      "case": "corrupt_receipt_in_author_directory",
+      "provider": "TEACHER_EQUIVALENT_BYTES_PROVIDER_UNVERIFIED"
+    },
+    {
+      "case": "same_known_bytes_unknown_acquisition_path",
+      "provider": "TEACHER_EQUIVALENT_BYTES_PROVIDER_UNVERIFIED"
+    },
+    {
+      "case": "explicit_install_sidecar_and_corrupt_sidecar",
+      "correct_sidecar_provider": "AUTHOR_RECONSTRUCTED_EXACT_BYTES",
+      "corrupt_sidecar_provider": "TEACHER_EQUIVALENT_BYTES_PROVIDER_UNVERIFIED"
+    },
+    {
+      "case": "actual_teacher_fixture_priority",
+      "provider": "TEACHER_PROVIDED"
+    }
+  ],
+  "seconds": 16.19869249199928,
+  "status": "PASS_IN_STATED_SCOPE"
+}

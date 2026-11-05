@@ -1,0 +1,19 @@
+{
+  "status": "PASS_MODEL_SCOPE",
+  "source_crs": "UNVERIFIED",
+  "comparison_assumption": "WGS84 ellipsoid used solely as mathematical reference, not proof of source datum",
+  "sampling": "4000 paired training-inner checkins, RNG20241105",
+  "nonzero_pairs": 4000,
+  "teacher_xy_euclidean_vs_model_geodesic": {
+    "mean_relative_signed": -0.0019897987916318222,
+    "median_abs_relative": 0.0015651086713070368,
+    "max_abs_relative": 0.0058453472136153995,
+    "max_abs_difference_km": 0.11005219259265075
+  },
+  "Manhattan_to_Euclidean_ratio": {
+    "min": 1.0000798250799687,
+    "max": 1.414213562108367,
+    "bound": "[1,sqrt(2)] verified; not a road-network distance validation"
+  },
+  "limits": "No geographic precision claim, coordinate offset conversion, or map-matching; teacher Manhattan model retained."
+}

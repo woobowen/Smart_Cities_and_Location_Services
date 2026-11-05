@@ -1,0 +1,4089 @@
+{
+  "actual_utc": "2026-11-05T12:35:45.112477+00:00",
+  "reviewer": "/root/research_data",
+  "status": "PASS_INDEPENDENT_CLI_AND_IMPORT_SCOPE",
+  "source_sha256": {
+    "task2/scripts/run_rl.py": "7f770087e1643e4934922a34514d168d753b057498a86a46c8125c310377f02e",
+    "task2/scripts/run_rl_followup.py": "6e5c631c552c376a2275fb5629e87e083f1f0c65914dc06dd1345a946e4734a1",
+    "task2/scripts/resume_rl_rngfix.py": "0693940516aaaecff9ca3a44a12fb575160b793e89f11faf025ed3608dcc5c38",
+    "task2/scripts/run_reposition_cost.py": "ba9b7c0ab7899ce9d81b2485235ff304a8c88cf308c81ff2cd29f839b6ab65c7",
+    "task2/scripts/run_rl_fusion.py": "527a000af7a5c836a1ff692255d55d3fe3b68e25b3d30c171873273b5e28ce9c",
+    "task2/scripts/run_rl_component_ablation.py": "29112e5807e69d7c2938a9966e8af5413aeeb0b7b9a1f62f026260bae0d789a1",
+    "task2/scripts/run_rl_offset_robustness.py": "62077677cdd4db236e20b04b26ab712735a4cfa9c19a9444907a2a87d8034560",
+    "task2/scripts/confirm_rl_movement.py": "4e92a00294e779b8315707a90579dee802cc6ff5a49364153d93c4856f9a974d",
+    "task2/scripts/confirm_rl_montecarlo.py": "97d94c7d54fab19c0ec82cc594083a624060fcc3c867770f9a540a1c15d47b34",
+    "task2/scripts/diagnose_rl_double.py": "9e68a91a0e9a175150c0f98041ca36553b18be3b8a03b5affbaa0c9f5e04bf1f",
+    "task2/scripts/run_rl_final.py": "9091f3633d1efcb387d01331c70f3e15a676af2f989c741416c4e8041e556d57",
+    "task2/scripts/run_basic_multiobjective.py": "48e654a605dc9e1ceeff1dd253f97b05231c540e62f84e123e802faad23e7dc2",
+    "task2/scripts/experiment_cli.py": "3bd3a51d7fc5c3fe4f384e394c3d0f0721902bc77b0e5558c5c3ecf5ab604568"
+  },
+  "cases_count": 168,
+  "cases": [
+    {
+      "launcher": "task2/scripts/run_rl.py",
+      "mode": "direct",
+      "case": "help",
+      "returncode": 0,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/run_rl.py",
+        "--help"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 69,
+      "stderr_sha256": "3b73ab4ca13f691c6f06fc1f20f0be2131647dc1d14c8d8d64694de7e11fb3eb",
+      "parser_diagnostic": []
+    },
+    {
+      "launcher": "task2/scripts/run_rl.py",
+      "mode": "direct",
+      "case": "short-help",
+      "returncode": 0,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/run_rl.py",
+        "-h"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 69,
+      "stderr_sha256": "ff7c1f984cca801012850b7aeb8bfa1498733bd17bb4717727f4ad4305b133cf",
+      "parser_diagnostic": []
+    },
+    {
+      "launcher": "task2/scripts/run_rl.py",
+      "mode": "direct",
+      "case": "existing-directory",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/run_rl.py",
+        "--phase",
+        "pilot",
+        "--data",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/no_data",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/fixture_existing_directory"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 68,
+      "stderr_sha256": "c479366dbef4b6702e6c132d1b4c0e1582137b46c9d888986cb9d54aa54944c4",
+      "parser_diagnostic": [
+        "                 (--run RUN | --output OUTPUT) --data DATA",
+        "                 [--episodes EPISODES] [--seeds SEEDS]",
+        "run_rl.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_rl.py",
+      "mode": "direct",
+      "case": "existing-file",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/run_rl.py",
+        "--phase",
+        "pilot",
+        "--data",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/no_data",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/fixture_existing_file"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 68,
+      "stderr_sha256": "b1eb1cc5b88a1960003e5691e9f52fe1c27c3f61508dc7cebcbf45ca17e786be",
+      "parser_diagnostic": [
+        "                 (--run RUN | --output OUTPUT) --data DATA",
+        "                 [--episodes EPISODES] [--seeds SEEDS]",
+        "run_rl.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_rl.py",
+      "mode": "direct",
+      "case": "dangling-symlink",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/run_rl.py",
+        "--phase",
+        "pilot",
+        "--data",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/no_data",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/fixture_dangling_link"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 68,
+      "stderr_sha256": "6805a96ed0065b712c1c7dd0b09692dc526626087e10692404647c47ad7a19c2",
+      "parser_diagnostic": [
+        "                 (--run RUN | --output OUTPUT) --data DATA",
+        "                 [--episodes EPISODES] [--seeds SEEDS]",
+        "run_rl.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_rl.py",
+      "mode": "direct",
+      "case": "unknown-option",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/run_rl.py",
+        "--phase",
+        "pilot",
+        "--data",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/no_data",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/unused_fresh",
+        "--not-a-real-option"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 68,
+      "stderr_sha256": "1e1b58f5235c0e69715efb89b4582d2daf026e06aefd8b5b7732ce037ad1a081",
+      "parser_diagnostic": [
+        "                 (--run RUN | --output OUTPUT) --data DATA",
+        "                 [--episodes EPISODES] [--seeds SEEDS]",
+        "run_rl.py: error: unrecognized arguments: --not-a-real-option"
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_rl.py",
+      "mode": "direct",
+      "case": "existing-default-or-run-alias",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/run_rl.py",
+        "--phase",
+        "pilot",
+        "--data",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/no_data",
+        "--run",
+        "existing_run"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 68,
+      "stderr_sha256": "7db890871f1d6f4722a6a8d5ef3ad8319b9a1fd141c5bae80116c5ddda1478ad",
+      "parser_diagnostic": [
+        "                 (--run RUN | --output OUTPUT) --data DATA",
+        "                 [--episodes EPISODES] [--seeds SEEDS]",
+        "run_rl.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_rl.py",
+      "mode": "module",
+      "case": "help",
+      "returncode": 0,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.run_rl",
+        "--help"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 78,
+      "stderr_sha256": "7552eed45aef205dd69cd2fe7384a5738b47db3248576aac42e81498c90f5845",
+      "parser_diagnostic": []
+    },
+    {
+      "launcher": "task2/scripts/run_rl.py",
+      "mode": "module",
+      "case": "short-help",
+      "returncode": 0,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.run_rl",
+        "-h"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 78,
+      "stderr_sha256": "f848f54cbb5b5c16c6e2f0d8c506deec789248d205020342f6e9536f4747ac9c",
+      "parser_diagnostic": []
+    },
+    {
+      "launcher": "task2/scripts/run_rl.py",
+      "mode": "module",
+      "case": "existing-directory",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.run_rl",
+        "--phase",
+        "pilot",
+        "--data",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/no_data",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/fixture_existing_directory"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 77,
+      "stderr_sha256": "5da4261fa49729e5c1d0187b24806a518b07de5b21cc2508924eb738e352e198",
+      "parser_diagnostic": [
+        "                 (--run RUN | --output OUTPUT) --data DATA",
+        "                 [--episodes EPISODES] [--seeds SEEDS]",
+        "run_rl.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_rl.py",
+      "mode": "module",
+      "case": "existing-file",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.run_rl",
+        "--phase",
+        "pilot",
+        "--data",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/no_data",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/fixture_existing_file"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 77,
+      "stderr_sha256": "0b9baa549dd94fbff4be2b6ffe30eab7eed8e977847c8cff04174cef864676a2",
+      "parser_diagnostic": [
+        "                 (--run RUN | --output OUTPUT) --data DATA",
+        "                 [--episodes EPISODES] [--seeds SEEDS]",
+        "run_rl.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_rl.py",
+      "mode": "module",
+      "case": "dangling-symlink",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.run_rl",
+        "--phase",
+        "pilot",
+        "--data",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/no_data",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/fixture_dangling_link"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 77,
+      "stderr_sha256": "616b06500ef35d83a89c7c50d5c967de0733cbea1a0ca055e9df500e57f1d013",
+      "parser_diagnostic": [
+        "                 (--run RUN | --output OUTPUT) --data DATA",
+        "                 [--episodes EPISODES] [--seeds SEEDS]",
+        "run_rl.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_rl.py",
+      "mode": "module",
+      "case": "unknown-option",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.run_rl",
+        "--phase",
+        "pilot",
+        "--data",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/no_data",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/unused_fresh",
+        "--not-a-real-option"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 77,
+      "stderr_sha256": "6fee7fff19b2fe9ac5a4c0ccf899a4307f7dd8fb942c68725cf831e3ceb467b6",
+      "parser_diagnostic": [
+        "                 (--run RUN | --output OUTPUT) --data DATA",
+        "                 [--episodes EPISODES] [--seeds SEEDS]",
+        "run_rl.py: error: unrecognized arguments: --not-a-real-option"
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_rl.py",
+      "mode": "module",
+      "case": "existing-default-or-run-alias",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.run_rl",
+        "--phase",
+        "pilot",
+        "--data",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/no_data",
+        "--run",
+        "existing_run"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 77,
+      "stderr_sha256": "b9e7c7f6fc2af33e2b8abd485532c9a177c6bb0364dc5a82d627500daa16bb7d",
+      "parser_diagnostic": [
+        "                 (--run RUN | --output OUTPUT) --data DATA",
+        "                 [--episodes EPISODES] [--seeds SEEDS]",
+        "run_rl.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_rl_followup.py",
+      "mode": "direct",
+      "case": "help",
+      "returncode": 0,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/run_rl_followup.py",
+        "--help"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 74,
+      "stderr_sha256": "e355b64fea1d293e1bd5ee157722c1ec4f2d2d998a9e36f48c69df215b689aab",
+      "parser_diagnostic": []
+    },
+    {
+      "launcher": "task2/scripts/run_rl_followup.py",
+      "mode": "direct",
+      "case": "short-help",
+      "returncode": 0,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/run_rl_followup.py",
+        "-h"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 74,
+      "stderr_sha256": "e8e2a38ff4fcab1a6c7d511330da7dd3d52fa0d45f30e11f9c865cba84ab32e9",
+      "parser_diagnostic": []
+    },
+    {
+      "launcher": "task2/scripts/run_rl_followup.py",
+      "mode": "direct",
+      "case": "existing-directory",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/run_rl_followup.py",
+        "--phase",
+        "beta",
+        "--model",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/no_model",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/fixture_existing_directory"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 73,
+      "stderr_sha256": "716dbb816ab6e8aba6fb88660af1deccecd2cfef9350437b334c835a4a2192d8",
+      "parser_diagnostic": [
+        "usage: run_rl_followup.py [-h] --phase {beta,reposition,diagnostics} --model",
+        "                          MODEL (--run RUN | --output OUTPUT) [--data DATA]",
+        "run_rl_followup.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_rl_followup.py",
+      "mode": "direct",
+      "case": "existing-file",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/run_rl_followup.py",
+        "--phase",
+        "beta",
+        "--model",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/no_model",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/fixture_existing_file"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 73,
+      "stderr_sha256": "6c67408dc831d80c08af028a63a23dbe2a118ee21d2d6749398244953478baf6",
+      "parser_diagnostic": [
+        "usage: run_rl_followup.py [-h] --phase {beta,reposition,diagnostics} --model",
+        "                          MODEL (--run RUN | --output OUTPUT) [--data DATA]",
+        "run_rl_followup.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_rl_followup.py",
+      "mode": "direct",
+      "case": "dangling-symlink",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/run_rl_followup.py",
+        "--phase",
+        "beta",
+        "--model",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/no_model",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/fixture_dangling_link"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 73,
+      "stderr_sha256": "74e80c052096d5ae94621645b5d3aab993124f08a8a9d489238d91e5509db821",
+      "parser_diagnostic": [
+        "usage: run_rl_followup.py [-h] --phase {beta,reposition,diagnostics} --model",
+        "                          MODEL (--run RUN | --output OUTPUT) [--data DATA]",
+        "run_rl_followup.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_rl_followup.py",
+      "mode": "direct",
+      "case": "unknown-option",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/run_rl_followup.py",
+        "--phase",
+        "beta",
+        "--model",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/no_model",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/unused_fresh",
+        "--not-a-real-option"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 73,
+      "stderr_sha256": "1110a79530935eedee787913f45ae98387d155b6cc7d6ed3aa2e7f88c0611c5a",
+      "parser_diagnostic": [
+        "usage: run_rl_followup.py [-h] --phase {beta,reposition,diagnostics} --model",
+        "                          MODEL (--run RUN | --output OUTPUT) [--data DATA]",
+        "run_rl_followup.py: error: unrecognized arguments: --not-a-real-option"
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_rl_followup.py",
+      "mode": "direct",
+      "case": "existing-default-or-run-alias",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/run_rl_followup.py",
+        "--phase",
+        "beta",
+        "--model",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/no_model",
+        "--run",
+        "existing_run"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 73,
+      "stderr_sha256": "e0140b8ca313b31f259f82c1e344497a9aec24547d8867f4b5af8d153b3a472c",
+      "parser_diagnostic": [
+        "usage: run_rl_followup.py [-h] --phase {beta,reposition,diagnostics} --model",
+        "                          MODEL (--run RUN | --output OUTPUT) [--data DATA]",
+        "run_rl_followup.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_rl_followup.py",
+      "mode": "module",
+      "case": "help",
+      "returncode": 0,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.run_rl_followup",
+        "--help"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 83,
+      "stderr_sha256": "31725452b279ce15b057937a0c3769c245d8c78e3b16f59b3dfb5d2325af3faf",
+      "parser_diagnostic": []
+    },
+    {
+      "launcher": "task2/scripts/run_rl_followup.py",
+      "mode": "module",
+      "case": "short-help",
+      "returncode": 0,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.run_rl_followup",
+        "-h"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 83,
+      "stderr_sha256": "6fa0d986ad54dabc948e585657677a87eb3bad2535c3e0d372b4cc13481d14c1",
+      "parser_diagnostic": []
+    },
+    {
+      "launcher": "task2/scripts/run_rl_followup.py",
+      "mode": "module",
+      "case": "existing-directory",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.run_rl_followup",
+        "--phase",
+        "beta",
+        "--model",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/no_model",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/fixture_existing_directory"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 82,
+      "stderr_sha256": "3364cbace3a9cde11f974f656c78c0fcf7b21e03a27aae950c7ee3a21aec389a",
+      "parser_diagnostic": [
+        "usage: run_rl_followup.py [-h] --phase {beta,reposition,diagnostics} --model",
+        "                          MODEL (--run RUN | --output OUTPUT) [--data DATA]",
+        "run_rl_followup.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_rl_followup.py",
+      "mode": "module",
+      "case": "existing-file",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.run_rl_followup",
+        "--phase",
+        "beta",
+        "--model",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/no_model",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/fixture_existing_file"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 82,
+      "stderr_sha256": "dc69cfcb8655197afeca5bbad6a77c44e682b5ff9c4cefcdf9fe985ff746d032",
+      "parser_diagnostic": [
+        "usage: run_rl_followup.py [-h] --phase {beta,reposition,diagnostics} --model",
+        "                          MODEL (--run RUN | --output OUTPUT) [--data DATA]",
+        "run_rl_followup.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_rl_followup.py",
+      "mode": "module",
+      "case": "dangling-symlink",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.run_rl_followup",
+        "--phase",
+        "beta",
+        "--model",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/no_model",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/fixture_dangling_link"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 82,
+      "stderr_sha256": "70ecf6268c3b2ce50e8bb53d8b9d0d2dfb4cc45c3d28d5028d4a70c5a6c45867",
+      "parser_diagnostic": [
+        "usage: run_rl_followup.py [-h] --phase {beta,reposition,diagnostics} --model",
+        "                          MODEL (--run RUN | --output OUTPUT) [--data DATA]",
+        "run_rl_followup.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_rl_followup.py",
+      "mode": "module",
+      "case": "unknown-option",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.run_rl_followup",
+        "--phase",
+        "beta",
+        "--model",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/no_model",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/unused_fresh",
+        "--not-a-real-option"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 82,
+      "stderr_sha256": "2cdd7e500c28517b80431d8fa5b8244d9e8ae430a680802e97dac85df0ea05fc",
+      "parser_diagnostic": [
+        "usage: run_rl_followup.py [-h] --phase {beta,reposition,diagnostics} --model",
+        "                          MODEL (--run RUN | --output OUTPUT) [--data DATA]",
+        "run_rl_followup.py: error: unrecognized arguments: --not-a-real-option"
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_rl_followup.py",
+      "mode": "module",
+      "case": "existing-default-or-run-alias",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.run_rl_followup",
+        "--phase",
+        "beta",
+        "--model",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/no_model",
+        "--run",
+        "existing_run"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 82,
+      "stderr_sha256": "ff87789ad62c5c7df3eae1a9f7760b8dac8c016fcf3d52732e2c722b6406d3c0",
+      "parser_diagnostic": [
+        "usage: run_rl_followup.py [-h] --phase {beta,reposition,diagnostics} --model",
+        "                          MODEL (--run RUN | --output OUTPUT) [--data DATA]",
+        "run_rl_followup.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/resume_rl_rngfix.py",
+      "mode": "direct",
+      "case": "help",
+      "returncode": 0,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/resume_rl_rngfix.py",
+        "--help"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 69,
+      "stderr_sha256": "557c5498cc8dbaa970be49ac60d2effed695e86aca2904c15c12f2011ac44284",
+      "parser_diagnostic": []
+    },
+    {
+      "launcher": "task2/scripts/resume_rl_rngfix.py",
+      "mode": "direct",
+      "case": "short-help",
+      "returncode": 0,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/resume_rl_rngfix.py",
+        "-h"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 69,
+      "stderr_sha256": "acba49a16027acddf9e02b66347308bbdc8e7591efdb951c408040d7dd433f43",
+      "parser_diagnostic": []
+    },
+    {
+      "launcher": "task2/scripts/resume_rl_rngfix.py",
+      "mode": "direct",
+      "case": "existing-directory",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/resume_rl_rngfix.py",
+        "--phase",
+        "sensitivity",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/fixture_existing_directory"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 68,
+      "stderr_sha256": "387284d710794cca7f0d8330b57049894d18ad6f3a6baba2511ce3bee7a3283c",
+      "parser_diagnostic": [
+        "usage: resume_rl_rngfix.py [-h] --phase {sensitivity,double} [--output OUTPUT]",
+        "resume_rl_rngfix.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/resume_rl_rngfix.py",
+      "mode": "direct",
+      "case": "existing-file",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/resume_rl_rngfix.py",
+        "--phase",
+        "sensitivity",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/fixture_existing_file"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 68,
+      "stderr_sha256": "3ecd0ffedd6695d26fc8811690fb4ab003135396a042275fd957a78f2008af7f",
+      "parser_diagnostic": [
+        "usage: resume_rl_rngfix.py [-h] --phase {sensitivity,double} [--output OUTPUT]",
+        "resume_rl_rngfix.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/resume_rl_rngfix.py",
+      "mode": "direct",
+      "case": "dangling-symlink",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/resume_rl_rngfix.py",
+        "--phase",
+        "sensitivity",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/fixture_dangling_link"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 68,
+      "stderr_sha256": "7651323b9725f6dd553442c9aa3334bfbf78fa0c6ad8fc5e42c10e3a00c8b267",
+      "parser_diagnostic": [
+        "usage: resume_rl_rngfix.py [-h] --phase {sensitivity,double} [--output OUTPUT]",
+        "resume_rl_rngfix.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/resume_rl_rngfix.py",
+      "mode": "direct",
+      "case": "unknown-option",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/resume_rl_rngfix.py",
+        "--phase",
+        "sensitivity",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/unused_fresh",
+        "--not-a-real-option"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 68,
+      "stderr_sha256": "dd997dd24871ff9f0efbb8fb12c3edd2dc6744d12eb5e514b81fbe354f744415",
+      "parser_diagnostic": [
+        "usage: resume_rl_rngfix.py [-h] --phase {sensitivity,double} [--output OUTPUT]",
+        "resume_rl_rngfix.py: error: unrecognized arguments: --not-a-real-option"
+      ]
+    },
+    {
+      "launcher": "task2/scripts/resume_rl_rngfix.py",
+      "mode": "direct",
+      "case": "existing-default-or-run-alias",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/resume_rl_rngfix.py",
+        "--phase",
+        "sensitivity"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 68,
+      "stderr_sha256": "e24756b9b6f03644a6e98edf8b7f7c428060baf9721f4b4275ffbbdbf5061114",
+      "parser_diagnostic": [
+        "usage: resume_rl_rngfix.py [-h] --phase {sensitivity,double} [--output OUTPUT]",
+        "resume_rl_rngfix.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/resume_rl_rngfix.py",
+      "mode": "module",
+      "case": "help",
+      "returncode": 0,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.resume_rl_rngfix",
+        "--help"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 78,
+      "stderr_sha256": "f8d13d97ec2f418eaa03c725195067016962676ed09f6e2b703511e7a0d0d2a2",
+      "parser_diagnostic": []
+    },
+    {
+      "launcher": "task2/scripts/resume_rl_rngfix.py",
+      "mode": "module",
+      "case": "short-help",
+      "returncode": 0,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.resume_rl_rngfix",
+        "-h"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 78,
+      "stderr_sha256": "b72e80fc336eed5e082ff2729703cd6aa611c673b384cf9364cb4af72a786fdf",
+      "parser_diagnostic": []
+    },
+    {
+      "launcher": "task2/scripts/resume_rl_rngfix.py",
+      "mode": "module",
+      "case": "existing-directory",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.resume_rl_rngfix",
+        "--phase",
+        "sensitivity",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/fixture_existing_directory"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 77,
+      "stderr_sha256": "56795fd03fdbf7a5f1e54cd927ed83e6e494f822f39624aeee84d03291fab440",
+      "parser_diagnostic": [
+        "usage: resume_rl_rngfix.py [-h] --phase {sensitivity,double} [--output OUTPUT]",
+        "resume_rl_rngfix.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/resume_rl_rngfix.py",
+      "mode": "module",
+      "case": "existing-file",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.resume_rl_rngfix",
+        "--phase",
+        "sensitivity",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/fixture_existing_file"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 77,
+      "stderr_sha256": "0cdcd255fe44878a6253081d7c5d667032d4b09ddab292e1414ab7bc8d51f3ab",
+      "parser_diagnostic": [
+        "usage: resume_rl_rngfix.py [-h] --phase {sensitivity,double} [--output OUTPUT]",
+        "resume_rl_rngfix.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/resume_rl_rngfix.py",
+      "mode": "module",
+      "case": "dangling-symlink",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.resume_rl_rngfix",
+        "--phase",
+        "sensitivity",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/fixture_dangling_link"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 77,
+      "stderr_sha256": "ffbbcb837ced041b0079227367e037354fe1844d344fdd41bcab0bc0023c26d2",
+      "parser_diagnostic": [
+        "usage: resume_rl_rngfix.py [-h] --phase {sensitivity,double} [--output OUTPUT]",
+        "resume_rl_rngfix.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/resume_rl_rngfix.py",
+      "mode": "module",
+      "case": "unknown-option",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.resume_rl_rngfix",
+        "--phase",
+        "sensitivity",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/unused_fresh",
+        "--not-a-real-option"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 77,
+      "stderr_sha256": "15cdc021868732443eba388d9e60ba8dca81f1fa7aabdfa8f88b040fcceb060e",
+      "parser_diagnostic": [
+        "usage: resume_rl_rngfix.py [-h] --phase {sensitivity,double} [--output OUTPUT]",
+        "resume_rl_rngfix.py: error: unrecognized arguments: --not-a-real-option"
+      ]
+    },
+    {
+      "launcher": "task2/scripts/resume_rl_rngfix.py",
+      "mode": "module",
+      "case": "existing-default-or-run-alias",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.resume_rl_rngfix",
+        "--phase",
+        "sensitivity"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 77,
+      "stderr_sha256": "0b1cfd9191f9a4778765a8afb4db63e7da73e5fb76586e0aed0e6020ce66766a",
+      "parser_diagnostic": [
+        "usage: resume_rl_rngfix.py [-h] --phase {sensitivity,double} [--output OUTPUT]",
+        "resume_rl_rngfix.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_reposition_cost.py",
+      "mode": "direct",
+      "case": "help",
+      "returncode": 0,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/run_reposition_cost.py",
+        "--help"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 69,
+      "stderr_sha256": "8f6351cce62685d730a2cb1f74b5b3f73944db331e3e187f6fc751d4ca0ecb65",
+      "parser_diagnostic": []
+    },
+    {
+      "launcher": "task2/scripts/run_reposition_cost.py",
+      "mode": "direct",
+      "case": "short-help",
+      "returncode": 0,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/run_reposition_cost.py",
+        "-h"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 69,
+      "stderr_sha256": "ad0dd962eb46c60ec30737ce1d8f6c1c92c8d7aeeac928adaac0dfc248522b2e",
+      "parser_diagnostic": []
+    },
+    {
+      "launcher": "task2/scripts/run_reposition_cost.py",
+      "mode": "direct",
+      "case": "existing-directory",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/run_reposition_cost.py",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/fixture_existing_directory"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 68,
+      "stderr_sha256": "e8c9d7e1eba0d50ae3edb674241c443881aeea7d8fb01a59eafcaca2157496ae",
+      "parser_diagnostic": [
+        "usage: run_reposition_cost.py [-h] [--output OUTPUT]",
+        "run_reposition_cost.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_reposition_cost.py",
+      "mode": "direct",
+      "case": "existing-file",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/run_reposition_cost.py",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/fixture_existing_file"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 68,
+      "stderr_sha256": "b8c07901b0d2e3dc2485e06400da9f6a115e496561df8f95ebb4420a0e3adf04",
+      "parser_diagnostic": [
+        "usage: run_reposition_cost.py [-h] [--output OUTPUT]",
+        "run_reposition_cost.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_reposition_cost.py",
+      "mode": "direct",
+      "case": "dangling-symlink",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/run_reposition_cost.py",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/fixture_dangling_link"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 68,
+      "stderr_sha256": "93f71db4114c8b83aa4bcc19233f60d6d24b2a697eda8819c023d36382b3cbb7",
+      "parser_diagnostic": [
+        "usage: run_reposition_cost.py [-h] [--output OUTPUT]",
+        "run_reposition_cost.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_reposition_cost.py",
+      "mode": "direct",
+      "case": "unknown-option",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/run_reposition_cost.py",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/unused_fresh",
+        "--not-a-real-option"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 68,
+      "stderr_sha256": "654c8b04b55c856a7972e2483eeecfb4afe22fb83334ad2b8ccb7468cfd3804d",
+      "parser_diagnostic": [
+        "usage: run_reposition_cost.py [-h] [--output OUTPUT]",
+        "run_reposition_cost.py: error: unrecognized arguments: --not-a-real-option"
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_reposition_cost.py",
+      "mode": "direct",
+      "case": "existing-default-or-run-alias",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/run_reposition_cost.py"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 68,
+      "stderr_sha256": "ac0409de43a7321e25b1e9d117c7bc518d5adfeca3cf15e50b45c4075248b60c",
+      "parser_diagnostic": [
+        "usage: run_reposition_cost.py [-h] [--output OUTPUT]",
+        "run_reposition_cost.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_reposition_cost.py",
+      "mode": "module",
+      "case": "help",
+      "returncode": 0,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.run_reposition_cost",
+        "--help"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 78,
+      "stderr_sha256": "29e3f4f9a4f94a2b449669efdb79dc03e0345078c540fba3d0322dbbdca13eb1",
+      "parser_diagnostic": []
+    },
+    {
+      "launcher": "task2/scripts/run_reposition_cost.py",
+      "mode": "module",
+      "case": "short-help",
+      "returncode": 0,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.run_reposition_cost",
+        "-h"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 78,
+      "stderr_sha256": "1f415933b3cf43eecff1126de276f78363e617143b0d5dfca4e0f98b59b448aa",
+      "parser_diagnostic": []
+    },
+    {
+      "launcher": "task2/scripts/run_reposition_cost.py",
+      "mode": "module",
+      "case": "existing-directory",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.run_reposition_cost",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/fixture_existing_directory"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 77,
+      "stderr_sha256": "e5e1fbfd688eea8be22beed89e261ef804a64335ffd1057edfdfc7a7d7ae8371",
+      "parser_diagnostic": [
+        "usage: run_reposition_cost.py [-h] [--output OUTPUT]",
+        "run_reposition_cost.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_reposition_cost.py",
+      "mode": "module",
+      "case": "existing-file",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.run_reposition_cost",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/fixture_existing_file"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 77,
+      "stderr_sha256": "a46bf592b3f723f0ce6e107f399cc4ac33b45fa271d021825c703bc3a00d543c",
+      "parser_diagnostic": [
+        "usage: run_reposition_cost.py [-h] [--output OUTPUT]",
+        "run_reposition_cost.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_reposition_cost.py",
+      "mode": "module",
+      "case": "dangling-symlink",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.run_reposition_cost",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/fixture_dangling_link"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 77,
+      "stderr_sha256": "c8be9961099f5da3a0346edfe2c5341a31ba90b4136bc9225effcab02896a7e0",
+      "parser_diagnostic": [
+        "usage: run_reposition_cost.py [-h] [--output OUTPUT]",
+        "run_reposition_cost.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_reposition_cost.py",
+      "mode": "module",
+      "case": "unknown-option",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.run_reposition_cost",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/unused_fresh",
+        "--not-a-real-option"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 77,
+      "stderr_sha256": "e935489bb1c7d56d59cc5bcf13f6effe56b809aeba7a248c57d55067daad20c7",
+      "parser_diagnostic": [
+        "usage: run_reposition_cost.py [-h] [--output OUTPUT]",
+        "run_reposition_cost.py: error: unrecognized arguments: --not-a-real-option"
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_reposition_cost.py",
+      "mode": "module",
+      "case": "existing-default-or-run-alias",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.run_reposition_cost"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 77,
+      "stderr_sha256": "c3d2edbdf35fd88a213dea3e8a41ae1444eb5797a3706196ce3e468d52aba1ac",
+      "parser_diagnostic": [
+        "usage: run_reposition_cost.py [-h] [--output OUTPUT]",
+        "run_reposition_cost.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_rl_fusion.py",
+      "mode": "direct",
+      "case": "help",
+      "returncode": 0,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/run_rl_fusion.py",
+        "--help"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 69,
+      "stderr_sha256": "43852ec07ab76a3a744f5a849e5c792f251fd2f9d7ac3d82c5bd5c38b4586d00",
+      "parser_diagnostic": []
+    },
+    {
+      "launcher": "task2/scripts/run_rl_fusion.py",
+      "mode": "direct",
+      "case": "short-help",
+      "returncode": 0,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/run_rl_fusion.py",
+        "-h"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 69,
+      "stderr_sha256": "945f4033d4346ad3f14e044efc888079f129fef7e2501b77692d5eb453d02b6d",
+      "parser_diagnostic": []
+    },
+    {
+      "launcher": "task2/scripts/run_rl_fusion.py",
+      "mode": "direct",
+      "case": "existing-directory",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/run_rl_fusion.py",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/fixture_existing_directory"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 68,
+      "stderr_sha256": "3fd982b843d9370053ee52315106cededf7525313f6fc8f0d623be5c177c550e",
+      "parser_diagnostic": [
+        "usage: run_rl_fusion.py [-h] [--output OUTPUT]",
+        "run_rl_fusion.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_rl_fusion.py",
+      "mode": "direct",
+      "case": "existing-file",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/run_rl_fusion.py",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/fixture_existing_file"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 68,
+      "stderr_sha256": "258aa5c61cbef687b487a35c8c7ad6d10903dad7e77a2d477ff2be0f90a3097f",
+      "parser_diagnostic": [
+        "usage: run_rl_fusion.py [-h] [--output OUTPUT]",
+        "run_rl_fusion.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_rl_fusion.py",
+      "mode": "direct",
+      "case": "dangling-symlink",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/run_rl_fusion.py",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/fixture_dangling_link"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 68,
+      "stderr_sha256": "ffb179458ec1140814383e9cf2a8838142197d82658bd1c8c69a5ca599b02b3f",
+      "parser_diagnostic": [
+        "usage: run_rl_fusion.py [-h] [--output OUTPUT]",
+        "run_rl_fusion.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_rl_fusion.py",
+      "mode": "direct",
+      "case": "unknown-option",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/run_rl_fusion.py",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/unused_fresh",
+        "--not-a-real-option"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 68,
+      "stderr_sha256": "347b68b478daa9f5e9a7804768750586a7fe28c3f7f81a9f57fd6dfcc0613801",
+      "parser_diagnostic": [
+        "usage: run_rl_fusion.py [-h] [--output OUTPUT]",
+        "run_rl_fusion.py: error: unrecognized arguments: --not-a-real-option"
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_rl_fusion.py",
+      "mode": "direct",
+      "case": "existing-default-or-run-alias",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/run_rl_fusion.py"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 68,
+      "stderr_sha256": "c7a4de910c0b0d27f28ecfefb03826458a23728709ff92fb6ef15c2b937062ee",
+      "parser_diagnostic": [
+        "usage: run_rl_fusion.py [-h] [--output OUTPUT]",
+        "run_rl_fusion.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_rl_fusion.py",
+      "mode": "module",
+      "case": "help",
+      "returncode": 0,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.run_rl_fusion",
+        "--help"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 78,
+      "stderr_sha256": "5d29183ce64cd466945551bf00a0c5b4a3668073874bf3bca88bdab96f88095c",
+      "parser_diagnostic": []
+    },
+    {
+      "launcher": "task2/scripts/run_rl_fusion.py",
+      "mode": "module",
+      "case": "short-help",
+      "returncode": 0,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.run_rl_fusion",
+        "-h"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 78,
+      "stderr_sha256": "dd901c181471778e76f95e361abd0241595c9d8fd8cd833725dca42123eed093",
+      "parser_diagnostic": []
+    },
+    {
+      "launcher": "task2/scripts/run_rl_fusion.py",
+      "mode": "module",
+      "case": "existing-directory",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.run_rl_fusion",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/fixture_existing_directory"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 77,
+      "stderr_sha256": "5ff85e91b221ad0515bd556366974dcc5067fe981b545ad41fb504288c58b816",
+      "parser_diagnostic": [
+        "usage: run_rl_fusion.py [-h] [--output OUTPUT]",
+        "run_rl_fusion.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_rl_fusion.py",
+      "mode": "module",
+      "case": "existing-file",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.run_rl_fusion",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/fixture_existing_file"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 77,
+      "stderr_sha256": "177aea612ba62832704fd2b93249f067eb45c1bed619404147b43a7d758fc485",
+      "parser_diagnostic": [
+        "usage: run_rl_fusion.py [-h] [--output OUTPUT]",
+        "run_rl_fusion.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_rl_fusion.py",
+      "mode": "module",
+      "case": "dangling-symlink",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.run_rl_fusion",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/fixture_dangling_link"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 77,
+      "stderr_sha256": "89e7d76d8faced7b5b94cb78397c85e343370e6d59ba1df7672adeee23c4b575",
+      "parser_diagnostic": [
+        "usage: run_rl_fusion.py [-h] [--output OUTPUT]",
+        "run_rl_fusion.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_rl_fusion.py",
+      "mode": "module",
+      "case": "unknown-option",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.run_rl_fusion",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/unused_fresh",
+        "--not-a-real-option"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 77,
+      "stderr_sha256": "05da13a97f43b10b7a3fd8c38f64cb4a1e80741be852337a37f66b016c68c116",
+      "parser_diagnostic": [
+        "usage: run_rl_fusion.py [-h] [--output OUTPUT]",
+        "run_rl_fusion.py: error: unrecognized arguments: --not-a-real-option"
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_rl_fusion.py",
+      "mode": "module",
+      "case": "existing-default-or-run-alias",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.run_rl_fusion"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 77,
+      "stderr_sha256": "7c3d24dd097f5567f53d517ef6affba12241aa08d253d3aaf64c4c97fda42e3a",
+      "parser_diagnostic": [
+        "usage: run_rl_fusion.py [-h] [--output OUTPUT]",
+        "run_rl_fusion.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_rl_component_ablation.py",
+      "mode": "direct",
+      "case": "help",
+      "returncode": 0,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/run_rl_component_ablation.py",
+        "--help"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 69,
+      "stderr_sha256": "510ddb31514d1c053f2572a39783e99314d475e106c774d475b7915b66750dee",
+      "parser_diagnostic": []
+    },
+    {
+      "launcher": "task2/scripts/run_rl_component_ablation.py",
+      "mode": "direct",
+      "case": "short-help",
+      "returncode": 0,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/run_rl_component_ablation.py",
+        "-h"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 69,
+      "stderr_sha256": "464eefba64de9ca7551d2d0c2e7c78f58e7e9ddf852f53f62150d48dbff0f601",
+      "parser_diagnostic": []
+    },
+    {
+      "launcher": "task2/scripts/run_rl_component_ablation.py",
+      "mode": "direct",
+      "case": "existing-directory",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/run_rl_component_ablation.py",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/fixture_existing_directory"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 68,
+      "stderr_sha256": "a27b08145abb21945a06f8446cc2675a7478e6dd333dcb752b8c62c81a8d78f9",
+      "parser_diagnostic": [
+        "usage: run_rl_component_ablation.py [-h] [--output OUTPUT]",
+        "run_rl_component_ablation.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_rl_component_ablation.py",
+      "mode": "direct",
+      "case": "existing-file",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/run_rl_component_ablation.py",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/fixture_existing_file"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 68,
+      "stderr_sha256": "996caef42b3bcfc997cbe0576c8a42ebbc705ba94172fc8d3477b32723cd6ed1",
+      "parser_diagnostic": [
+        "usage: run_rl_component_ablation.py [-h] [--output OUTPUT]",
+        "run_rl_component_ablation.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_rl_component_ablation.py",
+      "mode": "direct",
+      "case": "dangling-symlink",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/run_rl_component_ablation.py",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/fixture_dangling_link"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 68,
+      "stderr_sha256": "3304e09c475398f4733fefa55e2be74b5969ec636a05c2f1d426e2c0818f2f75",
+      "parser_diagnostic": [
+        "usage: run_rl_component_ablation.py [-h] [--output OUTPUT]",
+        "run_rl_component_ablation.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_rl_component_ablation.py",
+      "mode": "direct",
+      "case": "unknown-option",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/run_rl_component_ablation.py",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/unused_fresh",
+        "--not-a-real-option"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 68,
+      "stderr_sha256": "d6dcd2a35f20cecfad1872f67a434d3db233aba92693e161301d0b2e17bb7240",
+      "parser_diagnostic": [
+        "usage: run_rl_component_ablation.py [-h] [--output OUTPUT]",
+        "run_rl_component_ablation.py: error: unrecognized arguments: --not-a-real-option"
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_rl_component_ablation.py",
+      "mode": "direct",
+      "case": "existing-default-or-run-alias",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/run_rl_component_ablation.py"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 68,
+      "stderr_sha256": "546520d8b2f3aec641d2d0f8e6d26de070e116aee9e96a355eb45b056b1f478b",
+      "parser_diagnostic": [
+        "usage: run_rl_component_ablation.py [-h] [--output OUTPUT]",
+        "run_rl_component_ablation.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_rl_component_ablation.py",
+      "mode": "module",
+      "case": "help",
+      "returncode": 0,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.run_rl_component_ablation",
+        "--help"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 78,
+      "stderr_sha256": "1022d43cfb34ce13108c3bae24866d77c52727a90de1788c74c689704df1bab8",
+      "parser_diagnostic": []
+    },
+    {
+      "launcher": "task2/scripts/run_rl_component_ablation.py",
+      "mode": "module",
+      "case": "short-help",
+      "returncode": 0,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.run_rl_component_ablation",
+        "-h"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 78,
+      "stderr_sha256": "9f9d390e8a7fcdf74da9cd9de030ce90b72b77cd9f8cab45e57f6c62f8786d99",
+      "parser_diagnostic": []
+    },
+    {
+      "launcher": "task2/scripts/run_rl_component_ablation.py",
+      "mode": "module",
+      "case": "existing-directory",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.run_rl_component_ablation",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/fixture_existing_directory"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 77,
+      "stderr_sha256": "56fba465b9fb9c4eed7a3e37587fdfe5ce5c176a09270d11d7825e9f1c44d942",
+      "parser_diagnostic": [
+        "usage: run_rl_component_ablation.py [-h] [--output OUTPUT]",
+        "run_rl_component_ablation.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_rl_component_ablation.py",
+      "mode": "module",
+      "case": "existing-file",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.run_rl_component_ablation",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/fixture_existing_file"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 77,
+      "stderr_sha256": "0d3ab2c464137accff7684e329f5f3d22150292d272e532b0fc428934c13a167",
+      "parser_diagnostic": [
+        "usage: run_rl_component_ablation.py [-h] [--output OUTPUT]",
+        "run_rl_component_ablation.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_rl_component_ablation.py",
+      "mode": "module",
+      "case": "dangling-symlink",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.run_rl_component_ablation",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/fixture_dangling_link"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 77,
+      "stderr_sha256": "94a4e268b12a847fc929fc06e5cae45e9a4bd8374752bf3ec4912688556425a7",
+      "parser_diagnostic": [
+        "usage: run_rl_component_ablation.py [-h] [--output OUTPUT]",
+        "run_rl_component_ablation.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_rl_component_ablation.py",
+      "mode": "module",
+      "case": "unknown-option",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.run_rl_component_ablation",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/unused_fresh",
+        "--not-a-real-option"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 77,
+      "stderr_sha256": "eccc793235d88d945b4a53b6af7873b3f946857bcc8cce0e201896a34cde57e4",
+      "parser_diagnostic": [
+        "usage: run_rl_component_ablation.py [-h] [--output OUTPUT]",
+        "run_rl_component_ablation.py: error: unrecognized arguments: --not-a-real-option"
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_rl_component_ablation.py",
+      "mode": "module",
+      "case": "existing-default-or-run-alias",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.run_rl_component_ablation"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 77,
+      "stderr_sha256": "afbcb5fed21ff957416e2db825d87bbd120135afaede734eafc719960c4ee76c",
+      "parser_diagnostic": [
+        "usage: run_rl_component_ablation.py [-h] [--output OUTPUT]",
+        "run_rl_component_ablation.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_rl_offset_robustness.py",
+      "mode": "direct",
+      "case": "help",
+      "returncode": 0,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/run_rl_offset_robustness.py",
+        "--help"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 69,
+      "stderr_sha256": "56c74c8eb4bb2876a7fbe00319a94612433d56736cf5e3f6467ad7a682a62a81",
+      "parser_diagnostic": []
+    },
+    {
+      "launcher": "task2/scripts/run_rl_offset_robustness.py",
+      "mode": "direct",
+      "case": "short-help",
+      "returncode": 0,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/run_rl_offset_robustness.py",
+        "-h"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 69,
+      "stderr_sha256": "201142937af7133ba170b14c411e304ea299c948a4896764eb6afac13561df08",
+      "parser_diagnostic": []
+    },
+    {
+      "launcher": "task2/scripts/run_rl_offset_robustness.py",
+      "mode": "direct",
+      "case": "existing-directory",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/run_rl_offset_robustness.py",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/fixture_existing_directory"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 68,
+      "stderr_sha256": "009fc0b0db828708d13ccf69e893bf844eba6b01c40c9e2dd6251bb62aa1c5a4",
+      "parser_diagnostic": [
+        "usage: run_rl_offset_robustness.py [-h] [--output OUTPUT]",
+        "run_rl_offset_robustness.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_rl_offset_robustness.py",
+      "mode": "direct",
+      "case": "existing-file",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/run_rl_offset_robustness.py",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/fixture_existing_file"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 68,
+      "stderr_sha256": "bcd28a8dc24d09df4751d8cb86b5e46b6f61a8bd8d072d5f2f0d120c0eb34870",
+      "parser_diagnostic": [
+        "usage: run_rl_offset_robustness.py [-h] [--output OUTPUT]",
+        "run_rl_offset_robustness.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_rl_offset_robustness.py",
+      "mode": "direct",
+      "case": "dangling-symlink",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/run_rl_offset_robustness.py",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/fixture_dangling_link"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 68,
+      "stderr_sha256": "a77da229d5d22fe0fddbab7c163208a04192969348299ea0a5419d04bc6c1f2b",
+      "parser_diagnostic": [
+        "usage: run_rl_offset_robustness.py [-h] [--output OUTPUT]",
+        "run_rl_offset_robustness.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_rl_offset_robustness.py",
+      "mode": "direct",
+      "case": "unknown-option",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/run_rl_offset_robustness.py",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/unused_fresh",
+        "--not-a-real-option"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 68,
+      "stderr_sha256": "1cfe18ce005f621c02cf821dbbfb60426a58ab3c57dd78692efc370bcba3036e",
+      "parser_diagnostic": [
+        "usage: run_rl_offset_robustness.py [-h] [--output OUTPUT]",
+        "run_rl_offset_robustness.py: error: unrecognized arguments: --not-a-real-option"
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_rl_offset_robustness.py",
+      "mode": "direct",
+      "case": "existing-default-or-run-alias",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/run_rl_offset_robustness.py"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 68,
+      "stderr_sha256": "f394244346546489996c12faf3654cedcfa98e43ea8d5eb5d35596d4f153574b",
+      "parser_diagnostic": [
+        "usage: run_rl_offset_robustness.py [-h] [--output OUTPUT]",
+        "run_rl_offset_robustness.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_rl_offset_robustness.py",
+      "mode": "module",
+      "case": "help",
+      "returncode": 0,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.run_rl_offset_robustness",
+        "--help"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 78,
+      "stderr_sha256": "4dcd5e48431b4a20fe191dc52cfd5579f1fdf0bdad382a395faee8f9295a551d",
+      "parser_diagnostic": []
+    },
+    {
+      "launcher": "task2/scripts/run_rl_offset_robustness.py",
+      "mode": "module",
+      "case": "short-help",
+      "returncode": 0,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.run_rl_offset_robustness",
+        "-h"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 78,
+      "stderr_sha256": "8f172d0dd4c130d124952b34c95587be5409e30a7b99724d7dc8435e088629b1",
+      "parser_diagnostic": []
+    },
+    {
+      "launcher": "task2/scripts/run_rl_offset_robustness.py",
+      "mode": "module",
+      "case": "existing-directory",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.run_rl_offset_robustness",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/fixture_existing_directory"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 77,
+      "stderr_sha256": "93b0448ef306bb00450ec657834d3adf1b4cfa245f6ceb6a5dcb16a40b30bf90",
+      "parser_diagnostic": [
+        "usage: run_rl_offset_robustness.py [-h] [--output OUTPUT]",
+        "run_rl_offset_robustness.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_rl_offset_robustness.py",
+      "mode": "module",
+      "case": "existing-file",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.run_rl_offset_robustness",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/fixture_existing_file"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 77,
+      "stderr_sha256": "2e1fed9eee69cb174ed14f165d8c5d02346fb7bc9bb2416d30f015217173e506",
+      "parser_diagnostic": [
+        "usage: run_rl_offset_robustness.py [-h] [--output OUTPUT]",
+        "run_rl_offset_robustness.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_rl_offset_robustness.py",
+      "mode": "module",
+      "case": "dangling-symlink",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.run_rl_offset_robustness",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/fixture_dangling_link"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 77,
+      "stderr_sha256": "14751d2569865fb885bb974017663ddc22b2c4a75dc415446065a84a1bc3cc9d",
+      "parser_diagnostic": [
+        "usage: run_rl_offset_robustness.py [-h] [--output OUTPUT]",
+        "run_rl_offset_robustness.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_rl_offset_robustness.py",
+      "mode": "module",
+      "case": "unknown-option",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.run_rl_offset_robustness",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/unused_fresh",
+        "--not-a-real-option"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 77,
+      "stderr_sha256": "4c053376dd250a8b1ba8e83f68e628aa0463bf54503ef85309717a409cf434fe",
+      "parser_diagnostic": [
+        "usage: run_rl_offset_robustness.py [-h] [--output OUTPUT]",
+        "run_rl_offset_robustness.py: error: unrecognized arguments: --not-a-real-option"
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_rl_offset_robustness.py",
+      "mode": "module",
+      "case": "existing-default-or-run-alias",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.run_rl_offset_robustness"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 77,
+      "stderr_sha256": "f814dacd2a7ea39a3113200a3ebb45792aa75cd533824fb6ee7dc9495d4906ab",
+      "parser_diagnostic": [
+        "usage: run_rl_offset_robustness.py [-h] [--output OUTPUT]",
+        "run_rl_offset_robustness.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/confirm_rl_movement.py",
+      "mode": "direct",
+      "case": "help",
+      "returncode": 0,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/confirm_rl_movement.py",
+        "--help"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 69,
+      "stderr_sha256": "e0d65f3a4d077c28dca87c2e843c81cf5a196a5f8b651c08c16b30955948cbe8",
+      "parser_diagnostic": []
+    },
+    {
+      "launcher": "task2/scripts/confirm_rl_movement.py",
+      "mode": "direct",
+      "case": "short-help",
+      "returncode": 0,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/confirm_rl_movement.py",
+        "-h"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 69,
+      "stderr_sha256": "71e99c41ca2ca7f0b5e42361edcedee83410fcb26b92ad4e79268b3e137dc34e",
+      "parser_diagnostic": []
+    },
+    {
+      "launcher": "task2/scripts/confirm_rl_movement.py",
+      "mode": "direct",
+      "case": "existing-directory",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/confirm_rl_movement.py",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/fixture_existing_directory"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 68,
+      "stderr_sha256": "2b77668c9de16ba1e927fbb1aac8f2ac63747243db2668b00c1c4ef050e7d36a",
+      "parser_diagnostic": [
+        "usage: confirm_rl_movement.py [-h] [--output OUTPUT]",
+        "confirm_rl_movement.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/confirm_rl_movement.py",
+      "mode": "direct",
+      "case": "existing-file",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/confirm_rl_movement.py",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/fixture_existing_file"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 68,
+      "stderr_sha256": "5fc053df0303100ae25d686c4e19caf667e9707cf34233f4244dd52ce24788f9",
+      "parser_diagnostic": [
+        "usage: confirm_rl_movement.py [-h] [--output OUTPUT]",
+        "confirm_rl_movement.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/confirm_rl_movement.py",
+      "mode": "direct",
+      "case": "dangling-symlink",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/confirm_rl_movement.py",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/fixture_dangling_link"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 68,
+      "stderr_sha256": "21266ddd9f2a68c41d448ad8e9b763e5a6ec0ad3b6db6acd00a4f825d28e73fc",
+      "parser_diagnostic": [
+        "usage: confirm_rl_movement.py [-h] [--output OUTPUT]",
+        "confirm_rl_movement.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/confirm_rl_movement.py",
+      "mode": "direct",
+      "case": "unknown-option",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/confirm_rl_movement.py",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/unused_fresh",
+        "--not-a-real-option"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 68,
+      "stderr_sha256": "38415afd48c9e6762d4c993dd1ab40a509dd494617bdf31a6baf4bbe77b8b58b",
+      "parser_diagnostic": [
+        "usage: confirm_rl_movement.py [-h] [--output OUTPUT]",
+        "confirm_rl_movement.py: error: unrecognized arguments: --not-a-real-option"
+      ]
+    },
+    {
+      "launcher": "task2/scripts/confirm_rl_movement.py",
+      "mode": "direct",
+      "case": "existing-default-or-run-alias",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/confirm_rl_movement.py"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 68,
+      "stderr_sha256": "a4ccc4c41edd4271aef0ec9bfb6e41f1da083e1050ab476463541d583b71a883",
+      "parser_diagnostic": [
+        "usage: confirm_rl_movement.py [-h] [--output OUTPUT]",
+        "confirm_rl_movement.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/confirm_rl_movement.py",
+      "mode": "module",
+      "case": "help",
+      "returncode": 0,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.confirm_rl_movement",
+        "--help"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 78,
+      "stderr_sha256": "48d1c7c5f76e95dafedee2e0c92e36c38ac81a4884f577485c276f45c1e7641f",
+      "parser_diagnostic": []
+    },
+    {
+      "launcher": "task2/scripts/confirm_rl_movement.py",
+      "mode": "module",
+      "case": "short-help",
+      "returncode": 0,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.confirm_rl_movement",
+        "-h"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 78,
+      "stderr_sha256": "4989658a908bffa1fa1bc196caa53251397ebb3cc89a2f72456c53aa1df6ae88",
+      "parser_diagnostic": []
+    },
+    {
+      "launcher": "task2/scripts/confirm_rl_movement.py",
+      "mode": "module",
+      "case": "existing-directory",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.confirm_rl_movement",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/fixture_existing_directory"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 77,
+      "stderr_sha256": "985e162d81c3d57ba4ec1334da89d7969a29854341d3a45b45d37e2107f1b1ea",
+      "parser_diagnostic": [
+        "usage: confirm_rl_movement.py [-h] [--output OUTPUT]",
+        "confirm_rl_movement.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/confirm_rl_movement.py",
+      "mode": "module",
+      "case": "existing-file",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.confirm_rl_movement",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/fixture_existing_file"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 77,
+      "stderr_sha256": "d0269f35e0a1c4d834a7d29c75e0268954bb0a6b2a49143cd5f050521fcc848d",
+      "parser_diagnostic": [
+        "usage: confirm_rl_movement.py [-h] [--output OUTPUT]",
+        "confirm_rl_movement.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/confirm_rl_movement.py",
+      "mode": "module",
+      "case": "dangling-symlink",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.confirm_rl_movement",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/fixture_dangling_link"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 77,
+      "stderr_sha256": "bf8ce9610b666741bc5c0bf7d9835eb35822f50e01d91ae4b9711c4ee8d58dc0",
+      "parser_diagnostic": [
+        "usage: confirm_rl_movement.py [-h] [--output OUTPUT]",
+        "confirm_rl_movement.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/confirm_rl_movement.py",
+      "mode": "module",
+      "case": "unknown-option",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.confirm_rl_movement",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/unused_fresh",
+        "--not-a-real-option"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 77,
+      "stderr_sha256": "b115ac43ff7fbfc7f2984c9100dc5b9167c88c8719acdefa1e513ce38c6d6292",
+      "parser_diagnostic": [
+        "usage: confirm_rl_movement.py [-h] [--output OUTPUT]",
+        "confirm_rl_movement.py: error: unrecognized arguments: --not-a-real-option"
+      ]
+    },
+    {
+      "launcher": "task2/scripts/confirm_rl_movement.py",
+      "mode": "module",
+      "case": "existing-default-or-run-alias",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.confirm_rl_movement"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 77,
+      "stderr_sha256": "068aad493628b1674d0c2ce0cd2cb522fe44122abbe43dd2229dff96b3b29526",
+      "parser_diagnostic": [
+        "usage: confirm_rl_movement.py [-h] [--output OUTPUT]",
+        "confirm_rl_movement.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/confirm_rl_montecarlo.py",
+      "mode": "direct",
+      "case": "help",
+      "returncode": 0,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/confirm_rl_montecarlo.py",
+        "--help"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 69,
+      "stderr_sha256": "893f9a254030339b691a17835aeb3b4300c563d27332fdf429183f1630440b2c",
+      "parser_diagnostic": []
+    },
+    {
+      "launcher": "task2/scripts/confirm_rl_montecarlo.py",
+      "mode": "direct",
+      "case": "short-help",
+      "returncode": 0,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/confirm_rl_montecarlo.py",
+        "-h"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 69,
+      "stderr_sha256": "00e72bdbbb2a1c7f2cb3a6dd8788ce8864eaaecd74e1eb7c4e76abc6a657e148",
+      "parser_diagnostic": []
+    },
+    {
+      "launcher": "task2/scripts/confirm_rl_montecarlo.py",
+      "mode": "direct",
+      "case": "existing-directory",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/confirm_rl_montecarlo.py",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/fixture_existing_directory"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 68,
+      "stderr_sha256": "2396002187f6b9976c0f52e902c9543f9843da32419585755a6a51ab0a831968",
+      "parser_diagnostic": [
+        "usage: confirm_rl_montecarlo.py [-h] [--output OUTPUT]",
+        "confirm_rl_montecarlo.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/confirm_rl_montecarlo.py",
+      "mode": "direct",
+      "case": "existing-file",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/confirm_rl_montecarlo.py",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/fixture_existing_file"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 68,
+      "stderr_sha256": "44f593465759d10cfe0042ceadfa6642bee27baaff26dd70f9c19b34fa593131",
+      "parser_diagnostic": [
+        "usage: confirm_rl_montecarlo.py [-h] [--output OUTPUT]",
+        "confirm_rl_montecarlo.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/confirm_rl_montecarlo.py",
+      "mode": "direct",
+      "case": "dangling-symlink",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/confirm_rl_montecarlo.py",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/fixture_dangling_link"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 68,
+      "stderr_sha256": "b22624a0ab377127c2e9e0a9591d1dd3a5f6eea540078881ddd8cc50897189c0",
+      "parser_diagnostic": [
+        "usage: confirm_rl_montecarlo.py [-h] [--output OUTPUT]",
+        "confirm_rl_montecarlo.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/confirm_rl_montecarlo.py",
+      "mode": "direct",
+      "case": "unknown-option",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/confirm_rl_montecarlo.py",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/unused_fresh",
+        "--not-a-real-option"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 68,
+      "stderr_sha256": "16d4d5a157449f0903472ab8a23e6e15cf5ee3699a2fcfebf7ebfa93cd97d001",
+      "parser_diagnostic": [
+        "usage: confirm_rl_montecarlo.py [-h] [--output OUTPUT]",
+        "confirm_rl_montecarlo.py: error: unrecognized arguments: --not-a-real-option"
+      ]
+    },
+    {
+      "launcher": "task2/scripts/confirm_rl_montecarlo.py",
+      "mode": "direct",
+      "case": "existing-default-or-run-alias",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/confirm_rl_montecarlo.py"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 68,
+      "stderr_sha256": "4664b9004b586daf28f4b17b022a33b37190d6e86b34cafe98193d679ee446fb",
+      "parser_diagnostic": [
+        "usage: confirm_rl_montecarlo.py [-h] [--output OUTPUT]",
+        "confirm_rl_montecarlo.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/confirm_rl_montecarlo.py",
+      "mode": "module",
+      "case": "help",
+      "returncode": 0,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.confirm_rl_montecarlo",
+        "--help"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 78,
+      "stderr_sha256": "b28f2d3009f996332914e5199e02d83b7af8d6e5df4b8e996de86e32725ab9d5",
+      "parser_diagnostic": []
+    },
+    {
+      "launcher": "task2/scripts/confirm_rl_montecarlo.py",
+      "mode": "module",
+      "case": "short-help",
+      "returncode": 0,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.confirm_rl_montecarlo",
+        "-h"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 78,
+      "stderr_sha256": "b63a37994f1b89c6b3206e302175eb6038e6edc8b7eb1667f1f8b81ea0f96550",
+      "parser_diagnostic": []
+    },
+    {
+      "launcher": "task2/scripts/confirm_rl_montecarlo.py",
+      "mode": "module",
+      "case": "existing-directory",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.confirm_rl_montecarlo",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/fixture_existing_directory"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 77,
+      "stderr_sha256": "ae4b312b2d305ea0678d0024492657269893288d3bd53df5976b95190e565ac5",
+      "parser_diagnostic": [
+        "usage: confirm_rl_montecarlo.py [-h] [--output OUTPUT]",
+        "confirm_rl_montecarlo.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/confirm_rl_montecarlo.py",
+      "mode": "module",
+      "case": "existing-file",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.confirm_rl_montecarlo",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/fixture_existing_file"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 77,
+      "stderr_sha256": "d8f289684a9595bee9b52e61e7b7078a88a329faa0f452e92290ad1d8ea5d3f8",
+      "parser_diagnostic": [
+        "usage: confirm_rl_montecarlo.py [-h] [--output OUTPUT]",
+        "confirm_rl_montecarlo.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/confirm_rl_montecarlo.py",
+      "mode": "module",
+      "case": "dangling-symlink",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.confirm_rl_montecarlo",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/fixture_dangling_link"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 77,
+      "stderr_sha256": "bbfcb945db8fee989412b514bdcb3febc67ac870f90f38e324c69b75af291840",
+      "parser_diagnostic": [
+        "usage: confirm_rl_montecarlo.py [-h] [--output OUTPUT]",
+        "confirm_rl_montecarlo.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/confirm_rl_montecarlo.py",
+      "mode": "module",
+      "case": "unknown-option",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.confirm_rl_montecarlo",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/unused_fresh",
+        "--not-a-real-option"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 77,
+      "stderr_sha256": "cf3e1f7024e835521f54077ca575c08b6ef3f5bc1c242e6b41e021b5aa6f25e4",
+      "parser_diagnostic": [
+        "usage: confirm_rl_montecarlo.py [-h] [--output OUTPUT]",
+        "confirm_rl_montecarlo.py: error: unrecognized arguments: --not-a-real-option"
+      ]
+    },
+    {
+      "launcher": "task2/scripts/confirm_rl_montecarlo.py",
+      "mode": "module",
+      "case": "existing-default-or-run-alias",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.confirm_rl_montecarlo"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 77,
+      "stderr_sha256": "3aeafe07473597405cb2e6ab4e022f6453739155041eecf6dd78f9028a45d54d",
+      "parser_diagnostic": [
+        "usage: confirm_rl_montecarlo.py [-h] [--output OUTPUT]",
+        "confirm_rl_montecarlo.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/diagnose_rl_double.py",
+      "mode": "direct",
+      "case": "help",
+      "returncode": 0,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/diagnose_rl_double.py",
+        "--help"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 69,
+      "stderr_sha256": "c247fe2190dacab4c8bb6f4dc8d6a5fd5946771bfc5d4788ddf81073e3d0adef",
+      "parser_diagnostic": []
+    },
+    {
+      "launcher": "task2/scripts/diagnose_rl_double.py",
+      "mode": "direct",
+      "case": "short-help",
+      "returncode": 0,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/diagnose_rl_double.py",
+        "-h"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 69,
+      "stderr_sha256": "615b74bf7eb7eb849ee04507d73bc26a429d04a022f52ec26645d729c5d9f960",
+      "parser_diagnostic": []
+    },
+    {
+      "launcher": "task2/scripts/diagnose_rl_double.py",
+      "mode": "direct",
+      "case": "existing-directory",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/diagnose_rl_double.py",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/fixture_existing_directory"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 68,
+      "stderr_sha256": "d63c3ff3ab7672d3b56d7a8281c0ee25d60f60e04b617f4d982e22ef2f7a2e6f",
+      "parser_diagnostic": [
+        "usage: diagnose_rl_double.py [-h] [--output OUTPUT]",
+        "diagnose_rl_double.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/diagnose_rl_double.py",
+      "mode": "direct",
+      "case": "existing-file",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/diagnose_rl_double.py",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/fixture_existing_file"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 68,
+      "stderr_sha256": "7266367d29eb6e80cee6e3f91b7731107e86bd81b45cdae56e3db59380afed6b",
+      "parser_diagnostic": [
+        "usage: diagnose_rl_double.py [-h] [--output OUTPUT]",
+        "diagnose_rl_double.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/diagnose_rl_double.py",
+      "mode": "direct",
+      "case": "dangling-symlink",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/diagnose_rl_double.py",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/fixture_dangling_link"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 68,
+      "stderr_sha256": "f69a928c4b40a4577c541d749ee9fee0ad78fe3ce83f623cfc97f7c2934b5223",
+      "parser_diagnostic": [
+        "usage: diagnose_rl_double.py [-h] [--output OUTPUT]",
+        "diagnose_rl_double.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/diagnose_rl_double.py",
+      "mode": "direct",
+      "case": "unknown-option",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/diagnose_rl_double.py",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/unused_fresh",
+        "--not-a-real-option"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 68,
+      "stderr_sha256": "ef87a081f2b7f27016e8e9542f7e6dc8f1042d961ba83b99d300d526b0eed8a2",
+      "parser_diagnostic": [
+        "usage: diagnose_rl_double.py [-h] [--output OUTPUT]",
+        "diagnose_rl_double.py: error: unrecognized arguments: --not-a-real-option"
+      ]
+    },
+    {
+      "launcher": "task2/scripts/diagnose_rl_double.py",
+      "mode": "direct",
+      "case": "existing-default-or-run-alias",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/diagnose_rl_double.py"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 68,
+      "stderr_sha256": "fd1c5d25823d20313db6215ed63b2404ad29fcde4fb4342e6a4687cb7951d9de",
+      "parser_diagnostic": [
+        "usage: diagnose_rl_double.py [-h] [--output OUTPUT]",
+        "diagnose_rl_double.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/diagnose_rl_double.py",
+      "mode": "module",
+      "case": "help",
+      "returncode": 0,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.diagnose_rl_double",
+        "--help"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 78,
+      "stderr_sha256": "78313b2d1ff0b19d83d4ac00a344bf3dc6cffe546670ded3704b669c0af77dad",
+      "parser_diagnostic": []
+    },
+    {
+      "launcher": "task2/scripts/diagnose_rl_double.py",
+      "mode": "module",
+      "case": "short-help",
+      "returncode": 0,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.diagnose_rl_double",
+        "-h"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 78,
+      "stderr_sha256": "4e03f5334912d570fed16bec496cb6c7411b3060c48ac2fecd94c2942ac80ac8",
+      "parser_diagnostic": []
+    },
+    {
+      "launcher": "task2/scripts/diagnose_rl_double.py",
+      "mode": "module",
+      "case": "existing-directory",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.diagnose_rl_double",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/fixture_existing_directory"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 77,
+      "stderr_sha256": "145911fdf3c25cb43301e88cd1dd8a7d1bd5edc487590c0a82d82cb43e406fc5",
+      "parser_diagnostic": [
+        "usage: diagnose_rl_double.py [-h] [--output OUTPUT]",
+        "diagnose_rl_double.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/diagnose_rl_double.py",
+      "mode": "module",
+      "case": "existing-file",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.diagnose_rl_double",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/fixture_existing_file"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 77,
+      "stderr_sha256": "f7ae127a4d42360fc39cb4cc109e7ed3fc897af1503e8317f823c587a49c8271",
+      "parser_diagnostic": [
+        "usage: diagnose_rl_double.py [-h] [--output OUTPUT]",
+        "diagnose_rl_double.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/diagnose_rl_double.py",
+      "mode": "module",
+      "case": "dangling-symlink",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.diagnose_rl_double",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/fixture_dangling_link"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 77,
+      "stderr_sha256": "4d3a824ab1c050c54e4630c8efcd9315a75a4928d75317f46909dddce7668ad9",
+      "parser_diagnostic": [
+        "usage: diagnose_rl_double.py [-h] [--output OUTPUT]",
+        "diagnose_rl_double.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/diagnose_rl_double.py",
+      "mode": "module",
+      "case": "unknown-option",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.diagnose_rl_double",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/unused_fresh",
+        "--not-a-real-option"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 77,
+      "stderr_sha256": "edf3a3abd8b346a35df4f6d5d2e5c3319f8b098442896267347e5d110e8a8eff",
+      "parser_diagnostic": [
+        "usage: diagnose_rl_double.py [-h] [--output OUTPUT]",
+        "diagnose_rl_double.py: error: unrecognized arguments: --not-a-real-option"
+      ]
+    },
+    {
+      "launcher": "task2/scripts/diagnose_rl_double.py",
+      "mode": "module",
+      "case": "existing-default-or-run-alias",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.diagnose_rl_double"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 77,
+      "stderr_sha256": "3682fa4403140d5dd42985026c3431df2d7d765adc2a56b50e8f2a8df7b22520",
+      "parser_diagnostic": [
+        "usage: diagnose_rl_double.py [-h] [--output OUTPUT]",
+        "diagnose_rl_double.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_rl_final.py",
+      "mode": "direct",
+      "case": "help",
+      "returncode": 0,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/run_rl_final.py",
+        "--help"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 73,
+      "stderr_sha256": "a6fb63698a7c2abae236f30dbe475ac32e7e560a3ab684b467e68682ab828da7",
+      "parser_diagnostic": []
+    },
+    {
+      "launcher": "task2/scripts/run_rl_final.py",
+      "mode": "direct",
+      "case": "short-help",
+      "returncode": 0,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/run_rl_final.py",
+        "-h"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 73,
+      "stderr_sha256": "49362802a596f06c986a52f399850e26241a61d00db6d4591a9a7baaf4daa4e0",
+      "parser_diagnostic": []
+    },
+    {
+      "launcher": "task2/scripts/run_rl_final.py",
+      "mode": "direct",
+      "case": "existing-directory",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/run_rl_final.py",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/fixture_existing_directory"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 72,
+      "stderr_sha256": "59b95dd228c846355f99c2d945d1178fd43c92fee153a80516ac44d1120067ef",
+      "parser_diagnostic": [
+        "usage: run_rl_final.py [-h] [--output OUTPUT]",
+        "run_rl_final.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_rl_final.py",
+      "mode": "direct",
+      "case": "existing-file",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/run_rl_final.py",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/fixture_existing_file"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 72,
+      "stderr_sha256": "106fcd3cb48eac014a6d36abfa717436c67227a77d67b4aa4a455868216f43bb",
+      "parser_diagnostic": [
+        "usage: run_rl_final.py [-h] [--output OUTPUT]",
+        "run_rl_final.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_rl_final.py",
+      "mode": "direct",
+      "case": "dangling-symlink",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/run_rl_final.py",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/fixture_dangling_link"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 72,
+      "stderr_sha256": "7d1c9ffdb0d8efcc51688652d8235d2349bb46e9a64522aea5cf1ae71a9bf498",
+      "parser_diagnostic": [
+        "usage: run_rl_final.py [-h] [--output OUTPUT]",
+        "run_rl_final.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_rl_final.py",
+      "mode": "direct",
+      "case": "unknown-option",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/run_rl_final.py",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/unused_fresh",
+        "--not-a-real-option"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 72,
+      "stderr_sha256": "176b6bbbfc646c94dd51c8d1dc4ae715d76efddafc91773322f42e83fe5892ec",
+      "parser_diagnostic": [
+        "usage: run_rl_final.py [-h] [--output OUTPUT]",
+        "run_rl_final.py: error: unrecognized arguments: --not-a-real-option"
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_rl_final.py",
+      "mode": "direct",
+      "case": "existing-default-or-run-alias",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/run_rl_final.py"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 72,
+      "stderr_sha256": "4bf218296537b4fcb9f885ccf6e44e180c6cfd78bb48f7a054741a81918f4855",
+      "parser_diagnostic": [
+        "usage: run_rl_final.py [-h] [--output OUTPUT]",
+        "run_rl_final.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_rl_final.py",
+      "mode": "module",
+      "case": "help",
+      "returncode": 0,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.run_rl_final",
+        "--help"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 82,
+      "stderr_sha256": "825ecaf2f0cb1793f8dcf6f0c825117e630fd092bd0567d98f52be735d067417",
+      "parser_diagnostic": []
+    },
+    {
+      "launcher": "task2/scripts/run_rl_final.py",
+      "mode": "module",
+      "case": "short-help",
+      "returncode": 0,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.run_rl_final",
+        "-h"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 82,
+      "stderr_sha256": "ae6456678f06d5015e0dbc9888189f2cd6543f8e48f6183530a26da17fa1743e",
+      "parser_diagnostic": []
+    },
+    {
+      "launcher": "task2/scripts/run_rl_final.py",
+      "mode": "module",
+      "case": "existing-directory",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.run_rl_final",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/fixture_existing_directory"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 81,
+      "stderr_sha256": "f1b34373871f2cf2babc401c2971942ea847dff0d8623b752f875c2a6b77a523",
+      "parser_diagnostic": [
+        "usage: run_rl_final.py [-h] [--output OUTPUT]",
+        "run_rl_final.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_rl_final.py",
+      "mode": "module",
+      "case": "existing-file",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.run_rl_final",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/fixture_existing_file"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 81,
+      "stderr_sha256": "4572d7ef4ff7a6e914f84b65144f6d8c942357e0fd1d29ba5a2b74c68900b8f0",
+      "parser_diagnostic": [
+        "usage: run_rl_final.py [-h] [--output OUTPUT]",
+        "run_rl_final.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_rl_final.py",
+      "mode": "module",
+      "case": "dangling-symlink",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.run_rl_final",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/fixture_dangling_link"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 81,
+      "stderr_sha256": "48c8defc03232a121048753e84add76010e583bb3fae3ac01503356735ce08df",
+      "parser_diagnostic": [
+        "usage: run_rl_final.py [-h] [--output OUTPUT]",
+        "run_rl_final.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_rl_final.py",
+      "mode": "module",
+      "case": "unknown-option",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.run_rl_final",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/unused_fresh",
+        "--not-a-real-option"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 81,
+      "stderr_sha256": "e74027b3f2b4ea5e3f14ce30b5077318c4b023f89613e10e667dd1ae500be39c",
+      "parser_diagnostic": [
+        "usage: run_rl_final.py [-h] [--output OUTPUT]",
+        "run_rl_final.py: error: unrecognized arguments: --not-a-real-option"
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_rl_final.py",
+      "mode": "module",
+      "case": "existing-default-or-run-alias",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.run_rl_final"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 81,
+      "stderr_sha256": "9fd6ad8b16c56393bcef2171abb74a11c2c9c225881c6dbb45511a2d54e9e640",
+      "parser_diagnostic": [
+        "usage: run_rl_final.py [-h] [--output OUTPUT]",
+        "run_rl_final.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_basic_multiobjective.py",
+      "mode": "direct",
+      "case": "help",
+      "returncode": 0,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/run_basic_multiobjective.py",
+        "--help"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 76,
+      "stderr_sha256": "12392a6dd54497cbc1b13ec828e5bae77b234cead65a243c9b0a3145c9966e94",
+      "parser_diagnostic": []
+    },
+    {
+      "launcher": "task2/scripts/run_basic_multiobjective.py",
+      "mode": "direct",
+      "case": "short-help",
+      "returncode": 0,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/run_basic_multiobjective.py",
+        "-h"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 76,
+      "stderr_sha256": "18314ed26a254449941f7c987d0600bb8d42fed4618bc6ed9620d2e576123f5c",
+      "parser_diagnostic": []
+    },
+    {
+      "launcher": "task2/scripts/run_basic_multiobjective.py",
+      "mode": "direct",
+      "case": "existing-directory",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/run_basic_multiobjective.py",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/fixture_existing_directory"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 75,
+      "stderr_sha256": "a98e25a19b857ad6ac26860ab12ccaac6e574bdd39fef05427382d16ab9b3c09",
+      "parser_diagnostic": [
+        "usage: run_basic_multiobjective.py [-h] [--output OUTPUT]",
+        "run_basic_multiobjective.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_basic_multiobjective.py",
+      "mode": "direct",
+      "case": "existing-file",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/run_basic_multiobjective.py",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/fixture_existing_file"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 75,
+      "stderr_sha256": "0b518ea3252aa05b8e4dae59ebacc59ddb2cb2391a4dbe99c1679a59354a1e0a",
+      "parser_diagnostic": [
+        "usage: run_basic_multiobjective.py [-h] [--output OUTPUT]",
+        "run_basic_multiobjective.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_basic_multiobjective.py",
+      "mode": "direct",
+      "case": "dangling-symlink",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/run_basic_multiobjective.py",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/fixture_dangling_link"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 75,
+      "stderr_sha256": "d94c481b6dae4c89ffef95f31d29bd606ee0977494a5f692d15853eba3aff941",
+      "parser_diagnostic": [
+        "usage: run_basic_multiobjective.py [-h] [--output OUTPUT]",
+        "run_basic_multiobjective.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_basic_multiobjective.py",
+      "mode": "direct",
+      "case": "unknown-option",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/run_basic_multiobjective.py",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/unused_fresh",
+        "--not-a-real-option"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 75,
+      "stderr_sha256": "39510e786f51b82343f7c1333b7ca887b0b8e1582e29d41ef25e5db1fffe21af",
+      "parser_diagnostic": [
+        "usage: run_basic_multiobjective.py [-h] [--output OUTPUT]",
+        "run_basic_multiobjective.py: error: unrecognized arguments: --not-a-real-option"
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_basic_multiobjective.py",
+      "mode": "direct",
+      "case": "existing-default-or-run-alias",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/task2/scripts/run_basic_multiobjective.py"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 75,
+      "stderr_sha256": "1874097be11f9b39cf6a270955d0c661668a82085edd45c0cbaa1de22c0506cb",
+      "parser_diagnostic": [
+        "usage: run_basic_multiobjective.py [-h] [--output OUTPUT]",
+        "run_basic_multiobjective.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_basic_multiobjective.py",
+      "mode": "module",
+      "case": "help",
+      "returncode": 0,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.run_basic_multiobjective",
+        "--help"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 85,
+      "stderr_sha256": "77d91e73dfc2001047f2d3b5866e99a3c3be42e0870345f333d8f0b51dfc64be",
+      "parser_diagnostic": []
+    },
+    {
+      "launcher": "task2/scripts/run_basic_multiobjective.py",
+      "mode": "module",
+      "case": "short-help",
+      "returncode": 0,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.run_basic_multiobjective",
+        "-h"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 85,
+      "stderr_sha256": "a0313e1c103b4ef967f25db47ceaafdadd53129d9764b67b551a6d7a64293087",
+      "parser_diagnostic": []
+    },
+    {
+      "launcher": "task2/scripts/run_basic_multiobjective.py",
+      "mode": "module",
+      "case": "existing-directory",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.run_basic_multiobjective",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/fixture_existing_directory"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 84,
+      "stderr_sha256": "81fad462f1518198b6ad7940b1cfdf7841c6ec2441b555a672282bc8bde46033",
+      "parser_diagnostic": [
+        "usage: run_basic_multiobjective.py [-h] [--output OUTPUT]",
+        "run_basic_multiobjective.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_basic_multiobjective.py",
+      "mode": "module",
+      "case": "existing-file",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.run_basic_multiobjective",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/fixture_existing_file"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 84,
+      "stderr_sha256": "5812ba56f647233a9822a59a2001d51cdef4245dcef21c8782c46d83d30d7b1b",
+      "parser_diagnostic": [
+        "usage: run_basic_multiobjective.py [-h] [--output OUTPUT]",
+        "run_basic_multiobjective.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_basic_multiobjective.py",
+      "mode": "module",
+      "case": "dangling-symlink",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.run_basic_multiobjective",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/fixture_dangling_link"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 84,
+      "stderr_sha256": "f8ffdc8cb628f85115db9b3f6764db04257bc01f55fcd7370946a5485edf71b8",
+      "parser_diagnostic": [
+        "usage: run_basic_multiobjective.py [-h] [--output OUTPUT]",
+        "run_basic_multiobjective.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_basic_multiobjective.py",
+      "mode": "module",
+      "case": "unknown-option",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.run_basic_multiobjective",
+        "--output",
+        "/tmp/dispatch-cli-independent-ytrdaeu3/clone/unused_fresh",
+        "--not-a-real-option"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 84,
+      "stderr_sha256": "01371ff7166947eff7fe4aca46f9a5916fc8dabf707f945f99233bf9c77d5e28",
+      "parser_diagnostic": [
+        "usage: run_basic_multiobjective.py [-h] [--output OUTPUT]",
+        "run_basic_multiobjective.py: error: unrecognized arguments: --not-a-real-option"
+      ]
+    },
+    {
+      "launcher": "task2/scripts/run_basic_multiobjective.py",
+      "mode": "module",
+      "case": "existing-default-or-run-alias",
+      "returncode": 2,
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-X",
+        "importtime",
+        "-m",
+        "task2.scripts.run_basic_multiobjective"
+      ],
+      "source_only_fixture_unchanged": true,
+      "experiment_imports": [],
+      "imported_module_count": 84,
+      "stderr_sha256": "138bef8edafc43b0a4d1d53b7dc56e83f776699d4001b4797e8998d031e18180",
+      "parser_diagnostic": [
+        "usage: run_basic_multiobjective.py [-h] [--output OUTPUT]",
+        "run_basic_multiobjective.py: error: Output already exists; preserve it and choose a fresh --output directory."
+      ]
+    }
+  ],
+  "load_model_ast_equal_to_original": true,
+  "smoke": {
+    "models": [
+      {
+        "model": "q_f60",
+        "double": false,
+        "arrays_exact": [
+          "V",
+          "NV",
+          "Q",
+          "N"
+        ]
+      },
+      {
+        "model": "double_beta1",
+        "double": true,
+        "arrays_exact": [
+          "V",
+          "NV",
+          "A",
+          "B",
+          "NA",
+          "NB"
+        ]
+      }
+    ],
+    "public_plot_modules": [
+      "build_figures",
+      "build_evolution_figures",
+      "build_rl_figures"
+    ],
+    "figures_created": 0,
+    "experiment_calls": 0,
+    "source_only_fixture_unchanged": true,
+    "matplotlib_cache_scope": "Temporary cache outside copied source/model tree; removed with fixture"
+  },
+  "mathematical_equivalence_scope": "Independently checked load_model AST only. Broader launcher-body AST equivalence belongs to the explicitly attributed EB/EA author receipts, not a new full mathematical audit.",
+  "limits": "No training/evaluation, new statistical samples, raw-data generation, model overwrite, figure rendering, or report rebuild. Temporary copies only; old run source identities and previous numerical/PDF reviews remain unchanged."
+}

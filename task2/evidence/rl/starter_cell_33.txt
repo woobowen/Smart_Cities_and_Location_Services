@@ -1,0 +1,50 @@
+def region_long_term_value(V, gamma=GAMMA):
+    """
+    TODO 2：由状态价值 V（形状 (T+1, N_ZONES)，V[T]=0）计算区域到区域的长期价值表 LT，形状 (T, N_ZONES, N_ZONES)：
+        LT[t, i, k] = gamma^DELTA[i, k] * V[min(t + DELTA[i, k], T), k]  -  gamma * V[t + 1, i]
+    提示：可以用 for t in range(T) 循环，每个 t 内用 numpy 向量化：
+        t2 = np.minimum(t + DELTA, T)                  # (Z, Z)
+        V[t2, np.arange(N_ZONES)[None, :]]             # 取出 V[t2[i,k], k]，形状 (Z, Z)
+        V[t + 1][:, None]                              # 每行（起点 i）的等待价值，广播到 (Z, Z)
+    """
+    # 请在此处完成代码
+    raise NotImplementedError("请完成 TODO")
+
+
+def make_q_km(LT, beta=0.5):
+    """返回一个派单策略函数（闭包），供 run_episode 调用"""
+
+    def q_km(ctx):
+        """
+        TODO 3：Q-KM 派单。ctx 中可用的字段：
+            ctx["t"]          当前时间片
+            ctx["fare"]       (m,)   每个订单的车费（即时奖励）
+            ctx["drv_zone"]   (n,)   每个空闲司机所在区域
+            ctx["dest_zone"]  (m,)   每个订单目的地区域
+            ctx["feas"]       (n, m) 是否满足接驾半径
+        步骤：
+          1) 查表得到长期价值矩阵 L (n, m)：L[d, j] = LT[t, drv_zone[d], dest_zone[j]]
+             （提示：花式索引 LT[t][drv_zone[:, None], dest_zone[None, :]]）
+          2) 边权 W = fare[None, :] + beta * L；不可行的边置 0（等价于不连边）
+          3) 调用 km_max(W) 求最大权匹配并返回
+        """
+        # 请在此处完成代码
+        raise NotImplementedError("请完成 TODO")
+
+    return q_km
+
+
+# 单元测试
+_V = np.zeros((T + 1, N_ZONES))
+_V[:T, 0], _V[:T, 1] = 5.0, 50.0                          # V[T] 保持 0（一天结束）
+_LT = region_long_term_value(_V)
+assert _LT.shape == (T, N_ZONES, N_ZONES)
+assert abs(_LT[10, 0, 1] - (GAMMA ** DELTA[0, 1] * 50 - GAMMA * 5)) < 1e-9
+assert abs(_LT[T - 1, 1, 0] - (GAMMA ** DELTA[1, 0] * 0 - GAMMA * 0)) < 1e-9, "越过一天结束时应取 V[T] = 0"
+assert abs(_LT[10, 1, 2] - (0 - GAMMA * 50)) < 1e-9
+_ctx = dict(t=10, fare=np.array([10.0, 10.0]), drv_zone=np.array([0, 1]),
+            dest_zone=np.array([1, 2]), feas=np.array([[True, True], [True, True]]))
+_pairs = sorted((int(a), int(b)) for a, b in make_q_km(_LT)(_ctx))
+# 司机 1 在高价值区域 1：接去区域 2 的单 w=10-γ·50<0 不派；区域 0 的司机接去区域 1 的单收益最大
+assert _pairs == [(0, 0)], f"期望只派 (司机0, 订单0)，实际 {_pairs}"
+print("TODO 2 / TODO 3 通过测试 ✓")

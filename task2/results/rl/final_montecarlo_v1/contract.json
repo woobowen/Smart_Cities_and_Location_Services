@@ -1,0 +1,37 @@
+{
+  "trigger": "Original frozen5day confirmation gives selectedKMmove3 gross difference640.81 with descriptive pairedt95[-64.07,1345.68]; clarify simulation MonteCarlo variability without altering that experiment or method",
+  "fixed_seeds": [
+    60000,
+    60001,
+    60002,
+    60003,
+    60004,
+    60005,
+    60006,
+    60007,
+    60008,
+    60009,
+    60010,
+    60011,
+    60012,
+    60013,
+    60014,
+    60015,
+    60016,
+    60017,
+    60018,
+    60019
+  ],
+  "models": "same frozen full70 q_f60, no retraining or checkpoint choice",
+  "model_sha256": "6920e9b9a861bbe09f33fd4efbd8d0b92893ddf8667f92de61f7222f19140451",
+  "policies": [
+    "km",
+    "qkm",
+    "km_move3",
+    "qkm_move5"
+  ],
+  "scope": "20new independently seeded proxy simulation resamplings of same heldout datepool, not20new real dates or population evidence",
+  "stop": "one20simulation batch only; report every seed; no post-test tuning or winner switch",
+  "source_sha256": "b2d7c820909a802dcf835d03b53b9cb66a5434330ea585fffbbbdea234962cea",
+  "selection_contract_sha256": "95945b3b1c096bb6223d0599757d88050a8ee713334f9569718a51583eb61e9b"
+}

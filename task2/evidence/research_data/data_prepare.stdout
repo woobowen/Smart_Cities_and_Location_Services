@@ -1,0 +1,157 @@
+{
+  "NYC": {
+    "city": "NYC",
+    "path": "task2/teacher_materials/advanced/foursquare/dataset_TSMC2014_NYC.csv",
+    "sha256": "60a235386a5324f55c9f24fb1b06e55a38a0d53c0242435d754b38c0cc0b514a",
+    "rows": 227428,
+    "columns": [
+      "userId",
+      "venueId",
+      "venueCategoryId",
+      "venueCategory",
+      "latitude",
+      "longitude",
+      "timezoneOffset",
+      "utcTimestamp"
+    ],
+    "missing_by_column": {
+      "userId": 0,
+      "venueId": 0,
+      "venueCategoryId": 0,
+      "venueCategory": 0,
+      "latitude": 0,
+      "longitude": 0,
+      "timezoneOffset": 0,
+      "utcTimestamp": 0
+    },
+    "exact_duplicate_rows": 250,
+    "users": 1083,
+    "venues": 38333,
+    "latitude_range": [
+      40.55085247,
+      40.98833172
+    ],
+    "longitude_range": [
+      -74.27476645,
+      -73.6838252
+    ],
+    "offset_minutes": [
+      -420,
+      -360,
+      -300,
+      -240,
+      -180,
+      120,
+      420,
+      480,
+      540,
+      660
+    ],
+    "utc_start": "2012-04-03T18:00:09+00:00",
+    "utc_end": "2013-02-16T02:35:36+00:00",
+    "local_start": "2012-04-03T14:00:09",
+    "local_end": "2013-02-15T21:35:36",
+    "source_crs": "UNVERIFIED",
+    "time_semantics": "per-record UTC plus timezoneOffset in minutes; local civil clock",
+    "identity": "teacher-provided check-ins, not ride-hailing orders",
+    "in_rectangle_checkins": 185654,
+    "proxy_trips": 25550,
+    "model": "teacher NYC rectangle, x=(lon+74.05)*111*cos(40.74deg), y=(lat-40.60)*111; Manhattan km",
+    "proxy_criteria": {
+      "same_local_day": true,
+      "gap_min_inclusive": [
+        10,
+        180
+      ],
+      "Manhattan_km_min": 1.0,
+      "pairing": "adjacent after NYC rectangle filtering, matching teacher starter"
+    },
+    "split": {
+      "trips_train_inner": {
+        "rows": 19617,
+        "dates": 139,
+        "start": "2012-04-03",
+        "end": "2012-10-18"
+      },
+      "trips_validation": {
+        "rows": 1972,
+        "dates": 35,
+        "start": "2012-10-19",
+        "end": "2012-11-26"
+      },
+      "trips_train": {
+        "rows": 21589,
+        "dates": 174,
+        "start": "2012-04-03",
+        "end": "2012-11-26"
+      },
+      "trips_test": {
+        "rows": 3961,
+        "dates": 75,
+        "start": "2012-11-27",
+        "end": "2013-02-15"
+      }
+    },
+    "validation_start": "2012-10-19",
+    "test_start": "2012-11-27",
+    "initialization": "development drivers use checkins_train_inner only; final drivers use checkins_train only",
+    "selection_rule": "test dates excluded from candidate selection and hyperparameter tuning",
+    "dataset_page_date_discrepancy": "author webpage says from 12 April 2012; teacher CSV includes 3 April 2012, retained as actually supplied"
+  },
+  "TKY": {
+    "city": "TKY",
+    "path": "task2/teacher_materials/advanced/foursquare/dataset_TSMC2014_TKY.csv",
+    "sha256": "849365e52e970c85819b3cc1559bb00bedbe2e37f8e274d77241d62e89ac85f2",
+    "rows": 573703,
+    "columns": [
+      "userId",
+      "venueId",
+      "venueCategoryId",
+      "venueCategory",
+      "latitude",
+      "longitude",
+      "timezoneOffset",
+      "utcTimestamp"
+    ],
+    "missing_by_column": {
+      "userId": 0,
+      "venueId": 0,
+      "venueCategoryId": 0,
+      "venueCategory": 0,
+      "latitude": 0,
+      "longitude": 0,
+      "timezoneOffset": 0,
+      "utcTimestamp": 0
+    },
+    "exact_duplicate_rows": 577,
+    "users": 2293,
+    "venues": 61858,
+    "latitude_range": [
+      35.51018469,
+      35.86715042
+    ],
+    "longitude_range": [
+      139.4708776,
+      139.9125932
+    ],
+    "offset_minutes": [
+      -480,
+      -420,
+      -360,
+      -300,
+      -240,
+      60,
+      420,
+      480,
+      540,
+      600
+    ],
+    "utc_start": "2012-04-03T18:17:18+00:00",
+    "utc_end": "2013-02-16T02:35:29+00:00",
+    "local_start": "2012-04-04T03:17:18",
+    "local_end": "2013-02-16T11:35:29",
+    "source_crs": "UNVERIFIED",
+    "time_semantics": "per-record UTC plus timezoneOffset in minutes; local civil clock",
+    "identity": "teacher-provided check-ins, not ride-hailing orders"
+  }
+}

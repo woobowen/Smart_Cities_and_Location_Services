@@ -1,0 +1,16 @@
+{
+  "state": "FROZEN_BEFORE_HELDOUT_TEST",
+  "scope": "teacher-local-clock proxy / conditional km teaching model; no claim of real taxi data or economic optimum",
+  "selection_data": "first70percent dates inner-train + held-out inner-validation; no heldouttest metrics accessed",
+  "evidence": "movement_trainseed_confirmation_v1 five training seeds x five common validation simulations; beta_validation_v1; double_v2_rngfix; fusion_validation_v1",
+  "teaching_reference": {"gamma":0.92,"grid":8,"patience":2,"beta":0.5,"episodes":300,"orders_per_simulated_day":1500},
+  "decision": "KM immediate-fare edge weighting + learnedV-guided neighbor movement with lambda3 penalty is selected gross-revenue candidate; preserve QKM+same movement as parent tradeoff and lambda5 as low-empty-distance sensitivity",
+  "basis": {"validation_mean_qkm":16807.816333777246,"validation_mean_km_move3":18309.83983051576,"validation_mean_qkm_move3":18067.71085481972,"training_seeds":[2024,2025,2026,2027,2028],"simulation_seeds":[50000,50001,50002,50003,50004]},
+  "guard": "mean response >= same teacher QKM-.01; gross revenue and empty distance reported separately; hypothetical1currency/km diagnostic is not the primary objective",
+  "rollback": "LT edge weighting removed in selected movement candidate because it reduced gross revenue in all five training seeds; learnedV still used for movement",
+  "not_adopted": ["Double beta1 increases revenue relative to beta1Q but lowers response and does not beat beta.5 reference; retain as teacher-required evaluated mechanism", "NSGA knee/constraint reduce pickup but lose revenue/response; retain Pareto tradeoff, do not claim dominance", "Patience3 changes customer waiting contract and stays sensitivity; gamma/grid changes not sufficiently supported for replacing teacher reference", "Naive zero-penaltyV movement incurs excessive emptydistance; retain negative result"],
+  "final_training": "retrain on all first70percent dates, train-only driver hotspots, seed2024,300 actual simulated episodes; validation monitor is in-training after refit and cannot select checkpoint",
+  "fixed_final_test": {"source":"last30percent dates","simulated_day_seeds":[50000,50001,50002,50003,50004],"fleet_sizes":[40,60,100],"no_retuning_after_test":true},
+  "followup_models": "full70 Q beta1 and Double beta1 trainseed2024; paired5 final simulated days; development had5 independent training seeds",
+  "fusion": {"per_dispatch_population":40,"generations":30,"seed":2024,"choices":["knee","pickup<=.6samecontextQKMpickup"],"final_test_identity":"descriptive confirmation of frozen tradeoff, not a new selection"}
+}

@@ -1,0 +1,43 @@
+GAMMA = 0.92        # 每个时间片（10 分钟）的折扣因子
+ALPHA_MIN = 0.05
+
+
+class QTable:
+    """平台共享的 Q 表（与车辆数无关）"""
+
+    def __init__(self):
+        self.Q = np.zeros((T, N_ZONES, N_ZONES + 1))    # Q[t, i, a]，a = 目的地区域 0..63 或 WAIT=64
+        self.N = np.zeros((T, N_ZONES, N_ZONES + 1), int)
+        self.V = np.zeros((T + 1, N_ZONES))             # V[t, i]；V[T] ≡ 0（一天结束）
+        self.NV = np.zeros((T + 1, N_ZONES), int)
+
+
+def q_update(qt, t, z, a, r, t2, z2, avail, gamma=GAMMA):
+    """
+    TODO 1：对一条经验做一次 Q-learning 更新（原地修改 qt）。
+        经验含义：时间片 t、区域 z 的司机执行动作 a（a = 目的地区域 或 WAIT），获得奖励 r，
+                  在时间片 t2 到达区域 z2；avail 是 s'=(t2, z2) 处可选的目的地区域数组（可能为空）。
+      1) 若 t2 >= T：m = 0（终止状态）
+         否则：  m = max(qt.Q[t2, z2, 可选动作])，可选动作 = avail ∪ {WAIT}（提示：np.append(avail, WAIT)）
+                 并用样本 m 更新 V：qt.NV[t2, z2] += 1；qt.V[t2, z2] += (m - qt.V[t2, z2]) / qt.NV[t2, z2]
+      2) TD 目标 y = r + gamma ** (t2 - t) * m
+      3) qt.N[t, z, a] += 1，学习率 alpha = max(1 / qt.N[t, z, a], ALPHA_MIN)
+      4) qt.Q[t, z, a] += alpha * (y - qt.Q[t, z, a])
+    返回 TD 误差 (y - 更新前的 Q[t, z, a])，用于监控收敛。
+    """
+    # 请在此处完成代码
+    raise NotImplementedError("请完成 TODO")
+
+
+# 单元测试：手算验证
+_qt = QTable()
+_qt.Q[5, 3, 7], _qt.Q[5, 3, 9], _qt.Q[5, 3, WAIT] = 30.0, 99.0, 10.0
+td = q_update(_qt, 2, 0, 3, 20.0, 5, 3, np.array([7]))
+assert abs(td - (20 + GAMMA ** 3 * 30)) < 1e-9, "max 只能在 avail ∪ {WAIT} 上取：应为 30，而不是 99"
+assert _qt.N[2, 0, 3] == 1 and abs(_qt.Q[2, 0, 3] - (20 + GAMMA ** 3 * 30)) < 1e-9, "首次访问 alpha=1"
+assert abs(_qt.V[5, 3] - 30) < 1e-9, "V(s') 应更新为样本 m 的平均"
+q_update(_qt, 2, 0, 3, 0.0, 5, 3, np.array([], int))      # 无订单可接：m = Q[WAIT] = 10
+assert abs(_qt.Q[2, 0, 3] - (20 + GAMMA ** 3 * 30 + GAMMA ** 3 * 10) / 2) < 1e-9, "第二次 alpha=1/2"
+assert abs(_qt.V[5, 3] - 20) < 1e-9
+assert abs(q_update(_qt, T - 1, 0, WAIT, 7.0, T + 2, 1, np.array([5])) - 7.0) < 1e-9, "终止状态只有 r"
+print("TODO 1 通过测试 ✓")

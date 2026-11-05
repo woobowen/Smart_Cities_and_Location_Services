@@ -1,0 +1,1743 @@
+{
+  "manifest_sha256": "1b958b5d5e2c9829635fcaac153e7e86d266ad12dc8e9179ee52c18e74cd6df8",
+  "csv_unclassified": [
+    {
+      "path": "task2/results/rl/offset_robustness_v1/filtered_validation.csv",
+      "columns": [
+        "date",
+        "minute",
+        "ox",
+        "oy",
+        "dx",
+        "dy",
+        "gap_min",
+        "origin_source_row",
+        "destination_source_row",
+        "trip_km",
+        "fare"
+      ],
+      "sensitive_columns": [
+        "destination_source_row",
+        "dx",
+        "dy",
+        "origin_source_row",
+        "ox",
+        "oy"
+      ],
+      "sha256": "5217517fc740e59d82791af6f88632b93d89482157fa954593e2832e8f502998"
+    },
+    {
+      "path": "task2/results/rl/offset_robustness_v1/filtered_inner.csv",
+      "columns": [
+        "date",
+        "minute",
+        "ox",
+        "oy",
+        "dx",
+        "dy",
+        "gap_min",
+        "origin_source_row",
+        "destination_source_row",
+        "trip_km",
+        "fare"
+      ],
+      "sensitive_columns": [
+        "destination_source_row",
+        "dx",
+        "dy",
+        "origin_source_row",
+        "ox",
+        "oy"
+      ],
+      "sha256": "982fe8389511fc19701699e467e542db0a3f95fdc9563ceb5dedac9e0a90ce00"
+    }
+  ],
+  "npz_unclassified": [
+    {
+      "path": "task2/results/rl/fusion_validation_v1/static_seed3.npz",
+      "arrays": {
+        "F": [
+          25,
+          2
+        ],
+        "genes": [
+          25,
+          48
+        ]
+      },
+      "sha256": "63a35d5a83a29ea73d0594ff781a03ed68d1a89ae1145aaa80c38b12f1ec3f0d"
+    },
+    {
+      "path": "task2/results/rl/fusion_validation_v1/static_seed2.npz",
+      "arrays": {
+        "F": [
+          25,
+          2
+        ],
+        "genes": [
+          25,
+          48
+        ]
+      },
+      "sha256": "49c4a6474e3d6bd374e01d87fb6f06a4162765e4f18eb40c87ea7db63d9ac46d"
+    },
+    {
+      "path": "task2/results/rl/fusion_validation_v1/static_seed1.npz",
+      "arrays": {
+        "F": [
+          25,
+          2
+        ],
+        "genes": [
+          25,
+          48
+        ]
+      },
+      "sha256": "5aecbfe2418f04abd8bd2cb17c1f89755afce0640c420e0cb9cc19accc204c09"
+    },
+    {
+      "path": "task2/results/rl/fusion_validation_v1/static_seed4.npz",
+      "arrays": {
+        "F": [
+          25,
+          2
+        ],
+        "genes": [
+          25,
+          48
+        ]
+      },
+      "sha256": "c83df214b77edffdbd87780bcc8f2a6e0afe009df3ea61b0775c46b277d7c9f1"
+    },
+    {
+      "path": "task2/results/rl/fusion_validation_v1/static_seed0.npz",
+      "arrays": {
+        "F": [
+          25,
+          2
+        ],
+        "genes": [
+          25,
+          48
+        ]
+      },
+      "sha256": "2adc1a33efd89550d3585ccb7fadf3981bdb80663cee3f25368c159137293485"
+    },
+    {
+      "path": "task2/results/rl/fusion_validation_v1/static_input.npz",
+      "arrays": {
+        "weights": [
+          50,
+          48
+        ],
+        "pickup": [
+          50,
+          48
+        ],
+        "feas": [
+          50,
+          48
+        ],
+        "t": [],
+        "fare": [
+          48
+        ],
+        "drv_zone": [
+          50
+        ],
+        "dest_zone": [
+          48
+        ]
+      },
+      "sha256": "1df59b8689ded42b337bb93e22fb0bf599403fc4144b698682bcb2ea711c44e2"
+    },
+    {
+      "path": "task2/results/rl/mechanism_validation_v1/value_samples_km_50001.npz",
+      "arrays": {
+        "samples": [
+          4951,
+          4
+        ]
+      },
+      "sha256": "a0fc79c2b4266e90ec39eb25bca854350e7e53148fcc66d59446db8a91bc431b"
+    },
+    {
+      "path": "task2/results/rl/mechanism_validation_v1/value_samples_greedy_50003.npz",
+      "arrays": {
+        "samples": [
+          5203,
+          4
+        ]
+      },
+      "sha256": "0280ea03f5b68ef2e254ae9b5fc615d08ab65a682347816ae6dfb1b4c331ee07"
+    },
+    {
+      "path": "task2/results/rl/mechanism_validation_v1/value_samples_km_50002.npz",
+      "arrays": {
+        "samples": [
+          5039,
+          4
+        ]
+      },
+      "sha256": "b1a175382e8e2059cc526e5d0ef88740e8e127a9802414d494f2c9f8e4a9e37b"
+    },
+    {
+      "path": "task2/results/rl/mechanism_validation_v1/value_samples_qkm_50001.npz",
+      "arrays": {
+        "samples": [
+          4955,
+          4
+        ]
+      },
+      "sha256": "3aaa6d0f25cf03c2170271f94801b0e0378a6f5c285d55060f845c4596b2f23c"
+    },
+    {
+      "path": "task2/results/rl/mechanism_validation_v1/value_samples_qkm_50004.npz",
+      "arrays": {
+        "samples": [
+          5021,
+          4
+        ]
+      },
+      "sha256": "4bfd924cdc0c3634fdc71cabb25011cf443c364dc32e39d2eb5861a2707324f9"
+    },
+    {
+      "path": "task2/results/rl/mechanism_validation_v1/value_samples_greedy_50000.npz",
+      "arrays": {
+        "samples": [
+          5270,
+          4
+        ]
+      },
+      "sha256": "3c76c926193939506f2d9a713cb676adad5021172058573b6dbdac90b23c7e8b"
+    },
+    {
+      "path": "task2/results/rl/mechanism_validation_v1/value_samples_qkm_50003.npz",
+      "arrays": {
+        "samples": [
+          5076,
+          4
+        ]
+      },
+      "sha256": "f158a405260ab45aa859a477ad6b7d03a92df449f226c4b8c4dd6d95aac628c9"
+    },
+    {
+      "path": "task2/results/rl/mechanism_validation_v1/value_samples_greedy_50004.npz",
+      "arrays": {
+        "samples": [
+          5173,
+          4
+        ]
+      },
+      "sha256": "b8c79b8a92c6adbaf15634c18e5b2b5d9fa3853613f84c2b059fc314ce3a611b"
+    },
+    {
+      "path": "task2/results/rl/mechanism_validation_v1/value_samples_greedy_50002.npz",
+      "arrays": {
+        "samples": [
+          5169,
+          4
+        ]
+      },
+      "sha256": "a8359414df9f4a84c8e0fc4d4b8859007a453ff813d02469adef97a00281d774"
+    },
+    {
+      "path": "task2/results/rl/mechanism_validation_v1/value_samples_km_50003.npz",
+      "arrays": {
+        "samples": [
+          5134,
+          4
+        ]
+      },
+      "sha256": "b0466fd09539162380f128ecad08b6bfa68a937da66d4800e021810f6a86f9d5"
+    },
+    {
+      "path": "task2/results/rl/mechanism_validation_v1/value_samples_qkm_50002.npz",
+      "arrays": {
+        "samples": [
+          5002,
+          4
+        ]
+      },
+      "sha256": "ee0c39ce9e81551d3ca1a43d2bb6ce06256399e3a3ae04586466213a14ce931c"
+    },
+    {
+      "path": "task2/results/rl/mechanism_validation_v1/value_samples_qkm_50000.npz",
+      "arrays": {
+        "samples": [
+          5122,
+          4
+        ]
+      },
+      "sha256": "d949946a69405ef501f8c651a5635e8dfcd97dacbb963fa449fe2df1f96ea694"
+    },
+    {
+      "path": "task2/results/rl/mechanism_validation_v1/value_samples_km_50004.npz",
+      "arrays": {
+        "samples": [
+          5048,
+          4
+        ]
+      },
+      "sha256": "324a6504b46b22d054d8335c38b3b95156a0e06989b6291517aec1d8a240c279"
+    },
+    {
+      "path": "task2/results/rl/mechanism_validation_v1/value_samples_greedy_50001.npz",
+      "arrays": {
+        "samples": [
+          5078,
+          4
+        ]
+      },
+      "sha256": "b53c1a4c8d8ccd9f233f1dff74e22359bb76349db94beefc36026cc701dbcad5"
+    },
+    {
+      "path": "task2/results/rl/mechanism_validation_v1/value_samples_km_50000.npz",
+      "arrays": {
+        "samples": [
+          5239,
+          4
+        ]
+      },
+      "sha256": "14381ff0c9aafb6c594d6429e0462a9e9d1bf7a8ec3b25111f846470e70a0378"
+    },
+    {
+      "path": "task2/results/rl/final_montecarlo_v1/episode_60015.npz",
+      "arrays": {
+        "drivers": [
+          60,
+          2
+        ],
+        "step": [
+          1500
+        ],
+        "oxy": [
+          1500,
+          2
+        ],
+        "dxy": [
+          1500,
+          2
+        ],
+        "dzone": [
+          1500
+        ],
+        "trip_km": [
+          1500
+        ],
+        "fare": [
+          1500
+        ]
+      },
+      "sha256": "e626057a98a22a724512f1f70608ea04ccfe5a7fa436cb2d8e2de10a2d01cebd"
+    },
+    {
+      "path": "task2/results/rl/final_montecarlo_v1/episode_60016.npz",
+      "arrays": {
+        "drivers": [
+          60,
+          2
+        ],
+        "step": [
+          1500
+        ],
+        "oxy": [
+          1500,
+          2
+        ],
+        "dxy": [
+          1500,
+          2
+        ],
+        "dzone": [
+          1500
+        ],
+        "trip_km": [
+          1500
+        ],
+        "fare": [
+          1500
+        ]
+      },
+      "sha256": "1a8faeb1232490f3df2fbda38c2b0220d08788292cca16161bf1eefb06fab2be"
+    },
+    {
+      "path": "task2/results/rl/final_montecarlo_v1/episode_60013.npz",
+      "arrays": {
+        "drivers": [
+          60,
+          2
+        ],
+        "step": [
+          1500
+        ],
+        "oxy": [
+          1500,
+          2
+        ],
+        "dxy": [
+          1500,
+          2
+        ],
+        "dzone": [
+          1500
+        ],
+        "trip_km": [
+          1500
+        ],
+        "fare": [
+          1500
+        ]
+      },
+      "sha256": "31dc33442e1af3c5a7f7a324142c0b6da1e6887fad2f4d233b98b2976073ba69"
+    },
+    {
+      "path": "task2/results/rl/final_montecarlo_v1/episode_60006.npz",
+      "arrays": {
+        "drivers": [
+          60,
+          2
+        ],
+        "step": [
+          1500
+        ],
+        "oxy": [
+          1500,
+          2
+        ],
+        "dxy": [
+          1500,
+          2
+        ],
+        "dzone": [
+          1500
+        ],
+        "trip_km": [
+          1500
+        ],
+        "fare": [
+          1500
+        ]
+      },
+      "sha256": "c90a49f42f7585be9655d10ae5f7feefcabb5b41e5e20457207dbff41cb792e8"
+    },
+    {
+      "path": "task2/results/rl/final_montecarlo_v1/episode_60000.npz",
+      "arrays": {
+        "drivers": [
+          60,
+          2
+        ],
+        "step": [
+          1500
+        ],
+        "oxy": [
+          1500,
+          2
+        ],
+        "dxy": [
+          1500,
+          2
+        ],
+        "dzone": [
+          1500
+        ],
+        "trip_km": [
+          1500
+        ],
+        "fare": [
+          1500
+        ]
+      },
+      "sha256": "92a6927d9c66e551567bc81316f0c12d7999dc48be8bfc39bf387907c799984c"
+    },
+    {
+      "path": "task2/results/rl/final_montecarlo_v1/episode_60018.npz",
+      "arrays": {
+        "drivers": [
+          60,
+          2
+        ],
+        "step": [
+          1500
+        ],
+        "oxy": [
+          1500,
+          2
+        ],
+        "dxy": [
+          1500,
+          2
+        ],
+        "dzone": [
+          1500
+        ],
+        "trip_km": [
+          1500
+        ],
+        "fare": [
+          1500
+        ]
+      },
+      "sha256": "2639ca900626d6de759284c00beb501b01992b7a002df7483a53052ef31f67ed"
+    },
+    {
+      "path": "task2/results/rl/final_montecarlo_v1/episode_60019.npz",
+      "arrays": {
+        "drivers": [
+          60,
+          2
+        ],
+        "step": [
+          1500
+        ],
+        "oxy": [
+          1500,
+          2
+        ],
+        "dxy": [
+          1500,
+          2
+        ],
+        "dzone": [
+          1500
+        ],
+        "trip_km": [
+          1500
+        ],
+        "fare": [
+          1500
+        ]
+      },
+      "sha256": "042470335261fe06339a0a6dec13cf909b01ef47d2a0204abca41741a5fa066c"
+    },
+    {
+      "path": "task2/results/rl/final_montecarlo_v1/episode_60012.npz",
+      "arrays": {
+        "drivers": [
+          60,
+          2
+        ],
+        "step": [
+          1500
+        ],
+        "oxy": [
+          1500,
+          2
+        ],
+        "dxy": [
+          1500,
+          2
+        ],
+        "dzone": [
+          1500
+        ],
+        "trip_km": [
+          1500
+        ],
+        "fare": [
+          1500
+        ]
+      },
+      "sha256": "5485324aee4d2637ebfb024534e32292881e15f6299fb104768c54fa164b4d7a"
+    },
+    {
+      "path": "task2/results/rl/final_montecarlo_v1/episode_60002.npz",
+      "arrays": {
+        "drivers": [
+          60,
+          2
+        ],
+        "step": [
+          1500
+        ],
+        "oxy": [
+          1500,
+          2
+        ],
+        "dxy": [
+          1500,
+          2
+        ],
+        "dzone": [
+          1500
+        ],
+        "trip_km": [
+          1500
+        ],
+        "fare": [
+          1500
+        ]
+      },
+      "sha256": "8e5c29a89f274dae8816bc5d5d514a259769d2203abdee7a3241181bff28ed4e"
+    },
+    {
+      "path": "task2/results/rl/final_montecarlo_v1/episode_60010.npz",
+      "arrays": {
+        "drivers": [
+          60,
+          2
+        ],
+        "step": [
+          1500
+        ],
+        "oxy": [
+          1500,
+          2
+        ],
+        "dxy": [
+          1500,
+          2
+        ],
+        "dzone": [
+          1500
+        ],
+        "trip_km": [
+          1500
+        ],
+        "fare": [
+          1500
+        ]
+      },
+      "sha256": "8be2bcba24b964d610b92c3813246df7f1c9caf770aa8c74ed264a11f23a5aff"
+    },
+    {
+      "path": "task2/results/rl/final_montecarlo_v1/episode_60017.npz",
+      "arrays": {
+        "drivers": [
+          60,
+          2
+        ],
+        "step": [
+          1500
+        ],
+        "oxy": [
+          1500,
+          2
+        ],
+        "dxy": [
+          1500,
+          2
+        ],
+        "dzone": [
+          1500
+        ],
+        "trip_km": [
+          1500
+        ],
+        "fare": [
+          1500
+        ]
+      },
+      "sha256": "c6db0822bcee98eec377a57a845aab501c29ad9ca4d09d1e6fd780467ffa8c16"
+    },
+    {
+      "path": "task2/results/rl/final_montecarlo_v1/episode_60014.npz",
+      "arrays": {
+        "drivers": [
+          60,
+          2
+        ],
+        "step": [
+          1500
+        ],
+        "oxy": [
+          1500,
+          2
+        ],
+        "dxy": [
+          1500,
+          2
+        ],
+        "dzone": [
+          1500
+        ],
+        "trip_km": [
+          1500
+        ],
+        "fare": [
+          1500
+        ]
+      },
+      "sha256": "63e725440fa407910a21d2de1411097621bca05a3741ffccc69df02a4c49fcce"
+    },
+    {
+      "path": "task2/results/rl/final_montecarlo_v1/episode_60005.npz",
+      "arrays": {
+        "drivers": [
+          60,
+          2
+        ],
+        "step": [
+          1500
+        ],
+        "oxy": [
+          1500,
+          2
+        ],
+        "dxy": [
+          1500,
+          2
+        ],
+        "dzone": [
+          1500
+        ],
+        "trip_km": [
+          1500
+        ],
+        "fare": [
+          1500
+        ]
+      },
+      "sha256": "3bab20238a07949d4f6011031c248d12cc9db8c3c87bf8ef3986e01fb8e070ed"
+    },
+    {
+      "path": "task2/results/rl/final_montecarlo_v1/episode_60001.npz",
+      "arrays": {
+        "drivers": [
+          60,
+          2
+        ],
+        "step": [
+          1500
+        ],
+        "oxy": [
+          1500,
+          2
+        ],
+        "dxy": [
+          1500,
+          2
+        ],
+        "dzone": [
+          1500
+        ],
+        "trip_km": [
+          1500
+        ],
+        "fare": [
+          1500
+        ]
+      },
+      "sha256": "8846feb7967520f1de1f0755052e492a376cda03fb364fef59e058f4e9047525"
+    },
+    {
+      "path": "task2/results/rl/final_montecarlo_v1/episode_60008.npz",
+      "arrays": {
+        "drivers": [
+          60,
+          2
+        ],
+        "step": [
+          1500
+        ],
+        "oxy": [
+          1500,
+          2
+        ],
+        "dxy": [
+          1500,
+          2
+        ],
+        "dzone": [
+          1500
+        ],
+        "trip_km": [
+          1500
+        ],
+        "fare": [
+          1500
+        ]
+      },
+      "sha256": "891b90e72c4d74827e7e6b6f3c55f5bdca926b9c28d95707c62748a8077cd561"
+    },
+    {
+      "path": "task2/results/rl/final_montecarlo_v1/episode_60003.npz",
+      "arrays": {
+        "drivers": [
+          60,
+          2
+        ],
+        "step": [
+          1500
+        ],
+        "oxy": [
+          1500,
+          2
+        ],
+        "dxy": [
+          1500,
+          2
+        ],
+        "dzone": [
+          1500
+        ],
+        "trip_km": [
+          1500
+        ],
+        "fare": [
+          1500
+        ]
+      },
+      "sha256": "60adee52cf29964febab354489c2d53a070fc9e9b2244e7c96dd5a87e1ab3417"
+    },
+    {
+      "path": "task2/results/rl/final_montecarlo_v1/episode_60011.npz",
+      "arrays": {
+        "drivers": [
+          60,
+          2
+        ],
+        "step": [
+          1500
+        ],
+        "oxy": [
+          1500,
+          2
+        ],
+        "dxy": [
+          1500,
+          2
+        ],
+        "dzone": [
+          1500
+        ],
+        "trip_km": [
+          1500
+        ],
+        "fare": [
+          1500
+        ]
+      },
+      "sha256": "885da08a26d6a67803e92efb02fc162317b2dcafb2a646d4b7576cdf1f48be66"
+    },
+    {
+      "path": "task2/results/rl/final_montecarlo_v1/episode_60007.npz",
+      "arrays": {
+        "drivers": [
+          60,
+          2
+        ],
+        "step": [
+          1500
+        ],
+        "oxy": [
+          1500,
+          2
+        ],
+        "dxy": [
+          1500,
+          2
+        ],
+        "dzone": [
+          1500
+        ],
+        "trip_km": [
+          1500
+        ],
+        "fare": [
+          1500
+        ]
+      },
+      "sha256": "3faca6e63097d5347b97f95891a09c5889f63a9c9d3309f27d8c518c61aad1f9"
+    },
+    {
+      "path": "task2/results/rl/final_montecarlo_v1/episode_60004.npz",
+      "arrays": {
+        "drivers": [
+          60,
+          2
+        ],
+        "step": [
+          1500
+        ],
+        "oxy": [
+          1500,
+          2
+        ],
+        "dxy": [
+          1500,
+          2
+        ],
+        "dzone": [
+          1500
+        ],
+        "trip_km": [
+          1500
+        ],
+        "fare": [
+          1500
+        ]
+      },
+      "sha256": "2ac519be302e1cdbc1eed1770d79a00224b0ddc4914ed0be0cc205e492c132e6"
+    },
+    {
+      "path": "task2/results/rl/final_montecarlo_v1/episode_60009.npz",
+      "arrays": {
+        "drivers": [
+          60,
+          2
+        ],
+        "step": [
+          1500
+        ],
+        "oxy": [
+          1500,
+          2
+        ],
+        "dxy": [
+          1500,
+          2
+        ],
+        "dzone": [
+          1500
+        ],
+        "trip_km": [
+          1500
+        ],
+        "fare": [
+          1500
+        ]
+      },
+      "sha256": "7c4ea2f4165b53395971c1be839ea987f93636deeb36581048a1e7cdf6348311"
+    },
+    {
+      "path": "task2/results/rl/final_v1/fleet40/episode_50000.npz",
+      "arrays": {
+        "drivers": [
+          40,
+          2
+        ],
+        "step": [
+          1500
+        ],
+        "oxy": [
+          1500,
+          2
+        ],
+        "dxy": [
+          1500,
+          2
+        ],
+        "dzone": [
+          1500
+        ],
+        "trip_km": [
+          1500
+        ],
+        "fare": [
+          1500
+        ]
+      },
+      "sha256": "5be68e3204761a3ba8b0583fb497cfb6272a0d6cf5fbe74be61c547c543954fe"
+    },
+    {
+      "path": "task2/results/rl/final_v1/fleet40/episode_50004.npz",
+      "arrays": {
+        "drivers": [
+          40,
+          2
+        ],
+        "step": [
+          1500
+        ],
+        "oxy": [
+          1500,
+          2
+        ],
+        "dxy": [
+          1500,
+          2
+        ],
+        "dzone": [
+          1500
+        ],
+        "trip_km": [
+          1500
+        ],
+        "fare": [
+          1500
+        ]
+      },
+      "sha256": "7a8ed75c9b4b1fa26face1c0c3ccb6afd8ac73c97f979a5e8dec3a63fe707e42"
+    },
+    {
+      "path": "task2/results/rl/final_v1/fleet40/episode_50003.npz",
+      "arrays": {
+        "drivers": [
+          40,
+          2
+        ],
+        "step": [
+          1500
+        ],
+        "oxy": [
+          1500,
+          2
+        ],
+        "dxy": [
+          1500,
+          2
+        ],
+        "dzone": [
+          1500
+        ],
+        "trip_km": [
+          1500
+        ],
+        "fare": [
+          1500
+        ]
+      },
+      "sha256": "c7086ca16c6491627538de1475fceccc6da38b47209348340425abff8c679408"
+    },
+    {
+      "path": "task2/results/rl/final_v1/fleet40/episode_50002.npz",
+      "arrays": {
+        "drivers": [
+          40,
+          2
+        ],
+        "step": [
+          1500
+        ],
+        "oxy": [
+          1500,
+          2
+        ],
+        "dxy": [
+          1500,
+          2
+        ],
+        "dzone": [
+          1500
+        ],
+        "trip_km": [
+          1500
+        ],
+        "fare": [
+          1500
+        ]
+      },
+      "sha256": "4d8bfab88b2804c53335002785383bb17fc437e4554d578164c48acfbdaa6778"
+    },
+    {
+      "path": "task2/results/rl/final_v1/fleet40/episode_50001.npz",
+      "arrays": {
+        "drivers": [
+          40,
+          2
+        ],
+        "step": [
+          1500
+        ],
+        "oxy": [
+          1500,
+          2
+        ],
+        "dxy": [
+          1500,
+          2
+        ],
+        "dzone": [
+          1500
+        ],
+        "trip_km": [
+          1500
+        ],
+        "fare": [
+          1500
+        ]
+      },
+      "sha256": "c785da606fc4dd2b94b30b3320f2f71441eba2df38931c4510d062e20599ac6e"
+    },
+    {
+      "path": "task2/results/rl/final_v1/enhancements/episode_50000.npz",
+      "arrays": {
+        "drivers": [
+          60,
+          2
+        ],
+        "step": [
+          1500
+        ],
+        "oxy": [
+          1500,
+          2
+        ],
+        "dxy": [
+          1500,
+          2
+        ],
+        "dzone": [
+          1500
+        ],
+        "trip_km": [
+          1500
+        ],
+        "fare": [
+          1500
+        ]
+      },
+      "sha256": "e1a3594d38305d69708bd9c21560f9a0f62c94e806af5b6c15665519f04d44aa"
+    },
+    {
+      "path": "task2/results/rl/final_v1/enhancements/episode_50004.npz",
+      "arrays": {
+        "drivers": [
+          60,
+          2
+        ],
+        "step": [
+          1500
+        ],
+        "oxy": [
+          1500,
+          2
+        ],
+        "dxy": [
+          1500,
+          2
+        ],
+        "dzone": [
+          1500
+        ],
+        "trip_km": [
+          1500
+        ],
+        "fare": [
+          1500
+        ]
+      },
+      "sha256": "06b12c41a87593599c47f9049258b2228922c2b76ab314e92c24a2ae1642e52b"
+    },
+    {
+      "path": "task2/results/rl/final_v1/enhancements/episode_50003.npz",
+      "arrays": {
+        "drivers": [
+          60,
+          2
+        ],
+        "step": [
+          1500
+        ],
+        "oxy": [
+          1500,
+          2
+        ],
+        "dxy": [
+          1500,
+          2
+        ],
+        "dzone": [
+          1500
+        ],
+        "trip_km": [
+          1500
+        ],
+        "fare": [
+          1500
+        ]
+      },
+      "sha256": "25e804b481aca5aaaff1fa1b1f06ed4921dbc08f64ea2170c5c8ba9ea1454e2a"
+    },
+    {
+      "path": "task2/results/rl/final_v1/enhancements/episode_50002.npz",
+      "arrays": {
+        "drivers": [
+          60,
+          2
+        ],
+        "step": [
+          1500
+        ],
+        "oxy": [
+          1500,
+          2
+        ],
+        "dxy": [
+          1500,
+          2
+        ],
+        "dzone": [
+          1500
+        ],
+        "trip_km": [
+          1500
+        ],
+        "fare": [
+          1500
+        ]
+      },
+      "sha256": "f2dc24be792097e2627b381317b9842fbec87da4eaafbe3e93e81237eedc7c20"
+    },
+    {
+      "path": "task2/results/rl/final_v1/enhancements/episode_50001.npz",
+      "arrays": {
+        "drivers": [
+          60,
+          2
+        ],
+        "step": [
+          1500
+        ],
+        "oxy": [
+          1500,
+          2
+        ],
+        "dxy": [
+          1500,
+          2
+        ],
+        "dzone": [
+          1500
+        ],
+        "trip_km": [
+          1500
+        ],
+        "fare": [
+          1500
+        ]
+      },
+      "sha256": "df0797239992730a39d9c4e281faed431ab63ced38f633e3d8e6b87c7c22ec73"
+    },
+    {
+      "path": "task2/results/rl/final_v1/fleet100/episode_50000.npz",
+      "arrays": {
+        "drivers": [
+          100,
+          2
+        ],
+        "step": [
+          1500
+        ],
+        "oxy": [
+          1500,
+          2
+        ],
+        "dxy": [
+          1500,
+          2
+        ],
+        "dzone": [
+          1500
+        ],
+        "trip_km": [
+          1500
+        ],
+        "fare": [
+          1500
+        ]
+      },
+      "sha256": "1c651c575144b2d5046ceb5d28199f2646bec47e6692a522dd046267642f3a34"
+    },
+    {
+      "path": "task2/results/rl/final_v1/fleet100/episode_50004.npz",
+      "arrays": {
+        "drivers": [
+          100,
+          2
+        ],
+        "step": [
+          1500
+        ],
+        "oxy": [
+          1500,
+          2
+        ],
+        "dxy": [
+          1500,
+          2
+        ],
+        "dzone": [
+          1500
+        ],
+        "trip_km": [
+          1500
+        ],
+        "fare": [
+          1500
+        ]
+      },
+      "sha256": "5564b8b5abea93ba885eb31b5afc327730b6d998d2e1952156c3b2dd024a515b"
+    },
+    {
+      "path": "task2/results/rl/final_v1/fleet100/episode_50003.npz",
+      "arrays": {
+        "drivers": [
+          100,
+          2
+        ],
+        "step": [
+          1500
+        ],
+        "oxy": [
+          1500,
+          2
+        ],
+        "dxy": [
+          1500,
+          2
+        ],
+        "dzone": [
+          1500
+        ],
+        "trip_km": [
+          1500
+        ],
+        "fare": [
+          1500
+        ]
+      },
+      "sha256": "bb635dfd364f9af4ade04f707abf68ed752266008ce0b64fd508d4731d6cb592"
+    },
+    {
+      "path": "task2/results/rl/final_v1/fleet100/episode_50002.npz",
+      "arrays": {
+        "drivers": [
+          100,
+          2
+        ],
+        "step": [
+          1500
+        ],
+        "oxy": [
+          1500,
+          2
+        ],
+        "dxy": [
+          1500,
+          2
+        ],
+        "dzone": [
+          1500
+        ],
+        "trip_km": [
+          1500
+        ],
+        "fare": [
+          1500
+        ]
+      },
+      "sha256": "18d06224f71fc7f72cc1b68f45be9def199f673c781022ce68ee5d58a9dea4f0"
+    },
+    {
+      "path": "task2/results/rl/final_v1/fleet100/episode_50001.npz",
+      "arrays": {
+        "drivers": [
+          100,
+          2
+        ],
+        "step": [
+          1500
+        ],
+        "oxy": [
+          1500,
+          2
+        ],
+        "dxy": [
+          1500,
+          2
+        ],
+        "dzone": [
+          1500
+        ],
+        "trip_km": [
+          1500
+        ],
+        "fare": [
+          1500
+        ]
+      },
+      "sha256": "ba34f6337284168df10d442e0f514c0db3eb553515cfebe0c039f1d63cec247e"
+    },
+    {
+      "path": "task2/results/rl/final_v1/fleet60/episode_50000.npz",
+      "arrays": {
+        "drivers": [
+          60,
+          2
+        ],
+        "step": [
+          1500
+        ],
+        "oxy": [
+          1500,
+          2
+        ],
+        "dxy": [
+          1500,
+          2
+        ],
+        "dzone": [
+          1500
+        ],
+        "trip_km": [
+          1500
+        ],
+        "fare": [
+          1500
+        ]
+      },
+      "sha256": "e1a3594d38305d69708bd9c21560f9a0f62c94e806af5b6c15665519f04d44aa"
+    },
+    {
+      "path": "task2/results/rl/final_v1/fleet60/episode_50004.npz",
+      "arrays": {
+        "drivers": [
+          60,
+          2
+        ],
+        "step": [
+          1500
+        ],
+        "oxy": [
+          1500,
+          2
+        ],
+        "dxy": [
+          1500,
+          2
+        ],
+        "dzone": [
+          1500
+        ],
+        "trip_km": [
+          1500
+        ],
+        "fare": [
+          1500
+        ]
+      },
+      "sha256": "06b12c41a87593599c47f9049258b2228922c2b76ab314e92c24a2ae1642e52b"
+    },
+    {
+      "path": "task2/results/rl/final_v1/fleet60/episode_50003.npz",
+      "arrays": {
+        "drivers": [
+          60,
+          2
+        ],
+        "step": [
+          1500
+        ],
+        "oxy": [
+          1500,
+          2
+        ],
+        "dxy": [
+          1500,
+          2
+        ],
+        "dzone": [
+          1500
+        ],
+        "trip_km": [
+          1500
+        ],
+        "fare": [
+          1500
+        ]
+      },
+      "sha256": "25e804b481aca5aaaff1fa1b1f06ed4921dbc08f64ea2170c5c8ba9ea1454e2a"
+    },
+    {
+      "path": "task2/results/rl/final_v1/fleet60/episode_50002.npz",
+      "arrays": {
+        "drivers": [
+          60,
+          2
+        ],
+        "step": [
+          1500
+        ],
+        "oxy": [
+          1500,
+          2
+        ],
+        "dxy": [
+          1500,
+          2
+        ],
+        "dzone": [
+          1500
+        ],
+        "trip_km": [
+          1500
+        ],
+        "fare": [
+          1500
+        ]
+      },
+      "sha256": "f2dc24be792097e2627b381317b9842fbec87da4eaafbe3e93e81237eedc7c20"
+    },
+    {
+      "path": "task2/results/rl/final_v1/fleet60/episode_50001.npz",
+      "arrays": {
+        "drivers": [
+          60,
+          2
+        ],
+        "step": [
+          1500
+        ],
+        "oxy": [
+          1500,
+          2
+        ],
+        "dxy": [
+          1500,
+          2
+        ],
+        "dzone": [
+          1500
+        ],
+        "trip_km": [
+          1500
+        ],
+        "fare": [
+          1500
+        ]
+      },
+      "sha256": "df0797239992730a39d9c4e281faed431ab63ced38f633e3d8e6b87c7c22ec73"
+    },
+    {
+      "path": "task2/results/evolution/batches/test_hour18_batchseed9012.npz",
+      "arrays": {
+        "drv": [
+          40,
+          2
+        ],
+        "o_xy": [
+          80,
+          2
+        ],
+        "d_xy": [
+          80,
+          2
+        ],
+        "fare": [
+          80
+        ],
+        "pickup": [
+          40,
+          80
+        ],
+        "trip_indices": [
+          80
+        ]
+      },
+      "sha256": "c59c4db292597f9c399e823ce7cc08821cbf774dab2f3d694dc0b7941a90b543"
+    },
+    {
+      "path": "task2/results/evolution/batches/test_hour18_batchseed9010.npz",
+      "arrays": {
+        "drv": [
+          40,
+          2
+        ],
+        "o_xy": [
+          80,
+          2
+        ],
+        "d_xy": [
+          80,
+          2
+        ],
+        "fare": [
+          80
+        ],
+        "pickup": [
+          40,
+          80
+        ],
+        "trip_indices": [
+          80
+        ]
+      },
+      "sha256": "d6462e599eace6b15458e3d8a9b83c030685fa44258ba58863e23c2385b4472b"
+    },
+    {
+      "path": "task2/results/evolution/batches/test_hour18_batchseed9013.npz",
+      "arrays": {
+        "drv": [
+          40,
+          2
+        ],
+        "o_xy": [
+          80,
+          2
+        ],
+        "d_xy": [
+          80,
+          2
+        ],
+        "fare": [
+          80
+        ],
+        "pickup": [
+          40,
+          80
+        ],
+        "trip_indices": [
+          80
+        ]
+      },
+      "sha256": "50242712113d8181350ed96c722278068d483756e079e69e58a8848861313d06"
+    },
+    {
+      "path": "task2/results/evolution/batches/test_hour18_batchseed9014.npz",
+      "arrays": {
+        "drv": [
+          40,
+          2
+        ],
+        "o_xy": [
+          80,
+          2
+        ],
+        "d_xy": [
+          80,
+          2
+        ],
+        "fare": [
+          80
+        ],
+        "pickup": [
+          40,
+          80
+        ],
+        "trip_indices": [
+          80
+        ]
+      },
+      "sha256": "004e0f55dda33ebbae9e00197055460f28c0332179028e857d5088e7dfa625f7"
+    },
+    {
+      "path": "task2/results/evolution/batches/test_hour18_batchseed9011.npz",
+      "arrays": {
+        "drv": [
+          40,
+          2
+        ],
+        "o_xy": [
+          80,
+          2
+        ],
+        "d_xy": [
+          80,
+          2
+        ],
+        "fare": [
+          80
+        ],
+        "pickup": [
+          40,
+          80
+        ],
+        "trip_indices": [
+          80
+        ]
+      },
+      "sha256": "d0c36939a31d5ebb53b292cdba3072828694d11898a9945f1e942fcdce9772bc"
+    },
+    {
+      "path": "task2/results/evolution/basic/basic_synthetic_od.npz",
+      "arrays": {
+        "drv": [
+          20,
+          2
+        ],
+        "o_xy": [
+          20,
+          2
+        ],
+        "d_xy": [
+          20,
+          2
+        ],
+        "pickup": [
+          20,
+          20
+        ],
+        "fare": [
+          20
+        ]
+      },
+      "sha256": "74a0b41134bfd662f99eb622f3e4dd19fcf73e2b0fb0da0c4b80311d672ed251"
+    }
+  ],
+  "teacher_notebook_outputs": [
+    {
+      "path": "task2/teacher_materials/advanced/实验3 多目标与强化学习派单（学生版）.ipynb",
+      "code_cells": 23,
+      "with_outputs": 0
+    },
+    {
+      "path": "task2/teacher_materials/basic/实验2/作业2 运力调度.ipynb",
+      "code_cells": 7,
+      "with_outputs": 0
+    }
+  ],
+  "anonymous_front_fare_reconstruction": {
+    "files_combined": 50,
+    "front_equations": 5897,
+    "active_order_columns": 56,
+    "rank": 56,
+    "unique_fares_identifiable": true,
+    "max_fare_reconstruction_error": 1.7994494783124537e-12,
+    "output_scope": "Only rank/error/counts; no individual recovered fares are written",
+    "affected_paths": [
+      "task2/results/evolution/runs/scale_inner_hour18_batchseed2024_nsga3_M2_N100_G600_s3.json",
+      "task2/results/evolution/runs/scale_inner_hour18_batchseed2024_nsga2_M2_N100_G600_s2.json",
+      "task2/results/evolution/runs/scale_inner_hour18_batchseed2024_nsga2_M2_N200_G300_s2.json",
+      "task2/results/evolution/runs/baseline_inner_hour18_batchseed2024_nsga2_M2_N100_G300_s3.json",
+      "task2/results/evolution/runs/scale_inner_hour18_batchseed2024_nsga3_M2_N200_G300_s1.json",
+      "task2/results/evolution/runs/baseline_inner_hour18_batchseed2024_nsga3_M2_N100_G300_s4.json",
+      "task2/results/evolution/runs/hybrid_inner_hour18_batchseed2024_nsga3_M2_N100_G300_s4.json",
+      "task2/results/evolution/runs/scale_inner_hour18_batchseed2024_nsga2_M2_N100_G600_s1.json",
+      "task2/results/evolution/runs/scale_inner_hour18_batchseed2024_nsga2_M2_N200_G300_s3.json",
+      "task2/results/evolution/runs/combination_inner_hour18_batchseed2024_nsga2_M2_N200_G300_s4.json",
+      "task2/results/evolution/runs/hybrid_inner_hour18_batchseed2024_nsga3_M2_N100_G300_s1.json",
+      "task2/results/evolution/runs/combination_inner_hour18_batchseed2024_nsga3_M2_N200_G300_s2.json",
+      "task2/results/evolution/runs/hybrid_inner_hour18_batchseed2024_nsga3_M2_N100_G300_s3.json",
+      "task2/results/evolution/runs/baseline_inner_hour18_batchseed2024_nsga3_M2_N100_G300_s0.json",
+      "task2/results/evolution/runs/hybrid_inner_hour18_batchseed2024_nsga2_M2_N100_G300_s0.json",
+      "task2/results/evolution/runs/combination_inner_hour18_batchseed2024_nsga3_M2_N200_G300_s4.json",
+      "task2/results/evolution/runs/scale_inner_hour18_batchseed2024_nsga3_M2_N100_G600_s0.json",
+      "task2/results/evolution/runs/scale_inner_hour18_batchseed2024_nsga2_M2_N100_G600_s0.json",
+      "task2/results/evolution/runs/hybrid_inner_hour18_batchseed2024_nsga2_M2_N100_G300_s4.json",
+      "task2/results/evolution/runs/scale_inner_hour18_batchseed2024_nsga2_M2_N200_G300_s1.json",
+      "task2/results/evolution/runs/hybrid_inner_hour18_batchseed2024_nsga2_M2_N100_G300_s2.json",
+      "task2/results/evolution/runs/baseline_inner_hour18_batchseed2024_nsga2_M2_N100_G300_s4.json",
+      "task2/results/evolution/runs/hybrid_inner_hour18_batchseed2024_nsga3_M2_N100_G300_s2.json",
+      "task2/results/evolution/runs/combination_inner_hour18_batchseed2024_nsga3_M2_N200_G300_s3.json",
+      "task2/results/evolution/runs/baseline_inner_hour18_batchseed2024_nsga2_M2_N100_G300_s2.json",
+      "task2/results/evolution/runs/hybrid_inner_hour18_batchseed2024_nsga3_M2_N100_G300_s0.json",
+      "task2/results/evolution/runs/hybrid_inner_hour18_batchseed2024_nsga2_M2_N100_G300_s3.json",
+      "task2/results/evolution/runs/baseline_inner_hour18_batchseed2024_nsga3_M2_N100_G300_s2.json",
+      "task2/results/evolution/runs/scale_inner_hour18_batchseed2024_nsga3_M2_N100_G600_s4.json",
+      "task2/results/evolution/runs/scale_inner_hour18_batchseed2024_nsga3_M2_N100_G600_s2.json",
+      "task2/results/evolution/runs/baseline_inner_hour18_batchseed2024_nsga3_M2_N100_G300_s1.json",
+      "task2/results/evolution/runs/combination_inner_hour18_batchseed2024_nsga3_M2_N200_G300_s1.json",
+      "task2/results/evolution/runs/combination_inner_hour18_batchseed2024_nsga2_M2_N200_G300_s3.json",
+      "task2/results/evolution/runs/scale_inner_hour18_batchseed2024_nsga3_M2_N100_G600_s1.json",
+      "task2/results/evolution/runs/scale_inner_hour18_batchseed2024_nsga3_M2_N200_G300_s0.json",
+      "task2/results/evolution/runs/combination_inner_hour18_batchseed2024_nsga3_M2_N200_G300_s0.json",
+      "task2/results/evolution/runs/scale_inner_hour18_batchseed2024_nsga2_M2_N200_G300_s4.json",
+      "task2/results/evolution/runs/scale_inner_hour18_batchseed2024_nsga2_M2_N100_G600_s3.json",
+      "task2/results/evolution/runs/scale_inner_hour18_batchseed2024_nsga3_M2_N200_G300_s3.json",
+      "task2/results/evolution/runs/combination_inner_hour18_batchseed2024_nsga2_M2_N200_G300_s2.json",
+      "task2/results/evolution/runs/scale_inner_hour18_batchseed2024_nsga2_M2_N100_G600_s4.json",
+      "task2/results/evolution/runs/scale_inner_hour18_batchseed2024_nsga3_M2_N200_G300_s4.json",
+      "task2/results/evolution/runs/scale_inner_hour18_batchseed2024_nsga3_M2_N200_G300_s2.json",
+      "task2/results/evolution/runs/baseline_inner_hour18_batchseed2024_nsga2_M2_N100_G300_s0.json",
+      "task2/results/evolution/runs/combination_inner_hour18_batchseed2024_nsga2_M2_N200_G300_s1.json",
+      "task2/results/evolution/runs/baseline_inner_hour18_batchseed2024_nsga2_M2_N100_G300_s1.json",
+      "task2/results/evolution/runs/hybrid_inner_hour18_batchseed2024_nsga2_M2_N100_G300_s1.json",
+      "task2/results/evolution/runs/baseline_inner_hour18_batchseed2024_nsga3_M2_N100_G300_s3.json",
+      "task2/results/evolution/runs/scale_inner_hour18_batchseed2024_nsga2_M2_N200_G300_s0.json",
+      "task2/results/evolution/runs/combination_inner_hour18_batchseed2024_nsga2_M2_N200_G300_s0.json"
+    ]
+  }
+}

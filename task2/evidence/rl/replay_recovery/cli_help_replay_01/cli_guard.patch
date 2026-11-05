@@ -1,0 +1,72 @@
+--- executed_original_source
++++ guarded_source_for_future_runs
+@@ -1,23 +1,38 @@
+-"""Frozen final confirmation. Read selection contract before opening held-out rows."""
++"""Frozen final confirmation in a fresh output directory; existing runs are preserved."""
+ from pathlib import Path
++import argparse
+ import sys,json
+-import pandas as pd
+ TASK=Path(__file__).resolve().parents[1]
+-sys.path.insert(0,str(TASK/'src'));sys.path.insert(0,str(TASK/'scripts'))
+-from run_rl import fit,evaluate,json_dump,sha
+-from rl_dispatch import region_long_term_value,make_q_km,km_fare,greedy_nearest
+-from rl_extensions import cost_aware_repositioner
+-from rl_fusion import NSGADispatch
+ 
+-if __name__=='__main__':
++
++def parse_args(argv=None):
++    parser=argparse.ArgumentParser(description=__doc__)
++    parser.add_argument('--output',type=Path,default=TASK/'results/rl/final_v1',
++                        help='Fresh output directory; any existing target is refused before loading data or models')
++    args=parser.parse_args(argv)
++    candidate=args.output.expanduser()
++    if candidate.is_symlink() or candidate.resolve().exists():
++        parser.error('Output already exists; preserve it and choose a fresh --output directory.')
++    args.output=candidate.resolve()
++    return args
++
++
++def main(argv=None):
++    # Parse help and reject existing outputs before importing the experiment stack.
++    args=parse_args(argv)
++    import pandas as pd
++    sys.path.insert(0,str(TASK/'src'));sys.path.insert(0,str(TASK/'scripts'))
++    from run_rl import fit,evaluate,json_dump,sha
++    from rl_dispatch import region_long_term_value,make_q_km,km_fare,greedy_nearest
++    from rl_extensions import cost_aware_repositioner
++    from rl_fusion import NSGADispatch
+     contract_path=TASK/'evidence/rl/FINAL_SELECTION.json'
+     contract=json.loads(contract_path.read_text())
+     assert contract['state']=='FROZEN_BEFORE_HELDOUT_TEST'
+-    out=TASK/'results/rl/final_v1';out.mkdir(parents=True,exist_ok=True)
++    out=args.output
++    out.mkdir(parents=True,exist_ok=False)
+     freeze=out/'selection_contract.json'
+-    if freeze.exists():
+-        assert freeze.read_bytes()==contract_path.read_bytes(),'Do not mutate the frozen test contract'
+-    else:freeze.write_bytes(contract_path.read_bytes())
++    freeze.write_bytes(contract_path.read_bytes())
+     data=TASK/'results/data'
+     train=pd.read_csv(data/'trips_train.csv');init=pd.read_csv(data/'checkins_train.csv')
+     val=pd.read_csv(data/'trips_validation.csv')
+@@ -29,7 +44,7 @@
+     single_b1=fit(out/'q_beta1',train,init,val,n=300,beta=1,data_identity=dataid)
+     double_b1=fit(out/'double_beta1',train,init,val,n=300,beta=1,double=True,data_identity=dataid)
+     json_dump(out/'before_test_manifest.json',dict(frozen_contract_sha256=sha(freeze),runner_sha256=sha(__file__),data_identity=dataid,
+-               model_paths=[str(p.relative_to(TASK)) for p in out.glob('*/model.npz')],final_training='all first70percent dates,300actual simulations each; val monitoring in-training after refit, no epoch selection',
++               model_paths=[str(p.relative_to(out)) for p in out.glob('*/model.npz')],model_paths_base='output_directory',final_training='all first70percent dates,300actual simulations each; val monitoring in-training after refit, no epoch selection',
+                fixed_test_seeds=list(range(50000,50005)),evaluation_identity='heldout proxy-date simulation; not real operational days'))
+     test=pd.read_csv(data/'trips_test.csv')
+     for fleet,qt in models.items():
+@@ -45,4 +60,8 @@
+         ('qnsga_knee',knee,None),('qnsga_constraint',constraint,None)],split='heldout_test')
+     json_dump(out/'fusion_fronts.json',dict(knee=knee.fronts,constraint=constraint.fronts))
+     json_dump(out/'completion_manifest.json',dict(contract_sha256=sha(freeze),test_data_sha256=sha(data/'trips_test.csv'),runner_sha256=sha(__file__),
+-               metric_paths=[str(p.relative_to(TASK)) for p in out.glob('*/day_metrics.json')],state='COMPLETED_HELDOUT_EVALUATION_NO_RETUNING'))
++               metric_paths=[str(p.relative_to(out)) for p in out.glob('*/day_metrics.json')],metric_paths_base='output_directory',state='COMPLETED_HELDOUT_EVALUATION_NO_RETUNING'))
++
++
++if __name__=='__main__':
++    main()

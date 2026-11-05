@@ -1,0 +1,24 @@
+{
+  "frozen_contract_sha256": "95945b3b1c096bb6223d0599757d88050a8ee713334f9569718a51583eb61e9b",
+  "runner_sha256": "32f260d7244a18d5969cd566a2a6b84a9f9515df59f9223e7b54bb292bc47d67",
+  "data_identity": {
+    "trips_train.csv": "4c4f2322822aef1ac224f98621a5ab7aa66dabce888939d24873767b8e6a430a",
+    "checkins_train.csv": "cc8db6e9d5ec3881b1642650989fd8501065144e4e06590cae0921ecbcfac3ab"
+  },
+  "model_paths": [
+    "results/rl/final_v1/q_beta1/model.npz",
+    "results/rl/final_v1/q_f40/model.npz",
+    "results/rl/final_v1/double_beta1/model.npz",
+    "results/rl/final_v1/q_f60/model.npz",
+    "results/rl/final_v1/q_f100/model.npz"
+  ],
+  "final_training": "all first70percent dates,300actual simulations each; val monitoring in-training after refit, no epoch selection",
+  "fixed_test_seeds": [
+    50000,
+    50001,
+    50002,
+    50003,
+    50004
+  ],
+  "evaluation_identity": "heldout proxy-date simulation; not real operational days"
+}

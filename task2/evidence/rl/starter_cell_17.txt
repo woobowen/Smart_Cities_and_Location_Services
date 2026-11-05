@@ -1,0 +1,28 @@
+SEEDS = [0, 1, 2, 3, 4]
+hv_curves = {"NSGA-II": [], "NSGA-III": []}
+final_fronts = {"NSGA-II": [], "NSGA-III": []}
+t0 = time.time()
+for s in SEEDS:
+    for name, algo in [("NSGA-II", "nsga2"), ("NSGA-III", "nsga3")]:
+        _, F, hist = run_nsga(prob, algo, pop_size=100, n_gen=300, seed=s, ref_dirs=REF2)
+        final_fronts[name].append(F)
+        hv_curves[name].append([(g, hypervolume(h, IDEAL2, NADIR2)) for g, h in hist])
+print(f"耗时 {time.time() - t0:.1f}s")
+
+fig, ax = plt.subplots(figsize=(7, 4.5))
+for name, color in [("NSGA-II", "#4c78a8"), ("NSGA-III", "#f58518")]:
+    arr = np.array(hv_curves[name])                  # (seed, point, 2)
+    gens, hv = arr[0, :, 0], arr[:, :, 1]
+    ax.plot(gens, hv.mean(0), color=color, label=name)
+    ax.fill_between(gens, hv.min(0), hv.max(0), color=color, alpha=0.2)
+ax.axhline(hypervolume(F_km, IDEAL2, NADIR2), color="k", ls="--", label="加权和 + KM")
+ax.set(xlabel="代数", ylabel="超体积 HV", title="收敛曲线（均值 ± 极差，5 个种子）")
+ax.grid(alpha=0.3)
+ax.legend()
+plt.tight_layout()
+plt.savefig(f"{FIG_DIR}/hv_convergence.png", dpi=200)
+plt.show()
+
+for name in hv_curves:
+    final = np.array(hv_curves[name])[:, -1, 1]
+    print(f"{name:9s} 最终 HV = {final.mean():.4f} ± {final.std():.4f}")

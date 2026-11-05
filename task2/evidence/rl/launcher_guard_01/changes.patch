@@ -1,0 +1,530 @@
+--- original/run_rl.py
++++ guarded/run_rl.py
+@@ -1,6 +1,30 @@
+ #!/usr/bin/env python3
+ """Reproducible staged RL experiments. Each stage retains raw model and day data."""
+ import argparse
++from pathlib import Path
++try:
++    from .experiment_cli import require_fresh_output
++except ImportError:  # Direct-file invocation has no package context.
++    from experiment_cli import require_fresh_output
++TASK = Path(__file__).resolve().parents[1]
++
++
++def parse_args(argv=None):
++    parser=argparse.ArgumentParser(description=__doc__)
++    parser.add_argument("--phase",required=True,choices=["pilot","baseline","sensitivity","double","final"])
++    output=parser.add_mutually_exclusive_group(required=True)
++    output.add_argument("--run",help="fresh output dir below results/rl")
++    output.add_argument("--output",type=Path,help="explicit fresh output directory")
++    parser.add_argument("--data",type=Path,required=True,help="directory containing audited split CSVs and driver pool")
++    parser.add_argument("--episodes",type=int,default=300)
++    parser.add_argument("--seeds",default="2024")
++    args=parser.parse_args(argv)
++    args.output=require_fresh_output(parser,args.output if args.output is not None else TASK/"results/rl"/args.run)
++    return args
++
++
++_CLI_ARGS=parse_args() if __name__=="__main__" else None
++
+ from dataclasses import asdict, replace
+ from datetime import datetime, timezone
+ import hashlib
+@@ -95,14 +119,10 @@
+     return rows
+ 
+ 
+-def main():
+-    parser=argparse.ArgumentParser()
+-    parser.add_argument("--phase",required=True,choices=["pilot","baseline","sensitivity","double","final"])
+-    parser.add_argument("--run",required=True,help="unique output dir below results/rl")
+-    parser.add_argument("--data",type=Path,required=True,help="directory containing audited split CSVs and driver pool")
+-    parser.add_argument("--episodes",type=int,default=300)
+-    parser.add_argument("--seeds",default="2024")
+-    args=parser.parse_args()
++def main(argv=None):
++    args=_CLI_ARGS if argv is None and _CLI_ARGS is not None else parse_args(argv)
++    root=args.output
++    root.mkdir(parents=True,exist_ok=False)
+     import pandas as pd
+     # Coordinator-approved export of dispatch_data, kept explicit for review.
+     data=args.data
+@@ -110,8 +130,6 @@
+     validation=pd.read_csv(data/"trips_validation.csv")
+     initial=pd.read_csv(data/"checkins_train_inner.csv")
+     data_id={p.name:sha(p) for p in data.glob("*.csv")}
+-    root=TASK/"results/rl"/args.run
+-    root.mkdir(parents=True,exist_ok=True)
+     train_seeds=[int(s) for s in args.seeds.split(",")]
+     if args.phase=="pilot":
+         qt=fit(root/"pilot_q",train,initial,validation,n=args.episodes,data_identity=data_id)
+--- original/run_rl_followup.py
++++ guarded/run_rl_followup.py
+@@ -2,6 +2,26 @@
+ """Result-triggered RL follow-ups, validation only; no held-out test selection."""
+ import argparse,json,sys
+ from pathlib import Path
++try:
++    from .experiment_cli import require_fresh_output
++except ImportError:  # Direct-file invocation has no package context.
++    from experiment_cli import require_fresh_output
++TASK=Path(__file__).resolve().parents[1]
++
++
++def parse_args(argv=None):
++    a=argparse.ArgumentParser(description=__doc__);a.add_argument('--phase',choices=['beta','reposition','diagnostics'],required=True)
++    a.add_argument('--model',type=Path,required=True)
++    output=a.add_mutually_exclusive_group(required=True)
++    output.add_argument('--run',help='fresh output dir below results/rl')
++    output.add_argument('--output',type=Path,help='explicit fresh output directory')
++    a.add_argument('--data',type=Path,default=TASK/'results/data');args=a.parse_args(argv)
++    args.output=require_fresh_output(a,args.output if args.output is not None else TASK/"results/rl"/args.run)
++    return args
++
++
++_CLI_ARGS=parse_args() if __name__=="__main__" else None
++
+ import numpy as np
+ import pandas as pd
+ TASK=Path(__file__).resolve().parents[1]
+@@ -34,14 +54,13 @@
+                 optimism_gap=float(gap.mean()),mae_to_policy_return=float(np.abs(gap).mean())),p
+ 
+ 
+-def main():
+-    a=argparse.ArgumentParser();a.add_argument('--phase',choices=['beta','reposition','diagnostics'],required=True)
+-    a.add_argument('--model',type=Path,required=True);a.add_argument('--run',required=True)
+-    a.add_argument('--data',type=Path,default=TASK/'results/data');args=a.parse_args()
++def main(argv=None):
++    args=_CLI_ARGS if argv is None and _CLI_ARGS is not None else parse_args(argv)
++    out=args.output
++    out.mkdir(parents=True,exist_ok=False)
+     args.model=args.model.resolve()
+     qt,meta=load_model(args.model);cfg=qt.config;LT=region_long_term_value(qt.V,config=cfg)
+     val=pd.read_csv(args.data/'trips_validation.csv');init=pd.read_csv(args.data/'checkins_train_inner.csv')
+-    out=TASK/'results/rl'/args.run;out.mkdir(parents=True,exist_ok=True)
+     json_dump(out/'followup_manifest.json',dict(phase=args.phase,parent_model=str(args.model.relative_to(TASK)),
+               parent_sha=sha(args.model/'model.npz'),runner_sha=sha(__file__),
+               trigger='300episode development baseline: QKM improves revenue over KM, pickup exceeds greedy and nonpositive edge weights remain; test not used',
+--- original/resume_rl_rngfix.py
++++ guarded/resume_rl_rngfix.py
+@@ -1,18 +1,35 @@
+-"""Resume only interrupted or affected runs; preserve valid Q-only runs in place."""
++"""Reproduce the historical RNG-fix follow-up in a fresh output directory."""
+ from pathlib import Path
+-from dataclasses import replace
+-import sys,json,argparse
+-import pandas as pd
++import argparse
++try:
++    from .experiment_cli import require_fresh_output
++except ImportError:  # Direct-file invocation has no package context.
++    from experiment_cli import require_fresh_output
+ TASK=Path(__file__).resolve().parents[1]
+-sys.path.insert(0,str(TASK/'src'));sys.path.insert(0,str(TASK/'scripts'))
+-from rl_dispatch import DEFAULT,region_long_term_value,make_q_km,greedy_nearest,km_fare
+-from run_rl import fit,load_model,evaluate,sha,json_dump
+ 
+-def main():
+-    p=argparse.ArgumentParser();p.add_argument('--phase',required=True,choices=['sensitivity','double']);args=p.parse_args()
++
++def parse_args(argv=None):
++    p=argparse.ArgumentParser(description=__doc__)
++    p.add_argument('--phase',required=True,choices=['sensitivity','double'])
++    p.add_argument('--output',type=Path,help='Explicit fresh output directory')
++    args=p.parse_args(argv)
++    args.output=require_fresh_output(p,args.output if args.output is not None else TASK/'results/rl'/f'{args.phase}_v2_rngfix')
++    return args
++
++
++def main(argv=None):
++    args=parse_args(argv)
++    root=args.output
++    root.mkdir(parents=True,exist_ok=False)
++    from dataclasses import replace
++    import sys,json,argparse
++    import pandas as pd
++    sys.path.insert(0,str(TASK/'src'));sys.path.insert(0,str(TASK/'scripts'))
++    from rl_dispatch import DEFAULT,region_long_term_value,make_q_km,greedy_nearest,km_fare
++    from run_rl import fit,load_model,evaluate,sha,json_dump
++
+     data=TASK/'results/data';train=pd.read_csv(data/'trips_train_inner.csv');val=pd.read_csv(data/'trips_validation.csv');init=pd.read_csv(data/'checkins_train_inner.csv')
+     data_id={f.name:sha(f) for f in data.glob('*.csv')}
+-    root=TASK/'results/rl'/f'{args.phase}_v2_rngfix';root.mkdir(parents=True,exist_ok=True)
+     json_dump(root/'resume_contract.json',dict(fix='independent Double update RNG; Q-only exact array parity verified',source_sha256=sha(TASK/'src/rl_dispatch.py'),runner_sha256=sha(__file__),scope='resume or rerun affected work; original valid Q-only identities retained',old_double_status='INVALID_FOR_FAIR_DOUBLE_COMPARE'))
+     if args.phase=='sensitivity':
+         for name,cfg in [('gamma08',replace(DEFAULT,gamma=.8)),('gamma095',replace(DEFAULT,gamma=.95)),('grid6',replace(DEFAULT,grid=6)),('grid10',replace(DEFAULT,grid=10)),('patience1',replace(DEFAULT,patience=1)),('patience3',replace(DEFAULT,patience=3))]:
+@@ -34,4 +51,7 @@
+                 else:qt=fit(root/name,train,init,val,seed=seed,n=300,beta=1,double=double,data_identity=data_id)
+                 LT=region_long_term_value(qt.V)
+                 evaluate(root/(name+'_validation'),val,init,60,[('km',km_fare,None),('beta05',make_q_km(LT,.5),None),('beta1',make_q_km(LT,1),None)])
+-if __name__=='__main__':main()
++
++
++if __name__=="__main__":
++    main()
+--- original/run_reposition_cost.py
++++ guarded/run_reposition_cost.py
+@@ -1,17 +1,28 @@
++"""Cost-aware reposition validation using a frozen parent model."""
+ from pathlib import Path
+-import sys,json
+-import pandas as pd
++try:
++    from .experiment_cli import fixed_output_args
++except ImportError:  # Direct-file invocation has no package context.
++    from experiment_cli import fixed_output_args
+ TASK=Path(__file__).resolve().parents[1]
+-sys.path.insert(0,str(TASK/'src'));sys.path.insert(0,str(TASK/'scripts'))
+-from rl_dispatch import DEFAULT,region_long_term_value,make_q_km,km_fare
+-from rl_extensions import cost_aware_repositioner
+-from run_rl import load_model,evaluate,json_dump,sha
+ 
+-if __name__=='__main__':
++
++def parse_args(argv=None):
++    return fixed_output_args(TASK/"results/rl/reposition_cost_validation_v1",__doc__,argv)
++
++
++def main(argv=None):
++    args=parse_args(argv)
++    out=args.output
++    out.mkdir(parents=True,exist_ok=False)
++    import sys,json
++    import pandas as pd
++    sys.path.insert(0,str(TASK/'src'));sys.path.insert(0,str(TASK/'scripts'))
++    from rl_dispatch import DEFAULT,region_long_term_value,make_q_km,km_fare
++    from rl_extensions import cost_aware_repositioner
++    from run_rl import load_model,evaluate,json_dump,sha
+     parent=TASK/'results/rl/development_v1/q_f60_s2024'
+     qt,meta=load_model(parent);LT=region_long_term_value(qt.V)
+-    out=TASK/'results/rl/reposition_cost_validation_v1'
+-    out.mkdir(parents=True,exist_ok=True)
+     json_dump(out/'followup_manifest.json',dict(trigger='V-only reposition adds ~5000km/day for gross revenue gain ~415 (QKM), so movement-value threshold must account for cost',
+               conditions=[0,1,3,5],cost_status='hypothetical teaching currency/km, not observed vehicle expense',
+               source_sha256={str(p.relative_to(TASK)):sha(p) for p in [Path(__file__),TASK/'src/rl_extensions.py']},
+@@ -21,3 +32,7 @@
+     for c in [0,1,3,5]:
+         policies.append((f'qkm_move_cost{c}',make_q_km(LT,.5),cost_aware_repositioner(qt.V,c)))
+     evaluate(out,val,init,60,policies)
++
++
++if __name__=="__main__":
++    main()
+--- original/run_rl_fusion.py
++++ guarded/run_rl_fusion.py
+@@ -1,16 +1,28 @@
++"""Static and dynamic QKM plus NSGA-II validation."""
+ from pathlib import Path
+-import sys,json,time
+-import numpy as np
+-import pandas as pd
++try:
++    from .experiment_cli import fixed_output_args
++except ImportError:  # Direct-file invocation has no package context.
++    from experiment_cli import fixed_output_args
+ TASK=Path(__file__).resolve().parents[1]
+-sys.path.insert(0,str(TASK/'src'));sys.path.insert(0,str(TASK/'scripts'))
+-from run_rl import load_model,sha,json_dump,evaluate
+-from rl_dispatch import DEFAULT,region_long_term_value,make_q_km,sample_episode,run_episode,greedy_nearest,km_fare
+-from rl_fusion import NSGADispatch
+-from evolution import EdgeDispatchProblem,run_nsga,knee_point,weighted_km
+ 
+-if __name__=='__main__':
+-    out=TASK/'results/rl/fusion_validation_v1';out.mkdir(parents=True,exist_ok=True)
++
++def parse_args(argv=None):
++    return fixed_output_args(TASK/"results/rl/fusion_validation_v1",__doc__,argv)
++
++
++def main(argv=None):
++    args=parse_args(argv)
++    out=args.output
++    out.mkdir(parents=True,exist_ok=False)
++    import sys,json,time
++    import numpy as np
++    import pandas as pd
++    sys.path.insert(0,str(TASK/'src'));sys.path.insert(0,str(TASK/'scripts'))
++    from run_rl import load_model,sha,json_dump,evaluate
++    from rl_dispatch import DEFAULT,region_long_term_value,make_q_km,sample_episode,run_episode,greedy_nearest,km_fare
++    from rl_fusion import NSGADispatch
++    from evolution import EdgeDispatchProblem,run_nsga,knee_point,weighted_km
+     qt,meta=load_model(TASK/'results/rl/development_v1/q_f60_s2024');LT=region_long_term_value(qt.V)
+     val=pd.read_csv(TASK/'results/data/trips_validation.csv');init=pd.read_csv(TASK/'results/data/checkins_train_inner.csv')
+     ep=sample_episode(val,60,50000,init)
+@@ -43,3 +55,7 @@
+     constrained=NSGADispatch(LT,seed=2024,choice='constraint')
+     evaluate(out/'dynamic',val,init,60,[('greedy',greedy_nearest,None),('km',km_fare,None),('qkm',make_q_km(LT,.5),None),('qnsga_knee',knee,None),('qnsga_constraint',constrained,None)],seeds=range(50000,50005))
+     json_dump(out/'dynamic_nsga_fronts.json',dict(knee=knee.fronts,constraint=constrained.fronts))
++
++
++if __name__=="__main__":
++    main()
+--- original/run_rl_component_ablation.py
++++ guarded/run_rl_component_ablation.py
+@@ -1,13 +1,31 @@
++"""Frozen validation component ablation."""
+ from pathlib import Path
+-import sys
+-import pandas as pd
++try:
++    from .experiment_cli import fixed_output_args
++except ImportError:  # Direct-file invocation has no package context.
++    from experiment_cli import fixed_output_args
+ TASK=Path(__file__).resolve().parents[1]
+-sys.path.insert(0,str(TASK/'src'));sys.path.insert(0,str(TASK/'scripts'))
+-from run_rl import load_model,evaluate,json_dump,sha
+-from rl_dispatch import region_long_term_value,make_q_km,km_fare
+-from rl_extensions import cost_aware_repositioner
+-out=TASK/'results/rl/component_ablation_v1';out.mkdir(parents=True,exist_ok=True)
+-qt,_=load_model(TASK/'results/rl/development_v1/q_f60_s2024');LT=region_long_term_value(qt.V)
+-json_dump(out/'contract.json',dict(trigger='Cost-awareλ3 QKM movement passed gross revenue/response validation safeguard; isolate long-term edge weighting vs movement on identicalV/map/day inputs',factorial='KM vsQKM × nomove vsλ3move;λ5 retained as cost tradeoff sensitivity',source_sha256=sha(__file__),parent_model_sha256=sha(TASK/'results/rl/development_v1/q_f60_s2024/model.npz'),split='validation'))
+-val=pd.read_csv(TASK/'results/data/trips_validation.csv');init=pd.read_csv(TASK/'results/data/checkins_train_inner.csv')
+-evaluate(out,val,init,60,[('km',km_fare,None),('qkm',make_q_km(LT,.5),None),('km_move3',km_fare,cost_aware_repositioner(qt.V,3)),('qkm_move3',make_q_km(LT,.5),cost_aware_repositioner(qt.V,3)),('qkm_move5',make_q_km(LT,.5),cost_aware_repositioner(qt.V,5))])
++
++
++def parse_args(argv=None):
++    return fixed_output_args(TASK/"results/rl/component_ablation_v1",__doc__,argv)
++
++
++def main(argv=None):
++    args=parse_args(argv)
++    out=args.output
++    out.mkdir(parents=True,exist_ok=False)
++    import sys
++    import pandas as pd
++    sys.path.insert(0,str(TASK/'src'));sys.path.insert(0,str(TASK/'scripts'))
++    from run_rl import load_model,evaluate,json_dump,sha
++    from rl_dispatch import region_long_term_value,make_q_km,km_fare
++    from rl_extensions import cost_aware_repositioner
++    qt,_=load_model(TASK/'results/rl/development_v1/q_f60_s2024');LT=region_long_term_value(qt.V)
++    json_dump(out/'contract.json',dict(trigger='Cost-awareλ3 QKM movement passed gross revenue/response validation safeguard; isolate long-term edge weighting vs movement on identicalV/map/day inputs',factorial='KM vsQKM × nomove vsλ3move;λ5 retained as cost tradeoff sensitivity',source_sha256=sha(__file__),parent_model_sha256=sha(TASK/'results/rl/development_v1/q_f60_s2024/model.npz'),split='validation'))
++    val=pd.read_csv(TASK/'results/data/trips_validation.csv');init=pd.read_csv(TASK/'results/data/checkins_train_inner.csv')
++    evaluate(out,val,init,60,[('km',km_fare,None),('qkm',make_q_km(LT,.5),None),('km_move3',km_fare,cost_aware_repositioner(qt.V,3)),('qkm_move3',make_q_km(LT,.5),cost_aware_repositioner(qt.V,3)),('qkm_move5',make_q_km(LT,.5),cost_aware_repositioner(qt.V,5))])
++
++
++if __name__=="__main__":
++    main()
+--- original/run_rl_offset_robustness.py
++++ guarded/run_rl_offset_robustness.py
+@@ -1,17 +1,35 @@
++"""Validation robustness to offset-inconsistent proxy pairs."""
+ from pathlib import Path
+-import sys
+-import numpy as np,pandas as pd
++try:
++    from .experiment_cli import fixed_output_args
++except ImportError:  # Direct-file invocation has no package context.
++    from experiment_cli import fixed_output_args
+ TASK=Path(__file__).resolve().parents[1]
+-sys.path.insert(0,str(TASK/'src'));sys.path.insert(0,str(TASK/'scripts'))
+-from run_rl import fit,evaluate,json_dump,sha
+-from rl_dispatch import region_long_term_value,make_q_km,km_fare,greedy_nearest
+-out=TASK/'results/rl/offset_robustness_v1';out.mkdir(parents=True,exist_ok=True)
+-data=TASK/'results/data';train=pd.read_csv(data/'trips_train_inner.csv');val=pd.read_csv(data/'trips_validation.csv');init=pd.read_csv(data/'checkins_train_inner.csv')
+-anomaly=pd.read_csv(TASK/'evidence/research_data/time_offset_anomalies.csv')
+-keys=set(zip(anomaly.origin_source_row,anomaly.destination_source_row))
+-keep=lambda d:np.array([(o,e) not in keys for o,e in zip(d.origin_source_row,d.destination_source_row)])
+-filtered_train=train.loc[keep(train)].copy();filtered_val=val.loc[keep(val)].copy()
+-filtered_train.to_csv(out/'filtered_inner.csv',index=False);filtered_val.to_csv(out/'filtered_validation.csv',index=False)
+-json_dump(out/'robustness_contract.json',dict(trigger='Independent raw timestamp audit found12 local-clock proxy pairs violating10–180min UTC window; inspect sensitivity without overwriting teacher-local-clock primary model',train_removed=len(train)-len(filtered_train),validation_removed=len(val)-len(filtered_val),train_removed_during_operating_hours=int(((~keep(train)) & train.minute.between(360,1439)).sum()),test='not used; no anomalies exist in held-out partition per separate audit',source_sha256=sha(__file__),data_sha256={f.name:sha(f) for f in [data/'trips_train_inner.csv',data/'trips_validation.csv',TASK/'evidence/research_data/time_offset_anomalies.csv']}))
+-qt=fit(out/'q_filtered',filtered_train,init,filtered_val,n=300,data_identity={f.name:sha(f) for f in [out/'filtered_inner.csv',out/'filtered_validation.csv']})
+-evaluate(out/'validation',filtered_val,init,60,[('greedy',greedy_nearest,None),('km',km_fare,None),('qkm',make_q_km(region_long_term_value(qt.V)),None)])
++
++
++def parse_args(argv=None):
++    return fixed_output_args(TASK/"results/rl/offset_robustness_v1",__doc__,argv)
++
++
++def main(argv=None):
++    args=parse_args(argv)
++    out=args.output
++    out.mkdir(parents=True,exist_ok=False)
++    import sys
++    import numpy as np,pandas as pd
++    sys.path.insert(0,str(TASK/'src'));sys.path.insert(0,str(TASK/'scripts'))
++    from run_rl import fit,evaluate,json_dump,sha
++    from rl_dispatch import region_long_term_value,make_q_km,km_fare,greedy_nearest
++    data=TASK/'results/data';train=pd.read_csv(data/'trips_train_inner.csv');val=pd.read_csv(data/'trips_validation.csv');init=pd.read_csv(data/'checkins_train_inner.csv')
++    anomaly=pd.read_csv(TASK/'evidence/research_data/time_offset_anomalies.csv')
++    keys=set(zip(anomaly.origin_source_row,anomaly.destination_source_row))
++    keep=lambda d:np.array([(o,e) not in keys for o,e in zip(d.origin_source_row,d.destination_source_row)])
++    filtered_train=train.loc[keep(train)].copy();filtered_val=val.loc[keep(val)].copy()
++    filtered_train.to_csv(out/'filtered_inner.csv',index=False);filtered_val.to_csv(out/'filtered_validation.csv',index=False)
++    json_dump(out/'robustness_contract.json',dict(trigger='Independent raw timestamp audit found12 local-clock proxy pairs violating10–180min UTC window; inspect sensitivity without overwriting teacher-local-clock primary model',train_removed=len(train)-len(filtered_train),validation_removed=len(val)-len(filtered_val),train_removed_during_operating_hours=int(((~keep(train)) & train.minute.between(360,1439)).sum()),test='not used; no anomalies exist in held-out partition per separate audit',source_sha256=sha(__file__),data_sha256={f.name:sha(f) for f in [data/'trips_train_inner.csv',data/'trips_validation.csv',TASK/'evidence/research_data/time_offset_anomalies.csv']}))
++    qt=fit(out/'q_filtered',filtered_train,init,filtered_val,n=300,data_identity={f.name:sha(f) for f in [out/'filtered_inner.csv',out/'filtered_validation.csv']})
++    evaluate(out/'validation',filtered_val,init,60,[('greedy',greedy_nearest,None),('km',km_fare,None),('qkm',make_q_km(region_long_term_value(qt.V)),None)])
++
++
++if __name__=="__main__":
++    main()
+--- original/confirm_rl_movement.py
++++ guarded/confirm_rl_movement.py
+@@ -1,17 +1,35 @@
++"""Frozen movement validation across training seeds."""
+ from pathlib import Path
+-import sys
+-import pandas as pd
++try:
++    from .experiment_cli import fixed_output_args
++except ImportError:  # Direct-file invocation has no package context.
++    from experiment_cli import fixed_output_args
+ TASK=Path(__file__).resolve().parents[1]
+-sys.path.insert(0,str(TASK/'src'));sys.path.insert(0,str(TASK/'scripts'))
+-from run_rl import fit,evaluate,json_dump,sha,load_model
+-from rl_dispatch import region_long_term_value,make_q_km,km_fare
+-from rl_extensions import cost_aware_repositioner
+-out=TASK/'results/rl/movement_trainseed_confirmation_v1';out.mkdir(parents=True,exist_ok=True)
+-data=TASK/'results/data';train=pd.read_csv(data/'trips_train_inner.csv');val=pd.read_csv(data/'trips_validation.csv');init=pd.read_csv(data/'checkins_train_inner.csv')
+-json_dump(out/'contract.json',dict(trigger='Single-seed removal of LT edge weighting improves gross revenue withV-motion; determine stability before final held-out evaluation',seeds=list(range(2024,2029)),candidate='KM vsQKM crossed with none vslambda3Vmotion; sameV within each seed',selection='mean gross validation fare, response >=teacherQKM-.01; report empty cost separately, do not call economic optimum',source_sha256=sha(__file__),data_identity={f.name:sha(f) for f in [data/'trips_train_inner.csv',data/'trips_validation.csv',data/'checkins_train_inner.csv']}))
+-for seed in range(2024,2029):
+- if seed==2024:
+-  qt,_=load_model(TASK/'results/rl/development_v1/q_f60_s2024')
+- else:qt=fit(out/f'q_s{seed}',train,init,val,n=300,seed=seed,data_identity={f.name:sha(f) for f in [data/'trips_train_inner.csv',data/'trips_validation.csv']})
+- LT=region_long_term_value(qt.V)
+- evaluate(out/f'validation_s{seed}',val,init,60,[('km',km_fare,None),('qkm',make_q_km(LT,.5),None),('km_move3',km_fare,cost_aware_repositioner(qt.V,3)),('qkm_move3',make_q_km(LT,.5),cost_aware_repositioner(qt.V,3))])
++
++
++def parse_args(argv=None):
++    return fixed_output_args(TASK/"results/rl/movement_trainseed_confirmation_v1",__doc__,argv)
++
++
++def main(argv=None):
++    args=parse_args(argv)
++    out=args.output
++    out.mkdir(parents=True,exist_ok=False)
++    import sys
++    import pandas as pd
++    sys.path.insert(0,str(TASK/'src'));sys.path.insert(0,str(TASK/'scripts'))
++    from run_rl import fit,evaluate,json_dump,sha,load_model
++    from rl_dispatch import region_long_term_value,make_q_km,km_fare
++    from rl_extensions import cost_aware_repositioner
++    data=TASK/'results/data';train=pd.read_csv(data/'trips_train_inner.csv');val=pd.read_csv(data/'trips_validation.csv');init=pd.read_csv(data/'checkins_train_inner.csv')
++    json_dump(out/'contract.json',dict(trigger='Single-seed removal of LT edge weighting improves gross revenue withV-motion; determine stability before final held-out evaluation',seeds=list(range(2024,2029)),candidate='KM vsQKM crossed with none vslambda3Vmotion; sameV within each seed',selection='mean gross validation fare, response >=teacherQKM-.01; report empty cost separately, do not call economic optimum',source_sha256=sha(__file__),data_identity={f.name:sha(f) for f in [data/'trips_train_inner.csv',data/'trips_validation.csv',data/'checkins_train_inner.csv']}))
++    for seed in range(2024,2029):
++     if seed==2024:
++      qt,_=load_model(TASK/'results/rl/development_v1/q_f60_s2024')
++     else:qt=fit(out/f'q_s{seed}',train,init,val,n=300,seed=seed,data_identity={f.name:sha(f) for f in [data/'trips_train_inner.csv',data/'trips_validation.csv']})
++     LT=region_long_term_value(qt.V)
++     evaluate(out/f'validation_s{seed}',val,init,60,[('km',km_fare,None),('qkm',make_q_km(LT,.5),None),('km_move3',km_fare,cost_aware_repositioner(qt.V,3)),('qkm_move3',make_q_km(LT,.5),cost_aware_repositioner(qt.V,3))])
++
++
++if __name__=="__main__":
++    main()
+--- original/confirm_rl_montecarlo.py
++++ guarded/confirm_rl_montecarlo.py
+@@ -1,17 +1,34 @@
+-"""One bounded fresh-resampling confirmation of frozen models, no parameter choice."""
++"""Frozen secondary held-out Monte Carlo confirmation."""
+ from pathlib import Path
+-import sys,json
+-import pandas as pd
++try:
++    from .experiment_cli import fixed_output_args
++except ImportError:  # Direct-file invocation has no package context.
++    from experiment_cli import fixed_output_args
+ TASK=Path(__file__).resolve().parents[1]
+-sys.path.insert(0,str(TASK/'src'));sys.path.insert(0,str(TASK/'scripts'))
+-from run_rl import load_model,evaluate,sha,json_dump
+-from rl_dispatch import region_long_term_value,make_q_km,km_fare
+-from rl_extensions import cost_aware_repositioner
+-out=TASK/'results/rl/final_montecarlo_v1';out.mkdir(parents=True,exist_ok=True)
+-qt,_=load_model(TASK/'results/rl/final_v1/q_f60');LT=region_long_term_value(qt.V)
+-json_dump(out/'contract.json',dict(trigger='Original frozen5day confirmation gives selectedKMmove3 gross difference640.81 with descriptive pairedt95[-64.07,1345.68]; clarify simulation MonteCarlo variability without altering that experiment or method',
+-     fixed_seeds=list(range(60000,60020)),models='same frozen full70 q_f60, no retraining or checkpoint choice',model_sha256=sha(TASK/'results/rl/final_v1/q_f60/model.npz'),
+-     policies=['km','qkm','km_move3','qkm_move5'],scope='20new independently seeded proxy simulation resamplings of same heldout datepool, not20new real dates or population evidence',
+-     stop='one20simulation batch only; report every seed; no post-test tuning or winner switch',source_sha256=sha(__file__),selection_contract_sha256=sha(TASK/'evidence/rl/FINAL_SELECTION.json')))
+-data=TASK/'results/data';test=pd.read_csv(data/'trips_test.csv');init=pd.read_csv(data/'checkins_train.csv')
+-evaluate(out,test,init,60,[('km',km_fare,None),('qkm',make_q_km(LT,.5),None),('km_move3',km_fare,cost_aware_repositioner(qt.V,3)),('qkm_move5',make_q_km(LT,.5),cost_aware_repositioner(qt.V,5))],seeds=range(60000,60020),split='heldout_secondary_montecarlo_confirmation')
++
++
++def parse_args(argv=None):
++    return fixed_output_args(TASK/"results/rl/final_montecarlo_v1",__doc__,argv)
++
++
++def main(argv=None):
++    args=parse_args(argv)
++    out=args.output
++    out.mkdir(parents=True,exist_ok=False)
++    import sys,json
++    import pandas as pd
++    sys.path.insert(0,str(TASK/'src'));sys.path.insert(0,str(TASK/'scripts'))
++    from run_rl import load_model,evaluate,sha,json_dump
++    from rl_dispatch import region_long_term_value,make_q_km,km_fare
++    from rl_extensions import cost_aware_repositioner
++    qt,_=load_model(TASK/'results/rl/final_v1/q_f60');LT=region_long_term_value(qt.V)
++    json_dump(out/'contract.json',dict(trigger='Original frozen5day confirmation gives selectedKMmove3 gross difference640.81 with descriptive pairedt95[-64.07,1345.68]; clarify simulation MonteCarlo variability without altering that experiment or method',
++         fixed_seeds=list(range(60000,60020)),models='same frozen full70 q_f60, no retraining or checkpoint choice',model_sha256=sha(TASK/'results/rl/final_v1/q_f60/model.npz'),
++         policies=['km','qkm','km_move3','qkm_move5'],scope='20new independently seeded proxy simulation resamplings of same heldout datepool, not20new real dates or population evidence',
++         stop='one20simulation batch only; report every seed; no post-test tuning or winner switch',source_sha256=sha(__file__),selection_contract_sha256=sha(TASK/'evidence/rl/FINAL_SELECTION.json')))
++    data=TASK/'results/data';test=pd.read_csv(data/'trips_test.csv');init=pd.read_csv(data/'checkins_train.csv')
++    evaluate(out,test,init,60,[('km',km_fare,None),('qkm',make_q_km(LT,.5),None),('km_move3',km_fare,cost_aware_repositioner(qt.V,3)),('qkm_move5',make_q_km(LT,.5),cost_aware_repositioner(qt.V,5))],seeds=range(60000,60020),split='heldout_secondary_montecarlo_confirmation')
++
++
++if __name__=="__main__":
++    main()
+--- original/diagnose_rl_double.py
++++ guarded/diagnose_rl_double.py
+@@ -1,22 +1,41 @@
++"""Descriptive Double-Q policy-value diagnostics; no training."""
+ from pathlib import Path
+-import sys,json
+-import numpy as np
++try:
++    from .experiment_cli import fixed_output_args
++except ImportError:  # Direct-file invocation has no package context.
++    from experiment_cli import fixed_output_args
+ TASK=Path(__file__).resolve().parents[1]
+-sys.path.insert(0,str(TASK/'src'));sys.path.insert(0,str(TASK/'scripts'))
+-from run_rl import load_model,sha,json_dump
+-from run_rl_followup import value_diagnostics
+-root=TASK/'results/rl/double_v2_rngfix'
+-rows=[]
+-for name in ['q','double']:
+- for seed in range(2024,2029):
+-  p=root/f'{name}_b1_s{seed}'
+-  if not p.exists():p=TASK/'results/rl/double_validation_v1'/f'{name}_b1_s{seed}'
+-  qt,meta=load_model(p)
+-  for day in range(50000,50005):
+-   tr=root/f'{name}_b1_s{seed}_validation'/f'trace_beta1_{day}.json'
+-   metrics,points=value_diagnostics(json.loads(tr.read_text()),qt.V)
+-   rows.append(dict(learner=name,train_seed=seed,day_seed=day,model_sha256=sha(p/'model.npz'),trace_sha256=sha(tr),**metrics))
+-json_dump(root/'value_bias_diagnostics.json',dict(scope='V minus realized discounted return under each actual policy, conditional on idle states; not a direct estimate of optimal-value bias because policies/state visitation differ',rows=rows))
+-for name in ['q','double']:
+- a=[r for r in rows if r['learner']==name]
+- print(name,{k:float(np.mean([r[k] for r in a])) for k in ['mean_estimate','mean_policy_return','optimism_gap','mae_to_policy_return']})
++
++
++def parse_args(argv=None):
++    return fixed_output_args(TASK/"results/rl/double_v2_rngfix",__doc__,argv)
++
++
++def main(argv=None):
++    args=parse_args(argv)
++    out=args.output
++    out.mkdir(parents=True,exist_ok=False)
++    import sys,json
++    import numpy as np
++    sys.path.insert(0,str(TASK/'src'));sys.path.insert(0,str(TASK/'scripts'))
++    from run_rl import load_model,sha,json_dump
++    from run_rl_followup import value_diagnostics
++    root=TASK/'results/rl/double_v2_rngfix'
++    rows=[]
++    for name in ['q','double']:
++     for seed in range(2024,2029):
++      p=root/f'{name}_b1_s{seed}'
++      if not p.exists():p=TASK/'results/rl/double_validation_v1'/f'{name}_b1_s{seed}'
++      qt,meta=load_model(p)
++      for day in range(50000,50005):
++       tr=root/f'{name}_b1_s{seed}_validation'/f'trace_beta1_{day}.json'
++       metrics,points=value_diagnostics(json.loads(tr.read_text()),qt.V)
++       rows.append(dict(learner=name,train_seed=seed,day_seed=day,model_sha256=sha(p/'model.npz'),trace_sha256=sha(tr),**metrics))
++    json_dump(out/'value_bias_diagnostics.json',dict(scope='V minus realized discounted return under each actual policy, conditional on idle states; not a direct estimate of optimal-value bias because policies/state visitation differ',rows=rows))
++    for name in ['q','double']:
++     a=[r for r in rows if r['learner']==name]
++     print(name,{k:float(np.mean([r[k] for r in a])) for k in ['mean_estimate','mean_policy_return','optimism_gap','mae_to_policy_return']})
++
++
++if __name__=="__main__":
++    main()

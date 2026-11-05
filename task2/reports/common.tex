@@ -1,0 +1,44 @@
+% Task-specific adaptation of the accepted Experiment Report typography.
+% Shared P2 values remain editable only in the repository common source.
+\usepackage[UTF8,fontset=none]{ctex}
+\usepackage{fontspec}
+\setmainfont{DejaVu Serif}\setsansfont{DejaVu Sans}
+\setCJKmainfont{Noto Serif CJK SC}\setCJKsansfont{Noto Sans CJK SC}
+\setCJKmonofont{Noto Sans Mono CJK SC}
+\usepackage[a4paper,left=21mm,right=21mm,top=20mm,bottom=20mm,headheight=14pt,headsep=8mm]{geometry}
+\usepackage{graphicx,booktabs,tabularx,array,amsmath,amssymb,longtable}
+\usepackage{xcolor,titlesec,fancyhdr,caption,hyperref,microtype,placeins,float,etoolbox,enumitem,needspace}
+\input{../../../templates/latex/common/p2_cloud_sorbet_colors.tex}
+\pagecolor{Paper}\color{Ink}
+\hypersetup{colorlinks=true,linkcolor=C1,urlcolor=C1,citecolor=C4,pdfauthor={吴博闻 / 10245102410}}
+\linespread{1.18}\setlength{\parindent}{2em}\setlength{\parskip}{.25em}
+\setlength{\emergencystretch}{2em}\clubpenalty=10000\widowpenalty=10000
+\titleformat{\section}[hang]{\sffamily\bfseries\Large}{\color{C1}\fontsize{25}{27}\selectfont\thesection}{.65em}{}
+\titleformat{\subsection}{\sffamily\bfseries\large}{\thesubsection}{.65em}{}
+\titlespacing*{\section}{0pt}{1.3em}{.7em}\titlespacing*{\subsection}{0pt}{1.1em}{.5em}
+\pagestyle{fancy}\fancyhf{}\fancyhead[L]{\sffamily\small\color{Muted}智慧城市与位置服务}
+\fancyhead[R]{\sffamily\small\color{Muted}\ReportIdentity}\fancyfoot[C]{\sffamily\small\color{Muted}\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\captionsetup{font=small,labelfont={bf,sf},labelsep=quad,skip=5pt}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.18}\setlist{nosep,leftmargin=2em}
+\newcommand{\tabnote}[1]{\par\vspace{2mm}\begin{minipage}{\linewidth}\footnotesize\color{Muted}#1\end{minipage}}
+\newcommand{\nextchapter}{\FloatBarrier\clearpage}\setcounter{tocdepth}{1}
+\pretocmd{\subsection}{\Needspace{7\baselineskip}}{}{}\raggedbottom
+\setlength{\textfloatsep}{13pt plus 2pt minus 2pt}\setlength{\intextsep}{11pt plus 2pt minus 2pt}
+\newcommand{\reportcover}[3]{\hypersetup{pageanchor=false}\begin{titlepage}\thispagestyle{empty}\setlength{\parindent}{0pt}
+\vspace*{21mm}{\sffamily\small\bfseries\color{C1}SMART CITIES \& LOCATION SERVICES}\par
+\vspace{14mm}{\sffamily\fontsize{17}{23}\selectfont 任务分配实验}\par
+\vspace{5mm}{\sffamily\bfseries\fontsize{27}{36}\selectfont #1}\par
+\vspace{5mm}{\large #2}\par\vspace{17mm}{\color{Rule}\rule{\linewidth}{.8pt}}\par\vspace{12mm}
+\begin{tabular}{@{}l@{\hspace{12mm}}l@{}}
+\textsf{\textcolor{Muted}{姓名}}&吴博闻\\[2mm]
+\textsf{\textcolor{Muted}{学号}}&10245102410\\[2mm]
+\textsf{\textcolor{Muted}{课程}}&智慧城市与位置服务\\[2mm]
+\textsf{\textcolor{Muted}{日期}}&2026年11月5日\\[2mm]
+\textsf{\textcolor{Muted}{材料}}&实验二（1）与实验三学生版
+\end{tabular}\vfill{\sffamily\small\color{Muted}#3}\par\vspace{4mm}
+{\color{P1}\rule{.34\linewidth}{3pt}\color{P2}\rule{.22\linewidth}{3pt}\color{P3}\rule{.20\linewidth}{3pt}\color{P4}\rule{.14\linewidth}{3pt}}\par\vspace*{8mm}
+\end{titlepage}\hypersetup{pageanchor=true}}
+\newcommand{\datafigure}[3]{\begin{figure}[htbp]\centering\includegraphics[width=\linewidth]{../../figures/formal/#1.pdf}\caption{#2}\label{#3}\end{figure}}

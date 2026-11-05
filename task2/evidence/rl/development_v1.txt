@@ -1,0 +1,57 @@
+TRAIN q_f40_s2024
+episode=0 double=False fleet=40 td=36.727 val=12733.334
+episode=20 double=False fleet=40 td=11.343 val=13739.014
+episode=40 double=False fleet=40 td=9.810 val=14165.435
+episode=60 double=False fleet=40 td=9.926 val=14278.456
+episode=80 double=False fleet=40 td=8.444 val=13968.859
+episode=100 double=False fleet=40 td=7.956 val=14208.167
+episode=120 double=False fleet=40 td=7.744 val=14271.595
+episode=140 double=False fleet=40 td=7.037 val=14034.317
+episode=160 double=False fleet=40 td=7.273 val=14035.528
+episode=180 double=False fleet=40 td=6.872 val=13924.608
+episode=200 double=False fleet=40 td=7.045 val=14102.279
+episode=220 double=False fleet=40 td=6.394 val=14030.882
+episode=240 double=False fleet=40 td=6.440 val=14051.477
+episode=260 double=False fleet=40 td=5.652 val=14091.548
+episode=280 double=False fleet=40 td=5.572 val=13868.886
+episode=299 double=False fleet=40 td=5.817 val=13871.181
+TRAINED q_f40_s2024 seconds 28.46
+EVAL baseline_f40_s2024 {"greedy": {"revenue": 12241.961885348337, "answer_rate": 0.4429333333333334, "avg_pickup": 1.6763910339856927, "empty_km": 0.0, "nonpositive_fraction": 0.0}, "km": {"revenue": 12009.85602943378, "answer_rate": 0.3778666666666667, "avg_pickup": 1.8684792373634598, "empty_km": 0.0, "nonpositive_fraction": 0.0}, "qkm": {"revenue": 13044.411536266269, "answer_rate": 0.43986666666666674, "avg_pickup": 1.8916327532003367, "empty_km": 0.0, "nonpositive_fraction": 0.04729303785319895}}
+TRAIN q_f60_s2024
+episode=0 double=False fleet=60 td=32.643 val=16465.386
+episode=20 double=False fleet=60 td=9.041 val=17768.944
+episode=40 double=False fleet=60 td=7.364 val=17751.782
+episode=60 double=False fleet=60 td=7.910 val=17989.788
+episode=80 double=False fleet=60 td=6.879 val=17750.505
+episode=100 double=False fleet=60 td=6.624 val=17668.383
+episode=120 double=False fleet=60 td=6.151 val=17795.541
+episode=140 double=False fleet=60 td=6.094 val=17852.229
+episode=160 double=False fleet=60 td=5.784 val=17734.468
+episode=180 double=False fleet=60 td=5.725 val=17891.508
+episode=200 double=False fleet=60 td=5.649 val=17819.480
+episode=220 double=False fleet=60 td=5.308 val=17748.228
+episode=240 double=False fleet=60 td=5.705 val=17745.439
+episode=260 double=False fleet=60 td=4.584 val=17807.234
+episode=280 double=False fleet=60 td=4.901 val=17749.662
+episode=299 double=False fleet=60 td=4.972 val=17835.628
+TRAINED q_f60_s2024 seconds 40.0
+EVAL baseline_f60_s2024 {"greedy": {"revenue": 16371.21318602334, "answer_rate": 0.596, "avg_pickup": 1.5574741171559012, "empty_km": 0.0, "nonpositive_fraction": 0.0}, "km": {"revenue": 15892.177152308135, "answer_rate": 0.5222666666666667, "avg_pickup": 1.8918419461880727, "empty_km": 0.0, "nonpositive_fraction": 0.0}, "qkm": {"revenue": 16830.682350984454, "answer_rate": 0.59, "avg_pickup": 1.8908894494158983, "empty_km": 0.0, "nonpositive_fraction": 0.030309578468969388}}
+TRAIN q_f100_s2024
+episode=0 double=False fleet=100 td=22.619 val=18828.507
+episode=20 double=False fleet=100 td=7.035 val=20074.769
+episode=40 double=False fleet=100 td=5.389 val=20242.064
+episode=60 double=False fleet=100 td=5.927 val=20316.634
+episode=80 double=False fleet=100 td=5.228 val=20307.869
+episode=100 double=False fleet=100 td=5.264 val=20395.718
+episode=120 double=False fleet=100 td=4.343 val=20461.800
+episode=140 double=False fleet=100 td=4.904 val=20549.933
+episode=160 double=False fleet=100 td=4.414 val=20492.888
+episode=180 double=False fleet=100 td=4.204 val=20435.165
+episode=200 double=False fleet=100 td=4.013 val=20483.852
+episode=220 double=False fleet=100 td=4.382 val=20583.530
+episode=240 double=False fleet=100 td=4.386 val=20539.066
+episode=260 double=False fleet=100 td=3.587 val=20497.225
+episode=280 double=False fleet=100 td=3.952 val=20546.258
+episode=299 double=False fleet=100 td=3.982 val=20542.904
+TRAINED q_f100_s2024 seconds 68.48
+EVAL baseline_f100_s2024 {"greedy": {"revenue": 21054.693641739254, "answer_rate": 0.7749333333333334, "avg_pickup": 1.3528067496336507, "empty_km": 0.0, "nonpositive_fraction": 0.0}, "km": {"revenue": 21197.28553530572, "answer_rate": 0.7549333333333333, "avg_pickup": 1.890514146763492, "empty_km": 0.0, "nonpositive_fraction": 0.0}, "qkm": {"revenue": 20636.686811180098, "answer_rate": 0.7457333333333334, "avg_pickup": 1.9265839407743695, "empty_km": 0.0, "nonpositive_fraction": 0.028852230342738837}}

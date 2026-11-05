@@ -1,0 +1,34 @@
+{
+  "code_hashes": {
+    "src/rl_dispatch.py": "268c2e5d09ef7ccb320a9d7186696b812feb3f1541229b3940bfb8b80a0fbf45",
+    "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+  },
+  "split": "validation",
+  "config": {
+    "grid": 8,
+    "step_min": 10,
+    "start": 360,
+    "end": 1440,
+    "speed": 25.0,
+    "radius": 3.0,
+    "patience": 2,
+    "orders": 1500,
+    "gamma": 0.92,
+    "alpha_min": 0.05,
+    "width": 25.230707400441077,
+    "height": 31.080000000000002
+  },
+  "fleet": 100,
+  "seeds": [
+    50000,
+    50001,
+    50002,
+    50003,
+    50004
+  ],
+  "policies": [
+    "greedy",
+    "km",
+    "qkm"
+  ]
+}

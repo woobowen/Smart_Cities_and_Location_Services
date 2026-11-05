@@ -1,0 +1,65 @@
+{
+  "author": "/root/evolution",
+  "inspection": "Actual view_image calls on every listed final 300dpi PNG export, after Matplotlib3.10.8 namespace repair",
+  "completed_utc": "2026-11-05T11:06:25.915154+00:00",
+  "figures": [
+    {
+      "path": "task2/figures/candidates/evolution_three_objectives_3d.png",
+      "sha256": "e1a83d326f529f9b4315550f351ca7d97306253ae8c89fe24baab796e7afcde1",
+      "viewed": true
+    },
+    {
+      "path": "task2/figures/candidates/evolution_three_objectives_parallel.png",
+      "sha256": "5415aea2a3cd2f577dfe2f1646e7aed0931db5d5c7408655cc5fa18a25f7d260",
+      "viewed": true
+    },
+    {
+      "path": "task2/figures/candidates/evolution_three_objectives_projections.png",
+      "sha256": "c96b87d0e087eacca6891505e69d06b74c7b108a62717d6dd65b25554c910dd9",
+      "viewed": true
+    },
+    {
+      "path": "task2/figures/formal/evolution_basic_scalar_reference.png",
+      "sha256": "22d1e2c9e8f502b27e637ce913296f42c59eac6d7de9df612b0932c1aa733d91",
+      "viewed": true
+    },
+    {
+      "path": "task2/figures/formal/evolution_budget_and_initialization.png",
+      "sha256": "6150e3e62417cd326423acf3ded399491e53ed4d0f5f6fc3fe41334e653c95c7",
+      "viewed": true
+    },
+    {
+      "path": "task2/figures/formal/evolution_dtlz2_geometry.png",
+      "sha256": "cfe9dcdc722f9f834a8ba0f6fd22e2442d32c5bf305622596b4a97680a000a7d",
+      "viewed": true
+    },
+    {
+      "path": "task2/figures/formal/evolution_front_and_convergence.png",
+      "sha256": "041f26553ee4c4b89e34555fcb5d5465b0d7edc6ca4f722bf111d34bd2ef8b00",
+      "viewed": true
+    },
+    {
+      "path": "task2/figures/formal/evolution_future_confirmation.png",
+      "sha256": "27b421144e148305ae313e0a8f1544360544b3a42daf2fe68c0b89a981e949e8",
+      "viewed": true
+    },
+    {
+      "path": "task2/figures/formal/evolution_hourly_fronts.png",
+      "sha256": "0c07bbc8179afd206c3b1cca6a48aea1e96deb6cb241191257e552f48bc08a2f",
+      "viewed": true
+    },
+    {
+      "path": "task2/figures/formal/evolution_three_objective_geometry.png",
+      "sha256": "865161b9121d1332b14c3f21782bad559478174065f2c132b08b60a96c4c8979",
+      "viewed": true
+    }
+  ],
+  "issues_and_repairs": [
+    "Original Matplotlib3.6 Axes3D tight bbox omitted outward z-axis labels on side-by-side3D/DTLZ2; added explicit bbox_extra_artists and re-exported in3.10.8. Re-view confirmed complete labels.",
+    "Basic front now directly labels exact scalar KM markers; all symbols and units checked.",
+    "Actual3D points remain visible; shared axes/camera in comparison plots; no interpolation of measured fronts."
+  ],
+  "scope_boundary": "Author figure inspection, not independent review or report-page inspection. Final report PDF rendering/review is coordinator responsibility.",
+  "automated_check": "figure_checks.txt; all10 PNGs >=3001x1264 and nonblank",
+  "shared_source_metadata_reexport": "After coordinator added unrelated shared-plot functions, all10 figures were actually re-exported to bind current shared_theme_sha256; every PNG SHA remains byte-identical to the10exports actually viewed."
+}

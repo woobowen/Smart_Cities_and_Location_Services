@@ -1,0 +1,40 @@
+{
+  "identity": "REPLAY_RECOMPUTE_SAME_FROZEN_MODELS_NOT_NEW_INDEPENDENT_TEST",
+  "reviewer": "/root/evolution",
+  "completed_utc": "2026-11-05T12:01:15.329771+00:00",
+  "producer_sha256_unchanged": "5ea1ce7a4ebee91c3c9df240f40cbbfe03cd3a610cc6d9077e5ee0a49e3234b6",
+  "producer_execution_count": 1,
+  "producer_exit_code": 0,
+  "producer_stdout": "Public aggregate projections 124 original source bytes unchanged\n",
+  "previous_independent_projection_review_sha256": "f5ef5c51d15defafb74d3cf4f2195c5f6c861efacdf65c42535503c4e213b6ef",
+  "previous_projection_manifest_sha256": "2d5edee27300386d890de46f5f0d03465598a8d84f8615f1a761b258987a46bd",
+  "current_projection_manifest_sha256": "ff623cc3a3e2491ba8b68775a526873cad9fadca7364865264261a99ffdeea2a",
+  "previous_public_final_front_sha256": "a75a7e6c1f17cd164d9563af0f2a92b95799e2706a7b7b0769294255f7077486",
+  "current_public_final_front_sha256": "dd81e39c19d26678ca63c9380521c3d2a43ce7d4e12eae76b5066ca48613c56c",
+  "current_replayed_raw_final_front_sha256": "484d68193f5ef2c6e65658e81fe92e350e67db5bbc259cc79be8f07a9a9cca1e",
+  "projected_file_count": 124,
+  "changed_public_bindings": [
+    "task2/public_results/rl/final_fronts.json"
+  ],
+  "unchanged_public_bindings": 123,
+  "changed_front_scalar_fields": 1060,
+  "front_difference_keys": [
+    "runtime"
+  ],
+  "all_scientific_fields_exactly_equal": true,
+  "manifest_difference_paths": [
+    [
+      "bindings",
+      123,
+      "source_sha256"
+    ],
+    [
+      "bindings",
+      123,
+      "public_sha256"
+    ]
+  ],
+  "original_review_file_unchanged": true,
+  "scope": "Actual public binding refresh only. No training, MOO, diagram or figure generation. Prior audits preserve their original hash scope; this appended receipt binds the current fixed-model REPLAY output.",
+  "status": "PASS_EXACT_EXPECTED_CHANGE_SET"
+}

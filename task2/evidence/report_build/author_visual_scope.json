@@ -1,0 +1,53 @@
+{
+  "author": "root report producer",
+  "type": "AUTHOR_SELF_CHECK",
+  "current_pdfs": [
+    {
+      "kind": "experiment",
+      "command": [
+        "latexmk",
+        "-g",
+        "-xelatex",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-halt-on-error",
+        "-outdir=build",
+        "main.tex"
+      ],
+      "returncode": 0,
+      "pages": 26,
+      "pdf": "task2/reports/experiment/Experiment_Report.pdf",
+      "sha256": "7a795625354e8a3c7034f8426171f8f8b32784db0cd398654b309c86ea72c101",
+      "render_dpi": 200,
+      "rendered_pages": 26,
+      "log_issues": [],
+      "visual_inspection": "PENDING_SEPARATE_ACTUAL_PAGE_REVIEW",
+      "recorded_utc": "2026-11-05T11:55:11.905536+00:00"
+    },
+    {
+      "kind": "process",
+      "command": [
+        "latexmk",
+        "-g",
+        "-xelatex",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-halt-on-error",
+        "-outdir=build",
+        "main.tex"
+      ],
+      "returncode": 0,
+      "pages": 8,
+      "pdf": "task2/reports/process/Process_Report.pdf",
+      "sha256": "a2c57f58d246e326d398003045cadad090db19dcab9163cae5871fd791b01de1",
+      "render_dpi": 200,
+      "rendered_pages": 8,
+      "log_issues": [],
+      "visual_inspection": "PENDING_SEPARATE_ACTUAL_PAGE_REVIEW",
+      "recorded_utc": "2026-11-05T11:55:15.729279+00:00"
+    }
+  ],
+  "actual_author_viewed": "Experiment physical pages1-8 before final minor edits; final pages6/9 and Process8 directly viewed at200dpi. No claim that author separately inspected every other page.",
+  "full_independent_page_review": "research_data viewed all26+8round1 pages; unchanged31page bytes inherited and3changedpages actually rechecked; see independent_report_review",
+  "findings": "Explicit online tail-generalization negative result and black discard caption fixed; final viewed pages readable without clipping."
+}

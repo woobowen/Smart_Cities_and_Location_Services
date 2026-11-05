@@ -1,0 +1,32 @@
+{
+  "fleet": 40,
+  "seed": 2024,
+  "beta": 0.5,
+  "double": false,
+  "split_identity": {
+    "trips_train.csv": "4c4f2322822aef1ac224f98621a5ab7aa66dabce888939d24873767b8e6a430a",
+    "checkins_train.csv": "cc8db6e9d5ec3881b1642650989fd8501065144e4e06590cae0921ecbcfac3ab"
+  },
+  "config": {
+    "grid": 8,
+    "step_min": 10,
+    "start": 360,
+    "end": 1440,
+    "speed": 25.0,
+    "radius": 3.0,
+    "patience": 2,
+    "orders": 1500,
+    "gamma": 0.92,
+    "alpha_min": 0.05,
+    "width": 25.230707400441077,
+    "height": 31.080000000000002
+  },
+  "runtime": 26.767902983999875,
+  "created": "2026-11-05T10:54:37.218398+00:00",
+  "code_hashes": {
+    "src/rl_dispatch.py": "4727cd44735ffbdd100bd8ed47fbbfe8c5897a20a69d9b9a22b7e2f454ac23b7",
+    "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+  },
+  "model_sha256": "649849ffc51a279dde1a93f18aa0563542f262ddf996d835c24924ffa4e95864",
+  "real_training_episodes": 300
+}

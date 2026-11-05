@@ -1,0 +1,29 @@
+import math
+import os
+import time
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from scipy.optimize import linear_sum_assignment   # KM（匈牙利）算法，求最小权完美匹配
+
+plt.rcParams["font.sans-serif"] = ["Arial Unicode MS", "PingFang SC", "SimHei", "Microsoft YaHei", "DejaVu Sans"]
+plt.rcParams["axes.unicode_minus"] = False
+
+DATA_PATH = "foursquare/dataset_TSMC2014_NYC.csv"
+FIG_DIR = "figures_exp3"              # 实验图表输出目录
+os.makedirs(FIG_DIR, exist_ok=True)
+SEED = 2024
+
+# ---- 研究区域：纽约主城区（曼哈顿 + 布鲁克林 / 皇后区西部）----
+LAT_MIN, LAT_MAX = 40.60, 40.88
+LON_MIN, LON_MAX = -74.05, -73.75
+KM_PER_LAT = 111.0                                   # 1° 纬度 ≈ 111 km
+KM_PER_LON = 111.0 * math.cos(math.radians(40.74))   # 1° 经度 ≈ 84 km
+W_KM = (LON_MAX - LON_MIN) * KM_PER_LON              # 区域东西宽 ≈ 25 km
+H_KM = (LAT_MAX - LAT_MIN) * KM_PER_LAT              # 区域南北高 ≈ 31 km
+
+# ---- 计价（与实验二仿真器一致）----
+BASE_FARE = 5.0      # 起步价（元）
+PER_KM = 2.0         # 每公里单价（元/km）
+PICKUP_RADIUS = 3.0  # 派单半径：司机与上车点曼哈顿距离不超过 3 km 才能派

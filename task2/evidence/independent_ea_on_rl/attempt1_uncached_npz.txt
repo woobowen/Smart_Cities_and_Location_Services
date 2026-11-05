@@ -1,0 +1,25 @@
+Traceback (most recent call last):
+  File "/home/addaswsw/lab/Smart_Cities_and_Location_Services/task2/evidence/independent_ea_on_rl/verify_rl.py", line 263, in <module>
+    main()
+  File "/home/addaswsw/lab/Smart_Cities_and_Location_Services/task2/evidence/independent_ea_on_rl/verify_rl.py", line 249, in main
+    obtained,_=replay(ep,tr,expected)
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/addaswsw/lab/Smart_Cities_and_Location_Services/task2/evidence/independent_ea_on_rl/verify_rl.py", line 102, in replay
+    near(a['destination'], e['dxy'][o], 'passenger destination')
+                           ~^^^^^^^
+  File "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/lib/python3.12/site-packages/numpy/lib/npyio.py", line 256, in __getitem__
+    return format.read_array(bytes,
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/lib/python3.12/site-packages/numpy/lib/format.py", line 831, in read_array
+    data = _read_bytes(fp, read_size, "array data")
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/lib/python3.12/site-packages/numpy/lib/format.py", line 966, in _read_bytes
+    r = fp.read(size - len(data))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/zipfile/__init__.py", line 1005, in read
+    data = self._read1(n)
+           ^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/zipfile/__init__.py", line 1081, in _read1
+    data = self._decompressor.decompress(data, n)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

@@ -1,0 +1,90 @@
+INFO: Auditing command paths
+PASS: xelatex -> /home/addaswsw/.local/texlive/2026/bin/x86_64-linux/xelatex
+INFO: xelatex version: XeTeX 3.141592653-2.6-0.999998 (TeX Live 2026)
+PASS: pdflatex -> /home/addaswsw/.local/texlive/2026/bin/x86_64-linux/pdflatex
+INFO: pdflatex version: pdfTeX 3.141592653-2.6-1.40.29 (TeX Live 2026)
+PASS: lualatex -> /home/addaswsw/.local/texlive/2026/bin/x86_64-linux/lualatex
+INFO: lualatex version: This is LuaHBTeX, Version 1.24.0 (TeX Live 2026)
+PASS: latexmk -> /home/addaswsw/.local/texlive/2026/bin/x86_64-linux/latexmk
+INFO: latexmk version: Latexmk, John Collins, 9 March 2026. Version 4.88
+PASS: kpsewhich -> /home/addaswsw/.local/texlive/2026/bin/x86_64-linux/kpsewhich
+INFO: kpsewhich version: kpathsea version 6.4.2
+PASS: bibtex -> /home/addaswsw/.local/texlive/2026/bin/x86_64-linux/bibtex
+INFO: bibtex version: BibTeX 0.99e (TeX Live 2026)
+PASS: biber -> /home/addaswsw/.local/texlive/2026/bin/x86_64-linux/biber
+INFO: biber version: biber version: 2.21
+PASS: pygmentize -> /home/addaswsw/.local/bin/pygmentize
+INFO: pygmentize version: Pygments version 2.20.0, (c) 2006-present by Georg Brandl, Matthäus Chajdas and contributors.
+PASS: python3 -> /usr/bin/python3
+INFO: python3 version: Python 3.12.3
+PASS: pdfinfo -> /usr/bin/pdfinfo
+INFO: pdfinfo version: pdfinfo version 24.02.0
+PASS: pdftotext -> /usr/bin/pdftotext
+INFO: pdftotext version: pdftotext version 24.02.0
+PASS: fc-list -> /usr/bin/fc-list
+INFO: fc-list version: fontconfig version 2.15.0
+PASS: tlmgr -> /home/addaswsw/.local/texlive/2026/bin/x86_64-linux/tlmgr
+INFO: tlmgr version: tlmgr revision 79639 (2026-07-10 18:45:34 +0200)
+PASS: pip -> /usr/bin/pip
+INFO: pip version: pip 24.0 from /usr/lib/python3/dist-packages/pip (python 3.12)
+PASS: latexminted -> /home/addaswsw/.local/texlive/2026/bin/x86_64-linux/latexminted
+INFO: latexminted version: latexminted 0.7.0
+INFO: Auditing TeX provenance and PATH
+PASS: TEXMFROOT=/home/addaswsw/.local/texlive/2026
+INFO: TEXMFLOCAL=/home/addaswsw/.local/texlive/texmf-local
+INFO: TEXMFHOME=/home/addaswsw/texmf
+INFO: type -a xelatex:
+  xelatex is /home/addaswsw/.local/texlive/2026/bin/x86_64-linux/xelatex
+INFO: type -a latexmk:
+  latexmk is /home/addaswsw/.local/texlive/2026/bin/x86_64-linux/latexmk
+INFO: type -a tlmgr:
+  tlmgr is /home/addaswsw/.local/texlive/2026/bin/x86_64-linux/tlmgr
+PASS: tlmgr belongs to active TEXMFROOT
+PASS: tlmgr repository: Default package repository (repository): https://jp.mirrors.cicku.me/ctan/systems/texlive/tlnet
+PASS: TeX Live repository DB is reachable: texlive.infra,79653,80721
+WARN: duplicate PATH entries detected: /home/addaswsw/.local/bin /mnt/c/Users/lenovo/AppData/Local/Programs/Python/Python312 /mnt/d/installation/MongoDB/bin/ 
+WARN: Windows TeX paths are present in WSL PATH; current Linux TeX must remain first: /mnt/d/installation/miktex/miktex/bin/x64/ /mnt/c/texlive/2025/bin/windows 
+INFO: Auditing TeX packages through kpsewhich
+PASS: ctex.sty -> /home/addaswsw/.local/texlive/2026/texmf-dist/tex/latex/ctex/ctex.sty
+PASS: xeCJK.sty -> /home/addaswsw/.local/texlive/2026/texmf-dist/tex/xelatex/xecjk/xeCJK.sty
+PASS: fontspec.sty -> /home/addaswsw/.local/texlive/2026/texmf-dist/tex/latex/fontspec/fontspec.sty
+PASS: geometry.sty -> /home/addaswsw/.local/texlive/2026/texmf-dist/tex/latex/geometry/geometry.sty
+PASS: graphicx.sty -> /home/addaswsw/.local/texlive/2026/texmf-dist/tex/latex/graphics/graphicx.sty
+PASS: xcolor.sty -> /home/addaswsw/.local/texlive/2026/texmf-dist/tex/latex/xcolor/xcolor.sty
+PASS: amsmath.sty -> /home/addaswsw/.local/texlive/2026/texmf-dist/tex/latex/amsmath/amsmath.sty
+PASS: amssymb.sty -> /home/addaswsw/.local/texlive/2026/texmf-dist/tex/latex/amsfonts/amssymb.sty
+PASS: amsthm.sty -> /home/addaswsw/.local/texlive/2026/texmf-dist/tex/latex/amscls/amsthm.sty
+PASS: minted.sty -> /home/addaswsw/.local/texlive/2026/texmf-dist/tex/latex/minted/minted.sty
+PASS: fancyvrb.sty -> /home/addaswsw/.local/texlive/2026/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+PASS: fvextra.sty -> /home/addaswsw/.local/texlive/2026/texmf-dist/tex/latex/fvextra/fvextra.sty
+PASS: tcolorbox.sty -> /home/addaswsw/.local/texlive/2026/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
+PASS: tikz.sty -> /home/addaswsw/.local/texlive/2026/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
+PASS: pgf.sty -> /home/addaswsw/.local/texlive/2026/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
+PASS: hyperref.sty -> /home/addaswsw/.local/texlive/2026/texmf-dist/tex/latex/hyperref/hyperref.sty
+PASS: biblatex.sty -> /home/addaswsw/.local/texlive/2026/texmf-dist/tex/latex/biblatex/biblatex.sty
+PASS: booktabs.sty -> /home/addaswsw/.local/texlive/2026/texmf-dist/tex/latex/booktabs/booktabs.sty
+PASS: longtable.sty -> /home/addaswsw/.local/texlive/2026/texmf-dist/tex/latex/tools/longtable.sty
+PASS: array.sty -> /home/addaswsw/.local/texlive/2026/texmf-dist/tex/latex/tools/array.sty
+PASS: enumitem.sty -> /home/addaswsw/.local/texlive/2026/texmf-dist/tex/latex/enumitem/enumitem.sty
+PASS: caption.sty -> /home/addaswsw/.local/texlive/2026/texmf-dist/tex/latex/caption/caption.sty
+PASS: subcaption.sty -> /home/addaswsw/.local/texlive/2026/texmf-dist/tex/latex/caption/subcaption.sty
+PASS: float.sty -> /home/addaswsw/.local/texlive/2026/texmf-dist/tex/latex/float/float.sty
+PASS: microtype.sty -> /home/addaswsw/.local/texlive/2026/texmf-dist/tex/latex/microtype/microtype.sty
+PASS: listings.sty -> /home/addaswsw/.local/texlive/2026/texmf-dist/tex/latex/listings/listings.sty
+INFO: Auditing Pygments and minted helpers
+PASS: Python imports Pygments: 2.20.0 /home/addaswsw/.local/lib/python3.12/site-packages/pygments/__init__.py 
+PASS: pygmentize is callable: Pygments version 2.20.0, (c) 2006-present by Georg Brandl, Matthäus Chajdas and contributors.
+INFO: Auditing Chinese fonts
+PASS: fontconfig sees Noto Serif CJK SC
+PASS: fontconfig sees Noto Sans CJK SC
+PASS: fontconfig sees Noto Sans Mono CJK SC
+PASS: TeX sees FandolSong-Regular.otf -> /home/addaswsw/.local/texlive/2026/texmf-dist/fonts/opentype/public/fandol/FandolSong-Regular.otf
+PASS: TeX sees FandolHei-Regular.otf -> /home/addaswsw/.local/texlive/2026/texmf-dist/fonts/opentype/public/fandol/FandolHei-Regular.otf
+PASS: TeX sees FandolFang-Regular.otf -> /home/addaswsw/.local/texlive/2026/texmf-dist/fonts/opentype/public/fandol/FandolFang-Regular.otf
+PASS: TeX sees FandolKai-Regular.otf -> /home/addaswsw/.local/texlive/2026/texmf-dist/fonts/opentype/public/fandol/FandolKai-Regular.otf
+INFO: Fandol may be absent from fontconfig while remaining usable through kpathsea/XeLaTeX.
+INFO: Auditing PDF validation tools
+PASS: pdfinfo is available for PDF validation
+PASS: pdftotext is available for PDF validation
+
+SUMMARY: PASS=56 WARN=2 FAIL=0

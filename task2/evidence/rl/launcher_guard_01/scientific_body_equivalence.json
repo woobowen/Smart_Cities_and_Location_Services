@@ -1,0 +1,100 @@
+{
+  "scope": "AST equivalence of scientific statements after excluding only import, argument parsing, guarded output initialization and diagnostic destination path; all original library functions exactly equal.",
+  "results": [
+    {
+      "path": "task2/scripts/run_rl.py",
+      "scientific_statements_equal": true,
+      "scientific_statement_count": 7,
+      "original_library_functions": [
+        {
+          "name": "sha",
+          "identical": true
+        },
+        {
+          "name": "json_dump",
+          "identical": true
+        },
+        {
+          "name": "identity",
+          "identical": true
+        },
+        {
+          "name": "save_model",
+          "identical": true
+        },
+        {
+          "name": "load_model",
+          "identical": true
+        },
+        {
+          "name": "fit",
+          "identical": true
+        },
+        {
+          "name": "evaluate",
+          "identical": true
+        }
+      ]
+    },
+    {
+      "path": "task2/scripts/run_rl_followup.py",
+      "scientific_statements_equal": true,
+      "scientific_statement_count": 8,
+      "original_library_functions": [
+        {
+          "name": "value_diagnostics",
+          "identical": true
+        }
+      ]
+    },
+    {
+      "path": "task2/scripts/resume_rl_rngfix.py",
+      "scientific_statements_equal": true,
+      "scientific_statement_count": 7,
+      "original_library_functions": []
+    },
+    {
+      "path": "task2/scripts/run_reposition_cost.py",
+      "scientific_statements_equal": true,
+      "scientific_statement_count": 9,
+      "original_library_functions": []
+    },
+    {
+      "path": "task2/scripts/run_rl_fusion.py",
+      "scientific_statements_equal": true,
+      "scientific_statement_count": 23,
+      "original_library_functions": []
+    },
+    {
+      "path": "task2/scripts/run_rl_component_ablation.py",
+      "scientific_statements_equal": true,
+      "scientific_statement_count": 6,
+      "original_library_functions": []
+    },
+    {
+      "path": "task2/scripts/run_rl_offset_robustness.py",
+      "scientific_statements_equal": true,
+      "scientific_statement_count": 14,
+      "original_library_functions": []
+    },
+    {
+      "path": "task2/scripts/confirm_rl_movement.py",
+      "scientific_statements_equal": true,
+      "scientific_statement_count": 6,
+      "original_library_functions": []
+    },
+    {
+      "path": "task2/scripts/confirm_rl_montecarlo.py",
+      "scientific_statements_equal": true,
+      "scientific_statement_count": 7,
+      "original_library_functions": []
+    },
+    {
+      "path": "task2/scripts/diagnose_rl_double.py",
+      "scientific_statements_equal": true,
+      "scientific_statement_count": 5,
+      "original_library_functions": []
+    }
+  ],
+  "status": "PASS"
+}

@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "reviewer": "/root/research_data",
+  "baseline": {
+    "trips": 25550,
+    "partitions": {
+      "trips_train_inner": 19617,
+      "trips_validation": 1972,
+      "trips_train": 21589,
+      "trips_test": 3961
+    }
+  },
+  "fallback": {
+    "source_identity": "AUTHOR_RECONSTRUCTED",
+    "teacher_byte_identity": false,
+    "resolved_path": "task2/teacher_materials/author_original/public_conversion/dataset_TSMC2014_NYC.csv",
+    "sha256": "7439cd16c531a3d37115febbe3c125d543d7064c66ec465f296dad948c5e7d05",
+    "all_trip_source_pairs_dates_minutes_equal": true,
+    "partition_counts_equal": true
+  },
+  "teacher_priority_checked": true,
+  "original_teacher_sha256_unchanged": "60a235386a5324f55c9f24fb1b06e55a38a0d53c0242435d754b38c0cc0b514a",
+  "data_code_sha256": "b37469c5eef181ad8725560acb557de86d2e5a62585e9c26313c1b3827863fb4",
+  "scope": "identity/path only; filtering, temporal split, geometry and current teacher input remain unchanged; active RL CSV inputs untouched"
+}

@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net">
+  <diagram name="Dispatch models and independent evaluation">
+    <mxGraphModel dx="1120" dy="800" page="1" pageWidth="1120" pageHeight="800">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="Dispatch models and independent evaluation" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=none;strokeColor=#DDE3E7;fontColor=#2D3238;fontSize=25;align=left;spacingLeft=14;">
+          <mxGeometry x="35" y="15" width="1050" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="raw" value="Teacher / synthetic input&#10;Immutable sources" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFFDFC;strokeColor=#DDE3E7;fontColor=#2D3238;fontSize=20;align=left;spacingLeft=14;">
+          <mxGeometry x="40" y="90" width="300" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="split" value="Chronological contract&#10;Inner / validate / test" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#D3EAF5;strokeColor=#DDE3E7;fontColor=#2D3238;fontSize=20;align=left;spacingLeft=14;">
+          <mxGeometry x="410" y="90" width="300" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="instances" value="Common scoped instances&#10;Arrivals / batch / day" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFFDFC;strokeColor=#DDE3E7;fontColor=#2D3238;fontSize=20;align=left;spacingLeft=14;">
+          <mxGeometry x="780" y="90" width="300" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="online" value="One-use online matching&#10;TBG / batch sum or max&#10;Recycle vs discard" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFFDFC;strokeColor=#DDE3E7;fontColor=#2D3238;fontSize=20;align=left;spacingLeft=14;">
+          <mxGeometry x="40" y="300" width="300" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="ea" value="Static optional matching&#10;NSGA-II/III / weighted KM&#10;Common feasible edges" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFFDFC;strokeColor=#DDE3E7;fontColor=#2D3238;fontSize=20;align=left;spacingLeft=14;">
+          <mxGeometry x="410" y="300" width="300" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="rl" value="Reusable-driver dynamics&#10;Q / Double / KM / NSGA&#10;Physical empty movement" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFFDFC;strokeColor=#DDE3E7;fontColor=#2D3238;fontSize=20;align=left;spacingLeft=14;">
+          <mxGeometry x="780" y="300" width="300" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="references" value="Exact independent checks&#10;Enumerate / LP / MILP&#10;HV union / manual TD" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#D7D3EA;strokeColor=#DDE3E7;fontColor=#2D3238;fontSize=20;align=left;spacingLeft=14;">
+          <mxGeometry x="40" y="560" width="300" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="metrics" value="Separate quality measures&#10;Coverage / delay / income&#10;Pickup / empty cost / HV" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFFDFC;strokeColor=#DDE3E7;fontColor=#2D3238;fontSize=20;align=left;spacingLeft=14;">
+          <mxGeometry x="410" y="560" width="300" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="artifacts" value="Valid runs -&gt; figures&#10;Reports / source / rerun&#10;Negative results retained" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFFDFC;strokeColor=#DDE3E7;fontColor=#2D3238;fontSize=20;align=left;spacingLeft=14;">
+          <mxGeometry x="780" y="560" width="300" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="footer" value="Static, single-use online and sequential fleet models keep separate definitions and units.&#10;Arrows show data and control. Technical structure is separate from historical chat evidence." vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=none;strokeColor=#DDE3E7;fontColor=#2D3238;fontSize=17;align=left;spacingLeft=14;">
+          <mxGeometry x="35" y="720" width="1050" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e0" edge="1" parent="1" source="raw" target="split" value="" style="endArrow=block;html=0;strokeColor=#5B9FBE;dashed=0;fontSize=16;">
+          <mxGeometry relative="1" labelX="0" labelY="0" as="geometry">
+            <mxPoint x="340" y="135" as="sourcePoint" />
+            <Array as="points" />
+            <mxPoint x="410" y="135" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="split" target="instances" value="" style="endArrow=block;html=0;strokeColor=#5B9FBE;dashed=0;fontSize=16;">
+          <mxGeometry relative="1" labelX="0" labelY="0" as="geometry">
+            <mxPoint x="710" y="135" as="sourcePoint" />
+            <Array as="points" />
+            <mxPoint x="780" y="135" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="instances" target="online" value="same scoped inputs" style="endArrow=block;html=0;strokeColor=#5B9FBE;dashed=0;fontSize=16;">
+          <mxGeometry relative="1" labelX="400" labelY="230" as="geometry">
+            <mxPoint x="930" y="180" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="930" y="240" />
+              <mxPoint x="190" y="240" />
+            </Array>
+            <mxPoint x="190" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="instances" target="ea" value="" style="endArrow=block;html=0;strokeColor=#5B9FBE;dashed=0;fontSize=16;">
+          <mxGeometry relative="1" labelX="0" labelY="0" as="geometry">
+            <mxPoint x="930" y="180" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="930" y="240" />
+              <mxPoint x="560" y="240" />
+            </Array>
+            <mxPoint x="560" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="instances" target="rl" value="" style="endArrow=block;html=0;strokeColor=#5B9FBE;dashed=0;fontSize=16;">
+          <mxGeometry relative="1" labelX="0" labelY="0" as="geometry">
+            <mxPoint x="930" y="180" as="sourcePoint" />
+            <Array as="points" />
+            <mxPoint x="930" y="300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="online" target="metrics" value="matching logs" style="endArrow=block;html=0;strokeColor=#5B9FBE;dashed=0;fontSize=16;">
+          <mxGeometry relative="1" labelX="220" labelY="480" as="geometry">
+            <mxPoint x="190" y="415" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="190" y="490" />
+              <mxPoint x="490" y="490" />
+            </Array>
+            <mxPoint x="490" y="560" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="ea" target="metrics" value="front + cost" style="endArrow=block;html=0;strokeColor=#5B9FBE;dashed=0;fontSize=16;">
+          <mxGeometry relative="1" labelX="575" labelY="500" as="geometry">
+            <mxPoint x="560" y="415" as="sourcePoint" />
+            <Array as="points" />
+            <mxPoint x="560" y="560" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="rl" target="metrics" value="day + movement logs" style="endArrow=block;html=0;strokeColor=#5B9FBE;dashed=0;fontSize=16;">
+          <mxGeometry relative="1" labelX="745" labelY="480" as="geometry">
+            <mxPoint x="930" y="415" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="930" y="490" />
+              <mxPoint x="650" y="490" />
+            </Array>
+            <mxPoint x="650" y="560" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="references" target="metrics" value="" style="endArrow=block;html=0;strokeColor=#5B9FBE;dashed=1;fontSize=16;">
+          <mxGeometry relative="1" labelX="0" labelY="0" as="geometry">
+            <mxPoint x="340" y="615" as="sourcePoint" />
+            <Array as="points" />
+            <mxPoint x="410" y="615" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="1" source="metrics" target="artifacts" value="" style="endArrow=block;html=0;strokeColor=#5B9FBE;dashed=0;fontSize=16;">
+          <mxGeometry relative="1" labelX="0" labelY="0" as="geometry">
+            <mxPoint x="710" y="615" as="sourcePoint" />
+            <Array as="points" />
+            <mxPoint x="780" y="615" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

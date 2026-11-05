@@ -1,0 +1,70 @@
+{
+  "actual_utc": "2026-11-05T12:44:58.459904+00:00",
+  "reviewer": "/root/research_data",
+  "status": "READY_WITH_EXPLICIT_SOURCE_PACKAGE_REVIEW_ATTRIBUTION",
+  "own_completed_checks": {
+    "cli_receipt": "task2/evidence/independent_cli_guard/result.json",
+    "cli_isolated_cases": 168,
+    "metadata_receipt": "task2/evidence/independent_final_metadata/km_scope_metadata_review.json",
+    "canonical_records": 125,
+    "metric_sets_8_10_12": 375,
+    "local_numeric_leaves_unchanged": 81980,
+    "public_numeric_leaves_unchanged": 81980
+  },
+  "source_package_review": {
+    "executor": "/root/reinforcement",
+    "receipt": "task2/evidence/independent_package/final_delta_review.json",
+    "receipt_sha256": "ac5fb6134aaa143bedda5de001e9ffd1eeda9ca34a3a5227ab7562fbd41987e8",
+    "reported_status": "PASS_FINAL_BOUNDED_DELTA_IN_STATED_SCOPE",
+    "current_bundle_sha256": "781dfd5a0990e9f9ddf0ce830bb1401a884481ab3d6fb0240a8f619f79d3a16e",
+    "prior_isolated_compile_bundle_sha256": "0215d2cd3f8dd25bbbc130c70467e0d56d01058008f393215a8255eec51b8fd4",
+    "scope_attributed_to_that_independent_executor": "81 members compared, only sources.json and SOURCE_PACKAGE_MANIFEST.json changed; 79 other assets unchanged, previous 34-page isolated compilation applies."
+  },
+  "own_zip_helper_limits": {
+    "status": "INCOMPLETE_NONZERO_EXIT_NO_OWN_ZIP_PASS",
+    "failed_preconditions": [
+      "Treating authorized regenerated sources.json as unchanged protected content.",
+      "Assuming EA protected-inventory sources.json and earlier compiled-ZIP sources.json had identical baseline hash.",
+      "Assuming manifest.files covered every ZIP member except itself (79 payload entries plus generated README plus manifest give 81).",
+      "Assuming the retained compiler extraction still matched every immutable prior member hash."
+    ],
+    "resolution": "Parent instructed no additional duplicate ZIP checks; preserve failed helper and use the actual independent EB final_delta_review. No experiment, graph, report, package, original evidence, or canonical result was modified by this verifier."
+  },
+  "no_new_experiment_render_compile": true,
+  "parent_next_step": "Final bounded stage/publication review and commit/push owned by root.",
+  "final_two_sentence_clarification": {
+    "actual_utc": "2026-11-05T12:45:35.823623+00:00",
+    "files": [
+      {
+        "path": "task2/README.md",
+        "line": 3,
+        "actual_text": "覆盖教师基础课件/Notebook及其两个思考点、进阶Part A/B及九道思考题、全部加分；本轮是一次性交付，研究和修复由单一连续父Goal承接。实验一成果保持原身份。",
+        "current_sha256": "9aa60199ea2a6a532f61e4ea12bd395da7db00ded9cd6f3fa596c5a5ee253974"
+      },
+      {
+        "path": "task2/review/DELIVERY_GATE_REVIEW.md",
+        "line": 7,
+        "actual_text": "|1 教师完整性|39页PPT/59Cells完整审读，基础TODO1–5/finalize与两个思考点、PartA/B及进阶九道思考题、全部加分映射到代码/测试/实验/图/报告；[要求矩阵](../docs/REQUIREMENT_MATRIX.md)|",
+        "current_sha256": "dbd7907024747e7ed4e127d48d84de5458dab4248457ffeb048c40f297bf9404"
+      }
+    ],
+    "source": "task2/docs/REQUIREMENT_MATRIX.md original rows31–32,47–50,66–70; teacher full-material reading retained in material_audit",
+    "basic_points": [
+      "BQ1",
+      "BQ2"
+    ],
+    "advanced_questions": [
+      "AQ1",
+      "AQ2",
+      "AQ3",
+      "AQ4",
+      "RQ1",
+      "RQ2",
+      "RQ3",
+      "RQ4",
+      "RQ5"
+    ],
+    "advanced_count": 9,
+    "conclusion": "Actual wording accurately separates two basic discussion points from four PartA and five PartB questions; no expansion of claimed coverage. No whole-document re-audit is claimed."
+  }
+}

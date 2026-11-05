@@ -1,0 +1,17 @@
+{
+  "source": "teacher advanced notebook in 归档.zip, zero-based cells",
+  "original_todo_cells": {"TODO1_q_update": 31, "TODO2_region_long_term_value": 33, "TODO3_make_q_km": 33},
+  "source_module": "task2/src/rl_dispatch.py",
+  "original_tests": {"cell31": "task2/tests/test_rl.py::test_teacher_todo_1_verbatim", "cell33": "task2/tests/test_rl.py::test_teacher_todo_2_3_verbatim"},
+  "actual_verification": {"command": "OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 .venv/bin/python -m pytest task2/tests/test_rl.py -q", "result": "10 passed in 0.51s", "scope": "original TODO assertions plus meaningful counterexamples; not a full Notebook RunAll"},
+  "integration": [
+    "Cell31 replace QTable/q_update definitions with from rl_dispatch import QTable, q_update; retain original unit-test statements exactly.",
+    "Cell33 replace only region_long_term_value/make_q_km definitions with imports, retain original assertions exactly.",
+    "Cell27 sample_episode must require explicit train-only initial_pool, replace global ck hotspot lookup. Use project run_episode to expose matching uniqueness, occupancy, cancellation, horizon accepted/completed metrics and empty reposition costs.",
+    "Cell35 use project train_q_km with trips_train_inner/checkins_train_inner/trips_validation for development; teacher n_episodes default remains300. Do not describe reading saved results as retraining.",
+    "Cell39 for frozen final evaluation fit on trips_train and initialize from checkins_train only; use held-out trips_test and seeds50000..50004, no tuning on these metrics.",
+    "Cell42 beta scan is validation-only for selection. Any teacher-style test curve is labeled descriptive, not an independent selection basis.",
+    "Cell37 show learned V on training-source background or explicitly full-dataset descriptive map; avoid using future background as training feature.",
+    "Config must propagate GRID/GAMMA/PATIENCE changes consistently to zones,WAIT,DELTA,QTable,episode geometry and policy. Avoid stale notebook globals."
+  ]
+}

@@ -1,0 +1,393 @@
+{
+  "status": "PASS_AUTHOR_ENGINEERING_GUARD_ONLY",
+  "scope": "10 RL launchers plus previously guarded final launcher:55 isolated CLI tests;20 real-workspace direct/module help calls under -S -B; public-only import/load_model/renderer import smoke without rendering. No training/evaluation/experiment executed. Original mathematical statements and library functions are AST-equal after only documented CLI/output plumbing exclusions.",
+  "source_hashes": [
+    {
+      "path": "task2/scripts/run_rl.py",
+      "original_snapshot": "task2/evidence/rl/launcher_guard_01/original_sources/run_rl.py",
+      "original_sha256": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644",
+      "guarded_sha256": "7f770087e1643e4934922a34514d168d753b057498a86a46c8125c310377f02e",
+      "scope": "CLI parsing, lazy imports, fresh output guard only; historical runs retain original source identity; no experiment executed"
+    },
+    {
+      "path": "task2/scripts/run_rl_followup.py",
+      "original_snapshot": "task2/evidence/rl/launcher_guard_01/original_sources/run_rl_followup.py",
+      "original_sha256": "bb080f83e19c9418d6843af620c208441c658755dd432f6bd83f355812635b87",
+      "guarded_sha256": "6e5c631c552c376a2275fb5629e87e083f1f0c65914dc06dd1345a946e4734a1",
+      "scope": "CLI parsing, lazy imports, fresh output guard only; historical runs retain original source identity; no experiment executed"
+    },
+    {
+      "path": "task2/scripts/resume_rl_rngfix.py",
+      "original_snapshot": "task2/evidence/rl/launcher_guard_01/original_sources/resume_rl_rngfix.py",
+      "original_sha256": "d604b1ef8c4e98a35e632d26a3f76df9092e7016cb87d2ff0dfba2eb434c2a07",
+      "guarded_sha256": "6c361a783257277338ee2cab713dd0352fa4ca6ac84139a17976ff058ab0a6c4",
+      "scope": "CLI parsing, lazy imports, fresh output guard only; historical runs retain original source identity; no experiment executed"
+    },
+    {
+      "path": "task2/scripts/run_reposition_cost.py",
+      "original_snapshot": "task2/evidence/rl/launcher_guard_01/original_sources/run_reposition_cost.py",
+      "original_sha256": "58cb4fa65636f28fbe6b501f8b59dc6d9a18bc1a47f2ca7b3575d9e0ba06df7f",
+      "guarded_sha256": "ba9b7c0ab7899ce9d81b2485235ff304a8c88cf308c81ff2cd29f839b6ab65c7",
+      "scope": "CLI parsing, lazy imports, fresh output guard only; historical runs retain original source identity; no experiment executed"
+    },
+    {
+      "path": "task2/scripts/run_rl_fusion.py",
+      "original_snapshot": "task2/evidence/rl/launcher_guard_01/original_sources/run_rl_fusion.py",
+      "original_sha256": "5af221e284d6358f6e62df95ae3bc523799354781d38e2ed6e955ffa8bc1f116",
+      "guarded_sha256": "527a000af7a5c836a1ff692255d55d3fe3b68e25b3d30c171873273b5e28ce9c",
+      "scope": "CLI parsing, lazy imports, fresh output guard only; historical runs retain original source identity; no experiment executed"
+    },
+    {
+      "path": "task2/scripts/run_rl_component_ablation.py",
+      "original_snapshot": "task2/evidence/rl/launcher_guard_01/original_sources/run_rl_component_ablation.py",
+      "original_sha256": "34efd9d410f1335ef89528ec77805252e5687a43f04ef4c50b12cd67ec07d542",
+      "guarded_sha256": "29112e5807e69d7c2938a9966e8af5413aeeb0b7b9a1f62f026260bae0d789a1",
+      "scope": "CLI parsing, lazy imports, fresh output guard only; historical runs retain original source identity; no experiment executed"
+    },
+    {
+      "path": "task2/scripts/run_rl_offset_robustness.py",
+      "original_snapshot": "task2/evidence/rl/launcher_guard_01/original_sources/run_rl_offset_robustness.py",
+      "original_sha256": "945cc2b017841570f6704830101a249df51a195ae211eb2999526b1ed8a7f0fb",
+      "guarded_sha256": "62077677cdd4db236e20b04b26ab712735a4cfa9c19a9444907a2a87d8034560",
+      "scope": "CLI parsing, lazy imports, fresh output guard only; historical runs retain original source identity; no experiment executed"
+    },
+    {
+      "path": "task2/scripts/confirm_rl_movement.py",
+      "original_snapshot": "task2/evidence/rl/launcher_guard_01/original_sources/confirm_rl_movement.py",
+      "original_sha256": "59d5ec4613a4fb22479a52db0aab2e48f821c2cf46ac95b87402dc625150263c",
+      "guarded_sha256": "4e92a00294e779b8315707a90579dee802cc6ff5a49364153d93c4856f9a974d",
+      "scope": "CLI parsing, lazy imports, fresh output guard only; historical runs retain original source identity; no experiment executed"
+    },
+    {
+      "path": "task2/scripts/confirm_rl_montecarlo.py",
+      "original_snapshot": "task2/evidence/rl/launcher_guard_01/original_sources/confirm_rl_montecarlo.py",
+      "original_sha256": "b2d7c820909a802dcf835d03b53b9cb66a5434330ea585fffbbbdea234962cea",
+      "guarded_sha256": "97d94c7d54fab19c0ec82cc594083a624060fcc3c867770f9a540a1c15d47b34",
+      "scope": "CLI parsing, lazy imports, fresh output guard only; historical runs retain original source identity; no experiment executed"
+    },
+    {
+      "path": "task2/scripts/diagnose_rl_double.py",
+      "original_snapshot": "task2/evidence/rl/launcher_guard_01/original_sources/diagnose_rl_double.py",
+      "original_sha256": "994312b4c9c3249f61f926c2e225f46dbed49661f6a4e13bc889e55117737bff",
+      "guarded_sha256": "9e68a91a0e9a175150c0f98041ca36553b18be3b8a03b5affbaa0c9f5e04bf1f",
+      "scope": "CLI parsing, lazy imports, fresh output guard only; historical runs retain original source identity; no experiment executed"
+    }
+  ],
+  "helper": {
+    "path": "task2/scripts/experiment_cli.py",
+    "sha256": "3bd3a51d7fc5c3fe4f384e394c3d0f0721902bc77b0e5558c5c3ecf5ab604568"
+  },
+  "test_sha256": "04758e3abd1eca674d40c5f5a7912bd77cc3810d5be14a687cccad5b4aa82790",
+  "tests": "55 passed in 1.26s; see pytest_output.txt",
+  "scientific_ast_receipt_sha256": "00a8c8800e825680bdebee536684f787ce2026c89add73be80ad51515018c63d",
+  "help_commands": [
+    {
+      "script": "task2/scripts/run_rl.py",
+      "mode": "direct",
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/task2/scripts/run_rl.py",
+        "--help"
+      ],
+      "returncode": 0,
+      "stdout_sha256": "27d696ce684083b775cfa57a115b1ea7b6a305be63277cfc8fb1e0ca2b8df310",
+      "stderr": ""
+    },
+    {
+      "script": "task2/scripts/run_rl.py",
+      "mode": "module",
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-m",
+        "task2.scripts.run_rl",
+        "--help"
+      ],
+      "returncode": 0,
+      "stdout_sha256": "27d696ce684083b775cfa57a115b1ea7b6a305be63277cfc8fb1e0ca2b8df310",
+      "stderr": ""
+    },
+    {
+      "script": "task2/scripts/run_rl_followup.py",
+      "mode": "direct",
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/task2/scripts/run_rl_followup.py",
+        "--help"
+      ],
+      "returncode": 0,
+      "stdout_sha256": "7cd880c95e60792d47ceabb9e165976c5fe5a4fec43dea4f244f9eff386b9cf7",
+      "stderr": ""
+    },
+    {
+      "script": "task2/scripts/run_rl_followup.py",
+      "mode": "module",
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-m",
+        "task2.scripts.run_rl_followup",
+        "--help"
+      ],
+      "returncode": 0,
+      "stdout_sha256": "7cd880c95e60792d47ceabb9e165976c5fe5a4fec43dea4f244f9eff386b9cf7",
+      "stderr": ""
+    },
+    {
+      "script": "task2/scripts/resume_rl_rngfix.py",
+      "mode": "direct",
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/task2/scripts/resume_rl_rngfix.py",
+        "--help"
+      ],
+      "returncode": 0,
+      "stdout_sha256": "e4e8a6ca39a96e3f6dec55dbd9de9014d3ff49f84404455eb1018ff1d95edbdd",
+      "stderr": ""
+    },
+    {
+      "script": "task2/scripts/resume_rl_rngfix.py",
+      "mode": "module",
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-m",
+        "task2.scripts.resume_rl_rngfix",
+        "--help"
+      ],
+      "returncode": 0,
+      "stdout_sha256": "e4e8a6ca39a96e3f6dec55dbd9de9014d3ff49f84404455eb1018ff1d95edbdd",
+      "stderr": ""
+    },
+    {
+      "script": "task2/scripts/run_reposition_cost.py",
+      "mode": "direct",
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/task2/scripts/run_reposition_cost.py",
+        "--help"
+      ],
+      "returncode": 0,
+      "stdout_sha256": "b5693389d9f9c1f03e06ed1709ffb154131a1f03b21f89e216899095b46c1c6b",
+      "stderr": ""
+    },
+    {
+      "script": "task2/scripts/run_reposition_cost.py",
+      "mode": "module",
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-m",
+        "task2.scripts.run_reposition_cost",
+        "--help"
+      ],
+      "returncode": 0,
+      "stdout_sha256": "b5693389d9f9c1f03e06ed1709ffb154131a1f03b21f89e216899095b46c1c6b",
+      "stderr": ""
+    },
+    {
+      "script": "task2/scripts/run_rl_fusion.py",
+      "mode": "direct",
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/task2/scripts/run_rl_fusion.py",
+        "--help"
+      ],
+      "returncode": 0,
+      "stdout_sha256": "8727d720aa5a3a020b31fae82a95f6c2c95c842162be6878f1edd5d22de55ed4",
+      "stderr": ""
+    },
+    {
+      "script": "task2/scripts/run_rl_fusion.py",
+      "mode": "module",
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-m",
+        "task2.scripts.run_rl_fusion",
+        "--help"
+      ],
+      "returncode": 0,
+      "stdout_sha256": "8727d720aa5a3a020b31fae82a95f6c2c95c842162be6878f1edd5d22de55ed4",
+      "stderr": ""
+    },
+    {
+      "script": "task2/scripts/run_rl_component_ablation.py",
+      "mode": "direct",
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/task2/scripts/run_rl_component_ablation.py",
+        "--help"
+      ],
+      "returncode": 0,
+      "stdout_sha256": "5df056906d6b65341652a8b0d654658f47b20f3e190d60efcf5b8ffc6896da29",
+      "stderr": ""
+    },
+    {
+      "script": "task2/scripts/run_rl_component_ablation.py",
+      "mode": "module",
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-m",
+        "task2.scripts.run_rl_component_ablation",
+        "--help"
+      ],
+      "returncode": 0,
+      "stdout_sha256": "5df056906d6b65341652a8b0d654658f47b20f3e190d60efcf5b8ffc6896da29",
+      "stderr": ""
+    },
+    {
+      "script": "task2/scripts/run_rl_offset_robustness.py",
+      "mode": "direct",
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/task2/scripts/run_rl_offset_robustness.py",
+        "--help"
+      ],
+      "returncode": 0,
+      "stdout_sha256": "9201727fba8815dd2f6d136cde9b389adeddcf0682e9101d642fd0150e364111",
+      "stderr": ""
+    },
+    {
+      "script": "task2/scripts/run_rl_offset_robustness.py",
+      "mode": "module",
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-m",
+        "task2.scripts.run_rl_offset_robustness",
+        "--help"
+      ],
+      "returncode": 0,
+      "stdout_sha256": "9201727fba8815dd2f6d136cde9b389adeddcf0682e9101d642fd0150e364111",
+      "stderr": ""
+    },
+    {
+      "script": "task2/scripts/confirm_rl_movement.py",
+      "mode": "direct",
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/task2/scripts/confirm_rl_movement.py",
+        "--help"
+      ],
+      "returncode": 0,
+      "stdout_sha256": "cf65a213361b899b7b9726c6091f4d584ca7161eb8975e3a46c1198c2d46d014",
+      "stderr": ""
+    },
+    {
+      "script": "task2/scripts/confirm_rl_movement.py",
+      "mode": "module",
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-m",
+        "task2.scripts.confirm_rl_movement",
+        "--help"
+      ],
+      "returncode": 0,
+      "stdout_sha256": "cf65a213361b899b7b9726c6091f4d584ca7161eb8975e3a46c1198c2d46d014",
+      "stderr": ""
+    },
+    {
+      "script": "task2/scripts/confirm_rl_montecarlo.py",
+      "mode": "direct",
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/task2/scripts/confirm_rl_montecarlo.py",
+        "--help"
+      ],
+      "returncode": 0,
+      "stdout_sha256": "9b20d57a9e57eb0f84c0ed95a619e69cc494ccbbd0642dc861be09adb2789f6c",
+      "stderr": ""
+    },
+    {
+      "script": "task2/scripts/confirm_rl_montecarlo.py",
+      "mode": "module",
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-m",
+        "task2.scripts.confirm_rl_montecarlo",
+        "--help"
+      ],
+      "returncode": 0,
+      "stdout_sha256": "9b20d57a9e57eb0f84c0ed95a619e69cc494ccbbd0642dc861be09adb2789f6c",
+      "stderr": ""
+    },
+    {
+      "script": "task2/scripts/diagnose_rl_double.py",
+      "mode": "direct",
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/task2/scripts/diagnose_rl_double.py",
+        "--help"
+      ],
+      "returncode": 0,
+      "stdout_sha256": "3b23f7559122ca5139bd7812182357a1c0a6c2ac46c7e2070f2d3f0bf1c29c5e",
+      "stderr": ""
+    },
+    {
+      "script": "task2/scripts/diagnose_rl_double.py",
+      "mode": "module",
+      "command": [
+        "/home/addaswsw/lab/Smart_Cities_and_Location_Services/.venv/bin/python",
+        "-S",
+        "-B",
+        "-m",
+        "task2.scripts.diagnose_rl_double",
+        "--help"
+      ],
+      "returncode": 0,
+      "stdout_sha256": "3b23f7559122ca5139bd7812182357a1c0a6c2ac46c7e2070f2d3f0bf1c29c5e",
+      "stderr": ""
+    }
+  ],
+  "public_import_smoke": {
+    "returncode": 0,
+    "stdout": "IMPORT_AND_LOAD_ONLY_NO_RENDER",
+    "stderr": "",
+    "source_sha256": {
+      "task2/scripts/run_rl.py": "7f770087e1643e4934922a34514d168d753b057498a86a46c8125c310377f02e",
+      "task2/scripts/experiment_cli.py": "3bd3a51d7fc5c3fe4f384e394c3d0f0721902bc77b0e5558c5c3ecf5ab604568",
+      "task2/scripts/build_rl_figures.py": "8ae3164787c45cb9be473847eba1e12cbe26645a27b57f213cde3910f9f05ebe",
+      "task2/scripts/build_figures.py": "e228d1abc1ef307c88629961b7402ee48b03314bc2dd24e0cc1e719540c404ed",
+      "task2/src/rl_dispatch.py": "4727cd44735ffbdd100bd8ed47fbbfe8c5897a20a69d9b9a22b7e2f454ac23b7",
+      "templates/latex/common/p2_cloud_sorbet_colors.tex": "2aa820c3f68ba6c14cf1b52082b12336071d77bb5466db2b05b2fab6890aa243"
+    },
+    "private_data_absent": true,
+    "figures_generated": 0
+  },
+  "protected_files": 1329,
+  "protected_byte_hashes_unchanged": true,
+  "historical_run_identity": "Original model/metric code_hashes unchanged. Their exact pre-guard launcher bytes remain in original_sources; guard source hashes are engineering revisions, not code claimed to have executed those historical runs."
+}

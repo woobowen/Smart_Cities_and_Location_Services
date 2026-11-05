@@ -1,0 +1,73 @@
+{
+  "source_page": "https://sites.google.com/site/yangdingqi/home/foursquare-dataset",
+  "source_url": "https://drive.google.com/file/d/1VE67jfSN-GV6fkCfuyBEQJzk_qy-SfOk/view?usp=sharing",
+  "archive_sha256": "cbe3fdab373d24b09b5fc53509c8958c77ff72b6c1a68589ce337d4f9a80235b",
+  "operation_utc": "2026-11-05T11:34:35.372013+00:00",
+  "source_action": "verified_existing_local_author_zip",
+  "redistribution": "NOT_ESTABLISHED; this script fetches from the author into the local workspace only",
+  "exact_reproduction": "Both reconstructed city CSVs must match audited teacher hashes. This verifies exact input bytes, not cross-environment bitwise equality of stochastic experiment artifacts.",
+  "reconstruction_rule_version": "decimal10_half_up_crlf_no_final_eol_v2",
+  "cities": {
+    "NYC": {
+      "rows": 227428,
+      "tsv_sha256": "2f39ce698e5bff6683c74bec30c436cc022c160b0f3d73c5268b55491b2445f9",
+      "csv_sha256": "60a235386a5324f55c9f24fb1b06e55a38a0d53c0242435d754b38c0cc0b514a",
+      "teacher_expected_sha256": "60a235386a5324f55c9f24fb1b06e55a38a0d53c0242435d754b38c0cc0b514a",
+      "byte_identity_to_teacher": true,
+      "conversion": "original Latin1 TSV -> UTF8 CSV; direct Decimal10 significant digits ROUND_HALF_UP; original row order; CRLF between records, no terminal CRLF",
+      "rule_version": "decimal10_half_up_crlf_no_final_eol_v2",
+      "source_identity": "AUTHOR_RECONSTRUCTED_EXACT_BYTES",
+      "identity": "author-public-source reconstructed input; CSV bytes equal audited teacher CSV, acquisition provider remains author reconstruction"
+    },
+    "TKY": {
+      "rows": 573703,
+      "tsv_sha256": "85542c605ce708d8584637756590383a84e9bbdb71342d0d8e78858ba2a0e5c8",
+      "csv_sha256": "849365e52e970c85819b3cc1559bb00bedbe2e37f8e274d77241d62e89ac85f2",
+      "teacher_expected_sha256": "849365e52e970c85819b3cc1559bb00bedbe2e37f8e274d77241d62e89ac85f2",
+      "byte_identity_to_teacher": true,
+      "conversion": "original Latin1 TSV -> UTF8 CSV; direct Decimal10 significant digits ROUND_HALF_UP; original row order; CRLF between records, no terminal CRLF",
+      "rule_version": "decimal10_half_up_crlf_no_final_eol_v2",
+      "source_identity": "AUTHOR_RECONSTRUCTED_EXACT_BYTES",
+      "identity": "author-public-source reconstructed input; CSV bytes equal audited teacher CSV, acquisition provider remains author reconstruction"
+    }
+  }
+}
+{
+  "actual_utc": "2026-11-05T11:34:46.249998+00:00",
+  "status": "EXACT_INPUT_AND_ACQUISITION_REGRESSION_PASS",
+  "checks": [
+    "checkins: exact DataFrame equality after public fallback",
+    "trips: exact DataFrame equality after public fallback",
+    "trips_train_inner: exact DataFrame equality after public fallback",
+    "trips_validation: exact DataFrame equality after public fallback",
+    "trips_train: exact DataFrame equality after public fallback",
+    "trips_test: exact DataFrame equality after public fallback",
+    "checkins_train_inner: exact DataFrame equality after public fallback",
+    "checkins_train: exact DataFrame equality after public fallback",
+    "TKY source rows/hash and author reconstruction identity",
+    "all expected proxy and date partition counts",
+    "canonical original teacher provision retains priority and identity",
+    "same hash outside known acquisition paths does not invent provider",
+    "real explicit install writes validated sidecars; teacher path does not rewrite provider",
+    "original two teacher CSV hashes unchanged"
+  ],
+  "partition_rows": {
+    "trips": 25550,
+    "trips_train_inner": 19617,
+    "trips_validation": 1972,
+    "trips_train": 21589,
+    "trips_test": 3961
+  },
+  "original_teacher_sha256": {
+    "NYC": "60a235386a5324f55c9f24fb1b06e55a38a0d53c0242435d754b38c0cc0b514a",
+    "TKY": "849365e52e970c85819b3cc1559bb00bedbe2e37f8e274d77241d62e89ac85f2"
+  },
+  "default_source_identity": "TEACHER_PROVIDED",
+  "fetch_source_action": "downloaded_from_public_author_url",
+  "fetch_receipt_sha256": "13356c0b17c0a0b881b39eb41cd061cec29169d3338e8700229e8b6346aa48a1",
+  "code_sha256": {
+    "src/dispatch_data.py": "6f6cdc4cab521e55d6d4a99435faba763625f2d0a9985a65e296b007bdf3ede5",
+    "scripts/fetch_public_data.py": "74e68664bd78cc75464969bace41b092c35775a9a0e6ab4030bd893aa44705f1"
+  },
+  "scope": "Read-only original inputs and temporary copies; no current-run CSV regenerated, no model retraining, not a claim of universal bitwise stochastic artifacts"
+}

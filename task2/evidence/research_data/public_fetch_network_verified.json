@@ -1,0 +1,63 @@
+{
+  "source_page": "https://sites.google.com/site/yangdingqi/home/foursquare-dataset",
+  "source_url": "https://drive.google.com/file/d/1VE67jfSN-GV6fkCfuyBEQJzk_qy-SfOk/view?usp=sharing",
+  "archive_sha256": "cbe3fdab373d24b09b5fc53509c8958c77ff72b6c1a68589ce337d4f9a80235b",
+  "operation_utc": "2026-11-05T10:52:29.414756+00:00",
+  "source_action": "downloaded_from_public_author_url",
+  "redistribution": "NOT_ESTABLISHED; this script fetches from the author into the local workspace only",
+  "exact_reproduction": "Exact published teacher-result replay requires the teacher CSV hashes. Author conversion is an explicitly distinct input.",
+  "cities": {
+    "NYC": {
+      "rows": 227428,
+      "tsv_sha256": "2f39ce698e5bff6683c74bec30c436cc022c160b0f3d73c5268b55491b2445f9",
+      "csv_sha256": "7439cd16c531a3d37115febbe3c125d543d7064c66ec465f296dad948c5e7d05",
+      "teacher_expected_sha256": "60a235386a5324f55c9f24fb1b06e55a38a0d53c0242435d754b38c0cc0b514a",
+      "byte_identity_to_teacher": false,
+      "conversion": "original Latin1 TSV -> UTF8 CSV; coordinates10 significant digits; original row order; CRLF",
+      "identity": "author-source converted proxy input, distinct from teacher-provided CSV",
+      "teacher_comparison": {
+        "rows_compared": 227428,
+        "field_differences": {
+          "userId": 0,
+          "venueId": 0,
+          "venueCategoryId": 0,
+          "venueCategory": 0,
+          "latitude": 11,
+          "longitude": 32,
+          "timezoneOffset": 0,
+          "utcTimestamp": 0
+        },
+        "max_coordinate_difference_degree": {
+          "latitude": 1.000000082740371e-08,
+          "longitude": 1.0000007932831068e-08
+        }
+      }
+    },
+    "TKY": {
+      "rows": 573703,
+      "tsv_sha256": "85542c605ce708d8584637756590383a84e9bbdb71342d0d8e78858ba2a0e5c8",
+      "csv_sha256": "939bc38d8cdd555d4a89ddc090921e7ad187d0e7399717b75ff5c75871d4de4f",
+      "teacher_expected_sha256": "849365e52e970c85819b3cc1559bb00bedbe2e37f8e274d77241d62e89ac85f2",
+      "byte_identity_to_teacher": false,
+      "conversion": "original Latin1 TSV -> UTF8 CSV; coordinates10 significant digits; original row order; CRLF",
+      "identity": "author-source converted proxy input, distinct from teacher-provided CSV",
+      "teacher_comparison": {
+        "rows_compared": 573703,
+        "field_differences": {
+          "userId": 0,
+          "venueId": 0,
+          "venueCategoryId": 0,
+          "venueCategory": 0,
+          "latitude": 31,
+          "longitude": 311,
+          "timezoneOffset": 0,
+          "utcTimestamp": 0
+        },
+        "max_coordinate_difference_degree": {
+          "latitude": 1.000000082740371e-08,
+          "longitude": 1.0000002248489182e-07
+        }
+      }
+    }
+  }
+}

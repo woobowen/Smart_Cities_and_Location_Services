@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net">
+  <diagram name="Research and verification: actual native contexts">
+    <mxGraphModel dx="1120" dy="800" page="1" pageWidth="1120" pageHeight="800">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="Research and verification: actual native contexts" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=none;strokeColor=#DDE3E7;fontColor=#2D3238;fontSize=25;align=left;spacingLeft=14;">
+          <mxGeometry x="35" y="15" width="1050" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="scope" value="Approved task scope&#10;Main-thread coordination&#10;One continuous Goal" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#D3EAF5;strokeColor=#DDE3E7;fontColor=#2D3238;fontSize=20;align=left;spacingLeft=14;">
+          <mxGeometry x="410" y="90" width="300" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="R" value="research_data context&#10;Teacher/source/data audit&#10;V/O on evolution" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFFDFC;strokeColor=#DDE3E7;fontColor=#2D3238;fontSize=20;align=left;spacingLeft=14;">
+          <mxGeometry x="40" y="285" width="300" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="EA" value="evolution context&#10;NSGA / KM execution&#10;Independent V on RL" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFFDFC;strokeColor=#DDE3E7;fontColor=#2D3238;fontSize=20;align=left;spacingLeft=14;">
+          <mxGeometry x="410" y="285" width="300" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="EB" value="reinforcement context&#10;Q-KM / extensions&#10;Independent V on online" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFFDFC;strokeColor=#DDE3E7;fontColor=#2D3238;fontSize=20;align=left;spacingLeft=14;">
+          <mxGeometry x="780" y="285" width="300" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="ROOT" value="Main thread execution&#10;TBG / BB / exact checks&#10;Integration and reports" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFFDFC;strokeColor=#DDE3E7;fontColor=#2D3238;fontSize=20;align=left;spacingLeft=14;">
+          <mxGeometry x="40" y="520" width="300" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="QA" value="Independent references&#10;Raw input + target hashes&#10;Issues -&gt; fix -&gt; rerun" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#D7D3EA;strokeColor=#DDE3E7;fontColor=#2D3238;fontSize=20;align=left;spacingLeft=14;">
+          <mxGeometry x="410" y="520" width="300" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="PKG" value="Reviewable deliverables&#10;Figures / notebooks / PDF&#10;Git commit / review ZIP" vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=#FFFDFC;strokeColor=#DDE3E7;fontColor=#2D3238;fontSize=20;align=left;spacingLeft=14;">
+          <mxGeometry x="780" y="520" width="300" height="115" as="geometry" />
+        </mxCell>
+        <mxCell id="footer" value="Four real contexts cover six responsibilities; deterministic functions are numerical tools.&#10;External web-GPT review and human acceptance follow the internal workflow." vertex="1" parent="1" style="rounded=1;whiteSpace=wrap;html=0;fillColor=none;strokeColor=#DDE3E7;fontColor=#2D3238;fontSize=17;align=left;spacingLeft=14;">
+          <mxGeometry x="35" y="720" width="1050" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e0" edge="1" parent="1" source="scope" target="R" value="source contract" style="endArrow=block;html=0;strokeColor=#5B9FBE;dashed=0;fontSize=16;">
+          <mxGeometry relative="1" labelX="205" labelY="225" as="geometry">
+            <mxPoint x="410" y="147" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="190" y="147" />
+            </Array>
+            <mxPoint x="190" y="285" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="scope" target="EA" value="method contract" style="endArrow=block;html=0;strokeColor=#5B9FBE;dashed=0;fontSize=16;">
+          <mxGeometry relative="1" labelX="575" labelY="245" as="geometry">
+            <mxPoint x="560" y="205" as="sourcePoint" />
+            <Array as="points" />
+            <mxPoint x="560" y="285" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="scope" target="EB" value="method contract" style="endArrow=block;html=0;strokeColor=#5B9FBE;dashed=0;fontSize=16;">
+          <mxGeometry relative="1" labelX="790" labelY="225" as="geometry">
+            <mxPoint x="710" y="147" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="930" y="147" />
+            </Array>
+            <mxPoint x="930" y="285" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="R" target="QA" value="cross-context checks" style="endArrow=block;html=0;strokeColor=#5B9FBE;dashed=0;fontSize=16;">
+          <mxGeometry relative="1" labelX="225" labelY="440" as="geometry">
+            <mxPoint x="190" y="395" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="190" y="450" />
+              <mxPoint x="460" y="450" />
+            </Array>
+            <mxPoint x="460" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="EA" target="QA" value="raw runs" style="endArrow=block;html=0;strokeColor=#5B9FBE;dashed=0;fontSize=16;">
+          <mxGeometry relative="1" labelX="575" labelY="485" as="geometry">
+            <mxPoint x="560" y="395" as="sourcePoint" />
+            <Array as="points" />
+            <mxPoint x="560" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="EB" target="QA" value="cross-context checks" style="endArrow=block;html=0;strokeColor=#5B9FBE;dashed=0;fontSize=16;">
+          <mxGeometry relative="1" labelX="735" labelY="440" as="geometry">
+            <mxPoint x="930" y="395" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="930" y="450" />
+              <mxPoint x="660" y="450" />
+            </Array>
+            <mxPoint x="660" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="ROOT" target="QA" value="" style="endArrow=block;html=0;strokeColor=#5B9FBE;dashed=0;fontSize=16;">
+          <mxGeometry relative="1" labelX="0" labelY="0" as="geometry">
+            <mxPoint x="340" y="575" as="sourcePoint" />
+            <Array as="points" />
+            <mxPoint x="410" y="575" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="QA" target="scope" value="issue / new hypothesis" style="endArrow=block;html=0;strokeColor=#5B9FBE;dashed=1;fontSize=16;">
+          <mxGeometry relative="1" labelX="755" labelY="495" as="geometry">
+            <mxPoint x="710" y="570" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="744" y="570" />
+              <mxPoint x="744" y="240" />
+              <mxPoint x="680" y="240" />
+            </Array>
+            <mxPoint x="680" y="205" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="QA" target="PKG" value="" style="endArrow=block;html=0;strokeColor=#5B9FBE;dashed=0;fontSize=16;">
+          <mxGeometry relative="1" labelX="0" labelY="0" as="geometry">
+            <mxPoint x="710" y="615" as="sourcePoint" />
+            <Array as="points" />
+            <mxPoint x="780" y="615" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

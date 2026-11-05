@@ -1,0 +1,14 @@
+\begin{table}[htbp]\centering\small
+\caption{60车开发单因素；每项重新训练300回合、同5个验证模拟日。}\label{tab:rlsensitivity}
+\begin{tabularx}{\linewidth}{Yrrr}\toprule
+变化 & 接单车费 & 应答率 & 接驾/km\\\midrule
+原参考 & 16,830.68 & 0.5900 & 1.891\\
+gamma=.8 & 16,089.53 & 0.5345 & 1.894\\
+gamma=.95 & 16,574.42 & 0.6085 & 1.913\\
+grid=6 & 16,748.56 & 0.5784 & 1.888\\
+grid=10 & 16,761.73 & 0.5937 & 1.910\\
+patience=1 & 16,366.49 & 0.5747 & 1.880\\
+patience=3 & 17,290.17 & 0.6064 & 1.890\\
+\bottomrule\end{tabularx}
+\tabnote{每项只改变命名参数；patience变化改变等待合同，不能直接解释为相同服务约束下的质量改善。}
+\end{table}

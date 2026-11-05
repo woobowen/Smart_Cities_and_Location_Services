@@ -1,0 +1,67 @@
+[
+  {
+    "phase": "final_v1/enhancements",
+    "metrics_sha256": "2e0e85ffcc6bc046bf1b436fa167c7fb3754ffda4491f0d554b1da51812cb7a6",
+    "gross_gain": {
+      "n": 5,
+      "mean": 640.8050101448928,
+      "sample_sd": 567.6846877733002,
+      "paired_t95": [
+        -64.06862899475993,
+        1345.6786492845454
+      ]
+    },
+    "extra_empty_km": {
+      "n": 5,
+      "mean": 826.5492074067946,
+      "sample_sd": 53.79905345943253,
+      "paired_t95": [
+        759.7488595887775,
+        893.3495552248118
+      ]
+    },
+    "diagnostic_net_at_hypothetical_cost1_per_km": {
+      "n": 5,
+      "mean": -185.744197261902,
+      "sample_sd": 565.9301326467688,
+      "paired_t95": [
+        -888.439268468077,
+        516.9508739442729
+      ]
+    },
+    "scope": "Conditional on frozen learned model and proxy-order resampling pool; not actual operational days, training uncertainty or fuel prices. No post-test method selection."
+  },
+  {
+    "phase": "final_montecarlo_v1",
+    "metrics_sha256": "3177a3045af4a7593348cd5ba1c47e2c8c6764061c203b8aac266a52e3d60785",
+    "gross_gain": {
+      "n": 20,
+      "mean": 435.4547577775405,
+      "sample_sd": 627.6950005281741,
+      "paired_t95": [
+        141.6844546926024,
+        729.2250608624786
+      ]
+    },
+    "extra_empty_km": {
+      "n": 20,
+      "mean": 848.0791602189263,
+      "sample_sd": 72.49657578388859,
+      "paired_t95": [
+        814.1497183359537,
+        882.0086021018989
+      ]
+    },
+    "diagnostic_net_at_hypothetical_cost1_per_km": {
+      "n": 20,
+      "mean": -412.62440244138577,
+      "sample_sd": 650.4182404705514,
+      "paired_t95": [
+        -717.0295091798928,
+        -108.21929570287881
+      ]
+    },
+    "scope": "Conditional on frozen learned model and proxy-order resampling pool; not actual operational days, training uncertainty or fuel prices. No post-test method selection."
+  }
+]
+fusion frames [{'phase': 'fusion_validation_v1', 'frames': 1064, 'mapping_sha256': '0565d850fe947e7a6b8743078954e1f654539dc66bf7fff9901326958bda48ae', 'source_front_sha256': '6f230b700534222c92c8bbcbdd04304782a28a672471d48189f7c46bc2cd3639', 'model_sha256': '2b29d6a62f535b150fa8da67cf5379a962b457d5bb6a763b070cae5cb218cba3', 'scope': 'All mapped local pairs, true context weights, objective sums, preference selection and evaluation budgets independently reconstructed.'}, {'phase': 'final_v1', 'frames': 1060, 'mapping_sha256': 'e4ba47e470944ef0b6d762939de8e96d9857726a2314e8f6ebad7c242fede94d', 'source_front_sha256': 'ec45229cfb0d4f0209fb7d60f78262a1128c5c44ae820872963db6eff4e35c0f', 'model_sha256': '6920e9b9a861bbe09f33fd4efbd8d0b92893ddf8667f92de61f7222f19140451', 'scope': 'All mapped local pairs, true context weights, objective sums, preference selection and evaluation budgets independently reconstructed.'}]

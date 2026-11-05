@@ -1,0 +1,171 @@
+{
+  "actual_utc": "2026-11-05T12:44:09.547877+00:00",
+  "reviewer": "/root/research_data, independent of EA implementation and metadata author",
+  "status": "PASS",
+  "command": ".venv/bin/python -B task2/evidence/independent_final_metadata/verify_final_metadata.py",
+  "scope": "Read actual before/current JSON, code AST, bytes and artifact hashes; no EA/KM solves, training, plotting or report compilation.",
+  "before_sha256": {
+    "task2/scripts/evaluate_evolution.py": "940464b610d3fef969a5a4785068f2ba06b9661123a8b9d51e2ac8fde322c81c",
+    "task2/results/evolution/metrics.json": "1af5c6abcac8fecdf5ae0b36e55558b3eabe1c8ececdaaa96f40e6692ab10733",
+    "task2/results/evolution/summary.csv": "818ede7586dd33b3c47c64ab0cd3b42cb8b7f73c26aa27b267bd5d21efb0d5ad",
+    "task2/public_results/evolution/metrics.json": "a2230ba264f247806592daf923a0a2be0177e825fc49fae568eec753d90c47dc",
+    "task2/public_results/projection_manifest.json": "ff623cc3a3e2491ba8b68775a526873cad9fadca7364865264261a99ffdeea2a"
+  },
+  "after_sha256": {
+    "task2/scripts/evaluate_evolution.py": "a311b6ec8710f109d6b259d9549c0aaeef34f01df973206bfe3ad4b7fbc4f5e9",
+    "task2/results/evolution/metrics.json": "36f1387a2eb0153a1f269310c64e94411cd5505077930c4586a16ac2eb732faf",
+    "task2/results/evolution/summary.csv": "818ede7586dd33b3c47c64ab0cd3b42cb8b7f73c26aa27b267bd5d21efb0d5ad",
+    "task2/public_results/evolution/metrics.json": "94427397ba871758473d698d641369ab28286858df66c393e6338e9c9a460d76",
+    "task2/public_results/projection_manifest.json": "a4fe877debc3a67c0ec9bd37af15468a06884235fe64403b21aa95392d927288"
+  },
+  "local_diff": [
+    {
+      "path": "/rows/5/runtime_scope",
+      "before": "EA-only in original baseline; initialization absent",
+      "after": "41 scalar assignments with objective sums and encoding; original elapsed time not captured; normalization timing separate and unrecorded"
+    },
+    {
+      "path": "/rows/6/runtime_scope",
+      "before": "EA-only in original baseline; initialization absent",
+      "after": "solve_seconds includes 41 scalar assignments, objective sums and encoding; normalization separate"
+    },
+    {
+      "path": "/rows/7/runtime_scope",
+      "before": "EA-only in original baseline; initialization absent",
+      "after": "41 scalar assignments with objective sums and encoding; original elapsed time not captured; normalization timing separate and unrecorded"
+    },
+    {
+      "path": "/rows/8/runtime_scope",
+      "before": "EA-only in original baseline; initialization absent",
+      "after": "41 scalar assignments with objective sums and encoding; original elapsed time not captured; normalization timing separate and unrecorded"
+    },
+    {
+      "path": "/rows/9/runtime_scope",
+      "before": "EA-only in original baseline; initialization absent",
+      "after": "41 scalar assignments with objective sums and encoding; original elapsed time not captured; normalization timing separate and unrecorded"
+    },
+    {
+      "path": "/runner_sha256",
+      "before": "940464b610d3fef969a5a4785068f2ba06b9661123a8b9d51e2ac8fde322c81c",
+      "after": "a311b6ec8710f109d6b259d9549c0aaeef34f01df973206bfe3ad4b7fbc4f5e9"
+    }
+  ],
+  "public_diff": [
+    {
+      "path": "/public_projection/source/sha256",
+      "before": "1af5c6abcac8fecdf5ae0b36e55558b3eabe1c8ececdaaa96f40e6692ab10733",
+      "after": "36f1387a2eb0153a1f269310c64e94411cd5505077930c4586a16ac2eb732faf"
+    },
+    {
+      "path": "/rows/5/runtime_scope",
+      "before": "EA-only in original baseline; initialization absent",
+      "after": "41 scalar assignments with objective sums and encoding; original elapsed time not captured; normalization timing separate and unrecorded"
+    },
+    {
+      "path": "/rows/6/runtime_scope",
+      "before": "EA-only in original baseline; initialization absent",
+      "after": "solve_seconds includes 41 scalar assignments, objective sums and encoding; normalization separate"
+    },
+    {
+      "path": "/rows/7/runtime_scope",
+      "before": "EA-only in original baseline; initialization absent",
+      "after": "41 scalar assignments with objective sums and encoding; original elapsed time not captured; normalization timing separate and unrecorded"
+    },
+    {
+      "path": "/rows/8/runtime_scope",
+      "before": "EA-only in original baseline; initialization absent",
+      "after": "41 scalar assignments with objective sums and encoding; original elapsed time not captured; normalization timing separate and unrecorded"
+    },
+    {
+      "path": "/rows/9/runtime_scope",
+      "before": "EA-only in original baseline; initialization absent",
+      "after": "41 scalar assignments with objective sums and encoding; original elapsed time not captured; normalization timing separate and unrecorded"
+    },
+    {
+      "path": "/runner_sha256",
+      "before": "940464b610d3fef969a5a4785068f2ba06b9661123a8b9d51e2ac8fde322c81c",
+      "after": "a311b6ec8710f109d6b259d9549c0aaeef34f01df973206bfe3ad4b7fbc4f5e9"
+    }
+  ],
+  "manifest_diff": [
+    {
+      "path": "/bindings/120/public_sha256",
+      "before": "a2230ba264f247806592daf923a0a2be0177e825fc49fae568eec753d90c47dc",
+      "after": "94427397ba871758473d698d641369ab28286858df66c393e6338e9c9a460d76"
+    },
+    {
+      "path": "/bindings/120/source_sha256",
+      "before": "1af5c6abcac8fecdf5ae0b36e55558b3eabe1c8ececdaaa96f40e6692ab10733",
+      "after": "36f1387a2eb0153a1f269310c64e94411cd5505077930c4586a16ac2eb732faf"
+    }
+  ],
+  "canonical_records": 125,
+  "full_metric_dicts_exactly_equal_8_10_12": 375,
+  "numeric_local_leaves_type_path_value_exact": 81980,
+  "numeric_public_leaves_type_path_value_exact": 81980,
+  "summary_csv_byte_identical": true,
+  "evaluator_ast_exact_except_single_runtime_scope_keyword": true,
+  "summary_md_only_one_canonical_hash_replacement": {
+    "before_sha256": "413530c346cefc06e4e950cfc0c2e4219ab58b7853cd2c26cb0b93db4d084a45",
+    "after_sha256": "d6466ac960f7d910773585aa16b1f7e67e1a33d1f788dff323a139ecf8196b4f",
+    "new_packet_sha256": "36f1387a2eb0153a1f269310c64e94411cd5505077930c4586a16ac2eb732faf"
+  },
+  "public_bindings": 124,
+  "changed_public_bindings": [
+    "task2/public_results/evolution/metrics.json"
+  ],
+  "other_public_bindings_exactly_equal": 123,
+  "sidecar_only_hash_plus_explicit_inheritance": [
+    {
+      "path": "task2/figures/candidates/evolution_three_objectives_3d.json",
+      "current_sha256": "6edc438b41bf8ec1f30334f295d515e800f7afdbce127fedc7eb676cde38ba73"
+    },
+    {
+      "path": "task2/figures/candidates/evolution_three_objectives_parallel.json",
+      "current_sha256": "8d1437c37a37126f067d627f8b0e3b8a85077c7fc2802fd9d17c77a4510f2bc9"
+    },
+    {
+      "path": "task2/figures/candidates/evolution_three_objectives_projections.json",
+      "current_sha256": "46daaead5e3d7be1ba47f839f2bf5e6f00a4af9eee1d2a487405bb7107e3d285"
+    },
+    {
+      "path": "task2/figures/formal/evolution_basic_scalar_reference.json",
+      "current_sha256": "7a0d80c3436e87213e9dcea59436ee1998b8a02d826e143f898f277646617a42"
+    },
+    {
+      "path": "task2/figures/formal/evolution_budget_and_initialization.json",
+      "current_sha256": "1821fafe9d5d10e9d2c130fa2790d4209e551080b637bd4378d57270d727552c"
+    },
+    {
+      "path": "task2/figures/formal/evolution_dtlz2_geometry.json",
+      "current_sha256": "6241e5e7f34d2c3a91a87e401951297d5d0fbd495567e05e4c004012d68bcf58"
+    },
+    {
+      "path": "task2/figures/formal/evolution_front_and_convergence.json",
+      "current_sha256": "21d413dbb706e6dcc35c545270d2e32536b1c8dbf0ff54dffd289dbc882a2f54"
+    },
+    {
+      "path": "task2/figures/formal/evolution_future_confirmation.json",
+      "current_sha256": "c17d3c51aa6c10f6206c0f876b6bd14becdfbff5026ef1598c4a5e91118f7d06"
+    },
+    {
+      "path": "task2/figures/formal/evolution_hourly_fronts.json",
+      "current_sha256": "4e149a65ec1d7219f7d5415b1b3903b3efd22d66dec5286a96954b65733f49db"
+    },
+    {
+      "path": "task2/figures/formal/evolution_three_objective_geometry.json",
+      "current_sha256": "36ed3363a059b251d82e5e321f586026281e2763f5e3f203fb2568e06883500f"
+    }
+  ],
+  "protected_snapshot_count": 428,
+  "protected_files_exactly_unchanged_excluding_10_sidecars_summary_header_and_generated_provenance": 416,
+  "generated_provenance_followup": {
+    "path": "task2/reports/generated/sources.json",
+    "before_sha256": "4e0b01c5f27606a5379ba58b941442223db95332c191ac0c532695789c97b822",
+    "current_sha256": "c474afb02b342a37dbe9c11674c10242085f7a914009f44e5d490d8539fda928",
+    "table_regression_receipt": "task2/evidence/report_build/km_metadata_table_regression.json"
+  },
+  "verification_iteration": "Initial protected-hash assertion identified the already-authorized generated/sources.json regeneration after the EA snapshot. Explicitly verified its current hash against the table receipt and old/current package manifests; no original artifacts were modified by this verifier.",
+  "limits": "Independent append to existing scientific audits. Does not claim a new experiment, new rendering, user acceptance, remote review, or independent certification of all CLI mathematical bodies.",
+  "execution_boundary": "All metadata assertions completed and this receipt was written. The combined helper later exited nonzero in its separate ZIP comparison; no source-package PASS is claimed by this receipt."
+}

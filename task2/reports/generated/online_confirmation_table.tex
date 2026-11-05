@@ -1,0 +1,14 @@
+\begin{table}[htbp]\centering\small
+\caption{五个独立合成确认实例：不按结果重新选择阈值。}\label{tab:onlineconfirmation}
+\begin{tabularx}{\linewidth}{Yrrrrr}\toprule
+方法(参数) & 匹配率 & 均值/min & 最大/min & P95/min & max实例比\\\midrule
+TBG(2) & 1.00 & 7.639 & 13.581 & 13.007 & 1.936\\
+TBG(5) & 1.00 & 5.411 & 15.927 & 14.070 & 2.272\\
+BBsum(1) & 1.00 & 5.255 & 12.208 & 10.111 & 1.727\\
+BBmax(1) & 1.00 & 5.369 & 12.208 & 10.291 & 1.727\\
+discard(0.5) & 0.37 & 5.348 & 9.239 & 8.808 & --\\
+离线sum & 1.00 & 4.033 & 10.645 & 7.863 & 1.497\\
+离线max & 1.00 & 5.136 & 7.050 & 6.914 & 1.000\\
+\bottomrule\end{tabularx}
+\tabnote{每行对5个输入seed先逐实例算指标，再平均；P95不是把全部seed混成单条观测。部分覆盖的实例比无定义，以--表示。}
+\end{table}

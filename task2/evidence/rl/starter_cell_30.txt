@@ -1,0 +1,15 @@
+## B.4 Q-learning：学习区域到区域的长期价值
+
+Q-learning 是**无模型、离策略（off-policy）**的时序差分算法。对一条经验 $(s, a, r, s')$：
+
+$$\underbrace{y}_{\text{TD 目标}} = r + \gamma^{\Delta}\max_{a'\in \mathcal{A}(s')} Q(s', a'),\qquad Q(s,a) \leftarrow Q(s,a) + \alpha\,\big(y - Q(s,a)\big)$$
+
+本实验中 $s=(t,i)$，$s'=(t',j)$，$\Delta=t'-t$；若 $t'\ge T$（一天结束），$y=r$。
+
+**派单场景的关键细节：$\max$ 只能在 $s'$ 处"真实可选"的动作 $\mathcal{A}(s')$ 上取。**
+司机不能想去哪就去哪，只能接身边出现的订单。$\mathcal{A}(s')$ = 司机到达 $s'$ 时接驾半径内订单的目的地区域 ∪ {空等}。
+仿真器已经把每条经验对应的 $\mathcal{A}(s')$ 记录在 `avail` 里。如果在全部 65 个动作上取 max，相当于假设"司机总能接到该区域历史上最好的那一单"，价值会被严重高估。
+
+同时维护**状态价值** $V(t,i)=\mathbb{E}\big[\max_{a\in\mathcal{A}(s)}Q(s,a)\big]$：每算出一次 $\max$，就是 $V(s')$ 的一个样本，用样本平均更新 $V$。
+
+**学习率**：$\alpha = \max(1/N(s,a),\ \alpha_{\min})$，前期等价于样本平均，后期保留跟踪能力。

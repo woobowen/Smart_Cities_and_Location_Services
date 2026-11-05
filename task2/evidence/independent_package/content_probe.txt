@@ -1,0 +1,129 @@
+{
+  "manifest_sha256": "1b958b5d5e2c9829635fcaac153e7e86d266ad12dc8e9179ee52c18e74cd6df8",
+  "csv_unclassified": [
+    {
+      "path": "task2/results/rl/offset_robustness_v1/filtered_validation.csv",
+      "columns": [
+        "date",
+        "minute",
+        "ox",
+        "oy",
+        "dx",
+        "dy",
+        "gap_min",
+        "origin_source_row",
+        "destination_source_row",
+        "trip_km",
+        "fare"
+      ],
+      "sensitive_columns": [
+        "destination_source_row",
+        "dx",
+        "dy",
+        "origin_source_row",
+        "ox",
+        "oy"
+      ],
+      "sha256": "5217517fc740e59d82791af6f88632b93d89482157fa954593e2832e8f502998"
+    },
+    {
+      "path": "task2/results/rl/offset_robustness_v1/filtered_inner.csv",
+      "columns": [
+        "date",
+        "minute",
+        "ox",
+        "oy",
+        "dx",
+        "dy",
+        "gap_min",
+        "origin_source_row",
+        "destination_source_row",
+        "trip_km",
+        "fare"
+      ],
+      "sensitive_columns": [
+        "destination_source_row",
+        "dx",
+        "dy",
+        "origin_source_row",
+        "ox",
+        "oy"
+      ],
+      "sha256": "982fe8389511fc19701699e467e542db0a3f95fdc9563ceb5dedac9e0a90ce00"
+    }
+  ],
+  "teacher_notebook_outputs": [
+    {
+      "path": "task2/teacher_materials/advanced/实验3 多目标与强化学习派单（学生版）.ipynb",
+      "code_cells": 23,
+      "with_outputs": 0
+    },
+    {
+      "path": "task2/teacher_materials/basic/实验2/作业2 运力调度.ipynb",
+      "code_cells": 7,
+      "with_outputs": 0
+    }
+  ],
+  "anonymous_front_fare_reconstruction": {
+    "files_combined": 50,
+    "front_equations": 5897,
+    "active_order_columns": 56,
+    "rank": 56,
+    "unique_fares_identifiable": true,
+    "max_fare_reconstruction_error": 1.7994494783124537e-12,
+    "output_scope": "Only rank/error/counts; no individual recovered fares are written",
+    "affected_paths": [
+      "task2/results/evolution/runs/scale_inner_hour18_batchseed2024_nsga3_M2_N100_G600_s3.json",
+      "task2/results/evolution/runs/scale_inner_hour18_batchseed2024_nsga2_M2_N100_G600_s2.json",
+      "task2/results/evolution/runs/scale_inner_hour18_batchseed2024_nsga2_M2_N200_G300_s2.json",
+      "task2/results/evolution/runs/baseline_inner_hour18_batchseed2024_nsga2_M2_N100_G300_s3.json",
+      "task2/results/evolution/runs/scale_inner_hour18_batchseed2024_nsga3_M2_N200_G300_s1.json",
+      "task2/results/evolution/runs/baseline_inner_hour18_batchseed2024_nsga3_M2_N100_G300_s4.json",
+      "task2/results/evolution/runs/hybrid_inner_hour18_batchseed2024_nsga3_M2_N100_G300_s4.json",
+      "task2/results/evolution/runs/scale_inner_hour18_batchseed2024_nsga2_M2_N100_G600_s1.json",
+      "task2/results/evolution/runs/scale_inner_hour18_batchseed2024_nsga2_M2_N200_G300_s3.json",
+      "task2/results/evolution/runs/combination_inner_hour18_batchseed2024_nsga2_M2_N200_G300_s4.json",
+      "task2/results/evolution/runs/hybrid_inner_hour18_batchseed2024_nsga3_M2_N100_G300_s1.json",
+      "task2/results/evolution/runs/combination_inner_hour18_batchseed2024_nsga3_M2_N200_G300_s2.json",
+      "task2/results/evolution/runs/hybrid_inner_hour18_batchseed2024_nsga3_M2_N100_G300_s3.json",
+      "task2/results/evolution/runs/baseline_inner_hour18_batchseed2024_nsga3_M2_N100_G300_s0.json",
+      "task2/results/evolution/runs/hybrid_inner_hour18_batchseed2024_nsga2_M2_N100_G300_s0.json",
+      "task2/results/evolution/runs/combination_inner_hour18_batchseed2024_nsga3_M2_N200_G300_s4.json",
+      "task2/results/evolution/runs/scale_inner_hour18_batchseed2024_nsga3_M2_N100_G600_s0.json",
+      "task2/results/evolution/runs/scale_inner_hour18_batchseed2024_nsga2_M2_N100_G600_s0.json",
+      "task2/results/evolution/runs/hybrid_inner_hour18_batchseed2024_nsga2_M2_N100_G300_s4.json",
+      "task2/results/evolution/runs/scale_inner_hour18_batchseed2024_nsga2_M2_N200_G300_s1.json",
+      "task2/results/evolution/runs/hybrid_inner_hour18_batchseed2024_nsga2_M2_N100_G300_s2.json",
+      "task2/results/evolution/runs/baseline_inner_hour18_batchseed2024_nsga2_M2_N100_G300_s4.json",
+      "task2/results/evolution/runs/hybrid_inner_hour18_batchseed2024_nsga3_M2_N100_G300_s2.json",
+      "task2/results/evolution/runs/combination_inner_hour18_batchseed2024_nsga3_M2_N200_G300_s3.json",
+      "task2/results/evolution/runs/baseline_inner_hour18_batchseed2024_nsga2_M2_N100_G300_s2.json",
+      "task2/results/evolution/runs/hybrid_inner_hour18_batchseed2024_nsga3_M2_N100_G300_s0.json",
+      "task2/results/evolution/runs/hybrid_inner_hour18_batchseed2024_nsga2_M2_N100_G300_s3.json",
+      "task2/results/evolution/runs/baseline_inner_hour18_batchseed2024_nsga3_M2_N100_G300_s2.json",
+      "task2/results/evolution/runs/scale_inner_hour18_batchseed2024_nsga3_M2_N100_G600_s4.json",
+      "task2/results/evolution/runs/scale_inner_hour18_batchseed2024_nsga3_M2_N100_G600_s2.json",
+      "task2/results/evolution/runs/baseline_inner_hour18_batchseed2024_nsga3_M2_N100_G300_s1.json",
+      "task2/results/evolution/runs/combination_inner_hour18_batchseed2024_nsga3_M2_N200_G300_s1.json",
+      "task2/results/evolution/runs/combination_inner_hour18_batchseed2024_nsga2_M2_N200_G300_s3.json",
+      "task2/results/evolution/runs/scale_inner_hour18_batchseed2024_nsga3_M2_N100_G600_s1.json",
+      "task2/results/evolution/runs/scale_inner_hour18_batchseed2024_nsga3_M2_N200_G300_s0.json",
+      "task2/results/evolution/runs/combination_inner_hour18_batchseed2024_nsga3_M2_N200_G300_s0.json",
+      "task2/results/evolution/runs/scale_inner_hour18_batchseed2024_nsga2_M2_N200_G300_s4.json",
+      "task2/results/evolution/runs/scale_inner_hour18_batchseed2024_nsga2_M2_N100_G600_s3.json",
+      "task2/results/evolution/runs/scale_inner_hour18_batchseed2024_nsga3_M2_N200_G300_s3.json",
+      "task2/results/evolution/runs/combination_inner_hour18_batchseed2024_nsga2_M2_N200_G300_s2.json",
+      "task2/results/evolution/runs/scale_inner_hour18_batchseed2024_nsga2_M2_N100_G600_s4.json",
+      "task2/results/evolution/runs/scale_inner_hour18_batchseed2024_nsga3_M2_N200_G300_s4.json",
+      "task2/results/evolution/runs/scale_inner_hour18_batchseed2024_nsga3_M2_N200_G300_s2.json",
+      "task2/results/evolution/runs/baseline_inner_hour18_batchseed2024_nsga2_M2_N100_G300_s0.json",
+      "task2/results/evolution/runs/combination_inner_hour18_batchseed2024_nsga2_M2_N200_G300_s1.json",
+      "task2/results/evolution/runs/baseline_inner_hour18_batchseed2024_nsga2_M2_N100_G300_s1.json",
+      "task2/results/evolution/runs/hybrid_inner_hour18_batchseed2024_nsga2_M2_N100_G300_s1.json",
+      "task2/results/evolution/runs/baseline_inner_hour18_batchseed2024_nsga3_M2_N100_G300_s3.json",
+      "task2/results/evolution/runs/scale_inner_hour18_batchseed2024_nsga2_M2_N200_G300_s0.json",
+      "task2/results/evolution/runs/combination_inner_hour18_batchseed2024_nsga2_M2_N200_G300_s0.json"
+    ]
+  }
+}
+npz_unclassified_count 67

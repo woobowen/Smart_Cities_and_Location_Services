@@ -1,0 +1,31 @@
+\documentclass[11pt,a4paper]{article}
+\newcommand{\ReportIdentity}{Experiment Report}
+\input{../common.tex}
+\hypersetup{pdftitle={任务分配：在线匹配、多目标优化与强化学习}}
+\begin{document}
+\reportcover{在线匹配、多目标优化与强化学习}{从可信基线到结果驱动的优化与回退}{Experiment Report}
+\pagenumbering{roman}
+\section*{实验概述}
+任务分配需要同时处理当前空间成本、没有到达的未来供需以及服务数量和收入之间的冲突。本报告分别构建单次在线二部匹配、静态多目标派单和跨时间片的车队仿真，先核验算法与指标，再进行成对控制变量和有限组合。结果显示，丢弃订单、混用离线目标和遗漏空驶成本都可能造成表面优势；增加算法复杂度也不一定带来额外收益。各项数值来自本轮实际运行，课件展示值仅作为教学参考。
+
+基础部分沿用课件的物理尺度，同时单列Notebook的抽象尺度；进阶部分利用Foursquare签到构造出行代理\cite{teacher}。两类数据都不提供真实网约车业务效果的直接证明。最后的留出实验只确认预先冻结的方法，没有依据测试结果重新调参。
+\tableofcontents\clearpage\pagenumbering{arabic}
+\input{chapters/01_data.tex}
+\nextchapter\input{chapters/02_online.tex}
+\nextchapter\input{chapters/03_evolution.tex}
+\nextchapter\input{chapters/04_rl.tex}
+\nextchapter\input{chapters/05_discussion.tex}
+\FloatBarrier
+\begingroup\small
+\begin{thebibliography}{9}
+\addcontentsline{toc}{section}{参考文献}
+\bibitem{teacher} 董宜滔. 实验2—任务分配（1）；实验3—多目标与强化学习派单：课件与学生Notebook[课程材料]. 2026.
+\bibitem{foursquare} Yang D, Zhang D, Zheng V W, Yu Z. Modeling user activity preference by leveraging user spatial temporal characteristics in LBSNs[J]. IEEE Transactions on Systems, Man, and Cybernetics: Systems, 2015. 数据入口：\url{https://sites.google.com/site/yangdingqi/home/foursquare-dataset}.
+\bibitem{nsga2} Deb K, Pratap A, Agarwal S, Meyarivan T. A fast and elitist multiobjective genetic algorithm: NSGA-II[J]. IEEE Transactions on Evolutionary Computation, 2002, 6(2):182--197. \url{https://doi.org/10.1109/4235.996017}.
+\bibitem{nsga3} Deb K, Jain H. An evolutionary many-objective optimization algorithm using reference-point-based nondominated sorting approach, Part I[J]. IEEE Transactions on Evolutionary Computation, 2014,18(4):577--601. \url{https://doi.org/10.1109/TEVC.2013.2281535}.
+\bibitem{xu} Xu Z, Li Z, Guan Q, et al. Large-scale order dispatch in on-demand ride-hailing platforms: A learning and planning approach[C]. KDD, 2018:905--913. \url{https://doi.org/10.1145/3219819.3219824}.
+\bibitem{double} van Hasselt H. Double Q-learning[C]. Advances in Neural Information Processing Systems, 2010. \url{https://proceedings.neurips.cc/paper/2010/hash/091d584fced301b442654dd8c23b3fc9-Abstract.html}.
+\bibitem{scipy} SciPy contributors. linear\_sum\_assignment[软件文档]. \url{https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.linear_sum_assignment.html}.
+\end{thebibliography}\endgroup
+\nextchapter\appendix\input{chapters/appendix.tex}
+\end{document}

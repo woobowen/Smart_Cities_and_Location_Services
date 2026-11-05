@@ -1,0 +1,19 @@
+\documentclass[11pt,a4paper]{article}
+\newcommand{\ReportIdentity}{Process Report}
+\input{../common.tex}
+\hypersetup{pdftitle={任务分配实验：持续研究、独立核验与方案取舍}}
+\begin{document}
+\reportcover{我怎样组织一次持续研究}{工作流继承、独立核验与结果驱动的取舍}{Process Report · 正文与技术素材交接稿}
+\pagenumbering{roman}
+\section*{本轮过程的阅读说明}
+这次我把基础在线任务分配和进阶多目标、强化学习两套材料一起交给Codex，要求在一个连续工程目标中完成研究、实现、实验、优化、制图与报告，不能做完一部分就当作整个任务结束。我明确把它作为一次性交付，同时保留实验计划、真实决定和验证记录。
+
+本轮尚未提供对应的ChatGPT原生UI截图和Evidence Master批准的呈现规格；这份交接稿整理可追溯的授权、实际执行和技术决定，新增对话证据页由Evidence Master后续接续。没有把实验一截图替换成这次对话，也没有据最终结果补写我曾经提出的问题。
+
+第一部分说明已有协作基础怎样承接到本次持续执行，第二部分沿真实读数和反馈解释关键实验取舍。命令、完整运行清单和数据发布记录留在源包，正文集中说明哪些机制改变了判断。
+\tableofcontents\clearpage\pagenumbering{arabic}
+\input{chapters/01_workflow.tex}
+\nextchapter\input{chapters/02_online_evolution.tex}
+\nextchapter\input{chapters/03_rl_decisions.tex}
+\nextchapter\input{chapters/04_reflection.tex}
+\end{document}

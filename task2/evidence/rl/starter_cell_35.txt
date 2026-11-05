@@ -1,0 +1,48 @@
+BETA = 0.5
+
+
+def train_q_km(n_drivers, n_episodes=300, beta=None, eps_start=0.5, eps_end=0.05,
+               eval_every=20, seed=SEED, verbose=True):
+    beta = BETA if beta is None else beta
+    qt = QTable()
+    rng = np.random.default_rng(seed)
+    val_eps = [sample_episode(trips_train, n_drivers, seed=10_000 + k) for k in range(3)]
+    curve, td_log = [], []
+    t0 = time.time()
+    for ep in range(n_episodes):
+        eps = eps_start + (eps_end - eps_start) * ep / max(1, n_episodes - 1)
+        LT = region_long_term_value(qt.V)
+        q_pol = make_q_km(LT, beta)
+        policy = lambda ctx: random_km(ctx) if rng.random() < eps else q_pol(ctx)
+        _, trans = run_episode(sample_episode(trips_train, n_drivers, seed=seed + ep), policy, collect=True)
+        td_abs = [abs(q_update(qt, *tr)) for tr in sorted(trans, key=lambda x: -x[0])]
+        td_log.append(np.mean(td_abs))
+        if ep % eval_every == 0 or ep == n_episodes - 1:
+            pol = make_q_km(region_long_term_value(qt.V), beta)
+            rev = np.mean([run_episode(e, pol)[0]["revenue"] for e in val_eps])
+            curve.append((ep, rev))
+            if verbose:
+                print(f"  ep {ep:4d} | ε={eps:.2f} | |TD|={td_log[-1]:6.2f} | 验证收入 {rev:8.0f} | {time.time() - t0:5.1f}s")
+    return qt, np.array(curve), np.array(td_log), val_eps
+
+
+BETA = 0.5          # 长期价值权重（见 B.9 敏感性实验）
+N_DRIVERS = 60
+qt, curve, td_log, val_eps = train_q_km(N_DRIVERS)
+
+base_val = {name: np.mean([run_episode(e, pol)[0]["revenue"] for e in val_eps])
+            for name, pol in [("贪心最近", greedy_nearest), ("KM-即时收入", km_fare)]}
+
+fig, axes = plt.subplots(1, 2, figsize=(13, 4.3))
+axes[0].plot(curve[:, 0], curve[:, 1], "o-", color="#9F3A3D", label="Q-KM（ε=0 评估）")
+for (name, v), c in zip(base_val.items(), ["#4c78a8", "#f58518"]):
+    axes[0].axhline(v, ls="--", color=c, label=name)
+axes[0].set(xlabel="训练回合（天）", ylabel="验证日平均总收入 / 元", title=f"学习曲线（{N_DRIVERS} 辆车）")
+axes[0].legend()
+axes[0].grid(alpha=0.3)
+axes[1].plot(td_log, color="#54a24b")
+axes[1].set(xlabel="训练回合（天）", ylabel="平均 |TD 误差|", title="TD 误差")
+axes[1].grid(alpha=0.3)
+plt.tight_layout()
+plt.savefig(f"{FIG_DIR}/rl_learning_curve.png", dpi=200)
+plt.show()

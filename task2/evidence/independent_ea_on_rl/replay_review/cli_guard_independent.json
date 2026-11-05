@@ -1,0 +1,25 @@
+{
+  "reviewer": "/root/evolution",
+  "script_sha256": "9091f3633d1efcb387d01331c70f3e15a676af2f989c741416c4e8041e556d57",
+  "commands": [
+    {
+      "arguments": [
+        "--help"
+      ],
+      "expected_exit_code": 0,
+      "actual_exit_code": 0,
+      "stdout": "usage: run_rl_final.py [-h] [--output OUTPUT]\n\nFrozen final confirmation in a fresh output directory; existing runs are\npreserved.\n\noptions:\n  -h, --help       show this help message and exit\n  --output OUTPUT  Fresh output directory; any existing target is refused\n                   before loading data or models\n",
+      "stderr": ""
+    },
+    {
+      "arguments": [],
+      "expected_exit_code": 2,
+      "actual_exit_code": 2,
+      "stdout": "",
+      "stderr": "usage: run_rl_final.py [-h] [--output OUTPUT]\nrun_rl_final.py: error: Output already exists; preserve it and choose a fresh --output directory.\n"
+    }
+  ],
+  "protected_files_count": 145,
+  "all_protected_bytes_unchanged": true,
+  "scope": "Actual --help exits0 and default existing-output invocation exits2 before any evaluation; no training or test episode was executed."
+}

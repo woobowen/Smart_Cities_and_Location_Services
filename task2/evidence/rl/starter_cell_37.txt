@@ -1,0 +1,12 @@
+V = qt.V
+fig, axes = plt.subplots(1, 4, figsize=(17, 4.4))
+for ax, hh in zip(axes, [8, 13, 18, 22]):
+    t = (hh * 60 - DAY_START) // STEP_MIN
+    im = ax.imshow(V[t].reshape(GRID, GRID), origin="lower", cmap="RdYlGn",
+                   extent=[0, W_KM, 0, H_KM], vmin=0, vmax=np.percentile(V[:T], 99))
+    ax.scatter(trips.ox.sample(3000, random_state=0), trips.oy.sample(3000, random_state=0), s=0.3, c="k", alpha=0.25)
+    ax.set(title=f"V(t, i) @ {hh}:00", xlabel="x / km")
+axes[0].set_ylabel("y / km")
+fig.colorbar(im, ax=axes, fraction=0.015, pad=0.01, label="状态价值 / 元")
+plt.savefig(f"{FIG_DIR}/value_map.png", dpi=200, bbox_inches="tight")
+plt.show()

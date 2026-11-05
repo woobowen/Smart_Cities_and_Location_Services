@@ -1,0 +1,37 @@
+{
+  "figure": "evolution_front_and_convergence",
+  "claim_scope": "40 drivers/80 requests, training-inner18h batchseed2024. Front illustration uses pre-fixed seed0. All methods share K6/radius3km and prior feasible-bound normalization/ref1.1. Convergence mean and min-max band across five algorithm seeds0..4 on the same input, not independent traffic samples. Polyline between KM points only guides reading. Constraint budget60km is explicitly non-binding.",
+  "author": "/root/evolution",
+  "input_sha256": {
+    "task2/public_results/evolution/km/inner_hour18_batchseed2024_M2.json": "a802ed84ca2a8ba8036588931da1734e875e301e911578d34aa51fdcaadf407e",
+    "task2/public_results/evolution/metrics.json": "94427397ba871758473d698d641369ab28286858df66c393e6338e9c9a460d76",
+    "task2/public_results/evolution/runs/baseline_inner_hour18_batchseed2024_nsga2_M2_N100_G300_s0.json": "0a5c413df56730df4ede912a765140479374bda70d8cc3c46fb99f31dda23e67",
+    "task2/public_results/evolution/runs/baseline_inner_hour18_batchseed2024_nsga2_M2_N100_G300_s1.json": "c16022e446e1588705701df263b2c66ff05d9ec39be6a126ac253bc0163855b1",
+    "task2/public_results/evolution/runs/baseline_inner_hour18_batchseed2024_nsga2_M2_N100_G300_s2.json": "40ce11771b04bb124e57f58316667f51a7939f018a1f28c231d8991e8ffa8d44",
+    "task2/public_results/evolution/runs/baseline_inner_hour18_batchseed2024_nsga2_M2_N100_G300_s3.json": "854d451c26892b29336887f95ec0777f94f28bffc5075447dda63b21ea401937",
+    "task2/public_results/evolution/runs/baseline_inner_hour18_batchseed2024_nsga2_M2_N100_G300_s4.json": "77fadc8f3a6b23bd54dfc98de75e102431ced03c042083932ce3777dc5fb481b",
+    "task2/public_results/evolution/runs/baseline_inner_hour18_batchseed2024_nsga3_M2_N100_G300_s0.json": "b1b79ceb36078de5750115fc40cc8635adc6569f8f2b24122ab8b777c7b66d09",
+    "task2/public_results/evolution/runs/baseline_inner_hour18_batchseed2024_nsga3_M2_N100_G300_s1.json": "ea832c0a20964eb1bc0f373f7ddcb4f7f1c1b4713b47fdad2401a03b393c03c8",
+    "task2/public_results/evolution/runs/baseline_inner_hour18_batchseed2024_nsga3_M2_N100_G300_s2.json": "ecd26539af79def2a2137d442b5c6c8e0baab8015e47f4ee4a8513aa70c9d262",
+    "task2/public_results/evolution/runs/baseline_inner_hour18_batchseed2024_nsga3_M2_N100_G300_s3.json": "9c2dc0cdbaad3b87f720f7790d1fc3fec230c1213f886950802daf889d759e2b",
+    "task2/public_results/evolution/runs/baseline_inner_hour18_batchseed2024_nsga3_M2_N100_G300_s4.json": "5ed67deadff532e41de0c5086040f3ae00718ddc589085ae47c61b25648c2b2f"
+  },
+  "script_sha256": "c80616c8d460303bbb69776647628563024aa52779642811e8bba345aabbe5d1",
+  "shared_theme_sha256": "e228d1abc1ef307c88629961b7402ee48b03314bc2dd24e0cc1e719540c404ed",
+  "palette_sha256": "2aa820c3f68ba6c14cf1b52082b12336071d77bb5466db2b05b2fab6890aa243",
+  "raster_dpi": 300,
+  "native": "Matplotlib data-native PDF/SVG and 300dpi PNG; all marks are actual points",
+  "metadata_inheritance": {
+    "identity": "METADATA_ONLY_INHERITANCE_NO_FIGURE_REBUILD",
+    "reason": "Only canonical runtime_scope labels and evaluator source binding changed; all numeric leaves are exactly preserved.",
+    "original_sidecar_sha256": "2460e65e870520e48bbc261ab913dc57e39c1bc30ca9abc52181e7f46109baa5",
+    "original_input_sha256": {
+      "task2/public_results/evolution/metrics.json": "a2230ba264f247806592daf923a0a2be0177e825fc49fae568eec753d90c47dc"
+    },
+    "current_input_sha256": {
+      "task2/public_results/evolution/metrics.json": "94427397ba871758473d698d641369ab28286858df66c393e6338e9c9a460d76"
+    },
+    "original_sidecar_snapshot": "task2/evidence/evolution/km_runtime_scope_fix/before/task2/figures/formal/evolution_front_and_convergence.json",
+    "verification": "task2/evidence/evolution/km_runtime_scope_fix/result.json"
+  }
+}

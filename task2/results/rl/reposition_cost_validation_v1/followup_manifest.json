@@ -1,0 +1,17 @@
+{
+  "trigger": "V-only reposition adds ~5000km/day for gross revenue gain ~415 (QKM), so movement-value threshold must account for cost",
+  "conditions": [
+    0,
+    1,
+    3,
+    5
+  ],
+  "cost_status": "hypothetical teaching currency/km, not observed vehicle expense",
+  "source_sha256": {
+    "scripts/run_reposition_cost.py": "58cb4fa65636f28fbe6b501f8b59dc6d9a18bc1a47f2ca7b3575d9e0ba06df7f",
+    "src/rl_extensions.py": "e094b537f2c7615b84cc293c63e639360eb874f186142d7dcb99438d241d1c49"
+  },
+  "parent_model_sha256": "2b29d6a62f535b150fa8da67cf5379a962b457d5bb6a763b070cae5cb218cba3",
+  "split": "validation",
+  "selection": "compare separate gross revenue, response and empty km; no arbitrary combined quality score"
+}

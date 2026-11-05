@@ -1,0 +1,15 @@
+FLEETS = [40, 60, 100]
+results = []
+q_tables = {}
+for nd in FLEETS:
+    qt_n, _, _, _ = train_q_km(nd, n_episodes=300, beta=BETA, verbose=False)
+    q_tables[nd] = qt_n
+    pol_q = make_q_km(region_long_term_value(qt_n.V), BETA)
+    test_eps = [sample_episode(trips_test, nd, seed=50_000 + k) for k in range(5)]
+    for name, pol in [("贪心最近", greedy_nearest), ("KM-即时收入", km_fare), ("Q-KM", pol_q)]:
+        for k, e in enumerate(test_eps):
+            m, _ = run_episode(e, pol)
+            results.append(dict(fleet=nd, policy=name, day=k, **m))
+res = pd.DataFrame(results)
+summary = res.groupby(["fleet", "policy"])[["revenue", "answer_rate", "avg_pickup"]].mean().round(3)
+print(summary)

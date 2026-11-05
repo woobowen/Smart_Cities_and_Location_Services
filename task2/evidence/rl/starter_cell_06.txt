@@ -1,0 +1,67 @@
+def make_batch(trip_pool, hour, n_orders=80, n_drivers=40, seed=0):
+    """从历史订单中抽取某小时的一个派单批次；司机分布在签到热点附近（模拟巡游出租车）"""
+    rng = np.random.default_rng(seed)
+    pool = trip_pool[trip_pool.minute // 60 == hour]
+    od = pool.sample(n_orders, replace=len(pool) < n_orders, random_state=seed)
+    hot = ck[ck.minute // 60 == hour][["x", "y"]].values
+    drv = hot[rng.integers(0, len(hot), n_drivers)] + rng.normal(0, 1.0, (n_drivers, 2))
+    o_xy = od[["ox", "oy"]].values
+    pickup = np.abs(drv[:, None, :] - o_xy[None, :, :]).sum(-1)   # (n, m) 接驾曼哈顿距离
+    return dict(drv=drv, o_xy=o_xy, d_xy=od[["dx", "dy"]].values,
+                fare=od["fare"].values, pickup=pickup)
+
+
+class DispatchProblem:
+    """把一个批次包装成多目标优化问题：基因 -> 匹配 -> 目标向量"""
+
+    def __init__(self, batch, K=6, radius=PICKUP_RADIUS, n_obj=2):
+        self.fare, self.pickup = batch["fare"], batch["pickup"]
+        self.n_drivers, self.n_var = self.pickup.shape
+        self.K, self.n_obj = K, n_obj
+        order_view = self.pickup.T                              # (m, n)
+        cand = np.argsort(order_view, axis=1)[:, :K]           # 每个订单最近的 K 个司机
+        ok = np.take_along_axis(order_view, cand, 1) <= radius
+        self.cand = np.where(ok, cand, -1)                      # -1 表示该候选不可行
+        self.n_cand = ok.sum(1)                                 # 每个订单的可行候选数
+
+    def decode(self, gene):
+        """基因 -> [(driver, order), ...]，冲突时顺延到下一个候选司机"""
+        used = np.zeros(self.n_drivers, bool)
+        pairs = []
+        for j, g in enumerate(gene):
+            c = self.n_cand[j]
+            if g == 0 or c == 0:
+                continue
+            for s in range(c):
+                d = self.cand[j, (g - 1 + s) % c]
+                if not used[d]:
+                    used[d] = True
+                    pairs.append((d, j))
+                    break
+        return pairs
+
+    def evaluate_one(self, gene):
+        pairs = self.decode(gene)
+        if not pairs:
+            return np.zeros(self.n_obj)
+        d, j = np.array(pairs).T
+        f = [-self.fare[j].sum(), self.pickup[d, j].sum()]
+        if self.n_obj == 3:
+            f.append(-len(pairs))                               # 第三目标：最大化服务订单数
+        return np.array(f, float)
+
+    def evaluate(self, pop):
+        return np.array([self.evaluate_one(g) for g in pop])
+
+    def random_population(self, size, rng):
+        pop = rng.integers(0, self.K + 1, (size, self.n_var))
+        pop[0] = 1                                              # 种子个体：全部派给最近司机
+        pop[1] = 0                                              # 种子个体：全部不派（f=0 的端点）
+        return pop
+
+
+batch = make_batch(trips_train, hour=18, seed=SEED)
+prob = DispatchProblem(batch)
+print("司机数", prob.n_drivers, "订单数", prob.n_var,
+      "| 无可行司机的订单", int((prob.n_cand == 0).sum()),
+      "| 平均可行候选", prob.n_cand.mean().round(2))

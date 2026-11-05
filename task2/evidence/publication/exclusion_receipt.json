@@ -1,0 +1,20 @@
+{
+  "status": "EXACT_REVIEWED_INVENTORY_EXCLUDED_NO_FILES_DELETED",
+  "inventory_path": "task2/evidence/research_data/local_only_manifest_current.json",
+  "inventory_sha256": "159ed36ed4424c2f127f8e3566e3c70abab11aaf21530993c9ead9e88ba77522",
+  "excluded_files": 1497,
+  "excluded_bytes": 1831912940,
+  "disclosed_authorized_replay_hash_changes": [
+    {
+      "path": "task2/results/rl/final_v1/fusion_fronts.json",
+      "classified_sha256": "ec45229cfb0d4f0209fb7d60f78262a1128c5c44ae820872963db6eff4e35c0f",
+      "current_sha256": "484d68193f5ef2c6e65658e81fe92e350e67db5bbc259cc79be8f07a9a9cca1e",
+      "reason": "Onlyper-frameruntimechanged inReplay; originalrecordclassificationretained, currenthashmustrefreshwithdisclosedreplayreceipt",
+      "authority": "Root disclosed same-model accidental REPLAY and instructed current hash rebinding; independent replay receipt confirms science unchanged",
+      "evidence": "task2/evidence/rl/replay_recovery/cli_help_replay_01/replay_sensitive_classification.json"
+    }
+  ],
+  "task_ignore_sha256": "bb5c95cfd37f849ec046f8f746dc368b01f6e91a0a1e14f01407a80a888d7dbd",
+  "root_ignore_sha256": "13f5011793735900949785eb5eeb0c9e0583d99eaefd4135bd139a39909be828",
+  "scope": "Only known local-only files. Final staged contents still require independent content review."
+}

@@ -1,0 +1,46 @@
+{
+  "actual_utc": "2026-11-05T11:26:03.578980+00:00",
+  "city": "NYC",
+  "rows": 227428,
+  "source_tsv_sha256": "2f39ce698e5bff6683c74bec30c436cc022c160b0f3d73c5268b55491b2445f9",
+  "teacher_sha256": "60a235386a5324f55c9f24fb1b06e55a38a0d53c0242435d754b38c0cc0b514a",
+  "differences": {
+    "decimal_direct_half_even": {
+      "latitude": 61,
+      "longitude": 33
+    },
+    "decimal_direct_half_up": {
+      "latitude": 0,
+      "longitude": 0
+    },
+    "decimal15_half_even_then10_half_even": {
+      "latitude": 92,
+      "longitude": 38
+    },
+    "decimal15_half_up_then10_half_up": {
+      "latitude": 20,
+      "longitude": 4
+    },
+    "decimal15_half_even_then10_half_up": {
+      "latitude": 20,
+      "longitude": 4
+    },
+    "decimal15_half_up_then10_half_even": {
+      "latitude": 92,
+      "longitude": 38
+    },
+    "pandas_high_then_python10g": {
+      "latitude": 31,
+      "longitude": 32
+    },
+    "pandas_legacy_then_python10g": {
+      "latitude": 31,
+      "longitude": 32
+    },
+    "pandas_round_trip_then_python10g": {
+      "latitude": 11,
+      "longitude": 32
+    }
+  },
+  "scope": "All NYC coordinate fields; exact numeric Decimal equality after specified formatting. Other fields not reconverted here. No conversion or algorithm input changed; no per-record values saved."
+}

@@ -1,0 +1,46 @@
+[
+  {
+    "kind": "experiment",
+    "command": [
+      "latexmk",
+      "-g",
+      "-xelatex",
+      "-interaction=nonstopmode",
+      "-file-line-error",
+      "-halt-on-error",
+      "-outdir=build",
+      "main.tex"
+    ],
+    "returncode": 0,
+    "pages": 26,
+    "pdf": "task2/reports/experiment/Experiment_Report.pdf",
+    "sha256": "1a30c2fdc3b98992e5c2cbb725d7c73eeea1c9767c60c2588e7fb953f9d97735",
+    "render_dpi": 200,
+    "rendered_pages": 26,
+    "log_issues": [],
+    "visual_inspection": "PENDING_SEPARATE_ACTUAL_PAGE_REVIEW",
+    "recorded_utc": "2026-11-05T11:37:11.311576+00:00"
+  },
+  {
+    "kind": "process",
+    "command": [
+      "latexmk",
+      "-g",
+      "-xelatex",
+      "-interaction=nonstopmode",
+      "-file-line-error",
+      "-halt-on-error",
+      "-outdir=build",
+      "main.tex"
+    ],
+    "returncode": 0,
+    "pages": 8,
+    "pdf": "task2/reports/process/Process_Report.pdf",
+    "sha256": "297cb356aaeb06796e084139270ad82f88dd57a5c91a5060e9a75acfc9bf8252",
+    "render_dpi": 200,
+    "rendered_pages": 8,
+    "log_issues": [],
+    "visual_inspection": "PENDING_SEPARATE_ACTUAL_PAGE_REVIEW",
+    "recorded_utc": "2026-11-05T11:37:18.833111+00:00"
+  }
+]

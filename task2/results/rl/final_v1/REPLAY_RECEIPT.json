@@ -1,0 +1,311 @@
+{
+  "identity": "REPLAY_RECOMPUTE_SAME_FROZEN_PRIMARY5_NOT_NEW_TEST",
+  "recorded_utc": "2026-11-05T12:00:45.648271+00:00",
+  "trigger": "root disclosed accidental invocation: run_rl_final.py --help; old script did not parse arguments and reused5existingmodels then reevaluated fixedprimary5simulations",
+  "reported_process_id": 24380,
+  "process_start_finish": "not independently recorded; do not infer timestamps from thisreceipt",
+  "training": "NO_NEW_TRAINING; all5modelNPZhashes match prioractiveindex",
+  "selection": "UNCHANGED; no parameter/candidate selection based on replay outcomes",
+  "primary_seed_count": 5,
+  "primary_seed_values": [
+    50000,
+    50001,
+    50002,
+    50003,
+    50004
+  ],
+  "sampling_identity": "same heldout pool, model and episode arrays; replayadds zero independent tests/dates/trainingseeds",
+  "old_executed_source_sha256": "32f260d7244a18d5969cd566a2a6b84a9f9515df59f9223e7b54bb292bc47d67",
+  "future_guarded_source_sha256": "9091f3633d1efcb387d01331c70f3e15a676af2f989c741416c4e8041e556d57",
+  "affected_metric_tables": [
+    {
+      "run_id": "final_fleet40",
+      "path": "task2/results/rl/final_v1/fleet40/day_metrics.json",
+      "previous_sha256": "23505963d15630e72fde87cc2fef1b0d017293e780706de21cfb9647cad4dde3",
+      "replay_sha256": "2ae8d5854c72511c11ce7e4169c71afaee637c81b12262dc73c837c4681cde88",
+      "scientific_summary_statistics_equal": 84,
+      "scientific_fingerprint_excludes_runtime": "a4b0dcebdb5ab2679427949a6c77a335afc848dca7e0ebfac668de128fa01bc6",
+      "runtime_statistics_changes": [
+        {
+          "policy": "greedy",
+          "statistic": "mean",
+          "previous": 0.0344049886000902,
+          "replay": 0.03343757620004908
+        },
+        {
+          "policy": "greedy",
+          "statistic": "sd",
+          "previous": 0.0034843358386194,
+          "replay": 0.010473311746384885
+        },
+        {
+          "policy": "km",
+          "statistic": "mean",
+          "previous": 0.0200910618000307,
+          "replay": 0.013376022200100124
+        },
+        {
+          "policy": "km",
+          "statistic": "sd",
+          "previous": 0.0092131269271384,
+          "replay": 0.0020116463077567296
+        },
+        {
+          "policy": "qkm",
+          "statistic": "mean",
+          "previous": 0.0208894984000835,
+          "replay": 0.01974811000000045
+        },
+        {
+          "policy": "qkm",
+          "statistic": "sd",
+          "previous": 0.0044821258072579,
+          "replay": 0.004489029586554675
+        }
+      ]
+    },
+    {
+      "run_id": "final_fleet60",
+      "path": "task2/results/rl/final_v1/fleet60/day_metrics.json",
+      "previous_sha256": "5114714fbd4508c3e65a45c9aa1556d7ef5ac3d9ac4dc260c17218ce1cef1648",
+      "replay_sha256": "7c52deed696b884a64cc44c615319927991ef6cd66ed59a0e1af5ba8e8d6b970",
+      "scientific_summary_statistics_equal": 84,
+      "scientific_fingerprint_excludes_runtime": "d6bfaf99783254d44ce4b27154f815e3a108a8aab8a2b5c08bcb081d2e8799fe",
+      "runtime_statistics_changes": [
+        {
+          "policy": "greedy",
+          "statistic": "mean",
+          "previous": 0.0339026422000642,
+          "replay": 0.038792722800099
+        },
+        {
+          "policy": "greedy",
+          "statistic": "sd",
+          "previous": 0.0047093546851189,
+          "replay": 0.010129401374094378
+        },
+        {
+          "policy": "km",
+          "statistic": "mean",
+          "previous": 0.0177836754000964,
+          "replay": 0.020345561600151996
+        },
+        {
+          "policy": "km",
+          "statistic": "sd",
+          "previous": 0.0024824906550935,
+          "replay": 0.004689444550633829
+        },
+        {
+          "policy": "qkm",
+          "statistic": "mean",
+          "previous": 0.0194456863999221,
+          "replay": 0.021237825599746428
+        },
+        {
+          "policy": "qkm",
+          "statistic": "sd",
+          "previous": 0.0019234603089737,
+          "replay": 0.0033821410301503457
+        }
+      ]
+    },
+    {
+      "run_id": "final_fleet100",
+      "path": "task2/results/rl/final_v1/fleet100/day_metrics.json",
+      "previous_sha256": "368a51b80ce0f79706b02b6dffca665ae59af0ecd1afa86869641ce89f1a33a6",
+      "replay_sha256": "7c9f68bd77799c6dcd9c946a062c776018f8633c3e66403c1df3b53cdfcda424",
+      "scientific_summary_statistics_equal": 84,
+      "scientific_fingerprint_excludes_runtime": "02515f131d268ec079b42fa08df5267c581ccf6c47f7af576b8cb7255d960115",
+      "runtime_statistics_changes": [
+        {
+          "policy": "greedy",
+          "statistic": "mean",
+          "previous": 0.0429651827999805,
+          "replay": 0.0444725961999211
+        },
+        {
+          "policy": "greedy",
+          "statistic": "sd",
+          "previous": 0.0095189247073388,
+          "replay": 0.01103774039850684
+        },
+        {
+          "policy": "km",
+          "statistic": "mean",
+          "previous": 0.0205212483999275,
+          "replay": 0.022251988999960302
+        },
+        {
+          "policy": "km",
+          "statistic": "sd",
+          "previous": 0.0038246071735287,
+          "replay": 0.0017953803079728276
+        },
+        {
+          "policy": "qkm",
+          "statistic": "mean",
+          "previous": 0.0248475358000177,
+          "replay": 0.02846320320004452
+        },
+        {
+          "policy": "qkm",
+          "statistic": "sd",
+          "previous": 0.0033700673588376,
+          "replay": 0.006194411389418181
+        }
+      ]
+    },
+    {
+      "run_id": "final_enhancements",
+      "path": "task2/results/rl/final_v1/enhancements/day_metrics.json",
+      "previous_sha256": "2e0e85ffcc6bc046bf1b436fa167c7fb3754ffda4491f0d554b1da51812cb7a6",
+      "replay_sha256": "5e85bbb98ac4fa8c1ced0552905d956fbd21339af3a1191b869bde7e64ddac2e",
+      "scientific_summary_statistics_equal": 280,
+      "scientific_fingerprint_excludes_runtime": "4299ba417a881b49ce0237880feb099cf508584f84ceed5d21741a38e9a96d85",
+      "runtime_statistics_changes": [
+        {
+          "policy": "double_beta1",
+          "statistic": "mean",
+          "previous": 0.0336274737998792,
+          "replay": 0.02627965940027934
+        },
+        {
+          "policy": "double_beta1",
+          "statistic": "sd",
+          "previous": 0.0209827161636025,
+          "replay": 0.013137316873401765
+        },
+        {
+          "policy": "greedy",
+          "statistic": "mean",
+          "previous": 0.045792782999888,
+          "replay": 0.03763636840012623
+        },
+        {
+          "policy": "greedy",
+          "statistic": "sd",
+          "previous": 0.0130160332054619,
+          "replay": 0.004798859374165411
+        },
+        {
+          "policy": "km",
+          "statistic": "mean",
+          "previous": 0.0160560344000259,
+          "replay": 0.021249340800022765
+        },
+        {
+          "policy": "km",
+          "statistic": "sd",
+          "previous": 0.0026554834303419,
+          "replay": 0.007403455939639044
+        },
+        {
+          "policy": "km_move3",
+          "statistic": "mean",
+          "previous": 0.143813052600035,
+          "replay": 0.13687408739951934
+        },
+        {
+          "policy": "km_move3",
+          "statistic": "sd",
+          "previous": 0.0287558137282125,
+          "replay": 0.018310270497557096
+        },
+        {
+          "policy": "q_beta1",
+          "statistic": "mean",
+          "previous": 0.0375776073999077,
+          "replay": 0.01867025300016394
+        },
+        {
+          "policy": "q_beta1",
+          "statistic": "sd",
+          "previous": 0.0195637828668428,
+          "replay": 0.004299935422264408
+        },
+        {
+          "policy": "qkm",
+          "statistic": "mean",
+          "previous": 0.0239329211999574,
+          "replay": 0.023412536400064708
+        },
+        {
+          "policy": "qkm",
+          "statistic": "sd",
+          "previous": 0.0043294794676103,
+          "replay": 0.0033676538311391115
+        },
+        {
+          "policy": "qkm_move3",
+          "statistic": "mean",
+          "previous": 0.1377388668000094,
+          "replay": 0.1239849232000779
+        },
+        {
+          "policy": "qkm_move3",
+          "statistic": "sd",
+          "previous": 0.0140597635130956,
+          "replay": 0.02179729685586583
+        },
+        {
+          "policy": "qkm_move5",
+          "statistic": "mean",
+          "previous": 0.1514588791999813,
+          "replay": 0.14021969040004478
+        },
+        {
+          "policy": "qkm_move5",
+          "statistic": "sd",
+          "previous": 0.0203267508953934,
+          "replay": 0.0198887656553335
+        },
+        {
+          "policy": "qnsga_constraint",
+          "statistic": "mean",
+          "previous": 4.719072122000034,
+          "replay": 4.442450658599773
+        },
+        {
+          "policy": "qnsga_constraint",
+          "statistic": "sd",
+          "previous": 0.1944311446545268,
+          "replay": 0.24020238102877514
+        },
+        {
+          "policy": "qnsga_knee",
+          "statistic": "mean",
+          "previous": 5.495235427999887,
+          "replay": 5.113876042400079
+        },
+        {
+          "policy": "qnsga_knee",
+          "statistic": "sd",
+          "previous": 0.2646866382704123,
+          "replay": 0.34060699868060196
+        }
+      ]
+    }
+  ],
+  "dynamic_front_original_sha256": "ec45229cfb0d4f0209fb7d60f78262a1128c5c44ae820872963db6eff4e35c0f",
+  "dynamic_front_replay_sha256": "484d68193f5ef2c6e65658e81fe92e350e67db5bbc259cc79be8f07a9a9cca1e",
+  "science_check": "95episode+trace hashes same; scientificsummary/25pairedarrays same;1060F/pairs/t/selected/NFE same; runtimesreplaceoldelapsedmeasurements",
+  "original_metric_runtime_recovery": "Originalindividualdayruntimebytes unrecoverable fromremainingaggregatestats; never fabricated. Originalaggregate/runtimehashesretained inincidentsurviving_prior_receipts.",
+  "exact_old_front_recovery": {
+    "attempted": true,
+    "source": "oldpublicper-frameelapsedtimes + byte-identicalscientificfields/memberships, exactoriginalserializer",
+    "original_expected_sha256": "ec45229cfb0d4f0209fb7d60f78262a1128c5c44ae820872963db6eff4e35c0f",
+    "recovered_sha256": "ec45229cfb0d4f0209fb7d60f78262a1128c5c44ae820872963db6eff4e35c0f",
+    "exact_hash_match": true,
+    "path": "task2/evidence/rl/replay_recovery/cli_help_replay_01/hash_verified_original_recovery/fusion_fronts.json",
+    "claim": "Exactoldbytes recoveredandSHAverified in aseparatearchive; currentReplayfile NOT overwritten. Per-dayoriginalruntimebytes remain unrecovered."
+  },
+  "evidence": {
+    "capture": "task2/evidence/rl/replay_recovery/cli_help_replay_01/capture_manifest.json",
+    "science": "task2/evidence/rl/replay_recovery/cli_help_replay_01/science_comparison.json",
+    "guard": "task2/evidence/rl/replay_recovery/cli_help_replay_01/cli_guard_receipt.json",
+    "independent": "task2/evidence/independent_ea_on_rl/replay_review/result.json",
+    "independent_old_front": "task2/evidence/independent_ea_on_rl/replay_review/recovered_front_result.json"
+  },
+  "status": "RECORDED_REPLAY_WITH_UNCHANGED_SCIENTIFIC_VALUES_AND_REPLACED_TIMINGS"
+}

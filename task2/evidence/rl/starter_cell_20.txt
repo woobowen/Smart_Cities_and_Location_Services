@@ -1,0 +1,11 @@
+fig = plt.figure(figsize=(12, 5))
+for i, (name, color) in enumerate([("NSGA-II", "#4c78a8"), ("NSGA-III", "#f58518")]):
+    ax = fig.add_subplot(1, 2, i + 1, projection="3d")
+    F = fronts3[name][0]
+    ax.scatter(F[:, 1], -F[:, 0], -F[:, 2], c=color, s=14)
+    ax.set(xlabel="接驾距离 / km", ylabel="收入 / 元", zlabel="服务单数",
+           title=f"{name}（HV={hv3[name][0]:.3f}，{len(F)} 个解）")
+    ax.view_init(elev=22, azim=-60)
+plt.tight_layout()
+plt.savefig(f"{FIG_DIR}/pareto_3obj.png", dpi=200)
+plt.show()

@@ -1,0 +1,1221 @@
+{
+  "actual_utc": "2026-11-05T12:19:19.325516+00:00",
+  "reviewer": "/root/evolution",
+  "status": "PASS_IN_STATED_INTEGRATION_INDEX_SCOPE",
+  "scope": "Read-only integration-index review of12 Markdown documents against existing artifacts; independently recomputed counts and stated aggregate arithmetic; no experiment, training, figure generation, PDF compilation or new PDF visual review.",
+  "document_sha256": {
+    "task2/review/EXPERIMENT_INDEX.md": "f02e69ac4336b6247eb8a6bb70305599b57ea2f364e425a67ecfd563d5e1a13e",
+    "task2/review/GIT_AND_REPRODUCIBILITY.md": "ddf4fbdb5ade0a645d88229a4c7a685e40df132a7d1640c0a45b7e88258524e1",
+    "task2/review/MULTI_AGENT_EVIDENCE.md": "731db1aea94dc09b19e2a426a90148731ea31da17b418bac10fdaaa5096942f9",
+    "task2/review/REPORT_PACKET.md": "47ec2b7847c62f11b4258adf5aaf865d5547e8af14ac3b6b58955397404fe27f",
+    "task2/review/RESULT_SUMMARY.md": "391bff71c1ee718e3fb5bc40e384c3c54bd6285e87a23b36d29483ebb0eb3efc",
+    "task2/review/REVIEW_INDEX.md": "6f182ade8b97684f53d4be6f183725a73437da6c7fc9cb8a96d517ba887dc9b8",
+    "task2/review/VERIFICATION_PACKET.md": "928fe66c0658398f4db62d8cd4bb02a09ea425ead7e80051704c9bd33e1fbffa",
+    "task2/review/VISUALIZATION_PACKET.md": "59f441c4ed5bfec9b6dcac0c8e0756c7c5eba9c19ea30fd154ad4161817f913c",
+    "task2/docs/REVIEW_LOG.md": "3388e7dfa154ffecf85bd4cabab528aa828f308ae18ef9f461023ae319d2cc97",
+    "task2/docs/EXPERIMENT_PLAN.md": "c07f7bd9d8d3455931c9324264c9754177a212c141c4669460f6344cd98e6dca",
+    "task2/docs/REPRODUCIBILITY_GUIDE.md": "fd5dd188301778ce42a9571314f5d943d780baaf3382084245af6616af202a2d",
+    "task2/README.md": "9384292ef8917c09c32185085712f20902b8ff29e33fb0aab088bf6da3e50366"
+  },
+  "input_sha256": {
+    "task2/review/EXPERIMENT_INDEX.md": "f02e69ac4336b6247eb8a6bb70305599b57ea2f364e425a67ecfd563d5e1a13e",
+    "task2/review/GIT_AND_REPRODUCIBILITY.md": "ddf4fbdb5ade0a645d88229a4c7a685e40df132a7d1640c0a45b7e88258524e1",
+    "task2/review/MULTI_AGENT_EVIDENCE.md": "731db1aea94dc09b19e2a426a90148731ea31da17b418bac10fdaaa5096942f9",
+    "task2/review/REPORT_PACKET.md": "47ec2b7847c62f11b4258adf5aaf865d5547e8af14ac3b6b58955397404fe27f",
+    "task2/review/RESULT_SUMMARY.md": "391bff71c1ee718e3fb5bc40e384c3c54bd6285e87a23b36d29483ebb0eb3efc",
+    "task2/review/REVIEW_INDEX.md": "6f182ade8b97684f53d4be6f183725a73437da6c7fc9cb8a96d517ba887dc9b8",
+    "task2/review/VERIFICATION_PACKET.md": "928fe66c0658398f4db62d8cd4bb02a09ea425ead7e80051704c9bd33e1fbffa",
+    "task2/review/VISUALIZATION_PACKET.md": "59f441c4ed5bfec9b6dcac0c8e0756c7c5eba9c19ea30fd154ad4161817f913c",
+    "task2/docs/REVIEW_LOG.md": "3388e7dfa154ffecf85bd4cabab528aa828f308ae18ef9f461023ae319d2cc97",
+    "task2/docs/EXPERIMENT_PLAN.md": "c07f7bd9d8d3455931c9324264c9754177a212c141c4669460f6344cd98e6dca",
+    "task2/docs/REPRODUCIBILITY_GUIDE.md": "fd5dd188301778ce42a9571314f5d943d780baaf3382084245af6616af202a2d",
+    "task2/README.md": "9384292ef8917c09c32185085712f20902b8ff29e33fb0aab088bf6da3e50366",
+    "task2/results/rl/ACTIVE_RUNS.json": "0322c7ca6f092189ad1708bb2f9f0ef92156a7cf1135388c617e4ffaef28b229",
+    "task2/results/rl/development_v1/q_f100_s2024/manifest.json": "95c6414c441613a4938c7a59ed19fe57a75238674ad8758dea72700c0e815137",
+    "task2/results/rl/development_v1/q_f100_s2024/model.npz": "6b1851e1d2ba6dea71f09be61ddcee17f060233b2f76061347ed81d52afd7648",
+    "task2/results/rl/development_v1/q_f40_s2024/manifest.json": "907f4fce97f81282faafc6eb596380f3f70c061ebf5cd8237906d9cad6fbdad9",
+    "task2/results/rl/development_v1/q_f40_s2024/model.npz": "71d8b548ed9217e6cc61eb222382b2c61c7e86b1db1ee7682b5530f35d3df871",
+    "task2/results/rl/development_v1/q_f60_s2024/manifest.json": "3471949d789607101be3147f6dc41868144b636cc49f102070c8c0a59f22d4b7",
+    "task2/results/rl/development_v1/q_f60_s2024/model.npz": "2b29d6a62f535b150fa8da67cf5379a962b457d5bb6a763b070cae5cb218cba3",
+    "task2/results/rl/double_v2_rngfix/double_b1_s2024/manifest.json": "6ef48f1f8459069466f412b6becbe411c2b979ac56c8cfa41ecb1a528fdf27f1",
+    "task2/results/rl/double_v2_rngfix/double_b1_s2024/model.npz": "06b30ebca1efefd8ce0a51769fe563d2ccc43bc2a7de33f6148eab241adfd04e",
+    "task2/results/rl/double_v2_rngfix/double_b1_s2025/manifest.json": "d31fd95540e1dd028c86dc2ef9a84a69c531b7ff2afa1f149ea87ce647d9ea33",
+    "task2/results/rl/double_v2_rngfix/double_b1_s2025/model.npz": "6427c5e5be4a8474d331c086f52daf92866a10e7030e6ed1a787bdaab632ef1c",
+    "task2/results/rl/double_v2_rngfix/double_b1_s2026/manifest.json": "a2a965d93d4c009134ba06849c786b7d08a8da32ae213f17ac607922ed460624",
+    "task2/results/rl/double_v2_rngfix/double_b1_s2026/model.npz": "ef4de0a0b39d0809ff28bf3e71dd478ccc8304897afcb7801506741c5821c034",
+    "task2/results/rl/double_v2_rngfix/double_b1_s2027/manifest.json": "e2699c761d79abeca4e3c36fce5ebb56708b1756bf7be4fe79d995255462ce4a",
+    "task2/results/rl/double_v2_rngfix/double_b1_s2027/model.npz": "f51dfe0a2f0b813fff5b3021390464d26e852f65fa5809f5cb502bc6873c017c",
+    "task2/results/rl/double_v2_rngfix/double_b1_s2028/manifest.json": "b0a2652fef5ab7a1acf608d9fe80d26b92aee2fc97a4f68ccf4331f7491bca29",
+    "task2/results/rl/double_v2_rngfix/double_b1_s2028/model.npz": "cf370bd0e9b7ce8afce6858a08b25a2dd83fd38c754d496950558207579de2b8",
+    "task2/results/rl/double_v2_rngfix/q_b1_s2026/manifest.json": "f605c80609b03e8b555f4a2290fac5b45d052eff30c96224fcdd646654b06313",
+    "task2/results/rl/double_v2_rngfix/q_b1_s2026/model.npz": "6fe75d70594d57e374aed2a6d50dd528d1d76c9d4578bafdf69ca5320197ec44",
+    "task2/results/rl/double_v2_rngfix/q_b1_s2027/manifest.json": "5903ad37ff3e8d09bb8584affb9c974ab70ef0ca77eec6bf89f95519fde0b6ef",
+    "task2/results/rl/double_v2_rngfix/q_b1_s2027/model.npz": "428762fa2f785042565508ed418ae02fe25cc74242c257124195481d5bc557a8",
+    "task2/results/rl/double_v2_rngfix/q_b1_s2028/manifest.json": "bed3f8a1d51bd435a73f14622c8faec6e5e6a9edce0d4613c830be5f869a14f0",
+    "task2/results/rl/double_v2_rngfix/q_b1_s2028/model.npz": "3dbdc69c78d1a904de9a29f1c341f468909dd96682abf75139eca7c52bc43f72",
+    "task2/results/rl/double_validation_v1/q_b1_s2024/manifest.json": "42717ba810e5ab5327aa99647595b6c1ab4b2e33046c1090510d6e340b54bebc",
+    "task2/results/rl/double_validation_v1/q_b1_s2024/model.npz": "d8c372348bd9e277a4b3a8c6963ff4c7d64abafb31a0ce559bc029726bc68df2",
+    "task2/results/rl/double_validation_v1/q_b1_s2025/manifest.json": "5aa0f03d5cfcabfbb46297d25846ab419a7471742bab366b65886dd5f5255886",
+    "task2/results/rl/double_validation_v1/q_b1_s2025/model.npz": "a6ebc5e81c8f95c07a6aba2e227513389436b20740a62ce662aaa0455943a530",
+    "task2/results/rl/final_v1/double_beta1/manifest.json": "320e358303179f63f7f8eb08b6cc4b646101d74c693c317102de79bd38f6cbaf",
+    "task2/results/rl/final_v1/double_beta1/model.npz": "a561aba26cfd887c988bb59a5237f4003b2a56d02b20cfb9954af648d46a0b8b",
+    "task2/results/rl/final_v1/q_beta1/manifest.json": "403f61cdb0093f9c9ef000d5a6aecf6e85dc2ab0750177870d0639b9ef40c2cb",
+    "task2/results/rl/final_v1/q_beta1/model.npz": "2245a490964fb027808e3d2efdd18fd636c03f4d2351b51f328a599a319bbe5d",
+    "task2/results/rl/final_v1/q_f100/manifest.json": "917deb4473990f32585499561c8262e002a41f21ce34ffb5f32741c09863a88a",
+    "task2/results/rl/final_v1/q_f100/model.npz": "a398ec554ab049374a56e4532335b9cc7d430a99c82ebf0fb0cd5c7d04bc75d0",
+    "task2/results/rl/final_v1/q_f40/manifest.json": "28b063f90c90d96e385904f05601db95a33be994bfe2357a09edb7176383373b",
+    "task2/results/rl/final_v1/q_f40/model.npz": "649849ffc51a279dde1a93f18aa0563542f262ddf996d835c24924ffa4e95864",
+    "task2/results/rl/final_v1/q_f60/manifest.json": "b588e87cbfb71506642b88f96eb0e619e168544cf1bb56adcdb6f2c6259c8936",
+    "task2/results/rl/final_v1/q_f60/model.npz": "6920e9b9a861bbe09f33fd4efbd8d0b92893ddf8667f92de61f7222f19140451",
+    "task2/results/rl/movement_trainseed_confirmation_v1/q_s2025/manifest.json": "4771872cac5459cb6cb047bde3ffe95397f21feab41de8b5e613fedb70320ef3",
+    "task2/results/rl/movement_trainseed_confirmation_v1/q_s2025/model.npz": "adb4bf46f590bb6cba9d6cdc19abe6c3e2ad38965d178b16b9dc086c422c0715",
+    "task2/results/rl/movement_trainseed_confirmation_v1/q_s2026/manifest.json": "b10161729feff49f76d87e7af7afbf0b43575493e863e7a9840ac9b25bc97fc4",
+    "task2/results/rl/movement_trainseed_confirmation_v1/q_s2026/model.npz": "3bc3f1cac0047ed2ca25a02238a6103973f3731edcfd90b3b88ff8671a4aeb4b",
+    "task2/results/rl/movement_trainseed_confirmation_v1/q_s2027/manifest.json": "df4ec004fd67ecbdd686783d5cb114b3008c913fd834be26ef75632aea0ceeca",
+    "task2/results/rl/movement_trainseed_confirmation_v1/q_s2027/model.npz": "25a10c76a4fddef4217577981e0ba603fc426e7e0f3d8a1f98556cb5df7aaa56",
+    "task2/results/rl/movement_trainseed_confirmation_v1/q_s2028/manifest.json": "d96d8bda17c69e6f722bd9e2078f63e6d6aeb86a35ca9461a889caa0bbffb9f5",
+    "task2/results/rl/movement_trainseed_confirmation_v1/q_s2028/model.npz": "374dbaccec94174a80c9f22950fc78b99d3c35ef2c1c8dcf47d3fafdd6e3bb05",
+    "task2/results/rl/offset_robustness_v1/q_filtered/manifest.json": "e79c95fb30d5c860d3f3797367a4641245023407d097d5fcb34c616a7a3739a9",
+    "task2/results/rl/offset_robustness_v1/q_filtered/model.npz": "13eaf79f3b8950b1c2c2a9032858103ded06131dc69caba9fb4c560cacd721fc",
+    "task2/results/rl/pilot_v1/pilot_q/manifest.json": "17f5f15ae71491faa435fe3f663b9be5a227011d76a6f215e7c5234119f196a6",
+    "task2/results/rl/pilot_v1/pilot_q/model.npz": "504acdb21af69dac5715a1563e2b38f9157aba29500b9fa52761def4f5faa923",
+    "task2/results/rl/sensitivity_v1/gamma08/manifest.json": "77f13bd917e535f6dfc6834791027a6d6a8da0a64cad262a6ada98d0f9091cb0",
+    "task2/results/rl/sensitivity_v1/gamma08/model.npz": "bb808ce4c2db24466f1f70993379ead5c704622f2ff240b4f1e98cc186b5132f",
+    "task2/results/rl/sensitivity_v1/gamma095/manifest.json": "6634b526e9ccd68d18f4b24f5968d69bec925d95c9131f9fb82772bfc4ed827e",
+    "task2/results/rl/sensitivity_v1/gamma095/model.npz": "1dbedc60b819b2d5c97c071294d897f2660e45226b54abdee6c21f550e1ba94e",
+    "task2/results/rl/sensitivity_v1/grid6/manifest.json": "d6d32f8d390619827e755b56b38bd2d0c8667cb163764f98a669c808ad4dcf67",
+    "task2/results/rl/sensitivity_v1/grid6/model.npz": "ee3782822ddbe9d88edba4c387f111d2f3d87815f478892740dca6b64b8ea180",
+    "task2/results/rl/sensitivity_v2_rngfix/grid10/manifest.json": "bf475052c1c6c592b50c69ae1585c2f8115b15f60a1c67efbea646a978d473ce",
+    "task2/results/rl/sensitivity_v2_rngfix/grid10/model.npz": "76f19b1d08a0c8388f79a3e79cce6aaf070f7bf80859014c854f754db1bd3c8a",
+    "task2/results/rl/sensitivity_v2_rngfix/patience1/manifest.json": "14a6b110f1dede3289d7a25340faee8448b8e8f999da3eda3883bb4328c3228b",
+    "task2/results/rl/sensitivity_v2_rngfix/patience1/model.npz": "68d2a239495e36750a31f58964fb3671210b77ccc02ccdeed3a9ee3bde5d317f",
+    "task2/results/rl/sensitivity_v2_rngfix/patience3/manifest.json": "a643ac7a5d21be1d0895301eff51dff9c8fbfa61ba7754a2c3c2aa2ba3a759a7",
+    "task2/results/rl/sensitivity_v2_rngfix/patience3/model.npz": "cae7fa658e96e26020c2727e5c7264b1f353c7aae94fab6b47ca250de60af7b0",
+    "task2/results/evolution/summary.csv": "818ede7586dd33b3c47c64ab0cd3b42cb8b7f73c26aa27b267bd5d21efb0d5ad",
+    "task2/results/online/development_v1/metrics.csv": "7440bb4735bb96b4cbfb3c7a125e73f49bb5b9eb509f31fefd51586d05652db9",
+    "task2/results/online/confirmation_v1/metrics.csv": "ee8f4948dff530914890cd8cf3a7a6c4cefd029502ae9fa01d0d8cf6385e5f8b",
+    "task2/results/online/threshold_diagnosis_v1/metrics.csv": "0d5fb8a76dcd0d68b173e9ac0cb33c6870bf1b03193dd75d9cbda177c571af3c",
+    "task2/results/online/foursquare_proxy_v1/metrics.csv": "ccd4aa7ff8077773296710eab633da568489bb64052c3ae339dd17485dfe5417",
+    "task2/results/rl/SUMMARY.csv": "f852182a223feadd27c3441d3d4f645ae1056735d2c570336d718a83b89a1a47",
+    "task2/results/rl/final_montecarlo_v1/paired_differences.json": "c426061238ccb45ac822fdaf0e5fb4fe919fcedc590b31709223dd24bcd17317",
+    "task2/releases/Dispatch_Reports_LaTeX_Source.zip": "c3868426b1388fac22922c876158c2202a3dc5f6d98d6e5ae60f97bb130473c1",
+    "task2/evidence/independent_package/report_source_01/archive_inspection.json": "fdc7743fabb929258ed7ba1618e6ee391583db34642d31a116b00bab76c2281b",
+    "task2/evidence/independent_package/report_source_01/compile_comparison.json": "3d2c708ebc6dd2f6d4d492d90e6a02ebaa2488c16cac4ff713f82d6d821e96c3",
+    "task2/evidence/independent_package/report_source_01/build/source/task2/reports/generated/sources.json": "8e1c94df693c54f9b64567efefd015118ec0440dbe8ae41c366ec0b85f707655",
+    "task2/evidence/independent_report_review/pdf_final_review.json": "c14cffce4f74404cb5147235e71a03b82238a2fdf01fef7611b35eecf3841331",
+    "task2/reports/experiment/Experiment_Report.pdf": "7a795625354e8a3c7034f8426171f8f8b32784db0cd398654b309c86ea72c101",
+    "task2/reports/process/Process_Report.pdf": "a2c57f58d246e326d398003045cadad090db19dcab9163cae5871fd791b01de1"
+  },
+  "checks_count": 85,
+  "checks": [
+    {
+      "label": "Markdown local links exist",
+      "actual": [],
+      "expected": [],
+      "decimal_places": null,
+      "passed": true
+    },
+    {
+      "label": "reviewed integration documents",
+      "actual": 12,
+      "expected": 12,
+      "decimal_places": null,
+      "passed": true
+    },
+    {
+      "label": "no global-policy-optimality overclaim",
+      "actual": false,
+      "expected": false,
+      "decimal_places": null,
+      "passed": true
+    },
+    {
+      "label": "training metadata uses actual filename",
+      "actual": false,
+      "expected": false,
+      "decimal_places": null,
+      "passed": true
+    },
+    {
+      "label": "formal scientific figure count",
+      "actual": 22,
+      "expected": 22,
+      "decimal_places": null,
+      "passed": true
+    },
+    {
+      "label": "formal figure branches",
+      "actual": {
+        "evolution": 7,
+        "online": 5,
+        "rl": 10
+      },
+      "expected": {
+        "online": 5,
+        "evolution": 7,
+        "rl": 10
+      },
+      "decimal_places": null,
+      "passed": true
+    },
+    {
+      "label": "generated table count",
+      "actual": 10,
+      "expected": 10,
+      "decimal_places": null,
+      "passed": true
+    },
+    {
+      "label": "RL run identities",
+      "actual": 39,
+      "expected": 39,
+      "decimal_places": null,
+      "passed": true
+    },
+    {
+      "label": "active day-metric tables",
+      "actual": 36,
+      "expected": 36,
+      "decimal_places": null,
+      "passed": true
+    },
+    {
+      "label": "unique active tables",
+      "actual": 36,
+      "expected": 36,
+      "decimal_places": null,
+      "passed": true
+    },
+    {
+      "label": "unique active training models",
+      "actual": 30,
+      "expected": 30,
+      "decimal_places": null,
+      "passed": true
+    },
+    {
+      "label": "model training episode counts",
+      "actual": {
+        "300": 29,
+        "10": 1
+      },
+      "expected": {
+        "10": 1,
+        "300": 29
+      },
+      "decimal_places": null,
+      "passed": true
+    },
+    {
+      "label": "training episodes, excluding Notebook recomputation and REPLAY",
+      "actual": 8710,
+      "expected": 8710,
+      "decimal_places": null,
+      "passed": true
+    },
+    {
+      "label": "EA and KM canonical records",
+      "actual": 125,
+      "expected": 125,
+      "decimal_places": null,
+      "passed": true
+    },
+    {
+      "label": "full EA records",
+      "actual": 115,
+      "expected": 115,
+      "decimal_places": null,
+      "passed": true
+    },
+    {
+      "label": "EA stage counts",
+      "actual": {
+        "basic": 5,
+        "weighted_km": 10,
+        "baseline": 60,
+        "combination": 10,
+        "confirmation_km": 5,
+        "confirmation_teacher": 5,
+        "hybrid": 10,
+        "scale": 20
+      },
+      "expected": {
+        "basic": 5,
+        "weighted_km": 10,
+        "baseline": 60,
+        "combination": 10,
+        "confirmation_km": 5,
+        "confirmation_teacher": 5,
+        "hybrid": 10,
+        "scale": 20
+      },
+      "decimal_places": null,
+      "passed": true
+    },
+    {
+      "label": "advanced raw EA files",
+      "actual": 110,
+      "expected": 110,
+      "decimal_places": null,
+      "passed": true
+    },
+    {
+      "label": "basic raw EA files",
+      "actual": 5,
+      "expected": 5,
+      "decimal_places": null,
+      "passed": true
+    },
+    {
+      "label": "18h 2D nsga2 HV mean",
+      "actual": 1.0902443498008265,
+      "expected": 1.090244,
+      "decimal_places": 6,
+      "passed": true
+    },
+    {
+      "label": "18h 2D nsga2 HV sample SD",
+      "actual": 0.004460414341348538,
+      "expected": 0.00446,
+      "decimal_places": 6,
+      "passed": true
+    },
+    {
+      "label": "18h 2D nsga3 HV mean",
+      "actual": 1.0770917772365842,
+      "expected": 1.077092,
+      "decimal_places": 6,
+      "passed": true
+    },
+    {
+      "label": "18h 2D nsga3 HV sample SD",
+      "actual": 0.009530189570220901,
+      "expected": 0.00953,
+      "decimal_places": 6,
+      "passed": true
+    },
+    {
+      "label": "18h 3D nsga2 HV mean",
+      "actual": 1.0148450824322222,
+      "expected": 1.014845,
+      "decimal_places": 6,
+      "passed": true
+    },
+    {
+      "label": "18h 3D nsga2 HV sample SD",
+      "actual": 0.010260394826611308,
+      "expected": 0.01026,
+      "decimal_places": 6,
+      "passed": true
+    },
+    {
+      "label": "18h 3D nsga3 HV mean",
+      "actual": 1.0126376064492237,
+      "expected": 1.012638,
+      "decimal_places": 6,
+      "passed": true
+    },
+    {
+      "label": "18h 3D nsga3 HV sample SD",
+      "actual": 0.005688727910060639,
+      "expected": 0.005689,
+      "decimal_places": 6,
+      "passed": true
+    },
+    {
+      "label": "integer DTLZ2 nsga2 mean",
+      "actual": 0.7071108582186321,
+      "expected": 0.707111,
+      "decimal_places": 6,
+      "passed": true
+    },
+    {
+      "label": "integer DTLZ2 nsga2 sample SD",
+      "actual": 0.006189904573878333,
+      "expected": 0.00619,
+      "decimal_places": 6,
+      "passed": true
+    },
+    {
+      "label": "integer DTLZ2 nsga3 mean",
+      "actual": 0.7443253790289186,
+      "expected": 0.744325,
+      "decimal_places": 6,
+      "passed": true
+    },
+    {
+      "label": "integer DTLZ2 nsga3 sample SD",
+      "actual": 0.00023518500822424464,
+      "expected": 0.000235,
+      "decimal_places": 6,
+      "passed": true
+    },
+    {
+      "label": "hybrid nsga2 HV",
+      "actual": 1.111427115199458,
+      "expected": 1.111427,
+      "decimal_places": 6,
+      "passed": true
+    },
+    {
+      "label": "combination incremental HV nsga2",
+      "actual": 0.0014846953695775156,
+      "expected": 0.001485,
+      "decimal_places": 6,
+      "passed": true
+    },
+    {
+      "label": "hybrid nsga3 HV",
+      "actual": 1.1114937283584385,
+      "expected": 1.111494,
+      "decimal_places": 6,
+      "passed": true
+    },
+    {
+      "label": "combination incremental HV nsga3",
+      "actual": 0.0005782621119339026,
+      "expected": 0.000578,
+      "decimal_places": 6,
+      "passed": true
+    },
+    {
+      "label": "future paired HV mean",
+      "actual": 0.031470429525213374,
+      "expected": 0.03147,
+      "decimal_places": 6,
+      "passed": true
+    },
+    {
+      "label": "future paired HV sample SD",
+      "actual": 0.006572978282426681,
+      "expected": 0.006573,
+      "decimal_places": 6,
+      "passed": true
+    },
+    {
+      "label": "future inputs with positive paired HV",
+      "actual": 5,
+      "expected": 5,
+      "decimal_places": null,
+      "passed": true
+    },
+    {
+      "label": "online development_v1 metric count",
+      "actual": 1045,
+      "expected": 1045,
+      "decimal_places": null,
+      "passed": true
+    },
+    {
+      "label": "online confirmation_v1 metric count",
+      "actual": 1045,
+      "expected": 1045,
+      "decimal_places": null,
+      "passed": true
+    },
+    {
+      "label": "online threshold_diagnosis_v1 metric count",
+      "actual": 150,
+      "expected": 150,
+      "decimal_places": null,
+      "passed": true
+    },
+    {
+      "label": "online foursquare_proxy_v1 metric count",
+      "actual": 200,
+      "expected": 200,
+      "decimal_places": null,
+      "passed": true
+    },
+    {
+      "label": "TBG_g2 confirmation mean delay",
+      "actual": 7.638529663870409,
+      "expected": 7.639,
+      "decimal_places": 3,
+      "passed": true
+    },
+    {
+      "label": "TBG_g2 confirmation mean maximum",
+      "actual": 13.581467886291213,
+      "expected": 13.581,
+      "decimal_places": 3,
+      "passed": true
+    },
+    {
+      "label": "TBG_g5 confirmation mean delay",
+      "actual": 5.410562421583934,
+      "expected": 5.411,
+      "decimal_places": 3,
+      "passed": true
+    },
+    {
+      "label": "TBG_g5 confirmation mean maximum",
+      "actual": 15.92684758650701,
+      "expected": 15.927,
+      "decimal_places": 3,
+      "passed": true
+    },
+    {
+      "label": "teacher BB_discard_t0.5 coverage",
+      "actual": 0.25,
+      "expected": 0.25,
+      "decimal_places": null,
+      "passed": true
+    },
+    {
+      "label": "teacher BB_recycle_t0.5 coverage",
+      "actual": 1.0,
+      "expected": 1.0,
+      "decimal_places": null,
+      "passed": true
+    },
+    {
+      "label": "workers_first BB_discard_t0.5 coverage",
+      "actual": 0.0,
+      "expected": 0.0,
+      "decimal_places": null,
+      "passed": true
+    },
+    {
+      "label": "teacher seed13 local BBmax daily delay excess",
+      "actual": 2.161646829768623,
+      "expected": 2.162,
+      "decimal_places": 3,
+      "passed": true
+    },
+    {
+      "label": "RL summary unique active run tables",
+      "actual": 36,
+      "expected": 36,
+      "decimal_places": null,
+      "passed": true
+    },
+    {
+      "label": "final fleet40 Q revenue",
+      "actual": 13994.899774711015,
+      "expected": 13994.9,
+      "decimal_places": 2,
+      "passed": true
+    },
+    {
+      "label": "final fleet40 KM revenue",
+      "actual": 12437.179647015264,
+      "expected": 12437.18,
+      "decimal_places": 2,
+      "passed": true
+    },
+    {
+      "label": "final fleet60 Q revenue",
+      "actual": 17170.847445501226,
+      "expected": 17170.85,
+      "decimal_places": 2,
+      "passed": true
+    },
+    {
+      "label": "final fleet60 KM revenue",
+      "actual": 16757.421222118293,
+      "expected": 16757.42,
+      "decimal_places": 2,
+      "passed": true
+    },
+    {
+      "label": "final fleet100 Q revenue",
+      "actual": 20046.48686136292,
+      "expected": 20046.49,
+      "decimal_places": 2,
+      "passed": true
+    },
+    {
+      "label": "final fleet100 KM revenue",
+      "actual": 20793.006209519554,
+      "expected": 20793.01,
+      "decimal_places": 2,
+      "passed": true
+    },
+    {
+      "label": "fair_double_b1 train seed count",
+      "actual": 5,
+      "expected": 5,
+      "decimal_places": null,
+      "passed": true
+    },
+    {
+      "label": "fair_double_b1 revenue",
+      "actual": 14771.952718321629,
+      "expected": 14771.95,
+      "decimal_places": 2,
+      "passed": true
+    },
+    {
+      "label": "fair_double_b1 response",
+      "actual": 0.5379733333333333,
+      "expected": 0.53797,
+      "decimal_places": 5,
+      "passed": true
+    },
+    {
+      "label": "fair_q_b1 train seed count",
+      "actual": 5,
+      "expected": 5,
+      "decimal_places": null,
+      "passed": true
+    },
+    {
+      "label": "fair_q_b1 revenue",
+      "actual": 14173.083679721634,
+      "expected": 14173.08,
+      "decimal_places": 2,
+      "passed": true
+    },
+    {
+      "label": "fair_q_b1 response",
+      "actual": 0.57176,
+      "expected": 0.57176,
+      "decimal_places": 5,
+      "passed": true
+    },
+    {
+      "label": "final enhancements double_beta1 revenue_mean",
+      "actual": 14336.253144360799,
+      "expected": 14336.25,
+      "decimal_places": 2,
+      "passed": true
+    },
+    {
+      "label": "final enhancements q_beta1 revenue_mean",
+      "actual": 13995.180591389402,
+      "expected": 13995.18,
+      "decimal_places": 2,
+      "passed": true
+    },
+    {
+      "label": "final enhancements km_move3 revenue_mean",
+      "actual": 17811.65245564612,
+      "expected": 17811.65,
+      "decimal_places": 2,
+      "passed": true
+    },
+    {
+      "label": "final enhancements km_move3 empty_km_mean",
+      "actual": 826.5492074067946,
+      "expected": 826.55,
+      "decimal_places": 2,
+      "passed": true
+    },
+    {
+      "label": "final enhancements qnsga_constraint avg_pickup_mean",
+      "actual": 1.3595900220044215,
+      "expected": 1.36,
+      "decimal_places": 3,
+      "passed": true
+    },
+    {
+      "label": "final enhancements qkm avg_pickup_mean",
+      "actual": 1.927808709823399,
+      "expected": 1.928,
+      "decimal_places": 3,
+      "passed": true
+    },
+    {
+      "label": "final enhancements qnsga_constraint revenue_mean",
+      "actual": 16932.910003494173,
+      "expected": 16932.91,
+      "decimal_places": 2,
+      "passed": true
+    },
+    {
+      "label": "final enhancements qnsga_constraint answer_rate_mean",
+      "actual": 0.6493333333333333,
+      "expected": 0.64933,
+      "decimal_places": 5,
+      "passed": true
+    },
+    {
+      "label": "final enhancements qkm answer_rate_mean",
+      "actual": 0.6602666666666667,
+      "expected": 0.66027,
+      "decimal_places": 5,
+      "passed": true
+    },
+    {
+      "label": "MC20 gross mean_difference",
+      "actual": 435.4547577775405,
+      "expected": 435.45,
+      "decimal_places": 2,
+      "passed": true
+    },
+    {
+      "label": "MC20 gross descriptive_t95_low",
+      "actual": 141.6844546926024,
+      "expected": 141.68,
+      "decimal_places": 2,
+      "passed": true
+    },
+    {
+      "label": "MC20 gross descriptive_t95_high",
+      "actual": 729.2250608624786,
+      "expected": 729.23,
+      "decimal_places": 2,
+      "passed": true
+    },
+    {
+      "label": "MC20 additional empty km",
+      "actual": 848.0791602189263,
+      "expected": 848.08,
+      "decimal_places": 2,
+      "passed": true
+    },
+    {
+      "label": "hypothetical unit-cost net mean",
+      "actual": -412.62440244138577,
+      "expected": -412.62,
+      "decimal_places": 2,
+      "passed": true
+    },
+    {
+      "label": "hypothetical unit-cost net t95 low",
+      "actual": -717.0295091798928,
+      "expected": -717.03,
+      "decimal_places": 2,
+      "passed": true
+    },
+    {
+      "label": "hypothetical unit-cost net t95 high",
+      "actual": -108.21929570287875,
+      "expected": -108.22,
+      "decimal_places": 2,
+      "passed": true
+    },
+    {
+      "label": "source archive exact member set",
+      "actual": [
+        "README_SOURCE_PACKAGE.md",
+        "SOURCE_PACKAGE_MANIFEST.json",
+        "task2/diagrams/dispatch_runtime_and_evaluation.drawio",
+        "task2/diagrams/dispatch_runtime_and_evaluation.pdf",
+        "task2/diagrams/dispatch_runtime_and_evaluation.svg",
+        "task2/diagrams/research_verification_workflow.drawio",
+        "task2/diagrams/research_verification_workflow.pdf",
+        "task2/diagrams/research_verification_workflow.svg",
+        "task2/docs/ENVIRONMENT_CHANGELOG.md",
+        "task2/figures/formal/evolution_basic_scalar_reference.pdf",
+        "task2/figures/formal/evolution_basic_scalar_reference.svg",
+        "task2/figures/formal/evolution_budget_and_initialization.pdf",
+        "task2/figures/formal/evolution_budget_and_initialization.svg",
+        "task2/figures/formal/evolution_dtlz2_geometry.pdf",
+        "task2/figures/formal/evolution_dtlz2_geometry.svg",
+        "task2/figures/formal/evolution_front_and_convergence.pdf",
+        "task2/figures/formal/evolution_front_and_convergence.svg",
+        "task2/figures/formal/evolution_future_confirmation.pdf",
+        "task2/figures/formal/evolution_future_confirmation.svg",
+        "task2/figures/formal/evolution_hourly_fronts.pdf",
+        "task2/figures/formal/evolution_hourly_fronts.svg",
+        "task2/figures/formal/evolution_three_objective_geometry.pdf",
+        "task2/figures/formal/evolution_three_objective_geometry.svg",
+        "task2/figures/formal/online_delay_and_coverage.pdf",
+        "task2/figures/formal/online_delay_and_coverage.svg",
+        "task2/figures/formal/online_proxy_hours.pdf",
+        "task2/figures/formal/online_proxy_hours.svg",
+        "task2/figures/formal/online_scenario_matrix.pdf",
+        "task2/figures/formal/online_scenario_matrix.svg",
+        "task2/figures/formal/online_spatial_mechanism.pdf",
+        "task2/figures/formal/online_spatial_mechanism.svg",
+        "task2/figures/formal/online_threshold_diagnosis.pdf",
+        "task2/figures/formal/online_threshold_diagnosis.svg",
+        "task2/figures/formal/rl_beta_rejection.pdf",
+        "task2/figures/formal/rl_beta_rejection.svg",
+        "task2/figures/formal/rl_double_paired.pdf",
+        "task2/figures/formal/rl_double_paired.svg",
+        "task2/figures/formal/rl_final_tradeoffs.pdf",
+        "task2/figures/formal/rl_final_tradeoffs.svg",
+        "task2/figures/formal/rl_fleet_final.pdf",
+        "task2/figures/formal/rl_fleet_final.svg",
+        "task2/figures/formal/rl_fleet_validation.pdf",
+        "task2/figures/formal/rl_fleet_validation.svg",
+        "task2/figures/formal/rl_fusion_front_and_effect.pdf",
+        "task2/figures/formal/rl_fusion_front_and_effect.svg",
+        "task2/figures/formal/rl_learning.pdf",
+        "task2/figures/formal/rl_learning.svg",
+        "task2/figures/formal/rl_movement_ablation.pdf",
+        "task2/figures/formal/rl_movement_ablation.svg",
+        "task2/figures/formal/rl_reposition_cost.pdf",
+        "task2/figures/formal/rl_reposition_cost.svg",
+        "task2/figures/formal/rl_value_maps.pdf",
+        "task2/figures/formal/rl_value_maps.svg",
+        "task2/reports/common.tex",
+        "task2/reports/experiment/Experiment_Report.pdf",
+        "task2/reports/experiment/chapters/01_data.tex",
+        "task2/reports/experiment/chapters/02_online.tex",
+        "task2/reports/experiment/chapters/03_evolution.tex",
+        "task2/reports/experiment/chapters/04_rl.tex",
+        "task2/reports/experiment/chapters/05_discussion.tex",
+        "task2/reports/experiment/chapters/appendix.tex",
+        "task2/reports/experiment/main.tex",
+        "task2/reports/generated/evolution_budget_table.tex",
+        "task2/reports/generated/evolution_confirmation_table.tex",
+        "task2/reports/generated/evolution_table.tex",
+        "task2/reports/generated/offset_table.tex",
+        "task2/reports/generated/online_confirmation_table.tex",
+        "task2/reports/generated/online_development_table.tex",
+        "task2/reports/generated/rl_enhancement_table.tex",
+        "task2/reports/generated/rl_fleet_table.tex",
+        "task2/reports/generated/rl_montecarlo_table.tex",
+        "task2/reports/generated/rl_sensitivity_table.tex",
+        "task2/reports/generated/sources.json",
+        "task2/reports/process/Process_Report.pdf",
+        "task2/reports/process/chapters/01_workflow.tex",
+        "task2/reports/process/chapters/02_online_evolution.tex",
+        "task2/reports/process/chapters/03_rl_decisions.tex",
+        "task2/reports/process/chapters/04_reflection.tex",
+        "task2/reports/process/main.tex",
+        "task2/scripts/build_reports.py",
+        "templates/latex/common/p2_cloud_sorbet_colors.tex"
+      ],
+      "expected": [
+        "README_SOURCE_PACKAGE.md",
+        "SOURCE_PACKAGE_MANIFEST.json",
+        "task2/diagrams/dispatch_runtime_and_evaluation.drawio",
+        "task2/diagrams/dispatch_runtime_and_evaluation.pdf",
+        "task2/diagrams/dispatch_runtime_and_evaluation.svg",
+        "task2/diagrams/research_verification_workflow.drawio",
+        "task2/diagrams/research_verification_workflow.pdf",
+        "task2/diagrams/research_verification_workflow.svg",
+        "task2/docs/ENVIRONMENT_CHANGELOG.md",
+        "task2/figures/formal/evolution_basic_scalar_reference.pdf",
+        "task2/figures/formal/evolution_basic_scalar_reference.svg",
+        "task2/figures/formal/evolution_budget_and_initialization.pdf",
+        "task2/figures/formal/evolution_budget_and_initialization.svg",
+        "task2/figures/formal/evolution_dtlz2_geometry.pdf",
+        "task2/figures/formal/evolution_dtlz2_geometry.svg",
+        "task2/figures/formal/evolution_front_and_convergence.pdf",
+        "task2/figures/formal/evolution_front_and_convergence.svg",
+        "task2/figures/formal/evolution_future_confirmation.pdf",
+        "task2/figures/formal/evolution_future_confirmation.svg",
+        "task2/figures/formal/evolution_hourly_fronts.pdf",
+        "task2/figures/formal/evolution_hourly_fronts.svg",
+        "task2/figures/formal/evolution_three_objective_geometry.pdf",
+        "task2/figures/formal/evolution_three_objective_geometry.svg",
+        "task2/figures/formal/online_delay_and_coverage.pdf",
+        "task2/figures/formal/online_delay_and_coverage.svg",
+        "task2/figures/formal/online_proxy_hours.pdf",
+        "task2/figures/formal/online_proxy_hours.svg",
+        "task2/figures/formal/online_scenario_matrix.pdf",
+        "task2/figures/formal/online_scenario_matrix.svg",
+        "task2/figures/formal/online_spatial_mechanism.pdf",
+        "task2/figures/formal/online_spatial_mechanism.svg",
+        "task2/figures/formal/online_threshold_diagnosis.pdf",
+        "task2/figures/formal/online_threshold_diagnosis.svg",
+        "task2/figures/formal/rl_beta_rejection.pdf",
+        "task2/figures/formal/rl_beta_rejection.svg",
+        "task2/figures/formal/rl_double_paired.pdf",
+        "task2/figures/formal/rl_double_paired.svg",
+        "task2/figures/formal/rl_final_tradeoffs.pdf",
+        "task2/figures/formal/rl_final_tradeoffs.svg",
+        "task2/figures/formal/rl_fleet_final.pdf",
+        "task2/figures/formal/rl_fleet_final.svg",
+        "task2/figures/formal/rl_fleet_validation.pdf",
+        "task2/figures/formal/rl_fleet_validation.svg",
+        "task2/figures/formal/rl_fusion_front_and_effect.pdf",
+        "task2/figures/formal/rl_fusion_front_and_effect.svg",
+        "task2/figures/formal/rl_learning.pdf",
+        "task2/figures/formal/rl_learning.svg",
+        "task2/figures/formal/rl_movement_ablation.pdf",
+        "task2/figures/formal/rl_movement_ablation.svg",
+        "task2/figures/formal/rl_reposition_cost.pdf",
+        "task2/figures/formal/rl_reposition_cost.svg",
+        "task2/figures/formal/rl_value_maps.pdf",
+        "task2/figures/formal/rl_value_maps.svg",
+        "task2/reports/common.tex",
+        "task2/reports/experiment/Experiment_Report.pdf",
+        "task2/reports/experiment/chapters/01_data.tex",
+        "task2/reports/experiment/chapters/02_online.tex",
+        "task2/reports/experiment/chapters/03_evolution.tex",
+        "task2/reports/experiment/chapters/04_rl.tex",
+        "task2/reports/experiment/chapters/05_discussion.tex",
+        "task2/reports/experiment/chapters/appendix.tex",
+        "task2/reports/experiment/main.tex",
+        "task2/reports/generated/evolution_budget_table.tex",
+        "task2/reports/generated/evolution_confirmation_table.tex",
+        "task2/reports/generated/evolution_table.tex",
+        "task2/reports/generated/offset_table.tex",
+        "task2/reports/generated/online_confirmation_table.tex",
+        "task2/reports/generated/online_development_table.tex",
+        "task2/reports/generated/rl_enhancement_table.tex",
+        "task2/reports/generated/rl_fleet_table.tex",
+        "task2/reports/generated/rl_montecarlo_table.tex",
+        "task2/reports/generated/rl_sensitivity_table.tex",
+        "task2/reports/generated/sources.json",
+        "task2/reports/process/Process_Report.pdf",
+        "task2/reports/process/chapters/01_workflow.tex",
+        "task2/reports/process/chapters/02_online_evolution.tex",
+        "task2/reports/process/chapters/03_rl_decisions.tex",
+        "task2/reports/process/chapters/04_reflection.tex",
+        "task2/reports/process/main.tex",
+        "task2/scripts/build_reports.py",
+        "templates/latex/common/p2_cloud_sorbet_colors.tex"
+      ],
+      "decimal_places": null,
+      "passed": true
+    },
+    {
+      "label": "source archive content changes since isolated compile",
+      "actual": [
+        "task2/reports/generated/sources.json"
+      ],
+      "expected": [
+        "task2/reports/generated/sources.json"
+      ],
+      "decimal_places": null,
+      "passed": true
+    },
+    {
+      "label": "source metadata change is only RL summary input hash",
+      "actual": {
+        "actual_input_hashes": {
+          "task2/public_results/evolution/runs/confirmation_km_test_hour18_batchseed9010_nsga2_M2_N100_G300_s10.json": "c65ed5e49aba739bc7b5f20daef70f8ac4a99916f6b6d6ef24561a73947d98ca",
+          "task2/public_results/evolution/runs/confirmation_teacher_test_hour18_batchseed9012_nsga2_M2_N100_G300_s12.json": "f347b9ed80f5ad1102e34c6dd30b8952dfb34707a3f7db5c5746d33ce663eeb5",
+          "task2/public_results/evolution/runs/confirmation_km_test_hour18_batchseed9011_nsga2_M2_N100_G300_s11.json": "64b16bbe1793b685b15ccb497719094553c8c3dee9612007d7fe4bbed231dd2a",
+          "task2/results/online/confirmation_v1/metrics.csv": "ee8f4948dff530914890cd8cf3a7a6c4cefd029502ae9fa01d0d8cf6385e5f8b",
+          "task2/public_results/evolution/runs/confirmation_teacher_test_hour18_batchseed9010_nsga2_M2_N100_G300_s10.json": "3426c904255dbf231900e550865421fbf4afe9c9f7fa12db88d331b1bb333547",
+          "task2/results/rl/final_v1/enhancements/day_metrics.json": "5e85bbb98ac4fa8c1ced0552905d956fbd21339af3a1191b869bde7e64ddac2e",
+          "task2/public_results/evolution/runs/confirmation_teacher_test_hour18_batchseed9011_nsga2_M2_N100_G300_s11.json": "2b65127d428e170c7482252cb17b4a67cb1a616e5020bc370befb9d21d01baed",
+          "task2/public_results/evolution/metrics.json": "a2230ba264f247806592daf923a0a2be0177e825fc49fae568eec753d90c47dc",
+          "task2/results/rl/final_montecarlo_v1/day_metrics.json": "3177a3045af4a7593348cd5ba1c47e2c8c6764061c203b8aac266a52e3d60785",
+          "task2/results/evolution/summary.csv": "818ede7586dd33b3c47c64ab0cd3b42cb8b7f73c26aa27b267bd5d21efb0d5ad",
+          "task2/public_results/evolution/runs/confirmation_teacher_test_hour18_batchseed9014_nsga2_M2_N100_G300_s14.json": "0e9b5db1b78ce50c1407bcef6aec97d897df63227a0f8cd5579f0c25fce948fc",
+          "task2/public_results/evolution/runs/confirmation_teacher_test_hour18_batchseed9013_nsga2_M2_N100_G300_s13.json": "37601e35acb4e4306089aaf5f34678e075b7ff37bc44e5417dd072c2b6157365",
+          "task2/results/online/development_v1/metrics.csv": "7440bb4735bb96b4cbfb3c7a125e73f49bb5b9eb509f31fefd51586d05652db9",
+          "task2/public_results/evolution/runs/confirmation_km_test_hour18_batchseed9012_nsga2_M2_N100_G300_s12.json": "641b894607cabfa87cfc863077420a78065a5f23890d218389d9aabd9de126f4",
+          "task2/public_results/evolution/runs/confirmation_km_test_hour18_batchseed9014_nsga2_M2_N100_G300_s14.json": "6a1cf250c1ae78118199cd38e6b7b2ed5aa44857204a4098821353d6d97f8e3c",
+          "task2/public_results/evolution/runs/confirmation_km_test_hour18_batchseed9013_nsga2_M2_N100_G300_s13.json": "9b44c4acbce851f80773a0fd5cc57d1f84d691e42508ebb7fb218db2e6543620"
+        },
+        "generator_sha256": "fe55d2e07ef85d4f40e166c0759909b23dcd9e2930e71c161eb95cca9e346ea3"
+      },
+      "expected": {
+        "actual_input_hashes": {
+          "task2/results/online/confirmation_v1/metrics.csv": "ee8f4948dff530914890cd8cf3a7a6c4cefd029502ae9fa01d0d8cf6385e5f8b",
+          "task2/public_results/evolution/runs/confirmation_teacher_test_hour18_batchseed9014_nsga2_M2_N100_G300_s14.json": "0e9b5db1b78ce50c1407bcef6aec97d897df63227a0f8cd5579f0c25fce948fc",
+          "task2/public_results/evolution/runs/confirmation_teacher_test_hour18_batchseed9011_nsga2_M2_N100_G300_s11.json": "2b65127d428e170c7482252cb17b4a67cb1a616e5020bc370befb9d21d01baed",
+          "task2/results/rl/final_montecarlo_v1/day_metrics.json": "3177a3045af4a7593348cd5ba1c47e2c8c6764061c203b8aac266a52e3d60785",
+          "task2/public_results/evolution/runs/confirmation_km_test_hour18_batchseed9014_nsga2_M2_N100_G300_s14.json": "6a1cf250c1ae78118199cd38e6b7b2ed5aa44857204a4098821353d6d97f8e3c",
+          "task2/results/rl/final_v1/enhancements/day_metrics.json": "5e85bbb98ac4fa8c1ced0552905d956fbd21339af3a1191b869bde7e64ddac2e",
+          "task2/results/evolution/summary.csv": "818ede7586dd33b3c47c64ab0cd3b42cb8b7f73c26aa27b267bd5d21efb0d5ad",
+          "task2/public_results/evolution/runs/confirmation_km_test_hour18_batchseed9010_nsga2_M2_N100_G300_s10.json": "c65ed5e49aba739bc7b5f20daef70f8ac4a99916f6b6d6ef24561a73947d98ca",
+          "task2/public_results/evolution/runs/confirmation_km_test_hour18_batchseed9012_nsga2_M2_N100_G300_s12.json": "641b894607cabfa87cfc863077420a78065a5f23890d218389d9aabd9de126f4",
+          "task2/public_results/evolution/runs/confirmation_teacher_test_hour18_batchseed9013_nsga2_M2_N100_G300_s13.json": "37601e35acb4e4306089aaf5f34678e075b7ff37bc44e5417dd072c2b6157365",
+          "task2/public_results/evolution/metrics.json": "a2230ba264f247806592daf923a0a2be0177e825fc49fae568eec753d90c47dc",
+          "task2/public_results/evolution/runs/confirmation_km_test_hour18_batchseed9013_nsga2_M2_N100_G300_s13.json": "9b44c4acbce851f80773a0fd5cc57d1f84d691e42508ebb7fb218db2e6543620",
+          "task2/public_results/evolution/runs/confirmation_teacher_test_hour18_batchseed9010_nsga2_M2_N100_G300_s10.json": "3426c904255dbf231900e550865421fbf4afe9c9f7fa12db88d331b1bb333547",
+          "task2/results/online/development_v1/metrics.csv": "7440bb4735bb96b4cbfb3c7a125e73f49bb5b9eb509f31fefd51586d05652db9",
+          "task2/public_results/evolution/runs/confirmation_km_test_hour18_batchseed9011_nsga2_M2_N100_G300_s11.json": "64b16bbe1793b685b15ccb497719094553c8c3dee9612007d7fe4bbed231dd2a",
+          "task2/public_results/evolution/runs/confirmation_teacher_test_hour18_batchseed9012_nsga2_M2_N100_G300_s12.json": "f347b9ed80f5ad1102e34c6dd30b8952dfb34707a3f7db5c5746d33ce663eeb5"
+        },
+        "generator_sha256": "fe55d2e07ef85d4f40e166c0759909b23dcd9e2930e71c161eb95cca9e346ea3"
+      },
+      "decimal_places": null,
+      "passed": true
+    },
+    {
+      "label": "inherited isolated source compile page counts",
+      "actual": [
+        26,
+        8
+      ],
+      "expected": [
+        26,
+        8
+      ],
+      "decimal_places": null,
+      "passed": true
+    },
+    {
+      "label": "inherited isolated source compile pixel comparisons",
+      "actual": 34,
+      "expected": 34,
+      "decimal_places": null,
+      "passed": true
+    },
+    {
+      "label": "experiment current PDF matches R independent visual review",
+      "actual": "7a795625354e8a3c7034f8426171f8f8b32784db0cd398654b309c86ea72c101",
+      "expected": "7a795625354e8a3c7034f8426171f8f8b32784db0cd398654b309c86ea72c101",
+      "decimal_places": null,
+      "passed": true
+    },
+    {
+      "label": "process current PDF matches R independent visual review",
+      "actual": "a2c57f58d246e326d398003045cadad090db19dcab9163cae5871fd791b01de1",
+      "expected": "a2c57f58d246e326d398003045cadad090db19dcab9163cae5871fd791b01de1",
+      "decimal_places": null,
+      "passed": true
+    }
+  ],
+  "active_model_evidence": [
+    {
+      "path": "task2/results/rl/development_v1/q_f100_s2024",
+      "episodes": 300,
+      "episode_rows": 300,
+      "td_rows": 300,
+      "manifest_sha256": "95c6414c441613a4938c7a59ed19fe57a75238674ad8758dea72700c0e815137",
+      "model_sha256": "6b1851e1d2ba6dea71f09be61ddcee17f060233b2f76061347ed81d52afd7648"
+    },
+    {
+      "path": "task2/results/rl/development_v1/q_f40_s2024",
+      "episodes": 300,
+      "episode_rows": 300,
+      "td_rows": 300,
+      "manifest_sha256": "907f4fce97f81282faafc6eb596380f3f70c061ebf5cd8237906d9cad6fbdad9",
+      "model_sha256": "71d8b548ed9217e6cc61eb222382b2c61c7e86b1db1ee7682b5530f35d3df871"
+    },
+    {
+      "path": "task2/results/rl/development_v1/q_f60_s2024",
+      "episodes": 300,
+      "episode_rows": 300,
+      "td_rows": 300,
+      "manifest_sha256": "3471949d789607101be3147f6dc41868144b636cc49f102070c8c0a59f22d4b7",
+      "model_sha256": "2b29d6a62f535b150fa8da67cf5379a962b457d5bb6a763b070cae5cb218cba3"
+    },
+    {
+      "path": "task2/results/rl/double_v2_rngfix/double_b1_s2024",
+      "episodes": 300,
+      "episode_rows": 300,
+      "td_rows": 300,
+      "manifest_sha256": "6ef48f1f8459069466f412b6becbe411c2b979ac56c8cfa41ecb1a528fdf27f1",
+      "model_sha256": "06b30ebca1efefd8ce0a51769fe563d2ccc43bc2a7de33f6148eab241adfd04e"
+    },
+    {
+      "path": "task2/results/rl/double_v2_rngfix/double_b1_s2025",
+      "episodes": 300,
+      "episode_rows": 300,
+      "td_rows": 300,
+      "manifest_sha256": "d31fd95540e1dd028c86dc2ef9a84a69c531b7ff2afa1f149ea87ce647d9ea33",
+      "model_sha256": "6427c5e5be4a8474d331c086f52daf92866a10e7030e6ed1a787bdaab632ef1c"
+    },
+    {
+      "path": "task2/results/rl/double_v2_rngfix/double_b1_s2026",
+      "episodes": 300,
+      "episode_rows": 300,
+      "td_rows": 300,
+      "manifest_sha256": "a2a965d93d4c009134ba06849c786b7d08a8da32ae213f17ac607922ed460624",
+      "model_sha256": "ef4de0a0b39d0809ff28bf3e71dd478ccc8304897afcb7801506741c5821c034"
+    },
+    {
+      "path": "task2/results/rl/double_v2_rngfix/double_b1_s2027",
+      "episodes": 300,
+      "episode_rows": 300,
+      "td_rows": 300,
+      "manifest_sha256": "e2699c761d79abeca4e3c36fce5ebb56708b1756bf7be4fe79d995255462ce4a",
+      "model_sha256": "f51dfe0a2f0b813fff5b3021390464d26e852f65fa5809f5cb502bc6873c017c"
+    },
+    {
+      "path": "task2/results/rl/double_v2_rngfix/double_b1_s2028",
+      "episodes": 300,
+      "episode_rows": 300,
+      "td_rows": 300,
+      "manifest_sha256": "b0a2652fef5ab7a1acf608d9fe80d26b92aee2fc97a4f68ccf4331f7491bca29",
+      "model_sha256": "cf370bd0e9b7ce8afce6858a08b25a2dd83fd38c754d496950558207579de2b8"
+    },
+    {
+      "path": "task2/results/rl/double_v2_rngfix/q_b1_s2026",
+      "episodes": 300,
+      "episode_rows": 300,
+      "td_rows": 300,
+      "manifest_sha256": "f605c80609b03e8b555f4a2290fac5b45d052eff30c96224fcdd646654b06313",
+      "model_sha256": "6fe75d70594d57e374aed2a6d50dd528d1d76c9d4578bafdf69ca5320197ec44"
+    },
+    {
+      "path": "task2/results/rl/double_v2_rngfix/q_b1_s2027",
+      "episodes": 300,
+      "episode_rows": 300,
+      "td_rows": 300,
+      "manifest_sha256": "5903ad37ff3e8d09bb8584affb9c974ab70ef0ca77eec6bf89f95519fde0b6ef",
+      "model_sha256": "428762fa2f785042565508ed418ae02fe25cc74242c257124195481d5bc557a8"
+    },
+    {
+      "path": "task2/results/rl/double_v2_rngfix/q_b1_s2028",
+      "episodes": 300,
+      "episode_rows": 300,
+      "td_rows": 300,
+      "manifest_sha256": "bed3f8a1d51bd435a73f14622c8faec6e5e6a9edce0d4613c830be5f869a14f0",
+      "model_sha256": "3dbdc69c78d1a904de9a29f1c341f468909dd96682abf75139eca7c52bc43f72"
+    },
+    {
+      "path": "task2/results/rl/double_validation_v1/q_b1_s2024",
+      "episodes": 300,
+      "episode_rows": 300,
+      "td_rows": 300,
+      "manifest_sha256": "42717ba810e5ab5327aa99647595b6c1ab4b2e33046c1090510d6e340b54bebc",
+      "model_sha256": "d8c372348bd9e277a4b3a8c6963ff4c7d64abafb31a0ce559bc029726bc68df2"
+    },
+    {
+      "path": "task2/results/rl/double_validation_v1/q_b1_s2025",
+      "episodes": 300,
+      "episode_rows": 300,
+      "td_rows": 300,
+      "manifest_sha256": "5aa0f03d5cfcabfbb46297d25846ab419a7471742bab366b65886dd5f5255886",
+      "model_sha256": "a6ebc5e81c8f95c07a6aba2e227513389436b20740a62ce662aaa0455943a530"
+    },
+    {
+      "path": "task2/results/rl/final_v1/double_beta1",
+      "episodes": 300,
+      "episode_rows": 300,
+      "td_rows": 300,
+      "manifest_sha256": "320e358303179f63f7f8eb08b6cc4b646101d74c693c317102de79bd38f6cbaf",
+      "model_sha256": "a561aba26cfd887c988bb59a5237f4003b2a56d02b20cfb9954af648d46a0b8b"
+    },
+    {
+      "path": "task2/results/rl/final_v1/q_beta1",
+      "episodes": 300,
+      "episode_rows": 300,
+      "td_rows": 300,
+      "manifest_sha256": "403f61cdb0093f9c9ef000d5a6aecf6e85dc2ab0750177870d0639b9ef40c2cb",
+      "model_sha256": "2245a490964fb027808e3d2efdd18fd636c03f4d2351b51f328a599a319bbe5d"
+    },
+    {
+      "path": "task2/results/rl/final_v1/q_f100",
+      "episodes": 300,
+      "episode_rows": 300,
+      "td_rows": 300,
+      "manifest_sha256": "917deb4473990f32585499561c8262e002a41f21ce34ffb5f32741c09863a88a",
+      "model_sha256": "a398ec554ab049374a56e4532335b9cc7d430a99c82ebf0fb0cd5c7d04bc75d0"
+    },
+    {
+      "path": "task2/results/rl/final_v1/q_f40",
+      "episodes": 300,
+      "episode_rows": 300,
+      "td_rows": 300,
+      "manifest_sha256": "28b063f90c90d96e385904f05601db95a33be994bfe2357a09edb7176383373b",
+      "model_sha256": "649849ffc51a279dde1a93f18aa0563542f262ddf996d835c24924ffa4e95864"
+    },
+    {
+      "path": "task2/results/rl/final_v1/q_f60",
+      "episodes": 300,
+      "episode_rows": 300,
+      "td_rows": 300,
+      "manifest_sha256": "b588e87cbfb71506642b88f96eb0e619e168544cf1bb56adcdb6f2c6259c8936",
+      "model_sha256": "6920e9b9a861bbe09f33fd4efbd8d0b92893ddf8667f92de61f7222f19140451"
+    },
+    {
+      "path": "task2/results/rl/movement_trainseed_confirmation_v1/q_s2025",
+      "episodes": 300,
+      "episode_rows": 300,
+      "td_rows": 300,
+      "manifest_sha256": "4771872cac5459cb6cb047bde3ffe95397f21feab41de8b5e613fedb70320ef3",
+      "model_sha256": "adb4bf46f590bb6cba9d6cdc19abe6c3e2ad38965d178b16b9dc086c422c0715"
+    },
+    {
+      "path": "task2/results/rl/movement_trainseed_confirmation_v1/q_s2026",
+      "episodes": 300,
+      "episode_rows": 300,
+      "td_rows": 300,
+      "manifest_sha256": "b10161729feff49f76d87e7af7afbf0b43575493e863e7a9840ac9b25bc97fc4",
+      "model_sha256": "3bc3f1cac0047ed2ca25a02238a6103973f3731edcfd90b3b88ff8671a4aeb4b"
+    },
+    {
+      "path": "task2/results/rl/movement_trainseed_confirmation_v1/q_s2027",
+      "episodes": 300,
+      "episode_rows": 300,
+      "td_rows": 300,
+      "manifest_sha256": "df4ec004fd67ecbdd686783d5cb114b3008c913fd834be26ef75632aea0ceeca",
+      "model_sha256": "25a10c76a4fddef4217577981e0ba603fc426e7e0f3d8a1f98556cb5df7aaa56"
+    },
+    {
+      "path": "task2/results/rl/movement_trainseed_confirmation_v1/q_s2028",
+      "episodes": 300,
+      "episode_rows": 300,
+      "td_rows": 300,
+      "manifest_sha256": "d96d8bda17c69e6f722bd9e2078f63e6d6aeb86a35ca9461a889caa0bbffb9f5",
+      "model_sha256": "374dbaccec94174a80c9f22950fc78b99d3c35ef2c1c8dcf47d3fafdd6e3bb05"
+    },
+    {
+      "path": "task2/results/rl/offset_robustness_v1/q_filtered",
+      "episodes": 300,
+      "episode_rows": 300,
+      "td_rows": 300,
+      "manifest_sha256": "e79c95fb30d5c860d3f3797367a4641245023407d097d5fcb34c616a7a3739a9",
+      "model_sha256": "13eaf79f3b8950b1c2c2a9032858103ded06131dc69caba9fb4c560cacd721fc"
+    },
+    {
+      "path": "task2/results/rl/pilot_v1/pilot_q",
+      "episodes": 10,
+      "episode_rows": 10,
+      "td_rows": 10,
+      "manifest_sha256": "17f5f15ae71491faa435fe3f663b9be5a227011d76a6f215e7c5234119f196a6",
+      "model_sha256": "504acdb21af69dac5715a1563e2b38f9157aba29500b9fa52761def4f5faa923"
+    },
+    {
+      "path": "task2/results/rl/sensitivity_v1/gamma08",
+      "episodes": 300,
+      "episode_rows": 300,
+      "td_rows": 300,
+      "manifest_sha256": "77f13bd917e535f6dfc6834791027a6d6a8da0a64cad262a6ada98d0f9091cb0",
+      "model_sha256": "bb808ce4c2db24466f1f70993379ead5c704622f2ff240b4f1e98cc186b5132f"
+    },
+    {
+      "path": "task2/results/rl/sensitivity_v1/gamma095",
+      "episodes": 300,
+      "episode_rows": 300,
+      "td_rows": 300,
+      "manifest_sha256": "6634b526e9ccd68d18f4b24f5968d69bec925d95c9131f9fb82772bfc4ed827e",
+      "model_sha256": "1dbedc60b819b2d5c97c071294d897f2660e45226b54abdee6c21f550e1ba94e"
+    },
+    {
+      "path": "task2/results/rl/sensitivity_v1/grid6",
+      "episodes": 300,
+      "episode_rows": 300,
+      "td_rows": 300,
+      "manifest_sha256": "d6d32f8d390619827e755b56b38bd2d0c8667cb163764f98a669c808ad4dcf67",
+      "model_sha256": "ee3782822ddbe9d88edba4c387f111d2f3d87815f478892740dca6b64b8ea180"
+    },
+    {
+      "path": "task2/results/rl/sensitivity_v2_rngfix/grid10",
+      "episodes": 300,
+      "episode_rows": 300,
+      "td_rows": 300,
+      "manifest_sha256": "bf475052c1c6c592b50c69ae1585c2f8115b15f60a1c67efbea646a978d473ce",
+      "model_sha256": "76f19b1d08a0c8388f79a3e79cce6aaf070f7bf80859014c854f754db1bd3c8a"
+    },
+    {
+      "path": "task2/results/rl/sensitivity_v2_rngfix/patience1",
+      "episodes": 300,
+      "episode_rows": 300,
+      "td_rows": 300,
+      "manifest_sha256": "14a6b110f1dede3289d7a25340faee8448b8e8f999da3eda3883bb4328c3228b",
+      "model_sha256": "68d2a239495e36750a31f58964fb3671210b77ccc02ccdeed3a9ee3bde5d317f"
+    },
+    {
+      "path": "task2/results/rl/sensitivity_v2_rngfix/patience3",
+      "episodes": 300,
+      "episode_rows": 300,
+      "td_rows": 300,
+      "manifest_sha256": "a643ac7a5d21be1d0895301eff51dff9c8fbfa61ba7754a2c3c2aa2ba3a759a7",
+      "model_sha256": "cae7fa658e96e26020c2727e5c7264b1f353c7aae94fab6b47ca250de60af7b0"
+    }
+  ],
+  "closed_findings": [
+    "Root replaced global policy-optimality wording with two beta1 trajectory edge-weight and local exact-matching scope.",
+    "RL training metadata file is each model directory manifest.json; training_manifest is not an actual filename."
+  ],
+  "source_archive_inheritance": {
+    "current_bundle_sha256": "c3868426b1388fac22922c876158c2202a3dc5f6d98d6e5ae60f97bb130473c1",
+    "actually_compiled_bundle_sha256": "0215d2cd3f8dd25bbbc130c70467e0d56d01058008f393215a8255eec51b8fd4",
+    "content_changes": [
+      {
+        "path": "task2/reports/generated/sources.json",
+        "old_sha256": "8e1c94df693c54f9b64567efefd015118ec0440dbe8ae41c366ec0b85f707655",
+        "new_sha256": "4e0b01c5f27606a5379ba58b941442223db95332c191ac0c532695789c97b822"
+      }
+    ],
+    "changed_json_key": "actual_input_hashes/task2/results/rl/SUMMARY.csv",
+    "old_summary_sha256": "878ea67cae211bbe9292f7fda50b8dbea473e4f4aa6369b2c70febbe5ef54d66",
+    "current_summary_sha256": "f852182a223feadd27c3441d3d4f645ae1056735d2c570336d718a83b89a1a47",
+    "basis": "All TeX, build script, generated TeX tables, PDFs, diagrams and vector figures are byte-identical to the isolated-compiled package. Only provenance JSON and its package manifest change. The old compile receipt remains its own bundle identity; no new compile is claimed."
+  },
+  "excluded": [
+    "EB final public Git file-set/security review, final fixed commit and remote publication",
+    "Independent re-review of source package compilation: inherited from EB on byte-identical render inputs",
+    "Independent re-review of PDF pages: inherited from R exact current PDF hashes",
+    "Process UI Evidence production/Lock, external GPT audit, user acceptance or teacher submission",
+    "Global RL or NSGA optimality, real operational profit or confirmed geographic datum"
+  ]
+}

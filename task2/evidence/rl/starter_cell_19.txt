@@ -1,0 +1,26 @@
+def spacing(F, ideal, nadir):
+    """Spacing 指标：归一化后每个解到最近邻的距离的变异系数，越小越均匀"""
+    Fn = np.unique((F - ideal) / np.maximum(nadir - ideal, 1e-12), axis=0)
+    D = np.abs(Fn[:, None] - Fn[None]).sum(-1)
+    np.fill_diagonal(D, np.inf)
+    d = D.min(1)
+    return d.std() / d.mean()
+
+
+prob3 = DispatchProblem(batch, n_obj=3)
+REF3 = das_dennis(3, 13)                                   # 105 个参考方向
+hv3 = {"NSGA-II": [], "NSGA-III": []}
+fronts3 = {}
+t0 = time.time()
+for s in SEEDS:
+    for name, algo in [("NSGA-II", "nsga2"), ("NSGA-III", "nsga3")]:
+        _, F, _ = run_nsga(prob3, algo, pop_size=105, n_gen=300, seed=s, ref_dirs=REF3, log_every=1000)
+        fronts3.setdefault(name, []).append(F)
+F_km3 = km_weighted_sum(prob3, LAMBDAS)
+all3 = np.vstack([f for v in fronts3.values() for f in v] + [F_km3])
+IDEAL3, NADIR3 = all3.min(0), all3.max(0)
+for name in fronts3:
+    hv3[name] = [hypervolume(F, IDEAL3, NADIR3) for F in fronts3[name]]
+    sp = [spacing(F, IDEAL3, NADIR3) for F in fronts3[name]]
+    print(f"{name:9s} 3 目标 HV = {np.mean(hv3[name]):.4f} ± {np.std(hv3[name]):.4f} | Spacing = {np.mean(sp):.3f}")
+print(f"加权和+KM 3 目标 HV = {hypervolume(F_km3, IDEAL3, NADIR3):.4f}   耗时 {time.time() - t0:.1f}s")

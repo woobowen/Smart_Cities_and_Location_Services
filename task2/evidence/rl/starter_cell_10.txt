@@ -1,0 +1,73 @@
+def das_dennis(n_obj, n_partitions):
+    """Das-Dennis 均匀参考方向"""
+    def rec(left, depth):
+        if depth == n_obj - 1:
+            return [[left]]
+        return [[i] + rest for i in range(left + 1) for rest in rec(left - i, depth + 1)]
+    return np.array(rec(n_partitions, 0), float) / n_partitions
+
+
+def normalize(F, ideal):
+    """NSGA-III 自适应归一化：极值点 -> 超平面截距；失败时退化为 nadir 归一化"""
+    Fp = F - ideal
+    M = F.shape[1]
+    w = np.eye(M) + 1e-6
+    asf = (Fp[:, None, :] / w[None, :, :]).max(-1)        # (N, M)
+    extreme = Fp[asf.argmin(0)]                            # 每个轴的极值点
+    try:
+        b = np.linalg.solve(extreme, np.ones(M))
+        intercept = 1.0 / b
+        if np.any(intercept <= 1e-6) or not np.all(np.isfinite(intercept)):
+            raise np.linalg.LinAlgError
+    except np.linalg.LinAlgError:
+        intercept = Fp.max(0)
+    intercept = np.where(intercept <= 1e-6, Fp.max(0) + 1e-6, intercept)
+    return Fp / intercept
+
+
+def associate(Fn, ref_dirs):
+    """返回每个个体最近的参考方向编号及垂直距离"""
+    u = ref_dirs / np.linalg.norm(ref_dirs, axis=1, keepdims=True)
+    proj = np.einsum("nk,rk->nr", Fn, u)                  # (N, R) 投影长度
+    perp = np.sqrt(np.maximum((Fn ** 2).sum(1, keepdims=True) - proj ** 2, 0))
+    niche = perp.argmin(1)
+    return niche, perp[np.arange(len(Fn)), niche]
+
+
+def nsga3_survival(F, N, ref_dirs, rng):
+    rank = fast_non_dominated_sort(F)
+    chosen, last = [], None
+    for r in range(rank.max() + 1):
+        front = np.where(rank == r)[0]
+        if len(chosen) + len(front) <= N:
+            chosen.extend(front)
+            if len(chosen) == N:
+                return np.array(chosen)
+        else:
+            last = front
+            break
+    if last is None:
+        return np.array(chosen)
+    cand = np.array(chosen + list(last))
+    Fn = normalize(F[cand], F[cand].min(0))
+    niche, dist = associate(Fn, ref_dirs)
+    k = len(chosen)
+    niche_count = np.bincount(niche[:k], minlength=len(ref_dirs))
+    pool = list(range(k, len(cand)))                       # 最后一层在 cand 中的下标
+    excluded = np.zeros(len(ref_dirs), bool)
+    while len(chosen) < N:
+        counts = np.where(excluded, np.inf, niche_count)
+        j_min = rng.choice(np.where(counts == counts.min())[0])
+        members = [p for p in pool if niche[p] == j_min]
+        if not members:
+            excluded[j_min] = True
+            continue
+        pick = members[int(np.argmin(dist[members]))] if niche_count[j_min] == 0 else rng.choice(members)
+        chosen.append(cand[pick])
+        pool.remove(pick)
+        niche_count[j_min] += 1
+    return np.array(chosen)
+
+
+print("2 目标 99 等分 -> 参考方向数", len(das_dennis(2, 99)))
+print("3 目标 13 等分 -> 参考方向数", len(das_dennis(3, 13)))

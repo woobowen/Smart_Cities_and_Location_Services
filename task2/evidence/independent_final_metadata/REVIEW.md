@@ -1,0 +1,11 @@
+# Final independent append
+
+CLI: 168 isolated cases and read-only model/import smoke passed; see `../independent_cli_guard/result.json`. Only `load_model` AST was independently compared here; broader launcher mathematical equivalence remains attributed to the original EB/EA receipts.
+
+KM metadata: 125 records, all 375 precision metric dictionaries, and 81,980 numeric leaves in each local/public packet are exactly unchanged. Six local, seven public, and two manifest leaf differences are descriptive scope/hash fields; summary.csv is byte-identical. SUMMARY.md changes one packet-hash occurrence. Ten sidecars change input hash plus explicit inheritance; the other 416 files of the 428-file inventory remain unchanged after accounting for those sidecars, SUMMARY.md and authorized generated/sources.json regeneration. See `km_scope_metadata_review.json`. All metadata assertions completed before the combined helper encountered a separate ZIP precondition failure.
+
+Source package: this reviewer did not finish a separate successful ZIP comparison and does not claim a new compilation. The failed helper is retained. The final applicable independent ZIP result is `/root/reinforcement`'s `../independent_package/final_delta_review.json`: current `781dfd5a…` package versus previously compiled `0215d2cd…`, 81 members, only generated/sources.json and enclosing package manifest changed, 79 remaining assets unchanged. That executor owns the member comparison; the original 34-page compilation/render receipts retain their identities. See `final_scope_handoff.json` for the exact receipt hash and failed-precondition boundaries.
+
+No experiments, model evaluations, figures, report bodies, canonical outputs or original evidence were changed in this append. No new compilation, visual review, user acceptance or remote review is claimed.
+
+Final two-line documentation clarification: read task2/README.md:3 and review/DELIVERY_GATE_REVIEW.md:7. Both now correctly state two basic discussion points plus nine advanced questions, matching original matrix BQ1–BQ2, AQ1–AQ4 and RQ1–RQ5. This corrects the grouping and does not enlarge coverage. Exact current file hashes and text are in final_scope_handoff.json.

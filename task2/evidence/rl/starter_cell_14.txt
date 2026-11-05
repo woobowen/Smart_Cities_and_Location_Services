@@ -1,0 +1,11 @@
+REF2 = das_dennis(2, 99)                                  # 100 个参考方向
+t0 = time.time()
+_, F_n2, hist_n2 = run_nsga(prob, "nsga2", pop_size=100, n_gen=300, seed=SEED)
+_, F_n3, hist_n3 = run_nsga(prob, "nsga3", pop_size=100, n_gen=300, seed=SEED, ref_dirs=REF2)
+F_km = km_weighted_sum(prob, LAMBDAS)
+print(f"耗时 {time.time() - t0:.1f}s | NSGA-II 前沿 {len(F_n2)} 个解, NSGA-III 前沿 {len(F_n3)} 个解")
+
+allF = np.vstack([F_n2, F_n3, F_km])
+IDEAL2, NADIR2 = allF.min(0), allF.max(0)
+for name, F in [("NSGA-II", F_n2), ("NSGA-III", F_n3), ("加权和+KM", F_km)]:
+    print(f"{name:10s} HV = {hypervolume(F, IDEAL2, NADIR2):.4f}")

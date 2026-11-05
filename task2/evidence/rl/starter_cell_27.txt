@@ -1,0 +1,108 @@
+GRID = 8
+N_ZONES = GRID * GRID
+WAIT = N_ZONES                       # 动作编号 64 = 空等
+STEP_MIN = 10                        # 时间片长度（分钟）
+DAY_START, DAY_END = 6 * 60, 24 * 60
+T = (DAY_END - DAY_START) // STEP_MIN  # 108 个时间片
+SPEED_KMH = 25.0
+KM_PER_STEP = SPEED_KMH * STEP_MIN / 60  # 每个时间片行驶约 4.2 km
+PATIENCE = 2                         # 订单最多等 2 个时间片（20 分钟）未派则取消
+ORDERS_PER_DAY = 1500
+
+
+def zone_of(x, y):
+    col = np.clip((x / W_KM * GRID).astype(int), 0, GRID - 1)
+    row = np.clip((y / H_KM * GRID).astype(int), 0, GRID - 1)
+    return row * GRID + col
+
+
+ZONE_XY = np.array([((c + 0.5) * W_KM / GRID, (r + 0.5) * H_KM / GRID)
+                    for r in range(GRID) for c in range(GRID)])
+# 区域中心之间的行驶时间片数 Δ(i, j)，用于区域级价值估计（至少 1 片）
+DELTA = np.maximum(1, np.ceil(np.abs(ZONE_XY[:, None] - ZONE_XY[None]).sum(-1) / KM_PER_STEP)).astype(int)
+
+
+def sample_episode(trip_pool, n_drivers, seed):
+    """一天的订单 = 从历史订单池按时间分布有放回抽样 + 小幅时空扰动；司机初始位置来自早上签到热点"""
+    rng = np.random.default_rng(seed)
+    pool = trip_pool[(trip_pool.minute >= DAY_START) & (trip_pool.minute < DAY_END)]
+    od = pool.iloc[rng.integers(0, len(pool), ORDERS_PER_DAY)]
+    minute = np.clip(od.minute.values + rng.integers(-5, 6, ORDERS_PER_DAY), DAY_START, DAY_END - 1)
+    jit = lambda v, hi: np.clip(v + rng.normal(0, 0.3, len(v)), 0, hi)
+    ox, oy = jit(od.ox.values, W_KM), jit(od.oy.values, H_KM)
+    dx, dy = jit(od.dx.values, W_KM), jit(od.dy.values, H_KM)
+    order = np.argsort(minute, kind="stable")
+    trip_km = np.abs(ox - dx) + np.abs(oy - dy)
+    orders = dict(step=((minute - DAY_START) // STEP_MIN)[order],
+                  oxy=np.c_[ox, oy][order], dzone=zone_of(dx, dy)[order], dxy=np.c_[dx, dy][order],
+                  trip_km=trip_km[order], fare=(BASE_FARE + PER_KM * trip_km)[order])
+    morning = ck[(ck.minute >= 360) & (ck.minute < 480)][["x", "y"]].values
+    drv = morning[rng.integers(0, len(morning), n_drivers)] + rng.normal(0, 0.5, (n_drivers, 2))
+    drv = np.clip(drv, 0, [W_KM, H_KM])
+    return orders, drv
+
+
+def run_episode(episode, policy, collect=False):
+    """
+    按时间片推进一天。policy(ctx) 返回 [(司机局部下标, 订单局部下标), ...]
+    collect=True 时返回经验 (t, 区域 i, 动作 a, 奖励 r, 下一时间片 t', 下一区域 i', avail)
+    其中 avail 是该司机在 t' 时刻（下一次空闲时）接驾半径内订单的目的地区域集合 A(s')
+    """
+    orders, drv0 = episode
+    pos = drv0.copy()
+    zone = zone_of(pos[:, 0], pos[:, 1])
+    free_at = np.zeros(len(pos), int)
+    active = np.zeros(0, int)
+    ptr, n_orders = 0, len(orders["step"])
+    revenue = pickup_km = 0.0
+    served = 0
+    trans = []
+    pending = {}                                  # 司机 -> 尚未填写 avail 的上一条经验
+    no_avail = np.zeros(0, int)
+    for t in range(T):
+        new_end = ptr
+        while new_end < n_orders and orders["step"][new_end] == t:
+            new_end += 1
+        active = np.concatenate([active, np.arange(ptr, new_end)])
+        ptr = new_end
+        active = active[t - orders["step"][active] <= PATIENCE]          # 超时取消
+        idle = np.where(free_at <= t)[0]
+        pairs = []
+        if len(idle) and len(active):
+            P = np.abs(pos[idle][:, None] - orders["oxy"][active][None]).sum(-1)
+            ctx = dict(t=t, pickup=P, feas=P <= PICKUP_RADIUS, fare=orders["fare"][active],
+                       drv_zone=zone[idle], dest_zone=orders["dzone"][active])
+            pairs = policy(ctx)
+        if collect:                               # 回填上一条经验的 A(s')
+            for a, d in enumerate(idle):
+                if d in pending:
+                    pending.pop(d)[6] = (np.unique(ctx["dest_zone"][ctx["feas"][a]])
+                                         if len(active) else no_avail)
+        busy = set()
+        done = []
+        for a, b in pairs:
+            d, o = idle[a], active[b]
+            pk = abs(pos[d, 0] - orders["oxy"][o, 0]) + abs(pos[d, 1] - orders["oxy"][o, 1])
+            assert pk <= PICKUP_RADIUS + 1e-9, "派单违反了接驾半径约束"
+            dur = max(1, int(math.ceil((pk + orders["trip_km"][o]) / KM_PER_STEP)))
+            fare = orders["fare"][o]
+            if collect:
+                trans.append([t, zone[d], orders["dzone"][o], fare, t + dur, orders["dzone"][o], no_avail])
+                pending[d] = trans[-1]
+            revenue += fare
+            pickup_km += pk
+            served += 1
+            pos[d] = orders["dxy"][o]
+            zone[d] = orders["dzone"][o]
+            free_at[d] = t + dur
+            busy.add(d)
+            done.append(b)
+        if collect:
+            for d in idle:
+                if d not in busy:
+                    trans.append([t, zone[d], WAIT, 0.0, t + 1, zone[d], no_avail])
+                    pending[d] = trans[-1]
+        active = np.delete(active, done)
+    metrics = dict(revenue=revenue, answer_rate=served / n_orders,
+                   avg_pickup=pickup_km / max(served, 1), served=served)
+    return metrics, trans

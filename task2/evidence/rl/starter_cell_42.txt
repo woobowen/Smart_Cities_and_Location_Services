@@ -1,0 +1,19 @@
+betas = [0, 0.2, 0.4, 0.5, 0.6, 0.8, 1.0]
+LT60 = region_long_term_value(q_tables[60].V)
+test60 = [sample_episode(trips_test, 60, seed=50_000 + k) for k in range(5)]
+sens = []
+for b in betas:
+    ms = [run_episode(e, make_q_km(LT60, b))[0] for e in test60]
+    sens.append((b, np.mean([m["revenue"] for m in ms]), np.mean([m["answer_rate"] for m in ms])))
+sens = np.array(sens)
+fig, ax = plt.subplots(figsize=(6.5, 4.2))
+ax.plot(sens[:, 0], sens[:, 1], "o-", color="#9F3A3D", label="总收入")
+ax.set(xlabel="β（长期价值权重）", ylabel="全天总收入 / 元", title="β 敏感性（60 辆车，测试集）")
+ax2 = ax.twinx()
+ax2.plot(sens[:, 0], sens[:, 2], "s--", color="#4c78a8", label="应答率")
+ax2.set_ylabel("应答率")
+ax.grid(alpha=0.3)
+fig.legend(loc="lower left", bbox_to_anchor=(0.12, 0.15))
+plt.tight_layout()
+plt.savefig(f"{FIG_DIR}/rl_beta.png", dpi=200)
+plt.show()

@@ -1,0 +1,47 @@
+{
+  "reviewer": "native child /root/reinforcement; independent of online author /root",
+  "scope": "current online.py and development_v1 raw results; no claim about future changes or RL own work",
+  "source_sha256": "61c2549fb5a90daaca8b0c7e3a5b37b3f047e788b7e0c2eff07de90cc06017bb",
+  "metrics_sha256": "7440bb4735bb96b4cbfb3c7a125e73f49bb5b9eb509f31fefd51586d05652db9",
+  "checks": [
+    {
+      "name": "bottleneck_independent_enumeration",
+      "instances": 200,
+      "status": "PASS"
+    },
+    {
+      "name": "sum_not_bottleneck",
+      "matrix": [
+        [
+          0.0,
+          6.0
+        ],
+        [
+          6.0,
+          10.0
+        ]
+      ],
+      "bottleneck": 6,
+      "minimum_sum": 10,
+      "status": "PASS"
+    },
+    {
+      "name": "same_time_zero_horizon_float_theta_and_speed",
+      "cases": 6,
+      "status": "PASS"
+    },
+    {
+      "name": "duplicate_ids",
+      "status": "PASS"
+    },
+    {
+      "name": "all_raw_dispatch_and_reported_metrics",
+      "runs": 1045,
+      "raw_assignments": 35190,
+      "inputs": 55,
+      "status": "PASS",
+      "reference": "LP (HiGHS) minimum-sum; custom augmenting paths bottleneck; raw geometric recompute"
+    }
+  ],
+  "seconds": 3.0756030082702637
+}

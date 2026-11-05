@@ -1,0 +1,33 @@
+def km_max(W):
+    """最大权匹配：W<=0 的边视为不连（等价于不派），返回 [(行, 列), ...]"""
+    W = np.where(W > 0, W, 0.0)
+    r, c = linear_sum_assignment(-W)
+    keep = W[r, c] > 0
+    return list(zip(r[keep], c[keep]))
+
+
+def greedy_nearest(ctx):
+    used, pairs = set(), []
+    for b in range(ctx["pickup"].shape[1]):
+        cand = [a for a in np.argsort(ctx["pickup"][:, b]) if ctx["feas"][a, b] and a not in used]
+        if cand:
+            used.add(cand[0])
+            pairs.append((cand[0], b))
+    return pairs
+
+
+def km_fare(ctx):
+    return km_max(np.where(ctx["feas"], ctx["fare"][None, :], 0.0))
+
+
+_explore_rng = np.random.default_rng(SEED)
+
+
+def random_km(ctx):
+    return km_max(np.where(ctx["feas"], _explore_rng.random(ctx["feas"].shape) + 0.01, 0.0))
+
+
+ep_demo = sample_episode(trips_train, n_drivers=60, seed=SEED)
+for name, pol in [("贪心最近", greedy_nearest), ("KM-即时收入", km_fare)]:
+    m, _ = run_episode(ep_demo, pol)
+    print(f"{name:8s} 收入 {m['revenue']:8.0f} 元 | 应答率 {m['answer_rate']:.3f} | 平均接驾 {m['avg_pickup']:.2f} km")

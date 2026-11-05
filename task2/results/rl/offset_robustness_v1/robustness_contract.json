@@ -1,0 +1,13 @@
+{
+  "trigger": "Independent raw timestamp audit found12 local-clock proxy pairs violating10–180min UTC window; inspect sensitivity without overwriting teacher-local-clock primary model",
+  "train_removed": 11,
+  "validation_removed": 1,
+  "train_removed_during_operating_hours": 9,
+  "test": "not used; no anomalies exist in held-out partition per separate audit",
+  "source_sha256": "945cc2b017841570f6704830101a249df51a195ae211eb2999526b1ed8a7f0fb",
+  "data_sha256": {
+    "trips_train_inner.csv": "9808bc36b62c2116052a511b5ccedbbc011f43ecee8b0239532a843fff4f63a2",
+    "trips_validation.csv": "2cb08c5ebd0099fd5b7c2fdb391fa4c4ed2865f3caedffea1da079913f5f128b",
+    "time_offset_anomalies.csv": "1260d9eb1803e28f21c84afcba1dd2af18201c8fb1cc41e4f88cf7e34a46753c"
+  }
+}

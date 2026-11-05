@@ -1,0 +1,93 @@
+{
+  "actual_utc": "2026-11-05T12:04:01.990448+00:00",
+  "reviewer": "/root/research_data",
+  "independent_of_report_author": true,
+  "reports": [
+    {
+      "kind": "experiment",
+      "pdf": {
+        "source": "task2/reports/experiment/Experiment_Report.pdf",
+        "snapshot": "task2/evidence/independent_report_review/pdf_final/Experiment_Report.pdf",
+        "sha256": "7a795625354e8a3c7034f8426171f8f8b32784db0cd398654b309c86ea72c101",
+        "bytes": 816416
+      },
+      "status": "PASS_IN_STATED_SCOPE",
+      "new_actual_page_views": [
+        {
+          "physical_page": 6,
+          "sha256": "d0b2293c56266fae56f2e2d1a0ac7b5e728ec7d97b48032ea8d4f983bb33649e",
+          "actually_viewed_with": "tools.view_image"
+        },
+        {
+          "physical_page": 9,
+          "sha256": "e24e58737f304a7110e3d41a07c362f40d5dcb052d49da4e025d7509c64ae95b",
+          "actually_viewed_with": "tools.view_image"
+        }
+      ],
+      "inherited_exact_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26
+      ],
+      "final_log_sha256": "b8dbc3d9add974213c274ea277365549d5e8650959f4d595c875d0b17fcca017",
+      "targeted_log_issues": []
+    },
+    {
+      "kind": "process",
+      "pdf": {
+        "source": "task2/reports/process/Process_Report.pdf",
+        "snapshot": "task2/evidence/independent_report_review/pdf_final/Process_Report.pdf",
+        "sha256": "a2c57f58d246e326d398003045cadad090db19dcab9163cae5871fd791b01de1",
+        "bytes": 316437
+      },
+      "status": "PASS_IN_STATED_SCOPE",
+      "new_actual_page_views": [
+        {
+          "physical_page": 8,
+          "sha256": "55ec63c8822d8ded4a926677fa516d92da087249ad771cd8cd8795f9ccf1a06e",
+          "actually_viewed_with": "tools.view_image"
+        }
+      ],
+      "inherited_exact_pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "final_log_sha256": "55abeab28388ac6e43f624f749654466c691f71191debce31f3979e1d77511ce",
+      "targeted_log_issues": []
+    }
+  ],
+  "previous_actual_views": "pdf_visual_review_round1.json",
+  "comparison": "pdf_final/page_difference.json",
+  "closed_findings": [
+    "Unidentified black discard ECDF curve now identified in caption",
+    "Online development advantage is explicitly not confirmed in tail mean",
+    "REPLAY and unrecoverable original elapsed-time bytes honestly disclosed"
+  ],
+  "limits": "Process body/technical-handoff scope only; no UI Evidence Lock, remote GPT audit, user acceptance, or source-ZIP build certification"
+}

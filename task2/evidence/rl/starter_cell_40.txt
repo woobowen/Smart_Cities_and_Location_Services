@@ -1,0 +1,21 @@
+POLICIES = ["贪心最近", "KM-即时收入", "Q-KM"]
+COLORS = ["#4c78a8", "#f58518", "#9F3A3D"]
+fig, axes = plt.subplots(1, 3, figsize=(16, 4.3))
+x = np.arange(len(FLEETS))
+for ax, (col, title) in zip(axes, [("revenue", "全天总收入 / 元"), ("answer_rate", "应答率"), ("avg_pickup", "平均接驾距离 / km")]):
+    for i, (p, c) in enumerate(zip(POLICIES, COLORS)):
+        g = res[res.policy == p].groupby("fleet")[col]
+        ax.bar(x + (i - 1) * 0.26, g.mean().values, 0.26, yerr=g.std().values, capsize=3, color=c, label=p)
+    ax.set(xticks=x, xticklabels=[f"{n} 辆" for n in FLEETS], title=title)
+    ax.grid(axis="y", alpha=0.3)
+    if col == "revenue":
+        lo = res[col].min() * 0.85
+        ax.set_ylim(lo, None)
+axes[0].legend()
+plt.tight_layout()
+plt.savefig(f"{FIG_DIR}/rl_compare.png", dpi=200)
+plt.show()
+
+gain = summary["revenue"].unstack()
+print("Q-KM 相对 KM-即时收入的收入提升：", ((gain["Q-KM"] / gain["KM-即时收入"] - 1) * 100).round(2).to_dict(), "%")
+print("Q-KM 相对 贪心最近 的收入提升：  ", ((gain["Q-KM"] / gain["贪心最近"] - 1) * 100).round(2).to_dict(), "%")

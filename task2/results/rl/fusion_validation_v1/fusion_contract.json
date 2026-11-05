@@ -1,0 +1,36 @@
+{
+  "trigger": "verified QKM improves gross income but pickup remains higher than nearest; verified standalone NSGA front can expose tradeoff",
+  "source_sha256": {
+    "scripts/run_rl_fusion.py": "5af221e284d6358f6e62df95ae3bc523799354781d38e2ed6e955ffa8bc1f116",
+    "src/rl_fusion.py": "2451b12ad47b1ee28b8263bedcea919113996fb64be9ac956e8c8a60b833b51a",
+    "src/evolution.py": "4706d277a520d44ac719be0bded4f2d02d10e73bb829a032bd0b5315ea7df79d"
+  },
+  "candidate_graph": "full radius-feasible positive-QKM-edge graph; K=None for all methods",
+  "objectives": [
+    "negative estimated QKM edge value",
+    "pickup km"
+  ],
+  "static": {
+    "pop": 100,
+    "gen": 300,
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ]
+  },
+  "dynamic": {
+    "pop": 40,
+    "gen": 30,
+    "choice": [
+      "knee",
+      "constraint"
+    ],
+    "constraint": "pickup <= .6 * same-context QKM pickup total"
+  },
+  "split": "validation",
+  "static_context": "18:00 of actual validation QKM trajectory, seed50000",
+  "boundary": "Estimated LT-weighted score is not realized income; dynamic simulations separately measure income/served/pickup"
+}

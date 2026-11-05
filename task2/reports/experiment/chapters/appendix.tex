@@ -1,0 +1,16 @@
+\section{补充参数与复现}
+两份完成版Notebook分别对应基础任务和进阶Part A/B；教师原始Notebook与PPT保持原样。Notebook内保留Q/LT/Q-KM的原始断言，基础TODO1--5与finalize在同一生产模块实现，避免Notebook与批量脚本两套数学定义。可重算实验、从真实run重画图、重编译报告是三种检查，工程记录分别给出。
+
+\begin{table}[htbp]\centering\caption{主要计算条件及统计单位。}
+\begin{tabularx}{\linewidth}{lYY}\toprule
+部分&参考设置&重复与统计单位\\\midrule
+在线&课件20×20/20min，独立NB100×100/2000；不同gamma/theta&开发seed10--14；合成确认110--114\\
+进化&二目标100/300，三目标105/300，pc=.9，pm=1/m&5个EAseed；未来池5个成对输入批次\\
+DTLZ2&整数教学域，12变量，种群92/400代&5个进化seed，球面误差/HV/Spacing\\
+RL&10min/片，8×8，25km/h，gamma.92，300回合，1500单&开发5训练seed与模拟日分开；留出5日及补充20采样seed\\
+融合&每次动态决策40种群/30代，固定膝点或.6接驾预算&实际决策NFE/耗时，完整模拟效果另列\\\bottomrule
+\end{tabularx}\end{table}
+
+复现入口为仓库\texttt{task2/docs/REPRODUCIBILITY\_GUIDE.md}，完整要求映射和实际run索引位于同一任务目录。公开脚本已从原作者渠道真实下载，以直接Decimal十位有效数字ROUND\_HALF\_UP、Latin1转UTF8及行间CRLF/末行无CRLF规则，重建出两城市与教师CSV逐字节SHA一致的输入。获取者身份仍为作者来源重建，不倒写成教师直接提供；输入字节一致也不自动保证任意环境中随机实验产物的二进制一致。报告采用公共P2颜色源和XeLaTeX，图表保留SVG/PDF与生成脚本。
+
+文稿和图表由主线程与原生子Agent实际制作；作者自检、独立数据/方法/图文核验、远程GPT二审、最终用户确认分别登记在交付记录。报告不代替教师正式提交。

@@ -1,0 +1,41 @@
+{
+  "status": "PASS_SCOPE_LIMITED",
+  "reviewer": "/root/research_data",
+  "batch_sha256": "74a0b41134bfd662f99eb622f3e4dd19fcf73e2b0fb0da0c4b80311d672ed251",
+  "exact_oracle": "SciPy MILP integral bipartite capacity <=1, distinct from execution linear_sum_assignment",
+  "scalar_optima": {
+    "0.0": 87.09670099814002,
+    "0.25": 79.00986728477814,
+    "0.5": 72.40054915059197,
+    "1.0": 61.44800946102649,
+    "2.0": 43.28461806453572
+  },
+  "reviewed": [
+    {
+      "path": "task2/results/evolution/basic/basic_nsga2_seed0.json",
+      "sha256": "6889e10e5254ea26113a9d48a158948c15c7ad6702ee29b799f3f72e9bfe919a",
+      "fronts": 78
+    },
+    {
+      "path": "task2/results/evolution/basic/basic_nsga2_seed1.json",
+      "sha256": "e659c4d842844e4a8985555e277524b3ee7dddee95d5fb6421dcf39b7b793950",
+      "fronts": 83
+    },
+    {
+      "path": "task2/results/evolution/basic/basic_nsga2_seed2.json",
+      "sha256": "0e13ffa43f1fe758a25846a51494d9f6cb96ab25b567925775f1332532732c3f",
+      "fronts": 83
+    },
+    {
+      "path": "task2/results/evolution/basic/basic_nsga2_seed3.json",
+      "sha256": "39f8a1f21f78ea905b6fa84e42ede416060c287b5a12d29437448cabaf13dc4b",
+      "fronts": 79
+    },
+    {
+      "path": "task2/results/evolution/basic/basic_nsga2_seed4.json",
+      "sha256": "667b043c224cea4ad2215480ac92d187b3ee6d6ba33c61a99064d0e96c979159",
+      "fronts": 78
+    }
+  ],
+  "scope": "basic full-candidate Euclidean OD Pareto and static scalar approximation ratios; no online competitive guarantee"
+}

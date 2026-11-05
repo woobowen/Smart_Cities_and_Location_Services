@@ -1,0 +1,2639 @@
+{
+  "generated_utc": "2026-11-05T12:03:17.293559+00:00",
+  "schema": 1,
+  "state": "FINAL_CONFIRMATION_EXECUTED",
+  "active_day_metrics": [
+    "results/rl/pilot_v1/pilot_validation/day_metrics.json",
+    "results/rl/development_v1/baseline_f40_s2024/day_metrics.json",
+    "results/rl/development_v1/baseline_f60_s2024/day_metrics.json",
+    "results/rl/development_v1/baseline_f100_s2024/day_metrics.json",
+    "results/rl/beta_validation_v1/day_metrics.json",
+    "results/rl/reposition_validation_v1/day_metrics.json",
+    "results/rl/reposition_cost_validation_v1/day_metrics.json",
+    "results/rl/component_ablation_v1/day_metrics.json",
+    "results/rl/sensitivity_v1/gamma08_validation/day_metrics.json",
+    "results/rl/sensitivity_v1/gamma095_validation/day_metrics.json",
+    "results/rl/sensitivity_v1/grid6_validation/day_metrics.json",
+    "results/rl/sensitivity_v2_rngfix/grid10_validation/day_metrics.json",
+    "results/rl/sensitivity_v2_rngfix/patience1_validation/day_metrics.json",
+    "results/rl/sensitivity_v2_rngfix/patience3_validation/day_metrics.json",
+    "results/rl/double_v2_rngfix/q_b1_s2024_validation/day_metrics.json",
+    "results/rl/double_v2_rngfix/double_b1_s2024_validation/day_metrics.json",
+    "results/rl/double_v2_rngfix/q_b1_s2025_validation/day_metrics.json",
+    "results/rl/double_v2_rngfix/double_b1_s2025_validation/day_metrics.json",
+    "results/rl/double_v2_rngfix/q_b1_s2026_validation/day_metrics.json",
+    "results/rl/double_v2_rngfix/double_b1_s2026_validation/day_metrics.json",
+    "results/rl/double_v2_rngfix/q_b1_s2027_validation/day_metrics.json",
+    "results/rl/double_v2_rngfix/double_b1_s2027_validation/day_metrics.json",
+    "results/rl/double_v2_rngfix/q_b1_s2028_validation/day_metrics.json",
+    "results/rl/double_v2_rngfix/double_b1_s2028_validation/day_metrics.json",
+    "results/rl/movement_trainseed_confirmation_v1/validation_s2024/day_metrics.json",
+    "results/rl/movement_trainseed_confirmation_v1/validation_s2025/day_metrics.json",
+    "results/rl/movement_trainseed_confirmation_v1/validation_s2026/day_metrics.json",
+    "results/rl/movement_trainseed_confirmation_v1/validation_s2027/day_metrics.json",
+    "results/rl/movement_trainseed_confirmation_v1/validation_s2028/day_metrics.json",
+    "results/rl/offset_robustness_v1/validation/day_metrics.json",
+    "results/rl/fusion_validation_v1/dynamic/day_metrics.json",
+    "results/rl/final_v1/fleet40/day_metrics.json",
+    "results/rl/final_v1/fleet60/day_metrics.json",
+    "results/rl/final_v1/fleet100/day_metrics.json",
+    "results/rl/final_v1/enhancements/day_metrics.json",
+    "results/rl/final_montecarlo_v1/day_metrics.json"
+  ],
+  "path_base": "task2 (repository relative path = task2/ + entry path)",
+  "identities": {
+    "development": "training/validation/selection; never held-out confirmation",
+    "final": "frozen candidates, held-out dates; no retuning",
+    "invalid": "retained failure/history; excluded",
+    "historical_equivalent": "valid predecessor retained, excluded to avoid duplicate pooling"
+  },
+  "producer_script_sha256": "c15be7d50689a529cf0cfdab737fc1c80febb9f81b4c20ae0d3fee18e872bf86",
+  "runs": [
+    {
+      "run_id": "pilot",
+      "path": "results/rl/pilot_v1/pilot_validation",
+      "identity": "development",
+      "active": true,
+      "metrics_path": "results/rl/pilot_v1/pilot_validation/day_metrics.json",
+      "metrics_sha256": "e49c40a581777305fb4afeab568e08aaa4647e625fe704f8033363cf85ea7580",
+      "note": "10actual episodes, cost pilot, never pooled with teacher300episode runs",
+      "models": [
+        {
+          "path": "results/rl/pilot_v1/pilot_q",
+          "model_sha256": "504acdb21af69dac5715a1563e2b38f9157aba29500b9fa52761def4f5faa923",
+          "manifest_sha256": "17f5f15ae71491faa435fe3f663b9be5a227011d76a6f215e7c5234119f196a6",
+          "source_hashes_at_execution": {
+            "src/rl_dispatch.py": "268c2e5d09ef7ccb320a9d7186696b812feb3f1541229b3940bfb8b80a0fbf45",
+            "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+          }
+        }
+      ],
+      "producer_metadata": [
+        {
+          "path": "results/rl/pilot_v1/pilot_validation/manifest.json",
+          "sha256": "24cbad6348f46c15bd9ba3211fd86ca010df90839507afe6aec1bf435de320fc",
+          "content": {
+            "code_hashes": {
+              "src/rl_dispatch.py": "268c2e5d09ef7ccb320a9d7186696b812feb3f1541229b3940bfb8b80a0fbf45",
+              "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+            },
+            "split": "validation",
+            "config": {
+              "grid": 8,
+              "step_min": 10,
+              "start": 360,
+              "end": 1440,
+              "speed": 25.0,
+              "radius": 3.0,
+              "patience": 2,
+              "orders": 1500,
+              "gamma": 0.92,
+              "alpha_min": 0.05,
+              "width": 25.230707400441077,
+              "height": 31.080000000000002
+            },
+            "fleet": 60,
+            "seeds": [
+              20000,
+              20001,
+              20002
+            ],
+            "policies": [
+              "greedy",
+              "km",
+              "qkm"
+            ]
+          }
+        }
+      ],
+      "execution_identity": "ORIGINAL_RECORDED_RUN"
+    },
+    {
+      "run_id": "baseline_f40",
+      "path": "results/rl/development_v1/baseline_f40_s2024",
+      "identity": "development",
+      "active": true,
+      "metrics_path": "results/rl/development_v1/baseline_f40_s2024/day_metrics.json",
+      "metrics_sha256": "96cdd7b04ba8b567cc0949bf5fbfb954487db0baf1e6f718d75d222ba8505494",
+      "note": "Valid original Q-only code; separate-RNG fix does not change this branch, parity recorded",
+      "models": [
+        {
+          "path": "results/rl/development_v1/q_f40_s2024",
+          "model_sha256": "71d8b548ed9217e6cc61eb222382b2c61c7e86b1db1ee7682b5530f35d3df871",
+          "manifest_sha256": "907f4fce97f81282faafc6eb596380f3f70c061ebf5cd8237906d9cad6fbdad9",
+          "source_hashes_at_execution": {
+            "src/rl_dispatch.py": "268c2e5d09ef7ccb320a9d7186696b812feb3f1541229b3940bfb8b80a0fbf45",
+            "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+          }
+        }
+      ],
+      "producer_metadata": [
+        {
+          "path": "results/rl/development_v1/baseline_f40_s2024/manifest.json",
+          "sha256": "999a96ce0fcb566a754627e6f7cb71b91b17cc572e5ee297f9350f55fc9927b7",
+          "content": {
+            "code_hashes": {
+              "src/rl_dispatch.py": "268c2e5d09ef7ccb320a9d7186696b812feb3f1541229b3940bfb8b80a0fbf45",
+              "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+            },
+            "split": "validation",
+            "config": {
+              "grid": 8,
+              "step_min": 10,
+              "start": 360,
+              "end": 1440,
+              "speed": 25.0,
+              "radius": 3.0,
+              "patience": 2,
+              "orders": 1500,
+              "gamma": 0.92,
+              "alpha_min": 0.05,
+              "width": 25.230707400441077,
+              "height": 31.080000000000002
+            },
+            "fleet": 40,
+            "seeds": [
+              50000,
+              50001,
+              50002,
+              50003,
+              50004
+            ],
+            "policies": [
+              "greedy",
+              "km",
+              "qkm"
+            ]
+          }
+        }
+      ],
+      "execution_identity": "ORIGINAL_RECORDED_RUN"
+    },
+    {
+      "run_id": "baseline_f60",
+      "path": "results/rl/development_v1/baseline_f60_s2024",
+      "identity": "development",
+      "active": true,
+      "metrics_path": "results/rl/development_v1/baseline_f60_s2024/day_metrics.json",
+      "metrics_sha256": "a70879e71461bf08c93cc9f2dc7724aa3a0a0c6afd30f9a26899def50ed40a19",
+      "note": "Valid original Q-only code; separate-RNG fix does not change this branch, parity recorded",
+      "models": [
+        {
+          "path": "results/rl/development_v1/q_f60_s2024",
+          "model_sha256": "2b29d6a62f535b150fa8da67cf5379a962b457d5bb6a763b070cae5cb218cba3",
+          "manifest_sha256": "3471949d789607101be3147f6dc41868144b636cc49f102070c8c0a59f22d4b7",
+          "source_hashes_at_execution": {
+            "src/rl_dispatch.py": "268c2e5d09ef7ccb320a9d7186696b812feb3f1541229b3940bfb8b80a0fbf45",
+            "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+          }
+        }
+      ],
+      "producer_metadata": [
+        {
+          "path": "results/rl/development_v1/baseline_f60_s2024/manifest.json",
+          "sha256": "a27f0fca5b98bc8c6219ed59b76b6d1d81cdf621139a2982542e064f04f3d9b7",
+          "content": {
+            "code_hashes": {
+              "src/rl_dispatch.py": "268c2e5d09ef7ccb320a9d7186696b812feb3f1541229b3940bfb8b80a0fbf45",
+              "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+            },
+            "split": "validation",
+            "config": {
+              "grid": 8,
+              "step_min": 10,
+              "start": 360,
+              "end": 1440,
+              "speed": 25.0,
+              "radius": 3.0,
+              "patience": 2,
+              "orders": 1500,
+              "gamma": 0.92,
+              "alpha_min": 0.05,
+              "width": 25.230707400441077,
+              "height": 31.080000000000002
+            },
+            "fleet": 60,
+            "seeds": [
+              50000,
+              50001,
+              50002,
+              50003,
+              50004
+            ],
+            "policies": [
+              "greedy",
+              "km",
+              "qkm"
+            ]
+          }
+        }
+      ],
+      "execution_identity": "ORIGINAL_RECORDED_RUN"
+    },
+    {
+      "run_id": "baseline_f100",
+      "path": "results/rl/development_v1/baseline_f100_s2024",
+      "identity": "development",
+      "active": true,
+      "metrics_path": "results/rl/development_v1/baseline_f100_s2024/day_metrics.json",
+      "metrics_sha256": "6592bf471bab83210d50222b0bbbef5c31fa1c987ea5be9a2a7a276955238b41",
+      "note": "Valid original Q-only code; separate-RNG fix does not change this branch, parity recorded",
+      "models": [
+        {
+          "path": "results/rl/development_v1/q_f100_s2024",
+          "model_sha256": "6b1851e1d2ba6dea71f09be61ddcee17f060233b2f76061347ed81d52afd7648",
+          "manifest_sha256": "95c6414c441613a4938c7a59ed19fe57a75238674ad8758dea72700c0e815137",
+          "source_hashes_at_execution": {
+            "src/rl_dispatch.py": "268c2e5d09ef7ccb320a9d7186696b812feb3f1541229b3940bfb8b80a0fbf45",
+            "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+          }
+        }
+      ],
+      "producer_metadata": [
+        {
+          "path": "results/rl/development_v1/baseline_f100_s2024/manifest.json",
+          "sha256": "d49a7e1d6c4e5e04074c0465b3e6481e49c1e7b0baaa2591a48a3ecb5e6304d0",
+          "content": {
+            "code_hashes": {
+              "src/rl_dispatch.py": "268c2e5d09ef7ccb320a9d7186696b812feb3f1541229b3940bfb8b80a0fbf45",
+              "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+            },
+            "split": "validation",
+            "config": {
+              "grid": 8,
+              "step_min": 10,
+              "start": 360,
+              "end": 1440,
+              "speed": 25.0,
+              "radius": 3.0,
+              "patience": 2,
+              "orders": 1500,
+              "gamma": 0.92,
+              "alpha_min": 0.05,
+              "width": 25.230707400441077,
+              "height": 31.080000000000002
+            },
+            "fleet": 100,
+            "seeds": [
+              50000,
+              50001,
+              50002,
+              50003,
+              50004
+            ],
+            "policies": [
+              "greedy",
+              "km",
+              "qkm"
+            ]
+          }
+        }
+      ],
+      "execution_identity": "ORIGINAL_RECORDED_RUN"
+    },
+    {
+      "run_id": "beta_validation_v1",
+      "path": "results/rl/beta_validation_v1",
+      "identity": "development",
+      "active": true,
+      "metrics_path": "results/rl/beta_validation_v1/day_metrics.json",
+      "metrics_sha256": "29677372e8aaca9def6812268b3e90943f823ad015cc44dc816795037da591bf",
+      "note": "Same learnedV, distinct controlled validation intervention; overlapping simulated seeds are not independent additional days",
+      "models": [
+        {
+          "path": "results/rl/development_v1/q_f60_s2024",
+          "model_sha256": "2b29d6a62f535b150fa8da67cf5379a962b457d5bb6a763b070cae5cb218cba3",
+          "manifest_sha256": "3471949d789607101be3147f6dc41868144b636cc49f102070c8c0a59f22d4b7",
+          "source_hashes_at_execution": {
+            "src/rl_dispatch.py": "268c2e5d09ef7ccb320a9d7186696b812feb3f1541229b3940bfb8b80a0fbf45",
+            "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+          }
+        }
+      ],
+      "producer_metadata": [
+        {
+          "path": "results/rl/beta_validation_v1/manifest.json",
+          "sha256": "c7eedba97acb18952d499e715412c5debe64602cc825d66c7cdc62e1e6492c48",
+          "content": {
+            "code_hashes": {
+              "src/rl_dispatch.py": "268c2e5d09ef7ccb320a9d7186696b812feb3f1541229b3940bfb8b80a0fbf45",
+              "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+            },
+            "split": "validation",
+            "config": {
+              "grid": 8,
+              "step_min": 10,
+              "start": 360,
+              "end": 1440,
+              "speed": 25.0,
+              "radius": 3.0,
+              "patience": 2,
+              "orders": 1500,
+              "gamma": 0.92,
+              "alpha_min": 0.05,
+              "width": 25.230707400441077,
+              "height": 31.080000000000002
+            },
+            "fleet": 60,
+            "seeds": [
+              50000,
+              50001,
+              50002,
+              50003,
+              50004
+            ],
+            "policies": [
+              "beta0",
+              "beta0.2",
+              "beta0.4",
+              "beta0.5",
+              "beta0.6",
+              "beta0.8",
+              "beta1"
+            ]
+          }
+        },
+        {
+          "path": "results/rl/beta_validation_v1/followup_manifest.json",
+          "sha256": "5080595ca2737b18813308f2b3c2b1a206c5e3dad96f1093c49e012011b63a6b",
+          "content": {
+            "phase": "beta",
+            "parent_model": "results/rl/development_v1/q_f60_s2024",
+            "parent_sha": "2b29d6a62f535b150fa8da67cf5379a962b457d5bb6a763b070cae5cb218cba3",
+            "runner_sha": "bb080f83e19c9418d6843af620c208441c658755dd432f6bd83f355812635b87",
+            "trigger": "300episode development baseline: QKM improves revenue over KM, pickup exceeds greedy and nonpositive edge weights remain; test not used",
+            "reference_contract": "task2/evidence/rl/METHOD_SPEC.md",
+            "split": "validation"
+          }
+        }
+      ],
+      "execution_identity": "ORIGINAL_RECORDED_RUN"
+    },
+    {
+      "run_id": "reposition_validation_v1",
+      "path": "results/rl/reposition_validation_v1",
+      "identity": "development",
+      "active": true,
+      "metrics_path": "results/rl/reposition_validation_v1/day_metrics.json",
+      "metrics_sha256": "64cfa9636145a3e1e25dac4c4bb11376bc289394ddd63c9ae116a5c465e58b41",
+      "note": "Same learnedV, distinct controlled validation intervention; overlapping simulated seeds are not independent additional days",
+      "models": [
+        {
+          "path": "results/rl/development_v1/q_f60_s2024",
+          "model_sha256": "2b29d6a62f535b150fa8da67cf5379a962b457d5bb6a763b070cae5cb218cba3",
+          "manifest_sha256": "3471949d789607101be3147f6dc41868144b636cc49f102070c8c0a59f22d4b7",
+          "source_hashes_at_execution": {
+            "src/rl_dispatch.py": "268c2e5d09ef7ccb320a9d7186696b812feb3f1541229b3940bfb8b80a0fbf45",
+            "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+          }
+        }
+      ],
+      "producer_metadata": [
+        {
+          "path": "results/rl/reposition_validation_v1/manifest.json",
+          "sha256": "b9c5964a0cf33a3f68ce9c97c66ef2b7a3114485ca2ead2e532099fa6c77042c",
+          "content": {
+            "code_hashes": {
+              "src/rl_dispatch.py": "268c2e5d09ef7ccb320a9d7186696b812feb3f1541229b3940bfb8b80a0fbf45",
+              "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+            },
+            "split": "validation",
+            "config": {
+              "grid": 8,
+              "step_min": 10,
+              "start": 360,
+              "end": 1440,
+              "speed": 25.0,
+              "radius": 3.0,
+              "patience": 2,
+              "orders": 1500,
+              "gamma": 0.92,
+              "alpha_min": 0.05,
+              "width": 25.230707400441077,
+              "height": 31.080000000000002
+            },
+            "fleet": 60,
+            "seeds": [
+              50000,
+              50001,
+              50002,
+              50003,
+              50004
+            ],
+            "policies": [
+              "km",
+              "qkm",
+              "km_reposition",
+              "qkm_reposition"
+            ]
+          }
+        },
+        {
+          "path": "results/rl/reposition_validation_v1/followup_manifest.json",
+          "sha256": "402855cef59c9cb3c4e057eb517125f9da3c0dea1e3bbe6fa5521cd28b0f2c94",
+          "content": {
+            "phase": "reposition",
+            "parent_model": "results/rl/development_v1/q_f60_s2024",
+            "parent_sha": "2b29d6a62f535b150fa8da67cf5379a962b457d5bb6a763b070cae5cb218cba3",
+            "runner_sha": "bb080f83e19c9418d6843af620c208441c658755dd432f6bd83f355812635b87",
+            "trigger": "300episode development baseline: QKM improves revenue over KM, pickup exceeds greedy and nonpositive edge weights remain; test not used",
+            "reference_contract": "task2/evidence/rl/METHOD_SPEC.md",
+            "split": "validation"
+          }
+        }
+      ],
+      "execution_identity": "ORIGINAL_RECORDED_RUN"
+    },
+    {
+      "run_id": "reposition_cost_validation_v1",
+      "path": "results/rl/reposition_cost_validation_v1",
+      "identity": "development",
+      "active": true,
+      "metrics_path": "results/rl/reposition_cost_validation_v1/day_metrics.json",
+      "metrics_sha256": "14f1e8033648d7db2061364f891091c7b6a87c2040a608f5861908b36863c011",
+      "note": "Same learnedV, distinct controlled validation intervention; overlapping simulated seeds are not independent additional days",
+      "models": [
+        {
+          "path": "results/rl/development_v1/q_f60_s2024",
+          "model_sha256": "2b29d6a62f535b150fa8da67cf5379a962b457d5bb6a763b070cae5cb218cba3",
+          "manifest_sha256": "3471949d789607101be3147f6dc41868144b636cc49f102070c8c0a59f22d4b7",
+          "source_hashes_at_execution": {
+            "src/rl_dispatch.py": "268c2e5d09ef7ccb320a9d7186696b812feb3f1541229b3940bfb8b80a0fbf45",
+            "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+          }
+        }
+      ],
+      "producer_metadata": [
+        {
+          "path": "results/rl/reposition_cost_validation_v1/manifest.json",
+          "sha256": "6505b64a72e7aa9b56791437d82dab4859ee1da25b06a3ff7cd2e73468f307fe",
+          "content": {
+            "code_hashes": {
+              "src/rl_dispatch.py": "268c2e5d09ef7ccb320a9d7186696b812feb3f1541229b3940bfb8b80a0fbf45",
+              "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+            },
+            "split": "validation",
+            "config": {
+              "grid": 8,
+              "step_min": 10,
+              "start": 360,
+              "end": 1440,
+              "speed": 25.0,
+              "radius": 3.0,
+              "patience": 2,
+              "orders": 1500,
+              "gamma": 0.92,
+              "alpha_min": 0.05,
+              "width": 25.230707400441077,
+              "height": 31.080000000000002
+            },
+            "fleet": 60,
+            "seeds": [
+              50000,
+              50001,
+              50002,
+              50003,
+              50004
+            ],
+            "policies": [
+              "qkm",
+              "qkm_move_cost0",
+              "qkm_move_cost1",
+              "qkm_move_cost3",
+              "qkm_move_cost5"
+            ]
+          }
+        },
+        {
+          "path": "results/rl/reposition_cost_validation_v1/followup_manifest.json",
+          "sha256": "cbcb3e1cfab0629a7295a87b42944e27be325d61f8e278813f1b9d2a7d1f6f6b",
+          "content": {
+            "trigger": "V-only reposition adds ~5000km/day for gross revenue gain ~415 (QKM), so movement-value threshold must account for cost",
+            "conditions": [
+              0,
+              1,
+              3,
+              5
+            ],
+            "cost_status": "hypothetical teaching currency/km, not observed vehicle expense",
+            "source_sha256": {
+              "scripts/run_reposition_cost.py": "58cb4fa65636f28fbe6b501f8b59dc6d9a18bc1a47f2ca7b3575d9e0ba06df7f",
+              "src/rl_extensions.py": "e094b537f2c7615b84cc293c63e639360eb874f186142d7dcb99438d241d1c49"
+            },
+            "parent_model_sha256": "2b29d6a62f535b150fa8da67cf5379a962b457d5bb6a763b070cae5cb218cba3",
+            "split": "validation",
+            "selection": "compare separate gross revenue, response and empty km; no arbitrary combined quality score"
+          }
+        }
+      ],
+      "execution_identity": "ORIGINAL_RECORDED_RUN"
+    },
+    {
+      "run_id": "component_ablation_v1",
+      "path": "results/rl/component_ablation_v1",
+      "identity": "development",
+      "active": true,
+      "metrics_path": "results/rl/component_ablation_v1/day_metrics.json",
+      "metrics_sha256": "f501870feb99f497cacf84690797951fa34a8d926b14c636abfc1d95899511f9",
+      "note": "Same learnedV, distinct controlled validation intervention; overlapping simulated seeds are not independent additional days",
+      "models": [
+        {
+          "path": "results/rl/development_v1/q_f60_s2024",
+          "model_sha256": "2b29d6a62f535b150fa8da67cf5379a962b457d5bb6a763b070cae5cb218cba3",
+          "manifest_sha256": "3471949d789607101be3147f6dc41868144b636cc49f102070c8c0a59f22d4b7",
+          "source_hashes_at_execution": {
+            "src/rl_dispatch.py": "268c2e5d09ef7ccb320a9d7186696b812feb3f1541229b3940bfb8b80a0fbf45",
+            "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+          }
+        }
+      ],
+      "producer_metadata": [
+        {
+          "path": "results/rl/component_ablation_v1/manifest.json",
+          "sha256": "4322cbb196db132e951a8cc60ff18d2e8742a8f755e6d8568c445b177fa843a5",
+          "content": {
+            "code_hashes": {
+              "src/rl_dispatch.py": "4727cd44735ffbdd100bd8ed47fbbfe8c5897a20a69d9b9a22b7e2f454ac23b7",
+              "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+            },
+            "split": "validation",
+            "config": {
+              "grid": 8,
+              "step_min": 10,
+              "start": 360,
+              "end": 1440,
+              "speed": 25.0,
+              "radius": 3.0,
+              "patience": 2,
+              "orders": 1500,
+              "gamma": 0.92,
+              "alpha_min": 0.05,
+              "width": 25.230707400441077,
+              "height": 31.080000000000002
+            },
+            "fleet": 60,
+            "seeds": [
+              50000,
+              50001,
+              50002,
+              50003,
+              50004
+            ],
+            "policies": [
+              "km",
+              "qkm",
+              "km_move3",
+              "qkm_move3",
+              "qkm_move5"
+            ]
+          }
+        },
+        {
+          "path": "results/rl/component_ablation_v1/contract.json",
+          "sha256": "c1f27521c441a78a3d5781416c8bccba7ad2b17425016495c11223525f792a7a",
+          "content": {
+            "trigger": "Cost-awareλ3 QKM movement passed gross revenue/response validation safeguard; isolate long-term edge weighting vs movement on identicalV/map/day inputs",
+            "factorial": "KM vsQKM × nomove vsλ3move;λ5 retained as cost tradeoff sensitivity",
+            "source_sha256": "34efd9d410f1335ef89528ec77805252e5687a43f04ef4c50b12cd67ec07d542",
+            "parent_model_sha256": "2b29d6a62f535b150fa8da67cf5379a962b457d5bb6a763b070cae5cb218cba3",
+            "split": "validation"
+          }
+        }
+      ],
+      "execution_identity": "ORIGINAL_RECORDED_RUN"
+    },
+    {
+      "run_id": "sensitivity_gamma08",
+      "path": "results/rl/sensitivity_v1/gamma08_validation",
+      "identity": "development",
+      "active": true,
+      "metrics_path": "results/rl/sensitivity_v1/gamma08_validation/day_metrics.json",
+      "metrics_sha256": "69bfcc25b33667087e82ab7be794090de5ead7defbbb167406df72a9ef4e4b0f",
+      "note": "",
+      "models": [
+        {
+          "path": "results/rl/sensitivity_v1/gamma08",
+          "model_sha256": "bb808ce4c2db24466f1f70993379ead5c704622f2ff240b4f1e98cc186b5132f",
+          "manifest_sha256": "77f13bd917e535f6dfc6834791027a6d6a8da0a64cad262a6ada98d0f9091cb0",
+          "source_hashes_at_execution": {
+            "src/rl_dispatch.py": "268c2e5d09ef7ccb320a9d7186696b812feb3f1541229b3940bfb8b80a0fbf45",
+            "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+          }
+        }
+      ],
+      "producer_metadata": [
+        {
+          "path": "results/rl/sensitivity_v1/gamma08_validation/manifest.json",
+          "sha256": "87b90c3a02f905465989381b8c1a7d3e1f1e6284b286e5c5c8325e562c0ddbca",
+          "content": {
+            "code_hashes": {
+              "src/rl_dispatch.py": "268c2e5d09ef7ccb320a9d7186696b812feb3f1541229b3940bfb8b80a0fbf45",
+              "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+            },
+            "split": "validation",
+            "config": {
+              "grid": 8,
+              "step_min": 10,
+              "start": 360,
+              "end": 1440,
+              "speed": 25.0,
+              "radius": 3.0,
+              "patience": 2,
+              "orders": 1500,
+              "gamma": 0.8,
+              "alpha_min": 0.05,
+              "width": 25.230707400441077,
+              "height": 31.080000000000002
+            },
+            "fleet": 60,
+            "seeds": [
+              50000,
+              50001,
+              50002,
+              50003,
+              50004
+            ],
+            "policies": [
+              "greedy",
+              "km",
+              "qkm"
+            ]
+          }
+        }
+      ],
+      "execution_identity": "ORIGINAL_RECORDED_RUN"
+    },
+    {
+      "run_id": "sensitivity_gamma095",
+      "path": "results/rl/sensitivity_v1/gamma095_validation",
+      "identity": "development",
+      "active": true,
+      "metrics_path": "results/rl/sensitivity_v1/gamma095_validation/day_metrics.json",
+      "metrics_sha256": "e7a376f92855cce0f4a5c52b72f0be975d7f1066aa0090ca3f6ff9787a8bb5c4",
+      "note": "",
+      "models": [
+        {
+          "path": "results/rl/sensitivity_v1/gamma095",
+          "model_sha256": "1dbedc60b819b2d5c97c071294d897f2660e45226b54abdee6c21f550e1ba94e",
+          "manifest_sha256": "6634b526e9ccd68d18f4b24f5968d69bec925d95c9131f9fb82772bfc4ed827e",
+          "source_hashes_at_execution": {
+            "src/rl_dispatch.py": "268c2e5d09ef7ccb320a9d7186696b812feb3f1541229b3940bfb8b80a0fbf45",
+            "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+          }
+        }
+      ],
+      "producer_metadata": [
+        {
+          "path": "results/rl/sensitivity_v1/gamma095_validation/manifest.json",
+          "sha256": "92a7458da345c0a586bdf3f3246babad1a5a47e4b40f45938d6f1ddb40fd9503",
+          "content": {
+            "code_hashes": {
+              "src/rl_dispatch.py": "268c2e5d09ef7ccb320a9d7186696b812feb3f1541229b3940bfb8b80a0fbf45",
+              "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+            },
+            "split": "validation",
+            "config": {
+              "grid": 8,
+              "step_min": 10,
+              "start": 360,
+              "end": 1440,
+              "speed": 25.0,
+              "radius": 3.0,
+              "patience": 2,
+              "orders": 1500,
+              "gamma": 0.95,
+              "alpha_min": 0.05,
+              "width": 25.230707400441077,
+              "height": 31.080000000000002
+            },
+            "fleet": 60,
+            "seeds": [
+              50000,
+              50001,
+              50002,
+              50003,
+              50004
+            ],
+            "policies": [
+              "greedy",
+              "km",
+              "qkm"
+            ]
+          }
+        }
+      ],
+      "execution_identity": "ORIGINAL_RECORDED_RUN"
+    },
+    {
+      "run_id": "sensitivity_grid6",
+      "path": "results/rl/sensitivity_v1/grid6_validation",
+      "identity": "development",
+      "active": true,
+      "metrics_path": "results/rl/sensitivity_v1/grid6_validation/day_metrics.json",
+      "metrics_sha256": "e39459e230776dc2cae2a9c46e208d73788b53ca59af75850a5e882731d65ce7",
+      "note": "",
+      "models": [
+        {
+          "path": "results/rl/sensitivity_v1/grid6",
+          "model_sha256": "ee3782822ddbe9d88edba4c387f111d2f3d87815f478892740dca6b64b8ea180",
+          "manifest_sha256": "d6d32f8d390619827e755b56b38bd2d0c8667cb163764f98a669c808ad4dcf67",
+          "source_hashes_at_execution": {
+            "src/rl_dispatch.py": "268c2e5d09ef7ccb320a9d7186696b812feb3f1541229b3940bfb8b80a0fbf45",
+            "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+          }
+        }
+      ],
+      "producer_metadata": [
+        {
+          "path": "results/rl/sensitivity_v1/grid6_validation/manifest.json",
+          "sha256": "2df8c7f40bd372c89d6a787e8aca79f1e65a1e987cb409d3a96514f0583584ac",
+          "content": {
+            "code_hashes": {
+              "src/rl_dispatch.py": "268c2e5d09ef7ccb320a9d7186696b812feb3f1541229b3940bfb8b80a0fbf45",
+              "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+            },
+            "split": "validation",
+            "config": {
+              "grid": 6,
+              "step_min": 10,
+              "start": 360,
+              "end": 1440,
+              "speed": 25.0,
+              "radius": 3.0,
+              "patience": 2,
+              "orders": 1500,
+              "gamma": 0.92,
+              "alpha_min": 0.05,
+              "width": 25.230707400441077,
+              "height": 31.080000000000002
+            },
+            "fleet": 60,
+            "seeds": [
+              50000,
+              50001,
+              50002,
+              50003,
+              50004
+            ],
+            "policies": [
+              "greedy",
+              "km",
+              "qkm"
+            ]
+          }
+        }
+      ],
+      "execution_identity": "ORIGINAL_RECORDED_RUN"
+    },
+    {
+      "run_id": "sensitivity_grid10",
+      "path": "results/rl/sensitivity_v2_rngfix/grid10_validation",
+      "identity": "development",
+      "active": true,
+      "metrics_path": "results/rl/sensitivity_v2_rngfix/grid10_validation/day_metrics.json",
+      "metrics_sha256": "091a04e06c11f8a2823f1c1ab9d9323b5c309c977a9cbba896e353645cf7a521",
+      "note": "",
+      "models": [
+        {
+          "path": "results/rl/sensitivity_v2_rngfix/grid10",
+          "model_sha256": "76f19b1d08a0c8388f79a3e79cce6aaf070f7bf80859014c854f754db1bd3c8a",
+          "manifest_sha256": "bf475052c1c6c592b50c69ae1585c2f8115b15f60a1c67efbea646a978d473ce",
+          "source_hashes_at_execution": {
+            "src/rl_dispatch.py": "4727cd44735ffbdd100bd8ed47fbbfe8c5897a20a69d9b9a22b7e2f454ac23b7",
+            "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+          }
+        }
+      ],
+      "producer_metadata": [
+        {
+          "path": "results/rl/sensitivity_v2_rngfix/grid10_validation/manifest.json",
+          "sha256": "07090b2a8a5ff27b721271b023f21726f71d64fc711b20e1924deb829f2c988b",
+          "content": {
+            "code_hashes": {
+              "src/rl_dispatch.py": "4727cd44735ffbdd100bd8ed47fbbfe8c5897a20a69d9b9a22b7e2f454ac23b7",
+              "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+            },
+            "split": "validation",
+            "config": {
+              "grid": 10,
+              "step_min": 10,
+              "start": 360,
+              "end": 1440,
+              "speed": 25.0,
+              "radius": 3.0,
+              "patience": 2,
+              "orders": 1500,
+              "gamma": 0.92,
+              "alpha_min": 0.05,
+              "width": 25.230707400441077,
+              "height": 31.080000000000002
+            },
+            "fleet": 60,
+            "seeds": [
+              50000,
+              50001,
+              50002,
+              50003,
+              50004
+            ],
+            "policies": [
+              "greedy",
+              "km",
+              "qkm"
+            ]
+          }
+        }
+      ],
+      "execution_identity": "ORIGINAL_RECORDED_RUN"
+    },
+    {
+      "run_id": "sensitivity_patience1",
+      "path": "results/rl/sensitivity_v2_rngfix/patience1_validation",
+      "identity": "development",
+      "active": true,
+      "metrics_path": "results/rl/sensitivity_v2_rngfix/patience1_validation/day_metrics.json",
+      "metrics_sha256": "0cd524c6f223ac94d697f577d00413891934c2225fba30b1b552b10f4a9f96fc",
+      "note": "",
+      "models": [
+        {
+          "path": "results/rl/sensitivity_v2_rngfix/patience1",
+          "model_sha256": "68d2a239495e36750a31f58964fb3671210b77ccc02ccdeed3a9ee3bde5d317f",
+          "manifest_sha256": "14a6b110f1dede3289d7a25340faee8448b8e8f999da3eda3883bb4328c3228b",
+          "source_hashes_at_execution": {
+            "src/rl_dispatch.py": "4727cd44735ffbdd100bd8ed47fbbfe8c5897a20a69d9b9a22b7e2f454ac23b7",
+            "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+          }
+        }
+      ],
+      "producer_metadata": [
+        {
+          "path": "results/rl/sensitivity_v2_rngfix/patience1_validation/manifest.json",
+          "sha256": "9e559819ec9d960715bd3b6fede91ed1438fd8f42552bfab0cc4bc39c616b145",
+          "content": {
+            "code_hashes": {
+              "src/rl_dispatch.py": "4727cd44735ffbdd100bd8ed47fbbfe8c5897a20a69d9b9a22b7e2f454ac23b7",
+              "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+            },
+            "split": "validation",
+            "config": {
+              "grid": 8,
+              "step_min": 10,
+              "start": 360,
+              "end": 1440,
+              "speed": 25.0,
+              "radius": 3.0,
+              "patience": 1,
+              "orders": 1500,
+              "gamma": 0.92,
+              "alpha_min": 0.05,
+              "width": 25.230707400441077,
+              "height": 31.080000000000002
+            },
+            "fleet": 60,
+            "seeds": [
+              50000,
+              50001,
+              50002,
+              50003,
+              50004
+            ],
+            "policies": [
+              "greedy",
+              "km",
+              "qkm"
+            ]
+          }
+        }
+      ],
+      "execution_identity": "ORIGINAL_RECORDED_RUN"
+    },
+    {
+      "run_id": "sensitivity_patience3",
+      "path": "results/rl/sensitivity_v2_rngfix/patience3_validation",
+      "identity": "development",
+      "active": true,
+      "metrics_path": "results/rl/sensitivity_v2_rngfix/patience3_validation/day_metrics.json",
+      "metrics_sha256": "3ada2dbe1f576ea8f74c22189cfbc322878df471e2fdf10bc2180e8f2dfbe5ad",
+      "note": "",
+      "models": [
+        {
+          "path": "results/rl/sensitivity_v2_rngfix/patience3",
+          "model_sha256": "cae7fa658e96e26020c2727e5c7264b1f353c7aae94fab6b47ca250de60af7b0",
+          "manifest_sha256": "a643ac7a5d21be1d0895301eff51dff9c8fbfa61ba7754a2c3c2aa2ba3a759a7",
+          "source_hashes_at_execution": {
+            "src/rl_dispatch.py": "4727cd44735ffbdd100bd8ed47fbbfe8c5897a20a69d9b9a22b7e2f454ac23b7",
+            "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+          }
+        }
+      ],
+      "producer_metadata": [
+        {
+          "path": "results/rl/sensitivity_v2_rngfix/patience3_validation/manifest.json",
+          "sha256": "9e9b6f16177100bf8833e12ed6677c21fa50fa5c85b05ede2e98e1bc3839f5bc",
+          "content": {
+            "code_hashes": {
+              "src/rl_dispatch.py": "4727cd44735ffbdd100bd8ed47fbbfe8c5897a20a69d9b9a22b7e2f454ac23b7",
+              "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+            },
+            "split": "validation",
+            "config": {
+              "grid": 8,
+              "step_min": 10,
+              "start": 360,
+              "end": 1440,
+              "speed": 25.0,
+              "radius": 3.0,
+              "patience": 3,
+              "orders": 1500,
+              "gamma": 0.92,
+              "alpha_min": 0.05,
+              "width": 25.230707400441077,
+              "height": 31.080000000000002
+            },
+            "fleet": 60,
+            "seeds": [
+              50000,
+              50001,
+              50002,
+              50003,
+              50004
+            ],
+            "policies": [
+              "greedy",
+              "km",
+              "qkm"
+            ]
+          }
+        }
+      ],
+      "execution_identity": "ORIGINAL_RECORDED_RUN"
+    },
+    {
+      "run_id": "fair_q_b1_s2024",
+      "path": "results/rl/double_v2_rngfix/q_b1_s2024_validation",
+      "identity": "development",
+      "active": true,
+      "metrics_path": "results/rl/double_v2_rngfix/q_b1_s2024_validation/day_metrics.json",
+      "metrics_sha256": "43d15e5aa61b19dbdbd173b872fc30634802115333c21d65b748aacf992615cd",
+      "note": "Behavior RNG separate from Double update coin; Q-only predecessor reused when valid",
+      "models": [
+        {
+          "path": "results/rl/double_validation_v1/q_b1_s2024",
+          "model_sha256": "d8c372348bd9e277a4b3a8c6963ff4c7d64abafb31a0ce559bc029726bc68df2",
+          "manifest_sha256": "42717ba810e5ab5327aa99647595b6c1ab4b2e33046c1090510d6e340b54bebc",
+          "source_hashes_at_execution": {
+            "src/rl_dispatch.py": "268c2e5d09ef7ccb320a9d7186696b812feb3f1541229b3940bfb8b80a0fbf45",
+            "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+          }
+        }
+      ],
+      "producer_metadata": [
+        {
+          "path": "results/rl/double_v2_rngfix/q_b1_s2024_validation/manifest.json",
+          "sha256": "80208d9b922bd77b2c4a32971400376d18ea8e3a17fb7451a02bb6e6363417d3",
+          "content": {
+            "code_hashes": {
+              "src/rl_dispatch.py": "4727cd44735ffbdd100bd8ed47fbbfe8c5897a20a69d9b9a22b7e2f454ac23b7",
+              "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+            },
+            "split": "validation",
+            "config": {
+              "grid": 8,
+              "step_min": 10,
+              "start": 360,
+              "end": 1440,
+              "speed": 25.0,
+              "radius": 3.0,
+              "patience": 2,
+              "orders": 1500,
+              "gamma": 0.92,
+              "alpha_min": 0.05,
+              "width": 25.230707400441077,
+              "height": 31.080000000000002
+            },
+            "fleet": 60,
+            "seeds": [
+              50000,
+              50001,
+              50002,
+              50003,
+              50004
+            ],
+            "policies": [
+              "km",
+              "beta05",
+              "beta1"
+            ]
+          }
+        }
+      ],
+      "execution_identity": "ORIGINAL_RECORDED_RUN"
+    },
+    {
+      "run_id": "old_q_b1_s2024",
+      "path": "results/rl/double_validation_v1/q_b1_s2024_validation",
+      "identity": "historical_equivalent",
+      "active": false,
+      "metrics_path": "results/rl/double_validation_v1/q_b1_s2024_validation/day_metrics.json",
+      "metrics_sha256": "c9ee2f79da2af4930f20bbd3f62e02c06ab4f9a669ed7c247f56a3c115254360",
+      "note": "Valid original Q-only, duplicated by explicitly registeredv2 evaluation; excluded from canonical tables",
+      "models": [
+        {
+          "path": "results/rl/double_validation_v1/q_b1_s2024",
+          "model_sha256": "d8c372348bd9e277a4b3a8c6963ff4c7d64abafb31a0ce559bc029726bc68df2",
+          "manifest_sha256": "42717ba810e5ab5327aa99647595b6c1ab4b2e33046c1090510d6e340b54bebc",
+          "source_hashes_at_execution": {
+            "src/rl_dispatch.py": "268c2e5d09ef7ccb320a9d7186696b812feb3f1541229b3940bfb8b80a0fbf45",
+            "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+          }
+        }
+      ],
+      "producer_metadata": [
+        {
+          "path": "results/rl/double_validation_v1/q_b1_s2024_validation/manifest.json",
+          "sha256": "9c77214fef4a7d0337d619870aba1b313725fd840f426ea7f89b4dc2d8bb5e14",
+          "content": {
+            "code_hashes": {
+              "src/rl_dispatch.py": "268c2e5d09ef7ccb320a9d7186696b812feb3f1541229b3940bfb8b80a0fbf45",
+              "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+            },
+            "split": "validation",
+            "config": {
+              "grid": 8,
+              "step_min": 10,
+              "start": 360,
+              "end": 1440,
+              "speed": 25.0,
+              "radius": 3.0,
+              "patience": 2,
+              "orders": 1500,
+              "gamma": 0.92,
+              "alpha_min": 0.05,
+              "width": 25.230707400441077,
+              "height": 31.080000000000002
+            },
+            "fleet": 60,
+            "seeds": [
+              50000,
+              50001,
+              50002,
+              50003,
+              50004
+            ],
+            "policies": [
+              "km",
+              "beta05",
+              "beta1"
+            ]
+          }
+        }
+      ],
+      "execution_identity": "ORIGINAL_RECORDED_RUN"
+    },
+    {
+      "run_id": "fair_double_b1_s2024",
+      "path": "results/rl/double_v2_rngfix/double_b1_s2024_validation",
+      "identity": "development",
+      "active": true,
+      "metrics_path": "results/rl/double_v2_rngfix/double_b1_s2024_validation/day_metrics.json",
+      "metrics_sha256": "b3ad9cf623af52333d9f9d21c42cfb5ccf6baddeafed79beaa6f6fd3b6967e69",
+      "note": "Behavior RNG separate from Double update coin; Q-only predecessor reused when valid",
+      "models": [
+        {
+          "path": "results/rl/double_v2_rngfix/double_b1_s2024",
+          "model_sha256": "06b30ebca1efefd8ce0a51769fe563d2ccc43bc2a7de33f6148eab241adfd04e",
+          "manifest_sha256": "6ef48f1f8459069466f412b6becbe411c2b979ac56c8cfa41ecb1a528fdf27f1",
+          "source_hashes_at_execution": {
+            "src/rl_dispatch.py": "4727cd44735ffbdd100bd8ed47fbbfe8c5897a20a69d9b9a22b7e2f454ac23b7",
+            "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+          }
+        }
+      ],
+      "producer_metadata": [
+        {
+          "path": "results/rl/double_v2_rngfix/double_b1_s2024_validation/manifest.json",
+          "sha256": "80208d9b922bd77b2c4a32971400376d18ea8e3a17fb7451a02bb6e6363417d3",
+          "content": {
+            "code_hashes": {
+              "src/rl_dispatch.py": "4727cd44735ffbdd100bd8ed47fbbfe8c5897a20a69d9b9a22b7e2f454ac23b7",
+              "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+            },
+            "split": "validation",
+            "config": {
+              "grid": 8,
+              "step_min": 10,
+              "start": 360,
+              "end": 1440,
+              "speed": 25.0,
+              "radius": 3.0,
+              "patience": 2,
+              "orders": 1500,
+              "gamma": 0.92,
+              "alpha_min": 0.05,
+              "width": 25.230707400441077,
+              "height": 31.080000000000002
+            },
+            "fleet": 60,
+            "seeds": [
+              50000,
+              50001,
+              50002,
+              50003,
+              50004
+            ],
+            "policies": [
+              "km",
+              "beta05",
+              "beta1"
+            ]
+          }
+        }
+      ],
+      "execution_identity": "ORIGINAL_RECORDED_RUN"
+    },
+    {
+      "run_id": "old_double_b1_s2024",
+      "path": "results/rl/double_validation_v1/double_b1_s2024_validation",
+      "identity": "invalid",
+      "active": false,
+      "metrics_path": "results/rl/double_validation_v1/double_b1_s2024_validation/day_metrics.json",
+      "metrics_sha256": "f7e33eb81cc39555b2ce9d188ee45d128bc37bd49dbf3dfa19a620fd0fb32194",
+      "note": "INVALID_FOR_FAIR_DOUBLE_COMPARE: shared update/behavior RNG",
+      "models": [
+        {
+          "path": "results/rl/double_validation_v1/double_b1_s2024",
+          "model_sha256": "c917051a0b9a95ff76fd2b27d159800d44740d1b7380f83557f67896b5fb20d9",
+          "manifest_sha256": "f573c91f8e725b4866cf484cde10193e506d8c44bfecda2e5771b19d21048f82",
+          "source_hashes_at_execution": {
+            "src/rl_dispatch.py": "268c2e5d09ef7ccb320a9d7186696b812feb3f1541229b3940bfb8b80a0fbf45",
+            "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+          }
+        }
+      ],
+      "producer_metadata": [
+        {
+          "path": "results/rl/double_validation_v1/double_b1_s2024_validation/manifest.json",
+          "sha256": "9c77214fef4a7d0337d619870aba1b313725fd840f426ea7f89b4dc2d8bb5e14",
+          "content": {
+            "code_hashes": {
+              "src/rl_dispatch.py": "268c2e5d09ef7ccb320a9d7186696b812feb3f1541229b3940bfb8b80a0fbf45",
+              "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+            },
+            "split": "validation",
+            "config": {
+              "grid": 8,
+              "step_min": 10,
+              "start": 360,
+              "end": 1440,
+              "speed": 25.0,
+              "radius": 3.0,
+              "patience": 2,
+              "orders": 1500,
+              "gamma": 0.92,
+              "alpha_min": 0.05,
+              "width": 25.230707400441077,
+              "height": 31.080000000000002
+            },
+            "fleet": 60,
+            "seeds": [
+              50000,
+              50001,
+              50002,
+              50003,
+              50004
+            ],
+            "policies": [
+              "km",
+              "beta05",
+              "beta1"
+            ]
+          }
+        }
+      ],
+      "execution_identity": "ORIGINAL_RECORDED_RUN"
+    },
+    {
+      "run_id": "fair_q_b1_s2025",
+      "path": "results/rl/double_v2_rngfix/q_b1_s2025_validation",
+      "identity": "development",
+      "active": true,
+      "metrics_path": "results/rl/double_v2_rngfix/q_b1_s2025_validation/day_metrics.json",
+      "metrics_sha256": "d9901ad0d205136445b3929f692aa99d95debcb67f4ab6eeb6482f37f22c1090",
+      "note": "Behavior RNG separate from Double update coin; Q-only predecessor reused when valid",
+      "models": [
+        {
+          "path": "results/rl/double_validation_v1/q_b1_s2025",
+          "model_sha256": "a6ebc5e81c8f95c07a6aba2e227513389436b20740a62ce662aaa0455943a530",
+          "manifest_sha256": "5aa0f03d5cfcabfbb46297d25846ab419a7471742bab366b65886dd5f5255886",
+          "source_hashes_at_execution": {
+            "src/rl_dispatch.py": "268c2e5d09ef7ccb320a9d7186696b812feb3f1541229b3940bfb8b80a0fbf45",
+            "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+          }
+        }
+      ],
+      "producer_metadata": [
+        {
+          "path": "results/rl/double_v2_rngfix/q_b1_s2025_validation/manifest.json",
+          "sha256": "80208d9b922bd77b2c4a32971400376d18ea8e3a17fb7451a02bb6e6363417d3",
+          "content": {
+            "code_hashes": {
+              "src/rl_dispatch.py": "4727cd44735ffbdd100bd8ed47fbbfe8c5897a20a69d9b9a22b7e2f454ac23b7",
+              "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+            },
+            "split": "validation",
+            "config": {
+              "grid": 8,
+              "step_min": 10,
+              "start": 360,
+              "end": 1440,
+              "speed": 25.0,
+              "radius": 3.0,
+              "patience": 2,
+              "orders": 1500,
+              "gamma": 0.92,
+              "alpha_min": 0.05,
+              "width": 25.230707400441077,
+              "height": 31.080000000000002
+            },
+            "fleet": 60,
+            "seeds": [
+              50000,
+              50001,
+              50002,
+              50003,
+              50004
+            ],
+            "policies": [
+              "km",
+              "beta05",
+              "beta1"
+            ]
+          }
+        }
+      ],
+      "execution_identity": "ORIGINAL_RECORDED_RUN"
+    },
+    {
+      "run_id": "old_q_b1_s2025",
+      "path": "results/rl/double_validation_v1/q_b1_s2025_validation",
+      "identity": "historical_equivalent",
+      "active": false,
+      "metrics_path": "results/rl/double_validation_v1/q_b1_s2025_validation/day_metrics.json",
+      "metrics_sha256": "e4f49f8b455f4ee337c9f43f41d83e7a58624ab835c2423642fead4536193e65",
+      "note": "Valid original Q-only, duplicated by explicitly registeredv2 evaluation; excluded from canonical tables",
+      "models": [
+        {
+          "path": "results/rl/double_validation_v1/q_b1_s2025",
+          "model_sha256": "a6ebc5e81c8f95c07a6aba2e227513389436b20740a62ce662aaa0455943a530",
+          "manifest_sha256": "5aa0f03d5cfcabfbb46297d25846ab419a7471742bab366b65886dd5f5255886",
+          "source_hashes_at_execution": {
+            "src/rl_dispatch.py": "268c2e5d09ef7ccb320a9d7186696b812feb3f1541229b3940bfb8b80a0fbf45",
+            "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+          }
+        }
+      ],
+      "producer_metadata": [
+        {
+          "path": "results/rl/double_validation_v1/q_b1_s2025_validation/manifest.json",
+          "sha256": "9c77214fef4a7d0337d619870aba1b313725fd840f426ea7f89b4dc2d8bb5e14",
+          "content": {
+            "code_hashes": {
+              "src/rl_dispatch.py": "268c2e5d09ef7ccb320a9d7186696b812feb3f1541229b3940bfb8b80a0fbf45",
+              "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+            },
+            "split": "validation",
+            "config": {
+              "grid": 8,
+              "step_min": 10,
+              "start": 360,
+              "end": 1440,
+              "speed": 25.0,
+              "radius": 3.0,
+              "patience": 2,
+              "orders": 1500,
+              "gamma": 0.92,
+              "alpha_min": 0.05,
+              "width": 25.230707400441077,
+              "height": 31.080000000000002
+            },
+            "fleet": 60,
+            "seeds": [
+              50000,
+              50001,
+              50002,
+              50003,
+              50004
+            ],
+            "policies": [
+              "km",
+              "beta05",
+              "beta1"
+            ]
+          }
+        }
+      ],
+      "execution_identity": "ORIGINAL_RECORDED_RUN"
+    },
+    {
+      "run_id": "fair_double_b1_s2025",
+      "path": "results/rl/double_v2_rngfix/double_b1_s2025_validation",
+      "identity": "development",
+      "active": true,
+      "metrics_path": "results/rl/double_v2_rngfix/double_b1_s2025_validation/day_metrics.json",
+      "metrics_sha256": "ac2ba133454d2732b3466f34264dcd7ac2784969ac3c2d68e7c49dcec55d156a",
+      "note": "Behavior RNG separate from Double update coin; Q-only predecessor reused when valid",
+      "models": [
+        {
+          "path": "results/rl/double_v2_rngfix/double_b1_s2025",
+          "model_sha256": "6427c5e5be4a8474d331c086f52daf92866a10e7030e6ed1a787bdaab632ef1c",
+          "manifest_sha256": "d31fd95540e1dd028c86dc2ef9a84a69c531b7ff2afa1f149ea87ce647d9ea33",
+          "source_hashes_at_execution": {
+            "src/rl_dispatch.py": "4727cd44735ffbdd100bd8ed47fbbfe8c5897a20a69d9b9a22b7e2f454ac23b7",
+            "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+          }
+        }
+      ],
+      "producer_metadata": [
+        {
+          "path": "results/rl/double_v2_rngfix/double_b1_s2025_validation/manifest.json",
+          "sha256": "80208d9b922bd77b2c4a32971400376d18ea8e3a17fb7451a02bb6e6363417d3",
+          "content": {
+            "code_hashes": {
+              "src/rl_dispatch.py": "4727cd44735ffbdd100bd8ed47fbbfe8c5897a20a69d9b9a22b7e2f454ac23b7",
+              "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+            },
+            "split": "validation",
+            "config": {
+              "grid": 8,
+              "step_min": 10,
+              "start": 360,
+              "end": 1440,
+              "speed": 25.0,
+              "radius": 3.0,
+              "patience": 2,
+              "orders": 1500,
+              "gamma": 0.92,
+              "alpha_min": 0.05,
+              "width": 25.230707400441077,
+              "height": 31.080000000000002
+            },
+            "fleet": 60,
+            "seeds": [
+              50000,
+              50001,
+              50002,
+              50003,
+              50004
+            ],
+            "policies": [
+              "km",
+              "beta05",
+              "beta1"
+            ]
+          }
+        }
+      ],
+      "execution_identity": "ORIGINAL_RECORDED_RUN"
+    },
+    {
+      "run_id": "fair_q_b1_s2026",
+      "path": "results/rl/double_v2_rngfix/q_b1_s2026_validation",
+      "identity": "development",
+      "active": true,
+      "metrics_path": "results/rl/double_v2_rngfix/q_b1_s2026_validation/day_metrics.json",
+      "metrics_sha256": "1db181e2fa380a68ec1c4e027ccc91222fffd1d07669d710d859b927e09cc993",
+      "note": "Behavior RNG separate from Double update coin; Q-only predecessor reused when valid",
+      "models": [
+        {
+          "path": "results/rl/double_v2_rngfix/q_b1_s2026",
+          "model_sha256": "6fe75d70594d57e374aed2a6d50dd528d1d76c9d4578bafdf69ca5320197ec44",
+          "manifest_sha256": "f605c80609b03e8b555f4a2290fac5b45d052eff30c96224fcdd646654b06313",
+          "source_hashes_at_execution": {
+            "src/rl_dispatch.py": "4727cd44735ffbdd100bd8ed47fbbfe8c5897a20a69d9b9a22b7e2f454ac23b7",
+            "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+          }
+        }
+      ],
+      "producer_metadata": [
+        {
+          "path": "results/rl/double_v2_rngfix/q_b1_s2026_validation/manifest.json",
+          "sha256": "80208d9b922bd77b2c4a32971400376d18ea8e3a17fb7451a02bb6e6363417d3",
+          "content": {
+            "code_hashes": {
+              "src/rl_dispatch.py": "4727cd44735ffbdd100bd8ed47fbbfe8c5897a20a69d9b9a22b7e2f454ac23b7",
+              "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+            },
+            "split": "validation",
+            "config": {
+              "grid": 8,
+              "step_min": 10,
+              "start": 360,
+              "end": 1440,
+              "speed": 25.0,
+              "radius": 3.0,
+              "patience": 2,
+              "orders": 1500,
+              "gamma": 0.92,
+              "alpha_min": 0.05,
+              "width": 25.230707400441077,
+              "height": 31.080000000000002
+            },
+            "fleet": 60,
+            "seeds": [
+              50000,
+              50001,
+              50002,
+              50003,
+              50004
+            ],
+            "policies": [
+              "km",
+              "beta05",
+              "beta1"
+            ]
+          }
+        }
+      ],
+      "execution_identity": "ORIGINAL_RECORDED_RUN"
+    },
+    {
+      "run_id": "fair_double_b1_s2026",
+      "path": "results/rl/double_v2_rngfix/double_b1_s2026_validation",
+      "identity": "development",
+      "active": true,
+      "metrics_path": "results/rl/double_v2_rngfix/double_b1_s2026_validation/day_metrics.json",
+      "metrics_sha256": "6aae1c125f98bf71aba2f0f095ef09a815378445a0466891499d5cfe2b397974",
+      "note": "Behavior RNG separate from Double update coin; Q-only predecessor reused when valid",
+      "models": [
+        {
+          "path": "results/rl/double_v2_rngfix/double_b1_s2026",
+          "model_sha256": "ef4de0a0b39d0809ff28bf3e71dd478ccc8304897afcb7801506741c5821c034",
+          "manifest_sha256": "a2a965d93d4c009134ba06849c786b7d08a8da32ae213f17ac607922ed460624",
+          "source_hashes_at_execution": {
+            "src/rl_dispatch.py": "4727cd44735ffbdd100bd8ed47fbbfe8c5897a20a69d9b9a22b7e2f454ac23b7",
+            "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+          }
+        }
+      ],
+      "producer_metadata": [
+        {
+          "path": "results/rl/double_v2_rngfix/double_b1_s2026_validation/manifest.json",
+          "sha256": "80208d9b922bd77b2c4a32971400376d18ea8e3a17fb7451a02bb6e6363417d3",
+          "content": {
+            "code_hashes": {
+              "src/rl_dispatch.py": "4727cd44735ffbdd100bd8ed47fbbfe8c5897a20a69d9b9a22b7e2f454ac23b7",
+              "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+            },
+            "split": "validation",
+            "config": {
+              "grid": 8,
+              "step_min": 10,
+              "start": 360,
+              "end": 1440,
+              "speed": 25.0,
+              "radius": 3.0,
+              "patience": 2,
+              "orders": 1500,
+              "gamma": 0.92,
+              "alpha_min": 0.05,
+              "width": 25.230707400441077,
+              "height": 31.080000000000002
+            },
+            "fleet": 60,
+            "seeds": [
+              50000,
+              50001,
+              50002,
+              50003,
+              50004
+            ],
+            "policies": [
+              "km",
+              "beta05",
+              "beta1"
+            ]
+          }
+        }
+      ],
+      "execution_identity": "ORIGINAL_RECORDED_RUN"
+    },
+    {
+      "run_id": "fair_q_b1_s2027",
+      "path": "results/rl/double_v2_rngfix/q_b1_s2027_validation",
+      "identity": "development",
+      "active": true,
+      "metrics_path": "results/rl/double_v2_rngfix/q_b1_s2027_validation/day_metrics.json",
+      "metrics_sha256": "e5e50e5bdd25e24a6651bd96183fcb2e1a60187936b2d96925f8e149f881c620",
+      "note": "Behavior RNG separate from Double update coin; Q-only predecessor reused when valid",
+      "models": [
+        {
+          "path": "results/rl/double_v2_rngfix/q_b1_s2027",
+          "model_sha256": "428762fa2f785042565508ed418ae02fe25cc74242c257124195481d5bc557a8",
+          "manifest_sha256": "5903ad37ff3e8d09bb8584affb9c974ab70ef0ca77eec6bf89f95519fde0b6ef",
+          "source_hashes_at_execution": {
+            "src/rl_dispatch.py": "4727cd44735ffbdd100bd8ed47fbbfe8c5897a20a69d9b9a22b7e2f454ac23b7",
+            "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+          }
+        }
+      ],
+      "producer_metadata": [
+        {
+          "path": "results/rl/double_v2_rngfix/q_b1_s2027_validation/manifest.json",
+          "sha256": "80208d9b922bd77b2c4a32971400376d18ea8e3a17fb7451a02bb6e6363417d3",
+          "content": {
+            "code_hashes": {
+              "src/rl_dispatch.py": "4727cd44735ffbdd100bd8ed47fbbfe8c5897a20a69d9b9a22b7e2f454ac23b7",
+              "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+            },
+            "split": "validation",
+            "config": {
+              "grid": 8,
+              "step_min": 10,
+              "start": 360,
+              "end": 1440,
+              "speed": 25.0,
+              "radius": 3.0,
+              "patience": 2,
+              "orders": 1500,
+              "gamma": 0.92,
+              "alpha_min": 0.05,
+              "width": 25.230707400441077,
+              "height": 31.080000000000002
+            },
+            "fleet": 60,
+            "seeds": [
+              50000,
+              50001,
+              50002,
+              50003,
+              50004
+            ],
+            "policies": [
+              "km",
+              "beta05",
+              "beta1"
+            ]
+          }
+        }
+      ],
+      "execution_identity": "ORIGINAL_RECORDED_RUN"
+    },
+    {
+      "run_id": "fair_double_b1_s2027",
+      "path": "results/rl/double_v2_rngfix/double_b1_s2027_validation",
+      "identity": "development",
+      "active": true,
+      "metrics_path": "results/rl/double_v2_rngfix/double_b1_s2027_validation/day_metrics.json",
+      "metrics_sha256": "dcc65ea6f7873b95511bc4da3011672ebac8ebebc4b19348f4d31a1002014cdb",
+      "note": "Behavior RNG separate from Double update coin; Q-only predecessor reused when valid",
+      "models": [
+        {
+          "path": "results/rl/double_v2_rngfix/double_b1_s2027",
+          "model_sha256": "f51dfe0a2f0b813fff5b3021390464d26e852f65fa5809f5cb502bc6873c017c",
+          "manifest_sha256": "e2699c761d79abeca4e3c36fce5ebb56708b1756bf7be4fe79d995255462ce4a",
+          "source_hashes_at_execution": {
+            "src/rl_dispatch.py": "4727cd44735ffbdd100bd8ed47fbbfe8c5897a20a69d9b9a22b7e2f454ac23b7",
+            "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+          }
+        }
+      ],
+      "producer_metadata": [
+        {
+          "path": "results/rl/double_v2_rngfix/double_b1_s2027_validation/manifest.json",
+          "sha256": "80208d9b922bd77b2c4a32971400376d18ea8e3a17fb7451a02bb6e6363417d3",
+          "content": {
+            "code_hashes": {
+              "src/rl_dispatch.py": "4727cd44735ffbdd100bd8ed47fbbfe8c5897a20a69d9b9a22b7e2f454ac23b7",
+              "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+            },
+            "split": "validation",
+            "config": {
+              "grid": 8,
+              "step_min": 10,
+              "start": 360,
+              "end": 1440,
+              "speed": 25.0,
+              "radius": 3.0,
+              "patience": 2,
+              "orders": 1500,
+              "gamma": 0.92,
+              "alpha_min": 0.05,
+              "width": 25.230707400441077,
+              "height": 31.080000000000002
+            },
+            "fleet": 60,
+            "seeds": [
+              50000,
+              50001,
+              50002,
+              50003,
+              50004
+            ],
+            "policies": [
+              "km",
+              "beta05",
+              "beta1"
+            ]
+          }
+        }
+      ],
+      "execution_identity": "ORIGINAL_RECORDED_RUN"
+    },
+    {
+      "run_id": "fair_q_b1_s2028",
+      "path": "results/rl/double_v2_rngfix/q_b1_s2028_validation",
+      "identity": "development",
+      "active": true,
+      "metrics_path": "results/rl/double_v2_rngfix/q_b1_s2028_validation/day_metrics.json",
+      "metrics_sha256": "4211e2aca2af99f80dc4087157452e63ff6e72a6d8b32bfa0b3577cdfc29742d",
+      "note": "Behavior RNG separate from Double update coin; Q-only predecessor reused when valid",
+      "models": [
+        {
+          "path": "results/rl/double_v2_rngfix/q_b1_s2028",
+          "model_sha256": "3dbdc69c78d1a904de9a29f1c341f468909dd96682abf75139eca7c52bc43f72",
+          "manifest_sha256": "bed3f8a1d51bd435a73f14622c8faec6e5e6a9edce0d4613c830be5f869a14f0",
+          "source_hashes_at_execution": {
+            "src/rl_dispatch.py": "4727cd44735ffbdd100bd8ed47fbbfe8c5897a20a69d9b9a22b7e2f454ac23b7",
+            "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+          }
+        }
+      ],
+      "producer_metadata": [
+        {
+          "path": "results/rl/double_v2_rngfix/q_b1_s2028_validation/manifest.json",
+          "sha256": "80208d9b922bd77b2c4a32971400376d18ea8e3a17fb7451a02bb6e6363417d3",
+          "content": {
+            "code_hashes": {
+              "src/rl_dispatch.py": "4727cd44735ffbdd100bd8ed47fbbfe8c5897a20a69d9b9a22b7e2f454ac23b7",
+              "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+            },
+            "split": "validation",
+            "config": {
+              "grid": 8,
+              "step_min": 10,
+              "start": 360,
+              "end": 1440,
+              "speed": 25.0,
+              "radius": 3.0,
+              "patience": 2,
+              "orders": 1500,
+              "gamma": 0.92,
+              "alpha_min": 0.05,
+              "width": 25.230707400441077,
+              "height": 31.080000000000002
+            },
+            "fleet": 60,
+            "seeds": [
+              50000,
+              50001,
+              50002,
+              50003,
+              50004
+            ],
+            "policies": [
+              "km",
+              "beta05",
+              "beta1"
+            ]
+          }
+        }
+      ],
+      "execution_identity": "ORIGINAL_RECORDED_RUN"
+    },
+    {
+      "run_id": "fair_double_b1_s2028",
+      "path": "results/rl/double_v2_rngfix/double_b1_s2028_validation",
+      "identity": "development",
+      "active": true,
+      "metrics_path": "results/rl/double_v2_rngfix/double_b1_s2028_validation/day_metrics.json",
+      "metrics_sha256": "d584f06140c2388c9f199a25a9d09db216b758d6749e9781d51e9afdd4126d7a",
+      "note": "Behavior RNG separate from Double update coin; Q-only predecessor reused when valid",
+      "models": [
+        {
+          "path": "results/rl/double_v2_rngfix/double_b1_s2028",
+          "model_sha256": "cf370bd0e9b7ce8afce6858a08b25a2dd83fd38c754d496950558207579de2b8",
+          "manifest_sha256": "b0a2652fef5ab7a1acf608d9fe80d26b92aee2fc97a4f68ccf4331f7491bca29",
+          "source_hashes_at_execution": {
+            "src/rl_dispatch.py": "4727cd44735ffbdd100bd8ed47fbbfe8c5897a20a69d9b9a22b7e2f454ac23b7",
+            "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+          }
+        }
+      ],
+      "producer_metadata": [
+        {
+          "path": "results/rl/double_v2_rngfix/double_b1_s2028_validation/manifest.json",
+          "sha256": "80208d9b922bd77b2c4a32971400376d18ea8e3a17fb7451a02bb6e6363417d3",
+          "content": {
+            "code_hashes": {
+              "src/rl_dispatch.py": "4727cd44735ffbdd100bd8ed47fbbfe8c5897a20a69d9b9a22b7e2f454ac23b7",
+              "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+            },
+            "split": "validation",
+            "config": {
+              "grid": 8,
+              "step_min": 10,
+              "start": 360,
+              "end": 1440,
+              "speed": 25.0,
+              "radius": 3.0,
+              "patience": 2,
+              "orders": 1500,
+              "gamma": 0.92,
+              "alpha_min": 0.05,
+              "width": 25.230707400441077,
+              "height": 31.080000000000002
+            },
+            "fleet": 60,
+            "seeds": [
+              50000,
+              50001,
+              50002,
+              50003,
+              50004
+            ],
+            "policies": [
+              "km",
+              "beta05",
+              "beta1"
+            ]
+          }
+        }
+      ],
+      "execution_identity": "ORIGINAL_RECORDED_RUN"
+    },
+    {
+      "run_id": "movement_trainseed_2024",
+      "path": "results/rl/movement_trainseed_confirmation_v1/validation_s2024",
+      "identity": "development",
+      "active": true,
+      "metrics_path": "results/rl/movement_trainseed_confirmation_v1/validation_s2024/day_metrics.json",
+      "metrics_sha256": "5c20a3446063692d9577dd4f4f2dcc8db186ccd441c6d617801d0af7e6e296a1",
+      "note": "",
+      "models": [
+        {
+          "path": "results/rl/development_v1/q_f60_s2024",
+          "model_sha256": "2b29d6a62f535b150fa8da67cf5379a962b457d5bb6a763b070cae5cb218cba3",
+          "manifest_sha256": "3471949d789607101be3147f6dc41868144b636cc49f102070c8c0a59f22d4b7",
+          "source_hashes_at_execution": {
+            "src/rl_dispatch.py": "268c2e5d09ef7ccb320a9d7186696b812feb3f1541229b3940bfb8b80a0fbf45",
+            "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+          }
+        }
+      ],
+      "producer_metadata": [
+        {
+          "path": "results/rl/movement_trainseed_confirmation_v1/validation_s2024/manifest.json",
+          "sha256": "9859f97d28e3d9cfbc3681203a7bf2589a5dec6eb76d0b71ecdaa51fa4cab912",
+          "content": {
+            "code_hashes": {
+              "src/rl_dispatch.py": "4727cd44735ffbdd100bd8ed47fbbfe8c5897a20a69d9b9a22b7e2f454ac23b7",
+              "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+            },
+            "split": "validation",
+            "config": {
+              "grid": 8,
+              "step_min": 10,
+              "start": 360,
+              "end": 1440,
+              "speed": 25.0,
+              "radius": 3.0,
+              "patience": 2,
+              "orders": 1500,
+              "gamma": 0.92,
+              "alpha_min": 0.05,
+              "width": 25.230707400441077,
+              "height": 31.080000000000002
+            },
+            "fleet": 60,
+            "seeds": [
+              50000,
+              50001,
+              50002,
+              50003,
+              50004
+            ],
+            "policies": [
+              "km",
+              "qkm",
+              "km_move3",
+              "qkm_move3"
+            ]
+          }
+        }
+      ],
+      "execution_identity": "ORIGINAL_RECORDED_RUN"
+    },
+    {
+      "run_id": "movement_trainseed_2025",
+      "path": "results/rl/movement_trainseed_confirmation_v1/validation_s2025",
+      "identity": "development",
+      "active": true,
+      "metrics_path": "results/rl/movement_trainseed_confirmation_v1/validation_s2025/day_metrics.json",
+      "metrics_sha256": "16cb1fe0465df14f8de8fe5dde3e77f40be3aa2a6a7f486cc009260458712a5a",
+      "note": "",
+      "models": [
+        {
+          "path": "results/rl/movement_trainseed_confirmation_v1/q_s2025",
+          "model_sha256": "adb4bf46f590bb6cba9d6cdc19abe6c3e2ad38965d178b16b9dc086c422c0715",
+          "manifest_sha256": "4771872cac5459cb6cb047bde3ffe95397f21feab41de8b5e613fedb70320ef3",
+          "source_hashes_at_execution": {
+            "src/rl_dispatch.py": "4727cd44735ffbdd100bd8ed47fbbfe8c5897a20a69d9b9a22b7e2f454ac23b7",
+            "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+          }
+        }
+      ],
+      "producer_metadata": [
+        {
+          "path": "results/rl/movement_trainseed_confirmation_v1/validation_s2025/manifest.json",
+          "sha256": "9859f97d28e3d9cfbc3681203a7bf2589a5dec6eb76d0b71ecdaa51fa4cab912",
+          "content": {
+            "code_hashes": {
+              "src/rl_dispatch.py": "4727cd44735ffbdd100bd8ed47fbbfe8c5897a20a69d9b9a22b7e2f454ac23b7",
+              "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+            },
+            "split": "validation",
+            "config": {
+              "grid": 8,
+              "step_min": 10,
+              "start": 360,
+              "end": 1440,
+              "speed": 25.0,
+              "radius": 3.0,
+              "patience": 2,
+              "orders": 1500,
+              "gamma": 0.92,
+              "alpha_min": 0.05,
+              "width": 25.230707400441077,
+              "height": 31.080000000000002
+            },
+            "fleet": 60,
+            "seeds": [
+              50000,
+              50001,
+              50002,
+              50003,
+              50004
+            ],
+            "policies": [
+              "km",
+              "qkm",
+              "km_move3",
+              "qkm_move3"
+            ]
+          }
+        }
+      ],
+      "execution_identity": "ORIGINAL_RECORDED_RUN"
+    },
+    {
+      "run_id": "movement_trainseed_2026",
+      "path": "results/rl/movement_trainseed_confirmation_v1/validation_s2026",
+      "identity": "development",
+      "active": true,
+      "metrics_path": "results/rl/movement_trainseed_confirmation_v1/validation_s2026/day_metrics.json",
+      "metrics_sha256": "a68868f3e1d154222f08b4ae8a0507f4eb2fd2ced927508b140abd8362df0237",
+      "note": "",
+      "models": [
+        {
+          "path": "results/rl/movement_trainseed_confirmation_v1/q_s2026",
+          "model_sha256": "3bc3f1cac0047ed2ca25a02238a6103973f3731edcfd90b3b88ff8671a4aeb4b",
+          "manifest_sha256": "b10161729feff49f76d87e7af7afbf0b43575493e863e7a9840ac9b25bc97fc4",
+          "source_hashes_at_execution": {
+            "src/rl_dispatch.py": "4727cd44735ffbdd100bd8ed47fbbfe8c5897a20a69d9b9a22b7e2f454ac23b7",
+            "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+          }
+        }
+      ],
+      "producer_metadata": [
+        {
+          "path": "results/rl/movement_trainseed_confirmation_v1/validation_s2026/manifest.json",
+          "sha256": "9859f97d28e3d9cfbc3681203a7bf2589a5dec6eb76d0b71ecdaa51fa4cab912",
+          "content": {
+            "code_hashes": {
+              "src/rl_dispatch.py": "4727cd44735ffbdd100bd8ed47fbbfe8c5897a20a69d9b9a22b7e2f454ac23b7",
+              "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+            },
+            "split": "validation",
+            "config": {
+              "grid": 8,
+              "step_min": 10,
+              "start": 360,
+              "end": 1440,
+              "speed": 25.0,
+              "radius": 3.0,
+              "patience": 2,
+              "orders": 1500,
+              "gamma": 0.92,
+              "alpha_min": 0.05,
+              "width": 25.230707400441077,
+              "height": 31.080000000000002
+            },
+            "fleet": 60,
+            "seeds": [
+              50000,
+              50001,
+              50002,
+              50003,
+              50004
+            ],
+            "policies": [
+              "km",
+              "qkm",
+              "km_move3",
+              "qkm_move3"
+            ]
+          }
+        }
+      ],
+      "execution_identity": "ORIGINAL_RECORDED_RUN"
+    },
+    {
+      "run_id": "movement_trainseed_2027",
+      "path": "results/rl/movement_trainseed_confirmation_v1/validation_s2027",
+      "identity": "development",
+      "active": true,
+      "metrics_path": "results/rl/movement_trainseed_confirmation_v1/validation_s2027/day_metrics.json",
+      "metrics_sha256": "3a96badfcae59f23f98fa1d03f7ce36ec951d0ca7f3d4fc8949ce69fdf0911ad",
+      "note": "",
+      "models": [
+        {
+          "path": "results/rl/movement_trainseed_confirmation_v1/q_s2027",
+          "model_sha256": "25a10c76a4fddef4217577981e0ba603fc426e7e0f3d8a1f98556cb5df7aaa56",
+          "manifest_sha256": "df4ec004fd67ecbdd686783d5cb114b3008c913fd834be26ef75632aea0ceeca",
+          "source_hashes_at_execution": {
+            "src/rl_dispatch.py": "4727cd44735ffbdd100bd8ed47fbbfe8c5897a20a69d9b9a22b7e2f454ac23b7",
+            "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+          }
+        }
+      ],
+      "producer_metadata": [
+        {
+          "path": "results/rl/movement_trainseed_confirmation_v1/validation_s2027/manifest.json",
+          "sha256": "9859f97d28e3d9cfbc3681203a7bf2589a5dec6eb76d0b71ecdaa51fa4cab912",
+          "content": {
+            "code_hashes": {
+              "src/rl_dispatch.py": "4727cd44735ffbdd100bd8ed47fbbfe8c5897a20a69d9b9a22b7e2f454ac23b7",
+              "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+            },
+            "split": "validation",
+            "config": {
+              "grid": 8,
+              "step_min": 10,
+              "start": 360,
+              "end": 1440,
+              "speed": 25.0,
+              "radius": 3.0,
+              "patience": 2,
+              "orders": 1500,
+              "gamma": 0.92,
+              "alpha_min": 0.05,
+              "width": 25.230707400441077,
+              "height": 31.080000000000002
+            },
+            "fleet": 60,
+            "seeds": [
+              50000,
+              50001,
+              50002,
+              50003,
+              50004
+            ],
+            "policies": [
+              "km",
+              "qkm",
+              "km_move3",
+              "qkm_move3"
+            ]
+          }
+        }
+      ],
+      "execution_identity": "ORIGINAL_RECORDED_RUN"
+    },
+    {
+      "run_id": "movement_trainseed_2028",
+      "path": "results/rl/movement_trainseed_confirmation_v1/validation_s2028",
+      "identity": "development",
+      "active": true,
+      "metrics_path": "results/rl/movement_trainseed_confirmation_v1/validation_s2028/day_metrics.json",
+      "metrics_sha256": "465f329abe7645f3dd3329dfd93077ab233691ef1da162ec2f7ba4261cbc2f29",
+      "note": "",
+      "models": [
+        {
+          "path": "results/rl/movement_trainseed_confirmation_v1/q_s2028",
+          "model_sha256": "374dbaccec94174a80c9f22950fc78b99d3c35ef2c1c8dcf47d3fafdd6e3bb05",
+          "manifest_sha256": "d96d8bda17c69e6f722bd9e2078f63e6d6aeb86a35ca9461a889caa0bbffb9f5",
+          "source_hashes_at_execution": {
+            "src/rl_dispatch.py": "4727cd44735ffbdd100bd8ed47fbbfe8c5897a20a69d9b9a22b7e2f454ac23b7",
+            "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+          }
+        }
+      ],
+      "producer_metadata": [
+        {
+          "path": "results/rl/movement_trainseed_confirmation_v1/validation_s2028/manifest.json",
+          "sha256": "9859f97d28e3d9cfbc3681203a7bf2589a5dec6eb76d0b71ecdaa51fa4cab912",
+          "content": {
+            "code_hashes": {
+              "src/rl_dispatch.py": "4727cd44735ffbdd100bd8ed47fbbfe8c5897a20a69d9b9a22b7e2f454ac23b7",
+              "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+            },
+            "split": "validation",
+            "config": {
+              "grid": 8,
+              "step_min": 10,
+              "start": 360,
+              "end": 1440,
+              "speed": 25.0,
+              "radius": 3.0,
+              "patience": 2,
+              "orders": 1500,
+              "gamma": 0.92,
+              "alpha_min": 0.05,
+              "width": 25.230707400441077,
+              "height": 31.080000000000002
+            },
+            "fleet": 60,
+            "seeds": [
+              50000,
+              50001,
+              50002,
+              50003,
+              50004
+            ],
+            "policies": [
+              "km",
+              "qkm",
+              "km_move3",
+              "qkm_move3"
+            ]
+          }
+        }
+      ],
+      "execution_identity": "ORIGINAL_RECORDED_RUN"
+    },
+    {
+      "run_id": "offset_robustness",
+      "path": "results/rl/offset_robustness_v1/validation",
+      "identity": "development",
+      "active": true,
+      "metrics_path": "results/rl/offset_robustness_v1/validation/day_metrics.json",
+      "metrics_sha256": "743c2fde27ba465e2e59cb21b2ef76ae1e9a6ec9a8540f4764366e7d458efd04",
+      "note": "UTC-consistent training subset sensitivity; teacher-local-clock main identity unchanged",
+      "models": [
+        {
+          "path": "results/rl/offset_robustness_v1/q_filtered",
+          "model_sha256": "13eaf79f3b8950b1c2c2a9032858103ded06131dc69caba9fb4c560cacd721fc",
+          "manifest_sha256": "e79c95fb30d5c860d3f3797367a4641245023407d097d5fcb34c616a7a3739a9",
+          "source_hashes_at_execution": {
+            "src/rl_dispatch.py": "4727cd44735ffbdd100bd8ed47fbbfe8c5897a20a69d9b9a22b7e2f454ac23b7",
+            "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+          }
+        }
+      ],
+      "producer_metadata": [
+        {
+          "path": "results/rl/offset_robustness_v1/validation/manifest.json",
+          "sha256": "07840bb7ef7a209748af89aa35691ec68b8f6e91b99425d5f071d123a8eff825",
+          "content": {
+            "code_hashes": {
+              "src/rl_dispatch.py": "4727cd44735ffbdd100bd8ed47fbbfe8c5897a20a69d9b9a22b7e2f454ac23b7",
+              "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+            },
+            "split": "validation",
+            "config": {
+              "grid": 8,
+              "step_min": 10,
+              "start": 360,
+              "end": 1440,
+              "speed": 25.0,
+              "radius": 3.0,
+              "patience": 2,
+              "orders": 1500,
+              "gamma": 0.92,
+              "alpha_min": 0.05,
+              "width": 25.230707400441077,
+              "height": 31.080000000000002
+            },
+            "fleet": 60,
+            "seeds": [
+              50000,
+              50001,
+              50002,
+              50003,
+              50004
+            ],
+            "policies": [
+              "greedy",
+              "km",
+              "qkm"
+            ]
+          }
+        }
+      ],
+      "execution_identity": "ORIGINAL_RECORDED_RUN"
+    },
+    {
+      "run_id": "fusion_dynamic",
+      "path": "results/rl/fusion_validation_v1/dynamic",
+      "identity": "development",
+      "active": true,
+      "metrics_path": "results/rl/fusion_validation_v1/dynamic/day_metrics.json",
+      "metrics_sha256": "6e72f9dd30869b10f4847749e73e71bf4fb6093bb758e47ba72fcdf1e21b5ee4",
+      "note": "Actual full-day NSGA40pop30gen per dispatch; estimated objective never called realized revenue",
+      "models": [
+        {
+          "path": "results/rl/development_v1/q_f60_s2024",
+          "model_sha256": "2b29d6a62f535b150fa8da67cf5379a962b457d5bb6a763b070cae5cb218cba3",
+          "manifest_sha256": "3471949d789607101be3147f6dc41868144b636cc49f102070c8c0a59f22d4b7",
+          "source_hashes_at_execution": {
+            "src/rl_dispatch.py": "268c2e5d09ef7ccb320a9d7186696b812feb3f1541229b3940bfb8b80a0fbf45",
+            "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+          }
+        }
+      ],
+      "producer_metadata": [
+        {
+          "path": "results/rl/fusion_validation_v1/dynamic/manifest.json",
+          "sha256": "48d45f71a415ec33a23f7ba967c98b4ed32d1e69fc8411b5d04202b0453b2ea9",
+          "content": {
+            "code_hashes": {
+              "src/rl_dispatch.py": "4727cd44735ffbdd100bd8ed47fbbfe8c5897a20a69d9b9a22b7e2f454ac23b7",
+              "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+            },
+            "split": "validation",
+            "config": {
+              "grid": 8,
+              "step_min": 10,
+              "start": 360,
+              "end": 1440,
+              "speed": 25.0,
+              "radius": 3.0,
+              "patience": 2,
+              "orders": 1500,
+              "gamma": 0.92,
+              "alpha_min": 0.05,
+              "width": 25.230707400441077,
+              "height": 31.080000000000002
+            },
+            "fleet": 60,
+            "seeds": [
+              50000,
+              50001,
+              50002,
+              50003,
+              50004
+            ],
+            "policies": [
+              "greedy",
+              "km",
+              "qkm",
+              "qnsga_knee",
+              "qnsga_constraint"
+            ]
+          }
+        }
+      ],
+      "execution_identity": "ORIGINAL_RECORDED_RUN"
+    },
+    {
+      "run_id": "final_fleet40",
+      "path": "results/rl/final_v1/fleet40",
+      "identity": "final",
+      "active": true,
+      "metrics_path": "results/rl/final_v1/fleet40/day_metrics.json",
+      "metrics_sha256": "2ae8d5854c72511c11ce7e4169c71afaee637c81b12262dc73c837c4681cde88",
+      "note": "; Samefrozenprimary5replayed, scientificvaluesunchanged; currentelapsedtimesareReplaymeasurements, notanewindependenttest.",
+      "models": [
+        {
+          "path": "results/rl/final_v1/q_f40",
+          "model_sha256": "649849ffc51a279dde1a93f18aa0563542f262ddf996d835c24924ffa4e95864",
+          "manifest_sha256": "28b063f90c90d96e385904f05601db95a33be994bfe2357a09edb7176383373b",
+          "source_hashes_at_execution": {
+            "src/rl_dispatch.py": "4727cd44735ffbdd100bd8ed47fbbfe8c5897a20a69d9b9a22b7e2f454ac23b7",
+            "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+          }
+        }
+      ],
+      "producer_metadata": [
+        {
+          "path": "results/rl/final_v1/fleet40/manifest.json",
+          "sha256": "7a5c0e27940213f8f534fb3013706af8ad4b9c8e81db39c39fa1c3a6112b9a21",
+          "content": {
+            "code_hashes": {
+              "src/rl_dispatch.py": "4727cd44735ffbdd100bd8ed47fbbfe8c5897a20a69d9b9a22b7e2f454ac23b7",
+              "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+            },
+            "split": "heldout_test",
+            "config": {
+              "grid": 8,
+              "step_min": 10,
+              "start": 360,
+              "end": 1440,
+              "speed": 25.0,
+              "radius": 3.0,
+              "patience": 2,
+              "orders": 1500,
+              "gamma": 0.92,
+              "alpha_min": 0.05,
+              "width": 25.230707400441077,
+              "height": 31.080000000000002
+            },
+            "fleet": 40,
+            "seeds": [
+              50000,
+              50001,
+              50002,
+              50003,
+              50004
+            ],
+            "policies": [
+              "greedy",
+              "km",
+              "qkm"
+            ]
+          }
+        }
+      ],
+      "execution_identity": "REPLAY_RECOMPUTE_SAME_FROZEN_PRIMARY5_NOT_NEW_TEST",
+      "replay_receipt": "results/rl/final_v1/REPLAY_RECEIPT.json"
+    },
+    {
+      "run_id": "final_fleet60",
+      "path": "results/rl/final_v1/fleet60",
+      "identity": "final",
+      "active": true,
+      "metrics_path": "results/rl/final_v1/fleet60/day_metrics.json",
+      "metrics_sha256": "7c52deed696b884a64cc44c615319927991ef6cd66ed59a0e1af5ba8e8d6b970",
+      "note": "; Samefrozenprimary5replayed, scientificvaluesunchanged; currentelapsedtimesareReplaymeasurements, notanewindependenttest.",
+      "models": [
+        {
+          "path": "results/rl/final_v1/q_f60",
+          "model_sha256": "6920e9b9a861bbe09f33fd4efbd8d0b92893ddf8667f92de61f7222f19140451",
+          "manifest_sha256": "b588e87cbfb71506642b88f96eb0e619e168544cf1bb56adcdb6f2c6259c8936",
+          "source_hashes_at_execution": {
+            "src/rl_dispatch.py": "4727cd44735ffbdd100bd8ed47fbbfe8c5897a20a69d9b9a22b7e2f454ac23b7",
+            "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+          }
+        }
+      ],
+      "producer_metadata": [
+        {
+          "path": "results/rl/final_v1/fleet60/manifest.json",
+          "sha256": "bc390a7f89f4b2b8470b708fa8d86c86ffd10148c84d4772068ca05da570a0f6",
+          "content": {
+            "code_hashes": {
+              "src/rl_dispatch.py": "4727cd44735ffbdd100bd8ed47fbbfe8c5897a20a69d9b9a22b7e2f454ac23b7",
+              "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+            },
+            "split": "heldout_test",
+            "config": {
+              "grid": 8,
+              "step_min": 10,
+              "start": 360,
+              "end": 1440,
+              "speed": 25.0,
+              "radius": 3.0,
+              "patience": 2,
+              "orders": 1500,
+              "gamma": 0.92,
+              "alpha_min": 0.05,
+              "width": 25.230707400441077,
+              "height": 31.080000000000002
+            },
+            "fleet": 60,
+            "seeds": [
+              50000,
+              50001,
+              50002,
+              50003,
+              50004
+            ],
+            "policies": [
+              "greedy",
+              "km",
+              "qkm"
+            ]
+          }
+        }
+      ],
+      "execution_identity": "REPLAY_RECOMPUTE_SAME_FROZEN_PRIMARY5_NOT_NEW_TEST",
+      "replay_receipt": "results/rl/final_v1/REPLAY_RECEIPT.json"
+    },
+    {
+      "run_id": "final_fleet100",
+      "path": "results/rl/final_v1/fleet100",
+      "identity": "final",
+      "active": true,
+      "metrics_path": "results/rl/final_v1/fleet100/day_metrics.json",
+      "metrics_sha256": "7c9f68bd77799c6dcd9c946a062c776018f8633c3e66403c1df3b53cdfcda424",
+      "note": "; Samefrozenprimary5replayed, scientificvaluesunchanged; currentelapsedtimesareReplaymeasurements, notanewindependenttest.",
+      "models": [
+        {
+          "path": "results/rl/final_v1/q_f100",
+          "model_sha256": "a398ec554ab049374a56e4532335b9cc7d430a99c82ebf0fb0cd5c7d04bc75d0",
+          "manifest_sha256": "917deb4473990f32585499561c8262e002a41f21ce34ffb5f32741c09863a88a",
+          "source_hashes_at_execution": {
+            "src/rl_dispatch.py": "4727cd44735ffbdd100bd8ed47fbbfe8c5897a20a69d9b9a22b7e2f454ac23b7",
+            "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+          }
+        }
+      ],
+      "producer_metadata": [
+        {
+          "path": "results/rl/final_v1/fleet100/manifest.json",
+          "sha256": "e38f23739402f430b8be889fb75a026eb87ad28c916dc27d476e99ab4143c4e0",
+          "content": {
+            "code_hashes": {
+              "src/rl_dispatch.py": "4727cd44735ffbdd100bd8ed47fbbfe8c5897a20a69d9b9a22b7e2f454ac23b7",
+              "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+            },
+            "split": "heldout_test",
+            "config": {
+              "grid": 8,
+              "step_min": 10,
+              "start": 360,
+              "end": 1440,
+              "speed": 25.0,
+              "radius": 3.0,
+              "patience": 2,
+              "orders": 1500,
+              "gamma": 0.92,
+              "alpha_min": 0.05,
+              "width": 25.230707400441077,
+              "height": 31.080000000000002
+            },
+            "fleet": 100,
+            "seeds": [
+              50000,
+              50001,
+              50002,
+              50003,
+              50004
+            ],
+            "policies": [
+              "greedy",
+              "km",
+              "qkm"
+            ]
+          }
+        }
+      ],
+      "execution_identity": "REPLAY_RECOMPUTE_SAME_FROZEN_PRIMARY5_NOT_NEW_TEST",
+      "replay_receipt": "results/rl/final_v1/REPLAY_RECEIPT.json"
+    },
+    {
+      "run_id": "final_enhancements",
+      "path": "results/rl/final_v1/enhancements",
+      "identity": "final",
+      "active": true,
+      "metrics_path": "results/rl/final_v1/enhancements/day_metrics.json",
+      "metrics_sha256": "5e85bbb98ac4fa8c1ced0552905d956fbd21339af3a1191b869bde7e64ddac2e",
+      "note": "; Samefrozenprimary5replayed, scientificvaluesunchanged; currentelapsedtimesareReplaymeasurements, notanewindependenttest.",
+      "models": [
+        {
+          "path": "results/rl/final_v1/q_f60",
+          "model_sha256": "6920e9b9a861bbe09f33fd4efbd8d0b92893ddf8667f92de61f7222f19140451",
+          "manifest_sha256": "b588e87cbfb71506642b88f96eb0e619e168544cf1bb56adcdb6f2c6259c8936",
+          "source_hashes_at_execution": {
+            "src/rl_dispatch.py": "4727cd44735ffbdd100bd8ed47fbbfe8c5897a20a69d9b9a22b7e2f454ac23b7",
+            "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+          }
+        },
+        {
+          "path": "results/rl/final_v1/q_beta1",
+          "model_sha256": "2245a490964fb027808e3d2efdd18fd636c03f4d2351b51f328a599a319bbe5d",
+          "manifest_sha256": "403f61cdb0093f9c9ef000d5a6aecf6e85dc2ab0750177870d0639b9ef40c2cb",
+          "source_hashes_at_execution": {
+            "src/rl_dispatch.py": "4727cd44735ffbdd100bd8ed47fbbfe8c5897a20a69d9b9a22b7e2f454ac23b7",
+            "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+          }
+        },
+        {
+          "path": "results/rl/final_v1/double_beta1",
+          "model_sha256": "a561aba26cfd887c988bb59a5237f4003b2a56d02b20cfb9954af648d46a0b8b",
+          "manifest_sha256": "320e358303179f63f7f8eb08b6cc4b646101d74c693c317102de79bd38f6cbaf",
+          "source_hashes_at_execution": {
+            "src/rl_dispatch.py": "4727cd44735ffbdd100bd8ed47fbbfe8c5897a20a69d9b9a22b7e2f454ac23b7",
+            "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+          }
+        }
+      ],
+      "producer_metadata": [
+        {
+          "path": "results/rl/final_v1/enhancements/manifest.json",
+          "sha256": "aa21f5b4eed05f2b4d2b124bce862095635c6e77aee9e456d7be0c10e97e1908",
+          "content": {
+            "code_hashes": {
+              "src/rl_dispatch.py": "4727cd44735ffbdd100bd8ed47fbbfe8c5897a20a69d9b9a22b7e2f454ac23b7",
+              "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+            },
+            "split": "heldout_test",
+            "config": {
+              "grid": 8,
+              "step_min": 10,
+              "start": 360,
+              "end": 1440,
+              "speed": 25.0,
+              "radius": 3.0,
+              "patience": 2,
+              "orders": 1500,
+              "gamma": 0.92,
+              "alpha_min": 0.05,
+              "width": 25.230707400441077,
+              "height": 31.080000000000002
+            },
+            "fleet": 60,
+            "seeds": [
+              50000,
+              50001,
+              50002,
+              50003,
+              50004
+            ],
+            "policies": [
+              "greedy",
+              "km",
+              "qkm",
+              "km_move3",
+              "qkm_move3",
+              "qkm_move5",
+              "q_beta1",
+              "double_beta1",
+              "qnsga_knee",
+              "qnsga_constraint"
+            ]
+          }
+        }
+      ],
+      "execution_identity": "REPLAY_RECOMPUTE_SAME_FROZEN_PRIMARY5_NOT_NEW_TEST",
+      "replay_receipt": "results/rl/final_v1/REPLAY_RECEIPT.json"
+    },
+    {
+      "run_id": "final_secondary_montecarlo",
+      "path": "results/rl/final_montecarlo_v1",
+      "identity": "final",
+      "active": true,
+      "metrics_path": "results/rl/final_montecarlo_v1/day_metrics.json",
+      "metrics_sha256": "3177a3045af4a7593348cd5ba1c47e2c8c6764061c203b8aac266a52e3d60785",
+      "note": "20new simulated resampling seeds60000–60019; fixed model/parameters, separate from primary5; not new real dates or trained models",
+      "models": [
+        {
+          "path": "results/rl/final_v1/q_f60",
+          "model_sha256": "6920e9b9a861bbe09f33fd4efbd8d0b92893ddf8667f92de61f7222f19140451",
+          "manifest_sha256": "b588e87cbfb71506642b88f96eb0e619e168544cf1bb56adcdb6f2c6259c8936",
+          "source_hashes_at_execution": {
+            "src/rl_dispatch.py": "4727cd44735ffbdd100bd8ed47fbbfe8c5897a20a69d9b9a22b7e2f454ac23b7",
+            "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+          }
+        }
+      ],
+      "producer_metadata": [
+        {
+          "path": "results/rl/final_montecarlo_v1/manifest.json",
+          "sha256": "920bc489d4fd7b9556f8f1605d438f90d90d9362afe6715e5d637b2208e14165",
+          "content": {
+            "code_hashes": {
+              "src/rl_dispatch.py": "4727cd44735ffbdd100bd8ed47fbbfe8c5897a20a69d9b9a22b7e2f454ac23b7",
+              "scripts/run_rl.py": "0d6b3732ea827369acd045c9e52c2a80667e35250fc38ac8c22fe8a472aff644"
+            },
+            "split": "heldout_secondary_montecarlo_confirmation",
+            "config": {
+              "grid": 8,
+              "step_min": 10,
+              "start": 360,
+              "end": 1440,
+              "speed": 25.0,
+              "radius": 3.0,
+              "patience": 2,
+              "orders": 1500,
+              "gamma": 0.92,
+              "alpha_min": 0.05,
+              "width": 25.230707400441077,
+              "height": 31.080000000000002
+            },
+            "fleet": 60,
+            "seeds": [
+              60000,
+              60001,
+              60002,
+              60003,
+              60004,
+              60005,
+              60006,
+              60007,
+              60008,
+              60009,
+              60010,
+              60011,
+              60012,
+              60013,
+              60014,
+              60015,
+              60016,
+              60017,
+              60018,
+              60019
+            ],
+            "policies": [
+              "km",
+              "qkm",
+              "km_move3",
+              "qkm_move5"
+            ]
+          }
+        },
+        {
+          "path": "results/rl/final_montecarlo_v1/contract.json",
+          "sha256": "66d25035a364c9615551ae5622330e90af361a9f13a3f23a0377c954fcd561ac",
+          "content": {
+            "trigger": "Original frozen5day confirmation gives selectedKMmove3 gross difference640.81 with descriptive pairedt95[-64.07,1345.68]; clarify simulation MonteCarlo variability without altering that experiment or method",
+            "fixed_seeds": [
+              60000,
+              60001,
+              60002,
+              60003,
+              60004,
+              60005,
+              60006,
+              60007,
+              60008,
+              60009,
+              60010,
+              60011,
+              60012,
+              60013,
+              60014,
+              60015,
+              60016,
+              60017,
+              60018,
+              60019
+            ],
+            "models": "same frozen full70 q_f60, no retraining or checkpoint choice",
+            "model_sha256": "6920e9b9a861bbe09f33fd4efbd8d0b92893ddf8667f92de61f7222f19140451",
+            "policies": [
+              "km",
+              "qkm",
+              "km_move3",
+              "qkm_move5"
+            ],
+            "scope": "20new independently seeded proxy simulation resamplings of same heldout datepool, not20new real dates or population evidence",
+            "stop": "one20simulation batch only; report every seed; no post-test tuning or winner switch",
+            "source_sha256": "b2d7c820909a802dcf835d03b53b9cb66a5434330ea585fffbbbdea234962cea",
+            "selection_contract_sha256": "95945b3b1c096bb6223d0599757d88050a8ee713334f9569718a51583eb61e9b"
+          }
+        }
+      ],
+      "execution_identity": "ORIGINAL_RECORDED_RUN"
+    }
+  ],
+  "independent_verifications": [
+    {
+      "path": "evidence/independent_ea_on_rl/result.json",
+      "sha256": "7ac164a456fd102ea9c6ab29918ab70211dd69ee98bef0a9acacbe12cb837703",
+      "status": "PASS_IN_STATED_SCOPE",
+      "reviewer": "/root/evolution",
+      "scope": "Only actual listed source, traces, policies and statistics; see full independent report"
+    },
+    {
+      "path": "evidence/independent_ea_on_rl/policy_result.json",
+      "sha256": "75a61eb7f9e973d5be42042cee351e3361eee4c656fe14192514f8ac483e0f7a",
+      "status": "PASS_IN_STATED_SCOPE",
+      "reviewer": "/root/evolution",
+      "scope": "Only actual listed source, traces, policies and statistics; see full independent report"
+    },
+    {
+      "path": "evidence/independent_ea_on_rl/replay_review/result.json",
+      "sha256": "3b70f9bf9aaffdfb0e58341025eaea65df781142b71596a179ecdc67749d0ced",
+      "status": "PASS_SCIENTIFIC_EQUIVALENCE_WITH_ACTUAL_REPLAY_TIMING_AND_NEW_HASHES",
+      "reviewer": "/root/evolution",
+      "scope": "Append-only replay/CLI/public-binding verification. Originalreview remains historical inits actualhashscope."
+    },
+    {
+      "path": "evidence/independent_ea_on_rl/replay_review/recovered_front_result.json",
+      "sha256": "08f0d43cf1735e26f63d4af9f9b74cbb356da8af631d2b323a3c01bd3df90521",
+      "status": "PASS_ONLY_RUNTIME_FIELDS_CHANGED",
+      "reviewer": "/root/evolution",
+      "scope": "Append-only replay/CLI/public-binding verification. Originalreview remains historical inits actualhashscope."
+    },
+    {
+      "path": "evidence/independent_ea_on_rl/replay_review/cli_guard_independent.json",
+      "sha256": "d9cf57765fc8f844c7ecd8d7761a7caa2750310ceb1e63f14b9b3749d8635fdd",
+      "status": null,
+      "reviewer": "/root/evolution",
+      "scope": "Append-only replay/CLI/public-binding verification. Originalreview remains historical inits actualhashscope."
+    },
+    {
+      "path": "evidence/independent_ea_on_rl/replay_review/public_binding_result.json",
+      "sha256": "d6c689b2ad73865250756eefd547115ebcc4d6245fd42f7373d9f2369b9f3ccd",
+      "status": "PASS_EXACT_EXPECTED_CHANGE_SET",
+      "reviewer": "/root/evolution",
+      "scope": "Append-only replay/CLI/public-binding verification. Originalreview remains historical inits actualhashscope."
+    }
+  ],
+  "replay_receipt": {
+    "path": "results/rl/final_v1/REPLAY_RECEIPT.json",
+    "sha256": "61baf0bcbfa66bee039eb960a8f96631dc9ceb4ed162e74fad39e787f3174ef2"
+  },
+  "pending": "Final evaluation index appears only after actual metrics exist; external verifier records separately"
+}

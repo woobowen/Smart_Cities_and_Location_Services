@@ -1,0 +1,16 @@
+{
+  "recorded_utc": "2026-11-05T11:53:30.961983+00:00",
+  "executed_original_source_sha256": "32f260d7244a18d5969cd566a2a6b84a9f9515df59f9223e7b54bb292bc47d67",
+  "guarded_source_sha256": "9091f3633d1efcb387d01331c70f3e15a676af2f989c741416c4e8041e556d57",
+  "guard_source_snapshot": "task2/evidence/rl/replay_recovery/cli_help_replay_01/surviving_prior_receipts/task2/scripts/run_rl_final.py",
+  "scope": "argparse/help/fresh-outputprotectiononly; frozenexperimentmathematics/model/selectionunchanged",
+  "tests": {
+    "command": ".venv/bin/python -m pytest task2/tests/test_rl_final_cli.py -q",
+    "actual_result": "5passed in0.17s",
+    "log": "task2/evidence/rl/replay_recovery/cli_help_replay_01/cli_tests.log",
+    "workspace_help_returncode": 0,
+    "all_143_replay_output_files_unchanged_by_guard_and_tests": 143
+  },
+  "fresh_output_positive_case": "parseaccepts explicitnewdirectorywithoutcreatingit; no newtrainingexecutedforguardtest",
+  "status": "CLI_GUARD_TESTED"
+}

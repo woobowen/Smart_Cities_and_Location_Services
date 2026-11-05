@@ -1,0 +1,92 @@
+def fast_non_dominated_sort(F):
+    """返回 rank 数组（0 = 第一层前沿）"""
+    N = len(F)
+    le = (F[:, None, :] <= F[None, :, :]).all(-1)
+    lt = (F[:, None, :] < F[None, :, :]).any(-1)
+    dom = le & lt                          # dom[a, b] = a 支配 b
+    n_dominated_by = dom.sum(0)            # 每个个体被多少个体支配
+    rank = np.full(N, -1)
+    current = np.where(n_dominated_by == 0)[0]
+    r = 0
+    while len(current):
+        rank[current] = r
+        n_dominated_by = n_dominated_by - dom[current].sum(0)
+        n_dominated_by[rank >= 0] = -1     # 已分层的个体不再参与
+        current = np.where(n_dominated_by == 0)[0]
+        r += 1
+    return rank
+
+
+def crowding_distance(F):
+    N, M = F.shape
+    cd = np.zeros(N)
+    if N <= 2:
+        return np.full(N, np.inf)
+    for k in range(M):
+        idx = np.argsort(F[:, k])
+        span = F[idx[-1], k] - F[idx[0], k]
+        cd[idx[0]] = cd[idx[-1]] = np.inf
+        if span > 0:
+            cd[idx[1:-1]] += (F[idx[2:], k] - F[idx[:-2], k]) / span
+    return cd
+
+
+def tournament(rank, cd, n, rng):
+    a, b = rng.integers(0, len(rank), (2, n))
+    better_a = (rank[a] < rank[b]) | ((rank[a] == rank[b]) & (cd[a] > cd[b]))
+    return np.where(better_a, a, b)
+
+
+def variation(parents, K, rng, pc=0.9, pm=None):
+    """均匀交叉 + 随机重置变异"""
+    n, L = parents.shape
+    pm = 1.0 / L if pm is None else pm
+    p1, p2 = parents[: n // 2], parents[n // 2: n // 2 * 2]
+    mask = (rng.random(p1.shape) < 0.5) & (rng.random((len(p1), 1)) < pc)
+    c1, c2 = np.where(mask, p2, p1), np.where(mask, p1, p2)
+    kids = np.vstack([c1, c2])
+    mut = rng.random(kids.shape) < pm
+    kids[mut] = rng.integers(0, K + 1, mut.sum())
+    return kids
+
+
+def nsga2_survival(F, N):
+    rank = fast_non_dominated_sort(F)
+    chosen = []
+    for r in range(rank.max() + 1):
+        front = np.where(rank == r)[0]
+        if len(chosen) + len(front) <= N:
+            chosen.extend(front)
+        else:
+            cd = crowding_distance(F[front])
+            chosen.extend(front[np.argsort(-cd)[: N - len(chosen)]])
+            break
+    return np.array(chosen)
+
+
+def run_nsga(problem, algo="nsga2", pop_size=100, n_gen=300, seed=0, ref_dirs=None, log_every=10):
+    """通用主循环：algo ∈ {'nsga2', 'nsga3'}；返回最终种群、目标值和每代前沿历史"""
+    rng = np.random.default_rng(seed)
+    pop = problem.random_population(pop_size, rng)
+    F = problem.evaluate(pop)
+    history = []
+    for gen in range(n_gen):
+        if algo == "nsga2":
+            rank = fast_non_dominated_sort(F)
+            cd = np.zeros(len(F))
+            for r in np.unique(rank):
+                cd[rank == r] = crowding_distance(F[rank == r])
+            parents = pop[tournament(rank, cd, pop_size, rng)]
+        else:                                                 # NSGA-III 原文：随机配对
+            parents = pop[rng.integers(0, pop_size, pop_size)]
+        kids = variation(parents, problem.K, rng)
+        pop_all, F_all = np.vstack([pop, kids]), np.vstack([F, problem.evaluate(kids)])
+        if algo == "nsga2":
+            keep = nsga2_survival(F_all, pop_size)
+        else:
+            keep = nsga3_survival(F_all, pop_size, ref_dirs, rng)
+        pop, F = pop_all[keep], F_all[keep]
+        if gen % log_every == 0 or gen == n_gen - 1:
+            history.append((gen, F[fast_non_dominated_sort(F) == 0].copy()))
+    front = fast_non_dominated_sort(F) == 0
+    return pop[front], F[front], history
