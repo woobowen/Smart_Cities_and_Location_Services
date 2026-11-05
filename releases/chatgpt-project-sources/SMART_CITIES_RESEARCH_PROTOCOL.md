@@ -1,9 +1,9 @@
 # Smart Cities Research Protocol
 
-Version: **v1.2**\
+Version: **v1.3**\
 Status: **ACTIVE / LONG-TERM RULE**\
 Purpose: **Smart Cities Research Governance / Source / Uncertainty / Spatiotemporal Correctness / Experiment Evidence / AI Critique**  
-Revision: **2026-09-29 · Project-wide workflow scope / conditional-analysis boundary**  
+Revision: **2026-11-05 · Research contract / adaptive experiment plan / bounded exploration governance**  
 Canonical repository path: `docs/research/SMART_CITIES_RESEARCH_PROTOCOL.md`
 
 优先级：**老师最新正式要求 / 用户最新明确要求 > 当前批准 Prompt > Project Settings > SMART_CITIES_RESEARCH_PROTOCOL > 历史旧规则。**
@@ -18,26 +18,32 @@ Canonical repository path: `docs/research/SMART_CITIES_RESEARCH_PROTOCOL.md`
 |---|---|
 | T1 TEACHER_REQUIRED | 老师明确必做。 |
 | T2 PROJECT_REQUIRED | 老师标为选做、拓展、思考讨论，本项目也必须完成。 |
-| T3 CANDIDATE_ENHANCEMENT | GPT 额外提出；说明目的、收益、成本、风险，只有用户明确批准后才能执行。 |
+| T3 CANDIDATE_ENHANCEMENT | GPT/Codex 提出的合同之外额外增强；说明目的、依据、收益、成本、风险，只有用户明确批准后才能执行。 |
 | T4 OUT_OF_SCOPE | 当前不执行。 |
 
-老师 optional 全部做，不等于 GPT/Codex 可以自行增加扩展。文件存在不等于当前任务范围；starter 接口、压缩包模块、历史结果不构成扩展授权。
+老师 optional 全部做，不等于 GPT/Codex 可以自行增加扩展。**T1/T2表示教师要求的来源与项目内必做性质；P1–P4表示本项目独立的长期正式交付要求，不混写为教师T2；T3表示教师和既定P之外、尚未包含在当前批准探索包络中的新增增强。** 既有任务的分类账保留历史原貌，新任务按本定义建账。文件存在不等于当前任务范围；starter 接口、压缩包模块、历史结果不构成扩展授权。
+
+用户可以一次性批准明确的**探索包络（Exploration Envelope）**。在已批准的方法族、数据、指标、参数域、成本与裁决规则内开展新的局部诊断、受控实验或有依据的组合，属于授权内执行，不逐次重新归类为待批准的T3；越出边界的全新算法方向、目标或重大研究假设仍按T3审议。
 
 ## B. Source Priority
 
-本轮老师正式任务/作业细则 > 老师最新补充和课堂说明 > starter notebook / code / data / template > 助教正式材料 > 理论/实验 PPT > 老师推荐资料 > 政府/标准/官方数据与文档 > 原始论文 > 权威研究机构 > 其他可信资料。
+先确认**发布者、正式性、发布时间及具体适用条款**：老师最新正式修订/最新明确正式补充优先于被其修改的旧细则；在没有更晚有效修订时，本轮正式任务书/作业细则优先于一般课堂说明。其后依次参考同轮的starter notebook/code/data/template、助教正式材料、理论/实验PPT、老师推荐资料、政府/标准/官方数据与文档、原始论文、权威研究机构及其他可信资料。课堂非正式建议不自动覆盖明确正式任务；当来源、时间或效力不明且会改变研究决定时，明确冲突并按§E处理。
 
 材料冲突必须显式指出，并说明对任务、方法、数据或结论的影响；不能用外部资料静默替换老师明确要求。
 
 ## C. Standard Research Workflow
 
-老师材料 → 完整读题与范围确认 → T1/T2 / Deliverables / grading / submission → 必要网络研究 → Source Audit → starter/data 检查 → requirement checklist → spatiotemporal correctness → GPT 候选 → User review / challenge / modify / reject / select → CONFIRMED / CANDIDATE / UNRESOLVED → 必要公平实验 → 方案冻结 → Codex implementation → real execution → results → GPT audit → human interpretation → formal conclusion。
+正式研究的基本路径：**老师材料与starter/数据审查 → T1/T2/P及交付、评分、提交边界 → 必要Source Audit与时空正确性检查 → 用户确认研究合同与探索包络 → 建立可信Baseline和独立评价 → 受控基础实验 → 实测诊断与滚动实验计划 → 必要的单项改进、有限组合、消融、回退及独立确认 → 真实工程与图表、双报告 → 内外审核和有依据的结论**。
+
+**冻结研究合同，不冻结所有未来试验。** 在正式执行前，用户确认必须保持的任务目标与方法族、数据及其语义、主要指标和参考、数据分区、约束/保护、允许探索的候选类型、预算上限、裁决/回退/停止规则和最终独立确认要求。后续实验计划可以根据有效结果滚动完善；进入独立最终确认前，应冻结参加确认的方案和选择规则，确认集不得被反复用于继续调参。
+
+默认采用**NORMAL研究模式**：GPT和用户讨论重要候选及下一阶段，Codex执行批准范围并返回证据。只有用户明确授权**LONG-RUN长任务模式**时，才优先一个完整父Goal，允许Codex与真实Agent在已批准探索包络内自主提出、实施、筛选后续实验。两种模式共享相同的真实性、公平比较和审查标准；长任务不是后台异步承诺，也不能成为未批准扩展的理由。
 
 实质工作流、Multi-Agent及持续闭环是项目通用工作方式。正式任务按问题和规模设置真实的研究、执行、独立核验、反馈、优化、修复与恢复职责，并保留与实际职责相匹配的证据；不能退化为模型只提建议、普通函数改名或事后补画架构图。角色数量、工具和信息合同由当轮任务设计，不永久固定实验一的A/B/C实现。
 
 四模式、记忆、特定消融和调用预算不自动成为未来每项任务的必做实验，其采用及评价由老师材料和当轮批准方案决定。经实测选定的最终记录级方法可以是确定性程序；研究/执行层的实质多角色工作流不要求每条数据都调用LLM。
 
-GPT 提供研究候选与审核，用户审阅、质疑、修改、否决或选择；Codex执行批准方案或用户明确批准的实验裁决规则。用户确认候选范围、指标、保护、选择/回退与停止规则后，普通授权内比较和裁决自动进行，不为每个参数重复确认；结果与正式解释仍需真实证据及范围明确的最终审核。
+GPT 提供研究候选与审核，用户审阅、质疑、修改、否决或选择；Codex执行批准方案及用户明确授权的探索规则。合同内的新单因素试验、异常诊断、有限参数研究及有父项证据的组合可以按真实结果自主推进，**自主设计下一轮实验不等于自主改写研究合同**。普通授权内比较、筛选与回退不为每个参数重复确认；重要结论仍需真实证据及范围明确的最终审核。
 
 研究成果进入文档时，在工具与可信输入齐备且任务已授权的情况下，GPT可优先直接制作正文、原生图表与LaTeX；Codex负责接管集成及相应复现。制作分工不改变研究定义、用户决策权或独立审核的实际归属。Git与工程执行规则由AGENTS管理。
 
@@ -75,6 +81,14 @@ UNRESOLVED 实验原则保持 same data、same split、same preprocessing、same
 禁止偏向性调参、看到结果后偷偷改变条件、选择性报告有利结果。
 
 “相同条件”指除研究干预外的可比条件，不要求顺序实验保持相同顺序，也不假称一次提议与多轮搜索计算量完全相同；不同参数域、输入可见性、反馈和实际消耗须事先说明。涉及候选组合时先保留单项及父项依据，按批准范围检查组合是否有额外价值，不以模块更多或论文更多判优。没有收益、权衡和回退均可构成有效实验结论，不为得到正结果事后放宽标准。
+
+### 结果驱动的实验晋级与停止
+
+先建立可靠基线与已知答案的正确性检查，再开展多个**有区分力的单因素或受控实验**；诊断结果来自何种输入、场景、尾部或反例。只有当父方案的独立作用和机制依据足以提出明确假设时，才对关键交互或组合做有限验证；教师明确要求的组合也必须保留父项对照。组合需与原始基线、相关单项和必要移除方案比较，不能只与最弱基线比较。
+
+按实际资源制定**正确性小试 → 初步开发 → 有依据扩量 → 独立最终确认**的分级预算；具体数量由本轮批准合同给出。每一轮有意义的新实验至少能追溯到：触发证据、待检验假设、变化因素和固定因素、数据用途、指标与参考、成本、结果、下一步/停止决定。可使用简洁的表或JSONL，不为普通操作制造审批文件。
+
+合法候选无收益、退化、出现权衡、证据不足、可解释问题已回答或预算用尽时，分别保留事实并合理回退/停止；**不以分数必须持续上涨定义优化**，不以探索停止省略教师T1/T2和批准的P要求。评价漏洞或工程错误必须修复并重建受影响结果；两类循环不能混为一谈。
 
 ## G. Spatiotemporal Correctness
 
@@ -115,7 +129,9 @@ source_crs 仍为 UNVERIFIED；数学椭球/投影假设不是文件 datum 证�
 
 结论强度必须与证据一致。报告依照批准方法、真实结果与有证据的解释整理；自动裁决只在用户预先批准规则内执行，最终解释按实际审核与用户确认范围记录，不能在看到结果后无依据扩张结论。
 
-区分任务覆盖、实现正确、评价可信、效果获支持和正式交付。候选之外的可信原始参考、明确输入范围、分母、单位、不可计算状态与实际输出是评价依据；测试数、文件数、可执行性和局部算法保证不能替代整链质量。具体指标及允许退化由批准任务决定，不用文稿润色改变数学标准。
+区分**任务覆盖、实现正确、评价可信、效果获支持、正式文稿与交付**。候选之外的可信原始参考、明确输入范围、分母、单位、不可计算状态与实际输出是评价依据；测试数、文件数、Agent数、可执行性和局部算法保证不能替代整链质量。具体指标及允许退化由批准任务决定，不用文稿润色改变数学标准。
+
+**研究效果循环**以真实结果触发诊断、候选、验证、采用/回退或停止；**工程修复循环**以可复现错误触发修复、回归、受影响结果重建和父任务恢复。多轮失败或合法负结果可以支持保留简单方案。具体执行、日志与发布由AGENTS负责；每项正式任务结束后可以记录实际有效/低效的工作流规则作为候选改进，但不能由Codex自动修改项目长期协议。
 
 正式报告在相应方法、参数、对照和取舍处解释核验与优化依据，让文字和图表呈现证据，而不是堆内部状态、长哈希和要求总表。完整追溯保留工程；影响结论的假设、时空不确定性、样本边界和负结果仍须在正文准确说明。纯表达/排版更新可以引用已验证且未受影响的真实运行，保持原实验身份，不必为每次改稿重新运行模型，也不得冒称新LIVE。
 
@@ -133,7 +149,7 @@ AI 是研究助手，不是事实来源或最终裁决者。检查 hidden assump
 
 - source conflict changes method；CRS/semantic ambiguity；
 - metric has materially different definitions；parameter requires research-level choice；
-- results challenge core assumption；starter suspected wrong and fixing changes method；
+- results reveal that an **approved core premise must change to proceed**；starter suspected wrong and fixing changes method；
 - new issue expands scope；missing evidence prevents conclusion。
 
 工程 stop、日志保存、权限与发布处理由 AGENTS 负责；不得用未经验证的假设绕过研究决策。

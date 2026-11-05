@@ -1,0 +1,567 @@
+{
+  "status": "LOCAL_SYNC_PASS",
+  "authority": "Explicit user approval dated2026-11-05; exact five-file controlled import",
+  "input_manifest": "input_manifest.json",
+  "ui_status": "USER_REPORTED_UPDATED",
+  "independent_ui_byte_verification": false,
+  "ui_action_required": false,
+  "ui_note": "User reports Settings and five governance sources already updated. No UI access performed; no repeated whole-collection upload requested. Project Settings remain UI-only.",
+  "normal_sync_direction": "Active Source → Manifest → Release Bundle",
+  "recorded_utc": "2026-11-05T17:09:49.373913+00:00",
+  "base_commit": "3ff6353915fcede24639f05e0fb967ac380e8ff3",
+  "input_manifest_sha256": "985df01bb294bc008ef59bb729bc71a2f1b2375802a7f6aef60409b0899f3903",
+  "source_records": 18,
+  "upload_members": 15,
+  "five_source_checks": [
+    {
+      "path": "docs/research/SMART_CITIES_RESEARCH_PROTOCOL.md",
+      "canonical_name": "SMART_CITIES_RESEARCH_PROTOCOL.md",
+      "version": "v1.3",
+      "sha256": "ec43f4ceab061ff6d4f1cccdec401f2f7a514aa5a5ba5963a1bcc7254c1d1b98",
+      "bytes": 17183,
+      "active_release_snapshot_exact": true
+    },
+    {
+      "path": "docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md",
+      "canonical_name": "WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md",
+      "version": "v2.8",
+      "sha256": "9f6234f44f6d05661c80e4b20955c4bc7600394276491bf60796e93eaccbecaa",
+      "bytes": 52859,
+      "active_release_snapshot_exact": true
+    },
+    {
+      "path": "docs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md",
+      "canonical_name": "SMART_CITIES_REPORT_WRITING_GUIDE.md",
+      "version": "v1.3",
+      "sha256": "9e56c40225ae4fe2dcd92de77ff7f93ef4670ada3d19b0139f03a2bf5193f165",
+      "bytes": 30746,
+      "active_release_snapshot_exact": true
+    },
+    {
+      "path": "docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md",
+      "canonical_name": "SMART_CITIES_VISUAL_SYSTEM.md",
+      "version": "v2.7",
+      "sha256": "dc1a9943b7599867d77e6d2bc8267a3e41fe6149c14528cf3b52e58e148b2ba9",
+      "bytes": 51358,
+      "active_release_snapshot_exact": true
+    },
+    {
+      "path": "AGENTS.md",
+      "canonical_name": "AGENTS.md",
+      "version": "2026-11-05",
+      "sha256": "6bc433f978a83406fb42a47fe400bd786dc2763e88c6ea97885539b9b9c4ed45",
+      "bytes": 45131,
+      "active_release_snapshot_exact": true
+    }
+  ],
+  "unchanged_other_source_entries": [
+    "Process_Report_P2_Locked_v1.pdf",
+    "Experiment_Report_P2_Exact.pdf",
+    "WF_WorkflowConstruction_PreTask1_REVISED.pdf",
+    "WF_WorkflowConstruction_PreTask1_31p_LaTeX_Source.zip",
+    "实验课1.pptx",
+    "作业.zip",
+    "任务3_LLM辅助评估清洗.ipynb",
+    "作业1轨迹数据预处理.ipynb",
+    "publication-plots.zip",
+    "Experiment_Report_吴博闻_10245102410.pdf",
+    "Experiment_Report_完整重构_源文件.zip",
+    "Process_Report_Revised.pdf",
+    "Process_Report_Revised_LaTeX_Source.zip"
+  ],
+  "non_governance_upload_files_unchanged": 10,
+  "bundle_exact_set": true,
+  "unsafe_bundle_members": [],
+  "tool_source_unchanged": true,
+  "sync_commands": [
+    {
+      "command": [
+        ".venv/bin/python",
+        "-B",
+        "evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/sync_sources.py",
+        "--plan"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"add\": [],\n  \"change\": [],\n  \"missing\": [],\n  \"unexpected\": [],\n  \"unsafe\": [],\n  \"errors\": [],\n  \"metadata_change\": [\n    \"evidence/infrastructure/chatgpt-project-source-sync/SOURCE_MANIFEST.md\",\n    \"evidence/infrastructure/chatgpt-project-source-sync/UPLOAD_INSTRUCTIONS.md\"\n  ],\n  \"file_count\": 15,\n  \"safe_to_sync\": true\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "-B",
+        "evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/sync_sources.py"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"status\": \"UPLOAD BUNDLE READY\",\n  \"file_count\": 15,\n  \"updated\": [\n    \"evidence/infrastructure/chatgpt-project-source-sync/SOURCE_MANIFEST.md\",\n    \"evidence/infrastructure/chatgpt-project-source-sync/UPLOAD_INSTRUCTIONS.md\"\n  ],\n  \"removed\": []\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "-B",
+        "evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/sync_sources.py",
+        "--check"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"status\": \"UPLOAD BUNDLE READY\",\n  \"file_count\": 15,\n  \"readonly\": true\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "-B",
+        "evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/sync_sources.py"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"status\": \"UPLOAD BUNDLE READY\",\n  \"file_count\": 15,\n  \"updated\": [],\n  \"removed\": []\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "-B",
+        "evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/sync_sources.py",
+        "--check"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"status\": \"UPLOAD BUNDLE READY\",\n  \"file_count\": 15,\n  \"readonly\": true\n}\n",
+      "stderr": ""
+    }
+  ],
+  "read_only_plan_and_checks_preserved_hashes_and_mtimes": true,
+  "second_sync_updated": [],
+  "second_sync_removed": [],
+  "idempotence": true,
+  "relative_link_checks": [
+    {
+      "source": "docs/research/SMART_CITIES_RESEARCH_PROTOCOL.md",
+      "target": "../../AGENTS.md",
+      "exists": true
+    },
+    {
+      "source": "docs/research/SMART_CITIES_RESEARCH_PROTOCOL.md",
+      "target": "../../docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md",
+      "exists": true
+    },
+    {
+      "source": "docs/research/SMART_CITIES_RESEARCH_PROTOCOL.md",
+      "target": "../../docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md",
+      "exists": true
+    },
+    {
+      "source": "docs/research/SMART_CITIES_RESEARCH_PROTOCOL.md",
+      "target": "../report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md",
+      "exists": true
+    },
+    {
+      "source": "docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md",
+      "target": "../research/SMART_CITIES_RESEARCH_PROTOCOL.md",
+      "exists": true
+    },
+    {
+      "source": "docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md",
+      "target": "../report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md",
+      "exists": true
+    },
+    {
+      "source": "docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md",
+      "target": "../design-system/SMART_CITIES_VISUAL_SYSTEM.md",
+      "exists": true
+    },
+    {
+      "source": "docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md",
+      "target": "../../AGENTS.md",
+      "exists": true
+    },
+    {
+      "source": "docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md",
+      "target": "../../evidence/process-report/workflow-construction/WORKFLOW_EVIDENCE_PLAN.md",
+      "exists": true
+    },
+    {
+      "source": "docs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md",
+      "target": "../research/SMART_CITIES_RESEARCH_PROTOCOL.md",
+      "exists": true
+    },
+    {
+      "source": "docs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md",
+      "target": "../design-system/SMART_CITIES_VISUAL_SYSTEM.md",
+      "exists": true
+    },
+    {
+      "source": "docs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md",
+      "target": "../process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md",
+      "exists": true
+    },
+    {
+      "source": "docs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md",
+      "target": "../../AGENTS.md",
+      "exists": true
+    },
+    {
+      "source": "docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md",
+      "target": "../research/SMART_CITIES_RESEARCH_PROTOCOL.md",
+      "exists": true
+    },
+    {
+      "source": "docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md",
+      "target": "../report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md",
+      "exists": true
+    },
+    {
+      "source": "docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md",
+      "target": "../process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md",
+      "exists": true
+    },
+    {
+      "source": "docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md",
+      "target": "../../AGENTS.md",
+      "exists": true
+    },
+    {
+      "source": "docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md",
+      "target": "../report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md#1-两份报告的读者与任务",
+      "exists": true
+    },
+    {
+      "source": "docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md",
+      "target": "../report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md",
+      "exists": true
+    },
+    {
+      "source": "docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md",
+      "target": "../report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md",
+      "exists": true
+    },
+    {
+      "source": "docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md",
+      "target": "../../evidence/infrastructure/chatgpt-project-source-sync/sources.json",
+      "exists": true
+    },
+    {
+      "source": "AGENTS.md",
+      "target": "docs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md",
+      "exists": true
+    },
+    {
+      "source": "AGENTS.md",
+      "target": "docs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md#1-两份报告的读者与任务",
+      "exists": true
+    },
+    {
+      "source": "AGENTS.md",
+      "target": "docs/research/SMART_CITIES_RESEARCH_PROTOCOL.md#c-standard-research-workflow",
+      "exists": true
+    },
+    {
+      "source": "AGENTS.md",
+      "target": "docs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md#12-process-report写作衔接不覆盖最新第一人称规则",
+      "exists": true
+    },
+    {
+      "source": "AGENTS.md",
+      "target": "docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md#13-native-and-reproducible-production",
+      "exists": true
+    },
+    {
+      "source": "AGENTS.md",
+      "target": "docs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md",
+      "exists": true
+    },
+    {
+      "source": "AGENTS.md",
+      "target": "docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md",
+      "exists": true
+    },
+    {
+      "source": "AGENTS.md",
+      "target": "evidence/infrastructure/chatgpt-project-source-sync/sources.json",
+      "exists": true
+    }
+  ],
+  "recognized_download_metadata_preserved": 5,
+  "whitespace_check": {
+    "command": "git diff --check",
+    "returncode": 0,
+    "scope": "Narrow15path .gitattributes preserves exact Markdown hardbreak bytes; all other paths retain default whitespace checks",
+    "isolated_probe": "Markdown hardbreak accepted, unrelated trailing-space file still rejected, no global config change"
+  },
+  "changed_scope": "Five approved active docs and exact release copies; unique manifest/generated metadata; two current navigation README version labels; scoped Git whitespace attributes; immutable inputs and this verification only",
+  "experiments_executed": 0,
+  "packages_installed": 0,
+  "settings_copy_created": false,
+  "remote_publication_scope": "Commit and remote identity are verified after push; this immutable-commit record covers local source/bundle checks only.",
+  "repository_relative_and_github_path_checks": [
+    {
+      "source": "docs/research/SMART_CITIES_RESEARCH_PROTOCOL.md",
+      "target": "../../AGENTS.md",
+      "path_exists": true
+    },
+    {
+      "source": "docs/research/SMART_CITIES_RESEARCH_PROTOCOL.md",
+      "target": "../../docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md",
+      "path_exists": true
+    },
+    {
+      "source": "docs/research/SMART_CITIES_RESEARCH_PROTOCOL.md",
+      "target": "../../docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md",
+      "path_exists": true
+    },
+    {
+      "source": "docs/research/SMART_CITIES_RESEARCH_PROTOCOL.md",
+      "target": "../report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md",
+      "path_exists": true
+    },
+    {
+      "source": "docs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md",
+      "target": "../research/SMART_CITIES_RESEARCH_PROTOCOL.md",
+      "path_exists": true
+    },
+    {
+      "source": "docs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md",
+      "target": "../design-system/SMART_CITIES_VISUAL_SYSTEM.md",
+      "path_exists": true
+    },
+    {
+      "source": "docs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md",
+      "target": "../process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md",
+      "path_exists": true
+    },
+    {
+      "source": "docs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md",
+      "target": "../../AGENTS.md",
+      "path_exists": true
+    },
+    {
+      "source": "docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md",
+      "target": "../research/SMART_CITIES_RESEARCH_PROTOCOL.md",
+      "path_exists": true
+    },
+    {
+      "source": "docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md",
+      "target": "../report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md",
+      "path_exists": true
+    },
+    {
+      "source": "docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md",
+      "target": "../process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md",
+      "path_exists": true
+    },
+    {
+      "source": "docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md",
+      "target": "../../AGENTS.md",
+      "path_exists": true
+    },
+    {
+      "source": "docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md",
+      "target": "../report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md#1-两份报告的读者与任务",
+      "path_exists": true
+    },
+    {
+      "source": "docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md",
+      "target": "../report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md",
+      "path_exists": true
+    },
+    {
+      "source": "docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md",
+      "target": "../report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md",
+      "path_exists": true
+    },
+    {
+      "source": "docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md",
+      "target": "../../evidence/infrastructure/chatgpt-project-source-sync/sources.json",
+      "path_exists": true
+    },
+    {
+      "source": "docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md",
+      "target": "../research/SMART_CITIES_RESEARCH_PROTOCOL.md",
+      "path_exists": true
+    },
+    {
+      "source": "docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md",
+      "target": "../report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md",
+      "path_exists": true
+    },
+    {
+      "source": "docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md",
+      "target": "../design-system/SMART_CITIES_VISUAL_SYSTEM.md",
+      "path_exists": true
+    },
+    {
+      "source": "docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md",
+      "target": "../../AGENTS.md",
+      "path_exists": true
+    },
+    {
+      "source": "docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md",
+      "target": "../../evidence/process-report/workflow-construction/WORKFLOW_EVIDENCE_PLAN.md",
+      "path_exists": true
+    },
+    {
+      "source": "AGENTS.md",
+      "target": "https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/docs/research/SMART_CITIES_RESEARCH_PROTOCOL.md",
+      "path_exists": true
+    },
+    {
+      "source": "AGENTS.md",
+      "target": "https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md",
+      "path_exists": true
+    },
+    {
+      "source": "AGENTS.md",
+      "target": "https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md",
+      "path_exists": true
+    },
+    {
+      "source": "AGENTS.md",
+      "target": "docs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md",
+      "path_exists": true
+    },
+    {
+      "source": "AGENTS.md",
+      "target": "https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/docs/research/SMART_CITIES_RESEARCH_PROTOCOL.md#a-research-scope--task-governance",
+      "path_exists": true
+    },
+    {
+      "source": "AGENTS.md",
+      "target": "docs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md#1-两份报告的读者与任务",
+      "path_exists": true
+    },
+    {
+      "source": "AGENTS.md",
+      "target": "docs/research/SMART_CITIES_RESEARCH_PROTOCOL.md#c-standard-research-workflow",
+      "path_exists": true
+    },
+    {
+      "source": "AGENTS.md",
+      "target": "docs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md#12-process-report写作衔接不覆盖最新第一人称规则",
+      "path_exists": true
+    },
+    {
+      "source": "AGENTS.md",
+      "target": "docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md#13-native-and-reproducible-production",
+      "path_exists": true
+    },
+    {
+      "source": "AGENTS.md",
+      "target": "https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/docs/research/SMART_CITIES_RESEARCH_PROTOCOL.md#g-spatiotemporal-correctness",
+      "path_exists": true
+    },
+    {
+      "source": "AGENTS.md",
+      "target": "https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/docs/research/SMART_CITIES_RESEARCH_PROTOCOL.md#f-fair-comparison",
+      "path_exists": true
+    },
+    {
+      "source": "AGENTS.md",
+      "target": "docs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md",
+      "path_exists": true
+    },
+    {
+      "source": "AGENTS.md",
+      "target": "docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md",
+      "path_exists": true
+    },
+    {
+      "source": "AGENTS.md",
+      "target": "https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md",
+      "path_exists": true
+    },
+    {
+      "source": "AGENTS.md",
+      "target": "https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md",
+      "path_exists": true
+    },
+    {
+      "source": "AGENTS.md",
+      "target": "https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md#11-figure-palette-and-scientific-plotting",
+      "path_exists": true
+    },
+    {
+      "source": "AGENTS.md",
+      "target": "https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/tools/skills/publication-plots/SKILL.md",
+      "path_exists": true
+    },
+    {
+      "source": "AGENTS.md",
+      "target": "https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md#14-generative-image-boundary",
+      "path_exists": true
+    },
+    {
+      "source": "AGENTS.md",
+      "target": "evidence/infrastructure/chatgpt-project-source-sync/sources.json",
+      "path_exists": true
+    },
+    {
+      "source": "AGENTS.md",
+      "target": "https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/sync_sources.py",
+      "path_exists": true
+    },
+    {
+      "source": "AGENTS.md",
+      "target": "https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/evidence/infrastructure/chatgpt-project-source-sync/SOURCE_MANIFEST.md",
+      "path_exists": true
+    },
+    {
+      "source": "AGENTS.md",
+      "target": "https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/evidence/infrastructure/chatgpt-project-source-sync/UPLOAD_INSTRUCTIONS.md",
+      "path_exists": true
+    }
+  ],
+  "controlled_rule_versions": {
+    "Research": "v1.3",
+    "Writing": "v1.3",
+    "Visual": "v2.7",
+    "Evidence": "v2.8",
+    "AGENTS": "2026-11-05"
+  },
+  "staged_verification": {
+    "command": [
+      ".venv/bin/python",
+      "-B",
+      "evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/validate_sync.py",
+      "--index"
+    ],
+    "returncode": 0,
+    "result": {
+      "status": "PASS",
+      "declared_members": 15,
+      "index_checked": true,
+      "writes": false,
+      "numerical_experiments": 0
+    },
+    "changed_files": 23,
+    "new_files": 8,
+    "modified_files": 15,
+    "deleted_files": 0,
+    "unrelated_user_changes_at_preflight": [],
+    "staged_path_allowlist": [
+      ".gitattributes",
+      "AGENTS.md",
+      "docs/design-system/README.md",
+      "docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md",
+      "docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md",
+      "docs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md",
+      "docs/research/SMART_CITIES_RESEARCH_PROTOCOL.md",
+      "evidence/infrastructure/SC-PROJECT-SOURCES-SYNC-20261105/input_manifest.json",
+      "evidence/infrastructure/SC-PROJECT-SOURCES-SYNC-20261105/input_snapshot/AGENTS.md",
+      "evidence/infrastructure/SC-PROJECT-SOURCES-SYNC-20261105/input_snapshot/SMART_CITIES_REPORT_WRITING_GUIDE.md",
+      "evidence/infrastructure/SC-PROJECT-SOURCES-SYNC-20261105/input_snapshot/SMART_CITIES_RESEARCH_PROTOCOL.md",
+      "evidence/infrastructure/SC-PROJECT-SOURCES-SYNC-20261105/input_snapshot/SMART_CITIES_VISUAL_SYSTEM.md",
+      "evidence/infrastructure/SC-PROJECT-SOURCES-SYNC-20261105/input_snapshot/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md",
+      "evidence/infrastructure/SC-PROJECT-SOURCES-SYNC-20261105/verification.json",
+      "evidence/infrastructure/chatgpt-project-source-sync/SOURCE_MANIFEST.md",
+      "evidence/infrastructure/chatgpt-project-source-sync/UPLOAD_INSTRUCTIONS.md",
+      "evidence/infrastructure/chatgpt-project-source-sync/sources.json",
+      "releases/chatgpt-project-sources/AGENTS.md",
+      "releases/chatgpt-project-sources/SMART_CITIES_REPORT_WRITING_GUIDE.md",
+      "releases/chatgpt-project-sources/SMART_CITIES_RESEARCH_PROTOCOL.md",
+      "releases/chatgpt-project-sources/SMART_CITIES_VISUAL_SYSTEM.md",
+      "releases/chatgpt-project-sources/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md",
+      "templates/latex/process-report/README.md"
+    ],
+    "staged_bytes_compared": true,
+    "git_diff_cached_check_returncode": 0,
+    "scope": "Audit receipt itself is appended after the inspected staging snapshot; re-staged without changing normative inputs."
+  }
+}

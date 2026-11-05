@@ -1,7 +1,7 @@
-# Smart Cities & Location Services — Visual / LaTeX Design System v2.6
+# Smart Cities & Location Services — Visual / LaTeX Design System v2.7
 
 Status: **LOCKED for Experiment Report and Process Report**  
-Revision: **2026-10-02 · Screenshot-dominant Process pages / arrow-only annotation / accepted exemplars**  
+Revision: **2026-11-05 · Research-led visualization selection / candidate figures / dual scientific-visual audit**  
 Canonical repository path: `docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md`
 
 This document defines the long-term visual identity, LaTeX baseline, report identities, evidence presentation language and technical-visualization rules for the 《智慧城市与位置服务》 project. Detailed prose and argumentation rules are maintained in the Report Writing Guide, not duplicated in Project Settings.
@@ -676,6 +676,16 @@ Captions identify the object, sample, units, conditions and encoding, then give 
 
 Interactive HTML is supplementary unless explicitly required. Essential evidence must remain understandable in the static formal PDF. Check labels, units, view angle, contrast and legends at the actual final size; vector output alone does not guarantee legibility.
 
+### 12.3 Research-led visualization development / 关键科研图研发循环
+
+**对承担主要研究结论的关键图（Signature Visualization），图型选择本身是正式研究与制作任务。**在研究问题和真实数据输入明确后，主动查阅本领域原论文的有效图表、可信可视化研究与绘图工具官方示例；记录来源的实际用途，而不因某图“高级”或热门就照搬。网络不可用时如实标明检索限制，读取已安装的 publication-plots Skill 与可用可信资料，不伪称已检索。
+
+重要主图通常应比较至少两种**有实质差异的视觉编码或布局**：分别判断能否展示重要机制、负结果、样本依赖、单位与参考关系，并评估信息密度、误读风险、实际阅读成本和实现成本。必要时用真实数据制作样图，检查实际坐标、分母、样本和标注；简单图若已最清楚或其他方案无附加解释价值，可说明取舍后采用，不制造冗余双稿或为图型数量增加工作。普通图按需，不能全部套用两个候选的固定配额。
+
+正式制作链：**研究问题 → 真实输入与图型来源 → 候选设计/实际样图 → 科研语义审核 → 视觉层次与审美审核 → 原生SVG/PDF和源码 → 最终报告尺寸检查 → 必要精修**。科研语义审核验证输入、目标、归一化、单位、分母、未知与负结果；视觉审核检查重点、层次、间距、字体、对比、图例、跨面板关系与静态阅读。任何问题回到实际制图源码修复并重新构建，不以手工覆盖结果图片代替生成链修复。
+
+研究型复杂图必须满足§12.1的数据条件。可视化研发可产生新的**描述性视图或由有效结果复算的汇总**，但不自动批准更换科学指标、创造未经验证的空间语义或增加新研究方法；这些研究级改变由Research Protocol处理。任务可在实验过程中先用诊断图发现问题，正式图不必都等全部实验结束才开始。
+
 ---
 
 ## 13. Native and Reproducible Production
@@ -764,6 +774,9 @@ Preserve valuable editable sources such as:
 where relevant.
 
 ### 13.1 Approved-source handoff and review
+
+
+正式主图的制图研究记录至少保留：拟回答的问题、对应真实输入与版本、主要候选方案及选择理由、图源、正式SVG/PDF和审核缺项。只有确实有候选比较时才需要其样图；允许多个图共用一份简洁设计记录，不为每个轴或图注建立管理文件。
 
 Preserve an accepted report/figure together with its editable source and real figure inputs or resolvable input identifiers. Integrate the source into the actual generator, rather than only replacing a PDF that a subsequent build will overwrite. Do not silently downgrade an accepted composition or replace approved prose with old template boilerplate.
 
@@ -941,6 +954,7 @@ The following are stable unless the teacher or user explicitly changes them:
 - native/reproducible technical visualization
 - publication-plots as plotting-quality baseline
 - Signature Visualization principle
+- research-led figure selection and actual candidate testing for important science figures, with separate scientific-semantic and visual-quality review
 - restrained P2 semantic-color use
 - prohibition on generative images as technical/data evidence
 

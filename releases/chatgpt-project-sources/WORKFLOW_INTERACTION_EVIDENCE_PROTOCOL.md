@@ -1,9 +1,9 @@
 # 《智慧城市与位置服务》Workflow Interaction Evidence Protocol
 
-Version: **v2.7**\
+Version: **v2.8**\
 Status: **ACTIVE / LONG-TERM RULE**\
 Purpose: **Process Report · Workflow Construction · Experiment Decision Process · Human–AI Interaction Evidence**  
-Revision: **2026-10-02 · Real user-UI openings / native captures / arrow-only evidence audit**  
+Revision: **2026-11-05 · Long-run autonomous research traces / human–AI UI provenance boundary**  
 Canonical repository path: `docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md`
 
 本协议专门约束：真实历史恢复、原始聊天取证、Narrative规划、Evidence设计、最小必要编辑、对话精修/重构、Simulation执行、原始研究对话证据采集、截图、审核、Evidence Lock、Block/Section级LaTeX同步与最终综合图制作。
@@ -1213,6 +1213,10 @@ Simulation GPT逐字输出Approved GPT Response。
 
 ## 28. 正式Research Conversation实时证据机制
 
+**长任务场景的来源边界。** 用户预先批准长任务合同后，Codex/原生Agent可能在无新Human–AI聊天回合的情况下连续执行试验、独立核验、优化与回退。它们的真实任务交接、实验日志及代码运行属于**自动研究/技术过程证据**，可以支持报告对授权内系统裁决的说明，但不是当时的用户消息、ChatGPT网页截图或新的Human Judgment。
+
+研究对话负责自然产生真实Human–AI互动；重要的授权、真实后续质疑和最终判断仍按Original Evidence First保留原生用户UI，交由已指定Evidence Master选择、整理、审核并Lock。执行期间没有真实用户交互时，**不强制补造用户确认轮次**；不把自动运行节点画成用户当时亲自介入，也不能以任务日志代替每个新互动板块的用户UI入口。缺少真实截图只阻断相关正式Evidence页，不阻断独立可完成的技术研究。
+
 每项正式研究从开始时即优先实时保存Original Evidence；既有任务的历史起点不限制后续任务的适用范围。
 
 推荐：
@@ -1241,6 +1245,8 @@ Research Conversation可以轻量记录：
 ---
 
 ## 29. Experiment Interaction Handoff
+
+长任务的Research Handoff应区分两类内容：**A. 有真实用户UI的互动候选**（消息范围、用户原话及其后续真实判断）；**B. 自主Agent的实际实验决策/执行事件**（真实上下文、工具、输入、运行与结果）。B可作为Process论证的技术来源，不能列成待伪造截图的User-turn。A是否成为正式Evidence、是否Lock由Evidence Master裁决，不能因Codex完成技术审核而自动升级状态。
 
 一个研究阶段结束后，Research Conversation可以输出：
 
@@ -1640,6 +1646,8 @@ Part II：
 ---
 
 ## 39. 最高执行原则
+
+**长任务补充底线：自动研究的真实性与Human–AI原始聊天的真实性分别验收；前者可以丰富研究叙事，不得冒充后者。**
 
 1. **真实聊天优先于重构聊天。**
 2. **Raw Original优先于任何精修版本。**

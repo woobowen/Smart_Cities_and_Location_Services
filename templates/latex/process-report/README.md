@@ -6,12 +6,12 @@ of the Smart Cities & Location Services project.
 
 The template follows:
 
-**Smart Cities Visual / LaTeX Design System v2.6**
+**Smart Cities Visual / LaTeX Design System v2.7**
 
 It shares the same P2 · Cloud Sorbet visual identity as the Experiment Report,
 but the two reports have different information responsibilities.
 
-The [Report Writing Guide v1.2](../../../docs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md) defines project-wide formal dual-report scope and later-task Process continuity. Later tasks introduce or cite the real shared foundation as needed for independent reading, then focus on their actual additions, corrections, rejected directions and Experiment Decision Process. Preserve source scope and Lock state; do not copy the entire earlier report or create new disputes to imply iteration. Evidence Master is explicitly appointed by the user under [Evidence Protocol §4.1](../../../docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md#41-evidence-master--master-planning-conversation).
+The [Report Writing Guide v1.3](../../../docs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md) defines project-wide formal dual-report scope and later-task Process continuity. Later tasks introduce or cite the real shared foundation as needed for independent reading, then focus on their actual additions, corrections, rejected directions and Experiment Decision Process. Preserve source scope and Lock state; do not copy the entire earlier report or create new disputes to imply iteration. Evidence Master is explicitly appointed by the user under [Evidence Protocol §4.1](../../../docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md#41-evidence-master--master-planning-conversation).
 
 ---
 
@@ -426,7 +426,7 @@ latexmk -xelatex \
 
 ## 12. Phrase-level Interaction Evidence authoring
 
-Required reads: [Evidence Protocol v2.7](../../../docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md), [Visual System v2.6](../../../docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md), [Report Writing Guide v1.2](../../../docs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md), [AGENTS](../../../AGENTS.md), and the user-designated Evidence Master's approved annotation specification. Research governance lives in [Research Protocol](../../../docs/research/SMART_CITIES_RESEARCH_PROTOCOL.md).
+Required reads: [Evidence Protocol v2.8](../../../docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md), [Visual System v2.7](../../../docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md), [Report Writing Guide v1.3](../../../docs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md), [AGENTS](../../../AGENTS.md), and the user-designated Evidence Master's approved annotation specification. Research governance lives in [Research Protocol](../../../docs/research/SMART_CITIES_RESEARCH_PROTOCOL.md).
 
 Production chain:
 
