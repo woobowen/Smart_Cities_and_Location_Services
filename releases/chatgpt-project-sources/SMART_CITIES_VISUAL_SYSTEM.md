@@ -1,7 +1,7 @@
-# Smart Cities & Location Services — Visual / LaTeX Design System v2.7
+# Smart Cities & Location Services — Visual / LaTeX Design System v2.8
 
 Status: **LOCKED for Experiment Report and Process Report**  
-Revision: **2026-11-05 · Research-led visualization selection / candidate figures / dual scientific-visual audit**  
+Revision: **2026-11-06 · Video-extracted authentic UI evidence / report exemplar routing**  
 Canonical repository path: `docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md`
 
 This document defines the long-term visual identity, LaTeX baseline, report identities, evidence presentation language and technical-visualization rules for the 《智慧城市与位置服务》 project. Detailed prose and argumentation rules are maintained in the Report Writing Guide, not duplicated in Project Settings.
@@ -450,7 +450,7 @@ Do not:
 
 ### 8.7 Interaction Evidence Visual Grammar
 
-**Original Evidence First.** Work from the user's real ChatGPT Web screenshots, including user-supplied native long captures and their split images. A long capture may be cropped and paginated into formal evidence when the relevant conversation is intact and readable. Preserve **raw / crop / annotated** with direct image embedding and editable TikZ/PDF vector arrows; do not substitute an old report page or redraw the UI. Acquisition, source mapping, effective PPI and explicitly approved native-width use are governed by Evidence Protocol §§5.3—5.7.
+**Original Evidence First.** 默认取证来源是用户真实录制的ChatGPT网页视频；也接受用户提供的原生网页截图、长截图及分割件。视频经真实工具读取后，先建立母视频→时间码→原始解码PNG帧→无损裁片的映射，保留截图中的用户原话、回复及连续关系；没有录像或工具不可用时不声称已截帧。PNG是对有损视频解码后的无损保存，**不是浏览器无损原生截图**。正式内容保持**raw / crop / annotated**分层，通过直接嵌入和可编辑TikZ/PDF箭头制作；不得复用旧报告页面或重绘UI。完整来源、有效PPI与视频框架见Evidence Protocol §§5.3—5.7。
 
 **Screenshot-dominant composition.** For a side-by-side interaction page, devote approximately **70%–80% of the usable image-and-note area to the screenshot pane**, with about **20% for right-side commentary** and the remaining space for a narrow gutter/arrow routing. These proportions describe layout allocation, not a requirement to distort or manufacture screenshot pixels. Keep the visible screenshot substantial within that pane; do not satisfy the ratio using a wide empty frame around a tiny image. Reduce commentary or split long evidence before reducing chat readability.
 
@@ -479,6 +479,14 @@ A core page normally shows one principal Interaction Trace, optionally a support
 After final XeLaTeX/PDF rendering, inspect the actual page for the user UI entry, screenshot/aside balance, phrase visibility, arrow direction/endpoints, cropping and text occlusion. Follow Evidence Protocol §30.H for the audit fields and source-resolution decision. Preserve approved narrow-source exceptions honestly rather than labeling them as higher-resolution originals. PDF rendering at 200 dpi is an inspection step, not an increase in source resolution.
 
 Prohibited: generated or redrawn chat UI; painting out/editing original words; artificial pixel upscaling or fake sharpening presented as original detail; rasterizing a whole report page and reusing it as chat evidence; arbitrary arrow connections; restoring circles/boxes under another annotation name.
+
+### 8.8 Video-based UI evidence: quality and semantic integrity
+
+当原件是视频时，优先在缓慢滚动或静止画面中选取实际可读的帧；同一互动跨多个视频时刻需标注真实连续关系，不把不同时刻的UI合成“同一屏原始截图”。裁片应有明确视频时间码与原帧对应，保留该帧原始字形、比例、UI气泡及必要上下文；视频中的折叠正文不因在别的消息中被概述就算作已录到。
+
+维持§8.7的截图主导、P2语义箭头和正文/侧注配比；视频帧的截图清晰度依**解码帧本身**，报告的200-dpi渲染不会增加源字的分辨率。正式页面应核验显示尺寸、有效PPI、压缩伪影、跨页连续性、标注端点、注释不遮挡及PDF中实际可读性。发现关键字不可辨认时先利用录屏邻帧、合理分割或缩放调整，仍不足则请求对应片段补录；不AI超分、不生成假网页UI、不重绘文字。
+
+视频提帧时间码、原视频哈希、裁片坐标和内部截帧审查**不以制作附录形式进入面向教师的Process正文**；按Evidence Protocol留在受保护的内部证据包。原始完整录屏、未选中原始帧及包含私密内容的源ZIP不得由默认工程发布自动公开。
 
 ---
 
@@ -889,6 +897,8 @@ Use the following canonical attachment names to locate the corresponding referen
 |---|---|---|
 | `Experiment_Report_吴博闻_10245102410.pdf` + `Experiment_Report_完整重构_源文件.zip` | **User-accepted Experiment Report exemplar**: teacher-facing problem-led writing, integrated method/verification/comparison, figure composition and editable production | Actual Experiment 1 work, not synthetic; its data, parameters, history and conclusions cannot be reused as a new task's results. User document acceptance does not prove repository integration, teacher grading or submission. |
 | `Process_Report_Revised.pdf` + `Process_Report_Revised_LaTeX_Source.zip` | **User-accepted full Process Report exemplar**: integrated Workflow Construction and Experiment Decision Process; first-person retrospective, real user UI at each interaction opening, screenshot-dominant pages, arrow-only correspondence and editable production | Use its real narrative and construction choices as a reference, not as new-task history. Preserve the accepted pair; record actual source hashes, build checks and per-evidence approval scope in the internal manifest/ledger. |
+| `Experiment2_Experiment_Report.pdf` (canonical Project Sources filename; repo `task2/reports/experiment/Experiment_Report.pdf`) | **Experiment 2 teacher-facing technical reference**, externally checked in the stated review scope | Real TBG/BB, NSGA and Q-KM work, not a universal method or future-task result. User/teacher formal acceptance and independent full rerun remain separate statuses. Pairing source remains in the task2 repository/release, not automatically a Project Source. |
+| `Experiment2_Process_Report.pdf` (canonical Project Sources filename; approved 16-page video-evidence report) | **User-approved Experiment 2 Process Report exemplar**: complete-video-source extraction, authentic user UI, research-long-run boundaries, readable arrows, P2/XeLaTeX production | Use its *presentation method* and true workflow story as a reference, not as permission to reuse original user messages/video in later tasks. Raw video and unsanitized evidence source ZIP remain private by default; the approved PDF has a separate public-release review boundary. |
 | `WF_WorkflowConstruction_PreTask1_REVISED.pdf` + `WF_WorkflowConstruction_PreTask1_31p_LaTeX_Source.zip` | **Historical pre-Task-1 Process foundation**: retained for the provenance of earlier Workflow Construction | Superseded by the accepted full Process pair as the current writing/layout exemplar. Keep historical originals and approval records in the repository; old boxes, narrow-image layouts and title-only pages are not the current production standard. |
 | `Experiment_Report_P2_Exact.pdf` | **Synthetic visual/template preview**, P2 and reusable page-language reference | Not experiment evidence or a competing version of the accepted real report. |
 | `Process_Report_P2_Locked_v1.pdf` | **Process template preview** with its recorded scope | The template name does not lock real interactions or prove all new pages accepted. |
@@ -905,7 +915,9 @@ Stable identity/components may be generalized into templates after approval; do 
 
 ### 16.4 Project Sources distribution
 
-Formal exemplar PDFs and their matching source ZIPs may be included in Project Sources when explicitly approved, with roles distinct from normative Markdown and synthetic templates. Key rules remain readable Markdown, not hidden solely in a ZIP. Broad source archives must not include font binaries, secrets or unrelated personal files.
+Project Sources以**小型、明确批准的成员集**为目标：长期规范、必需的绘图Skill、少量有实质差异的正式PDF参考及确有长期制作价值的已验收源包；已完成任务的教师原件和Starter通常归档在仓库，需要回看时再按需提供。不能因仓库“完整镜像”原则，自动把全部历史ZIP、视频、截图或运行记录加入Project Sources。形式上重复或失去当前用途的合成preview可以保留仓库，但退出active上传集。
+
+已验收PDF和配对源ZIP**可以**按批准进入Project Sources，但不是每份PDF都强制携带所有私密原始证据：当源包含原始聊天视频帧、未遮蔽私密材料或缺少公开授权时，默认仅同步获准的PDF，源包保留受保护的本地存档或按需交接。关键规则仍为可读Markdown，不能藏在ZIP中；任何源包都不含字体二进制、秘密或无关私人文件。
 
 The upload set and its count come from the current approved [structured manifest](../../evidence/infrastructure/chatgpt-project-source-sync/sources.json), with no permanent file-count constant. Membership checks, stable names and byte equality remain mandatory; detailed distribution/migration rules are in AGENTS §18. Do not remove an existing teacher file or valid reference merely to restore an old count, and do not claim UI upload from local file generation.
 

@@ -1,19 +1,56 @@
 \documentclass[11pt,a4paper]{article}
 \newcommand{\ReportIdentity}{Process Report}
 \input{../common.tex}
-\hypersetup{pdftitle={任务分配实验：持续研究、独立核验与方案取舍}}
+
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc,positioning}
+\usepackage{multicol}
+\newcommand{\evidencelead}[3]{%
+  \clearpage\noindent {\sffamily\small\bfseries\color{C4}#1}\par\vspace{2.2mm}
+  {\sffamily\Large\bfseries #2}\par\vspace{1mm}
+  {\small\color{Muted}#3}\par\vspace{3mm}%
+}
+% Evidence graphic + vector arrow is assembled in TeX, screenshot pixels unchanged.
+% Args: crop id, side title, side text, note-top(mm), end-x(mm), end-y(mm), arrow color
+\newcommand{\evidenceshot}[7]{%
+ \noindent\begin{tikzpicture}[x=1mm,y=1mm,>=Stealth]
+  \node[anchor=north west,inner sep=0] (screen) at (0,0)
+     {\includegraphics[width=124mm]{evidence/assets/#1.png}};
+  \node[anchor=north west,inner sep=0,text width=37mm] (note) at (129mm,-#4mm)
+     {\sffamily\footnotesize\color{#7}\textbf{#2}\par\vspace{1mm}\color{Ink}#3};
+  \draw[-{Stealth[length=2mm,width=1.5mm]},line width=.65pt,color=#7,rounded corners=3pt]
+     ([xshift=-1mm]note.west) -- ([xshift=126mm,yshift=-#6mm]screen.north west) -- ([xshift=#5mm,yshift=-#6mm]screen.north west);
+ \end{tikzpicture}\par\vspace{2mm}%
+}
+\newcommand{\sourceband}[1]{\noindent {\sffamily\scriptsize\color{Muted}#1}\par\vspace{1mm}}
+\newcommand{\researchtag}[1]{{\sffamily\footnotesize\color{C1}\bfseries #1}}
+
+\hypersetup{pdftitle={实验二：从四段计划到持续研究的真实人机协作},pdfsubject={真实录屏证据、动态实验研究与双重核验}}
 \begin{document}
-\reportcover{我怎样组织一次持续研究}{工作流继承、独立核验与结果驱动的取舍}{Process Report · 正文与技术素材交接稿}
+\reportcover{从四段计划到持续研究}{实验二的真实人机互动、证据驱动派单研究与独立审核}{Process Report · 视频原帧证据整合版}
 \pagenumbering{roman}
-\section*{本轮过程的阅读说明}
-这次我把基础在线任务分配和进阶多目标、强化学习两套材料一起交给Codex，要求在一个连续工程目标中完成研究、实现、实验、优化、制图与报告，不能做完一部分就当作整个任务结束。我明确把它作为一次性交付，同时保留实验计划、真实决定和验证记录。
+\section*{阅读说明}
+在本次实验中，我先把两套教师材料交给GPT讨论，随后纠正最初分成四个Goal、缺少研究优化和可视化研发的执行方案。我要求先建立可信基线，再做丰富的控制变量试验，依据真实结果决定后续优化。最终，我明确批准一个完整长Goal，交由Codex组织研究、运行、独立核验和提交。
 
-本轮尚未提供对应的ChatGPT原生UI截图和Evidence Master批准的呈现规格；这份交接稿整理可追溯的授权、实际执行和技术决定，新增对话证据页由Evidence Master后续接续。没有把实验一截图替换成这次对话，也没有据最终结果补写我曾经提出的问题。
+本报告分成两条互补线索。\textbf{Part I}保留我与GPT之间确实发生的任务设计和授权对话；\textbf{Part II}以真实工程与实验记录解释长任务内部如何发现问题、比较单项与组合并合理回退；\textbf{Part III}呈现我对数据许可、GitHub审查和项目规则的后续判断。技术中的自主Agent行为按真实身份记录，不补写成我的即时人工操作。
 
-第一部分说明已有协作基础怎样承接到本次持续执行，第二部分沿真实读数和反馈解释关键实验取舍。命令、完整运行清单和数据发布记录留在源包，正文集中说明哪些机制改变了判断。
+\textbf{截图采集说明。}这次我提供了在ChatGPT网页中录制的真实滚屏视频 \texttt{QQ20261105-091814.mp4}\allowbreak；GPT从该视频的原始解码画面提取PNG原帧并作无损矩形裁切，随后在LaTeX中叠加可编辑矢量箭头。原视频保存哈希和精确视频时间码；箭头、侧注与截图像素分离。视频帧属于录屏源，不冒称截图软件直接输出的无损原始网页截图。关键原话与视频一一核对，报告不通过模拟聊天补造历史。
+
 \tableofcontents\clearpage\pagenumbering{arabic}
+\noindent {\sffamily\small\bfseries\color{C3}PART I · WORKFLOW CONSTRUCTION}
 \input{chapters/01_workflow.tex}
-\nextchapter\input{chapters/02_online_evolution.tex}
-\nextchapter\input{chapters/03_rl_decisions.tex}
-\nextchapter\input{chapters/04_reflection.tex}
+\input{evidence/01_reframe.tex}
+\input{evidence/02_authorization.tex}
+\nextchapter
+\input{chapters/02_online_evolution.tex}
+\nextchapter
+\input{chapters/03_rl_decisions.tex}
+\input{evidence/03_license.tex}
+\nextchapter
+\input{chapters/04_reflection.tex}
+\input{evidence/04_review.tex}
+\input{evidence/05_governance.tex}
+\nextchapter
+\input{chapters/05_summary.tex}
+
 \end{document}

@@ -24,3 +24,7 @@
 新增配置仅项目venv内的kernel/namespace修复及本任务的公开排除清单；根.gitignore仅补用户明确要求不公开的两个含数据ZIP。原始数据、有效实验、报告和可复建依赖保留，不因一次性交付自动删除。
 
 这些依赖用于后续重建与审查，建议保留；若用户选择清理，再核对其对原实验一和本轮成果复建的影响，不能盲目删整个共享venv或回退全局TeX。
+
+## 2026-11-06 Process 文档同步
+
+新增系统包、Python 包、TeX 包、字体或工具链：无。沿用已有 `.venv`、TeX Live 2026 与 Poppler；未修改 `.bashrc`、PATH、系统字体或持久化 Fontconfig 配置。Process 构建脚本仅为其编译子进程生成临时 `FONTCONFIG_FILE`，排除竞争的 Noto Sans CJK Black，以匹配获批 PDF 的 Bold；临时配置随隔离构建目录清理。完整入站包和来源证据保存在仓库外私密暂存区，属于保留的真实性材料，不作无关清理。

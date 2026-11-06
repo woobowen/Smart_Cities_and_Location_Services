@@ -2,7 +2,7 @@
 
 本文件规定 Codex 在《智慧城市与位置服务》仓库中的长期工程行为。
 
-Revision: **2026-11-05 · Conditional long-run execution / multi-agent evidence / GitHub review-packet contract**  
+Revision: **2026-11-06 · Video-first evidence engineering / minimal Project Sources / release privacy**  
 Canonical repository path: `AGENTS.md`
 
 Repository: https://github.com/woobowen/Smart_Cities_and_Location_Services.git\
@@ -363,19 +363,19 @@ Process Evidence 任务必须先读取：
 
 **Evidence Master决定关系，Codex精确实现。**Codex不得自行选择用户UI入口、User anchor、GPT before/after、箭头语义关系、turn调序、入选Evidence或改写用户原话。按当前批准的Evidence Plan / annotation specification实现；缺少规格只暂停受影响真实页面，不按时间相邻推断关系。
 
-新互动板块起始部分必须嵌入对应的真实ChatGPT用户UI；同一互动的续页按批准顺序承接。从用户原生截图、长截图或分割件制作，不拿旧LaTeX/PDF页面渲染图当原始聊天素材。截图主体、简短右侧说明、标题与首图同页，以及无固定最低像素宽度的版式规则，执行Visual System §§4.3、8.7与Evidence Protocol §5。
+新互动板块起始部分必须嵌入对应的真实ChatGPT用户UI；同一互动续页按批准顺序承接。默认从用户上传的**完整真实录屏**中提取实际解码帧；真实原生截图、长截图或分割件可作补充。每张视频证据需有原视频哈希、时间码/帧标识和裁片映射，不拿旧LaTeX/PDF报告页面渲染图当原始聊天素材，也不能伪造未录入的折叠消息。截图主体、简短右侧说明、标题与首图同页，以及无固定最低像素宽度的版式规则，执行Visual System §§4.3、8.7与Evidence Protocol §5。
 
 对话截图只叠加精确矢量箭头，不恢复荧光圈、彩色框、填充、下划线或圈号覆盖原话。可编辑的技术结构图仍按其原生制图规范处理。箭头必须指向批准的确切短语或紧邻位置，区分原句关系与侧注阅读提示，避免压字和歧义。
 
 Codex负责lossless crop、image direct embed、TikZ/PDF vector arrows、arrow routing、side note placement、LaTeX compile、实际尺寸/PPI记录、PDF render和visual inspection。几何实现不得改变批准的短语、语义关系与文案；裁切、缩放或分页变化后重新核对端点，不只检查源文件中的坐标值。
 
-raw不得覆盖。保留用户提供的原图/分割件、可用长图与映射、crop（或可重现LaTeX trim）、annotated或LaTeX/PDF overlay。没有收到的上游整张长图如实标明缺失，不伪造原件。Original Evidence First、干预等级与重构条件只按Evidence Protocol执行，Simulation不是默认路径。
+raw不得覆盖。若采用视频，应保留**受保护的原始录屏、视频哈希、实际解码帧、时间码、帧/裁片映射**；同时保留实际收到的原图/分割件、可用长图与映射、crop（或可重现LaTeX trim）、annotated或LaTeX/PDF overlay。没有收到的上游视频/长图如实标明缺失，不伪造原件；默认不公开完整视频、未选中帧和含私人聊天的源ZIP。Original Evidence First、干预等级与重构条件只按Evidence Protocol执行，Simulation不是默认路径。
 
 清晰度、有效PPI公式和用户明确批准现有原宽的处理统一执行Evidence Protocol §5.4。记录真实像素、裁切边界、显示尺寸与适用批准；不得在本文件另设强制加宽门槛，也不得把已通过真实样页审核的同一素材反复退回重截。禁止AI upscale、generative redraw、fake sharpening或将低清栅格标注放大当作原始细节。
 
 逐项执行Evidence Protocol §30.H的USER UI ENTRY、ANNOTATION MODE、PHRASE MATCH、ARROW RELATION、ARROW ENDPOINT、PAGE READABILITY、SOURCE RESOLUTION检查。原宽例外按实际批准记录，旧BOX RANGE测试退出当前纯箭头页的门槛；历史测试和旧Lock记录保留原身份。Codex工程自检不能替代Evidence Master审核与Lock。
 
-生产链：真实截图/分割原件 → Evidence Master批准规格 → 无损裁切与来源映射 → 直接LaTeX嵌入 → 矢量箭头 → XeLaTeX → 至少200-dpi实际页面检查 → User UI / Phrase / Arrow / Readability Audit → Evidence Master Lock。全局演变图仍在主要Workflow Evidence Lock后制作。
+生产链：**用户真实录屏/原生截图 → GPT在工具可用时核验并提取真实解码帧 → Evidence Master批准来源和对应关系 → 无损裁切与时间码映射 → 直接LaTeX嵌入 → 矢量箭头 → XeLaTeX → 至少200-dpi实际页面检查 → User UI / Phrase / Arrow / Video Provenance / Readability Audit → Evidence Master Lock**。全局演变图仍在主要Workflow Evidence Lock后制作。
 
 ---
 
@@ -535,12 +535,17 @@ GitHub与老师最终提交包职责不同：
 
 **在数据最初接收与制定公开同步方案时，提前审查来源许可、再分发权、隐私、逐条记录及派生结果的反解风险**，不能等到临近push才检查。教师允许课程使用不自动授予公开再分发权限。存在限制时，仅暂停受影响的公开文件，不缩减已获授权的本地实验；合法公开代码、配置、核验脚本、不泄露记录的汇总与数据获取/校验说明。不能虚构授权或下载渠道，也不能为“完整镜像”上传未获授权的教师ZIP、原始数据或可逆派生记录。
 
+**真实聊天录屏及截帧需独立做公开边界检查。**用户授权制作Process报告不默认授予公开发布整段原视频、所有原始帧或可恢复私人对话的源包的权限。除用户明确批准并完成实际内容安全审查外，录屏母件/未经筛选证据包在受保护本地保存，不加入公开Git或Project Sources；已批准的正式PDF单独审查公开身份，不能因PDF可发布推定其原始视频也可公开。
+
 ### ChatGPT Project Sources Upload Bundle
+
+本项目的**公开GitHub工程镜像**与**ChatGPT Project Sources精简知识集**不是同一集合：Project Sources按用户当前批准的最小成员清单，只包含长期规则、必要出版制图参考和少量有复用价值的正式报告；教师/Starter的历史原件、失败运行和完整工程继续保存于GitHub或受保护本地，但不自动进入长期ChatGPT上下文。清理Project Sources不授权删除唯一源文件，也不授权将受限视频上传公开仓库。
+
 
 `releases/chatgpt-project-sources/` 是按**当前批准的显式文件清单**生成的Upload-Ready Bundle。AGENTS.md本身是PROJECT_SOURCE。唯一结构化清单是 [sources.json](evidence/infrastructure/chatgpt-project-source-sync/sources.json)；成员集合必须精确，数量由清单计算，不固化历史或本轮数量。
 
 - 五个长期Markdown入口是Research Protocol、Report Writing Guide、Visual System、Interaction Evidence Protocol和AGENTS。老师材料、starter、Skill distribution、模板preview及已批准真实PDF/源包，按当前清单分别纳入；不能因新增写作指南就删除原有必要资料。
-- 文件的project-source成员身份与语义角色分开：规则、教师材料、starter、合成模板、已验收实验成品、局部过程参考、可复现源包等不能混称。
+- 文件的project-source成员身份与语义角色分开：规则、教师材料、starter、合成模板、已验收实验成品、局部过程参考、可复现源包等不能混称。**只有被当前成员清单明确列入的才需放在release顶层**，历史条目即使仍在结构化sources列表，也可设置`project_source:false`保留其仓库来源与角色。
 - 目录仅包含批准上传的普通文件，不放README、内部manifest、Evidence Plan、同步脚本、日志、临时文件、备份、子目录、符号链接或重复上传后缀版本。Project Settings在UI维护，transfer文本不作为active Project Source。
 - **Active source first → approved manifest → upload bundle**。分发副本不是第二套编辑源；每次active规则或参考成品变化，先更新对应源，再同步精确副本。用户明确授权从release导入时，先保存完整清单与不可变输入快照，完成一次受控导入后恢复正常单向分发。
 - 使用既有 [sync_sources.py](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/sync_sources.py) 和上述清单。`--plan`展示新增、变化、缺失、意外及不安全项；`--check`只读核验，不创建或修改manifest、正文、hash、日期及mtime。旧版本若仍硬编码数量或自动清理未知文件，必须先迁移，不能直接写入真实release。

@@ -1,12 +1,12 @@
 # 《智慧城市与位置服务》Workflow Interaction Evidence Protocol
 
-Version: **v2.8**\
+Version: **v2.9**\
 Status: **ACTIVE / LONG-TERM RULE**\
 Purpose: **Process Report · Workflow Construction · Experiment Decision Process · Human–AI Interaction Evidence**  
-Revision: **2026-11-05 · Long-run autonomous research traces / human–AI UI provenance boundary**  
+Revision: **2026-11-06 · Video-first original evidence / verified frame extraction / private provenance**  
 Canonical repository path: `docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md`
 
-本协议专门约束：真实历史恢复、原始聊天取证、Narrative规划、Evidence设计、最小必要编辑、对话精修/重构、Simulation执行、原始研究对话证据采集、截图、审核、Evidence Lock、Block/Section级LaTeX同步与最终综合图制作。
+本协议专门约束：真实历史恢复、**用户录屏/原生截图取证**、Narrative规划、Evidence设计、最小必要编辑、对话精修/重构、Simulation执行、原始研究对话证据采集、截图、审核、Evidence Lock、Block/Section级LaTeX同步与最终综合图制作。
 
 优先级：
 
@@ -255,9 +255,13 @@ Canonical repository path: `docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PR
 
 ### 5.1 用户职责
 
-用户负责原生取证：
+用户负责提供**真实、尽量完整且清晰的聊天取证来源**。正式Process默认采用：
 
-> **保存原生、完整、真实的ChatGPT Web截图。**
+> **用户在ChatGPT网页中录制完整相关对话（MP4等原视频） → 上传给具备视频处理工具的GPT/Evidence Master → GPT从视频定位真实聊天画面、提取原始解码帧并制作证据。**
+
+用户不再默认使用ShareX逐条长截图和手动图片分割。录屏是默认入口而非唯一合法来源；必要的原生截图、长图、分割件和针对某段的补录仍可作为补充。
+
+录制时尽量逐条展开与Decision有关的消息，缓慢滚动并在重要文字处短暂停留，保留用户原话、GPT回应与必要前文，避免密钥、通知、无关隐私进入画面。视频缺失片段或文字确实不可读时，先利用相邻帧与现有附件恢复；仅对具体缺口请求补录/补截，不机械要求用户重录全部聊天。
 
 原则上：
 
@@ -269,13 +273,12 @@ Canonical repository path: `docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PR
 
 用户应尽量：
 
-- 保留完整消息边界；
-- 宁可多截，不要少截；
-- 关键Evidence附近保留必要上下文；
-- 保存原始文件；
-- 不覆盖raw截图。
+- 保留真实消息的完整边界和出现顺序；
+- 录屏覆盖关键Evidence和必要前后文，不遗漏折叠内容；
+- 保留视频/截图原始文件及其可核验身份，不覆盖；
+- 尽量提供能阅读原话的录制分辨率与停留时间，不为“较短视频”快速掠过核心决策。
 
-用户可以自愿使用ShareX等工具进行长截图与图片分割；“不要求用户自行裁切”不是禁止提交已经分割的原生图片。收到长图和分割图时，保存两者及其对应关系；仅收到分割图时，如实记录当前可用原件，不伪造缺失的整张长图。正式取舍、裁切规格、排版与标注仍由Evidence Master负责。
+GPT/Evidence Master在真实工具可用时承担帧普查、时间码定位、清晰帧截取、裁片、分页和标注；不得声称已经查看尚未真正解析的视频。用户自愿使用ShareX或其他工具时仍接受真实长图/分割件，保存已提供原件和映射，不伪造缺失的视频或母图。
 
 
 ### 5.2 Evidence Master职责
@@ -294,7 +297,9 @@ Evidence Master负责：
 
 原则：
 
-> **用户负责原生取证，Evidence Master负责正式呈现。**
+> **用户负责提供真实取证来源；GPT在具备实际工具能力和授权时负责视频截帧；Evidence Master负责正式取舍、呈现与Lock。**
+
+Evidence Master仍须由用户按具体任务明确指定；一次任务中对当前GPT的指定不自动迁移到以后所有对话。
 
 ---
 
@@ -304,9 +309,22 @@ Retrieval Screenshot 可以长滚动，用于历史检索、恢复上下文与�
 
 Formal Evidence Screenshot 以真实、可读的ChatGPT Web UI为基础；一张覆盖当前Interaction Window或其连续片段，宁可多张，不将长聊天压缩到一页。PNG preferred，保留原图宽高比和像素，不规定跨任务统一的最低宽度。按Visual System §8.7安排截图主导的版面；Evidence Master负责selection、crop、pagination、annotation、caption、LaTeX placement、audit、lock。
 
+### 5.3.1 Video Original / Frame Provenance（新增默认取证路径）
+
+- **VIDEO_ORIGINAL**：用户上传的原始视频字节、文件SHA-256、实际时长/尺寸/编码及可用性；该文件是录屏取证母件，不等于浏览器直接输出的无损网页图像。
+- **VIDEO_EXTRACTED_FRAME**：按真实容器时间码/PTS或可解释的时间定位从视频解码并保存的PNG帧；记录来源视频ID、时间点/帧索引、原解码像素尺寸和帧文件哈希。PNG只是无损保存**已被原视频有损编码处理过的画面**，不能冒称原始网页像素无损。
+- **VIDEO_FRAME_CROP**：从已保存帧无损矩形裁切的正式图片；记录源帧、裁切边界、像素尺寸、顺序、必要交叠及使用的证据ID。标注层与裁片分离。
+- **IMAGE_NATIVE_CAPTURE**：用户单独上传的真实网页截图/ShareX长图，按现有raw/crop/annotation流程；与视频来源身份不可混称。
+
+长录屏先建立可读帧时间线及Decision Unit候选，再从真正清晰、稳定的帧中挑选截图；可以跨多个时间点按真实顺序制作续页，**不能将不同时刻的画面合成为伪称单次原始截图的图片**。视频显示过“展开/收起”不等于每个折叠部分已被真实录到；不可读、缺失或被遮挡处须登记限制而非猜写。视频时间码指录屏内的相对时刻，不自动等于聊天消息实际发送时间。
+
+原始视频及可能包含私密聊天/通知的未筛选帧默认归入**受保护的本地原始证据**，不自动加入公开GitHub、Project Sources或可公开的完整源包。正式获批的PDF可以按用户明确范围同步；逐帧原件或含真实聊天的ZIP仍需单独检查隐私与发布授权。
+
 ### 5.4 Resolution / Image Integrity
 
 正式清晰度来自 raw 本身。记录 raw pixel size、final display size、effective PPI；裁切时同时记录 crop pixel size 与 crop bounds。有效 PPI = 实际显示区域的像素数 / 最终物理尺寸（英寸），横纵分别计算，取较小值；不能用整张 raw 的像素数除以局部 crop 的尺寸。
+
+视频帧额外记录**录制视频分辨率、解码原帧分辨率、裁片区域与压缩伪影/滚动模糊**。视频分辨率和PDF的200-dpi渲染都不等于裁片实际有效PPI；不得以生成PNG、插值、AI超分或锐化制造不存在的原文细节。相同句子被录到多个相邻帧时，选择最清晰且上下文真实完整的帧，不依赖OCR自动结果取代可见字形核验。
 
 常规目标为 **>= 180 ppi，preferred >= 200 ppi**，同时检查最终页面中的实际可读性。新素材优先通过合理显示尺寸、无损裁切和拆页改善；未获明确原宽批准且仍无法达到适用清晰度条件时，记录 `RECAPTURE_REQUIRED`，暂停该证据的Lock并说明需要补取的具体范围。
 
@@ -320,7 +338,7 @@ Formal Evidence Screenshot 以真实、可读的ChatGPT Web UI为基础；一张
 
 正式资产保留三层：raw、crop、annotated（可由 LaTeX/TikZ 源文件与 PDF overlay 表示）。raw 不得覆盖。
 
-推荐：**raw PNG → lossless crop / LaTeX trim → direct embed → vector annotation**。LaTeX trim 可保留 raw 文件并以可追溯的裁切参数表达 crop 层。
+推荐：**VIDEO_ORIGINAL → decoded raw PNG frame → lossless crop / LaTeX trim → direct embed → vector annotation**；原生截图仍按 **raw PNG → lossless crop → vector annotation**。LaTeX trim 可保留raw frame并以可追溯的裁切参数表达crop层。视频母件与raw frame都不得被裁片或注释覆盖。
 
 禁止：raw → downsample → raster annotation → enlarge。
 
@@ -332,17 +350,17 @@ Formal Evidence Screenshot 以真实、可读的ChatGPT Web UI为基础；一张
 
 此要求作用于新的互动板块，而不是要求每一张续页重新贴一次用户消息。一个Decision Unit跨多页时，第一页展示用户原话及必要回应，后续页按连续关系承接。若用户消息依赖上一条GPT内容，允许在起始截图中按真实顺序一并保留前文；“用户可见”不等于把用户消息移到真实发生顺序之前。
 
-缺少对应用户原件时，先检索已有素材、同组长图、分割图及相邻上下文；仍缺失则登记该板块缺项，不能用不相关的用户话语、报告截图或补写聊天凑齐。封面、目录及单纯综合图页不作为独立互动板块，亦不代替该板块的用户UI入口。
+缺少对应用户原件时，先检索**原始视频的邻近清晰帧、录屏的其他位置**、已有截图、同组长图、分割图及相邻上下文；仍缺失则登记该板块缺项，不能用不相关的用户话语、报告截图或补写聊天凑齐。封面、目录及单纯综合图页不作为独立互动板块，亦不代替该板块的用户UI入口。
 
 ### 5.7 开篇的真实截图采集说明
 
-Process Report开篇用一句话如实说明本次截图由谁采集、实际使用的工具/分割方式，以及AI在本次协作中的取证能力与制作职责。说明出现一次即可；详细来源映射保留源包，个别证据有不同来源或复盘性质时另行标明。
+Process Report开篇用**一句简短事实说明**本轮用户实际采用录屏或原生截图、由谁提帧及制图；不因采用视频就增加“时间码/帧哈希/裁切方法”的正式正文附录。详细源视频哈希、帧时间码、裁片坐标和审核记录只进入**受保护的内部 Evidence / 可控源包**，个别证据来源不同或确为后期复盘时准确注明。
 
 本次已验收Process成品的用户确认原句为：
 
 > 文档中的所有对话截图，都是我在 ChatGPT 网页中通过sharex软件利用长截图一张一张手动截取然后再利用图片分割器功能一张张切割并提供的；在本次协作中，GPT 没有直接截取我的网页对话界面的功能。
 
-这句保留为该成品的采集说明。未来任务按真实工具与能力填写，不强制使用ShareX，不把“本次协作中”的工具能力限定扩展为永久事实。采集说明与前言衔接按Report Writing Guide §12执行，不扩写为反复出现的制作免责声明。
+这句**仅保留为实验一已验收成品的真实历史说明**，不能机械复用于实验二及未来视频取证。实验二真实视频取证参考为用户上传真实ChatGPT录屏、GPT从录屏原帧提取PNG并在LaTeX加入矢量箭头；以后须按实际能力写，不能假称每个运行环境均能读视频。采集说明与前言衔接按Report Writing Guide §12执行，不扩写为制作技术附录或反复出现的免责声明。
 
 
 ---
@@ -1227,7 +1245,8 @@ Simulation GPT逐字输出Approved GPT Response。
 → 资料/数据/实验\
 → Decision\
 → 标记Interaction Evidence Candidate\
-→ 用户保存原生截图\
+→ 用户保留完整原始录屏（或真实网页截图）\
+→ Evidence Master按授权从视频截帧/选择证据\
 → 继续研究。**
 
 Research Conversation可以轻量记录：
@@ -1306,6 +1325,8 @@ GPT回复是否符合真实角色和Decision。
 - RETROSPECTIVE RECONSTRUCTION
 - CURRENT RECONFIRMATION
 
+视频来源应进一步标识 `VIDEO_ORIGINAL` → `VIDEO_EXTRACTED_FRAME` → `VIDEO_FRAME_CROP`；原生截图仍标记 `IMAGE_NATIVE_CAPTURE`。这些表示**捕获媒介与父子来源关系**，并不替代上述Original/L0–L5编辑干预等级。视频取证的真实网页UI、用户原话和相邻消息需按同一真实性标准核查。
+
 ### G. Required Label
 是否需要标注：
 
@@ -1331,12 +1352,15 @@ Screenshot Audit按实际对象逐项记录，取值统一为：
 - `ARROW ENDPOINT: PASS / REVISE / NOT_APPLICABLE`
 - `PAGE READABILITY: PASS / REVISE`
 - `SOURCE RESOLUTION: PASS / APPROVED_NATIVE_WIDTH / RECAPTURE_REQUIRED`
+- `VIDEO FRAME PROVENANCE: PASS / REVISE / NOT_APPLICABLE`
+- `VIDEO FRAME READABILITY: PASS / RECAPTURE_REQUIRED / NOT_APPLICABLE`
 
 检查对应用户原话确在起始UI截图中；GPT before/after确为有关原句；箭头具有语义依据且端点、方向准确；没有圈框、压字和错误裁切；实际页面的截图、侧注、标题和续页可读。`CONTINUATION`只用于承接已建立用户入口的续页，并记录其起始页；不能用于没有用户UI的新板块。
 
 没有设计箭头的Contact Sheet或未标注裁片，记录`ANNOTATION MODE: NONE`及不适用依据，不虚构关系或通过记录；若出现旧圈框/高亮则页面检查为`REVISE`。`APPROVED_NATIVE_WIDTH`须满足§5.4的明确批准、实际尺寸/PPI和可读性检查，不能作为来源或原话真实性的豁免。
 
-任一适用项`REVISE`或`RECAPTURE_REQUIRED`均阻止该Evidence的总审核通过与Lock。符合条件的原宽批准可与其他检查一起进入Evidence Master审核，不再机械要求补截更宽原图。旧BOX RANGE/高亮检查只作为历史记录保留，当前新审查不再以圈框范围为门槛。
+任一适用项`REVISE`或`RECAPTURE_REQUIRED`均阻止该Evidence的总审核通过与Lock。
+视频证据需回查源视频的时间码/PTS、所选解码帧及裁片边界，检查原话、消息次序、折叠区是否实际展现、是否有不连续拼接、UI关键字是否可辨；没有视频证据时标 `NOT_APPLICABLE`，不虚构检测。符合条件的原宽批准可与其他检查一起进入Evidence Master审核，不再机械要求补截更宽原图。旧BOX RANGE/高亮检查只作为历史记录保留，当前新审查不再以圈框范围为门槛。
 
 ---
 
@@ -1371,6 +1395,11 @@ Screenshot Audit按实际对象逐项记录，取值统一为：
 - Raw Screenshot
 - User UI Entry Screenshot / Opening Page
 - Capture Method / Supplied Split Images / Available Parent Capture
+- Video Source ID / Original Video SHA256 / Restricted Master Location（若为视频）
+- Video Timecode / PTS or Frame Index / Decoded Frame SHA256（若为视频）
+- Video Frame Pixel Size / Frame-to-Crop Mapping（若为视频）
+- Video Frame Provenance / Readability Audit Result（若为视频）
+- Public-Release / Privacy Review Decision（若相关）
 - Crop / Split Source Mapping
 - Cropped Screenshot
 - Annotated Screenshot
@@ -1407,6 +1436,8 @@ Screenshot Audit按实际对象逐项记录，取值统一为：
 → `SCREENSHOT_REVIEWED`
 → `CROPPED / ANNOTATED`
 → `LOCKED`
+
+视频取证在 `RAW_CAPTURED` 阶段同时完成母视频身份、实际截帧、时间码与来源映射、解码帧核验；若缺失或不可读则保持 `RECAPTURE_REQUIRED`，不跳过审核进入Lock。
 
 ### Retrospective Evidence
 
@@ -1619,7 +1650,7 @@ Part I：
 Part II：
 
 - Original Research Conversation优先；
-- 实时保存原生截图；
+- 默认实时保存真实录屏原文件；可补充原生截图；
 - Evidence Master后续筛选、裁切、排版和Lock。
 
 ### Phase 2 — Block / Section-Level LaTeX Sync
@@ -1653,7 +1684,7 @@ Part II：
 2. **Raw Original优先于任何精修版本。**
 3. **能裁切不改写，能多页不压缩。**
 4. **长是版式问题；乱是Narrative问题，两者分开处理。**
-5. **用户负责保存真实原生截图，可自愿提供长图分割件；正式裁切规格、排版、annotation和LaTeX呈现由Evidence Master负责。**
+5. **用户默认提供真实、完整、可读的录屏；原生截图/ShareX长图可补充。GPT实际具备工具时提取真实解码帧；正式筛选、裁片规格、箭头、排版、审核和Lock由获指定的Evidence Master负责。**
 6. **Research Conversation负责产生真实Evidence。**
 7. **Evidence Master负责筛选、整理、裁切、审核和Lock。**
 8. **Simulation Conversation只执行必要的Approved Retrospective Script。**
@@ -1671,7 +1702,7 @@ Part II：
 20. **Part I只讲Workflow Construction，不混入具体Experiment技术问题。**
 21. **Part II记录具体任务中的真实研究Decision。**
 22. **后期Evidence生产协议不作为正式Workflow Construction故事。**
-23. **截图必须由Evidence Master独立审核。**
+23. **视频源、实际截帧、裁片和正式页面的真实性必须由Evidence Master审核；视频母件不得以生成PNG冒充无损网页原件。**
 24. **未LOCK不作为正式Evidence。**
 25. **内部Evidence Plan不进入Project source。**
 26. **LaTeX按自然Block/Section同步。**

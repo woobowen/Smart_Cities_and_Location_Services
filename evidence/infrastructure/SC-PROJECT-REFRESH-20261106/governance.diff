@@ -1,0 +1,355 @@
+--- a/docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md
++++ b/docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md
+@@ -1,12 +1,12 @@
+ # 《智慧城市与位置服务》Workflow Interaction Evidence Protocol
+ 
+-Version: **v2.8**\
++Version: **v2.9**\
+ Status: **ACTIVE / LONG-TERM RULE**\
+ Purpose: **Process Report · Workflow Construction · Experiment Decision Process · Human–AI Interaction Evidence**  
+-Revision: **2026-11-05 · Long-run autonomous research traces / human–AI UI provenance boundary**  
++Revision: **2026-11-06 · Video-first original evidence / verified frame extraction / private provenance**  
+ Canonical repository path: `docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md`
+ 
+-本协议专门约束：真实历史恢复、原始聊天取证、Narrative规划、Evidence设计、最小必要编辑、对话精修/重构、Simulation执行、原始研究对话证据采集、截图、审核、Evidence Lock、Block/Section级LaTeX同步与最终综合图制作。
++本协议专门约束：真实历史恢复、**用户录屏/原生截图取证**、Narrative规划、Evidence设计、最小必要编辑、对话精修/重构、Simulation执行、原始研究对话证据采集、截图、审核、Evidence Lock、Block/Section级LaTeX同步与最终综合图制作。
+ 
+ 优先级：
+ 
+@@ -255,9 +255,13 @@
+ 
+ ### 5.1 用户职责
+ 
+-用户负责原生取证：
+-
+-> **保存原生、完整、真实的ChatGPT Web截图。**
++用户负责提供**真实、尽量完整且清晰的聊天取证来源**。正式Process默认采用：
++
++> **用户在ChatGPT网页中录制完整相关对话（MP4等原视频） → 上传给具备视频处理工具的GPT/Evidence Master → GPT从视频定位真实聊天画面、提取原始解码帧并制作证据。**
++
++用户不再默认使用ShareX逐条长截图和手动图片分割。录屏是默认入口而非唯一合法来源；必要的原生截图、长图、分割件和针对某段的补录仍可作为补充。
++
++录制时尽量逐条展开与Decision有关的消息，缓慢滚动并在重要文字处短暂停留，保留用户原话、GPT回应与必要前文，避免密钥、通知、无关隐私进入画面。视频缺失片段或文字确实不可读时，先利用相邻帧与现有附件恢复；仅对具体缺口请求补录/补截，不机械要求用户重录全部聊天。
+ 
+ 原则上：
+ 
+@@ -269,13 +273,12 @@
+ 
+ 用户应尽量：
+ 
+-- 保留完整消息边界；
+-- 宁可多截，不要少截；
+-- 关键Evidence附近保留必要上下文；
+-- 保存原始文件；
+-- 不覆盖raw截图。
+-
+-用户可以自愿使用ShareX等工具进行长截图与图片分割；“不要求用户自行裁切”不是禁止提交已经分割的原生图片。收到长图和分割图时，保存两者及其对应关系；仅收到分割图时，如实记录当前可用原件，不伪造缺失的整张长图。正式取舍、裁切规格、排版与标注仍由Evidence Master负责。
++- 保留真实消息的完整边界和出现顺序；
++- 录屏覆盖关键Evidence和必要前后文，不遗漏折叠内容；
++- 保留视频/截图原始文件及其可核验身份，不覆盖；
++- 尽量提供能阅读原话的录制分辨率与停留时间，不为“较短视频”快速掠过核心决策。
++
++GPT/Evidence Master在真实工具可用时承担帧普查、时间码定位、清晰帧截取、裁片、分页和标注；不得声称已经查看尚未真正解析的视频。用户自愿使用ShareX或其他工具时仍接受真实长图/分割件，保存已提供原件和映射，不伪造缺失的视频或母图。
+ 
+ 
+ ### 5.2 Evidence Master职责
+@@ -294,7 +297,9 @@
+ 
+ 原则：
+ 
+-> **用户负责原生取证，Evidence Master负责正式呈现。**
++> **用户负责提供真实取证来源；GPT在具备实际工具能力和授权时负责视频截帧；Evidence Master负责正式取舍、呈现与Lock。**
++
++Evidence Master仍须由用户按具体任务明确指定；一次任务中对当前GPT的指定不自动迁移到以后所有对话。
+ 
+ ---
+ 
+@@ -304,10 +309,23 @@
+ 
+ Formal Evidence Screenshot 以真实、可读的ChatGPT Web UI为基础；一张覆盖当前Interaction Window或其连续片段，宁可多张，不将长聊天压缩到一页。PNG preferred，保留原图宽高比和像素，不规定跨任务统一的最低宽度。按Visual System §8.7安排截图主导的版面；Evidence Master负责selection、crop、pagination、annotation、caption、LaTeX placement、audit、lock。
+ 
++### 5.3.1 Video Original / Frame Provenance（新增默认取证路径）
++
++- **VIDEO_ORIGINAL**：用户上传的原始视频字节、文件SHA-256、实际时长/尺寸/编码及可用性；该文件是录屏取证母件，不等于浏览器直接输出的无损网页图像。
++- **VIDEO_EXTRACTED_FRAME**：按真实容器时间码/PTS或可解释的时间定位从视频解码并保存的PNG帧；记录来源视频ID、时间点/帧索引、原解码像素尺寸和帧文件哈希。PNG只是无损保存**已被原视频有损编码处理过的画面**，不能冒称原始网页像素无损。
++- **VIDEO_FRAME_CROP**：从已保存帧无损矩形裁切的正式图片；记录源帧、裁切边界、像素尺寸、顺序、必要交叠及使用的证据ID。标注层与裁片分离。
++- **IMAGE_NATIVE_CAPTURE**：用户单独上传的真实网页截图/ShareX长图，按现有raw/crop/annotation流程；与视频来源身份不可混称。
++
++长录屏先建立可读帧时间线及Decision Unit候选，再从真正清晰、稳定的帧中挑选截图；可以跨多个时间点按真实顺序制作续页，**不能将不同时刻的画面合成为伪称单次原始截图的图片**。视频显示过“展开/收起”不等于每个折叠部分已被真实录到；不可读、缺失或被遮挡处须登记限制而非猜写。视频时间码指录屏内的相对时刻，不自动等于聊天消息实际发送时间。
++
++原始视频及可能包含私密聊天/通知的未筛选帧默认归入**受保护的本地原始证据**，不自动加入公开GitHub、Project Sources或可公开的完整源包。正式获批的PDF可以按用户明确范围同步；逐帧原件或含真实聊天的ZIP仍需单独检查隐私与发布授权。
++
+ ### 5.4 Resolution / Image Integrity
+ 
+ 正式清晰度来自 raw 本身。记录 raw pixel size、final display size、effective PPI；裁切时同时记录 crop pixel size 与 crop bounds。有效 PPI = 实际显示区域的像素数 / 最终物理尺寸（英寸），横纵分别计算，取较小值；不能用整张 raw 的像素数除以局部 crop 的尺寸。
+ 
++视频帧额外记录**录制视频分辨率、解码原帧分辨率、裁片区域与压缩伪影/滚动模糊**。视频分辨率和PDF的200-dpi渲染都不等于裁片实际有效PPI；不得以生成PNG、插值、AI超分或锐化制造不存在的原文细节。相同句子被录到多个相邻帧时，选择最清晰且上下文真实完整的帧，不依赖OCR自动结果取代可见字形核验。
++
+ 常规目标为 **>= 180 ppi，preferred >= 200 ppi**，同时检查最终页面中的实际可读性。新素材优先通过合理显示尺寸、无损裁切和拆页改善；未获明确原宽批准且仍无法达到适用清晰度条件时，记录 `RECAPTURE_REQUIRED`，暂停该证据的Lock并说明需要补取的具体范围。
+ 
+ **已批准原宽素材。**用户明确允许使用现有截图宽度，并已审核真实样页或成品效果时，可以在该素材与版式范围内记录 `APPROVED_NATIVE_WIDTH` 后继续制作。保留实际PPI、原件/裁片标识、批准来源及对应样页，不将其写成达到了更高PPI，也不反复要求用户加宽重截。后续无需因同一原宽再次请求批准；版式发生影响可读性的变化时检查受影响页面。
+@@ -320,7 +338,7 @@
+ 
+ 正式资产保留三层：raw、crop、annotated（可由 LaTeX/TikZ 源文件与 PDF overlay 表示）。raw 不得覆盖。
+ 
+-推荐：**raw PNG → lossless crop / LaTeX trim → direct embed → vector annotation**。LaTeX trim 可保留 raw 文件并以可追溯的裁切参数表达 crop 层。
++推荐：**VIDEO_ORIGINAL → decoded raw PNG frame → lossless crop / LaTeX trim → direct embed → vector annotation**；原生截图仍按 **raw PNG → lossless crop → vector annotation**。LaTeX trim 可保留raw frame并以可追溯的裁切参数表达crop层。视频母件与raw frame都不得被裁片或注释覆盖。
+ 
+ 禁止：raw → downsample → raster annotation → enlarge。
+ 
+@@ -332,17 +350,17 @@
+ 
+ 此要求作用于新的互动板块，而不是要求每一张续页重新贴一次用户消息。一个Decision Unit跨多页时，第一页展示用户原话及必要回应，后续页按连续关系承接。若用户消息依赖上一条GPT内容，允许在起始截图中按真实顺序一并保留前文；“用户可见”不等于把用户消息移到真实发生顺序之前。
+ 
+-缺少对应用户原件时，先检索已有素材、同组长图、分割图及相邻上下文；仍缺失则登记该板块缺项，不能用不相关的用户话语、报告截图或补写聊天凑齐。封面、目录及单纯综合图页不作为独立互动板块，亦不代替该板块的用户UI入口。
++缺少对应用户原件时，先检索**原始视频的邻近清晰帧、录屏的其他位置**、已有截图、同组长图、分割图及相邻上下文；仍缺失则登记该板块缺项，不能用不相关的用户话语、报告截图或补写聊天凑齐。封面、目录及单纯综合图页不作为独立互动板块，亦不代替该板块的用户UI入口。
+ 
+ ### 5.7 开篇的真实截图采集说明
+ 
+-Process Report开篇用一句话如实说明本次截图由谁采集、实际使用的工具/分割方式，以及AI在本次协作中的取证能力与制作职责。说明出现一次即可；详细来源映射保留源包，个别证据有不同来源或复盘性质时另行标明。
++Process Report开篇用**一句简短事实说明**本轮用户实际采用录屏或原生截图、由谁提帧及制图；不因采用视频就增加“时间码/帧哈希/裁切方法”的正式正文附录。详细源视频哈希、帧时间码、裁片坐标和审核记录只进入**受保护的内部 Evidence / 可控源包**，个别证据来源不同或确为后期复盘时准确注明。
+ 
+ 本次已验收Process成品的用户确认原句为：
+ 
+ > 文档中的所有对话截图，都是我在 ChatGPT 网页中通过sharex软件利用长截图一张一张手动截取然后再利用图片分割器功能一张张切割并提供的；在本次协作中，GPT 没有直接截取我的网页对话界面的功能。
+ 
+-这句保留为该成品的采集说明。未来任务按真实工具与能力填写，不强制使用ShareX，不把“本次协作中”的工具能力限定扩展为永久事实。采集说明与前言衔接按Report Writing Guide §12执行，不扩写为反复出现的制作免责声明。
++这句**仅保留为实验一已验收成品的真实历史说明**，不能机械复用于实验二及未来视频取证。实验二真实视频取证参考为用户上传真实ChatGPT录屏、GPT从录屏原帧提取PNG并在LaTeX加入矢量箭头；以后须按实际能力写，不能假称每个运行环境均能读视频。采集说明与前言衔接按Report Writing Guide §12执行，不扩写为制作技术附录或反复出现的免责声明。
+ 
+ 
+ ---
+@@ -1227,7 +1245,8 @@
+ → 资料/数据/实验\
+ → Decision\
+ → 标记Interaction Evidence Candidate\
+-→ 用户保存原生截图\
++→ 用户保留完整原始录屏（或真实网页截图）\
++→ Evidence Master按授权从视频截帧/选择证据\
+ → 继续研究。**
+ 
+ Research Conversation可以轻量记录：
+@@ -1306,6 +1325,8 @@
+ - RETROSPECTIVE RECONSTRUCTION
+ - CURRENT RECONFIRMATION
+ 
++视频来源应进一步标识 `VIDEO_ORIGINAL` → `VIDEO_EXTRACTED_FRAME` → `VIDEO_FRAME_CROP`；原生截图仍标记 `IMAGE_NATIVE_CAPTURE`。这些表示**捕获媒介与父子来源关系**，并不替代上述Original/L0–L5编辑干预等级。视频取证的真实网页UI、用户原话和相邻消息需按同一真实性标准核查。
++
+ ### G. Required Label
+ 是否需要标注：
+ 
+@@ -1331,12 +1352,15 @@
+ - `ARROW ENDPOINT: PASS / REVISE / NOT_APPLICABLE`
+ - `PAGE READABILITY: PASS / REVISE`
+ - `SOURCE RESOLUTION: PASS / APPROVED_NATIVE_WIDTH / RECAPTURE_REQUIRED`
++- `VIDEO FRAME PROVENANCE: PASS / REVISE / NOT_APPLICABLE`
++- `VIDEO FRAME READABILITY: PASS / RECAPTURE_REQUIRED / NOT_APPLICABLE`
+ 
+ 检查对应用户原话确在起始UI截图中；GPT before/after确为有关原句；箭头具有语义依据且端点、方向准确；没有圈框、压字和错误裁切；实际页面的截图、侧注、标题和续页可读。`CONTINUATION`只用于承接已建立用户入口的续页，并记录其起始页；不能用于没有用户UI的新板块。
+ 
+ 没有设计箭头的Contact Sheet或未标注裁片，记录`ANNOTATION MODE: NONE`及不适用依据，不虚构关系或通过记录；若出现旧圈框/高亮则页面检查为`REVISE`。`APPROVED_NATIVE_WIDTH`须满足§5.4的明确批准、实际尺寸/PPI和可读性检查，不能作为来源或原话真实性的豁免。
+ 
+-任一适用项`REVISE`或`RECAPTURE_REQUIRED`均阻止该Evidence的总审核通过与Lock。符合条件的原宽批准可与其他检查一起进入Evidence Master审核，不再机械要求补截更宽原图。旧BOX RANGE/高亮检查只作为历史记录保留，当前新审查不再以圈框范围为门槛。
++任一适用项`REVISE`或`RECAPTURE_REQUIRED`均阻止该Evidence的总审核通过与Lock。
++视频证据需回查源视频的时间码/PTS、所选解码帧及裁片边界，检查原话、消息次序、折叠区是否实际展现、是否有不连续拼接、UI关键字是否可辨；没有视频证据时标 `NOT_APPLICABLE`，不虚构检测。符合条件的原宽批准可与其他检查一起进入Evidence Master审核，不再机械要求补截更宽原图。旧BOX RANGE/高亮检查只作为历史记录保留，当前新审查不再以圈框范围为门槛。
+ 
+ ---
+ 
+@@ -1371,6 +1395,11 @@
+ - Raw Screenshot
+ - User UI Entry Screenshot / Opening Page
+ - Capture Method / Supplied Split Images / Available Parent Capture
++- Video Source ID / Original Video SHA256 / Restricted Master Location（若为视频）
++- Video Timecode / PTS or Frame Index / Decoded Frame SHA256（若为视频）
++- Video Frame Pixel Size / Frame-to-Crop Mapping（若为视频）
++- Video Frame Provenance / Readability Audit Result（若为视频）
++- Public-Release / Privacy Review Decision（若相关）
+ - Crop / Split Source Mapping
+ - Cropped Screenshot
+ - Annotated Screenshot
+@@ -1408,6 +1437,8 @@
+ → `CROPPED / ANNOTATED`
+ → `LOCKED`
+ 
++视频取证在 `RAW_CAPTURED` 阶段同时完成母视频身份、实际截帧、时间码与来源映射、解码帧核验；若缺失或不可读则保持 `RECAPTURE_REQUIRED`，不跳过审核进入Lock。
++
+ ### Retrospective Evidence
+ 
+ `IDENTIFIED`
+@@ -1619,7 +1650,7 @@
+ Part II：
+ 
+ - Original Research Conversation优先；
+-- 实时保存原生截图；
++- 默认实时保存真实录屏原文件；可补充原生截图；
+ - Evidence Master后续筛选、裁切、排版和Lock。
+ 
+ ### Phase 2 — Block / Section-Level LaTeX Sync
+@@ -1653,7 +1684,7 @@
+ 2. **Raw Original优先于任何精修版本。**
+ 3. **能裁切不改写，能多页不压缩。**
+ 4. **长是版式问题；乱是Narrative问题，两者分开处理。**
+-5. **用户负责保存真实原生截图，可自愿提供长图分割件；正式裁切规格、排版、annotation和LaTeX呈现由Evidence Master负责。**
++5. **用户默认提供真实、完整、可读的录屏；原生截图/ShareX长图可补充。GPT实际具备工具时提取真实解码帧；正式筛选、裁片规格、箭头、排版、审核和Lock由获指定的Evidence Master负责。**
+ 6. **Research Conversation负责产生真实Evidence。**
+ 7. **Evidence Master负责筛选、整理、裁切、审核和Lock。**
+ 8. **Simulation Conversation只执行必要的Approved Retrospective Script。**
+@@ -1671,7 +1702,7 @@
+ 20. **Part I只讲Workflow Construction，不混入具体Experiment技术问题。**
+ 21. **Part II记录具体任务中的真实研究Decision。**
+ 22. **后期Evidence生产协议不作为正式Workflow Construction故事。**
+-23. **截图必须由Evidence Master独立审核。**
++23. **视频源、实际截帧、裁片和正式页面的真实性必须由Evidence Master审核；视频母件不得以生成PNG冒充无损网页原件。**
+ 24. **未LOCK不作为正式Evidence。**
+ 25. **内部Evidence Plan不进入Project source。**
+ 26. **LaTeX按自然Block/Section同步。**
+--- a/docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md
++++ b/docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md
+@@ -1,7 +1,7 @@
+-# Smart Cities & Location Services — Visual / LaTeX Design System v2.7
++# Smart Cities & Location Services — Visual / LaTeX Design System v2.8
+ 
+ Status: **LOCKED for Experiment Report and Process Report**  
+-Revision: **2026-11-05 · Research-led visualization selection / candidate figures / dual scientific-visual audit**  
++Revision: **2026-11-06 · Video-extracted authentic UI evidence / report exemplar routing**  
+ Canonical repository path: `docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md`
+ 
+ This document defines the long-term visual identity, LaTeX baseline, report identities, evidence presentation language and technical-visualization rules for the 《智慧城市与位置服务》 project. Detailed prose and argumentation rules are maintained in the Report Writing Guide, not duplicated in Project Settings.
+@@ -450,7 +450,7 @@
+ 
+ ### 8.7 Interaction Evidence Visual Grammar
+ 
+-**Original Evidence First.** Work from the user's real ChatGPT Web screenshots, including user-supplied native long captures and their split images. A long capture may be cropped and paginated into formal evidence when the relevant conversation is intact and readable. Preserve **raw / crop / annotated** with direct image embedding and editable TikZ/PDF vector arrows; do not substitute an old report page or redraw the UI. Acquisition, source mapping, effective PPI and explicitly approved native-width use are governed by Evidence Protocol §§5.3—5.7.
++**Original Evidence First.** 默认取证来源是用户真实录制的ChatGPT网页视频；也接受用户提供的原生网页截图、长截图及分割件。视频经真实工具读取后，先建立母视频→时间码→原始解码PNG帧→无损裁片的映射，保留截图中的用户原话、回复及连续关系；没有录像或工具不可用时不声称已截帧。PNG是对有损视频解码后的无损保存，**不是浏览器无损原生截图**。正式内容保持**raw / crop / annotated**分层，通过直接嵌入和可编辑TikZ/PDF箭头制作；不得复用旧报告页面或重绘UI。完整来源、有效PPI与视频框架见Evidence Protocol §§5.3—5.7。
+ 
+ **Screenshot-dominant composition.** For a side-by-side interaction page, devote approximately **70%–80% of the usable image-and-note area to the screenshot pane**, with about **20% for right-side commentary** and the remaining space for a narrow gutter/arrow routing. These proportions describe layout allocation, not a requirement to distort or manufacture screenshot pixels. Keep the visible screenshot substantial within that pane; do not satisfy the ratio using a wide empty frame around a tiny image. Reduce commentary or split long evidence before reducing chat readability.
+ 
+@@ -479,6 +479,14 @@
+ After final XeLaTeX/PDF rendering, inspect the actual page for the user UI entry, screenshot/aside balance, phrase visibility, arrow direction/endpoints, cropping and text occlusion. Follow Evidence Protocol §30.H for the audit fields and source-resolution decision. Preserve approved narrow-source exceptions honestly rather than labeling them as higher-resolution originals. PDF rendering at 200 dpi is an inspection step, not an increase in source resolution.
+ 
+ Prohibited: generated or redrawn chat UI; painting out/editing original words; artificial pixel upscaling or fake sharpening presented as original detail; rasterizing a whole report page and reusing it as chat evidence; arbitrary arrow connections; restoring circles/boxes under another annotation name.
++
++### 8.8 Video-based UI evidence: quality and semantic integrity
++
++当原件是视频时，优先在缓慢滚动或静止画面中选取实际可读的帧；同一互动跨多个视频时刻需标注真实连续关系，不把不同时刻的UI合成“同一屏原始截图”。裁片应有明确视频时间码与原帧对应，保留该帧原始字形、比例、UI气泡及必要上下文；视频中的折叠正文不因在别的消息中被概述就算作已录到。
++
++维持§8.7的截图主导、P2语义箭头和正文/侧注配比；视频帧的截图清晰度依**解码帧本身**，报告的200-dpi渲染不会增加源字的分辨率。正式页面应核验显示尺寸、有效PPI、压缩伪影、跨页连续性、标注端点、注释不遮挡及PDF中实际可读性。发现关键字不可辨认时先利用录屏邻帧、合理分割或缩放调整，仍不足则请求对应片段补录；不AI超分、不生成假网页UI、不重绘文字。
++
++视频提帧时间码、原视频哈希、裁片坐标和内部截帧审查**不以制作附录形式进入面向教师的Process正文**；按Evidence Protocol留在受保护的内部证据包。原始完整录屏、未选中原始帧及包含私密内容的源ZIP不得由默认工程发布自动公开。
+ 
+ ---
+ 
+@@ -889,6 +897,8 @@
+ |---|---|---|
+ | `Experiment_Report_吴博闻_10245102410.pdf` + `Experiment_Report_完整重构_源文件.zip` | **User-accepted Experiment Report exemplar**: teacher-facing problem-led writing, integrated method/verification/comparison, figure composition and editable production | Actual Experiment 1 work, not synthetic; its data, parameters, history and conclusions cannot be reused as a new task's results. User document acceptance does not prove repository integration, teacher grading or submission. |
+ | `Process_Report_Revised.pdf` + `Process_Report_Revised_LaTeX_Source.zip` | **User-accepted full Process Report exemplar**: integrated Workflow Construction and Experiment Decision Process; first-person retrospective, real user UI at each interaction opening, screenshot-dominant pages, arrow-only correspondence and editable production | Use its real narrative and construction choices as a reference, not as new-task history. Preserve the accepted pair; record actual source hashes, build checks and per-evidence approval scope in the internal manifest/ledger. |
++| `Experiment2_Experiment_Report.pdf` (canonical Project Sources filename; repo `task2/reports/experiment/Experiment_Report.pdf`) | **Experiment 2 teacher-facing technical reference**, externally checked in the stated review scope | Real TBG/BB, NSGA and Q-KM work, not a universal method or future-task result. User/teacher formal acceptance and independent full rerun remain separate statuses. Pairing source remains in the task2 repository/release, not automatically a Project Source. |
++| `Experiment2_Process_Report.pdf` (canonical Project Sources filename; approved 16-page video-evidence report) | **User-approved Experiment 2 Process Report exemplar**: complete-video-source extraction, authentic user UI, research-long-run boundaries, readable arrows, P2/XeLaTeX production | Use its *presentation method* and true workflow story as a reference, not as permission to reuse original user messages/video in later tasks. Raw video and unsanitized evidence source ZIP remain private by default; the approved PDF has a separate public-release review boundary. |
+ | `WF_WorkflowConstruction_PreTask1_REVISED.pdf` + `WF_WorkflowConstruction_PreTask1_31p_LaTeX_Source.zip` | **Historical pre-Task-1 Process foundation**: retained for the provenance of earlier Workflow Construction | Superseded by the accepted full Process pair as the current writing/layout exemplar. Keep historical originals and approval records in the repository; old boxes, narrow-image layouts and title-only pages are not the current production standard. |
+ | `Experiment_Report_P2_Exact.pdf` | **Synthetic visual/template preview**, P2 and reusable page-language reference | Not experiment evidence or a competing version of the accepted real report. |
+ | `Process_Report_P2_Locked_v1.pdf` | **Process template preview** with its recorded scope | The template name does not lock real interactions or prove all new pages accepted. |
+@@ -905,7 +915,9 @@
+ 
+ ### 16.4 Project Sources distribution
+ 
+-Formal exemplar PDFs and their matching source ZIPs may be included in Project Sources when explicitly approved, with roles distinct from normative Markdown and synthetic templates. Key rules remain readable Markdown, not hidden solely in a ZIP. Broad source archives must not include font binaries, secrets or unrelated personal files.
++Project Sources以**小型、明确批准的成员集**为目标：长期规范、必需的绘图Skill、少量有实质差异的正式PDF参考及确有长期制作价值的已验收源包；已完成任务的教师原件和Starter通常归档在仓库，需要回看时再按需提供。不能因仓库“完整镜像”原则，自动把全部历史ZIP、视频、截图或运行记录加入Project Sources。形式上重复或失去当前用途的合成preview可以保留仓库，但退出active上传集。
++
++已验收PDF和配对源ZIP**可以**按批准进入Project Sources，但不是每份PDF都强制携带所有私密原始证据：当源包含原始聊天视频帧、未遮蔽私密材料或缺少公开授权时，默认仅同步获准的PDF，源包保留受保护的本地存档或按需交接。关键规则仍为可读Markdown，不能藏在ZIP中；任何源包都不含字体二进制、秘密或无关私人文件。
+ 
+ The upload set and its count come from the current approved [structured manifest](../../evidence/infrastructure/chatgpt-project-source-sync/sources.json), with no permanent file-count constant. Membership checks, stable names and byte equality remain mandatory; detailed distribution/migration rules are in AGENTS §18. Do not remove an existing teacher file or valid reference merely to restore an old count, and do not claim UI upload from local file generation.
+ 
+--- a/docs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md
++++ b/docs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md
+@@ -1,8 +1,8 @@
+ # 《智慧城市与位置服务》正式报告写作与论证指南
+ 
+-Version: **v1.3**  
++Version: **v1.4**  
+ Status: **ACTIVE / LONG-TERM RULE**  
+-Revision: **2026-11-05 · Adaptive experiment narrative / evidence-driven visualization / automated decision attribution**  
++Revision: **2026-11-06 · Video-origin Process evidence / concise acquisition disclosure / private technical provenance**  
+ Canonical repository path: `docs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md`
+ 
+ 本指南承接已确认的 Experiment Report 重构与报告制作方式，负责正式报告的读者定位、内容组织、论证、中文表达、图文关系和编辑审核。它不是本次实验的结果文件，也不要求未来任务照搬实验一的目录、参数、数据或图型。
+@@ -262,15 +262,15 @@
+ 
+ ### 12.2 用真实用户UI引出互动，不用释文代替截图
+ 
+-每个新互动板块的起始部分必须能看到对应的真实用户UI消息，再结合GPT回应解释这一轮怎样改变了要求、方案或判断。正文与侧注说明“我在关心什么、回应改变了什么、后来怎样验证或取舍”，不逐句复述长截图。承接同一互动的续页无需重复同一条用户消息。
+-
+-用户消息的起始截图、必要前文、跨页与采集说明按Evidence Protocol §§5.3—5.7执行。摘要、文字引述、技术图以及旧报告页面截图，都不能代替真实ChatGPT对话截图。标题、简短导语与第一组截图在同页自然衔接；截图主导的比例和箭头样式由Visual System §8.7统一规定。
++每个新互动板块的起始部分必须能看到对应的真实用户UI消息；可以是**从真实ChatGPT录屏中提取的解码帧裁片**，也可以是真实原生截图。再结合GPT回应解释这一轮怎样改变了要求、方案或判断。正文与侧注说明“我在关心什么、回应改变了什么、后来怎样验证或取舍”，不逐句复述长截图。承接同一互动的续页无需重复同一条用户消息。
++
++用户消息的起始截图、视频帧时间码映射、必要前文、跨页与采集说明按Evidence Protocol §§5.3—5.7执行。摘要、文字引述、技术图以及旧报告页面截图，都不能代替真实ChatGPT对话画面。标题、简短导语与第一组截图在同页自然衔接；截图主导的比例和箭头样式由Visual System §8.7统一规定。
+ 
+ ### 12.3 直接叙述事实，把制作与交付信息放到适当位置
+ 
+ 全文逐段检查防御性写作，而非只删除用户举出的某一句。正文优先写清当时的问题、我的真实要求、GPT的回应、验证依据和后续决定；不反复插入“报告完成不代表什么”“本成稿不自动证明什么”等与该段研究内容无关的制作声明。
+ 
+-提交是否执行、作者自检与独立检查的分工、PDF/源包构建范围、完整裁切与绘图定义、文件清单和日志入口，放在交付记录或源包说明中。教师明确要求的内容照常提供。正文中的采集说明只需在开篇如实交代一次，后面仅对来源或性质确有不同的证据补充说明。
++提交是否执行、作者自检与独立检查的分工、PDF/源包构建范围、完整视频时间码/帧哈希/裁切坐标、绘图定义、文件清单和日志入口，放在**受保护的内部证据/源包说明**中。教师明确要求的内容照常提供。**正式Process不为正常视频截帧流程新增“视频证据来源、裁切与复现”制作附录**；在开篇仅如实简述用户录屏、GPT实际提帧及箭头制作一次，后面只对来源身份有实际差异时补充说明。
+ 
+ 数据来源未知、无真值、指标范围、负结果以及AI使用等影响解释的事实仍保留在相关内容处，用具体、自然的语言说明。删去防御口吻不等于删去限制；旧截图内真实出现的防御语句也不因改稿被擦除或改写。
+ 
+@@ -313,7 +313,7 @@
+ 
+ ## 15. 已验收参考成品与长期复用
+ 
+-已批准的Experiment Report及完整Process Report的PDF与对应源包，分别作为技术论证和真实研究过程叙述的写作、图表与排版参考；参考清单和角色由Visual System §16统一登记，实际文件来源与哈希由内部Source Manifest维护。完整Process成品可供复用真实UI起始、截图主导、箭头对应、跨页和第一人称写作的制作方式；较早PreTask版本保留历史身份，不作为与之竞争的当前版式标准。
++已批准的Experiment Report及完整Process Report的PDF与对应源包，分别作为技术论证和真实研究过程叙述的写作、图表与排版参考；**Experiment 2 的获准视频证据版Process PDF可额外参考录屏截帧、正文与矢量箭头的组合方式**，不能借用其用户原话为新任务历史。参考清单和角色由Visual System §16统一登记，实际文件来源与哈希由内部Source Manifest维护。完整Process成品可供复用真实UI起始、截图主导、箭头对应、跨页和第一人称写作的制作方式；较早PreTask版本保留历史身份，不作为与之竞争的当前版式标准。
+ 
+ 阅读成品以理解内容和视觉；读取源文件以复用构建方式。PDF和ZIP必须对应同一版本，改动任一方后重新检查配对。包内数据仍属于原任务，不成为新实验的输入或结果。
+ 
+--- a/AGENTS.md
++++ b/AGENTS.md
+@@ -2,7 +2,7 @@
+ 
+ 本文件规定 Codex 在《智慧城市与位置服务》仓库中的长期工程行为。
+ 
+-Revision: **2026-11-05 · Conditional long-run execution / multi-agent evidence / GitHub review-packet contract**  
++Revision: **2026-11-06 · Video-first evidence engineering / minimal Project Sources / release privacy**  
+ Canonical repository path: `AGENTS.md`
+ 
+ Repository: https://github.com/woobowen/Smart_Cities_and_Location_Services.git\
+@@ -363,19 +363,19 @@
+ 
+ **Evidence Master决定关系，Codex精确实现。**Codex不得自行选择用户UI入口、User anchor、GPT before/after、箭头语义关系、turn调序、入选Evidence或改写用户原话。按当前批准的Evidence Plan / annotation specification实现；缺少规格只暂停受影响真实页面，不按时间相邻推断关系。
+ 
+-新互动板块起始部分必须嵌入对应的真实ChatGPT用户UI；同一互动的续页按批准顺序承接。从用户原生截图、长截图或分割件制作，不拿旧LaTeX/PDF页面渲染图当原始聊天素材。截图主体、简短右侧说明、标题与首图同页，以及无固定最低像素宽度的版式规则，执行Visual System §§4.3、8.7与Evidence Protocol §5。
++新互动板块起始部分必须嵌入对应的真实ChatGPT用户UI；同一互动续页按批准顺序承接。默认从用户上传的**完整真实录屏**中提取实际解码帧；真实原生截图、长截图或分割件可作补充。每张视频证据需有原视频哈希、时间码/帧标识和裁片映射，不拿旧LaTeX/PDF报告页面渲染图当原始聊天素材，也不能伪造未录入的折叠消息。截图主体、简短右侧说明、标题与首图同页，以及无固定最低像素宽度的版式规则，执行Visual System §§4.3、8.7与Evidence Protocol §5。
+ 
+ 对话截图只叠加精确矢量箭头，不恢复荧光圈、彩色框、填充、下划线或圈号覆盖原话。可编辑的技术结构图仍按其原生制图规范处理。箭头必须指向批准的确切短语或紧邻位置，区分原句关系与侧注阅读提示，避免压字和歧义。
+ 
+ Codex负责lossless crop、image direct embed、TikZ/PDF vector arrows、arrow routing、side note placement、LaTeX compile、实际尺寸/PPI记录、PDF render和visual inspection。几何实现不得改变批准的短语、语义关系与文案；裁切、缩放或分页变化后重新核对端点，不只检查源文件中的坐标值。
+ 
+-raw不得覆盖。保留用户提供的原图/分割件、可用长图与映射、crop（或可重现LaTeX trim）、annotated或LaTeX/PDF overlay。没有收到的上游整张长图如实标明缺失，不伪造原件。Original Evidence First、干预等级与重构条件只按Evidence Protocol执行，Simulation不是默认路径。
++raw不得覆盖。若采用视频，应保留**受保护的原始录屏、视频哈希、实际解码帧、时间码、帧/裁片映射**；同时保留实际收到的原图/分割件、可用长图与映射、crop（或可重现LaTeX trim）、annotated或LaTeX/PDF overlay。没有收到的上游视频/长图如实标明缺失，不伪造原件；默认不公开完整视频、未选中帧和含私人聊天的源ZIP。Original Evidence First、干预等级与重构条件只按Evidence Protocol执行，Simulation不是默认路径。
+ 
+ 清晰度、有效PPI公式和用户明确批准现有原宽的处理统一执行Evidence Protocol §5.4。记录真实像素、裁切边界、显示尺寸与适用批准；不得在本文件另设强制加宽门槛，也不得把已通过真实样页审核的同一素材反复退回重截。禁止AI upscale、generative redraw、fake sharpening或将低清栅格标注放大当作原始细节。
+ 
+ 逐项执行Evidence Protocol §30.H的USER UI ENTRY、ANNOTATION MODE、PHRASE MATCH、ARROW RELATION、ARROW ENDPOINT、PAGE READABILITY、SOURCE RESOLUTION检查。原宽例外按实际批准记录，旧BOX RANGE测试退出当前纯箭头页的门槛；历史测试和旧Lock记录保留原身份。Codex工程自检不能替代Evidence Master审核与Lock。
+ 
+-生产链：真实截图/分割原件 → Evidence Master批准规格 → 无损裁切与来源映射 → 直接LaTeX嵌入 → 矢量箭头 → XeLaTeX → 至少200-dpi实际页面检查 → User UI / Phrase / Arrow / Readability Audit → Evidence Master Lock。全局演变图仍在主要Workflow Evidence Lock后制作。
++生产链：**用户真实录屏/原生截图 → GPT在工具可用时核验并提取真实解码帧 → Evidence Master批准来源和对应关系 → 无损裁切与时间码映射 → 直接LaTeX嵌入 → 矢量箭头 → XeLaTeX → 至少200-dpi实际页面检查 → User UI / Phrase / Arrow / Video Provenance / Readability Audit → Evidence Master Lock**。全局演变图仍在主要Workflow Evidence Lock后制作。
+ 
+ ---
+ 
+@@ -535,12 +535,17 @@
+ 
+ **在数据最初接收与制定公开同步方案时，提前审查来源许可、再分发权、隐私、逐条记录及派生结果的反解风险**，不能等到临近push才检查。教师允许课程使用不自动授予公开再分发权限。存在限制时，仅暂停受影响的公开文件，不缩减已获授权的本地实验；合法公开代码、配置、核验脚本、不泄露记录的汇总与数据获取/校验说明。不能虚构授权或下载渠道，也不能为“完整镜像”上传未获授权的教师ZIP、原始数据或可逆派生记录。
+ 
++**真实聊天录屏及截帧需独立做公开边界检查。**用户授权制作Process报告不默认授予公开发布整段原视频、所有原始帧或可恢复私人对话的源包的权限。除用户明确批准并完成实际内容安全审查外，录屏母件/未经筛选证据包在受保护本地保存，不加入公开Git或Project Sources；已批准的正式PDF单独审查公开身份，不能因PDF可发布推定其原始视频也可公开。
++
+ ### ChatGPT Project Sources Upload Bundle
+ 
++本项目的**公开GitHub工程镜像**与**ChatGPT Project Sources精简知识集**不是同一集合：Project Sources按用户当前批准的最小成员清单，只包含长期规则、必要出版制图参考和少量有复用价值的正式报告；教师/Starter的历史原件、失败运行和完整工程继续保存于GitHub或受保护本地，但不自动进入长期ChatGPT上下文。清理Project Sources不授权删除唯一源文件，也不授权将受限视频上传公开仓库。
++
++
+ `releases/chatgpt-project-sources/` 是按**当前批准的显式文件清单**生成的Upload-Ready Bundle。AGENTS.md本身是PROJECT_SOURCE。唯一结构化清单是 [sources.json](evidence/infrastructure/chatgpt-project-source-sync/sources.json)；成员集合必须精确，数量由清单计算，不固化历史或本轮数量。
+ 
+ - 五个长期Markdown入口是Research Protocol、Report Writing Guide、Visual System、Interaction Evidence Protocol和AGENTS。老师材料、starter、Skill distribution、模板preview及已批准真实PDF/源包，按当前清单分别纳入；不能因新增写作指南就删除原有必要资料。
+-- 文件的project-source成员身份与语义角色分开：规则、教师材料、starter、合成模板、已验收实验成品、局部过程参考、可复现源包等不能混称。
++- 文件的project-source成员身份与语义角色分开：规则、教师材料、starter、合成模板、已验收实验成品、局部过程参考、可复现源包等不能混称。**只有被当前成员清单明确列入的才需放在release顶层**，历史条目即使仍在结构化sources列表，也可设置`project_source:false`保留其仓库来源与角色。
+ - 目录仅包含批准上传的普通文件，不放README、内部manifest、Evidence Plan、同步脚本、日志、临时文件、备份、子目录、符号链接或重复上传后缀版本。Project Settings在UI维护，transfer文本不作为active Project Source。
+ - **Active source first → approved manifest → upload bundle**。分发副本不是第二套编辑源；每次active规则或参考成品变化，先更新对应源，再同步精确副本。用户明确授权从release导入时，先保存完整清单与不可变输入快照，完成一次受控导入后恢复正常单向分发。
+ - 使用既有 [sync_sources.py](https://github.com/woobowen/Smart_Cities_and_Location_Services/blob/main/evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/sync_sources.py) 和上述清单。`--plan`展示新增、变化、缺失、意外及不安全项；`--check`只读核验，不创建或修改manifest、正文、hash、日期及mtime。旧版本若仍硬编码数量或自动清理未知文件，必须先迁移，不能直接写入真实release。

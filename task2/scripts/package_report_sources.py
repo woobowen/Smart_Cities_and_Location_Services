@@ -3,6 +3,7 @@ from pathlib import Path
 import argparse
 import hashlib
 import json
+import re
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -17,6 +18,16 @@ def main():
         parser.error('output exists; choose a new path or explicitly use --replace')
     files = set((ROOT / 'task2/reports').rglob('*.tex'))
     files.update((ROOT / 'task2/reports').glob('*/*_Report.pdf'))
+    process_sources='\n'.join(path.read_text() for path in
+                             (ROOT / 'task2/reports/process').rglob('*.tex')
+                             if 'build' not in path.relative_to(ROOT).parts)
+    crop_ids=set(re.findall(r'\\evidenceshot\{([A-Za-z0-9_]+)\}',process_sources))
+    asset_names={name+'.png' for name in crop_ids}
+    asset_names.update(re.findall(r'evidence/assets/([A-Za-z0-9_]+\.png)',process_sources))
+    assets=ROOT / 'task2/reports/process/evidence/assets'
+    if {path.name for path in assets.iterdir()} != asset_names:
+        parser.error('Process assets must exactly match the referenced screenshots; inspect extras or missing files')
+    files.update(assets / name for name in asset_names)
     for extension in ('*.pdf', '*.svg'):
         files.update((ROOT / 'task2/figures/formal').glob(extension))
     for extension in ('*.drawio', '*.pdf', '*.svg'):
@@ -40,7 +51,7 @@ def main():
 
 Extract while preserving the relative `task2/` and `templates/` directories.
 Run from this extracted root with Python 3 and XeLaTeX/latexmk, Poppler tools,
-DejaVu Serif/Sans and Noto Serif/Sans/Mono CJK SC installed:
+DejaVu Serif/Sans, Noto Serif/Sans/Mono CJK SC, Fontconfig and Pillow installed:
 
     python3 task2/scripts/build_reports.py
 
@@ -56,9 +67,12 @@ are distributed. Scientific plots can be regenerated separately from the public
 repository scripts/aggregate inputs; experiment recomputation uses the author's
 verified public download and fixed input hashes documented in the repository.
 
-Process Report is a text/technical-material handoff. New native ChatGPT UI
-screenshots, presentation specification and Evidence Master Lock remain external.
-Compilation does not establish data recomputation or visual acceptance.
+Process Report is the user-approved 16-page report integrated on 2026-11-06.
+Only the screenshot assets already used by that accepted PDF are included.
+Original video/raw frames, unused crops and the full inbound archive stay private.
+The process build verifies text and 200-dpi pixels without replacing its accepted
+PDF. The older Dispatch_Reports_LaTeX_Source.zip remains a historical 8-page pair.
+Compilation does not establish data recomputation or a new Evidence Master Lock.
 '''
     payload['README_SOURCE_PACKAGE.md'] = readme.encode('utf-8')
     payload['SOURCE_PACKAGE_MANIFEST.json'] = json.dumps({

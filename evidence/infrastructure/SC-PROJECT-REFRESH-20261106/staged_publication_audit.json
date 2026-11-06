@@ -1,0 +1,938 @@
+{
+  "status": "PASS",
+  "checked_at_utc": "2026-11-06T10:10:28.974467+00:00",
+  "scope": "Actual index checkpoint. This receipt and later reviewer files are appended after this snapshot.",
+  "staged_changed_files": 119,
+  "all_index_paths": 10884,
+  "private_inventory_count": 1497,
+  "private_index_intersection": [],
+  "high_confidence_secret_hits": [],
+  "python_ast_checked": [
+    "evidence/infrastructure/SC-PROJECT-REFRESH-20261106/independent_review/verify_approved_refresh.py",
+    "task2/evidence/process_report_sync_20261106/independent_review/diagnose_render.py",
+    "task2/evidence/process_report_sync_20261106/independent_review/verify_integration.py",
+    "task2/evidence/process_report_sync_20261106/independent_review/verify_script_guards.py",
+    "task2/scripts/build_reports.py",
+    "task2/scripts/package_report_sources.py"
+  ],
+  "local_markdown_targets_checked": 239,
+  "mirror_link_contexts": [
+    {
+      "document": "releases/chatgpt-project-sources/AGENTS.md",
+      "authoritative_link_context": "AGENTS.md",
+      "target": "docs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md",
+      "exists": true
+    },
+    {
+      "document": "releases/chatgpt-project-sources/AGENTS.md",
+      "authoritative_link_context": "AGENTS.md",
+      "target": "docs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md#1-两份报告的读者与任务",
+      "exists": true
+    },
+    {
+      "document": "releases/chatgpt-project-sources/AGENTS.md",
+      "authoritative_link_context": "AGENTS.md",
+      "target": "docs/research/SMART_CITIES_RESEARCH_PROTOCOL.md#c-standard-research-workflow",
+      "exists": true
+    },
+    {
+      "document": "releases/chatgpt-project-sources/AGENTS.md",
+      "authoritative_link_context": "AGENTS.md",
+      "target": "docs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md#12-process-report写作衔接不覆盖最新第一人称规则",
+      "exists": true
+    },
+    {
+      "document": "releases/chatgpt-project-sources/AGENTS.md",
+      "authoritative_link_context": "AGENTS.md",
+      "target": "docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md#13-native-and-reproducible-production",
+      "exists": true
+    },
+    {
+      "document": "releases/chatgpt-project-sources/AGENTS.md",
+      "authoritative_link_context": "AGENTS.md",
+      "target": "docs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md",
+      "exists": true
+    },
+    {
+      "document": "releases/chatgpt-project-sources/AGENTS.md",
+      "authoritative_link_context": "AGENTS.md",
+      "target": "docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md",
+      "exists": true
+    },
+    {
+      "document": "releases/chatgpt-project-sources/AGENTS.md",
+      "authoritative_link_context": "AGENTS.md",
+      "target": "evidence/infrastructure/chatgpt-project-source-sync/sources.json",
+      "exists": true
+    },
+    {
+      "document": "releases/chatgpt-project-sources/SMART_CITIES_REPORT_WRITING_GUIDE.md",
+      "authoritative_link_context": "docs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md",
+      "target": "../research/SMART_CITIES_RESEARCH_PROTOCOL.md",
+      "exists": true
+    },
+    {
+      "document": "releases/chatgpt-project-sources/SMART_CITIES_REPORT_WRITING_GUIDE.md",
+      "authoritative_link_context": "docs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md",
+      "target": "../design-system/SMART_CITIES_VISUAL_SYSTEM.md",
+      "exists": true
+    },
+    {
+      "document": "releases/chatgpt-project-sources/SMART_CITIES_REPORT_WRITING_GUIDE.md",
+      "authoritative_link_context": "docs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md",
+      "target": "../process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md",
+      "exists": true
+    },
+    {
+      "document": "releases/chatgpt-project-sources/SMART_CITIES_REPORT_WRITING_GUIDE.md",
+      "authoritative_link_context": "docs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md",
+      "target": "../../AGENTS.md",
+      "exists": true
+    },
+    {
+      "document": "releases/chatgpt-project-sources/SMART_CITIES_VISUAL_SYSTEM.md",
+      "authoritative_link_context": "docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md",
+      "target": "../research/SMART_CITIES_RESEARCH_PROTOCOL.md",
+      "exists": true
+    },
+    {
+      "document": "releases/chatgpt-project-sources/SMART_CITIES_VISUAL_SYSTEM.md",
+      "authoritative_link_context": "docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md",
+      "target": "../report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md",
+      "exists": true
+    },
+    {
+      "document": "releases/chatgpt-project-sources/SMART_CITIES_VISUAL_SYSTEM.md",
+      "authoritative_link_context": "docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md",
+      "target": "../process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md",
+      "exists": true
+    },
+    {
+      "document": "releases/chatgpt-project-sources/SMART_CITIES_VISUAL_SYSTEM.md",
+      "authoritative_link_context": "docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md",
+      "target": "../../AGENTS.md",
+      "exists": true
+    },
+    {
+      "document": "releases/chatgpt-project-sources/SMART_CITIES_VISUAL_SYSTEM.md",
+      "authoritative_link_context": "docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md",
+      "target": "../report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md#1-两份报告的读者与任务",
+      "exists": true
+    },
+    {
+      "document": "releases/chatgpt-project-sources/SMART_CITIES_VISUAL_SYSTEM.md",
+      "authoritative_link_context": "docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md",
+      "target": "../report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md",
+      "exists": true
+    },
+    {
+      "document": "releases/chatgpt-project-sources/SMART_CITIES_VISUAL_SYSTEM.md",
+      "authoritative_link_context": "docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md",
+      "target": "../report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md",
+      "exists": true
+    },
+    {
+      "document": "releases/chatgpt-project-sources/SMART_CITIES_VISUAL_SYSTEM.md",
+      "authoritative_link_context": "docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md",
+      "target": "../../evidence/infrastructure/chatgpt-project-source-sync/sources.json",
+      "exists": true
+    },
+    {
+      "document": "releases/chatgpt-project-sources/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md",
+      "authoritative_link_context": "docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md",
+      "target": "../research/SMART_CITIES_RESEARCH_PROTOCOL.md",
+      "exists": true
+    },
+    {
+      "document": "releases/chatgpt-project-sources/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md",
+      "authoritative_link_context": "docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md",
+      "target": "../report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md",
+      "exists": true
+    },
+    {
+      "document": "releases/chatgpt-project-sources/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md",
+      "authoritative_link_context": "docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md",
+      "target": "../design-system/SMART_CITIES_VISUAL_SYSTEM.md",
+      "exists": true
+    },
+    {
+      "document": "releases/chatgpt-project-sources/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md",
+      "authoritative_link_context": "docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md",
+      "target": "../../AGENTS.md",
+      "exists": true
+    },
+    {
+      "document": "releases/chatgpt-project-sources/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md",
+      "authoritative_link_context": "docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md",
+      "target": "../../evidence/process-report/workflow-construction/WORKFLOW_EVIDENCE_PLAN.md",
+      "exists": true
+    }
+  ],
+  "broken_local_targets": [],
+  "staged_working_equal": true,
+  "only_approved_release_deletions": [
+    "releases/chatgpt-project-sources/Experiment_Report_P2_Exact.pdf",
+    "releases/chatgpt-project-sources/任务3_LLM辅助评估清洗.ipynb",
+    "releases/chatgpt-project-sources/作业.zip",
+    "releases/chatgpt-project-sources/作业1轨迹数据预处理.ipynb",
+    "releases/chatgpt-project-sources/实验课1.pptx"
+  ],
+  "maximum_new_blob_bytes": 6139844,
+  "protected_roots_unchanged_from_baseline": [
+    "task1/",
+    "templates/",
+    "task2/src/",
+    "task2/tests/",
+    "task2/results/",
+    "task2/public_results/",
+    "task2/figures/",
+    "task2/diagrams/",
+    "task2/notebooks/",
+    "task2/reports/experiment/",
+    "task2/reports/generated/",
+    "task2/reports/common.tex",
+    "task2/releases/",
+    "docs/research/SMART_CITIES_RESEARCH_PROTOCOL.md",
+    "releases/skills/publication-plots-approved-original.zip"
+  ],
+  "whole_diff_check": {
+    "exit_code": 2,
+    "stdout": "evidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:5: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:9: trailing whitespace.\n+ Purpose: **Process Report · Workflow Construction · Experiment Decision Process · Human–AI Interaction Evidence**  \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:10: trailing whitespace.\n+-Revision: **2026-11-05 · Long-run autonomous research traces / human–AI UI provenance boundary**  \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:11: trailing whitespace.\n++Revision: **2026-11-06 · Video-first original evidence / verified frame extraction / private provenance**  \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:13: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:16: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:18: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:20: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:22: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:33: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:35: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:37: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:39: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:53: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:54: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:57: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:59: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:64: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:66: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:68: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:70: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:83: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:85: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:89: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:92: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:94: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:97: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:99: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:101: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:103: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:106: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:108: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:111: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:113: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:115: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:118: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:119: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:129: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:134: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:139: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:146: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:148: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:150: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:154: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:156: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:172: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:176: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:180: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:185: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:210: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:211: trailing whitespace.\n+ Status: **LOCKED for Experiment Report and Process Report**  \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:212: trailing whitespace.\n+-Revision: **2026-11-05 · Research-led visualization selection / candidate figures / dual scientific-visual audit**  \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:213: trailing whitespace.\n++Revision: **2026-11-06 · Video-extracted authentic UI evidence / report exemplar routing**  \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:215: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:218: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:220: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:223: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:225: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:228: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:238: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:240: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:251: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:253: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:258: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:260: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:265: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:266: trailing whitespace.\n+-Version: **v1.3**  \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:267: trailing whitespace.\n++Version: **v1.4**  \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:268: trailing whitespace.\n+ Status: **ACTIVE / LONG-TERM RULE**  \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:269: trailing whitespace.\n+-Revision: **2026-11-05 · Adaptive experiment narrative / evidence-driven visualization / automated decision attribution**  \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:270: trailing whitespace.\n++Revision: **2026-11-06 · Video-origin Process evidence / concise acquisition disclosure / private technical provenance**  \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:272: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:275: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:277: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:284: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:286: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:288: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:291: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:293: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:295: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:297: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:300: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:302: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:306: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:308: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:309: trailing whitespace.\n+-Revision: **2026-11-05 · Conditional long-run execution / multi-agent evidence / GitHub review-packet contract**  \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:310: trailing whitespace.\n++Revision: **2026-11-06 · Video-first evidence engineering / minimal Project Sources / release privacy**  \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:312: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:315: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:317: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:320: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:322: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:324: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:327: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:329: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:331: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:334: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:336: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:338: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:340: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:344: trailing whitespace.\n+ \nevidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff:349: trailing whitespace.\n+ \ntask2/evidence/process_report_sync_20261106/installed_build/process_compile.txt:308: trailing whitespace.\n+Output written on <isolated-build>/main.xdv (16 pages, 211808 \ntask2/evidence/process_report_sync_20261106/installed_build/process_compile.txt:613: trailing whitespace.\n+Output written on <isolated-build>/main.xdv (16 pages, 216448 \ntask2/evidence/process_report_sync_20261106/installed_build/process_compile.txt:637: new blank line at EOF.\ntask2/evidence/process_report_sync_20261106/installed_build_fontfix/process_compile.txt:308: trailing whitespace.\n+Output written on <isolated-build>/main.xdv (16 pages, 211792 \ntask2/evidence/process_report_sync_20261106/installed_build_fontfix/process_compile.txt:613: trailing whitespace.\n+Output written on <isolated-build>/main.xdv (16 pages, 216432 \ntask2/evidence/process_report_sync_20261106/installed_build_fontfix/process_compile.txt:637: new blank line at EOF.\n"
+  },
+  "source_document_diff_check": {
+    "exit_code": 0,
+    "stdout": "",
+    "preserved_evidence_exclusions": [
+      "task2/evidence/process_report_sync_20261106/installed_build/process_compile.txt",
+      "task2/evidence/process_report_sync_20261106/installed_build_fontfix/process_compile.txt",
+      "evidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff"
+    ],
+    "reason": "Two exact raw compiler transcripts and one exact unified-diff artifact preserve original spaces, Markdown hard breaks and diff context markers. No source or approved document is changed to silence formatting checks."
+  },
+  "link_checker_correction": {
+    "initial_result": "20 false missing-target results for exact-byte governance mirrors interpreted relative to release.",
+    "resolution": "Confirm mirror byte identity, then resolve relative links in active_path context. All resolve. No sync safety logic changed."
+  },
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "git_blob": "985a60955d03e64d821326d25538b3e32792639f",
+      "bytes": 46788,
+      "sha256": "98b6b7063042b3b3e3e6b8b49d8460a514bd0ed1af0965fdb739c54d6c0694d7"
+    },
+    {
+      "path": "README.md",
+      "git_blob": "d43d428d87c753608f5d8e1673dc4b80c2cb6552",
+      "bytes": 4263,
+      "sha256": "09c199d13f501a75ab0db75b518df3b5df77ec0d16349e789f2e06d926943c30"
+    },
+    {
+      "path": "docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md",
+      "git_blob": "1997b7d1485a3b90e0d11b3d7047dfc16b91a061",
+      "bytes": 54413,
+      "sha256": "d109b1072cb05a5309c96e3f5aa1337d0e2a67614a1e7cbc0a62fa50253b45a8"
+    },
+    {
+      "path": "docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md",
+      "git_blob": "27fe4094f0b6e74f0cfce8c6acc6ade688f9bdc1",
+      "bytes": 58332,
+      "sha256": "bec2a66770da9dc80991e84aebc67e2284310f9980671129200f706576db01fc"
+    },
+    {
+      "path": "docs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md",
+      "git_blob": "ff03f278145e2bef832cb3fad85ad015aa19ac6a",
+      "bytes": 31207,
+      "sha256": "4aef6e48c79efe87e49d2173f9975d65d8bf6716a3f2f0dd04308b2daee90f18"
+    },
+    {
+      "path": "evidence/infrastructure/SC-PROJECT-REFRESH-20261106/REVIEW_PACKET.md",
+      "git_blob": "32c9a2b5857e342e41267c2f99e826ca0cbb5659",
+      "bytes": 11436,
+      "sha256": "fe59f442de796686fadfb195ec54e829e84166e556ad49065c3f663fbd8bf9da"
+    },
+    {
+      "path": "evidence/infrastructure/SC-PROJECT-REFRESH-20261106/UI_HANDOFF.md",
+      "git_blob": "cf747ce468affcd966de713a548767a4045dc2a9",
+      "bytes": 3976,
+      "sha256": "38f54844d5d6785b1d415745a1077cf2d27c2cbabaf42d9018ddc0b99ed963e8"
+    },
+    {
+      "path": "evidence/infrastructure/SC-PROJECT-REFRESH-20261106/approved_target.json",
+      "git_blob": "94e13903574e400d17223d42a5a711dec2e5a13f",
+      "bytes": 4279,
+      "sha256": "65a49e2726d858487cf063355c7b6e47a54cff2b36a08d42cf26698d01e7e469"
+    },
+    {
+      "path": "evidence/infrastructure/SC-PROJECT-REFRESH-20261106/approved_versions.json",
+      "git_blob": "7f9fb1566ae3cd9dec997740651fcf5de29f6f87",
+      "bytes": 2718,
+      "sha256": "79413271a4431f8f73a4ab6ef60509ccb4a5c224b8ae005e7df3c95b46f4bf3c"
+    },
+    {
+      "path": "evidence/infrastructure/SC-PROJECT-REFRESH-20261106/final_check.json",
+      "git_blob": "8c73aed46488568ea0c6ae02f491eced2f78d7fc",
+      "bytes": 314,
+      "sha256": "b477bfd918e37a9273b4c793e37a3f304be0eebfd55ebacaf877798e7723d1a7"
+    },
+    {
+      "path": "evidence/infrastructure/SC-PROJECT-REFRESH-20261106/final_plan.json",
+      "git_blob": "c525ae8b3d5fc5fa338e3a8ad37a036eb8fd710c",
+      "bytes": 421,
+      "sha256": "0e551853eeaac1db118777caa2d4aa4ef159690c7007b14abef60fe72ec682bf"
+    },
+    {
+      "path": "evidence/infrastructure/SC-PROJECT-REFRESH-20261106/governance.diff",
+      "git_blob": "e4cf8e9c9e9f2ab116c861f850eeebe7649c714e",
+      "bytes": 41219,
+      "sha256": "013ebb0a91a5e2d85f757ca2d12b62617f04235319be8f5dc86a27a5c2e49000"
+    },
+    {
+      "path": "evidence/infrastructure/SC-PROJECT-REFRESH-20261106/independent_review/INITIAL_REVIEW.md",
+      "git_blob": "7f4efdd92a27b73ff354071fbc0f1031ca279cd9",
+      "bytes": 4278,
+      "sha256": "dda407fc55ac746ada870ce58a48ddef48b3e9226c96e7a80dcbb3341406803f"
+    },
+    {
+      "path": "evidence/infrastructure/SC-PROJECT-REFRESH-20261106/independent_review/initial_refresh_audit.json",
+      "git_blob": "b101f804932b01365bbc9631cc42395e25b07935",
+      "bytes": 6049,
+      "sha256": "c349c5e927ae9d84f88205bfaf975cd8106a059beeaaed7459413e20348c1486"
+    },
+    {
+      "path": "evidence/infrastructure/SC-PROJECT-REFRESH-20261106/independent_review/verify_approved_refresh.py",
+      "git_blob": "b44e4c659f54f14f28ddce96cd24ba9740516152",
+      "bytes": 9962,
+      "sha256": "dca6effc03c0b18dc46b995d5bd82e3958bbe07854cd30209207d3fc93a36418"
+    },
+    {
+      "path": "evidence/infrastructure/SC-PROJECT-REFRESH-20261106/index_validation.json",
+      "git_blob": "d5625125e22ab2b8e4575be7ef97a73880b5b876",
+      "bytes": 366,
+      "sha256": "a0b40dc6a6c9f03cc29176f20e90edeaf767f2650ae8bee2feaa34fb8f97d774"
+    },
+    {
+      "path": "evidence/infrastructure/SC-PROJECT-REFRESH-20261106/intake.json",
+      "git_blob": "9dcc951857c230cba221d9d656e608afec6cff3d",
+      "bytes": 2447,
+      "sha256": "69fd92c9de3115c6eedb7984137e64d517ced47876e93f7c88d7899aaa548d63"
+    },
+    {
+      "path": "evidence/infrastructure/SC-PROJECT-REFRESH-20261106/membership_change.json",
+      "git_blob": "6be81adbe2d1d3b32be968c5c49815754e4091b8",
+      "bytes": 1020,
+      "sha256": "cbf5a4c421f4a61675cdf91698fd10be50854a4a35b4dfd6864765e093a93e97"
+    },
+    {
+      "path": "evidence/infrastructure/SC-PROJECT-REFRESH-20261106/metadata_relocation.json",
+      "git_blob": "6625817740f495d8dea1fba6e7aaa1e047ec86fc",
+      "bytes": 2450,
+      "sha256": "fc76704dfdaca673326318779462603b97d8a67854934b9a3c9f82dd86ab9383"
+    },
+    {
+      "path": "evidence/infrastructure/SC-PROJECT-REFRESH-20261106/preflight.json",
+      "git_blob": "249d0d8bcd3c3b520b679ab7fa492d861f1d97fc",
+      "bytes": 24399,
+      "sha256": "765bc829f054da04eb449e0573dca036330ecb8ea28d9c5dcbac69bc3adff61f"
+    },
+    {
+      "path": "evidence/infrastructure/SC-PROJECT-REFRESH-20261106/publication_projection.json",
+      "git_blob": "1fac686a834f917082b50bff87f61880909a083c",
+      "bytes": 1099,
+      "sha256": "07f9180e2ee9fbcfae3c15d55cda1b1c5ca6fb19d03624faca78e10a9100f082"
+    },
+    {
+      "path": "evidence/infrastructure/SC-PROJECT-REFRESH-20261106/release_retirement.json",
+      "git_blob": "27ac1c64b7380ca6e01537c6b04d1aa593674f09",
+      "bytes": 3655,
+      "sha256": "401610dc045cdb96be781f84a634e2b7d6b2cf766613a2078438b2caa3727c84"
+    },
+    {
+      "path": "evidence/infrastructure/SC-PROJECT-REFRESH-20261106/source_set_verification.json",
+      "git_blob": "2117932ef2f322c8d0941bac06bcd73d1b55419c",
+      "bytes": 4984,
+      "sha256": "e3437f13308de0f789d5e92f9c5ccea6d33fe391a5e090a48b0de2c403e7d278"
+    },
+    {
+      "path": "evidence/infrastructure/SC-PROJECT-REFRESH-20261106/sync_check.json",
+      "git_blob": "0f71919901d69ac3ccf68b1673797645ef93f559",
+      "bytes": 78,
+      "sha256": "588f7de0d9b4a24ae5510550ae780547653b8544b37abcd3513b1087d960df8a"
+    },
+    {
+      "path": "evidence/infrastructure/SC-PROJECT-REFRESH-20261106/sync_plan_before_archive.json",
+      "git_blob": "6e6c5d890fbc54dc2a25dc4729553857992e5020",
+      "bytes": 789,
+      "sha256": "2ecfbd8d639a9ddf87d842a9318e49e59151c95617e8da6487bf460800f20beb"
+    },
+    {
+      "path": "evidence/infrastructure/SC-PROJECT-REFRESH-20261106/sync_plan_safe.json",
+      "git_blob": "f258c41bfc60bfafbbefb8d4d606711f7e53cab6",
+      "bytes": 524,
+      "sha256": "c2b06354c6dd3a316e24bdebb898b06e959a14b202a3e78e9aa7e9d31479fc47"
+    },
+    {
+      "path": "evidence/infrastructure/SC-PROJECT-REFRESH-20261106/sync_regression_receipt.json",
+      "git_blob": "618dac24c1caa8ae6858d429fd155421eff16c7b",
+      "bytes": 437,
+      "sha256": "520db2c2bfcbfa0f9350a4cb7804513b20d4c1348be3534825595cfa27e0efdb"
+    },
+    {
+      "path": "evidence/infrastructure/SC-PROJECT-REFRESH-20261106/sync_write.json",
+      "git_blob": "962b5197ddd63060cdee79e67d4febf5105fdb22",
+      "bytes": 607,
+      "sha256": "0baf51ddca138a9b8ca8bd2c4c4c0ce7c5803689d5a242085e1099cf20ceb182"
+    },
+    {
+      "path": "evidence/infrastructure/chatgpt-project-source-sync/README.md",
+      "git_blob": "3fead168f1bc1a7e8b81ed7af9f918b830dcb214",
+      "bytes": 6158,
+      "sha256": "3484fbb5ac689f62e5f0ef9e97157601d84ae124c351b5f2387629c2dc2859ed"
+    },
+    {
+      "path": "evidence/infrastructure/chatgpt-project-source-sync/SOURCE_MANIFEST.md",
+      "git_blob": "f01401db46ced81c315840f9d30da1b12bd89ee6",
+      "bytes": 10774,
+      "sha256": "8a5023f0ca9cb29e1694adc13a20ce8fa7abe06a1b47fb5328004369915030d4"
+    },
+    {
+      "path": "evidence/infrastructure/chatgpt-project-source-sync/UPLOAD_INSTRUCTIONS.md",
+      "git_blob": "ff07e341549e2fb14260e7b52731d2c862cf7cc9",
+      "bytes": 2331,
+      "sha256": "856baf62a52ede1d6ac00952e9c55cba08f40fb422c2390b8630ea2f34698147"
+    },
+    {
+      "path": "evidence/infrastructure/chatgpt-project-source-sync/sources.json",
+      "git_blob": "4f24cbe525b2fe699d98d3e974849114cda2924f",
+      "bytes": 15179,
+      "sha256": "92cb8cdec8f4a74655cdc50962eea6161fff3d2cc43ffa1942c3cb8afc44f3e1"
+    },
+    {
+      "path": "releases/chatgpt-project-sources/AGENTS.md",
+      "git_blob": "985a60955d03e64d821326d25538b3e32792639f",
+      "bytes": 46788,
+      "sha256": "98b6b7063042b3b3e3e6b8b49d8460a514bd0ed1af0965fdb739c54d6c0694d7"
+    },
+    {
+      "path": "releases/chatgpt-project-sources/Experiment2_Experiment_Report.pdf",
+      "git_blob": "9a537782a5c692f38825244343ced376a42ebe76",
+      "bytes": 816416,
+      "sha256": "7a795625354e8a3c7034f8426171f8f8b32784db0cd398654b309c86ea72c101"
+    },
+    {
+      "path": "releases/chatgpt-project-sources/Experiment2_Process_Report.pdf",
+      "git_blob": "023ceb3a1be371e5032163b153e40ebb6f0e954c",
+      "bytes": 6139844,
+      "sha256": "c96c96bd267aaffd99232d23432bfe9dbc4804352acd0c25c145e9ddfa803e2f"
+    },
+    {
+      "path": "releases/chatgpt-project-sources/SMART_CITIES_REPORT_WRITING_GUIDE.md",
+      "git_blob": "ff03f278145e2bef832cb3fad85ad015aa19ac6a",
+      "bytes": 31207,
+      "sha256": "4aef6e48c79efe87e49d2173f9975d65d8bf6716a3f2f0dd04308b2daee90f18"
+    },
+    {
+      "path": "releases/chatgpt-project-sources/SMART_CITIES_VISUAL_SYSTEM.md",
+      "git_blob": "1997b7d1485a3b90e0d11b3d7047dfc16b91a061",
+      "bytes": 54413,
+      "sha256": "d109b1072cb05a5309c96e3f5aa1337d0e2a67614a1e7cbc0a62fa50253b45a8"
+    },
+    {
+      "path": "releases/chatgpt-project-sources/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md",
+      "git_blob": "27fe4094f0b6e74f0cfce8c6acc6ade688f9bdc1",
+      "bytes": 58332,
+      "sha256": "bec2a66770da9dc80991e84aebc67e2284310f9980671129200f706576db01fc"
+    },
+    {
+      "path": "task2/README.md",
+      "git_blob": "bcceb250686681f492177b9da3985122e539e1e9",
+      "bytes": 2955,
+      "sha256": "a70db28206e30a5a411397cd49aa0efccbef0e547d578d11ad82d66244b30ff0"
+    },
+    {
+      "path": "task2/docs/ENVIRONMENT_CHANGELOG.md",
+      "git_blob": "c4e05eddc1eadac60f8d3cc61206abb1e746260c",
+      "bytes": 2905,
+      "sha256": "539fb809ea7a935cd25c972f608e2169eca6cca1bb6e87293f25dd603d3286ee"
+    },
+    {
+      "path": "task2/docs/REPRODUCIBILITY_GUIDE.md",
+      "git_blob": "a2c58f3682678d6f279843ec1378c09428b40572",
+      "bytes": 10797,
+      "sha256": "fa7e2016e5e0f095eff2657155dcf9f094d8e146168094ed68ff0d26730f7cf6"
+    },
+    {
+      "path": "task2/docs/REVIEW_LOG.md",
+      "git_blob": "8991851b3f102887c1cd4da652032c5d5a82d8e6",
+      "bytes": 6826,
+      "sha256": "4771fbcfa17156eec80b3da22b1efa2606fd2f8a9e74ce885c556fb68a461c06"
+    },
+    {
+      "path": "task2/evidence/process_report_sync_20261106/independent_review/FINAL_STAGED_REVIEW.json",
+      "git_blob": "31573633ff5d169f4c08cf81324305a7f5282241",
+      "bytes": 33742,
+      "sha256": "648814d837c4264eea550af9a6790336074099e74936515f6d4110468a4f7f7f"
+    },
+    {
+      "path": "task2/evidence/process_report_sync_20261106/independent_review/FINAL_STAGED_REVIEW.md",
+      "git_blob": "91dcf17013e7684858dcb5bed2cc18cb13c117a3",
+      "bytes": 5591,
+      "sha256": "b81d47ec1e364eeda7c97eedabe0cb96358738be02ec5320856c8f81cccb1dcd"
+    },
+    {
+      "path": "task2/evidence/process_report_sync_20261106/independent_review/REVIEW.md",
+      "git_blob": "dc534151e6b6dceea8504ff76bf195c5642b3330",
+      "bytes": 5648,
+      "sha256": "0b282749772da16bdaad34c9d846bda49804a4016adf1e11d5cdc3845489e350"
+    },
+    {
+      "path": "task2/evidence/process_report_sync_20261106/independent_review/asset_metadata_audit.json",
+      "git_blob": "8358d31c9c44fd0be32769a6791cde3388ef1a26",
+      "bytes": 3836,
+      "sha256": "7982b2466aeb2f35c28b1c83675896eec10e002e7fea473802062c62c1e4fabf"
+    },
+    {
+      "path": "task2/evidence/process_report_sync_20261106/independent_review/diagnose_render.py",
+      "git_blob": "d3884761022320ea24ee8147602393569d7e6713",
+      "bytes": 3021,
+      "sha256": "145047eca35c7891cfbf8fe58a809fd39c4fc28b6eb2022f448e4a9c2a134dab"
+    },
+    {
+      "path": "task2/evidence/process_report_sync_20261106/independent_review/fontfix_render_measurements.json",
+      "git_blob": "84d08363af8d56f141e2637727cf0d8a616fab30",
+      "bytes": 3608,
+      "sha256": "696d4838c96d196a2115b0fabb3cc0287524591db5bf49bfa7d66ae60b4fea04"
+    },
+    {
+      "path": "task2/evidence/process_report_sync_20261106/independent_review/integration_audit.json",
+      "git_blob": "bfa62e00a0387a26818cb9f0f1873e89c0cc883d",
+      "bytes": 11097,
+      "sha256": "aeadcba8feb58590ccfe65ac71ac04c9a93755751fb087f86e8d62d60c451b81"
+    },
+    {
+      "path": "task2/evidence/process_report_sync_20261106/independent_review/render_diagnosis.json",
+      "git_blob": "c4bd1449b8339913bd34e4ccfff34027a6698f2b",
+      "bytes": 18850,
+      "sha256": "0074b4b7bf2daf4da4011793cae1ccd4d4ef3dd7a7ef89373de104504f476da8"
+    },
+    {
+      "path": "task2/evidence/process_report_sync_20261106/independent_review/script_guard_checks.json",
+      "git_blob": "fd9ba2a9bb137a00e24aa3e47c412fc0cd0135e6",
+      "bytes": 1744,
+      "sha256": "755fe828cefcc5afa0adf58ac869c8d11526ee07fc51e0c809cff50a41c43767"
+    },
+    {
+      "path": "task2/evidence/process_report_sync_20261106/independent_review/verify_integration.py",
+      "git_blob": "839aafe2bc5737a6e4a0518b13de6421079a80c5",
+      "bytes": 8139,
+      "sha256": "98f3f81feea47f62ceb5ebc334b5411ad073b54979d559cbc13c98515a883941"
+    },
+    {
+      "path": "task2/evidence/process_report_sync_20261106/independent_review/verify_script_guards.py",
+      "git_blob": "3b892f6659bb42a2a74fdfc0e412b96a155919ba",
+      "bytes": 7290,
+      "sha256": "585f1603239c5019062cb063c8c9c27c281cbe7900d899d42ff17b8575a25c5a"
+    },
+    {
+      "path": "task2/evidence/process_report_sync_20261106/installed_build/process_approved_pdfinfo.txt",
+      "git_blob": "eb8713e46a1121b1e901364911aef9350f63911e",
+      "bytes": 630,
+      "sha256": "121e0251cb521a6da1fb9383f8c37399790ee986ba8d2c703f6eff0f5040d5fe"
+    },
+    {
+      "path": "task2/evidence/process_report_sync_20261106/installed_build/process_approved_text.txt",
+      "git_blob": "87c4d8d1b5833a0de34aa70546cca3dd73b3485b",
+      "bytes": 35500,
+      "sha256": "b0c87497845e7eb3b91c812de91feb004319dc34200972ad38ab114f25735a20"
+    },
+    {
+      "path": "task2/evidence/process_report_sync_20261106/installed_build/process_compile.txt",
+      "git_blob": "5cc213b997343d4f7c8004e0e2ddf77ad5602a5a",
+      "bytes": 32442,
+      "sha256": "8bd40e12c821e4864662e47755a5ceda79381678efe395ed944ae21b72b5e07f"
+    },
+    {
+      "path": "task2/evidence/process_report_sync_20261106/installed_build/process_compiled_pdfinfo.txt",
+      "git_blob": "dbce854bf54bacce165de3ee47781403e24c990c",
+      "bytes": 630,
+      "sha256": "c61d16ea5c0dd776285386c3880059dbdf21db06b962e092761bc1555f2da51b"
+    },
+    {
+      "path": "task2/evidence/process_report_sync_20261106/installed_build/process_compiled_text.txt",
+      "git_blob": "87c4d8d1b5833a0de34aa70546cca3dd73b3485b",
+      "bytes": 35500,
+      "sha256": "b0c87497845e7eb3b91c812de91feb004319dc34200972ad38ab114f25735a20"
+    },
+    {
+      "path": "task2/evidence/process_report_sync_20261106/installed_build/process_verification.json",
+      "git_blob": "a52c73462aa6acd759f8d9fecb15decfaa2cb2fc",
+      "bytes": 2653,
+      "sha256": "bcd70bec96e7fdac8cb60979ef6b950adc63e44d7a2fdb4b709b4c972b77ae8f"
+    },
+    {
+      "path": "task2/evidence/process_report_sync_20261106/installed_build_fontfix/process_approved_pdfinfo.txt",
+      "git_blob": "eb8713e46a1121b1e901364911aef9350f63911e",
+      "bytes": 630,
+      "sha256": "121e0251cb521a6da1fb9383f8c37399790ee986ba8d2c703f6eff0f5040d5fe"
+    },
+    {
+      "path": "task2/evidence/process_report_sync_20261106/installed_build_fontfix/process_approved_text.txt",
+      "git_blob": "87c4d8d1b5833a0de34aa70546cca3dd73b3485b",
+      "bytes": 35500,
+      "sha256": "b0c87497845e7eb3b91c812de91feb004319dc34200972ad38ab114f25735a20"
+    },
+    {
+      "path": "task2/evidence/process_report_sync_20261106/installed_build_fontfix/process_compile.txt",
+      "git_blob": "50a5771e8a6cedda4f0275038ff9ceb0f9f9648a",
+      "bytes": 32442,
+      "sha256": "f86ddc1fc13b83f0d59a4b96736933ec69147dc9b29233d0ababb3c54a9ad5e2"
+    },
+    {
+      "path": "task2/evidence/process_report_sync_20261106/installed_build_fontfix/process_compiled_pdfinfo.txt",
+      "git_blob": "7e23b6db348da175569a613cf6142d3bd234292d",
+      "bytes": 630,
+      "sha256": "62e649afa24e6e5673a39587463bfafac05514408134090bb768ce11b1bbe212"
+    },
+    {
+      "path": "task2/evidence/process_report_sync_20261106/installed_build_fontfix/process_compiled_text.txt",
+      "git_blob": "87c4d8d1b5833a0de34aa70546cca3dd73b3485b",
+      "bytes": 35500,
+      "sha256": "b0c87497845e7eb3b91c812de91feb004319dc34200972ad38ab114f25735a20"
+    },
+    {
+      "path": "task2/evidence/process_report_sync_20261106/installed_build_fontfix/process_verification.json",
+      "git_blob": "0a8824ccc4f59bbf03e8e1693c3ca3a166b03919",
+      "bytes": 2889,
+      "sha256": "13133de1793fcf83d9eafd0bbee2ce75b00234e7294023acbaa9fd5b9d9bfbc1"
+    },
+    {
+      "path": "task2/evidence/process_report_sync_20261106/intake.json",
+      "git_blob": "7c4bb59650ab0ae73f8a58e0f7f91e37b9ae1b09",
+      "bytes": 2387,
+      "sha256": "e8cbc5469c82b8da709e597b4a6a4649506d20541f6ef2a0eed75969eacb8f48"
+    },
+    {
+      "path": "task2/evidence/process_report_sync_20261106/integration.json",
+      "git_blob": "5c87ee89fb0b4ba5d7946037fac7500010afadf1",
+      "bytes": 13290,
+      "sha256": "dd5d8e93c27320f5a5248bb6c661e0822e1c714e409a85eea8804a2754fc583e"
+    },
+    {
+      "path": "task2/evidence/process_report_sync_20261106/late_extra_failed_check.json",
+      "git_blob": "d69632ac8e0de4bcbae78d187c64c5527553f307",
+      "bytes": 841,
+      "sha256": "89aff29c7cb064f5d1fc244d9e5f33cfcff50f0aa9236bcb00fdd4fa5bc77dda"
+    },
+    {
+      "path": "task2/evidence/process_report_sync_20261106/late_extra_inventory.json",
+      "git_blob": "5cca5ce370e7030f58b0f937dd491ee4d4ae23ec",
+      "bytes": 2000,
+      "sha256": "f735260728e80979b3a1d7bf3afb7a86dd1d56686d6ff4bb094fffb9adac7bcb"
+    },
+    {
+      "path": "task2/evidence/process_report_sync_20261106/page_review.json",
+      "git_blob": "81481e94cd1b39d01c2c934ae505e37824fae6fa",
+      "bytes": 6285,
+      "sha256": "eb04aebe312b46334577d7eea2d24cc6328c9094a26ef6ea4d76c41fd9dd747d"
+    },
+    {
+      "path": "task2/evidence/process_report_sync_20261106/source_build.json",
+      "git_blob": "199958fa15a65321b8d9656eaaf885ea2ce253c2",
+      "bytes": 1782,
+      "sha256": "37262d662bff2e1af7c29156ad6736c38a2c7a807a6f9c4f5b641d16268296e6"
+    },
+    {
+      "path": "task2/evidence/process_report_sync_20261106/source_log_diagnosis.json",
+      "git_blob": "f89a5684957072054bc402035ae1f637a6eb6bec",
+      "bytes": 433,
+      "sha256": "e400265a436413502e77a30d83a03ee81415f80e200e7130d8816d10d9c84d75"
+    },
+    {
+      "path": "task2/evidence/process_report_sync_20261106/source_packaging_check.json",
+      "git_blob": "751718ab80aacbfa60fa1d11de7a362e0e464dcf",
+      "bytes": 568,
+      "sha256": "6db0e0363c8d27df0c90afc2927ac749c4bd3bbf1164893a85cfc629c2266e0f"
+    },
+    {
+      "path": "task2/evidence/process_report_sync_20261106/sources_baseline.json",
+      "git_blob": "3980bec65994fb8e4a3bed0d55b98c0773b2c12f",
+      "bytes": 3618,
+      "sha256": "ffc4396666893da584c945126efc4e52180e21397ff73771148b2611f954a489"
+    },
+    {
+      "path": "task2/evidence/process_report_sync_20261106/sources_baseline_check.txt",
+      "git_blob": "5a1b9e59ca36eab2e9c6ebc8250f8f2c3555fa02",
+      "bytes": 78,
+      "sha256": "0920feb1c1e1f0a58361a14b7e880a6f17e1003bdbea08d3aa5d0f9a4188477d"
+    },
+    {
+      "path": "task2/evidence/process_report_sync_20261106/sources_check.json",
+      "git_blob": "cbae77920c84d9d2ccdab7f690b1a7959dd73290",
+      "bytes": 78,
+      "sha256": "3b2bba50bacacc5608affd852d4888eb16475cb44d3813463d5ea771c0854cf9"
+    },
+    {
+      "path": "task2/evidence/process_report_sync_20261106/sources_plan.json",
+      "git_blob": "b603d9bd9610e2798a29cfcc290815d151ac4c30",
+      "bytes": 394,
+      "sha256": "5a428cf9eba10b7a0165f463db8f2c9711d9b76e35590d59f1ef6404af6ba227"
+    },
+    {
+      "path": "task2/evidence/process_report_sync_20261106/sources_verification.json",
+      "git_blob": "4c5bd47092472866daca2890b1ef51d16e33e6f0",
+      "bytes": 4892,
+      "sha256": "38fa6ba17385ad4fa375c73829ff6ab985b20fe3577b43214710d851d18aac0b"
+    },
+    {
+      "path": "task2/evidence/process_report_sync_20261106/sources_write.json",
+      "git_blob": "6cf14e77e86132c93190e7fb9ffe36dd07c54a19",
+      "bytes": 347,
+      "sha256": "6bf090986d77affc3bc880d6adaf48b785afe5b90992fac4a6e951aa801e625a"
+    },
+    {
+      "path": "task2/evidence/process_report_sync_20261106/staged_audit.json",
+      "git_blob": "f7b27f5947ca976109e034023564a4177b3f2ff0",
+      "bytes": 16848,
+      "sha256": "3c40fa3d0e62a1e9e7196a7d4a6391ab3faa0da665f7a569bac2917d5b2bef50"
+    },
+    {
+      "path": "task2/evidence/process_report_sync_20261106/verification_summary.json",
+      "git_blob": "7f4297905e9f15b0ab6fb09c1e40ce7c74f323da",
+      "bytes": 1685,
+      "sha256": "04bc63681d7d9b80bd3b11a84a799cd3ec9434d45351037f286b153395772737"
+    },
+    {
+      "path": "task2/reports/process/Process_Report.pdf",
+      "git_blob": "023ceb3a1be371e5032163b153e40ebb6f0e954c",
+      "bytes": 6139844,
+      "sha256": "c96c96bd267aaffd99232d23432bfe9dbc4804352acd0c25c145e9ddfa803e2f"
+    },
+    {
+      "path": "task2/reports/process/README.md",
+      "git_blob": "c7916149f2276a0c80b89751cb216231f6e3ad7a",
+      "bytes": 3088,
+      "sha256": "9fa5e51b8fcfa432577abc809263f730563a80b92d848019e1535c2e41aab78c"
+    },
+    {
+      "path": "task2/reports/process/chapters/01_workflow.tex",
+      "git_blob": "b4474cd43c39c364728552db33c5eb52a3130d12",
+      "bytes": 3985,
+      "sha256": "cd822bc6f6519ed9d6d26193f0b8fd6761a29d4e4f17f83c29d1f4a00e96f84c"
+    },
+    {
+      "path": "task2/reports/process/chapters/02_online_evolution.tex",
+      "git_blob": "bba683c4791f79e0faf4bd667c61aeadd5500689",
+      "bytes": 4399,
+      "sha256": "a0eeadcad6904e33d3e4d22431e6c28f453a00ed1994d0b646354fcdd08047af"
+    },
+    {
+      "path": "task2/reports/process/chapters/04_reflection.tex",
+      "git_blob": "fc7a7dd6ba9367f77f02bd6160ae65f92b9fcc68",
+      "bytes": 3739,
+      "sha256": "f4105357d75e1a61463fd5fcdc1e06e44b0b26207dd061a104017c88fd30d139"
+    },
+    {
+      "path": "task2/reports/process/chapters/05_summary.tex",
+      "git_blob": "7721cdffc2ae2305ed324f407c21e1ebe8f935e8",
+      "bytes": 1732,
+      "sha256": "bf12bebae8cd64f88c894fc6e76a63fb79d4a9b0513aa1115889cc71222b07be"
+    },
+    {
+      "path": "task2/reports/process/evidence/01_reframe.tex",
+      "git_blob": "577911f53661d2d7d69e2534c38a5e58150127d6",
+      "bytes": 1499,
+      "sha256": "ea3eb3473edcf457089b8d16043a0cb104cd7c6c96a2e5d6ea5d6f5802f30b3b"
+    },
+    {
+      "path": "task2/reports/process/evidence/02_authorization.tex",
+      "git_blob": "6a669adf104dff4e0c3b9c44943f1f33c23dee96",
+      "bytes": 1141,
+      "sha256": "06893bddc8529e50da8f79b91d34bcef401041b9173e507c9c50e8cbfd913184"
+    },
+    {
+      "path": "task2/reports/process/evidence/03_license.tex",
+      "git_blob": "665b175a812e0ac423933371275730e6b84ee68c",
+      "bytes": 1408,
+      "sha256": "63033e9dc98893ac012490eea36d5e3966266f27380ac89033a96514d8c1284b"
+    },
+    {
+      "path": "task2/reports/process/evidence/04_review.tex",
+      "git_blob": "0657945065c7e35a3cf7e729dcdab1564c617ac0",
+      "bytes": 2176,
+      "sha256": "a922ea715c91d4417611c2ef6102577e1a93d306660d3e0e80890ab490c25d85"
+    },
+    {
+      "path": "task2/reports/process/evidence/05_governance.tex",
+      "git_blob": "60b5badda4a1862270c4ee94a6ee930c6295bc00",
+      "bytes": 2007,
+      "sha256": "a09c21b6e3b22ccdcac1e85d04c154a6cbfbc459a8541613eade1bafb15d57c9"
+    },
+    {
+      "path": "task2/reports/process/evidence/assets/D01_gpt_onegoal.png",
+      "git_blob": "0c5eeda4677106f9760a1d84583a9bf2b0ea5fc7",
+      "bytes": 597534,
+      "sha256": "6e5dedcf9b49ebdffcc1493dd0f766768abb4aa77828a2f0e6c20a9ba7190be5"
+    },
+    {
+      "path": "task2/reports/process/evidence/assets/D01_gpt_visual.png",
+      "git_blob": "642cdd279f69f2d4fe363516da0713347a1d033b",
+      "bytes": 547418,
+      "sha256": "a72cac41a331fcf6e46a072d9df8f04fa9af365aeba98be661b62ca8fecb18e8"
+    },
+    {
+      "path": "task2/reports/process/evidence/assets/D01_user_goal.png",
+      "git_blob": "1fa1e09a00d272d14e2dc73692f9ad0499d9bf15",
+      "bytes": 750064,
+      "sha256": "842e5efca08d4d9af2ae93b44e42ff54c3451d18ac3631b8d7b43679f4cf618f"
+    },
+    {
+      "path": "task2/reports/process/evidence/assets/D01_user_longrun.png",
+      "git_blob": "f2be033cc5c60e847036056412b061c56b1b6951",
+      "bytes": 551921,
+      "sha256": "31d5032dd68ca093c182477afefb032027df91e874d179f6f12f6872c318f052"
+    },
+    {
+      "path": "task2/reports/process/evidence/assets/D02_gpt_contract.png",
+      "git_blob": "d9529e79f61063ad4bc9cf85ce31ccfd05cc9ad7",
+      "bytes": 550548,
+      "sha256": "0af3fc453d3195054345d7c44c80be4c4b8e011aeacb6cb03856a767426c75e6"
+    },
+    {
+      "path": "task2/reports/process/evidence/assets/D02_user_approval.png",
+      "git_blob": "8bbbe805b2f5134dfb0b833c8833098ac21ba19d",
+      "bytes": 192990,
+      "sha256": "3a9e780637fdb5d0f000620ce5acb03bfd836ad4e9e56e3ed22fb1d6dabc5b7a"
+    },
+    {
+      "path": "task2/reports/process/evidence/assets/D03_gpt_license.png",
+      "git_blob": "29fff86aba3efc42b15efdfdd7227abce7a68065",
+      "bytes": 874611,
+      "sha256": "7791d2e6cd966e7ea14166487f0efb61c620c9861fe35c3b6c1a81a9786f8b61"
+    },
+    {
+      "path": "task2/reports/process/evidence/assets/D03_user_license.png",
+      "git_blob": "83783c1fcf5f4c339bc78e353c5a0b6495173a7a",
+      "bytes": 22414,
+      "sha256": "b5e6fc6d70bc504c905480ac7451d886901f4251eefeebee3a0031d43d759ca4"
+    },
+    {
+      "path": "task2/reports/process/evidence/assets/D04_gpt_audit.png",
+      "git_blob": "fdc42f44e620652a66c37a577dd4b0b99d150e02",
+      "bytes": 470200,
+      "sha256": "443ea31d68d7a5ee40c64951b07f3072b678245448fa86c2f7e3155c73a98ad2"
+    },
+    {
+      "path": "task2/reports/process/evidence/assets/D04_user_audit.png",
+      "git_blob": "06ae95dd5e7a044968ce16383b2eabbd9af273d7",
+      "bytes": 156814,
+      "sha256": "cdcde61a673f8c3a2387863f6b17c82eee47e96d05dec3f6a85190014461587a"
+    },
+    {
+      "path": "task2/reports/process/evidence/assets/D04_user_handoff.png",
+      "git_blob": "e19bbe18cfb55a6d2d8859a16633f0446899f5ee",
+      "bytes": 255662,
+      "sha256": "7674de1a15c048d9797cb3a0c381cfc49dd157f967bddc270d2bd2a0c0fb95ad"
+    },
+    {
+      "path": "task2/reports/process/evidence/assets/D05_gpt_status.png",
+      "git_blob": "649809cdd0c04a6c7da3d29fd32e4cbb49382768",
+      "bytes": 204778,
+      "sha256": "de19d54e12d1931218782466585cb9e2bf755352f5c6a522e0884314d279cf18"
+    },
+    {
+      "path": "task2/reports/process/evidence/assets/D05_user_status.png",
+      "git_blob": "e7970a04f0bfb5b10144a1b3b0aa97336dba0c13",
+      "bytes": 47647,
+      "sha256": "ea914ffcf317219270d76958926a3d628b2c0608a592203253e04c1871e63272"
+    },
+    {
+      "path": "task2/reports/process/evidence/assets/D06_gpt_governance.png",
+      "git_blob": "ed4c29aa7212c3c99ca7a582a670d5777be66efc",
+      "bytes": 428999,
+      "sha256": "e12754e502cec482c454d2ec2400e2e061a5342016a5592a0ac13c4f5f2e581f"
+    },
+    {
+      "path": "task2/reports/process/evidence/assets/D06_gpt_revision.png",
+      "git_blob": "40c8d5c5d0287497e7c15520590cd50ae53aea85",
+      "bytes": 516158,
+      "sha256": "67d4424d2c478923a1385707711ce0a943c574c4645df332ca057c0215d71500"
+    },
+    {
+      "path": "task2/reports/process/evidence/assets/D06_user_governance.png",
+      "git_blob": "11bae8c2ee7d9fba3eccabb6d032b28d59883952",
+      "bytes": 267244,
+      "sha256": "6c180ff06b5115e37c739ad2bf7f0891dafae6caf5cdd43a6a8209132bcc5122"
+    },
+    {
+      "path": "task2/reports/process/evidence/assets/D06_user_revision.png",
+      "git_blob": "fc2dd4800fa3583f1b2a6647ccec40f00c5ae5a5",
+      "bytes": 63438,
+      "sha256": "bd2313ff08c4b3ad2414f344288053ba96f10706a7363e14bfbc103bf6e39481"
+    },
+    {
+      "path": "task2/reports/process/evidence/assets/codex_question_original.png",
+      "git_blob": "a1cacfaef3ddc5ccfe0176454b282a1916630fdc",
+      "bytes": 102030,
+      "sha256": "c7a4b366a236f79889af7d0dbe22e2c7658a7efcb206d187dc86e13c3fcb1934"
+    },
+    {
+      "path": "task2/reports/process/history/20261105_8page_handoff/Process_Report_Technical_Handoff_20261105_8p.pdf",
+      "git_blob": "90a3c28f5e6cf9bc2acd28ee4de9104c388ee152",
+      "bytes": 316437,
+      "sha256": "a2c57f58d246e326d398003045cadad090db19dcab9163cae5871fd791b01de1"
+    },
+    {
+      "path": "task2/reports/process/history/20261105_8page_handoff/README.md",
+      "git_blob": "1dc9a804a512dd1fd42698f2ec0909865742d671",
+      "bytes": 529,
+      "sha256": "7e36475e02a7aecb517113bc186f07679e63fc5d5f057103af1da025dcad5bfd"
+    },
+    {
+      "path": "task2/reports/process/main.tex",
+      "git_blob": "550a6775004456b932bf3e3795994a31d909a571",
+      "bytes": 3607,
+      "sha256": "a17265e423880c25db88c91486d774b5cc15dcbf3e0dcceca0674b5882926c7c"
+    },
+    {
+      "path": "task2/review/DELIVERY_GATE_REVIEW.md",
+      "git_blob": "da52da4df5558ed446070f5cd308959e1d86cd73",
+      "bytes": 3484,
+      "sha256": "c4c11f0a0c93deb7c3798d5c948f69607f58945f0d13412dad0f19f92f4b283b"
+    },
+    {
+      "path": "task2/review/PROCESS_REPORT_SYNC_20261106.md",
+      "git_blob": "7c991ca0356a857009ddff9e13e8a55154cd2ada",
+      "bytes": 7021,
+      "sha256": "492c2d0a77ddc4d8a4896525f30bd943ecaf11e44b6580dd514a7e24b3dbded3"
+    },
+    {
+      "path": "task2/review/REPORT_PACKET.md",
+      "git_blob": "c961b5fcbd54edc2c35d9c6cbd0e89401a5593e8",
+      "bytes": 2331,
+      "sha256": "ad830a527e8cbe447f62387fba136c1b4e8475c2e333c8c60dc5ea3ab565c393"
+    },
+    {
+      "path": "task2/review/REVIEW_INDEX.md",
+      "git_blob": "e65bac7ddb72195ab7ed90a2f501914ee8ae1102",
+      "bytes": 2741,
+      "sha256": "4390db537b1f49110a6782d89df468bcbc62e71bbc9534142ed04ea4e7ec7934"
+    },
+    {
+      "path": "task2/scripts/build_reports.py",
+      "git_blob": "018e2b97de80e9426a8fbbaa8a86accd2c777559",
+      "bytes": 8409,
+      "sha256": "944d117131784c0fda92ee60b4bc82e6210e8d38310ce8575e3276499edd69f1"
+    },
+    {
+      "path": "task2/scripts/package_report_sources.py",
+      "git_blob": "e7dad03a17a8d29667a7ddd0066bf00c7c8434bb",
+      "bytes": 4945,
+      "sha256": "e722e2ba9c21c5063e136769e2f030f4950f069576590967a0667ab236175f4d"
+    }
+  ],
+  "limits": [
+    "High-confidence signature scan does not prove absence of every secret.",
+    "Historical Git objects and actual ChatGPT UI state not exhaustively audited.",
+    "Prior Process page/PNG checks inherited only where exact bytes still match.",
+    "No experiments, report rebuild, screenshot processing or new Evidence Lock."
+  ]
+}

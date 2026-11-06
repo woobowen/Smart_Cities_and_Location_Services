@@ -1,0 +1,58 @@
+{
+  "reviewer": "Codex independent agent process_integration_verifier",
+  "method": "AST syntax parsing and isolated synthetic mocked guard tests; these are not actual report compilation or visual inspection.",
+  "reviewed_scripts": [
+    {
+      "path": "task2/scripts/build_reports.py",
+      "sha256": "944d117131784c0fda92ee60b4bc82e6210e8d38310ce8575e3276499edd69f1"
+    },
+    {
+      "path": "task2/scripts/package_report_sources.py",
+      "sha256": "e722e2ba9c21c5063e136769e2f030f4950f069576590967a0667ab236175f4d"
+    }
+  ],
+  "tests": [
+    {
+      "test": "builder_success",
+      "result": "PASS",
+      "accepted_bytes_unchanged": true,
+      "expected_failure_observed": false
+    },
+    {
+      "test": "builder_compile_failure",
+      "result": "PASS",
+      "accepted_bytes_unchanged": true,
+      "expected_failure_observed": true
+    },
+    {
+      "test": "builder_text_mismatch",
+      "result": "PASS",
+      "accepted_bytes_unchanged": true,
+      "expected_failure_observed": true
+    },
+    {
+      "test": "builder_pixel_mismatch",
+      "result": "PASS",
+      "accepted_bytes_unchanged": true,
+      "expected_failure_observed": true
+    },
+    {
+      "test": "package_existing_output_preserved",
+      "result": "PASS"
+    },
+    {
+      "test": "package_rejects_unreferenced_asset_before_writing",
+      "result": "PASS"
+    },
+    {
+      "test": "package_rejects_missing_asset_before_writing",
+      "result": "PASS"
+    }
+  ],
+  "result": "PASS",
+  "limits": [
+    "Only the Process builder branch is exercised; Experiment branch is not run.",
+    "Actual XeLaTeX/text/render receipts remain separate from synthetic guard tests.",
+    "This result does not grant Evidence Lock or GPT external review."
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "status": "USER_APPROVED_TARGET_PROPOSAL_NOT_APPLIED",
+  "date": "2026-11-06",
+  "github_baseline_main": "b7fd9ee522905c11ddcea760470e7a5f0c1be9f0",
+  "current_structured_manifest": "evidence/infrastructure/chatgpt-project-source-sync/sources.json",
+  "current_total_records_observed": 18,
+  "current_project_sources_true_observed": 15,
+  "target_total_metadata_records_if_baseline_unchanged": 20,
+  "target_project_sources_true": 12,
+  "target_project_sources": [
+    {"name":"SMART_CITIES_RESEARCH_PROTOCOL.md","path":"docs/research/SMART_CITIES_RESEARCH_PROTOCOL.md","kind":"governance","change":"keep_unchanged","version":"v1.3"},
+    {"name":"WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md","path":"docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md","kind":"governance","change":"replace_with_delivered","version":"v2.9"},
+    {"name":"SMART_CITIES_REPORT_WRITING_GUIDE.md","path":"docs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md","kind":"governance","change":"replace_with_delivered","version":"v1.4"},
+    {"name":"SMART_CITIES_VISUAL_SYSTEM.md","path":"docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md","kind":"governance","change":"replace_with_delivered","version":"v2.8"},
+    {"name":"AGENTS.md","path":"AGENTS.md","kind":"engineering_governance","change":"replace_with_delivered","version":"2026-11-06"},
+    {"name":"publication-plots.zip","path":"releases/skills/publication-plots-approved-original.zip","kind":"skill_original_archive","change":"keep_unchanged","version":"approved original"},
+    {"name":"Experiment_Report_吴博闻_10245102410.pdf","path":"reports/experiment-report/experiment1-reconstructed/Experiment_Report_吴博闻_10245102410.pdf","kind":"accepted_experiment_report","change":"keep_unchanged","version":"accepted"},
+    {"name":"Experiment_Report_完整重构_源文件.zip","path":"reports/experiment-report/experiment1-reconstructed/Experiment_Report_完整重构_源文件.zip","kind":"accepted_source_archive","change":"keep_unchanged","version":"accepted"},
+    {"name":"Process_Report_Revised.pdf","path":"reports/process-report/experiment1-revised/Process_Report_Revised.pdf","kind":"accepted_full_process_report","change":"keep_unchanged","version":"accepted"},
+    {"name":"Process_Report_Revised_LaTeX_Source.zip","path":"reports/process-report/experiment1-revised/Process_Report_Revised_LaTeX_Source.zip","kind":"accepted_process_source_archive","change":"keep_unchanged","version":"accepted"},
+    {"name":"Experiment2_Experiment_Report.pdf","path":"task2/reports/experiment/Experiment_Report.pdf","kind":"range_reviewed_experiment_report_reference","change":"add_new_member","version":"Experiment 2 technical review, 26 pages"},
+    {"name":"Experiment2_Process_Report.pdf","path":"task2/reports/process/Process_Report.pdf","kind":"user_approved_video_process_report_reference","change":"add_new_member_and_integrate_approved_pdf","version":"2026-11-06 approved 16-page video-evidence PDF"}
+  ],
+  "deactivate_keep_original_repo_files": [
+    "Experiment_Report_P2_Exact.pdf",
+    "实验课1.pptx",
+    "作业.zip",
+    "任务3_LLM辅助评估清洗.ipynb",
+    "作业1轨迹数据预处理.ipynb"
+  ],
+  "already_false_keep_false": [
+    "Process_Report_P2_Locked_v1.pdf",
+    "WF_WorkflowConstruction_PreTask1_REVISED.pdf",
+    "WF_WorkflowConstruction_PreTask1_31p_LaTeX_Source.zip"
+  ],
+  "private_or_on_demand_not_public_release": [
+    "QQ20261105-091814.mp4",
+    "Process_Report_Experiment2_SOURCE_resend.zip",
+    "Experiment2_Process_Report_Complete_LaTeX_Source_20261106_Revised.zip",
+    "raw decoded video frames and unsanitized screenshot evidence",
+    "raw teacher data / original teaching archives not explicitly licensed for redistribution"
+  ],
+  "process_pdf_known_approved_render_equivalent_sha256": [
+    "c96c96bd267aaffd99232d23432bfe9dbc4804352acd0c25c145e9ddfa803e2f",
+    "399970a96f63d70fd2b978b56058f85f692a77c7099f38005eee792f60a3525e"
+  ],
+  "important": "DO NOT interpret this target planning file as the complete active sources.json. Codex must inspect current repo, compare exact bytes, preserve all historical sources, and update the actual repository manifest only after the approved active sources are present. ChatGPT UI upload remains a separate user action."
+}

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "approval": "SC-PROJECT-SOURCES-SYNC-20261105",
-  "revision_date": "2026-11-05",
+  "approval": "SC-PROJECT-REFRESH-20261106",
+  "revision_date": "2026-11-06",
   "sources": [
     {
       "canonical_name": "SMART_CITIES_RESEARCH_PROTOCOL.md",
@@ -21,11 +21,11 @@
       "project_source": true,
       "semantic_role": "governance",
       "scope": "project",
-      "version": "v2.8",
-      "sha256": "9f6234f44f6d05661c80e4b20955c4bc7600394276491bf60796e93eaccbecaa",
+      "version": "v2.9",
+      "sha256": "bec2a66770da9dc80991e84aebc67e2284310f9980671129200f706576db01fc",
       "pair_id": null,
-      "approval_scope": "User-approved 2026-11-05 governance upgrade; exact release input bytes; one-time controlled Release→Active import",
-      "supersedes": "v2.7"
+      "approval_scope": "SC-PROJECT-REFRESH-20261106: user-approved complete replacement from verified 2026-11-06 refresh package; exact input bytes",
+      "supersedes": "v2.8"
     },
     {
       "canonical_name": "SMART_CITIES_REPORT_WRITING_GUIDE.md",
@@ -33,11 +33,11 @@
       "project_source": true,
       "semantic_role": "governance",
       "scope": "project; Experiment 1 examples remain task-specific",
-      "version": "v1.3",
-      "sha256": "9e56c40225ae4fe2dcd92de77ff7f93ef4670ada3d19b0139f03a2bf5193f165",
+      "version": "v1.4",
+      "sha256": "4aef6e48c79efe87e49d2173f9975d65d8bf6716a3f2f0dd04308b2daee90f18",
       "pair_id": null,
-      "approval_scope": "User-approved 2026-11-05 governance upgrade; exact release input bytes; one-time controlled Release→Active import",
-      "supersedes": "v1.2"
+      "approval_scope": "SC-PROJECT-REFRESH-20261106: user-approved complete replacement from verified 2026-11-06 refresh package; exact input bytes",
+      "supersedes": "v1.3"
     },
     {
       "canonical_name": "SMART_CITIES_VISUAL_SYSTEM.md",
@@ -45,11 +45,11 @@
       "project_source": true,
       "semantic_role": "governance",
       "scope": "project",
-      "version": "v2.7",
-      "sha256": "dc1a9943b7599867d77e6d2bc8267a3e41fe6149c14528cf3b52e58e148b2ba9",
+      "version": "v2.8",
+      "sha256": "d109b1072cb05a5309c96e3f5aa1337d0e2a67614a1e7cbc0a62fa50253b45a8",
       "pair_id": null,
-      "approval_scope": "User-approved 2026-11-05 governance upgrade; exact release input bytes; one-time controlled Release→Active import",
-      "supersedes": "v2.6"
+      "approval_scope": "SC-PROJECT-REFRESH-20261106: user-approved complete replacement from verified 2026-11-06 refresh package; exact input bytes",
+      "supersedes": "v2.7"
     },
     {
       "canonical_name": "AGENTS.md",
@@ -57,11 +57,11 @@
       "project_source": true,
       "semantic_role": "engineering_governance",
       "scope": "project",
-      "version": "2026-11-05",
-      "sha256": "6bc433f978a83406fb42a47fe400bd786dc2763e88c6ea97885539b9b9c4ed45",
+      "version": "2026-11-06",
+      "sha256": "98b6b7063042b3b3e3e6b8b49d8460a514bd0ed1af0965fdb739c54d6c0694d7",
       "pair_id": null,
-      "approval_scope": "User-approved 2026-11-05 governance upgrade; exact release input bytes; one-time controlled Release→Active import",
-      "supersedes": "2026-10-02"
+      "approval_scope": "SC-PROJECT-REFRESH-20261106: user-approved complete replacement from verified 2026-11-06 refresh package; exact input bytes",
+      "supersedes": "2026-11-05"
     },
     {
       "canonical_name": "Process_Report_P2_Locked_v1.pdf",
@@ -78,7 +78,7 @@
     {
       "canonical_name": "Experiment_Report_P2_Exact.pdf",
       "active_path": "templates/latex/experiment-report/preview/Experiment_Report_P2_Exact.pdf",
-      "project_source": true,
+      "project_source": false,
       "semantic_role": "synthetic_template",
       "scope": "project layout reference",
       "version": "P2 exact",
@@ -114,7 +114,7 @@
     {
       "canonical_name": "实验课1.pptx",
       "active_path": "task1/实验课1.pptx",
-      "project_source": true,
+      "project_source": false,
       "semantic_role": "teacher_material",
       "scope": "Experiment 1",
       "version": "teacher original",
@@ -126,7 +126,7 @@
     {
       "canonical_name": "作业.zip",
       "active_path": "task1/作业.zip",
-      "project_source": true,
+      "project_source": false,
       "semantic_role": "teacher_material",
       "scope": "Experiment 1",
       "version": "teacher original",
@@ -138,7 +138,7 @@
     {
       "canonical_name": "任务3_LLM辅助评估清洗.ipynb",
       "active_path": "task1/作业/作业/任务3_LLM辅助评估清洗.ipynb",
-      "project_source": true,
+      "project_source": false,
       "semantic_role": "starter",
       "scope": "Experiment 1; preserved without execution",
       "version": "teacher original",
@@ -150,7 +150,7 @@
     {
       "canonical_name": "作业1轨迹数据预处理.ipynb",
       "active_path": "task1/作业/作业/作业1轨迹数据预处理.ipynb",
-      "project_source": true,
+      "project_source": false,
       "semantic_role": "starter",
       "scope": "Experiment 1; preserved without execution",
       "version": "teacher original",
@@ -218,11 +218,35 @@
       "pair_id": "experiment1-process-revised",
       "approval_scope": "SC-LAB1-FINAL-SUBMISSION-CLOSEOUT-001: inherit prior complete manuscript/native-width approval; p76 crop revision explicitly authorized; current file pagewise user review not recorded; no new Evidence Lock",
       "supersedes": "2026-10-02 full Process pair (retained in reports history)"
+    },
+    {
+      "canonical_name": "Experiment2_Process_Report.pdf",
+      "active_path": "task2/reports/process/Process_Report.pdf",
+      "project_source": true,
+      "semantic_role": "user_approved_video_process_report_reference",
+      "scope": "Experiment 2 user-approved complete 16-page video-evidence Process exemplar; approved PDF only; raw video/frames and full source ZIP private; no new Evidence Lock",
+      "version": "2026-11-06 approved 16-page video-evidence PDF",
+      "sha256": "c96c96bd267aaffd99232d23432bfe9dbc4804352acd0c25c145e9ddfa803e2f",
+      "pair_id": "experiment2-process-20261106",
+      "approval_scope": "SC-PROJECT-REFRESH-20261106: retain previously integrated c96c96bd…e2f approved bytes and task authority, migrate intermediate canonical filename to the exact approved 12-member target name; alternate 399970a9…525e remains different private bytes",
+      "supersedes": "2026-11-05 8-page technical handoff, retained as repository history; no Experiment 1 member replaced"
+    },
+    {
+      "canonical_name": "Experiment2_Experiment_Report.pdf",
+      "active_path": "task2/reports/experiment/Experiment_Report.pdf",
+      "project_source": true,
+      "semantic_role": "range_reviewed_experiment_report_reference",
+      "scope": "Experiment 2 26-page technical reference; inherit only stated prior technical review scope; no new model run, full-data retraining, user final acceptance or teacher submission inferred",
+      "version": "Experiment 2 technical review, 26 pages",
+      "sha256": "7a795625354e8a3c7034f8426171f8f8b32784db0cd398654b309c86ea72c101",
+      "pair_id": "experiment2-technical-report",
+      "approval_scope": "SC-PROJECT-REFRESH-20261106: explicit user authorization to add existing 26-page technical report bytes as a Project Source; existing report/research source remains in repository, not a new Project Source archive",
+      "supersedes": null
     }
   ],
-  "last_collection_verification": "SC-PROJECT-SOURCES-SYNC-20261105",
-  "current_ui_handoff": "../SC-PROJECT-SOURCES-SYNC-20261105/verification.json",
-  "ui_status": "USER_REPORTED_UPDATED",
+  "last_collection_verification": "SC-PROJECT-REFRESH-20261106",
+  "current_ui_handoff": "../SC-PROJECT-REFRESH-20261106/UI_HANDOFF.md",
+  "ui_status": "USER_UI_ACTION_REQUIRED",
   "prior_ui_status": {
     "status": "USER_REPORTED_UPDATED",
     "scope": "SC-LAB1-PROCESS-INTEGRATION-SYNC-001 old Process pair; no current upload inferred"
@@ -232,5 +256,34 @@
     "basis": "Current explicit user report: ChatGPT Project Settings and the five governance Project Sources already updated",
     "scope": "Five governance documents and UI-maintained Project Settings; no new report/teacher-source upload requested",
     "independent_ui_byte_verification": false
+  },
+  "prior_collection_approval": "SC-LAB2-PROCESS-SYNC-20261106",
+  "pending_ui_action": {
+    "scope": "Apply approved 12-member target using actual current UI file identities",
+    "replace_four_governance_documents": [
+      "WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md",
+      "SMART_CITIES_VISUAL_SYSTEM.md",
+      "SMART_CITIES_REPORT_WRITING_GUIDE.md",
+      "AGENTS.md"
+    ],
+    "retire_five_existing_members": [
+      "Experiment_Report_P2_Exact.pdf",
+      "实验课1.pptx",
+      "作业.zip",
+      "任务3_LLM辅助评估清洗.ipynb",
+      "作业1轨迹数据预处理.ipynb"
+    ],
+    "task2_pdf_names": [
+      "Experiment2_Experiment_Report.pdf",
+      "Experiment2_Process_Report.pdf"
+    ],
+    "process_source_zip": "User reports a Process source ZIP currently in UI; safely backed up privately, remove from standing UI only after confirming the backup; never delete a unique original",
+    "settings": "User pastes the provided transfer TXT in ChatGPT UI; no repository active Settings file",
+    "actual_ui_upload_verified": false
+  },
+  "current_ui_user_report": {
+    "basis": "Latest user-approved refresh prompt reports Experiment 2 Process PDF and source ZIP already uploaded in UI",
+    "independently_verified": false,
+    "scope": "Presence reported only; current UI filenames, hashes, duplicates and final 12-member count still require user action"
   }
 }

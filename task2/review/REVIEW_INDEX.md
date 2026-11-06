@@ -2,7 +2,9 @@
 
 审核对象是包含本文件的**固定Git提交**，仓库 `woobowen/Smart_Cities_and_Location_Services`、分支 `main`。交付ZIP根目录的 `FIXED_COMMIT.json` 给出实测local/remote SHA、ZIP生成身份与远程读取回执；使用该SHA读取所有文件，不把移动的main当作已审版本。此仓库内索引不嵌入自身commit以避免循环身份。
 
-本提交的内部交付状态为 `READY_FOR_GPT_REVIEW`，发布动作与固定SHA/包身份须结合post-push回执核对；不代表GPT外部审核PASS或用户验收。真实未交付范围只有本轮原生UI互动证据页面及Evidence Master Lock；Process当前为正文与技术素材交接稿。原始Foursquare及可反解逐条派生按用户明确要求留本地，代码、聚合数值和实质审查证据公开。[八项门槛与外部状态](DELIVERY_GATE_REVIEW.md)分别登记。
+当前新增审核对象是 [2026-11-06 四份规范升级、12 项 Project Sources 与发布](../../evidence/infrastructure/SC-PROJECT-REFRESH-20261106/REVIEW_PACKET.md)。本地分发状态为 `UPLOAD_BUNDLE_READY`，UI 为 `USER_UI_ACTION_REQUIRED`；固定提交发布及回读完成后才进入 `READY_FOR_GPT_EXTERNAL_REVIEW`。Process 已接入用户认可的 16 页 PDF、原生 UI 与 TikZ 源；其编译和全文已核验，严格像素复现仍有记录在案的差异。[此前 16 项中间方案](PROCESS_REPORT_SYNC_20261106.md)保留历史身份。GitHub 同步、Upload Bundle Ready、ChatGPT UI 实际上传及 GPT 外审分别核验，不自行宣告外审或新 Evidence Lock。原研究结果和数据公开边界不变。
+
+以下顺序继续索引原研究交付，旧 26+8 页检查与审核包保留历史范围；不能据旧回执声称新报告已经外审。
 
 建议顺序：
 

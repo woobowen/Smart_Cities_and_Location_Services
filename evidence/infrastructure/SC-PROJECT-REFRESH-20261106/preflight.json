@@ -1,0 +1,383 @@
+{
+  "task": "SC-PROJECT-REFRESH-20261106",
+  "recorded_utc": "2026-11-06T09:33:12.619859+00:00",
+  "local_head": "b7fd9ee522905c11ddcea760470e7a5f0c1be9f0",
+  "branch": "main",
+  "remote_main": "b7fd9ee522905c11ddcea760470e7a5f0c1be9f0",
+  "git_status": "M  README.md\nMM evidence/infrastructure/chatgpt-project-source-sync/README.md\nM  evidence/infrastructure/chatgpt-project-source-sync/SOURCE_MANIFEST.md\nM  evidence/infrastructure/chatgpt-project-source-sync/UPLOAD_INSTRUCTIONS.md\nM  evidence/infrastructure/chatgpt-project-source-sync/sources.json\nA  \"releases/chatgpt-project-sources/Experiment2_Process_Report_\\345\\220\\264\\345\\215\\232\\351\\227\\273_10245102410.pdf\"\nM  task2/README.md\nM  task2/docs/ENVIRONMENT_CHANGELOG.md\nM  task2/docs/REPRODUCIBILITY_GUIDE.md\nM  task2/docs/REVIEW_LOG.md\nA  task2/evidence/process_report_sync_20261106/independent_review/REVIEW.md\nA  task2/evidence/process_report_sync_20261106/independent_review/asset_metadata_audit.json\nA  task2/evidence/process_report_sync_20261106/independent_review/diagnose_render.py\nA  task2/evidence/process_report_sync_20261106/independent_review/fontfix_render_measurements.json\nA  task2/evidence/process_report_sync_20261106/independent_review/integration_audit.json\nA  task2/evidence/process_report_sync_20261106/independent_review/render_diagnosis.json\nA  task2/evidence/process_report_sync_20261106/independent_review/script_guard_checks.json\nA  task2/evidence/process_report_sync_20261106/independent_review/verify_integration.py\nA  task2/evidence/process_report_sync_20261106/independent_review/verify_script_guards.py\nA  task2/evidence/process_report_sync_20261106/installed_build/process_approved_pdfinfo.txt\nA  task2/evidence/process_report_sync_20261106/installed_build/process_approved_text.txt\nA  task2/evidence/process_report_sync_20261106/installed_build/process_compile.txt\nA  task2/evidence/process_report_sync_20261106/installed_build/process_compiled_pdfinfo.txt\nA  task2/evidence/process_report_sync_20261106/installed_build/process_compiled_text.txt\nA  task2/evidence/process_report_sync_20261106/installed_build/process_verification.json\nA  task2/evidence/process_report_sync_20261106/installed_build_fontfix/process_approved_pdfinfo.txt\nA  task2/evidence/process_report_sync_20261106/installed_build_fontfix/process_approved_text.txt\nA  task2/evidence/process_report_sync_20261106/installed_build_fontfix/process_compile.txt\nA  task2/evidence/process_report_sync_20261106/installed_build_fontfix/process_compiled_pdfinfo.txt\nA  task2/evidence/process_report_sync_20261106/installed_build_fontfix/process_compiled_text.txt\nA  task2/evidence/process_report_sync_20261106/installed_build_fontfix/process_verification.json\nA  task2/evidence/process_report_sync_20261106/intake.json\nA  task2/evidence/process_report_sync_20261106/integration.json\nA  task2/evidence/process_report_sync_20261106/page_review.json\nA  task2/evidence/process_report_sync_20261106/source_build.json\nA  task2/evidence/process_report_sync_20261106/source_log_diagnosis.json\nA  task2/evidence/process_report_sync_20261106/source_packaging_check.json\nA  task2/evidence/process_report_sync_20261106/sources_baseline.json\nA  task2/evidence/process_report_sync_20261106/sources_baseline_check.txt\nA  task2/evidence/process_report_sync_20261106/sources_check.json\nA  task2/evidence/process_report_sync_20261106/sources_plan.json\nA  task2/evidence/process_report_sync_20261106/sources_verification.json\nA  task2/evidence/process_report_sync_20261106/sources_write.json\nAM task2/evidence/process_report_sync_20261106/verification_summary.json\nM  task2/reports/process/Process_Report.pdf\nA  task2/reports/process/README.md\nM  task2/reports/process/chapters/01_workflow.tex\nM  task2/reports/process/chapters/02_online_evolution.tex\nM  task2/reports/process/chapters/04_reflection.tex\nA  task2/reports/process/chapters/05_summary.tex\nA  task2/reports/process/evidence/01_reframe.tex\nA  task2/reports/process/evidence/02_authorization.tex\nA  task2/reports/process/evidence/03_license.tex\nA  task2/reports/process/evidence/04_review.tex\nA  task2/reports/process/evidence/05_governance.tex\nA  task2/reports/process/evidence/assets/D01_gpt_onegoal.png\nA  task2/reports/process/evidence/assets/D01_gpt_visual.png\nA  task2/reports/process/evidence/assets/D01_user_goal.png\nA  task2/reports/process/evidence/assets/D01_user_longrun.png\nA  task2/reports/process/evidence/assets/D02_gpt_contract.png\nA  task2/reports/process/evidence/assets/D02_user_approval.png\nA  task2/reports/process/evidence/assets/D03_gpt_license.png\nA  task2/reports/process/evidence/assets/D03_user_license.png\nA  task2/reports/process/evidence/assets/D04_gpt_audit.png\nA  task2/reports/process/evidence/assets/D04_user_audit.png\nA  task2/reports/process/evidence/assets/D04_user_handoff.png\nA  task2/reports/process/evidence/assets/D05_gpt_status.png\nA  task2/reports/process/evidence/assets/D05_user_status.png\nA  task2/reports/process/evidence/assets/D06_gpt_governance.png\nA  task2/reports/process/evidence/assets/D06_gpt_revision.png\nA  task2/reports/process/evidence/assets/D06_user_governance.png\nA  task2/reports/process/evidence/assets/D06_user_revision.png\nA  task2/reports/process/evidence/assets/codex_question_original.png\nA  task2/reports/process/history/20261105_8page_handoff/Process_Report_Technical_Handoff_20261105_8p.pdf\nA  task2/reports/process/history/20261105_8page_handoff/README.md\nM  task2/reports/process/main.tex\nM  task2/review/DELIVERY_GATE_REVIEW.md\nAM task2/review/PROCESS_REPORT_SYNC_20261106.md\nM  task2/review/REPORT_PACKET.md\nM  task2/review/REVIEW_INDEX.md\nM  task2/scripts/build_reports.py\nM  task2/scripts/package_report_sources.py\n?? releases/chatgpt-project-sources/Smart_Cities_Project_Sources_Video_Workflow_Update_20261106.zip\n?? task2/evidence/process_report_sync_20261106/independent_review/FINAL_STAGED_REVIEW.json\n?? task2/evidence/process_report_sync_20261106/independent_review/FINAL_STAGED_REVIEW.md\n?? task2/evidence/process_report_sync_20261106/late_extra_failed_check.json\n?? task2/evidence/process_report_sync_20261106/late_extra_inventory.json\n?? task2/evidence/process_report_sync_20261106/staged_audit.json\n",
+  "governance_before": {
+    "docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md": {
+      "version": "v2.8",
+      "sha256": "9f6234f44f6d05661c80e4b20955c4bc7600394276491bf60796e93eaccbecaa",
+      "bytes": 52859
+    },
+    "docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md": {
+      "version": "v2.7",
+      "sha256": "dc1a9943b7599867d77e6d2bc8267a3e41fe6149c14528cf3b52e58e148b2ba9",
+      "bytes": 51358
+    },
+    "docs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md": {
+      "version": "v1.3",
+      "sha256": "9e56c40225ae4fe2dcd92de77ff7f93ef4670ada3d19b0139f03a2bf5193f165",
+      "bytes": 30746
+    },
+    "AGENTS.md": {
+      "version": "2026-11-05",
+      "sha256": "6bc433f978a83406fb42a47fe400bd786dc2763e88c6ea97885539b9b9c4ed45",
+      "bytes": 45131
+    }
+  },
+  "research_before": {
+    "version": "v1.3",
+    "sha256": "ec43f4ceab061ff6d4f1cccdec401f2f7a514aa5a5ba5963a1bcc7254c1d1b98"
+  },
+  "manifest_before": {
+    "schema_version": 1,
+    "approval": "SC-LAB2-PROCESS-SYNC-20261106",
+    "revision_date": "2026-11-06",
+    "sources": [
+      {
+        "canonical_name": "SMART_CITIES_RESEARCH_PROTOCOL.md",
+        "active_path": "docs/research/SMART_CITIES_RESEARCH_PROTOCOL.md",
+        "project_source": true,
+        "semantic_role": "governance",
+        "scope": "project",
+        "version": "v1.3",
+        "sha256": "ec43f4ceab061ff6d4f1cccdec401f2f7a514aa5a5ba5963a1bcc7254c1d1b98",
+        "pair_id": null,
+        "approval_scope": "User-approved 2026-11-05 governance upgrade; exact release input bytes; one-time controlled Release→Active import",
+        "supersedes": "v1.2"
+      },
+      {
+        "canonical_name": "WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md",
+        "active_path": "docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md",
+        "project_source": true,
+        "semantic_role": "governance",
+        "scope": "project",
+        "version": "v2.8",
+        "sha256": "9f6234f44f6d05661c80e4b20955c4bc7600394276491bf60796e93eaccbecaa",
+        "pair_id": null,
+        "approval_scope": "User-approved 2026-11-05 governance upgrade; exact release input bytes; one-time controlled Release→Active import",
+        "supersedes": "v2.7"
+      },
+      {
+        "canonical_name": "SMART_CITIES_REPORT_WRITING_GUIDE.md",
+        "active_path": "docs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md",
+        "project_source": true,
+        "semantic_role": "governance",
+        "scope": "project; Experiment 1 examples remain task-specific",
+        "version": "v1.3",
+        "sha256": "9e56c40225ae4fe2dcd92de77ff7f93ef4670ada3d19b0139f03a2bf5193f165",
+        "pair_id": null,
+        "approval_scope": "User-approved 2026-11-05 governance upgrade; exact release input bytes; one-time controlled Release→Active import",
+        "supersedes": "v1.2"
+      },
+      {
+        "canonical_name": "SMART_CITIES_VISUAL_SYSTEM.md",
+        "active_path": "docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md",
+        "project_source": true,
+        "semantic_role": "governance",
+        "scope": "project",
+        "version": "v2.7",
+        "sha256": "dc1a9943b7599867d77e6d2bc8267a3e41fe6149c14528cf3b52e58e148b2ba9",
+        "pair_id": null,
+        "approval_scope": "User-approved 2026-11-05 governance upgrade; exact release input bytes; one-time controlled Release→Active import",
+        "supersedes": "v2.6"
+      },
+      {
+        "canonical_name": "AGENTS.md",
+        "active_path": "AGENTS.md",
+        "project_source": true,
+        "semantic_role": "engineering_governance",
+        "scope": "project",
+        "version": "2026-11-05",
+        "sha256": "6bc433f978a83406fb42a47fe400bd786dc2763e88c6ea97885539b9b9c4ed45",
+        "pair_id": null,
+        "approval_scope": "User-approved 2026-11-05 governance upgrade; exact release input bytes; one-time controlled Release→Active import",
+        "supersedes": "2026-10-02"
+      },
+      {
+        "canonical_name": "Process_Report_P2_Locked_v1.pdf",
+        "active_path": "templates/latex/process-report/preview/history/Process_Report_P2_Locked_v1_20260929.pdf",
+        "project_source": false,
+        "semantic_role": "synthetic_template",
+        "scope": "historical synthetic template preview; not current Project Source",
+        "version": "locked-v1",
+        "sha256": "3903042ef7935a722d32871a9f55ba973b1262ee0fe290363b0a6c3bda09dcfa",
+        "pair_id": null,
+        "approval_scope": "SC-PROJECT-SOURCES-SYNC-003 preserves approved original; historical bytes retained, upload membership removed by SC-LAB1-PROCESS-INTEGRATION-SYNC-001",
+        "supersedes": null
+      },
+      {
+        "canonical_name": "Experiment_Report_P2_Exact.pdf",
+        "active_path": "templates/latex/experiment-report/preview/Experiment_Report_P2_Exact.pdf",
+        "project_source": true,
+        "semantic_role": "synthetic_template",
+        "scope": "project layout reference",
+        "version": "P2 exact",
+        "sha256": "6fd543f5123ba4d67985193d5658802ae820c6585dc3f509071b8b2d39b323dd",
+        "pair_id": null,
+        "approval_scope": "SC-PROJECT-SOURCES-SYNC-003 preserves approved original",
+        "supersedes": null
+      },
+      {
+        "canonical_name": "WF_WorkflowConstruction_PreTask1_REVISED.pdf",
+        "active_path": "reports/process-report/pre-task1/WF_WorkflowConstruction_PreTask1_REVISED.pdf",
+        "project_source": false,
+        "semantic_role": "accepted_partial_history",
+        "scope": "historical PreTask foundation",
+        "version": "REVISED",
+        "sha256": "0247a7755558169d3bd3397a93028c72a93f09e318c75f623f5813b96c1ed0f0",
+        "pair_id": "pre-task1",
+        "approval_scope": "SC-PROJECT-SOURCES-SYNC-003 preserves approved original; historical bytes retained, upload membership removed by SC-LAB1-PROCESS-INTEGRATION-SYNC-001",
+        "supersedes": null
+      },
+      {
+        "canonical_name": "WF_WorkflowConstruction_PreTask1_31p_LaTeX_Source.zip",
+        "active_path": "reports/process-report/pre-task1/WF_WorkflowConstruction_PreTask1_31p_LaTeX_Source.zip",
+        "project_source": false,
+        "semantic_role": "historical_source_archive",
+        "scope": "historical PreTask foundation",
+        "version": "31p",
+        "sha256": "e85942c5137e678e4043b02e7231788ccd241261c1483a39657edc6ae648e633",
+        "pair_id": "pre-task1",
+        "approval_scope": "SC-PROJECT-SOURCES-SYNC-003 preserves approved original; historical bytes retained, upload membership removed by SC-LAB1-PROCESS-INTEGRATION-SYNC-001",
+        "supersedes": null
+      },
+      {
+        "canonical_name": "实验课1.pptx",
+        "active_path": "task1/实验课1.pptx",
+        "project_source": true,
+        "semantic_role": "teacher_material",
+        "scope": "Experiment 1",
+        "version": "teacher original",
+        "sha256": "cf5fdbdd0e116818f4bf195e8761dd55c4733443d7c360c986cf1cdfddfda075",
+        "pair_id": null,
+        "approval_scope": "SC-PROJECT-SOURCES-SYNC-003 preserves approved original",
+        "supersedes": null
+      },
+      {
+        "canonical_name": "作业.zip",
+        "active_path": "task1/作业.zip",
+        "project_source": true,
+        "semantic_role": "teacher_material",
+        "scope": "Experiment 1",
+        "version": "teacher original",
+        "sha256": "818d483cf719aeb1145ea97b551b2648913559ed1fca0be220ed41eff8ba42cc",
+        "pair_id": null,
+        "approval_scope": "SC-PROJECT-SOURCES-SYNC-003 preserves approved original",
+        "supersedes": null
+      },
+      {
+        "canonical_name": "任务3_LLM辅助评估清洗.ipynb",
+        "active_path": "task1/作业/作业/任务3_LLM辅助评估清洗.ipynb",
+        "project_source": true,
+        "semantic_role": "starter",
+        "scope": "Experiment 1; preserved without execution",
+        "version": "teacher original",
+        "sha256": "4ecffe64024e002c0cffe7830e18b5f6ded04cd5aa9dd645d6798fc9b0715add",
+        "pair_id": null,
+        "approval_scope": "SC-PROJECT-SOURCES-SYNC-003 preserves approved original",
+        "supersedes": null
+      },
+      {
+        "canonical_name": "作业1轨迹数据预处理.ipynb",
+        "active_path": "task1/作业/作业/作业1轨迹数据预处理.ipynb",
+        "project_source": true,
+        "semantic_role": "starter",
+        "scope": "Experiment 1; preserved without execution",
+        "version": "teacher original",
+        "sha256": "8601d1dfecaef062fef553992cc9774d3a0eb551751c70536f5b52f1343b158a",
+        "pair_id": null,
+        "approval_scope": "SC-PROJECT-SOURCES-SYNC-003 preserves approved original",
+        "supersedes": null
+      },
+      {
+        "canonical_name": "publication-plots.zip",
+        "active_path": "releases/skills/publication-plots-approved-original.zip",
+        "project_source": true,
+        "semantic_role": "skill_original_archive",
+        "scope": "project visualization tooling",
+        "version": "approved original",
+        "sha256": "b3d20aec75a8450e62effcb51399115c952fa6c3787c254fa09305e44a9c3041",
+        "pair_id": null,
+        "approval_scope": "SC-PROJECT-SOURCES-SYNC-003 preserves approved original",
+        "supersedes": null
+      },
+      {
+        "canonical_name": "Experiment_Report_吴博闻_10245102410.pdf",
+        "active_path": "reports/experiment-report/experiment1-reconstructed/Experiment_Report_吴博闻_10245102410.pdf",
+        "project_source": true,
+        "semantic_role": "accepted_experiment_report",
+        "scope": "Experiment 1 accepted reference; no authority for future data/method/conclusions",
+        "version": "accepted 25-page reconstruction",
+        "sha256": "2a940be556262725acbe666bbe5b5f8a6b20e08d6838770f0b681bb17bf5cdd0",
+        "pair_id": "experiment1-reconstructed",
+        "approval_scope": "SC-PROJECT-SOURCES-SYNC-003 immutable approved input",
+        "supersedes": "22-page current Experiment report"
+      },
+      {
+        "canonical_name": "Experiment_Report_完整重构_源文件.zip",
+        "active_path": "reports/experiment-report/experiment1-reconstructed/Experiment_Report_完整重构_源文件.zip",
+        "project_source": true,
+        "semantic_role": "accepted_source_archive",
+        "scope": "Experiment 1 accepted reference; no authority for future data/method/conclusions",
+        "version": "accepted 25-page reconstruction",
+        "sha256": "6c0d2cc5e3b65bccb0279e1dd7ad5e776b5a8fc098b159f34bfd5301242e4dcd",
+        "pair_id": "experiment1-reconstructed",
+        "approval_scope": "SC-PROJECT-SOURCES-SYNC-003 immutable approved input",
+        "supersedes": "22-page current Experiment report"
+      },
+      {
+        "canonical_name": "Process_Report_Revised.pdf",
+        "active_path": "reports/process-report/experiment1-revised/Process_Report_Revised.pdf",
+        "project_source": true,
+        "semantic_role": "accepted_full_process_report",
+        "scope": "Experiment 1 complete Workflow Construction and Experiment Decision Process; not new-task evidence",
+        "version": "2026-10-03 authorized p76 revision of prior accepted 77-page report",
+        "sha256": "dc1bb8e8e2262379b7e234550901f645ef0d6f549d6d2aef5e3985a433a1fa23",
+        "pair_id": "experiment1-process-revised",
+        "approval_scope": "SC-LAB1-FINAL-SUBMISSION-CLOSEOUT-001: inherit prior complete manuscript/native-width approval; p76 crop revision explicitly authorized; current file pagewise user review not recorded; no new Evidence Lock",
+        "supersedes": "2026-10-02 full Process pair (retained in reports history)"
+      },
+      {
+        "canonical_name": "Process_Report_Revised_LaTeX_Source.zip",
+        "active_path": "reports/process-report/experiment1-revised/Process_Report_Revised_LaTeX_Source.zip",
+        "project_source": true,
+        "semantic_role": "accepted_process_source_archive",
+        "scope": "Experiment 1 complete Workflow Construction and Experiment Decision Process; not new-task evidence",
+        "version": "2026-10-03 authorized p76 revision of prior accepted 77-page report",
+        "sha256": "831d61baa7de160796827b60f29e1ada9f1b3809c2a87aa4acd6b98703e352ef",
+        "pair_id": "experiment1-process-revised",
+        "approval_scope": "SC-LAB1-FINAL-SUBMISSION-CLOSEOUT-001: inherit prior complete manuscript/native-width approval; p76 crop revision explicitly authorized; current file pagewise user review not recorded; no new Evidence Lock",
+        "supersedes": "2026-10-02 full Process pair (retained in reports history)"
+      },
+      {
+        "canonical_name": "Experiment2_Process_Report_吴博闻_10245102410.pdf",
+        "active_path": "task2/reports/process/Process_Report.pdf",
+        "project_source": true,
+        "semantic_role": "accepted_full_process_report",
+        "scope": "Experiment 2 complete Process Report; approved existing body, native screenshots and TikZ arrows; no new research or Evidence Lock",
+        "version": "2026-11-06 accepted 16-page revision; provenance appendix and its contents entry removed",
+        "sha256": "c96c96bd267aaffd99232d23432bfe9dbc4804352acd0c25c145e9ddfa803e2f",
+        "pair_id": "experiment2-process-20261106",
+        "approval_scope": "Explicit user authorization in SC-LAB2-PROCESS-SYNC-20261106: add this PDF as Project Source; recover exact pinned PDF bytes from the SHA-verified inbound source archive; full inbound archive/raw frames remain private and are not Project Sources",
+        "supersedes": "2026-11-05 8-page technical handoff, retained as repository history; no Experiment 1 member replaced"
+      }
+    ],
+    "last_collection_verification": "SC-LAB2-PROCESS-SYNC-20261106",
+    "current_ui_handoff": "../../../task2/review/PROCESS_REPORT_SYNC_20261106.md",
+    "ui_status": "USER_UI_ACTION_REQUIRED",
+    "prior_ui_status": {
+      "status": "USER_REPORTED_UPDATED",
+      "scope": "SC-LAB1-PROCESS-INTEGRATION-SYNC-001 old Process pair; no current upload inferred"
+    },
+    "ui_update_report": {
+      "date": "2026-11-05",
+      "basis": "Current explicit user report: ChatGPT Project Settings and the five governance Project Sources already updated",
+      "scope": "Five governance documents and UI-maintained Project Settings; no new report/teacher-source upload requested",
+      "independent_ui_byte_verification": false
+    },
+    "prior_collection_approval": "SC-PROJECT-SOURCES-SYNC-20261105",
+    "pending_ui_action": {
+      "action": "Add one new Experiment 2 Process PDF; keep all 15 previous members unchanged",
+      "canonical_name": "Experiment2_Process_Report_吴博闻_10245102410.pdf",
+      "sha256": "c96c96bd267aaffd99232d23432bfe9dbc4804352acd0c25c145e9ddfa803e2f",
+      "actual_ui_upload_verified": false,
+      "prior_report": "The 2026-11-05 ui_update_report remains a historical user report about five governance documents"
+    }
+  },
+  "release_before": [
+    {
+      "name": "AGENTS.md",
+      "bytes": 45131,
+      "sha256": "6bc433f978a83406fb42a47fe400bd786dc2763e88c6ea97885539b9b9c4ed45"
+    },
+    {
+      "name": "Experiment2_Process_Report_吴博闻_10245102410.pdf",
+      "bytes": 6139844,
+      "sha256": "c96c96bd267aaffd99232d23432bfe9dbc4804352acd0c25c145e9ddfa803e2f"
+    },
+    {
+      "name": "Experiment_Report_P2_Exact.pdf",
+      "bytes": 278863,
+      "sha256": "6fd543f5123ba4d67985193d5658802ae820c6585dc3f509071b8b2d39b323dd"
+    },
+    {
+      "name": "Experiment_Report_吴博闻_10245102410.pdf",
+      "bytes": 907540,
+      "sha256": "2a940be556262725acbe666bbe5b5f8a6b20e08d6838770f0b681bb17bf5cdd0"
+    },
+    {
+      "name": "Experiment_Report_完整重构_源文件.zip",
+      "bytes": 3515637,
+      "sha256": "6c0d2cc5e3b65bccb0279e1dd7ad5e776b5a8fc098b159f34bfd5301242e4dcd"
+    },
+    {
+      "name": "Process_Report_Revised.pdf",
+      "bytes": 8143247,
+      "sha256": "dc1bb8e8e2262379b7e234550901f645ef0d6f549d6d2aef5e3985a433a1fa23"
+    },
+    {
+      "name": "Process_Report_Revised_LaTeX_Source.zip",
+      "bytes": 56878339,
+      "sha256": "831d61baa7de160796827b60f29e1ada9f1b3809c2a87aa4acd6b98703e352ef"
+    },
+    {
+      "name": "SMART_CITIES_REPORT_WRITING_GUIDE.md",
+      "bytes": 30746,
+      "sha256": "9e56c40225ae4fe2dcd92de77ff7f93ef4670ada3d19b0139f03a2bf5193f165"
+    },
+    {
+      "name": "SMART_CITIES_RESEARCH_PROTOCOL.md",
+      "bytes": 17183,
+      "sha256": "ec43f4ceab061ff6d4f1cccdec401f2f7a514aa5a5ba5963a1bcc7254c1d1b98"
+    },
+    {
+      "name": "SMART_CITIES_VISUAL_SYSTEM.md",
+      "bytes": 51358,
+      "sha256": "dc1a9943b7599867d77e6d2bc8267a3e41fe6149c14528cf3b52e58e148b2ba9"
+    },
+    {
+      "name": "Smart_Cities_Project_Sources_Video_Workflow_Update_20261106.zip",
+      "bytes": 114793,
+      "sha256": "5012d8643f7a59208b89dc5be803b65b8701e9c55a85cb8c345767adf55dae13"
+    },
+    {
+      "name": "Smart_Cities_Project_Sources_Video_Workflow_Update_20261106.zip:Zone.Identifier",
+      "bytes": 90,
+      "sha256": "a365b939a8a6615a145a309978e1d4cf38e7be13b08d50828f80225a9f6a222a"
+    },
+    {
+      "name": "WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md",
+      "bytes": 52859,
+      "sha256": "9f6234f44f6d05661c80e4b20955c4bc7600394276491bf60796e93eaccbecaa"
+    },
+    {
+      "name": "publication-plots.zip",
+      "bytes": 13105,
+      "sha256": "b3d20aec75a8450e62effcb51399115c952fa6c3787c254fa09305e44a9c3041"
+    },
+    {
+      "name": "任务3_LLM辅助评估清洗.ipynb",
+      "bytes": 20208,
+      "sha256": "4ecffe64024e002c0cffe7830e18b5f6ded04cd5aa9dd645d6798fc9b0715add"
+    },
+    {
+      "name": "作业.zip",
+      "bytes": 15376559,
+      "sha256": "818d483cf719aeb1145ea97b551b2648913559ed1fca0be220ed41eff8ba42cc"
+    },
+    {
+      "name": "作业1轨迹数据预处理.ipynb",
+      "bytes": 77455,
+      "sha256": "8601d1dfecaef062fef553992cc9774d3a0eb551751c70536f5b52f1343b158a"
+    },
+    {
+      "name": "实验课1.pptx",
+      "bytes": 11442326,
+      "sha256": "cf5fdbdd0e116818f4bf195e8761dd55c4733443d7c360c986cf1cdfddfda075"
+    }
+  ],
+  "preexisting_work": "82 staged paths and further unstaged audit records preserved; private index/patch snapshots saved before this refresh"
+}

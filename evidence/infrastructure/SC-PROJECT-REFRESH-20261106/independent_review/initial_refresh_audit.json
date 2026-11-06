@@ -1,0 +1,149 @@
+{
+  "reviewer": "Codex independent agent process_integration_verifier",
+  "recorded_utc": "2026-11-06T09:38:28.457037+00:00",
+  "baseline": "b7fd9ee522905c11ddcea760470e7a5f0c1be9f0",
+  "scope": "Approved document bytes, actual diff, target semantics, frozen artifacts and candidate publication boundary; no source writes, media extraction, experiment run or report compile.",
+  "package_sha256": "5012d8643f7a59208b89dc5be803b65b8701e9c55a85cb8c345767adf55dae13",
+  "package_sha_matches_user": true,
+  "package_members": 10,
+  "package_crc_ok": true,
+  "package_unsafe_members": [],
+  "documents": [
+    {
+      "path": "docs/process-report/WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md",
+      "version": "v2.9",
+      "sha256": "bec2a66770da9dc80991e84aebc67e2284310f9980671129200f706576db01fc",
+      "bytes": 58332,
+      "exact_full_approved_package_bytes": true,
+      "matches_approved_manifest": true,
+      "old_git_bytes_match_package_baseline": true,
+      "old_git_blob_matches_package_baseline": true
+    },
+    {
+      "path": "docs/design-system/SMART_CITIES_VISUAL_SYSTEM.md",
+      "version": "v2.8",
+      "sha256": "d109b1072cb05a5309c96e3f5aa1337d0e2a67614a1e7cbc0a62fa50253b45a8",
+      "bytes": 54413,
+      "exact_full_approved_package_bytes": true,
+      "matches_approved_manifest": true,
+      "old_git_bytes_match_package_baseline": true,
+      "old_git_blob_matches_package_baseline": true
+    },
+    {
+      "path": "docs/report-writing/SMART_CITIES_REPORT_WRITING_GUIDE.md",
+      "version": "v1.4",
+      "sha256": "4aef6e48c79efe87e49d2173f9975d65d8bf6716a3f2f0dd04308b2daee90f18",
+      "bytes": 31207,
+      "exact_full_approved_package_bytes": true,
+      "matches_approved_manifest": true,
+      "old_git_bytes_match_package_baseline": true,
+      "old_git_blob_matches_package_baseline": true
+    },
+    {
+      "path": "AGENTS.md",
+      "version": "2026-11-06",
+      "sha256": "98b6b7063042b3b3e3e6b8b49d8460a514bd0ed1af0965fdb739c54d6c0694d7",
+      "bytes": 46788,
+      "exact_full_approved_package_bytes": true,
+      "matches_approved_manifest": true,
+      "old_git_bytes_match_package_baseline": true,
+      "old_git_blob_matches_package_baseline": true
+    }
+  ],
+  "actual_diff_matches_parent_record": true,
+  "approved_target_record_exact_package_bytes": true,
+  "approved_versions_record_exact_package_bytes": true,
+  "approved_target": {
+    "active_count": 12,
+    "names_unique": true,
+    "expected_final_registration_rows": 20,
+    "expected_final_false_count": 8,
+    "active_names": [
+      "SMART_CITIES_RESEARCH_PROTOCOL.md",
+      "WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md",
+      "SMART_CITIES_REPORT_WRITING_GUIDE.md",
+      "SMART_CITIES_VISUAL_SYSTEM.md",
+      "AGENTS.md",
+      "publication-plots.zip",
+      "Experiment_Report_吴博闻_10245102410.pdf",
+      "Experiment_Report_完整重构_源文件.zip",
+      "Process_Report_Revised.pdf",
+      "Process_Report_Revised_LaTeX_Source.zip",
+      "Experiment2_Experiment_Report.pdf",
+      "Experiment2_Process_Report.pdf"
+    ],
+    "deactivate_names": [
+      "Experiment_Report_P2_Exact.pdf",
+      "实验课1.pptx",
+      "作业.zip",
+      "任务3_LLM辅助评估清洗.ipynb",
+      "作业1轨迹数据预处理.ipynb"
+    ],
+    "already_false_names": [
+      "Process_Report_P2_Locked_v1.pdf",
+      "WF_WorkflowConstruction_PreTask1_REVISED.pdf",
+      "WF_WorkflowConstruction_PreTask1_31p_LaTeX_Source.zip"
+    ],
+    "identity": "Approved target plan; never treated as the active sources.json"
+  },
+  "protected_git_roots": [
+    "templates/",
+    "task1/",
+    "task2/src/",
+    "task2/results/",
+    "task2/public_results/",
+    "task2/figures/",
+    "task2/diagrams/",
+    "task2/tests/",
+    "task2/notebooks/",
+    "task2/reports/experiment/",
+    "task2/reports/generated/",
+    "docs/research/SMART_CITIES_RESEARCH_PROTOCOL.md",
+    "task2/reports/common.tex",
+    "task2/releases/Dispatch_Reports_LaTeX_Source.zip"
+  ],
+  "protected_git_paths_changed": [],
+  "research_v13_unchanged": true,
+  "research_sha256": "ec43f4ceab061ff6d4f1cccdec401f2f7a514aa5a5ba5963a1bcc7254c1d1b98",
+  "reports": [
+    {
+      "kind": "process",
+      "path": "task2/reports/process/Process_Report.pdf",
+      "sha256": "c96c96bd267aaffd99232d23432bfe9dbc4804352acd0c25c145e9ddfa803e2f",
+      "expected_sha_matches": true,
+      "pages": 16,
+      "expected_pages_match": true
+    },
+    {
+      "kind": "experiment",
+      "path": "task2/reports/experiment/Experiment_Report.pdf",
+      "sha256": "7a795625354e8a3c7034f8426171f8f8b32784db0cd398654b309c86ea72c101",
+      "expected_sha_matches": true,
+      "pages": 26,
+      "expected_pages_match": true
+    }
+  ],
+  "process_sources_unchanged_since_prior_integration_audit": true,
+  "selected_18_pngs_unchanged_since_prior_pdf_embedding_audit": true,
+  "prior_independent_records_checked": 9,
+  "prior_independent_records_unchanged": true,
+  "strict_render_limit_inherited": "Same Process PDF and sources; prior compile/text verification applies, strict pixel verification remained nonzero. No new compilation or visual check is claimed.",
+  "current_manifest_snapshot": {
+    "rows": 19,
+    "active": 16,
+    "false": 3,
+    "matches_target_active_names": false,
+    "status": "IN_PROGRESS_EXPECTED_NOT_FINAL; final synchronization/staged review is a separate appended record"
+  },
+  "candidate_boundary": {
+    "staged_contains_complete_settings_body": false,
+    "staged_raw_media_or_input_names": [],
+    "source_package_and_settings_policy": "Private input/TRANSFER_COPY only; no active Settings file or Project Source is created"
+  },
+  "not_checked": [
+    "Final manifest synchronization and staged publication set remain pending.",
+    "No original video was supplied or reviewed; no new Evidence Master Lock is granted.",
+    "No ChatGPT UI Settings paste/upload, remote publication or GPT external review was performed by this audit."
+  ],
+  "result": "APPROVED_DOCUMENT_BYTES_AND_FROZEN_ARTIFACTS_VERIFIED; FINAL_COLLECTION_AND_PUBLICATION_REVIEW_PENDING"
+}

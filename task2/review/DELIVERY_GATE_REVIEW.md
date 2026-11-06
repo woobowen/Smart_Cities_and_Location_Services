@@ -1,5 +1,7 @@
 # 内部交付门槛与外部状态
 
+2026-11-06 追加：当前 [规范升级、12 项 Project Sources 与外审核验](../../evidence/infrastructure/SC-PROJECT-REFRESH-20261106/REVIEW_PACKET.md)承接用户已认可的 16 页 Process 文稿，保留原生 UI 与 TikZ 箭头，正式 PDF 为精确获批字节。源码编译和全文通过，严格渲染仍有差异；Project Sources 12 项本地检查通过，UI 实际操作和 GPT 外审待办。以下门槛表保留 2026-11-05 原研究交付的真实历史身份，其中 8 页稿及原 81 成员源包不代表当前正式 Process 的配对状态。
+
 此表是本轮工程集成结论，逐项证据由实际执行者回执支持；不把作者重复检查称独立，不把发布称为用户理解或教师提交。Gate8的真实SHA/ZIP身份在发布后从Git对象冻结，见交付审核包根目录FIXED_COMMIT.json。
 
 |门槛|内部结论与证据|

@@ -1,0 +1,14 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-B",
+    "evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/sync_sources.py",
+    "--check"
+  ],
+  "returncode": 1,
+  "output": "Unsafe or unexpected bundle entries: unsafe=[], extra=['AGENTS.md:Zone.Identifier', 'SMART_CITIES_REPORT_WRITING_GUIDE.md:Zone.Identifier', 'SMART_CITIES_RESEARCH_PROTOCOL.md:Zone.Identifier', 'SMART_CITIES_VISUAL_SYSTEM.md:Zone.Identifier', 'WORKFLOW_INTERACTION_EVIDENCE_PROTOCOL.md:Zone.Identifier']\n",
+  "status": "BLOCKED_UNKNOWN_EXTRAS",
+  "previous_successful_check": "sources_check.json is preserved as an earlier successful check, not the current state",
+  "approved_member_bytes": "All 16 still match approved hashes",
+  "next_action": "Await exact-list relocation authorization, then recheck without relaxing synchronizer"
+}

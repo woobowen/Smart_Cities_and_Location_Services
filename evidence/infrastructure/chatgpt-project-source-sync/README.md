@@ -1,9 +1,10 @@
 # ChatGPT Project Sources distribution
 
-当前同步记录：[SC-LAB1-PROCESS-INTEGRATION-SYNC-001](../SC-LAB1-PROCESS-INTEGRATION-SYNC-001/REVIEW_PACKET.md)；[SYNC-003](../SC-PROJECT-SOURCES-SYNC-003/REVIEW_PACKET.md)保留历史身份。
-唯一结构化批准清单：[sources.json](sources.json)。程序按清单推导数量，角色、适用范围、版本、配对、批准范围与hash汇总在生成的 [SOURCE_MANIFEST.md](SOURCE_MANIFEST.md)。
+当前有效同步为 [SC-PROJECT-REFRESH-20261106](../SC-PROJECT-REFRESH-20261106/REVIEW_PACKET.md)：20 条登记、12 项 active、8 项历史 false，分发目录恰好 12 项。`--check` 返回 0、`UPLOAD BUNDLE READY`；全部 active 源、规范分发字节和登记 SHA 一致，见[机器回执](../SC-PROJECT-REFRESH-20261106/source_set_verification.json)。实际 UI 状态为 `USER_UI_ACTION_REQUIRED`，GPT 外审尚未执行。
 
-权威源 → 清单 → bundle。用户本轮在release提供的四份规范已先保存在仓库外不可变私密快照，再逐字节导入权威位置；位置与hash记录在本轮任务目录，仅本次受控导入允许反向迁移。Project Settings仅在UI维护。
+唯一结构化批准清单：[sources.json](sources.json)。四份规范升级至 Evidence v2.9、Visual v2.8、Writing v1.4、AGENTS 2026-11-06；Research v1.3 保持原字节。保留既有有效参考，五份历史/重复材料仅退出分发，其权威原件和验证后的私密归档均保留；新增任务二 `Experiment2_Experiment_Report.pdf` 与 `Experiment2_Process_Report.pdf`。publication-plots 原批准发行字节未变。数量按清单推导，本轮 12 项不是脚本永久常量。
+
+权威源 → 清单 → bundle。release 是上传准备目录，不是第二份编辑源。入站文件先在该目录外校验并私密暂存；完整源 ZIP、视频、raw 帧、未选截图和 Settings transfer TXT 不属于本轮分发集。Project Settings 仅由用户在 UI 维护。
 
 ```bash
 .venv/bin/python -B evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/sync_sources.py --plan
@@ -13,11 +14,9 @@
 .venv/bin/python -B evidence/infrastructure/SMART-CITIES-WORKFLOW-GOVERNANCE-AND-EVIDENCE-SYNC-001/validate_sync.py --index
 ```
 
-`--plan`和`--check`只读；`--check`不创建或刷新manifest。经批准的active修改须同步更新sources.json对应版本/hash。写同步先校验全部来源、路径和hash，再暂存并受控替换bundle和生成metadata；失败保留恢复记录并回滚已替换文件。未知extra一律拒绝，不默认删除。重复运行无内容变化则不修改mtime或日期。`--index`用于暂存后核验Git索引。
+`--plan` 和 `--check` 只读，后者不刷新 metadata；无参数才受控写同步。先验证全部权威来源、路径与 SHA，再暂存、替换 bundle 和两份派生 metadata；失败保留恢复记录并回滚已替换内容。unknown extra、目录或符号链接均拒绝，不自动删除。此次获准的五份退出副本、已知入站文件和五份下载元数据均逐项验证、保护后受控移出，未放宽安全检查。`--index` 另核验 Git 暂存字节。
 
-publication-plots从独立的releases/skills/publication-plots-approved-original.zip原字节分发，固定hash和installed effective members双重验证；所有成员从manifest指定的canonical active路径分发，禁止release自引用来源。不执行Notebook或实验、不修改Process原件、不重新打包Skill。
-
-UI按[差异更新说明](UPLOAD_INSTRUCTIONS.md)操作，仅替换实际变化文档，保留未变有效资料。bundle就绪不代表UI已更新。用户本轮已报告UI更新，记录USER_REPORTED_UPDATED；最终15项均同批准输入，当前无再次上传动作。
+[生成清单](SOURCE_MANIFEST.md)、[生成上传说明](UPLOAD_INSTRUCTIONS.md)、[当前 UI 交接](../SC-PROJECT-REFRESH-20261106/UI_HANDOFF.md)。此前未发布的 [16 项 Process 中间方案](../../../task2/review/PROCESS_REPORT_SYNC_20261106.md)、下载元数据阻塞及 2026-11-05 的历史同步回执保持原阶段身份，不描述当前 12 项状态。
 
 以下仅是历史迁移记录，数量、当时清理行为和测试结果均不描述当前工具。
 

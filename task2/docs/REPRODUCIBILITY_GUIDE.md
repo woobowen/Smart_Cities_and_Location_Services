@@ -121,4 +121,11 @@ OPENBLAS_NUM_THREADS=1 .venv/bin/python -m task2.scripts.build_diagrams
 
 后者强制从真正XeLaTeX源重编译，检查最终log/引用/字形/overfull，提取全文并逐页200dpi渲染；脚本不伪造视觉PASS，实际逐页检查另存receipt。只编译源包时也保持其中的相对目录（task2及templates颜色源）；不需要原始签到数据。字体不在包内。
 
-当前Process是已完成正文和技术素材的交接版，新任务真实UI截图、呈现规格与Evidence Master Lock仍在外部边界；无假UI、无模拟原话。发布到GitHub、网页GPT二审、用户理解验收、教师Submission分开记录。
+2026-11-06 当前 Process 已替换为用户认可的 16 页正式 PDF，保留原生 UI、TikZ 箭头与任务源码；原 8 页交接稿及旧源包保留历史配对。只检查当前 Process 时执行：
+
+```bash
+.venv/bin/python -B task2/scripts/build_reports.py --kind process \
+  --evidence-dir task2/reports/process/build/recheck
+```
+
+该分支隔离编译并保留正式 PDF；即使比较失败也不覆盖。实测编译返回 0、页数和全文一致，但 200 dpi 像素未全部相同，严格完整命令仍返回非零。环境级字重修复与残余限制见 [Process 构建说明](../reports/process/README.md)。未新增全局字体配置或安装依赖。发布到 GitHub、网页 GPT 二审、UI 实际上传、用户理解验收及教师 Submission 分开记录。
